@@ -594,3 +594,84 @@ iterate, does it have fixed points?); the mechanism of annealed
 re-entrance; dispersion-line extraction as a general particle detector;
 whether any pair's remainder is exactly Class IV (a relationship whose
 own physics is complex).
+
+## 10. The run calculus: naming the invisible base (2026-07-03)
+
+A slow Socratic dialogue about "what exactly is the difference between the
+Concepts page's G gallery and the unrolled U construction" bottomed out in
+a missing *parameter*, not a missing concept. Every spacetime picture the
+project has ever drawn is
+
+    run(gauge, base, S0)[t] = gauge(base^t(S0))
+
+— one map walks (the **base**, the only thing that ever gets a time
+exponent), another watches (the **gauge**, evaluated once per row). The
+Concepts page had silently pinned base = E for every figure, which made
+the parameter invisible; the Explorer had half-surfaced it by asking for a
+rule on D cards (that's the *ingredient* slot, D(., psi) — a second,
+distinct place a rule enters; the page had been currying The Rule into
+both slots without saying so).
+
+Definitions and laws (implemented in `src/groovy/operators.py` as
+`identity` / `orbit` / `run`, mirrored in the JS engine; every claim
+asserted in `scripts/experiment_run_calculus.py`):
+
+- **orbit(base, S0)** = S0, base(S0), base²(S0), … — the only iteration
+  anywhere in the calculus. Everything else fires once per row.
+- **engine(F) := run(F, F)** — the reflexive stance: the map is its own
+  base. engine(F) = orbit(F) shifted one row, so *every engine is an
+  orbit of a composite* and a source card is the degenerate case where
+  the two stances coincide (the re-anchoring law at gauge = identity).
+- **Ladder**: phi (a table: eight facts, no space, no time) -> E_phi (a
+  map: the table bound to a ring — space) -> orbit (the map bound to a
+  seed and repetition — time). E binds space; orbit binds time.
+- **Foundations, non-circularly**: phi is primitive; E(S,phi) = phi(S)
+  and D(S,phi) = S xor phi(S) are siblings; D = id xor E, E xor D = id,
+  and E = I(S, D(S)) are lemmas. The identity map is written with the
+  blackboard one on the site — NOT the letter I, which remains
+  integration (trivial for elementary CA for a *different* reason:
+  by-accident vs by-definition).
+- **Linearity law**: run(f xor g, base) = run(f, base) xor run(g, base),
+  exactly, for any gauges — the G gallery IS the (D o E) gallery xor the
+  (E o D) gallery, row for row. **Reflexivity breaks it**, with the
+  calculus's own operators as minimal counterexample: E xor D = id as
+  maps, yet engine(E) xor engine(D) disagrees with engine(id) (the frozen
+  seed) on ~48% of cells.
+- **Re-anchoring**: run(g o base, base)[t] = run(g, base)[t+1] — the
+  Concepts page's D(E(S_t)) = D(S_{t+1}) identity, now recognizable as a
+  theorem of the *gauge stance* with no engine analog.
+
+Two consequences worth the price of the formalism:
+
+1. **R(A,B) reformulated.** The remainder field is U = engine(B o A) xor
+   engine(A o B) — an XOR of two engine runs. In the gauge stance that
+   XOR is *always* a run of the same base (linearity); in the engine
+   stance it usually isn't a run of anything. The bleeding-edge question
+   "when does a projected view follow its own rule" is exactly: **when is
+   the XOR of two engine runs itself an engine run?** The affine closed
+   form (d(t+1) = MN d(t) xor kappa) is the statement that affine maps
+   keep engines linear — one more face of the affine theorem.
+
+2. **The U slice was already in the sweep.** D(., phi) is elementary rule
+   phi^204, so the single-rule U construction is divergence_trajectory(
+   phi^204, phi) — 128 pairs already classified by the full sweep (see
+   `scripts/experiment_u_engine_slice.py` and CLAUDE.md result 11): U
+   spans all five regimes; the commute set is exactly the eight linear
+   rules (D = id xor E, and a linear map commutes with any polynomial in
+   itself) plus the nonlinear surprises 4 and 200; the eight
+   biased-affine rules land crystalline at 0.99 — the discrete
+   [x,p] = ih·(identity), compounding under reflexivity into a frozen
+   near-complement.
+
+Site changes: Concepts gained a #run section ("Every picture is a run")
+between State->State and the instrument catalog; every rendered field on
+Concepts and in the Explorer now carries a derived run-signature badge
+(RunSig.jsx; the Explorer derives signatures from the card graph at
+render time — transform chains compose the gauge, only roots own a base,
+and the second-order transform card is now correctly badged as the engine
+it always was). The four sections that were never gauges (second-order,
+coupling, prehoc, rule fields) are re-kickered from "Instrument" to
+"Engine". The Explorer still can't build an engine of a *composite* — its
+source cards only accept the 256 elementary rules; that's now a visible,
+well-defined gap ("a source card with a composite rule") rather than a
+vague itch.

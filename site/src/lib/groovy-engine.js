@@ -95,7 +95,36 @@ export function divergenceTrajectory(state0, ruleA, ruleB, steps) {
   return field;
 }
 
+// ---- run calculus (operators.py: identity / orbit / run) ----
+// Every picture on the site is run(gauge, base): the raw diagram is
+// run(identity, E), the D-gallery is run(D(.,phi), E_phi), and the engine
+// stance is the reflexive run(F, F) = orbit(F) shifted one row. Laws
+// (linearity in the gauge; re-anchoring; their failure under reflexivity)
+// live in the Python docstring and scripts/experiment_run_calculus.py.
+
+// identity(state) -- the do-nothing map (blackboard-one in prose; NOT
+// integration I, which is trivial for elementary CA for a different reason).
+export function identity(state) {
+  return state;
+}
+
+// orbit(base, state0, steps) -- rows [S0, base(S0), ..., base^steps(S0)].
+// The only primitive that iterates. `base` is any state -> state function,
+// so composites work: orbit((s) => applyRule(applyRule(s, a), b), S0, T).
+export function orbit(base, state0, steps) {
+  const rows = [state0.slice()];
+  for (let t = 0; t < steps; t++) rows.push(base(rows[t]));
+  return rows;
+}
+
+// run(gauge, base, state0, steps)[t] = gauge(base^t(S0)).
+export function run(gauge, base, state0, steps) {
+  return orbit(base, state0, steps).map((row) => gauge(row));
+}
+
 // Plain single-rule evolution trajectory (for the "elementary CA" / raw views).
+// Equivalent to orbit((s) => applyRule(s, ruleNum), state0, steps - 1) --
+// i.e. run(identity, E_rule); kept for its (steps, n) shape and callers.
 export function evolveTrajectory(state0, ruleNum, steps) {
   let state = state0.slice();
   const field = [];

@@ -231,6 +231,30 @@ first, they carry the math. Full interpretive writeup and citations are in
    grids (Life nonzero on 50/50 controls) — the affine theorem (result
    1) is not a 1D artifact.
 
+11. **The run calculus; U-engine slice read out of the sweep** (2026-07-03,
+   `src/groovy/operators.py::identity/orbit/run` + JS mirror, laws
+   asserted in `scripts/experiment_run_calculus.py`; slice lookup in
+   `scripts/experiment_u_engine_slice.py` → `results/u_engine_slice.csv`;
+   full writeup NOTES.md §10). Every spacetime picture is
+   `run(gauge, base, S0)[t] = gauge(base^t(S0))`; `orbit` is the only
+   iteration; `engine(F) = run(F, F)` (reflexive) = orbit of a composite.
+   Laws: runs are LINEAR in the gauge (`run(f⊕g, base) = run(f,base) ⊕
+   run(g,base)`, so the G gallery is the (D∘E)-gallery ⊕ (E∘D)-gallery);
+   re-anchoring `run(g∘base, base)[t] = run(g, base)[t+1]` is a
+   gauge-stance theorem with no engine analog; reflexivity breaks
+   linearity (E ⊕ D = id as maps, yet engine(E) ⊕ engine(D) ≠ engine(id),
+   ~0.48 disagreement). R(A,B) reformulates as: when is the XOR of two
+   engine runs itself an engine run? Since D(·,φ) is rule φ^204, the
+   single-rule U construction (engines E∘D vs D∘E) is
+   divergence_trajectory(φ^204, φ) — already classified by the full
+   sweep: U spans all five regimes (structured 106 / drain 58 /
+   crystalline 56 / noisy 26 / commute 10 per rule); the commute set is
+   exactly the 8 linear rules (a linear map commutes with any polynomial
+   in itself) plus nonlinear {4, 200}; the 8 biased-affine rules are all
+   crystalline at mean disagreement 0.99. Notation conventions now
+   site-wide: identity map = blackboard 𝟙 (NOT `I`, which stays
+   integration); φ = the base's rule, ψ = a gauge's ingredient rule.
+
 ## New instruments (added 2026-06-30, from a separate chat-interface exploration)
 
 Four directions came out of a parallel conversation; two are implemented,
@@ -319,7 +343,11 @@ section 6 for the full writeup and citations.
   convention; `remainder.html` ("The Walk" in the nav) is a narrative
   guided tour of the jam-session findings (NOTES.md §9) whose demos all
   compute live in-browser, quoting at-scale statistics from the
-  experiment scripts).
+  experiment scripts; the concepts page's `#run` section defines the run
+  calculus (result 11) and every rendered field on concepts/explorer
+  carries a run-signature badge — `RunSig.jsx`, with the Explorer
+  deriving signatures from the card graph at render time, never storing
+  them in `?seed=` URLs, so keep it that way when adding card types).
   `site/src/lib/groovy-engine.js` is a hand-ported JS mirror of
   `src/groovy/*.py` (1D functions) plus a 2D Life-like extension the
   Python package doesn't have yet — if you change the Python math, update

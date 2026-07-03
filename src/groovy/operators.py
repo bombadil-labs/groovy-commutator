@@ -20,11 +20,38 @@ Cross-rule construction (phi_a, phi_b = two different rules):
         This is the construction that produced the five empirical pair
         regimes documented in NOTES.md (commute / crystalline / noise /
         structured / drain).
+
+Run calculus (orbit / run / identity):
+    orbit(base, S0)[t]      = base^t(S0)        -- the ONLY place iteration lives
+    run(gauge, base, S0)[t] = gauge(base^t(S0)) -- one gauge evaluation per row
+
+Every spacetime picture is a run: the raw diagram is run(id, E) (the
+identity gauge riding base E), the D-gallery is run(D(.,phi), E_phi), and
+the "engine stance" -- a map fed its own output -- is the reflexive case
+run(F, F), which equals orbit(F, S0) shifted one row. The laws, verified
+in scripts/experiment_run_calculus.py:
+
+    linearity     run(f XOR g, base) = run(f, base) XOR run(g, base)
+                  (pointwise, exact, for ANY gauges f, g)
+    re-anchoring  run(g o base, base)[t] = run(g, base)[t+1]
+                  (a gauge-stance theorem; it has NO engine analog)
+    breakage      engines are NOT linear: E XOR D = id identically, yet
+                  run(E,E) XOR run(D,D) != run(id,id). The remainder-rule
+                  question R(A,B) (NOTES.md) is exactly "when is the XOR
+                  of two engine runs itself an engine run?"
+
+Notation: in prose/math displays the identity map is written with the
+blackboard one (U+1D7D9), NOT `I` -- `I` is integration (trivial for
+elementary CA, a different reason to do nothing than identity's
+by-definition triviality).
 """
 from __future__ import annotations
+from typing import Callable
 import numpy as np
 from .ca import apply_rule
 from .metrics import absential_field
+
+StateMap = Callable[[np.ndarray], np.ndarray]
 
 
 def C(a: np.ndarray, b: np.ndarray) -> np.ndarray:
@@ -53,6 +80,45 @@ def cross_commutator(state: np.ndarray, rule_a: int, rule_b: int) -> np.ndarray:
     ab = apply_rule(apply_rule(state, rule_b), rule_a)
     ba = apply_rule(apply_rule(state, rule_a), rule_b)
     return C(ab, ba)
+
+
+def identity(state: np.ndarray) -> np.ndarray:
+    """The do-nothing map (the blackboard-one of the run calculus).
+
+    Named because it has the same State -> State type as every gauge, so
+    it can fill the gauge slot: run(identity, E) IS the raw spacetime
+    diagram. Distinct from integration I(a, b) = a XOR b, which is a real
+    operation that merely happens to be trivial for elementary CA."""
+    return state
+
+
+def orbit(base: StateMap, state0: np.ndarray, steps: int) -> np.ndarray:
+    """The trail one map leaves when fed its own output.
+
+    orbit(base, S0)[t] = base^t(S0); rows 0..steps, shape (steps+1, n).
+    This is the only primitive that iterates -- E, D, G and every gauge
+    fire once per row. `base` is any State -> State callable, so orbits
+    of composites (the engine stance: run(F, F) = orbit(F)[1:]) work the
+    same as orbits of elementary rules. For a plain rule-phi orbit pass
+    base=lambda s: apply_rule(s, phi)."""
+    rows = np.zeros((steps + 1, len(state0)), dtype=np.uint8)
+    rows[0] = state0
+    for t in range(steps):
+        rows[t + 1] = base(rows[t])
+    return rows
+
+
+def run(gauge: StateMap, base: StateMap, state0: np.ndarray, steps: int) -> np.ndarray:
+    """A gauge evaluated along a base's orbit: run(gauge, base, S0)[t] =
+    gauge(base^t(S0)), shape (steps+1, n).
+
+    The two stances of the project are the two ways to fill the slots:
+    gauge stance = run(F, E) (F measured along E's clockwork), engine
+    stance = run(F, F) (F is its own base). Laws -- linearity in the
+    gauge, the re-anchoring identity, and their failure under
+    reflexivity -- are stated in the module docstring and verified in
+    scripts/experiment_run_calculus.py."""
+    return np.stack([gauge(row) for row in orbit(base, state0, steps)])
 
 
 def absential_trajectory(state0: np.ndarray, rule_num: int, steps: int) -> np.ndarray:

@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
+import RunSig from './RunSig.jsx';
 
 const OVERLAP_COLOR = 'oklch(0.6 0.28 340)'; // vivid magenta -- not used elsewhere on the site, so it reads unambiguously as "more than one layer lit here"
 
@@ -8,6 +9,10 @@ const OVERLAP_COLOR = 'oklch(0.6 0.28 340)'; // vivid magenta -- not used elsewh
 // Deliberately no card CRUD here -- these are fixed pedagogical examples,
 // not an editable graph. `multiply` (not the Explorer's `screen`) because
 // this site is light-on-dark there and dark-on-light here.
+//
+// Each item carries a required `sig` ({gauge, base} | {engine} | {text},
+// see RunSig.jsx) so every field states its run signature -- the label
+// string stays the human-readable name (and the key for the hide toggles).
 export default function InstrumentViewer({ items, exploreHref, size = 220 }) {
   const [mode, setMode] = useState('side');
   const [hidden, setHidden] = useState(() => new Set());
@@ -106,6 +111,7 @@ export default function InstrumentViewer({ items, exploreHref, size = 220 }) {
                 <button onClick={() => toggleHidden(item.label)} className="gc-mono" style={{ display: 'flex', alignItems: 'center', gap: '0.35em', fontSize: '0.7rem', color: 'var(--ink-soft)', marginTop: '0.3rem', background: 'none', border: 'none', padding: 0, cursor: 'pointer' }}>
                   <span style={{ width: 8, height: 8, borderRadius: 2, background: item.color, flex: 'none' }}></span>{item.label}
                 </button>
+                {item.sig && <div style={{ marginTop: '0.25rem' }}><RunSig sig={item.sig} /></div>}
               </div>
             );
           })}
@@ -141,6 +147,16 @@ export default function InstrumentViewer({ items, exploreHref, size = 220 }) {
               <span style={{ width: 8, height: 8, borderRadius: 2, background: OVERLAP_COLOR, flex: 'none' }}></span>2+ layers here
             </div>
           </div>
+          {items.some((it) => it.sig) && (
+            <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap', marginTop: '0.4rem' }}>
+              {items.map((item) => item.sig && (
+                <span key={item.label} style={{ display: 'inline-flex', alignItems: 'center', gap: '0.3em' }}>
+                  <span style={{ width: 8, height: 8, borderRadius: 2, background: item.color, flex: 'none' }}></span>
+                  <RunSig sig={item.sig} />
+                </span>
+              ))}
+            </div>
+          )}
         </>
       )}
     </div>

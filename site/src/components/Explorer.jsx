@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import Watermark from './Watermark.jsx';
+import RunSig from './RunSig.jsx';
 import { readSeedFromLocation } from '../lib/exploreSeed.js';
 
 const TYPE_COLORS = {
@@ -267,6 +268,45 @@ export default function Explorer() {
     if (c.type === 'comparison') return { title: 'C' + c.from + ' vs C' + c.fromB, desc: 'XOR of C' + c.from + ' and C' + c.fromB + ', per generation.' };
     if (c.type === 'coupling') return { title: bsLabel(c.born, c.survive) + ' ↔ ' + bsLabel(c.bornB, c.surviveB), desc: 'Cross-rule divergence, 2D, shared starting grid.' };
     return { title: '?', desc: '' };
+  }
+
+  // The card's run signature (see the Concepts page's #run section),
+  // derived from the config graph at render time -- never stored in seed
+  // URLs, so legacy links pick these up for free. Transform chains compose
+  // the gauge (a D card on a D card is run(D∘D, base)); only root cards own
+  // a base. Coupling/prehoc/rulefield roots -- and the second-order op,
+  // which free-runs on its own output after two seed rows -- are engines.
+  function sigFor(id) {
+    const c = cardConfigs[id];
+    if (!c) return null;
+    if (c.type === 'source') return { gauge: '\u{1D7D9}', base: c.dim === '2d' ? bsLabel(c.born, c.survive) : `E_${c.rule}` };
+    if (c.type === 'transform') {
+      const parts = [];
+      let cur = c;
+      while (cur && cur.type === 'transform') {
+        const ing = cur.dim === '2d' ? bsLabel(cur.born, cur.survive) : cur.rule;
+        if (cur.op === 'secondorder') return { engine: `2nd-order ${ing}`, note: `seeded by C${cur.from}` };
+        if (cur.op === 'e') parts.push(`E(·,${ing})`);
+        else if (cur.op === 'd') parts.push(`D(·,${ing})`);
+        else if (cur.op === 'g') parts.push(`G(·,${ing})`);
+        else if (cur.op === 'absential') parts.push('A');
+        // 'raw' is the identity gauge -- contributes nothing to the chain
+        cur = cardConfigs[cur.from];
+      }
+      const gauge = parts.length ? parts.join('∘') : '\u{1D7D9}';
+      let base = '?';
+      if (cur && cur.type === 'source') base = cur.dim === '2d' ? bsLabel(cur.born, cur.survive) : `E_${cur.rule}`;
+      else if (cur) base = `C${cur.id}`; // gauge over a non-orbit picture (e.g. a coupling card's remainder field)
+      return { gauge, base };
+    }
+    if (c.type === 'comparison') return { text: `C${c.from} ⊕ C${c.fromB}` };
+    if (c.type === 'coupling') {
+      const [a, b] = c.dim === '2d' ? [bsLabel(c.born, c.survive), bsLabel(c.bornB, c.surviveB)] : [c.rule, c.ruleB];
+      return { text: `engine(${b}∘${a}) ⊕ engine(${a}∘${b})` };
+    }
+    if (c.type === 'prehoc') return { engine: 'A⇄B', note: ({ a: 'layer A', b: 'layer B', diff: 'C(A,B)' })[c.layer || 'a'] + ' shown' };
+    if (c.type === 'rulefield') return { engine: 'S⇄R', note: (c.layer === 'rules' ? 'rule' : 'state') + ' layer shown' };
+    return null;
   }
 
   function colorForCard(id) { return cardConfigs[id].color || CANVAS_TYPE_COLORS[cardConfigs[id].type]; }
@@ -728,7 +768,8 @@ export default function Explorer() {
                     <button onClick={() => setDeleteTarget(soloId)} style={{ background: 'none', border: '1px solid var(--rule)', color: 'var(--ink-soft)', fontFamily: "'IBM Plex Mono',monospace", fontSize: '9.5px', padding: '3px 8px', borderRadius: 5, cursor: 'pointer' }}>delete</button>
                   </span>
                 </div>
-                <h3 style={{ margin: '0 0 10px', fontFamily: "'Lora',serif", fontSize: 16, color: 'var(--ink)' }}>{soloMeta.title}</h3>
+                <h3 style={{ margin: '0 0 6px', fontFamily: "'Lora',serif", fontSize: 16, color: 'var(--ink)' }}>{soloMeta.title}</h3>
+                <div style={{ margin: '0 0 10px' }}><RunSig sig={sigFor(soloId)} style={{ background: 'var(--inset)' }} /></div>
                 <div style={{ display: 'flex', gap: 16, flexWrap: 'wrap', alignItems: 'flex-start', marginBottom: 12 }}>
                   <canvas className="ex-field" ref={getRef(soloId)} style={{ width: 220, height: 220, background: 'var(--inset)', borderRadius: 6, flex: 'none' }}></canvas>
                   <div style={{ flex: 1, minWidth: 180 }}>
@@ -769,7 +810,8 @@ export default function Explorer() {
                         </span>
                       </div>
                       <canvas className="ex-field" ref={getRef(p.id)} style={{ width: 154, height: 154, background: 'var(--panel)', display: 'block', margin: '8px auto' }}></canvas>
-                      <p style={{ fontSize: 10, color: 'var(--ink-soft)', margin: '0 8px 8px' }}>{p.meta.title}</p>
+                      <p style={{ fontSize: 10, color: 'var(--ink-soft)', margin: '0 8px 4px' }}>{p.meta.title}</p>
+                      <div style={{ margin: '0 8px 8px' }}><RunSig sig={sigFor(p.id)} style={{ background: 'var(--panel)', fontSize: '0.6rem' }} /></div>
                     </div>
                   );
                 })}
