@@ -4,9 +4,10 @@ import Watermark from './Watermark.jsx';
 import couplingData from '../data/critical_coupling.json';
 
 // ---------------------------------------------------------------------------
-// The Remainder -- a guided walk through one night of experiments.
-// Every demo on this page computes live from the engine; the numbers the
-// prose quotes were established at scale by scripts/experiment_remainder_*.py,
+// The Remainder -- a guided walk through one night of experiments, written
+// for a reader arriving cold: every term is built before it is used.
+// Every demo computes live from the engine; the statistics the prose quotes
+// were established at scale by scripts/experiment_remainder_*.py,
 // experiment_fourier.py, experiment_conservation_kinematics.py,
 // experiment_critical_coupling.py and experiment_scale_rhyme.py, and the
 // live widgets re-derive their local versions in front of the reader.
@@ -32,7 +33,6 @@ const statStyle = { fontFamily: "'IBM Plex Mono',monospace", fontSize: '0.78rem'
 const CONSERVERS = {
   live: [170, 184, 204, 226, 240],
   absential: [170, 171, 185, 204, 205, 227, 240, 241],
-  footprint: [170, 204, 236, 240],
   activity: [15, 51, 85, 170, 204, 240],
 };
 const FIXED_POINTS = {
@@ -108,7 +108,6 @@ function fitAndTest(field, radius) {
     buckets,
     predField,
     errField,
-    testRows: field.slice(half, steps - 1),
   };
 }
 
@@ -136,9 +135,8 @@ function fft(re, im) {
   }
 }
 
-// 2D power spectrum of a (steps x n) binary field, both dims cropped/padded
-// to `size` (power of two). Returns { power: Float64Array(size*size),
-// concentration: top-1% share of non-DC power }.
+// 2D power spectrum of a (steps x n) binary field, both dims cropped to
+// `size` (power of two).
 function powerSpectrum(field, size) {
   const re = [], im = [];
   let mean = 0;
@@ -172,13 +170,12 @@ function drawSpectrum(canvas, P, size) {
   let mx = 0;
   const L = new Float64Array(size * size);
   for (let i = 0; i < P.length; i++) { L[i] = Math.log1p(P[i]); if (L[i] > mx) mx = L[i]; }
-  // fftshift so DC sits at the center and the dispersion lines read as lines
+  // fftshift so "no stripes at all" sits at the center of the picture
   for (let t = 0; t < size; t++) {
     for (let i = 0; i < size; i++) {
       const st = (t + size / 2) % size, si = (i + size / 2) % size;
       const v = mx > 0 ? L[st * size + si] / mx : 0;
       const o = (t * size + i) * 4;
-      // cream -> teal -> ink ramp
       img.data[o] = Math.round(241 + (42 - 241) * v);
       img.data[o + 1] = Math.round(234 + (96 - 234) * (v < 0.5 ? v * 2 * 0.65 : 0.65 + (v - 0.5) * 2 * 0.35));
       img.data[o + 2] = Math.round(217 + (60 - 217) * v);
@@ -188,7 +185,7 @@ function drawSpectrum(canvas, P, size) {
   ctx.putImageData(img, 0, 0);
 }
 
-// ---- shared: compute a divergence field ------------------------------------
+// ---- shared helpers ---------------------------------------------------------
 
 function useEngine() {
   const ref = useRef(null);
@@ -206,7 +203,57 @@ function divergence(engine, a, b, n, steps, burn, seed) {
   return F.slice(burn);
 }
 
-// ---- Stop 1: the triptych ---------------------------------------------------
+// ---- Stop 0: a single rule running -----------------------------------------
+
+function SoloRun() {
+  const [engineRef, ready] = useEngine();
+  const ref = useRef(null);
+  useEffect(() => {
+    if (!ready) return;
+    const e = engineRef.current;
+    const T = e.evolveTrajectory(e.randomState(160, 2), 110, 160);
+    if (ref.current) e.renderFieldToCanvas(ref.current, T, ON, CREAM);
+  }, [ready]);   // eslint-disable-line react-hooks/exhaustive-deps
+  return (
+    <div style={{ width: 190, margin: '0.4rem 0 0.8rem' }}>
+      <canvas className="gc-field" ref={ref} style={{ width: 190, height: 190 }}></canvas>
+      <div style={capStyle}>one rule, one history — the top row is the start; each row below it is one tick later</div>
+    </div>
+  );
+}
+
+// ---- Stop 1: how the disagreement picture is made ---------------------------
+
+function TwoClocks() {
+  const [engineRef, ready] = useEngine();
+  const refs = [useRef(null), useRef(null), useRef(null)];
+  useEffect(() => {
+    if (!ready) return;
+    const e = engineRef.current;
+    const n = 160, steps = 160, a = 110, b = 54;
+    let p1 = e.randomState(n, 5), p2 = p1.slice();
+    const F1 = [], F2 = [], D = [];
+    for (let t = 0; t < steps; t++) {
+      F1.push(p1); F2.push(p2); D.push(e.C(p1, p2));
+      p1 = e.applyRule(e.applyRule(p1, a), b);
+      p2 = e.applyRule(e.applyRule(p2, b), a);
+    }
+    if (refs[0].current) e.renderFieldToCanvas(refs[0].current, F1, ON, CREAM);
+    if (refs[1].current) e.renderFieldToCanvas(refs[1].current, F2, ON, CREAM);
+    if (refs[2].current) e.renderFieldToCanvas(refs[2].current, D, AMBER, CREAM);
+  }, [ready]);   // eslint-disable-line react-hooks/exhaustive-deps
+  const caps = ['history 1: rule A then rule B, every tick', 'history 2: rule B then rule A, every tick', 'the remainder: every square where they differ'];
+  return (
+    <div style={{ display: 'flex', gap: '0.9rem', flexWrap: 'wrap', margin: '0.4rem 0 0.8rem' }}>
+      {refs.map((r, i) => (
+        <div key={i} style={{ width: 170 }}>
+          <canvas className="gc-field" ref={r} style={{ width: 170, height: 170 }}></canvas>
+          <div style={capStyle}>{caps[i]}</div>
+        </div>
+      ))}
+    </div>
+  );
+}
 
 function Triptych() {
   const [engineRef, ready] = useEngine();
@@ -220,7 +267,7 @@ function Triptych() {
       if (refs[i].current) e.renderFieldToCanvas(refs[i].current, F, color, CREAM);
     });
   }, [ready]);   // eslint-disable-line react-hooks/exhaustive-deps
-  const labels = ['90 vs 150 — commute: nothing left over', '110 vs 54 — structured: a legible leftover', '110 vs 30 — noisy: an illegible one'];
+  const labels = ['rules 90 & 150 — the histories never differ: blank', 'rules 110 & 54 — they differ, and the difference has a pattern', 'rules 110 & 30 — they differ like static'];
   return (
     <div style={{ display: 'flex', gap: '0.9rem', flexWrap: 'wrap', margin: '0.4rem 0 0.8rem' }}>
       {refs.map((r, i) => (
@@ -236,9 +283,9 @@ function Triptych() {
 // ---- Stop 2: the autonomy experiment ---------------------------------------
 
 const AUTONOMY_PAIRS = [
-  { a: 110, b: 54, label: '110 / 54 (structured)' },
-  { a: 110, b: 30, label: '110 / 30 (noisy)' },
-  { a: 32, b: 71, label: '32 / 71 (structured, exact)' },
+  { a: 110, b: 54, label: '110 & 54 (patterned)' },
+  { a: 110, b: 30, label: '110 & 30 (static)' },
+  { a: 32, b: 71, label: '32 & 71 (patterned, exact)' },
 ];
 
 function AutonomyDemo() {
@@ -272,7 +319,7 @@ function AutonomyDemo() {
         ))}
       </div>
       <div style={{ display: 'flex', gap: '0.9rem', flexWrap: 'wrap' }}>
-        {[[fieldRef, 'the remainder, full run'], [predRef, 'its own law, predicting the unseen half'], [errRef, 'errors (red = the law was wrong)']].map(([r, cap]) => (
+        {[[fieldRef, 'the remainder, whole run'], [predRef, 'what the learned rulebook predicts, for the half it was never shown'], [errRef, 'every square the rulebook got wrong (red)']].map(([r, cap]) => (
           <div key={cap} style={{ width: 190 }}>
             <canvas className="gc-field" ref={r} style={{ width: 190, height: 190 }}></canvas>
             <div style={capStyle}>{cap}</div>
@@ -281,9 +328,9 @@ function AutonomyDemo() {
       </div>
       {stats && (
         <div style={statStyle}>
-          held-out accuracy <strong>{(stats.acc * 100).toFixed(2)}%</strong>
-          {' '}&middot; contradiction mass in training <strong>{(stats.contra * 100).toFixed(2)}%</strong>
-          {' '}&middot; contexts visited <strong>{stats.nCtx}/{stats.buckets}</strong>
+          score on the unseen half <strong>{(stats.acc * 100).toFixed(2)}%</strong>
+          {' '}&middot; self-contradictions while learning <strong>{(stats.contra * 100).toFixed(2)}%</strong>
+          {' '}&middot; distinct five-cell patterns witnessed <strong>{stats.nCtx}/{stats.buckets}</strong>
         </div>
       )}
     </div>
@@ -294,7 +341,7 @@ function AutonomyDemo() {
 
 function SolitonDemo() {
   const [engineRef, ready] = useEngine();
-  const [verdict, setVerdict] = useState('running…');
+  const [verdict, setVerdict] = useState('checking, live…');
   const ref = useRef(null);
   useEffect(() => {
     if (!ready) return;
@@ -307,22 +354,19 @@ function SolitonDemo() {
         if (!rowsEqual(F[t + 1], rollRow(F[t], k))) { all = false; break; }
       }
       if (all) {
-        setVerdict(`verified in your browser just now: every one of the ${F.length - 1} steps of this run satisfies diff(t+1) = shift${k > 0 ? 'right' : 'left'}(diff(t)), exactly.`);
+        setVerdict(`Checked in your browser just now: on every one of this run's ${F.length - 1} ticks, the next row of the remainder is exactly the previous row slid one square to the ${k > 0 ? 'right' : 'left'}. No exceptions.`);
         return;
       }
     }
-    setVerdict('this seed did not lock to a pure shift (it happens for some initial conditions — reroll by reloading).');
+    setVerdict('This particular starting row did not settle into a pure slide (some starts don’t — reload to reroll).');
   }, [ready]);   // eslint-disable-line react-hooks/exhaustive-deps
   return (
     <div style={{ display: 'flex', gap: '1.1rem', flexWrap: 'wrap', alignItems: 'flex-start' }}>
       <div style={{ width: 190 }}>
         <canvas className="gc-field" ref={ref} style={{ width: 190, height: 190 }}></canvas>
-        <div style={capStyle}>the remainder of 138 vs 205</div>
+        <div style={capStyle}>the remainder of rules 138 & 205 — stripes drifting sideways forever</div>
       </div>
-      <p style={{ ...pBody, maxWidth: '38ch', fontSize: '0.9rem' }}>
-        This pair's remainder obeys <span className="gc-code">rule 170</span> &mdash; the pure shift.{' '}
-        {verdict}
-      </p>
+      <p style={{ ...pBody, maxWidth: '38ch', fontSize: '0.9rem' }}>{verdict}</p>
     </div>
   );
 }
@@ -347,10 +391,10 @@ function SpectrumDemo() {
   }, [ready]);   // eslint-disable-line react-hooks/exhaustive-deps
   return (
     <div style={{ display: 'flex', gap: '0.9rem', flexWrap: 'wrap' }}>
-      {[[s1, 'spectrum of the 110/54 remainder', 0], [s2, 'spectrum of the 110/30 remainder', 1]].map(([r, cap, i]) => (
+      {[[s1, 'the patterned remainder (110 & 54): its energy lies on a few sharp lines', 0], [s2, 'the static remainder (110 & 30): its energy is everywhere at once', 1]].map(([r, cap, i]) => (
         <div key={cap} style={{ width: 210 }}>
           <canvas ref={r} style={{ width: 210, height: 210, imageRendering: 'pixelated', border: '1px solid var(--rule)', borderRadius: 6, display: 'block' }}></canvas>
-          <div style={capStyle}>{cap}{conc && <> &middot; top-1% share <strong>{(conc[i] * 100).toFixed(0)}%</strong></>}</div>
+          <div style={capStyle}>{cap}{conc && <> &middot; share held by the brightest 1%: <strong>{(conc[i] * 100).toFixed(0)}%</strong></>}</div>
         </div>
       ))}
     </div>
@@ -367,8 +411,6 @@ function RhymeDemo() {
     const n = 256, steps = 300, burn = 64;
     const T = e.evolveTrajectory(e.randomState(n, 12), 110, steps + burn).slice(burn);
     if (rawRef.current) e.renderFieldToCanvas(rawRef.current, T, ON, CREAM);
-    // blind search over lags k and shifts s for the deepest rhyme,
-    // density estimated on every 4th row
     let best = { k: 0, s: 0, d: 1 };
     for (let k = 1; k <= 12; k++) {
       for (let s = 0; s < n; s++) {
@@ -389,7 +431,7 @@ function RhymeDemo() {
   return (
     <div>
       <div style={{ display: 'flex', gap: '0.9rem', flexWrap: 'wrap' }}>
-        {[[rawRef, 'rule 110, raw — ether everywhere'], [resRef, 'the same run, rhymed against itself — only the gliders survive']].map(([r, cap]) => (
+        {[[rawRef, 'rule 110, raw — wallpaper almost everywhere'], [resRef, 'the same run with its best-matching past subtracted — the wallpaper cancels; only the travelers survive']].map(([r, cap]) => (
           <div key={cap} style={{ width: 210 }}>
             <canvas className="gc-field" ref={r} style={{ width: 210, height: 210 }}></canvas>
             <div style={capStyle}>{cap}</div>
@@ -398,8 +440,9 @@ function RhymeDemo() {
       </div>
       {found && (
         <div style={statStyle}>
-          deepest rhyme found blind at lag <strong>{found.k}</strong>, shift <strong>{found.s <= 128 ? found.s : found.s - 256}</strong>
-          {' '}&middot; residual density <strong>{found.d.toFixed(3)}</strong> (raw: {found.rawDensity.toFixed(3)})
+          best echo found by blind search: <strong>{found.k}</strong> ticks back,{' '}
+          <strong>{found.s <= 128 ? found.s : found.s - 256}</strong> squares over
+          {' '}&middot; disagreement after subtracting it: <strong>{found.d.toFixed(3)}</strong> (before: {found.rawDensity.toFixed(3)})
         </div>
       )}
     </div>
@@ -434,9 +477,9 @@ function SilhouetteDemo() {
       for (let t = 0; t < steps; t++) {
         for (let i = 0; i < n; i++) {
           const o = (t * n + i) * 4;
-          let r = 241, g = 234, b = 217;                    // void: cream
-          if (rows[t].s[i]) { r = 42; g = 36; b = 32; }     // live: ink
-          else if (rows[t].a[i]) { r = 209; g = 154; b = 60; } // absential: amber
+          let r = 241, g = 234, b = 217;
+          if (rows[t].s[i]) { r = 42; g = 36; b = 32; }
+          else if (rows[t].a[i]) { r = 209; g = 154; b = 60; }
           img.data[o] = r; img.data[o + 1] = g; img.data[o + 2] = b; img.data[o + 3] = 255;
         }
       }
@@ -448,12 +491,12 @@ function SilhouetteDemo() {
     <div style={{ display: 'flex', gap: '1.1rem', flexWrap: 'wrap', alignItems: 'flex-start' }}>
       <div style={{ width: 220 }}>
         <canvas ref={ref} style={{ width: 220, height: 132, imageRendering: 'pixelated', border: '1px solid var(--rule)', borderRadius: 6, display: 'block', background: CREAM }}></canvas>
-        <div style={capStyle}>rule 236 — live cells (ink) grow into their own halo (amber); the silhouette never moves</div>
+        <div style={capStyle}>rule 236 — on cells (ink) grow into their halo (amber), but the outline never moves</div>
       </div>
       {nums && (
         <div style={{ ...statStyle, margin: 0 }}>
-          live cells: <strong>{nums.live0} &rarr; {nums.live1}</strong> (grows)<br />
-          footprint (live+halo): <strong>{nums.closed0} &rarr; {nums.closed1}</strong> (conserved)
+          on cells: <strong>{nums.live0} &rarr; {nums.live1}</strong> (grows)<br />
+          outline, i.e. on + halo: <strong>{nums.closed0} &rarr; {nums.closed1}</strong> (never changes)
         </div>
       )}
     </div>
@@ -480,15 +523,15 @@ function CouplingChart() {
         {[0, 0.5, 1].map((v) => (
           <text key={'y' + v} x={padL - 6} y={y(v) + 3} textAnchor="end" fontFamily="IBM Plex Mono, monospace" fontSize="10" fill={INK_SOFT}>{v}</text>
         ))}
-        <text x={padL + w / 2} y={H - 2} textAnchor="middle" fontFamily="IBM Plex Mono, monospace" fontSize="10" fill={INK_SOFT}>coupling density &alpha;</text>
+        <text x={padL + w / 2} y={H - 2} textAnchor="middle" fontFamily="IBM Plex Mono, monospace" fontSize="10" fill={INK_SOFT}>fraction of cells whose listening line is connected</text>
         <path d={path('quenched')} fill="none" stroke="var(--accent)" strokeWidth="2.2" />
         <path d={path('annealed')} fill="none" stroke={RED} strokeWidth="2.2" />
         <circle cx={x(1)} cy={y(curves.annealed.comp[curves.annealed.comp.length - 1])} r="5" fill="none" stroke={RED} strokeWidth="2" />
-        <text x={x(0.62)} y={y(0.15)} fontFamily="IBM Plex Mono, monospace" fontSize="10" fill="var(--accent)">quenched (fixed dry sites)</text>
-        <text x={x(0.30)} y={y(0.9)} fontFamily="IBM Plex Mono, monospace" fontSize="10" fill={RED}>annealed (flickering)</text>
+        <text x={x(0.62)} y={y(0.15)} fontFamily="IBM Plex Mono, monospace" fontSize="10" fill="var(--accent)">some cells permanently deaf</text>
+        <text x={x(0.26)} y={y(0.9)} fontFamily="IBM Plex Mono, monospace" fontSize="10" fill={RED}>every cell's line flickering</text>
       </svg>
       <p className="gc-mono" style={{ fontSize: '0.7rem', color: INK_SOFT, margin: '0.3rem 0 0' }}>
-        y: compressibility of layer A (0 frozen &middot; ~0.45 structured &middot; 1 noise) &middot; circled: the snap back to order at exactly &alpha; = 1
+        vertical axis: how noise-like the result is (0 = frozen, ~0.45 = patterned, 1 = pure static) &middot; circled: order returning all at once at exactly 1
       </p>
     </>
   );
@@ -523,7 +566,7 @@ function CouplingTriptych() {
       if (refs[i].current) e.renderFieldToCanvas(refs[i].current, F, ON, CREAM);
     });
   }, [ready]);   // eslint-disable-line react-hooks/exhaustive-deps
-  const caps = ['α = 0.6, quenched — pinned but coherent', 'α = 0.85, flickering — coupling noise as heat', 'α = 1.0 — full fidelity, structure returns'];
+  const caps = ['60% of lines connected, permanently — dented but coherent', '85% connected but flickering — the flicker itself becomes static', '100%, steady — the pattern returns'];
   return (
     <div style={{ display: 'flex', gap: '0.9rem', flexWrap: 'wrap', margin: '1rem 0 0' }}>
       {refs.map((r, i) => (
@@ -548,10 +591,9 @@ function ScaleDemo() {
     const s0 = new Uint8Array(n); s0[n >> 1] = 1;
     const T = e.evolveTrajectory(s0, 90, steps);
     if (fineRef.current) e.renderFieldToCanvas(fineRef.current, T, ON, CREAM);
-    // decimation: keep every other cell of every other row (block map h = b0,
-    // one of the three verified self-maps of rule 90 in results/scale_rhyme.csv).
-    // Rendered at the same display size, the half-resolution field should be
-    // pixel-for-pixel the same picture.
+    // decimation: keep every other cell of every other row (one of the three
+    // verified self-maps of rule 90 in results/scale_rhyme.csv). Rendered at
+    // the same display size, the half-resolution copy is the same picture.
     const coarse = [];
     for (let t = 0; t < steps; t += 2) {
       coarse.push(Uint8Array.from({ length: n / 2 }, (_, i) => T[t][2 * i]));
@@ -560,7 +602,7 @@ function ScaleDemo() {
   }, [ready]);   // eslint-disable-line react-hooks/exhaustive-deps
   return (
     <div style={{ display: 'flex', gap: '0.9rem', flexWrap: 'wrap' }}>
-      {[[fineRef, 'rule 90'], [coarseRef, 'rule 90, every other cell, every other step']].map(([r, cap]) => (
+      {[[fineRef, 'rule 90, full resolution'], [coarseRef, 'the same run, keeping only every other cell and every other tick']].map(([r, cap]) => (
         <div key={cap} style={{ width: 210 }}>
           <canvas className="gc-field" ref={r} style={{ width: 210, height: 210 }}></canvas>
           <div style={capStyle}>{cap}</div>
@@ -593,203 +635,277 @@ export default function Remainder() {
           The night the remainder became a thing
         </h1>
         <p style={{ fontSize: '1.05rem', color: 'var(--ink-soft)', margin: '0 0 2.2rem', maxWidth: '64ch', lineHeight: 1.7 }}>
-          Everything on this site eventually points at the same picture: two rules, one shared origin, order
-          swapped, and the field of their disagreement unrolling down the page. This page walks through one long
-          night of asking that picture a question it had been begging the whole time. Seven stops. Bring nothing;
-          everything is computed in front of you.
+          This is the story of one long night of experiments, told from the beginning &mdash; you don't need to
+          have read anything else on this site. It ends at a question we had been trying to ask for months without
+          managing to say it: <em>when does the relationship between two processes become a thing in its own
+          right &mdash; with its own law?</em> Every picture on this page is computed in your browser as you read
+          it. Nothing is a stock illustration.
         </p>
+
+        {/* STOP 0 */}
+        <section style={{ padding: '1.4rem 0', borderTop: '1px solid var(--rule)' }}>
+          <div style={kicker}>stop 0</div>
+          <h2 style={h2Style}>The whole universe in one paragraph</h2>
+          <p style={pBody}>
+            Picture a row of about two hundred squares, each either on (ink) or off (cream). Time moves in ticks.
+            At every tick, each square looks at exactly three things &mdash; itself and its immediate left and
+            right neighbors &mdash; and consults a fixed table that says what to become next. All squares update
+            at once, every tick, forever. That table is called a <strong>rule</strong>, and because three squares
+            can only be on/off in 8 combinations, a rule is just 8 yes/no answers &mdash; which means there are
+            exactly 256 possible rules, numbered 0 to 255. To see a rule's whole personality at once, we draw
+            time downward: the first row is the starting condition, and each row below it is one tick later.
+          </p>
+          <SoloRun />
+          <p style={pBody}>
+            That's everything. No physics, no randomness after the first row, no hidden machinery &mdash; just a
+            row of squares repeatedly consulting an 8-line table. (If you want to compute one of these by hand,
+            square by square, the <a href="concepts.html" style={{ color: 'var(--accent)' }}>Concepts page</a>{' '}
+            walks through it slowly.) The astonishment of the field is that some of these 256 tables produce
+            pictures like the one above &mdash; churning, particle-crossed, never settling &mdash; from six lines
+            of arithmetic.
+          </p>
+        </section>
 
         {/* STOP 1 */}
         <section style={{ padding: '1.4rem 0', borderTop: '1px solid var(--rule)' }}>
           <div style={kicker}>stop 1</div>
-          <h2 style={h2Style}>The itch</h2>
+          <h2 style={h2Style}>Two histories, one question</h2>
           <p style={pBody}>
-            Run two rules against each other &mdash; A-then-B versus B-then-A &mdash; and XOR the two unfoldings.
-            What's left is the <strong>remainder</strong>: the part of the relationship that neither vanishes nor
-            explains itself. Three textures keep appearing:
+            Now take <em>two</em> rules, A and B, and one shared starting row. Make two copies of that row and let
+            each copy live out its own history. Both histories use both rules &mdash; on every tick, each copy
+            applies one rule and then the other. The <em>only</em> difference between them is the order inside the
+            tick: copy 1 always does A-then-B, copy 2 always does B-then-A. Same ingredients, same starting point,
+            different order of operations. Does the order matter?
+          </p>
+          <p style={pBody}>
+            To find out, compare the two histories square by square, moment by moment, and mark every square where
+            they disagree. Those marks form a picture of their own &mdash; the same shape as the two histories,
+            showing only the difference between them:
+          </p>
+          <TwoClocks />
+          <p style={pBody}>
+            We call that third picture the <strong>remainder</strong>: what's left over when you subtract one
+            history from the other. It is the portrait of a <em>relationship</em> &mdash; not of either process,
+            but of how they fail to be interchangeable. Run this comparison for many different pairs of rules and
+            three kinds of remainder keep appearing:
           </p>
           <Triptych />
           <p style={pBody}>
-            The left one is silence. The right one is static. But the middle one <em>does something</em> &mdash;
-            it ripples, it persists, it looks for all the world like it's alive. Which should be impossible to
-            take seriously, because a remainder is a shadow: every bit of it is mechanically determined by the two
-            hidden trajectories that cast it. It has no dynamics of its own. It <em>can't</em>.
+            Blank means the order never mattered. Static means the two histories disagree everywhere, patternlessly
+            &mdash; the relationship has no shape. But the middle case is the strange one: the two histories
+            disagree <em>in an organized way</em>, indefinitely. The disagreement ripples. It persists. It looks,
+            frankly, like it's up to something.
           </p>
-          <p style={pBody}>And yet.</p>
         </section>
 
         {/* STOP 2 */}
         <section style={{ padding: '1.4rem 0', borderTop: '1px solid var(--rule)' }}>
           <div style={kicker}>stop 2</div>
-          <h2 style={h2Style}>Interrogate the shadow</h2>
+          <h2 style={h2Style}>Interrogating a shadow</h2>
           <p style={pBody}>
-            Here is a simple, slightly disrespectful experiment. Ignore the substrates entirely. Pretend the shadow
-            is a citizen: assume it has its own local law, learn that law by watching the first half of its life
-            (for every 5-cell neighborhood it exhibits, record what it does next), then cover everything up and ask
-            the learned law to predict a future it has never seen &mdash; one step at a time, graded against
-            reality.
+            Here's why that should be impossible to take seriously. The remainder is not a simulation. Nothing
+            computes it. Each of its squares just answers a bookkeeping question &mdash; &ldquo;do the two real
+            histories disagree here?&rdquo; &mdash; the way a shadow on a wall just reports where an object blocks
+            the light. A shadow can move, stretch, and dance, but nothing about the shadow <em>causes</em> its next
+            shape; the object does. Here, the two real histories are the object. The remainder is their shadow. It
+            has no machinery of its own. It <em>can't</em> have a law of its own.
+          </p>
+          <p style={pBody}>
+            So we tested exactly that, with an experiment simple enough to state in one breath. Cover up the two
+            real histories entirely; look only at the remainder. For the first half of its run, keep a tally: every time
+            some five-square stretch of it (a square plus two neighbors on each side) shows a particular on/off
+            pattern, write down what the middle square did on the next tick. That tally is a <strong>rulebook
+            written purely by watching the shadow</strong>. Then take the second half &mdash; which
+            the rulebook has never seen &mdash; and make it predict, square by square, tick by tick. Grade it
+            against what actually happened.
           </p>
           <AutonomyDemo />
           <p style={{ ...pBody, marginTop: '1.1rem' }}>
-            Click between the pairs and watch the red panel. For the noisy pair the law fails on roughly a third of
-            all cells, and here is the damning detail: giving it a wider neighborhood barely helps, because the
-            missing information isn't nearby &mdash; it's in the hidden substrates, permanently off-stage. The
-            noisy remainder really is a shadow. But the structured pair's errors nearly vanish, and for pair
-            32/71 they vanish <em>exactly</em>. At scale (200 sampled pairs,{' '}
-            <span className="gc-code">experiment_remainder_autonomy.py</span>): the median live structured
-            remainder scores <strong>1.000</strong> on held-out future with <strong>zero</strong> contradictions in
-            seventy thousand transitions &mdash; while visiting nearly every context it could express, so this is
-            not a frozen field coasting on repetition.
+            Click between the pairs and watch the red panel. For the static pair (110 &amp; 30), the shadow-rulebook
+            fails on roughly a third of all squares &mdash; and here's the damning detail from the full study:
+            giving it a wider window barely helps, because what it's missing isn't <em>nearby</em>, it's{' '}
+            <em>off-stage</em>, locked in the two covered-up histories. That remainder really is just a shadow.
+            But for the patterned pair the errors nearly vanish &mdash; and for the pair 32 &amp; 71 they vanish{' '}
+            <em>completely</em>: a perfect score on every tick of a future it was never shown, with zero
+            self-contradictions while learning. At scale (200 sampled pairs,{' '}
+            <span className="gc-code">experiment_remainder_autonomy.py</span>), the typical patterned remainder
+            scores a perfect 1.000 &mdash; while actively using nearly every five-square pattern it could express,
+            so this is not a frozen picture coasting on repetition.
           </p>
           <p style={pBody}>
-            Sit with what that means. In the structured regime, the disagreement between two processes{' '}
-            <strong>keeps its own law</strong>. You can throw away the parents and the orphan still knows how to
-            behave. That is a measurable, falsifiable definition of the thing this site keeps circling: a
-            relationship becomes a thing when its remainder closes over its own vocabulary. (Honesty clause: closed{' '}
-            <em>on its attractor</em> &mdash; the law is exact where the relationship actually lives, not over all
-            conceivable states.)
+            Stop and feel how strange that is. The question we had been circling all year turns out to be askable
+            in one sentence: <strong>under what conditions does a mere <em>view</em> of a system follow its own
+            rule &mdash; and can we recover that rule by watching?</strong> And the answer is: it depends on the
+            relationship. When two processes disagree like static, their disagreement stays a shadow &mdash; no law
+            to recover. When they disagree in an organized way, the disagreement <em>keeps its own law</em>, and
+            you can learn that law without ever seeing the processes underneath. (One honest fine-print line: the
+            recovered law is exact for every situation the remainder actually gets into &mdash; we can't promise it
+            for situations this particular run never visits.)
           </p>
         </section>
 
         {/* STOP 3 */}
         <section style={{ padding: '1.4rem 0', borderTop: '1px solid var(--rule)' }}>
           <div style={kicker}>stop 3</div>
-          <h2 style={h2Style}>The remainder is a soliton</h2>
+          <h2 style={h2Style}>Some remainders are travelers</h2>
           <p style={pBody}>
-            Then it got weirder. Dozens of structured pairs have remainders so simple they are{' '}
-            <em>elementary rules</em> &mdash; full 8-entry lookup tables, extracted from observation. And every
-            single one extracted came out as rule 170 or rule 240. Those are the two shifts. The relationship is a
-            wave: a pattern of disagreement that never changes shape, only glides.
+            Then it got weirder. For dozens of rule pairs, the recovered law came out so simple it fit in the same
+            8-line format as the original 256 rules &mdash; the shadow's law is itself <em>one of the rules of
+            this universe</em>. And every single time that happened, it was the same law: rule 170 or rule 240,
+            the two &ldquo;slide everything one square over&rdquo; rules. In other words: these remainders are
+            patterns of disagreement that never change shape at all. They only drift. Physicists have a word for a
+            wave that travels without changing shape &mdash; a <em>soliton</em>.
           </p>
           <SolitonDemo />
           <p style={{ ...pBody, marginTop: '1.1rem' }}>
-            We had a beautiful explanation ready: maybe these pairs satisfy an exact algebra, A&#8728;B equal to
-            B&#8728;A <em>up to translation</em> &mdash; order mattering only as a change of reference frame. It
-            was tested exhaustively over every state at n=12, and it is false for every pair. Zero for
-            thirty-four. The real mechanism is humbler and stranger: both orderings fall into{' '}
-            <em>traveling-wave attractors</em> of the same velocity, and the disagreement inherits the drift. The
-            wave isn't in the algebra. It's in where the dynamics settles &mdash; the relationship survives because
-            both parents surf.
+            We had a beautiful explanation ready, and it deserves a public funeral. The hope: maybe for these pairs,
+            doing A-then-B literally equals doing B-then-A and then sliding the whole row one square &mdash; order
+            mattering only as a change of viewpoint, like two people describing the same parade from opposite
+            curbs. Elegant, algebraic &mdash; and false. We checked it against every possible configuration at
+            small sizes: it holds for none of the 34 pairs. The true reason is humbler: each of the two histories,
+            run long enough, settles into a repeating pattern that <em>travels</em> &mdash; and two travelers
+            moving at the same speed disagree in a pattern that travels with them. The wave isn't in the algebra.
+            It's in where the dynamics comes to rest.
           </p>
         </section>
 
         {/* STOP 4 */}
         <section style={{ padding: '1.4rem 0', borderTop: '1px solid var(--rule)' }}>
           <div style={kicker}>stop 4</div>
-          <h2 style={h2Style}>Look with waves</h2>
+          <h2 style={h2Style}>Looking with waves</h2>
           <p style={pBody}>
-            If remainders drift, their portraits in wave-space should be lines. Take the 2D Fourier transform of
-            the whole space-time field &mdash; every spatial frequency crossed with every temporal frequency
-            &mdash; and coherent traveling structure collapses onto <em>dispersion lines</em> &omega; = v&middot;k,
-            whose slope is a velocity. Noise, by definition, fills the plane.
+            If remainders drift, there's a classic instrument for seeing it: the Fourier transform. Don't let the
+            name intimidate; the idea is a change of question. Instead of asking &ldquo;which squares are
+            on?&rdquo;, ask &ldquo;how much of this picture is made of <em>stripes</em> &mdash; for every possible
+            stripe spacing and every possible stripe speed?&rdquo; and lay the answers out as a new picture. A
+            pattern gliding at a steady speed answers &ldquo;a lot&rdquo; only along one straight line of that
+            picture (and the line's slope <em>is</em> the speed). Pure static answers &ldquo;a little&rdquo;
+            everywhere at once.
           </p>
           <SpectrumDemo />
           <p style={{ ...pBody, marginTop: '1.1rem' }}>
-            The structured remainder's power piles onto a few sharp lines &mdash; at scale, the median structured
-            pair puts <strong>97%</strong> of its spectral power into 1% of the bins; noisy pairs manage 9%. And
-            for the soliton pairs of stop 3, the line's slope reads <strong>exactly &plusmn;1.00 cells per
-            step</strong>, sign matching rule 170 versus 240: the spectrum reads the remainder's law straight off
-            the picture.
+            The patterned remainder's energy collapses onto a few sharp lines &mdash; in the full study, the
+            typical patterned pair packs <strong>97%</strong> of its energy into 1% of the picture, while static
+            pairs manage 9%. And for the traveler pairs of stop 3, the line's slope reads exactly one square per
+            tick, in the direction their recovered rule said. Two completely different instruments &mdash;
+            rulebook-learning and stripe-counting &mdash; agreeing about what the shadow is doing.
           </p>
           <p style={pBody}>
-            Fourier gave us one more gift, aimed at a different itch: <em>d&eacute;j&agrave; vu as an
-            instrument</em>. XOR a trajectory against a lagged, shifted copy of itself and scan all lags and
-            shifts &mdash; a rhyme spectrum. Wherever the field has a periodic background, some offset cancels it
-            perfectly, and what survives the cancellation is exactly the parts that <em>break</em> the pattern:
+            The same trick, turned inward, answers an old itch of ours about d&eacute;j&agrave; vu. Take a single
+            rule's history and slide a copy of it back in time and sideways in space, every possible amount, asking
+            each time: how well does the past line up with the present? Rule 110 &mdash; the most famous of the 256
+            &mdash; fills its world with a repeating background texture (aficionados call it the <em>ether</em>)
+            crossed by particle-like travelers (<em>gliders</em>). We told the search nothing about any of that:
           </p>
           <RhymeDemo />
           <p style={{ ...pBody, marginTop: '1.1rem' }}>
-            Nothing in that search knew rule 110 has an ether, or what its lattice vector is. The rhyme found it
-            blind and handed back the gliders. (Rule 30, the control, has no deep rhyme anywhere: its best offset
-            still leaves ~37% disagreement.) One sentence to keep: <strong>structure is having somewhere to rhyme
-            to.</strong>
+            The blind search finds the exact slide at which the wallpaper repeats &mdash; and subtracting that echo
+            cancels the wallpaper and hands back <em>only the gliders</em>, the parts that break the pattern. (Rule
+            30, our control, has no repeating background: its best echo still leaves ~37% disagreement. Nothing
+            cancels because nothing repeats.) The sentence we kept from this stop: <strong>structure is having
+            somewhere to rhyme to.</strong>
           </p>
         </section>
 
         {/* STOP 5 */}
         <section style={{ padding: '1.4rem 0', borderTop: '1px solid var(--rule)' }}>
           <div style={kicker}>stop 5</div>
-          <h2 style={h2Style}>Weigh everything</h2>
+          <h2 style={h2Style}>Weighing everything</h2>
           <p style={pBody}>
-            A night this strange deserves bookkeeping. For every rule and every quantity this site cares about
-            &mdash; live cells, absential halo, void, footprint, activity &mdash; we checked <em>exact</em>{' '}
-            conservation over every state, exhaustively, at two ring sizes
-            (<span className="gc-code">experiment_conservation_kinematics.py</span>). The atlas came back with
-            jewelry in it:
+            A night this strange deserves bookkeeping, so we did some accounting on all 256 rules. For each one we
+            asked: as the picture evolves, what stays <em>exactly</em> constant, for every possible starting row?
+            The count of on-squares? The count of <strong>halo</strong> squares (off, but right next to an on
+            square &mdash; the one-square-thick fringe around every pattern)? The count of squares that change
+            per tick? This is checked by brute force over every configuration, so the answers are theorems, not
+            observations. Three jewels came back:
           </p>
           <ul style={{ ...pBody, paddingLeft: '1.2em' }}>
             <li style={{ marginBottom: '0.5em' }}>
-              Mass conservers: <RuleList rules={CONSERVERS.live} /> &mdash; the known number-conserving five. Halo
-              conservers: <RuleList rules={CONSERVERS.absential} /> &mdash; note the pattern: each mass-conserver's
-              vacuum-filling twin (its rule number XOR 1). Rule 184 conserves mass but not halo; its twin 185
-              conserves halo but not mass.
+              Exactly five rules never change their on-count: <RuleList rules={CONSERVERS.live} /> (a known
+              classic, and our sanity check). But the rules that never change their <em>halo</em> count are{' '}
+              <RuleList rules={CONSERVERS.absential} /> &mdash; and the pattern in that list is exact: it's the
+              conservers again, each optionally modified in a single table line (the one that decides whether an
+              empty, isolated square turns on). Rule 184 preserves its mass but not its halo; its one-line-different
+              twin 185 preserves the halo but not the mass.
             </li>
             <li style={{ marginBottom: '0.5em' }}>
-              Activity conservers: <RuleList rules={CONSERVERS.activity} /> &mdash; <em>exactly</em> the six
-              universally reversible rules. Conserved rate-of-change and reversibility are the same short list.
+              The rules whose <em>rate of change</em> is constant are exactly <RuleList rules={CONSERVERS.activity} />{' '}
+              &mdash; precisely the six rules known to be perfectly reversible. Two lists compiled for different
+              reasons, and they coincide, member for member.
             </li>
             <li>
-              And one loner: rule 236 conserves its <em>silhouette</em> while growing &mdash;
+              And one loner, rule 236, conserves its <em>outline</em> while growing inside it:
             </li>
           </ul>
           <SilhouetteDemo />
           <p style={{ ...pBody, marginTop: '1.1rem' }}>
-            For the record, because negative results are load-bearing here: we also measured mass, halo, activity
-            and velocity for the whole Life bestiary, and E=mc&sup2; did <em>not</em> fall out &mdash; still lifes
-            have zero activity, oscillators have internal energy at rest, and no clean invariant ties E to
-            m&middot;v across the spaceships. The speed of light, though, is not a metaphor in this universe: c is
-            one cell per step, exactly, with Life's proven c/2 and c/4 ship limits sitting obediently under it.
+            For the record, because our negative results are load-bearing: we also measured mass, halo, speed and
+            activity for the classic bestiary of Conway's Game of Life (the 2D cousin of these rules), hunting for
+            a clean energy law &mdash; and E=mc&sup2; did <em>not</em> fall out. Still objects here have zero
+            activity; blinking objects have activity while standing still; no tidy formula ties it together yet.
+            What <em>is</em> literal in this universe: a speed limit. Influence propagates at most one square per
+            tick &mdash; a true speed of light, with Life's famous spaceships provably capped at half and a
+            quarter of it.
           </p>
         </section>
 
         {/* STOP 6 */}
         <section style={{ padding: '1.4rem 0', borderTop: '1px solid var(--rule)' }}>
           <div style={kicker}>stop 6</div>
-          <h2 style={h2Style}>Turn the coupling knob</h2>
+          <h2 style={h2Style}>How much coupling does a pattern need?</h2>
           <p style={pBody}>
-            The pre-hoc result elsewhere on this site was binary: couple two layers of boring rules and structure
-            appears. Binary results hide dials. So: gate the coupling through a mask of density &alpha; &mdash;
-            at 0 the layers are strangers, at 1 the full emergent system &mdash; and ask <em>how much coupling
-            emergence needs</em>. Two ways to be partially coupled: <strong>quenched</strong> (some cells are
-            permanently deaf) and <strong>annealed</strong> (every cell flickers).
+            One more construction, explained from scratch. Elsewhere on this site we found rule pairs with a
+            party trick: run <em>two</em> rows side by side, and give every square one extra input &mdash; a
+            listening line to the square directly across from it in the other row, which selects which of two
+            tables the square consults this tick. Choose the four tables right and something remarkable happens:
+            four rules that are each utterly boring alone (they freeze or blink) produce rich, persistent
+            patterns when wired together. The structure lives entirely in the <em>coupling</em>.
+          </p>
+          <p style={pBody}>
+            That's an all-or-nothing fact, and all-or-nothing facts hide dials. So: turn the listening down.
+            Connect only a fraction of the lines and ask how much coupling the pattern actually needs. Two very
+            different ways to be partially connected: cut some lines <em>permanently</em> (some squares are just
+            deaf), or make every line <em>flicker</em> (each square's connection randomly drops in and out, tick
+            by tick, same average).
           </p>
           <CouplingChart />
           <CouplingTriptych />
           <p style={{ ...pBody, marginTop: '1.1rem' }}>
-            The prediction was a phase transition at some critical &alpha;. Wrong, in the most instructive way.
-            Quenched deafness barely matters: one permanently deaf cell in a hundred costs <em>nothing</em>, and
-            structure degrades gracefully all the way down. But flickering is catastrophic: at &alpha; &asymp; 0.85
-            the system is indistinguishable from noise &mdash; <em>worse</em> than no coupling at all &mdash; and
-            order snaps back only at exactly &alpha; = 1. Intermittency in the coupling channel behaves like
-            temperature. The lesson reads like it was written for people rather than automata:{' '}
-            <strong>structure isn't bought with the amount of coupling; it's bought with its fidelity.</strong> An
-            unreliable relationship is worse than none.
+            We expected a tipping point &mdash; some critical fraction where structure switches on. Wrong, in the
+            most instructive way. Permanent deafness is almost harmless: cut one line in a hundred and nothing is
+            lost; cut a third of them and the pattern is dented but alive. Flicker is what kills. At 85%
+            flickering connectivity &mdash; <em>more</em> total listening than the dented-but-alive case &mdash;
+            the system is indistinguishable from static, and order returns only when the flickering stops
+            entirely. An intermittent connection isn't a weaker connection; it's a noise source. The lesson reads
+            like it was written for people rather than automata: <strong>what builds structure isn't how much
+            coupling you have &mdash; it's whether the coupling can be trusted.</strong>
           </p>
         </section>
 
         {/* STOP 7 */}
         <section style={{ padding: '1.4rem 0', borderTop: '1px solid var(--rule)' }}>
           <div style={kicker}>stop 7</div>
-          <h2 style={h2Style}>Zoom out until it rhymes</h2>
+          <h2 style={h2Style}>Zooming out until it rhymes</h2>
           <p style={pBody}>
-            Last stop, longest lens. Call rule B a <em>coarse image</em> of rule A if watching A through a blur
-            &mdash; two cells merged into one, two steps into one &mdash; is exactly B. This is renormalization,
-            done to 8-bit rules, and it's small enough here to do <em>exhaustively</em>: every rule, every block
-            map, every state, all hits re-verified at a larger size
-            (<span className="gc-code">experiment_scale_rhyme.py</span>). Some rules turn out to be their own
-            coarse image. Watch:
+            Last stop, longest lens. Take any rule's history and <em>squint</em>: merge each pair of neighboring
+            squares into one, and keep only every other tick &mdash; a half-resolution summary of the same events.
+            Now ask a precise question: is there a rule whose ordinary behavior is exactly what this summary shows?
+            When the answer is the <em>same rule you started with</em>, the rule is scale-invariant &mdash; it
+            looks like itself from twice as far away. This universe is small enough that we could check every
+            rule, every way of merging, every configuration, exhaustively. Watch what that means for rule 90:
           </p>
           <ScaleDemo />
           <p style={{ ...pBody, marginTop: '1.1rem' }}>
-            Same picture. Not similar &mdash; <em>same</em>, verified state-by-state. Rule 90 draws a fractal{' '}
-            <em>because</em> it is a fixed point of coarse-graining; the self-similarity you can see is a theorem
-            you can check. And the full list of fixed points lands with a thud: the affine family{' '}
-            <RuleList rules={FIXED_POINTS.affine} />, the shifts <RuleList rules={FIXED_POINTS.shifts} />, and the
-            absorbing sponges <RuleList rules={FIXED_POINTS.absorbing} />. The affine rules are this site's
-            oldest characters &mdash; the crystals, the ones whose commutator is constant. The crystals are also
-            the scale-invariant ones. And Class IV &mdash; the interesting, alive-looking rules &mdash; appears
-            nowhere on the list. <strong>Complexity doesn't live at the fixed points. It lives in the flow between
-            them.</strong>
+            Same picture. Not <em>similar</em> &mdash; the same, square for square, and the exhaustive check
+            proves it's no accident of this run. Rule 90 draws an endlessly nested triangle <em>because</em>{' '}
+            zooming out is a symmetry it possesses; the fractal is what that symmetry looks like. The full list of
+            self-similar rules turned out to be short and pointed: <RuleList rules={FIXED_POINTS.affine} /> (the
+            &ldquo;crystal&rdquo; family &mdash; the rules this site's oldest theorem singled out as perfectly
+            orderly, whose remainders are always constant), plus the trivial sliders and copiers{' '}
+            <RuleList rules={FIXED_POINTS.shifts} />, plus a family of rules that only ever fill in and absorb{' '}
+            <RuleList rules={FIXED_POINTS.absorbing} />. And the celebrated complex rules &mdash; 110 and its kin,
+            the ones that look most alive &mdash; are <em>nowhere on the list</em>. Perfect order survives any
+            zoom. Complexity lives at particular scales, in the space between the things that don't change.
           </p>
         </section>
 
@@ -798,21 +914,22 @@ export default function Remainder() {
           <div style={kicker}>coda</div>
           <h2 style={h2Style}>What we're holding now</h2>
           <p style={pBody}>
-            Walk back through the stops and notice they were one sentence the whole time. A relationship leaves a
-            remainder. In the structured regime the remainder <em>keeps its own law</em> &mdash; sometimes so
-            perfectly it is simply another rule, a wave with a velocity Fourier can read. Its bookkeeping has
-            conservation laws. Its coupling demands fidelity, not quantity. And the whole picture repeats across
-            scale exactly for the rules that have stopped being interesting &mdash; the crystals &mdash; while
-            everything alive lives in between.
+            Walk it back and it was one thought the whole way. Two processes, run against each other, leave a
+            remainder &mdash; a picture of their relationship and nothing else. Usually that picture is what it
+            ought to be: a shadow. But under conditions we can now name and test, the shadow closes up and keeps
+            a law of its own &mdash; sometimes a law so crisp it's just another rule of the same universe, a wave
+            with a speed you can read off a stripe-chart. Relationships, here, can be <em>things</em>: with laws,
+            with conserved quantities, with a demand for faithful coupling, embedded in a world where perfect
+            order is scale-free and everything interesting is not.
           </p>
           <p style={pBody}>
-            The door this opens is the one we haven't walked through yet: if the remainder of two rules can{' '}
-            <em>be</em> a rule, then &ldquo;taking the relationship&rdquo; is an operation &mdash; R(A,B) &mdash;
-            and rule space is partially closed under it. Does R iterate? Does it have fixed points? Is any pair's
-            remainder Class IV &mdash; a relationship whose own physics is complex? Nobody knows. The instruments
-            are all on the <a href="explorer.html" style={{ color: 'var(--accent)' }}>explorer</a> page, and the
-            receipts are in <span className="gc-code">NOTES.md &sect;9</span> and{' '}
-            <span className="gc-code">scripts/</span>.
+            And the door we haven't opened yet is right there in the phrasing. If the remainder of two rules can
+            itself <em>be</em> a rule, then &ldquo;take the relationship&rdquo; is an operation: feed in two
+            rules, get a third. Does applying it again and again settle somewhere? Is there a pair whose
+            relationship is as complex as rule 110 itself &mdash; a shadow with an inner life? Nobody knows. The
+            instruments are on the <a href="explorer.html" style={{ color: 'var(--accent)' }}>explorer</a> page;
+            the receipts are in <span className="gc-code">NOTES.md &sect;9</span> and{' '}
+            <span className="gc-code">scripts/</span>. The walk continues.
           </p>
         </section>
       </main>
