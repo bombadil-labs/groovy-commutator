@@ -93,6 +93,17 @@ def main() -> None:
 
     df = pd.DataFrame(rows)
     df.to_csv(ROOT / "results" / "critical_coupling.csv", index=False)
+
+    import json
+    site = {}
+    for (ex, mode), grp in df.groupby(["example", "mode"]):
+        site.setdefault(ex, {})[mode] = dict(
+            alpha=[float(a) for a in grp.alpha],
+            comp=[float(c) for c in grp.comp_median],
+        )
+    (ROOT / "site" / "src" / "data" / "critical_coupling.json").write_text(
+        json.dumps(dict(n=N, steps=STEPS, seeds=SEEDS, curves=site), indent=1))
+
     for (ex, mode), grp in df.groupby(["example", "mode"]):
         print(f"\n{ex}  [{mode}]   alpha: comp (var) | spec")
         for r in grp.itertuples():

@@ -67,6 +67,7 @@ const NAV_PAGES = [
   { href: 'index.html', label: 'Home' },
   { href: 'concepts.html', label: 'Concepts' },
   { href: 'questions.html', label: 'Questions' },
+  { href: 'remainder.html', label: 'The Walk' },
   { href: 'explorer.html', label: 'Explorer', active: true },
 ];
 
