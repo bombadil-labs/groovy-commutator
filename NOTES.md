@@ -513,3 +513,84 @@ born-popcount (1.00 → 0.00), mean born-popcount 4.5 → 2.6, stable
 ~283-rule polyculture on 4,096 cells. The selection-for-quiescence
 pressure now stands across: three variation mechanisms, five lattice
 sizes, and two dimensions. What it still isn't: a proven mechanism.
+
+
+## 9. The jam session: five cycles on the remainder, Fourier, sizes, coupling, and scale
+
+One sitting, five ideate->run cycles (2026-07-03, scripts:
+experiment_remainder_autonomy / remainder_rules / fourier /
+conservation_kinematics / critical_coupling / scale_rhyme). What survived:
+
+**1. The remainder has its own physics (the thing-ness criterion).** Fit
+the best deterministic local rule to a pair's disagreement-field
+transitions and score held-out accuracy. Live structured remainders are
+observationally CLOSED — median test accuracy 1.000, zero contradiction
+mass, ~29/32 radius-2 contexts visited — while noisy remainders are
+irreducibly OPEN (median 0.74; 27% of transition mass contradicts any
+deterministic local rule; widening the radius doesn't help because the
+missing information lives in the hidden substrates). "When does a
+relationship become a thing" now has a local, measurable answer: when its
+remainder field closes over its own vocabulary. Dozens of structured
+pairs are exactly ELEMENTARY, and every elementary remainder found is
+rule 170 or 240 — the shifts. The relationship is a soliton. Mechanism
+(exhaustive, n=12): not the algebraic identity A∘B = σ∘B∘A (0/34 pairs);
+the pair's round map acts as a pure shift on its reachable attractor —
+both orderings ride traveling waves of shared velocity and the
+disagreement inherits the drift. Caveat: closure is exact ON THE
+ATTRACTOR, not over all of state space.
+
+**2. Fourier brings dispersion relations.** The 2D space-time power
+spectrum turns regime language into wave language: structured
+disagreement fields put ~97% of non-DC power into 1% of bins (they ARE a
+few dispersion lines); noisy fields are white (~9%). The shift-remainder
+pairs' spectra are razor lines of slope exactly ±1.00 cells/step, sign
+matching remainder 170 vs 240 — the spectrum reads cycle 1's remainder
+rule. And the rhyme spectrum R[k,s] = density(S(t) XOR σ_s S(t-k)) — déjà
+vu as an instrument — finds rule 110's ether lattice vector blind and
+leaves a 0.13-density residue of gliders (rule 30 control: no deep rhyme
+anywhere, 0.375). Structure is having somewhere to rhyme to.
+
+**3. The conservation atlas (Noetherpoetics, checkable form).** Exact
+conservation of each observable, all 256 rules, exhaustive at n=12 and
+13: live-count conservers = the known number-conserving five (anchor);
+absential conservers have exact bit-flip structure (the movers with or
+without the 000->1 vacuum-filling bit — 184 conserves mass but not halo,
+185 halo but not mass); rule 236 conserves its SILHOUETTE while growing;
+activity conservers are exactly the six universally reversible rules —
+the same six from the memory-variants result. Kinematics: E=mc² does not
+fall out of the Life bestiary (still lifes have zero activity; E/(mv) is
+not constant across spaceships), but c is literal (light cone, with
+Life's proven c/2 and c/4 limits) and the (m, halo, E, v) table is now
+data.
+
+**4. Coupling: fidelity beats quantity.** Gate the pre-hoc fourth input
+through a mask of density α. Quenched (fixed dry sites): no critical α;
+graceful degradation (one dry cell in 100 costs nothing). Annealed
+(flickering): re-entrant — small intermittent coupling lifts structure,
+α≈0.85 is indistinguishable from noise, and exactly at α=1.0 order snaps
+back (comp 1.0 -> 0.45). Temporal randomness in the coupling channel is
+temperature; an unreliable relationship is worse than none; order returns
+discontinuously at perfect fidelity. (The 137 lesson, in eight bits: what
+matters about a coupling constant here isn't its size but whether the
+coupling can be trusted.)
+
+**5. Scale-rhyme (RG for ECA).** Exhaustive block-2 semi-conjugacy search
+(h(A²(s)) == B(h(s)) for every state, n=12, all hits re-verified at
+n=16): 276 nontrivial coarse-graining relations; 72 rules have some
+nontrivial coarse image; the most common images are absorbing rules. The
+16 SELF-SIMILAR rules — fixed points of the renormalization step — are
+exactly the affine family {60, 90, 102, 150, 153, 165, 195}, the
+shifts/identity {170, 204, 240}, and the monotone/absorbing family
+{128, 136, 192, 238, 252, 254}. The affine theorem's crystals are also
+the scale-invariant rules: rule 90 draws a fractal BECAUSE it is an RG
+fixed point. Class IV is absent — complexity lives in the flow between
+fixed points, not at them. (Israeli & Goldenfeld 2004-06 is the
+literature home of CA coarse-graining; this is the exhaustive block-2
+atlas in our framework.)
+
+Open doors left ajar: the remainder operator R(A,B) as a partial binary
+operation on rule space (is there an algebra of relationships — does R
+iterate, does it have fixed points?); the mechanism of annealed
+re-entrance; dispersion-line extraction as a general particle detector;
+whether any pair's remainder is exactly Class IV (a relationship whose
+own physics is complex).
