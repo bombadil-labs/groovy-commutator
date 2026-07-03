@@ -312,10 +312,14 @@ section 6 for the full writeup and citations.
 - `results/` — sweep outputs (parquet/csv) and generated figures. Treat
   this as data, not scratch space — name files so it's clear what
   parameters produced them (rule range, seed count, date if it matters).
-- `site/` — the GitHub Pages site's source (React + Vite, four pages:
-  home/concepts/questions/explorer — the questions page was called
-  "findings" before a copy pass restructured it around named questions
-  each answered by embedded data, per the confidence-labeling convention).
+- `site/` — the GitHub Pages site's source (React + Vite, five pages:
+  home/concepts/questions/remainder/explorer — the questions page was
+  called "findings" before a copy pass restructured it around named
+  questions each answered by embedded data, per the confidence-labeling
+  convention; `remainder.html` ("The Walk" in the nav) is a narrative
+  guided tour of the jam-session findings (NOTES.md §9) whose demos all
+  compute live in-browser, quoting at-scale statistics from the
+  experiment scripts).
   `site/src/lib/groovy-engine.js` is a hand-ported JS mirror of
   `src/groovy/*.py` (1D functions) plus a 2D Life-like extension the
   Python package doesn't have yet — if you change the Python math, update

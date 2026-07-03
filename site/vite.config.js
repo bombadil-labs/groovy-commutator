@@ -23,6 +23,7 @@ export default defineConfig({
         home: resolve(__dirname, 'index.html'),
         concepts: resolve(__dirname, 'concepts.html'),
         questions: resolve(__dirname, 'questions.html'),
+        remainder: resolve(__dirname, 'remainder.html'),
         explorer: resolve(__dirname, 'explorer.html'),
       },
     },
