@@ -6,10 +6,14 @@ import InstrumentViewer from './InstrumentViewer.jsx';
 import RunSig from './RunSig.jsx';
 import { buildSeedUrl } from '../lib/exploreSeed.js';
 
-// Run signatures (see the #run section): every field states which gauge it
-// is and whose orbit it rides. 𝟙 is the identity map (NOT integration I --
+// Run signatures (see the #run section): a field states which gauge it is
+// and whose orbit it rides. 𝟙 is the identity map (NOT integration I --
 // see the #run section's aside); base strings like 'E_110' render with
-// subscripts via RunSig.
+// subscripts via RunSig. Badges appear only from the #run section down --
+// earlier viewers stay unsigned so the notation is never shown before the
+// page defines it. Gauges on this page always share the base's rule, so
+// badge gauges omit the rule slot ('D', not 'D(·,110)'); the Explorer,
+// where the slots can genuinely differ per card, spells them out.
 const sigRaw = (r) => ({ gauge: '\u{1D7D9}', base: `E_${r}` });
 const sigGauge = (g, r) => ({ gauge: g, base: `E_${r}` });
 
@@ -137,7 +141,6 @@ function ClassExamples() {
           <div className="gc-mono" style={{ fontSize: '0.7rem', color: 'var(--ink-soft)', marginTop: '0.3rem', textAlign: 'center' }}>
             Class {ex.cls} &middot; rule {ex.rule}
           </div>
-          <div style={{ marginTop: '0.25rem', textAlign: 'center' }}><RunSig sig={sigRaw(ex.rule)} /></div>
         </div>
       ))}
     </div>
@@ -582,10 +585,10 @@ export default function Concepts() {
       for (let i = 0; i < row.length; i++) out[i] = (row[i] || absField[t][i]) ? 0 : 1;
       return out;
     });
-    // The #run section's engine-stance field: U[t] = (D∘E)^{t+1}(S0) XOR
+    // The #run section's engine field: U[t] = (D∘E)^{t+1}(S0) XOR
     // (E∘D)^{t+1}(S0) -- the same two composites as the G gallery, but each
     // iterated on its OWN output (run(F, F)) instead of measured along E's
-    // orbit. Row 0 equals G(S0) exactly; the stances then part ways.
+    // orbit. Row 0 equals G(S0) exactly; the two constructions then part ways.
     const { applyRule, D: Dop, C: Cop, orbit } = engineRef.current;
     const deMap = (s) => Dop(applyRule(s, rule), rule);   // D o E
     const edMap = (s) => applyRule(Dop(s, rule), rule);   // E o D
@@ -963,8 +966,8 @@ export default function Concepts() {
             </p>
             <InstrumentViewer
               items={[
-                { label: L_E, sig: sigRaw(rule), field: computed && computed.raw, color: ON_COLOR },
-                { label: L_D, sig: sigGauge(`D(·,${rule})`, rule), field: computed && computed.d, color: ACCENT },
+                { label: L_E, field: computed && computed.raw, color: ON_COLOR },
+                { label: L_D, field: computed && computed.d, color: ACCENT },
               ]}
               exploreHref={buildSeedUrl([
                 { id: 1, type: 'source', dim: '1d', rule, ic: initState, steps: STEPS, color: EXPLORE_COLORS.cream },
@@ -996,31 +999,18 @@ export default function Concepts() {
               are the same move, XOR, asked of two different questions.
             </p>
 
-            <h3 style={h3Style}>Siblings, and the do-nothing map</h3>
+            <h3 style={h3Style}>The rule slot</h3>
             <p style={pBody}>
               One bookkeeping point that pays off later. Nothing above is circular: everything bottoms out in the
               lookup table &phi;. <code className="gc-code">E</code> and <code className="gc-code">D</code> are{' '}
               <em>siblings</em>, each defined directly from &phi; &mdash; written with the rule slot explicit,{' '}
               <code className="gc-code">E(S,&phi;) = &phi;(S)</code> and{' '}
               <code className="gc-code">D(S,&phi;) = S &oplus; &phi;(S)</code> &mdash; and the elegant relations
-              between them (<code className="gc-code">E = I(S, D(S))</code> above) are <em>lemmas</em>, derived
-              facts, not definitions. Writing the rule slot out also names something quietly important: D never was
-              a one-argument operation. Any rule can fill that slot, not just the one generating the picture &mdash;
-              which is exactly why the <a href="explorer.html" style={{ color: 'var(--accent)' }}>explorer</a>'s D
-              card asks you for a rule.
-            </p>
-            <div style={formulaBlock}>
-              <div style={{ display: 'flex', justifyContent: 'space-between', gap: '1rem', margin: '0.15em 0' }}><span>&#120793;(S) = S</span><span style={{ color: 'var(--ink-soft)', fontSize: '0.7rem' }}>the do-nothing map (identity)</span></div>
-              <div style={{ display: 'flex', justifyContent: 'space-between', gap: '1rem', margin: '0.15em 0' }}><span>E(S,&phi;) &oplus; D(S,&phi;) = &#120793;(S)</span><span style={{ color: 'var(--ink-soft)', fontSize: '0.7rem' }}>lemma: the siblings XOR to the identity</span></div>
-            </div>
-            <p style={pBody}>
-              <code className="gc-code">&#120793;</code> returns its input unchanged &mdash; a photocopier. It earns
-              a name because it has the same State &rarr; State shape as <code className="gc-code">E</code> and{' '}
-              <code className="gc-code">D</code>, so it can sit anywhere they sit; the next two sections put it to
-              work. Careful with one near-miss: <code className="gc-code">&#120793;</code> is not{' '}
-              <code className="gc-code">I</code>. Integration is a real operation that merely <em>happens</em> to be
-              trivial here; <code className="gc-code">&#120793;</code> is trivial by definition. Two different
-              reasons for doing nothing.
+              between them (<code className="gc-code">E = I(S, D(S))</code> above) are derived facts, not
+              definitions. Writing the slot out names something quietly important: D never was a one-argument
+              operation. Any rule can fill that slot, not just the one that generated the state &mdash; which is
+              exactly why the <a href="explorer.html" style={{ color: 'var(--accent)' }}>explorer</a>'s D card asks
+              you for a rule.
             </p>
           </section>
 
@@ -1058,7 +1048,7 @@ export default function Concepts() {
               Here is a question this page has never asked out loud: when a diagram shows{' '}
               <code className="gc-code">D(S)</code> row after row, row after row <em>of what</em>? Not of D's own
               output &mdash; each row is D applied to a fresh state pulled from somewhere else. That somewhere else
-              is an invisible parameter, and naming it takes a short ladder plus two definitions.
+              is an invisible parameter. Naming it takes a short ladder and two new words.
             </p>
             <div style={formulaBlock}>
               <div style={{ display: 'flex', justifyContent: 'space-between', gap: '1rem', margin: '0.15em 0' }}><span>&phi;</span><span style={{ color: 'var(--ink-soft)', fontSize: '0.7rem' }}>a table &mdash; eight facts, knows nothing of rings or time</span></div>
@@ -1077,69 +1067,55 @@ export default function Concepts() {
               &mdash; row t of its orbit.
             </p>
             <div style={formulaBlock}>
+              <div style={{ display: 'flex', justifyContent: 'space-between', gap: '1rem', margin: '0.15em 0' }}><span>&#120793;(S) = S</span><span style={{ color: 'var(--ink-soft)', fontSize: '0.7rem' }}>the do-nothing map: reports its input unchanged</span></div>
               <div style={{ display: 'flex', justifyContent: 'space-between', gap: '1rem', margin: '0.15em 0' }}><span>run(gauge, base, S<sub>0</sub>)<sub>t</sub> = gauge(base<sup>t</sup>(S<sub>0</sub>))</span><span style={{ color: 'var(--ink-soft)', fontSize: '0.7rem' }}>one map walks, another watches</span></div>
+            </div>
+            <p style={pBody}>
+              <strong>run</strong> takes two maps and splits the work between them. The <strong>base</strong> does
+              the walking: it owns the orbit, and it's the only thing that gets the exponent. The{' '}
+              <strong>gauge</strong> watches: it's evaluated once on each footprint, and its answers are the rows
+              you actually see. The do-nothing map <code className="gc-code">&#120793;</code> earns its name here
+              &mdash; make it the gauge, and the run just reports the footprints themselves. That's what every raw
+              CA diagram on this page has been all along: <RunSig sig={sigRaw(rule)} />. And the D panel from the
+              calculus section is <RunSig sig={sigGauge('D', rule)} /> &mdash; same walk, different watcher. From
+              here down, every field on this page carries a badge like those two, naming its gauge and its base.
+              (One near-miss to dodge: <code className="gc-code">&#120793;</code> is not the integration{' '}
+              <code className="gc-code">I</code> from above. I is XOR, a real operation that happens to be simple;
+              &#120793; just copies.)
+            </p>
+            <div style={formulaBlock}>
               <div style={{ display: 'flex', justifyContent: 'space-between', gap: '1rem', margin: '0.15em 0' }}><span>engine(F) = run(F, F)</span><span style={{ color: 'var(--ink-soft)', fontSize: '0.7rem' }}>reflexive: the map is its own base</span></div>
             </div>
             <p style={pBody}>
-              <strong>run</strong> takes two maps. The <strong>base</strong> owns the orbit &mdash; it does the
-              walking, and it's the only thing that gets the exponent. The <strong>gauge</strong> rides along,
-              evaluated once on each footprint. Every picture on this page is a run, including the ones that came
-              before these words existed: the raw diagram is <RunSig sig={sigRaw(rule)} /> &mdash; the do-nothing
-              gauge from the calculus section, finally at work, reporting the footprints themselves &mdash; and the
-              D panel you've seen in three sections is <RunSig sig={sigGauge(`D(·,${rule})`, rule)} />. From here
-              down, every field on this page carries a badge like those two, stating its gauge and its base. The
-              badge answers the question the pictures never used to ask: same gauge, different base &mdash;
-              different picture.
+              <strong>engine</strong> is the reflexive case: make a map the base of its own run, so every row is
+              the map fed its own previous output. For plain <code className="gc-code">E</code> that adds nothing
+              &mdash; <code className="gc-code">run(E, E)</code> is just the orbit again, shifted one row, which is
+              exactly why the base could stay invisible for so long: in the plainest picture, walking and watching
+              are the same act. It becomes a genuinely different thing when the map is a <em>composite</em>.{' '}
+              <code className="gc-code">E(D(S))</code> measured along E's orbit and{' '}
+              <code className="gc-code">E(D(S))</code> iterated on its own output are two different pictures &mdash;
+              same map, same XORs, different thing doing the walking.
             </p>
             <p style={pBody}>
-              And <strong>engine</strong> is the reflexive case: feed a map its <em>own</em> output &mdash; make it
-              the base of its own run. For a single rule that's nothing new (<code className="gc-code">run(E, E)</code>{' '}
-              is just the orbit again, shifted one row &mdash; which is exactly why the base could stay invisible
-              this long: for the plainest picture, riding-along and walking are the same act). It becomes a
-              genuinely different thing when the map is a <em>composite</em>. <code className="gc-code">E(D(S))</code>{' '}
-              measured along E's orbit and <code className="gc-code">E(D(S))</code> iterated on its own output are
-              two different constructions &mdash; same map, same XORs, different placement of the exponent.
-            </p>
-            <div style={formulaBlock}>
-              <div style={{ display: 'flex', justifyContent: 'space-between', gap: '1rem', margin: '0.15em 0' }}><span>run(f &oplus; g, base) = run(f, base) &oplus; run(g, base)</span><span style={{ color: 'var(--ink-soft)', fontSize: '0.7rem' }}>gauges: linear, always</span></div>
-              <div style={{ display: 'flex', justifyContent: 'space-between', gap: '1rem', margin: '0.15em 0' }}><span>engine(f &oplus; g) &ne; engine(f) &oplus; engine(g)</span><span style={{ color: 'var(--ink-soft)', fontSize: '0.7rem' }}>engines: reflexivity breaks it</span></div>
-            </div>
-            <p style={pBody}>
-              This is how the boolean calculus meets the run: XOR passes freely through any gauge&mdash;the picture
-              of f&oplus;g is the picture of f XORed with the picture of g, row for row, always. Engines shred that,
-              and the calculus's own operators are the minimal counterexample: the lemma above says{' '}
-              <code className="gc-code">E &oplus; D = &#120793;</code> as maps, so{' '}
-              <code className="gc-code">engine(E &oplus; D)</code> is the frozen seed row repeated forever &mdash;
-              but <code className="gc-code">engine(E) &oplus; engine(D)</code> is alive, disagreeing with that
-              frozen row on roughly half its cells. Same maps, same XOR; the gauge stance respects the algebra, the
-              engine stance doesn't. (Verified, along with everything else this section claims, in{' '}
-              <code className="gc-code">scripts/experiment_run_calculus.py</code>.)
-            </p>
-            <p style={pBody}>
-              Watch it happen. Below, the same two composites &mdash; D&#8728;E and E&#8728;D, the commutator's two
-              ingredients &mdash; XORed against each other in both stances, from one shared seed. As gauges riding
-              E's orbit they make <code className="gc-code">G</code>, the commutator gallery two sections down. As
-              engines they make a field called <code className="gc-code">U</code>. The two panels agree on their
-              first row exactly (<code className="gc-code">U<sub>0</sub> = G(S<sub>0</sub>)</code> &mdash; the
-              stances coincide for precisely one step, which is why they were so easy to conflate), then go their
-              separate ways:
+              Watch the difference. Below, the same two composites &mdash; D&#8728;E and E&#8728;D, the two
+              ingredients of the commutator &mdash; XORed against each other both ways, from one shared seed. As
+              gauges riding E's orbit, they make <code className="gc-code">G</code>, the Groovy Commutator, three
+              sections down. As engines, each walking on its own output, they make a different field called{' '}
+              <code className="gc-code">U</code>. The two panels agree on their first row exactly, then part ways:
             </p>
             <InstrumentViewer
               items={[
-                { label: 'G — the gauge stance', sig: { text: 'run(D∘E, E_' + rule + ') ⊕ run(E∘D, E_' + rule + ')' }, field: computed && computed.g, color: 'oklch(0.5 0.13 300)' },
-                { label: 'U — the engine stance', sig: { text: 'engine(D∘E) ⊕ engine(E∘D)' }, field: computed && computed.u, color: 'oklch(0.6 0.15 22)' },
+                { label: "G — gauges riding E's orbit", sig: { text: 'run(D∘E, E_' + rule + ') ⊕ run(E∘D, E_' + rule + ')' }, field: computed && computed.g, color: 'oklch(0.5 0.13 300)' },
+                { label: 'U — engines, self-fed', sig: { text: 'engine(D∘E) ⊕ engine(E∘D)' }, field: computed && computed.u, color: 'oklch(0.6 0.15 22)' },
               ]}
             />
             <p style={{ ...pBody, marginTop: '1.1rem' }}>
-              Try rule 90 in the panel above: both fields go flat &mdash; for affine rules the two stances agree
-              forever, another face of the affine theorem below. For most rules they don't, and the engine stance
-              opens a question the gauge stance can't even pose: since XOR doesn't pass through engines for free,{' '}
-              <em>when does the XOR of two engine runs follow a rule of its own anyway?</em> That question &mdash;
-              whether a shadow can carry its own physics &mdash; is{' '}
-              <a href="remainder.html" style={{ color: 'var(--accent)' }}>The Walk</a>, this site's current research
-              frontier. (One honest caveat about the vocabulary: the explorer's transform cards build gauges, and
-              its source cards are engines whose map happens to be one of the 256 elementary rules &mdash; an
-              engine of a <em>composite</em> can't be built there yet.)
+              Try rule 90 in the panel above: both fields go flat &mdash; for affine rules the two constructions
+              agree forever, one more face of the affine theorem coming up. For most rules they disagree, and what
+              that engine field does next &mdash; whether the disagreement between two engines can follow a rule of
+              its own &mdash; is <a href="remainder.html" style={{ color: 'var(--accent)' }}>The Walk</a>, this
+              site's research frontier. Nothing below needs any of that. What everything below does use is the
+              badge vocabulary: one map walks, another watches, and every picture names both.
             </p>
           </section>
 
@@ -1157,8 +1133,8 @@ export default function Concepts() {
             <InstrumentViewer
               items={[
                 { label: L_E, sig: sigRaw(rule), field: computed && computed.raw, color: ON_COLOR },
-                { label: L_D, sig: sigGauge(`D(·,${rule})`, rule), field: computed && computed.d, color: ACCENT },
-                { label: L_D2, sig: sigGauge(`D²(·,${rule})`, rule), field: computed && computed.d2, color: 'oklch(0.55 0.14 30)' },
+                { label: L_D, sig: sigGauge('D', rule), field: computed && computed.d, color: ACCENT },
+                { label: L_D2, sig: sigGauge('D²', rule), field: computed && computed.d2, color: 'oklch(0.55 0.14 30)' },
               ]}
               exploreHref={buildSeedUrl([
                 { id: 1, type: 'source', dim: '1d', rule, ic: initState, steps: STEPS, color: EXPLORE_COLORS.cream },
@@ -1203,7 +1179,7 @@ export default function Concepts() {
             <InstrumentViewer
               items={[
                 { label: L_E, sig: sigRaw(rule), field: computed && computed.raw, color: ON_COLOR },
-                { label: L_D, sig: sigGauge(`D(·,${rule})`, rule), field: computed && computed.d, color: ACCENT },
+                { label: L_D, sig: sigGauge('D', rule), field: computed && computed.d, color: ACCENT },
                 { label: L_ED, sig: sigGauge('E∘D', rule), field: computed && computed.ed, color: 'oklch(0.6 0.14 75)' },
               ]}
               exploreHref={buildSeedUrl([
@@ -1240,10 +1216,7 @@ export default function Concepts() {
               <code className="gc-code">D(E(S))</code> turns out to equal the ordinary{' '}
               <code className="gc-code">D(S)</code> trajectory from a few sections back, read one row later
               (<code className="gc-code">D(E(S<sub>t</sub>)) = D(S<sub>t+1</sub>)</code>, exactly, not
-              approximately &mdash; this is the run calculus's re-anchoring law,{' '}
-              <code className="gc-code">run(g&#8728;base, base)<sub>t</sub> = run(g, base)<sub>t+1</sub></code>, a
-              theorem of the <a href="#run" style={{ color: 'var(--accent)' }}>gauge stance</a> that engines don't
-              get to use). <code className="gc-code">E(D(S))</code> reaches for that same nominal position 1.5
+              approximately). <code className="gc-code">E(D(S))</code> reaches for that same nominal position 1.5
               by a completely different, weirder route: it evolves whatever's sitting at 0.5 forward by one step
               &mdash; except position 0.5 was never a real point on the trajectory to begin with, just a mask. Two
               different paths, both aimed at the same target. <code className="gc-code">G(S)</code> is the question
@@ -1270,7 +1243,7 @@ export default function Concepts() {
                 { label: L_E, sig: sigRaw(rule), field: computed && computed.raw, color: ON_COLOR },
                 { label: L_DE, sig: sigGauge('D∘E', rule), field: computed && computed.de, color: ACCENT },
                 { label: L_ED, sig: sigGauge('E∘D', rule), field: computed && computed.ed, color: 'oklch(0.6 0.14 75)' },
-                { label: L_G, sig: sigGauge(`G(·,${rule})`, rule), field: computed && computed.g, color: 'oklch(0.5 0.13 300)' },
+                { label: L_G, sig: sigGauge('G', rule), field: computed && computed.g, color: 'oklch(0.5 0.13 300)' },
               ]}
               exploreHref={buildSeedUrl([
                 { id: 1, type: 'source', dim: '1d', rule, ic: initState, steps: STEPS, color: EXPLORE_COLORS.cream },
@@ -1321,7 +1294,7 @@ export default function Concepts() {
               Overlay mode is worth trying here specifically: all three fields are mutually exclusive by
               construction, so a correct overlay should show zero magenta (the 2+ layers highlight) anywhere on the
               grid &mdash; toggle layers off and on to check it. <code className="gc-code">V(S)</code> isn't wired
-              into the explorer's transform menu yet, so the link below carries S and A(S) only.
+              into the explorer yet, so the Explore link above carries S and A(S) only.
             </p>
             <p style={{ fontSize: '0.92rem', color: 'var(--ink-soft)', maxWidth: '60ch', margin: 0 }}>
               Open question this raises: does this field's own compressibility work as a faster Class-IV detector
@@ -1387,7 +1360,11 @@ export default function Concepts() {
             Everything above acts on one state under one rule. The natural next move: let two <em>different</em>{' '}
             rules act on the same shared starting state, and ask whether the order they're applied in matters. Run
             one shared starting row two ways &mdash; A-then-B, and B-then-A &mdash; and watch the two paths disagree
-            over time. The disagreement reliably settles into one of five shapes:
+            over time. The disagreement reliably settles into one of five shapes: <strong>commute</strong> (the
+            paths never disagree at all), <strong>crystalline</strong> (a disagreement that freezes into a fixed
+            pattern), <strong>noisy</strong> (indistinguishable from static), <strong>structured</strong>{' '}
+            (disagreement with visible pattern of its own), or <strong>drain</strong> (both paths collapse into the
+            same dead end):
           </p>
           <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap', margin: '0 0 1.2rem' }}>
             {PAIR_PRESETS.map((p, idx) => {

@@ -1,8 +1,10 @@
-// The run-signature badge: every rendered field on the site states which
-// gauge it is and whose orbit it rides, in the notation of the Concepts
-// page's run calculus (run(gauge, base); engine(F) = run(F, F)). Deriving
-// these from real props -- instead of freehand caption strings -- is what
-// keeps "an unsigned picture" from being expressible in the first place.
+// The run-signature badge: a rendered field states which gauge it is and
+// whose orbit it rides, in the notation of the Concepts page's run calculus
+// (run(gauge, base); engine(F) = run(F, F)). Deriving these from real props
+// -- instead of freehand caption strings -- is what keeps "an unsigned
+// picture" from being expressible. On the Concepts page badges deliberately
+// start at the #run section (nothing above it is badged, so the notation is
+// never shown before it's defined); the Explorer badges every card.
 //
 // Sig shapes accepted:
 //   { gauge, base }          -> run(gauge, base)          (gauge stance)
