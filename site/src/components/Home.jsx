@@ -1,5 +1,6 @@
 import Nav from './Nav.jsx';
 import { StaticRuleGrid } from './AmbientCA.jsx';
+import Defn, { Op } from './Defn.jsx';
 
 // Same rules as the Concepts page's quick-pick list, one color each --
 // reuses the site's established regime hues for visual continuity.
@@ -12,9 +13,6 @@ const SAMPLE_RULES = [
   { num: 90, color: 'oklch(0.56 0.15 22)' },
 ];
 
-const formulaBlock = { fontFamily: "'IBM Plex Mono',monospace", background: 'var(--bg-alt)', border: '1px solid var(--rule)', padding: '0.9rem 1.1rem', borderRadius: 8, fontSize: '0.86rem', margin: '1.4rem 0' };
-const formulaLine = { display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap', gap: '0.4rem 1.5rem', margin: '0.15em 0' };
-const formulaNote = { color: 'var(--ink-soft)', fontSize: '0.7rem' };
 const pBody = { fontSize: '1rem', color: 'var(--ink-soft)', margin: '0 0 1.2rem', maxWidth: '68ch' };
 
 export default function Home() {
@@ -36,28 +34,35 @@ export default function Home() {
           </p>
 
           <p style={pBody}>
-            Normally you'd just say: the next state is <code className="gc-code">&phi;(S)</code>, full stop. Call
-            that step <code className="gc-code">E(S)</code>, for <em>evolve</em> &mdash; and if all you want is the
+            Normally you'd just say: the next state is <Op>&phi;(S)</Op>, full stop. Call
+            that step <Op>E(S)</Op>, for <em>evolve</em> &mdash; and if all you want is the
             next state, that's the whole story, no calculus required. What follows arrives at that exact
-            same <code className="gc-code">&phi;(S)</code> by a longer road, through a derivative and an integral.
-            That's not a different answer &mdash; <code className="gc-code">E(S)</code> is provably identical to
-            plain <code className="gc-code">&phi;(S)</code>, an isomorphism, not a new evolution rule. The point of
-            the detour is what it exposes along the way: two internal moving parts, <code className="gc-code">D</code>{' '}
-            and <code className="gc-code">I</code>, that turn out to be useful on their own.
+            same <Op>&phi;(S)</Op> by a longer road, through a derivative and an integral.
+            That's not a different answer &mdash; <Op>E(S)</Op> is provably identical to
+            plain <Op>&phi;(S)</Op>, an isomorphism, not a new evolution rule. The point of
+            the detour is what it exposes along the way: two internal moving parts, <Op>D</Op>{' '}
+            and <Op>I</Op>, that turn out to be useful on their own.
           </p>
 
-          <div style={formulaBlock}>
-            <div style={formulaLine}><span>R &isin; {'{0, 1, …, 255}'}</span><span style={formulaNote}>the rule</span></div>
-            <div style={formulaLine}><span>&phi;(S)<sub>i</sub> = R<sub>4&middot;S(i&minus;1) + 2&middot;S(i) + S(i+1)</sub></span><span style={formulaNote}>one cell's next value</span></div>
-            <div style={formulaLine}><span>D(S) = S &oplus; &phi;(S)</span><span style={formulaNote}>differentiate &mdash; what changed</span></div>
-            <div style={formulaLine}><span>I(a, b) = a &oplus; b</span><span style={formulaNote}>integrate &mdash; fold a difference back in</span></div>
-            <div style={formulaLine}><span>E(S) = I(S, D(S)) = &phi;(S)</span><span style={formulaNote}>evolve &mdash; derived, not assumed</span></div>
+          <div style={{ margin: '1.4rem 0' }}>
+            <Defn lines={[
+              { parts: [{ t: 'R' }, { t: ' ∈ {0, 1, …, 255}' }], note: 'the rule' },
+              { parts: [
+                  { t: <>&phi;(S)<sub>i</sub></>, k: 'φ' },
+                  { t: ' = ' },
+                  { t: <>R<sub>4&middot;S(i&minus;1) + 2&middot;S(i) + S(i+1)</sub></>, k: 'R' },
+                ], note: "one cell's next value" },
+              { parts: [{ t: 'D' }, { t: '(S) = S ⊕ ' }, { t: 'φ' }, { t: '(S)' }], note: 'differentiate — what changed' },
+              { parts: [{ t: 'I' }, { t: '(a, b) = a ⊕ b' }], note: 'integrate — fold a difference back in' },
+              { parts: [{ t: 'E' }, { t: '(S) = ' }, { t: 'I' }, { t: '(S, ' }, { t: 'D' }, { t: '(S)) = ' }, { t: 'φ' }, { t: '(S)' }], note: 'evolve — derived, not assumed' },
+            ]} />
           </div>
           <p style={{ ...pBody, fontSize: '0.9rem' }}>
-            <code className="gc-code">&phi;</code>{' '}
-            just reads <code className="gc-code">R</code>{' '}
+            <Op>&phi;</Op>{' '}
+            just reads <Op>R</Op>{' '}
             as an 8-entry lookup table, indexed by the 3-cell neighborhood &mdash; the same table the rule-diagram on
-            the Concepts page lets you edit by hand.
+            the Concepts page lets you edit by hand. Anything <span style={{ fontWeight: 700 }}>bold with a dotted
+            underline</span> here and on the Concepts page is clickable &mdash; tap it for its definition.
           </p>
 
           <StaticRuleGrid rules={SAMPLE_RULES} />
