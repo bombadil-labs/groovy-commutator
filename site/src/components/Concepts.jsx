@@ -4,17 +4,17 @@ import Watermark from './Watermark.jsx';
 import { AmbientCA2D } from './AmbientCA.jsx';
 import InstrumentViewer from './InstrumentViewer.jsx';
 import RunSig from './RunSig.jsx';
+import Defn from './Defn.jsx';
 import { buildSeedUrl } from '../lib/exploreSeed.js';
 
 // Run signatures (see the #run section): a field states which gauge it is
-// and whose orbit it rides. 𝟙 is the identity map (NOT integration I --
-// see the #run section's aside); base strings like 'E_110' render with
+// and whose orbit it rides; base strings like 'E_110' render with
 // subscripts via RunSig. Badges appear only from the #run section down --
 // earlier viewers stay unsigned so the notation is never shown before the
 // page defines it. Gauges on this page always share the base's rule, so
 // badge gauges omit the rule slot ('D', not 'D(·,110)'); the Explorer,
 // where the slots can genuinely differ per card, spells them out.
-const sigRaw = (r) => ({ gauge: '\u{1D7D9}', base: `E_${r}` });
+const sigRaw = (r) => ({ gauge: 'id', base: `E_${r}` });
 const sigGauge = (g, r) => ({ gauge: g, base: `E_${r}` });
 
 // Explorer's own dark-theme card palette (not shared with this light-theme
@@ -86,13 +86,14 @@ const REGIME_CANVAS_COLOR = {
 
 const TOC = [
   ['#ca', 'Cellular automata'],
-  ['#calculus', 'Boolean calculus'],
   ['#state', 'State → State'],
   ['#run', 'Every picture is a run'],
+  ['#calculus', 'Boolean calculus'],
   ['#secondderivative', 'Second derivative'],
   ['#evolvederivative', 'Evolving the derivative'],
   ['#commutator', 'The Groovy Commutator G'],
   ['#absential', 'Absential cells'],
+  ['#engines', 'Engines'],
   ['#secondorder', 'Reversible memory'],
   ['#coupling', 'Coupling rules'],
   ['#prehoc', 'The fourth input'],
@@ -144,6 +145,33 @@ function ClassExamples() {
         </div>
       ))}
     </div>
+  );
+}
+
+// Fixed demo for the #run section: one walk (rule 110 from a single seed
+// cell), watched two ways. Deliberately independent of the interactive rule
+// panel, which doesn't debut until the calculus section further down.
+const RUN_DEMO_RULE = 110;
+function RunExamples() {
+  const [fields, setFields] = useState(null);
+  useEffect(() => {
+    let cancelled = false;
+    import('../lib/groovy-engine.js').then((engine) => {
+      if (cancelled) return;
+      const s0 = Uint8Array.from(defaultInitState(N_CELLS));
+      const raw = engine.evolveTrajectory(s0, RUN_DEMO_RULE, STEPS);
+      const flipped = raw.map((row) => Uint8Array.from(row, (b) => (b ? 0 : 1)));
+      setFields({ raw, flipped });
+    });
+    return () => { cancelled = true; };
+  }, []);
+  return (
+    <InstrumentViewer
+      items={[
+        { label: 'id — every footprint, unchanged', sig: { gauge: 'id', base: `E_${RUN_DEMO_RULE}` }, field: fields && fields.raw, color: ON_COLOR },
+        { label: 'NOT — every footprint, flipped', sig: { gauge: 'NOT', base: `E_${RUN_DEMO_RULE}` }, field: fields && fields.flipped, color: ACCENT },
+      ]}
+    />
   );
 }
 
@@ -841,6 +869,125 @@ export default function Concepts() {
             <a href="explorer.html" style={{ color: 'var(--accent)' }}>explorer</a> lets you build and couple 2D
             rules the same way as 1D.
           </p>
+
+          <h3 style={h3Style}>Bits, and the operation everything shares</h3>
+          <p style={pBody}>
+            One more primitive completes the substrate. A state is just a row of bits, and nearly everything on
+            this page combines rows with a single bit-operation: <strong>XOR</strong> (&oplus;) &mdash; it's 1
+            exactly where two bits disagree. Click the two bits below:
+          </p>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '0.8rem', flexWrap: 'wrap' }}>
+            <button onClick={() => setXorA(xorA ? 0 : 1)} className="gc-mono" style={{ fontWeight: 800, fontSize: '1.3rem', width: 54, height: 54, borderRadius: 8, border: '1px solid var(--accent)', display: 'flex', alignItems: 'center', justifyContent: 'center', background: xorA ? ON_COLOR : OFF_COLOR, color: xorA ? '#faf7f0' : '#2a2420', cursor: 'pointer' }}>{xorA}</button>
+            <span className="gc-mono" style={{ fontSize: '1.1rem', color: 'var(--ink-soft)' }}>&oplus;</span>
+            <button onClick={() => setXorB(xorB ? 0 : 1)} className="gc-mono" style={{ fontWeight: 800, fontSize: '1.3rem', width: 54, height: 54, borderRadius: 8, border: '1px solid var(--accent)', display: 'flex', alignItems: 'center', justifyContent: 'center', background: xorB ? ON_COLOR : OFF_COLOR, color: xorB ? '#faf7f0' : '#2a2420', cursor: 'pointer' }}>{xorB}</button>
+            <span className="gc-mono" style={{ fontSize: '1.1rem', color: 'var(--ink-soft)' }}>=</span>
+            <div className="gc-mono" style={{ fontWeight: 800, fontSize: '1.3rem', width: 54, height: 54, borderRadius: 8, border: '1px solid var(--accent)', display: 'flex', alignItems: 'center', justifyContent: 'center', background: xorResult ? ON_COLOR : OFF_COLOR, color: xorResult ? '#faf7f0' : '#2a2420' }}>{xorResult}</div>
+          </div>
+          <p style={{ fontSize: '0.84rem', color: 'var(--ink-soft)', margin: '0.9rem 0 0' }}>GF(2) just means "the two-element field" &mdash; arithmetic where 1 + 1 = 0. That's XOR.</p>
+        </section>
+
+        {/* STATE -> STATE -- before any instrument exists: the shape contract everything obeys */}
+        <section id="state" style={{ padding: '1.6rem 0', borderTop: '1px solid var(--rule)' }}>
+          <div style={sectionKicker}>Foundation</div>
+          <h2 style={h2Style}>Everything is State &rarr; State</h2>
+          <p style={pBody}>
+            One step of a rule takes a row of <code className="gc-code">n</code> bits in and returns{' '}
+            <em>another row of n bits</em> out. So does every instrument this page builds later: row in, row out,
+            same length. Nothing compresses, expands, or reinterprets the state &mdash; which is what makes every
+            instrument stackable, comparable, and renderable the same way, and what makes an open-ended{' '}
+            <a href="explorer.html" style={{ color: 'var(--accent)' }}>explorer</a> possible at all: nothing needs
+            a bespoke UI per instrument, because every instrument is the same shape of thing.
+          </p>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '0.7rem', flexWrap: 'wrap' }}>
+            <div className="gc-mono" style={{ fontSize: '0.8rem', fontWeight: 700, padding: '0.6rem 0.9rem', border: '1px solid var(--rule)', borderRadius: 7, background: '#fff' }}>State (n bits)</div>
+            <span style={{ color: 'var(--accent)', fontSize: '1.1rem' }}>&rarr;</span>
+            <div className="gc-mono" style={{ fontSize: '0.8rem', fontWeight: 700, padding: '0.6rem 0.9rem', border: '1px solid var(--accent)', borderRadius: 7, background: 'var(--accent-soft)', color: 'var(--accent-dark)' }}>map</div>
+            <span style={{ color: 'var(--accent)', fontSize: '1.1rem' }}>&rarr;</span>
+            <div className="gc-mono" style={{ fontSize: '0.8rem', fontWeight: 700, padding: '0.6rem 0.9rem', border: '1px solid var(--rule)', borderRadius: 7, background: '#fff' }}>State (n bits)</div>
+          </div>
+          <p style={{ ...pBody, marginTop: '1.1rem', marginBottom: 0 }}>
+            A map is one tick. Every picture on this page has hundreds of rows &mdash; so one more operation needs
+            a name: the one that turns a map into a picture.
+          </p>
+        </section>
+
+        {/* EVERY PICTURE IS A RUN -- orbit and run, taught before any calculus exists */}
+        <section id="run" style={{ padding: '1.6rem 0', borderTop: '1px solid var(--rule)' }}>
+          <div style={sectionKicker}>Foundation</div>
+          <h2 style={h2Style}>Every picture is a run</h2>
+          <p style={pBody}>
+            Every diagram so far was built by repetition: take a seed row, apply the rule, apply it again, and
+            stack the rows as they come. Name the pieces:
+          </p>
+          <Defn lines={[
+            { parts: [
+                { t: 'rule 110', r: 'rule', g: 'an eight-entry lookup table. It knows nothing about rows or time — it is just eight facts.' },
+              ], note: 'a table' },
+            { parts: [
+                { t: 'E₁₁₀', r: 'walk', g: 'one step: the table applied to every cell of a row at once. Row in, row out — a State → State map. E for evolve.' },
+                { t: '(S)', r: 'state' },
+              ], note: 'a map — one tick' },
+            { parts: [
+                { t: 'orbit', g: 'feed the output back in as the next input, forever. The collected rows are the orbit.' },
+                { t: '(' },
+                { t: 'E₁₁₀', r: 'walk' },
+                { t: ', seed) = seed, ' },
+                { t: 'E₁₁₀', r: 'walk' },
+                { t: '(seed), ' },
+                { t: 'E₁₁₀', r: 'walk' },
+                { t: '(' },
+                { t: 'E₁₁₀', r: 'walk' },
+                { t: '(seed)), …' },
+              ], note: 'a history' },
+          ]} />
+          <p style={pBody}>
+            The <strong>orbit</strong> is output fed back as input: row zero is the seed, every next row is the
+            map applied to the row above. Every triangle on this page is an orbit. Two things to hold on to: an
+            orbit belongs to exactly <em>one</em> map &mdash; &ldquo;whose orbit is this?&rdquo; is always a fair
+            question about any picture &mdash; and the orbit is the only place repetition lives. Everything else
+            on this page fires once per row.
+          </p>
+          <Defn lines={[
+            { parts: [
+                { t: 'id', r: 'watch', g: 'the do-nothing map: returns its input unchanged.' },
+                { t: '(S) = S' },
+              ], note: 'the do-nothing map' },
+            { parts: [
+                { t: 'run(' },
+                { t: 'gauge', r: 'watch', g: 'the watcher: evaluated once on each row of the walk. What it reports is what gets drawn.' },
+                { t: ', ' },
+                { t: 'base', r: 'walk', g: 'the walker: the map that gets iterated. It owns the orbit.' },
+                { t: ') = ' },
+                { t: 'gauge', r: 'watch' },
+                { t: '(seed), ' },
+                { t: 'gauge', r: 'watch' },
+                { t: '(' },
+                { t: 'base', r: 'walk' },
+                { t: '(seed)), ' },
+                { t: 'gauge', r: 'watch' },
+                { t: '(' },
+                { t: 'base', r: 'walk' },
+                { t: '(' },
+                { t: 'base', r: 'walk' },
+                { t: '(seed))), …' },
+              ], note: 'one map walks, another watches' },
+          ]} />
+          <p style={pBody}>
+            <strong>run</strong> splits picture-making into two jobs. The <strong>base</strong> walks: it's the
+            map applied over and over, exactly as in the orbit. The <strong>gauge</strong> watches: it looks at
+            each footprint once, and what it reports is what gets drawn. The plain diagram is{' '}
+            <RunSig sig={{ gauge: 'id', base: 'E_110' }} /> &mdash; walk with rule 110, report every footprint
+            unchanged. Keep the walk and swap the watcher, and the same history draws a different picture:
+          </p>
+          <RunExamples />
+          <p style={{ ...pBody, marginTop: '1.1rem', marginBottom: 0 }}>
+            From here on, every field on this page carries a badge naming its gauge and its base &mdash; amber
+            for what walks, teal for what watches. The{' '}
+            <a href="explorer.html" style={{ color: 'var(--accent)' }}>explorer</a> is built on exactly this
+            split: a source card is a base, and every transform card stacked on one is a gauge &mdash; stacking
+            cards is building runs. So far the only watchers are trivial. The next section builds ones worth the
+            name.
+          </p>
         </section>
 
         <hr style={{ border: 'none', borderTop: '1px solid var(--rule)', margin: 0 }} />
@@ -913,9 +1060,9 @@ export default function Concepts() {
           <section style={{ padding: '1.6rem 0' }}>
             <div style={{ display: 'flex', alignItems: 'flex-start', gap: '1.4rem', flexWrap: 'wrap' }}>
               <p style={{ fontSize: '0.92rem', color: 'var(--ink-soft)', maxWidth: '60ch', margin: 0 }}>
-                This is the same rule-number/lookup-table system as the four classes shown earlier, now with a rule
-                you built yourself. Edit the starting row above (or randomize it) and watch every view on this page
-                update from it, including everything in the next few sections.
+                Fixed examples end here. This panel stays pinned through the sections below: build any rule
+                (click the bits, or type a number 0&ndash;255), edit the starting row, and every field that
+                follows recomputes from your choices, live.
               </p>
             </div>
           </section>
@@ -925,22 +1072,18 @@ export default function Concepts() {
             <div style={sectionKicker}>Foundation</div>
             <h2 style={h2Style}>Boolean calculus</h2>
             <p style={pBody}>
-              Every state above is a row of bits. Almost everything from here on is built from a single operation:{' '}
-              <strong>XOR</strong> (&oplus;) &mdash; it's 1 exactly where two bits disagree. Click the two bits below:
+              The watchers worth having are built from two ingredients the page already has: the rule table, and
+              XOR. First, the table lookup written as a formula:
             </p>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '0.8rem', flexWrap: 'wrap' }}>
-              <button onClick={() => setXorA(xorA ? 0 : 1)} className="gc-mono" style={{ fontWeight: 800, fontSize: '1.3rem', width: 54, height: 54, borderRadius: 8, border: '1px solid var(--accent)', display: 'flex', alignItems: 'center', justifyContent: 'center', background: xorA ? ON_COLOR : OFF_COLOR, color: xorA ? '#faf7f0' : '#2a2420', cursor: 'pointer' }}>{xorA}</button>
-              <span className="gc-mono" style={{ fontSize: '1.1rem', color: 'var(--ink-soft)' }}>&oplus;</span>
-              <button onClick={() => setXorB(xorB ? 0 : 1)} className="gc-mono" style={{ fontWeight: 800, fontSize: '1.3rem', width: 54, height: 54, borderRadius: 8, border: '1px solid var(--accent)', display: 'flex', alignItems: 'center', justifyContent: 'center', background: xorB ? ON_COLOR : OFF_COLOR, color: xorB ? '#faf7f0' : '#2a2420', cursor: 'pointer' }}>{xorB}</button>
-              <span className="gc-mono" style={{ fontSize: '1.1rem', color: 'var(--ink-soft)' }}>=</span>
-              <div className="gc-mono" style={{ fontWeight: 800, fontSize: '1.3rem', width: 54, height: 54, borderRadius: 8, border: '1px solid var(--accent)', display: 'flex', alignItems: 'center', justifyContent: 'center', background: xorResult ? ON_COLOR : OFF_COLOR, color: xorResult ? '#faf7f0' : '#2a2420' }}>{xorResult}</div>
-            </div>
-            <p style={{ fontSize: '0.84rem', color: 'var(--ink-soft)', margin: '0.9rem 0 1.6rem' }}>GF(2) just means "the two-element field" &mdash; arithmetic where 1 + 1 = 0. That's XOR.</p>
 
             <h3 id="phi-formal" style={h3Style}>Neighborhoods and rules, formally</h3>
-            <div style={formulaBlock}>
-              <div style={{ display: 'flex', justifyContent: 'space-between', gap: '1rem', margin: '0.15em 0' }}><span>&phi;(S)<sub>i</sub> = R<sub>4&middot;S(i&minus;1) + 2&middot;S(i) + S(i+1)</sub></span><span style={{ color: 'var(--ink-soft)', fontSize: '0.7rem' }}>one cell's next value</span></div>
-            </div>
+            <Defn lines={[
+              { parts: [
+                  { t: <>&phi;(S)<sub>i</sub></>, r: 'rule', k: 'φ(S)ᵢ', g: 'cell i of the row the rule produces: look the neighborhood up in the table, write down the answer.' },
+                  { t: ' = ' },
+                  { t: <>R<sub>4&middot;S(i&minus;1) + 2&middot;S(i) + S(i+1)</sub></>, r: 'rule', k: 'R[…]', g: "the rule's eight-entry table, indexed by reading cell i's neighborhood (left, self, right) as a binary number 0–7." },
+                ], note: "one cell's next value" },
+            ]} />
             <p style={pBody}>
               This is the rule-table lookup from above, written as a formula instead of a diagram: read cell i's own
               three-cell neighborhood off <code className="gc-code">S</code> (left, self, right), treat those three
@@ -954,20 +1097,32 @@ export default function Concepts() {
             </p>
 
             <h3 id="comparison-differentiation" style={h3Style}>Comparison and differentiation</h3>
-            <div style={formulaBlock}>
-              <div style={{ display: 'flex', justifyContent: 'space-between', gap: '1rem', margin: '0.15em 0' }}><span>C(a, b) = a &oplus; b</span><span style={{ color: 'var(--ink-soft)', fontSize: '0.7rem' }}>comparison</span></div>
-              <div style={{ display: 'flex', justifyContent: 'space-between', gap: '1rem', margin: '0.15em 0' }}><span>D(S) = C(S, &phi;(S)) = S &oplus; &phi;(S)</span><span style={{ color: 'var(--ink-soft)', fontSize: '0.7rem' }}>what changed</span></div>
-            </div>
+            <Defn lines={[
+              { parts: [
+                  { t: 'C', r: 'watch', g: 'comparison: XOR two rows, bit by bit. 1 marks every position where they disagree.' },
+                  { t: '(a, b) = a ⊕ b' },
+                ], note: 'comparison' },
+              { parts: [
+                  { t: 'D', r: 'watch', g: 'the derivative: compare a state against what the rule makes of it. 1 marks every cell about to change.' },
+                  { t: '(S) = ' },
+                  { t: 'C', r: 'watch' },
+                  { t: '(S, ' },
+                  { t: 'φ', r: 'rule' },
+                  { t: '(S)) = S ⊕ ' },
+                  { t: 'φ', r: 'rule' },
+                  { t: '(S)' },
+                ], note: 'what changed' },
+            ]} />
             <p style={pBody}>
-              <code className="gc-code">C</code> is just XOR again, named for the role it plays: comparing two
-              states bit by bit. <code className="gc-code">D</code> uses it to ask the smallest possible question
-              about a rule &mdash; compare the state to what the rule turns it into, one step later. Base state and
-              D(S), for Rule {rule}:
+              <code className="gc-code">C</code> is XOR, named for the role it plays: comparing two states bit by
+              bit. <code className="gc-code">D</code> uses it to ask the smallest possible question about a rule
+              &mdash; compare the state to what the rule turns it into, one step later. It's the first watcher
+              worth a badge. Base state and D(S), for Rule {rule}:
             </p>
             <InstrumentViewer
               items={[
-                { label: L_E, field: computed && computed.raw, color: ON_COLOR },
-                { label: L_D, field: computed && computed.d, color: ACCENT },
+                { label: L_E, sig: sigRaw(rule), field: computed && computed.raw, color: ON_COLOR },
+                { label: L_D, sig: sigGauge('D', rule), field: computed && computed.d, color: ACCENT },
               ]}
               exploreHref={buildSeedUrl([
                 { id: 1, type: 'source', dim: '1d', rule, ic: initState, steps: STEPS, color: EXPLORE_COLORS.cream },
@@ -976,148 +1131,55 @@ export default function Concepts() {
             />
 
             <h3 style={h3Style}>Integration, and why evolution is Euler's method in disguise</h3>
-            <div style={formulaBlock}>
-              <div style={{ display: 'flex', justifyContent: 'space-between', gap: '1rem', margin: '0.15em 0' }}><span>I(a, b) = a &oplus; b</span><span style={{ color: 'var(--ink-soft)', fontSize: '0.7rem' }}>integration</span></div>
-              <div style={{ display: 'flex', justifyContent: 'space-between', gap: '1rem', margin: '0.15em 0' }}><span>E(S) = I(S, D(S))</span><span style={{ color: 'var(--ink-soft)', fontSize: '0.7rem' }}>evolution</span></div>
-            </div>
+            <Defn lines={[
+              { parts: [
+                  { t: 'I', r: 'watch', g: 'integration: the same XOR as C, pointed the other way — fold a difference back into a state.' },
+                  { t: '(a, b) = a ⊕ b' },
+                ], note: 'integration' },
+              { parts: [
+                  { t: 'E', r: 'walk', g: 'evolution — the same E as the badges: one step of the rule.' },
+                  { t: '(S) = ' },
+                  { t: 'I', r: 'watch' },
+                  { t: '(S, ' },
+                  { t: 'D', r: 'watch' },
+                  { t: '(S))' },
+                ], note: 'evolution' },
+            ]} />
             <p style={pBody}>
-              <code className="gc-code">I</code> is the same arithmetic as <code className="gc-code">C</code> &mdash;
-              XOR, again &mdash; but asked in the opposite direction: instead of "how do these two states differ,"
-              it's "fold this difference back into a state." That's ordinary numerical integration, discretized:
-              Euler's method updates <code className="gc-code">y</code> by <code className="gc-code">y + h&middot;f(y)</code>{' '}
-              each step; here the step size <code className="gc-code">h</code> is 1, addition is XOR, and the rate of
-              change <code className="gc-code">f</code> is exactly <code className="gc-code">D</code>. Integrating the
-              derivative back into the state is <code className="gc-code">E</code> itself:
+              <code className="gc-code">I</code> is XOR asked in the opposite direction from{' '}
+              <code className="gc-code">C</code>: not "how do these two states differ," but "fold this difference
+              back into a state." That's Euler's method, discretized to bits: numerical integration updates{' '}
+              <code className="gc-code">y</code> by <code className="gc-code">y + h&middot;f(y)</code> each step;
+              here the step size <code className="gc-code">h</code> is 1, addition is XOR, and the rate of change{' '}
+              <code className="gc-code">f</code> is <code className="gc-code">D</code>. Expand the definition and
+              everything cancels:
             </p>
             <div style={formulaBlock}>
               <div>E(S) = I(S, D(S)) = S &oplus; (S &oplus; &phi;(S)) = &phi;(S)</div>
             </div>
             <p style={pBody}>
-              Evolution isn't a second, independent rule &mdash; it's what you get from integrating the derivative
-              back into the state, over GF(2). <code className="gc-code">I</code> and <code className="gc-code">C</code>{' '}
-              being the same operation isn't a coincidence to paper over; it's the point. Comparison and integration
-              are the same move, XOR, asked of two different questions.
+              Integrating the derivative back into the state is evolution. That identity &mdash; differentiate,
+              integrate, and you're back to the rule's own step &mdash; is what earns the word{' '}
+              <em>calculus</em> here, and it's checkable by hand from the two definitions above.
             </p>
 
             <h3 style={h3Style}>The rule slot</h3>
             <p style={pBody}>
-              One bookkeeping point that pays off later. Nothing above is circular: everything bottoms out in the
-              lookup table &phi;. <code className="gc-code">E</code> and <code className="gc-code">D</code> are{' '}
-              <em>siblings</em>, each defined directly from &phi; &mdash; written with the rule slot explicit,{' '}
+              <code className="gc-code">E</code> and <code className="gc-code">D</code> are both defined straight
+              from &phi; &mdash; with the rule slot written out,{' '}
               <code className="gc-code">E(S,&phi;) = &phi;(S)</code> and{' '}
-              <code className="gc-code">D(S,&phi;) = S &oplus; &phi;(S)</code> &mdash; and the elegant relations
-              between them (<code className="gc-code">E = I(S, D(S))</code> above) are derived facts, not
-              definitions. Writing the slot out names something quietly important: D never was a one-argument
-              operation. Any rule can fill that slot, not just the one that generated the state &mdash; which is
-              exactly why the <a href="explorer.html" style={{ color: 'var(--accent)' }}>explorer</a>'s D card asks
-              you for a rule.
+              <code className="gc-code">D(S,&phi;) = S &oplus; &phi;(S)</code>. The slot matters: any rule can fill
+              it, not just the one that generated the state, which is why the{' '}
+              <a href="explorer.html" style={{ color: 'var(--accent)' }}>explorer</a>'s D card asks you for a rule.
+              The badges on this page leave the slot implicit &mdash; here it always matches the base's rule &mdash;
+              but the explorer writes it out (<code className="gc-code">D(&middot;,110)</code>), because there the
+              two can differ.
             </p>
           </section>
 
-          {/* STATE -> STATE */}
-          <section id="state" style={{ padding: '1.6rem 0', borderTop: '1px solid var(--rule)' }}>
-            <div style={sectionKicker}>Foundation</div>
-            <h2 style={h2Style}>Everything is State &rarr; State</h2>
-            <p style={pBody}>
-              <code className="gc-code">D</code>, <code className="gc-code">E</code>, and every instrument below take
-              a row of <code className="gc-code">n</code> bits in and return <em>another row of n bits</em> out.
-              Nothing compresses, expands, or reinterprets the state &mdash; which is what makes every instrument
-              stackable, comparable, and renderable the same way, and what makes an open-ended{' '}
-              <a href="explorer.html" style={{ color: 'var(--accent)' }}>explorer</a> possible at all: nothing needs
-              a bespoke UI per instrument, because every instrument is the same shape of thing.
-            </p>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '0.7rem', flexWrap: 'wrap' }}>
-              <div className="gc-mono" style={{ fontSize: '0.8rem', fontWeight: 700, padding: '0.6rem 0.9rem', border: '1px solid var(--rule)', borderRadius: 7, background: '#fff' }}>State (n bits)</div>
-              <span style={{ color: 'var(--accent)', fontSize: '1.1rem' }}>&rarr;</span>
-              <div className="gc-mono" style={{ fontSize: '0.8rem', fontWeight: 700, padding: '0.6rem 0.9rem', border: '1px solid var(--accent)', borderRadius: 7, background: 'var(--accent-soft)', color: 'var(--accent-dark)' }}>instrument</div>
-              <span style={{ color: 'var(--accent)', fontSize: '1.1rem' }}>&rarr;</span>
-              <div className="gc-mono" style={{ fontSize: '0.8rem', fontWeight: 700, padding: '0.6rem 0.9rem', border: '1px solid var(--rule)', borderRadius: 7, background: '#fff' }}>State (n bits)</div>
-            </div>
-            <p style={{ ...pBody, marginTop: '1.1rem', marginBottom: 0 }}>
-              But a map is one tick, and every picture on this page has hundreds of rows. The next section names
-              the single operation that turns any State &rarr; State map into a picture &mdash; an operation this
-              page has been using silently since its first diagram.
-            </p>
-          </section>
-
-          {/* EVERY PICTURE IS A RUN */}
-          <section id="run" style={{ padding: '1.6rem 0', borderTop: '1px solid var(--rule)' }}>
-            <div style={sectionKicker}>Foundation</div>
-            <h2 style={h2Style}>Every picture is a run</h2>
-            <p style={pBody}>
-              Here is a question this page has never asked out loud: when a diagram shows{' '}
-              <code className="gc-code">D(S)</code> row after row, row after row <em>of what</em>? Not of D's own
-              output &mdash; each row is D applied to a fresh state pulled from somewhere else. That somewhere else
-              is an invisible parameter. Naming it takes a short ladder and two new words.
-            </p>
-            <div style={formulaBlock}>
-              <div style={{ display: 'flex', justifyContent: 'space-between', gap: '1rem', margin: '0.15em 0' }}><span>&phi;</span><span style={{ color: 'var(--ink-soft)', fontSize: '0.7rem' }}>a table &mdash; eight facts, knows nothing of rings or time</span></div>
-              <div style={{ display: 'flex', justifyContent: 'space-between', gap: '1rem', margin: '0.15em 0' }}><span>E<sub>&phi;</sub> = E(&middot;,&phi;)</span><span style={{ color: 'var(--ink-soft)', fontSize: '0.7rem' }}>a map &mdash; the table bound to space, one tick</span></div>
-              <div style={{ display: 'flex', justifyContent: 'space-between', gap: '1rem', margin: '0.15em 0' }}><span>orbit(E<sub>&phi;</sub>, S<sub>0</sub>) = S<sub>0</sub>, E<sub>&phi;</sub>(S<sub>0</sub>), E<sub>&phi;</sub><sup>2</sup>(S<sub>0</sub>), &hellip;</span><span style={{ color: 'var(--ink-soft)', fontSize: '0.7rem' }}>a history &mdash; the map bound to time</span></div>
-            </div>
-            <p style={pBody}>
-              <strong>orbit</strong> is output-fed-back-as-input, forever: row zero is the seed, every next row is
-              the map applied to the row above, and the collected rows are the orbit. You have been computing
-              orbits since the first triangle on this page &mdash; it's just the standard name for the trail one
-              map leaves when it walks. Two things to hold onto: an orbit takes exactly <em>one</em> map (so
-              &ldquo;whose orbit is this?&rdquo; is always a fair question about any picture), and{' '}
-              <strong>orbit is the only place iteration lives</strong> &mdash; E, D, G and every instrument on this
-              page fire once per row; nothing else repeats. The little superscript in what follows,{' '}
-              <code className="gc-code">base<sup>t</sup></code>, means &ldquo;the base applied t times&rdquo;
-              &mdash; row t of its orbit.
-            </p>
-            <div style={formulaBlock}>
-              <div style={{ display: 'flex', justifyContent: 'space-between', gap: '1rem', margin: '0.15em 0' }}><span>&#120793;(S) = S</span><span style={{ color: 'var(--ink-soft)', fontSize: '0.7rem' }}>the do-nothing map: reports its input unchanged</span></div>
-              <div style={{ display: 'flex', justifyContent: 'space-between', gap: '1rem', margin: '0.15em 0' }}><span>run(gauge, base, S<sub>0</sub>)<sub>t</sub> = gauge(base<sup>t</sup>(S<sub>0</sub>))</span><span style={{ color: 'var(--ink-soft)', fontSize: '0.7rem' }}>one map walks, another watches</span></div>
-            </div>
-            <p style={pBody}>
-              <strong>run</strong> takes two maps and splits the work between them. The <strong>base</strong> does
-              the walking: it owns the orbit, and it's the only thing that gets the exponent. The{' '}
-              <strong>gauge</strong> watches: it's evaluated once on each footprint, and its answers are the rows
-              you actually see. The do-nothing map <code className="gc-code">&#120793;</code> earns its name here
-              &mdash; make it the gauge, and the run just reports the footprints themselves. That's what every raw
-              CA diagram on this page has been all along: <RunSig sig={sigRaw(rule)} />. And the D panel from the
-              calculus section is <RunSig sig={sigGauge('D', rule)} /> &mdash; same walk, different watcher. From
-              here down, every field on this page carries a badge like those two, naming its gauge and its base.
-              (One near-miss to dodge: <code className="gc-code">&#120793;</code> is not the integration{' '}
-              <code className="gc-code">I</code> from above. I is XOR, a real operation that happens to be simple;
-              &#120793; just copies.)
-            </p>
-            <div style={formulaBlock}>
-              <div style={{ display: 'flex', justifyContent: 'space-between', gap: '1rem', margin: '0.15em 0' }}><span>engine(F) = run(F, F)</span><span style={{ color: 'var(--ink-soft)', fontSize: '0.7rem' }}>reflexive: the map is its own base</span></div>
-            </div>
-            <p style={pBody}>
-              <strong>engine</strong> is the reflexive case: make a map the base of its own run, so every row is
-              the map fed its own previous output. For plain <code className="gc-code">E</code> that adds nothing
-              &mdash; <code className="gc-code">run(E, E)</code> is just the orbit again, shifted one row, which is
-              exactly why the base could stay invisible for so long: in the plainest picture, walking and watching
-              are the same act. It becomes a genuinely different thing when the map is a <em>composite</em>.{' '}
-              <code className="gc-code">E(D(S))</code> measured along E's orbit and{' '}
-              <code className="gc-code">E(D(S))</code> iterated on its own output are two different pictures &mdash;
-              same map, same XORs, different thing doing the walking.
-            </p>
-            <p style={pBody}>
-              Watch the difference. Below, the same two composites &mdash; D&#8728;E and E&#8728;D, the two
-              ingredients of the commutator &mdash; XORed against each other both ways, from one shared seed. As
-              gauges riding E's orbit, they make <code className="gc-code">G</code>, the Groovy Commutator, three
-              sections down. As engines, each walking on its own output, they make a different field called{' '}
-              <code className="gc-code">U</code>. The two panels agree on their first row exactly, then part ways:
-            </p>
-            <InstrumentViewer
-              items={[
-                { label: "G — gauges riding E's orbit", sig: { text: 'run(D∘E, E_' + rule + ') ⊕ run(E∘D, E_' + rule + ')' }, field: computed && computed.g, color: 'oklch(0.5 0.13 300)' },
-                { label: 'U — engines, self-fed', sig: { text: 'engine(D∘E) ⊕ engine(E∘D)' }, field: computed && computed.u, color: 'oklch(0.6 0.15 22)' },
-              ]}
-            />
-            <p style={{ ...pBody, marginTop: '1.1rem' }}>
-              Try rule 90 in the panel above: both fields go flat &mdash; for affine rules the two constructions
-              agree forever, one more face of the affine theorem coming up. For most rules they disagree, and what
-              that engine field does next &mdash; whether the disagreement between two engines can follow a rule of
-              its own &mdash; is <a href="remainder.html" style={{ color: 'var(--accent)' }}>The Walk</a>, this
-              site's research frontier. Nothing below needs any of that. What everything below does use is the
-              badge vocabulary: one map walks, another watches, and every picture names both.
-            </p>
-          </section>
+          {/* (The former in-flow #run section moved above the rule panel; see the
+              Foundation sections before the calculus. The engine half of it now
+              lives in #engines, after the commutator.) */}
 
           {/* INSTRUMENTS: D², G, ABSENTIAL, SECOND-ORDER */}
           <section id="secondderivative" style={{ padding: '1.6rem 0', borderTop: '1px solid var(--rule)' }}>
@@ -1158,23 +1220,13 @@ export default function Concepts() {
               <div>E(D(S)) = &phi;(D(S))</div>
             </div>
             <p style={pBody}>
-              Something genuinely strange, worth pausing on before the next section needs it.{' '}
-              <code className="gc-code">D(S)</code> is not a state in the usual sense &mdash; it's a mask, "which
-              cells are about to change," not "which cells are alive." Nothing stops us from handing it
-              to <code className="gc-code">&phi;</code> anyway: <code className="gc-code">&phi;</code> doesn't know
-              or care what its input "means," it only sees a row of bits and looks each neighborhood up in the same
-              eight-entry table it always uses. <code className="gc-code">E(D(S))</code> is what happens when you
-              take that indifference seriously &mdash; reinterpret the derivative field as a fresh state under the
-              very same rule, and ask what the rule predicts happens to it next.
-            </p>
-            <p style={pBody}>
-              What does that even mean? Nothing physical, necessarily &mdash; there's no particular reason to expect
-              "the future of which-cells-are-changing" to be a meaningful question. But it's a well-defined one:{' '}
-              <code className="gc-code">D(S)</code> is a row the same length as <code className="gc-code">S</code>,
-              so <code className="gc-code">&phi;</code> applies to it exactly as well as it applies to anything
-              else. Whether the result says anything real about the rule or the state is exactly the kind of thing
-              worth checking empirically rather than assuming &mdash; which is what the panels below are for. Base
-              state, D(S), and E(D(S)), for Rule {rule}:
+              <code className="gc-code">D(S)</code> is a mask &mdash; "which cells are about to change" &mdash;
+              not a state of live cells. <code className="gc-code">&phi;</code> doesn't care: it sees a row of
+              bits and looks each neighborhood up in the same eight-entry table it always uses, so it will happily
+              take the mask as input. <code className="gc-code">E(D(S))</code> does exactly that: reinterpret the
+              derivative field as a fresh state under the same rule, and ask what the rule predicts happens to it
+              next. Whether the answer says anything real about the rule or the state is a question for the panels
+              below, not for the definition. Base state, D(S), and E(D(S)), for Rule {rule}:
             </p>
             <InstrumentViewer
               items={[
@@ -1303,6 +1355,55 @@ export default function Concepts() {
             </p>
           </section>
 
+          {/* ENGINES: the reflexive run, defined where composites first make it interesting */}
+          <section id="engines" style={{ padding: '1.6rem 0', borderTop: '1px solid var(--rule)' }}>
+            <div style={sectionKicker}>Engine</div>
+            <h2 style={h2Style}>Letting a map walk itself</h2>
+            <p style={pBody}>
+              Every instrument above is a gauge: D, D&sup2;, E&#8728;D, G, A, and V all watch a walk that E
+              provides. The remaining move is to make a map <em>walk</em> &mdash; feed it its own output, instead
+              of showing it someone else's.
+            </p>
+            <Defn lines={[
+              { parts: [
+                  { t: 'engine', r: 'walk', g: 'a run whose map is its own base: every row is the map fed its previous output.' },
+                  { t: '(F) = run(' },
+                  { t: 'F', r: 'watch' },
+                  { t: ', ' },
+                  { t: 'F', r: 'walk' },
+                  { t: ')' },
+                ], note: 'the map is its own base' },
+            ]} />
+            <p style={pBody}>
+              For plain <code className="gc-code">E</code> this changes nothing &mdash;{' '}
+              <code className="gc-code">run(E, E)</code> is the orbit again, shifted one row. For a composite it
+              changes everything. <code className="gc-code">E(D(S))</code> riding E's orbit and{' '}
+              <code className="gc-code">E(D(S))</code> walking on its own output are two different pictures: same
+              map, same XORs, different thing being iterated.
+            </p>
+            <p style={pBody}>
+              Here are the commutator's two ingredients, D&#8728;E and E&#8728;D, XORed against each other both
+              ways from one shared seed. As gauges on E's orbit they make <code className="gc-code">G</code>{' '}
+              &mdash; the same purple field as two sections up. As engines they make a field{' '}
+              <a href="remainder.html" style={{ color: 'var(--accent)' }}>The Walk</a> calls{' '}
+              <code className="gc-code">U</code>. The panels agree on their first row exactly, then part ways:
+            </p>
+            <InstrumentViewer
+              items={[
+                { label: "G — gauges riding E's orbit", sig: { text: 'run(D∘E, E_' + rule + ') ⊕ run(E∘D, E_' + rule + ')' }, field: computed && computed.g, color: 'oklch(0.5 0.13 300)' },
+                { label: 'U — engines, self-fed', sig: { text: 'engine(D∘E) ⊕ engine(E∘D)' }, field: computed && computed.u, color: 'oklch(0.6 0.15 22)' },
+              ]}
+            />
+            <p style={{ ...pBody, marginTop: '1.1rem', marginBottom: 0 }}>
+              Try rule 90 in the pinned panel: both fields go flat &mdash; for affine rules the two constructions
+              agree forever, one more face of the affine theorem. For most rules they disagree, and whether that
+              disagreement can follow a rule of its own is The Walk, this site's research frontier. The{' '}
+              <span className="gc-mono" style={{ fontSize: '0.85em', fontWeight: 700 }}>ENGINE</span> label on the
+              sections below marks constructions of this shape: fields that walk on their own output rather than
+              watching E's.
+            </p>
+          </section>
+
           <section id="secondorder" style={{ padding: '1.6rem 0', borderTop: '1px solid var(--rule)' }}>
             <div style={sectionKicker}>Engine</div>
             <h2 style={h2Style}>Reversible memory (second-order CA)</h2>
@@ -1317,15 +1418,11 @@ export default function Concepts() {
               trick for giving 1D CA memory and reversibility at once, for <em>any</em> rule, not just famous ones.
             </p>
             <p style={pBody}>
-              Worth being precise about what's <em>not</em> happening here: this isn't "log every{' '}
-              <code className="gc-code">D(S)</code> as you go, then XOR the log backward." That would work too, but
-              only because it stores the entire trajectory in disguise &mdash; one full row of diff bits per step, the
-              same amount of information as just keeping every state. The interesting part of second-order memory is
-              that it needs <em>none</em> of that history: knowing only the current and previous state (two rows,
-              not a growing log) is enough to run forever in either direction, even though most rules{' '}
-              <code className="gc-code">&phi;</code> are not themselves invertible &mdash; you generally can't
-              recover <code className="gc-code">S(t)</code> from <code className="gc-code">S(t+1)</code> alone. The
-              one extra row of memory is what smuggles in the missing information.
+              The economy is the striking part: two rows &mdash; current and previous &mdash; are enough to run
+              forever in either direction, even though most rules <code className="gc-code">&phi;</code> aren't
+              invertible and <code className="gc-code">S(t+1)</code> alone can't recover{' '}
+              <code className="gc-code">S(t)</code>. The one extra row of memory carries exactly the missing
+              information.
             </p>
             <div style={{ display: 'flex', alignItems: 'flex-start', gap: '1.4rem', flexWrap: 'wrap' }}>
               <div>

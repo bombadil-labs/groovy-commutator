@@ -279,7 +279,7 @@ export default function Explorer() {
   function sigFor(id) {
     const c = cardConfigs[id];
     if (!c) return null;
-    if (c.type === 'source') return { gauge: '\u{1D7D9}', base: c.dim === '2d' ? bsLabel(c.born, c.survive) : `E_${c.rule}` };
+    if (c.type === 'source') return { gauge: 'id', base: c.dim === '2d' ? bsLabel(c.born, c.survive) : `E_${c.rule}` };
     if (c.type === 'transform') {
       const parts = [];
       let cur = c;
@@ -293,7 +293,7 @@ export default function Explorer() {
         // 'raw' is the identity gauge -- contributes nothing to the chain
         cur = cardConfigs[cur.from];
       }
-      const gauge = parts.length ? parts.join('∘') : '\u{1D7D9}';
+      const gauge = parts.length ? parts.join('∘') : 'id';
       let base = '?';
       if (cur && cur.type === 'source') base = cur.dim === '2d' ? bsLabel(cur.born, cur.survive) : `E_${cur.rule}`;
       else if (cur) base = `C${cur.id}`; // gauge over a non-orbit picture (e.g. a coupling card's remainder field)
