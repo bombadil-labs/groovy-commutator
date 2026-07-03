@@ -4,7 +4,7 @@ import Watermark from './Watermark.jsx';
 import { AmbientCA2D } from './AmbientCA.jsx';
 import InstrumentViewer from './InstrumentViewer.jsx';
 import RunSig from './RunSig.jsx';
-import Defn from './Defn.jsx';
+import Defn, { Op } from './Defn.jsx';
 import { buildSeedUrl } from '../lib/exploreSeed.js';
 
 // Run signatures (see the #run section): a field states which gauge it is
@@ -111,7 +111,6 @@ const sectionKicker = { fontFamily: "'IBM Plex Mono',monospace", fontSize: '0.74
 const h2Style = { fontFamily: "'Lora',serif", fontSize: '1.35rem', margin: '0.3em 0 0.5em', fontWeight: 600 };
 const h3Style = { fontFamily: "'Lora',serif", fontSize: '1.1rem', margin: '1.4em 0 0.5em', fontWeight: 600 };
 const pBody = { fontSize: '0.98rem', color: 'var(--ink-soft)', margin: '0 0 1.1rem', maxWidth: '60ch' };
-const formulaBlock = { fontFamily: "'IBM Plex Mono',monospace", background: 'var(--bg-alt)', border: '1px solid var(--rule)', padding: '0.9rem 1.1rem', borderRadius: 8, fontSize: '0.86rem', margin: '0 0 1.1rem' };
 
 const CLASS_EXAMPLES = [
   { rule: 0, cls: 'I' },
@@ -963,14 +962,22 @@ export default function Concepts() {
             { parts: [
                 { t: 'orbit', g: 'feed the output back in as the next input, forever. The collected rows are the orbit.' },
                 { t: '(' },
-                { t: 'E₁₁₀', r: 'walk' },
-                { t: ', seed) = seed, ' },
-                { t: 'E₁₁₀', r: 'walk' },
-                { t: '(seed), ' },
-                { t: 'E₁₁₀', r: 'walk' },
+                { t: 'E₁₁₀' },
+                { t: ', ' },
+                { t: 'seed' },
+                { t: ') = ' },
+                { t: 'seed' },
+                { t: ', ' },
+                { t: 'E₁₁₀' },
                 { t: '(' },
-                { t: 'E₁₁₀', r: 'walk' },
-                { t: '(seed)), …' },
+                { t: 'seed' },
+                { t: '), ' },
+                { t: 'E₁₁₀' },
+                { t: '(' },
+                { t: 'E₁₁₀' },
+                { t: '(' },
+                { t: 'seed' },
+                { t: ')), …' },
               ], note: 'a history' },
           ]} />
           <p style={pBody}>
@@ -986,23 +993,30 @@ export default function Concepts() {
                 { t: '(S) = S' },
               ], note: 'the do-nothing map' },
             { parts: [
-                { t: 'run(' },
-                { t: 'gauge', r: 'watch', g: 'the watcher: evaluated once on each row of the walk. What it reports is what gets drawn.' },
+                { t: 'run' },
+                { t: '(' },
+                { t: 'gauge' },
                 { t: ', ' },
-                { t: 'base', r: 'walk', g: 'the walker: the map that gets iterated. It owns the orbit.' },
+                { t: 'base' },
                 { t: ') = ' },
-                { t: 'gauge', r: 'watch' },
-                { t: '(seed), ' },
-                { t: 'gauge', r: 'watch' },
+                { t: 'gauge' },
                 { t: '(' },
-                { t: 'base', r: 'walk' },
-                { t: '(seed)), ' },
-                { t: 'gauge', r: 'watch' },
+                { t: 'seed' },
+                { t: '), ' },
+                { t: 'gauge' },
                 { t: '(' },
-                { t: 'base', r: 'walk' },
+                { t: 'base' },
                 { t: '(' },
-                { t: 'base', r: 'walk' },
-                { t: '(seed))), …' },
+                { t: 'seed' },
+                { t: ')), ' },
+                { t: 'gauge' },
+                { t: '(' },
+                { t: 'base' },
+                { t: '(' },
+                { t: 'base' },
+                { t: '(' },
+                { t: 'seed' },
+                { t: '))), …' },
               ], note: 'one map walks, another watches' },
           ]} />
           <p style={pBody}>
@@ -1119,13 +1133,13 @@ export default function Concepts() {
             ]} />
             <p style={pBody}>
               This is the rule-table lookup from above, written as a formula instead of a diagram: read cell i's own
-              three-cell neighborhood off <code className="gc-code">S</code> (left, self, right), treat those three
+              three-cell neighborhood off <Op>S</Op> (left, self, right), treat those three
               bits as a binary number 0&ndash;7, and use that number to index into the rule's eight-entry table{' '}
-              <code className="gc-code">R</code> &mdash; exactly the lookup the worked example above walked through
+              <Op>R</Op> &mdash; exactly the lookup the worked example above walked through
               by hand, and exactly what the rule-builder's eight little diagrams show, one entry each.{' '}
-              <code className="gc-code">&phi;(S)</code> (no subscript) means doing that for every cell{' '}
+              <Op>φ(S)</Op> (no subscript) means doing that for every cell{' '}
               <code className="gc-code">i</code> at once, producing a whole new row the same length as{' '}
-              <code className="gc-code">S</code>. Every formula from here on treats <code className="gc-code">&phi;</code>{' '}
+              <Op>S</Op>. Every formula from here on treats <Op>φ</Op>{' '}
               as a given, already-understood building block &mdash; one call evolves an entire state by one step.
             </p>
 
@@ -1147,10 +1161,10 @@ export default function Concepts() {
                 ], note: 'what changed' },
             ]} />
             <p style={pBody}>
-              <code className="gc-code">C</code> is XOR, named for the role it plays: comparing two states bit by
-              bit. <code className="gc-code">D</code> uses it to ask the smallest possible question about a rule
+              <Op>C</Op> is XOR, named for the role it plays: comparing two states bit by
+              bit. <Op>D</Op> uses it to ask the smallest possible question about a rule
               &mdash; compare the state to what the rule turns it into, one step later. It's the first watcher
-              worth a badge. Base state and <code className="gc-code">D(S)</code>, for Rule {rule}:
+              worth a badge. Base state and <Op>D(S)</Op>, for Rule {rule}:
             </p>
             <InstrumentViewer
               items={[
@@ -1179,17 +1193,20 @@ export default function Concepts() {
                 ], note: 'evolution' },
             ]} />
             <p style={pBody}>
-              <code className="gc-code">I</code> is XOR asked in the opposite direction from{' '}
-              <code className="gc-code">C</code>: not "how do these two states differ," but "fold this difference
+              <Op>I</Op> is XOR asked in the opposite direction from{' '}
+              <Op>C</Op>: not "how do these two states differ," but "fold this difference
               back into a state." That's Euler's method, discretized to bits: numerical integration updates{' '}
               <code className="gc-code">y</code> by <code className="gc-code">y + h&middot;f(y)</code> each step;
               here the step size <code className="gc-code">h</code> is 1, addition is XOR, and the rate of change{' '}
-              <code className="gc-code">f</code> is <code className="gc-code">D</code>. Expand the definition and
+              <code className="gc-code">f</code> is <Op>D</Op>. Expand the definition and
               everything cancels:
             </p>
-            <div style={formulaBlock}>
-              <div>E(S) = I(S, D(S)) = S &oplus; (S &oplus; &phi;(S)) = &phi;(S)</div>
-            </div>
+            <Defn lines={[
+              { parts: [
+                  { t: 'E' }, { t: '(S) = ' }, { t: 'I' }, { t: '(S, ' }, { t: 'D' }, { t: '(S)) = S ⊕ (S ⊕ ' },
+                  { t: 'φ' }, { t: '(S)) = ' }, { t: 'φ' }, { t: '(S)' },
+                ] },
+            ]} />
             <p style={pBody}>
               Integrating the derivative back into the state is evolution. That identity &mdash; differentiate,
               integrate, and you're back to the rule's own step &mdash; is what earns the word{' '}
@@ -1198,7 +1215,7 @@ export default function Concepts() {
 
             <h3 style={h3Style}>The rule slot</h3>
             <p style={pBody}>
-              <code className="gc-code">E</code> and <code className="gc-code">D</code> are both defined straight
+              <Op>E</Op> and <Op>D</Op> are both defined straight
               from &phi; &mdash; with the rule slot written out,{' '}
               <code className="gc-code">E(S,&phi;) = &phi;(S)</code> and{' '}
               <code className="gc-code">D(S,&phi;) = S &oplus; &phi;(S)</code>. The slot matters: any rule can fill
@@ -1218,13 +1235,13 @@ export default function Concepts() {
           <section id="secondderivative" style={{ padding: '1.6rem 0', borderTop: '1px solid var(--rule)' }}>
             <div style={sectionKicker}>Instrument</div>
             <h2 style={h2Style}>The second derivative</h2>
-            <div style={formulaBlock}>
-              <div>D&sup2;(S) = D(D(S))</div>
-            </div>
+            <Defn lines={[
+              { parts: [{ t: 'D²' }, { t: '(S) = ' }, { t: 'D' }, { t: '(' }, { t: 'D' }, { t: '(S))' }] },
+            ]} />
             <p style={pBody}>
-              The obvious next move once <code className="gc-code">D</code> exists: apply it to its own output,
-              under the same rule. Base state, <code className="gc-code">D(S)</code>, and{' '}
-              <code className="gc-code">D&sup2;(S)</code>, for Rule {rule}:
+              The obvious next move once <Op>D</Op> exists: apply it to its own output,
+              under the same rule. Base state, <Op>D(S)</Op>, and{' '}
+              <Op>D²(S)</Op>, for Rule {rule}:
             </p>
             <InstrumentViewer
               items={[
@@ -1239,8 +1256,8 @@ export default function Concepts() {
               ])}
             />
             <p style={{ ...pBody, marginTop: '1.1rem' }}>
-              Read the teal panel as "which cells are about to change" &mdash; it's <code className="gc-code">D(S)</code>,
-              the difference between <code className="gc-code">E(S)</code> and what the rule turns it into next.
+              Read the teal panel as "which cells are about to change" &mdash; it's <Op>D(S)</Op>,
+              the difference between <Op>E(S)</Op> and what the rule turns it into next.
               The red panel is the same
               question asked one level up: treat <em>that</em> difference field as a state in its own right, and ask
               which of <em>its</em> cells are about to change under the same rule. Not a property of the original
@@ -1251,18 +1268,18 @@ export default function Concepts() {
           <section id="evolvederivative" style={{ padding: '1.6rem 0', borderTop: '1px solid var(--rule)' }}>
             <div style={sectionKicker}>Instrument</div>
             <h2 style={h2Style}>Evolving the derivative</h2>
-            <div style={formulaBlock}>
-              <div>E(D(S)) = &phi;(D(S))</div>
-            </div>
+            <Defn lines={[
+              { parts: [{ t: 'E' }, { t: '(' }, { t: 'D' }, { t: '(S)) = ' }, { t: 'φ' }, { t: '(' }, { t: 'D' }, { t: '(S))' }] },
+            ]} />
             <p style={pBody}>
-              <code className="gc-code">D(S)</code> is a mask &mdash; "which cells are about to change" &mdash;
-              not a state of live cells. <code className="gc-code">&phi;</code> doesn't care: it sees a row of
+              <Op>D(S)</Op> is a mask &mdash; "which cells are about to change" &mdash;
+              not a state of live cells. <Op>φ</Op> doesn't care: it sees a row of
               bits and looks each neighborhood up in the same eight-entry table it always uses, so it will happily
-              take the mask as input. <code className="gc-code">E(D(S))</code> does exactly that: reinterpret the
+              take the mask as input. <Op k="E∘D">E(D(S))</Op> does exactly that: reinterpret the
               derivative field as a fresh state under the same rule, and ask what the rule predicts happens to it
               next. Whether the answer says anything real about the rule or the state is a question for the panels
-              below, not for the definition. Base state, <code className="gc-code">D(S)</code>, and{' '}
-              <code className="gc-code">E(D(S))</code>, for Rule {rule}:
+              below, not for the definition. Base state, <Op>D(S)</Op>, and{' '}
+              <Op k="E∘D">E(D(S))</Op>, for Rule {rule}:
             </p>
             <InstrumentViewer
               items={[
@@ -1286,46 +1303,50 @@ export default function Concepts() {
           <section id="commutator" style={{ padding: '1.6rem 0', borderTop: '1px solid var(--rule)', background: 'var(--bg)' }}>
             <div style={sectionKicker}>Instrument</div>
             <h2 style={h2Style}>The Groovy Commutator G</h2>
-            <div style={formulaBlock}>
-              <div>G(S) = C(D(E(S)), E(D(S)))</div>
-            </div>
+            <Defn lines={[
+              { parts: [
+                  { t: 'G' }, { t: '(S) = ' }, { t: 'C' }, { t: '(' },
+                  { t: 'D' }, { t: '(' }, { t: 'E' }, { t: '(S)), ' },
+                  { t: 'E' }, { t: '(' }, { t: 'D' }, { t: '(S)))' },
+                ] },
+            ]} />
             <p style={pBody}>
-              Evolve-then-differentiate (<code className="gc-code">D(E(S))</code>), compared against
-              differentiate-then-evolve (<code className="gc-code">E(D(S))</code>, defined above): does order agree?
+              Evolve-then-differentiate (<Op k="D∘E">D(E(S))</Op>), compared against
+              differentiate-then-evolve (<Op k="E∘D">E(D(S))</Op>, defined above): does order agree?
               Same construction as the commutator <code className="gc-code">[A,B] = AB - BA</code> from ordinary
               algebra &mdash; does applying two operations one way give the same result as applying them the other
               way.
             </p>
             <p style={pBody}>
-              Think of <code className="gc-code">S</code> as sitting at position 0 and <code className="gc-code">E(S)</code> at
-              position 1. <code className="gc-code">D(S)</code> compares those two, so it straddles positions 0 and
-              1 &mdash; call it position 0.5. <code className="gc-code">D(E(S))</code> is that same comparison, one
+              Think of <Op>S</Op> as sitting at position 0 and <Op>E(S)</Op> at
+              position 1. <Op>D(S)</Op> compares those two, so it straddles positions 0 and
+              1 &mdash; call it position 0.5. <Op k="D∘E">D(E(S))</Op> is that same comparison, one
               full step later: it straddles 1 and 2, position 1.5 &mdash; which is exactly why{' '}
-              <code className="gc-code">D(E(S))</code> turns out to equal the ordinary{' '}
-              <code className="gc-code">D(S)</code> trajectory from a few sections back, read one row later
+              <Op k="D∘E">D(E(S))</Op> turns out to equal the ordinary{' '}
+              <Op>D(S)</Op> trajectory from a few sections back, read one row later
               (<code className="gc-code">D(E(S<sub>t</sub>)) = D(S<sub>t+1</sub>)</code>, exactly, not
-              approximately). <code className="gc-code">E(D(S))</code> reaches for that same nominal position 1.5
+              approximately). <Op k="E∘D">E(D(S))</Op> reaches for that same nominal position 1.5
               by a completely different, weirder route: it evolves whatever's sitting at 0.5 forward by one step
               &mdash; except position 0.5 was never a real point on the trajectory to begin with, just a mask. Two
-              different paths, both aimed at the same target. <code className="gc-code">G(S)</code> is the question
+              different paths, both aimed at the same target. <Op>G(S)</Op> is the question
               of whether they actually land there together.
             </p>
             <p style={pBody}>
-              <strong>The affine theorem:</strong> <code className="gc-code">G(S)</code> is the same for every
-              possible <code className="gc-code">S</code>, forever, if and only if{' '}
-              <code className="gc-code">&phi;</code> is GF(2)-affine. Checked live against Rule {rule}'s own
+              <strong>The affine theorem:</strong> <Op>G(S)</Op> is the same for every
+              possible <Op>S</Op>, forever, if and only if{' '}
+              <Op>φ</Op> is GF(2)-affine. Checked live against Rule {rule}'s own
               lookup table:{' '}
               {isAffine === null ? 'checking…'
-                : isAffine ? <>this rule is GF(2)-affine &mdash; <code className="gc-code">G</code> is the same constant for every state, every step.</>
-                : <>this rule is not affine &mdash; <code className="gc-code">G</code> is not constant; watch the strip below churn.</>}
+                : isAffine ? <>this rule is GF(2)-affine &mdash; <Op>G</Op> is the same constant for every state, every step.</>
+                : <>this rule is not affine &mdash; <Op>G</Op> is not constant; watch the strip below churn.</>}
             </p>
             <p style={pBody}>
               Worth flipping through the quick-pick rules above and watching what happens to the purple panel: rule{' '}
-              90 is affine with no bias, so <code className="gc-code">G(S)</code> goes flat black &mdash; confirms
+              90 is affine with no bias, so <Op>G(S)</Op> goes flat black &mdash; confirms
               the theorem directly, even though the teal and amber panels feeding into it are each still churning
-              on their own. Rule 30 (class III) makes <code className="gc-code">G(S)</code> churn with no visible
+              on their own. Rule 30 (class III) makes <Op>G(S)</Op> churn with no visible
               structure. Rule 110 or 54 (class IV) is the interesting middle case:{' '}
-              <code className="gc-code">G(S)</code> is neither constant nor noise, it has visible structure of its
+              <Op>G(S)</Op> is neither constant nor noise, it has visible structure of its
               own. Rules 4 and 184 (class II)
               tend to settle into something periodic. Same four panels, four qualitatively different stories, just
               by changing the rule number.
@@ -1362,14 +1383,14 @@ export default function Concepts() {
               <strong>NOT</strong> (&not;, flips a bit). A cell's closed neighborhood is on if it or either neighbor
               is on; a cell is absential if its neighborhood is on but it itself isn't:
             </p>
-            <div style={formulaBlock}>
-              <div style={{ display: 'flex', justifyContent: 'space-between', gap: '1rem', margin: '0.15em 0' }}><span>N(S) = S &or; left(S) &or; right(S)</span><span style={{ color: 'var(--ink-soft)', fontSize: '0.7rem' }}>closed neighborhood</span></div>
-              <div style={{ display: 'flex', justifyContent: 'space-between', gap: '1rem', margin: '0.15em 0' }}><span>A(S) = N(S) &and; &not;S</span><span style={{ color: 'var(--ink-soft)', fontSize: '0.7rem' }}>absential field</span></div>
-              <div style={{ display: 'flex', justifyContent: 'space-between', gap: '1rem', margin: '0.15em 0' }}><span>V(S) = &not;N(S) = &not;S &and; &not;A(S)</span><span style={{ color: 'var(--ink-soft)', fontSize: '0.7rem' }}>void field</span></div>
-            </div>
+            <Defn lines={[
+              { parts: [{ t: 'N' }, { t: '(S) = ' }, { t: 'S' }, { t: ' ∨ left(S) ∨ right(S)' }], note: 'closed neighborhood' },
+              { parts: [{ t: 'A' }, { t: '(S) = ' }, { t: 'N' }, { t: '(S) ∧ ¬' }, { t: 'S' }], note: 'absential field' },
+              { parts: [{ t: 'V' }, { t: '(S) = ¬' }, { t: 'N' }, { t: '(S) = ¬' }, { t: 'S' }, { t: ' ∧ ¬' }, { t: 'A' }, { t: '(S)' }], note: 'void field' },
+            ]} />
             <p style={pBody}>
-              <code className="gc-code">S</code>, <code className="gc-code">A(S)</code>, and{' '}
-              <code className="gc-code">V(S)</code> partition every cell into exactly one of three categories
+              <Op>S</Op>, <Op>A(S)</Op>, and{' '}
+              <Op>V(S)</Op> partition every cell into exactly one of three categories
               &mdash; live, absential, or void &mdash; with no overlap and nothing left over.
             </p>
             <InstrumentViewer
@@ -1386,13 +1407,13 @@ export default function Concepts() {
             <p style={{ ...pBody, marginTop: '1.1rem' }}>
               Overlay mode is worth trying here specifically: all three fields are mutually exclusive by
               construction, so a correct overlay should show zero magenta (the 2+ layers highlight) anywhere on the
-              grid &mdash; toggle layers off and on to check it. <code className="gc-code">V(S)</code> isn't wired
-              into the explorer yet, so the Explore link above carries <code className="gc-code">S</code> and{' '}
-              <code className="gc-code">A(S)</code> only.
+              grid &mdash; toggle layers off and on to check it. <Op>V(S)</Op> isn't wired
+              into the explorer yet, so the Explore link above carries <Op>S</Op> and{' '}
+              <Op>A(S)</Op> only.
             </p>
             <p style={{ fontSize: '0.92rem', color: 'var(--ink-soft)', maxWidth: '60ch', margin: 0 }}>
               Open question this raises: does this field's own compressibility work as a faster Class-IV detector
-              than looking at <code className="gc-code">G(S)</code> or <code className="gc-code">E(S)</code>{' '}
+              than looking at <Op>G(S)</Op> or <Op>E(S)</Op>{' '}
               directly? First test didn't confirm it &mdash; see the{' '}
               <a href="questions.html#absential" style={{ color: 'var(--accent)' }}>questions page</a>.
             </p>
@@ -1403,17 +1424,19 @@ export default function Concepts() {
             <div style={sectionKicker}>Engine</div>
             <h2 style={h2Style}>Letting a map walk itself</h2>
             <p style={pBody}>
-              Every instrument above is a gauge: <code className="gc-code">D</code>,{' '}
-              <code className="gc-code">D&sup2;</code>, <code className="gc-code">E&#8728;D</code>,{' '}
-              <code className="gc-code">G</code>, <code className="gc-code">A</code>, and{' '}
-              <code className="gc-code">V</code> all watch a walk that <code className="gc-code">E</code>{' '}
+              Every instrument above is a gauge: <Op>D</Op>,{' '}
+              <Op>D²</Op>, <Op>E∘D</Op>,{' '}
+              <Op>G</Op>, <Op>A</Op>, and{' '}
+              <Op>V</Op> all watch a walk that <Op>E</Op>{' '}
               provides. The remaining move is to make a map <em>walk</em> &mdash; feed it its own output, instead
               of showing it someone else's.
             </p>
             <Defn lines={[
               { parts: [
                   { t: 'engine', r: 'walk', g: 'a run whose map is its own base: every row is the map fed its previous output.' },
-                  { t: '(F) = run(' },
+                  { t: '(F) = ' },
+                  { t: 'run' },
+                  { t: '(' },
                   { t: 'F', r: 'watch' },
                   { t: ', ' },
                   { t: 'F', r: 'walk' },
@@ -1421,20 +1444,20 @@ export default function Concepts() {
                 ], note: 'the map is its own base' },
             ]} />
             <p style={pBody}>
-              For plain <code className="gc-code">E</code> this changes nothing &mdash;{' '}
-              <code className="gc-code">run(E, E)</code> is the orbit again, shifted one row. For a composite it
-              changes everything. <code className="gc-code">E(D(S))</code> riding{' '}
-              <code className="gc-code">E</code>'s orbit and <code className="gc-code">E(D(S))</code> walking on
+              For plain <Op>E</Op> this changes nothing &mdash;{' '}
+              <Op>run(E, E)</Op> is the orbit again, shifted one row. For a composite it
+              changes everything. <Op k="E∘D">E(D(S))</Op> riding{' '}
+              <Op>E</Op>'s orbit and <Op k="E∘D">E(D(S))</Op> walking on
               its own output are two different pictures: same map, same XORs, different thing being iterated.
             </p>
             <p style={pBody}>
-              Here are the commutator's two ingredients, <code className="gc-code">D&#8728;E</code> and{' '}
-              <code className="gc-code">E&#8728;D</code>, XORed against each other both ways from one shared
-              seed. As gauges on <code className="gc-code">E</code>'s orbit they make{' '}
-              <code className="gc-code">G</code> &mdash; the same purple field as two sections up. As engines
+              Here are the commutator's two ingredients, <Op>D∘E</Op> and{' '}
+              <Op>E∘D</Op>, XORed against each other both ways from one shared
+              seed. As gauges on <Op>E</Op>'s orbit they make{' '}
+              <Op>G</Op> &mdash; the same purple field as two sections up. As engines
               they make a field{' '}
               <a href="remainder.html" style={{ color: 'var(--accent)' }}>The Walk</a> calls{' '}
-              <code className="gc-code">U</code>. The panels agree on their first row exactly, then part ways:
+              <Op>U</Op>. The panels agree on their first row exactly, then part ways:
             </p>
             <InstrumentViewer
               items={[
@@ -1448,16 +1471,16 @@ export default function Concepts() {
               disagreement can follow a rule of its own is The Walk, this site's research frontier. The{' '}
               <span className="gc-mono" style={{ fontSize: '0.85em', fontWeight: 700 }}>ENGINE</span> label on the
               sections below marks constructions of this shape: fields that walk on their own output rather than
-              watching <code className="gc-code">E</code>'s.
+              watching <Op>E</Op>'s.
             </p>
           </section>
 
           <section id="secondorder" style={{ padding: '1.6rem 0', borderTop: '1px solid var(--rule)' }}>
             <div style={sectionKicker}>Engine</div>
             <h2 style={h2Style}>Reversible memory (second-order CA)</h2>
-            <div style={formulaBlock}>
-              S(t+1) = &phi;(S(t)) &oplus; S(t&minus;1)
-            </div>
+            <Defn lines={[
+              { parts: [{ t: 'S' }, { t: '(t+1) = ' }, { t: 'φ' }, { t: '(' }, { t: 'S' }, { t: '(t)) ⊕ ' }, { t: 'S' }, { t: '(t−1)' }] },
+            ]} />
             <p style={pBody}>
               A different shape of the same underlying move as comparison and coupling: compute two things
               separately, then XOR them together. Here the two things are the rule's ordinary output and a
@@ -1467,9 +1490,9 @@ export default function Concepts() {
             </p>
             <p style={pBody}>
               The economy is the striking part: two rows &mdash; current and previous &mdash; are enough to run
-              forever in either direction, even though most rules <code className="gc-code">&phi;</code> aren't
-              invertible and <code className="gc-code">S(t+1)</code> alone can't recover{' '}
-              <code className="gc-code">S(t)</code>. The one extra row of memory carries exactly the missing
+              forever in either direction, even though most rules <Op>φ</Op> aren't
+              invertible and <Op>S(t+1)</Op> alone can't recover{' '}
+              <Op>S(t)</Op>. The one extra row of memory carries exactly the missing
               information.
             </p>
             <div style={{ display: 'flex', alignItems: 'flex-start', gap: '1.4rem', flexWrap: 'wrap' }}>
@@ -1485,14 +1508,14 @@ export default function Concepts() {
             <p style={{ ...pBody, marginTop: '1.1rem' }}>
               One generalization worth knowing about: pass the memory through a rule of its own before XOR-ing it
               in &mdash; <code className="gc-code">S(t+1) = &phi;(S(t)) &oplus; &mu;(S(t&minus;1))</code>. The
-              construction stays reversible exactly when <code className="gc-code">&mu;</code> is itself
+              construction stays reversible exactly when <Op>μ</Op> is itself
               invertible, and only six elementary rules are invertible on every ring size (15, 51, 85, 170, 204,
               240 &mdash; the identity, complement, and shift family; the standard construction above is just{' '}
               <code className="gc-code">&mu; = 204</code>, the identity). The natural-sounding variant &ldquo;feed
               the <em>derivative</em> of the past in as the memory&rdquo; is the special case{' '}
               <code className="gc-code">&mu; = &phi;&oplus;204</code> &mdash; so it keeps reversibility only for{' '}
               <code className="gc-code">&phi; &isin; {'{'}0, 60, 102, 153, 195, 255{'}'}</code>, essentially the
-              additive family. For every other rule, <code className="gc-code">D</code>-memory trades
+              additive family. For every other rule, <Op>D</Op>-memory trades
               reversibility away. Verified exhaustively in{' '}
               <code className="gc-code">scripts/experiment_memory_variants.py</code>.
             </p>
@@ -1550,16 +1573,22 @@ export default function Concepts() {
           <div style={sectionKicker}>Engine &mdash; newer</div>
           <h2 style={h2Style}>The fourth input (pre-hoc composition)</h2>
           <p style={pBody}>
-            Every composition above &mdash; <code className="gc-code">D</code>, reversible memory, coupling
+            Every composition above &mdash; <Op>D</Op>, reversible memory, coupling
             &mdash; computes two finished fields and
             then XORs or compares them: composition <em>after</em> the rule has run. There's a second, more invasive
             option: give the rule's own lookup table a <strong>fourth input</strong>, alongside left/self/right,
             before &phi; is ever evaluated. One extra binary input doubles the table from 8 entries to 16 &mdash;
             and the doubled table has a tidy reading:
           </p>
-          <div style={formulaBlock}>
-            <div style={{ display: 'flex', justifyContent: 'space-between', gap: '1rem', margin: '0.15em 0' }}><span>f(l, c, r, x) = x ? &phi;<sub>1</sub>(l,c,r) : &phi;<sub>0</sub>(l,c,r)</span><span style={{ color: 'var(--ink-soft)', fontSize: '0.7rem' }}>a 16-entry table IS a rule pair</span></div>
-          </div>
+          <Defn lines={[
+            { parts: [
+                { t: 'f(l, c, r, ' },
+                { t: 'x' },
+                { t: ') = ' },
+                { t: 'x' },
+                { t: <> ? &phi;<sub>1</sub>(l,c,r) : &phi;<sub>0</sub>(l,c,r)</> },
+              ], note: 'a 16-entry table IS a rule pair' },
+          ]} />
           <p style={pBody}>
             Every 4-input rule is exactly an <em>ordered pair of elementary rules</em>, with x choosing per cell,
             per step, which of the two applies. Only 512 of the 65,536 possible tables can be rewritten as
@@ -1571,7 +1600,7 @@ export default function Concepts() {
             <em>same state at the same time</em> &mdash; say <code className="gc-code">x = D(S)</code>, or{' '}
             <code className="gc-code">x = A(S)</code>, the absential field from a few sections up &mdash; the
             whole thing collapses back into a single ordinary elementary rule. (Two facts fall out of proving
-            this: <code className="gc-code">A(S)</code> <em>is</em> elementary rule 50, and{' '}
+            this: <Op>A(S)</Op> <em>is</em> elementary rule 50, and{' '}
             <code className="gc-code">D(&middot;,&psi;)</code> <em>is</em> elementary rule{' '}
             <code className="gc-code">&psi;&oplus;204</code>.) The fourth input only escapes the collapse when it comes from another{' '}
             <em>time</em> (that's reversible memory, above) or another <em>trajectory</em> &mdash; a second layer

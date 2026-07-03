@@ -56,7 +56,10 @@ export default function RunSig({ sig, style }) {
         border: `1px solid ${isEngine ? 'var(--accent)' : 'var(--rule)'}`,
         background: 'var(--bg-alt)',
         color: isEngine ? 'var(--accent)' : 'var(--ink-soft)',
-        whiteSpace: 'nowrap',
+        // No nowrap: badges live under fixed-width canvases (e.g. the
+        // 160px mini-demo columns), where an overflowing badge paints
+        // over its neighbor. Wrapping beats overlapping.
+        maxWidth: '100%',
         ...style,
       }}
     >
