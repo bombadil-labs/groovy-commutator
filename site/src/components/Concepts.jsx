@@ -3,7 +3,15 @@ import Nav from './Nav.jsx';
 import Watermark from './Watermark.jsx';
 import { AmbientCA2D } from './AmbientCA.jsx';
 import InstrumentViewer from './InstrumentViewer.jsx';
+import RunSig from './RunSig.jsx';
 import { buildSeedUrl } from '../lib/exploreSeed.js';
+
+// Run signatures (see the #run section): every field states which gauge it
+// is and whose orbit it rides. 𝟙 is the identity map (NOT integration I --
+// see the #run section's aside); base strings like 'E_110' render with
+// subscripts via RunSig.
+const sigRaw = (r) => ({ gauge: '\u{1D7D9}', base: `E_${r}` });
+const sigGauge = (g, r) => ({ gauge: g, base: `E_${r}` });
 
 // Explorer's own dark-theme card palette (not shared with this light-theme
 // page) -- used only when building ?seed= links, so cards read correctly
@@ -76,6 +84,7 @@ const TOC = [
   ['#ca', 'Cellular automata'],
   ['#calculus', 'Boolean calculus'],
   ['#state', 'State → State'],
+  ['#run', 'Every picture is a run'],
   ['#secondderivative', 'Second derivative'],
   ['#evolvederivative', 'Evolving the derivative'],
   ['#commutator', 'The Groovy Commutator G'],
@@ -128,6 +137,7 @@ function ClassExamples() {
           <div className="gc-mono" style={{ fontSize: '0.7rem', color: 'var(--ink-soft)', marginTop: '0.3rem', textAlign: 'center' }}>
             Class {ex.cls} &middot; rule {ex.rule}
           </div>
+          <div style={{ marginTop: '0.25rem', textAlign: 'center' }}><RunSig sig={sigRaw(ex.rule)} /></div>
         </div>
       ))}
     </div>
@@ -401,11 +411,12 @@ function PrehocMiniDemo() {
 
   return (
     <div style={{ display: 'flex', alignItems: 'flex-start', gap: '1.2rem', flexWrap: 'wrap' }}>
-      {[[aRef, 'layer A: rule 77 or 55, chosen per cell by B'],
-        [bRef, 'layer B: rule 44 or 23, chosen per cell by A']].map(([ref, label]) => (
+      {[[aRef, 'layer A: rule 77 or 55, chosen per cell by B', 'layer A shown'],
+        [bRef, 'layer B: rule 44 or 23, chosen per cell by A', 'layer B shown']].map(([ref, label, note]) => (
         <div key={label} style={{ width: 160 }}>
           <canvas className="gc-field" ref={ref} style={{ width: 160, height: 160 }}></canvas>
           <div className="gc-mono" style={{ fontSize: '0.66rem', color: INK_SOFT, marginTop: 3 }}>{label}</div>
+          <div style={{ marginTop: '0.25rem' }}><RunSig sig={{ engine: 'A⇄B', note }} /></div>
         </div>
       ))}
       <div style={{ display: 'flex', flexDirection: 'column', gap: '0.6rem' }}>
@@ -459,11 +470,12 @@ function RuleFieldMiniDemo() {
 
   return (
     <div style={{ display: 'flex', alignItems: 'flex-start', gap: '1.2rem', flexWrap: 'wrap' }}>
-      {[[stateRef, 'the state, each cell under its own rule'],
-        [rulesRef, 'the rule field — one color per rule value']].map(([ref, label]) => (
+      {[[stateRef, 'the state, each cell under its own rule', 'state layer shown'],
+        [rulesRef, 'the rule field — one color per rule value', 'rule layer shown']].map(([ref, label, note]) => (
         <div key={label} style={{ width: 160 }}>
           <canvas className="gc-field" ref={ref} style={{ width: 160, height: 160 }}></canvas>
           <div className="gc-mono" style={{ fontSize: '0.66rem', color: INK_SOFT, marginTop: 3 }}>{label}</div>
+          <div style={{ marginTop: '0.25rem' }}><RunSig sig={{ engine: 'S⇄R', note }} /></div>
         </div>
       ))}
       <div style={{ display: 'flex', flexDirection: 'column', gap: '0.6rem' }}>
@@ -570,7 +582,17 @@ export default function Concepts() {
       for (let i = 0; i < row.length; i++) out[i] = (row[i] || absField[t][i]) ? 0 : 1;
       return out;
     });
-    setComputed({ raw, d: dField, d2: d2Field, g: gField, de: deField, ed: edField, absential: absField, void: voidField });
+    // The #run section's engine-stance field: U[t] = (D∘E)^{t+1}(S0) XOR
+    // (E∘D)^{t+1}(S0) -- the same two composites as the G gallery, but each
+    // iterated on its OWN output (run(F, F)) instead of measured along E's
+    // orbit. Row 0 equals G(S0) exactly; the stances then part ways.
+    const { applyRule, D: Dop, C: Cop, orbit } = engineRef.current;
+    const deMap = (s) => Dop(applyRule(s, rule), rule);   // D o E
+    const edMap = (s) => applyRule(Dop(s, rule), rule);   // E o D
+    const pRows = orbit(deMap, s0, STEPS).slice(1);
+    const qRows = orbit(edMap, s0, STEPS).slice(1);
+    const uField = pRows.map((row, t) => Cop(row, qRows[t]));
+    setComputed({ raw, d: dField, d2: d2Field, g: gField, de: deField, ed: edField, absential: absField, void: voidField, u: uField });
 
     const soTraj = runSecondOrder(s0, s0, rule, STEPS);
     if (secondOrderRef.current) renderFieldToCanvas(secondOrderRef.current, soTraj, 'oklch(0.5 0.12 230)', '#f1ead9');
@@ -941,8 +963,8 @@ export default function Concepts() {
             </p>
             <InstrumentViewer
               items={[
-                { label: L_E, field: computed && computed.raw, color: ON_COLOR },
-                { label: L_D, field: computed && computed.d, color: ACCENT },
+                { label: L_E, sig: sigRaw(rule), field: computed && computed.raw, color: ON_COLOR },
+                { label: L_D, sig: sigGauge(`D(·,${rule})`, rule), field: computed && computed.d, color: ACCENT },
               ]}
               exploreHref={buildSeedUrl([
                 { id: 1, type: 'source', dim: '1d', rule, ic: initState, steps: STEPS, color: EXPLORE_COLORS.cream },
@@ -973,6 +995,33 @@ export default function Concepts() {
               being the same operation isn't a coincidence to paper over; it's the point. Comparison and integration
               are the same move, XOR, asked of two different questions.
             </p>
+
+            <h3 style={h3Style}>Siblings, and the do-nothing map</h3>
+            <p style={pBody}>
+              One bookkeeping point that pays off later. Nothing above is circular: everything bottoms out in the
+              lookup table &phi;. <code className="gc-code">E</code> and <code className="gc-code">D</code> are{' '}
+              <em>siblings</em>, each defined directly from &phi; &mdash; written with the rule slot explicit,{' '}
+              <code className="gc-code">E(S,&phi;) = &phi;(S)</code> and{' '}
+              <code className="gc-code">D(S,&phi;) = S &oplus; &phi;(S)</code> &mdash; and the elegant relations
+              between them (<code className="gc-code">E = I(S, D(S))</code> above) are <em>lemmas</em>, derived
+              facts, not definitions. Writing the rule slot out also names something quietly important: D never was
+              a one-argument operation. Any rule can fill that slot, not just the one generating the picture &mdash;
+              which is exactly why the <a href="explorer.html" style={{ color: 'var(--accent)' }}>explorer</a>'s D
+              card asks you for a rule.
+            </p>
+            <div style={formulaBlock}>
+              <div style={{ display: 'flex', justifyContent: 'space-between', gap: '1rem', margin: '0.15em 0' }}><span>&#120793;(S) = S</span><span style={{ color: 'var(--ink-soft)', fontSize: '0.7rem' }}>the do-nothing map (identity)</span></div>
+              <div style={{ display: 'flex', justifyContent: 'space-between', gap: '1rem', margin: '0.15em 0' }}><span>E(S,&phi;) &oplus; D(S,&phi;) = &#120793;(S)</span><span style={{ color: 'var(--ink-soft)', fontSize: '0.7rem' }}>lemma: the siblings XOR to the identity</span></div>
+            </div>
+            <p style={pBody}>
+              <code className="gc-code">&#120793;</code> returns its input unchanged &mdash; a photocopier. It earns
+              a name because it has the same State &rarr; State shape as <code className="gc-code">E</code> and{' '}
+              <code className="gc-code">D</code>, so it can sit anywhere they sit; the next two sections put it to
+              work. Careful with one near-miss: <code className="gc-code">&#120793;</code> is not{' '}
+              <code className="gc-code">I</code>. Integration is a real operation that merely <em>happens</em> to be
+              trivial here; <code className="gc-code">&#120793;</code> is trivial by definition. Two different
+              reasons for doing nothing.
+            </p>
           </section>
 
           {/* STATE -> STATE */}
@@ -994,6 +1043,104 @@ export default function Concepts() {
               <span style={{ color: 'var(--accent)', fontSize: '1.1rem' }}>&rarr;</span>
               <div className="gc-mono" style={{ fontSize: '0.8rem', fontWeight: 700, padding: '0.6rem 0.9rem', border: '1px solid var(--rule)', borderRadius: 7, background: '#fff' }}>State (n bits)</div>
             </div>
+            <p style={{ ...pBody, marginTop: '1.1rem', marginBottom: 0 }}>
+              But a map is one tick, and every picture on this page has hundreds of rows. The next section names
+              the single operation that turns any State &rarr; State map into a picture &mdash; an operation this
+              page has been using silently since its first diagram.
+            </p>
+          </section>
+
+          {/* EVERY PICTURE IS A RUN */}
+          <section id="run" style={{ padding: '1.6rem 0', borderTop: '1px solid var(--rule)' }}>
+            <div style={sectionKicker}>Foundation</div>
+            <h2 style={h2Style}>Every picture is a run</h2>
+            <p style={pBody}>
+              Here is a question this page has never asked out loud: when a diagram shows{' '}
+              <code className="gc-code">D(S)</code> row after row, row after row <em>of what</em>? Not of D's own
+              output &mdash; each row is D applied to a fresh state pulled from somewhere else. That somewhere else
+              is an invisible parameter, and naming it takes a short ladder plus two definitions.
+            </p>
+            <div style={formulaBlock}>
+              <div style={{ display: 'flex', justifyContent: 'space-between', gap: '1rem', margin: '0.15em 0' }}><span>&phi;</span><span style={{ color: 'var(--ink-soft)', fontSize: '0.7rem' }}>a table &mdash; eight facts, knows nothing of rings or time</span></div>
+              <div style={{ display: 'flex', justifyContent: 'space-between', gap: '1rem', margin: '0.15em 0' }}><span>E<sub>&phi;</sub> = E(&middot;,&phi;)</span><span style={{ color: 'var(--ink-soft)', fontSize: '0.7rem' }}>a map &mdash; the table bound to space, one tick</span></div>
+              <div style={{ display: 'flex', justifyContent: 'space-between', gap: '1rem', margin: '0.15em 0' }}><span>orbit(E<sub>&phi;</sub>, S<sub>0</sub>) = S<sub>0</sub>, E<sub>&phi;</sub>(S<sub>0</sub>), E<sub>&phi;</sub><sup>2</sup>(S<sub>0</sub>), &hellip;</span><span style={{ color: 'var(--ink-soft)', fontSize: '0.7rem' }}>a history &mdash; the map bound to time</span></div>
+            </div>
+            <p style={pBody}>
+              <strong>orbit</strong> is output-fed-back-as-input, forever: row zero is the seed, every next row is
+              the map applied to the row above, and the collected rows are the orbit. You have been computing
+              orbits since the first triangle on this page &mdash; it's just the standard name for the trail one
+              map leaves when it walks. Two things to hold onto: an orbit takes exactly <em>one</em> map (so
+              &ldquo;whose orbit is this?&rdquo; is always a fair question about any picture), and{' '}
+              <strong>orbit is the only place iteration lives</strong> &mdash; E, D, G and every instrument on this
+              page fire once per row; nothing else repeats. The little superscript in what follows,{' '}
+              <code className="gc-code">base<sup>t</sup></code>, means &ldquo;the base applied t times&rdquo;
+              &mdash; row t of its orbit.
+            </p>
+            <div style={formulaBlock}>
+              <div style={{ display: 'flex', justifyContent: 'space-between', gap: '1rem', margin: '0.15em 0' }}><span>run(gauge, base, S<sub>0</sub>)<sub>t</sub> = gauge(base<sup>t</sup>(S<sub>0</sub>))</span><span style={{ color: 'var(--ink-soft)', fontSize: '0.7rem' }}>one map walks, another watches</span></div>
+              <div style={{ display: 'flex', justifyContent: 'space-between', gap: '1rem', margin: '0.15em 0' }}><span>engine(F) = run(F, F)</span><span style={{ color: 'var(--ink-soft)', fontSize: '0.7rem' }}>reflexive: the map is its own base</span></div>
+            </div>
+            <p style={pBody}>
+              <strong>run</strong> takes two maps. The <strong>base</strong> owns the orbit &mdash; it does the
+              walking, and it's the only thing that gets the exponent. The <strong>gauge</strong> rides along,
+              evaluated once on each footprint. Every picture on this page is a run, including the ones that came
+              before these words existed: the raw diagram is <RunSig sig={sigRaw(rule)} /> &mdash; the do-nothing
+              gauge from the calculus section, finally at work, reporting the footprints themselves &mdash; and the
+              D panel you've seen in three sections is <RunSig sig={sigGauge(`D(·,${rule})`, rule)} />. From here
+              down, every field on this page carries a badge like those two, stating its gauge and its base. The
+              badge answers the question the pictures never used to ask: same gauge, different base &mdash;
+              different picture.
+            </p>
+            <p style={pBody}>
+              And <strong>engine</strong> is the reflexive case: feed a map its <em>own</em> output &mdash; make it
+              the base of its own run. For a single rule that's nothing new (<code className="gc-code">run(E, E)</code>{' '}
+              is just the orbit again, shifted one row &mdash; which is exactly why the base could stay invisible
+              this long: for the plainest picture, riding-along and walking are the same act). It becomes a
+              genuinely different thing when the map is a <em>composite</em>. <code className="gc-code">E(D(S))</code>{' '}
+              measured along E's orbit and <code className="gc-code">E(D(S))</code> iterated on its own output are
+              two different constructions &mdash; same map, same XORs, different placement of the exponent.
+            </p>
+            <div style={formulaBlock}>
+              <div style={{ display: 'flex', justifyContent: 'space-between', gap: '1rem', margin: '0.15em 0' }}><span>run(f &oplus; g, base) = run(f, base) &oplus; run(g, base)</span><span style={{ color: 'var(--ink-soft)', fontSize: '0.7rem' }}>gauges: linear, always</span></div>
+              <div style={{ display: 'flex', justifyContent: 'space-between', gap: '1rem', margin: '0.15em 0' }}><span>engine(f &oplus; g) &ne; engine(f) &oplus; engine(g)</span><span style={{ color: 'var(--ink-soft)', fontSize: '0.7rem' }}>engines: reflexivity breaks it</span></div>
+            </div>
+            <p style={pBody}>
+              This is how the boolean calculus meets the run: XOR passes freely through any gauge&mdash;the picture
+              of f&oplus;g is the picture of f XORed with the picture of g, row for row, always. Engines shred that,
+              and the calculus's own operators are the minimal counterexample: the lemma above says{' '}
+              <code className="gc-code">E &oplus; D = &#120793;</code> as maps, so{' '}
+              <code className="gc-code">engine(E &oplus; D)</code> is the frozen seed row repeated forever &mdash;
+              but <code className="gc-code">engine(E) &oplus; engine(D)</code> is alive, disagreeing with that
+              frozen row on roughly half its cells. Same maps, same XOR; the gauge stance respects the algebra, the
+              engine stance doesn't. (Verified, along with everything else this section claims, in{' '}
+              <code className="gc-code">scripts/experiment_run_calculus.py</code>.)
+            </p>
+            <p style={pBody}>
+              Watch it happen. Below, the same two composites &mdash; D&#8728;E and E&#8728;D, the commutator's two
+              ingredients &mdash; XORed against each other in both stances, from one shared seed. As gauges riding
+              E's orbit they make <code className="gc-code">G</code>, the commutator gallery two sections down. As
+              engines they make a field called <code className="gc-code">U</code>. The two panels agree on their
+              first row exactly (<code className="gc-code">U<sub>0</sub> = G(S<sub>0</sub>)</code> &mdash; the
+              stances coincide for precisely one step, which is why they were so easy to conflate), then go their
+              separate ways:
+            </p>
+            <InstrumentViewer
+              items={[
+                { label: 'G — the gauge stance', sig: { text: 'run(D∘E, E_' + rule + ') ⊕ run(E∘D, E_' + rule + ')' }, field: computed && computed.g, color: 'oklch(0.5 0.13 300)' },
+                { label: 'U — the engine stance', sig: { text: 'engine(D∘E) ⊕ engine(E∘D)' }, field: computed && computed.u, color: 'oklch(0.6 0.15 22)' },
+              ]}
+            />
+            <p style={{ ...pBody, marginTop: '1.1rem' }}>
+              Try rule 90 in the panel above: both fields go flat &mdash; for affine rules the two stances agree
+              forever, another face of the affine theorem below. For most rules they don't, and the engine stance
+              opens a question the gauge stance can't even pose: since XOR doesn't pass through engines for free,{' '}
+              <em>when does the XOR of two engine runs follow a rule of its own anyway?</em> That question &mdash;
+              whether a shadow can carry its own physics &mdash; is{' '}
+              <a href="remainder.html" style={{ color: 'var(--accent)' }}>The Walk</a>, this site's current research
+              frontier. (One honest caveat about the vocabulary: the explorer's transform cards build gauges, and
+              its source cards are engines whose map happens to be one of the 256 elementary rules &mdash; an
+              engine of a <em>composite</em> can't be built there yet.)
+            </p>
           </section>
 
           {/* INSTRUMENTS: D², G, ABSENTIAL, SECOND-ORDER */}
@@ -1009,9 +1156,9 @@ export default function Concepts() {
             </p>
             <InstrumentViewer
               items={[
-                { label: L_E, field: computed && computed.raw, color: ON_COLOR },
-                { label: L_D, field: computed && computed.d, color: ACCENT },
-                { label: L_D2, field: computed && computed.d2, color: 'oklch(0.55 0.14 30)' },
+                { label: L_E, sig: sigRaw(rule), field: computed && computed.raw, color: ON_COLOR },
+                { label: L_D, sig: sigGauge(`D(·,${rule})`, rule), field: computed && computed.d, color: ACCENT },
+                { label: L_D2, sig: sigGauge(`D²(·,${rule})`, rule), field: computed && computed.d2, color: 'oklch(0.55 0.14 30)' },
               ]}
               exploreHref={buildSeedUrl([
                 { id: 1, type: 'source', dim: '1d', rule, ic: initState, steps: STEPS, color: EXPLORE_COLORS.cream },
@@ -1055,9 +1202,9 @@ export default function Concepts() {
             </p>
             <InstrumentViewer
               items={[
-                { label: L_E, field: computed && computed.raw, color: ON_COLOR },
-                { label: L_D, field: computed && computed.d, color: ACCENT },
-                { label: L_ED, field: computed && computed.ed, color: 'oklch(0.6 0.14 75)' },
+                { label: L_E, sig: sigRaw(rule), field: computed && computed.raw, color: ON_COLOR },
+                { label: L_D, sig: sigGauge(`D(·,${rule})`, rule), field: computed && computed.d, color: ACCENT },
+                { label: L_ED, sig: sigGauge('E∘D', rule), field: computed && computed.ed, color: 'oklch(0.6 0.14 75)' },
               ]}
               exploreHref={buildSeedUrl([
                 { id: 1, type: 'source', dim: '1d', rule, ic: initState, steps: STEPS, color: EXPLORE_COLORS.cream },
@@ -1093,7 +1240,10 @@ export default function Concepts() {
               <code className="gc-code">D(E(S))</code> turns out to equal the ordinary{' '}
               <code className="gc-code">D(S)</code> trajectory from a few sections back, read one row later
               (<code className="gc-code">D(E(S<sub>t</sub>)) = D(S<sub>t+1</sub>)</code>, exactly, not
-              approximately). <code className="gc-code">E(D(S))</code> reaches for that same nominal position 1.5
+              approximately &mdash; this is the run calculus's re-anchoring law,{' '}
+              <code className="gc-code">run(g&#8728;base, base)<sub>t</sub> = run(g, base)<sub>t+1</sub></code>, a
+              theorem of the <a href="#run" style={{ color: 'var(--accent)' }}>gauge stance</a> that engines don't
+              get to use). <code className="gc-code">E(D(S))</code> reaches for that same nominal position 1.5
               by a completely different, weirder route: it evolves whatever's sitting at 0.5 forward by one step
               &mdash; except position 0.5 was never a real point on the trajectory to begin with, just a mask. Two
               different paths, both aimed at the same target. <code className="gc-code">G(S)</code> is the question
@@ -1117,10 +1267,10 @@ export default function Concepts() {
             </p>
             <InstrumentViewer
               items={[
-                { label: L_E, field: computed && computed.raw, color: ON_COLOR },
-                { label: L_DE, field: computed && computed.de, color: ACCENT },
-                { label: L_ED, field: computed && computed.ed, color: 'oklch(0.6 0.14 75)' },
-                { label: L_G, field: computed && computed.g, color: 'oklch(0.5 0.13 300)' },
+                { label: L_E, sig: sigRaw(rule), field: computed && computed.raw, color: ON_COLOR },
+                { label: L_DE, sig: sigGauge('D∘E', rule), field: computed && computed.de, color: ACCENT },
+                { label: L_ED, sig: sigGauge('E∘D', rule), field: computed && computed.ed, color: 'oklch(0.6 0.14 75)' },
+                { label: L_G, sig: sigGauge(`G(·,${rule})`, rule), field: computed && computed.g, color: 'oklch(0.5 0.13 300)' },
               ]}
               exploreHref={buildSeedUrl([
                 { id: 1, type: 'source', dim: '1d', rule, ic: initState, steps: STEPS, color: EXPLORE_COLORS.cream },
@@ -1158,9 +1308,9 @@ export default function Concepts() {
             </p>
             <InstrumentViewer
               items={[
-                { label: L_E, field: computed && computed.raw, color: ON_COLOR },
-                { label: L_A, field: computed && computed.absential, color: 'oklch(0.6 0.14 75)' },
-                { label: L_V, field: computed && computed.void, color: 'oklch(0.6 0.13 240)' },
+                { label: L_E, sig: sigRaw(rule), field: computed && computed.raw, color: ON_COLOR },
+                { label: L_A, sig: sigGauge('A', rule), field: computed && computed.absential, color: 'oklch(0.6 0.14 75)' },
+                { label: L_V, sig: sigGauge('V', rule), field: computed && computed.void, color: 'oklch(0.6 0.13 240)' },
               ]}
               exploreHref={buildSeedUrl([
                 { id: 1, type: 'source', dim: '1d', rule, ic: initState, steps: STEPS, color: EXPLORE_COLORS.cream },
@@ -1181,7 +1331,7 @@ export default function Concepts() {
           </section>
 
           <section id="secondorder" style={{ padding: '1.6rem 0', borderTop: '1px solid var(--rule)' }}>
-            <div style={sectionKicker}>Instrument</div>
+            <div style={sectionKicker}>Engine</div>
             <h2 style={h2Style}>Reversible memory (second-order CA)</h2>
             <div style={formulaBlock}>
               S(t+1) = &phi;(S(t)) &oplus; S(t&minus;1)
@@ -1208,6 +1358,7 @@ export default function Concepts() {
               <div>
                 <canvas className="gc-field" ref={secondOrderRef}></canvas>
                 <div className="gc-mono" style={{ fontSize: '0.72rem', color: 'var(--ink-soft)', marginTop: '0.4rem', maxWidth: 160 }}>second-order Rule {rule}</div>
+                <div style={{ marginTop: '0.25rem' }}><RunSig sig={{ engine: `2nd-order ${rule}`, note: 'walks (S(t), S(t−1)) pairs' }} /></div>
               </div>
               <p style={{ fontSize: '0.88rem', color: 'var(--ink-soft)', maxWidth: '42ch', margin: 0 }}>
                 Reversibility check, run live in your browser right now: {secondOrderStatus}
@@ -1230,7 +1381,7 @@ export default function Concepts() {
 
         {/* COUPLING */}
         <section id="coupling" style={{ padding: '1.6rem 0', borderTop: '1px solid var(--rule)' }}>
-          <div style={sectionKicker}>Instrument</div>
+          <div style={sectionKicker}>Engine</div>
           <h2 style={h2Style}>Coupling two rules</h2>
           <p style={{ ...pBody, marginBottom: '1rem' }}>
             Everything above acts on one state under one rule. The natural next move: let two <em>different</em>{' '}
@@ -1250,7 +1401,10 @@ export default function Concepts() {
             })}
           </div>
           <div style={{ display: 'flex', alignItems: 'flex-start', gap: '1.4rem', flexWrap: 'wrap' }}>
-            <div><canvas className="gc-field" ref={pairRef}></canvas></div>
+            <div>
+              <canvas className="gc-field" ref={pairRef}></canvas>
+              <div style={{ marginTop: '0.3rem' }}><RunSig sig={{ text: `engine(${selectedPreset.b}∘${selectedPreset.a}) ⊕ engine(${selectedPreset.a}∘${selectedPreset.b})` }} /></div>
+            </div>
             <p style={{ fontSize: '0.92rem', color: 'var(--ink-soft)', maxWidth: '42ch', margin: 0 }}>
               <span className="gc-mono" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.4em', fontWeight: 700, fontSize: '0.78rem', padding: '0.2rem 0.6rem', borderRadius: 999, color: '#fff', background: `var(--${selectedPreset.regime})`, textTransform: 'uppercase' }}>{selectedPreset.regime}</span>
               <br /><br />{selectedPreset.a} vs {selectedPreset.b} &mdash; {selectedPreset.note}. Pattern above is
@@ -1269,7 +1423,7 @@ export default function Concepts() {
 
         {/* THE FOURTH INPUT (pre-hoc composition) */}
         <section id="prehoc" style={{ padding: '1.6rem 0', borderTop: '1px solid var(--rule)' }}>
-          <div style={sectionKicker}>Instrument &mdash; newer</div>
+          <div style={sectionKicker}>Engine &mdash; newer</div>
           <h2 style={h2Style}>The fourth input (pre-hoc composition)</h2>
           <p style={pBody}>
             Every composition above &mdash; D, reversible memory, coupling &mdash; computes two finished fields and
@@ -1306,7 +1460,7 @@ export default function Concepts() {
 
         {/* RULE FIELDS (non-uniform CA) */}
         <section id="rulefield" style={{ padding: '1.6rem 0', borderTop: '1px solid var(--rule)' }}>
-          <div style={sectionKicker}>Instrument &mdash; newest</div>
+          <div style={sectionKicker}>Engine &mdash; newest</div>
           <h2 style={h2Style}>Rule fields (a rule per cell)</h2>
           <p style={pBody}>
             One more wall to knock down. Everything above still assumes one shared global rule &mdash; the rule is
@@ -1338,7 +1492,7 @@ export default function Concepts() {
         {/* CLOSING POINTER -- questions (incl. rules birthing rules, and everything still open) live on their own page now */}
         <section style={{ padding: '1.6rem 0 2rem', borderTop: '1px solid var(--rule)' }}>
           <p style={pBody}>
-            That's the instrument set built on this calculus so far. What happens when you push them further
+            That's the set of instruments and engines built on this calculus so far. What happens when you push them further
             &mdash; a state that generates its own successor rule, what actually predicts the drain regime, whether
             a rule could live in the same shape as the data it acts on &mdash; is exactly what the{' '}
             <a href="questions.html" style={{ color: 'var(--accent)' }}>questions page</a> is for.
