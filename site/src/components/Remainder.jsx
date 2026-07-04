@@ -1,6 +1,8 @@
 import { useEffect, useRef, useState } from 'react';
 import Nav from './Nav.jsx';
 import Watermark from './Watermark.jsx';
+import Defn, { Op } from './Defn.jsx';
+import RunSig from './RunSig.jsx';
 import couplingData from '../data/critical_coupling.json';
 
 // ---------------------------------------------------------------------------
@@ -218,6 +220,7 @@ function SoloRun() {
     <div style={{ width: 190, margin: '0.4rem 0 0.8rem' }}>
       <canvas className="gc-field" ref={ref} style={{ width: 190, height: 190 }}></canvas>
       <div style={capStyle}>one rule, one history — the top row is the start; each row below it is one tick later</div>
+      <div style={{ marginTop: 5 }}><RunSig sig={{ gauge: 'id', base: 'E_110' }} /></div>
     </div>
   );
 }
@@ -243,12 +246,14 @@ function TwoClocks() {
     if (refs[2].current) e.renderFieldToCanvas(refs[2].current, D, AMBER, CREAM);
   }, [ready]);   // eslint-disable-line react-hooks/exhaustive-deps
   const caps = ['history 1: rule A then rule B, every tick', 'history 2: rule B then rule A, every tick', 'the remainder: every square where they differ'];
+  const sigs = [{ engine: '54∘110' }, { engine: '110∘54' }, { text: 'engine(54∘110) ⊕ engine(110∘54)' }];
   return (
     <div style={{ display: 'flex', gap: '0.9rem', flexWrap: 'wrap', margin: '0.4rem 0 0.8rem' }}>
       {refs.map((r, i) => (
         <div key={i} style={{ width: 170 }}>
           <canvas className="gc-field" ref={r} style={{ width: 170, height: 170 }}></canvas>
           <div style={capStyle}>{caps[i]}</div>
+          <div style={{ marginTop: 5 }}><RunSig sig={sigs[i]} /></div>
         </div>
       ))}
     </div>
@@ -268,12 +273,18 @@ function Triptych() {
     });
   }, [ready]);   // eslint-disable-line react-hooks/exhaustive-deps
   const labels = ['rules 90 & 150 — the histories never differ: blank', 'rules 110 & 54 — they differ, and the difference has a pattern', 'rules 110 & 30 — they differ like static'];
+  const sigs = [
+    { text: 'engine(150∘90) ⊕ engine(90∘150)' },
+    { text: 'engine(54∘110) ⊕ engine(110∘54)' },
+    { text: 'engine(30∘110) ⊕ engine(110∘30)' },
+  ];
   return (
     <div style={{ display: 'flex', gap: '0.9rem', flexWrap: 'wrap', margin: '0.4rem 0 0.8rem' }}>
       {refs.map((r, i) => (
         <div key={i} style={{ width: 170 }}>
           <canvas className="gc-field" ref={r} style={{ width: 170, height: 170 }}></canvas>
           <div style={capStyle}>{labels[i]}</div>
+          <div style={{ marginTop: 5 }}><RunSig sig={sigs[i]} /></div>
         </div>
       ))}
     </div>
@@ -319,10 +330,11 @@ function AutonomyDemo() {
         ))}
       </div>
       <div style={{ display: 'flex', gap: '0.9rem', flexWrap: 'wrap' }}>
-        {[[fieldRef, 'the remainder, whole run'], [predRef, 'what the learned rulebook predicts, for the half it was never shown'], [errRef, 'every square the rulebook got wrong (red)']].map(([r, cap]) => (
+        {[[fieldRef, 'the remainder, whole run', true], [predRef, 'what the learned rulebook predicts, for the half it was never shown'], [errRef, 'every square the rulebook got wrong (red)']].map(([r, cap, badge]) => (
           <div key={cap} style={{ width: 190 }}>
             <canvas className="gc-field" ref={r} style={{ width: 190, height: 190 }}></canvas>
             <div style={capStyle}>{cap}</div>
+            {badge && <div style={{ marginTop: 5 }}><RunSig sig={{ text: `engine(${AUTONOMY_PAIRS[pairIdx].b}∘${AUTONOMY_PAIRS[pairIdx].a}) ⊕ engine(${AUTONOMY_PAIRS[pairIdx].a}∘${AUTONOMY_PAIRS[pairIdx].b})` }} /></div>}
           </div>
         ))}
       </div>
@@ -365,6 +377,7 @@ function SolitonDemo() {
       <div style={{ width: 190 }}>
         <canvas className="gc-field" ref={ref} style={{ width: 190, height: 190 }}></canvas>
         <div style={capStyle}>the remainder of rules 138 & 205 — stripes drifting sideways forever</div>
+        <div style={{ marginTop: 5 }}><RunSig sig={{ text: 'engine(205∘138) ⊕ engine(138∘205)' }} /></div>
       </div>
       <p style={{ ...pBody, maxWidth: '38ch', fontSize: '0.9rem' }}>{verdict}</p>
     </div>
@@ -567,12 +580,14 @@ function CouplingTriptych() {
     });
   }, [ready]);   // eslint-disable-line react-hooks/exhaustive-deps
   const caps = ['60% of lines connected, permanently — dented but coherent', '85% connected but flickering — the flicker itself becomes static', '100%, steady — the pattern returns'];
+  const notes = ['60% wired, fixed', '85% wired, flickering', '100% wired'];
   return (
     <div style={{ display: 'flex', gap: '0.9rem', flexWrap: 'wrap', margin: '1rem 0 0' }}>
       {refs.map((r, i) => (
         <div key={i} style={{ width: 170 }}>
           <canvas className="gc-field" ref={r} style={{ width: 170, height: 170 }}></canvas>
           <div style={capStyle}>{caps[i]}</div>
+          <div style={{ marginTop: 5 }}><RunSig sig={{ engine: 'A⇄B', note: notes[i] }} /></div>
         </div>
       ))}
     </div>
@@ -638,8 +653,10 @@ export default function Remainder() {
           This is the story of one long night of experiments, told from the beginning &mdash; you don't need to
           have read anything else on this site. It ends at a question we had been trying to ask for months without
           managing to say it: <em>when does the relationship between two processes become a thing in its own
-          right &mdash; with its own law?</em> Every picture on this page is computed in your browser as you read
-          it. Nothing is a stock illustration.
+          right &mdash; with its own law?</em> If you <em>have</em> read the{' '}
+          <a href="concepts.html" style={{ color: 'var(--accent)' }}>Concepts page</a>, its vocabulary &mdash;
+          runs, engines, the walker and the watcher &mdash; will name everything here as we go. Every picture on
+          this page is computed in your browser as you read it. Nothing is a stock illustration.
         </p>
 
         {/* STOP 0 */}
@@ -660,9 +677,10 @@ export default function Remainder() {
             That's everything. No physics, no randomness after the first row, no hidden machinery &mdash; just a
             row of squares repeatedly consulting an 8-line table. (If you want to compute one of these by hand,
             square by square, the <a href="concepts.html" style={{ color: 'var(--accent)' }}>Concepts page</a>{' '}
-            walks through it slowly.) The astonishment of the field is that some of these 256 tables produce
-            pictures like the one above &mdash; churning, particle-crossed, never settling &mdash; from six lines
-            of arithmetic.
+            walks through it slowly. In its vocabulary, the badge under the picture already says all of this:
+            rule 110 walks, the do-nothing map <Op>id</Op> watches.) The astonishment of the field is that some
+            of these 256 tables produce pictures like the one above &mdash; churning, particle-crossed, never
+            settling &mdash; from six lines of arithmetic.
           </p>
         </section>
 
@@ -686,8 +704,28 @@ export default function Remainder() {
           <p style={pBody}>
             We call that third picture the <strong>remainder</strong>: what's left over when you subtract one
             history from the other. It is the portrait of a <em>relationship</em> &mdash; not of either process,
-            but of how they fail to be interchangeable. Run this comparison for many different pairs of rules and
-            three kinds of remainder keep appearing:
+            but of how they fail to be interchangeable. In the calculus the{' '}
+            <a href="concepts.html#engines" style={{ color: 'var(--accent)' }}>Concepts page</a> builds, this has
+            a compact spelling:
+          </p>
+          <Defn lines={[
+            { parts: [{ t: 'engine' }, { t: '(B∘A)' }], note: 'history 1: A-then-B, fed its own output forever' },
+            { parts: [{ t: 'engine' }, { t: '(A∘B)' }], note: 'history 2: same maps, other order' },
+            { parts: [
+                { t: 'remainder', k: 'remainder' },
+                { t: '(A, B) = ' },
+                { t: 'engine' },
+                { t: '(B∘A) ⊕ ' },
+                { t: 'engine' },
+                { t: '(A∘B)' },
+              ], note: 'their disagreement, cell by cell' },
+          ]} />
+          <p style={pBody}>
+            Each history is an <Op>engine</Op> &mdash; a map walking on its own output &mdash; and the remainder
+            is the XOR of two engine runs. That spelling is why this page exists: a <Op>gauge</Op>'s pictures add
+            up (the XOR of two gauges over one walk is just another gauge over that walk), but engines make no
+            such promise. Nothing guarantees the XOR of two engines is anything at all. Run this comparison for
+            many different pairs of rules and three kinds of remainder keep appearing:
           </p>
           <Triptych />
           <p style={pBody}>
@@ -742,6 +780,13 @@ export default function Remainder() {
             recovered law is exact for every situation the remainder actually gets into &mdash; we can't promise it
             for situations this particular run never visits.)
           </p>
+          <p style={pBody}>
+            In the calculus, the whole stop compresses to one line: <strong>when is the XOR of two{' '}
+            <Op>engine</Op> runs itself an engine run?</strong> The static remainder is the default answer &mdash;
+            a shadow, its next row not a function of its current one, because the missing information lives in the
+            two covered-up walkers. The patterned remainder is the exception: the shadow closes up and walks on
+            its own output, like any other engine.
+          </p>
         </section>
 
         {/* STOP 3 */}
@@ -751,8 +796,9 @@ export default function Remainder() {
           <p style={pBody}>
             Then it got weirder. For dozens of rule pairs, the recovered law came out so simple it fit in the same
             8-line format as the original 256 rules &mdash; the shadow's law is itself <em>one of the rules of
-            this universe</em>. And every single time that happened, it was the same law: rule 170 or rule 240,
-            the two &ldquo;slide everything one square over&rdquo; rules. In other words: these remainders are
+            this universe</em>. Formally: the remainder isn't just <em>an</em> engine, it's{' '}
+            <Op>engine</Op>(E<sub>170</sub>) or <Op>engine</Op>(E<sub>240</sub>) &mdash; the two &ldquo;slide
+            everything one square over&rdquo; rules. In other words: these remainders are
             patterns of disagreement that never change shape at all. They only drift. Physicists have a word for a
             wave that travels without changing shape &mdash; a <em>soliton</em>.
           </p>
@@ -815,8 +861,8 @@ export default function Remainder() {
             A night this strange deserves bookkeeping, so we did some accounting on all 256 rules. For each one we
             asked: as the picture evolves, what stays <em>exactly</em> constant, for every possible starting row?
             The count of on-squares? The count of <strong>halo</strong> squares (off, but right next to an on
-            square &mdash; the one-square-thick fringe around every pattern)? The count of squares that change
-            per tick? This is checked by brute force over every configuration, so the answers are theorems, not
+            square &mdash; the one-square-thick fringe around every pattern; the Concepts page calls this field{' '}
+            <Op>A</Op>, the absential field)? The count of squares that change per tick? This is checked by brute force over every configuration, so the answers are theorems, not
             observations. Three jewels came back:
           </p>
           <ul style={{ ...pBody, paddingLeft: '1.2em' }}>
@@ -859,7 +905,10 @@ export default function Remainder() {
             listening line to the square directly across from it in the other row, which selects which of two
             tables the square consults this tick. Choose the four tables right and something remarkable happens:
             four rules that are each utterly boring alone (they freeze or blink) produce rich, persistent
-            patterns when wired together. The structure lives entirely in the <em>coupling</em>.
+            patterns when wired together. The structure lives entirely in the <em>coupling</em>. (On the{' '}
+            <a href="concepts.html#prehoc" style={{ color: 'var(--accent)' }}>Concepts page</a> the listening line
+            is the <em>fourth input</em>, and the wired-together pair is the engine the badges below write as{' '}
+            <Op>engine</Op>(A⇄B).)
           </p>
           <p style={pBody}>
             That's an all-or-nothing fact, and all-or-nothing facts hide dials. So: turn the listening down.
@@ -898,7 +947,10 @@ export default function Remainder() {
           <p style={{ ...pBody, marginTop: '1.1rem' }}>
             Same picture. Not <em>similar</em> &mdash; the same, square for square, and the exhaustive check
             proves it's no accident of this run. Rule 90 draws an endlessly nested triangle <em>because</em>{' '}
-            zooming out is a symmetry it possesses; the fractal is what that symmetry looks like. The full list of
+            zooming out is a symmetry it possesses; the fractal is what that symmetry looks like. (Squinting is
+            also, quietly, the one operation on this site that breaks the State&nbsp;&rarr;&nbsp;State contract
+            &mdash; the summary row has half the squares of the original. The calculus lives at a fixed size;
+            scale is a door it hasn't formalized yet.) The full list of
             self-similar rules turned out to be short and pointed: <RuleList rules={FIXED_POINTS.affine} /> (the
             &ldquo;crystal&rdquo; family &mdash; the rules this site's oldest theorem singled out as perfectly
             orderly, whose remainders are always constant), plus the trivial sliders and copiers{' '}
@@ -924,7 +976,8 @@ export default function Remainder() {
           </p>
           <p style={pBody}>
             And the door we haven't opened yet is right there in the phrasing. If the remainder of two rules can
-            itself <em>be</em> a rule, then &ldquo;take the relationship&rdquo; is an operation: feed in two
+            itself <em>be</em> a rule &mdash; if <Op>engine</Op>(B∘A) ⊕ <Op>engine</Op>(A∘B) is sometimes an
+            engine with its own name &mdash; then &ldquo;take the relationship&rdquo; is an operation: feed in two
             rules, get a third. Does applying it again and again settle somewhere? Is there a pair whose
             relationship is as complex as rule 110 itself &mdash; a shadow with an inner life? Nobody knows. The
             instruments are on the <a href="explorer.html" style={{ color: 'var(--accent)' }}>explorer</a> page;
