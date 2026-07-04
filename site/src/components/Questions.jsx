@@ -1,6 +1,7 @@
 import { Fragment, useEffect, useRef, useState } from 'react';
 import Nav from './Nav.jsx';
 import Watermark from './Watermark.jsx';
+import Defn, { Op } from './Defn.jsx';
 import drainData from '../data/drain_predictor.json';
 import thresholdData from '../data/threshold_check.json';
 import prehocData from '../data/prehoc_coupling.json';
@@ -609,8 +610,22 @@ export default function Questions() {
           status="established" statusLabel="Established"
         >
           <p style={{ fontSize: '0.92rem', color: 'var(--ink-soft)', margin: '0 0 1rem' }}>
-            Across all 256 rules &mdash; all 32,640 unordered pairs, 5 seeds each &mdash; the disagreement between two
-            rules settles into one of five regimes (see Concepts for what each one means):
+            The object under study, in the <a href="concepts.html#engines" style={{ color: 'var(--accent)' }}>Concepts
+            page's calculus</a> &mdash; run each ordering as an engine, XOR the two histories:
+          </p>
+          <Defn lines={[
+            { parts: [
+                { t: 'remainder', k: 'remainder' },
+                { t: '(A, B) = ' },
+                { t: 'engine' },
+                { t: '(B∘A) ⊕ ' },
+                { t: 'engine' },
+                { t: '(A∘B)' },
+              ], note: 'the field every pair question below measures' },
+          ]} />
+          <p style={{ fontSize: '0.92rem', color: 'var(--ink-soft)', margin: '0 0 1rem' }}>
+            Across all 256 rules &mdash; all 32,640 unordered pairs, 5 seeds each &mdash; that remainder settles
+            into one of five regimes (see Concepts for what each one means):
           </p>
           <RegimeBarChart />
           <p className="gc-mono" style={{ fontSize: '0.72rem', color: 'var(--ink-soft)', margin: '0.5rem 0 0' }}>
@@ -763,7 +778,7 @@ export default function Questions() {
           <p style={{ fontSize: '0.88rem', color: 'var(--ink-soft)', margin: '1rem 0 0' }}>
             <strong style={{ color: 'var(--ink)' }}>What this says:</strong> yes, robustly &mdash; and one early
             reading didn't survive the scale-up. The information-free control
-            (<code className="gc-code">G(&middot;,90)</code>, provably all-zero for every state by the affine
+            (<Op>G(&middot;,90)</Op>, provably all-zero for every state by the affine
             theorem, so it always emits rule 0) sits at <em>exactly</em> 2.0 generations with zero variance &mdash;
             a floor pinned by a theorem. Every information-carrying generator searches 3&ndash;5&times; longer, with
             separated CIs. But the earlier suggestion that the &ldquo;richest&rdquo; generator searches longest
@@ -809,8 +824,9 @@ export default function Questions() {
           status="established" statusLabel="Established (negative) — 2D tested"
         >
           <p style={{ fontSize: '0.92rem', color: 'var(--ink-soft)', margin: '0 0 1rem' }}>
-            Hypothesis: cells that are off-but-adjacent-to-alive (the absential field, see Concepts) might compress
-            in a more class-discriminating way than the base state, E(S). One canonical rule per Wolfram class, published
+            Hypothesis: cells that are off-but-adjacent-to-alive (the absential field <Op>A</Op>, see Concepts)
+            might compress in a more class-discriminating way than the base state, <Op>E(S)</Op>. One canonical
+            rule per Wolfram class, published
             numbers (zlib) alongside a live recomputation in your browser right now (deflate &mdash; same shape of
             metric, different compressor, so don't expect the two columns to match exactly):
           </p>
@@ -892,9 +908,10 @@ export default function Questions() {
           <p style={{ fontSize: '0.92rem', color: 'var(--ink-soft)', margin: '0 0 1rem' }}>
             This was the open question above all others, and it's now been run
             (<code className="gc-code">scripts/experiment_drain_predictor.py</code>). The move: stop scoring rules
-            one at a time and measure the <em>pair</em>. For every one of the 32,640 pairs, take one full round of
-            the divergence construction (apply A then B) as a single composed map, push the <em>entire</em> n=12
-            state space (4,096 states) through it repeatedly, and record two structural numbers: how small the
+            one at a time and measure the <em>pair</em>. For every one of the 32,640 pairs, take the map one
+            ordering's <Op>engine</Op> walks &mdash; the composite B&#8728;A, one full round of A-then-B &mdash;
+            push the <em>entire</em> n=12 state space (4,096 states) through it repeatedly, and record two
+            structural numbers: how small the
             reachable set collapses (the pair's <strong>eventual image</strong>), and how much the two orderings'
             eventual images <strong>overlap</strong> as sets (Jaccard).
           </p>
@@ -1051,10 +1068,10 @@ export default function Questions() {
           status="suggestive" statusLabel="Suggestive — now implemented"
         >
           <p style={{ fontSize: '0.92rem', color: 'var(--ink-soft)', margin: '0 0 1rem' }}>
-            Everything that composes two fields on this site &mdash; D, reversible memory, Comparison, Coupling
-            &mdash; computes each field independently, then XORs the finished results: <strong>post-hoc
+            Everything that composes two fields on this site &mdash; <Op>D</Op>, reversible memory, Comparison,
+            Coupling &mdash; computes each field independently, then XORs the finished results: <strong>post-hoc
             composition</strong>. The proposal here was <strong>pre-hoc composition</strong>: let the rule's own
-            lookup table take a fourth binary input, before &phi; is ever evaluated. That's now implemented
+            lookup table take a fourth binary input, before <Op>&phi;</Op> is ever evaluated. That's now implemented
             (<code className="gc-code">src/groovy/prehoc.py</code>, mirrored in the site engine), and the first
             thing implementation forced was a decomposition that makes the whole space legible: a 16-entry table
             <em> is</em> an ordered pair of elementary rules &mdash; the 4th input just selects, per cell, per step,
@@ -1066,8 +1083,9 @@ export default function Questions() {
             <strong style={{ color: 'var(--ink)' }}>A collapse theorem came out of it, too</strong> &mdash; and it
             kills the two most natural candidate inputs. If the 4th input is any same-time, radius-1 function of the
             same state, the 4-input rule provably collapses back into a plain elementary rule. Both proposed inputs
-            are of that form: the absential field <em>is</em> elementary rule 50, and D(&middot;,&psi;) is elementary
-            rule &psi;&nbsp;&oplus;&nbsp;204. Feeding a rule its own derivative or its own absential field as a
+            are of that form: the absential field <Op>A</Op> <em>is</em> elementary rule 50, and{' '}
+            <Op>D(&middot;,&psi;)</Op> is elementary rule &psi;&nbsp;&oplus;&nbsp;204. Feeding a rule its own
+            derivative or its own absential field as a
             fourth neighbor buys nothing new. Escaping the collapse requires the input to come from another{' '}
             <em>time</em> (memory) or another <em>trajectory</em> &mdash; which is why the experiment below couples
             two layers, each reading the other as its fourth input.

@@ -52,6 +52,7 @@ export const GLOSSARY = {
   gauge: { r: 'watch', g: 'the watcher: evaluated once on each row of the walk; what it reports is what gets drawn.' },
   base: { r: 'walk', g: 'the walker: the map that gets iterated. It owns the orbit.' },
   U: { r: 'watch', g: "the engine-side commutator: engine(D∘E) ⊕ engine(E∘D) — the field The Walk studies." },
+  remainder: { r: 'plain', g: 'the XOR of two engine runs, engine(B∘A) ⊕ engine(A∘B): every cell where the two orderings disagree. The Walk asks when this field keeps a law of its own.' },
 };
 
 // 'G(S)' -> 'G', 'run(E, E)' -> 'run', 'D²(S)' -> 'D²', 'φ' -> 'φ'.
