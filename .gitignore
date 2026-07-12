@@ -28,3 +28,7 @@ site/node_modules/
 site/dist/
 /public/
 
+.adlc/*
+!.adlc/tickets.json
+!.adlc/specs/
+.claude/settings.local.json
