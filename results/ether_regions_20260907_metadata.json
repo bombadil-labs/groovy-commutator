@@ -1,0 +1,143 @@
+{
+  "protocol": "docs/research/protocols/ether-regions-20260907.json",
+  "parameters": {
+    "rule": 110,
+    "ether_word": "00010011011111",
+    "sizes": [
+      420,
+      840
+    ],
+    "steps": 512,
+    "burn": 150,
+    "hmax": 6,
+    "min_support": 5,
+    "train_ensembles": [
+      [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108
+      ],
+      [
+        111,
+        112,
+        113,
+        114,
+        115,
+        116,
+        117,
+        118
+      ]
+    ],
+    "test_seeds": [
+      301,
+      302,
+      303,
+      304,
+      305,
+      306,
+      307,
+      308
+    ],
+    "perturbed_seeds": [
+      401,
+      402
+    ],
+    "perturbation_fraction": 0.02,
+    "observers": [
+      [
+        "parity",
+        2,
+        2
+      ],
+      [
+        "parity",
+        4,
+        4
+      ],
+      [
+        "majority",
+        3,
+        1
+      ],
+      [
+        "majority",
+        5,
+        1
+      ],
+      [
+        "derivative",
+        1,
+        1
+      ]
+    ],
+    "detector_past_rows": 3,
+    "detectors": [
+      [
+        3,
+        7
+      ],
+      [
+        7,
+        14
+      ]
+    ],
+    "snapshot_control_radii": [
+      3,
+      10
+    ],
+    "primary_comparison": "h=0 versus h=6, paired at identical targets; report all intermediate depths",
+    "labels": "At the forecast anchor, a fine center is background if its past-three-row long window matches one coherent ether phase; departure if its short window matches no phase; otherwise ambiguous. Target region uses the full fine-scale causal footprint: any departure => departure; all background => background; otherwise ambiguous. No future target is used in a label.",
+    "interpretation": "Local ether incompatibility is an operational departure detector, not a glider or collision classifier. Region labels are used for scoring only. Report signed regional contributions to total error reduction and region frequencies, including ambiguous regions. No iid-cell confidence intervals."
+  },
+  "protocol_commit": "3374637d7a025f10bdb10b82faed2311ce0434f2",
+  "protocol_sha256": "949037495d0ba49b330293cd6d91c8c8a6e1247a4534c011841b0ddc6e9649a4",
+  "script_sha256": "4beaaefd2b982875ee955e7d68e425c01c04b85146f60db12071fbbd8c133093",
+  "checks": {
+    "ether_temporal_period": 7,
+    "detectors": [
+      {
+        "short": 3,
+        "long": 7,
+        "coherent_phases": 14,
+        "all_phases_background": true,
+        "single_flip_detected": true,
+        "translation_covariant": true,
+        "future_independent": true,
+        "literal_patch_crosscheck": true,
+        "long_implies_short": true
+      },
+      {
+        "short": 7,
+        "long": 14,
+        "coherent_phases": 14,
+        "all_phases_background": true,
+        "single_flip_detected": true,
+        "translation_covariant": true,
+        "future_independent": true,
+        "literal_patch_crosscheck": true,
+        "long_implies_short": true
+      }
+    ],
+    "causal_footprints_and_wide_keys": true,
+    "disjoint_training_and_test_seeds": true
+  },
+  "python": "3.12.13",
+  "numpy": "2.3.5",
+  "rng": "numpy.default_rng (PCG64)",
+  "row_count": 15840,
+  "elapsed_seconds": 58.46,
+  "implementation_details": [
+    "Shared fine trajectories across observers; observation windows differ by stride.",
+    "Pure ether seed 0; one phase tested for prediction, all phases checked by detector.",
+    "Perturbation samples exactly round(0.02*n) initial sites without replacement.",
+    "Spatial backoff uses successively smaller radii; history uses successively shorter histories.",
+    "Two training ensembles share held-out trajectories; they are sensitivity repeats, not 16 independent test seeds.",
+    "Regional rates pool integer counts; seed ranges are conditional on training, not confidence intervals.",
+    "After evaluation, summary JSON changed to a column/row encoding without changing counts or estimates."
+  ]
+}

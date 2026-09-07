@@ -22,7 +22,8 @@
       "updated": "2026-09-07",
       "source": "docs/knowledge/history-repair.md",
       "research": [
-        "history-repairability"
+        "history-repairability",
+        "ether-regions"
       ]
     },
     {
@@ -53,13 +54,14 @@
       "id": "ether-or-defects",
       "title": "What part of Rule 110 becomes predictable?",
       "kind": "question",
-      "status": "open",
-      "summary": "Does history recover the repeating background, moving disturbances, or both?",
+      "status": "partly-answered",
+      "summary": "History improves all three operational regions. Which gliders or interactions explain the remaining errors is still open.",
       "updated": "2026-09-07",
       "source": "docs/knowledge/ether-or-defects.md",
       "research": [
         "history-repairability",
-        "ether-or-defects"
+        "ether-or-defects",
+        "ether-regions"
       ]
     },
     {
@@ -67,23 +69,25 @@
       "title": "Ether phase may explain much of the repair",
       "kind": "theory",
       "status": "proposed",
-      "summary": "History may chiefly recover the phase of Rule 110’s repeating background.",
+      "summary": "Phase recovery remains a plausible partial mechanism; measured history gains also extend to departure neighborhoods.",
       "updated": "2026-09-07",
       "source": "docs/knowledge/phase-recovery.md",
       "research": [
-        "ether-or-defects"
+        "ether-or-defects",
+        "ether-regions"
       ]
     },
     {
       "id": "regional-prediction-test",
       "title": "Separate background and disturbance errors",
       "kind": "experiment",
-      "status": "planned",
-      "summary": "Record prediction errors by region using a detector independent of the predictor.",
+      "status": "completed",
+      "summary": "A frozen regional comparison finds gains around departures and background across two detectors, two widths, and five observations.",
       "updated": "2026-09-07",
       "source": "docs/knowledge/regional-prediction-test.md",
       "research": [
-        "ether-or-defects"
+        "ether-or-defects",
+        "ether-regions"
       ]
     },
     {
@@ -133,6 +137,30 @@
       "research": [
         "affine-converse"
       ]
+    },
+    {
+      "id": "departure-history-repair",
+      "title": "History improves prediction around ether departures",
+      "kind": "finding",
+      "status": "replicated",
+      "summary": "History reduces departure-region error in every tested seed comparison; those regions still contain most residual errors.",
+      "updated": "2026-09-07",
+      "source": "docs/knowledge/departure-history-repair.md",
+      "research": [
+        "ether-regions"
+      ]
+    },
+    {
+      "id": "history-spatial-control",
+      "title": "History beats the tested wider-snapshot estimator",
+      "kind": "finding",
+      "status": "replicated",
+      "summary": "The 21-bit history beats the 21-bit snapshot at this training budget, while also having better context coverage.",
+      "updated": "2026-09-07",
+      "source": "docs/knowledge/history-spatial-control.md",
+      "research": [
+        "ether-regions"
+      ]
     }
   ],
   "edges": [
@@ -158,7 +186,7 @@
       "source": "projection-dependence",
       "type": "contradicts",
       "target": "class-iv-shortcut",
-      "reason": "Rule 30’s strong derivative-history repair defeats the repair-only distinction from Rule 110.",
+      "reason": "Rule 30\u2019s strong derivative-history repair defeats the repair-only distinction from Rule 110.",
       "research": [
         "history-repairability"
       ]
@@ -176,27 +204,30 @@
       "source": "regional-prediction-test",
       "type": "depends_on",
       "target": "history-repair",
-      "reason": "The planned breakdown reuses the validation setup and matched prediction targets.",
+      "reason": "The completed breakdown extends the same training-only predictor and matched-target history setup.",
       "research": [
-        "ether-or-defects"
+        "ether-or-defects",
+        "ether-regions"
       ]
     },
     {
       "source": "regional-prediction-test",
       "type": "tests",
       "target": "phase-recovery",
-      "reason": "Separating regional errors would measure how much improvement belongs to background cells.",
+      "reason": "The completed regional partition measures contributions to prediction improvement, without identifying phase tracking as a mechanism.",
       "research": [
-        "ether-or-defects"
+        "ether-or-defects",
+        "ether-regions"
       ]
     },
     {
       "source": "regional-prediction-test",
       "type": "tests",
       "target": "ether-or-defects",
-      "reason": "The protocol is intended to distinguish the sources of the aggregate history benefit.",
+      "reason": "The completed test separates operational background, ambiguous, and departure-region errors while leaving glider-level interpretation open.",
       "research": [
-        "ether-or-defects"
+        "ether-or-defects",
+        "ether-regions"
       ]
     },
     {
@@ -233,6 +264,51 @@
       "reason": "The counterexamples show that zero commutator cannot establish affine structure by itself.",
       "research": [
         "affine-converse"
+      ]
+    },
+    {
+      "source": "departure-history-repair",
+      "type": "depends_on",
+      "target": "regional-prediction-test",
+      "reason": "This finding relies on the frozen detector, causal-footprint labels, and matched held-out comparisons.",
+      "research": [
+        "ether-regions"
+      ]
+    },
+    {
+      "source": "regional-prediction-test",
+      "type": "supports",
+      "target": "departure-history-repair",
+      "reason": "Departure-region errors fall under every tested seed comparison; local incompatibility does not identify glider computation.",
+      "research": [
+        "ether-regions"
+      ]
+    },
+    {
+      "source": "departure-history-repair",
+      "type": "supports",
+      "target": "history-repair",
+      "reason": "The new regional measurements repeat the aggregate benefit and locate substantial improvement around departures.",
+      "research": [
+        "ether-regions"
+      ]
+    },
+    {
+      "source": "history-spatial-control",
+      "type": "depends_on",
+      "target": "regional-prediction-test",
+      "reason": "The comparison uses the same trajectories, minimum-support estimator, and fixed 21-bit context controls.",
+      "research": [
+        "ether-regions"
+      ]
+    },
+    {
+      "source": "regional-prediction-test",
+      "type": "supports",
+      "target": "history-spatial-control",
+      "reason": "The history estimator beats radius-ten snapshots at this budget, with better training support; no intrinsic information separation is established.",
+      "research": [
+        "ether-regions"
       ]
     }
   ]

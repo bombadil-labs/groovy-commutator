@@ -7,3 +7,11 @@ The September validation repeats the history benefit across two ring widths, fiv
 ## Scope and limits
 
 Targets are matched across depths and sparse contexts fall back to supported shorter histories. The study uses one training ensemble, one initial density, and a bounded history budget. It does not prove a minimum sufficient memory or exact closure. Whether the predictor mostly learns ether phase is still open.
+
+## Regional replication, 2026-09-07
+
+The [frozen regional experiment](../research/2026-09-07-ether-regions.md) repeats
+the benefit with two training ensembles, eight new held-out seeds, and widths
+420 and 840. Improvement extends to departure neighborhoods under both fixed
+detectors, while most residual errors remain there. This strengthens the
+scoped prediction finding without establishing a mechanism or closure law.

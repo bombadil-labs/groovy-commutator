@@ -291,7 +291,10 @@ def main():
                 writer.writeheader()
                 writer.writerows(output)
             print(f"completed n={n}, observer={observer}, rows={len(output)}, seconds={time.monotonic()-started:.1f}", flush=True)
-    prefix.with_suffix(".json").write_text(json.dumps(summarize(output), indent=2) + "\n")
+    summary = summarize(output)
+    columns = list(summary[0])
+    prefix.with_suffix(".json").write_text(json.dumps({"columns": columns,
+        "rows": [[row[key] for key in columns] for row in summary]}, separators=(",", ":")) + "\n")
     metadata = {"protocol": str(args.protocol.relative_to(ROOT)), "parameters": config,
         "protocol_commit": "3374637d7a025f10bdb10b82faed2311ce0434f2",
         "protocol_sha256": hashlib.sha256(args.protocol.read_bytes()).hexdigest(),

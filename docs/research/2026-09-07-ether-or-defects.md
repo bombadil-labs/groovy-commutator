@@ -8,8 +8,10 @@ But Rule 110's trajectories include a repeating background—the **ether**—and
 disturbances that move through it. A predictor could score well by recognizing
 the background's phase while missing much of what happens at disturbances.
 
-This note is a proposed experiment. No background/defect breakdown has been
-measured yet.
+This note preserves the original proposed experiment. **Update, 2026-09-07:**
+the [frozen protocol has now been run](2026-09-07-ether-regions.md). History
+improves prediction in all three operational regions, including departure
+neighborhoods. Read the new note for results, detector limits, and controls.
 
 ## Two explanations to separate
 

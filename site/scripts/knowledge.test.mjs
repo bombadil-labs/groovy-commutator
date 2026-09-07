@@ -64,12 +64,14 @@ test('dependency and replacement cycles fail, while support cycles do not imply 
 
 test('superseded prerequisites flag dependents without changing their authored status', () => {
   const graph = readKnowledge();
+  const experimentStatus = graph.nodes.find((n) => n.id === 'regional-prediction-test').status;
   const premise = graph.nodes.find((n) => n.id === 'history-repair');
   premise.status = 'superseded'; premise.supersededBy = 'projection-dependence';
   render(graph);
   assert.match(html('history-repair'), /Superseded by <a href="projection-dependence.html"/);
   assert.match(html('regional-prediction-test'), /Review prerequisites/);
-  assert.match(html('regional-prediction-test'), /class="research-status planned">Planned/);
+  assert.ok(html('regional-prediction-test').includes(`class="research-status ${experimentStatus}">`));
+  assert.equal(graph.nodes.find((n) => n.id === 'regional-prediction-test').status, experimentStatus);
   assert.match(html('projection-dependence'), /class="research-status replicated">Replicated experiment/);
   assert.equal(graph.nodes.find((n) => n.id === 'projection-dependence').status, 'replicated');
 });
@@ -84,7 +86,12 @@ test('schema rejects missing endpoints, provenance, rationale, and invalid seman
     [(g) => { g.edges[0].research = ['missing-note']; }, /unknown research reference/],
     [(g) => { g.edges.push({ ...g.edges[0] }); }, /duplicate relationship/],
     [(g) => { g.edges[0].type = 'tests'; }, /tests must point/],
-    [(g) => { g.edges[5].type = 'supports'; }, /supports needs a finding or completed experiment/],
+    [(g) => {
+      // Set the fixture's lifecycle explicitly: the real experiment can advance.
+      g.nodes.find((n) => n.id === 'regional-prediction-test').status = 'planned';
+      g.edges.push({ source: 'regional-prediction-test', type: 'supports', target: 'phase-recovery',
+        reason: 'Synthetic invalid support from a planned experiment.', research: ['ether-or-defects'] });
+    }, /supports needs a finding or completed experiment/],
   ]) {
     const graph = readKnowledge(); mutate(graph);
     assert.throws(() => validateKnowledge(graph, research), error);

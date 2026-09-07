@@ -8,11 +8,19 @@
     "kind": "Experiment",
     "evidence": "replicated",
     "topic": "Observation and memory",
-    "summary": "A short history makes some coarse views of Rule 110 much easier to predict. Changing the observation changes the result—and the proposed Class IV shortcut fails.",
+    "summary": "A short history makes some coarse views of Rule 110 much easier to predict. Changing the observation changes the result\u2014and the proposed Class IV shortcut fails.",
     "takeaway": "What looks unpredictable in a snapshot can become predictable when we restore part of its path.",
     "source": "docs/research/2026-09-07-history-repairability.md",
-    "promotion": { "stage": "candidate", "idea": "What a snapshot forgets", "destination": "Questions" },
-    "related": ["affine-converse", "ether-or-defects"]
+    "promotion": {
+      "stage": "candidate",
+      "idea": "What a snapshot forgets",
+      "destination": "Questions"
+    },
+    "related": [
+      "affine-converse",
+      "ether-or-defects",
+      "ether-regions"
+    ]
   },
   {
     "slug": "affine-converse",
@@ -26,8 +34,14 @@
     "summary": "Rules 4 and 200 are nonlinear, yet their commutators vanish. The earlier theorem needs a one-way implication, and the Concepts explanation has been corrected.",
     "takeaway": "A useful test can have exceptions. Preserving the counterexample is part of improving the explanation.",
     "source": "docs/research/2026-09-07-affine-converse.md",
-    "promotion": { "stage": "promoted", "title": "The commutator, with the correction", "href": "concepts.html#commutator" },
-    "related": ["history-repairability"]
+    "promotion": {
+      "stage": "promoted",
+      "title": "The commutator, with the correction",
+      "href": "concepts.html#commutator"
+    },
+    "related": [
+      "history-repairability"
+    ]
   },
   {
     "slug": "ether-or-defects",
@@ -38,10 +52,37 @@
     "kind": "Research plan",
     "evidence": "open",
     "topic": "Observation and memory",
-    "summary": "Rule 110 has a repeating background and moving disturbances. A low average prediction error may hide which of those the model has actually learned.",
-    "takeaway": "The next experiment needs to locate prediction errors, not just count them.",
+    "summary": "The original plan for separating background and disturbance errors, now linked to its completed frozen-protocol experiment.",
+    "takeaway": "The regional test is complete; its results and remaining structural questions have their own note.",
     "source": "docs/research/2026-09-07-ether-or-defects.md",
-    "promotion": { "stage": "research" },
-    "related": ["history-repairability"]
+    "promotion": {
+      "stage": "research"
+    },
+    "related": [
+      "history-repairability",
+      "ether-regions"
+    ]
+  },
+  {
+    "slug": "ether-regions",
+    "number": "004",
+    "title": "History helps around disturbances, too",
+    "date": "2026-09-07",
+    "updated": "2026-09-07",
+    "kind": "Experiment",
+    "evidence": "replicated",
+    "topic": "Observation and memory",
+    "summary": "A frozen regional test finds that history improves prediction around ether departures as well as background. Most remaining errors still lie near departures.",
+    "takeaway": "A path restores useful predictive context around disturbances, but a local detector does not tell us whether the predictor understands gliders.",
+    "source": "docs/research/2026-09-07-ether-regions.md",
+    "promotion": {
+      "stage": "candidate",
+      "idea": "A path helps at disturbances, too",
+      "destination": "Questions"
+    },
+    "related": [
+      "history-repairability",
+      "ether-or-defects"
+    ]
   }
 ]

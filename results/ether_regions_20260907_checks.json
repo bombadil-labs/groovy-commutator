@@ -1,0 +1,14 @@
+{
+  "row_count": 15840,
+  "expected_row_count": 15840,
+  "count_bounds": true,
+  "region_accounting": true,
+  "paired_error_accounting": true,
+  "same_samples_and_baseline_across_models": true,
+  "same_predictions_across_detectors": true,
+  "pure_ether_all_background_and_zero_history_errors": true,
+  "departure_comparisons": 320,
+  "departure_positive_gains": 320,
+  "history_spatial_comparisons": 160,
+  "history_lower_error_than_wide": 160
+}
