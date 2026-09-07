@@ -4,7 +4,9 @@
 [costed comparison](2026-09-07-costed-primitives.md) and
 [all-width audit](2026-09-07-macro-local-equivalence.md) are complete. They
 assume given constructions and oracle planning; learning, discovery, and
-repeated transitions remain open.
+changes to the operation vocabulary remain open. The
+[returning-task comparison](2026-09-07-returning-tasks.md) now covers repeated
+transitions under known dynamics.
 
 The motivating question: A system can turn an expensive
 construction into a reusable primitive. Does that inherited efficiency help

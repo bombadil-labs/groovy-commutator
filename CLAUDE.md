@@ -338,8 +338,20 @@ of 131,072 unrestricted windows; preserve its bounded scope and counterexample.
 
 The original revisable-primitives proposal is partly implemented. Given
 macros, free oracle planning, and one task transition are explicit limits.
-Use the all-width kernels for the next task-return experiment; separately
-address learning/discovery and search costs before claiming adaptation.
+The returning-task extension is now complete in
+`docs/research/2026-09-07-returning-tasks.md`: 294,912 configurations using
+only all-width kernels; direct enumeration of 4,194,304 two-block macro paths
+agrees with dynamic programming. A free-trace Rule 4/30 witness saves one
+unit on the changed job but adds two on the returning job. A separate
+present-cost tie leaves returning costs of 13 versus 10. At primary prices,
+farther-change hindsight revision wins rise from 430/1056 for one return
+cycle (mean -0.691 units) to 893/1056 for four (mean +8.599). These are shared
+configurations, not independent replicates. Reactive policies deliberately
+do not learn the recurring schedule; oracle gains include future information.
+The original future-repertoire insight is promoted into Concepts #possibility.
+Separately address learning/discovery and search costs before claiming
+adaptation, and read the user's latest Narrative Calculus discussion before
+choosing another experimental direction.
 
 ## Research continuation: observed history (2026-09-07)
 

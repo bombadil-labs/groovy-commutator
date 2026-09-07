@@ -163,8 +163,9 @@ and [report generator](../../scripts/report_macro_program.py).
 The planner knows the dynamics and current target, and pays no search cost.
 This is a cost frontier under those assumptions, not a measured learning
 algorithm. The library contains one inherited construction and undergoes one
-transition. A natural next test lets tasks leave and return, so that a useful
-current revision can change the cost of recovering an earlier capability.
+transition. The [returning-task follow-up](2026-09-07-returning-tasks.md) now lets tasks
+leave and return, showing how a useful current revision can change the cost
+of recovering an earlier capability.
 
 The wider question concerns historical structure that can support and revise
 future activity. These calculations provide an inspectable resource model;

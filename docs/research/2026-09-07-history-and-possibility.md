@@ -127,7 +127,7 @@ closure. None is a substitute for measuring the others.
 | Workstream | Next discriminating question | Evidence boundary |
 | --- | --- | --- |
 | Operation order and future options | Can order change available outcomes, how to reach them, or both? | Exact enumeration on declared finite rings and action budgets. |
-| Reusable and revisable primitives | What does a current revision do to the cost of recovering an earlier ability? | A completed oracle cost comparison and all-width audit; learning and repeated transitions remain open. |
+| Reusable and revisable primitives | How should a system choose revisions when future tasks are uncertain? | Costed, all-width, and returning-task comparisons are complete; learning and changes to the operation vocabulary remain open. |
 | Selective historical influence | Which retained differences affect future responses? | Recover and verify earlier derivative-memory artifacts before treating their reported measurements as established. |
 | Decomposition and reconstitution | What becomes possible at another scale when a unit dissolves? | Explicit unit definitions and intervention controls are still needed. |
 | Reciprocal constraint | Can coupled processes sustain and revise each other's conditions? | Build on existing coupling and persistent-rule experiments; do not infer agency from compressibility. |
@@ -137,7 +137,9 @@ The first bridge to future options is complete. A
 [costed revisable-primitives comparison](2026-09-07-costed-primitives.md) and
 [local-equivalence audit](2026-09-07-macro-local-equivalence.md) now separate
 physical computation, dispatch savings, and the price of retaining a trace.
-The next extension lets tasks leave and return. Memory remains an important
+The [returning-task extension](2026-09-07-returning-tasks.md) now separates
+revision capacity, the policy for using it, and the cost of recovering earlier
+abilities. Memory remains an important
 branch, with a specific place in this wider program.
 
 ## How we will recognize progress

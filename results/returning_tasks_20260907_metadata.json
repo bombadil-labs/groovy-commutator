@@ -1,0 +1,98 @@
+{
+  "protocol": {
+    "protocol": "returning-tasks-20260907",
+    "version": 1,
+    "base_commit": "5325af3a66b47786204a052b1993fd2f2ff21873",
+    "parent_protocol": "revisable-primitives-20260907",
+    "kernel_source": "results/macro_local_equivalence_20260907_kernels.json",
+    "scope": "Use only the exact local-map kernels valid at every ring width; retain the eight-physical-tick job cap.",
+    "initial_phase": "Eight jobs of transformation WW with inherited macro W, as in the parent model.",
+    "following_tasks": "Alternate VV then WW for cycles in {1,2,4}; each block contains K jobs.",
+    "cycles": [
+      1,
+      2,
+      4
+    ],
+    "jobs_per_block": [
+      1,
+      4,
+      16
+    ],
+    "dispatch_costs": [
+      0,
+      1,
+      2,
+      4
+    ],
+    "trace_reserves": [
+      0,
+      2,
+      4,
+      8
+    ],
+    "primary": {
+      "dispatch_cost": 1,
+      "trace_reserve": 4,
+      "jobs_per_block": 4,
+      "cycles": 1
+    },
+    "prices": "Unchanged parent compile=8, replace=8, patch=min(8,1+2*Hamming), retain=0. Trace reserve is paid once at the beginning, not after every change.",
+    "capacity": "One current four-letter macro and, for the revisable arm, its current editable trace. No free archive of earlier macros; returning to an earlier word pays the same management rule.",
+    "policies": {
+      "uncompiled": "Primitive-only execution throughout.",
+      "frozen": "Keep inherited W throughout.",
+      "replacement_oracle": "Choose the cheapest complete macro sequence with all future task blocks known.",
+      "revision_oracle": "Same full-sequence optimization with revision fees and one prepaid trace reserve.",
+      "replacement_reactive_lex": "Minimize current-block management plus execution cost; break ties lexicographically; do not use subsequent tasks.",
+      "revision_reactive_lex": "Same reactive rule with revision fees.",
+      "replacement_reactive_stay": "Same reactive rule, but prefer the current macro when tied, then lexicographic order.",
+      "revision_reactive_stay": "Same reactive stay-on-tie rule with revision fees."
+    },
+    "readouts": [
+      "total cost sums and exact comparison counts",
+      "positive hindsight regret for each reactive policy",
+      "cost differences due to tie handling",
+      "revision gain relative to replacement under each matched information policy",
+      "costs and chosen macro paths for selected witnesses"
+    ],
+    "strata": [
+      "rule pair",
+      "dispatch price",
+      "trace reserve",
+      "jobs per block",
+      "cycles",
+      "literal W/V distance category",
+      "whether inherited compilation paid for itself before the change"
+    ],
+    "witness_selection": "First lexicographic (A,B,dispatch,trace,K,cycles,W,V) useful-inheritance example for reactive stay revision regret, reactive stay revision costing more than frozen, and any tie-rule cost difference. Also select the first primary-price four-cycle revision-oracle gain over replacement exceeding one unit. Preserve absence if no witness exists.",
+    "checks": [
+      "dynamic programming matches direct enumeration of all 256 two-block macro paths for every pair, dispatch, W/V at K=4",
+      "every stored macro path replays its management and execution cost",
+      "hindsight oracle never costs more than its corresponding reactive policy",
+      "replacement oracle never costs more than frozen",
+      "zero-price physical execution has no library benefit",
+      "free-trace revision oracle weakly dominates replacement oracle",
+      "revision-oracle saving is bounded by 10*cycles minus trace reserve"
+    ],
+    "limits": [
+      "The oracle has more future information than the reactive benchmark; regret quantifies that information/planning gap, not a fair contest between learning algorithms.",
+      "The reactive benchmark deliberately does not use the repeating schedule; it does not learn that the task will return.",
+      "Current tasks and dynamics are fully known; search and task identification remain unpriced.",
+      "The trace stores the current construction only. No organizational survival or intrinsic agency is modeled.",
+      "Task, price, and cycle configurations share the same kernels and are not independent statistical replicates."
+    ]
+  },
+  "protocol_sha256": "ca535e8feb80815cbc40434c06e67ddc9e77cc5ce4595bf2d66cdbd1cdb20ede",
+  "script_sha256": "df930c19796f324ee4e066695aeaf48547ad4c284cf80c98a02e0836b5d0aa35",
+  "kernel_sha256": "9a3005bd99ed8d49bcf28cbecc5cd8e51c33fc047c8598840b656d05ea5e2afe",
+  "parent_script_sha256": "6f999849fff6fa68daf8f9ae76e558a3368476dfaa7bae59ff0d14105ae08350",
+  "python": "3.12.13",
+  "numpy": "2.3.5",
+  "aggregate_rows": 4212,
+  "checks": {
+    "two_block_direct_paths": 4194304,
+    "policy_configurations": 294912,
+    "witnesses_replayed": 4,
+    "all_passed": true
+  }
+}

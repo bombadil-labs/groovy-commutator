@@ -15,5 +15,6 @@ are preserved with their failed generalizations.
 
 The implementation assumes known dynamics, free planning, given inherited
 constructions, and one library transition. It does not execute the broader
-proposal's learning/discovery component. Repeated changes and returning tasks
-are the next extension.
+proposal's learning/discovery component. The
+[returning-task extension](../research/2026-09-07-returning-tasks.md) is now
+complete as a separate sequence experiment.

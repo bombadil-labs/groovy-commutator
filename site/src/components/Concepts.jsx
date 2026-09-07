@@ -5,6 +5,7 @@ import { AmbientCA2D } from './AmbientCA.jsx';
 import InstrumentViewer from './InstrumentViewer.jsx';
 import RunSig from './RunSig.jsx';
 import Defn, { Op } from './Defn.jsx';
+import PossibilityDemo from './PossibilityDemo.jsx';
 import { buildSeedUrl } from '../lib/exploreSeed.js';
 
 // Run signatures (see the #run section): a field states which gauge it is
@@ -98,6 +99,7 @@ const TOC = [
   ['#secondderivative', 'Second derivative'],
   ['#evolvederivative', 'Evolving the derivative'],
   ['#commutator', 'The Groovy Commutator G'],
+  ['#possibility', 'What can happen next?'],
   ['#absential', 'Absential cells'],
   ['#engines', 'Engines'],
   ['#secondorder', 'Reversible memory'],
@@ -1369,6 +1371,30 @@ export default function Concepts() {
                 { id: 6, type: 'transform', dim: '1d', from: 1, op: 'g', rule, color: EXPLORE_COLORS.purple },
               ])}
             />
+          </section>
+
+          <section id="possibility" style={{ padding: '1.6rem 0', borderTop: '1px solid var(--rule)' }}>
+            <div style={sectionKicker}>Order and possibility</div>
+            <h2 style={h2Style}>What can happen next?</h2>
+            <p style={pBody}>
+              The commutator tells us whether two orders reach the same state. A further question is what
+              each resulting state lets us do. A different state can have different options, or the same
+              options reached through different actions.
+            </p>
+            <PossibilityDemo />
+            <p style={pBody}>
+              Here an option missing after one step returns after two. Possibility depends on the actions
+              available and the time allowed. Counting options also leaves out which outcomes they are,
+              and which action sequence reaches each one.
+            </p>
+            <p style={pBody}>
+              These are exact, simple examples. The choices come from our interventions; the automaton
+              is not inventing new actions. The{' '}
+              <a href="research/future-repertoire.html" style={{ color: 'var(--accent)' }}>research experiment</a>
+              {' '}keeps the full definitions, counterexamples, and finite enumeration. The wider{' '}
+              <a href="research/history-and-possibility.html" style={{ color: 'var(--accent)' }}>history-and-possibility program</a>
+              {' '}asks how useful constructions can themselves become operations for later activity.
+            </p>
           </section>
 
           <section id="absential" style={{ padding: '1.6rem 0', borderTop: '1px solid var(--rule)' }}>
