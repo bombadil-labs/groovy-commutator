@@ -1,0 +1,146 @@
+{
+  "protocol": {
+    "protocol": "revisable-primitives-20260907",
+    "version": 1,
+    "base_commit": "c930a9fbdf12a2d1801086886c894805a35cfcbe",
+    "ring_widths": [
+      6,
+      9,
+      11
+    ],
+    "rule_pairs": [
+      [
+        0,
+        51
+      ],
+      [
+        4,
+        30
+      ],
+      [
+        30,
+        110
+      ],
+      [
+        51,
+        170
+      ],
+      [
+        54,
+        110
+      ],
+      [
+        90,
+        150
+      ],
+      [
+        110,
+        184
+      ],
+      [
+        184,
+        250
+      ]
+    ],
+    "macro_length": 4,
+    "inherited_words": "all 16 binary words W of length 4",
+    "target_words": "all 16 binary words V of length 4",
+    "task": "implement F_(VV) for every initial state on the ring with one common open-loop program",
+    "old_task": "implement F_(WW) for every initial state on the ring with one common open-loop program",
+    "max_physical_ticks_per_job": 8,
+    "prechange_jobs": 8,
+    "postchange_jobs": [
+      1,
+      4,
+      16
+    ],
+    "dispatch_costs": [
+      0,
+      1,
+      2,
+      4
+    ],
+    "trace_reserves": [
+      0,
+      2,
+      4,
+      8
+    ],
+    "primary": {
+      "dispatch_cost": 1,
+      "trace_reserve": 4,
+      "postchange_jobs": 4
+    },
+    "capacity": "one callable length-four macro; primitive A and B remain available to every arm",
+    "execution_cost": "expanded physical ticks plus dispatch_cost times issued primitive or macro instructions",
+    "compile_cost": 8,
+    "replace_cost": 8,
+    "revise_cost": "0 to retain current word; otherwise min(8, 1 + 2 * Hamming(current, new))",
+    "trace_cost": "revisable arm pays trace_reserve once before the change, even if unused",
+    "arms": [
+      "uncompiled",
+      "frozen",
+      "replace",
+      "revisable"
+    ],
+    "planning": "Exact oracle chooses a library and the cheapest program for each declared task; no search cost, hidden dynamics, learned policy, or uncertainty about the current target is modeled.",
+    "enumeration": "Enumerate all 511 primitive words of length 0..8; compare their full transformation arrays on all 2^n initial states. For every macro, find a minimum-dispatch encoding of each word, then the cheapest realization of each target transformation.",
+    "costs": {
+      "uncompiled": "8 * raw_old_job_cost + K * raw_new_job_cost",
+      "frozen": "8 + 8 * inherited_old_job_cost + K * inherited_new_job_cost",
+      "replace": "8 + 8 * inherited_old_job_cost + min_U(replace_fee(W,U) + K * U_new_job_cost)",
+      "revisable": "8 + trace_reserve + 8 * inherited_old_job_cost + min_U(revise_fee(W,U) + K * U_new_job_cost)"
+    },
+    "strata": [
+      "width",
+      "rule pair",
+      "dispatch cost",
+      "trace reserve",
+      "postchange jobs",
+      "literal shift: unchanged / one edit / two-or-more edits",
+      "inherited compilation paid off during prechange jobs"
+    ],
+    "readouts": [
+      "exact counts of each arm winning, tying, or losing against uncompiled, frozen, and replacement",
+      "total-cost sums",
+      "semantic equality of old and new task transformations",
+      "selected macro changes",
+      "maximum savings and excess cost"
+    ],
+    "witness_selection": "First lexicographic (n,A,B,dispatch,trace,K,W,V) useful-inheritance witness at the primary parameters for revisable beating all other arms, revisable losing to frozen, and revisable losing to replacement. Save a further physical-only control; replay selected expanded programs independently.",
+    "checks": [
+      "integer CA transitions match the vectorized engine at n=6",
+      "prefix and suffix constructions of every word map agree",
+      "minimum-dispatch encodings agree with independent macro-token enumeration",
+      "every returned encoded program expands to its declared word",
+      "dispatch-zero execution costs are identical across libraries",
+      "replacement never costs more than frozen (structural control)",
+      "free-trace revision never costs more than replacement (structural control)",
+      "selected programs implement the target for every finite-ring state through the separate vectorized engine"
+    ],
+    "limits": [
+      "All macros expand into existing operations: no new unbounded physical reachability is possible.",
+      "Costs are declared dimensionless resource prices, not measured energy or cognition.",
+      "An extra revision choice without a trace charge weakly dominates replacement by construction; that control is not evidence of adaptation.",
+      "No discovery of macros is modeled. All inherited constructions, including unhelpful ones, are retained in the complete record; successful prechange constructions form a declared stratum.",
+      "Full transformation equivalence is finite-ring and budget bounded; literal word distance need not match behavioral distance.",
+      "This tests one library transition under perfect current-task knowledge, not autonomous learning, viability, or ethical alignment."
+    ]
+  },
+  "protocol_sha256": "6cec975cfeecd1176608b36f4204b3f5dc9cdff3640664cd5082414131e7190b",
+  "script_sha256": "6f999849fff6fa68daf8f9ae76e558a3368476dfaa7bae59ff0d14105ae08350",
+  "ca_engine_sha256": "6969d6f0699b48602c8a2f55aecd61d58862e6472fea56f6d1ed9ebb2656d77e",
+  "python": "3.12.13",
+  "numpy": "2.3.5",
+  "aggregate_rows": 4608,
+  "checks": {
+    "encodings": 8176,
+    "engine_transitions": 1024,
+    "prefix_suffix_maps": 12240,
+    "physical_only_library_costs": 6528,
+    "witnesses_replayed": 4,
+    "policy_cases": 294912,
+    "all_passed": true
+  },
+  "interpretation": "Exact finite oracle cost model. Shared configurations are not independent statistical replicates."
+}

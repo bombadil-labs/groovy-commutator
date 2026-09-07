@@ -1,0 +1,310 @@
+[
+  {
+    "category": "physical_only",
+    "n": 6,
+    "A": 0,
+    "B": 51,
+    "dispatch": 0,
+    "trace": 4,
+    "K": 4,
+    "W": "AAAA",
+    "V": "AAAA",
+    "totals": {
+      "uncompiled": 12,
+      "frozen": 20,
+      "replace": 20,
+      "revisable": 24
+    },
+    "old_plan": {
+      "macro": "AAAA",
+      "target_word": "AAAAAAAA",
+      "expanded_word": "A",
+      "tokens": [
+        "A"
+      ],
+      "physical_ticks": 1,
+      "dispatches": 1,
+      "execution_cost": 1
+    },
+    "new_plans": {
+      "uncompiled": {
+        "macro": null,
+        "target_word": "AAAAAAAA",
+        "expanded_word": "A",
+        "tokens": [
+          "A"
+        ],
+        "physical_ticks": 1,
+        "dispatches": 1,
+        "execution_cost": 1
+      },
+      "frozen": {
+        "macro": "AAAA",
+        "target_word": "AAAAAAAA",
+        "expanded_word": "A",
+        "tokens": [
+          "A"
+        ],
+        "physical_ticks": 1,
+        "dispatches": 1,
+        "execution_cost": 1
+      },
+      "replace": {
+        "macro": "AAAA",
+        "target_word": "AAAAAAAA",
+        "expanded_word": "A",
+        "tokens": [
+          "A"
+        ],
+        "physical_ticks": 1,
+        "dispatches": 1,
+        "execution_cost": 1
+      },
+      "revisable": {
+        "macro": "AAAA",
+        "target_word": "AAAAAAAA",
+        "expanded_word": "A",
+        "tokens": [
+          "A"
+        ],
+        "physical_ticks": 1,
+        "dispatches": 1,
+        "execution_cost": 1
+      }
+    }
+  },
+  {
+    "category": "revision_loses_frozen",
+    "n": 6,
+    "A": 4,
+    "B": 30,
+    "dispatch": 1,
+    "trace": 4,
+    "K": 4,
+    "W": "AABB",
+    "V": "AAAA",
+    "totals": {
+      "uncompiled": 104,
+      "frozen": 96,
+      "replace": 96,
+      "revisable": 100
+    },
+    "old_plan": {
+      "macro": "AABB",
+      "target_word": "AABBAABB",
+      "expanded_word": "AABBAABB",
+      "tokens": [
+        "@",
+        "@"
+      ],
+      "physical_ticks": 8,
+      "dispatches": 2,
+      "execution_cost": 10
+    },
+    "new_plans": {
+      "uncompiled": {
+        "macro": null,
+        "target_word": "AAAAAAAA",
+        "expanded_word": "A",
+        "tokens": [
+          "A"
+        ],
+        "physical_ticks": 1,
+        "dispatches": 1,
+        "execution_cost": 2
+      },
+      "frozen": {
+        "macro": "AABB",
+        "target_word": "AAAAAAAA",
+        "expanded_word": "A",
+        "tokens": [
+          "A"
+        ],
+        "physical_ticks": 1,
+        "dispatches": 1,
+        "execution_cost": 2
+      },
+      "replace": {
+        "macro": "AABB",
+        "target_word": "AAAAAAAA",
+        "expanded_word": "A",
+        "tokens": [
+          "A"
+        ],
+        "physical_ticks": 1,
+        "dispatches": 1,
+        "execution_cost": 2
+      },
+      "revisable": {
+        "macro": "AABB",
+        "target_word": "AAAAAAAA",
+        "expanded_word": "A",
+        "tokens": [
+          "A"
+        ],
+        "physical_ticks": 1,
+        "dispatches": 1,
+        "execution_cost": 2
+      }
+    }
+  },
+  {
+    "category": "revision_loses_replacement",
+    "n": 6,
+    "A": 4,
+    "B": 30,
+    "dispatch": 1,
+    "trace": 4,
+    "K": 4,
+    "W": "AABB",
+    "V": "AAAA",
+    "totals": {
+      "uncompiled": 104,
+      "frozen": 96,
+      "replace": 96,
+      "revisable": 100
+    },
+    "old_plan": {
+      "macro": "AABB",
+      "target_word": "AABBAABB",
+      "expanded_word": "AABBAABB",
+      "tokens": [
+        "@",
+        "@"
+      ],
+      "physical_ticks": 8,
+      "dispatches": 2,
+      "execution_cost": 10
+    },
+    "new_plans": {
+      "uncompiled": {
+        "macro": null,
+        "target_word": "AAAAAAAA",
+        "expanded_word": "A",
+        "tokens": [
+          "A"
+        ],
+        "physical_ticks": 1,
+        "dispatches": 1,
+        "execution_cost": 2
+      },
+      "frozen": {
+        "macro": "AABB",
+        "target_word": "AAAAAAAA",
+        "expanded_word": "A",
+        "tokens": [
+          "A"
+        ],
+        "physical_ticks": 1,
+        "dispatches": 1,
+        "execution_cost": 2
+      },
+      "replace": {
+        "macro": "AABB",
+        "target_word": "AAAAAAAA",
+        "expanded_word": "A",
+        "tokens": [
+          "A"
+        ],
+        "physical_ticks": 1,
+        "dispatches": 1,
+        "execution_cost": 2
+      },
+      "revisable": {
+        "macro": "AABB",
+        "target_word": "AAAAAAAA",
+        "expanded_word": "A",
+        "tokens": [
+          "A"
+        ],
+        "physical_ticks": 1,
+        "dispatches": 1,
+        "execution_cost": 2
+      }
+    }
+  },
+  {
+    "category": "revision_beats_all",
+    "n": 6,
+    "A": 4,
+    "B": 30,
+    "dispatch": 1,
+    "trace": 4,
+    "K": 4,
+    "W": "AABB",
+    "V": "ABBA",
+    "totals": {
+      "uncompiled": 136,
+      "frozen": 124,
+      "replace": 124,
+      "revisable": 123
+    },
+    "old_plan": {
+      "macro": "AABB",
+      "target_word": "AABBAABB",
+      "expanded_word": "AABBAABB",
+      "tokens": [
+        "@",
+        "@"
+      ],
+      "physical_ticks": 8,
+      "dispatches": 2,
+      "execution_cost": 10
+    },
+    "new_plans": {
+      "uncompiled": {
+        "macro": null,
+        "target_word": "ABBAABBA",
+        "expanded_word": "ABBBA",
+        "tokens": [
+          "A",
+          "B",
+          "B",
+          "B",
+          "A"
+        ],
+        "physical_ticks": 5,
+        "dispatches": 5,
+        "execution_cost": 10
+      },
+      "frozen": {
+        "macro": "AABB",
+        "target_word": "ABBAABBA",
+        "expanded_word": "AABBBA",
+        "tokens": [
+          "@",
+          "B",
+          "A"
+        ],
+        "physical_ticks": 6,
+        "dispatches": 3,
+        "execution_cost": 9
+      },
+      "replace": {
+        "macro": "AABB",
+        "target_word": "ABBAABBA",
+        "expanded_word": "AABBBA",
+        "tokens": [
+          "@",
+          "B",
+          "A"
+        ],
+        "physical_ticks": 6,
+        "dispatches": 3,
+        "execution_cost": 9
+      },
+      "revisable": {
+        "macro": "ABBB",
+        "target_word": "ABBAABBA",
+        "expanded_word": "ABBBA",
+        "tokens": [
+          "@",
+          "A"
+        ],
+        "physical_ticks": 5,
+        "dispatches": 2,
+        "execution_cost": 7
+      }
+    }
+  }
+]

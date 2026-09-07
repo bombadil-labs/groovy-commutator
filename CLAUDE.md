@@ -315,9 +315,31 @@ Possibility here comes from declared external actions. Different histories
 act through different complete present states; no intrinsic agency, viability,
 or new action invention was measured. Exactly-h sets need not grow with h,
 and different pairs have different action alphabets. Do not rank intrinsic
-freedom by their set sizes. The next larger question is in
-`docs/research/2026-09-07-revisable-primitives.md`: proposed, not executed;
-resolve equal-resource accounting and revision costs before freezing a test.
+freedom by their set sizes.
+
+The next unit is now complete in `docs/research/2026-09-07-costed-primitives.md`
+and `docs/research/2026-09-07-macro-local-equivalence.md`. Scripts
+`experiment_revisable_primitives.py` and `experiment_macro_local_equivalence.py`
+compare four library policies with explicit physical, dispatch, construction,
+trace, and revision costs. There are 294,912 finite configurations plus 98,304
+all-width local-map configurations; all encodings, engine, witness, and
+price-bound checks pass. All-width equivalence is established on every
+17-bit causal window for words up to eight ticks; shortest-program search
+is still bounded to eight ticks.
+
+At primary dispatch=1, trace=4, K=4, useful inherited macros give revision
+wins over replacement in 364/384 one-edit changes (mean saving 0.802), versus
+91/1056 farther changes (mean saving -1.902). No unchanged task wins. The
+single-transition saving is bounded by 5 minus trace price, so at most one
+unit here: a property of the cost schedule, not a new CA law. Macro expansion
+preserves physical-budget reachability; savings require priced dispatch.
+The first six-cell shortcut ABBBA = ABBAABBA for rules 4/30 fails on 11,264
+of 131,072 unrestricted windows; preserve its bounded scope and counterexample.
+
+The original revisable-primitives proposal is partly implemented. Given
+macros, free oracle planning, and one task transition are explicit limits.
+Use the all-width kernels for the next task-return experiment; separately
+address learning/discovery and search costs before claiming adaptation.
 
 ## Research continuation: observed history (2026-09-07)
 
