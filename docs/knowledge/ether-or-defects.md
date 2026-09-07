@@ -1,9 +1,17 @@
 # What part of Rule 110 becomes predictable?
 
-## Open question
+## Partly answered, 2026-09-07
 
-Low average prediction error does not locate the improvement. A predictor may recognize the phase of a repeating background while remaining poor around moving disturbances and their interactions.
+The [regional experiment](../research/2026-09-07-ether-regions.md) finds that
+history improves prediction in background-compatible, ambiguous, and
+departure-neighborhood targets under both fixed detectors. The benefit is
+not confined to undisturbed background. Departure regions nevertheless
+contain most residual errors.
 
-## What would answer it
+## What remains open
 
-Compare current-only and history errors at matched positions, separated by an independently defined background detector. Report background, disturbance-neighborhood, and ambiguous frequencies together with their errors. No such regional breakdown has been measured yet.
+Local ether incompatibility does not identify glider species or collisions.
+Which recurring structures remain difficult, and whether their interactions
+explain the errors, require a finer independently validated classification.
+The relative contribution of background and departures depends on the
+observation and detector; neither can be omitted from the explanation.

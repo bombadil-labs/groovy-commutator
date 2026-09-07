@@ -310,10 +310,22 @@ workstream; the unchanged earlier notes and source hashes are under
   also repairs under majority and derivative observations. There is no
   projection-independent Class-IV classifier here. Report seed ranges,
   coverage, and exact projection/cadence with every error curve.
-- **Next:** distinguish ether-phase prediction from defect prediction;
-  vary training budget and observation family; only then estimate robust
-  sufficient-history scaling or fit reduced dynamics with explicit memory.
-  Empirical low error does not prove a finite-memory closure law.
+- **Regional follow-up completed:** see `docs/research/2026-09-07-ether-regions.md`
+  and `scripts/experiment_ether_regions.py`. Frozen-protocol Rule 110 test:
+  two training ensembles, eight shared held-out seeds, widths 420/840, five
+  observers, two past-only ether detectors. All 320 departure-region paired
+  comparisons improve at h=6; these share data and are not independent
+  replicates. Departures contribute 40.4–74.8% of total gain depending on
+  observation, width, and detector; background also contributes substantially.
+  Primary-detector departure neighborhoods contain 97.2–100% of pooled
+  residual error. History beats the equal-bit radius-ten snapshot in all
+  160 paired seed comparisons, with better support coverage: this is an
+  estimator/budget finding, not proof of irreducible temporal information.
+  The detector labels local incompatibility, not glider species or collisions.
+- **Next:** independently classify residual-error structures; separately vary
+  training budget at fixed width for spatial versus temporal contexts. Only
+  then estimate sufficient-history scaling or fit reduced dynamics with
+  explicit memory. Low empirical error does not prove finite-memory closure.
 
 ## New instruments (added 2026-06-30, from a separate chat-interface exploration)
 
