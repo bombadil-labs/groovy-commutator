@@ -1,0 +1,42 @@
+{
+  "protocol": "future-repertoire-20260907",
+  "version": 1,
+  "base_commit": "b4ca8b6d362554d91837ea9b40990b0ad16b7c62",
+  "ring_widths": [6, 9, 11],
+  "rules": [0, 4, 30, 51, 54, 90, 110, 150, 170, 184, 204, 250],
+  "pairs": "all unordered distinct pairs, A < B",
+  "initial_conditions": "every binary state at each ring width",
+  "preparations": {"AB": "apply A, then B", "BA": "apply B, then A"},
+  "continuation_actions": "at every synchronous tick choose globally either A or B",
+  "horizons": [0, 1, 2, 3, 4, 5, 6],
+  "budget": "exactly h continuation ticks; all 2^h open-loop words, no early stopping",
+  "observations": ["identity", "population_count"],
+  "primary_observation": "identity",
+  "primary_horizon": 6,
+  "metrics": [
+    "prepared-state Hamming distance and noncommutation count",
+    "number of distinct reachable outcomes per preparation",
+    "outcome-set Jaccard distance",
+    "counts of equal sets, strict containment in either direction, and incomparable sets",
+    "counts of equal-size but different outcome sets",
+    "fraction of action words with different outcomes under the two preparations",
+    "counts of equal outcome sets but different action-to-outcome maps"
+  ],
+  "witness_selection": "first lexicographic (n,A,B,h,S) witness per observation for strict containment, equal-size/different-sets, and equal-sets/different-response-map; require h > 0 and differing prepared states",
+  "checks": [
+    "integer CA maps agree with the vectorized engine for all n=6 panel states",
+    "same prepared state implies identical continuation maps and outcome sets",
+    "h=0 identity set discrepancy equals noncommutation",
+    "identity/constant-rule controls agree with explicit word enumeration",
+    "every saved witness independently replays through the vectorized engine"
+  ],
+  "reporting": "Aggregate exact integer counts by width, pair, horizon, and observation. Keep widths separate; cases and horizons are not independent samples. Save all selected witnesses, configuration and script hashes, environment versions, and a generated summary/figure.",
+  "limitations": [
+    "Finite rings, a selected rule panel, and six-tick continuation budgets; no thermodynamic or open-endedness claim.",
+    "Possibilities are defined by an external open-loop controller; this is not intrinsic autonomy, learned adaptation, or a viability measure.",
+    "Different preparations have different complete present states; historical effects are carried by those states.",
+    "The action alphabet depends on the pair; do not rank pairs as having intrinsically greater freedom.",
+    "Population count can merge physically distinct outcomes; equality under it is weaker than equality of full states.",
+    "No hypothesis of life, criticality, or ethical desirability is tested by repertoire size alone."
+  ]
+}
