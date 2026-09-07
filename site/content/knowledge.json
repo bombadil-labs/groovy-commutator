@@ -229,14 +229,15 @@
       "title": "When should an inherited primitive remain revisable?",
       "kind": "question",
       "status": "partly-answered",
-      "summary": "An exact oracle cost model identifies when editing repays its retained-trace cost; learning and repeated task changes remain open.",
+      "summary": "Costed one-transition and returning-task comparisons identify price-dependent revision benefits and policy failures; learning and changing the operation vocabulary remain open.",
       "updated": "2026-09-07",
       "source": "docs/knowledge/revisable-primitives.md",
       "research": [
         "revisable-primitives",
         "history-and-possibility",
         "costed-primitives",
-        "macro-local-equivalence"
+        "macro-local-equivalence",
+        "returning-tasks"
       ]
     },
     {
@@ -337,6 +338,54 @@
       "source": "docs/knowledge/macro-local-test.md",
       "research": [
         "macro-local-equivalence"
+      ]
+    },
+    {
+      "id": "returning-tasks-test",
+      "title": "Compare returning tasks and revision policies",
+      "kind": "experiment",
+      "status": "completed",
+      "summary": "An exact sequence comparison separates full-hindsight planning from reactive policies and tests whether repeated changes repay an editable trace.",
+      "updated": "2026-09-07",
+      "source": "docs/knowledge/returning-tasks-test.md",
+      "research": [
+        "returning-tasks"
+      ]
+    },
+    {
+      "id": "revision-sequence-regret",
+      "title": "A locally cheaper revision can cost more after a return",
+      "kind": "finding",
+      "status": "exact",
+      "summary": "A free-trace example saves one unit on the changed job but adds two when the old task returns; available revision does not guarantee good sequential decisions.",
+      "updated": "2026-09-07",
+      "source": "docs/knowledge/revision-sequence-regret.md",
+      "research": [
+        "returning-tasks"
+      ]
+    },
+    {
+      "id": "present-ties-future-costs",
+      "title": "Equal immediate costs can conceal different future costs",
+      "kind": "finding",
+      "status": "exact",
+      "summary": "Two declared tie rules choose equally cheap current actions but incur different costs on a returning task.",
+      "updated": "2026-09-07",
+      "source": "docs/knowledge/present-ties-future-costs.md",
+      "research": [
+        "returning-tasks"
+      ]
+    },
+    {
+      "id": "trace-amortization",
+      "title": "Repeated changes can repay a retained construction record",
+      "kind": "finding",
+      "status": "exact",
+      "summary": "The fixed trace reserve can be amortized across repeated management opportunities under the same declared price schedule.",
+      "updated": "2026-09-07",
+      "source": "docs/knowledge/trace-amortization.md",
+      "research": [
+        "returning-tasks"
       ]
     }
   ],
@@ -614,6 +663,78 @@
       "reason": "The stated counterexample counts come from the exhaustive local-map audit.",
       "research": [
         "macro-local-equivalence"
+      ]
+    },
+    {
+      "source": "returning-tasks-test",
+      "type": "depends_on",
+      "target": "macro-local-test",
+      "reason": "The sequence comparison reuses the exact all-width execution kernels, preserving their physical search bound.",
+      "research": [
+        "returning-tasks"
+      ]
+    },
+    {
+      "source": "returning-tasks-test",
+      "type": "tests",
+      "target": "revisable-primitives",
+      "reason": "The completed extension tests repeated changes and returning tasks under known dynamics, not learning or macro discovery.",
+      "research": [
+        "returning-tasks"
+      ]
+    },
+    {
+      "source": "returning-tasks-test",
+      "type": "supports",
+      "target": "revision-sequence-regret",
+      "reason": "The selected free-trace path isolates a local execution gain outweighed by the returning-task cost.",
+      "research": [
+        "returning-tasks"
+      ]
+    },
+    {
+      "source": "returning-tasks-test",
+      "type": "supports",
+      "target": "present-ties-future-costs",
+      "reason": "A replayed witness compares lexicographic and stay-on-tie choices with equal current costs and different later costs.",
+      "research": [
+        "returning-tasks"
+      ]
+    },
+    {
+      "source": "returning-tasks-test",
+      "type": "supports",
+      "target": "trace-amortization",
+      "reason": "The exact repeated-cycle comparisons retain the same prices while paying the trace reserve once.",
+      "research": [
+        "returning-tasks"
+      ]
+    },
+    {
+      "source": "revision-sequence-regret",
+      "type": "depends_on",
+      "target": "returning-tasks-test",
+      "reason": "The counterexample depends on the declared task sequence, reactive policy, and cost accounting.",
+      "research": [
+        "returning-tasks"
+      ]
+    },
+    {
+      "source": "present-ties-future-costs",
+      "type": "depends_on",
+      "target": "returning-tasks-test",
+      "reason": "The tie-effect finding comes from the two predeclared reactive tie rules.",
+      "research": [
+        "returning-tasks"
+      ]
+    },
+    {
+      "source": "trace-amortization",
+      "type": "depends_on",
+      "target": "returning-tasks-test",
+      "reason": "The repeated-cycle result relies on the one-time trace reserve and the declared management prices.",
+      "research": [
+        "returning-tasks"
       ]
     }
   ]

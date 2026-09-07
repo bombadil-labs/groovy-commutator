@@ -105,7 +105,8 @@
       "history-repairability",
       "ether-regions",
       "costed-primitives",
-      "macro-local-equivalence"
+      "macro-local-equivalence",
+      "returning-tasks"
     ],
     "date": "2026-09-07",
     "updated": "2026-09-07",
@@ -121,9 +122,9 @@
     "summary": "Exact enumeration separates prepared-state differences, reachable outcomes, and action responses. Equal numbers can hide different options; equal sets can hide different ways to act.",
     "takeaway": "Possibility needs an action vocabulary and a time budget. Count the options, identify them, and check how they are reached.",
     "promotion": {
-      "stage": "candidate",
-      "idea": "The same options can require different actions",
-      "destination": "Concepts"
+      "stage": "promoted",
+      "title": "What can happen next?",
+      "href": "concepts.html#possibility"
     },
     "related": [
       "history-and-possibility",
@@ -150,7 +151,8 @@
       "history-and-possibility",
       "future-repertoire",
       "costed-primitives",
-      "macro-local-equivalence"
+      "macro-local-equivalence",
+      "returning-tasks"
     ],
     "date": "2026-09-07",
     "updated": "2026-09-07",
@@ -168,7 +170,8 @@
     "related": [
       "revisable-primitives",
       "macro-local-equivalence",
-      "history-and-possibility"
+      "history-and-possibility",
+      "returning-tasks"
     ],
     "promotion": {
       "stage": "research"
@@ -199,5 +202,27 @@
     "date": "2026-09-07",
     "updated": "2026-09-07",
     "source": "docs/research/2026-09-07-macro-local-equivalence.md"
+  },
+  {
+    "slug": "returning-tasks",
+    "number": "010",
+    "title": "When an earlier task returns",
+    "date": "2026-09-07",
+    "updated": "2026-09-07",
+    "kind": "Experiment",
+    "evidence": "exact",
+    "topic": "History and possibility",
+    "summary": "A locally cheaper revision can cost more when an old task returns. Repeated changes can also repay the retained trace, and immediate ties can conceal different future costs.",
+    "takeaway": "Available revision options, the policy for using them, and the sequence of future tasks jointly determine what a construction costs.",
+    "source": "docs/research/2026-09-07-returning-tasks.md",
+    "promotion": {
+      "stage": "research"
+    },
+    "related": [
+      "costed-primitives",
+      "macro-local-equivalence",
+      "revisable-primitives",
+      "history-and-possibility"
+    ]
   }
 ]

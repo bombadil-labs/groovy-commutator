@@ -1,0 +1,2163 @@
+[
+  {
+    "category": "reactive_revision_worse_frozen",
+    "A": 0,
+    "B": 51,
+    "dispatch": 4,
+    "trace": 2,
+    "K": 1,
+    "cycles": 1,
+    "W": "AAAB",
+    "V": "AAAA",
+    "totals": {
+      "uncompiled": 95,
+      "frozen": 85,
+      "replacement_oracle": 85,
+      "replacement_reactive_lex": 85,
+      "replacement_reactive_stay": 85,
+      "revision_oracle": 87,
+      "revision_reactive_lex": 87,
+      "revision_reactive_stay": 87
+    },
+    "old_raw_job_cost": 10,
+    "old_macro_job_cost": 8,
+    "blocks": {
+      "uncompiled": [
+        {
+          "management": 0,
+          "job_cost": 5,
+          "block_cost": 5,
+          "plan": {
+            "macro": null,
+            "target_word": "AAAAAAAA",
+            "expanded_word": "A",
+            "tokens": [
+              "A"
+            ],
+            "physical_ticks": 1,
+            "dispatches": 1,
+            "execution_cost": 5
+          }
+        },
+        {
+          "management": 0,
+          "job_cost": 10,
+          "block_cost": 10,
+          "plan": {
+            "macro": null,
+            "target_word": "AAABAAAB",
+            "expanded_word": "AB",
+            "tokens": [
+              "A",
+              "B"
+            ],
+            "physical_ticks": 2,
+            "dispatches": 2,
+            "execution_cost": 10
+          }
+        }
+      ],
+      "frozen": [
+        {
+          "management": 0,
+          "job_cost": 5,
+          "block_cost": 5,
+          "plan": {
+            "macro": "AAAB",
+            "target_word": "AAAAAAAA",
+            "expanded_word": "A",
+            "tokens": [
+              "A"
+            ],
+            "physical_ticks": 1,
+            "dispatches": 1,
+            "execution_cost": 5
+          }
+        },
+        {
+          "management": 0,
+          "job_cost": 8,
+          "block_cost": 8,
+          "plan": {
+            "macro": "AAAB",
+            "target_word": "AAABAAAB",
+            "expanded_word": "AAAB",
+            "tokens": [
+              "@"
+            ],
+            "physical_ticks": 4,
+            "dispatches": 1,
+            "execution_cost": 8
+          }
+        }
+      ],
+      "replacement_oracle": [
+        {
+          "management": 0,
+          "job_cost": 5,
+          "block_cost": 5,
+          "plan": {
+            "macro": "AAAB",
+            "target_word": "AAAAAAAA",
+            "expanded_word": "A",
+            "tokens": [
+              "A"
+            ],
+            "physical_ticks": 1,
+            "dispatches": 1,
+            "execution_cost": 5
+          }
+        },
+        {
+          "management": 0,
+          "job_cost": 8,
+          "block_cost": 8,
+          "plan": {
+            "macro": "AAAB",
+            "target_word": "AAABAAAB",
+            "expanded_word": "AAAB",
+            "tokens": [
+              "@"
+            ],
+            "physical_ticks": 4,
+            "dispatches": 1,
+            "execution_cost": 8
+          }
+        }
+      ],
+      "revision_oracle": [
+        {
+          "management": 0,
+          "job_cost": 5,
+          "block_cost": 5,
+          "plan": {
+            "macro": "AAAB",
+            "target_word": "AAAAAAAA",
+            "expanded_word": "A",
+            "tokens": [
+              "A"
+            ],
+            "physical_ticks": 1,
+            "dispatches": 1,
+            "execution_cost": 5
+          }
+        },
+        {
+          "management": 0,
+          "job_cost": 8,
+          "block_cost": 8,
+          "plan": {
+            "macro": "AAAB",
+            "target_word": "AAABAAAB",
+            "expanded_word": "AAAB",
+            "tokens": [
+              "@"
+            ],
+            "physical_ticks": 4,
+            "dispatches": 1,
+            "execution_cost": 8
+          }
+        }
+      ],
+      "replacement_reactive_lex": [
+        {
+          "management": 0,
+          "job_cost": 5,
+          "block_cost": 5,
+          "plan": {
+            "macro": "AAAB",
+            "target_word": "AAAAAAAA",
+            "expanded_word": "A",
+            "tokens": [
+              "A"
+            ],
+            "physical_ticks": 1,
+            "dispatches": 1,
+            "execution_cost": 5
+          }
+        },
+        {
+          "management": 0,
+          "job_cost": 8,
+          "block_cost": 8,
+          "plan": {
+            "macro": "AAAB",
+            "target_word": "AAABAAAB",
+            "expanded_word": "AAAB",
+            "tokens": [
+              "@"
+            ],
+            "physical_ticks": 4,
+            "dispatches": 1,
+            "execution_cost": 8
+          }
+        }
+      ],
+      "revision_reactive_lex": [
+        {
+          "management": 0,
+          "job_cost": 5,
+          "block_cost": 5,
+          "plan": {
+            "macro": "AAAB",
+            "target_word": "AAAAAAAA",
+            "expanded_word": "A",
+            "tokens": [
+              "A"
+            ],
+            "physical_ticks": 1,
+            "dispatches": 1,
+            "execution_cost": 5
+          }
+        },
+        {
+          "management": 0,
+          "job_cost": 8,
+          "block_cost": 8,
+          "plan": {
+            "macro": "AAAB",
+            "target_word": "AAABAAAB",
+            "expanded_word": "AAAB",
+            "tokens": [
+              "@"
+            ],
+            "physical_ticks": 4,
+            "dispatches": 1,
+            "execution_cost": 8
+          }
+        }
+      ],
+      "replacement_reactive_stay": [
+        {
+          "management": 0,
+          "job_cost": 5,
+          "block_cost": 5,
+          "plan": {
+            "macro": "AAAB",
+            "target_word": "AAAAAAAA",
+            "expanded_word": "A",
+            "tokens": [
+              "A"
+            ],
+            "physical_ticks": 1,
+            "dispatches": 1,
+            "execution_cost": 5
+          }
+        },
+        {
+          "management": 0,
+          "job_cost": 8,
+          "block_cost": 8,
+          "plan": {
+            "macro": "AAAB",
+            "target_word": "AAABAAAB",
+            "expanded_word": "AAAB",
+            "tokens": [
+              "@"
+            ],
+            "physical_ticks": 4,
+            "dispatches": 1,
+            "execution_cost": 8
+          }
+        }
+      ],
+      "revision_reactive_stay": [
+        {
+          "management": 0,
+          "job_cost": 5,
+          "block_cost": 5,
+          "plan": {
+            "macro": "AAAB",
+            "target_word": "AAAAAAAA",
+            "expanded_word": "A",
+            "tokens": [
+              "A"
+            ],
+            "physical_ticks": 1,
+            "dispatches": 1,
+            "execution_cost": 5
+          }
+        },
+        {
+          "management": 0,
+          "job_cost": 8,
+          "block_cost": 8,
+          "plan": {
+            "macro": "AAAB",
+            "target_word": "AAABAAAB",
+            "expanded_word": "AAAB",
+            "tokens": [
+              "@"
+            ],
+            "physical_ticks": 4,
+            "dispatches": 1,
+            "execution_cost": 8
+          }
+        }
+      ]
+    }
+  },
+  {
+    "category": "reactive_revision_regret",
+    "A": 4,
+    "B": 30,
+    "dispatch": 1,
+    "trace": 0,
+    "K": 1,
+    "cycles": 1,
+    "W": "AABB",
+    "V": "ABAB",
+    "totals": {
+      "uncompiled": 124,
+      "frozen": 114,
+      "replacement_oracle": 114,
+      "replacement_reactive_lex": 114,
+      "replacement_reactive_stay": 114,
+      "revision_oracle": 114,
+      "revision_reactive_lex": 115,
+      "revision_reactive_stay": 115
+    },
+    "old_raw_job_cost": 12,
+    "old_macro_job_cost": 10,
+    "blocks": {
+      "uncompiled": [
+        {
+          "management": 0,
+          "job_cost": 16,
+          "block_cost": 16,
+          "plan": {
+            "macro": null,
+            "target_word": "ABABABAB",
+            "expanded_word": "ABABABAB",
+            "tokens": [
+              "A",
+              "B",
+              "A",
+              "B",
+              "A",
+              "B",
+              "A",
+              "B"
+            ],
+            "physical_ticks": 8,
+            "dispatches": 8,
+            "execution_cost": 16
+          }
+        },
+        {
+          "management": 0,
+          "job_cost": 12,
+          "block_cost": 12,
+          "plan": {
+            "macro": null,
+            "target_word": "AABBAABB",
+            "expanded_word": "ABBABB",
+            "tokens": [
+              "A",
+              "B",
+              "B",
+              "A",
+              "B",
+              "B"
+            ],
+            "physical_ticks": 6,
+            "dispatches": 6,
+            "execution_cost": 12
+          }
+        }
+      ],
+      "frozen": [
+        {
+          "management": 0,
+          "job_cost": 16,
+          "block_cost": 16,
+          "plan": {
+            "macro": "AABB",
+            "target_word": "ABABABAB",
+            "expanded_word": "ABABABAB",
+            "tokens": [
+              "A",
+              "B",
+              "A",
+              "B",
+              "A",
+              "B",
+              "A",
+              "B"
+            ],
+            "physical_ticks": 8,
+            "dispatches": 8,
+            "execution_cost": 16
+          }
+        },
+        {
+          "management": 0,
+          "job_cost": 10,
+          "block_cost": 10,
+          "plan": {
+            "macro": "AABB",
+            "target_word": "AABBAABB",
+            "expanded_word": "AABBAABB",
+            "tokens": [
+              "@",
+              "@"
+            ],
+            "physical_ticks": 8,
+            "dispatches": 2,
+            "execution_cost": 10
+          }
+        }
+      ],
+      "replacement_oracle": [
+        {
+          "management": 0,
+          "job_cost": 16,
+          "block_cost": 16,
+          "plan": {
+            "macro": "AABB",
+            "target_word": "ABABABAB",
+            "expanded_word": "ABABABAB",
+            "tokens": [
+              "A",
+              "B",
+              "A",
+              "B",
+              "A",
+              "B",
+              "A",
+              "B"
+            ],
+            "physical_ticks": 8,
+            "dispatches": 8,
+            "execution_cost": 16
+          }
+        },
+        {
+          "management": 0,
+          "job_cost": 10,
+          "block_cost": 10,
+          "plan": {
+            "macro": "AABB",
+            "target_word": "AABBAABB",
+            "expanded_word": "AABBAABB",
+            "tokens": [
+              "@",
+              "@"
+            ],
+            "physical_ticks": 8,
+            "dispatches": 2,
+            "execution_cost": 10
+          }
+        }
+      ],
+      "revision_oracle": [
+        {
+          "management": 0,
+          "job_cost": 16,
+          "block_cost": 16,
+          "plan": {
+            "macro": "AABB",
+            "target_word": "ABABABAB",
+            "expanded_word": "ABABABAB",
+            "tokens": [
+              "A",
+              "B",
+              "A",
+              "B",
+              "A",
+              "B",
+              "A",
+              "B"
+            ],
+            "physical_ticks": 8,
+            "dispatches": 8,
+            "execution_cost": 16
+          }
+        },
+        {
+          "management": 0,
+          "job_cost": 10,
+          "block_cost": 10,
+          "plan": {
+            "macro": "AABB",
+            "target_word": "AABBAABB",
+            "expanded_word": "AABBAABB",
+            "tokens": [
+              "@",
+              "@"
+            ],
+            "physical_ticks": 8,
+            "dispatches": 2,
+            "execution_cost": 10
+          }
+        }
+      ],
+      "replacement_reactive_lex": [
+        {
+          "management": 0,
+          "job_cost": 16,
+          "block_cost": 16,
+          "plan": {
+            "macro": "AABB",
+            "target_word": "ABABABAB",
+            "expanded_word": "ABABABAB",
+            "tokens": [
+              "A",
+              "B",
+              "A",
+              "B",
+              "A",
+              "B",
+              "A",
+              "B"
+            ],
+            "physical_ticks": 8,
+            "dispatches": 8,
+            "execution_cost": 16
+          }
+        },
+        {
+          "management": 0,
+          "job_cost": 10,
+          "block_cost": 10,
+          "plan": {
+            "macro": "AABB",
+            "target_word": "AABBAABB",
+            "expanded_word": "AABBAABB",
+            "tokens": [
+              "@",
+              "@"
+            ],
+            "physical_ticks": 8,
+            "dispatches": 2,
+            "execution_cost": 10
+          }
+        }
+      ],
+      "revision_reactive_lex": [
+        {
+          "management": 5,
+          "job_cost": 10,
+          "block_cost": 15,
+          "plan": {
+            "macro": "ABAB",
+            "target_word": "ABABABAB",
+            "expanded_word": "ABABABAB",
+            "tokens": [
+              "@",
+              "@"
+            ],
+            "physical_ticks": 8,
+            "dispatches": 2,
+            "execution_cost": 10
+          }
+        },
+        {
+          "management": 0,
+          "job_cost": 12,
+          "block_cost": 12,
+          "plan": {
+            "macro": "ABAB",
+            "target_word": "AABBAABB",
+            "expanded_word": "ABBABB",
+            "tokens": [
+              "A",
+              "B",
+              "B",
+              "A",
+              "B",
+              "B"
+            ],
+            "physical_ticks": 6,
+            "dispatches": 6,
+            "execution_cost": 12
+          }
+        }
+      ],
+      "replacement_reactive_stay": [
+        {
+          "management": 0,
+          "job_cost": 16,
+          "block_cost": 16,
+          "plan": {
+            "macro": "AABB",
+            "target_word": "ABABABAB",
+            "expanded_word": "ABABABAB",
+            "tokens": [
+              "A",
+              "B",
+              "A",
+              "B",
+              "A",
+              "B",
+              "A",
+              "B"
+            ],
+            "physical_ticks": 8,
+            "dispatches": 8,
+            "execution_cost": 16
+          }
+        },
+        {
+          "management": 0,
+          "job_cost": 10,
+          "block_cost": 10,
+          "plan": {
+            "macro": "AABB",
+            "target_word": "AABBAABB",
+            "expanded_word": "AABBAABB",
+            "tokens": [
+              "@",
+              "@"
+            ],
+            "physical_ticks": 8,
+            "dispatches": 2,
+            "execution_cost": 10
+          }
+        }
+      ],
+      "revision_reactive_stay": [
+        {
+          "management": 5,
+          "job_cost": 10,
+          "block_cost": 15,
+          "plan": {
+            "macro": "ABAB",
+            "target_word": "ABABABAB",
+            "expanded_word": "ABABABAB",
+            "tokens": [
+              "@",
+              "@"
+            ],
+            "physical_ticks": 8,
+            "dispatches": 2,
+            "execution_cost": 10
+          }
+        },
+        {
+          "management": 0,
+          "job_cost": 12,
+          "block_cost": 12,
+          "plan": {
+            "macro": "ABAB",
+            "target_word": "AABBAABB",
+            "expanded_word": "ABBABB",
+            "tokens": [
+              "A",
+              "B",
+              "B",
+              "A",
+              "B",
+              "B"
+            ],
+            "physical_ticks": 6,
+            "dispatches": 6,
+            "execution_cost": 12
+          }
+        }
+      ]
+    }
+  },
+  {
+    "category": "tie_changes_cost",
+    "A": 4,
+    "B": 30,
+    "dispatch": 1,
+    "trace": 0,
+    "K": 1,
+    "cycles": 1,
+    "W": "ABBB",
+    "V": "AAAB",
+    "totals": {
+      "uncompiled": 152,
+      "frozen": 106,
+      "replacement_oracle": 106,
+      "replacement_reactive_lex": 106,
+      "replacement_reactive_stay": 106,
+      "revision_oracle": 106,
+      "revision_reactive_lex": 109,
+      "revision_reactive_stay": 106
+    },
+    "old_raw_job_cost": 16,
+    "old_macro_job_cost": 10,
+    "blocks": {
+      "uncompiled": [
+        {
+          "management": 0,
+          "job_cost": 8,
+          "block_cost": 8,
+          "plan": {
+            "macro": null,
+            "target_word": "AAABAAAB",
+            "expanded_word": "ABAB",
+            "tokens": [
+              "A",
+              "B",
+              "A",
+              "B"
+            ],
+            "physical_ticks": 4,
+            "dispatches": 4,
+            "execution_cost": 8
+          }
+        },
+        {
+          "management": 0,
+          "job_cost": 16,
+          "block_cost": 16,
+          "plan": {
+            "macro": null,
+            "target_word": "ABBBABBB",
+            "expanded_word": "ABBBABBB",
+            "tokens": [
+              "A",
+              "B",
+              "B",
+              "B",
+              "A",
+              "B",
+              "B",
+              "B"
+            ],
+            "physical_ticks": 8,
+            "dispatches": 8,
+            "execution_cost": 16
+          }
+        }
+      ],
+      "frozen": [
+        {
+          "management": 0,
+          "job_cost": 8,
+          "block_cost": 8,
+          "plan": {
+            "macro": "ABBB",
+            "target_word": "AAABAAAB",
+            "expanded_word": "ABAB",
+            "tokens": [
+              "A",
+              "B",
+              "A",
+              "B"
+            ],
+            "physical_ticks": 4,
+            "dispatches": 4,
+            "execution_cost": 8
+          }
+        },
+        {
+          "management": 0,
+          "job_cost": 10,
+          "block_cost": 10,
+          "plan": {
+            "macro": "ABBB",
+            "target_word": "ABBBABBB",
+            "expanded_word": "ABBBABBB",
+            "tokens": [
+              "@",
+              "@"
+            ],
+            "physical_ticks": 8,
+            "dispatches": 2,
+            "execution_cost": 10
+          }
+        }
+      ],
+      "replacement_oracle": [
+        {
+          "management": 0,
+          "job_cost": 8,
+          "block_cost": 8,
+          "plan": {
+            "macro": "ABBB",
+            "target_word": "AAABAAAB",
+            "expanded_word": "ABAB",
+            "tokens": [
+              "A",
+              "B",
+              "A",
+              "B"
+            ],
+            "physical_ticks": 4,
+            "dispatches": 4,
+            "execution_cost": 8
+          }
+        },
+        {
+          "management": 0,
+          "job_cost": 10,
+          "block_cost": 10,
+          "plan": {
+            "macro": "ABBB",
+            "target_word": "ABBBABBB",
+            "expanded_word": "ABBBABBB",
+            "tokens": [
+              "@",
+              "@"
+            ],
+            "physical_ticks": 8,
+            "dispatches": 2,
+            "execution_cost": 10
+          }
+        }
+      ],
+      "revision_oracle": [
+        {
+          "management": 0,
+          "job_cost": 8,
+          "block_cost": 8,
+          "plan": {
+            "macro": "ABBB",
+            "target_word": "AAABAAAB",
+            "expanded_word": "ABAB",
+            "tokens": [
+              "A",
+              "B",
+              "A",
+              "B"
+            ],
+            "physical_ticks": 4,
+            "dispatches": 4,
+            "execution_cost": 8
+          }
+        },
+        {
+          "management": 0,
+          "job_cost": 10,
+          "block_cost": 10,
+          "plan": {
+            "macro": "ABBB",
+            "target_word": "ABBBABBB",
+            "expanded_word": "ABBBABBB",
+            "tokens": [
+              "@",
+              "@"
+            ],
+            "physical_ticks": 8,
+            "dispatches": 2,
+            "execution_cost": 10
+          }
+        }
+      ],
+      "replacement_reactive_lex": [
+        {
+          "management": 0,
+          "job_cost": 8,
+          "block_cost": 8,
+          "plan": {
+            "macro": "ABBB",
+            "target_word": "AAABAAAB",
+            "expanded_word": "ABAB",
+            "tokens": [
+              "A",
+              "B",
+              "A",
+              "B"
+            ],
+            "physical_ticks": 4,
+            "dispatches": 4,
+            "execution_cost": 8
+          }
+        },
+        {
+          "management": 0,
+          "job_cost": 10,
+          "block_cost": 10,
+          "plan": {
+            "macro": "ABBB",
+            "target_word": "ABBBABBB",
+            "expanded_word": "ABBBABBB",
+            "tokens": [
+              "@",
+              "@"
+            ],
+            "physical_ticks": 8,
+            "dispatches": 2,
+            "execution_cost": 10
+          }
+        }
+      ],
+      "revision_reactive_lex": [
+        {
+          "management": 3,
+          "job_cost": 5,
+          "block_cost": 8,
+          "plan": {
+            "macro": "ABAB",
+            "target_word": "AAABAAAB",
+            "expanded_word": "ABAB",
+            "tokens": [
+              "@"
+            ],
+            "physical_ticks": 4,
+            "dispatches": 1,
+            "execution_cost": 5
+          }
+        },
+        {
+          "management": 3,
+          "job_cost": 10,
+          "block_cost": 13,
+          "plan": {
+            "macro": "ABBB",
+            "target_word": "ABBBABBB",
+            "expanded_word": "ABBBABBB",
+            "tokens": [
+              "@",
+              "@"
+            ],
+            "physical_ticks": 8,
+            "dispatches": 2,
+            "execution_cost": 10
+          }
+        }
+      ],
+      "replacement_reactive_stay": [
+        {
+          "management": 0,
+          "job_cost": 8,
+          "block_cost": 8,
+          "plan": {
+            "macro": "ABBB",
+            "target_word": "AAABAAAB",
+            "expanded_word": "ABAB",
+            "tokens": [
+              "A",
+              "B",
+              "A",
+              "B"
+            ],
+            "physical_ticks": 4,
+            "dispatches": 4,
+            "execution_cost": 8
+          }
+        },
+        {
+          "management": 0,
+          "job_cost": 10,
+          "block_cost": 10,
+          "plan": {
+            "macro": "ABBB",
+            "target_word": "ABBBABBB",
+            "expanded_word": "ABBBABBB",
+            "tokens": [
+              "@",
+              "@"
+            ],
+            "physical_ticks": 8,
+            "dispatches": 2,
+            "execution_cost": 10
+          }
+        }
+      ],
+      "revision_reactive_stay": [
+        {
+          "management": 0,
+          "job_cost": 8,
+          "block_cost": 8,
+          "plan": {
+            "macro": "ABBB",
+            "target_word": "AAABAAAB",
+            "expanded_word": "ABAB",
+            "tokens": [
+              "A",
+              "B",
+              "A",
+              "B"
+            ],
+            "physical_ticks": 4,
+            "dispatches": 4,
+            "execution_cost": 8
+          }
+        },
+        {
+          "management": 0,
+          "job_cost": 10,
+          "block_cost": 10,
+          "plan": {
+            "macro": "ABBB",
+            "target_word": "ABBBABBB",
+            "expanded_word": "ABBBABBB",
+            "tokens": [
+              "@",
+              "@"
+            ],
+            "physical_ticks": 8,
+            "dispatches": 2,
+            "execution_cost": 10
+          }
+        }
+      ]
+    }
+  },
+  {
+    "category": "repeat_revision_gain",
+    "A": 4,
+    "B": 30,
+    "dispatch": 1,
+    "trace": 4,
+    "K": 4,
+    "cycles": 4,
+    "W": "AABB",
+    "V": "AAAB",
+    "totals": {
+      "uncompiled": 416,
+      "frozen": 376,
+      "replacement_oracle": 364,
+      "replacement_reactive_lex": 376,
+      "replacement_reactive_stay": 376,
+      "revision_oracle": 342,
+      "revision_reactive_lex": 342,
+      "revision_reactive_stay": 342
+    },
+    "old_raw_job_cost": 12,
+    "old_macro_job_cost": 10,
+    "blocks": {
+      "uncompiled": [
+        {
+          "management": 0,
+          "job_cost": 8,
+          "block_cost": 32,
+          "plan": {
+            "macro": null,
+            "target_word": "AAABAAAB",
+            "expanded_word": "ABAB",
+            "tokens": [
+              "A",
+              "B",
+              "A",
+              "B"
+            ],
+            "physical_ticks": 4,
+            "dispatches": 4,
+            "execution_cost": 8
+          }
+        },
+        {
+          "management": 0,
+          "job_cost": 12,
+          "block_cost": 48,
+          "plan": {
+            "macro": null,
+            "target_word": "AABBAABB",
+            "expanded_word": "ABBABB",
+            "tokens": [
+              "A",
+              "B",
+              "B",
+              "A",
+              "B",
+              "B"
+            ],
+            "physical_ticks": 6,
+            "dispatches": 6,
+            "execution_cost": 12
+          }
+        },
+        {
+          "management": 0,
+          "job_cost": 8,
+          "block_cost": 32,
+          "plan": {
+            "macro": null,
+            "target_word": "AAABAAAB",
+            "expanded_word": "ABAB",
+            "tokens": [
+              "A",
+              "B",
+              "A",
+              "B"
+            ],
+            "physical_ticks": 4,
+            "dispatches": 4,
+            "execution_cost": 8
+          }
+        },
+        {
+          "management": 0,
+          "job_cost": 12,
+          "block_cost": 48,
+          "plan": {
+            "macro": null,
+            "target_word": "AABBAABB",
+            "expanded_word": "ABBABB",
+            "tokens": [
+              "A",
+              "B",
+              "B",
+              "A",
+              "B",
+              "B"
+            ],
+            "physical_ticks": 6,
+            "dispatches": 6,
+            "execution_cost": 12
+          }
+        },
+        {
+          "management": 0,
+          "job_cost": 8,
+          "block_cost": 32,
+          "plan": {
+            "macro": null,
+            "target_word": "AAABAAAB",
+            "expanded_word": "ABAB",
+            "tokens": [
+              "A",
+              "B",
+              "A",
+              "B"
+            ],
+            "physical_ticks": 4,
+            "dispatches": 4,
+            "execution_cost": 8
+          }
+        },
+        {
+          "management": 0,
+          "job_cost": 12,
+          "block_cost": 48,
+          "plan": {
+            "macro": null,
+            "target_word": "AABBAABB",
+            "expanded_word": "ABBABB",
+            "tokens": [
+              "A",
+              "B",
+              "B",
+              "A",
+              "B",
+              "B"
+            ],
+            "physical_ticks": 6,
+            "dispatches": 6,
+            "execution_cost": 12
+          }
+        },
+        {
+          "management": 0,
+          "job_cost": 8,
+          "block_cost": 32,
+          "plan": {
+            "macro": null,
+            "target_word": "AAABAAAB",
+            "expanded_word": "ABAB",
+            "tokens": [
+              "A",
+              "B",
+              "A",
+              "B"
+            ],
+            "physical_ticks": 4,
+            "dispatches": 4,
+            "execution_cost": 8
+          }
+        },
+        {
+          "management": 0,
+          "job_cost": 12,
+          "block_cost": 48,
+          "plan": {
+            "macro": null,
+            "target_word": "AABBAABB",
+            "expanded_word": "ABBABB",
+            "tokens": [
+              "A",
+              "B",
+              "B",
+              "A",
+              "B",
+              "B"
+            ],
+            "physical_ticks": 6,
+            "dispatches": 6,
+            "execution_cost": 12
+          }
+        }
+      ],
+      "frozen": [
+        {
+          "management": 0,
+          "job_cost": 8,
+          "block_cost": 32,
+          "plan": {
+            "macro": "AABB",
+            "target_word": "AAABAAAB",
+            "expanded_word": "ABAB",
+            "tokens": [
+              "A",
+              "B",
+              "A",
+              "B"
+            ],
+            "physical_ticks": 4,
+            "dispatches": 4,
+            "execution_cost": 8
+          }
+        },
+        {
+          "management": 0,
+          "job_cost": 10,
+          "block_cost": 40,
+          "plan": {
+            "macro": "AABB",
+            "target_word": "AABBAABB",
+            "expanded_word": "AABBAABB",
+            "tokens": [
+              "@",
+              "@"
+            ],
+            "physical_ticks": 8,
+            "dispatches": 2,
+            "execution_cost": 10
+          }
+        },
+        {
+          "management": 0,
+          "job_cost": 8,
+          "block_cost": 32,
+          "plan": {
+            "macro": "AABB",
+            "target_word": "AAABAAAB",
+            "expanded_word": "ABAB",
+            "tokens": [
+              "A",
+              "B",
+              "A",
+              "B"
+            ],
+            "physical_ticks": 4,
+            "dispatches": 4,
+            "execution_cost": 8
+          }
+        },
+        {
+          "management": 0,
+          "job_cost": 10,
+          "block_cost": 40,
+          "plan": {
+            "macro": "AABB",
+            "target_word": "AABBAABB",
+            "expanded_word": "AABBAABB",
+            "tokens": [
+              "@",
+              "@"
+            ],
+            "physical_ticks": 8,
+            "dispatches": 2,
+            "execution_cost": 10
+          }
+        },
+        {
+          "management": 0,
+          "job_cost": 8,
+          "block_cost": 32,
+          "plan": {
+            "macro": "AABB",
+            "target_word": "AAABAAAB",
+            "expanded_word": "ABAB",
+            "tokens": [
+              "A",
+              "B",
+              "A",
+              "B"
+            ],
+            "physical_ticks": 4,
+            "dispatches": 4,
+            "execution_cost": 8
+          }
+        },
+        {
+          "management": 0,
+          "job_cost": 10,
+          "block_cost": 40,
+          "plan": {
+            "macro": "AABB",
+            "target_word": "AABBAABB",
+            "expanded_word": "AABBAABB",
+            "tokens": [
+              "@",
+              "@"
+            ],
+            "physical_ticks": 8,
+            "dispatches": 2,
+            "execution_cost": 10
+          }
+        },
+        {
+          "management": 0,
+          "job_cost": 8,
+          "block_cost": 32,
+          "plan": {
+            "macro": "AABB",
+            "target_word": "AAABAAAB",
+            "expanded_word": "ABAB",
+            "tokens": [
+              "A",
+              "B",
+              "A",
+              "B"
+            ],
+            "physical_ticks": 4,
+            "dispatches": 4,
+            "execution_cost": 8
+          }
+        },
+        {
+          "management": 0,
+          "job_cost": 10,
+          "block_cost": 40,
+          "plan": {
+            "macro": "AABB",
+            "target_word": "AABBAABB",
+            "expanded_word": "AABBAABB",
+            "tokens": [
+              "@",
+              "@"
+            ],
+            "physical_ticks": 8,
+            "dispatches": 2,
+            "execution_cost": 10
+          }
+        }
+      ],
+      "replacement_oracle": [
+        {
+          "management": 8,
+          "job_cost": 5,
+          "block_cost": 28,
+          "plan": {
+            "macro": "ABAB",
+            "target_word": "AAABAAAB",
+            "expanded_word": "ABAB",
+            "tokens": [
+              "@"
+            ],
+            "physical_ticks": 4,
+            "dispatches": 1,
+            "execution_cost": 5
+          }
+        },
+        {
+          "management": 0,
+          "job_cost": 12,
+          "block_cost": 48,
+          "plan": {
+            "macro": "ABAB",
+            "target_word": "AABBAABB",
+            "expanded_word": "ABBABB",
+            "tokens": [
+              "A",
+              "B",
+              "B",
+              "A",
+              "B",
+              "B"
+            ],
+            "physical_ticks": 6,
+            "dispatches": 6,
+            "execution_cost": 12
+          }
+        },
+        {
+          "management": 0,
+          "job_cost": 5,
+          "block_cost": 20,
+          "plan": {
+            "macro": "ABAB",
+            "target_word": "AAABAAAB",
+            "expanded_word": "ABAB",
+            "tokens": [
+              "@"
+            ],
+            "physical_ticks": 4,
+            "dispatches": 1,
+            "execution_cost": 5
+          }
+        },
+        {
+          "management": 0,
+          "job_cost": 12,
+          "block_cost": 48,
+          "plan": {
+            "macro": "ABAB",
+            "target_word": "AABBAABB",
+            "expanded_word": "ABBABB",
+            "tokens": [
+              "A",
+              "B",
+              "B",
+              "A",
+              "B",
+              "B"
+            ],
+            "physical_ticks": 6,
+            "dispatches": 6,
+            "execution_cost": 12
+          }
+        },
+        {
+          "management": 0,
+          "job_cost": 5,
+          "block_cost": 20,
+          "plan": {
+            "macro": "ABAB",
+            "target_word": "AAABAAAB",
+            "expanded_word": "ABAB",
+            "tokens": [
+              "@"
+            ],
+            "physical_ticks": 4,
+            "dispatches": 1,
+            "execution_cost": 5
+          }
+        },
+        {
+          "management": 0,
+          "job_cost": 12,
+          "block_cost": 48,
+          "plan": {
+            "macro": "ABAB",
+            "target_word": "AABBAABB",
+            "expanded_word": "ABBABB",
+            "tokens": [
+              "A",
+              "B",
+              "B",
+              "A",
+              "B",
+              "B"
+            ],
+            "physical_ticks": 6,
+            "dispatches": 6,
+            "execution_cost": 12
+          }
+        },
+        {
+          "management": 0,
+          "job_cost": 5,
+          "block_cost": 20,
+          "plan": {
+            "macro": "ABAB",
+            "target_word": "AAABAAAB",
+            "expanded_word": "ABAB",
+            "tokens": [
+              "@"
+            ],
+            "physical_ticks": 4,
+            "dispatches": 1,
+            "execution_cost": 5
+          }
+        },
+        {
+          "management": 8,
+          "job_cost": 9,
+          "block_cost": 44,
+          "plan": {
+            "macro": "ABBA",
+            "target_word": "AABBAABB",
+            "expanded_word": "ABBABB",
+            "tokens": [
+              "@",
+              "B",
+              "B"
+            ],
+            "physical_ticks": 6,
+            "dispatches": 3,
+            "execution_cost": 9
+          }
+        }
+      ],
+      "revision_oracle": [
+        {
+          "management": 5,
+          "job_cost": 5,
+          "block_cost": 25,
+          "plan": {
+            "macro": "ABAB",
+            "target_word": "AAABAAAB",
+            "expanded_word": "ABAB",
+            "tokens": [
+              "@"
+            ],
+            "physical_ticks": 4,
+            "dispatches": 1,
+            "execution_cost": 5
+          }
+        },
+        {
+          "management": 3,
+          "job_cost": 9,
+          "block_cost": 39,
+          "plan": {
+            "macro": "BBAB",
+            "target_word": "AABBAABB",
+            "expanded_word": "ABBABB",
+            "tokens": [
+              "A",
+              "@",
+              "B"
+            ],
+            "physical_ticks": 6,
+            "dispatches": 3,
+            "execution_cost": 9
+          }
+        },
+        {
+          "management": 3,
+          "job_cost": 5,
+          "block_cost": 23,
+          "plan": {
+            "macro": "ABAB",
+            "target_word": "AAABAAAB",
+            "expanded_word": "ABAB",
+            "tokens": [
+              "@"
+            ],
+            "physical_ticks": 4,
+            "dispatches": 1,
+            "execution_cost": 5
+          }
+        },
+        {
+          "management": 3,
+          "job_cost": 9,
+          "block_cost": 39,
+          "plan": {
+            "macro": "BBAB",
+            "target_word": "AABBAABB",
+            "expanded_word": "ABBABB",
+            "tokens": [
+              "A",
+              "@",
+              "B"
+            ],
+            "physical_ticks": 6,
+            "dispatches": 3,
+            "execution_cost": 9
+          }
+        },
+        {
+          "management": 3,
+          "job_cost": 5,
+          "block_cost": 23,
+          "plan": {
+            "macro": "ABAB",
+            "target_word": "AAABAAAB",
+            "expanded_word": "ABAB",
+            "tokens": [
+              "@"
+            ],
+            "physical_ticks": 4,
+            "dispatches": 1,
+            "execution_cost": 5
+          }
+        },
+        {
+          "management": 3,
+          "job_cost": 9,
+          "block_cost": 39,
+          "plan": {
+            "macro": "BBAB",
+            "target_word": "AABBAABB",
+            "expanded_word": "ABBABB",
+            "tokens": [
+              "A",
+              "@",
+              "B"
+            ],
+            "physical_ticks": 6,
+            "dispatches": 3,
+            "execution_cost": 9
+          }
+        },
+        {
+          "management": 3,
+          "job_cost": 5,
+          "block_cost": 23,
+          "plan": {
+            "macro": "ABAB",
+            "target_word": "AAABAAAB",
+            "expanded_word": "ABAB",
+            "tokens": [
+              "@"
+            ],
+            "physical_ticks": 4,
+            "dispatches": 1,
+            "execution_cost": 5
+          }
+        },
+        {
+          "management": 3,
+          "job_cost": 9,
+          "block_cost": 39,
+          "plan": {
+            "macro": "BBAB",
+            "target_word": "AABBAABB",
+            "expanded_word": "ABBABB",
+            "tokens": [
+              "A",
+              "@",
+              "B"
+            ],
+            "physical_ticks": 6,
+            "dispatches": 3,
+            "execution_cost": 9
+          }
+        }
+      ],
+      "replacement_reactive_lex": [
+        {
+          "management": 8,
+          "job_cost": 5,
+          "block_cost": 28,
+          "plan": {
+            "macro": "ABAB",
+            "target_word": "AAABAAAB",
+            "expanded_word": "ABAB",
+            "tokens": [
+              "@"
+            ],
+            "physical_ticks": 4,
+            "dispatches": 1,
+            "execution_cost": 5
+          }
+        },
+        {
+          "management": 8,
+          "job_cost": 9,
+          "block_cost": 44,
+          "plan": {
+            "macro": "ABBA",
+            "target_word": "AABBAABB",
+            "expanded_word": "ABBABB",
+            "tokens": [
+              "@",
+              "B",
+              "B"
+            ],
+            "physical_ticks": 6,
+            "dispatches": 3,
+            "execution_cost": 9
+          }
+        },
+        {
+          "management": 8,
+          "job_cost": 5,
+          "block_cost": 28,
+          "plan": {
+            "macro": "ABAB",
+            "target_word": "AAABAAAB",
+            "expanded_word": "ABAB",
+            "tokens": [
+              "@"
+            ],
+            "physical_ticks": 4,
+            "dispatches": 1,
+            "execution_cost": 5
+          }
+        },
+        {
+          "management": 8,
+          "job_cost": 9,
+          "block_cost": 44,
+          "plan": {
+            "macro": "ABBA",
+            "target_word": "AABBAABB",
+            "expanded_word": "ABBABB",
+            "tokens": [
+              "@",
+              "B",
+              "B"
+            ],
+            "physical_ticks": 6,
+            "dispatches": 3,
+            "execution_cost": 9
+          }
+        },
+        {
+          "management": 8,
+          "job_cost": 5,
+          "block_cost": 28,
+          "plan": {
+            "macro": "ABAB",
+            "target_word": "AAABAAAB",
+            "expanded_word": "ABAB",
+            "tokens": [
+              "@"
+            ],
+            "physical_ticks": 4,
+            "dispatches": 1,
+            "execution_cost": 5
+          }
+        },
+        {
+          "management": 8,
+          "job_cost": 9,
+          "block_cost": 44,
+          "plan": {
+            "macro": "ABBA",
+            "target_word": "AABBAABB",
+            "expanded_word": "ABBABB",
+            "tokens": [
+              "@",
+              "B",
+              "B"
+            ],
+            "physical_ticks": 6,
+            "dispatches": 3,
+            "execution_cost": 9
+          }
+        },
+        {
+          "management": 8,
+          "job_cost": 5,
+          "block_cost": 28,
+          "plan": {
+            "macro": "ABAB",
+            "target_word": "AAABAAAB",
+            "expanded_word": "ABAB",
+            "tokens": [
+              "@"
+            ],
+            "physical_ticks": 4,
+            "dispatches": 1,
+            "execution_cost": 5
+          }
+        },
+        {
+          "management": 8,
+          "job_cost": 9,
+          "block_cost": 44,
+          "plan": {
+            "macro": "ABBA",
+            "target_word": "AABBAABB",
+            "expanded_word": "ABBABB",
+            "tokens": [
+              "@",
+              "B",
+              "B"
+            ],
+            "physical_ticks": 6,
+            "dispatches": 3,
+            "execution_cost": 9
+          }
+        }
+      ],
+      "revision_reactive_lex": [
+        {
+          "management": 5,
+          "job_cost": 5,
+          "block_cost": 25,
+          "plan": {
+            "macro": "ABAB",
+            "target_word": "AAABAAAB",
+            "expanded_word": "ABAB",
+            "tokens": [
+              "@"
+            ],
+            "physical_ticks": 4,
+            "dispatches": 1,
+            "execution_cost": 5
+          }
+        },
+        {
+          "management": 3,
+          "job_cost": 9,
+          "block_cost": 39,
+          "plan": {
+            "macro": "BBAB",
+            "target_word": "AABBAABB",
+            "expanded_word": "ABBABB",
+            "tokens": [
+              "A",
+              "@",
+              "B"
+            ],
+            "physical_ticks": 6,
+            "dispatches": 3,
+            "execution_cost": 9
+          }
+        },
+        {
+          "management": 3,
+          "job_cost": 5,
+          "block_cost": 23,
+          "plan": {
+            "macro": "ABAB",
+            "target_word": "AAABAAAB",
+            "expanded_word": "ABAB",
+            "tokens": [
+              "@"
+            ],
+            "physical_ticks": 4,
+            "dispatches": 1,
+            "execution_cost": 5
+          }
+        },
+        {
+          "management": 3,
+          "job_cost": 9,
+          "block_cost": 39,
+          "plan": {
+            "macro": "BBAB",
+            "target_word": "AABBAABB",
+            "expanded_word": "ABBABB",
+            "tokens": [
+              "A",
+              "@",
+              "B"
+            ],
+            "physical_ticks": 6,
+            "dispatches": 3,
+            "execution_cost": 9
+          }
+        },
+        {
+          "management": 3,
+          "job_cost": 5,
+          "block_cost": 23,
+          "plan": {
+            "macro": "ABAB",
+            "target_word": "AAABAAAB",
+            "expanded_word": "ABAB",
+            "tokens": [
+              "@"
+            ],
+            "physical_ticks": 4,
+            "dispatches": 1,
+            "execution_cost": 5
+          }
+        },
+        {
+          "management": 3,
+          "job_cost": 9,
+          "block_cost": 39,
+          "plan": {
+            "macro": "BBAB",
+            "target_word": "AABBAABB",
+            "expanded_word": "ABBABB",
+            "tokens": [
+              "A",
+              "@",
+              "B"
+            ],
+            "physical_ticks": 6,
+            "dispatches": 3,
+            "execution_cost": 9
+          }
+        },
+        {
+          "management": 3,
+          "job_cost": 5,
+          "block_cost": 23,
+          "plan": {
+            "macro": "ABAB",
+            "target_word": "AAABAAAB",
+            "expanded_word": "ABAB",
+            "tokens": [
+              "@"
+            ],
+            "physical_ticks": 4,
+            "dispatches": 1,
+            "execution_cost": 5
+          }
+        },
+        {
+          "management": 3,
+          "job_cost": 9,
+          "block_cost": 39,
+          "plan": {
+            "macro": "BBAB",
+            "target_word": "AABBAABB",
+            "expanded_word": "ABBABB",
+            "tokens": [
+              "A",
+              "@",
+              "B"
+            ],
+            "physical_ticks": 6,
+            "dispatches": 3,
+            "execution_cost": 9
+          }
+        }
+      ],
+      "replacement_reactive_stay": [
+        {
+          "management": 8,
+          "job_cost": 5,
+          "block_cost": 28,
+          "plan": {
+            "macro": "ABAB",
+            "target_word": "AAABAAAB",
+            "expanded_word": "ABAB",
+            "tokens": [
+              "@"
+            ],
+            "physical_ticks": 4,
+            "dispatches": 1,
+            "execution_cost": 5
+          }
+        },
+        {
+          "management": 8,
+          "job_cost": 9,
+          "block_cost": 44,
+          "plan": {
+            "macro": "ABBA",
+            "target_word": "AABBAABB",
+            "expanded_word": "ABBABB",
+            "tokens": [
+              "@",
+              "B",
+              "B"
+            ],
+            "physical_ticks": 6,
+            "dispatches": 3,
+            "execution_cost": 9
+          }
+        },
+        {
+          "management": 8,
+          "job_cost": 5,
+          "block_cost": 28,
+          "plan": {
+            "macro": "ABAB",
+            "target_word": "AAABAAAB",
+            "expanded_word": "ABAB",
+            "tokens": [
+              "@"
+            ],
+            "physical_ticks": 4,
+            "dispatches": 1,
+            "execution_cost": 5
+          }
+        },
+        {
+          "management": 8,
+          "job_cost": 9,
+          "block_cost": 44,
+          "plan": {
+            "macro": "ABBA",
+            "target_word": "AABBAABB",
+            "expanded_word": "ABBABB",
+            "tokens": [
+              "@",
+              "B",
+              "B"
+            ],
+            "physical_ticks": 6,
+            "dispatches": 3,
+            "execution_cost": 9
+          }
+        },
+        {
+          "management": 8,
+          "job_cost": 5,
+          "block_cost": 28,
+          "plan": {
+            "macro": "ABAB",
+            "target_word": "AAABAAAB",
+            "expanded_word": "ABAB",
+            "tokens": [
+              "@"
+            ],
+            "physical_ticks": 4,
+            "dispatches": 1,
+            "execution_cost": 5
+          }
+        },
+        {
+          "management": 8,
+          "job_cost": 9,
+          "block_cost": 44,
+          "plan": {
+            "macro": "ABBA",
+            "target_word": "AABBAABB",
+            "expanded_word": "ABBABB",
+            "tokens": [
+              "@",
+              "B",
+              "B"
+            ],
+            "physical_ticks": 6,
+            "dispatches": 3,
+            "execution_cost": 9
+          }
+        },
+        {
+          "management": 8,
+          "job_cost": 5,
+          "block_cost": 28,
+          "plan": {
+            "macro": "ABAB",
+            "target_word": "AAABAAAB",
+            "expanded_word": "ABAB",
+            "tokens": [
+              "@"
+            ],
+            "physical_ticks": 4,
+            "dispatches": 1,
+            "execution_cost": 5
+          }
+        },
+        {
+          "management": 8,
+          "job_cost": 9,
+          "block_cost": 44,
+          "plan": {
+            "macro": "ABBA",
+            "target_word": "AABBAABB",
+            "expanded_word": "ABBABB",
+            "tokens": [
+              "@",
+              "B",
+              "B"
+            ],
+            "physical_ticks": 6,
+            "dispatches": 3,
+            "execution_cost": 9
+          }
+        }
+      ],
+      "revision_reactive_stay": [
+        {
+          "management": 5,
+          "job_cost": 5,
+          "block_cost": 25,
+          "plan": {
+            "macro": "ABAB",
+            "target_word": "AAABAAAB",
+            "expanded_word": "ABAB",
+            "tokens": [
+              "@"
+            ],
+            "physical_ticks": 4,
+            "dispatches": 1,
+            "execution_cost": 5
+          }
+        },
+        {
+          "management": 3,
+          "job_cost": 9,
+          "block_cost": 39,
+          "plan": {
+            "macro": "BBAB",
+            "target_word": "AABBAABB",
+            "expanded_word": "ABBABB",
+            "tokens": [
+              "A",
+              "@",
+              "B"
+            ],
+            "physical_ticks": 6,
+            "dispatches": 3,
+            "execution_cost": 9
+          }
+        },
+        {
+          "management": 3,
+          "job_cost": 5,
+          "block_cost": 23,
+          "plan": {
+            "macro": "ABAB",
+            "target_word": "AAABAAAB",
+            "expanded_word": "ABAB",
+            "tokens": [
+              "@"
+            ],
+            "physical_ticks": 4,
+            "dispatches": 1,
+            "execution_cost": 5
+          }
+        },
+        {
+          "management": 3,
+          "job_cost": 9,
+          "block_cost": 39,
+          "plan": {
+            "macro": "BBAB",
+            "target_word": "AABBAABB",
+            "expanded_word": "ABBABB",
+            "tokens": [
+              "A",
+              "@",
+              "B"
+            ],
+            "physical_ticks": 6,
+            "dispatches": 3,
+            "execution_cost": 9
+          }
+        },
+        {
+          "management": 3,
+          "job_cost": 5,
+          "block_cost": 23,
+          "plan": {
+            "macro": "ABAB",
+            "target_word": "AAABAAAB",
+            "expanded_word": "ABAB",
+            "tokens": [
+              "@"
+            ],
+            "physical_ticks": 4,
+            "dispatches": 1,
+            "execution_cost": 5
+          }
+        },
+        {
+          "management": 3,
+          "job_cost": 9,
+          "block_cost": 39,
+          "plan": {
+            "macro": "BBAB",
+            "target_word": "AABBAABB",
+            "expanded_word": "ABBABB",
+            "tokens": [
+              "A",
+              "@",
+              "B"
+            ],
+            "physical_ticks": 6,
+            "dispatches": 3,
+            "execution_cost": 9
+          }
+        },
+        {
+          "management": 3,
+          "job_cost": 5,
+          "block_cost": 23,
+          "plan": {
+            "macro": "ABAB",
+            "target_word": "AAABAAAB",
+            "expanded_word": "ABAB",
+            "tokens": [
+              "@"
+            ],
+            "physical_ticks": 4,
+            "dispatches": 1,
+            "execution_cost": 5
+          }
+        },
+        {
+          "management": 3,
+          "job_cost": 9,
+          "block_cost": 39,
+          "plan": {
+            "macro": "BBAB",
+            "target_word": "AABBAABB",
+            "expanded_word": "ABBABB",
+            "tokens": [
+              "A",
+              "@",
+              "B"
+            ],
+            "physical_ticks": 6,
+            "dispatches": 3,
+            "execution_cost": 9
+          }
+        }
+      ]
+    }
+  }
+]
