@@ -19,7 +19,8 @@
     "related": [
       "affine-converse",
       "ether-or-defects",
-      "ether-regions"
+      "ether-regions",
+      "history-and-possibility"
     ]
   },
   {
@@ -82,7 +83,73 @@
     },
     "related": [
       "history-repairability",
-      "ether-or-defects"
+      "ether-or-defects",
+      "history-and-possibility"
     ]
+  },
+  {
+    "slug": "history-and-possibility",
+    "number": "005",
+    "title": "History and possibility: the wider research program",
+    "kind": "Research program",
+    "evidence": "open",
+    "topic": "History and possibility",
+    "summary": "How inherited structure enables further activity, when it becomes difficult to revise, and how to study capabilities alongside prediction.",
+    "takeaway": "History matters through what it makes possible, including the ability to change the operations available next.",
+    "promotion": {
+      "stage": "research"
+    },
+    "related": [
+      "future-repertoire",
+      "revisable-primitives",
+      "history-repairability",
+      "ether-regions"
+    ],
+    "date": "2026-09-07",
+    "updated": "2026-09-07",
+    "source": "docs/research/2026-09-07-history-and-possibility.md"
+  },
+  {
+    "slug": "future-repertoire",
+    "number": "006",
+    "title": "Operation order changes outcomes and how to reach them",
+    "kind": "Experiment",
+    "evidence": "exact",
+    "topic": "Operation order and possibility",
+    "summary": "Exact enumeration separates prepared-state differences, reachable outcomes, and action responses. Equal numbers can hide different options; equal sets can hide different ways to act.",
+    "takeaway": "Possibility needs an action vocabulary and a time budget. Count the options, identify them, and check how they are reached.",
+    "promotion": {
+      "stage": "candidate",
+      "idea": "The same options can require different actions",
+      "destination": "Concepts"
+    },
+    "related": [
+      "history-and-possibility",
+      "revisable-primitives",
+      "affine-converse"
+    ],
+    "date": "2026-09-07",
+    "updated": "2026-09-07",
+    "source": "docs/research/2026-09-07-future-repertoire.md"
+  },
+  {
+    "slug": "revisable-primitives",
+    "number": "007",
+    "title": "When does a useful shortcut become a constraint?",
+    "kind": "Research plan",
+    "evidence": "open",
+    "topic": "History and possibility",
+    "summary": "A proposed comparison of reusable constructions that can be reopened versus constructions that become fixed, with equal resources and explicit revision costs.",
+    "takeaway": "Inherited efficiency and the capacity to revise it need to be measured together. This experiment is proposed, not run.",
+    "promotion": {
+      "stage": "research"
+    },
+    "related": [
+      "history-and-possibility",
+      "future-repertoire"
+    ],
+    "date": "2026-09-07",
+    "updated": "2026-09-07",
+    "source": "docs/research/2026-09-07-revisable-primitives.md"
   }
 ]

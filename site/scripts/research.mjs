@@ -124,6 +124,7 @@ function promotion(e) {
 }
 
 function renderIndex(entries) {
+  const program = entries.find((e) => e.slug === 'history-and-possibility');
   const candidates = entries.filter((e) => e.promotion.stage === 'candidate');
   const topics = [...new Set(entries.map((e) => e.topic))];
   const rows = entries.map((e) => `<article class="research-entry">
@@ -136,6 +137,7 @@ function renderIndex(entries) {
     <p class="research-intro">Experiments, results, and questions still taking shape. Each note keeps the evidence, the limits, and a way to pick up the thread.</p>
     <div class="research-layout"><section aria-labelledby="notes"><h2 id="notes" class="research-section-title">Research notes · ${entries.length} entries</h2>${rows}</section>
     <aside class="research-sidebar" aria-label="About the research">
+      ${program ? `<section><h2>The wider program</h2><p>How does inherited structure enable further activity, and when does it become difficult to revise? Prediction is one part of that question.</p><a href="${entryUrl(program)}">History and possibility →</a></section>` : ''}
       <section><h2>From research to explanation</h2><p>The main pages introduce the ideas. This is where we test them. When an insight is ready, we give it an accessible explanation and keep a link back to the work.</p><a href="../questions.html">Explore the questions →</a></section>
       <section id="to-explain"><h2>To explain next</h2>${candidates.length ? `<ul>${candidates.map((e) => `<li><a href="${entryUrl(e)}">${esc(e.promotion.idea)}</a><small>Candidate for ${esc(e.promotion.destination)}</small></li>`).join('')}</ul>` : '<p>No explanations are queued. The current work remains in the notes.</p>'}<p>Editorial readiness is separate from the strength of the evidence.</p></section>
       <section><h2>Threads</h2><ul>${topics.map((topic) => `<li>${esc(topic)}<small>${entries.filter((e) => e.topic === topic).length} ${entries.filter((e) => e.topic === topic).length === 1 ? 'note' : 'notes'}</small></li>`).join('')}</ul></section>

@@ -9,3 +9,7 @@ In the current experiment, each time slice contributes a radius-one observed nei
 ## Distinctions to preserve
 
 Exact closure means the next observed state is determined by a specified observed neighborhood for every allowed fine state. Low prediction error is a finite-sample result for a fitted estimator. More history, a wider current neighborhood, and a different observation are separate changes to the prediction problem.
+
+Giving an observer more history also differs from retaining history in the
+system's dynamics. See [historical influence](historical-influence.md) and
+the [wider program](../research/2026-09-07-history-and-possibility.md).
