@@ -336,8 +336,8 @@ export function ruleNeighborhoods(ruleNum) {
 // A 3-input boolean function (the rule's lookup table) is GF(2)-affine iff
 // it equals c0 XOR (cl & l) XOR (cc & c) XOR (cr & r) for fixed bits derived
 // from the table itself. Exhaustively checked against all 8 neighborhoods —
-// this is the live, computed version of the affine theorem on the concepts
-// page (not asserted, derived from the rule's own LUT each time).
+// this checks affinity, a sufficient condition for constant G. It does not
+// test the converse: nonlinear ECA rules 4 and 200 also have G identically 0.
 export function isAffineRule(ruleNum) {
   const lut = ruleLUT(ruleNum);
   const c0 = lut[0];

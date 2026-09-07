@@ -599,9 +599,10 @@ export default function Questions() {
           whatever we've actually got &mdash; confidence-labeled, including the ones that came back negative, and
           including the ones still genuinely open.
         </p>
-        <p className="gc-mono" style={{ fontSize: '0.78rem', color: 'var(--ink-soft)', margin: '-1.2rem 0 2rem', maxWidth: '62ch' }}>
-          New: the latest findings are also told as a guided, live-computed narrative &mdash;{' '}
-          <a href="remainder.html" style={{ color: 'var(--accent)', fontWeight: 700 }}>take the walk &rarr;</a>
+        <p style={{ fontSize: '0.95rem', color: 'var(--ink-soft)', margin: '-1rem 0 2rem', maxWidth: '62ch' }}>
+          For a guided narrative with live demos, <a href="remainder.html" style={{ color: 'var(--accent)' }}>take the walk</a>.
+          {' '}For the ongoing experiments, methods, and questions still taking shape, visit{' '}
+          <a href="research/index.html" style={{ color: 'var(--accent)' }}>Research &rarr;</a>
         </p>
 
         <QuestionCard

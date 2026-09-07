@@ -93,7 +93,13 @@ export default function Home() {
 
           <p style={pBody}>
             You'll find a <a href="questions.html" style={{ color: 'var(--accent)' }}>Questions page</a>, where I
-            document questions that arise for me and the experiments I've run to answer them.
+            explain the questions that arise for me and what the experiments have taught us so far.
+          </p>
+
+          <p style={pBody}>
+            The <a href="research/index.html" style={{ color: 'var(--accent)' }}>Research section</a> keeps the ongoing
+            work: experiments, corrections, and open questions, with their methods and evidence. As an idea becomes
+            ready to explain, it finds its way into these main pages.
           </p>
 
           <p style={pBody}>
