@@ -210,7 +210,7 @@ def main():
                 rows.extend(evaluate(rule, kind, block, stride, n, args))
             print(f"completed rule {rule}, n={n}", flush=True)
     with prefix.with_suffix(".csv").open("w", newline="") as f:
-        writer = csv.DictWriter(f, fieldnames=list(rows[0]))
+        writer = csv.DictWriter(f, fieldnames=list(rows[0]), lineterminator="\n")
         writer.writeheader()
         writer.writerows(rows)
     summary = summarize(rows)
