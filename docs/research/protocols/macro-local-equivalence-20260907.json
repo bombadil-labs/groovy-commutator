@@ -1,0 +1,16 @@
+{
+  "protocol": "macro-local-equivalence-20260907",
+  "version": 1,
+  "parent_protocol": "revisable-primitives-20260907",
+  "question": "Do the macro cost comparisons survive removing finite-ring equivalences?",
+  "rule_pairs": [[0,51],[4,30],[30,110],[51,170],[54,110],[90,150],[110,184],[184,250]],
+  "primitive_word_lengths": [0,1,2,3,4,5,6,7,8],
+  "causal_window_bits": 17,
+  "method": "Build the local truth table of every chronological primitive word, extend it to a common 17-bit causal window, and group words only when all 131072 local outputs agree.",
+  "scope": "Equality of these local maps establishes equality on arbitrary binary configurations and every positive periodic ring width for the declared words; the program search still has an eight-physical-tick bound.",
+  "cost_model": "Use the unchanged parent protocol, all its W/V histories, resource prices, and job counts.",
+  "readouts": ["same primary and sensitivity cost comparisons", "finite-ring versus local equivalence of target transformations", "changes in finite-ring minimum program costs", "which selected finite-ring witness programs generalize"],
+  "witness_selection": "Audit all programs saved by the parent experiment. For each failed equality save the first integer-coded 17-bit window where outputs differ. Select local-cost revision win and loss examples by the parent's lexicographic procedure.",
+  "checks": ["all local words through length three match direct vectorized CA evaluation on every minimal causal window", "all saved finite-ring program comparisons agree with an independent shrinking-window computation on all 17-bit windows", "local equivalence implies each corresponding finite-ring equivalence", "finite-ring execution costs never exceed corresponding all-width local costs", "the parent price-bound and physical-only controls still hold"],
+  "interpretation": "This is a causal-window extension of an already observed finite experiment, not an independent preregistered replication of its discovery. The extension protocol is committed before running the new enumeration. It does not remove the toy price schedule, oracle planning, or bounded program length."
+}

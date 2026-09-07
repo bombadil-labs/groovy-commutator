@@ -228,25 +228,29 @@
       "id": "revisable-primitives",
       "title": "When should an inherited primitive remain revisable?",
       "kind": "question",
-      "status": "open",
-      "summary": "A reusable construction may enable later work while making its assumptions costly to change.",
+      "status": "partly-answered",
+      "summary": "An exact oracle cost model identifies when editing repays its retained-trace cost; learning and repeated task changes remain open.",
       "updated": "2026-09-07",
       "source": "docs/knowledge/revisable-primitives.md",
       "research": [
         "revisable-primitives",
-        "history-and-possibility"
+        "history-and-possibility",
+        "costed-primitives",
+        "macro-local-equivalence"
       ]
     },
     {
       "id": "revisable-primitives-test",
       "title": "Compare fixed and revisable compiled primitives",
       "kind": "experiment",
-      "status": "planned",
-      "summary": "A proposed equal-resource comparison must count construction and revision costs before testing adaptation after an environmental change.",
+      "status": "completed",
+      "summary": "A bounded comparison prices compilation, physical execution, dispatch, retained traces, and revision; a causal-window follow-up removes finite-size coincidences.",
       "updated": "2026-09-07",
       "source": "docs/knowledge/revisable-primitives-test.md",
       "research": [
-        "revisable-primitives"
+        "revisable-primitives",
+        "costed-primitives",
+        "macro-local-equivalence"
       ]
     },
     {
@@ -272,6 +276,67 @@
       "research": [
         "history-and-possibility",
         "revisable-primitives"
+      ]
+    },
+    {
+      "id": "compiled-primitives",
+      "title": "Compiled primitives and their resource costs",
+      "kind": "concept",
+      "status": "defined",
+      "summary": "A macro reuses existing operations; its physical execution, dispatch, construction, and retained structure have distinct costs.",
+      "updated": "2026-09-07",
+      "source": "docs/knowledge/compiled-primitives.md",
+      "research": [
+        "costed-primitives"
+      ]
+    },
+    {
+      "id": "compilation-preserves-physical-options",
+      "title": "Expanding a macro preserves its physical computation",
+      "kind": "finding",
+      "status": "exact",
+      "summary": "With primitive operations still available and full expansion charged, adding macros does not enlarge physical-budget reachability.",
+      "updated": "2026-09-07",
+      "source": "docs/knowledge/compilation-preserves-physical-options.md",
+      "research": [
+        "costed-primitives"
+      ]
+    },
+    {
+      "id": "costed-revision",
+      "title": "A retained trace can pay for a nearby change",
+      "kind": "finding",
+      "status": "exact",
+      "summary": "At the declared prices, all-width programs give a narrow revision advantage for most one-letter changes; distant changes usually favor replacement.",
+      "updated": "2026-09-07",
+      "source": "docs/knowledge/costed-revision.md",
+      "research": [
+        "costed-primitives",
+        "macro-local-equivalence"
+      ]
+    },
+    {
+      "id": "finite-ring-shortcuts",
+      "title": "Finite-ring program equivalence need not generalize",
+      "kind": "finding",
+      "status": "exact",
+      "summary": "Two selected Rule 4/30 shortcuts agree on six cells but fail on 11,264 of the 131,072 unrestricted causal windows.",
+      "updated": "2026-09-07",
+      "source": "docs/knowledge/finite-ring-shortcuts.md",
+      "research": [
+        "macro-local-equivalence"
+      ]
+    },
+    {
+      "id": "macro-local-test",
+      "title": "Audit compiled programs on every causal window",
+      "kind": "experiment",
+      "status": "completed",
+      "summary": "The 17-cell window exhaustively checks all local inputs for programs up to eight ticks and repeats the cost model using all-width equivalence.",
+      "updated": "2026-09-07",
+      "source": "docs/knowledge/macro-local-test.md",
+      "research": [
+        "macro-local-equivalence"
       ]
     }
   ],
@@ -472,9 +537,83 @@
       "source": "revisable-primitives-test",
       "type": "tests",
       "target": "revisable-primitives",
-      "reason": "The planned comparison would test adaptation with fixed versus revisable constructions; no outcome has been measured.",
+      "reason": "The completed bounded comparison tests resource costs of fixed, replacement, and revisable constructions; learning and repeated transitions remain open.",
       "research": [
-        "revisable-primitives"
+        "revisable-primitives",
+        "costed-primitives",
+        "macro-local-equivalence"
+      ]
+    },
+    {
+      "source": "revisable-primitives-test",
+      "type": "depends_on",
+      "target": "compiled-primitives",
+      "reason": "The comparison uses the declared physical, dispatch, construction, and trace costs.",
+      "research": [
+        "costed-primitives"
+      ]
+    },
+    {
+      "source": "compilation-preserves-physical-options",
+      "type": "depends_on",
+      "target": "compiled-primitives",
+      "reason": "The expansion argument requires that every macro consists of retained primitive operations and pays their execution cost.",
+      "research": [
+        "costed-primitives"
+      ]
+    },
+    {
+      "source": "revisable-primitives-test",
+      "type": "supports",
+      "target": "costed-revision",
+      "reason": "The exact cost comparison measures gains and losses under specified prices; it does not demonstrate autonomous learning.",
+      "research": [
+        "costed-primitives"
+      ]
+    },
+    {
+      "source": "costed-revision",
+      "type": "depends_on",
+      "target": "revisable-primitives-test",
+      "reason": "The numerical finding depends on the frozen resource prices and task construction.",
+      "research": [
+        "costed-primitives"
+      ]
+    },
+    {
+      "source": "costed-revision",
+      "type": "depends_on",
+      "target": "macro-local-test",
+      "reason": "The all-width version uses local equivalence rather than finite-ring coincidences.",
+      "research": [
+        "macro-local-equivalence"
+      ]
+    },
+    {
+      "source": "macro-local-test",
+      "type": "tests",
+      "target": "costed-revision",
+      "reason": "The follow-up asks which cost conclusions survive requiring a program to work on arbitrary configurations.",
+      "research": [
+        "macro-local-equivalence"
+      ]
+    },
+    {
+      "source": "macro-local-test",
+      "type": "supports",
+      "target": "finite-ring-shortcuts",
+      "reason": "Independent shrinking-window evolution supplies explicit counterexample inputs for the two finite-only shortcuts.",
+      "research": [
+        "macro-local-equivalence"
+      ]
+    },
+    {
+      "source": "finite-ring-shortcuts",
+      "type": "depends_on",
+      "target": "macro-local-test",
+      "reason": "The stated counterexample counts come from the exhaustive local-map audit.",
+      "research": [
+        "macro-local-equivalence"
       ]
     }
   ]

@@ -103,7 +103,9 @@
       "future-repertoire",
       "revisable-primitives",
       "history-repairability",
-      "ether-regions"
+      "ether-regions",
+      "costed-primitives",
+      "macro-local-equivalence"
     ],
     "date": "2026-09-07",
     "updated": "2026-09-07",
@@ -139,17 +141,63 @@
     "kind": "Research plan",
     "evidence": "open",
     "topic": "History and possibility",
-    "summary": "A proposed comparison of reusable constructions that can be reopened versus constructions that become fixed, with equal resources and explicit revision costs.",
-    "takeaway": "Inherited efficiency and the capacity to revise it need to be measured together. This experiment is proposed, not run.",
+    "summary": "The original plan now has a completed cost comparison and an all-width equivalence audit. Learning and discovery of primitives remain open.",
+    "takeaway": "A bounded resource model is complete; the broader question of learning and revising useful constructions continues.",
     "promotion": {
       "stage": "research"
     },
     "related": [
       "history-and-possibility",
-      "future-repertoire"
+      "future-repertoire",
+      "costed-primitives",
+      "macro-local-equivalence"
     ],
     "date": "2026-09-07",
     "updated": "2026-09-07",
     "source": "docs/research/2026-09-07-revisable-primitives.md"
+  },
+  {
+    "slug": "costed-primitives",
+    "number": "008",
+    "title": "When does keeping a construction revisable pay?",
+    "kind": "Experiment",
+    "evidence": "exact",
+    "topic": "History and possibility",
+    "summary": "A costed comparison finds a narrow revision advantage for nearby changes. Preserving an editable trace can also cost more than replacing the construction.",
+    "takeaway": "A reusable form can save coordination work while its revisability has an upfront cost. The result depends on which resources we count.",
+    "related": [
+      "revisable-primitives",
+      "macro-local-equivalence",
+      "history-and-possibility"
+    ],
+    "promotion": {
+      "stage": "research"
+    },
+    "date": "2026-09-07",
+    "updated": "2026-09-07",
+    "source": "docs/research/2026-09-07-costed-primitives.md"
+  },
+  {
+    "slug": "macro-local-equivalence",
+    "number": "009",
+    "title": "Does the shortcut survive a larger world?",
+    "kind": "Robustness check",
+    "evidence": "exact",
+    "topic": "History and possibility",
+    "summary": "An exact causal-window audit catches a six-cell shortcut that fails elsewhere, then repeats the cost comparison with programs valid at every ring width.",
+    "takeaway": "A construction can work perfectly in a small world and fail when that world expands. Verify the scope of an equivalence before reusing it.",
+    "related": [
+      "costed-primitives",
+      "revisable-primitives",
+      "history-and-possibility"
+    ],
+    "promotion": {
+      "stage": "candidate",
+      "idea": "A shortcut can depend on the size of its world",
+      "destination": "Concepts"
+    },
+    "date": "2026-09-07",
+    "updated": "2026-09-07",
+    "source": "docs/research/2026-09-07-macro-local-equivalence.md"
   }
 ]

@@ -1,6 +1,12 @@
 # When does a useful shortcut become a constraint?
 
-**Status: proposed experiment; not run.** A system can turn an expensive
+**Status: original proposal, now partly implemented.** The
+[costed comparison](2026-09-07-costed-primitives.md) and
+[all-width audit](2026-09-07-macro-local-equivalence.md) are complete. They
+assume given constructions and oracle planning; learning, discovery, and
+repeated transitions remain open.
+
+The motivating question: A system can turn an expensive
 construction into a reusable primitive. Does that inherited efficiency help
 it adapt when conditions change, or make its earlier assumptions harder to
 revise?
