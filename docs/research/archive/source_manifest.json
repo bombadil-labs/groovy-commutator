@@ -1,0 +1,32 @@
+{
+  "recovered_on": "2026-09-07",
+  "conversation": "Analysis of Collusion Wiki",
+  "access": "Targeted conversation retrieval and complete recovered research artifacts; full transcript not available.",
+  "files": [
+    {
+      "name": "history_repairability_canonical88_parity.csv",
+      "sha256": "4d677af4fb1d9f4108bb9ce574d3644fc4aa8f5f59c9677ef6376f846a6b2618",
+      "bytes": 11817
+    },
+    {
+      "name": "history_repairability_full256_majority.csv",
+      "sha256": "c1ac244a74dc491de3fe7f7c9ea61a45a5d157f1678521ebb399f65bd4575b98",
+      "bytes": 30639
+    },
+    {
+      "name": "history_repairability_repo_patch.zip",
+      "sha256": "960c69246fccef751f7bd974818fa9275fbbd0bd265d273cf16aa53116d33154",
+      "bytes": 15849
+    },
+    {
+      "name": "history_repairable_nonclosure.md",
+      "sha256": "984cb5e9e16cfe5b49b373d818fbd5a125c1db2b56823f804aff3a8b3d2bf8d0",
+      "bytes": 3370
+    },
+    {
+      "name": "rule90_rule110_wet_math_comparison.md",
+      "sha256": "7a3eedf04f38c2b6eda3cd0f8f4e22573c2765377fb8386807899429cb475092",
+      "bytes": 16950
+    }
+  ]
+}

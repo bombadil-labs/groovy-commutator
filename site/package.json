@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "test:research": "node --test scripts/research.test.mjs scripts/knowledge.test.mjs",
     "preview": "vite preview"
   },
   "dependencies": {
@@ -14,6 +15,9 @@
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^4.3.4",
+    "katex": "0.18.7",
+    "markdown-it": "15.0.1",
+    "markdown-it-texmath": "1.0.0",
     "vite": "^6.0.7"
   }
 }

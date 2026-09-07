@@ -1,0 +1,257 @@
+{
+  "method": "exhaustive causal windows; uniform window weighting",
+  "derivative_rules": {
+    "90": 150,
+    "110": 162
+  },
+  "commutators": {
+    "30": {
+      "ones": 12,
+      "windows": 32,
+      "degree": 3,
+      "monomials": 6,
+      "masks": [
+        4,
+        8,
+        10,
+        12,
+        20,
+        28
+      ]
+    },
+    "54": {
+      "ones": 14,
+      "windows": 32,
+      "degree": 3,
+      "monomials": 6,
+      "masks": [
+        6,
+        9,
+        12,
+        13,
+        18,
+        22
+      ]
+    },
+    "90": {
+      "ones": 0,
+      "windows": 32,
+      "degree": 0,
+      "monomials": 0,
+      "masks": []
+    },
+    "110": {
+      "ones": 10,
+      "windows": 32,
+      "degree": 4,
+      "monomials": 4,
+      "masks": [
+        8,
+        10,
+        23,
+        30
+      ]
+    }
+  },
+  "dyadic": [
+    {
+      "rule": 90,
+      "horizon": 1,
+      "degree": 1,
+      "monomials": 3
+    },
+    {
+      "rule": 90,
+      "horizon": 2,
+      "degree": 1,
+      "monomials": 3
+    },
+    {
+      "rule": 90,
+      "horizon": 4,
+      "degree": 1,
+      "monomials": 3
+    },
+    {
+      "rule": 90,
+      "horizon": 8,
+      "degree": 1,
+      "monomials": 3
+    },
+    {
+      "rule": 110,
+      "horizon": 1,
+      "degree": 3,
+      "monomials": 3
+    },
+    {
+      "rule": 110,
+      "horizon": 2,
+      "degree": 5,
+      "monomials": 7
+    },
+    {
+      "rule": 110,
+      "horizon": 4,
+      "degree": 8,
+      "monomials": 71
+    },
+    {
+      "rule": 110,
+      "horizon": 8,
+      "degree": 15,
+      "monomials": 5135
+    },
+    {
+      "rule": 30,
+      "horizon": 1,
+      "degree": 2,
+      "monomials": 3
+    },
+    {
+      "rule": 30,
+      "horizon": 2,
+      "degree": 3,
+      "monomials": 11
+    },
+    {
+      "rule": 30,
+      "horizon": 4,
+      "degree": 7,
+      "monomials": 121
+    },
+    {
+      "rule": 30,
+      "horizon": 8,
+      "degree": 15,
+      "monomials": 23093
+    }
+  ],
+  "parity_closure": [
+    {
+      "rule": 90,
+      "block": 2,
+      "stride": 2,
+      "error_count": 0,
+      "windows": 64,
+      "error": 0.0,
+      "best_macro_rule": 90
+    },
+    {
+      "rule": 90,
+      "block": 4,
+      "stride": 4,
+      "error_count": 0,
+      "windows": 4096,
+      "error": 0.0,
+      "best_macro_rule": 90
+    },
+    {
+      "rule": 110,
+      "block": 2,
+      "stride": 2,
+      "error_count": 22,
+      "windows": 64,
+      "error": 0.34375,
+      "best_macro_rule": 4
+    },
+    {
+      "rule": 110,
+      "block": 4,
+      "stride": 4,
+      "error_count": 1916,
+      "windows": 4096,
+      "error": 0.4677734375,
+      "best_macro_rule": 34
+    },
+    {
+      "rule": 30,
+      "block": 2,
+      "stride": 2,
+      "error_count": 24,
+      "windows": 64,
+      "error": 0.375,
+      "best_macro_rule": 210
+    },
+    {
+      "rule": 30,
+      "block": 4,
+      "stride": 4,
+      "error_count": 1912,
+      "windows": 4096,
+      "error": 0.466796875,
+      "best_macro_rule": 15
+    }
+  ],
+  "bounded_projection_search": [
+    {
+      "rule": 110,
+      "block": 2,
+      "stride": 1,
+      "nonconstant_projections": 14,
+      "exact_closures": []
+    },
+    {
+      "rule": 110,
+      "block": 2,
+      "stride": 2,
+      "nonconstant_projections": 14,
+      "exact_closures": []
+    },
+    {
+      "rule": 110,
+      "block": 3,
+      "stride": 1,
+      "nonconstant_projections": 254,
+      "exact_closures": []
+    },
+    {
+      "rule": 110,
+      "block": 3,
+      "stride": 2,
+      "nonconstant_projections": 254,
+      "exact_closures": []
+    },
+    {
+      "rule": 110,
+      "block": 3,
+      "stride": 3,
+      "nonconstant_projections": 254,
+      "exact_closures": []
+    }
+  ],
+  "constant_commutator_rules": {
+    "zero": [
+      0,
+      4,
+      60,
+      90,
+      102,
+      150,
+      170,
+      200,
+      204,
+      240
+    ],
+    "one": [
+      15,
+      51,
+      85,
+      105,
+      153,
+      165,
+      195,
+      255
+    ]
+  },
+  "torus_checks": {
+    "power_of_two_n": [
+      8,
+      16,
+      32,
+      256
+    ],
+    "zero_by": "n/2",
+    "n300_single_seed_nonzero_at_t150": true
+  }
+}

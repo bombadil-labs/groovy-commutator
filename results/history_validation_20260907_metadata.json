@@ -1,0 +1,76 @@
+{
+  "parameters": {
+    "rules": [
+      0,
+      4,
+      51,
+      170,
+      184,
+      41,
+      30,
+      45,
+      90,
+      54,
+      106,
+      110
+    ],
+    "sizes": [
+      300,
+      420
+    ],
+    "steps": 512,
+    "burn": 150,
+    "hmax": 6,
+    "min_support": 5,
+    "output_prefix": "history_validation_20260907"
+  },
+  "train_seeds": [
+    101,
+    102,
+    103,
+    104,
+    105,
+    106,
+    107,
+    108
+  ],
+  "test_seeds": [
+    201,
+    202,
+    203,
+    204
+  ],
+  "observers": [
+    [
+      "parity",
+      2,
+      2
+    ],
+    [
+      "parity",
+      4,
+      4
+    ],
+    [
+      "majority",
+      3,
+      1
+    ],
+    [
+      "majority",
+      5,
+      1
+    ],
+    [
+      "derivative",
+      1,
+      1
+    ]
+  ],
+  "rng": "numpy.default_rng (PCG64)",
+  "python": "3.12.13",
+  "numpy": "2.3.5",
+  "zlib": "1.3.2",
+  "row_count": 3360,
+  "uncertainty": "Per-test-trajectory range, conditional on one shared training ensemble; no iid-cell CIs"
+}

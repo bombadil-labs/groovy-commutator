@@ -1,19 +1,13 @@
-const PAGES = [
-  { href: 'index.html', label: 'Home', key: 'home' },
-  { href: 'concepts.html', label: 'Concepts', key: 'concepts' },
-  { href: 'questions.html', label: 'Questions', key: 'questions' },
-  { href: 'remainder.html', label: 'The Walk', key: 'remainder' },
-  { href: 'explorer.html', label: 'Explorer', key: 'explorer' },
-];
+import { PAGES } from '../data/navigation.js';
 
 export default function Nav({ active, brandFont = "'Lora',serif" }) {
   return (
     <header className="gc-header">
-      <nav className="gc-nav">
+      <nav className="gc-nav" aria-label="Main navigation">
         <a href="index.html" className="gc-nav-brand" style={{ fontFamily: brandFont }}>Groovy Commutator</a>
         <div className="gc-nav-links">
           {PAGES.map((p) => (
-            <a key={p.key} href={p.href} className={'gc-nav-link' + (p.key === active ? ' active' : '')}>
+            <a key={p.key} href={p.href} aria-current={p.key === active ? 'page' : undefined} className={'gc-nav-link' + (p.key === active ? ' active' : '')}>
               {p.label}
             </a>
           ))}
