@@ -1257,6 +1257,7 @@ export default function Concepts() {
                 : isAffine ? 'this rule is GF(2)-affine — G is the same constant for every state, every step.'
                 : (rule === 4 || rule === 200) ? 'this rule is nonlinear, but its commutator is identically zero.'
                 : 'this rule is nonlinear and G varies across possible states; a particular orbit may still settle.'}
+              {' '}<a href="research/affine-converse.html" style={{ color: 'var(--accent)' }}>Read the correction and exhaustive checks.</a>
             </p>
             <p style={pBody}>
               Worth flipping through the quick-pick rules above and watching what happens to the purple panel: rule{' '}

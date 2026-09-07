@@ -5,6 +5,8 @@ on:
     branches: [main]
     paths:
       - "site/**"
+      - "docs/research/**"
+      - "results/**"
       - ".github/workflows/pages.yml"
   workflow_dispatch:
 
@@ -31,6 +33,8 @@ jobs:
           cache: npm
           cache-dependency-path: site/package-lock.json
       - run: npm ci
+        working-directory: site
+      - run: npm run test:research
         working-directory: site
       - run: npm run build
         working-directory: site

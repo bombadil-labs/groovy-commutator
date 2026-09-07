@@ -18,6 +18,24 @@ All of this is implemented in `src/groovy/` — read the module docstrings
 first, they carry the math. Full interpretive writeup and citations are in
 `NOTES.md`, kept separate so this file stays short.
 
+## Ongoing research and the public site
+
+Capture each substantial new experiment, correction, or open research plan
+as a dated Markdown note in `docs/research/` and register it in
+`site/content/research.json`. The site build renders these into the Research
+index and individual pages. Follow `docs/research/README.md` for metadata,
+evidence labels, and the promotion workflow. Keep the main pages accessible:
+write full methods and mathematical detail in Research, then periodically
+review candidates and write selected insights into Home, Concepts, Questions,
+or The Walk with a link back to the supporting note. Evidence strength and
+editorial readiness are separate decisions. Corrections to existing main-page
+claims should be made promptly and linked to their research record.
+
+Run `npm run test:research --prefix site` and `npm run build --prefix site`
+after changing notes or their catalog. Do not edit generated `site/research/`
+or repo-root `public/` files. Publication remains the existing GitHub Pages
+workflow; research source and result changes now also trigger that workflow.
+
 ## Established results (don't re-derive these, build on them)
 
 1. **Affine implication (converse corrected 2026-09-07).** If `phi(S) =
@@ -368,7 +386,8 @@ section 6 for the full writeup and citations.
 - `results/` — sweep outputs (parquet/csv) and generated figures. Treat
   this as data, not scratch space — name files so it's clear what
   parameters produced them (rule range, seed count, date if it matters).
-- `site/` — the GitHub Pages site's source (React + Vite, five pages:
+- `site/` — the GitHub Pages site's source (React + Vite, five main pages
+  plus generated Research pages):
   home/concepts/questions/remainder/explorer — the questions page was
   called "findings" before a copy pass restructured it around named
   questions each answered by embedded data, per the confidence-labeling
@@ -379,7 +398,7 @@ section 6 for the full writeup and citations.
   calculus (result 11) and every rendered field on concepts/explorer
   carries a run-signature badge — `RunSig.jsx`, with the Explorer
   deriving signatures from the card graph at render time, never storing
-  them in `?seed=` URLs, so keep it that way when adding card types).
+  them in `?seed=` URLs, so keep it that way when adding card types.
   `site/src/lib/groovy-engine.js` is a hand-ported JS mirror of
   `src/groovy/*.py` (1D functions) plus a 2D Life-like extension the
   Python package doesn't have yet — if you change the Python math, update

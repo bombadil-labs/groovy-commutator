@@ -4,7 +4,19 @@ An operator-commutator framework for cellular automata — generalized from
 a single rule's self-commutator to the relationship *between* pairs of
 rules. Origin: https://liet-codes.github.io/wet-math/commutator.html
 
-## Latest research checkpoint
+## Research and the public site
+
+The site's **Research** section is the ongoing working record. Each entry has
+a plain-language summary, evidence status, methods, limitations, and links to
+the code and data. Main pages remain curated explanations; the Research index
+keeps a separate list of ideas to explain next.
+
+To add a note or promote an insight, follow
+[the research authoring guide](docs/research/README.md). Write the note in
+`docs/research/` and register it in `site/content/research.json`; the normal
+site build creates its page and updates the index automatically.
+
+### First research checkpoint
 
 [Observed history and coarse-grained prediction](docs/research/2026-09-07-history-repairability.md)
 continues **Analysis of Collusion Wiki**: recovered Rule 90/110 notes, reproduced
@@ -38,13 +50,18 @@ This checkpoint also corrects the old affine converse: nonlinear Rules 4 and
 - `results/` — sweep outputs: `sweep_full.parquet` (raw), 
   `sweep_full_classified.parquet` (regime-labeled, joined with image_ratio),
   `sweep_summary.csv`, `image_ratios.csv`.
-- `site/` — source for the GitHub Pages site (React + Vite): four pages —
+- `docs/research/` — canonical research notes, archived conversation material,
+  and the authoring/promotion guide. Published notes are selected by
+  `site/content/research.json`; archived notes stay available as evidence.
+- `site/` — source for the GitHub Pages site (React + Vite): main pages —
   home, concepts (cellular automata, boolean calculus incl. the `I`/Euler-
   integration reading of evolution, the State&rarr;State shape, each
   instrument, all with live in-browser demos), questions (named questions
   answered by embedded, confidence-labeled data — including ones still
-  open), and explorer (a card-based tool for composing the instruments
-  yourself, 1D or 2D). `site/src/lib/groovy-engine.js` is the client-side
+  open), The Walk (a guided narrative with live demos), and explorer
+  (a card-based tool for composing the instruments yourself, 1D or 2D) —
+  plus static Research pages generated from Markdown.
+  `site/src/lib/groovy-engine.js` is the client-side
   reimplementation of `src/groovy/*.py` — keep them in sync. Dev server:
   `npm run dev --prefix site`; build: `npm run build --prefix site`
   (outputs to `public/`).
