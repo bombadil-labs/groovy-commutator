@@ -24,11 +24,15 @@ algebra: if `phi` is GF(2)-affine (`phi(X) = M·X ⊕ c` for some GF(2)-linear
 M and constant bias c), then `phi(A⊕B) = phi(A)⊕phi(B)⊕c`, and that alone
 forces `G(S) = c` for *every* S, not just on average.
 
-**Theorem**: D and E commute identically (for all states) iff phi is
-GF(2)-affine. Confirmed computationally for elementary CA rules 0, 90, 150
-(c=0, G≡0) and 165, 105 — complements of 90/150, so still affine but with
-c=1 — where G(S) is the *same nonzero constant array* for every random S
-tested (density 1.000, exact match across trials).
+**Theorem (affine implication; converse corrected 2026-09-07):** an
+GF(2)-affine rule has constant G equal to its bias c; D and E commute when
+that bias is zero. Biased affine rules have G=1, so they do not commute.
+The converse previously written here was false. Nonlinear rules 4 and 200
+also have G identically zero, as already foreshadowed by the U-slice in §10.
+Exhaustive five-cell windows confirm exactly ten zero-G and eight one-G ECA
+rules; see `scripts/verify_history_algebra.py` and
+`results/history_algebra_checks.json`. This does not establish a converse
+for wider neighborhoods or other dimensions.
 
 This connects directly to the established theory of additive/linear
 cellular automata (the GF(2)[x, x⁻¹] polynomial-ring treatment of CA rules —
@@ -675,3 +679,43 @@ coupling, prehoc, rule fields) are re-kickered from "Instrument" to
 source cards only accept the 256 elementary rules; that's now a visible,
 well-defined gap ("a source card with a composite rule") rather than a
 vague itch.
+
+
+## 11. From the Collusion Wiki conversation to observed-history experiments
+
+The recovered thread and its continuation are now recorded in
+[`docs/research/2026-09-07-history-repairability.md`](docs/research/2026-09-07-history-repairability.md),
+with unchanged source notes, reproducible scripts, per-seed data, and a result
+ledger. The path was: Rule 90's exact transport of change and dyadic parity
+closure → Rule 110's structured failure of those closures → asking how much
+historical context restores predictive power → Class II and projection-dependent
+counterexamples to a simple Class-IV interpretation.
+
+The conceptual question survives: **when a relation is represented as a state,
+what context has been discarded, and where can that context still be found?**
+The distinction is between an observed present and an observed path. It is not
+a claim that the microscopic CA is indeterministic or that a finite predictor's
+residual proves ontological nonclosure. G is the discrepancy when evolving D
+under the original rule; it need not be the error of the best learned predictor
+of D, and neither object is the two-engine divergence U.
+
+The surrounding discussion connected this to wet alignment and to knowing as
+a transformation of the knower: changing an observer's capacities changes
+what can be recognized or predicted. The user pressed that even learning a
+fact transforms the knower, and connected sustained openness to Buber and a
+critique of final, context-free closure (including the phrase "Newton's Sleep").
+Those are recovered conceptual motivations, not consequences proved by these
+CA experiments. A fixed coarse projection models selective access; it does not
+by itself model reciprocal agency, I–Thou relation, or a changing observer.
+The mapping has to earn those further steps. **Resonance proposes; it does not
+prove.**
+
+The broad sweep's simple Class-IV identification failed. The stronger candidate
+joint profile combines substantial present-only error, historical repair, and
+nontrivial structure, but its thresholds and class labels remain exploratory.
+The follow-up confirms why: Rule 110's parity observations are repairable,
+Rule 90's dyadic parity observations close exactly, and Rule 30's parity
+observations remain poorly predicted by the tested histories; yet Rule 30's
+*derivative* history is highly predictive too. "The present is insufficient,
+but the path is not lost" is a useful research question about a specified
+observation of specified dynamics, not a universal division of rules.

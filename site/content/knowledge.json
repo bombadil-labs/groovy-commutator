@@ -1,0 +1,239 @@
+{
+  "schemaVersion": 1,
+  "nodes": [
+    {
+      "id": "observed-history",
+      "title": "Observed histories",
+      "kind": "concept",
+      "status": "defined",
+      "summary": "A prediction depends on which parts of a trajectory we choose to observe.",
+      "updated": "2026-09-07",
+      "source": "docs/knowledge/observed-history.md",
+      "research": [
+        "history-repairability"
+      ]
+    },
+    {
+      "id": "history-repair",
+      "title": "History improves Rule 110 prediction",
+      "kind": "finding",
+      "status": "replicated",
+      "summary": "Short histories sharply reduce prediction error for the tested coarse observations of Rule 110.",
+      "updated": "2026-09-07",
+      "source": "docs/knowledge/history-repair.md",
+      "research": [
+        "history-repairability"
+      ]
+    },
+    {
+      "id": "projection-dependence",
+      "title": "History repair depends on the observation",
+      "kind": "finding",
+      "status": "replicated",
+      "summary": "Rule 30 repairs strongly under derivative observation while its tested parity histories do not improve prediction.",
+      "updated": "2026-09-07",
+      "source": "docs/knowledge/projection-dependence.md",
+      "research": [
+        "history-repairability"
+      ]
+    },
+    {
+      "id": "class-iv-shortcut",
+      "title": "Does strong history repair identify Class IV?",
+      "kind": "theory",
+      "status": "refuted",
+      "summary": "The simple repair-only shortcut fails on the tested comparison rules.",
+      "updated": "2026-09-07",
+      "source": "docs/knowledge/class-iv-shortcut.md",
+      "research": [
+        "history-repairability"
+      ]
+    },
+    {
+      "id": "ether-or-defects",
+      "title": "What part of Rule 110 becomes predictable?",
+      "kind": "question",
+      "status": "open",
+      "summary": "Does history recover the repeating background, moving disturbances, or both?",
+      "updated": "2026-09-07",
+      "source": "docs/knowledge/ether-or-defects.md",
+      "research": [
+        "history-repairability",
+        "ether-or-defects"
+      ]
+    },
+    {
+      "id": "phase-recovery",
+      "title": "Ether phase may explain much of the repair",
+      "kind": "theory",
+      "status": "proposed",
+      "summary": "History may chiefly recover the phase of Rule 110’s repeating background.",
+      "updated": "2026-09-07",
+      "source": "docs/knowledge/phase-recovery.md",
+      "research": [
+        "ether-or-defects"
+      ]
+    },
+    {
+      "id": "regional-prediction-test",
+      "title": "Separate background and disturbance errors",
+      "kind": "experiment",
+      "status": "planned",
+      "summary": "Record prediction errors by region using a detector independent of the predictor.",
+      "updated": "2026-09-07",
+      "source": "docs/knowledge/regional-prediction-test.md",
+      "research": [
+        "ether-or-defects"
+      ]
+    },
+    {
+      "id": "affine-implication",
+      "title": "Affine evolution has a constant commutator",
+      "kind": "finding",
+      "status": "exact",
+      "summary": "For binary affine evolution, the self-commutator equals the fixed bias.",
+      "updated": "2026-09-07",
+      "source": "docs/knowledge/affine-implication.md",
+      "research": [
+        "affine-converse"
+      ]
+    },
+    {
+      "id": "affine-converse",
+      "title": "Does a constant commutator imply affine evolution?",
+      "kind": "theory",
+      "status": "refuted",
+      "summary": "The converse of the affine implication is false, already among elementary rules.",
+      "updated": "2026-09-07",
+      "source": "docs/knowledge/affine-converse.md",
+      "research": [
+        "affine-converse"
+      ]
+    },
+    {
+      "id": "nonlinear-zero",
+      "title": "Nonlinear Rules 4 and 200 have zero commutator",
+      "kind": "finding",
+      "status": "exact",
+      "summary": "Exhaustive five-cell enumeration gives zero for every local commutator window of Rules 4 and 200.",
+      "updated": "2026-09-07",
+      "source": "docs/knowledge/nonlinear-zero.md",
+      "research": [
+        "affine-converse"
+      ]
+    },
+    {
+      "id": "zero-is-not-linearity",
+      "title": "Zero commutator is not a linearity test",
+      "kind": "finding",
+      "status": "exact",
+      "summary": "Observing an identically zero commutator does not establish that a rule is linear or affine.",
+      "updated": "2026-09-07",
+      "source": "docs/knowledge/zero-is-not-linearity.md",
+      "research": [
+        "affine-converse"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "history-repair",
+      "type": "depends_on",
+      "target": "observed-history",
+      "reason": "The result is defined relative to a fixed observation, stride, and history context.",
+      "research": [
+        "history-repairability"
+      ]
+    },
+    {
+      "source": "projection-dependence",
+      "type": "depends_on",
+      "target": "history-repair",
+      "reason": "The comparison extends the same controlled prediction setup to other observations and rules.",
+      "research": [
+        "history-repairability"
+      ]
+    },
+    {
+      "source": "projection-dependence",
+      "type": "contradicts",
+      "target": "class-iv-shortcut",
+      "reason": "Rule 30’s strong derivative-history repair defeats the repair-only distinction from Rule 110.",
+      "research": [
+        "history-repairability"
+      ]
+    },
+    {
+      "source": "phase-recovery",
+      "type": "depends_on",
+      "target": "history-repair",
+      "reason": "The hypothesis aims to explain this observed benefit; it needs reconsideration if the benefit changes.",
+      "research": [
+        "ether-or-defects"
+      ]
+    },
+    {
+      "source": "regional-prediction-test",
+      "type": "depends_on",
+      "target": "history-repair",
+      "reason": "The planned breakdown reuses the validation setup and matched prediction targets.",
+      "research": [
+        "ether-or-defects"
+      ]
+    },
+    {
+      "source": "regional-prediction-test",
+      "type": "tests",
+      "target": "phase-recovery",
+      "reason": "Separating regional errors would measure how much improvement belongs to background cells.",
+      "research": [
+        "ether-or-defects"
+      ]
+    },
+    {
+      "source": "regional-prediction-test",
+      "type": "tests",
+      "target": "ether-or-defects",
+      "reason": "The protocol is intended to distinguish the sources of the aggregate history benefit.",
+      "research": [
+        "ether-or-defects"
+      ]
+    },
+    {
+      "source": "affine-converse",
+      "type": "depends_on",
+      "target": "affine-implication",
+      "reason": "The rejected equivalence extended the valid one-way statement; failure of the converse does not negate the premise.",
+      "research": [
+        "affine-converse"
+      ]
+    },
+    {
+      "source": "nonlinear-zero",
+      "type": "contradicts",
+      "target": "affine-converse",
+      "reason": "A nonlinear rule with constant zero commutator is an exact counterexample to the converse.",
+      "research": [
+        "affine-converse"
+      ]
+    },
+    {
+      "source": "zero-is-not-linearity",
+      "type": "depends_on",
+      "target": "nonlinear-zero",
+      "reason": "This inference is justified here by the explicit nonlinear counterexamples.",
+      "research": [
+        "affine-converse"
+      ]
+    },
+    {
+      "source": "nonlinear-zero",
+      "type": "supports",
+      "target": "zero-is-not-linearity",
+      "reason": "The counterexamples show that zero commutator cannot establish affine structure by itself.",
+      "research": [
+        "affine-converse"
+      ]
+    }
+  ]
+}

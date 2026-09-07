@@ -8,9 +8,9 @@ Single-rule construction (phi = an elementary CA rule):
     G(S) = C(D(E(S)), E(D(S)))     the commutator
 
 G(S) is literally the operator commutator [D, E] evaluated at the state S.
-See NOTES.md for the derivation of the affine theorem (G(S) is constant
-across all S iff phi is GF(2)-affine) and its correspondence to kinematic
-vs. dynamical commutators in quantum mechanics.
+See NOTES.md for the affine implication (affine phi gives G equal to its
+bias), its nonlinear exceptions to the converse (ECA rules 4 and 200), and
+the interpretive correspondence to kinematic vs. dynamical commutators.
 
 Cross-rule construction (phi_a, phi_b = two different rules):
     cross_commutator(S) = C(phi_a(phi_b(S)), phi_b(phi_a(S)))

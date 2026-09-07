@@ -1,0 +1,47 @@
+[
+  {
+    "slug": "history-repairability",
+    "number": "001",
+    "title": "When does history restore what a snapshot loses?",
+    "date": "2026-09-07",
+    "updated": "2026-09-07",
+    "kind": "Experiment",
+    "evidence": "replicated",
+    "topic": "Observation and memory",
+    "summary": "A short history makes some coarse views of Rule 110 much easier to predict. Changing the observation changes the result—and the proposed Class IV shortcut fails.",
+    "takeaway": "What looks unpredictable in a snapshot can become predictable when we restore part of its path.",
+    "source": "docs/research/2026-09-07-history-repairability.md",
+    "promotion": { "stage": "candidate", "idea": "What a snapshot forgets", "destination": "Questions" },
+    "related": ["affine-converse", "ether-or-defects"]
+  },
+  {
+    "slug": "affine-converse",
+    "number": "002",
+    "title": "A zero commutator does not imply a linear rule",
+    "date": "2026-09-07",
+    "updated": "2026-09-07",
+    "kind": "Correction",
+    "evidence": "exact",
+    "topic": "Algebra and closure",
+    "summary": "Rules 4 and 200 are nonlinear, yet their commutators vanish. The earlier theorem needs a one-way implication, and the Concepts explanation has been corrected.",
+    "takeaway": "A useful test can have exceptions. Preserving the counterexample is part of improving the explanation.",
+    "source": "docs/research/2026-09-07-affine-converse.md",
+    "promotion": { "stage": "promoted", "title": "The commutator, with the correction", "href": "concepts.html#commutator" },
+    "related": ["history-repairability"]
+  },
+  {
+    "slug": "ether-or-defects",
+    "number": "003",
+    "title": "Are we predicting the background, or the moving structures?",
+    "date": "2026-09-07",
+    "updated": "2026-09-07",
+    "kind": "Research plan",
+    "evidence": "open",
+    "topic": "Observation and memory",
+    "summary": "Rule 110 has a repeating background and moving disturbances. A low average prediction error may hide which of those the model has actually learned.",
+    "takeaway": "The next experiment needs to locate prediction errors, not just count them.",
+    "source": "docs/research/2026-09-07-ether-or-defects.md",
+    "promotion": { "stage": "research" },
+    "related": ["history-repairability"]
+  }
+]

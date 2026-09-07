@@ -1332,13 +1332,15 @@ export default function Concepts() {
               of whether they actually land there together.
             </p>
             <p style={pBody}>
-              <strong>The affine theorem:</strong> <Op>G(S)</Op> is the same for every
-              possible <Op>S</Op>, forever, if and only if{' '}
-              <Op>φ</Op> is GF(2)-affine. Checked live against Rule {rule}'s own
-              lookup table:{' '}
+              <strong>The affine implication:</strong> if <Op>φ</Op> is GF(2)-affine,
+              <Op>G(S)</Op> equals its constant bias for every <Op>S</Op>. The converse fails:
+              nonlinear rules 4 and 200 also have <Op>G(S)</Op> = 0.
+              Rule {rule}'s affine status is checked against its own lookup table:{' '}
               {isAffine === null ? 'checking…'
                 : isAffine ? <>this rule is GF(2)-affine &mdash; <Op>G</Op> is the same constant for every state, every step.</>
-                : <>this rule is not affine &mdash; <Op>G</Op> is not constant; watch the strip below churn.</>}
+                : (rule === 4 || rule === 200) ? 'this rule is nonlinear, but its commutator is identically zero.'
+                : <>this rule is nonlinear and <Op>G</Op> varies across possible states; a particular orbit may still settle.</>}
+              {' '}<a href="research/affine-converse.html" style={{ color: 'var(--accent)' }}>Read the correction and exhaustive checks.</a>
             </p>
             <p style={pBody}>
               Worth flipping through the quick-pick rules above and watching what happens to the purple panel: rule{' '}
@@ -1347,8 +1349,8 @@ export default function Concepts() {
               on their own. Rule 30 (class III) makes <Op>G(S)</Op> churn with no visible
               structure. Rule 110 or 54 (class IV) is the interesting middle case:{' '}
               <Op>G(S)</Op> is neither constant nor noise, it has visible structure of its
-              own. Rules 4 and 184 (class II)
-              tend to settle into something periodic. Same four panels, four qualitatively different stories, just
+              own. Rule 4 has <Op>G(S)</Op> = 0 identically; Rule 184 (class II) can settle into periodic
+              behavior. Same four panels, four qualitatively different stories, just
               by changing the rule number.
             </p>
             <InstrumentViewer

@@ -18,17 +18,47 @@ All of this is implemented in `src/groovy/` — read the module docstrings
 first, they carry the math. Full interpretive writeup and citations are in
 `NOTES.md`, kept separate so this file stays short.
 
+## Ongoing research and the public site
+
+Capture each substantial new experiment, correction, or open research plan
+as a dated Markdown note in `docs/research/` and register it in
+`site/content/research.json`. The site build renders these into the Research
+index and individual pages. Follow `docs/research/README.md` for metadata,
+evidence labels, and the promotion workflow. Keep the main pages accessible:
+write full methods and mathematical detail in Research, then periodically
+review candidates and write selected insights into Home, Concepts, Questions,
+or The Walk with a link back to the supporting note. Evidence strength and
+editorial readiness are separate decisions. Corrections to existing main-page
+claims should be made promptly and linked to their research record.
+
+Maintain the current knowledge account in `docs/knowledge/` and
+`site/content/knowledge.json` as research advances. Follow
+`docs/knowledge/README.md`: one focused entry per concept, finding, question,
+theory, or experiment; explicit status; typed directed relationships with a
+rationale and research provenance. Record dependencies deliberately rather
+than inferring them from ordinary links. When a claim changes, inspect its
+direct and indirect dependents and update affected accounts. Preserve refuted
+theories and superseded entries. The public knowledge base generates backlinks
+and review notices, but never changes conclusions automatically.
+
+Run `npm run test:research --prefix site` and `npm run build --prefix site`
+after changing notes or their catalog. Do not edit generated `site/research/`
+or repo-root `public/` files. Publication remains the existing GitHub Pages
+workflow; research source and result changes now also trigger that workflow.
+
 ## Established results (don't re-derive these, build on them)
 
-1. **Affine theorem.** `G(S)` is constant across *all* S iff `phi` is
-   GF(2)-affine. The constant is 0 iff `phi` has no bias term (rules 90, 150).
-   With a bias term (rules 165, 105 — complements of 90/150) `G(S)` is a fixed
-   nonzero constant for every S, every time. This is the discrete analog of
-   the canonical commutation relation `[x,p] = iħ` being a *constant*
-   operator rather than a dynamical one. Verified in
-   `src/groovy/operators.py::G`, see `NOTES.md` for the QM correspondence
-   (kinematic vs. dynamical commutators, Ehrenfest's theorem, Noether,
-   quantum chaos level statistics, quantum scars).
+1. **Affine implication (converse corrected 2026-09-07).** If `phi(S) =
+   M S XOR c` is GF(2)-affine, then `G(S) = c` for every S. The converse
+   previously stated here is false: nonlinear rules **4 and 200** also have
+   `G ≡ 0`. Exhaustive five-cell causal-window enumeration gives zero-G
+   rules {0,4,60,90,102,150,170,200,204,240} and one-G rules
+   {15,51,85,105,153,165,195,255}; all other ECA commutators vary with S.
+   `scripts/verify_history_algebra.py` reproduces this and the exact Rule
+   90/110 comparison in `results/history_algebra_checks.json`. The affine
+   implication is dimension-free; the exhaustive converse classification
+   just listed is specific to elementary CA. See NOTES.md §2 for the
+   mathematical derivation and the qualified QM analogy.
 
 2. **Cross-rule commuting is a real, solved, named problem.** Moore &
    Boykett, "Commuting Cellular Automata," *Complex Systems* 11(1), 1997 —
@@ -255,6 +285,36 @@ first, they carry the math. Full interpretive writeup and citations are in
    site-wide: identity map = blackboard 𝟙 (NOT `I`, which stays
    integration); φ = the base's rule, ψ = a gauge's ingredient rule.
 
+## Research continuation: observed history (2026-09-07)
+
+Recovered **Analysis of Collusion Wiki** research is indexed in
+`docs/research/2026-09-07-history-repairability.md`. Read that first for this
+workstream; the unchanged earlier notes and source hashes are under
+`docs/research/archive/`.
+
+- **Exact checks:** D90=150, D110=162; G110 has degree 4, four monomials,
+  10/32 nonzero local windows. The reported dyadic derivative ANF counts
+  through horizon 8 reproduce. Rule 90 has exact dyadic parity closure;
+  Rule 110 has no radius-one closure for any nonconstant binary block map
+  at b=2, strides 1–2, or b=3, strides 1–3. These are bounded claims.
+- **Reproduced broad sweep:** all values in the recovered 176-row parity
+  and 256-row majority tables reproduced to 1e-12 (the recovered script's
+  `wclass` header differs from the archived CSV's `class`). Summary JSON
+  reproduced byte for byte. The legacy canonical label for 41 conflicts
+  with its cited source; 106's III/IV status is disputed. Keep class
+  enrichment exploratory, and don't count equivalent rules as independent.
+- **Independent-seed validation:** `experiment_history_validation.py`, 12
+  rules × 5 observations × 2 ring widths × 4 test seeds × 7 depths = 3,360
+  rows, trained on a disjoint eight-seed ensemble. Matched targets and
+  low-support backoff reproduce strong Rule-110 repair, while Rule 30
+  also repairs under majority and derivative observations. There is no
+  projection-independent Class-IV classifier here. Report seed ranges,
+  coverage, and exact projection/cadence with every error curve.
+- **Next:** distinguish ether-phase prediction from defect prediction;
+  vary training budget and observation family; only then estimate robust
+  sufficient-history scaling or fit reduced dynamics with explicit memory.
+  Empirical low error does not prove a finite-memory closure law.
+
 ## New instruments (added 2026-06-30, from a separate chat-interface exploration)
 
 Four directions came out of a parallel conversation; two are implemented,
@@ -336,7 +396,8 @@ section 6 for the full writeup and citations.
 - `results/` — sweep outputs (parquet/csv) and generated figures. Treat
   this as data, not scratch space — name files so it's clear what
   parameters produced them (rule range, seed count, date if it matters).
-- `site/` — the GitHub Pages site's source (React + Vite, five pages:
+- `site/` — the GitHub Pages site's source (React + Vite, five main pages
+  plus generated Research pages):
   home/concepts/questions/remainder/explorer — the questions page was
   called "findings" before a copy pass restructured it around named
   questions each answered by embedded data, per the confidence-labeling
@@ -347,7 +408,7 @@ section 6 for the full writeup and citations.
   calculus (result 11) and every rendered field on concepts/explorer
   carries a run-signature badge — `RunSig.jsx`, with the Explorer
   deriving signatures from the card graph at render time, never storing
-  them in `?seed=` URLs, so keep it that way when adding card types).
+  them in `?seed=` URLs, so keep it that way when adding card types.
   `site/src/lib/groovy-engine.js` is a hand-ported JS mirror of
   `src/groovy/*.py` (1D functions) plus a 2D Life-like extension the
   Python package doesn't have yet — if you change the Python math, update
