@@ -4,6 +4,15 @@ An operator-commutator framework for cellular automata — generalized from
 a single rule's self-commutator to the relationship *between* pairs of
 rules. Origin: https://liet-codes.github.io/wet-math/commutator.html
 
+## Latest research checkpoint
+
+[Observed history and coarse-grained prediction](docs/research/2026-09-07-history-repairability.md)
+continues **Analysis of Collusion Wiki**: recovered Rule 90/110 notes, reproduced
+broad sweeps, exact algebra checks, and new independent-seed history curves.
+The simple Class-IV identification failed; repair depends on the observation.
+This checkpoint also corrects the old affine converse: nonlinear Rules 4 and
+200 have zero commutator. Start with the research note for methods and limits.
+
 ## Layout
 
 - `src/groovy/` — the actual library. Start with `operators.py`'s

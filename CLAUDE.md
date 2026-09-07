@@ -20,15 +20,17 @@ first, they carry the math. Full interpretive writeup and citations are in
 
 ## Established results (don't re-derive these, build on them)
 
-1. **Affine theorem.** `G(S)` is constant across *all* S iff `phi` is
-   GF(2)-affine. The constant is 0 iff `phi` has no bias term (rules 90, 150).
-   With a bias term (rules 165, 105 — complements of 90/150) `G(S)` is a fixed
-   nonzero constant for every S, every time. This is the discrete analog of
-   the canonical commutation relation `[x,p] = iħ` being a *constant*
-   operator rather than a dynamical one. Verified in
-   `src/groovy/operators.py::G`, see `NOTES.md` for the QM correspondence
-   (kinematic vs. dynamical commutators, Ehrenfest's theorem, Noether,
-   quantum chaos level statistics, quantum scars).
+1. **Affine implication (converse corrected 2026-09-07).** If `phi(S) =
+   M S XOR c` is GF(2)-affine, then `G(S) = c` for every S. The converse
+   previously stated here is false: nonlinear rules **4 and 200** also have
+   `G ≡ 0`. Exhaustive five-cell causal-window enumeration gives zero-G
+   rules {0,4,60,90,102,150,170,200,204,240} and one-G rules
+   {15,51,85,105,153,165,195,255}; all other ECA commutators vary with S.
+   `scripts/verify_history_algebra.py` reproduces this and the exact Rule
+   90/110 comparison in `results/history_algebra_checks.json`. The affine
+   implication is dimension-free; the exhaustive converse classification
+   just listed is specific to elementary CA. See NOTES.md §2 for the
+   mathematical derivation and the qualified QM analogy.
 
 2. **Cross-rule commuting is a real, solved, named problem.** Moore &
    Boykett, "Commuting Cellular Automata," *Complex Systems* 11(1), 1997 —
@@ -254,6 +256,36 @@ first, they carry the math. Full interpretive writeup and citations are in
    crystalline at mean disagreement 0.99. Notation conventions now
    site-wide: identity map = blackboard 𝟙 (NOT `I`, which stays
    integration); φ = the base's rule, ψ = a gauge's ingredient rule.
+
+## Research continuation: observed history (2026-09-07)
+
+Recovered **Analysis of Collusion Wiki** research is indexed in
+`docs/research/2026-09-07-history-repairability.md`. Read that first for this
+workstream; the unchanged earlier notes and source hashes are under
+`docs/research/archive/`.
+
+- **Exact checks:** D90=150, D110=162; G110 has degree 4, four monomials,
+  10/32 nonzero local windows. The reported dyadic derivative ANF counts
+  through horizon 8 reproduce. Rule 90 has exact dyadic parity closure;
+  Rule 110 has no radius-one closure for any nonconstant binary block map
+  at b=2, strides 1–2, or b=3, strides 1–3. These are bounded claims.
+- **Reproduced broad sweep:** all values in the recovered 176-row parity
+  and 256-row majority tables reproduced to 1e-12 (the recovered script's
+  `wclass` header differs from the archived CSV's `class`). Summary JSON
+  reproduced byte for byte. The legacy canonical label for 41 conflicts
+  with its cited source; 106's III/IV status is disputed. Keep class
+  enrichment exploratory, and don't count equivalent rules as independent.
+- **Independent-seed validation:** `experiment_history_validation.py`, 12
+  rules × 5 observations × 2 ring widths × 4 test seeds × 7 depths = 3,360
+  rows, trained on a disjoint eight-seed ensemble. Matched targets and
+  low-support backoff reproduce strong Rule-110 repair, while Rule 30
+  also repairs under majority and derivative observations. There is no
+  projection-independent Class-IV classifier here. Report seed ranges,
+  coverage, and exact projection/cadence with every error curve.
+- **Next:** distinguish ether-phase prediction from defect prediction;
+  vary training budget and observation family; only then estimate robust
+  sufficient-history scaling or fit reduced dynamics with explicit memory.
+  Empirical low error does not prove a finite-memory closure law.
 
 ## New instruments (added 2026-06-30, from a separate chat-interface exploration)
 
