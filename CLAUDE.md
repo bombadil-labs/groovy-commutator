@@ -20,6 +20,14 @@ first, they carry the math. Full interpretive writeup and citations are in
 
 ## Ongoing research and the public site
 
+Start with `docs/research/2026-09-07-history-and-possibility.md` for the wider
+program: how inherited structure enables further activity and remains
+revisable. Observed-history prediction is one workstream. Keep it distinct
+from historical influence within the dynamics and from future capability.
+The first new bridge is the completed finite repertoire experiment; the next
+larger proposal concerns fixed versus revisable compiled primitives. Do not
+promote earlier dialogue's unverified numbers or ethical analogies into results.
+
 Capture each substantial new experiment, correction, or open research plan
 as a dated Markdown note in `docs/research/` and register it in
 `site/content/research.json`. The site build renders these into the Research
@@ -285,6 +293,32 @@ workflow; research source and result changes now also trigger that workflow.
    site-wide: identity map = blackboard 𝟙 (NOT `I`, which stays
    integration); φ = the base's rule, ψ = a gauge's ingredient rule.
 
+## Research continuation: history and possibility (2026-09-07)
+
+`docs/research/2026-09-07-future-repertoire.md` records a protocol committed
+before evaluation: all initial states on widths 6/9/11, 66 pairs from rules
+{0,4,30,51,54,90,110,150,170,184,204,250}, all exactly-h action words for
+h=0..6, identity and population-count views. Scripts
+`experiment_future_repertoire.py` and `report_future_repertoire.py` generate
+2,772 aggregate rows, six independently replayed witnesses, summary and figure.
+Engine, direct-word/set, zero-horizon, and identity/reset controls pass.
+
+At h=6 under identity, equal-size/different-set cases are 258/2763/10615
+and equal-set/different-action-map cases are 281/831/2399 at widths 6/9/11.
+The respective denominators are 4224/33792/135168 pair-state cases. These are
+exact bounded counts, not independent samples. Simple reset/complement and
+Rule 4/30 examples separate counts, set membership, and action responses;
+the reset/complement example also restores an option at two ticks that was
+absent at one. These distinctions are not unique to complex rules.
+
+Possibility here comes from declared external actions. Different histories
+act through different complete present states; no intrinsic agency, viability,
+or new action invention was measured. Exactly-h sets need not grow with h,
+and different pairs have different action alphabets. Do not rank intrinsic
+freedom by their set sizes. The next larger question is in
+`docs/research/2026-09-07-revisable-primitives.md`: proposed, not executed;
+resolve equal-resource accounting and revision costs before freezing a test.
+
 ## Research continuation: observed history (2026-09-07)
 
 Recovered **Analysis of Collusion Wiki** research is indexed in
@@ -322,7 +356,7 @@ workstream; the unchanged earlier notes and source hashes are under
   160 paired seed comparisons, with better support coverage: this is an
   estimator/budget finding, not proof of irreducible temporal information.
   The detector labels local incompatibility, not glider species or collisions.
-- **Next:** independently classify residual-error structures; separately vary
+- **Next within this workstream:** independently classify residual-error structures; separately vary
   training budget at fixed width for spatial versus temporal contexts. Only
   then estimate sufficient-history scaling or fit reduced dynamics with
   explicit memory. Low empirical error does not prove finite-memory closure.

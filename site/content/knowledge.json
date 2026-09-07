@@ -161,6 +161,118 @@
       "research": [
         "ether-regions"
       ]
+    },
+    {
+      "id": "historical-influence",
+      "title": "Historical influence in the dynamics",
+      "kind": "concept",
+      "status": "defined",
+      "summary": "Past differences influence behavior when retained in the evolving state; this differs from giving an observer more history.",
+      "updated": "2026-09-07",
+      "source": "docs/knowledge/historical-influence.md",
+      "research": [
+        "history-and-possibility"
+      ]
+    },
+    {
+      "id": "controlled-future-repertoire",
+      "title": "Controlled future repertoire",
+      "kind": "concept",
+      "status": "defined",
+      "summary": "Reachable outcomes under declared actions, observations, and a finite budget; a count does not specify the outcomes or how to reach them.",
+      "updated": "2026-09-07",
+      "source": "docs/knowledge/controlled-future-repertoire.md",
+      "research": [
+        "future-repertoire",
+        "history-and-possibility"
+      ]
+    },
+    {
+      "id": "order-and-possibility",
+      "title": "How does operation order change future options?",
+      "kind": "question",
+      "status": "partly-answered",
+      "summary": "Finite counterexamples separate option counts, outcome sets, and action responses; endogenous capabilities and viability remain open.",
+      "updated": "2026-09-07",
+      "source": "docs/knowledge/order-and-possibility.md",
+      "research": [
+        "future-repertoire",
+        "history-and-possibility"
+      ]
+    },
+    {
+      "id": "future-repertoire-test",
+      "title": "Enumerate continuations after both operation orders",
+      "kind": "experiment",
+      "status": "completed",
+      "summary": "All states on 6-, 9-, and 11-cell rings were enumerated for 66 pairs, seven horizons, and two observations.",
+      "updated": "2026-09-07",
+      "source": "docs/knowledge/future-repertoire-test.md",
+      "research": [
+        "future-repertoire"
+      ]
+    },
+    {
+      "id": "future-response-separation",
+      "title": "Outcome counts, sets, and action maps can differ separately",
+      "kind": "finding",
+      "status": "exact",
+      "summary": "Replayed finite examples show equal counts with different outcomes and equal outcome sets with different action responses.",
+      "updated": "2026-09-07",
+      "source": "docs/knowledge/future-response-separation.md",
+      "research": [
+        "future-repertoire"
+      ]
+    },
+    {
+      "id": "revisable-primitives",
+      "title": "When should an inherited primitive remain revisable?",
+      "kind": "question",
+      "status": "open",
+      "summary": "A reusable construction may enable later work while making its assumptions costly to change.",
+      "updated": "2026-09-07",
+      "source": "docs/knowledge/revisable-primitives.md",
+      "research": [
+        "revisable-primitives",
+        "history-and-possibility"
+      ]
+    },
+    {
+      "id": "revisable-primitives-test",
+      "title": "Compare fixed and revisable compiled primitives",
+      "kind": "experiment",
+      "status": "planned",
+      "summary": "A proposed equal-resource comparison must count construction and revision costs before testing adaptation after an environmental change.",
+      "updated": "2026-09-07",
+      "source": "docs/knowledge/revisable-primitives-test.md",
+      "research": [
+        "revisable-primitives"
+      ]
+    },
+    {
+      "id": "decomposition-and-reconstitution",
+      "title": "What becomes possible when an organization dissolves?",
+      "kind": "question",
+      "status": "open",
+      "summary": "Distinguish loss of a unit, continued activity of its substrate, and formation of a new organization.",
+      "updated": "2026-09-07",
+      "source": "docs/knowledge/decomposition-and-reconstitution.md",
+      "research": [
+        "history-and-possibility"
+      ]
+    },
+    {
+      "id": "wet-alignment",
+      "title": "Wet alignment as an ongoing relationship",
+      "kind": "concept",
+      "status": "defined",
+      "summary": "An ethical motivation to preserve the capacity to learn and revise a relationship as interaction changes its participants.",
+      "updated": "2026-09-07",
+      "source": "docs/knowledge/wet-alignment.md",
+      "research": [
+        "history-and-possibility",
+        "revisable-primitives"
+      ]
     }
   ],
   "edges": [
@@ -309,6 +421,60 @@
       "reason": "The history estimator beats radius-ten snapshots at this budget, with better training support; no intrinsic information separation is established.",
       "research": [
         "ether-regions"
+      ]
+    },
+    {
+      "source": "order-and-possibility",
+      "type": "depends_on",
+      "target": "controlled-future-repertoire",
+      "reason": "The finite part of this question uses the declared repertoire definition; changing its actions or budget changes what is being compared.",
+      "research": [
+        "future-repertoire"
+      ]
+    },
+    {
+      "source": "future-repertoire-test",
+      "type": "depends_on",
+      "target": "controlled-future-repertoire",
+      "reason": "The completed enumeration implements this exact action-word, observation, and budget definition.",
+      "research": [
+        "future-repertoire"
+      ]
+    },
+    {
+      "source": "future-repertoire-test",
+      "type": "tests",
+      "target": "order-and-possibility",
+      "reason": "The finite comparison separates sets and action responses after AB and BA; it does not test self-generated operations or viability.",
+      "research": [
+        "future-repertoire"
+      ]
+    },
+    {
+      "source": "future-response-separation",
+      "type": "depends_on",
+      "target": "future-repertoire-test",
+      "reason": "The recorded bounded counts and selected witnesses come from this independently checked enumeration.",
+      "research": [
+        "future-repertoire"
+      ]
+    },
+    {
+      "source": "future-repertoire-test",
+      "type": "supports",
+      "target": "future-response-separation",
+      "reason": "Its replayed examples establish both equal-size/different-set and equal-set/different-response separations.",
+      "research": [
+        "future-repertoire"
+      ]
+    },
+    {
+      "source": "revisable-primitives-test",
+      "type": "tests",
+      "target": "revisable-primitives",
+      "reason": "The planned comparison would test adaptation with fixed versus revisable constructions; no outcome has been measured.",
+      "research": [
+        "revisable-primitives"
       ]
     }
   ]

@@ -1,0 +1,206 @@
+[
+  {
+    "category": "strict_containment",
+    "observation": "identity",
+    "n": 6,
+    "A": 0,
+    "B": 51,
+    "h": 1,
+    "initial_state": 0,
+    "prepared_AB": 63,
+    "prepared_BA": 0,
+    "outcomes_AB": [
+      0
+    ],
+    "outcomes_BA": [
+      0,
+      63
+    ],
+    "responses": [
+      {
+        "word": "A",
+        "AB": 0,
+        "BA": 0
+      },
+      {
+        "word": "B",
+        "AB": 0,
+        "BA": 63
+      }
+    ]
+  },
+  {
+    "category": "strict_containment",
+    "observation": "population_count",
+    "n": 6,
+    "A": 0,
+    "B": 51,
+    "h": 1,
+    "initial_state": 0,
+    "prepared_AB": 63,
+    "prepared_BA": 0,
+    "outcomes_AB": [
+      0
+    ],
+    "outcomes_BA": [
+      0,
+      6
+    ],
+    "responses": [
+      {
+        "word": "A",
+        "AB": 0,
+        "BA": 0
+      },
+      {
+        "word": "B",
+        "AB": 0,
+        "BA": 6
+      }
+    ]
+  },
+  {
+    "category": "equal_sets_different_response_map",
+    "observation": "identity",
+    "n": 6,
+    "A": 0,
+    "B": 51,
+    "h": 2,
+    "initial_state": 0,
+    "prepared_AB": 63,
+    "prepared_BA": 0,
+    "outcomes_AB": [
+      0,
+      63
+    ],
+    "outcomes_BA": [
+      0,
+      63
+    ],
+    "responses": [
+      {
+        "word": "AA",
+        "AB": 0,
+        "BA": 0
+      },
+      {
+        "word": "AB",
+        "AB": 63,
+        "BA": 63
+      },
+      {
+        "word": "BA",
+        "AB": 0,
+        "BA": 0
+      },
+      {
+        "word": "BB",
+        "AB": 63,
+        "BA": 0
+      }
+    ]
+  },
+  {
+    "category": "equal_sets_different_response_map",
+    "observation": "population_count",
+    "n": 6,
+    "A": 0,
+    "B": 51,
+    "h": 2,
+    "initial_state": 0,
+    "prepared_AB": 63,
+    "prepared_BA": 0,
+    "outcomes_AB": [
+      0,
+      6
+    ],
+    "outcomes_BA": [
+      0,
+      6
+    ],
+    "responses": [
+      {
+        "word": "AA",
+        "AB": 0,
+        "BA": 0
+      },
+      {
+        "word": "AB",
+        "AB": 6,
+        "BA": 6
+      },
+      {
+        "word": "BA",
+        "AB": 0,
+        "BA": 0
+      },
+      {
+        "word": "BB",
+        "AB": 6,
+        "BA": 0
+      }
+    ]
+  },
+  {
+    "category": "equal_size_different_sets",
+    "observation": "identity",
+    "n": 6,
+    "A": 4,
+    "B": 30,
+    "h": 1,
+    "initial_state": 13,
+    "prepared_AB": 35,
+    "prepared_BA": 4,
+    "outcomes_AB": [
+      0,
+      52
+    ],
+    "outcomes_BA": [
+      4,
+      14
+    ],
+    "responses": [
+      {
+        "word": "A",
+        "AB": 0,
+        "BA": 4
+      },
+      {
+        "word": "B",
+        "AB": 52,
+        "BA": 14
+      }
+    ]
+  },
+  {
+    "category": "equal_size_different_sets",
+    "observation": "population_count",
+    "n": 6,
+    "A": 4,
+    "B": 30,
+    "h": 1,
+    "initial_state": 13,
+    "prepared_AB": 35,
+    "prepared_BA": 4,
+    "outcomes_AB": [
+      0,
+      3
+    ],
+    "outcomes_BA": [
+      1,
+      3
+    ],
+    "responses": [
+      {
+        "word": "A",
+        "AB": 0,
+        "BA": 1
+      },
+      {
+        "word": "B",
+        "AB": 3,
+        "BA": 3
+      }
+    ]
+  }
+]
