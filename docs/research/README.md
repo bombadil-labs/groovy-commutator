@@ -5,6 +5,12 @@ into the ideas. Keep a finding's full methods and qualifications in a research
 note, then give selected insights their own explanation in the main pages.
 Both remain available and link to each other.
 
+The [knowledge base](../knowledge/README.md) keeps the current account of
+individual findings, questions, theories, and experiments, with typed
+relationships and dependency paths. After a substantial research checkpoint,
+update the relevant knowledge entries and their relationships. Cite the note
+from each entry; the site generates links back in both directions.
+
 ## Add a research note
 
 1. Write `docs/research/YYYY-MM-DD-short-name.md`. Start with a single `#`

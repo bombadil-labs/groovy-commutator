@@ -21,12 +21,12 @@ export const EVIDENCE = {
   exact: 'Exact within stated bounds', superseded: 'Superseded',
 };
 const STAGES = ['research', 'candidate', 'promoted'];
-const esc = (x) => String(x).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
-const requireValue = (condition, message) => { if (!condition) throw new Error(`Research: ${message}`); };
-const dateLabel = (s) => new Intl.DateTimeFormat('en-GB', { day: 'numeric', month: 'short', year: 'numeric', timeZone: 'UTC' }).format(new Date(`${s}T00:00:00Z`));
+export const esc = (x) => String(x).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+export const requireValue = (condition, message) => { if (!condition) throw new Error(`Research: ${message}`); };
+export const dateLabel = (s) => new Intl.DateTimeFormat('en-GB', { day: 'numeric', month: 'short', year: 'numeric', timeZone: 'UTC' }).format(new Date(`${s}T00:00:00Z`));
 const entryUrl = (entry) => `${entry.slug}.html`;
 
-function existingRepoPath(relative, label) {
+export function existingRepoPath(relative, label) {
   const absolute = path.resolve(ROOT, relative);
   requireValue(absolute.startsWith(ROOT + path.sep) && fs.existsSync(absolute), `missing or invalid ${label}: ${relative}`);
   requireValue(fs.realpathSync(absolute).startsWith(fs.realpathSync(ROOT) + path.sep), `external symlink in ${label}`);
@@ -78,34 +78,40 @@ export function validateCatalog(entries) {
   return entries;
 }
 
-function sourceRef() {
+export function sourceRef() {
   if (process.env.GITHUB_SHA) return process.env.GITHUB_SHA;
   try { return execFileSync('git', ['branch', '--show-current'], { cwd: ROOT, encoding: 'utf8' }).trim() || 'main'; }
   catch { return 'main'; }
 }
 
-function repoUrl(relative, ref, fragment = '') {
+export function repoUrl(relative, ref, fragment = '') {
   return `https://github.com/bombadil-labs/groovy-commutator/blob/${ref.split('/').map(encodeURIComponent).join('/')}/${relative.split(path.sep).map(encodeURIComponent).join('/')}${fragment}`;
 }
 
-function nav() {
+function nav(prefix) {
   return `<header class="gc-header"><nav class="gc-nav" aria-label="Main navigation">
-    <a href="../index.html" class="gc-nav-brand" style="font-family:'Lora',serif">Groovy Commutator</a>
-    <div class="gc-nav-links">${PAGES.map((p) => `<a href="../${p.href}" class="gc-nav-link${p.key === 'research' ? ' active' : ''}"${p.key === 'research' ? ' aria-current="page"' : ''}>${p.label}</a>`).join('')}</div>
+    <a href="${prefix}index.html" class="gc-nav-brand" style="font-family:'Lora',serif">Groovy Commutator</a>
+    <div class="gc-nav-links">${PAGES.map((p) => `<a href="${prefix}${p.href}" class="gc-nav-link${p.key === 'research' ? ' active' : ''}"${p.key === 'research' ? ' aria-current="page"' : ''}>${p.label}</a>`).join('')}</div>
   </nav></header>`;
 }
 
-function layout(title, description, content) {
+export function layout(title, description, content, { depth = 1, section = 'notes', script = '' } = {}) {
+  const prefix = '../'.repeat(depth);
+  const researchPrefix = '../'.repeat(depth - 1);
   return `<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>${esc(title)} — Groovy Commutator</title><meta name="description" content="${esc(description)}">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../src/styles/tokens.css"><link rel="stylesheet" href="../src/styles/research.css">
-<link rel="stylesheet" href="../node_modules/katex/dist/katex.min.css">
-</head><body class="research-page"><a class="research-skip" href="#main">Skip to content</a>${nav()}
-<main id="main" class="research-shell">${content}</main>
-<footer class="gc-footer"><div class="gc-footer-inner">An ongoing investigation. <a href="index.html">Research index</a> · <a href="../concepts.html">Start with the concepts</a> · <a href="https://github.com/bombadil-labs/groovy-commutator">Source and data</a></div></footer>
+<link rel="stylesheet" href="${prefix}src/styles/tokens.css"><link rel="stylesheet" href="${prefix}src/styles/research.css">
+<link rel="stylesheet" href="${prefix}node_modules/katex/dist/katex.min.css">
+</head><body class="research-page"><a class="research-skip" href="#main">Skip to content</a>${nav(prefix)}
+<main id="main" class="research-shell"><nav class="research-sections" aria-label="Research navigation">
+<a href="${researchPrefix}index.html"${section === 'notes' ? ' aria-current="page"' : ''}>Research notes</a>
+<a href="${researchPrefix}knowledge/index.html"${section === 'knowledge' ? ' aria-current="page"' : ''}>Knowledge base</a>
+</nav>${content}</main>
+<footer class="gc-footer"><div class="gc-footer-inner">An ongoing investigation. <a href="${researchPrefix}index.html">Research index</a> · <a href="${prefix}concepts.html">Start with the concepts</a> · <a href="https://github.com/bombadil-labs/groovy-commutator">Source and data</a></div></footer>
+${script ? `<script type="module" src="${prefix}${script}"></script>` : ''}
 </body></html>`;
 }
 
@@ -136,15 +142,8 @@ function renderIndex(entries) {
     </aside></div>`);
 }
 
-export function buildResearch({ entries: catalogEntries, output = path.join(SITE, 'research') } = {}) {
-  const entries = validateCatalog(catalogEntries ?? JSON.parse(fs.readFileSync(CATALOG, 'utf8')))
-    .sort((a, b) => b.updated.localeCompare(a.updated) || a.number.localeCompare(b.number));
-  fs.mkdirSync(output, { recursive: true });
-  // Only remove generated HTML. Hand-authored sources are elsewhere.
-  for (const file of fs.readdirSync(output)) if (file.endsWith('.html')) fs.unlinkSync(path.join(output, file));
-  const ref = sourceRef();
-  const bySource = new Map(entries.map((e) => [path.resolve(ROOT, e.source), e]));
-  const dependencies = new Set([CATALOG]);
+export function renderMarkdown(source, { bySource, ref, output, dependencies, reservedIds = [] }) {
+  dependencies.add(source);
   const mathErrors = [];
   const engine = { renderToString(tex, options) {
     try { return katex.renderToString(tex, options); }
@@ -156,66 +155,80 @@ export function buildResearch({ entries: catalogEntries, output = path.join(SITE
     .use(texmath, { engine, delimiters: ['brackets', 'dollars'], katexOptions: { throwOnError: true, trust: false, strict: 'ignore', output: 'htmlAndMathml' } });
   md.renderer.rules.table_open = () => '<div class="table-scroll" role="region" aria-label="Data table" tabindex="0"><table>\n';
   md.renderer.rules.table_close = () => '</table></div>\n';
+  const markdown = fs.readFileSync(source, 'utf8').replace(/^# [^\n]*\n/, '');
+  const tokens = md.parse(markdown, {});
+  const headings = [];
+  const usedIds = new Set(['main', ...reservedIds]);
+  function headingId(text) {
+    const base = text.toLowerCase().normalize('NFKD').replace(/[^a-z0-9\s-]/g, '').trim().replace(/\s+/g, '-') || 'section';
+    let id = base, n = 1;
+    while (usedIds.has(id)) id = `${base}-${n++}`;
+    usedIds.add(id); return id;
+  }
+  function localTarget(href) {
+    const [file, ...fragment] = href.split('#');
+    const absolute = existingRepoPath(path.relative(ROOT, path.resolve(path.dirname(source), decodeURIComponent(file))), 'linked file');
+    return { absolute, fragment: fragment.length ? `#${fragment.join('#')}` : '' };
+  }
+  function transform(token) {
+    if (token.type === 'link_open') {
+      const href = token.attrGet('href');
+      if (href && !/^(?:[a-z][a-z0-9+.-]*:|#|\/)/i.test(href)) {
+        const { absolute, fragment } = localTarget(href);
+        const linked = bySource.get(absolute);
+        token.attrSet('href', linked ? `${linked}${fragment}` : repoUrl(path.relative(ROOT, absolute), ref, fragment));
+      }
+    }
+    if (token.type === 'image') {
+      const src = token.attrGet('src');
+      if (!/^https?:\/\//i.test(src)) {
+        const { absolute } = localTarget(src);
+        requireValue(/\.(svg|png|jpe?g|gif|webp)$/i.test(absolute), `unsupported image in ${source}`);
+        dependencies.add(absolute);
+        const bytes = fs.readFileSync(absolute);
+        const name = `${createHash('sha256').update(bytes).digest('hex').slice(0, 12)}-${path.basename(absolute)}`;
+        fs.mkdirSync(path.join(output, 'assets'), { recursive: true });
+        fs.writeFileSync(path.join(output, 'assets', name), bytes);
+        token.attrSet('src', `assets/${name}`);
+      }
+      token.attrSet('loading', 'lazy');
+    }
+    for (const child of token.children || []) transform(child);
+  }
+  for (let i = 0; i < tokens.length; i++) {
+    const token = tokens[i];
+    requireValue(!(token.type === 'heading_open' && token.tag === 'h1'), `only one top-level title is allowed in ${source}`);
+    if (token.type === 'heading_open') {
+      const text = tokens[i + 1].content;
+      const id = headingId(text); token.attrSet('id', id);
+      if (token.tag === 'h2') headings.push({ text, id });
+    }
+    transform(token);
+  }
+  mathErrors.length = 0;
+  const body = md.renderer.render(tokens, md.options, {});
+  requireValue(!mathErrors.length, `invalid math in ${source}: ${mathErrors.join('; ')}`);
+  const minutes = Math.max(1, Math.ceil(markdown.split(/\s+/).length / 180));
+  return { body, headings, minutes };
+}
+
+export function buildResearch({ entries: catalogEntries, knowledge = [], output = path.join(SITE, 'research') } = {}) {
+  const entries = validateCatalog(catalogEntries ?? JSON.parse(fs.readFileSync(CATALOG, 'utf8')))
+    .sort((a, b) => b.updated.localeCompare(a.updated) || a.number.localeCompare(b.number));
+  fs.mkdirSync(output, { recursive: true });
+  // Only remove generated HTML. Hand-authored sources are elsewhere.
+  for (const file of fs.readdirSync(output)) if (file.endsWith('.html')) fs.unlinkSync(path.join(output, file));
+  const ref = sourceRef();
+  const bySource = new Map([...entries.map((e) => [path.resolve(ROOT, e.source), entryUrl(e)]), ...knowledge.map((n) => [path.resolve(ROOT, n.source), `knowledge/${n.id}.html`])]);
+  const dependencies = new Set([CATALOG]);
   const inputs = { research: path.join(output, 'index.html') };
   fs.writeFileSync(inputs.research, renderIndex(entries));
   for (const e of entries) {
     const source = path.resolve(ROOT, e.source);
     dependencies.add(source);
-    const markdown = fs.readFileSync(source, 'utf8').replace(/^# [^\n]*\n/, '');
-    const tokens = md.parse(markdown, {});
-    const headings = [];
-    const usedIds = new Set(['main']);
-    function headingId(text) {
-      const base = text.toLowerCase().normalize('NFKD').replace(/[^a-z0-9\s-]/g, '').trim().replace(/\s+/g, '-') || 'section';
-      let id = base, n = 1;
-      while (usedIds.has(id)) id = `${base}-${n++}`;
-      usedIds.add(id); return id;
-    }
-    function localTarget(href) {
-      const [file, ...fragment] = href.split('#');
-      const absolute = existingRepoPath(path.relative(ROOT, path.resolve(path.dirname(source), decodeURIComponent(file))), 'linked file');
-      return { absolute, fragment: fragment.length ? `#${fragment.join('#')}` : '' };
-    }
-    function transform(token) {
-      if (token.type === 'link_open') {
-        const href = token.attrGet('href');
-        if (href && !/^(?:[a-z][a-z0-9+.-]*:|#|\/)/i.test(href)) {
-          const { absolute, fragment } = localTarget(href);
-          const linked = bySource.get(absolute);
-          token.attrSet('href', linked ? `${entryUrl(linked)}${fragment}` : repoUrl(path.relative(ROOT, absolute), ref, fragment));
-        }
-      }
-      if (token.type === 'image') {
-        const src = token.attrGet('src');
-        if (!/^https?:\/\//i.test(src)) {
-          const { absolute } = localTarget(src);
-          requireValue(/\.(svg|png|jpe?g|gif|webp)$/i.test(absolute), `unsupported image in ${e.slug}`);
-          dependencies.add(absolute);
-          const bytes = fs.readFileSync(absolute);
-          const name = `${createHash('sha256').update(bytes).digest('hex').slice(0, 12)}-${path.basename(absolute)}`;
-          fs.mkdirSync(path.join(output, 'assets'), { recursive: true });
-          fs.writeFileSync(path.join(output, 'assets', name), bytes);
-          token.attrSet('src', `assets/${name}`);
-        }
-        token.attrSet('loading', 'lazy');
-      }
-      for (const child of token.children || []) transform(child);
-    }
-    for (let i = 0; i < tokens.length; i++) {
-      const token = tokens[i];
-      requireValue(!(token.type === 'heading_open' && token.tag === 'h1'), `only one top-level title is allowed in ${e.source}`);
-      if (token.type === 'heading_open') {
-        const text = tokens[i + 1].content;
-        const id = headingId(text); token.attrSet('id', id);
-        if (token.tag === 'h2') headings.push({ text, id });
-      }
-      transform(token);
-    }
-    mathErrors.length = 0;
-    const body = md.renderer.render(tokens, md.options, {});
-    requireValue(!mathErrors.length, `invalid math in ${e.source}: ${mathErrors.join('; ')}`);
-    const minutes = Math.max(1, Math.ceil(markdown.split(/\s+/).length / 180));
+    const { body, headings, minutes } = renderMarkdown(source, { bySource, ref, output, dependencies });
     const replacement = e.supersededBy && entries.find((x) => x.slug === e.supersededBy);
+    const concepts = knowledge.filter((n) => n.research.includes(e.slug));
     const related = e.related.map((slug) => entries.find((x) => x.slug === slug));
     const html = layout(e.title, e.summary, `<article class="research-article">
       <a class="research-back" href="index.html">← All research</a>
@@ -227,6 +240,7 @@ export function buildResearch({ entries: catalogEntries, output = path.join(SITE
       ${headings.length ? `<details class="research-toc"><summary>In this note</summary><ul>${headings.map((h) => `<li><a href="#${h.id}">${esc(h.text)}</a></li>`).join('')}</ul></details>` : ''}
       <div class="research-prose">${body}</div>
       <p class="research-source"><a href="${esc(repoUrl(e.source, ref))}">Source note and revision history</a></p>
+      ${concepts.length ? `<section class="research-related"><h2>In the knowledge base</h2><ul>${concepts.map((n) => `<li><a href="knowledge/${n.id}.html">${esc(n.title)}</a> <span class="kb-inline-kind">${esc(n.kind)}</span></li>`).join('')}</ul></section>` : ''}
       ${related.length ? `<section class="research-related"><h2>Continue the thread</h2><ul>${related.map((x) => `<li><a href="${entryUrl(x)}">${esc(x.title)}</a></li>`).join('')}</ul></section>` : ''}
     </article>`);
     const file = path.join(output, entryUrl(e));

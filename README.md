@@ -11,6 +11,12 @@ a plain-language summary, evidence status, methods, limitations, and links to
 the code and data. Main pages remain curated explanations; the Research index
 keeps a separate list of ideas to explain next.
 
+Within Research, the **Knowledge base** tracks individual concepts, findings,
+questions, theories, and experiments. Typed links record support,
+contradiction, tests, and dependencies, with reasons and research provenance.
+Entries show backlinks and indirect dependents. See the
+[knowledge authoring guide](docs/knowledge/README.md).
+
 To add a note or promote an insight, follow
 [the research authoring guide](docs/research/README.md). Write the note in
 `docs/research/` and register it in `site/content/research.json`; the normal

@@ -2,8 +2,11 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import { resolve } from 'path';
 import { buildResearch, researchWatch } from './scripts/research.mjs';
+import { readKnowledge, buildKnowledge, knowledgeAsset } from './scripts/knowledge.mjs';
 
-const research = buildResearch();
+const graph = readKnowledge();
+const knowledge = buildKnowledge({ graph });
+const research = buildResearch({ knowledge: graph.nodes });
 
 // Curated React pages plus static Research pages generated from Markdown.
 // Output goes to ../public (repo root) --
@@ -17,7 +20,7 @@ export default defineConfig({
   // components are deliberately relative instead, so they're unaffected by
   // this and would work under any base path.
   base: '/groovy-commutator/',
-  plugins: [react(), researchWatch(research.dependencies)],
+  plugins: [react(), researchWatch([...research.dependencies, ...knowledge.dependencies]), knowledgeAsset(knowledge.asset)],
   build: {
     outDir: resolve(__dirname, '../public'),
     emptyOutDir: true,
@@ -29,6 +32,7 @@ export default defineConfig({
         remainder: resolve(__dirname, 'remainder.html'),
         explorer: resolve(__dirname, 'explorer.html'),
         ...research.inputs,
+        ...knowledge.inputs,
       },
     },
   },

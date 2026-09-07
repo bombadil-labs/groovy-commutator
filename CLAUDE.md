@@ -31,6 +31,16 @@ or The Walk with a link back to the supporting note. Evidence strength and
 editorial readiness are separate decisions. Corrections to existing main-page
 claims should be made promptly and linked to their research record.
 
+Maintain the current knowledge account in `docs/knowledge/` and
+`site/content/knowledge.json` as research advances. Follow
+`docs/knowledge/README.md`: one focused entry per concept, finding, question,
+theory, or experiment; explicit status; typed directed relationships with a
+rationale and research provenance. Record dependencies deliberately rather
+than inferring them from ordinary links. When a claim changes, inspect its
+direct and indirect dependents and update affected accounts. Preserve refuted
+theories and superseded entries. The public knowledge base generates backlinks
+and review notices, but never changes conclusions automatically.
+
 Run `npm run test:research --prefix site` and `npm run build --prefix site`
 after changing notes or their catalog. Do not edit generated `site/research/`
 or repo-root `public/` files. Publication remains the existing GitHub Pages

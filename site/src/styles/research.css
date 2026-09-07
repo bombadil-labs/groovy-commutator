@@ -1,4 +1,8 @@
 .research-page { --research-width: 1080px; }
+.research-page [hidden] { display: none !important; }
+.research-sections { display: flex; flex-wrap: wrap; gap: 1.5rem; border-bottom: 1px solid var(--rule); margin: -1rem 0 2rem; padding-bottom: .75rem; font-size: .9375rem; }
+.research-sections a { color: var(--ink-soft); text-decoration: none; }
+.research-sections a[aria-current] { color: var(--accent-dark); text-decoration: underline; text-underline-offset: .35em; }
 .research-page .gc-nav, .research-page .gc-footer-inner { max-width: var(--research-width); }
 .research-page a:focus-visible, .research-page summary:focus-visible {
   outline: 3px solid var(--accent); outline-offset: 4px;
@@ -88,4 +92,56 @@
   .research-shell { padding: 0; max-width: none; }
   .research-layout { display: block; }
   .research-prose .table-scroll, .research-prose .katex-display { overflow: visible; }
+}
+
+.kb-heading { font-size: clamp(1.8rem, 4vw, 2.5rem); font-weight: 500; line-height: 1.2; max-width: 30ch; margin: 0 0 1rem; }
+.kb-intro { font-size: 1.0625rem; color: var(--ink-soft); max-width: 65ch; margin-bottom: 2rem; }
+.kb-layout { display: grid; grid-template-columns: minmax(0, 1fr) 260px; gap: 3rem; }
+.kb-filters { display: flex; flex-wrap: wrap; gap: .75rem; align-items: end; }
+.kb-filters label { display: grid; gap: .35rem; font-size: .875rem; }
+.kb-filters label:first-child { flex: 1 1 200px; }
+.kb-filters input, .kb-filters select, .kb-filters button { font: inherit; font-size: 1rem; color: var(--ink); border: 1px solid var(--ink-soft); background: var(--bg); border-radius: 0; padding: .6rem .75rem; min-height: 44px; max-width: 100%; }
+.kb-filters input { min-width: 0; width: 100%; }
+.kb-filters button { cursor: pointer; }
+.kb-filters :focus-visible, .kb-review :focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+.kb-count, .kb-inline-kind { font-size: .875rem; color: var(--ink-soft); }
+.kb-entry { border-top: 1px solid var(--rule); padding: 1.4rem 0; }
+.kb-entry h2 { font-size: 1.4rem; line-height: 1.3; margin: .5rem 0; font-weight: 500; }
+.kb-entry h2 a { text-underline-offset: .2em; text-decoration-thickness: 1px; }
+.kb-entry p { font-size: 1rem; color: var(--ink-soft); margin: .65rem 0 .9rem; }
+.kb-definitions dt { font-weight: 600; color: var(--accent-dark); margin-top: 1rem; }
+.kb-definitions dd { margin: .35rem 0 0; color: var(--ink-soft); font-size: .9375rem; }
+.kb-article { max-width: 920px; margin: auto; }
+.kb-article > .research-summary, .kb-prose { max-width: 70ch; }
+.kb-jump { display: flex; flex-wrap: wrap; gap: .7rem 1.5rem; font-size: .9375rem; padding: 1.1rem 0; margin-top: 1.5rem; border-block: 1px solid var(--rule); }
+.kb-jump a, .kb-section a, .kb-review a { color: var(--accent-dark); text-underline-offset: .2em; }
+.kb-section { border-top: 1px solid var(--ink); margin-top: 2.5rem; padding-top: 1rem; font-size: 1rem; }
+.kb-section, .kb-prose { scroll-margin-top: 10rem; }
+.kb-section > h2 { font-size: 1.5rem; font-weight: 500; }
+.kb-connections { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2rem; }
+.kb-connections > section > h3 { font-family: 'IBM Plex Mono', monospace; font-size: .875rem; font-weight: 500; margin: 0 0 1rem; }
+.kb-relations { list-style: none; margin: 0; padding: 0; }
+.kb-relations li { padding: 1rem 0 1.5rem; border-top: 1px solid var(--rule); }
+.kb-relations h3 { font-size: 1.15rem; line-height: 1.4; margin: .5rem 0 .65rem; font-weight: 500; }
+.kb-relation-label { font-family: 'IBM Plex Mono', monospace; color: var(--accent-dark); font-size: .875rem; }
+.kb-relations p { font-size: 1rem; color: var(--ink-soft); }
+.kb-citation { font-size: .875rem; }
+.kb-paths { padding-left: 1.2rem; }
+.kb-paths li { margin: 1rem 0; line-height: 1.9; }
+.kb-connector { font-size: .875rem; color: var(--ink-soft); padding: 0 .3em; }
+.kb-empty { color: var(--ink-soft); }
+.kb-review { border-left: 3px solid #9a402f; background: var(--bg-alt); padding: .75rem 1.25rem; margin-top: 1.5rem; font-size: 1rem; }
+.kb-review h2 { font-size: 1.2rem; margin: .5rem 0; }
+.research-status.refuted { color: #803524; border-color: #a9604c; }
+.research-status.proposed, .research-status.planned { border-style: dashed; }
+@media (max-width: 800px) {
+  .kb-layout { grid-template-columns: minmax(0, 1fr); gap: 2rem; }
+  .kb-sidebar { display: block; }
+}
+@media (max-width: 600px) {
+  .kb-connections { grid-template-columns: minmax(0, 1fr); gap: 1.5rem; }
+}
+@media print {
+  .research-sections, .kb-filters, .kb-jump { display: none; }
+  .kb-layout, .kb-connections { display: block; }
 }
