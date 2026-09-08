@@ -26,7 +26,7 @@ revisable. Observed-history prediction is one workstream. Keep it distinct
 from historical influence within the dynamics and from future capability.
 The finite repertoire and costed/returning-task comparisons are complete;
 learning reusable primitives remains open. The latest completed unit is the
-coupled-strips experiment and buffer-row proof. The 3D hypothesis is parked by explicit user
+interface-state experiment and unbounded-escape proof. The 3D hypothesis is parked by explicit user
 instruction; continue the fixed 2D workstream. Read its continuation below before the historical
 agenda checkpoint and dimensional/provenance continuations.
 Do not promote earlier dialogue's unverified numbers or ethical analogies into results.
@@ -669,6 +669,43 @@ residual as state. Fix its variables, decoder, locality and cadence before
 testing closure under repeated F. Adjacency's current-code failure is not a
 no-go for all coupled descriptions. The physical F remains fixed. 3D and
 the separate boundary/individuation thread remain parked.
+
+## Research continuation: the interface escapes (2026-09-08)
+
+`docs/research/2026-09-08-interface-state.md` completes Research019. Main
+protocol 740e12f; instruments/storage clarification bd222be; NumPy index-type
+fix a7d38d5 before any successful output. Keep F, alignment and cadence2 fixed.
+W retains six physical bits per block: (0,1),(1,0),(1,1),(2,0),(2,1),(3,0).
+Fixed cells (0,0)=0,(3,1)=1; exterior B. It contains V_0 and all F^2 V_0.
+
+All 64^3 unrestricted symbol triples: 69264/262144 preserve W; 114688 change
+exterior rows. Actual original-pair causal census t=2,4,6,8 has respectively
+64/64,625/1024,3544/16384,11200/262144 valid W patterns; exterior-change counts
+0,183,10321,237892. Local horizon-specific counts, not survival probabilities.
+Independent encoders/update/summaries agree on all541760 complete fields.
+
+Post-census witness protocol/instrument53d9e9b: a_1=1,b_0=1, otherwise zero;
+physical XOR seed (0,3),(1,2),(2,1),(3,0). Scalar audit checks341968 cells
+through32ticks. At t4 the extreme rows contain only(-1,4) and(4,-1).
+Subsequent local proof: with all rows above r in B_t,
+delta_next(r-1,x)=B_t(x)*delta(r,x-1); below r,
+delta_next(r+1,x)=(1 XOR B_t(x))*delta(r,x+1).
+Thus top(3-t,t), bottom(t,3-t) for EVERY t>=4; vertical span2t-2. Both tips
+retain the required background polarity, and radius1 forbids farther escape.
+384 local formula checks corroborate the argument. At t32 mass840, span62.
+The growing wake is NOT an isolated traveling object. The all-time claim
+comes from induction, not extrapolation of finite pictures.
+
+Consequence: no exact fixed-height horizontal-band encoding against B can
+contain this orbit, even in a translating frame. More cells within any
+fixed-height band cannot repair that. Does NOT exclude symbolic descriptions
+of growing support, other encodings, special inputs, or controlled encounters.
+
+Next bounded lead: fix pulse shapes/law/adjacency and vary relative horizontal
+position, classifying which encounters launch outward fronts versus cancel or
+remain unresolved. Use the extreme-row identity where applicable; finite runs
+do not prove indefinite confinement. No fold-in or logical gate established.
+The 3D and separate boundary/individuation threads remain parked.
 
 ## Research agenda checkpoint: preserve unfinished threads (2026-09-08)
 

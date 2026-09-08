@@ -1,0 +1,9 @@
+{
+  "front_row_patterns": 32,
+  "phases": 2,
+  "directions": 2,
+  "local_cell_checks": 384,
+  "finite_witness_endpoint_checks": 29,
+  "scope": "Post-census lemma corroboration. The all-time result uses the local induction in Research019.",
+  "script_sha256": "493d00afb4e0d8a27023757747cec361e084312087a472f346bf12df41ea44a4"
+}

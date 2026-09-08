@@ -403,5 +403,26 @@
       "encoded-defects",
       "block-compatibility"
     ]
+  },
+  {
+    "slug": "interface-state",
+    "number": "019",
+    "title": "The interface does not stay put",
+    "date": "2026-09-08",
+    "updated": "2026-09-08",
+    "kind": "Exact closure test and escape proof",
+    "evidence": "exact",
+    "topic": "History and possibility",
+    "summary": "Keeping six bits captures one interaction step but fails on reachable states. A four-cell pulse pair provably escapes every fixed-height band.",
+    "takeaway": "A description of interacting strips may need to represent growing spatial support, even when each strip alone stays confined.",
+    "source": "docs/research/2026-09-08-interface-state.md",
+    "promotion": {
+      "stage": "research"
+    },
+    "related": [
+      "coupled-strips",
+      "defect-fates",
+      "encoded-defects"
+    ]
   }
 ]

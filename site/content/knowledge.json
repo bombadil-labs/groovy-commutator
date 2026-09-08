@@ -758,11 +758,60 @@
       "title": "Can interacting strips retain an exact joint description?",
       "kind": "question",
       "status": "partly-answered",
-      "summary": "Separated strips compose independently; retaining additional interface state may allow a larger description of adjacent interactions.",
+      "summary": "The six-bit enlargement fails; one finite encounter excludes every fixed-height band. Other descriptions and special input families remain open.",
       "updated": "2026-09-08",
       "source": "docs/knowledge/coupled-strip-closure.md",
       "research": [
-        "coupled-strips"
+        "coupled-strips",
+        "interface-state"
+      ]
+    },
+    {
+      "id": "interface-state-failure",
+      "title": "Retaining the interface repairs only the first update",
+      "kind": "finding",
+      "status": "exact",
+      "summary": "The six-bit enlargement fails on actual adjacent-strip trajectories by fine tick four.",
+      "updated": "2026-09-08",
+      "source": "docs/knowledge/interface-state-failure.md",
+      "research": [
+        "interface-state"
+      ]
+    },
+    {
+      "id": "unbounded-strip-escape",
+      "title": "A finite strip encounter escapes every fixed-height band",
+      "kind": "finding",
+      "status": "exact",
+      "summary": "An extreme-row induction proves that one four-cell pulse encounter has unbounded vertical span.",
+      "updated": "2026-09-08",
+      "source": "docs/knowledge/unbounded-strip-escape.md",
+      "research": [
+        "interface-state"
+      ]
+    },
+    {
+      "id": "interface-state-test",
+      "title": "The enlarged interface-state test is complete",
+      "kind": "experiment",
+      "status": "completed",
+      "summary": "Independent implementations agree on 541,760 output fields; a separate witness and local proof establish indefinite escape.",
+      "updated": "2026-09-08",
+      "source": "docs/knowledge/interface-state-test.md",
+      "research": [
+        "interface-state"
+      ]
+    },
+    {
+      "id": "pulse-encounter-geometry",
+      "title": "Which pulse encounters launch outward fronts?",
+      "kind": "question",
+      "status": "open",
+      "summary": "Vary the relative position of fixed adjacent pulses to distinguish outward launches, cancellation and unresolved growth.",
+      "updated": "2026-09-08",
+      "source": "docs/knowledge/pulse-encounter-geometry.md",
+      "research": [
+        "interface-state"
       ]
     }
   ],
@@ -1481,6 +1530,60 @@
       "reason": "The open joint-representation problem starts from the fixed two-row strip encoding and ambient interpreter.",
       "research": [
         "coupled-strips"
+      ]
+    },
+    {
+      "source": "interface-state-test",
+      "type": "tests",
+      "target": "coupled-strip-closure",
+      "reason": "The frozen enlargement and original-pair census test whether retaining the interface gives a recurrent exact description.",
+      "research": [
+        "interface-state"
+      ]
+    },
+    {
+      "source": "interface-state-test",
+      "type": "supports",
+      "target": "interface-state-failure",
+      "reason": "The independently audited full fields show code failures on both arbitrary symbols and reachable inputs.",
+      "research": [
+        "interface-state"
+      ]
+    },
+    {
+      "source": "interface-state-test",
+      "type": "supports",
+      "target": "unbounded-strip-escape",
+      "reason": "The separate finite witness verifies the base configuration for the all-time extreme-row induction; finite simulation alone is not the proof.",
+      "research": [
+        "interface-state"
+      ]
+    },
+    {
+      "source": "interface-state-failure",
+      "type": "depends_on",
+      "target": "adjacent-strip-residual",
+      "reason": "W retains the precise interface cells identified by the previous adjacent-strip census.",
+      "research": [
+        "interface-state"
+      ]
+    },
+    {
+      "source": "unbounded-strip-escape",
+      "type": "depends_on",
+      "target": "finite-strip-rule90",
+      "reason": "The seed consists of the specified two finite-strip pulses placed adjacently under their fixed physical law.",
+      "research": [
+        "interface-state"
+      ]
+    },
+    {
+      "source": "pulse-encounter-geometry",
+      "type": "depends_on",
+      "target": "unbounded-strip-escape",
+      "reason": "The known launch and extreme-row test define the concrete behavior to classify across other pulse positions.",
+      "research": [
+        "interface-state"
       ]
     }
   ]
