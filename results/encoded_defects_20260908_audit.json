@@ -1,0 +1,8 @@
+{
+  "response_fields": 196608,
+  "aggregate_records": 384,
+  "pair_records": 90,
+  "all_classifications_match": true,
+  "seconds": 0.838,
+  "script_sha256": "7484cdfa59a8dfb7fffbbb36915e524426f63eaeaeda7af2d2dba406442efa60"
+}

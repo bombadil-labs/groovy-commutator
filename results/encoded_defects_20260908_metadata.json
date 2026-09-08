@@ -1,0 +1,12 @@
+{
+  "mask_background_cases": 65536,
+  "sampled_responses": 196608,
+  "pair_background_checks": 46080,
+  "seconds": 2.624,
+  "sha256": {
+    "scripts/experiment_encoded_defects.py": "1fee1ea6fd052a7bdd1e22e84545baac080defd9079409870aaa4f98549abb3a",
+    "scripts/experiment_column_compatibility.py": "69537d6c44319f588e8ae44d362cef0446f7523316650fff40b534902d854b14",
+    "src/groovy/ca.py": "6969d6f0699b48602c8a2f55aecd61d58862e6472fea56f6d1ed9ebb2656d77e",
+    "docs/research/protocols/encoded-defects-20260908.md": "ca3c99c861bb18d9c608aa883b36e9e00255508db7af30ed7f9df419e7b6db1f"
+  }
+}
