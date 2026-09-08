@@ -224,5 +224,27 @@
       "revisable-primitives",
       "history-and-possibility"
     ]
+  },
+  {
+    "slug": "shared-state-rule",
+    "number": "011",
+    "title": "When the same bits are both a state and a rule",
+    "date": "2026-09-08",
+    "updated": "2026-09-08",
+    "kind": "Experiment",
+    "evidence": "exact",
+    "topic": "History and possibility",
+    "summary": "Eight surrounding cells can encode a rule for their center. Exhaustive checks reveal a precise family of nonlinear rules whose dynamics depend on the spatial assignment.",
+    "takeaway": "A shared substrate is possible; the mapping between instructions and space is part of the dynamics.",
+    "source": "docs/research/2026-09-08-shared-state-rule.md",
+    "promotion": {
+      "stage": "candidate",
+      "idea": "A neighborhood that reads itself as an instruction",
+      "destination": "Concepts"
+    },
+    "related": [
+      "history-and-possibility",
+      "future-repertoire"
+    ]
   }
 ]
