@@ -424,5 +424,28 @@
       "defect-fates",
       "encoded-defects"
     ]
+  },
+  {
+    "slug": "pulse-scattering",
+    "number": "020",
+    "title": "What does pulse position actually control?",
+    "date": "2026-09-08",
+    "updated": "2026-09-08",
+    "kind": "Exact scattering census and proof",
+    "evidence": "exact",
+    "topic": "History and possibility",
+    "summary": "Every single-bit adjacent-strip encounter launches persistent outward boundary fronts. Displacement controls an exact arithmetic delay and front signature, confirmed on a fresh range and reduced to finite contact templates.",
+    "takeaway": "For this pulse family, geometry changes the scattering signature rather than the qualitative fate; pulse shape is the next control parameter.",
+    "source": "docs/research/2026-09-08-pulse-scattering.md",
+    "promotion": {
+      "stage": "candidate",
+      "idea": "Exact boundary channels can emerge from a growing interaction wake",
+      "destination": "Concepts"
+    },
+    "related": [
+      "interface-state",
+      "coupled-strips",
+      "defect-fates"
+    ]
   }
 ]

@@ -1,0 +1,26 @@
+{
+  "ok": true,
+  "contact_template_assignments": 512,
+  "contact_departure_assignments": 512,
+  "negative_even_cancellation_assignments": 128,
+  "records": [
+    {"template":"positive-even","edge_parity":0,"assignments":64,"outcomes":[[6,[4],[-3]]]},
+    {"template":"positive-even","edge_parity":1,"assignments":64,"outcomes":[[8,[4],[-3]]]},
+    {"template":"positive-odd","edge_parity":0,"assignments":64,"outcomes":[[4,[4],[-1]]]},
+    {"template":"positive-odd","edge_parity":1,"assignments":64,"outcomes":[[4,[4],[-1]]]},
+    {"template":"negative-odd","edge_parity":0,"assignments":64,"outcomes":[[8,[2],[1]]]},
+    {"template":"negative-odd","edge_parity":1,"assignments":64,"outcomes":[[8,[4,6],[-3,-1]]]},
+    {"template":"negative-even","edge_parity":0,"assignments":64,"outcomes":[[6,[4],[-3]]]},
+    {"template":"negative-even","edge_parity":1,"assignments":64,"outcomes":[[6,[4],[-3]]]}
+  ],
+  "deductive_inputs": {
+    "rule90_edge": "C(n,0)=1 at either edge",
+    "rule90_first_inward": "C(n,1)=n mod 2",
+    "deeper_bits": "three inward coefficients per row exhausted arbitrarily",
+    "max_contact_horizon": 8
+  },
+  "source_sha256": {
+    "script": "01d07dc6d851a8e660b8bce812902d9847955f4c332d4ff8b7f6f08b4a48cbf4",
+    "primary_instrument": "c7eba0b993a254d0df0b1761bf2785cd31f54cc557c4e0b929b2efdb04f6f6dc"
+  }
+}

@@ -1,12 +1,7 @@
 # Which pulse encounters launch outward fronts?
 
-One upper and one lower pulse in adjacent strips can launch indefinite
-vertical escape, while separated strips stay independent. The next open
-test fixes the law, pulse shapes and adjacency, varies relative horizontal
-position, and classifies the resulting encounters.
+For the fixed **single-bit** pulse family this question is answered: every integer relative horizontal displacement of one upper and one lower adjacent-strip pulse eventually leaves the original four-row code and launches nonempty top and bottom extreme supports that propagate outward forever.
 
-Use the established extreme-row identity to certify sustained outward motion
-where its conditions hold. Distinguish that from finite-height behavior,
-cancellation, and unclassified growth; bounded observations alone cannot
-prove indefinite confinement. No experiment on this position family has yet
-been run. See the [launch witness and proposed continuation](../research/2026-09-08-interface-state.md).
+The displacement still matters. It determines exact arithmetic formulas for first code departure, first exterior-row change, and the outgoing boundary signature; one negative residue class launches doublet rather than singleton extremes. A fresh non-overlapping range confirms the frozen formulas, and a finite contact-template reduction covers all integer displacements.
+
+This answer is specific to the declared pulse shape, phase, background, alignment and physical law. It does not imply that arbitrary finite logical shapes have the same fate. That broader question has moved to `pulse-shape-scattering`. See the original [launch witness](../research/2026-09-08-interface-state.md) and the completed [scattering law](../research/2026-09-08-pulse-scattering.md).
