@@ -15,7 +15,7 @@ def encode(indices, mode, ticks):
     xs = np.arange(-ticks, 2+ticks)
     f = np.broadcast_to((xs%2)[None,None,:], (len(indices),len(ys),len(xs))).copy().astype(np.uint8)
     for j,x in enumerate(xs):
-        block = x//2+radius
+        block = int(x//2+radius)
         if mode == 'free':
             for v,(y,parity) in enumerate(FREE):
                 if x%2 == parity:
