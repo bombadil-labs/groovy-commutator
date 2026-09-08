@@ -1,0 +1,16 @@
+{
+  "checks": {
+    "local_triples": 8,
+    "fine_fields": 1280,
+    "coarse_states": 640,
+    "action_word_states": 768
+  },
+  "identity": "F^2 U = U phi90",
+  "physical_flips_per_logical_flip": 2,
+  "vertical_support_rows": 2,
+  "chronology": "Post-census conjecture and exact verification",
+  "sha256": {
+    "scripts/check_defect_strip.py": "71e4ac8e3168280a908652402cfe09c9830a239f0ed3c5e106c56dbf6ca53411",
+    "docs/research/protocols/defect-fates-strip-followup-20260908.md": "5d066822ac8fbb22aa9a5d554bc2bf89078158afcc9cda11f534d005c8e75c74"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "cases": 6912,
+  "sampled_fields": 117504,
+  "certificates": 0,
+  "seconds": 39.241,
+  "sha256": {
+    "scripts/experiment_defect_fates.py": "80696c2cd0ce94ad17442fa9109ee1303e89b779fa5d34605adef581af55aedd",
+    "scripts/experiment_column_compatibility.py": "69537d6c44319f588e8ae44d362cef0446f7523316650fff40b534902d854b14",
+    "src/groovy/ca.py": "6969d6f0699b48602c8a2f55aecd61d58862e6472fea56f6d1ed9ebb2656d77e",
+    "docs/research/protocols/defect-fates-20260908.md": "ae308413bb52e46c875d0153020768f0c69290acce1d2e4621583580201682c3"
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "groups": [
+    {
+      "mode": "periodic",
+      "cohort": "periodic",
+      "initially_invalid": 1364,
+      "returns": 0,
+      "screens": 0,
+      "certificates": 0,
+      "median_mass_32": 98.0,
+      "final_mass_below_prior_peak": 226
+    },
+    {
+      "mode": "periodic",
+      "cohort": "random-a",
+      "initially_invalid": 992,
+      "returns": 0,
+      "screens": 0,
+      "certificates": 0,
+      "median_mass_32": 98.0,
+      "final_mass_below_prior_peak": 224
+    },
+    {
+      "mode": "periodic",
+      "cohort": "random-b",
+      "initially_invalid": 992,
+      "returns": 0,
+      "screens": 0,
+      "certificates": 0,
+      "median_mass_32": 97.0,
+      "final_mass_below_prior_peak": 195
+    },
+    {
+      "mode": "isolated",
+      "cohort": "periodic",
+      "initially_invalid": 1386,
+      "returns": 0,
+      "screens": 0,
+      "certificates": 0,
+      "median_mass_32": 988.5,
+      "final_mass_below_prior_peak": 6
+    },
+    {
+      "mode": "isolated",
+      "cohort": "random-a",
+      "initially_invalid": 1008,
+      "returns": 0,
+      "screens": 0,
+      "certificates": 0,
+      "median_mass_32": 977.0,
+      "final_mass_below_prior_peak": 0
+    },
+    {
+      "mode": "isolated",
+      "cohort": "random-b",
+      "initially_invalid": 1008,
+      "returns": 0,
+      "screens": 0,
+      "certificates": 0,
+      "median_mass_32": 998.0,
+      "final_mass_below_prior_peak": 0
+    }
+  ],
+  "initially_invalid": 6750,
+  "certified_structure_followup": {
+    "eligible": 0,
+    "performed": 0
+  },
+  "strip_followup": "Separate post-census algebraic hypothesis, verified in _strip.json"
+}

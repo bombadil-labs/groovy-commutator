@@ -358,5 +358,29 @@
       "column-compatibility",
       "spacetime-provenance"
     ]
+  },
+  {
+    "slug": "defect-fates",
+    "number": "017",
+    "title": "Outside one code, exact under another",
+    "date": "2026-09-08",
+    "updated": "2026-09-08",
+    "kind": "Longer trajectories and exact follow-up",
+    "evidence": "exact",
+    "topic": "History and possibility",
+    "summary": "Longer defect runs reveal an exact Rule-90 encoding confined to two rows. It permits finite logical actions while remaining outside the original repeated code.",
+    "takeaway": "Leaving one representation need not destroy organized dynamics; sparse activity alone does not demonstrate reassembly.",
+    "source": "docs/research/2026-09-08-defect-fates.md",
+    "promotion": {
+      "stage": "candidate",
+      "idea": "Outside one description, exact under another",
+      "destination": "Concepts"
+    },
+    "related": [
+      "encoded-defects",
+      "block-compatibility",
+      "column-compatibility",
+      "spacetime-provenance"
+    ]
   }
 ]

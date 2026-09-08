@@ -664,7 +664,8 @@
       "updated": "2026-09-08",
       "source": "docs/knowledge/rule90-defect-recovery.md",
       "research": [
-        "encoded-defects"
+        "encoded-defects",
+        "defect-fates"
       ]
     },
     {
@@ -677,6 +678,42 @@
       "source": "docs/knowledge/encoded-defects-test.md",
       "research": [
         "encoded-defects"
+      ]
+    },
+    {
+      "id": "finite-strip-rule90",
+      "title": "Rule 90 occupies a finite two-row strip",
+      "kind": "finding",
+      "status": "exact",
+      "summary": "The same 2D interpreter supports a two-row encoding with two-cell logical flips and a specified alternating background.",
+      "updated": "2026-09-08",
+      "source": "docs/knowledge/finite-strip-rule90.md",
+      "research": [
+        "defect-fates"
+      ]
+    },
+    {
+      "id": "sparsity-is-not-reassembly",
+      "title": "Fewer active cells need not mean spatial reassembly",
+      "kind": "finding",
+      "status": "exact",
+      "summary": "The strip pulse repeatedly becomes sparse while its horizontal span continues to grow.",
+      "updated": "2026-09-08",
+      "source": "docs/knowledge/sparsity-is-not-reassembly.md",
+      "research": [
+        "defect-fates"
+      ]
+    },
+    {
+      "id": "defect-fates-test",
+      "title": "Longer defect trajectories reveal an alternative encoding",
+      "kind": "experiment",
+      "status": "completed",
+      "summary": "A complete 32-tick census audit finds no original-code recovery; a separate exact follow-up identifies a finite strip family.",
+      "updated": "2026-09-08",
+      "source": "docs/knowledge/defect-fates-test.md",
+      "research": [
+        "defect-fates"
       ]
     }
   ],
@@ -1296,6 +1333,51 @@
       "reason": "A further scoped example separates invariant encoded dynamics from repair of physical damage; it does not negate the earlier Rule-23 recovery cases.",
       "research": [
         "encoded-defects"
+      ]
+    },
+    {
+      "source": "defect-fates-test",
+      "type": "supports",
+      "target": "finite-strip-rule90",
+      "reason": "The post-census local proof and independent fine-field and action checks establish the strip identity for arbitrary logical inputs.",
+      "research": [
+        "defect-fates"
+      ]
+    },
+    {
+      "source": "defect-fates-test",
+      "type": "supports",
+      "target": "sparsity-is-not-reassembly",
+      "reason": "The exceptional pulse separates activity contraction from continued spatial expansion; the strip proof supplies an all-time formula.",
+      "research": [
+        "defect-fates"
+      ]
+    },
+    {
+      "source": "defect-fates-test",
+      "type": "supports",
+      "target": "rule90-defect-recovery",
+      "reason": "No recovery occurs through tick32 on the declared backgrounds; this sampled extension does not turn the four-tick exhaustive result into an all-background 32-tick claim.",
+      "research": [
+        "defect-fates"
+      ]
+    },
+    {
+      "source": "finite-strip-rule90",
+      "type": "depends_on",
+      "target": "outer-totalistic-lift",
+      "reason": "The strip uses the same fixed ternary interpreter, with a newly specified non-periodic vertical encoding.",
+      "research": [
+        "defect-fates"
+      ]
+    },
+    {
+      "source": "sparsity-is-not-reassembly",
+      "type": "depends_on",
+      "target": "finite-strip-rule90",
+      "reason": "The exact pulse mass and span follow from the strip identity and Rule-90 shift polynomial.",
+      "research": [
+        "defect-fates"
       ]
     }
   ]
