@@ -20,8 +20,10 @@ Evolve input rows -4..7 and columns -2..3 twice, shrinking the causal window,
 to output rows -2..5 and columns 0..1. Check the ENTIRE output against W's
 fixed cells and exterior background, not just its decoded six-bit symbol.
 Save valid-input count, every fixed-cell violation count, first failed input
-and first witness for each violated coordinate. Save all output words as hex
-in input-index order (uint64 little-endian), plus their SHA256 digest.
+and first witness for each violated coordinate. Save all output words as
+zlib-compressed hex in input-index order (decompressed uint64 little-endian),
+plus their uncompressed SHA256 digest. This storage clarification is made
+with the instrument commit, before evaluation.
 If W is invariant, this gives its total radius-one update. If it fails,
 do not promote the partial readout to an exact coupled logical rule.
 
