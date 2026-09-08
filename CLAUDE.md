@@ -388,6 +388,42 @@ larger grids; separately specify a locally represented changeable decoder.
 Do not infer that expanding same-time instructions to a fixed local rule
 makes them meaningless, or that memory is the only interesting mechanism.
 
+## Research continuation: dimensional compatibility (2026-09-08)
+
+`docs/research/2026-09-08-dimensional-lift.md` defines the outer-totalistic
+2*3^d-bit table encoding in two adjacent layers and the ternary interpreter.
+For H = complement plus full spatial reflection J, F H = H F in every positive
+dimension. This is an interpreter symmetry on all configurations, not a
+cross-dimensional projection or Class-IV selector. D(HX)=J D(X), while the
+Groovy covariance defect is F(JD(X)) XOR JF(D(X)). On the d=1 interpreter's
+3x3 periodic grid it is nonzero on 504/512 states (saved witness starts at 1).
+
+`verify_dimensional_lift.py` verifies the proof on all 512 d=1 local patches,
+9,728 affine-basis cases covering all d=2 local patches, sampled d=3/4 cases,
+and all 512 finite global states. Initial code was committed before execution. A deductive follow-up defines
+T_X(delta)=F(X) XOR F(X XOR delta); all 262,144 base/change pairs satisfy its
+symmetry, and T_X(D(X))=D(F(X)) holds for every binary map by definition.
+The latter is not a selective invariant. Context can be the present base
+state, without a stored history.
+The higher-dimensional interpreter is not outer-totalistic (same-center,
+same-population counterexample); identical overlapping table windows force a
+constant layer in the direct unblocked representation. These are scoped
+obstructions, not a general impossibility of spatially represented programs.
+
+The user explicitly proposed dimensional persistence as a possible Class-IV
+characterization. Record as proposed only: no score or enrichment exists.
+The current 64-rule outer-totalistic ECA domain admits 54/90 but excludes
+30/106/110. Out-of-domain is not failure. Decode-only round trips can be
+true by construction; known history repair also occurs for Rule 30 and does
+not independently identify Class IV.
+
+Next priority supersedes the Gray-code comparison: specify spatially compatible
+encodings and nontrivial invariant families, with a fixed evolution-sensitive
+decoding criterion and declared representation budget. Broaden the lift before
+attempting the full ECA comparison. Keep symmetry equivalence and disputed
+class labels explicit. Recovered parallel-session material is now supplied by
+the user in this thread; its conjectures are not experimental results.
+
 ## Research continuation: observed history (2026-09-07)
 
 Recovered **Analysis of Collusion Wiki** research is indexed in

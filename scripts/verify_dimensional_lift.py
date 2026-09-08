@@ -88,6 +88,12 @@ def main():
     rhs=f[j[delta]]^j[f[delta]]
     assert np.array_equal(defect,rhs)
     checks['global_symmetry']=512;checks['derivative_covariance']=512;checks['commutator_defect_identity']=512
+    # Deductive follow-up: retain the base state when transporting a change.
+    transport=f[:,None]^f[states[:,None]^states[None,:]]
+    assert np.array_equal(transport[h[:,None],j[None,:]],j[transport])
+    assert np.array_equal(transport[states,delta],delta[f])
+    checks['context_transport_covariance']=512*512
+    checks['context_transport_derivative_identity']=512
     failures=np.flatnonzero(defect)
     if len(failures):
         z=int(failures[0]);witnesses['commutator']={key:int(value) for key,value in

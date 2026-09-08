@@ -435,6 +435,66 @@
       "research": [
         "shared-state-rule"
       ]
+    },
+    {
+      "id": "outer-totalistic-lift",
+      "title": "Outer-totalistic dimensional encoding",
+      "kind": "concept",
+      "status": "defined",
+      "summary": "A rule with 2\u00b73^d bits fits in the two adjacent layers of a (d+1)-dimensional neighborhood.",
+      "updated": "2026-09-08",
+      "source": "docs/knowledge/outer-totalistic-lift.md",
+      "research": [
+        "dimensional-lift"
+      ]
+    },
+    {
+      "id": "dimensional-complement-symmetry",
+      "title": "The dimensional interpreter respects complement and reflection",
+      "kind": "finding",
+      "status": "exact",
+      "summary": "For every positive dimension, complementing all bits and reflecting all coordinates commutes with the ternary interpreter.",
+      "updated": "2026-09-08",
+      "source": "docs/knowledge/dimensional-complement-symmetry.md",
+      "research": [
+        "dimensional-lift"
+      ]
+    },
+    {
+      "id": "derivative-symmetry-action",
+      "title": "States and their changes transform differently",
+      "kind": "finding",
+      "status": "exact",
+      "summary": "States transform by complement plus reflection; XOR changes transform by reflection alone, creating an explicit commutator covariance defect.",
+      "updated": "2026-09-08",
+      "source": "docs/knowledge/derivative-symmetry-action.md",
+      "research": [
+        "dimensional-lift"
+      ]
+    },
+    {
+      "id": "recursive-dimensional-family",
+      "title": "Which families remain compatible across dimensions?",
+      "kind": "question",
+      "status": "open",
+      "summary": "Local encoding is established; overlapping programs, family closure, and evolution-preserving decoding remain to be solved.",
+      "updated": "2026-09-08",
+      "source": "docs/knowledge/recursive-dimensional-family.md",
+      "research": [
+        "dimensional-lift"
+      ]
+    },
+    {
+      "id": "class-iv-dimensional-persistence",
+      "title": "Does dimensional persistence distinguish Class IV?",
+      "kind": "theory",
+      "status": "proposed",
+      "summary": "The proposed association is untested; a broader lift is needed to include Rules 30, 106, and 110.",
+      "updated": "2026-09-08",
+      "source": "docs/knowledge/class-iv-dimensional-persistence.md",
+      "research": [
+        "dimensional-lift"
+      ]
     }
   ],
   "edges": [
@@ -828,6 +888,42 @@
       "reason": "The finite graph counts differ under encoding interventions and satisfy the rotation conjugacy controls.",
       "research": [
         "shared-state-rule"
+      ]
+    },
+    {
+      "source": "dimensional-complement-symmetry",
+      "type": "depends_on",
+      "target": "outer-totalistic-lift",
+      "reason": "The symmetry belongs to the explicitly defined ternary interpreter.",
+      "research": [
+        "dimensional-lift"
+      ]
+    },
+    {
+      "source": "derivative-symmetry-action",
+      "type": "depends_on",
+      "target": "dimensional-complement-symmetry",
+      "reason": "The different action on XOR changes follows by cancelling the two state complements.",
+      "research": [
+        "dimensional-lift"
+      ]
+    },
+    {
+      "source": "recursive-dimensional-family",
+      "type": "depends_on",
+      "target": "outer-totalistic-lift",
+      "reason": "The local encoding supplies the current candidate whose global and recursive compatibility is unresolved.",
+      "research": [
+        "dimensional-lift"
+      ]
+    },
+    {
+      "source": "class-iv-dimensional-persistence",
+      "type": "depends_on",
+      "target": "recursive-dimensional-family",
+      "reason": "A persistence association requires a defined compatible family and evolution-sensitive score; neither is settled.",
+      "research": [
+        "dimensional-lift"
       ]
     }
   ]
