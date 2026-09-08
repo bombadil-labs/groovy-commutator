@@ -1,0 +1,14 @@
+{
+  "ok": true,
+  "cases": 1600,
+  "checked_ticks": 18290,
+  "checked_changed_points": 439718,
+  "mismatches": [],
+  "seconds": 1.958,
+  "source_sha256": {
+    "script": "44d9fedeb747136eacae294551389e9d3ac5ffe27908016f46bb77f3d88aee33",
+    "protocol": "a5e1defb7026d7d90aa26ed838a44bd8963c05f4b90b35ea630a78989d90ea5b",
+    "primary": "0918df41017bde990db1dfd6ab857050673d0b6564dac295af873f40f6a7a0cb",
+    "sparse_kernel": "e6e95744f768a3a6e173820684e697eb8fdb9378a4638ba304649e081ddbd00a"
+  }
+}
