@@ -23,3 +23,11 @@ without intervening background is another system and is not covered by this
 proof. The result therefore does not contradict the prior bounded minimum
 for periodically repeated block encodings. See the
 [proof and checks](../research/2026-09-08-defect-fates.md).
+
+## Composition update, 2026-09-08
+
+The [two-strip test](../research/2026-09-08-coupled-strips.md) proves exact
+independence for any aligned collection with at least one background row
+between strips. Direct adjacency generally leaves the current code and creates
+a nonlinear residual in the touching rows. The next open question is whether
+an enlarged joint representation can retain that interface state.

@@ -1,0 +1,49 @@
+{
+  "first_tick_formula_cases": 320,
+  "adjacent_first_tick_interaction_inputs": 32,
+  "all_ones_first_tick_interaction": [
+    [
+      1,
+      0
+    ],
+    [
+      0,
+      1
+    ]
+  ],
+  "all_ones_second_tick_residual": [
+    [
+      0,
+      0
+    ],
+    [
+      0,
+      0
+    ],
+    [
+      0,
+      0
+    ],
+    [
+      0,
+      0
+    ],
+    [
+      0,
+      0
+    ],
+    [
+      0,
+      0
+    ],
+    [
+      0,
+      0
+    ],
+    [
+      0,
+      0
+    ]
+  ],
+  "scope": "Compact formulas derived from and checked against the completed local census."
+}

@@ -26,7 +26,7 @@ revisable. Observed-history prediction is one workstream. Keep it distinct
 from historical influence within the dynamics and from future capability.
 The finite repertoire and costed/returning-task comparisons are complete;
 learning reusable primitives remains open. The latest completed unit is the
-defect-fates experiment and post-census finite-strip proof. The 3D hypothesis is parked by explicit user
+coupled-strips experiment and buffer-row proof. The 3D hypothesis is parked by explicit user
 instruction; continue the fixed 2D workstream. Read its continuation below before the historical
 agenda checkpoint and dimensional/provenance continuations.
 Do not promote earlier dialogue's unverified numbers or ethical analogies into results.
@@ -626,6 +626,49 @@ Next concrete 2D lead: independent data strips, separated as a control and
 adjacent as a coupling test. Determine exact coexistence and interaction laws
 before making claims about compositional computation. The ambient F stays
 fixed; no fitted decoder. 3D and boundary/individuation remain parked.
+
+## Research continuation: strips compose or interact (2026-09-08)
+
+`docs/research/2026-09-08-coupled-strips.md` completes the two-strip unit.
+Protocol c186318 and three instruments 06edcb9 committed before evaluation.
+Keep F, horizontal alignment, and cadence two fixed. V_g encodes independent
+rows a,b in strips beginning at 0 and g+2; g=0..4 background rows between.
+All 64 six-bit logical triples checked for every gap, including ALL output
+constant cells and exterior rows. Independent uint64 audit agrees on 320
+cases, 200 output/residual polynomials, validity and cross-influence.
+
+For g=1..4, every input preserves V_g and yields independent Rule90(a/b).
+The two-phase buffer argument proves the same for ALL g>=1 and any aligned
+collection of strips, including infinitely many independently variable rows.
+The buffer's 01 phase reads constant bottom-odd1/top-even0 cells, becoming10;
+its 10 phase reads constant top-odd0/bottom-even1 cells, returning01. Thus
+no data cross it in this invariant family. One row is minimal under this
+fixed architecture, not a universal isolation distance.
+
+For g=0, only17/64 local inputs stay valid, all equal independent outputs.
+The other47 leave the code; there is no total logical H in this code at
+cadence2. Composition residual C=F^2 V XOR V(phi90a,phi90b) lies only in the
+touching rows1/2. Two physical cells in each strip depend on the other row.
+Residual monomials all mix a/b variables; degrees4/5. First-tick interaction
+relative to independent evolution is [[a*b,b*(a XOR a_right)],
+[a*(b_left XOR b),a*b]]. Nonzero on32 local inputs at tick1 versus47 at tick2;
+different stage counts do not establish pointwise monotonicity. Both rows
+identically1 give nonzero tick1 interaction but zero tick2 residual, returning
+the zero logical pair. First failed triple pair100/100 decodes1/1 while
+constant physical cell(y2,x0) is incorrectly1. Reading candidate bits alone
+conceals loss of the encoding.
+
+Gaps1/2: all pairs of ring states at widths5/7 for four coarse steps. Gap1,
+width5: all64 length-three words over none/topflip/bottomflip/both, all1024
+initial pairs. Independently computed671,744fine fields;139,264coarse paired
+states;196,608action-word states. No vertical torus. Local and action
+identities prove arbitrary finite matched action words independently of tests.
+
+Next: a bounded enlarged joint representation that retains the interface
+residual as state. Fix its variables, decoder, locality and cadence before
+testing closure under repeated F. Adjacency's current-code failure is not a
+no-go for all coupled descriptions. The physical F remains fixed. 3D and
+the separate boundary/individuation thread remain parked.
 
 ## Research agenda checkpoint: preserve unfinished threads (2026-09-08)
 
