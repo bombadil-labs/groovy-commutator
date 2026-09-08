@@ -156,6 +156,6 @@ If yes, the relevant boundary is not spatial separation. It is **selector-relati
 
 That would connect the strip experiments back to the project's earlier neighborhood-selector and provenance results: a physical difference can be present, nearby, and growing, while remaining dynamically absent from a particular continuing process because the process never reads it.
 
-Research022 should isolate and prove or refute that shielding mechanism.
+A follow-up should isolate and prove or refute that shielding mechanism.
 
 The 3D hypothesis remains parked.
