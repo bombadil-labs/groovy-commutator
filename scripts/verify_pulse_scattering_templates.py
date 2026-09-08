@@ -11,7 +11,7 @@ from pathlib import Path
 import hashlib
 import json
 
-from experiment_pulse_scattering import background, dense_step
+from experiment_pulse_scattering import background, dense_step, v0_member
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "results/pulse_scattering_20260908_templates.json"
@@ -92,13 +92,18 @@ EXPECTED = {
 
 def main():
     records = []
-    checks = 0
+    checks = departure_checks = 0
     for (name, p), expected in EXPECTED.items():
         outcomes = set()
         for bits_a in product((0, 1), repeat=3):
             for bits_b in product((0, 1), repeat=3):
                 a, b = template_rows(name, p, bits_a, bits_b)
-                got = first_exterior(encode_v0(a, b), limit=8)
+                initial = encode_v0(a, b)
+                after_two = dense_step(dense_step(initial, 0), 1)
+                departure_checks += 1
+                if v0_member(after_two, 2) is not False:
+                    raise AssertionError((name, p, bits_a, bits_b, "no contact departure at tick 2"))
+                got = first_exterior(initial, limit=8)
                 if got is None:
                     raise AssertionError((name, p, bits_a, bits_b, "no exterior"))
                 t, top, bottom, _ = got
@@ -132,6 +137,7 @@ def main():
     result = {
         "ok": True,
         "contact_template_assignments": checks,
+        "contact_departure_assignments": departure_checks,
         "negative_even_cancellation_assignments": cancellation_checks,
         "records": records,
         "deductive_inputs": {
@@ -147,7 +153,8 @@ def main():
     }
     OUT.write_text(json.dumps(result, indent=2) + "\n")
     print(json.dumps({k: result[k] for k in (
-        "ok", "contact_template_assignments", "negative_even_cancellation_assignments")}, indent=2))
+        "ok", "contact_template_assignments", "contact_departure_assignments",
+        "negative_even_cancellation_assignments")}, indent=2))
     for r in records:
         print(r["template"], r["edge_parity"], r["outcomes"])
 
