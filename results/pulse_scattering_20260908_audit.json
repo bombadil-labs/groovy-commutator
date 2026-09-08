@@ -1,0 +1,13 @@
+{
+  "ok": true,
+  "checked_ticks": 7399,
+  "checked_changed_points": 21287358,
+  "shards": [[-64,-49],[-48,-33],[-32,-17],[-16,-1],[0,31],[32,64]],
+  "shard_seconds": [12.78,17.826,25.577,37.599,0.071,0.316],
+  "source_sha256": {
+    "script": "e6e95744f768a3a6e173820684e697eb8fdb9378a4638ba304649e081ddbd00a",
+    "protocol": "1fcf51bc17125e1a525fbe348f1c6ae1fc82d705cea72e7aaa4ac84c40aa3a29",
+    "primary": "5afd85a2b75e5f2f0990da3b763f4b0ca3a34277525700cfef0f175fcaed04ba"
+  },
+  "publication_note": "Per-displacement audit records are omitted from this compact publication copy; aggregate counts, frozen shard ranges, timings and source hashes are retained. The committed audit script reproduces the full records."
+}
