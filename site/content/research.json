@@ -246,5 +246,26 @@
       "history-and-possibility",
       "future-repertoire"
     ]
+  },
+  {
+    "slug": "dimensional-lift",
+    "number": "012",
+    "title": "A dimensional rule encoding and its symmetry",
+    "date": "2026-09-08",
+    "updated": "2026-09-08",
+    "kind": "Algebra and research direction",
+    "evidence": "exact",
+    "topic": "History and possibility",
+    "summary": "Outer-totalistic rules fit into the next dimension, and the resulting interpreter has a complement/reflection symmetry. Recursive closure and the proposed Class-IV connection remain open.",
+    "takeaway": "A shared encoding can preserve a symmetry while its treatment of changes introduces a precise mismatch.",
+    "source": "docs/research/2026-09-08-dimensional-lift.md",
+    "promotion": {
+      "stage": "research"
+    },
+    "related": [
+      "shared-state-rule",
+      "history-and-possibility",
+      "history-repairability"
+    ]
   }
 ]
