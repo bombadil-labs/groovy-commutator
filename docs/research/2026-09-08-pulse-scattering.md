@@ -57,7 +57,7 @@ for which the first exterior row contains a **doublet** rather than the singleto
 
 The independent sparse scalar audit agrees with the primary changed-coordinate fields on **7,399 complete ticks and 21,287,358 changed points** across the full discovery domain. The primary trajectory file was materialized per displacement after a monolithic process exceeded the execution ceiling; the frozen per-displacement logic and criteria were unchanged. The scalar audit's hardest shard was similarly subdivided only for execution and then reaggregated.
 
-The [summary](../../results/pulse_scattering_20260908_summary.json), [independent audit](../../results/pulse_scattering_20260908_audit.json), and [compact primary observables](../../results/pulse_scattering_20260908_primary_metrics.json) retain the result. The publication file stores the frozen per-tick scalar and membership observables in columnar arrays rather than repeating JSON field names; its column schema is embedded in the file. Full top/bottom support coordinates and per-tick coordinate digests were used during the run and independent audit but are not duplicated in this smaller publication copy; first-event extreme coordinates are retained in the fresh-range and proof-audit records.
+The [summary](../../results/pulse_scattering_20260908_summary.json), [independent audit](../../results/pulse_scattering_20260908_audit.json), and [compact discovery cases](../../results/pulse_scattering_20260908_primary_metrics.json) retain the result. The compact discovery file keeps every displacement, frozen status and primary first-event times; it also records the post-census boundary-support classification and persistent-support certificate for each case, plus source hashes and the SHA-256 of the full raw trajectory bundle. Per-tick fields are not duplicated in the repository copy; the committed primary and audit instruments reproduce them.
 
 ## The singleton certificate generalizes to any transmitting extreme support
 
@@ -159,7 +159,7 @@ That gives 384 new displacement values. For every one, the dense physical-field 
 
 All **384/384** cases pass. The two implementations agree on **64,032 complete fields** comprising **4,677,264 changed-point comparisons**. Of the fresh cases, 336 launch singleton extreme supports and 48 launch doublets, exactly as predicted. There are no formula failures.
 
-Together with the discovery range, the computation directly checks every integer displacement from $-256$ through $256$, while preserving the discovery/confirmation split. The saved [fresh-range result](../../results/pulse_scattering_20260908_fresh_range.json) contains every observed and predicted scalar, the actual extreme coordinates, and a canonical field digest.
+Together with the discovery range, the computation directly checks every integer displacement from $-256$ through $256$, while preserving the discovery/confirmation split. The saved [fresh-range summary](../../results/pulse_scattering_20260908_fresh_range.json) retains the aggregate formula checks, extreme-mass counts, complete-field comparison counts, and source hashes. The committed checker reproduces the 384 per-case predicted/observed scalars, first-exterior supports, parity checks, and canonical field digests.
 
 ## Why this is not merely a 513-case pattern
 
