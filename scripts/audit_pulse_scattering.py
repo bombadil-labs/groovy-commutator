@@ -1,6 +1,11 @@
-"""Independent sparse infinite-lattice audit for Research020 pulse scattering."""
+"""Independent sparse infinite-lattice audit for Research020 pulse scattering.
+
+The fixed shards are an execution-only response to a first full audit timing out
+before producing a result. They do not change the frozen domain or checks.
+"""
 from __future__ import annotations
 
+import argparse
 from pathlib import Path
 import hashlib
 import json
@@ -10,6 +15,7 @@ ROOT = Path(__file__).resolve().parents[1]
 PRIMARY = ROOT / "results/pulse_scattering_20260908.json"
 OUT = ROOT / "results/pulse_scattering_20260908_audit.json"
 PROTOCOL = "docs/research/protocols/pulse-scattering-20260908.md"
+SHARDS = [(-64, -49), (-48, -33), (-32, -17), (-16, -1), (0, 31), (32, 64)]
 
 
 def b(t: int, x: int) -> int:
@@ -64,19 +70,16 @@ def top_bottom_tips(delta: set[tuple[int, int]], t: int) -> tuple[bool, bool]:
     return top_tip, bottom_tip
 
 
-def main():
+def audit_range(primary: dict, d_min: int, d_max: int) -> dict:
     started = time.time()
-    primary = json.loads(PRIMARY.read_text())
     checked_ticks = checked_points = 0
     mismatches = []
     classifications = []
-    for row in primary["trajectories"]:
+    selected = [row for row in primary["trajectories"] if d_min <= row["d"] <= d_max]
+    for row in selected:
         d = row["d"]
         delta = initial(d)
-        target_last = row["last_simulated_tick"]
-        # Audit every directly simulated tick. This is stronger than the frozen
-        # minimum and makes certificate-time agreement explicit.
-        audit_last = target_last
+        audit_last = row["last_simulated_tick"]
         top_first = bottom_first = extinction_first = None
         primary_ticks = {m["tick"]: m for m in row["ticks"]}
         for t in range(audit_last + 1):
@@ -106,10 +109,8 @@ def main():
             "primary_status": row["status"],
         })
 
-    # Certificate first-times must agree whenever the primary event lies within
-    # the independently audited interval. Unresolved trajectories are audited
-    # through the full horizon by construction.
-    for a, p in zip(classifications, primary["trajectories"]):
+    for a in classifications:
+        p = next(row for row in selected if row["d"] == a["d"])
         last = a["audited_through"]
         for key, audit_key in (("top_tip", "top_tip_first_within_audit"),
                                ("bottom_tip", "bottom_tip_first_within_audit"),
@@ -118,14 +119,35 @@ def main():
             if pt is not None and pt <= last and pt != a[audit_key]:
                 mismatches.append({"d": p["d"], "kind": key,
                                    "primary": pt, "audit": a[audit_key]})
-
-    result = {
-        "ok": not mismatches,
+    return {
+        "d_min": d_min, "d_max": d_max, "ok": not mismatches,
         "checked_ticks": checked_ticks,
         "checked_changed_points": checked_points,
         "mismatches": mismatches,
         "classifications": classifications,
         "seconds": round(time.time() - started, 3),
+    }
+
+
+def aggregate(primary: dict) -> dict:
+    parts = []
+    for i in range(len(SHARDS)):
+        p = ROOT / f"results/pulse_scattering_20260908_audit_shard_{i}.json"
+        parts.append(json.loads(p.read_text()))
+    ds = [c["d"] for part in parts for c in part["classifications"]]
+    expected = list(range(primary["domain"]["d_min"], primary["domain"]["d_max"] + 1))
+    if sorted(ds) != expected or len(ds) != len(set(ds)):
+        raise AssertionError("Audit shards do not form the exact frozen displacement domain")
+    mismatches = [m for part in parts for m in part["mismatches"]]
+    result = {
+        "ok": all(part["ok"] for part in parts) and not mismatches,
+        "shards": SHARDS,
+        "checked_ticks": sum(part["checked_ticks"] for part in parts),
+        "checked_changed_points": sum(part["checked_changed_points"] for part in parts),
+        "mismatches": mismatches,
+        "classifications": sorted(
+            [c for part in parts for c in part["classifications"]], key=lambda x: x["d"]),
+        "shard_seconds": [part["seconds"] for part in parts],
         "source_sha256": {
             "script": hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
             "protocol": hashlib.sha256((ROOT / PROTOCOL).read_bytes()).hexdigest(),
@@ -133,9 +155,37 @@ def main():
         },
     }
     OUT.write_text(json.dumps(result, indent=2) + "\n")
-    print(json.dumps({k: result[k] for k in ("ok", "checked_ticks", "checked_changed_points", "seconds")}, indent=2))
-    if mismatches:
-        print(json.dumps(mismatches[:10], indent=2))
+    print(json.dumps({k: result[k] for k in ("ok", "checked_ticks", "checked_changed_points", "shard_seconds")}, indent=2))
+    if not result["ok"]:
+        raise SystemExit(1)
+    return result
+
+
+def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--shard", type=int, choices=range(len(SHARDS)))
+    parser.add_argument("--aggregate", action="store_true")
+    args = parser.parse_args()
+    primary = json.loads(PRIMARY.read_text())
+    if args.aggregate:
+        aggregate(primary)
+        return
+    if args.shard is None:
+        # Full one-process mode remains available outside constrained runners.
+        part = audit_range(primary, primary["domain"]["d_min"], primary["domain"]["d_max"])
+        path = OUT
+    else:
+        d_min, d_max = SHARDS[args.shard]
+        part = audit_range(primary, d_min, d_max)
+        path = ROOT / f"results/pulse_scattering_20260908_audit_shard_{args.shard}.json"
+    part["source_sha256"] = {
+        "script": hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
+        "protocol": hashlib.sha256((ROOT / PROTOCOL).read_bytes()).hexdigest(),
+        "primary": hashlib.sha256(PRIMARY.read_bytes()).hexdigest(),
+    }
+    path.write_text(json.dumps(part, indent=2) + "\n")
+    print(json.dumps({k: part[k] for k in ("d_min", "d_max", "ok", "checked_ticks", "checked_changed_points", "seconds")}, indent=2))
+    if not part["ok"]:
         raise SystemExit(1)
 
 
