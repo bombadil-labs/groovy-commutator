@@ -265,7 +265,8 @@
     "related": [
       "shared-state-rule",
       "history-and-possibility",
-      "history-repairability"
+      "history-repairability",
+      "column-compatibility"
     ]
   },
   {
@@ -288,7 +289,29 @@
     "related": [
       "dimensional-lift",
       "shared-state-rule",
-      "future-repertoire"
+      "future-repertoire",
+      "column-compatibility"
+    ]
+  },
+  {
+    "slug": "column-compatibility",
+    "number": "014",
+    "title": "When an encoding survives evolution",
+    "date": "2026-09-08",
+    "updated": "2026-09-08",
+    "kind": "Exact search and construction",
+    "evidence": "exact",
+    "topic": "History and possibility",
+    "summary": "A fixed 2D law supports exact lower-dimensional dynamics. The search separates loss of an encoding from growth of its effective neighborhood; a conveyor construction works across dimensions.",
+    "takeaway": "Preserving a representation, preserving a chosen rule neighborhood, and repairing damage are different requirements.",
+    "source": "docs/research/2026-09-08-column-compatibility.md",
+    "promotion": {
+      "stage": "research"
+    },
+    "related": [
+      "dimensional-lift",
+      "spacetime-provenance",
+      "shared-state-rule"
     ]
   }
 ]

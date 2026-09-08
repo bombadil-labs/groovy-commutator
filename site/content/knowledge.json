@@ -476,12 +476,13 @@
       "id": "recursive-dimensional-family",
       "title": "Which families remain compatible across dimensions?",
       "kind": "question",
-      "status": "open",
-      "summary": "Local encoding is established; overlapping programs, family closure, and evolution-preserving decoding remain to be solved.",
+      "status": "partly-answered",
+      "summary": "Invariant column and conveyor families now preserve dynamics and matched actions; recursive interpreter simulation and interactions beyond transport remain open.",
       "updated": "2026-09-08",
       "source": "docs/knowledge/recursive-dimensional-family.md",
       "research": [
-        "dimensional-lift"
+        "dimensional-lift",
+        "column-compatibility"
       ]
     },
     {
@@ -542,6 +543,54 @@
       "source": "docs/knowledge/provenance-panel-test.md",
       "research": [
         "spacetime-provenance"
+      ]
+    },
+    {
+      "id": "invariant-column-encodings",
+      "title": "Two elementary updates survive the column encoding test",
+      "kind": "finding",
+      "status": "exact",
+      "summary": "The all-height graph selects Rules 23/232 at cadence one; other returning codes can require wider neighborhoods.",
+      "updated": "2026-09-08",
+      "source": "docs/knowledge/invariant-column-encodings.md",
+      "research": [
+        "column-compatibility"
+      ]
+    },
+    {
+      "id": "dimensional-conveyor",
+      "title": "Separated data planes form a dimensional conveyor",
+      "kind": "finding",
+      "status": "exact",
+      "summary": "A local proof gives data-preserving diagonal transport inside the same interpreter construction in every positive lower dimension.",
+      "updated": "2026-09-08",
+      "source": "docs/knowledge/dimensional-conveyor.md",
+      "research": [
+        "column-compatibility"
+      ]
+    },
+    {
+      "id": "encoding-is-not-repair",
+      "title": "Restoring a valid encoding need not restore its content",
+      "kind": "finding",
+      "status": "exact",
+      "summary": "Some damaged trajectories regain valid code with different logical content in the bounded two-row experiment.",
+      "updated": "2026-09-08",
+      "source": "docs/knowledge/encoding-is-not-repair.md",
+      "research": [
+        "column-compatibility"
+      ]
+    },
+    {
+      "id": "column-compatibility-test",
+      "title": "Exact column compatibility experiment",
+      "kind": "experiment",
+      "status": "completed",
+      "summary": "A frozen search and independent graph audit establish invariant families, with separate finite action and damage checks.",
+      "updated": "2026-09-08",
+      "source": "docs/knowledge/column-compatibility-test.md",
+      "research": [
+        "column-compatibility"
       ]
     }
   ],
@@ -1017,6 +1066,60 @@
       "reason": "The zero-panel witness supplies another scoped example: identical natural continuation does not determine the response to an action.",
       "research": [
         "spacetime-provenance"
+      ]
+    },
+    {
+      "source": "column-compatibility-test",
+      "type": "tests",
+      "target": "recursive-dimensional-family",
+      "reason": "The fixed-interpreter search supplies globally consistent invariant families under an explicit column restriction.",
+      "research": [
+        "column-compatibility"
+      ]
+    },
+    {
+      "source": "column-compatibility-test",
+      "type": "supports",
+      "target": "invariant-column-encodings",
+      "reason": "The finite census, all-height constraint graph, and independent audit agree on the elementary targets.",
+      "research": [
+        "column-compatibility"
+      ]
+    },
+    {
+      "source": "column-compatibility-test",
+      "type": "supports",
+      "target": "encoding-is-not-repair",
+      "reason": "The declared one-cell damage tests separate return to code from return to the undamaged trajectory.",
+      "research": [
+        "column-compatibility"
+      ]
+    },
+    {
+      "source": "invariant-column-encodings",
+      "type": "depends_on",
+      "target": "outer-totalistic-lift",
+      "reason": "The search fixes the ternary interpreter derived in the dimensional-lift construction, while testing all ECA targets.",
+      "research": [
+        "column-compatibility"
+      ]
+    },
+    {
+      "source": "dimensional-conveyor",
+      "type": "depends_on",
+      "target": "outer-totalistic-lift",
+      "reason": "The proof uses the same all-dimensional count and ternary-address update law.",
+      "research": [
+        "column-compatibility"
+      ]
+    },
+    {
+      "source": "encoding-is-not-repair",
+      "type": "depends_on",
+      "target": "invariant-column-encodings",
+      "reason": "The tested Rule-23 damage response is defined relative to its proven two-row invariant code.",
+      "research": [
+        "column-compatibility"
       ]
     }
   ]

@@ -25,8 +25,9 @@ program: how inherited structure enables further activity and remains
 revisable. Observed-history prediction is one workstream. Keep it distinct
 from historical influence within the dynamics and from future capability.
 The finite repertoire and costed/returning-task comparisons are complete;
-learning reusable primitives remains open. For the latest unfinished work,
-read the agenda checkpoint below and the dimensional/provenance continuations.
+learning reusable primitives remains open. The latest completed unit is the
+column-compatibility search. Read its continuation below before the historical
+agenda checkpoint and dimensional/provenance continuations.
 Do not promote earlier dialogue's unverified numbers or ethical analogies into results.
 
 Capture each substantial new experiment, correction, or open research plan
@@ -459,6 +460,49 @@ continuation, and preserving responses to a declared action set. Choose target,
 representation budget and decoder before scoring. This full-ECA observational
 map does not yet implement a higher-dimensional evolutionary law or remove the
 outer-totalistic domain restriction from the separate dimensional interpreter.
+
+## Research continuation: invariant column encodings (2026-09-08)
+
+`docs/research/2026-09-08-column-compatibility.md` completes the next fixed-
+interpreter compatibility unit. Protocol and instrument were committed before
+evaluation. All ordered distinct vertical codewords a,b at heights 1..6 and
+cadences k=1..3 give 16,002 conditions. A row-type constraint graph decides
+existence at EVERY finite vertical height for each of 256 ECA targets and
+each cadence. Only 23/232 occur at k1; none at k2/3. This is not an exclusion
+of larger horizontal blocks, drift, higher cadences, or other upper laws.
+
+Crucial distinction: 18/50/54 finite codes remain valid under F^k at k1/2/3;
+only 18/0/0 give radius-one lower rules. The others carry wider-neighborhood
+dynamics. Thus absence of an ECA target is not failure of all dimensional
+compatibility. The 18 successful records reduce to two canonical families:
+vertically repeated data (232, majority) and alternating data/complement
+(23, complement-majority). No Class-IV labels or enrichment were evaluated.
+
+The independent audit rebuilds all 17,472 vertical truth constraints with
+Boolean truth sets and checks 796 variable-edge return paths; all 768 graph
+decisions agree. Primary checks include 2,130,432 local window pairs, 40,960
+package-engine comparisons, 16,002 finite/graph agreements, 150 symmetries,
+5,120 matched trajectory and 3,072 action-word state comparisons.
+
+Deductive follow-up: in every positive lower dimension d, repeat arbitrary
+data planes with m-1 zero planes between them, m>=2. Each interpreter tick
+moves the data one transverse step and one step in every spatial coordinate.
+After m ticks, F_(d+1)^m E_(d,m) = E_(d,m) diagonal_shift_d^m. This is proved
+locally; checks include 14,080 1D state/tick cases and 288 full-field ticks in
+lower dimensions 2/3. It is a simple transport family, not a proof that one
+interpreter simulates the preceding dimensional interpreter.
+
+Matched logical flips toggle a XOR b per column/vertical period; arbitrary
+finite matched action words are preserved by the intertwining identity.
+One physical cell flip is different: on the 2x7 Rule-23 code, 28/128 states
+return to valid code by tick4, but only 18 match undamaged evolution. Damage
+tests are tiny periodic tori, not isolated defects in an infinite plane.
+
+Next: explicitly allow a bounded amount of horizontal packing or fixed drift,
+while holding the upper law, action dictionary, and evaluation budget fixed.
+Seek interactions beyond transport. Do not extend the failed radius-one
+criterion into an unrestricted impossibility claim. Remainder feedback still
+needs its own law and controls; the boundary question remains parked.
 
 ## Research agenda checkpoint: preserve unfinished threads (2026-09-08)
 

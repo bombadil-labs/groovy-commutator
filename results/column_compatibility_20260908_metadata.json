@@ -1,0 +1,18 @@
+{
+  "checks": {
+    "previous_interpreter_local_patches": 512,
+    "previous_interpreter_complete_grids": 512,
+    "package_eca_state_checks": 40960,
+    "local_vertical_horizontal_windows": 2130432,
+    "graph_cycle_direct_checks": 2,
+    "finite_code_graph_agreements": 16002,
+    "encoding_symmetry_checks": 150,
+    "matched_trajectory_state_checks": 5120,
+    "action_word_state_checks": 3072
+  },
+  "seconds": 11.598,
+  "numpy": "2.3.5",
+  "script_sha256": "69537d6c44319f588e8ae44d362cef0446f7523316650fff40b534902d854b14",
+  "protocol_sha256": "cbf0e5ffb444397e28dd4bd60112858c493c339bb716f4b340464a385426202b",
+  "scope": "All periodic column heights, cadences 1..3, fixed Research-012 interpreter; physical damage is finite n=5/7, four coarse steps."
+}
