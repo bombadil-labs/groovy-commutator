@@ -1,0 +1,275 @@
+{
+  "census": [
+    {
+      "m": 1,
+      "k": 1,
+      "candidates": 2,
+      "accepted": 2,
+      "off_code": 0,
+      "outer_context": 0,
+      "rules": [
+        232
+      ],
+      "primitive_codes": 2
+    },
+    {
+      "m": 1,
+      "k": 2,
+      "candidates": 2,
+      "accepted": 0,
+      "off_code": 0,
+      "outer_context": 2,
+      "rules": [],
+      "primitive_codes": 0
+    },
+    {
+      "m": 1,
+      "k": 3,
+      "candidates": 2,
+      "accepted": 0,
+      "off_code": 0,
+      "outer_context": 2,
+      "rules": [],
+      "primitive_codes": 0
+    },
+    {
+      "m": 2,
+      "k": 1,
+      "candidates": 12,
+      "accepted": 4,
+      "off_code": 8,
+      "outer_context": 0,
+      "rules": [
+        23,
+        232
+      ],
+      "primitive_codes": 2
+    },
+    {
+      "m": 2,
+      "k": 2,
+      "candidates": 12,
+      "accepted": 0,
+      "off_code": 0,
+      "outer_context": 12,
+      "rules": [],
+      "primitive_codes": 0
+    },
+    {
+      "m": 2,
+      "k": 3,
+      "candidates": 12,
+      "accepted": 0,
+      "off_code": 8,
+      "outer_context": 4,
+      "rules": [],
+      "primitive_codes": 0
+    },
+    {
+      "m": 3,
+      "k": 1,
+      "candidates": 56,
+      "accepted": 2,
+      "off_code": 54,
+      "outer_context": 0,
+      "rules": [
+        232
+      ],
+      "primitive_codes": 0
+    },
+    {
+      "m": 3,
+      "k": 2,
+      "candidates": 56,
+      "accepted": 0,
+      "off_code": 54,
+      "outer_context": 2,
+      "rules": [],
+      "primitive_codes": 0
+    },
+    {
+      "m": 3,
+      "k": 3,
+      "candidates": 56,
+      "accepted": 0,
+      "off_code": 42,
+      "outer_context": 14,
+      "rules": [],
+      "primitive_codes": 0
+    },
+    {
+      "m": 4,
+      "k": 1,
+      "candidates": 240,
+      "accepted": 4,
+      "off_code": 236,
+      "outer_context": 0,
+      "rules": [
+        23,
+        232
+      ],
+      "primitive_codes": 0
+    },
+    {
+      "m": 4,
+      "k": 2,
+      "candidates": 240,
+      "accepted": 0,
+      "off_code": 220,
+      "outer_context": 20,
+      "rules": [],
+      "primitive_codes": 0
+    },
+    {
+      "m": 4,
+      "k": 3,
+      "candidates": 240,
+      "accepted": 0,
+      "off_code": 236,
+      "outer_context": 4,
+      "rules": [],
+      "primitive_codes": 0
+    },
+    {
+      "m": 5,
+      "k": 1,
+      "candidates": 992,
+      "accepted": 2,
+      "off_code": 990,
+      "outer_context": 0,
+      "rules": [
+        232
+      ],
+      "primitive_codes": 0
+    },
+    {
+      "m": 5,
+      "k": 2,
+      "candidates": 992,
+      "accepted": 0,
+      "off_code": 990,
+      "outer_context": 2,
+      "rules": [],
+      "primitive_codes": 0
+    },
+    {
+      "m": 5,
+      "k": 3,
+      "candidates": 992,
+      "accepted": 0,
+      "off_code": 990,
+      "outer_context": 2,
+      "rules": [],
+      "primitive_codes": 0
+    },
+    {
+      "m": 6,
+      "k": 1,
+      "candidates": 4032,
+      "accepted": 4,
+      "off_code": 4028,
+      "outer_context": 0,
+      "rules": [
+        23,
+        232
+      ],
+      "primitive_codes": 0
+    },
+    {
+      "m": 6,
+      "k": 2,
+      "candidates": 4032,
+      "accepted": 0,
+      "off_code": 4020,
+      "outer_context": 12,
+      "rules": [],
+      "primitive_codes": 0
+    },
+    {
+      "m": 6,
+      "k": 3,
+      "candidates": 4032,
+      "accepted": 0,
+      "off_code": 4004,
+      "outer_context": 28,
+      "rules": [],
+      "primitive_codes": 0
+    }
+  ],
+  "total_candidates": 16002,
+  "accepted": 18,
+  "canonical_encodings": 2,
+  "admitted_by_k": {
+    "1": [
+      23,
+      232
+    ],
+    "2": [],
+    "3": []
+  },
+  "rule_symmetry_orbits": [
+    23,
+    232
+  ],
+  "minimal_codes": [
+    {
+      "m": 2,
+      "a": 1,
+      "b": 2,
+      "k": 1,
+      "primitive_m": 2,
+      "physical_flips": 2,
+      "rule": 23,
+      "off_code": 0,
+      "outer_conflicts": 0,
+      "witness_input": -1,
+      "witness_other": -1,
+      "witness_output": -1
+    },
+    {
+      "m": 1,
+      "a": 0,
+      "b": 1,
+      "k": 1,
+      "primitive_m": 1,
+      "physical_flips": 1,
+      "rule": 232,
+      "off_code": 0,
+      "outer_conflicts": 0,
+      "witness_input": -1,
+      "witness_other": -1,
+      "witness_output": -1
+    }
+  ],
+  "probe_codes": [
+    [
+      1,
+      0,
+      1,
+      1,
+      232
+    ],
+    [
+      1,
+      1,
+      0,
+      1,
+      232
+    ],
+    [
+      2,
+      1,
+      2,
+      1,
+      23
+    ],
+    [
+      2,
+      2,
+      1,
+      1,
+      23
+    ]
+  ],
+  "damage_rows": 60
+}

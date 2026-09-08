@@ -1,0 +1,98 @@
+{
+  "graph_cycles": [
+    {
+      "m": 2,
+      "a": 2,
+      "b": 1,
+      "k": 1,
+      "rule": 23,
+      "row_types": [
+        2,
+        1
+      ],
+      "cycle_edges": [
+        25,
+        38
+      ]
+    },
+    {
+      "m": 1,
+      "a": 1,
+      "b": 0,
+      "k": 1,
+      "rule": 232,
+      "row_types": [
+        1
+      ],
+      "cycle_edges": [
+        21
+      ]
+    }
+  ],
+  "rejected": {
+    "off_code": {
+      "m": 2,
+      "a": 0,
+      "b": 1,
+      "k": 1,
+      "primitive_m": 2,
+      "physical_flips": 1,
+      "rule": -1,
+      "off_code": 4,
+      "outer_conflicts": 0,
+      "witness_input": 1,
+      "witness_other": -1,
+      "witness_output": 2
+    },
+    "outer_context": {
+      "m": 1,
+      "a": 0,
+      "b": 1,
+      "k": 2,
+      "primitive_m": 1,
+      "physical_flips": 1,
+      "rule": -1,
+      "off_code": 0,
+      "outer_conflicts": 4,
+      "witness_input": 11,
+      "witness_other": 10,
+      "witness_output": 1
+    }
+  },
+  "damage": {
+    "reentered_changed": {
+      "m": 2,
+      "a": 1,
+      "b": 2,
+      "k": 1,
+      "rule": 23,
+      "n": 5,
+      "damaged_row": 0,
+      "h": 1,
+      "initial": 9,
+      "decoded": 31,
+      "natural": 15,
+      "damaged_rows": [
+        0,
+        31
+      ]
+    },
+    "reentered_undamaged": {
+      "m": 2,
+      "a": 1,
+      "b": 2,
+      "k": 1,
+      "rule": 23,
+      "n": 5,
+      "damaged_row": 0,
+      "h": 2,
+      "initial": 4,
+      "decoded": 0,
+      "natural": 0,
+      "damaged_rows": [
+        31,
+        0
+      ]
+    }
+  }
+}

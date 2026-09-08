@@ -1,0 +1,10 @@
+{
+  "independent_vertical_truth_words": 17472,
+  "independent_variable_edge_return_searches": 796,
+  "independent_rule_cadence_decisions": 768,
+  "conveyor_finite_state_tick_checks": 14080,
+  "conveyor_scope": "Deductive follow-up: all m>=2; finite checks m2..9, n5/7, two vertical laps.",
+  "higher_dimensional_conveyor_field_ticks": 288,
+  "higher_dimensional_scope": "Proof for every positive lower dimension; checks d2/3, transverse m2/3/4, spatial side3, eight seeded fields, two laps.",
+  "script_sha256": "31c320caa966f79d9e2b9d667f5293e2daa9f59e539601a8db787c672690d518"
+}
