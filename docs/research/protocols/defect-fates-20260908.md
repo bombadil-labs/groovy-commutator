@@ -12,7 +12,7 @@ modes, fine horizon 32. Sample times 0,2,...,32. Logical backgrounds are:
 - Every binary word of minimal period p for p=1..4, with each spatial phase
   retained as a different aligned background. Word bit i gives s_i. This is
   22 backgrounds (2+2+6+12), not 22 independent statistical samples.
-- Two random cohorts of 16 nine-to-sixty-five-bit extensions each: generate
+- Two random cohorts of 16 backgrounds each: generate
   the entire 65-bit word s[-32..32] independently with NumPy default_rng seeds
   2026090801 and 2026090802, Bernoulli probability 1/2. Save the actual words.
   These are sampled backgrounds, not an exhaustive longer-horizon statement.
