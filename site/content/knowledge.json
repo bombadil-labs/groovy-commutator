@@ -579,7 +579,8 @@
       "updated": "2026-09-08",
       "source": "docs/knowledge/encoding-is-not-repair.md",
       "research": [
-        "column-compatibility"
+        "column-compatibility",
+        "encoded-defects"
       ]
     },
     {
@@ -635,11 +636,47 @@
       "title": "Does three-dimensional space support a distinctive representation?",
       "kind": "theory",
       "status": "proposed",
-      "summary": "Parallel work proposes a representation specific to three dimensions; its exact object and allowed transformations remain to be specified.",
+      "summary": "Proposed and currently parked: parallel work suggests a representation specific to three dimensions; its precise claim remains unspecified.",
       "updated": "2026-09-08",
       "source": "docs/knowledge/three-dimensional-exception.md",
       "research": [
         "block-compatibility"
+      ]
+    },
+    {
+      "id": "encoded-action-coordination",
+      "title": "A logical action can depend on physical coordination",
+      "kind": "finding",
+      "status": "exact",
+      "summary": "A repeated two-cell flip has one logical response while its components and its isolated version depend strongly on context.",
+      "updated": "2026-09-08",
+      "source": "docs/knowledge/encoded-action-coordination.md",
+      "research": [
+        "encoded-defects"
+      ]
+    },
+    {
+      "id": "rule90-defect-recovery",
+      "title": "The tested Rule-90 defects do not recover within four ticks",
+      "kind": "finding",
+      "status": "exact",
+      "summary": "No initially invalid mask/background case returns at sampled ticks two or four, under the declared periodic and isolated interventions.",
+      "updated": "2026-09-08",
+      "source": "docs/knowledge/rule90-defect-recovery.md",
+      "research": [
+        "encoded-defects"
+      ]
+    },
+    {
+      "id": "encoded-defects-test",
+      "title": "The finite-cone defect experiment is complete",
+      "kind": "experiment",
+      "status": "completed",
+      "summary": "Independent implementations agree on 196,608 response fields and the complete recovery and pair-interaction records.",
+      "updated": "2026-09-08",
+      "source": "docs/knowledge/encoded-defects-test.md",
+      "research": [
+        "encoded-defects"
       ]
     }
   ],
@@ -1214,6 +1251,51 @@
       "reason": "The claim is witnessed by the same explicit six-cell code and its translation identities.",
       "research": [
         "block-compatibility"
+      ]
+    },
+    {
+      "source": "encoded-defects-test",
+      "type": "supports",
+      "target": "encoded-action-coordination",
+      "reason": "All response fields and pair interactions are independently audited for the fixed code and declared actions.",
+      "research": [
+        "encoded-defects"
+      ]
+    },
+    {
+      "source": "encoded-defects-test",
+      "type": "supports",
+      "target": "rule90-defect-recovery",
+      "reason": "The complete causal-window enumeration verifies bounded non-recovery without artificial boundary effects.",
+      "research": [
+        "encoded-defects"
+      ]
+    },
+    {
+      "source": "encoded-action-coordination",
+      "type": "depends_on",
+      "target": "block-encoded-rule90",
+      "reason": "The matched action and its all-even-time response use the exact six-cell Rule-90 encoding.",
+      "research": [
+        "encoded-defects"
+      ]
+    },
+    {
+      "source": "rule90-defect-recovery",
+      "type": "depends_on",
+      "target": "block-encoded-rule90",
+      "reason": "Validity and recovery are defined relative to the fixed invariant six-cell code.",
+      "research": [
+        "encoded-defects"
+      ]
+    },
+    {
+      "source": "rule90-defect-recovery",
+      "type": "supports",
+      "target": "encoding-is-not-repair",
+      "reason": "A further scoped example separates invariant encoded dynamics from repair of physical damage; it does not negate the earlier Rule-23 recovery cases.",
+      "research": [
+        "encoded-defects"
       ]
     }
   ]

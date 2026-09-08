@@ -1,0 +1,33 @@
+{
+  "shape": [
+    2,
+    64,
+    3,
+    512
+  ],
+  "axes": [
+    "mode",
+    "mask",
+    "sample_time",
+    "background"
+  ],
+  "modes": [
+    "periodic",
+    "isolated"
+  ],
+  "times": [
+    0,
+    2,
+    4
+  ],
+  "dtype": "uint8",
+  "order": "C",
+  "meanings": {
+    "0": "same",
+    "1": "valid_changed",
+    "2": "outside"
+  },
+  "raw_sha256": "b5c5e725c261086682ebed0f3e7c26ea3cddde26912b3844a61b5f1262af57a4",
+  "compression": "zlib+base64",
+  "data": "eNrt1QENADAIA7CBf9EXcAMka000AaDRAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADAAQNAJQMCAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHBZAKhkQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPg9C+niTA=="
+}

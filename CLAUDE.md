@@ -26,7 +26,8 @@ revisable. Observed-history prediction is one workstream. Keep it distinct
 from historical influence within the dynamics and from future capability.
 The finite repertoire and costed/returning-task comparisons are complete;
 learning reusable primitives remains open. The latest completed unit is the
-block-compatibility search. Read its continuation below before the historical
+encoded-defects experiment. The 3D hypothesis is parked by explicit user
+instruction; continue the fixed 2D workstream. Read its continuation below before the historical
 agenda checkpoint and dimensional/provenance continuations.
 Do not promote earlier dialogue's unverified numbers or ethical analogies into results.
 
@@ -546,6 +547,47 @@ allowed maps and preserved property before freezing a 2D/3D/4D test. Three
 rows in a 2D block are not three spatial dimensions. Do not invent a mechanism
 to fit three or conflate ordinary storage with operational invariance. The
 boundary/individuation question remains parked; remainder feedback undefined.
+
+## Research continuation: isolated and periodic defects (2026-09-08)
+
+User explicitly parked the three-dimensional hypothesis and requested work on
+what is already before us. Do not ask for its formulation or make a dimensional
+comparison the next prerequisite. The previous paragraph's 3D next target is
+superseded as an active priority, not mathematically refuted.
+
+`docs/research/2026-09-08-encoded-defects.md` completes the next fixed-2D unit.
+Protocol ef79c56 and both instruments a2b59a2 were committed before evaluation.
+All 64 six-cell XOR masks, 512 logical backgrounds (-4..4), periodic vertical
+application versus one isolated block; fine times 0/2/4. Shrinking causal
+windows cover every affected block without artificial boundaries. Thus the
+isolated cases are genuine finite defects on the infinite encoded plane.
+
+No initially invalid case returns at fine ticks 2 or 4: 31,744 periodic and
+32,256 isolated cases. Repeated mask 33 is a valid logical flip from the start;
+it has one background-independent response. At tick 4, its individual masks
+1/32 each have 200 responses in periodic mode; isolated 1/32 have 177 each,
+isolated 33 has 200. Pair interaction J=delta_pair XOR delta_A XOR delta_B
+is nonzero on all 512 backgrounds for periodic (1,32) at ticks 2/4; isolated
+pair has zero at tick 2 and 440/512 nonzero at tick 4. All 15 periodic pairs
+interact on all backgrounds at tick 4; 14/15 isolated pairs do, except (1,32).
+
+Crucial validity distinction: isolated mask 33 initially leaves all individual
+blocks valid but violates equality between vertical copies. For finite isolated
+damage, global recovery at any finite time must equal undamaged evolution,
+since remote unchanged copies fix all logical content. This is architecture-
+specific, not a general no-go for localized computation.
+
+Independent bitset audit agrees on 196,608 full sampled response fields, 384
+aggregate records, all classifications, and 90 pair records. Source hashes,
+response digests, compact classifications and witnesses in results/encoded_
+defects_20260908*. No permanence claim: horizon four fine ticks, sampled at
+the stationary even phase. Other shifted phases are not classified.
+
+Next within 2D: determine whether invalid responses spread, move away, or
+enter another usable representation. Freeze a longer causal horizon or derive
+a structural constraint before calling a survivor persistent. Preserve the
+distinction between loss of the original code and loss of all organization.
+Remainder feedback remains undefined; boundary/individuation stays parked.
 
 ## Research agenda checkpoint: preserve unfinished threads (2026-09-08)
 
