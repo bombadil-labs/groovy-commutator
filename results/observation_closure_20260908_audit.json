@@ -1,0 +1,12 @@
+{
+  "exact_derivative_rules": 30,
+  "local_factor_checks": 310,
+  "all_local_factor_checks_pass": true,
+  "block2_matches_scale_rhyme": true,
+  "forbidden_derivative_neighborhoods": {
+    "23": [2],
+    "178": [2],
+    "77": [5],
+    "232": [5]
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "observer_truth_tables": {
+    "1": {"name": "NOR", "complement": 14, "family": "and_or"},
+    "2": {"name": "x_and_not_y", "complement": 13, "family": "directional"},
+    "3": {"name": "not_y", "complement": 12, "family": "projection"},
+    "4": {"name": "not_x_and_y", "complement": 11, "family": "directional"},
+    "5": {"name": "not_x", "complement": 10, "family": "projection"},
+    "6": {"name": "XOR", "complement": 9, "family": "parity"},
+    "7": {"name": "NAND", "complement": 8, "family": "and_or"}
+  },
+  "sizes": [8, 10, 12, 14, 16],
+  "rules_with_any_memoryless_block2_observer_n12": 92,
+  "rules_with_any_stabilized_observer": 154,
+  "min_hstar_n16_distribution": {"0": 92, "1": 36, "2": 4, "3": 30, "4": 38, "5": 28, "6": 20, "7": 4, "17": 4},
+  "memoryless_n12_by_observer_and_class": {
+    "1": {"I": 11, "II": 26},
+    "2": {"I": 6, "II": 20},
+    "3": {"I": 8, "II": 12, "III": 8},
+    "4": {"I": 6, "II": 20},
+    "5": {"I": 8, "II": 12, "III": 8},
+    "6": {"I": 6, "II": 6, "III": 8},
+    "7": {"I": 11, "II": 26}
+  },
+  "scaling_by_observer_pair": {
+    "1": {"monotone_growing": 138, "stabilized_last3": 96, "nonmonotone": 22},
+    "2": {"monotone_growing": 160, "stabilized_last3": 82, "nonmonotone": 14},
+    "3": {"monotone_growing": 134, "stabilized_last3": 116, "nonmonotone": 6},
+    "4": {"monotone_growing": 160, "stabilized_last3": 82, "nonmonotone": 14},
+    "5": {"monotone_growing": 134, "stabilized_last3": 116, "nonmonotone": 6},
+    "6": {"monotone_growing": 148, "stabilized_last3": 100, "nonmonotone": 8},
+    "7": {"monotone_growing": 138, "stabilized_last3": 96, "nonmonotone": 22}
+  },
+  "best_memory_scaling_by_class": {
+    "I": {"winner_has_stabilized": 16, "winner_growing": 8},
+    "II": {"winner_has_stabilized": 122, "winner_growing": 70},
+    "III": {"winner_growing": 12, "winner_has_stabilized": 12, "winner_nonmonotone_or_unresolved": 2},
+    "IV": {"winner_growing": 14}
+  }
+}
