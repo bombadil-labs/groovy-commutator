@@ -1,0 +1,17 @@
+{
+  "ok": true,
+  "domain": {"negative": [-256,-65], "positive": [65,256], "cases": 384},
+  "extreme_mass_counts": {"1": 336, "2": 48},
+  "complete_field_agreement_ticks": 64032,
+  "changed_points_compared": 4677264,
+  "failures": [],
+  "seconds": 33.037,
+  "source_sha256": {
+    "script": "87d3a537998a7b130e51ff304ccc14051f697104977931cd26a26f466fdb4b4c",
+    "protocol": "e14caf88251ca59ff381165ca4a81ab98812534cccbc6f95636999e6615c3c38",
+    "primary_instrument": "c7eba0b993a254d0df0b1761bf2785cd31f54cc557c4e0b929b2efdb04f6f6dc",
+    "audit_instrument": "e6e95744f768a3a6e173820684e697eb8fdb9378a4638ba304649e081ddbd00a"
+  },
+  "formula_checks": {"departure":384,"exterior":384,"extreme_mass":384,"persistent_parity":384,"passes":384},
+  "publication_note": "Compact confirmatory summary. The committed fresh-range checker reproduces the 384 per-case predicted/observed scalars, first-exterior supports, parity checks and field digests."
+}
