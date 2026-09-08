@@ -24,9 +24,10 @@ Start with `docs/research/2026-09-07-history-and-possibility.md` for the wider
 program: how inherited structure enables further activity and remains
 revisable. Observed-history prediction is one workstream. Keep it distinct
 from historical influence within the dynamics and from future capability.
-The first new bridge is the completed finite repertoire experiment; the next
-larger proposal concerns fixed versus revisable compiled primitives. Do not
-promote earlier dialogue's unverified numbers or ethical analogies into results.
+The finite repertoire and costed/returning-task comparisons are complete;
+learning reusable primitives remains open. For the latest unfinished work,
+read the agenda checkpoint below and the dimensional/provenance continuations.
+Do not promote earlier dialogue's unverified numbers or ethical analogies into results.
 
 Capture each substantial new experiment, correction, or open research plan
 as a dated Markdown note in `docs/research/` and register it in
@@ -458,6 +459,48 @@ continuation, and preserving responses to a declared action set. Choose target,
 representation budget and decoder before scoring. This full-ECA observational
 map does not yet implement a higher-dimensional evolutionary law or remove the
 outer-totalistic domain restriction from the separate dimensional interpreter.
+
+## Research agenda checkpoint: preserve unfinished threads (2026-09-08)
+
+After discussing [Thinking Like a Function](https://myk.pub/thinking-like-a-function-16),
+the user asked to record the boundary question and revisit earlier unfinished
+work before choosing the next experiment. No new experiment was selected or
+run at this checkpoint. The following is a backlog, not a new frozen protocol.
+
+- **Previously recorded next priority — dimensional compatibility.** The local
+  encoding and symmetry audit are complete; a globally compatible evolving
+  representation remains open. Specify how overlapping encodings coexist,
+  remain valid under evolution, and decode across dimensions with a fixed
+  budget. The provenance experiment is complete but does not supply that
+  higher-dimensional dynamics. It adds the requirement to distinguish rule
+  identity, natural continuation, and responses to declared interventions.
+- **Related open question — remainder feedback.** Can a specified feedback
+  law sustain compatibility between representations? Earlier mutual and
+  derivative replacement models cycled on the tested finite systems. Feeding
+  a compatibility mismatch back into the dimensional construction remains
+  undefined and untested. Full-base-state change transport closes by identity;
+  a bounded-context criterion would need separate design and evaluation.
+- **Deferred spatial controls.** Compare Gray-code and geometric assignments
+  on larger grids; separately define a locally stored changeable decoder.
+  The dimensional-compatibility priority explicitly deferred these questions,
+  rather than completing them. See the shared-state/rule continuation above.
+- **Earlier open branches.** Learning/discovering reusable primitives with
+  charged search and uncertain future tasks; residual-error structure and
+  training-budget controls in the regional history experiment; selective
+  historical influence, reciprocal constraint, and decomposition/reconstitution
+  in `docs/research/2026-09-07-history-and-possibility.md`. Earlier dialogue's
+  state-gated derivative-memory measurements still require artifact recovery
+  and verification; the separate `mu(S_previous)` reversibility study is not
+  a substitute for that model.
+- **Parked boundary/individuation question.** How are process boundaries
+  established, sustained, changed, or dissolved, and which forms of continuity
+  let a unit remain usable within larger processes? Record the user's
+  function-as-holon correction as motivation for later operational definitions.
+  This question does not automatically supersede the unfinished work above.
+
+The proposed Class-IV connection remains downstream of a defined, nontrivial
+compatibility criterion; there is still no persistence score or enrichment
+result. This checkpoint adds no experimental finding.
 
 ## Research continuation: observed history (2026-09-07)
 
