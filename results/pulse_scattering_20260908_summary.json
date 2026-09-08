@@ -1,47 +1,8 @@
 {
-  "discovery": {
-    "domain": [-64, 64],
-    "cases": 129,
-    "frozen_primary_status_counts": {"escape-both": 113, "unresolved-through-192": 16},
-    "post_census_generalized_escape_certificates": 129,
-    "generalized_certificate_failures": [],
-    "arithmetic_formula_failures": [],
-    "extreme_multiplicity_counts": {"1x1": 113, "2x2": 16},
-    "annihilations": 0,
-    "post_departure_reconstitutions": 0
-  },
-  "independent_audit": {
-    "ok": true,
-    "checked_ticks": 7399,
-    "checked_changed_points": 21287358,
-    "shards": [[-64,-49],[-48,-33],[-32,-17],[-16,-1],[0,31],[32,64]],
-    "shard_seconds": [12.78,17.826,25.577,37.599,0.071,0.316]
-  },
-  "fresh_confirmatory": {
-    "domain": {"negative": [-256,-65], "positive": [65,256], "cases": 384},
-    "cases": 384,
-    "ok": true,
-    "extreme_mass_counts": {"1": 336, "2": 48},
-    "complete_field_agreement_ticks": 64032,
-    "changed_points_compared": 4677264,
-    "failures": 0
-  },
-  "contact_template_proof_audit": {
-    "ok": true,
-    "contact_template_assignments": 512,
-    "contact_departure_assignments": 512,
-    "negative_even_cancellation_assignments": 128
-  },
-  "all_integer_claim": {
-    "scope": "one upper and one lower single-bit Rule-90 pulse in the fixed adjacent-strip architecture, arbitrary integer relative displacement d",
-    "conclusion": "every displacement leaves V0 and reaches two transmitting extreme-row supports that move outward forever"
-  },
-  "storage": {
-    "primary_raw_bytes": 9774093,
-    "primary_raw_sha256": "5afd85a2b75e5f2f0990da3b763f4b0ca3a34277525700cfef0f175fcaed04ba",
-    "published_primary_observables": "results/pulse_scattering_20260908_primary_metrics.json",
-    "published_primary_bytes": 39211,
-    "published_format": "case-level discovery observables; full per-tick trajectory SHA256 retained, full run reproducible from committed script/protocol",
-    "execution_note": "Primary trajectories were materialized per displacement after the monolithic process exceeded the local execution ceiling; run_one logic, domain, and criteria were unchanged. The frozen scalar audit shard -16..-1 was further subdivided for execution only and then reaggregated."
-  }
+  "discovery": {"domain":[-64,64],"cases":129,"frozen_primary_status_counts":{"escape-both":113,"unresolved-through-192":16},"post_census_generalized_escape_certificates":129,"generalized_certificate_failures":[],"arithmetic_formula_failures":[],"extreme_multiplicity_counts":{"1x1":113,"2x2":16},"annihilations":0,"post_departure_reconstitutions":0},
+  "independent_audit": {"ok":true,"checked_ticks":7399,"checked_changed_points":21287358,"shards":[[-64,-49],[-48,-33],[-32,-17],[-16,-1],[0,31],[32,64]],"shard_seconds":[12.78,17.826,25.577,37.599,0.071,0.316]},
+  "fresh_confirmatory": {"domain":{"negative":[-256,-65],"positive":[65,256],"cases":384},"cases":384,"ok":true,"extreme_mass_counts":{"1":336,"2":48},"complete_field_agreement_ticks":64032,"changed_points_compared":4677264,"failures":0},
+  "contact_template_proof_audit": {"ok":true,"contact_template_assignments":512,"contact_departure_assignments":512,"negative_even_cancellation_assignments":128},
+  "all_integer_claim": {"scope":"one upper and one lower single-bit Rule-90 pulse in the fixed adjacent-strip architecture, arbitrary integer relative displacement d","conclusion":"every displacement leaves V0 and reaches two transmitting extreme-row supports that move outward forever"},
+  "storage": {"primary_raw_bytes":9774093,"primary_raw_sha256":"5afd85a2b75e5f2f0990da3b763f4b0ca3a34277525700cfef0f175fcaed04ba","published_primary_observables":"results/pulse_scattering_20260908_primary_metrics.json","published_primary_bytes":8387,"published_format":"case-level discovery observables; full per-tick trajectory SHA256 retained, full run reproducible from committed script/protocol","execution_note":"Primary trajectories were materialized per displacement after the monolithic process exceeded the local execution ceiling; run_one logic, domain, and criteria were unchanged. The frozen scalar audit shard -16..-1 was further subdivided for execution only and then reaggregated."}
 }
