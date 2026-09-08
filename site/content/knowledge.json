@@ -387,6 +387,54 @@
       "research": [
         "returning-tasks"
       ]
+    },
+    {
+      "id": "shared-state-rule",
+      "title": "A shared space for states and rules",
+      "kind": "concept",
+      "status": "defined",
+      "summary": "An eight-bit pattern can act as configuration, rule table, or difference once a decoder is specified.",
+      "updated": "2026-09-08",
+      "source": "docs/knowledge/shared-state-rule.md",
+      "research": [
+        "shared-state-rule"
+      ]
+    },
+    {
+      "id": "neighborhood-selector",
+      "title": "Eight neighbors can supply their center\u2019s rule",
+      "kind": "finding",
+      "status": "exact",
+      "summary": "For either declared address axis, all 40,320 assignments give nine-essential-input, degree-four rules; 36,000 functions are distinct.",
+      "updated": "2026-09-08",
+      "source": "docs/knowledge/neighborhood-selector.md",
+      "research": [
+        "shared-state-rule"
+      ]
+    },
+    {
+      "id": "encoding-changes-dynamics",
+      "title": "The state-to-rule assignment changes the dynamics",
+      "kind": "finding",
+      "status": "exact",
+      "summary": "Changing only the encoding or address axis changes finite dynamics; a consistent rotation of the whole construction preserves them.",
+      "updated": "2026-09-08",
+      "source": "docs/knowledge/encoding-changes-dynamics.md",
+      "research": [
+        "shared-state-rule"
+      ]
+    },
+    {
+      "id": "shared-space-test",
+      "title": "Shared-space and spatial-selector enumeration",
+      "kind": "experiment",
+      "status": "completed",
+      "summary": "The frozen protocol covers 168 complete finite graphs and 80,640 local assignment/axis cases.",
+      "updated": "2026-09-08",
+      "source": "docs/knowledge/shared-space-test.md",
+      "research": [
+        "shared-state-rule"
+      ]
     }
   ],
   "edges": [
@@ -735,6 +783,51 @@
       "reason": "The repeated-cycle result relies on the one-time trace reserve and the declared management prices.",
       "research": [
         "returning-tasks"
+      ]
+    },
+    {
+      "source": "neighborhood-selector",
+      "type": "depends_on",
+      "target": "shared-state-rule",
+      "reason": "The selector uses the explicitly declared identification between surrounding bits and rule outputs.",
+      "research": [
+        "shared-state-rule"
+      ]
+    },
+    {
+      "source": "encoding-changes-dynamics",
+      "type": "depends_on",
+      "target": "shared-state-rule",
+      "reason": "An encoding intervention is defined relative to the shared-space decoder.",
+      "research": [
+        "shared-state-rule"
+      ]
+    },
+    {
+      "source": "shared-space-test",
+      "type": "tests",
+      "target": "encoding-changes-dynamics",
+      "reason": "The full finite graphs compare assignment changes with consistent coordinate changes.",
+      "research": [
+        "shared-state-rule"
+      ]
+    },
+    {
+      "source": "shared-space-test",
+      "type": "supports",
+      "target": "neighborhood-selector",
+      "reason": "Every local input and every permutation is enumerated, with an independent polynomial audit for selected tables.",
+      "research": [
+        "shared-state-rule"
+      ]
+    },
+    {
+      "source": "shared-space-test",
+      "type": "supports",
+      "target": "encoding-changes-dynamics",
+      "reason": "The finite graph counts differ under encoding interventions and satisfy the rotation conjugacy controls.",
+      "research": [
+        "shared-state-rule"
       ]
     }
   ]

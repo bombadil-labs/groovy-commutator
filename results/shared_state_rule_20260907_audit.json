@@ -1,0 +1,8 @@
+{
+  "polynomial_output_checks": 24576,
+  "scalar_longest_cycle_steps": 628,
+  "quartic_terms_per_selector": 6,
+  "distinct_tables_per_axis": 36000,
+  "script_sha256": "2a3bdfa58ee3f6e8c44779c0cf553f70cbb09558a7fe90fdbc3de3c6d9a3b3aa",
+  "scope": "post-enumeration audit; proofs and combinatorial counts in Research note"
+}

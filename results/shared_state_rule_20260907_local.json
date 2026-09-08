@@ -1,0 +1,51 @@
+{
+  "horizontal": {
+    "permutations": 40320,
+    "distinct_tables": 36000,
+    "joint_histogram": [
+      {
+        "ones": 192,
+        "essential": 9,
+        "degree": 4,
+        "count": 10080
+      },
+      {
+        "ones": 256,
+        "essential": 9,
+        "degree": 4,
+        "count": 20160
+      },
+      {
+        "ones": 320,
+        "essential": 9,
+        "degree": 4,
+        "count": 10080
+      }
+    ]
+  },
+  "vertical": {
+    "permutations": 40320,
+    "distinct_tables": 36000,
+    "joint_histogram": [
+      {
+        "ones": 192,
+        "essential": 9,
+        "degree": 4,
+        "count": 10080
+      },
+      {
+        "ones": 256,
+        "essential": 9,
+        "degree": 4,
+        "count": 20160
+      },
+      {
+        "ones": 320,
+        "essential": 9,
+        "degree": 4,
+        "count": 10080
+      }
+    ]
+  },
+  "distinct_tables_both_axes": 72000
+}

@@ -1,0 +1,282 @@
+[
+  {
+    "model": "ring",
+    "mode": "frozen",
+    "width": 8,
+    "max_period": {
+      "default": 40,
+      "min": 40,
+      "max": 40
+    },
+    "recurrent": {
+      "default": 15120,
+      "min": 15120,
+      "max": 15120
+    },
+    "fixed": {
+      "default": 2192,
+      "min": 2192,
+      "max": 2192
+    },
+    "image": {
+      "default": 31450,
+      "min": 31450,
+      "max": 31450
+    },
+    "max_transient": {
+      "default": 18,
+      "min": 18,
+      "max": 18
+    },
+    "largest_basin": {
+      "default": 256,
+      "min": 256,
+      "max": 256
+    },
+    "commutator_nonzero": {
+      "default": 56720,
+      "min": 56720,
+      "max": 56720
+    }
+  },
+  {
+    "model": "ring",
+    "mode": "mutual",
+    "width": 8,
+    "max_period": {
+      "default": 4,
+      "min": 2,
+      "max": 8
+    },
+    "recurrent": {
+      "default": 155,
+      "min": 86,
+      "max": 250
+    },
+    "fixed": {
+      "default": 99,
+      "min": 44,
+      "max": 139
+    },
+    "image": {
+      "default": 29877,
+      "min": 28207,
+      "max": 29969
+    },
+    "max_transient": {
+      "default": 20,
+      "min": 20,
+      "max": 31
+    },
+    "largest_basin": {
+      "default": 33694,
+      "min": 28384,
+      "max": 33694
+    },
+    "commutator_nonzero": {
+      "default": 64403,
+      "min": 64234,
+      "max": 64540
+    }
+  },
+  {
+    "model": "ring",
+    "mode": "derivative",
+    "width": 8,
+    "max_period": {
+      "default": 4,
+      "min": 3,
+      "max": 6
+    },
+    "recurrent": {
+      "default": 14,
+      "min": 6,
+      "max": 24
+    },
+    "fixed": {
+      "default": 1,
+      "min": 1,
+      "max": 1
+    },
+    "image": {
+      "default": 16844,
+      "min": 16844,
+      "max": 16844
+    },
+    "max_transient": {
+      "default": 26,
+      "min": 23,
+      "max": 42
+    },
+    "largest_basin": {
+      "default": 50759,
+      "min": 44294,
+      "max": 52016
+    },
+    "commutator_nonzero": {
+      "default": 64161,
+      "min": 64005,
+      "max": 64278
+    }
+  },
+  {
+    "model": "selector2d",
+    "mode": "horizontal",
+    "width": 3,
+    "max_period": {
+      "default": 12,
+      "min": 3,
+      "max": 15
+    },
+    "recurrent": {
+      "default": 95,
+      "min": 11,
+      "max": 110
+    },
+    "fixed": {
+      "default": 2,
+      "min": 2,
+      "max": 14
+    },
+    "image": {
+      "default": 260,
+      "min": 221,
+      "max": 317
+    },
+    "max_transient": {
+      "default": 5,
+      "min": 5,
+      "max": 14
+    },
+    "largest_basin": {
+      "default": 69,
+      "min": 39,
+      "max": 487
+    },
+    "commutator_nonzero": {
+      "default": 501,
+      "min": 429,
+      "max": 501
+    }
+  },
+  {
+    "model": "selector2d",
+    "mode": "horizontal",
+    "width": 4,
+    "max_period": {
+      "default": 12,
+      "min": 4,
+      "max": 56
+    },
+    "recurrent": {
+      "default": 710,
+      "min": 138,
+      "max": 1192
+    },
+    "fixed": {
+      "default": 2,
+      "min": 2,
+      "max": 66
+    },
+    "image": {
+      "default": 29220,
+      "min": 20188,
+      "max": 29220
+    },
+    "max_transient": {
+      "default": 26,
+      "min": 10,
+      "max": 26
+    },
+    "largest_basin": {
+      "default": 2860,
+      "min": 1572,
+      "max": 64065
+    },
+    "commutator_nonzero": {
+      "default": 65452,
+      "min": 63208,
+      "max": 65516
+    }
+  },
+  {
+    "model": "selector2d",
+    "mode": "vertical",
+    "width": 3,
+    "max_period": {
+      "default": 3,
+      "min": 3,
+      "max": 12
+    },
+    "recurrent": {
+      "default": 38,
+      "min": 11,
+      "max": 113
+    },
+    "fixed": {
+      "default": 14,
+      "min": 2,
+      "max": 14
+    },
+    "image": {
+      "default": 269,
+      "min": 143,
+      "max": 287
+    },
+    "max_transient": {
+      "default": 8,
+      "min": 3,
+      "max": 8
+    },
+    "largest_basin": {
+      "default": 409,
+      "min": 69,
+      "max": 460
+    },
+    "commutator_nonzero": {
+      "default": 432,
+      "min": 372,
+      "max": 501
+    }
+  },
+  {
+    "model": "selector2d",
+    "mode": "vertical",
+    "width": 4,
+    "max_period": {
+      "default": 4,
+      "min": 4,
+      "max": 20
+    },
+    "recurrent": {
+      "default": 342,
+      "min": 342,
+      "max": 860
+    },
+    "fixed": {
+      "default": 66,
+      "min": 2,
+      "max": 116
+    },
+    "image": {
+      "default": 21964,
+      "min": 21556,
+      "max": 29220
+    },
+    "max_transient": {
+      "default": 11,
+      "min": 8,
+      "max": 26
+    },
+    "largest_basin": {
+      "default": 61081,
+      "min": 2048,
+      "max": 61081
+    },
+    "commutator_nonzero": {
+      "default": 63958,
+      "min": 63958,
+      "max": 65522
+    }
+  }
+]

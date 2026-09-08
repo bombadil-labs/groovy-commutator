@@ -198,8 +198,9 @@ workflow; research source and result changes now also trigger that workflow.
      S(t+1)[i] a fixed function of S(t)[i-3..i+4] — i.e. ONE uniform
      radius-4 CA. Verified cell-by-cell against the explicit 256-entry
      window LUT. Same moral as the prehoc collapse theorem: same-time
-     self-reference buys nothing; the rule field must have its own
-     memory.
+     rule extraction remains a fixed local CA. A persistent rule field is
+     one different construction, not a prerequisite for meaningful
+     instruction/state representations (see the September 8 shared-space note).
    - **State-gated rule transport** (`step_gated_diffusion`: live cell
      copies left neighbor's rule, dead cell keeps its own; R persists):
      60 seeds, n=100, 200 steps. Diversity falls 82 → 20 median distinct
@@ -350,8 +351,42 @@ configurations, not independent replicates. Reactive policies deliberately
 do not learn the recurring schedule; oracle gains include future information.
 The original future-repertoire insight is promoted into Concepts #possibility.
 Separately address learning/discovery and search costs before claiming
-adaptation, and read the user's latest Narrative Calculus discussion before
-choosing another experimental direction.
+adaptation. The user subsequently confirmed the recovered Narrative Calculus
+gist and explicitly selected shared state/rule spaces and the eight-neighbor
+2D connection as the next experiment; the full parallel-chat tail remains
+unavailable and is not treated as evidence.
+
+## Research continuation: shared state and rule space (2026-09-08)
+
+Completed `docs/research/2026-09-08-shared-state-rule.md`, with protocol and
+implementation committed before evaluation. `experiment_shared_state_rule.py`
+enumerates 168 complete graphs: 24 encodings × three eight-cell ring modes,
+plus 24 encodings × two address axes × two square sizes (3/4). Every pair
+(r,s) is included in ring graphs; all states are included in square graphs.
+All 80,640 local permutation/axis cases are evaluated on all 512 inputs.
+
+The eight-neighbor selector has r_k = neighbor[p[k]], q = 4W+2C+E (or 4N+2C+S),
+and next center = neighbor[p[q]]. Every permutation has nine essential inputs,
+exactly six quartic terms and degree four. There are 36,000 distinct functions
+per axis. The proof and independent polynomial audit were post-enumeration.
+These local results hold independently of grid size; global cycle results do not.
+
+The default 4x4 horizontal/vertical selectors have longest cycles 12/4 and
+fixed points 2/66. Rotate both axis and decoder to obtain conjugate dynamics;
+changing only the axis is a different intervention. Frozen ring longest cycle
+40 is encoding-invariant. Mutual ring longest cycles range 2–8, derivative
+replacement 3–6 across the declared encodings: feedback alone does not sustain
+novelty. Full states still have one successor under a fixed meta-law.
+
+65,536 engine checks, 5,376 independent orbits, all graph accounting,
+24 frozen conjugacies and mutual symmetries, 24,576 scalar local checks,
+1,585,152 rotated-state comparisons and 24,576 independent polynomial outputs
+pass. Source/result hashes and all selected encodings are recorded.
+
+Next: compare a principled Gray-code assignment and geometric controls on
+larger grids; separately specify a locally represented changeable decoder.
+Do not infer that expanding same-time instructions to a fixed local rule
+makes them meaningless, or that memory is the only interesting mechanism.
 
 ## Research continuation: observed history (2026-09-07)
 
@@ -449,9 +484,10 @@ section 6 for the full writeup and citations.
   implemented, see established result 8 (`nonuniform.py`). The
   historically-grounded framing (von Neumann's self-reproducing automaton
   carried construction instructions as patterns in the same substrate
-  they acted on) turned out to have a sharp resolution: same-time
-  self-reference collapses to a bigger uniform CA; rule-as-state becomes
-  real exactly when the rule field carries its own memory.
+  they acted on) admits a useful representational statement: same-time
+  rule extraction expands to a bigger uniform CA. This does not invalidate
+  the instructional interpretation or establish memory as the only useful
+  mechanism; see the September 8 shared-space note.
 
 ## Conventions
 - Use `src/groovy/ca.py`'s vectorized `apply_rule` for anything beyond toy
