@@ -1,0 +1,27 @@
+{
+  "derivative": {
+    "exact_closure_rules": 30,
+    "n16_survivors": 30,
+    "all_local_factor_checks_pass": true,
+    "same_rule": [0, 4, 60, 90, 102, 150, 170, 200, 204, 240],
+    "bias_flip": [15, 51, 85, 105, 153, 165, 195, 255],
+    "variable_commutator_drain": [12, 68, 76, 205, 207, 221, 223, 236],
+    "variable_commutator_nonconstant_factor": [23, 77, 178, 232]
+  },
+  "block2": {
+    "triples": 404,
+    "fine_rules": 92,
+    "coarse_rules": 24,
+    "matches_scale_rhyme": true,
+    "fixed_points": [60, 90, 102, 128, 136, 150, 153, 165, 170, 192, 195, 204, 238, 240, 252, 254]
+  },
+  "block3": {
+    "triples": 3312,
+    "fine_rules": 141,
+    "coarse_rules": 14,
+    "fixed_points": [15, 51, 85, 128, 136, 170, 192, 204, 238, 240, 252, 254]
+  },
+  "fixed_point_intersection": [128, 136, 170, 192, 204, 238, 240, 252, 254],
+  "block2_only_fixed_points": [60, 90, 102, 150, 153, 165, 195],
+  "block3_only_fixed_points": [15, 51, 85]
+}

@@ -1,0 +1,50 @@
+{
+  "definition": "h* is the least past-history depth making the next observed whole state deterministic for every microstate",
+  "sizes": [8, 10, 12, 14, 16],
+  "derivative": {
+    "scaling_kind_counts": {"stabilized_last3": 192, "monotone_growing": 56, "nonmonotone": 8},
+    "by_wolfram_class": {
+      "I": {"stabilized_last3": 16, "monotone_growing": 8},
+      "II": {"stabilized_last3": 138, "monotone_growing": 48, "nonmonotone": 6},
+      "III": {"stabilized_last3": 24, "nonmonotone": 2},
+      "IV": {"stabilized_last3": 14}
+    },
+    "hstar_distributions": {
+      "8": {"0": 30, "1": 152, "2": 34, "3": 10, "4": 10, "5": 16, "6": 4},
+      "10": {"0": 30, "1": 146, "2": 22, "3": 6, "4": 18, "5": 8, "6": 10, "7": 12, "8": 4},
+      "12": {"0": 30, "1": 146, "2": 20, "3": 4, "4": 16, "5": 10, "7": 4, "8": 10, "9": 12, "10": 4},
+      "14": {"0": 30, "1": 144, "2": 24, "3": 2, "5": 4, "6": 18, "7": 4, "9": 4, "10": 10, "11": 12, "12": 4},
+      "16": {"0": 30, "1": 142, "2": 26, "3": 2, "6": 16, "7": 10, "9": 4, "12": 10, "13": 12, "14": 4}
+    }
+  },
+  "block2_parity": {
+    "scaling_kind_counts": {"monotone_growing": 148, "stabilized_last3": 100, "nonmonotone": 8},
+    "by_wolfram_class": {
+      "I": {"monotone_growing": 16, "stabilized_last3": 8},
+      "II": {"monotone_growing": 116, "stabilized_last3": 76},
+      "III": {"stabilized_last3": 16, "nonmonotone": 8, "monotone_growing": 2},
+      "IV": {"monotone_growing": 14}
+    },
+    "hstar_distributions": {
+      "8": {"0": 20, "1": 74, "2": 78, "3": 78, "4": 2, "7": 4},
+      "10": {"0": 20, "1": 64, "2": 48, "3": 62, "4": 50, "5": 8, "10": 4},
+      "12": {"0": 20, "1": 62, "2": 24, "3": 68, "4": 28, "5": 40, "6": 4, "9": 2, "10": 4, "13": 4},
+      "14": {"0": 20, "1": 62, "2": 8, "3": 46, "4": 54, "5": 20, "6": 38, "10": 4, "15": 4},
+      "16": {"0": 20, "1": 62, "2": 6, "3": 20, "4": 50, "5": 40, "6": 6, "7": 36, "8": 4, "9": 4, "10": 4, "17": 4}
+    }
+  },
+  "derivative_locality_n12_hmax6": {"global_hstar_le6": 226, "radius_1": 180, "radius_2": 218, "radius_3": 222, "radius_4": 226},
+  "matched_target_derivative_n12_T6_hmax6": {"current_closed": 106, "history_repaired": 120, "unresolved": 30},
+  "examples": {
+    "28": {"derivative": [5,7,9,11,13], "block2_parity": [3,4,5,6,7]},
+    "30": {"derivative": [1,1,1,1,1], "block2_parity": [7,10,10,10,10]},
+    "41": {"derivative": [1,1,1,1,1], "block2_parity": [3,5,5,6,7]},
+    "54": {"derivative": [2,2,2,2,2], "block2_parity": [3,3,5,5,8]},
+    "78": {"derivative": [4,6,8,10,12], "block2_parity": [3,4,5,6,7]},
+    "90": {"derivative": [0,0,0,0,0], "block2_parity": [0,0,0,0,0]},
+    "106": {"derivative": [1,1,1,1,1], "block2_parity": [3,5,13,15,17]},
+    "110": {"derivative": [1,1,1,1,1], "block2_parity": [3,4,4,4,5]},
+    "136": {"derivative": [6,8,10,12,14], "block2_parity": [3,4,5,6,7]},
+    "184": {"derivative": [3,4,5,6,7], "block2_parity": [2,3,3,4,4]}
+  }
+}
