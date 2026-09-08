@@ -1,0 +1,9 @@
+{
+  "local_cases": 320,
+  "seconds": 0.067,
+  "sha256": {
+    "scripts/experiment_coupled_strips.py": "3d314567282cfe2e3f5c0ffc8674c7d14a708a26849ec73f3b1aa41778a4801a",
+    "scripts/experiment_column_compatibility.py": "69537d6c44319f588e8ae44d362cef0446f7523316650fff40b534902d854b14",
+    "docs/research/protocols/coupled-strips-20260908.md": "4418d81ece26f7734ec457069f4b7ded4d448ccf46bc01642e1571a3f693bb00"
+  }
+}

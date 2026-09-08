@@ -689,7 +689,8 @@
       "updated": "2026-09-08",
       "source": "docs/knowledge/finite-strip-rule90.md",
       "research": [
-        "defect-fates"
+        "defect-fates",
+        "coupled-strips"
       ]
     },
     {
@@ -714,6 +715,54 @@
       "source": "docs/knowledge/defect-fates-test.md",
       "research": [
         "defect-fates"
+      ]
+    },
+    {
+      "id": "strip-buffer-independence",
+      "title": "One background row keeps aligned strips independent",
+      "kind": "finding",
+      "status": "exact",
+      "summary": "A local two-phase buffer argument proves independent Rule-90 evolution for any aligned collection with positive gaps.",
+      "updated": "2026-09-08",
+      "source": "docs/knowledge/strip-buffer-independence.md",
+      "research": [
+        "coupled-strips"
+      ]
+    },
+    {
+      "id": "adjacent-strip-residual",
+      "title": "Adjacent strips interact but usually leave their code",
+      "kind": "finding",
+      "status": "exact",
+      "summary": "Direct adjacency produces a mixed nonlinear residual on 47 of 64 local inputs, confined to the touching rows.",
+      "updated": "2026-09-08",
+      "source": "docs/knowledge/adjacent-strip-residual.md",
+      "research": [
+        "coupled-strips"
+      ]
+    },
+    {
+      "id": "coupled-strips-test",
+      "title": "The exact two-strip composition test is complete",
+      "kind": "experiment",
+      "status": "completed",
+      "summary": "Independent implementations agree on the complete local truth tables and extensive paired-state and matched-action checks.",
+      "updated": "2026-09-08",
+      "source": "docs/knowledge/coupled-strips-test.md",
+      "research": [
+        "coupled-strips"
+      ]
+    },
+    {
+      "id": "coupled-strip-closure",
+      "title": "Can interacting strips retain an exact joint description?",
+      "kind": "question",
+      "status": "partly-answered",
+      "summary": "Separated strips compose independently; retaining additional interface state may allow a larger description of adjacent interactions.",
+      "updated": "2026-09-08",
+      "source": "docs/knowledge/coupled-strip-closure.md",
+      "research": [
+        "coupled-strips"
       ]
     }
   ],
@@ -1378,6 +1427,60 @@
       "reason": "The exact pulse mass and span follow from the strip identity and Rule-90 shift polynomial.",
       "research": [
         "defect-fates"
+      ]
+    },
+    {
+      "source": "coupled-strips-test",
+      "type": "tests",
+      "target": "coupled-strip-closure",
+      "reason": "The fixed-gap comparison tests exact independence, a valid joint rule, and departure from the existing representation separately.",
+      "research": [
+        "coupled-strips"
+      ]
+    },
+    {
+      "source": "coupled-strips-test",
+      "type": "supports",
+      "target": "strip-buffer-independence",
+      "reason": "The exhaustive local checks and matched actions corroborate the all-gap two-phase buffer proof.",
+      "research": [
+        "coupled-strips"
+      ]
+    },
+    {
+      "source": "coupled-strips-test",
+      "type": "supports",
+      "target": "adjacent-strip-residual",
+      "reason": "All adjacent output fields, code failures and mixed residual polynomials agree with the independent audit.",
+      "research": [
+        "coupled-strips"
+      ]
+    },
+    {
+      "source": "strip-buffer-independence",
+      "type": "depends_on",
+      "target": "finite-strip-rule90",
+      "reason": "The isolation proof uses the specified strip code and its two fine phases.",
+      "research": [
+        "coupled-strips"
+      ]
+    },
+    {
+      "source": "adjacent-strip-residual",
+      "type": "depends_on",
+      "target": "finite-strip-rule90",
+      "reason": "The composition residual compares adjacent placement with the separately established single-strip evolution.",
+      "research": [
+        "coupled-strips"
+      ]
+    },
+    {
+      "source": "coupled-strip-closure",
+      "type": "depends_on",
+      "target": "finite-strip-rule90",
+      "reason": "The open joint-representation problem starts from the fixed two-row strip encoding and ambient interpreter.",
+      "research": [
+        "coupled-strips"
       ]
     }
   ]

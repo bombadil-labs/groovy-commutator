@@ -382,5 +382,26 @@
       "column-compatibility",
       "spacetime-provenance"
     ]
+  },
+  {
+    "slug": "coupled-strips",
+    "number": "018",
+    "title": "When exact strips meet",
+    "date": "2026-09-08",
+    "updated": "2026-09-08",
+    "kind": "Exact composition and interaction",
+    "evidence": "exact",
+    "topic": "History and possibility",
+    "summary": "One background row preserves independent Rule-90 strips. Direct adjacency creates nonlinear cross-influence but usually leaves the declared logical code.",
+    "takeaway": "Physical interaction and composition that preserves a logical representation are different requirements.",
+    "source": "docs/research/2026-09-08-coupled-strips.md",
+    "promotion": {
+      "stage": "research"
+    },
+    "related": [
+      "defect-fates",
+      "encoded-defects",
+      "block-compatibility"
+    ]
   }
 ]

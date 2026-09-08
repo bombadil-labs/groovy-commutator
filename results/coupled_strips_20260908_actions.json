@@ -1,0 +1,13 @@
+{
+  "eligible_gaps": [
+    1,
+    2
+  ],
+  "checks": {
+    "fine_fields": 671744,
+    "coarse_states": 139264,
+    "action_word_states": 196608
+  },
+  "seconds": 6.994,
+  "script_sha256": "f799514a4a5390dcb3fe5c16f2dfd0d7e34ac965ba466a304ec11da357b9a596"
+}
