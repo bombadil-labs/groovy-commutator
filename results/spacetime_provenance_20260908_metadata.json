@@ -1,0 +1,39 @@
+{
+  "checks": {
+    "engine_transitions": 32768,
+    "candidate_multiplicity_panels": 1300744,
+    "direct_partition_checks": 189,
+    "future_bound_panels": 10405952,
+    "nested_mask_cases": 2064384,
+    "witness_derivations": 135
+  },
+  "widths": [
+    6,
+    8,
+    10
+  ],
+  "observed_steps": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "future_steps": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "modes": [
+    "autonomous",
+    "flip_cell_0"
+  ],
+  "aggregate_rows": 168,
+  "numpy": "2.3.5",
+  "protocol_commit": "80639b11948ca39766c7a0c998f60ea885a33045",
+  "protocol_sha256": "03097a142ed6020823b155a92fcbf23bc90a6e8770eb5d58d8235164e97f56e8",
+  "script_sha256": "963df437e8d098250d61fcab19fb354c99f5c347a85d38a0443c3234d10f5c83"
+}

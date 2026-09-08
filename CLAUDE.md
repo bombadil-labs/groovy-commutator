@@ -424,6 +424,41 @@ attempting the full ECA comparison. Keep symmetry equivalence and disputed
 class labels explicit. Recovered parallel-session material is now supplied by
 the user in this thread; its conjectures are not experimental results.
 
+## Research continuation: provenance and action responses (2026-09-08)
+
+`docs/research/2026-09-08-spacetime-provenance.md` answers the user's provenance
+question for 1D rows stacked into a 2D panel. Protocol and implementation were
+committed before evaluation. All 256 rules and every initial ring at n=6/8/10,
+observed transitions 0..6, future horizons 1..4, autonomous and fixed cell-0 flip:
+168 aggregate rows. Candidate rules are exactly r & M = V for visited-input
+mask M, hence 2^(8-popcount(M)) candidates. The rule remains fixed for every
+entire future; no re-selection at each step.
+
+Primary t=2,h=4: autonomous/flipped ambiguous panels are 1384/2260 of 6696 at
+n6, 5444/8998 of 36154 at n8, and 17604/29548 of 173148 at n10. At n8,t6,h4,
+96/42718 panels have natural future ambiguity versus 4134 after the flip;
+10430 still have rule ambiguity. Report distinct-panel denominators; CSV also
+retains generating-pair weighting. No class labels or independent replicates.
+
+The zero n6 panel has 128 possible rules, identical natural futures forever,
+and 38 four-step futures after a flip. Panel [3,25,8] under rules9/137 agrees
+at next row35 then diverges to40/41. Seed23 at n8 exposes all eight rule-table
+inputs in one transition; [23,0] uniquely identifies rule0. Purpose-specific
+future codes can need fewer bits than identifying the rule; codebook/decoder
+cost is not modeled and side information is not inferred from absent data.
+
+32,768 package-engine comparisons, 1,300,744 candidate multiplicities,
+189 direct row-partition checks, 10,405,952 future bounds, 2,064,384 nested-mask
+cases and 135 witness replays pass. The content-addressed witness provenance
+JSON has eight nodes and 135 derivation edges; it is not the full enumeration
+and is separate from the semantic knowledge graph.
+
+Next compatibility work must distinguish preserving a rule, preserving natural
+continuation, and preserving responses to a declared action set. Choose target,
+representation budget and decoder before scoring. This full-ECA observational
+map does not yet implement a higher-dimensional evolutionary law or remove the
+outer-totalistic domain restriction from the separate dimensional interpreter.
+
 ## Research continuation: observed history (2026-09-07)
 
 Recovered **Analysis of Collusion Wiki** research is indexed in
