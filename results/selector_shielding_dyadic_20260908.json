@@ -1,0 +1,42 @@
+{
+  "ok": true,
+  "tick": 256,
+  "row_checks": {
+    "0": {
+      "ok": true,
+      "observed_mass": 133,
+      "expected_mass": 133,
+      "extra": [],
+      "missing": []
+    },
+    "1": {
+      "ok": true,
+      "observed_mass": 193,
+      "expected_mass": 193,
+      "extra": [],
+      "missing": []
+    },
+    "2": {
+      "ok": true,
+      "observed_mass": 256,
+      "expected_mass": 256,
+      "extra": [],
+      "missing": []
+    }
+  },
+  "first_negative_row2": null,
+  "first_lower_failure": null,
+  "complete_field_ticks": 514,
+  "changed_points_compared": 2257852,
+  "coupled_mass_at_256": 30227,
+  "reference_mass_at_256": 20,
+  "coupled_sha256": "f7cb1d4b31408aff13798acd6b01eedcb9e772df305e2e91cf462d6d617c9ec4",
+  "reference_sha256": "dbdb50e66955ca320e8f9ed406544f0f3900f62500430d117e0e3d0662e0ce60",
+  "seconds": 14.463,
+  "source_sha256": {
+    "script": "3705610833d26aefc4b94b5242e0e68f3f9439134def9f6424bea89a9bafb4d9",
+    "protocol": "5a30e013bb309f062db6d8f6597d7678b183e0acb19f3d6172526bb2d52e7910",
+    "dense_kernel": "c7eba0b993a254d0df0b1761bf2785cd31f54cc557c4e0b929b2efdb04f6f6dc",
+    "sparse_kernel": "e6e95744f768a3a6e173820684e697eb8fdb9378a4638ba304649e081ddbd00a"
+  }
+}
