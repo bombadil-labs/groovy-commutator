@@ -53,12 +53,14 @@ Enumerate every integer displacement
 -64\le d\le64.
 \]
 
-Evolve each trajectory through fine tick 192 inclusive. The primary
-implementation uses a finite array with enough padding that the retained
-causal window contains the complete perturbation at every recorded tick; no
-physical torus is permitted. The independent audit uses an infinite-lattice
-sparse perturbation implementation against the analytic background and does
-not share the primary update routine.
+Attempt direct evolution through fine tick 192 inclusive. If an exact
+extinction or persistent-tip certificate is reached earlier, the simulator may
+terminate that trajectory because its primary fate is then fixed for all future
+times; it must retain the certificate state and first time. The primary
+implementation uses a finite array/cropped causal rectangle with analytic
+background padding and no physical torus. The independent audit uses an
+infinite-lattice sparse perturbation implementation against the analytic
+background and does not share the primary update routine.
 
 The census range and horizon are descriptive bounds, not a theorem about all
 integer displacements. Exact certificates defined below may support all-time
@@ -66,7 +68,7 @@ claims for individual trajectories.
 
 ## Recorded observables
 
-For every displacement and tick record at least:
+For every displacement and every directly simulated tick record at least:
 
 - perturbation mass `|delta_t|`;
 - top, bottom, left, and right changed coordinates and bounding box;
@@ -76,6 +78,10 @@ For every displacement and tick record at least:
   two-strip code `V_0`;
 - whether the complete even-phase field is a finite union of **separated exact
   strips**, as defined below.
+
+After an exact terminal/certificate event, later per-tick metrics need not be
+materialized; the saved result must distinguish analytic continuation from
+directly simulated observations.
 
 Also record first times for extinction, original-code departure, exterior-row
 change, certified top escape, certified bottom escape, two-sided certified
@@ -196,9 +202,12 @@ Before the first successful census output, commit two instruments:
 2. an independent sparse infinite-lattice perturbation implementation that
    evaluates the selector law by scalar coordinate lookup against `B_t`.
 
-The audit must agree on every changed coordinate for every `d` through at
-least tick 64, and on all classification/certificate fields through tick 192.
-If full-coordinate audit through tick 192 is inexpensive, retain it.
+The audit must agree on every changed coordinate for every `d` through the
+earlier of tick 64 or an exact terminal/certificate event, and on every
+classification/certificate field at the primary trajectory's stopping time.
+For trajectories still unresolved after tick 64, continue the independent
+audit through tick 192. If full-coordinate audit through all directly simulated
+ticks is inexpensive, retain it.
 
 Any implementation correction made after a failed run must be committed before
 rerunning and documented in the final research note.
