@@ -26,7 +26,7 @@ revisable. Observed-history prediction is one workstream. Keep it distinct
 from historical influence within the dynamics and from future capability.
 The finite repertoire and costed/returning-task comparisons are complete;
 learning reusable primitives remains open. The latest completed unit is the
-encoded-defects experiment. The 3D hypothesis is parked by explicit user
+defect-fates experiment and post-census finite-strip proof. The 3D hypothesis is parked by explicit user
 instruction; continue the fixed 2D workstream. Read its continuation below before the historical
 agenda checkpoint and dimensional/provenance continuations.
 Do not promote earlier dialogue's unverified numbers or ethical analogies into results.
@@ -588,6 +588,44 @@ enter another usable representation. Freeze a longer causal horizon or derive
 a structural constraint before calling a survivor persistent. Preserve the
 distinction between loss of the original code and loss of all organization.
 Remainder feedback remains undefined; boundary/individuation stays parked.
+
+## Research continuation: longer fates and a finite strip (2026-09-08)
+
+`docs/research/2026-09-08-defect-fates.md` completes the 32-tick unit. Frozen
+protocol 7512927, both instruments and wording clarification 1a9a923. 6,912
+trajectories: 64 masks, 2 modes, 22 minimal-period<=4 aligned backgrounds plus
+two independent cohorts of 16 saved random 65-bit words (seeds2026090801/02).
+Finite shrinking causal windows, even samples0..32. General backgrounds are
+sampled, not an exhaustive extension of Research016's all-background result.
+Independent uint64 truth-set audit matches every one of 117,504 response fields,
+every metric and recurrence decision. No original-code return among6,750
+initially invalid cases; no three-shape screen passes at periods2/4/6/8.
+No full-state recurrence certificates, hence no eligible object for the
+predeclared conditional perturbation stage. Do not claim periodic-object proof.
+
+Post-census finding: masks6/24 on the zero logical background keep two-row
+support and Rule-90 pulse masses. Hypothesis and exact checker committed in
+58c9f6f before checking. Let B be horizontal01 repeated at every y. U(s)
+replaces ONLY rows0/1 with (0,1 XOR s_i),(s_i,1). Then F^2 U=U phi90 for
+all logical inputs and all widths. First tick: row0=(1 XOR left XOR center,0),
+row1=(1,center XOR right), all other rows complement B. Second tick returns
+to U(left XOR right). All8local triples checked with independent updates;
+1,280 fine-field and640coarse-state comparisons at widths5/7 plus768matched
+action-word states. A logical flip toggles just (0,2i+1),(1,2i): two physical
+cells total, no vertical replication. Background preparation remains a cost;
+do not confuse finite action support with absence of a specified environment.
+
+This strip is not vertically repeated every2rows, so it does not contradict
+the earlier minimum within periodic block encodings. Isolated masks6/24 on B
+are already in U or its translate at time0, not a spontaneously formed code
+after a transient. They remain outside E. At t=2n the pulse has mass
+2^(1+popcount(n)) and span4n+2: from tick30 to32, mass32->4 but span62->66.
+Cancellation/sparsity is not spatial reassembly or a demonstrated fold-in.
+
+Next concrete 2D lead: independent data strips, separated as a control and
+adjacent as a coupling test. Determine exact coexistence and interaction laws
+before making claims about compositional computation. The ambient F stays
+fixed; no fitted decoder. 3D and boundary/individuation remain parked.
 
 ## Research agenda checkpoint: preserve unfinished threads (2026-09-08)
 

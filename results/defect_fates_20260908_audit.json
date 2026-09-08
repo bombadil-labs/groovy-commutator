@@ -1,0 +1,9 @@
+{
+  "cases": 6912,
+  "sampled_response_fields": 117504,
+  "all_metrics_and_hashes_match": true,
+  "all_recurrence_decisions_match": true,
+  "certificates": 0,
+  "seconds": 5.563,
+  "script_sha256": "7df0b875e0decf48b2e34570567d94fb46b40120927519306c78952f9582703c"
+}
