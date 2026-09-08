@@ -1,0 +1,18 @@
+{
+  "checks": {
+    "causal_assignment_candidate_checks": 47211984,
+    "previous_zero_frame_column_conditions": 16002,
+    "encoding_symmetries": 60778,
+    "laboratory_trajectory_states": 16640,
+    "laboratory_action_word_states": 19968
+  },
+  "seconds": 40.344,
+  "numpy": "2.3.5",
+  "sha256": {
+    "scripts/experiment_block_compatibility.py": "12595b24b850c9dbddfe24c5fa18f19a8ca0ff777e0c6c60edf9703bf18f30b8",
+    "scripts/experiment_column_compatibility.py": "69537d6c44319f588e8ae44d362cef0446f7523316650fff40b534902d854b14",
+    "src/groovy/ca.py": "6969d6f0699b48602c8a2f55aecd61d58862e6472fea56f6d1ed9ebb2656d77e",
+    "docs/research/protocols/block-compatibility-20260908.md": "2295b59624368128f503a3b367a0f34894eb4c9e02f9236381baee707bbf5429"
+  },
+  "scope": "Every ordered binary block pair with area<=6, k1..3, |u|/|v|<=k with vertical periods identified. No class labels."
+}

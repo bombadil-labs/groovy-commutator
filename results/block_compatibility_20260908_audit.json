@@ -1,0 +1,7 @@
+{
+  "independent_outcomes": 781050,
+  "independent_truth_evolutions": 284550,
+  "seconds": 8.967,
+  "script_sha256": "cb0a6b6b9f130ce43305f8985bf026ef2b186d7ee7ea6e5d8c8266d99f6af3c2",
+  "scope": "Every saved outcome, independently checked with truth sets and shrinking horizontal windows; includes complete enumeration of the protocol parameter grid."
+}

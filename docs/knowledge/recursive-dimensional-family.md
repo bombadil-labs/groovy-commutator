@@ -17,3 +17,16 @@ The open problem is now compatibility beyond these simple families, including
 declared horizontal packing or drift and nontrivial interactions. The result
 does not establish that the interpreter in one dimension is simulated by the
 next, or that the proposed dimensional criterion selects Class IV.
+
+## Further update, 2026-09-08: horizontal blocks combine inputs
+
+The [block-compatibility experiment](../research/2026-09-08-block-compatibility.md)
+finds a six-cell code implementing Rule 90 at cadence two. The same code
+implements Rules 60 and 102 in fixed moving frames. All 781,050 bounded
+candidate outcomes agree with an independent audit. This extends the exact
+families beyond transport and the previous stationary column architecture.
+
+The recursive question remains partly answered: we have 1D dynamics inside
+the 2D interpreter, not yet a compatible encoding of a genuinely 2D input
+field into its 3D counterpart. The newly reported three-dimensional-exception
+hypothesis is separate and needs its precise formulation before testing.
