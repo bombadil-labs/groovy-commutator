@@ -74,7 +74,11 @@ def main()->None:
     }
     out=ROOT/'results'/'rule106_visibility_scaling_fresh_20260908.json'
     out.write_text(json.dumps(result,indent=2)+'\n')
-    print(json.dumps({k:v for k,v in result.items() if k!='rows'},indent=2))
+    summary={k:v for k,v in result.items() if k!='rows'}
+    summary["first_case"]=rows[0]; summary["last_case"]=rows[-1]
+    summary["publication_note"]="Compact confirmatory summary; this script regenerates all 50 per-width records."
+    (ROOT/'results'/'rule106_visibility_scaling_fresh_20260908_summary.json').write_text(json.dumps(summary,indent=2)+'\n')
+    print(json.dumps(summary,indent=2))
     if failures: raise SystemExit(1)
 
 if __name__=='__main__':main()
