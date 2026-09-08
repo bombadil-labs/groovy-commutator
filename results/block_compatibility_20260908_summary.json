@@ -1,0 +1,1071 @@
+{
+  "candidates": 781050,
+  "rectangles": 14,
+  "successes": 9022,
+  "canonical_encodings": 1218,
+  "admitted_rules": [
+    0,
+    15,
+    23,
+    51,
+    60,
+    85,
+    90,
+    102,
+    128,
+    136,
+    153,
+    165,
+    170,
+    192,
+    195,
+    204,
+    232,
+    238,
+    240,
+    252,
+    254,
+    255
+  ],
+  "rules": [
+    {
+      "rule": 0,
+      "essential": [],
+      "arity": 0,
+      "degree": 0,
+      "anf_masks": [],
+      "kind": "constant",
+      "symmetry_orbit": 0,
+      "output_ones": 0,
+      "encodings": 1254,
+      "stationary": 236,
+      "blocked": 1254,
+      "minimal": {
+        "m": 1,
+        "w": 3,
+        "area": 3,
+        "a": 0,
+        "b": 1,
+        "k": 1,
+        "u": 0,
+        "v": 0,
+        "rule": 0,
+        "physical_flips": 1
+      }
+    },
+    {
+      "rule": 15,
+      "essential": [
+        "left"
+      ],
+      "arity": 1,
+      "degree": 1,
+      "anf_masks": [
+        0,
+        4
+      ],
+      "kind": "single-input",
+      "symmetry_orbit": 15,
+      "output_ones": 4,
+      "encodings": 48,
+      "stationary": 6,
+      "blocked": 24,
+      "minimal": {
+        "m": 2,
+        "w": 2,
+        "area": 4,
+        "a": 3,
+        "b": 12,
+        "k": 2,
+        "u": -2,
+        "v": -1,
+        "rule": 15,
+        "physical_flips": 4
+      }
+    },
+    {
+      "rule": 23,
+      "essential": [
+        "left",
+        "center",
+        "right"
+      ],
+      "arity": 3,
+      "degree": 2,
+      "anf_masks": [
+        0,
+        3,
+        5,
+        6
+      ],
+      "kind": "multi-input nonlinear",
+      "symmetry_orbit": 23,
+      "output_ones": 4,
+      "encodings": 6,
+      "stationary": 6,
+      "blocked": 0,
+      "minimal": {
+        "m": 2,
+        "w": 1,
+        "area": 2,
+        "a": 1,
+        "b": 2,
+        "k": 1,
+        "u": 0,
+        "v": 0,
+        "rule": 23,
+        "physical_flips": 2
+      }
+    },
+    {
+      "rule": 51,
+      "essential": [
+        "center"
+      ],
+      "arity": 1,
+      "degree": 1,
+      "anf_masks": [
+        0,
+        2
+      ],
+      "kind": "single-input",
+      "symmetry_orbit": 51,
+      "output_ones": 4,
+      "encodings": 114,
+      "stationary": 20,
+      "blocked": 66,
+      "minimal": {
+        "m": 2,
+        "w": 2,
+        "area": 4,
+        "a": 3,
+        "b": 12,
+        "k": 1,
+        "u": 0,
+        "v": 0,
+        "rule": 51,
+        "physical_flips": 4
+      }
+    },
+    {
+      "rule": 60,
+      "essential": [
+        "left",
+        "center"
+      ],
+      "arity": 2,
+      "degree": 1,
+      "anf_masks": [
+        2,
+        4
+      ],
+      "kind": "multi-input affine",
+      "symmetry_orbit": 60,
+      "output_ones": 4,
+      "encodings": 3,
+      "stationary": 0,
+      "blocked": 3,
+      "minimal": {
+        "m": 3,
+        "w": 2,
+        "area": 6,
+        "a": 42,
+        "b": 11,
+        "k": 1,
+        "u": -1,
+        "v": 0,
+        "rule": 60,
+        "physical_flips": 2
+      }
+    },
+    {
+      "rule": 85,
+      "essential": [
+        "right"
+      ],
+      "arity": 1,
+      "degree": 1,
+      "anf_masks": [
+        0,
+        1
+      ],
+      "kind": "single-input",
+      "symmetry_orbit": 15,
+      "output_ones": 4,
+      "encodings": 48,
+      "stationary": 6,
+      "blocked": 24,
+      "minimal": {
+        "m": 2,
+        "w": 2,
+        "area": 4,
+        "a": 3,
+        "b": 12,
+        "k": 2,
+        "u": 2,
+        "v": -1,
+        "rule": 85,
+        "physical_flips": 4
+      }
+    },
+    {
+      "rule": 90,
+      "essential": [
+        "left",
+        "right"
+      ],
+      "arity": 2,
+      "degree": 1,
+      "anf_masks": [
+        1,
+        4
+      ],
+      "kind": "multi-input affine",
+      "symmetry_orbit": 90,
+      "output_ones": 4,
+      "encodings": 3,
+      "stationary": 3,
+      "blocked": 3,
+      "minimal": {
+        "m": 3,
+        "w": 2,
+        "area": 6,
+        "a": 42,
+        "b": 11,
+        "k": 2,
+        "u": 0,
+        "v": 0,
+        "rule": 90,
+        "physical_flips": 2
+      }
+    },
+    {
+      "rule": 102,
+      "essential": [
+        "center",
+        "right"
+      ],
+      "arity": 2,
+      "degree": 1,
+      "anf_masks": [
+        1,
+        2
+      ],
+      "kind": "multi-input affine",
+      "symmetry_orbit": 60,
+      "output_ones": 4,
+      "encodings": 3,
+      "stationary": 0,
+      "blocked": 3,
+      "minimal": {
+        "m": 3,
+        "w": 2,
+        "area": 6,
+        "a": 42,
+        "b": 11,
+        "k": 1,
+        "u": 1,
+        "v": 0,
+        "rule": 102,
+        "physical_flips": 2
+      }
+    },
+    {
+      "rule": 128,
+      "essential": [
+        "left",
+        "center",
+        "right"
+      ],
+      "arity": 3,
+      "degree": 3,
+      "anf_masks": [
+        7
+      ],
+      "kind": "multi-input nonlinear",
+      "symmetry_orbit": 128,
+      "output_ones": 1,
+      "encodings": 28,
+      "stationary": 16,
+      "blocked": 28,
+      "minimal": {
+        "m": 1,
+        "w": 2,
+        "area": 2,
+        "a": 0,
+        "b": 1,
+        "k": 2,
+        "u": 0,
+        "v": 0,
+        "rule": 128,
+        "physical_flips": 1
+      }
+    },
+    {
+      "rule": 136,
+      "essential": [
+        "center",
+        "right"
+      ],
+      "arity": 2,
+      "degree": 2,
+      "anf_masks": [
+        3
+      ],
+      "kind": "multi-input nonlinear",
+      "symmetry_orbit": 136,
+      "output_ones": 2,
+      "encodings": 36,
+      "stationary": 0,
+      "blocked": 36,
+      "minimal": {
+        "m": 1,
+        "w": 2,
+        "area": 2,
+        "a": 0,
+        "b": 1,
+        "k": 1,
+        "u": 1,
+        "v": 0,
+        "rule": 136,
+        "physical_flips": 1
+      }
+    },
+    {
+      "rule": 153,
+      "essential": [
+        "center",
+        "right"
+      ],
+      "arity": 2,
+      "degree": 1,
+      "anf_masks": [
+        0,
+        1,
+        2
+      ],
+      "kind": "multi-input affine",
+      "symmetry_orbit": 60,
+      "output_ones": 4,
+      "encodings": 3,
+      "stationary": 0,
+      "blocked": 3,
+      "minimal": {
+        "m": 3,
+        "w": 2,
+        "area": 6,
+        "a": 11,
+        "b": 42,
+        "k": 1,
+        "u": 1,
+        "v": 0,
+        "rule": 153,
+        "physical_flips": 2
+      }
+    },
+    {
+      "rule": 165,
+      "essential": [
+        "left",
+        "right"
+      ],
+      "arity": 2,
+      "degree": 1,
+      "anf_masks": [
+        0,
+        1,
+        4
+      ],
+      "kind": "multi-input affine",
+      "symmetry_orbit": 90,
+      "output_ones": 4,
+      "encodings": 3,
+      "stationary": 3,
+      "blocked": 3,
+      "minimal": {
+        "m": 3,
+        "w": 2,
+        "area": 6,
+        "a": 11,
+        "b": 42,
+        "k": 2,
+        "u": 0,
+        "v": 0,
+        "rule": 165,
+        "physical_flips": 2
+      }
+    },
+    {
+      "rule": 170,
+      "essential": [
+        "right"
+      ],
+      "arity": 1,
+      "degree": 1,
+      "anf_masks": [
+        1
+      ],
+      "kind": "single-input",
+      "symmetry_orbit": 170,
+      "output_ones": 4,
+      "encodings": 1218,
+      "stationary": 24,
+      "blocked": 514,
+      "minimal": {
+        "m": 1,
+        "w": 2,
+        "area": 2,
+        "a": 0,
+        "b": 3,
+        "k": 2,
+        "u": 2,
+        "v": 0,
+        "rule": 170,
+        "physical_flips": 2
+      }
+    },
+    {
+      "rule": 192,
+      "essential": [
+        "left",
+        "center"
+      ],
+      "arity": 2,
+      "degree": 2,
+      "anf_masks": [
+        6
+      ],
+      "kind": "multi-input nonlinear",
+      "symmetry_orbit": 136,
+      "output_ones": 2,
+      "encodings": 36,
+      "stationary": 0,
+      "blocked": 36,
+      "minimal": {
+        "m": 1,
+        "w": 2,
+        "area": 2,
+        "a": 0,
+        "b": 1,
+        "k": 1,
+        "u": -1,
+        "v": 0,
+        "rule": 192,
+        "physical_flips": 1
+      }
+    },
+    {
+      "rule": 195,
+      "essential": [
+        "left",
+        "center"
+      ],
+      "arity": 2,
+      "degree": 1,
+      "anf_masks": [
+        0,
+        2,
+        4
+      ],
+      "kind": "multi-input affine",
+      "symmetry_orbit": 60,
+      "output_ones": 4,
+      "encodings": 3,
+      "stationary": 0,
+      "blocked": 3,
+      "minimal": {
+        "m": 3,
+        "w": 2,
+        "area": 6,
+        "a": 11,
+        "b": 42,
+        "k": 1,
+        "u": -1,
+        "v": 0,
+        "rule": 195,
+        "physical_flips": 2
+      }
+    },
+    {
+      "rule": 204,
+      "essential": [
+        "center"
+      ],
+      "arity": 1,
+      "degree": 1,
+      "anf_masks": [
+        2
+      ],
+      "kind": "single-input",
+      "symmetry_orbit": 204,
+      "output_ones": 4,
+      "encodings": 3604,
+      "stationary": 972,
+      "blocked": 2196,
+      "minimal": {
+        "m": 1,
+        "w": 2,
+        "area": 2,
+        "a": 0,
+        "b": 3,
+        "k": 1,
+        "u": 0,
+        "v": 0,
+        "rule": 204,
+        "physical_flips": 2
+      }
+    },
+    {
+      "rule": 232,
+      "essential": [
+        "left",
+        "center",
+        "right"
+      ],
+      "arity": 3,
+      "degree": 2,
+      "anf_masks": [
+        3,
+        5,
+        6
+      ],
+      "kind": "multi-input nonlinear",
+      "symmetry_orbit": 232,
+      "output_ones": 4,
+      "encodings": 40,
+      "stationary": 12,
+      "blocked": 0,
+      "minimal": {
+        "m": 1,
+        "w": 1,
+        "area": 1,
+        "a": 0,
+        "b": 1,
+        "k": 1,
+        "u": 0,
+        "v": 0,
+        "rule": 232,
+        "physical_flips": 1
+      }
+    },
+    {
+      "rule": 238,
+      "essential": [
+        "center",
+        "right"
+      ],
+      "arity": 2,
+      "degree": 2,
+      "anf_masks": [
+        1,
+        2,
+        3
+      ],
+      "kind": "multi-input nonlinear",
+      "symmetry_orbit": 136,
+      "output_ones": 6,
+      "encodings": 36,
+      "stationary": 0,
+      "blocked": 36,
+      "minimal": {
+        "m": 1,
+        "w": 2,
+        "area": 2,
+        "a": 1,
+        "b": 0,
+        "k": 1,
+        "u": 1,
+        "v": 0,
+        "rule": 238,
+        "physical_flips": 1
+      }
+    },
+    {
+      "rule": 240,
+      "essential": [
+        "left"
+      ],
+      "arity": 1,
+      "degree": 1,
+      "anf_masks": [
+        4
+      ],
+      "kind": "single-input",
+      "symmetry_orbit": 170,
+      "output_ones": 4,
+      "encodings": 1218,
+      "stationary": 24,
+      "blocked": 514,
+      "minimal": {
+        "m": 1,
+        "w": 2,
+        "area": 2,
+        "a": 0,
+        "b": 3,
+        "k": 2,
+        "u": -2,
+        "v": 0,
+        "rule": 240,
+        "physical_flips": 2
+      }
+    },
+    {
+      "rule": 252,
+      "essential": [
+        "left",
+        "center"
+      ],
+      "arity": 2,
+      "degree": 2,
+      "anf_masks": [
+        2,
+        4,
+        6
+      ],
+      "kind": "multi-input nonlinear",
+      "symmetry_orbit": 136,
+      "output_ones": 6,
+      "encodings": 36,
+      "stationary": 0,
+      "blocked": 36,
+      "minimal": {
+        "m": 1,
+        "w": 2,
+        "area": 2,
+        "a": 1,
+        "b": 0,
+        "k": 1,
+        "u": -1,
+        "v": 0,
+        "rule": 252,
+        "physical_flips": 1
+      }
+    },
+    {
+      "rule": 254,
+      "essential": [
+        "left",
+        "center",
+        "right"
+      ],
+      "arity": 3,
+      "degree": 3,
+      "anf_masks": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "kind": "multi-input nonlinear",
+      "symmetry_orbit": 128,
+      "output_ones": 7,
+      "encodings": 28,
+      "stationary": 16,
+      "blocked": 28,
+      "minimal": {
+        "m": 1,
+        "w": 2,
+        "area": 2,
+        "a": 1,
+        "b": 0,
+        "k": 2,
+        "u": 0,
+        "v": 0,
+        "rule": 254,
+        "physical_flips": 1
+      }
+    },
+    {
+      "rule": 255,
+      "essential": [],
+      "arity": 0,
+      "degree": 0,
+      "anf_masks": [
+        0
+      ],
+      "kind": "constant",
+      "symmetry_orbit": 0,
+      "output_ones": 8,
+      "encodings": 1254,
+      "stationary": 236,
+      "blocked": 1254,
+      "minimal": {
+        "m": 1,
+        "w": 3,
+        "area": 3,
+        "a": 1,
+        "b": 0,
+        "k": 1,
+        "u": 0,
+        "v": 0,
+        "rule": 255,
+        "physical_flips": 1
+      }
+    }
+  ],
+  "no_frame_rules": [
+    0,
+    15,
+    23,
+    51,
+    85,
+    90,
+    128,
+    165,
+    170,
+    204,
+    232,
+    240,
+    254,
+    255
+  ],
+  "column_frame_rules": [
+    15,
+    23,
+    51,
+    85,
+    170,
+    204,
+    232,
+    240
+  ],
+  "block_frame_rules": [
+    0,
+    15,
+    51,
+    60,
+    85,
+    90,
+    102,
+    128,
+    136,
+    153,
+    165,
+    170,
+    192,
+    195,
+    204,
+    238,
+    240,
+    252,
+    254,
+    255
+  ],
+  "selected_action_checks": [
+    {
+      "m": 1,
+      "w": 3,
+      "area": 3,
+      "a": 0,
+      "b": 1,
+      "k": 1,
+      "u": 0,
+      "v": 0,
+      "rule": 0,
+      "physical_flips": 1
+    },
+    {
+      "m": 2,
+      "w": 2,
+      "area": 4,
+      "a": 3,
+      "b": 12,
+      "k": 2,
+      "u": -2,
+      "v": -1,
+      "rule": 15,
+      "physical_flips": 4
+    },
+    {
+      "m": 2,
+      "w": 3,
+      "area": 6,
+      "a": 1,
+      "b": 8,
+      "k": 3,
+      "u": 0,
+      "v": 0,
+      "rule": 15,
+      "physical_flips": 2
+    },
+    {
+      "m": 2,
+      "w": 1,
+      "area": 2,
+      "a": 1,
+      "b": 2,
+      "k": 1,
+      "u": 0,
+      "v": 0,
+      "rule": 23,
+      "physical_flips": 2
+    },
+    {
+      "m": 2,
+      "w": 2,
+      "area": 4,
+      "a": 3,
+      "b": 12,
+      "k": 1,
+      "u": 0,
+      "v": 0,
+      "rule": 51,
+      "physical_flips": 4
+    },
+    {
+      "m": 3,
+      "w": 2,
+      "area": 6,
+      "a": 42,
+      "b": 11,
+      "k": 1,
+      "u": -1,
+      "v": 0,
+      "rule": 60,
+      "physical_flips": 2
+    },
+    {
+      "m": 2,
+      "w": 2,
+      "area": 4,
+      "a": 3,
+      "b": 12,
+      "k": 2,
+      "u": 2,
+      "v": -1,
+      "rule": 85,
+      "physical_flips": 4
+    },
+    {
+      "m": 2,
+      "w": 3,
+      "area": 6,
+      "a": 31,
+      "b": 59,
+      "k": 3,
+      "u": 0,
+      "v": 0,
+      "rule": 85,
+      "physical_flips": 2
+    },
+    {
+      "m": 3,
+      "w": 2,
+      "area": 6,
+      "a": 42,
+      "b": 11,
+      "k": 2,
+      "u": 0,
+      "v": 0,
+      "rule": 90,
+      "physical_flips": 2
+    },
+    {
+      "m": 3,
+      "w": 2,
+      "area": 6,
+      "a": 42,
+      "b": 11,
+      "k": 1,
+      "u": 1,
+      "v": 0,
+      "rule": 102,
+      "physical_flips": 2
+    },
+    {
+      "m": 1,
+      "w": 2,
+      "area": 2,
+      "a": 0,
+      "b": 1,
+      "k": 2,
+      "u": 0,
+      "v": 0,
+      "rule": 128,
+      "physical_flips": 1
+    },
+    {
+      "m": 1,
+      "w": 2,
+      "area": 2,
+      "a": 0,
+      "b": 1,
+      "k": 1,
+      "u": 1,
+      "v": 0,
+      "rule": 136,
+      "physical_flips": 1
+    },
+    {
+      "m": 3,
+      "w": 2,
+      "area": 6,
+      "a": 11,
+      "b": 42,
+      "k": 1,
+      "u": 1,
+      "v": 0,
+      "rule": 153,
+      "physical_flips": 2
+    },
+    {
+      "m": 3,
+      "w": 2,
+      "area": 6,
+      "a": 11,
+      "b": 42,
+      "k": 2,
+      "u": 0,
+      "v": 0,
+      "rule": 165,
+      "physical_flips": 2
+    },
+    {
+      "m": 1,
+      "w": 2,
+      "area": 2,
+      "a": 0,
+      "b": 3,
+      "k": 2,
+      "u": 2,
+      "v": 0,
+      "rule": 170,
+      "physical_flips": 2
+    },
+    {
+      "m": 2,
+      "w": 2,
+      "area": 4,
+      "a": 3,
+      "b": 7,
+      "k": 2,
+      "u": 0,
+      "v": 0,
+      "rule": 170,
+      "physical_flips": 1
+    },
+    {
+      "m": 1,
+      "w": 2,
+      "area": 2,
+      "a": 0,
+      "b": 1,
+      "k": 1,
+      "u": -1,
+      "v": 0,
+      "rule": 192,
+      "physical_flips": 1
+    },
+    {
+      "m": 3,
+      "w": 2,
+      "area": 6,
+      "a": 11,
+      "b": 42,
+      "k": 1,
+      "u": -1,
+      "v": 0,
+      "rule": 195,
+      "physical_flips": 2
+    },
+    {
+      "m": 1,
+      "w": 2,
+      "area": 2,
+      "a": 0,
+      "b": 3,
+      "k": 1,
+      "u": 0,
+      "v": 0,
+      "rule": 204,
+      "physical_flips": 2
+    },
+    {
+      "m": 1,
+      "w": 1,
+      "area": 1,
+      "a": 0,
+      "b": 1,
+      "k": 1,
+      "u": 0,
+      "v": 0,
+      "rule": 232,
+      "physical_flips": 1
+    },
+    {
+      "m": 1,
+      "w": 2,
+      "area": 2,
+      "a": 1,
+      "b": 0,
+      "k": 1,
+      "u": 1,
+      "v": 0,
+      "rule": 238,
+      "physical_flips": 1
+    },
+    {
+      "m": 1,
+      "w": 2,
+      "area": 2,
+      "a": 0,
+      "b": 3,
+      "k": 2,
+      "u": -2,
+      "v": 0,
+      "rule": 240,
+      "physical_flips": 2
+    },
+    {
+      "m": 2,
+      "w": 2,
+      "area": 4,
+      "a": 0,
+      "b": 1,
+      "k": 2,
+      "u": 0,
+      "v": 0,
+      "rule": 240,
+      "physical_flips": 1
+    },
+    {
+      "m": 1,
+      "w": 2,
+      "area": 2,
+      "a": 1,
+      "b": 0,
+      "k": 1,
+      "u": -1,
+      "v": 0,
+      "rule": 252,
+      "physical_flips": 1
+    },
+    {
+      "m": 1,
+      "w": 2,
+      "area": 2,
+      "a": 1,
+      "b": 0,
+      "k": 2,
+      "u": 0,
+      "v": 0,
+      "rule": 254,
+      "physical_flips": 1
+    },
+    {
+      "m": 1,
+      "w": 3,
+      "area": 3,
+      "a": 1,
+      "b": 0,
+      "k": 1,
+      "u": 0,
+      "v": 0,
+      "rule": 255,
+      "physical_flips": 1
+    }
+  ]
+}

@@ -313,5 +313,29 @@
       "spacetime-provenance",
       "shared-state-rule"
     ]
+  },
+  {
+    "slug": "block-compatibility",
+    "number": "015",
+    "title": "One 2D process, three exact 1D readouts",
+    "date": "2026-09-08",
+    "updated": "2026-09-08",
+    "kind": "Exact search and construction",
+    "evidence": "exact",
+    "topic": "History and possibility",
+    "summary": "Six-cell blocks implement Rule 90 under the fixed 2D interpreter. The same physical process reads as Rules 60 and 102 in moving frames; every bounded search outcome passes an independent audit.",
+    "takeaway": "Encoding, frame, and cadence can change the effective law while preserving exact relationships between descriptions.",
+    "source": "docs/research/2026-09-08-block-compatibility.md",
+    "promotion": {
+      "stage": "candidate",
+      "idea": "One physical process, several exact descriptions",
+      "destination": "Concepts"
+    },
+    "related": [
+      "column-compatibility",
+      "dimensional-lift",
+      "spacetime-provenance",
+      "shared-state-rule"
+    ]
   }
 ]

@@ -1,0 +1,30 @@
+{
+  "checked_readouts": 51,
+  "logical_width": 41,
+  "fine_ticks": 32,
+  "m": 3,
+  "w": 2,
+  "a": 42,
+  "b": 11,
+  "readouts": [
+    {
+      "rule": 60,
+      "k": 1,
+      "u": -1,
+      "v": 0
+    },
+    {
+      "rule": 102,
+      "k": 1,
+      "u": 1,
+      "v": 0
+    },
+    {
+      "rule": 90,
+      "k": 2,
+      "u": 0,
+      "v": 0
+    }
+  ],
+  "scope": "Illustrative replay after the census, with full block and independent ECA comparison at every plotted readout."
+}

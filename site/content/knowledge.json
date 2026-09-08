@@ -477,12 +477,13 @@
       "title": "Which families remain compatible across dimensions?",
       "kind": "question",
       "status": "partly-answered",
-      "summary": "Invariant column and conveyor families now preserve dynamics and matched actions; recursive interpreter simulation and interactions beyond transport remain open.",
+      "summary": "Exact column and block encodings now include Rule 90 inside the 2D interpreter; compatibility through further dimensions remains open.",
       "updated": "2026-09-08",
       "source": "docs/knowledge/recursive-dimensional-family.md",
       "research": [
         "dimensional-lift",
-        "column-compatibility"
+        "column-compatibility",
+        "block-compatibility"
       ]
     },
     {
@@ -591,6 +592,54 @@
       "source": "docs/knowledge/column-compatibility-test.md",
       "research": [
         "column-compatibility"
+      ]
+    },
+    {
+      "id": "block-encoded-rule90",
+      "title": "Six-cell blocks implement Rule 90 exactly",
+      "kind": "finding",
+      "status": "exact",
+      "summary": "A fixed 2D law combines logical neighbors by XOR under a six-cell encoding and two-tick sampling.",
+      "updated": "2026-09-08",
+      "source": "docs/knowledge/block-encoded-rule90.md",
+      "research": [
+        "block-compatibility"
+      ]
+    },
+    {
+      "id": "frame-changes-effective-rule",
+      "title": "One physical process has several exact effective laws",
+      "kind": "finding",
+      "status": "exact",
+      "summary": "The same encoding and trajectory implement Rules 60, 102, and 90 under fixed changes of frame and cadence.",
+      "updated": "2026-09-08",
+      "source": "docs/knowledge/frame-changes-effective-rule.md",
+      "research": [
+        "block-compatibility"
+      ]
+    },
+    {
+      "id": "block-compatibility-test",
+      "title": "The bounded block and moving-frame test is complete",
+      "kind": "experiment",
+      "status": "completed",
+      "summary": "An independent audit agrees on all 781,050 candidate outcomes, admitting 22 elementary targets within the frozen budget.",
+      "updated": "2026-09-08",
+      "source": "docs/knowledge/block-compatibility-test.md",
+      "research": [
+        "block-compatibility"
+      ]
+    },
+    {
+      "id": "three-dimensional-exception",
+      "title": "Does three-dimensional space support a distinctive representation?",
+      "kind": "theory",
+      "status": "proposed",
+      "summary": "Parallel work proposes a representation specific to three dimensions; its exact object and allowed transformations remain to be specified.",
+      "updated": "2026-09-08",
+      "source": "docs/knowledge/three-dimensional-exception.md",
+      "research": [
+        "block-compatibility"
       ]
     }
   ],
@@ -1120,6 +1169,51 @@
       "reason": "The tested Rule-23 damage response is defined relative to its proven two-row invariant code.",
       "research": [
         "column-compatibility"
+      ]
+    },
+    {
+      "source": "block-compatibility-test",
+      "type": "tests",
+      "target": "recursive-dimensional-family",
+      "reason": "The fixed-interpreter search tests globally consistent block families and fixed frames; it does not establish recursion through subsequent dimensions.",
+      "research": [
+        "block-compatibility"
+      ]
+    },
+    {
+      "source": "block-compatibility-test",
+      "type": "supports",
+      "target": "block-encoded-rule90",
+      "reason": "The exhaustive local search and separate truth-set audit verify the six-cell Rule-90 identity for every logical input.",
+      "research": [
+        "block-compatibility"
+      ]
+    },
+    {
+      "source": "block-compatibility-test",
+      "type": "supports",
+      "target": "frame-changes-effective-rule",
+      "reason": "The same code pair supports all three exact readouts; laboratory-frame replays verify their stated frames and cadences.",
+      "research": [
+        "block-compatibility"
+      ]
+    },
+    {
+      "source": "block-encoded-rule90",
+      "type": "depends_on",
+      "target": "outer-totalistic-lift",
+      "reason": "The construction uses the fixed ternary interpreter derived from the dimensional encoding, with no fitted change to its update law.",
+      "research": [
+        "block-compatibility"
+      ]
+    },
+    {
+      "source": "frame-changes-effective-rule",
+      "type": "depends_on",
+      "target": "block-encoded-rule90",
+      "reason": "The claim is witnessed by the same explicit six-cell code and its translation identities.",
+      "research": [
+        "block-compatibility"
       ]
     }
   ]

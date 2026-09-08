@@ -26,7 +26,7 @@ revisable. Observed-history prediction is one workstream. Keep it distinct
 from historical influence within the dynamics and from future capability.
 The finite repertoire and costed/returning-task comparisons are complete;
 learning reusable primitives remains open. The latest completed unit is the
-column-compatibility search. Read its continuation below before the historical
+block-compatibility search. Read its continuation below before the historical
 agenda checkpoint and dimensional/provenance continuations.
 Do not promote earlier dialogue's unverified numbers or ethical analogies into results.
 
@@ -503,6 +503,49 @@ while holding the upper law, action dictionary, and evaluation budget fixed.
 Seek interactions beyond transport. Do not extend the failed radius-one
 criterion into an unrestricted impossibility claim. Remainder feedback still
 needs its own law and controls; the boundary question remains parked.
+
+## Research continuation: blocks and moving frames (2026-09-08)
+
+`docs/research/2026-09-08-block-compatibility.md` completes the previous next
+step. Protocol a968c9d and both instruments 6d246c4 were committed before
+evaluation. All rectangles m*w<=6, every ordered distinct binary code pair,
+k=1/2/3, |u|/|v|<=k with vertical equivalence mod m. Fixed upper law; no class
+labels. Criterion F^k E = T_(v,u) E phi_r. Frame motion is observation, never
+a physical repair between updates.
+
+781,050 candidates, 9,022 successes, 1,218 canonical records, 22 literal
+targets in 11 reflection/state-complement rule orbits. Columns stationary
+admit 2 targets, columns with frames 8, all rectangles stationary 14, all with
+frames 22. Targets: 0/15/23/51/60/85/90/102/128/136/153/165/170/192/195/204/232/
+238/240/252/254/255. No 54/110 within this budget; no unbounded exclusion.
+
+Main exact witness: E(s_i) has rows (s_i,1),(0,1),(0,1 XOR s_i), periodically
+repeated vertically. A42/B11, bitindex2*y+j. F E = T_(0,-1) E phi60 =
+T_(0,1) E phi102; F^2 E = E phi90. Six cells per logical bit per period,
+two physical flips per matched logical flip. Area6 is minimal for multi-input
+affine targets only within the frozen search. Writing logical right shift tau,
+phi102=I XOR tau^-1 gives tau*phi102^2=tau XOR tau^-1=phi90. The duplicated
+middle terms cancel. This is exact mixing beyond the conveyor, not a defined
+remainder-feedback operation or evidence of universal computation.
+
+All outcomes independently audited using Boolean truth sets and shrinking
+windows; no primary update/decoder import. Primary: 47,211,984 causal assignment
+checks, 16,002 prior column checks, 60,778 symmetries. For 26 selected witnesses,
+16,640 laboratory trajectory and 19,968 action-word state comparisons. Report
+replays the same physical trajectory under all three readouts and verifies
+every plotted block. Source hashes, rejection witnesses and full outcome
+matrices are in results/block_compatibility_20260908*.
+
+Next mathematical target: determine whether the block mechanism supports a
+genuine 2D input field in the 3D interpreter with a fixed encoding/action map.
+User steering during this run: parallel Wet Math work suggests a representation
+specific to exactly three dimensions, absent below AND above. Record as
+proposed theory three-dimensional-exception, not as this experiment's result.
+Exact squad argument was not recovered. Need its object, dimension meaning,
+allowed maps and preserved property before freezing a 2D/3D/4D test. Three
+rows in a 2D block are not three spatial dimensions. Do not invent a mechanism
+to fit three or conflate ordinary storage with operational invariance. The
+boundary/individuation question remains parked; remainder feedback undefined.
 
 ## Research agenda checkpoint: preserve unfinished threads (2026-09-08)
 
