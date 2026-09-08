@@ -495,6 +495,54 @@
       "research": [
         "dimensional-lift"
       ]
+    },
+    {
+      "id": "spacetime-provenance",
+      "title": "Spacetime content and generating provenance",
+      "kind": "concept",
+      "status": "defined",
+      "summary": "A panel has one content identity and can have multiple generating-rule derivations.",
+      "updated": "2026-09-08",
+      "source": "docs/knowledge/spacetime-provenance.md",
+      "research": [
+        "spacetime-provenance"
+      ]
+    },
+    {
+      "id": "rule-ambiguity-future-ambiguity",
+      "title": "Rule ambiguity can exceed future ambiguity",
+      "kind": "finding",
+      "status": "exact",
+      "summary": "Several rules may fit a panel while agreeing on its requested natural continuation.",
+      "updated": "2026-09-08",
+      "source": "docs/knowledge/rule-ambiguity-future-ambiguity.md",
+      "research": [
+        "spacetime-provenance"
+      ]
+    },
+    {
+      "id": "intervention-exposes-provenance",
+      "title": "An action can expose hidden provenance differences",
+      "kind": "finding",
+      "status": "exact",
+      "summary": "Compatible generators may agree along the observed path and differ after the same intervention.",
+      "updated": "2026-09-08",
+      "source": "docs/knowledge/intervention-exposes-provenance.md",
+      "research": [
+        "spacetime-provenance"
+      ]
+    },
+    {
+      "id": "provenance-panel-test",
+      "title": "Exact spacetime provenance experiment",
+      "kind": "experiment",
+      "status": "completed",
+      "summary": "All 256 rules and all initial states on widths 6/8/10 were checked across seven observation lengths and four future horizons.",
+      "updated": "2026-09-08",
+      "source": "docs/knowledge/provenance-panel-test.md",
+      "research": [
+        "spacetime-provenance"
+      ]
     }
   ],
   "edges": [
@@ -924,6 +972,51 @@
       "reason": "A persistence association requires a defined compatible family and evolution-sensitive score; neither is settled.",
       "research": [
         "dimensional-lift"
+      ]
+    },
+    {
+      "source": "rule-ambiguity-future-ambiguity",
+      "type": "depends_on",
+      "target": "spacetime-provenance",
+      "reason": "Rule ambiguity and future equivalence are conditioned on the specified complete panel and fixed-rule provenance alternatives.",
+      "research": [
+        "spacetime-provenance"
+      ]
+    },
+    {
+      "source": "intervention-exposes-provenance",
+      "type": "depends_on",
+      "target": "spacetime-provenance",
+      "reason": "The compared interventions start from the same panel and retain each candidate generating rule.",
+      "research": [
+        "spacetime-provenance"
+      ]
+    },
+    {
+      "source": "provenance-panel-test",
+      "type": "supports",
+      "target": "rule-ambiguity-future-ambiguity",
+      "reason": "Exact compatible-rule partitions separate rule identity from finite continuation identity.",
+      "research": [
+        "spacetime-provenance"
+      ]
+    },
+    {
+      "source": "provenance-panel-test",
+      "type": "supports",
+      "target": "intervention-exposes-provenance",
+      "reason": "Paired fixed-cell interventions and replayed witnesses expose different responses among compatible generators.",
+      "research": [
+        "spacetime-provenance"
+      ]
+    },
+    {
+      "source": "intervention-exposes-provenance",
+      "type": "supports",
+      "target": "future-response-separation",
+      "reason": "The zero-panel witness supplies another scoped example: identical natural continuation does not determine the response to an action.",
+      "research": [
+        "spacetime-provenance"
       ]
     }
   ]

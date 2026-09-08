@@ -267,5 +267,28 @@
       "history-and-possibility",
       "history-repairability"
     ]
+  },
+  {
+    "slug": "spacetime-provenance",
+    "number": "013",
+    "title": "Same spacetime, different possibilities",
+    "date": "2026-09-08",
+    "updated": "2026-09-08",
+    "kind": "Experiment",
+    "evidence": "exact",
+    "topic": "History and possibility",
+    "summary": "Different rules can produce the same observed path while responding differently to a perturbation. Exact enumeration separates rule identity, natural continuation, and action responses.",
+    "takeaway": "A picture can predict its next steps while concealing differences that matter when we act on it.",
+    "source": "docs/research/2026-09-08-spacetime-provenance.md",
+    "promotion": {
+      "stage": "candidate",
+      "idea": "The same past can hide different responses",
+      "destination": "Questions"
+    },
+    "related": [
+      "dimensional-lift",
+      "shared-state-rule",
+      "future-repertoire"
+    ]
   }
 ]
