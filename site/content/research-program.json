@@ -36,7 +36,7 @@
     "date": "2026-09-09",
     "updated": "2026-09-09",
     "status": "living",
-    "summary": "A parallel program on rules becoming higher-dimensional space. Editable spatial Rail programs now preserve complete dynamics through recursive lifts under explicit layout budgets; mutable wrapper structure and less prescribed role geometry remain open.",
+    "summary": "A parallel program on rules becoming higher-dimensional space. Editable tables for every added axis preserve complete dynamics, local edits, and program transport through recursive lifts; program topology and prepared boundary resources remain explicit constraints.",
     "thesis": "When two dynamical paths fail to commute, represent the disagreement as a new coordinate and ask whether the enlarged representation closes.",
     "source": "docs/research/2026-09-09-dimensional-closure-program.md",
     "supports": [
@@ -49,7 +49,8 @@
       "selector-two-lift",
       "dimensional-intertwining",
       "program-edit-locality",
-      "spatial-rail-programs"
+      "spatial-rail-programs",
+      "editable-routing-tables"
     ]
   }
 ]

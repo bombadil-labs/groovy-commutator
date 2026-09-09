@@ -1,0 +1,33 @@
+name: Editable routing-table audit
+
+on:
+  pull_request:
+    paths:
+      - 'scripts/verify_editable_routing_tables.py'
+      - 'results/editable_routing_tables_20260909.json'
+      - 'docs/research/protocols/editable-routing-tables-20260909.md'
+      - '.github/workflows/research-editable-routing.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/verify_editable_routing_tables.py'
+      - 'results/editable_routing_tables_20260909.json'
+      - 'docs/research/protocols/editable-routing-tables-20260909.md'
+      - '.github/workflows/research-editable-routing.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  editable-routing-audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Audit editable instructions, neutral-table failures, and physical lifts
+        run: python scripts/verify_editable_routing_tables.py > /tmp/editable-routing-tables.json
+      - name: Reproduce the frozen result
+        run: diff -u results/editable_routing_tables_20260909.json /tmp/editable-routing-tables.json
