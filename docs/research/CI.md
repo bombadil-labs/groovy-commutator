@@ -19,15 +19,13 @@ Fast checks may block a merge. Do not put exploratory sweeps or large exhaustive
 5. aggregate and audit exact coverage;
 6. retain run artifacts and publish compact summaries.
 
-Research027 representation design is the first CI-native workload. It partitions the 256 ECA rules into eight disjoint 32-rule shards. Every shard records the experiment schema, rule interval, ring width, and source/protocol hashes. The aggregate step rejects gaps, overlaps, mixed schemas, or mixed source hashes before evaluating scientific controls.
+Research027 representation design was the first CI-native workload. It partitions the 256 ECA rules into eight disjoint 32-rule shards. Every shard records the experiment schema, rule interval, ring width, and source/protocol hashes. The aggregate step rejects gaps, overlaps, mixed schemas, or mixed source hashes before evaluating scientific controls.
 
-The final publication artifact also includes an independently written selected-case audit and the frozen fresh-size Rule-106 confirmation.
-
-The Research027 pull request triggers this workload automatically. Once merged to `main`, the same workflow is available through `workflow_dispatch` for future frozen workloads.
+Research028 escalates the same pattern to the exact block-3 local repair lattice. Its implementation gate first evaluates Rules `30,54,90,106,110,184` across all 127 canonical binary targets, then fans the complete 256-rule census into sixteen disjoint 16-rule shards. The final aggregate must reproduce the Research026 block-3 closure controls before evaluating the new greedy/global-optimality and diminishing-returns summaries.
 
 ## Manual runs
 
-Once `research-run.yml` is present on the default branch, the workflow can also be launched with `workflow_dispatch`. Manual confirmatory runs should cite the workflow run and retained artifact in the corresponding research note when that provenance materially supports a published result.
+Once a workload is present on the default branch, `research-run.yml` can also be launched through `workflow_dispatch`. Manual confirmatory runs should cite the workflow run and retained artifact in the corresponding research note when that provenance materially supports a published result.
 
 ## Design rule
 
