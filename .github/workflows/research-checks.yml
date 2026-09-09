@@ -34,8 +34,8 @@ jobs:
         with:
           python-version: '3.12'
           cache: pip
-      - name: Install package
-        run: python -m pip install -e .
+      - name: Install package and research runtime
+        run: python -m pip install -e . pandas
       - name: Compile Python sources
         run: python -m compileall -q src scripts
       - name: Existing algebra regression
