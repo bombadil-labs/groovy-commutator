@@ -1,4 +1,4 @@
-# Resource addendum: Research035 exact sofic orbit — 2026-09-09
+# Resource addendum: exact sofic defect orbit — 2026-09-09
 
 **Status:** frozen after bounded Rule-35/Rule-5 implementation controls and before evaluating any of the 170 Research034 survivors.
 

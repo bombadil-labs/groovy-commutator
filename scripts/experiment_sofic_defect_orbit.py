@@ -1,4 +1,4 @@
-"""Research035: exact sofic orbit closure for one-defect paired block-3 ECA dynamics."""
+"""Note 036 / sofic-defect-orbit: exact sofic orbit closure for one-defect paired block-3 ECA dynamics."""
 from __future__ import annotations
 import argparse, hashlib, json, sys
 from collections import Counter

@@ -1,4 +1,4 @@
-"""Aggregate the frozen Research035 lazy-union recovery."""
+"""Aggregate the frozen Note 036 / sofic-defect-orbit lazy-union recovery."""
 from __future__ import annotations
 import argparse, json
 from collections import Counter
@@ -88,6 +88,7 @@ def main():
     out = {
         "ok": True,
         "experiment": "sofic-defect-orbit-lazy-recovery",
+        "publication_identity": {"canonical_slug": "sofic-defect-orbit", "note_number": "036"},
         "rules": 256,
         "hmax": 12,
         "research034_survivors": survivors,
@@ -115,6 +116,7 @@ def main():
         "rule122_161_sentinels": sentinels,
         "primary_censoring_baseline": {"censored": 170, "resolved": 0},
         "resource_limits": shards[0]["resource_limits"],
+        "source_hashes_scope": "Frozen prepublication source bytes used for this result; live files may differ by publication-identity-only normalization.",
         "source_hashes": shards[0]["source_hashes"],
     }
     args.output.parent.mkdir(parents=True, exist_ok=True)

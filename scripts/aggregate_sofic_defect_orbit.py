@@ -1,4 +1,4 @@
-"""Aggregate sharded Research035 exact sofic defect-orbit results."""
+"""Aggregate sharded Note 036 / sofic-defect-orbit results."""
 from __future__ import annotations
 import argparse, json
 from collections import Counter
@@ -35,7 +35,7 @@ def main():
     shards = [json.loads(p.read_text()) for p in sorted(args.input_dir.rglob("*.json"))]
     shards = [x for x in shards if x.get("experiment") == "sofic-defect-orbit"]
     if not shards:
-        raise SystemExit("no Research035 shards")
+        raise SystemExit("no sofic-defect-orbit shards")
     assert {x["schema"] for x in shards} == {1}
     assert {x["hmax"] for x in shards} == {12}
     assert len({json.dumps(x["source_hashes"], sort_keys=True) for x in shards}) == 1
@@ -100,6 +100,7 @@ def main():
     out = {
         "ok": True,
         "experiment": "sofic-defect-orbit",
+        "publication_identity": {"canonical_slug": "sofic-defect-orbit", "note_number": "036"},
         "rules": 256,
         "block_size": 3,
         "cadence": 3,
@@ -133,6 +134,7 @@ def main():
             "rule5_control_closure_horizon": control["controls"]["rule5_control_closure_horizon"],
         },
         "resource_limits": shards[0]["resource_limits"],
+        "source_hashes_scope": "Frozen prepublication source bytes used for this result; live files may differ by publication-identity-only normalization.",
         "source_hashes": shards[0]["source_hashes"],
     }
     args.output.parent.mkdir(parents=True, exist_ok=True)

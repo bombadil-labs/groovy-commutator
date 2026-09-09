@@ -1,4 +1,4 @@
-"""Research035 recovery: exact raw-NFA sofic slices with lazy accumulated union."""
+"""Note 036 / sofic-defect-orbit recovery: exact raw-NFA sofic slices with lazy accumulated union."""
 from __future__ import annotations
 import argparse, hashlib, json, sys
 from collections import Counter

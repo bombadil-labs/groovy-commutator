@@ -1,8 +1,8 @@
 # Recovery protocol: lazy exact sofic orbit union — 2026-09-09
 
-**Status:** frozen after the complete primary Research035 run `34388121180` was reaggregated as 170/170 censored, and before evaluating any lazy-union recovery outcome.  
+**Status:** frozen after the complete primary `sofic-defect-orbit` run `34388121180` was reaggregated as 170/170 censored, and before evaluating any lazy-union recovery outcome.  
 **Branch:** `research/sofic-defect-orbit-20260909`.  
-**Dependency:** frozen Research035 exact sofic protocol and censor-aware primary summary.
+**Dependency:** frozen `sofic-defect-orbit` exact sofic protocol and censor-aware primary summary.
 
 ## Why recovery is needed
 
@@ -113,7 +113,7 @@ Do not raise any ceiling after seeing recovery outcomes.
 
 ## Freshness and hypotheses
 
-This is a recovery of the already-frozen Research035 hypotheses, not a new hypothesis-generating experiment.
+This is a recovery of the already-frozen Note 036 / `sofic-defect-orbit` hypotheses, not a new hypothesis-generating experiment.
 
 The original two hypotheses remain:
 
@@ -155,4 +155,4 @@ Explicitly compare recovery censoring against the primary 170/170 censoring resu
 - If recovery resolves cases, freeze the first witness/closure/a surviving case for independent audit before publication.
 - If lazy union eliminates determinization censoring but slice-image ceilings remain dominant, the next target is exact slice representation/minimization rather than orbit-union representation.
 - If inclusion itself becomes the dominant ceiling, move toward a simulation/bisimulation or language-quotient certificate rather than eagerly determinizing the union.
-- If 170/170 remain censored, publish Research035 as a proof-complexity boundary and do not interpret either frozen hypothesis as false.
+- If 170/170 remain censored, publish Note 036 / `sofic-defect-orbit` as a proof-complexity boundary and do not interpret either frozen hypothesis as false.
