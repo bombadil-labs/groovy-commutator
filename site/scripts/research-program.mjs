@@ -149,7 +149,15 @@ function patchKnowledgeNavigation(output) {
 
 export function buildResearchProgram({ records: suppliedRecords, program: suppliedProgram, knowledge = [], output = path.join(SITE, 'research') } = {}) {
   const records = validateRecords(suppliedRecords ?? readResearchRecords())
-    .sort((a, b) => b.updated.localeCompare(a.updated) || String(a.recordType === 'checkpoint' ? `zz-${a.label}` : a.number).localeCompare(String(b.recordType === 'checkpoint' ? `zz-${b.label}` : b.number)));
+    .sort((a, b) => {
+      const byUpdated = b.updated.localeCompare(a.updated);
+      if (byUpdated) return byUpdated;
+      const aCheckpoint = a.recordType === 'checkpoint';
+      const bCheckpoint = b.recordType === 'checkpoint';
+      if (aCheckpoint !== bCheckpoint) return aCheckpoint ? 1 : -1;
+      if (aCheckpoint) return String(a.label).localeCompare(String(b.label));
+      return String(b.number).localeCompare(String(a.number));
+    });
   const program = validateProgram(suppliedProgram ?? JSON.parse(fs.readFileSync(PROGRAM, 'utf8')), records);
   fs.mkdirSync(output, { recursive: true });
   for (const file of fs.readdirSync(output)) if (file.endsWith('.html')) fs.unlinkSync(path.join(output, file));
@@ -185,6 +193,7 @@ export function buildResearchProgram({ records: suppliedRecords, program: suppli
     fs.writeFileSync(file, html);
     inputs[`research-${entry.slug}`] = file;
   }
+
   patchKnowledgeNavigation(output);
   return { inputs, dependencies: [...dependencies] };
 }
