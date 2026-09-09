@@ -1,0 +1,39 @@
+name: Promote Research034 exact result
+
+on:
+  push:
+    branches: ['research/window3-reachable-language-20260909']
+    paths:
+      - '.github/workflows/promote-window3-results.yml'
+  workflow_dispatch:
+
+permissions:
+  actions: read
+  contents: write
+
+jobs:
+  promote:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: research/window3-reachable-language-20260909
+      - name: Download green aggregate
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p /tmp/r034
+          gh run download 34384109852 \
+            --repo bombadil-labs/groovy-commutator \
+            --name window3-reachable-language-publication \
+            --dir /tmp/r034
+      - name: Promote exact compact result
+        run: |
+          cp /tmp/r034/window3-reachable-language-summary.json results/window3_reachable_language_20260909.json
+      - name: Commit publication artifact
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add results/window3_reachable_language_20260909.json
+          git commit -m 'Research034: promote exact width-3 reachable-language result'
+          git push origin HEAD:research/window3-reachable-language-20260909
