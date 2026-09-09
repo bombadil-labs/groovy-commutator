@@ -1,0 +1,61 @@
+name: Symbolic defect-normalization controls
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'scripts/experiment_symbolic_defect_normalization.py'
+      - 'scripts/aggregate_symbolic_defect_normalization.py'
+      - 'docs/research/protocols/symbolic-defect-normalization-20260909.md'
+      - '.github/workflows/research-symbolic-defect-normalization.yml'
+  push:
+    branches:
+      - 'research/symbolic-sofic-image-20260909'
+    paths:
+      - 'scripts/experiment_symbolic_defect_normalization.py'
+      - 'scripts/aggregate_symbolic_defect_normalization.py'
+      - 'docs/research/protocols/symbolic-defect-normalization-20260909.md'
+      - '.github/workflows/research-symbolic-defect-normalization.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  controls:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+      - name: Install research runtime
+        run: python -m pip install -e .
+      - name: Compile symbolic normalization instrument
+        run: python -m py_compile scripts/experiment_symbolic_defect_normalization.py scripts/aggregate_symbolic_defect_normalization.py
+      - name: Run frozen published controls
+        run: >-
+          python scripts/experiment_symbolic_defect_normalization.py
+          --controls-only
+          --output /tmp/symbolic-defect-normalization-controls.json
+      - name: Verify control shape
+        run: |
+          python - <<'PY'
+          import json
+          x=json.load(open('/tmp/symbolic-defect-normalization-controls.json'))
+          assert x['controls']['ok'] is True
+          assert x['controls']['rule5']['status'] == 'pass'
+          assert x['controls']['rule5']['t'] == 3
+          assert x['controls']['rule5']['k'] == 2
+          assert x['controls']['rule5']['j'] == 1
+          assert x['controls']['rule5']['delta'] == 0
+          assert x['controls']['rule5']['rail'] == 'left'
+          assert x['controls']['rule35_all_fail'] is True
+          print({
+              'rule5_max_nodes': x['controls']['rule5']['max_mdd_nodes'],
+              'rule35_candidates': x['controls']['rule35_t_le_3_candidates'],
+              'rule35_max_nodes': x['controls']['rule35_max_mdd_nodes'],
+          })
+          PY
