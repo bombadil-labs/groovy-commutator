@@ -154,11 +154,13 @@ Candidate order is frozen for canonical reporting and resource behavior:
 
 Within one candidate, check output positions outside the candidate seed’s `j`-step cone `[delta-j,delta+j]` first, in ascending order, then positions inside the cone in ascending order. A proved inequality at any position is an exact counterexample and immediately fails that candidate.
 
+Stop a seed-language search at the **first passing candidate** in this frozen order; later candidates are not needed to establish the exact closure and are recorded as untested. If no candidate passes, exhaust the family unless the seed-language wall-time ceiling is reached. Candidate status counts therefore describe the tested prefix for certified languages and the complete family for uncensored non-certified languages.
+
 ## Frozen primary domain
 
-Use exactly the **22 distinct `(rule,seed)` one-defect languages** underlying the **170 Research034 survivor target questions** committed in `results/window3_reachable_language_20260909.json`.
+Use exactly the **22 distinct `(rule,seed)` one-defect languages** underlying the **170 Research034 survivor target questions** committed by the Research034 instrument.
 
-Do not add or remove seed languages after primary evaluation begins.
+The production script must reconstruct this domain with `scan_research034` under the frozen Research034 semantics and assert totals `22` seed languages and `170` target questions before interpreting outcomes. Do not add or remove seed languages after primary evaluation begins.
 
 For every incoming target attached to a seed language, retain the Research032/034 assertion that no finite witness exists through horizon 6. The new instrument is not allowed to redefine or recompute the incoming target family after seeing normalization outcomes.
 
@@ -233,7 +235,7 @@ No prediction is frozen for the Rule-122/161 sentinel families.
 For every `(rule,seed)` language record:
 
 - attached Research034 target IDs;
-- candidate status counts;
+- candidate status counts over the tested prefix;
 - first canonical passing candidate, if any;
 - first exact failing output position and a compact counterexample assignment when practical;
 - MDD node counts by checked output position;
