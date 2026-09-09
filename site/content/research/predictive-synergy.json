@@ -23,5 +23,30 @@
       "history-lift-closure",
       "observer-search"
     ]
+  },
+  {
+    "slug": "contextual-quotient",
+    "number": "029",
+    "title": "The future-context quotient is the canonical repair target",
+    "date": "2026-09-09",
+    "updated": "2026-09-09",
+    "kind": "Universal quotient theorem with exact block-3 safety census",
+    "evidence": "exact",
+    "topic": "Observation and memory",
+    "summary": "Context substitution induces a unique coarsest sufficient uniform local quotient for any deterministic future label. In the full block-3 ECA census, canonical greedy never encounters a strictly better unsafe edit: all four known failures lie exactly on a zero safety-margin boundary.",
+    "takeaway": "Greedy regret has a canonical structural certificate: the first refinement that splits a distinction the future-context quotient still merges. Generic synergy is common; fatal synergy requires leaving the quotient-compatible region.",
+    "source": "docs/research/2026-09-09-contextual-quotient.md",
+    "promotion": {
+      "stage": "candidate",
+      "idea": "Future-context equivalence gives the canonical local repair target",
+      "destination": "Concepts"
+    },
+    "related": [
+      "block3-representation-design",
+      "representation-design",
+      "fiber-visibility",
+      "observer-search",
+      "possibility-frontier"
+    ]
   }
 ]
