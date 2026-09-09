@@ -23,6 +23,8 @@ Research027 representation design is the first CI-native workload. It partitions
 
 The final publication artifact also includes an independently written selected-case audit and the frozen fresh-size Rule-106 confirmation.
 
+The Research027 pull request triggers this workload automatically because the workflow is new and therefore is not yet available from the default branch's manual-run UI. Once merged to `main`, the same workflow is available through `workflow_dispatch` for future frozen workloads.
+
 ## Manual runs
 
 Once `research-run.yml` is present on the default branch, the workflow can also be launched with `workflow_dispatch`. Manual confirmatory runs should cite the workflow run and retained artifact in the corresponding research note when that provenance materially supports a published result.
