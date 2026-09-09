@@ -1,0 +1,91 @@
+name: Research031 causal witness validation
+
+on:
+  push:
+    branches: [research/causal-witness-horizon-20260909]
+    paths:
+      - 'scripts/experiment_causal_witness_horizon.py'
+      - 'scripts/aggregate_causal_witness_horizon.py'
+      - 'docs/research/protocols/causal-witness-horizon-20260909.md'
+      - '.github/workflows/causal-witness-horizon-validation.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  sentinel:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+      - run: python -m pip install -e . pandas
+      - name: Rule 90 exact light-cone smoke
+        run: >-
+          python scripts/experiment_causal_witness_horizon.py
+          --rule-start 90 --rule-end 91
+          --output /tmp/causal-witness-rule90.json
+
+  shard:
+    needs: sentinel
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: [0, 1, 2, 3, 4, 5, 6, 7]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+      - run: python -m pip install -e . pandas
+      - name: Run exact local-cone shard
+        env:
+          SHARD: ${{ matrix.shard }}
+        run: |
+          start=$((SHARD * 32))
+          end=$((start + 32))
+          mkdir -p artifacts
+          python scripts/experiment_causal_witness_horizon.py \
+            --rule-start "$start" --rule-end "$end" \
+            --output "artifacts/causal-witness-${start}-${end}.json"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: causal-witness-shard-${{ matrix.shard }}
+          path: artifacts/*.json
+          if-no-files-found: error
+          retention-days: 30
+
+  aggregate:
+    needs: shard
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+      - run: python -m pip install -e . pandas
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: causal-witness-shard-*
+          path: artifacts/shards
+          merge-multiple: true
+      - name: Aggregate exact census
+        run: |
+          mkdir -p artifacts/final
+          python scripts/aggregate_causal_witness_horizon.py \
+            --input-dir artifacts/shards \
+            --output artifacts/final/causal-witness-summary.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: causal-witness-publication
+          path: artifacts/final/*.json
+          if-no-files-found: error
+          retention-days: 90
