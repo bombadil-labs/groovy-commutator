@@ -1,0 +1,26 @@
+[
+  {
+    "slug": "dimensional-intertwining",
+    "number": "031",
+    "title": "One trajectory can obey local laws in two dimensions",
+    "date": "2026-09-09",
+    "updated": "2026-09-09",
+    "kind": "Exact construction and exhaustive ECA audit",
+    "evidence": "exact",
+    "topic": "Dimensional change",
+    "summary": "A lattice-quotient embedding intertwines any finite-radius 1D CA with a local 2D CA. For ECAs, 218 active lifts already have affinely two-dimensional essential stencils, and a defect-gated extension gives an affinely 2D ambient rule for all 256.",
+    "takeaway": "Changing dimension can commute exactly with evolution even when each representation follows its own local law; the selective frontier is requiring the encoded state itself to carry irreducibly two-dimensional degrees of freedom.",
+    "source": "docs/research/2026-09-09-dimensional-intertwining.md",
+    "promotion": {
+      "stage": "candidate",
+      "idea": "Evolution can commute across dimensions while the local law changes",
+      "destination": "Concepts"
+    },
+    "related": [
+      "column-compatibility",
+      "dimensional-lift",
+      "observation-closure",
+      "coupled-strips"
+    ]
+  }
+]
