@@ -1,0 +1,59 @@
+name: Surface Research030 publication artifact
+
+on:
+  push:
+    branches:
+      - research/finite-horizon-quotients-20260909
+    paths:
+      - '.github/workflows/read-finite-horizon-artifact.yml'
+
+permissions:
+  actions: read
+  contents: read
+  pull-requests: write
+
+jobs:
+  surface:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download green publication artifact
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p artifact
+          gh run download 34327714933 \
+            --repo bombadil-labs/groovy-commutator \
+            --name finite-horizon-quotients-publication \
+            --dir artifact
+          find artifact -maxdepth 2 -type f -print
+      - name: Build exact summary comment
+        run: |
+          python - <<'PY'
+          import json, pathlib
+          p=pathlib.Path('artifact/finite-horizon-quotients-summary.json')
+          x=json.loads(p.read_text())
+          lm=x['long_memory_hstar_ge_10']
+          lines=[
+            '## Research030 green aggregate',
+            '',
+            'Extracted from Actions run `34327714933` publication artifact.',
+            '',
+            f"- nonclosed targets: **{x['nonclosed_targets']}**",
+            f"- quotient discovered before full predictive closure: **{x['early_quotient_count']}/{x['nonclosed_targets']} = {x['early_quotient_fraction']:.6%}**",
+            f"- final local quotient already reached by `h*/2`: **{x['quotient_by_half_hstar_count']}/{x['nonclosed_targets']} = {x['quotient_by_half_hstar_fraction']:.6%}**",
+            f"- at least half of final representation information certified before `h*/2`: **{x['half_info_before_half_hstar_count']}/{x['nonclosed_targets']} = {x['half_info_before_half_hstar_fraction']:.6%}**",
+            f"- median `d_Q/h*`: **{x['median_dq_over_hstar']:.6g}**",
+            f"- mean `d_Q/h*`: **{x['mean_dq_over_hstar']:.6g}**",
+            f"- maximum `d_Q`: **{x['max_quotient_discovery_time']}**",
+            f"- maximum `h*`: **{x['max_hstar']}**",
+            f"- long-memory (`h*>=10`) cases: **{lm['cases']}**; all early: **{lm['all_early']}**; all `d_Q=1`: **{lm['all_dq_one']}**; median `d_Q/h*`: **{lm['median_dq_over_hstar']:.6g}**",
+            '',
+            'Selected max-memory and mechanism cases are preserved in the JSON artifact.'
+          ]
+          pathlib.Path('/tmp/summary.md').write_text('\n'.join(lines)+'\n')
+          print('\n'.join(lines))
+          PY
+      - name: Post summary to PR 34
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh pr comment 34 --repo bombadil-labs/groovy-commutator --body-file /tmp/summary.md
