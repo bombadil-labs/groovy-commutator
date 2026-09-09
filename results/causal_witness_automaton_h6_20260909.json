@@ -1,0 +1,65 @@
+{
+  "ok": true,
+  "complete": false,
+  "experiment": "causal-witness-automaton-h6",
+  "rules": 256,
+  "hmax": 6,
+  "node_budget": 5000000,
+  "h3_regression_count": 4,
+  "h4_births": 0,
+  "h5_births": 0,
+  "fresh_h6_births": 0,
+  "fresh_h6_events": [],
+  "censored": [
+    {
+      "rule": 122,
+      "horizon": 6,
+      "reason": "MDD node ceiling 5000000 exceeded",
+      "node_budget": 5000000
+    },
+    {
+      "rule": 126,
+      "horizon": 6,
+      "reason": "MDD node ceiling 5000000 exceeded",
+      "node_budget": 5000000
+    },
+    {
+      "rule": 129,
+      "horizon": 6,
+      "reason": "MDD node ceiling 5000000 exceeded",
+      "node_budget": 5000000
+    },
+    {
+      "rule": 146,
+      "horizon": 6,
+      "reason": "MDD node ceiling 5000000 exceeded",
+      "node_budget": 5000000
+    },
+    {
+      "rule": 161,
+      "horizon": 6,
+      "reason": "MDD node ceiling 5000000 exceeded",
+      "node_budget": 5000000
+    },
+    {
+      "rule": 182,
+      "horizon": 6,
+      "reason": "MDD node ceiling 5000000 exceeded",
+      "node_budget": 5000000
+    }
+  ],
+  "h6_state_growth": {
+    "rules_built": 186,
+    "new_births": 0,
+    "median_build_nodes": 475.0,
+    "max_build_nodes": 548427,
+    "max_build_rule": 18,
+    "median_query_nodes": 918.0,
+    "max_query_nodes": 4833483
+  },
+  "unresolved_after_run": 52712,
+  "source_hashes": {
+    "scripts/experiment_causal_witness_automaton.py": "0ecec9e2cef54e7b931986c59eb527ba13641fb5af18803212860b262341b4b9",
+    "docs/research/protocols/causal-witness-automaton-20260909.md": "6e3e0597dad88fb4feec0bb46f7b89c56e476d72c761db4a0f7eabbd02033a54"
+  }
+}
