@@ -20,6 +20,7 @@
     "causal-witness-horizon",
     "causal-witness-automaton",
     "reachable-context-invariants",
+    "window3-reachable-language",
     "selector-shielding",
     "pulse-shape-scattering",
     "pulse-scattering"
