@@ -76,12 +76,85 @@ The first sizes are
 
 | source dimension | shell-coded rule bits | completed next-dimensional neighborhood |
 | ---: | ---: | ---: |
+| 0 | 2 | 3 |
 | 1 | 8 | 9 |
 | 2 | 26 | 27 |
 | 3 | 80 | 81 |
 | 4 | 242 | 243 |
 
-The `d=1` member is not an invented compression: its 8-bit rule language is exactly the full ECA rule space. At `d=2`, the ansatz proposes a 26-bit native rule language, much smaller than the 512-bit unrestricted Moore truth table. This is potentially the missing recursive compression mechanism.
+The `d=0` term is already an ordinary unrestricted rule space: a binary zero-dimensional deterministic system updates one bit from its current value, so its truth table has two entries. The `d=1` term is also ordinary and unrestricted: its eight bits are exactly the full ECA rule table.
+
+Thus the recurrence is not introduced only after seeing the ECA coincidence. It begins
+
+\[
+\text{all binary 0D rules}\to\text{all binary 1D ECA rule codes}\to\text{candidate 26-bit 2D shell rules}\to\cdots
+\]
+
+with the first two rule spaces already standard.
+
+At `d=2`, the ansatz proposes a 26-bit native rule language, much smaller than the 512-bit unrestricted Moore truth table. This is potentially the missing recursive compression mechanism.
+
+## A natural selector semantics for shell rules
+
+The shell cardinality also suggests a uniform *form* for the local rule, even though the required address maps are not yet known.
+
+Let
+
+\[
+S_{d+1}=\{-1,0,1\}^{d+1}\setminus\{0\}
+\]
+
+be the set of shell offsets, so `|S_{d+1}|=3^{d+1}-1`.
+
+A shell-coded rule `r` is a bit assignment
+
+\[
+r:S_{d+1}\to\{0,1\}.
+\]
+
+If there exists a fixed, rule-independent address map
+
+\[
+A_d:\{0,1\}^{3^d}\to S_{d+1},
+\]
+
+then the corresponding `d`-dimensional local update can be written as the selector
+
+\[
+F_r(x)=r(A_d(x)).
+\]
+
+At `d=0`, the input neighborhood has one bit and there are two shell positions in 1D, so `A_0` can be a bijection.
+
+At `d=1`, there are eight 3-bit input patterns and eight shell positions in 2D, so `A_1` can again be a bijection. This is exactly the existing ECA truth-table-to-Moore-ring selector family, modulo the choice of spatialization.
+
+At `d=2`, the first genuine compression problem appears:
+
+\[
+A_2:\{0,1\}^{9}\to S_3,
+\]
+
+mapping 512 binary 2D Moore neighborhoods to only 26 shell directions in 3D.
+
+So the recursive-lift problem can be sharpened further:
+
+> **Find a dimension-uniform, rule-blind family of address maps `A_d` whose first two members reproduce ordinary unrestricted 0D and 1D rules and whose higher members give composable shell-coded rules.**
+
+The derivative completion may be relevant precisely because every `d`-dimensional neighborhood in this shell language can be parsed recursively as a lower-dimensional shell rule plus one provenance bit:
+
+\[
+\{0,1\}^{3^d}
+\cong
+\mathcal R_{d-1}^{\mathrm{shell}}\times\{0,1\}.
+\]
+
+Therefore an address map may equivalently be sought in recursive form
+
+\[
+\widetilde A_d:\mathcal R_{d-1}^{\mathrm{shell}}\times\{0,1\}\to S_{d+1}.
+\]
+
+This does not yet determine `A_d`, but it turns the higher-dimensional input from an undifferentiated `3^d`-bit pattern into exactly the pair suggested by the construction: **a lower-dimensional rule code plus the derivative/provenance bit at its center**.
 
 ## Why the derivative is structurally natural
 
@@ -153,7 +226,7 @@ The shell-coded language instead grows geometrically:
 3^{d+1}-1.
 \]
 
-So the proposal does not make the old obstruction disappear; it replaces the unrestricted native-rule family with a recursively typed compressed family whose first member coincides exactly with all ECAs.
+So the proposal does not make the old obstruction disappear; it replaces the unrestricted native-rule family with a recursively typed compressed family whose first two members coincide with ordinary unrestricted binary rule spaces in dimensions zero and one.
 
 This produces three mutually exclusive possibilities worth distinguishing:
 
@@ -167,7 +240,7 @@ Any of these is a useful result.
 
 Do **not** join Wolfram classes yet.
 
-First search for a rule-independent local semantics for shell codes satisfying the `d=1` ECA behavior and admitting a well-typed `d=2` rule family. Candidate semantics should be ranked only by structural requirements fixed in advance:
+First search for a rule-independent local semantics for shell codes satisfying the `d=0` and `d=1` ordinary-rule behavior and admitting a well-typed `d=2` rule family. Candidate semantics should be ranked only by structural requirements fixed in advance:
 
 - locality;
 - translation equivariance;
@@ -175,6 +248,6 @@ First search for a rule-independent local semantics for shell codes satisfying t
 - no rule-specific decoder;
 - the completed center has derivative/provenance semantics;
 - the output shell can be extracted without trajectory-specific fitting;
-- composability from 1D to 2D to 3D.
+- composability from 0D to 1D to 2D to 3D.
 
 Only after one or more operators are frozen should their closure domains be compared with Class-IV labels.
