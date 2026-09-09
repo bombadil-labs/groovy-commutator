@@ -12,15 +12,16 @@ const programs = () => readPrograms();
 const page = (name) => fs.readFileSync(path.join(output, name), 'utf8');
 after(() => fs.rmSync(output, { recursive: true, force: true }));
 
-test('the extended record contains numbered notes plus one unnumbered checkpoint', () => {
+test('the extended record contains numbered notes and unnumbered checkpoints', () => {
   const all = records();
   const notes = all.filter((entry) => (entry.recordType || 'note') === 'note');
   const checkpoints = all.filter((entry) => entry.recordType === 'checkpoint');
   assert.ok(notes.length >= 25);
-  assert.equal(checkpoints.length, 1);
+  assert.ok(checkpoints.length >= 1);
+  assert.ok(checkpoints.every((entry) => entry.number === undefined && typeof entry.label === 'string' && entry.label.trim()));
   assert.equal(new Set(notes.map((entry) => entry.number)).size, notes.length);
   assert.ok(notes.every((entry) => typeof entry.number === 'string' && entry.number.length > 0));
-  const checkpoint = checkpoints[0];
+  const checkpoint = checkpoints.find((entry) => entry.slug === 'selector-shielding');
   assert.equal(checkpoint.slug, 'selector-shielding');
   assert.equal(checkpoint.number, undefined);
   assert.equal(checkpoint.label, 'Checkpoint');

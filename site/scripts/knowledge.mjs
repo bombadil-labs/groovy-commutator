@@ -1,6 +1,8 @@
 import fs from 'node:fs';
 import path from 'node:path';
-import { ROOT, SITE, CATALOG, esc, dateLabel, existingRepoPath, sourceRef, repoUrl, layout, renderMarkdown } from './research.mjs';
+import { ROOT, SITE, esc, dateLabel, existingRepoPath, sourceRef, repoUrl, layout, renderMarkdown } from './research.mjs';
+
+import { readResearchRecords, catalogFiles } from './research-program.mjs';
 
 export const KNOWLEDGE = path.join(SITE, 'content/knowledge.json');
 export const KINDS = {
@@ -92,11 +94,11 @@ export function dependencyPaths(graph, id, reverse = false) {
   return result;
 }
 
-export function buildKnowledge({ graph = readKnowledge(), research = JSON.parse(fs.readFileSync(CATALOG, 'utf8')), output = path.join(SITE, 'research/knowledge') } = {}) {
+export function buildKnowledge({ graph = readKnowledge(), research = readResearchRecords(), output = path.join(SITE, 'research/knowledge') } = {}) {
   validateKnowledge(graph, research);
   const nodes = new Map(graph.nodes.map((n) => [n.id, n]));
   const notes = new Map(research.map((n) => [n.slug, n]));
-  const ref = sourceRef(), dependencies = new Set([KNOWLEDGE, CATALOG]);
+  const ref = sourceRef(), dependencies = new Set([KNOWLEDGE, ...catalogFiles()]);
   const bySource = new Map([
     ...graph.nodes.map((n) => [path.resolve(ROOT, n.source), `${n.id}.html`]),
     ...research.map((n) => [path.resolve(ROOT, n.source), `../${n.slug}.html`]),
