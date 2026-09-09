@@ -10,6 +10,7 @@ on:
         type: choice
         options:
           - representation-design
+          - block3-representation-design
   pull_request:
     branches: [main]
     paths:
@@ -17,11 +18,15 @@ on:
       - 'scripts/aggregate_representation_design.py'
       - 'scripts/audit_representation_design.py'
       - 'scripts/check_representation_design_rule106_n18.py'
+      - 'scripts/experiment_block3_representation_design.py'
+      - 'scripts/aggregate_block3_representation_design.py'
       - 'docs/research/protocols/representation-design-*.md'
+      - 'docs/research/protocols/block3-representation-design-*.md'
       - '.github/workflows/research-run.yml'
 
 permissions:
   contents: read
+  pull-requests: write
 
 concurrency:
   group: research-validation-${{ github.workflow }}-${{ github.ref }}
@@ -29,7 +34,7 @@ concurrency:
 
 jobs:
   representation-design-shard:
-    if: github.event_name == 'workflow_dispatch' || startsWith(github.head_ref, 'research/representation-design-')
+    if: (github.event_name == 'workflow_dispatch' && inputs.experiment == 'representation-design') || startsWith(github.head_ref, 'research/representation-design-')
     runs-on: ubuntu-latest
     timeout-minutes: 45
     strategy:
@@ -62,6 +67,7 @@ jobs:
           retention-days: 30
 
   representation-design-aggregate:
+    if: (github.event_name == 'workflow_dispatch' && inputs.experiment == 'representation-design') || startsWith(github.head_ref, 'research/representation-design-')
     needs: representation-design-shard
     runs-on: ubuntu-latest
     timeout-minutes: 30
@@ -96,6 +102,130 @@ jobs:
       - uses: actions/upload-artifact@v4
         with:
           name: representation-design-publication
+          path: artifacts/final/*.json
+          if-no-files-found: error
+          retention-days: 90
+
+  block3-sentinel:
+    if: (github.event_name == 'workflow_dispatch' && inputs.experiment == 'block3-representation-design') || startsWith(github.head_ref, 'research/block3-representation-design-')
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+      - name: Install package and research runtime
+        run: python -m pip install -e . pandas
+      - name: Run all-target sentinel rules
+        run: >-
+          python scripts/experiment_block3_representation_design.py
+          --rules 30,54,90,106,110,184 --n 12 --max-steps 128
+          --output /tmp/block3-sentinel.json
+      - name: Verify sentinel shape
+        run: |
+          python - <<'PY'
+          import json
+          x=json.load(open('/tmp/block3-sentinel.json'))
+          assert x['rules']==[30,54,90,106,110,184]
+          assert x['target_count']==127
+          assert all(len(r['targets'])==127 for r in x['rows'])
+          print({'sentinel_rules':len(x['rows']),'targets_each':127})
+          PY
+
+  block3-shard:
+    if: (github.event_name == 'workflow_dispatch' && inputs.experiment == 'block3-representation-design') || startsWith(github.head_ref, 'research/block3-representation-design-')
+    needs: block3-sentinel
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+      - name: Install package and research runtime
+        run: python -m pip install -e . pandas
+      - name: Run exact block-3 shard
+        env:
+          SHARD: ${{ matrix.shard }}
+        run: |
+          start=$((SHARD * 16))
+          end=$((start + 16))
+          mkdir -p artifacts
+          python scripts/experiment_block3_representation_design.py \
+            --rule-start "$start" --rule-end "$end" --n 12 --max-steps 128 \
+            --output "artifacts/block3-representation-design-${start}-${end}.json"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: block3-representation-design-shard-${{ matrix.shard }}
+          path: artifacts/*.json
+          if-no-files-found: error
+          retention-days: 30
+
+  block3-aggregate:
+    if: (github.event_name == 'workflow_dispatch' && inputs.experiment == 'block3-representation-design') || startsWith(github.head_ref, 'research/block3-representation-design-')
+    needs: block3-shard
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+      - name: Install package and research runtime
+        run: python -m pip install -e . pandas
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: block3-representation-design-shard-*
+          path: artifacts/shards
+          merge-multiple: true
+      - name: Aggregate exact block-3 census
+        run: |
+          mkdir -p artifacts/final
+          python scripts/aggregate_block3_representation_design.py \
+            --input-dir artifacts/shards \
+            --output artifacts/final/block3-representation-design-summary.json
+      - name: Build compact PR report
+        if: github.event_name == 'pull_request'
+        run: |
+          python - <<'PY'
+          import json
+          x=json.load(open('artifacts/final/block3-representation-design-summary.json'))
+          first=x.get('first_counterexample')
+          lines=[
+            '## Research028 exact CI summary',
+            '',
+            f"- target cases: **{x['target_cases']:,}** ({x['nonclosed_targets']:,} nonclosed)",
+            f"- greedy globally optimal: **{x['greedy_global_optimal']:,}/{x['nonclosed_targets']:,} ({100*x['greedy_success_fraction']:.4f}%)**",
+            f"- greedy failures: **{x['greedy_failures']:,}**",
+            f"- diminishing-return violations: **{x['diminishing_returns']['violations']:,}/{x['diminishing_returns']['comparisons']:,}**",
+          ]
+          if first:
+            lines += [
+              '',
+              f"First counterexample: Rule **{first['rule']}**, target `{first['target']}`, balance {first['balance']}/8.",
+              f"Greedy cost `{first['greedy_added_bits']:.12g}` vs global `{first['global_min_added_bits']:.12g}`; regret `{first['regret']:.12g}`.",
+              f"Beam diagnostics: `{json.dumps(first['counterexample']['beam'], sort_keys=True)}`",
+            ]
+          else:
+            lines += ['', '**No greedy counterexample exists in the frozen block-3 census.**']
+          open('/tmp/block3-report.md','w').write('\n'.join(lines)+'\n')
+          PY
+      - name: Comment compact exact summary
+        if: github.event_name == 'pull_request'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh pr comment "${{ github.event.pull_request.number }}" --body-file /tmp/block3-report.md
+      - uses: actions/upload-artifact@v4
+        with:
+          name: block3-representation-design-publication
           path: artifacts/final/*.json
           if-no-files-found: error
           retention-days: 90

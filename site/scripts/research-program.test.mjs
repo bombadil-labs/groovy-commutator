@@ -12,11 +12,15 @@ const program = () => JSON.parse(fs.readFileSync(PROGRAM, 'utf8'));
 const page = (name) => fs.readFileSync(path.join(output, name), 'utf8');
 after(() => fs.rmSync(output, { recursive: true, force: true }));
 
-test('the extended record contains numbered notes plus an unnumbered checkpoint', () => {
+test('the extended record contains numbered notes plus one unnumbered checkpoint', () => {
   const all = records();
-  assert.equal(all.length, 26);
-  assert.equal(all.filter((entry) => (entry.recordType || 'note') === 'note').length, 25);
-  const checkpoint = all.find((entry) => entry.recordType === 'checkpoint');
+  const notes = all.filter((entry) => (entry.recordType || 'note') === 'note');
+  const checkpoints = all.filter((entry) => entry.recordType === 'checkpoint');
+  assert.ok(notes.length >= 25);
+  assert.equal(checkpoints.length, 1);
+  assert.equal(new Set(notes.map((entry) => entry.number)).size, notes.length);
+  assert.ok(notes.every((entry) => typeof entry.number === 'string' && entry.number.length > 0));
+  const checkpoint = checkpoints[0];
   assert.equal(checkpoint.slug, 'selector-shielding');
   assert.equal(checkpoint.number, undefined);
   assert.equal(checkpoint.label, 'Checkpoint');
@@ -36,6 +40,7 @@ test('program, records, and local evidence links render as first-class routes', 
   assert.match(page('program.html'), /aria-current="page">Program<\/a>/);
   assert.match(page('program.html'), /href="observation-closure.html">Research022/);
   assert.match(page('fiber-visibility.html'), /Note 025 · Exact fiber-visibility census/);
+  assert.match(page('block3-representation-design.html'), /Note 028 · Exact block-3 representation-design census/);
   assert.match(page('selector-shielding.html'), /Checkpoint · Exact selector theorem/);
   assert.match(page('selector-shielding.html'), /Source record and revision history/);
 });

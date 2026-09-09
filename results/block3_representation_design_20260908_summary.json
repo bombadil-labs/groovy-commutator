@@ -1,0 +1,44 @@
+{
+  "ok": true,
+  "experiment": "block3-representation-design",
+  "ci_run": 34308263175,
+  "ring_width": 12,
+  "cadence": 3,
+  "rules": 256,
+  "canonical_binary_targets": 127,
+  "target_cases": 32512,
+  "closed_targets": 1656,
+  "nonclosed_targets": 30856,
+  "closed_fine_rules": 141,
+  "greedy_global_optimal": 30852,
+  "greedy_failures": 4,
+  "greedy_success_fraction": 0.9998703655690951,
+  "diminishing_returns": {
+    "comparisons": 166222336,
+    "violations": 131593228,
+    "violation_fraction": 0.7916699474130842
+  },
+  "failure_cases": [
+    {"rule": 24, "wclass": "II", "target": "01000010", "balance": 2, "regret_bits": 1.0},
+    {"rule": 24, "wclass": "II", "target": "01000110", "balance": 3, "regret_bits": 1.0},
+    {"rule": 231, "wclass": "II", "target": "01000010", "balance": 2, "regret_bits": 1.0},
+    {"rule": 231, "wclass": "II", "target": "01100010", "balance": 3, "regret_bits": 1.0}
+  ],
+  "first_counterexample": {
+    "rule": 24,
+    "target": "01000010",
+    "greedy_added_bits": 6.754887502163468,
+    "global_min_added_bits": 5.754887502163468,
+    "regret_bits": 1.0,
+    "greedy_endpoint": "01230245",
+    "global_optimum": "01230243",
+    "beam_2_4_8_recover_global": false,
+    "beam_endpoint": "01230456",
+    "beam_added_bits": 7.754887502163468
+  },
+  "publication_regressions": {
+    "independent_rule24_audit": "pass",
+    "fresh_rule24_n15": "pass"
+  },
+  "publication_note": "Compact exact summary. Full 16-shard census remains in the GitHub Actions run artifacts; independent audit and fresh-size records are committed separately."
+}
