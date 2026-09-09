@@ -1,13 +1,15 @@
-# Publication numbering note — sofic defect-orbit line
+# Publication identity — sofic defect-orbit line
 
-The exact sofic defect-orbit protocol was frozen internally as **Research035** before a parallel research branch merged `ternary-commutator-lift` as public **Research035**.
+The canonical public identity for this work is **Note 036**, with slug `sofic-defect-orbit`.
 
-The repository now supports multiple living research programs over one shared chronological evidence record. To preserve both preregistration histories:
+A temporary prepublication number collided with a parallel research note. It was normalized before publication and is not an alternate identifier for this line.
 
-- protocol, script, result, and CI provenance from the sofic line retain their original internal `Research035` labels;
-- the public research note is numbered **036**;
-- `sofic-defect-orbit` is supported only by the `erased-distinctions` living program;
-- the parallel `dimensional-lift` program remains unchanged;
-- cross-program links are treated as conceptual relations, not shared evidence claims.
+Preregistration provenance remains auditable through three independent records:
 
-No scientific hypothesis, domain, threshold, or result was changed by this renumbering.
+- the dated frozen protocol files and their Git history;
+- the `source_hashes` stored in the committed result JSON, which identify the exact source bytes used by the frozen runs;
+- the immutable commit and pull-request history that records when protocols, resource ceilings, recoveries, and results were committed.
+
+Publication-identity cleanup changes some live source bytes without changing experiment semantics. Historical `source_hashes` therefore identify the frozen run snapshot and are not expected to equal the hashes of the current identity-normalized files. No hypothesis, domain, threshold, result, or program evidence assignment changes under this normalization.
+
+There is no alternate internal note number. `sofic-defect-orbit` is evidence only for the `erased-distinctions` living program; the parallel `dimensional-lift` program remains separate.

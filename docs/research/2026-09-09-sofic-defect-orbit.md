@@ -1,6 +1,6 @@
 # Exact reachability hits a representation-complexity wall
 
-> **Public numbering note.** This work was preregistered internally as Research035 before a parallel branch merged the ternary commutator lift as public Note 035. To preserve both histories without renumbering frozen protocols, this checkpoint is published as **Note 036** while its protocol and script filenames retain the internal Research035 label.
+> **Publication identity.** This checkpoint is **Note 036**, with canonical slug `sofic-defect-orbit`. A temporary prepublication number collided with a parallel research note and was normalized before publication. Immutable Git history and the recorded frozen source hashes preserve the preregistration; there is no alternate internal note number.
 
 Research034 ended with a small but stubborn frontier:
 

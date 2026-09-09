@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "canonical_slug": "sofic-defect-orbit",
+  "note_number": "036",
+  "alternate_internal_note_number": null,
+  "historical_results": [
+    "results/sofic_defect_orbit_20260909.json",
+    "results/sofic_defect_orbit_lazy_20260909.json",
+    "results/sofic_defect_orbit_raw_control_20260909.json"
+  ],
+  "source_hashes_semantics": "The source_hashes embedded in historical result files identify the exact frozen prepublication source bytes used for those runs. Publication-identity-only edits to live source are expected to change current file hashes.",
+  "publication_identity_note": "docs/research/protocols/sofic-defect-orbit-public-numbering-20260909.md",
+  "publication_record": "site/content/research/sofic-reachability.json",
+  "scientific_semantics_changed": false
+}

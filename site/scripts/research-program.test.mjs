@@ -27,6 +27,52 @@ test('the extended record contains numbered notes and unnumbered checkpoints', (
   assert.equal(checkpoint.label, 'Checkpoint');
 });
 
+test('sofic defect-orbit has one canonical publication identity', () => {
+  const note = records().find((entry) => entry.slug === 'sofic-defect-orbit');
+  assert.ok(note);
+  assert.equal(note.number, '036');
+
+  const banned = [
+    ['Research', '035'].join(''),
+    ['Note', '035'].join(''),
+    ['Note ', '035'].join(''),
+    'internal_research_line',
+  ];
+  const lineage = [
+    note.source,
+    'docs/research/protocols/sofic-defect-orbit-20260909.md',
+    'docs/research/protocols/sofic-defect-orbit-resource-addendum-20260909.md',
+    'docs/research/protocols/sofic-defect-orbit-lazy-union-recovery-20260909.md',
+    'docs/research/protocols/sofic-defect-orbit-raw-slice-recovery-20260909.md',
+    'docs/research/protocols/sofic-defect-orbit-public-numbering-20260909.md',
+    'scripts/experiment_sofic_defect_orbit.py',
+    'scripts/experiment_sofic_defect_orbit_lazy.py',
+    'scripts/experiment_sofic_defect_orbit_raw.py',
+    'scripts/aggregate_sofic_defect_orbit.py',
+    'scripts/aggregate_sofic_defect_orbit_lazy.py',
+    'scripts/aggregate_sofic_defect_orbit_raw.py',
+    'results/sofic_defect_orbit_20260909.json',
+    'results/sofic_defect_orbit_lazy_20260909.json',
+    'results/sofic_defect_orbit_raw_control_20260909.json',
+    'results/sofic_defect_orbit_provenance_20260909.json',
+  ];
+  for (const relative of lineage) {
+    const text = fs.readFileSync(path.join(ROOT, relative), 'utf8');
+    for (const token of banned) assert.equal(text.includes(token), false, `${relative} contains stale alias ${token}`);
+  }
+
+  const provenance = JSON.parse(fs.readFileSync(path.join(ROOT, 'results/sofic_defect_orbit_provenance_20260909.json'), 'utf8'));
+  assert.equal(provenance.canonical_slug, 'sofic-defect-orbit');
+  assert.equal(provenance.note_number, '036');
+  assert.equal(provenance.alternate_internal_note_number, null);
+  assert.equal(provenance.scientific_semantics_changed, false);
+  assert.match(provenance.source_hashes_semantics, /frozen prepublication source bytes/);
+  for (const relative of provenance.historical_results.slice(0, 2)) {
+    const result = JSON.parse(fs.readFileSync(path.join(ROOT, relative), 'utf8'));
+    assert.ok(result.source_hashes && Object.keys(result.source_hashes).length > 0);
+  }
+});
+
 test('same-day numbered notes render newest number first', () => {
   buildResearchProgram({ output });
   const html = page('index.html');

@@ -2,11 +2,11 @@
 
 **Status:** frozen after the lazy-union recovery left all 170 Research034 survivors censored at exact slice-image construction, and before evaluating any raw-slice recovery outcome.  
 **Branch:** `research/sofic-defect-orbit-20260909`.  
-**Public numbering note:** the protocol retains the internal Research035 lineage frozen before the parallel dimensional program claimed public Note 035. Any public note from this line will be numbered 036.
+**Publication identity:** this protocol belongs to public **Note 036** with canonical slug `sofic-defect-orbit`. A temporary prepublication number collided with a parallel note and was normalized; no alternate note number is canonical.
 
 ## Why a second recovery is needed
 
-The primary Research035 method represented each exact sofic time slice by a determinized right-resolving graph and eagerly determinized the cumulative orbit union. The complete primary run censored all 170 questions.
+The primary `sofic-defect-orbit` method represented each exact sofic time slice by a determinized right-resolving graph and eagerly determinized the cumulative orbit union. The complete primary run censored all 170 questions.
 
 The first frozen recovery removed eager union determinization by keeping the accumulated orbit as a lazy disjoint union of exact slice graphs. It again left all 170 questions censored, now **all at the slice-image stage**.
 

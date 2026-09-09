@@ -1,4 +1,4 @@
-"""Research035 recovery: exact sofic slices with lazy nondeterministic accumulated union."""
+"""Note 036 / sofic-defect-orbit recovery: exact sofic slices with lazy nondeterministic accumulated union."""
 from __future__ import annotations
 import argparse, hashlib, json, sys
 from collections import Counter
