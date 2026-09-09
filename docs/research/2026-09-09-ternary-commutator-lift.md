@@ -1,118 +1,139 @@
-# The commuting square generates a ternary dimensional lift
+# The commuting square grows a ternary spatial address
 
-The dimensional-lift search now has a rule-independent algebraic candidate that does not begin by choosing a favored spatial encoding.
+The dimensional-lift search asked for a rule-independent operator rather than a favorable encoding chosen per source rule. The commutator-role work now supplies one exact semantic candidate.
 
-For fixed evolution `F` and any configuration transformation `A`, define
-
-\[
-L(A)=A\circ F,\qquad R(A)=F\circ A,
-\]
-
-and their residual
+For a fixed deterministic evolution `F` and a configuration transformation `A`, define
 
 \[
-C(A)=L(A)\oplus R(A).
-\]
-
-These are the two paths around a commuting square and the exact discrepancy between them. Starting from the discrete derivative
-
-\[
-A_\epsilon=D=I\oplus F,
-\]
-
-a ternary word `w` in `{L,R,C}^d` names one descendant transformation `A_w`.
-
-The [protocol](protocols/ternary-commutator-lift-20260909.md) freezes this operator and evaluates all descendants through depth six on the complete width-eight state space of all 256 ECAs, with no Wolfram class labels loaded.
-
-## One new dimension is one commuting square
-
-Appending a ternary digit to an existing semantic coordinate gives
-
-\[
-A_{wL}(S)=A_w(F(S)),
+L_F(A)=A\circ F,
 \]
 
 \[
-A_{wR}(S)=F(A_w(S)),
+R_F(A)=F\circ A,
+\]
+
+and
+
+\[
+C_F(A)=L_F(A)\oplus R_F(A).
+\]
+
+Start from the outgoing derivative
+
+\[
+A_\epsilon=D=I\oplus F.
+\]
+
+For every word `w` over the alphabet `{L,R,C}`, let `A_w` be the corresponding descendant. A word of length `d` is naturally a ternary coordinate in a side-three `d`-dimensional block.
+
+The [protocol](protocols/ternary-commutator-lift-20260909.md) froze this construction and depth six before evaluation. The [verifier](../../scripts/verify_ternary_commutator_lift.py) evaluates complete function tables on all 256 states of the eight-cell ECA substrate with no Wolfram class labels loaded. The committed summary records the full-result SHA-256 so the structural table is fixed before label comparison.
+
+## The exact lift identity
+
+Define the semantic block
+
+\[
+J_d(S)_w=A_w(S),\qquad w\in\{L,R,C\}^d.
+\]
+
+Appending one ternary coordinate gives three slabs:
+
+\[
+J_{d+1}^{L}(S)=J_d(F(S)),
 \]
 
 \[
-A_{wC}(S)=A_{wL}(S)\oplus A_{wR}(S).
+J_{d+1}^{R}(S)=F^{\parallel}(J_d(S)),
 \]
-
-So the new coordinate literally distinguishes the two composition paths and their residual. The all-`C` ray is exactly the previously measured commutator tower.
-
-This is why the construction naturally suggested a `3^d` side-three spatial block: every semantic coordinate sprouts `L`, `R`, and `C` children.
-
-## The nominal ternary cube has a universal quotient
-
-The labeled tree contains `3^d` words at depth `d`, but two identities hold for **every** `A` and **every** update `F`:
 
 \[
-L(R(A))=R(L(A)),
+J_{d+1}^{C}(S)=J_{d+1}^{L}(S)\oplus J_{d+1}^{R}(S),
 \]
 
-because both sides are `F o A o F`, and
+where `F^parallel` applies the original one-dimensional rule independently to each represented role pattern.
+
+The added dimension therefore stores exactly the two paths around the commuting square and their residual. The all-`C` line is the previously studied commutator tower.
+
+This identity is algebraic and applies to every deterministic rule. It is already a dimension-uniform semantic lift. What remains open is whether its semantic block can evolve autonomously under a native bounded higher-dimensional CA rule.
+
+## The nominal 3^d tree has a forced quotient
+
+A post-evaluation deduction explains a striking regularity in the census. Composition is associative, so
 
 \[
-L(C(A))=C(L(A)).
+L_FR_F=R_FL_F.
 \]
 
-The second identity follows because precomposition by `F` distributes over XOR.
-
-Thus `L` commutes past both `R` and `C`. Every labeled ternary word has a canonical representative
+Also, `L` distributes through XOR, giving
 
 \[
-L^k w,\qquad w\in\{R,C\}^{d-k}.
+L_FC_F=C_FL_F.
 \]
 
-The number of possible canonical roles at exact depth `d` is therefore at most
+Thus every ternary word can be rewritten with all `L` symbols moved through the `R/C` suffix. At exact depth `d` there are therefore at most
 
 \[
-\sum_{m=0}^d 2^m = 2^{d+1}-1.
+\sum_{j=0}^{d}2^j=2^{d+1}-1
 \]
 
-The universal ceiling through depth six is
+semantically distinct descendant maps, despite the `3^d` labeled ternary addresses.
+
+The frozen census respects this bound at every rule and depth. **107 of 256 ECAs saturate it at every tested depth**, with the exact sequence
 
 \[
 1,3,7,15,31,63,127.
 \]
 
-This quotient is forced before the source rule is inspected. Further identifications below it are genuinely rule-dependent on the declared finite substrate.
+So the ternary spatial address contains forced redundancy. That redundancy is not a defect in the operator; it is an algebraic quotient induced by the commuting square itself.
 
-## Exact depth-six census
+## Finite role closure through depth six
 
-Exactly **107 of 256** ECAs attain the universal ceiling at every depth through six. Their semantic role vocabulary therefore expands as fast as this algebra permits within the tested horizon.
+A cumulative role vocabulary counts as closed only if applying `L`, `R`, or `C` to every represented map stays inside the vocabulary.
 
-At the other end, **33 of 256** rules generate a cumulative descendant vocabulary that becomes exactly closed under all three operations `L`, `R`, and `C` by depth six.
+Across all 256 ECAs:
 
-The first closure depths are:
+- **33** reach exact finite ternary-role closure by depth six;
+- **223** do not;
+- closure depths are `0:1`, `1:9`, `2:5`, `3:10`, `4:4`, `5:2`, `6:2`;
+- **225** rules are still adding new maps at depth six;
+- the all-`C` branch agrees with the previously frozen commutator tower throughout the tested depth for every rule.
 
-| First closed depth | Rules |
-| ---: | ---: |
-| 0 | 1 |
-| 1 | 9 |
-| 2 | 5 |
-| 3 | 10 |
-| 4 | 4 |
-| 5 | 2 |
-| 6 | 2 |
-| not closed by 6 | 223 |
+This is not a claim that the 223 nonclosed sources have infinite role vocabularies. Depth six is the frozen boundary.
 
-The 33 bounded-closure rules are:
+## Frozen starter-label comparison
 
-`0, 1, 4, 8, 12, 19, 23, 32, 36, 51, 55, 64, 68, 72, 76, 90, 105, 128, 132, 136, 150, 165, 192, 200, 204, 219, 223, 232, 236, 239, 251, 253, 255`.
+Only after the structural table and its hash were fixed were the repository's existing textbook starter labels consulted.
 
-The all-`C` branch is checked directly against the original commutator-tower recurrence at every evaluated depth.
+| Class | Rule | Closure through depth 6 | Exact-depth role counts |
+| --- | ---: | --- | --- |
+| I | 0 | depth 1 | `1,1,1,1,1,1,1` |
+| I | 250 | no | `1,3,7,15,28,45,75` |
+| II | 4 | depth 1 | `1,1,1,1,1,1,1` |
+| II | 108 | no | `1,3,7,15,29,52,73` |
+| II | 184 | no | `1,3,7,15,31,63,127` |
+| II | 232 | depth 4 | `1,3,7,11,11,11,11` |
+| III | 18 | no | `1,3,7,14,26,42,72` |
+| III | 30 | no | `1,3,7,15,31,63,127` |
+| III | 126 | no | `1,3,7,14,26,47,78` |
+| IV | 54 | no | `1,3,7,15,31,63,127` |
+| IV | 110 | no | `1,3,7,15,31,63,127` |
 
-## What this says about the lift problem
+Both Class-IV starters exhibit maximal semantic growth, but so do Rule 30 and Class-II Rule 184, along with many unlabeled rules. Finite closure and maximal depth-six growth therefore both fail as exact Class-IV discriminators.
 
-The construction separates two questions that previous experiments mixed together.
+That negative classification result does not weaken the operator result: the `L/R/C` lift was derived without labels and survives unchanged.
 
-First, **dimension raising has a canonical semantic operation**: expose the two orderings of `A` and `F` plus their residual. No Class-IV label or arbitrary table placement is required to define that operation.
+## What the operator changes
 
-Second, a finite-dimensional autonomous realization requires a **quotient of the descendant vocabulary**. If all children of all represented roles are already identified with roles in a finite set, the semantic system is closed. If genuinely new descendants continue to appear, the representation asks for more role coordinates.
+The original derivative-completed proposal suggested that a new dimension might carry rule, state, and change. The ternary commutator lift supplies a more canonical recursion: every new dimension carries **left path, right path, residual**.
 
-The observed width-eight closure table is not yet a theorem about infinite ECAs. It is an exact finite-substrate result. Nor does a closed semantic vocabulary yet prove that it embeds as a local higher-dimensional CA state.
+It also explains why a fixed-dimensional autonomous realization is the hard part. To advance `J_d(S)` one step, its required future is literally the `L` slab of `J_{d+1}(S)`. Unless the role vocabulary closes or can be compressed, indefinite evolution keeps asking for deeper roles.
 
-The next step is to inspect the quotient graphs of the 33 closed rules and, separately, the maximally expanding 107-rule family. The important spatial question is whether the universal `L/R/C` semantics can be represented by a fixed local geometry whose symmetry quotient matches these algebraic identifications rather than by a decoder fitted per rule.
+So dimension and correction depth become two presentations of the same bookkeeping problem.
+
+## Next question
+
+The protocol's decision boundary now applies. Because most rules continue growing, test the role-growth signatures on fresh periodic widths before interpreting them as intrinsic. More importantly, search for a native spatial realization of the exact slab identity:
+
+> Can a fixed local higher-dimensional CA carry the `L/R/C` block so that projection onto its `L` face reproduces lower-dimensional evolution while the `R` and `C` faces supply the independently evolved role and the correction needed to keep the representation autonomous?
+
+That is now the concrete dimensional-lift problem.
