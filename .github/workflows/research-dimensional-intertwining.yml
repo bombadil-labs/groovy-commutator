@@ -1,0 +1,29 @@
+name: Dimensional intertwining audit
+
+on:
+  pull_request:
+    paths:
+      - 'scripts/verify_dimensional_intertwining.py'
+      - 'results/dimensional_intertwining_20260909_summary.json'
+      - '.github/workflows/research-dimensional-intertwining.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/verify_dimensional_intertwining.py'
+      - 'results/dimensional_intertwining_20260909_summary.json'
+      - '.github/workflows/research-dimensional-intertwining.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  intertwining-audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Reproduce local and periodic audits and verify the published summary
+        run: python scripts/verify_dimensional_intertwining.py

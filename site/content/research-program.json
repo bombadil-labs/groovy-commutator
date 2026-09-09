@@ -46,7 +46,8 @@
       "block-compatibility",
       "ternary-commutator-lift",
       "correction-future-coordinates",
-      "selector-two-lift"
+      "selector-two-lift",
+      "dimensional-intertwining"
     ]
   }
 ]

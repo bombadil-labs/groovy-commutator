@@ -1,0 +1,28 @@
+[
+  {
+    "slug": "dimensional-intertwining",
+    "title": "One trajectory can obey local laws in two dimensions",
+    "date": "2026-09-09",
+    "updated": "2026-09-09",
+    "kind": "Exact construction and exhaustive ECA audit",
+    "evidence": "exact",
+    "topic": "Dimensional change",
+    "summary": "A lattice-quotient embedding intertwines any finite-radius 1D CA with a local 2D CA. For ECAs, 218 active lifts already have affinely two-dimensional essential stencils, and a defect-gated extension gives an affinely 2D ambient rule for all 256.",
+    "takeaway": "Exact cross-dimensional evolution supplies a baseline. Redundant encoded data, the cost of physical edits, and inherited spatial programs remain separate constraints.",
+    "source": "docs/research/2026-09-09-dimensional-intertwining.md",
+    "promotion": {
+      "stage": "candidate",
+      "idea": "Evolution can commute across dimensions while the local law changes",
+      "destination": "Concepts"
+    },
+    "related": [
+      "column-compatibility",
+      "dimensional-lift",
+      "observation-closure",
+      "coupled-strips",
+      "selector-two-lift"
+    ],
+    "recordType": "checkpoint",
+    "label": "Dimensional intertwining checkpoint"
+  }
+]
