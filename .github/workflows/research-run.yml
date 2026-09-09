@@ -11,6 +11,7 @@ on:
         options:
           - representation-design
           - block3-representation-design
+          - contextual-quotient
   pull_request:
     branches: [main]
     paths:
@@ -22,6 +23,10 @@ on:
       - 'scripts/aggregate_block3_representation_design.py'
       - 'docs/research/protocols/representation-design-*.md'
       - 'docs/research/protocols/block3-representation-design-*.md'
+      - 'scripts/experiment_contextual_quotient.py'
+      - 'scripts/aggregate_contextual_quotient.py'
+      - 'scripts/audit_contextual_quotient.py'
+      - 'docs/research/protocols/contextual-quotient-*.md'
       - '.github/workflows/research-run.yml'
 
 permissions:
@@ -200,20 +205,14 @@ jobs:
           x=json.load(open('artifacts/final/block3-representation-design-summary.json'))
           first=x.get('first_counterexample')
           lines=[
-            '## Research028 exact CI summary',
-            '',
+            '## Research028 exact CI summary','',
             f"- target cases: **{x['target_cases']:,}** ({x['nonclosed_targets']:,} nonclosed)",
             f"- greedy globally optimal: **{x['greedy_global_optimal']:,}/{x['nonclosed_targets']:,} ({100*x['greedy_success_fraction']:.4f}%)**",
             f"- greedy failures: **{x['greedy_failures']:,}**",
             f"- diminishing-return violations: **{x['diminishing_returns']['violations']:,}/{x['diminishing_returns']['comparisons']:,}**",
           ]
           if first:
-            lines += [
-              '',
-              f"First counterexample: Rule **{first['rule']}**, target `{first['target']}`, balance {first['balance']}/8.",
-              f"Greedy cost `{first['greedy_added_bits']:.12g}` vs global `{first['global_min_added_bits']:.12g}`; regret `{first['regret']:.12g}`.",
-              f"Beam diagnostics: `{json.dumps(first['counterexample']['beam'], sort_keys=True)}`",
-            ]
+            lines += ['', f"First counterexample: Rule **{first['rule']}**, target `{first['target']}`, balance {first['balance']}/8.", f"Greedy cost `{first['greedy_added_bits']:.12g}` vs global `{first['global_min_added_bits']:.12g}`; regret `{first['regret']:.12g}`.", f"Beam diagnostics: `{json.dumps(first['counterexample']['beam'], sort_keys=True)}`"]
           else:
             lines += ['', '**No greedy counterexample exists in the frozen block-3 census.**']
           open('/tmp/block3-report.md','w').write('\n'.join(lines)+'\n')
@@ -226,6 +225,138 @@ jobs:
       - uses: actions/upload-artifact@v4
         with:
           name: block3-representation-design-publication
+          path: artifacts/final/*.json
+          if-no-files-found: error
+          retention-days: 90
+
+  contextual-quotient-sentinel:
+    if: (github.event_name == 'workflow_dispatch' && inputs.experiment == 'contextual-quotient') || startsWith(github.head_ref, 'research/fatal-predictive-synergy-')
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+      - name: Install package and research runtime
+        run: python -m pip install -e . pandas
+      - name: Run fatal-synergy sentinel rules
+        run: |
+          mkdir -p artifacts
+          python scripts/experiment_contextual_quotient.py \
+            --rule-start 24 --rule-end 25 \
+            --output artifacts/contextual-quotient-rule24.json
+          python scripts/experiment_contextual_quotient.py \
+            --rule-start 231 --rule-end 232 \
+            --output artifacts/contextual-quotient-rule231.json
+      - name: Verify sentinel failure family
+        run: |
+          python - <<'PY'
+          import json
+          want={(24,'01000010'),(24,'01000110'),(231,'01000010'),(231,'01100010')}
+          got=set()
+          for fn in ('artifacts/contextual-quotient-rule24.json','artifacts/contextual-quotient-rule231.json'):
+              x=json.load(open(fn))
+              for row in x['rows']:
+                  for t in row['targets']:
+                      if not t['closed'] and not t['canonical_optimal']:
+                          got.add((t['rule'],t['target']))
+          assert got == want, (got,want)
+          print({'canonical_failure_family':sorted(got)})
+          PY
+
+  contextual-quotient-shard:
+    if: (github.event_name == 'workflow_dispatch' && inputs.experiment == 'contextual-quotient') || startsWith(github.head_ref, 'research/fatal-predictive-synergy-')
+    needs: contextual-quotient-sentinel
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: [0, 1, 2, 3, 4, 5, 6, 7]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+      - name: Install package and research runtime
+        run: python -m pip install -e . pandas
+      - name: Run contextual-quotient shard
+        env:
+          SHARD: ${{ matrix.shard }}
+        run: |
+          start=$((SHARD * 32))
+          end=$((start + 32))
+          mkdir -p artifacts
+          python scripts/experiment_contextual_quotient.py \
+            --rule-start "$start" --rule-end "$end" \
+            --output "artifacts/contextual-quotient-${start}-${end}.json"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: contextual-quotient-shard-${{ matrix.shard }}
+          path: artifacts/*.json
+          if-no-files-found: error
+          retention-days: 30
+
+  contextual-quotient-aggregate:
+    if: (github.event_name == 'workflow_dispatch' && inputs.experiment == 'contextual-quotient') || startsWith(github.head_ref, 'research/fatal-predictive-synergy-')
+    needs: contextual-quotient-shard
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+      - name: Install package and research runtime
+        run: python -m pip install -e . pandas
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: contextual-quotient-shard-*
+          path: artifacts/shards
+          merge-multiple: true
+      - name: Aggregate contextual quotient census
+        run: |
+          mkdir -p artifacts/final
+          python scripts/aggregate_contextual_quotient.py \
+            --input-dir artifacts/shards \
+            --output artifacts/final/contextual-quotient-summary.json
+      - name: Stratified independent quotient audit
+        run: >-
+          python scripts/audit_contextual_quotient.py
+          --output artifacts/final/contextual-quotient-audit.json
+      - name: Build compact PR report
+        if: github.event_name == 'pull_request'
+        run: |
+          python - <<'PY'
+          import json
+          x=json.load(open('artifacts/final/contextual-quotient-summary.json'))
+          lines=[
+            '## Research029 exact CI summary','',
+            f"- nonclosed block-3 targets: **{x['nonclosed_targets']:,}**",
+            f"- canonical greedy failures: **{x['canonical_failures']}**",
+            f"- strictly negative safety-margin cases: **{x['strict_negative_margin_cases']}**",
+            f"- cost-aware greedy failures: **{x['cost_aware_failures']}**",
+            f"- canonical/cost-aware path differences: **{x['paths_differ']:,}**",
+            f"- minimum positive canonical safety margin: `{x['minimum_positive_canonical_safety_margin']}`",
+          ]
+          if x['canonical_failure_cases']:
+              lines += ['', 'Canonical failure family:']
+              for r in x['canonical_failure_cases']:
+                  lines.append(f"- Rule **{r['rule']}**, target `{r['target']}`, quotient `{r['quotient']}`, margin `{r['margin']}`")
+          open('/tmp/contextual-quotient-report.md','w').write('\n'.join(lines)+'\n')
+          PY
+      - name: Comment compact exact summary
+        if: github.event_name == 'pull_request'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh pr comment "${{ github.event.pull_request.number }}" --body-file /tmp/contextual-quotient-report.md
+      - uses: actions/upload-artifact@v4
+        with:
+          name: contextual-quotient-publication
           path: artifacts/final/*.json
           if-no-files-found: error
           retention-days: 90
