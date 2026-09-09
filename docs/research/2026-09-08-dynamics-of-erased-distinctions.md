@@ -25,9 +25,7 @@ F=E^q\times E^q.
 The distinctions that can be forgotten forever by this observation are exactly
 
 \[
-\boxed{
-R_\infty=\bigcap_{t\ge0}F^{-t}(R_0).
-}
+\boxed{R_\infty=\bigcap_{t\ge0}F^{-t}(R_0).}
 \]
 
 A pair in `R_infinity` remains observationally indistinguishable for its entire future. A pair in `R_0` but not `R_infinity` is only temporarily hidden: eventually the discarded distinction returns to the observed variables.
@@ -93,9 +91,7 @@ The stable relation `R_infinity` defines the smallest exact predictive state spa
 [Research025](2026-09-08-fiber-visibility.md) turns this into an exact information budget,
 
 \[
-\boxed{
-H(S)=H(P(S))+I_{\rm latent}+I_{\rm shielded}.
-}
+\boxed{H(S)=H(P(S))+I_{\rm latent}+I_{\rm shielded}.}
 \]
 
 - `H(P(S))` is what the observer represents now.
@@ -105,6 +101,31 @@ H(S)=H(P(S))+I_{\rm latent}+I_{\rm shielded}.
 The last term is a precise notion of **safe forgetting** relative to an effective description.
 
 This is stronger than asking how much information a coarse-graining loses. The important question is **which lost distinctions remain in the causal future of the variables we intend to keep**.
+
+## Closure and possibility are different representation objectives
+
+Research025's latent term also has a direct possibility interpretation. If `C_infinity` is the stable future-equivalence class, then
+
+\[
+V_\infty(E,P)=H(C_\infty\mid P(S))
+\]
+
+is the entropy of distinguishable observed future trajectories compatible with the present macrostate. In other words,
+
+\[
+\boxed{I_{\rm latent}=\text{future repertoire hidden in the present}.}
+\]
+
+[Research026](2026-09-08-possibility-frontier.md) uses this to separate two representation-selection objectives:
+
+1. forget as little as possible while making present closure fail;
+2. choose a representation under which the present macrostate remains compatible with the largest repertoire of distinct futures.
+
+Across the exact `n=12` static block-observer census, 247 of 256 ECA rules admit at least one closure-breaking observation. For 222 of those 247, the least-forgetting closure breaker and the maximum-repertoire observer are different. No repository-labeled Class-III or Class-IV rule has a tested observer that optimizes both.
+
+The extremes both have zero repertoire: identity forgets nothing and therefore leaves no macro-level ambiguity, while a constant observation forgets every distinction including the future itself. Possibility therefore lives in an interior region of representation space, and for most rules its best value is not monotone in the amount forgotten.
+
+This adds a second design pressure to the Program. A representation can be good because it is a compact sufficient state for prediction, or because it preserves a rich structured family of still-distinguishable continuations. Useful representations may need to negotiate between those objectives rather than maximizing one scalar notion of compression.
 
 ## Hidden modes have dynamics
 
@@ -149,6 +170,7 @@ The program should distinguish its stable results from its motivating language. 
 7. **Moving shielding walls.** The left and right boundary-wall recurrences established in the shielding checkpoint are exact for all future time within their proved moving-frame domains.
 8. **Stripe diode.** The reported period-2 stripe phase is an exact phase with directional selector behavior.
 9. **Bounded scattering laws.** The single-pulse all-displacement law and the 1,600-case small-shape census are exact within their declared architectures.
+10. **Possibility frontier.** In the frozen static observer family at `n=12`, 222 of 247 rules with any closure breaker separate the least-forgetting closure breaker from the maximum-future-repertoire observer; all six frozen observer pairs preserve that ordering on the fresh `n=18` validation.
 
 ## What remains open
 
@@ -181,6 +203,8 @@ F^t(s,s')\in R_0\quad\text{for every }t\ge0
 \]
 
 without requiring exhaustive future simulation. Rule 106 and selector shielding are the first two worked examples against which such a criterion should be tested.
+
+Research026 adds a dual constructive question: once a hidden distinction is classified as latent or shielded, can we deliberately add or remove macro variables to move a representation along the closure/possibility Pareto frontier? That would replace blind observer search with controlled representation design.
 
 ## How to read the record
 

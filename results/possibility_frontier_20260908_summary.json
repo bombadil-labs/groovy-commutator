@@ -1,0 +1,79 @@
+{
+  "ring_width": 12,
+  "controls": {
+    "block2_closed_fine_rules": 92,
+    "block2_canonical_factors": 202,
+    "block2_full_factors": 404,
+    "block3_closed_fine_rules": 141,
+    "block3_canonical_factors": 1656,
+    "block3_full_factors": 3312,
+    "derivative_closed_rules": 30
+  },
+  "primary": {
+    "rules_with_breaker": 247,
+    "rules_without_breaker": 9,
+    "optimizer_overlap_rules": 25,
+    "optimizer_nonoverlap_rules": 222,
+    "optimizer_nonoverlap_fraction": 0.8987854251012146,
+    "minimum_forgetting_distribution": {"6.0":236,"7.132331253245202":8,"8.0":3},
+    "maximum_repertoire_kind_counts": {"block3":171,"block2":76},
+    "interior_curve_kind_counts": {"nonmonotone":227,"strictly_increasing":20,"nondecreasing":9},
+    "pareto_point_count": {"minimum":1,"median":4.0,"maximum":7}
+  },
+  "by_wolfram_class": {
+    "I": {"rules_with_breaker":18,"minimum_maximum_overlap_rules":2,"minimum_maximum_overlap_fraction":0.1111111111111111,"median_minimum_breaking_forgetting_bits":6.0,"median_maximum_future_repertoire_bits":3.2887400195732868,"mean_maximum_future_repertoire_bits":2.923850581833026,"median_forgetting_at_maximum_repertoire_bits":7.132331253245203,"median_maximum_possibility_efficiency":0.47769735642038064,"mean_maximum_possibility_efficiency":0.4403515440821855,"median_pareto_points":3.0},
+    "II": {"rules_with_breaker":189,"minimum_maximum_overlap_rules":23,"minimum_maximum_overlap_fraction":0.12169312169312169,"median_minimum_breaking_forgetting_bits":6.0,"median_maximum_future_repertoire_bits":5.443211725955198,"mean_maximum_future_repertoire_bits":5.233443344576939,"median_forgetting_at_maximum_repertoire_bits":8.0,"median_maximum_possibility_efficiency":0.7417503873730403,"mean_maximum_possibility_efficiency":0.7266114774982063,"median_pareto_points":4.0},
+    "III": {"rules_with_breaker":26,"minimum_maximum_overlap_rules":0,"minimum_maximum_overlap_fraction":0.0,"median_minimum_breaking_forgetting_bits":6.0,"median_maximum_future_repertoire_bits":7.318967329122997,"mean_maximum_future_repertoire_bits":7.788732532249977,"median_forgetting_at_maximum_repertoire_bits":8.754887502163468,"median_maximum_possibility_efficiency":0.9398872580531511,"mean_maximum_possibility_efficiency":0.9121246599788709,"median_pareto_points":6.0},
+    "IV": {"rules_with_breaker":14,"minimum_maximum_overlap_rules":0,"minimum_maximum_overlap_fraction":0.0,"median_minimum_breaking_forgetting_bits":6.0,"median_maximum_future_repertoire_bits":8.360612574594457,"mean_maximum_future_repertoire_bits":8.31455146601626,"median_forgetting_at_maximum_repertoire_bits":9.825742227201614,"median_maximum_possibility_efficiency":0.9670729266160922,"mean_maximum_possibility_efficiency":0.9720974191658721,"median_pareto_points":7.0}
+  },
+  "best_repertoire_by_forgetting_level_and_class": {
+    "I": {"0.000000000":{"median":0.0,"mean":0.0},"6.000000000":{"median":2.672954401222377,"mean":1.9530871826564848},"7.132331253":{"median":2.81099661959477,"mean":2.047522312695858},"8.000000000":{"median":1.7465810922283165,"mean":1.3948321708395512},"8.182263988":{"median":1.9178613035223004,"mean":1.497190727878286},"8.754887502":{"median":2.0606897350179705,"mean":1.5421409502190597},"9.825742227":{"median":1.9319025512119112,"mean":1.4585813957434037},"12.000000000":{"median":0.0,"mean":0.0}},
+    "II": {"0.000000000":{"median":0.0,"mean":0.0},"6.000000000":{"median":4.145002898379325,"mean":4.021194670057689},"7.132331253":{"median":4.3682281260965325,"mean":4.243947941014322},"8.000000000":{"median":5.067688076108125,"mean":4.950466763955217},"8.182263988":{"median":5.071548803298605,"mean":4.996132026931949},"8.754887502":{"median":4.902867865673399,"mean":4.761362637897016},"9.825742227":{"median":3.8960251674936983,"mean":3.861206529596556},"12.000000000":{"median":0.0,"mean":0.0}},
+    "III": {"0.000000000":{"median":0.0,"mean":0.0},"6.000000000":{"median":5.16051090719562,"mean":3.838599671470807},"7.132331253":{"median":5.96202779738093,"mean":5.913744155637782},"8.000000000":{"median":7.166600122549529,"mean":7.1911922065048595},"8.182263988":{"median":7.318967329122997,"mean":7.269262095792533},"8.754887502":{"median":7.26896425389141,"mean":7.413840237791977},"9.825742227":{"median":6.943559206310757,"mean":7.171177864584703},"12.000000000":{"median":0.0,"mean":0.0}},
+    "IV": {"0.000000000":{"median":0.0,"mean":0.0},"6.000000000":{"median":5.802437559696553,"mean":5.832584514995233},"7.132331253":{"median":6.886649245060098,"mean":6.807507708931284},"8.000000000":{"median":7.6260934558384434,"mean":7.598168745335438},"8.182263988":{"median":7.803960152357093,"mean":7.766735545091167},"8.754887502":{"median":8.273889908640124,"mean":8.094071327594532},"9.825742227":{"median":8.360612574594457,"mean":8.311322663976496},"12.000000000":{"median":0.0,"mean":0.0}}
+  },
+  "derivative_vs_static": {
+    "I":{"rules":24,"nondominated":24,"beats_best_static_efficiency":22},
+    "II":{"rules":192,"nondominated":168,"beats_best_static_efficiency":130},
+    "III":{"rules":26,"nondominated":22,"beats_best_static_efficiency":10},
+    "IV":{"rules":14,"nondominated":14,"beats_best_static_efficiency":10}
+  },
+  "selected_curves": {
+    "30": {
+      "minimum_breaker":{"observer":"block2:3","forgotten_bits":6.0,"future_repertoire_bits":5.99951171875,"shielded_bits":0.00048828125,"possibility_efficiency":0.9999186197916666,"hstar":5,"V_t":[0.0,4.74749180368325,5.805046551510504,5.98779296875,5.99658203125,5.99951171875]},
+      "maximum_repertoire":{"observer":"block3:1","forgotten_bits":9.825742227201614,"future_repertoire_bits":9.546018980867677,"shielded_bits":0.27972324633393697,"possibility_efficiency":0.9715315912156183,"hstar":14,"V_t":[0.0,2.0307024139441263,3.9925116214370147,5.730889143769581,7.144466788327874,8.189791116880658,8.875593378883217,9.24352370971881,9.399258744390847,9.481656901996521,9.519632701562351,9.532825841215013,9.540159605867677,9.542112730867677,9.546018980867677]},
+      "maximum_efficiency":{"observer":"block2:3","forgotten_bits":6.0,"future_repertoire_bits":5.99951171875,"shielded_bits":0.00048828125,"possibility_efficiency":0.9999186197916666,"hstar":5,"V_t":[0.0,4.74749180368325,5.805046551510504,5.98779296875,5.99658203125,5.99951171875]},
+      "derivative":{"observer":"derivative","forgotten_bits":0.0314342987065821,"future_repertoire_bits":0.0302734375,"shielded_bits":0.0011608612065820978,"possibility_efficiency":0.963070236832132,"hstar":1,"V_t":[0.0,0.0302734375]}
+    },
+    "54": {
+      "minimum_breaker":{"observer":"block2:3","forgotten_bits":6.0,"future_repertoire_bits":5.735193695052512,"shielded_bits":0.2648063049474878,"possibility_efficiency":0.9558656158420854,"hstar":3,"V_t":[0.0,4.59375,5.624224621563016,5.735193695052512]},
+      "maximum_repertoire":{"observer":"block3:1","forgotten_bits":9.825742227201614,"future_repertoire_bits":7.918165732287255,"shielded_bits":1.907576494914359,"possibility_efficiency":0.8058592978723359,"hstar":7,"V_t":[0.0,3.325309279273181,5.694118115092476,7.38105388215682,7.791137628885101,7.896202621939919,7.912306357287255,7.918165732287255]},
+      "maximum_efficiency":{"observer":"block2:3","forgotten_bits":6.0,"future_repertoire_bits":5.735193695052512,"shielded_bits":0.2648063049474878,"possibility_efficiency":0.9558656158420854,"hstar":3,"V_t":[0.0,4.59375,5.624224621563016,5.735193695052512]},
+      "derivative":{"observer":"derivative","forgotten_bits":3.612124219966951,"future_repertoire_bits":3.608217969966951,"shielded_bits":0.00390625,"possibility_efficiency":0.9989185726287022,"hstar":2,"V_t":[0.0,3.300744691113989,3.608217969966951]}
+    },
+    "90": {
+      "minimum_breaker":{"observer":"block2:2","forgotten_bits":7.132331253245203,"future_repertoire_bits":3.988476286553711,"shielded_bits":3.1438549666914923,"possibility_efficiency":0.5592107468002077,"hstar":1,"V_t":[0.0,3.988476286553711]},
+      "maximum_repertoire":{"observer":"block3:30","forgotten_bits":8.0,"future_repertoire_bits":7.021848332858651,"shielded_bits":0.9781516671413488,"possibility_efficiency":0.8777310416073314,"hstar":2,"V_t":[0.0,3.958536709940084,7.021848332858651]},
+      "maximum_efficiency":{"observer":"block3:30","forgotten_bits":8.0,"future_repertoire_bits":7.021848332858651,"shielded_bits":0.9781516671413488,"possibility_efficiency":0.8777310416073314,"hstar":2,"V_t":[0.0,3.958536709940084,7.021848332858651]},
+      "derivative":{"observer":"derivative","forgotten_bits":2.0,"future_repertoire_bits":0.0,"shielded_bits":2.0,"possibility_efficiency":0.0,"hstar":0,"V_t":[0.0]}
+    },
+    "106": {
+      "minimum_breaker":{"observer":"block2:6","forgotten_bits":6.0,"future_repertoire_bits":5.802437559696553,"shielded_bits":0.1975624403034466,"possibility_efficiency":0.9670729266160922,"hstar":13,"V_t":[0.0,4.044986826316753,5.421075944646105,5.59802026230158,5.697686912717559,5.728089579957057,5.743843809696553,5.758492247196553,5.770210997196553,5.779000059696553,5.784859434696553,5.790718809696553,5.796578184696553,5.802437559696553]},
+      "maximum_repertoire":{"observer":"block3:127","forgotten_bits":9.825742227201614,"future_repertoire_bits":8.904991454768838,"shielded_bits":0.9207507724327755,"possibility_efficiency":0.9062919878069092,"hstar":19,"V_t":[0.0,2.1045660207990307,3.9911033850421167,5.6891031509208965,6.901550202328625,7.72096164933617,8.20322508385345,8.506120730461591,8.634297087191648,8.739949543210358,8.806943107192266,8.851091601839236,8.867356271792415,8.879528531017717,8.888531735069352,8.897178954768838,8.899132079768838,8.901085204768838,8.903038329768838,8.904991454768838]},
+      "maximum_efficiency":{"observer":"block2:6","forgotten_bits":6.0,"future_repertoire_bits":5.802437559696553,"shielded_bits":0.1975624403034466,"possibility_efficiency":0.9670729266160922,"hstar":13,"V_t":[0.0,4.044986826316753,5.421075944646105,5.59802026230158,5.697686912717559,5.728089579957057,5.743843809696553,5.758492247196553,5.770210997196553,5.779000059696553,5.784859434696553,5.790718809696553,5.796578184696553,5.802437559696553]},
+      "derivative":{"observer":"derivative","forgotten_bits":0.0314342987065821,"future_repertoire_bits":0.029969454956582098,"shielded_bits":0.00146484375,"possibility_efficiency":0.9533998272500581,"hstar":1,"V_t":[0.0,0.029969454956582098]}
+    },
+    "110": {
+      "minimum_breaker":{"observer":"block2:3","forgotten_bits":6.0,"future_repertoire_bits":5.9931640625,"shielded_bits":0.0068359375,"possibility_efficiency":0.9988606770833334,"hstar":4,"V_t":[0.0,4.3510271716028335,5.883825039661758,5.9873046875,5.9931640625]},
+      "maximum_repertoire":{"observer":"block3:64","forgotten_bits":9.825742227201614,"future_repertoire_bits":8.360612574594457,"shielded_bits":1.4651296526071569,"possibility_efficiency":0.8508886536275002,"hstar":9,"V_t":[0.0,2.3231791905588604,4.441773105126096,6.191934080892205,7.436273771280943,8.045481310619786,8.272965490788765,8.329201639988616,8.350465739120276,8.360612574594457]},
+      "maximum_efficiency":{"observer":"block2:3","forgotten_bits":6.0,"future_repertoire_bits":5.9931640625,"shielded_bits":0.0068359375,"possibility_efficiency":0.9988606770833334,"hstar":4,"V_t":[0.0,4.3510271716028335,5.883825039661758,5.9873046875,5.9931640625]},
+      "derivative":{"observer":"derivative","forgotten_bits":2.469862387671345,"future_repertoire_bits":2.468885825171345,"shielded_bits":0.0009765625,"possibility_efficiency":0.999604608538162,"hstar":1,"V_t":[0.0,2.468885825171345]}
+    },
+    "184": {
+      "minimum_breaker":{"observer":"block2:3","forgotten_bits":6.0,"future_repertoire_bits":3.963925903130164,"shielded_bits":2.036074096869836,"possibility_efficiency":0.6606543171883607,"hstar":3,"V_t":[0.0,3.0692667151517856,3.753649230735192,3.963925903130164]},
+      "maximum_repertoire":{"observer":"block2:4","forgotten_bits":7.132331253245203,"future_repertoire_bits":5.000555869758868,"shielded_bits":2.1317753834863353,"possibility_efficiency":0.7011109961393928,"hstar":3,"V_t":[0.0,4.026141728186714,4.867856885527283,5.000555869758868]},
+      "maximum_efficiency":{"observer":"block2:4","forgotten_bits":7.132331253245203,"future_repertoire_bits":5.000555869758868,"shielded_bits":2.1317753834863353,"possibility_efficiency":0.7011109961393928,"hstar":3,"V_t":[0.0,4.026141728186714,4.867856885527283,5.000555869758868]},
+      "derivative":{"observer":"derivative","forgotten_bits":3.866213647655284,"future_repertoire_bits":3.865237085155284,"shielded_bits":0.0009765625,"possibility_efficiency":0.9997474111394252,"hstar":5,"V_t":[0.0,2.8992689560291094,3.6241804202993446,3.805575382098839,3.8513067506762884,3.865237085155284]}
+    }
+  }
+}

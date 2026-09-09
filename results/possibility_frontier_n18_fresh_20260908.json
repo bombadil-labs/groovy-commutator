@@ -1,0 +1,26 @@
+{
+  "ok": true,
+  "ring_width": 18,
+  "rows": [
+    {"rule":30,"selection":"minimum","observer":"block2:3","forgotten_bits":9.0,"future_repertoire_bits":8.999992370605469,"shielded_bits":7.62939453125e-06,"possibility_efficiency":0.9999991522894965,"hstar":6,"closed":false},
+    {"rule":30,"selection":"maximum","observer":"block3:1","forgotten_bits":14.73861334080242,"future_repertoire_bits":14.702564337500622,"shielded_bits":0.036049003301798166,"possibility_efficiency":0.9975541116068226,"hstar":12,"closed":false},
+    {"rule":54,"selection":"minimum","observer":"block2:3","forgotten_bits":9.0,"future_repertoire_bits":8.806431861152184,"shielded_bits":0.19356813884781587,"possibility_efficiency":0.9784924290169094,"hstar":7,"closed":false},
+    {"rule":54,"selection":"maximum","observer":"block3:1","forgotten_bits":14.73861334080242,"future_repertoire_bits":12.871143176437943,"shielded_bits":1.8674701643644767,"possibility_efficiency":0.8732940391892522,"hstar":10,"closed":false},
+    {"rule":90,"selection":"minimum","observer":"block2:7","forgotten_bits":10.698496879867804,"future_repertoire_bits":9.66532977320265,"shielded_bits":1.0331671066651538,"possibility_efficiency":0.9034287602953509,"hstar":4,"closed":false},
+    {"rule":90,"selection":"maximum","observer":"block3:30","forgotten_bits":12.0,"future_repertoire_bits":11.937562351139952,"shielded_bits":0.062437648860047545,"possibility_efficiency":0.994796862594996,"hstar":6,"closed":false},
+    {"rule":106,"selection":"minimum","observer":"block2:6","forgotten_bits":9.0,"future_repertoire_bits":8.918972478024763,"shielded_bits":0.081027521975237,"possibility_efficiency":0.9909969420027515,"hstar":49,"closed":false},
+    {"rule":106,"selection":"maximum","observer":"block3:127","forgotten_bits":14.73861334080242,"future_repertoire_bits":14.439913556727195,"shielded_bits":0.29869978407522524,"possibility_efficiency":0.9797335219285315,"hstar":67,"closed":false},
+    {"rule":110,"selection":"minimum","observer":"block2:3","forgotten_bits":9.0,"future_repertoire_bits":8.999710083007812,"shielded_bits":0.0002899169921875,"possibility_efficiency":0.9999677870008681,"hstar":5,"closed":false},
+    {"rule":110,"selection":"maximum","observer":"block3:64","forgotten_bits":14.73861334080242,"future_repertoire_bits":13.13200937506586,"shielded_bits":1.6066039657365607,"possibility_efficiency":0.8909935467749307,"hstar":11,"closed":false},
+    {"rule":184,"selection":"minimum","observer":"block2:3","forgotten_bits":9.0,"future_repertoire_bits":6.297367916229046,"shielded_bits":2.702632083770954,"possibility_efficiency":0.6997075462476717,"hstar":4,"closed":false},
+    {"rule":184,"selection":"maximum","observer":"block2:4","forgotten_bits":10.698496879867804,"future_repertoire_bits":7.95764238353,"shielded_bits":2.7408544963378034,"possibility_efficiency":0.7438093848963508,"hstar":5,"closed":false}
+  ],
+  "checks": [
+    {"rule":30,"minimum_observer":"block2:3","maximum_observer":"block3:1","minimum_future":8.999992370605469,"maximum_future":14.702564337500622,"future_order_pass":true,"forgetting_order_pass":true,"both_nonclosed":true},
+    {"rule":54,"minimum_observer":"block2:3","maximum_observer":"block3:1","minimum_future":8.806431861152184,"maximum_future":12.871143176437943,"future_order_pass":true,"forgetting_order_pass":true,"both_nonclosed":true},
+    {"rule":90,"minimum_observer":"block2:7","maximum_observer":"block3:30","minimum_future":9.66532977320265,"maximum_future":11.937562351139952,"future_order_pass":true,"forgetting_order_pass":true,"both_nonclosed":true},
+    {"rule":106,"minimum_observer":"block2:6","maximum_observer":"block3:127","minimum_future":8.918972478024763,"maximum_future":14.439913556727195,"future_order_pass":true,"forgetting_order_pass":true,"both_nonclosed":true},
+    {"rule":110,"minimum_observer":"block2:3","maximum_observer":"block3:64","minimum_future":8.999710083007812,"maximum_future":13.13200937506586,"future_order_pass":true,"forgetting_order_pass":true,"both_nonclosed":true},
+    {"rule":184,"minimum_observer":"block2:3","maximum_observer":"block2:4","minimum_future":6.297367916229046,"maximum_future":7.95764238353,"future_order_pass":true,"forgetting_order_pass":true,"both_nonclosed":true}
+  ]
+}
