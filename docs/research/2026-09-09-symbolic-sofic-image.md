@@ -1,5 +1,7 @@
 # Symbolic recurrence clears the representation wall but not the frontier
 
+> **Publication identity.** This work was preregistered, implemented, and evaluated under the number-independent slug `symbolic-sofic-image`. After the result was frozen, the shared catalog assigned it **Note 037**. The frozen protocol bytes and hashes are unchanged.
+
 Note 036 ended at an awkward but useful boundary. The exact one-defect orbit is a mathematically legitimate sofic object, and finite orbit containment gives an exact all-time permanence certificate. But every one of the 170 remaining Research034 questions censored under the frozen explicit graph representations.
 
 The immediate temptation was to build a more compact graph.
