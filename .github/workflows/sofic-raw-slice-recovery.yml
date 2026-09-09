@@ -1,0 +1,130 @@
+name: Research035 raw-NFA exact sofic recovery
+
+on:
+  push:
+    branches: ['research/sofic-defect-orbit-20260909']
+    paths:
+      - 'scripts/experiment_sofic_defect_orbit_raw.py'
+      - 'scripts/aggregate_sofic_defect_orbit_raw.py'
+      - 'docs/research/protocols/sofic-defect-orbit-raw-slice-recovery-20260909.md'
+      - '.github/workflows/sofic-raw-slice-recovery.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  sentinel:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+      - run: python -m pip install -e . pandas
+      - name: Validate frozen raw-NFA controls
+        run: |
+          mkdir -p artifacts
+          python scripts/experiment_sofic_defect_orbit_raw.py \
+            --controls-only \
+            --output artifacts/raw-controls.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: sofic-raw-controls
+          path: artifacts/raw-controls.json
+          retention-days: 90
+
+  shard:
+    needs: sentinel
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+      - run: python -m pip install -e . pandas
+      - name: Run exact raw-NFA survivor shard
+        env:
+          SHARD: ${{ matrix.shard }}
+        run: |
+          start=$((SHARD * 8))
+          end=$((start + 8))
+          mkdir -p artifacts
+          python scripts/experiment_sofic_defect_orbit_raw.py \
+            --rule-start "$start" --rule-end "$end" \
+            --output "artifacts/sofic-raw-${start}-${end}.json"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: sofic-raw-shard-${{ matrix.shard }}
+          path: artifacts/*.json
+          if-no-files-found: error
+          retention-days: 30
+
+  aggregate-and-promote:
+    needs: [sentinel, shard]
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: research/sofic-defect-orbit-20260909
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: sofic-raw-shard-*
+          path: artifacts/shards
+          merge-multiple: true
+      - uses: actions/download-artifact@v4
+        with:
+          name: sofic-raw-controls
+          path: artifacts/controls
+      - name: Aggregate exact recovery
+        run: |
+          python scripts/aggregate_sofic_defect_orbit_raw.py \
+            --input-dir artifacts/shards \
+            --controls artifacts/controls/raw-controls.json \
+            --output results/sofic_defect_orbit_raw_20260909.json
+      - name: Commit exact aggregate
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add results/sofic_defect_orbit_raw_20260909.json
+          git commit -m 'Research035: preserve exact raw-slice recovery result'
+          git push origin HEAD:research/sofic-defect-orbit-20260909
+      - name: Surface recovery on PR 41
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python - <<'PY' > /tmp/comment.md
+          import json
+          x=json.load(open('results/sofic_defect_orbit_raw_20260909.json'))
+          print('## Research035 raw-NFA slice recovery (public Note 036)')
+          print()
+          print(f"- Research034 survivors: **{x['research034_survivors']}**")
+          print(f"- finite witnesses: **{x['finite_witness_resolutions']}**")
+          print(f"- finite sofic closures: **{x['finite_sofic_closure_resolutions']}**")
+          print(f"- unresolved through h12: **{x['unresolved_through_12']}**")
+          print(f"- censored: **{x['censored']}**")
+          print(f"- resolved total: **{x['resolved_total']} ({x['resolved_fraction']:.6%})**")
+          print(f"- censoring by stage: **{x['censoring_by_stage']}**")
+          print(f"- censoring by reason: **{x['censoring_by_reason']}**")
+          print()
+          print('Frozen hypotheses:')
+          for k,v in x['primary_hypotheses'].items(): print(f'- `{k}`: **{v}**')
+          if x['first_finite_witness']:
+              print(f"\nFirst deeper witness: {x['first_finite_witness']}")
+          if x['first_finite_sofic_closure']:
+              print(f"\nFirst exact closure: {x['first_finite_sofic_closure']}")
+          PY
+          gh pr comment 41 --repo bombadil-labs/groovy-commutator --body-file /tmp/comment.md
