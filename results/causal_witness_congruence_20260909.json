@@ -1,0 +1,393 @@
+{
+  "ok": true,
+  "method": "greatest fixed point of one-coordinate target-respecting substitutivity",
+  "h5_unresolved_total": 52712,
+  "congruence_certified_total": 47352,
+  "certified_fraction_of_h5_unresolved": 0.8983153741083624,
+  "noncongruence_remainder": 5360,
+  "max_refinement_rounds": 4,
+  "censored_rules": [
+    {
+      "rule": 122,
+      "certified_pair_targets": 0,
+      "h5_unresolved": 6,
+      "covers_all_h5_unresolved": false,
+      "certificates": []
+    },
+    {
+      "rule": 126,
+      "certified_pair_targets": 21,
+      "h5_unresolved": 21,
+      "covers_all_h5_unresolved": true,
+      "certificates": [
+        {
+          "target": "00100000",
+          "pair": "0-1"
+        },
+        {
+          "target": "00100000",
+          "pair": "0-3"
+        },
+        {
+          "target": "00100000",
+          "pair": "0-4"
+        },
+        {
+          "target": "00100000",
+          "pair": "0-5"
+        },
+        {
+          "target": "00100000",
+          "pair": "0-6"
+        },
+        {
+          "target": "00100000",
+          "pair": "0-7"
+        },
+        {
+          "target": "00100000",
+          "pair": "1-3"
+        },
+        {
+          "target": "00100000",
+          "pair": "1-4"
+        },
+        {
+          "target": "00100000",
+          "pair": "1-5"
+        },
+        {
+          "target": "00100000",
+          "pair": "1-6"
+        },
+        {
+          "target": "00100000",
+          "pair": "1-7"
+        },
+        {
+          "target": "00100000",
+          "pair": "3-4"
+        },
+        {
+          "target": "00100000",
+          "pair": "3-5"
+        },
+        {
+          "target": "00100000",
+          "pair": "3-6"
+        },
+        {
+          "target": "00100000",
+          "pair": "3-7"
+        },
+        {
+          "target": "00100000",
+          "pair": "4-5"
+        },
+        {
+          "target": "00100000",
+          "pair": "4-6"
+        },
+        {
+          "target": "00100000",
+          "pair": "4-7"
+        },
+        {
+          "target": "00100000",
+          "pair": "5-6"
+        },
+        {
+          "target": "00100000",
+          "pair": "5-7"
+        },
+        {
+          "target": "00100000",
+          "pair": "6-7"
+        }
+      ]
+    },
+    {
+      "rule": 129,
+      "certified_pair_targets": 21,
+      "h5_unresolved": 21,
+      "covers_all_h5_unresolved": true,
+      "certificates": [
+        {
+          "target": "00000100",
+          "pair": "0-1"
+        },
+        {
+          "target": "00000100",
+          "pair": "0-2"
+        },
+        {
+          "target": "00000100",
+          "pair": "0-3"
+        },
+        {
+          "target": "00000100",
+          "pair": "0-4"
+        },
+        {
+          "target": "00000100",
+          "pair": "0-6"
+        },
+        {
+          "target": "00000100",
+          "pair": "0-7"
+        },
+        {
+          "target": "00000100",
+          "pair": "1-2"
+        },
+        {
+          "target": "00000100",
+          "pair": "1-3"
+        },
+        {
+          "target": "00000100",
+          "pair": "1-4"
+        },
+        {
+          "target": "00000100",
+          "pair": "1-6"
+        },
+        {
+          "target": "00000100",
+          "pair": "1-7"
+        },
+        {
+          "target": "00000100",
+          "pair": "2-3"
+        },
+        {
+          "target": "00000100",
+          "pair": "2-4"
+        },
+        {
+          "target": "00000100",
+          "pair": "2-6"
+        },
+        {
+          "target": "00000100",
+          "pair": "2-7"
+        },
+        {
+          "target": "00000100",
+          "pair": "3-4"
+        },
+        {
+          "target": "00000100",
+          "pair": "3-6"
+        },
+        {
+          "target": "00000100",
+          "pair": "3-7"
+        },
+        {
+          "target": "00000100",
+          "pair": "4-6"
+        },
+        {
+          "target": "00000100",
+          "pair": "4-7"
+        },
+        {
+          "target": "00000100",
+          "pair": "6-7"
+        }
+      ]
+    },
+    {
+      "rule": 146,
+      "certified_pair_targets": 21,
+      "h5_unresolved": 21,
+      "covers_all_h5_unresolved": true,
+      "certificates": [
+        {
+          "target": "00000001",
+          "pair": "0-1"
+        },
+        {
+          "target": "00000001",
+          "pair": "0-2"
+        },
+        {
+          "target": "00000001",
+          "pair": "0-3"
+        },
+        {
+          "target": "00000001",
+          "pair": "0-4"
+        },
+        {
+          "target": "00000001",
+          "pair": "0-5"
+        },
+        {
+          "target": "00000001",
+          "pair": "0-6"
+        },
+        {
+          "target": "00000001",
+          "pair": "1-2"
+        },
+        {
+          "target": "00000001",
+          "pair": "1-3"
+        },
+        {
+          "target": "00000001",
+          "pair": "1-4"
+        },
+        {
+          "target": "00000001",
+          "pair": "1-5"
+        },
+        {
+          "target": "00000001",
+          "pair": "1-6"
+        },
+        {
+          "target": "00000001",
+          "pair": "2-3"
+        },
+        {
+          "target": "00000001",
+          "pair": "2-4"
+        },
+        {
+          "target": "00000001",
+          "pair": "2-5"
+        },
+        {
+          "target": "00000001",
+          "pair": "2-6"
+        },
+        {
+          "target": "00000001",
+          "pair": "3-4"
+        },
+        {
+          "target": "00000001",
+          "pair": "3-5"
+        },
+        {
+          "target": "00000001",
+          "pair": "3-6"
+        },
+        {
+          "target": "00000001",
+          "pair": "4-5"
+        },
+        {
+          "target": "00000001",
+          "pair": "4-6"
+        },
+        {
+          "target": "00000001",
+          "pair": "5-6"
+        }
+      ]
+    },
+    {
+      "rule": 161,
+      "certified_pair_targets": 0,
+      "h5_unresolved": 6,
+      "covers_all_h5_unresolved": false,
+      "certificates": []
+    },
+    {
+      "rule": 182,
+      "certified_pair_targets": 21,
+      "h5_unresolved": 21,
+      "covers_all_h5_unresolved": true,
+      "certificates": [
+        {
+          "target": "01111111",
+          "pair": "1-2"
+        },
+        {
+          "target": "01111111",
+          "pair": "1-3"
+        },
+        {
+          "target": "01111111",
+          "pair": "1-4"
+        },
+        {
+          "target": "01111111",
+          "pair": "1-5"
+        },
+        {
+          "target": "01111111",
+          "pair": "1-6"
+        },
+        {
+          "target": "01111111",
+          "pair": "1-7"
+        },
+        {
+          "target": "01111111",
+          "pair": "2-3"
+        },
+        {
+          "target": "01111111",
+          "pair": "2-4"
+        },
+        {
+          "target": "01111111",
+          "pair": "2-5"
+        },
+        {
+          "target": "01111111",
+          "pair": "2-6"
+        },
+        {
+          "target": "01111111",
+          "pair": "2-7"
+        },
+        {
+          "target": "01111111",
+          "pair": "3-4"
+        },
+        {
+          "target": "01111111",
+          "pair": "3-5"
+        },
+        {
+          "target": "01111111",
+          "pair": "3-6"
+        },
+        {
+          "target": "01111111",
+          "pair": "3-7"
+        },
+        {
+          "target": "01111111",
+          "pair": "4-5"
+        },
+        {
+          "target": "01111111",
+          "pair": "4-6"
+        },
+        {
+          "target": "01111111",
+          "pair": "4-7"
+        },
+        {
+          "target": "01111111",
+          "pair": "5-6"
+        },
+        {
+          "target": "01111111",
+          "pair": "5-7"
+        },
+        {
+          "target": "01111111",
+          "pair": "6-7"
+        }
+      ]
+    }
+  ]
+}

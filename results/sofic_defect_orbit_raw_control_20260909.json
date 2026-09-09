@@ -1,0 +1,115 @@
+{
+  "ok": true,
+  "kind": "post-outcome diagnostic only",
+  "changes_frozen_thresholds": false,
+  "controls": [
+    {
+      "rule": 35,
+      "target": "00000001",
+      "pair": "2-6",
+      "censoring": {
+        "source_horizon": 2,
+        "attempted_next_horizon": 3,
+        "kind": "raw-image-transitions",
+        "limit": 5000000,
+        "observed": 6029312
+      },
+      "slices": [
+        {
+          "horizon": 0,
+          "states": 2,
+          "edges": 17,
+          "labels": 9,
+          "target_visible": false,
+          "next_raw_image": {
+            "raw_pair_states": 144,
+            "raw_pre_normalization_transitions": 1216,
+            "trimmed_states": 144,
+            "trimmed_edges": 1216
+          }
+        },
+        {
+          "horizon": 1,
+          "states": 144,
+          "edges": 1216,
+          "labels": 15,
+          "target_visible": false,
+          "next_raw_image": {
+            "raw_pair_states": 10240,
+            "raw_pre_normalization_transitions": 86016,
+            "trimmed_states": 10240,
+            "trimmed_edges": 86016
+          }
+        },
+        {
+          "horizon": 2,
+          "states": 10240,
+          "edges": 86016,
+          "labels": 24,
+          "target_visible": false,
+          "censoring": {
+            "source_horizon": 2,
+            "attempted_next_horizon": 3,
+            "kind": "raw-image-transitions",
+            "limit": 5000000,
+            "observed": 6029312
+          }
+        }
+      ]
+    },
+    {
+      "rule": 5,
+      "target": "01001100",
+      "pair": "0-2",
+      "censoring": {
+        "source_horizon": 2,
+        "attempted_next_horizon": 3,
+        "kind": "raw-image-transitions",
+        "limit": 5000000,
+        "observed": 6029312
+      },
+      "slices": [
+        {
+          "horizon": 0,
+          "states": 2,
+          "edges": 17,
+          "labels": 9,
+          "target_visible": false,
+          "next_raw_image": {
+            "raw_pair_states": 144,
+            "raw_pre_normalization_transitions": 1216,
+            "trimmed_states": 144,
+            "trimmed_edges": 1216
+          }
+        },
+        {
+          "horizon": 1,
+          "states": 144,
+          "edges": 1216,
+          "labels": 11,
+          "target_visible": false,
+          "next_raw_image": {
+            "raw_pair_states": 10240,
+            "raw_pre_normalization_transitions": 86016,
+            "trimmed_states": 10240,
+            "trimmed_edges": 86016
+          }
+        },
+        {
+          "horizon": 2,
+          "states": 10240,
+          "edges": 86016,
+          "labels": 13,
+          "target_visible": false,
+          "censoring": {
+            "source_horizon": 2,
+            "attempted_next_horizon": 3,
+            "kind": "raw-image-transitions",
+            "limit": 5000000,
+            "observed": 6029312
+          }
+        }
+      ]
+    }
+  ]
+}

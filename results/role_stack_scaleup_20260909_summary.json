@@ -1,0 +1,13 @@
+{
+  "protocol": "docs/research/protocols/role-stack-scaleup-20260909.md",
+  "class_labels_loaded": false,
+  "rules_checked": 512,
+  "predecessor_states_per_rule": 512,
+  "closed_rule_count": 29,
+  "closed_rules": [0,2,4,8,10,16,18,20,32,34,36,40,42,64,66,68,80,82,84,128,130,136,138,144,146,160,162,168,170],
+  "algebraic_characterization": {
+    "boundary": "r[0]=r[8]=0",
+    "adjacency": "no adjacent table entries are both one",
+    "rising_edge_reflection": "if r[p-1]=0 and r[p]=1 then r[9-p]=0"
+  }
+}

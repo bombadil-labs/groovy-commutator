@@ -1,0 +1,409 @@
+{
+  "ok": true,
+  "experiment": "reachable-context-invariants",
+  "rules": 256,
+  "block_size": 3,
+  "cadence": 3,
+  "target_count": 127,
+  "finite_witness_absent_through_h6": 52712,
+  "research032_congruence_certified": 47352,
+  "research032_noncongruence_residual": 5360,
+  "distinct_rule_seed_languages": 930,
+  "new_generated_symbol_certificates": 0,
+  "generated_edge_certificates": 5132,
+  "edge_only_certificates": 5132,
+  "remaining_after_edge": 228,
+  "resolved_fraction_of_r032_residual_by_edge": 0.9574626865671642,
+  "remaining_fraction_of_r032_residual": 0.04253731343283582,
+  "primary_hypotheses": {
+    "generated_symbol_improves_on_congruence": false,
+    "edge_strictly_improves_on_symbol": true
+  },
+  "new_certificates_by_wolfram_class": {
+    "I": 232,
+    "II": 4900
+  },
+  "remaining_by_wolfram_class": {
+    "II": 216,
+    "III": 12
+  },
+  "first_symbol_certificate": null,
+  "first_edge_only_certificate": {
+    "rule": 1,
+    "wclass": "II",
+    "pair": "0-2",
+    "pair_index": 1,
+    "generated_symbol_count": 48,
+    "symbol_rounds": 5,
+    "generated_edge_count": 153,
+    "edge_rounds": 3,
+    "target_id": 102,
+    "level": "edge-only",
+    "edge_rows_hex": [
+      "8141201089450245",
+      "0000000000000000",
+      "8040201008040201",
+      "0000001000000001",
+      "0000000000000000",
+      "0000000000000000",
+      "8080000088880200",
+      "8080000088880200",
+      "0000000000000000",
+      "8041201008450245",
+      "0000000000000000",
+      "0000000000000000",
+      "0000000000000000",
+      "0000000000000000",
+      "0000000000000000",
+      "0000000000000000",
+      "0000001000000001",
+      "0000000000000000",
+      "8040201008040205",
+      "0000001000000001",
+      "0000000000000000",
+      "0000000000000000",
+      "0000000000000088",
+      "0000000000000088",
+      "0000001000000001",
+      "0000000000000000",
+      "0000000000000000",
+      "8040201008040205",
+      "0000000000000000",
+      "0000000000000000",
+      "0000000000000000",
+      "0000000000000088",
+      "0000000000000000",
+      "0000000000000000",
+      "0000000000000000",
+      "0000000000000000",
+      "814020108904028d",
+      "0000000000000000",
+      "0000000000000000",
+      "0000000000000000",
+      "0000000000000000",
+      "0000000000000000",
+      "0000000000000000",
+      "0000000000000000",
+      "0000000000000000",
+      "8040201008040205",
+      "0000000000000000",
+      "0000000000000000",
+      "8000000088000201",
+      "0000000000000000",
+      "0000000000000000",
+      "0000000000000000",
+      "0000000000000000",
+      "0000000000000000",
+      "814020108904028d",
+      "8100000089000289",
+      "8000000088000201",
+      "0000000000000000",
+      "0000000000000000",
+      "0000000000000000",
+      "0000000000000000",
+      "0000000000000000",
+      "0000000000000000",
+      "814020108904028d"
+    ]
+  },
+  "first_unresolved": {
+    "rule": 5,
+    "wclass": "II",
+    "pair": "0-2",
+    "pair_index": 1,
+    "generated_symbol_count": 64,
+    "symbol_rounds": 5,
+    "generated_edge_count": 230,
+    "edge_rounds": 4,
+    "target_id": 102,
+    "level": "unresolved",
+    "edge_rows_hex": [
+      "844420108c442215",
+      "0000201000002211",
+      "80c02030888c2223",
+      "0000000000000000",
+      "0000000000000004",
+      "0000000000000004",
+      "0000000000000000",
+      "0000000000000000",
+      "0000000000000000",
+      "8040201008042215",
+      "0000000000000000",
+      "0000000000000000",
+      "0000000000000000",
+      "0000000000000004",
+      "0000000000000000",
+      "0000000000000000",
+      "840020008c002200",
+      "0000000000000000",
+      "844020108c042205",
+      "0000200000002201",
+      "0000000000000000",
+      "0000000000000000",
+      "0000000000000004",
+      "0000000000000004",
+      "0000000000000000",
+      "0000200000002200",
+      "0000200000002201",
+      "8040201008042205",
+      "0000000000000000",
+      "0000000000000000",
+      "0000000000000000",
+      "0000000000000004",
+      "0000000000000000",
+      "0000000000000000",
+      "0000000000000000",
+      "0000000000000000",
+      "a45420108c452215",
+      "a45420108c452215",
+      "0000000000000000",
+      "0000000000000000",
+      "0000000000000000",
+      "0000000000000000",
+      "0000000000000000",
+      "0000000000000000",
+      "0000000000000000",
+      "a45420108c452215",
+      "0000000000000000",
+      "0000000000000000",
+      "0000000000000000",
+      "0000000000000000",
+      "a00020008a052201",
+      "0000000000000000",
+      "0400000004000000",
+      "0000000000000000",
+      "a44020108c052205",
+      "a40020008c052205",
+      "0000000000000000",
+      "0000000000000000",
+      "a00020008a052201",
+      "0000000000000000",
+      "0000000000000000",
+      "a40020008c002200",
+      "0000000000000000",
+      "a44020108c052205"
+    ]
+  },
+  "rule122_161_sentinels": [
+    {
+      "rule": 161,
+      "wclass": "III",
+      "pair": "0-1",
+      "pair_index": 0,
+      "generated_symbol_count": 64,
+      "symbol_rounds": 3,
+      "generated_edge_count": 3520,
+      "edge_rounds": 6,
+      "residual_target_ids": [
+        111
+      ],
+      "symbol_certified_target_ids": [],
+      "edge_certified_target_ids": [],
+      "unresolved_target_ids": [
+        111
+      ]
+    },
+    {
+      "rule": 161,
+      "wclass": "III",
+      "pair": "0-4",
+      "pair_index": 3,
+      "generated_symbol_count": 64,
+      "symbol_rounds": 3,
+      "generated_edge_count": 3520,
+      "edge_rounds": 6,
+      "residual_target_ids": [
+        111
+      ],
+      "symbol_certified_target_ids": [],
+      "edge_certified_target_ids": [],
+      "unresolved_target_ids": [
+        111
+      ]
+    },
+    {
+      "rule": 161,
+      "wclass": "III",
+      "pair": "1-4",
+      "pair_index": 9,
+      "generated_symbol_count": 64,
+      "symbol_rounds": 3,
+      "generated_edge_count": 3520,
+      "edge_rounds": 6,
+      "residual_target_ids": [
+        111
+      ],
+      "symbol_certified_target_ids": [],
+      "edge_certified_target_ids": [],
+      "unresolved_target_ids": [
+        111
+      ]
+    },
+    {
+      "rule": 161,
+      "wclass": "III",
+      "pair": "2-3",
+      "pair_index": 13,
+      "generated_symbol_count": 64,
+      "symbol_rounds": 3,
+      "generated_edge_count": 3523,
+      "edge_rounds": 6,
+      "residual_target_ids": [
+        111
+      ],
+      "symbol_certified_target_ids": [],
+      "edge_certified_target_ids": [],
+      "unresolved_target_ids": [
+        111
+      ]
+    },
+    {
+      "rule": 161,
+      "wclass": "III",
+      "pair": "2-6",
+      "pair_index": 16,
+      "generated_symbol_count": 64,
+      "symbol_rounds": 3,
+      "generated_edge_count": 3523,
+      "edge_rounds": 6,
+      "residual_target_ids": [
+        111
+      ],
+      "symbol_certified_target_ids": [],
+      "edge_certified_target_ids": [],
+      "unresolved_target_ids": [
+        111
+      ]
+    },
+    {
+      "rule": 161,
+      "wclass": "III",
+      "pair": "3-6",
+      "pair_index": 20,
+      "generated_symbol_count": 64,
+      "symbol_rounds": 3,
+      "generated_edge_count": 3528,
+      "edge_rounds": 6,
+      "residual_target_ids": [
+        111
+      ],
+      "symbol_certified_target_ids": [],
+      "edge_certified_target_ids": [],
+      "unresolved_target_ids": [
+        111
+      ]
+    },
+    {
+      "rule": 122,
+      "wclass": "III",
+      "pair": "1-4",
+      "pair_index": 9,
+      "generated_symbol_count": 64,
+      "symbol_rounds": 3,
+      "generated_edge_count": 3528,
+      "edge_rounds": 6,
+      "residual_target_ids": [
+        125
+      ],
+      "symbol_certified_target_ids": [],
+      "edge_certified_target_ids": [],
+      "unresolved_target_ids": [
+        125
+      ]
+    },
+    {
+      "rule": 122,
+      "wclass": "III",
+      "pair": "1-5",
+      "pair_index": 10,
+      "generated_symbol_count": 64,
+      "symbol_rounds": 3,
+      "generated_edge_count": 3523,
+      "edge_rounds": 6,
+      "residual_target_ids": [
+        125
+      ],
+      "symbol_certified_target_ids": [],
+      "edge_certified_target_ids": [],
+      "unresolved_target_ids": [
+        125
+      ]
+    },
+    {
+      "rule": 122,
+      "wclass": "III",
+      "pair": "3-6",
+      "pair_index": 20,
+      "generated_symbol_count": 64,
+      "symbol_rounds": 3,
+      "generated_edge_count": 3520,
+      "edge_rounds": 6,
+      "residual_target_ids": [
+        125
+      ],
+      "symbol_certified_target_ids": [],
+      "edge_certified_target_ids": [],
+      "unresolved_target_ids": [
+        125
+      ]
+    },
+    {
+      "rule": 122,
+      "wclass": "III",
+      "pair": "3-7",
+      "pair_index": 21,
+      "generated_symbol_count": 64,
+      "symbol_rounds": 3,
+      "generated_edge_count": 3520,
+      "edge_rounds": 6,
+      "residual_target_ids": [
+        125
+      ],
+      "symbol_certified_target_ids": [],
+      "edge_certified_target_ids": [],
+      "unresolved_target_ids": [
+        125
+      ]
+    },
+    {
+      "rule": 122,
+      "wclass": "III",
+      "pair": "4-5",
+      "pair_index": 22,
+      "generated_symbol_count": 64,
+      "symbol_rounds": 3,
+      "generated_edge_count": 3523,
+      "edge_rounds": 6,
+      "residual_target_ids": [
+        125
+      ],
+      "symbol_certified_target_ids": [],
+      "edge_certified_target_ids": [],
+      "unresolved_target_ids": [
+        125
+      ]
+    },
+    {
+      "rule": 122,
+      "wclass": "III",
+      "pair": "6-7",
+      "pair_index": 27,
+      "generated_symbol_count": 64,
+      "symbol_rounds": 3,
+      "generated_edge_count": 3520,
+      "edge_rounds": 6,
+      "residual_target_ids": [
+        125
+      ],
+      "symbol_certified_target_ids": [],
+      "edge_certified_target_ids": [],
+      "unresolved_target_ids": [
+        125
+      ]
+    }
+  ],
+  "source_hashes": {
+    "scripts/experiment_reachable_context_invariants.py": "ea08998aaf3aa59d976a625c58ca14bd74be3926a0050f44866c5b768cd5acc1",
+    "docs/research/protocols/reachable-context-invariants-20260909.md": "9145882dcd97938496c68d55c442da946be37ecc6fa26db4a4cce09374fba2ad"
+  }
+}

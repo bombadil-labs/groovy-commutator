@@ -1,0 +1,95 @@
+{
+  "ok": true,
+  "experiment": "causal-witness-automaton-h5",
+  "rules": 256,
+  "hmax": 5,
+  "node_budget": 5000000,
+  "h3_regression_events": [
+    {
+      "rule": 35,
+      "target": "00000001",
+      "pair": "2-6"
+    },
+    {
+      "rule": 49,
+      "target": "00000001",
+      "pair": "2-3"
+    },
+    {
+      "rule": 59,
+      "target": "01111111",
+      "pair": "1-5"
+    },
+    {
+      "rule": 115,
+      "target": "01111111",
+      "pair": "4-5"
+    }
+  ],
+  "h4_births": 0,
+  "pilot_h5_births_rules_0_63": 0,
+  "fresh_h5_births_rules_64_255": 0,
+  "fresh_h5_events": [],
+  "censored": [],
+  "horizon_stats": {
+    "0": {
+      "rules_built": 256,
+      "new_births": 458752,
+      "median_build_nodes": 1.0,
+      "max_build_nodes": 1,
+      "max_build_rule": 0,
+      "median_query_nodes": 1.0,
+      "max_query_nodes": 1
+    },
+    "1": {
+      "rules_built": 256,
+      "new_births": 396098,
+      "median_build_nodes": 17.0,
+      "max_build_nodes": 62,
+      "max_build_rule": 120,
+      "median_query_nodes": 47.0,
+      "max_query_nodes": 115
+    },
+    "2": {
+      "rules_built": 220,
+      "new_births": 2770,
+      "median_build_nodes": 60.0,
+      "max_build_nodes": 497,
+      "max_build_rule": 82,
+      "median_query_nodes": 154.5,
+      "max_query_nodes": 1846
+    },
+    "3": {
+      "rules_built": 192,
+      "new_births": 4,
+      "median_build_nodes": 128.0,
+      "max_build_nodes": 2834,
+      "max_build_rule": 122,
+      "median_query_nodes": 260.5,
+      "max_query_nodes": 17690
+    },
+    "4": {
+      "rules_built": 192,
+      "new_births": 0,
+      "median_build_nodes": 227.5,
+      "max_build_nodes": 21759,
+      "max_build_rule": 122,
+      "median_query_nodes": 474.0,
+      "max_query_nodes": 160386
+    },
+    "5": {
+      "rules_built": 192,
+      "new_births": 0,
+      "median_build_nodes": 357.0,
+      "max_build_nodes": 158077,
+      "max_build_rule": 122,
+      "median_query_nodes": 761.5,
+      "max_query_nodes": 1404965
+    }
+  },
+  "unresolved_after_run": 52712,
+  "source_hashes": {
+    "scripts/experiment_causal_witness_automaton.py": "0ecec9e2cef54e7b931986c59eb527ba13641fb5af18803212860b262341b4b9",
+    "docs/research/protocols/causal-witness-automaton-20260909.md": "6e3e0597dad88fb4feec0bb46f7b89c56e476d72c761db4a0f7eabbd02033a54"
+  }
+}

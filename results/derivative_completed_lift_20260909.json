@@ -1,0 +1,60 @@
+{
+  "base": {
+    "actual_derivative_cardinality_histogram": {
+      "1": 2,
+      "2": 254
+    },
+    "dynamically_realized_T2_rules": 510,
+    "formal_bijection": true,
+    "formal_distinct_T2_rules": 512,
+    "formal_pairs": 512,
+    "missing_T2_rules_under_actual_local_delta": [
+      51,
+      460
+    ],
+    "single_derivative_rules": {
+      "204": [
+        0
+      ],
+      "51": [
+        1
+      ]
+    }
+  },
+  "class_labels_loaded": false,
+  "protocol": "docs/research/protocols/derivative-completed-lift-20260909.md",
+  "recursive_storage_checks": [
+    {
+      "dimension": 1,
+      "identity": "3*3^1=3^2",
+      "lower_table_bits": 3,
+      "next_table_bits": 9
+    },
+    {
+      "dimension": 2,
+      "identity": "3*3^2=3^3",
+      "lower_table_bits": 9,
+      "next_table_bits": 27
+    },
+    {
+      "dimension": 3,
+      "identity": "3*3^3=3^4",
+      "lower_table_bits": 27,
+      "next_table_bits": 81
+    },
+    {
+      "dimension": 4,
+      "identity": "3*3^4=3^5",
+      "lower_table_bits": 81,
+      "next_table_bits": 243
+    }
+  ],
+  "selector_index_checks": 117,
+  "self_substrate_2d": {
+    "complement": 128,
+    "constant_fixed": 2,
+    "one": 127,
+    "same": 128,
+    "zero": 127
+  }
+}

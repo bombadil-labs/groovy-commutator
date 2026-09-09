@@ -98,5 +98,80 @@
       "selector-shielding",
       "history-lift-closure"
     ]
+  },
+  {
+    "slug": "causal-witness-automaton",
+    "number": "032",
+    "title": "A symbolic light cone finds a desert after the third step",
+    "date": "2026-09-09",
+    "updated": "2026-09-09",
+    "kind": "Exact symbolic witness automaton, horizon-4–6 census, and congruence certificates",
+    "evidence": "exact",
+    "topic": "Observation and memory",
+    "summary": "A reduced eight-valued decision automaton replaces explicit light-cone enumeration and extends the complete block-3 ECA causal-witness census through horizon 6. The only new births remain the four symmetry-related horizon-3 events: none occur at horizons 4, 5, or 6. Of 52,712 distinctions still unresolved after horizon 5, 47,352 receive exact all-time target-congruence certificates; 5,360 remain dynamically unresolved.",
+    "takeaway": "Causal-witness search can be compressed symbolically by many orders of magnitude, and most apparently unresolved distinctions can be separated into proved-permanent versus genuinely reachability-dependent cases without simply searching deeper horizons.",
+    "source": "docs/research/2026-09-09-causal-witness-automaton.md",
+    "promotion": {
+      "stage": "candidate",
+      "idea": "Causal witness horizons admit symbolic search and all-time congruence certificates",
+      "destination": "Concepts"
+    },
+    "related": [
+      "causal-witness-horizon",
+      "finite-horizon-quotients",
+      "contextual-quotient",
+      "fiber-visibility",
+      "selector-shielding"
+    ]
+  },
+  {
+    "slug": "reachable-context-invariants",
+    "number": "033",
+    "title": "The context is in the edges",
+    "date": "2026-09-09",
+    "updated": "2026-09-09",
+    "kind": "Exact paired-language invariant theorem and full residual census",
+    "evidence": "exact",
+    "topic": "Observation and memory",
+    "summary": "A nearest-neighbor invariant of the paired macro dynamics proves permanent invisibility for 5,132 of the 5,360 cases left unresolved by Research032’s all-context congruence, leaving 228. Generated-symbol closure alone adds zero cases.",
+    "takeaway": "Causal safety can depend on spatial grammar: which hidden paired states may be adjacent can matter more than the set of states alone.",
+    "source": "docs/research/2026-09-09-reachable-context-invariants.md",
+    "promotion": {
+      "stage": "candidate",
+      "idea": "Causal safety can live in the grammar of spatial relationships",
+      "destination": "Concepts"
+    },
+    "related": [
+      "causal-witness-automaton",
+      "causal-witness-horizon",
+      "finite-horizon-quotients",
+      "contextual-quotient",
+      "fiber-visibility"
+    ]
+  },
+  {
+    "slug": "window3-reachable-language",
+    "number": "034",
+    "title": "One more word of context removes another layer of false danger",
+    "date": "2026-09-09",
+    "updated": "2026-09-09",
+    "kind": "Exact width-3 paired-language invariant theorem and residual census",
+    "evidence": "exact",
+    "topic": "Observation and memory",
+    "summary": "A length-3 de Bruijn invariant proves permanent invisibility for 58 of the 228 cases left unresolved by Research033’s nearest-neighbor grammar, leaving 170. The preregistered Rule-5 splice case is rescued exactly, showing that legal edges can compose into an impossible longer context.",
+    "takeaway": "Causal possibility depends on composability: remembering longer spatial phrases can eliminate futures that exist only because a coarser grammar splices locally legal pieces into globally unreachable contexts.",
+    "source": "docs/research/2026-09-09-window3-reachable-language.md",
+    "promotion": {
+      "stage": "candidate",
+      "idea": "Causal possibility requires composable spatial context",
+      "destination": "Concepts"
+    },
+    "related": [
+      "reachable-context-invariants",
+      "causal-witness-automaton",
+      "causal-witness-horizon",
+      "finite-horizon-quotients",
+      "contextual-quotient"
+    ]
   }
 ]

@@ -1,0 +1,742 @@
+{
+  "ok": true,
+  "solver": "z3",
+  "encoding": "paired 39-cell shrinking fine-ECA cones for 18 ticks",
+  "horizon": 6,
+  "cases": [
+    {
+      "rule": 122,
+      "target": "00100000",
+      "pair": "1-4",
+      "axes": [
+        {
+          "axis": 0,
+          "status": "unsat"
+        },
+        {
+          "axis": 1,
+          "status": "unsat"
+        },
+        {
+          "axis": 2,
+          "status": "unsat"
+        },
+        {
+          "axis": 3,
+          "status": "unsat"
+        },
+        {
+          "axis": 4,
+          "status": "unsat"
+        },
+        {
+          "axis": 5,
+          "status": "unsat"
+        },
+        {
+          "axis": 6,
+          "status": "unsat"
+        },
+        {
+          "axis": 7,
+          "status": "unsat"
+        },
+        {
+          "axis": 8,
+          "status": "unsat"
+        },
+        {
+          "axis": 9,
+          "status": "unsat"
+        },
+        {
+          "axis": 10,
+          "status": "unsat"
+        },
+        {
+          "axis": 11,
+          "status": "unsat"
+        },
+        {
+          "axis": 12,
+          "status": "unsat"
+        }
+      ],
+      "h6_witness_exists": false,
+      "first_witness": null
+    },
+    {
+      "rule": 122,
+      "target": "00100000",
+      "pair": "1-5",
+      "axes": [
+        {
+          "axis": 0,
+          "status": "unsat"
+        },
+        {
+          "axis": 1,
+          "status": "unsat"
+        },
+        {
+          "axis": 2,
+          "status": "unsat"
+        },
+        {
+          "axis": 3,
+          "status": "unsat"
+        },
+        {
+          "axis": 4,
+          "status": "unsat"
+        },
+        {
+          "axis": 5,
+          "status": "unsat"
+        },
+        {
+          "axis": 6,
+          "status": "unsat"
+        },
+        {
+          "axis": 7,
+          "status": "unsat"
+        },
+        {
+          "axis": 8,
+          "status": "unsat"
+        },
+        {
+          "axis": 9,
+          "status": "unsat"
+        },
+        {
+          "axis": 10,
+          "status": "unsat"
+        },
+        {
+          "axis": 11,
+          "status": "unsat"
+        },
+        {
+          "axis": 12,
+          "status": "unsat"
+        }
+      ],
+      "h6_witness_exists": false,
+      "first_witness": null
+    },
+    {
+      "rule": 122,
+      "target": "00100000",
+      "pair": "3-6",
+      "axes": [
+        {
+          "axis": 0,
+          "status": "unsat"
+        },
+        {
+          "axis": 1,
+          "status": "unsat"
+        },
+        {
+          "axis": 2,
+          "status": "unsat"
+        },
+        {
+          "axis": 3,
+          "status": "unsat"
+        },
+        {
+          "axis": 4,
+          "status": "unsat"
+        },
+        {
+          "axis": 5,
+          "status": "unsat"
+        },
+        {
+          "axis": 6,
+          "status": "unsat"
+        },
+        {
+          "axis": 7,
+          "status": "unsat"
+        },
+        {
+          "axis": 8,
+          "status": "unsat"
+        },
+        {
+          "axis": 9,
+          "status": "unsat"
+        },
+        {
+          "axis": 10,
+          "status": "unsat"
+        },
+        {
+          "axis": 11,
+          "status": "unsat"
+        },
+        {
+          "axis": 12,
+          "status": "unsat"
+        }
+      ],
+      "h6_witness_exists": false,
+      "first_witness": null
+    },
+    {
+      "rule": 122,
+      "target": "00100000",
+      "pair": "3-7",
+      "axes": [
+        {
+          "axis": 0,
+          "status": "unsat"
+        },
+        {
+          "axis": 1,
+          "status": "unsat"
+        },
+        {
+          "axis": 2,
+          "status": "unsat"
+        },
+        {
+          "axis": 3,
+          "status": "unsat"
+        },
+        {
+          "axis": 4,
+          "status": "unsat"
+        },
+        {
+          "axis": 5,
+          "status": "unsat"
+        },
+        {
+          "axis": 6,
+          "status": "unsat"
+        },
+        {
+          "axis": 7,
+          "status": "unsat"
+        },
+        {
+          "axis": 8,
+          "status": "unsat"
+        },
+        {
+          "axis": 9,
+          "status": "unsat"
+        },
+        {
+          "axis": 10,
+          "status": "unsat"
+        },
+        {
+          "axis": 11,
+          "status": "unsat"
+        },
+        {
+          "axis": 12,
+          "status": "unsat"
+        }
+      ],
+      "h6_witness_exists": false,
+      "first_witness": null
+    },
+    {
+      "rule": 122,
+      "target": "00100000",
+      "pair": "4-5",
+      "axes": [
+        {
+          "axis": 0,
+          "status": "unsat"
+        },
+        {
+          "axis": 1,
+          "status": "unsat"
+        },
+        {
+          "axis": 2,
+          "status": "unsat"
+        },
+        {
+          "axis": 3,
+          "status": "unsat"
+        },
+        {
+          "axis": 4,
+          "status": "unsat"
+        },
+        {
+          "axis": 5,
+          "status": "unsat"
+        },
+        {
+          "axis": 6,
+          "status": "unsat"
+        },
+        {
+          "axis": 7,
+          "status": "unsat"
+        },
+        {
+          "axis": 8,
+          "status": "unsat"
+        },
+        {
+          "axis": 9,
+          "status": "unsat"
+        },
+        {
+          "axis": 10,
+          "status": "unsat"
+        },
+        {
+          "axis": 11,
+          "status": "unsat"
+        },
+        {
+          "axis": 12,
+          "status": "unsat"
+        }
+      ],
+      "h6_witness_exists": false,
+      "first_witness": null
+    },
+    {
+      "rule": 122,
+      "target": "00100000",
+      "pair": "6-7",
+      "axes": [
+        {
+          "axis": 0,
+          "status": "unsat"
+        },
+        {
+          "axis": 1,
+          "status": "unsat"
+        },
+        {
+          "axis": 2,
+          "status": "unsat"
+        },
+        {
+          "axis": 3,
+          "status": "unsat"
+        },
+        {
+          "axis": 4,
+          "status": "unsat"
+        },
+        {
+          "axis": 5,
+          "status": "unsat"
+        },
+        {
+          "axis": 6,
+          "status": "unsat"
+        },
+        {
+          "axis": 7,
+          "status": "unsat"
+        },
+        {
+          "axis": 8,
+          "status": "unsat"
+        },
+        {
+          "axis": 9,
+          "status": "unsat"
+        },
+        {
+          "axis": 10,
+          "status": "unsat"
+        },
+        {
+          "axis": 11,
+          "status": "unsat"
+        },
+        {
+          "axis": 12,
+          "status": "unsat"
+        }
+      ],
+      "h6_witness_exists": false,
+      "first_witness": null
+    },
+    {
+      "rule": 161,
+      "target": "00000100",
+      "pair": "0-1",
+      "axes": [
+        {
+          "axis": 0,
+          "status": "unsat"
+        },
+        {
+          "axis": 1,
+          "status": "unsat"
+        },
+        {
+          "axis": 2,
+          "status": "unsat"
+        },
+        {
+          "axis": 3,
+          "status": "unsat"
+        },
+        {
+          "axis": 4,
+          "status": "unsat"
+        },
+        {
+          "axis": 5,
+          "status": "unsat"
+        },
+        {
+          "axis": 6,
+          "status": "unsat"
+        },
+        {
+          "axis": 7,
+          "status": "unsat"
+        },
+        {
+          "axis": 8,
+          "status": "unsat"
+        },
+        {
+          "axis": 9,
+          "status": "unsat"
+        },
+        {
+          "axis": 10,
+          "status": "unsat"
+        },
+        {
+          "axis": 11,
+          "status": "unsat"
+        },
+        {
+          "axis": 12,
+          "status": "unsat"
+        }
+      ],
+      "h6_witness_exists": false,
+      "first_witness": null
+    },
+    {
+      "rule": 161,
+      "target": "00000100",
+      "pair": "0-4",
+      "axes": [
+        {
+          "axis": 0,
+          "status": "unsat"
+        },
+        {
+          "axis": 1,
+          "status": "unsat"
+        },
+        {
+          "axis": 2,
+          "status": "unsat"
+        },
+        {
+          "axis": 3,
+          "status": "unsat"
+        },
+        {
+          "axis": 4,
+          "status": "unsat"
+        },
+        {
+          "axis": 5,
+          "status": "unsat"
+        },
+        {
+          "axis": 6,
+          "status": "unsat"
+        },
+        {
+          "axis": 7,
+          "status": "unsat"
+        },
+        {
+          "axis": 8,
+          "status": "unsat"
+        },
+        {
+          "axis": 9,
+          "status": "unsat"
+        },
+        {
+          "axis": 10,
+          "status": "unsat"
+        },
+        {
+          "axis": 11,
+          "status": "unsat"
+        },
+        {
+          "axis": 12,
+          "status": "unsat"
+        }
+      ],
+      "h6_witness_exists": false,
+      "first_witness": null
+    },
+    {
+      "rule": 161,
+      "target": "00000100",
+      "pair": "1-4",
+      "axes": [
+        {
+          "axis": 0,
+          "status": "unsat"
+        },
+        {
+          "axis": 1,
+          "status": "unsat"
+        },
+        {
+          "axis": 2,
+          "status": "unsat"
+        },
+        {
+          "axis": 3,
+          "status": "unsat"
+        },
+        {
+          "axis": 4,
+          "status": "unsat"
+        },
+        {
+          "axis": 5,
+          "status": "unsat"
+        },
+        {
+          "axis": 6,
+          "status": "unsat"
+        },
+        {
+          "axis": 7,
+          "status": "unsat"
+        },
+        {
+          "axis": 8,
+          "status": "unsat"
+        },
+        {
+          "axis": 9,
+          "status": "unsat"
+        },
+        {
+          "axis": 10,
+          "status": "unsat"
+        },
+        {
+          "axis": 11,
+          "status": "unsat"
+        },
+        {
+          "axis": 12,
+          "status": "unsat"
+        }
+      ],
+      "h6_witness_exists": false,
+      "first_witness": null
+    },
+    {
+      "rule": 161,
+      "target": "00000100",
+      "pair": "2-3",
+      "axes": [
+        {
+          "axis": 0,
+          "status": "unsat"
+        },
+        {
+          "axis": 1,
+          "status": "unsat"
+        },
+        {
+          "axis": 2,
+          "status": "unsat"
+        },
+        {
+          "axis": 3,
+          "status": "unsat"
+        },
+        {
+          "axis": 4,
+          "status": "unsat"
+        },
+        {
+          "axis": 5,
+          "status": "unsat"
+        },
+        {
+          "axis": 6,
+          "status": "unsat"
+        },
+        {
+          "axis": 7,
+          "status": "unsat"
+        },
+        {
+          "axis": 8,
+          "status": "unsat"
+        },
+        {
+          "axis": 9,
+          "status": "unsat"
+        },
+        {
+          "axis": 10,
+          "status": "unsat"
+        },
+        {
+          "axis": 11,
+          "status": "unsat"
+        },
+        {
+          "axis": 12,
+          "status": "unsat"
+        }
+      ],
+      "h6_witness_exists": false,
+      "first_witness": null
+    },
+    {
+      "rule": 161,
+      "target": "00000100",
+      "pair": "2-6",
+      "axes": [
+        {
+          "axis": 0,
+          "status": "unsat"
+        },
+        {
+          "axis": 1,
+          "status": "unsat"
+        },
+        {
+          "axis": 2,
+          "status": "unsat"
+        },
+        {
+          "axis": 3,
+          "status": "unsat"
+        },
+        {
+          "axis": 4,
+          "status": "unsat"
+        },
+        {
+          "axis": 5,
+          "status": "unsat"
+        },
+        {
+          "axis": 6,
+          "status": "unsat"
+        },
+        {
+          "axis": 7,
+          "status": "unsat"
+        },
+        {
+          "axis": 8,
+          "status": "unsat"
+        },
+        {
+          "axis": 9,
+          "status": "unsat"
+        },
+        {
+          "axis": 10,
+          "status": "unsat"
+        },
+        {
+          "axis": 11,
+          "status": "unsat"
+        },
+        {
+          "axis": 12,
+          "status": "unsat"
+        }
+      ],
+      "h6_witness_exists": false,
+      "first_witness": null
+    },
+    {
+      "rule": 161,
+      "target": "00000100",
+      "pair": "3-6",
+      "axes": [
+        {
+          "axis": 0,
+          "status": "unsat"
+        },
+        {
+          "axis": 1,
+          "status": "unsat"
+        },
+        {
+          "axis": 2,
+          "status": "unsat"
+        },
+        {
+          "axis": 3,
+          "status": "unsat"
+        },
+        {
+          "axis": 4,
+          "status": "unsat"
+        },
+        {
+          "axis": 5,
+          "status": "unsat"
+        },
+        {
+          "axis": 6,
+          "status": "unsat"
+        },
+        {
+          "axis": 7,
+          "status": "unsat"
+        },
+        {
+          "axis": 8,
+          "status": "unsat"
+        },
+        {
+          "axis": 9,
+          "status": "unsat"
+        },
+        {
+          "axis": 10,
+          "status": "unsat"
+        },
+        {
+          "axis": 11,
+          "status": "unsat"
+        },
+        {
+          "axis": 12,
+          "status": "unsat"
+        }
+      ],
+      "h6_witness_exists": false,
+      "first_witness": null
+    }
+  ],
+  "sat_cases": 0,
+  "unsat_cases": 12
+}

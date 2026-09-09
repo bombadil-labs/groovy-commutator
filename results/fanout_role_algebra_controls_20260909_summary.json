@@ -1,0 +1,21 @@
+{
+  "selector_only": {
+    "protocol": "docs/research/protocols/role-algebra-closure-20260909.md",
+    "candidate_count": 162,
+    "nonconstant_success_count": 0,
+    "success_counts_by_source_rule": {"0":48,"1":0,"2":0,"3":0,"4":0,"5":0,"6":0,"7":0}
+  },
+  "groovy_one_to_one": {
+    "protocol": "docs/research/protocols/groovy-role-algebra-20260909.md",
+    "candidate_count": 1296,
+    "nonconstant_success_rules": [],
+    "constant_success_counts": {"0":192,"7":32}
+  },
+  "fanout_three_cell": {
+    "protocol": "docs/research/protocols/fanout-role-algebra-20260909.md",
+    "candidate_count": 1296,
+    "success_counts_by_source_rule": {"0":144,"1":0,"2":18,"3":0,"4":0,"5":6,"6":0,"7":0},
+    "nonconstant_sources": [2,5],
+    "eca_equivalents": [90,165]
+  }
+}
