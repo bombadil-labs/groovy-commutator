@@ -123,19 +123,21 @@ Beam-search results are descriptive unless their ranking rule is implemented bef
 
 The perfect block-2 greedy result may reflect hidden structure in the fixed-target conditional-entropy objective. Test a local diminishing-returns condition before interpreting another high greedy-success rate.
 
-For every comparable encoder pair `Z1 <= Z2 <= T` and every target-class split operation `s` that is a valid refinement cover at both states, compare its raw uncertainty reduction
+Take a **coarser** encoder `Z_c` and a refinement `Z_f <= Z_c` that leaves some local class `C` unsplit in both. Let the same binary split operation `s:C -> C_1|C_2` be a valid cover at both encoders. Define
 
 \[
 \Delta_s W(Z)=W_T(Z)-W_T(sZ).
 \]
 
-A diminishing-returns-compatible edge pair satisfies
+A diminishing-returns-compatible comparison satisfies
 
 \[
-\Delta_s W(Z_1)\ge \Delta_s W(Z_2).
+\Delta_s W(Z_c)\ge \Delta_s W(Z_f).
 \]
 
-Record exact counts of tested comparable split pairs and violations. Also record the cost-normalized gain ordering using `g_close` as a secondary diagnostic.
+That is: after adding unrelated present detail elsewhere, the same remaining split should not become *more* valuable.
+
+Record exact counts of tested comparable same-split pairs and violations. Also record the cost-normalized gain ordering using `g_close` as a secondary diagnostic.
 
 This is **not** asserted to be lattice submodularity in the formal sense; it is a preregistered local diagnostic intended to identify whether greedy success correlates with diminishing returns.
 
