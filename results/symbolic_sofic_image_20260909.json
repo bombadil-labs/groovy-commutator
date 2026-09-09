@@ -54,6 +54,11 @@
     "scripts/experiment_symbolic_sofic_image.py": "a391f6c0d435c003e26299959de261d213b7622ab843d99a33f0cb64e5ebc9cc",
     "docs/research/protocols/symbolic-sofic-image-20260909.md": "99ac1ca17428828737e98e3b8d9e1d230378e7fed20d46eff707c2be581d28a0"
   },
+  "source_hashes_scope": "Exact frozen protocol and production-instrument bytes used for the primary evaluation; post-result publication metadata is separate.",
+  "publication_identity": {
+    "record": "docs/research/protocols/symbolic-sofic-image-publication-20260909.md",
+    "note_number": "037"
+  },
   "rules": [
     {"rule": 122, "wclass": "III", "frontier_questions": 6, "frontier_seed_languages": 6, "h6_mdd_nodes": 1142614, "status": "no-recurrence-through-6"},
     {"rule": 154, "wclass": "II", "frontier_questions": 31, "frontier_seed_languages": 1, "h6_mdd_nodes": 807, "status": "no-recurrence-through-6"},
