@@ -7,11 +7,13 @@ import json
 from collections import Counter
 from pathlib import Path
 
-EXPECTED_RULES = 256
+EXPECTED_PRIMARY_RULES = (122, 154, 161, 164, 166, 180, 210, 218)
+SOURCE_RULE_FAMILY = 256
 EXPECTED_SEED_LANGUAGES = 22
 EXPECTED_TARGET_QUESTIONS = 170
 EXPECTED_TARGET_CLASSES = {"II": 158, "III": 12}
 PROTOCOL = "docs/research/protocols/symbolic-defect-normalization-20260909.md"
+DOMAIN_ADDENDUM = "docs/research/protocols/symbolic-defect-normalization-domain-20260909.md"
 
 
 def file_hash(path: Path) -> str:
@@ -64,9 +66,9 @@ def main():
     for shard in shards:
         coverage.extend(range(shard["rule_start"], shard["rule_end"]))
         rows.extend(shard["rows"])
-    assert sorted(coverage) == list(range(EXPECTED_RULES)) and len(set(coverage)) == EXPECTED_RULES
+    assert sorted(coverage) == list(EXPECTED_PRIMARY_RULES) and len(set(coverage)) == len(EXPECTED_PRIMARY_RULES), coverage
     rows.sort(key=lambda r: r["rule"])
-    assert [r["rule"] for r in rows] == list(range(EXPECTED_RULES))
+    assert [r["rule"] for r in rows] == list(EXPECTED_PRIMARY_RULES)
 
     langs = []
     for row in rows:
@@ -135,7 +137,8 @@ def main():
         "experiment": "symbolic-defect-normalization",
         "working_identity": "symbolic-defect-normalization",
         "public_note_number": None,
-        "rules": EXPECTED_RULES,
+        "source_rule_family": SOURCE_RULE_FAMILY,
+        "primary_rules": list(EXPECTED_PRIMARY_RULES),
         "seed_languages": seed_languages,
         "target_questions": target_questions,
         "target_questions_by_wolfram_class": dict(sorted(target_classes.items())),
@@ -150,6 +153,20 @@ def main():
         "first_canonical_certificate": first,
         "certificate_parameter_counts": dict(sorted(cert_params.items())),
         "rule122_161_sentinels": sentinels,
+        "language_summaries": [
+            {
+                "rule": l["rule"], "wclass": l["wclass"], "pair_index": l["pair_index"],
+                "pair": l["pair"], "seed_symbol": l["seed_symbol"],
+                "incoming_target_ids": l["incoming_target_ids"], "status": l["status"],
+                "candidate_status_counts": l["candidate_status_counts"],
+                "tested_candidates": l["tested_candidates"],
+                "frozen_family_candidates": l["frozen_family_candidates"],
+                "first_certificate": compact_certificate(l),
+                "first_censoring": l.get("first_censoring"),
+                "max_mdd_nodes": l["max_mdd_nodes"], "elapsed_seconds": l["elapsed_seconds"],
+            }
+            for l in langs
+        ],
         "maximum_mdd_nodes_observed": max_nodes,
         "resource_limits": {"mdd_nodes_per_position": 5_000_000, "seed_wall_seconds": 1200, "tmax": 6},
         "controls": controls["controls"],
@@ -157,6 +174,7 @@ def main():
         "aggregate_source_hashes": {
             "scripts/aggregate_symbolic_defect_normalization.py": file_hash(Path(__file__)),
             PROTOCOL: file_hash(Path(PROTOCOL)),
+            DOMAIN_ADDENDUM: file_hash(Path(DOMAIN_ADDENDUM)),
         },
     }
     args.output.parent.mkdir(parents=True, exist_ok=True)
