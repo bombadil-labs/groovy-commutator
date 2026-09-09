@@ -1,0 +1,209 @@
+{
+  "ok": true,
+  "cases": [
+    {
+      "rule": 35,
+      "target": "00000001",
+      "pair": "2-6",
+      "sizes": [
+        {
+          "macroblocks": 4,
+          "fine_width": 12,
+          "quotient_chain": [
+            "00000001",
+            "01234325",
+            "01234526",
+            "01234526"
+          ],
+          "pair_separation_horizon": null
+        },
+        {
+          "macroblocks": 5,
+          "fine_width": 15,
+          "quotient_chain": [
+            "00000001",
+            "01234325",
+            "01234526",
+            "01234567"
+          ],
+          "pair_separation_horizon": 3
+        },
+        {
+          "macroblocks": 6,
+          "fine_width": 18,
+          "quotient_chain": [
+            "00000001",
+            "01234325",
+            "01234526",
+            "01234567"
+          ],
+          "pair_separation_horizon": 3
+        },
+        {
+          "macroblocks": 7,
+          "fine_width": 21,
+          "quotient_chain": [
+            "00000001",
+            "01234325",
+            "01234526",
+            "01234567"
+          ],
+          "pair_separation_horizon": 3
+        }
+      ]
+    },
+    {
+      "rule": 49,
+      "target": "00000001",
+      "pair": "2-3",
+      "sizes": [
+        {
+          "macroblocks": 4,
+          "fine_width": 12,
+          "quotient_chain": [
+            "00000001",
+            "01223445",
+            "01223456",
+            "01223456"
+          ],
+          "pair_separation_horizon": null
+        },
+        {
+          "macroblocks": 5,
+          "fine_width": 15,
+          "quotient_chain": [
+            "00000001",
+            "01223445",
+            "01223456",
+            "01234567"
+          ],
+          "pair_separation_horizon": 3
+        },
+        {
+          "macroblocks": 6,
+          "fine_width": 18,
+          "quotient_chain": [
+            "00000001",
+            "01223445",
+            "01223456",
+            "01234567"
+          ],
+          "pair_separation_horizon": 3
+        },
+        {
+          "macroblocks": 7,
+          "fine_width": 21,
+          "quotient_chain": [
+            "00000001",
+            "01223445",
+            "01223456",
+            "01234567"
+          ],
+          "pair_separation_horizon": 3
+        }
+      ]
+    },
+    {
+      "rule": 59,
+      "target": "01111111",
+      "pair": "1-5",
+      "sizes": [
+        {
+          "macroblocks": 4,
+          "fine_width": 12,
+          "quotient_chain": [
+            "01111111",
+            "01232145",
+            "01234156",
+            "01234156"
+          ],
+          "pair_separation_horizon": null
+        },
+        {
+          "macroblocks": 5,
+          "fine_width": 15,
+          "quotient_chain": [
+            "01111111",
+            "01232145",
+            "01234156",
+            "01234567"
+          ],
+          "pair_separation_horizon": 3
+        },
+        {
+          "macroblocks": 6,
+          "fine_width": 18,
+          "quotient_chain": [
+            "01111111",
+            "01232145",
+            "01234156",
+            "01234567"
+          ],
+          "pair_separation_horizon": 3
+        },
+        {
+          "macroblocks": 7,
+          "fine_width": 21,
+          "quotient_chain": [
+            "01111111",
+            "01232145",
+            "01234156",
+            "01234567"
+          ],
+          "pair_separation_horizon": 3
+        }
+      ]
+    },
+    {
+      "rule": 115,
+      "target": "01111111",
+      "pair": "4-5",
+      "sizes": [
+        {
+          "macroblocks": 4,
+          "fine_width": 12,
+          "quotient_chain": [
+            "01111111",
+            "01123345",
+            "01234456",
+            "01234456"
+          ],
+          "pair_separation_horizon": null
+        },
+        {
+          "macroblocks": 5,
+          "fine_width": 15,
+          "quotient_chain": [
+            "01111111",
+            "01123345",
+            "01234456",
+            "01234567"
+          ],
+          "pair_separation_horizon": 3
+        },
+        {
+          "macroblocks": 6,
+          "fine_width": 18,
+          "quotient_chain": [
+            "01111111",
+            "01123345",
+            "01234456",
+            "01234567"
+          ],
+          "pair_separation_horizon": 3
+        },
+        {
+          "macroblocks": 7,
+          "fine_width": 21,
+          "quotient_chain": [
+            "01111111",
+            "01123345",
+            "01234456",
+            "01234567"
+          ],
+          "pair_separation_horizon": 3
+        }
+      ]
+    }
+  ]
+}
