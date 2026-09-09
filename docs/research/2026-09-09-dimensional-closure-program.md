@@ -4,7 +4,7 @@ This page is the **working synthesis** of the dimensional-lift research program.
 
 > **When two dynamical paths fail to commute, can the disagreement itself become a new spatial coordinate so that the enlarged representation closes?**
 
-The program is parallel to *Dynamics of Erased Distinctions*. That program asks when information can be forgotten safely and how a lossy representation repairs itself. This one asks what additional structure must be represented when evolution and transformation refuse to agree.
+The program is parallel to [Dynamics of Erased Distinctions](2026-09-08-dynamics-of-erased-distinctions.md). That program asks when information can be forgotten safely and how a lossy representation repairs itself. This one asks what additional structure must be represented when evolution and transformation refuse to agree.
 
 ## The original dimensional observation
 
