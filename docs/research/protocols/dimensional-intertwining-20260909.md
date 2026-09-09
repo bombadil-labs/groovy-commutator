@@ -86,7 +86,7 @@ The verifier will:
 - verify the local intertwining identity for both constructions;
 - compute the essential logical inputs of each ECA;
 - compute the directional rank of essential physical offsets for the active lift;
-- independently enumerate the truth table of the gated lift over its six distinct physical inputs and verify that `(2,0)` and `(1,1)` are essential for every rule;
+- independently enumerate the truth table of the gated lift over its five distinct physical inputs and verify that `(2,0)` and `(1,1)` are essential for every rule;
 - verify global commutation on square periodic tori for selected rules and all source states at widths 3 through 6;
 - save a machine-readable JSON summary.
 
