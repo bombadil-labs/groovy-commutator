@@ -45,3 +45,11 @@ jobs:
           python scripts/experiment_representation_design.py
           --rule-start 106 --rule-end 107 --n 8 --max-steps 64
           --output /tmp/representation-design-smoke.json
+      - name: Block-3 Rule24 independent counterexample audit
+        run: >-
+          python scripts/audit_block3_representation_design.py
+          --output /tmp/block3-rule24-audit.json
+      - name: Block-3 Rule24 fresh-size regression
+        run: >-
+          python scripts/check_block3_representation_design_rule24_n15.py
+          --output /tmp/block3-rule24-n15.json
