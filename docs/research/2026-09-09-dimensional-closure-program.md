@@ -274,6 +274,34 @@ leaf instructions are mutable; Rail wrapper structure is fixed by dimension.
 It does not encode arbitrary physical rules or realize the ternary L/R/C
 roles. These architectural limits define subsequent experiments.
 
+## Added routing contents are now spatial program data
+
+The [editable-routing checkpoint](2026-09-09-editable-routing-tables.md) stores
+one eight-bit table per axis. The original table reads the first-axis source
+neighborhood; every later table reads the preceding result and its two
+axis-neighbors. Both data execution and gated copying of the complete tuple
+have exact physical realizations.
+
+A lift appends the canonical selector table 172 and keeps separate guard
+programs. Every native source field lifts, including arbitrary previously
+edited 2D and 3D routing programs. Local proofs give every finite dimension;
+the physical audit reaches dimension four. Inherited edits remain single
+physical-symbol edits.
+
+A newly introduced instruction is a new operation: editing it can change
+the new-dimensional dynamics. Exactly 64 of 256 appended tables preserve
+unchanged old behavior on the canonical rails, but all 256 table values are
+allowed within a source being lifted next. Distinct stored programs also
+need not have distinct data functions: the 65,536 two-word programs give
+30,496 local data functions.
+
+Storage is 8d+1 occupied sites per 9^d-site macrocell, still with five
+symbols, radius nine and one-tick cadence. Local processing evaluates d
+tables; its circuit cost is not dimension-independent. Contents are mutable;
+stage order, axis assignments, protected roles and infinite guard backgrounds
+remain prepared architecture. This is a scoped constructive result without
+an established novelty claim.
+
 ## Relation to the Class-IV hope
 
 The original Class-IV conjecture records the intuition that motivated this
@@ -304,27 +332,29 @@ recursive spatial-program closure.
 
 9. **Editable spatial Rail programs have exact recursive realizations.** A five-symbol, radius-nine interpreter with a separate guard program preserves all native source program/data fields through both interfaces and every further finite lift. It also preserves autonomous state-gated program transport. Fixed role markers and wrapper structure remain architectural resources.
 
+10. **Introduced routing-table contents can be edited and inherited.** One eight-bit table per axis gives exact physical execution and lifts for arbitrary native source programs, including autonomous copying of the added words. The grammar's ordered topology and prepared boundary resources remain fixed.
+
 ## What remains open
 
 - A bounded local law exists for an infinitely prepared correction stack. A finite, locally prepared realization satisfying the intended program grammar remains open.
-- The Rail family now has active spatial program storage and recursive typing under explicit marker/layout budgets. Mutable wrapper instructions, smaller alphabets, and self-maintained role structure remain open; this does not spatialize the correction-stack program.
+- Added routing-table contents are now active spatial program data. Mutable stage topology, finite-thickness boundaries, smaller alphabets, and self-maintained role structure remain open; this does not spatialize the correction-stack program.
 - The relationship between correction depth, spatial dimension, and growing within-dimension radius is not yet characterized.
 - Class-IV correspondence is background motivation only and does not direct the current search.
 
 ## The next theoretical target
 
-The constructive witness now supports a more specific question:
+The table-content question now has an explicit answer. The next bounded
+resource question is:
 
-> **Can an introduced Rail instruction itself become locally editable, while the same spatial layout, guard conditions, and recursive action contract remain valid?**
+> **Can the infinite guard half-spaces be replaced by a finite-thickness prepared boundary while preserving execution, inherited edits, and recursive source typing?**
 
-The current grammar stores and transports eight mutable ECA leaf bits but
-fixes every Rail wrapper through the ambient dimension. Add any new
-instruction bit explicitly to the program layout and account for its
-physical support. Derive the modified guard and inheritance equations before
-evaluation. A failed placement or guard should be retained as a scoped result,
-with a proposed rescue frozen separately.
+Specify the boundary symbols and rule, source family, local decoder, and
+preparation support before evaluation. A cell that freezes because an input
+is absent is still a supplied boundary mechanism; count it explicitly.
+Freeze the candidate and retain failures with their precise scope.
 
-Reducing the five-symbol role alphabet or sparse macrocell overhead is a
-separate workstream. Arbitrary program synthesis, marker self-organization,
-and realization of the ternary correction roles are not implied by the
-present witness.
+This would reduce one preparation resource. It would not by itself establish
+spontaneous roles, arbitrary program synthesis, mutable axis topology, or
+physical realization of the ternary correction roles. Those remain separate
+targets. A literature comparison is also needed before claiming novelty for
+this particular combination of simulation and edit guarantees.

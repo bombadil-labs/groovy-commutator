@@ -391,6 +391,43 @@ larger grids; separately specify a locally represented changeable decoder.
 Do not infer that expanding same-time instructions to a fixed local rule
 makes them meaningless, or that memory is the only interesting mechanism.
 
+## Research continuation: added routing tables are editable (2026-09-09)
+
+The next dimensional unit is complete; see
+docs/research/2026-09-09-editable-routing-tables.md and its frozen protocol.
+Preserve the parallel Erased Distinctions thread and its publication metadata.
+
+- Native P=(r,h2,...,hd) has d editable eight-bit tables. Each added table
+  reads the preceding result and the two data neighbors on its axis.
+  The ordered chain, axis assignments and hold/copy policy remain fixed.
+- Place byte j along axis j in a scale-nine macrocell: 8d+1 occupied sites
+  out of 9^d, five symbols, radius nine, one tick. Local evaluation reads
+  8d program bits and 2d+1 data bits and evaluates d tables; constant tick
+  count does not mean constant circuit complexity as dimension grows.
+- Appending selector word 172 with separate guard Qd=(204,172,...) lifts
+  every native source program/data field. Both retention and state-gated
+  copying of the entire tuple commute, including inherited one-cell edits.
+  The proof repeats for every finite d; whole-field audits reach 4D.
+- Newly introduced table edits may alter the relation to the previous source.
+  Exactly 64 appended words preserve old dynamics on the (0,1) rails
+  (bits 1=0, 5=1); 192 counterexamples are retained. This does not restrict
+  the routing words allowed in a source being lifted next.
+- There are 30,496 local data functions among 65,536 two-word programs.
+  Syntax aliases and dormant instructions are explicit; every program slot
+  has a causal context, not guaranteed activity in every enclosing program.
+- verify_editable_routing_tables.py passes 2,236,434 assertions; canonical
+  JSON is results/editable_routing_tables_20260909.json. Protocol and code
+  were committed before execution, with no corrections/deviations. CI
+  reproduces the exact result. Counts are not independent scientific samples.
+- Next bounded target: finite-thickness transverse preparation with an
+  explicit boundary rule, local decoder, and recursive source/action contract.
+  Freezing because required inputs are absent is an architectural resource.
+  This reduction has not been audited or established by the current result.
+- Existing exact CA simulation theory is the comparison baseline. No
+  novelty, intrinsic-universality, arbitrary editable syntax, or self-assembly
+  claim is established. C4 remains background only. Scope failures to the
+  attempted architecture and freeze rescues before evaluation.
+
 ## Research continuation: editable spatial Rail programs (2026-09-09)
 
 The dimensional workstream now has an exact stored-program witness; see
@@ -421,9 +458,9 @@ special-dimension hypothesis.
   motivate reasoning, architecture selection, or a selectivity requirement.
   Negative findings are scoped to an attempt and can be revisited by an explicit
   revision. Preserve the failed candidate and freeze a rescue before evaluation.
-- Next focused question: make an introduced Rail instruction locally editable,
-  accounting for additional instruction cells and changed guard conditions.
-  Smaller role alphabets and marker self-organization are separate experiments.
+- Follow-up completed: the editable-routing checkpoint above stores each added
+  table explicitly. Its ordered topology remains fixed. Smaller role alphabets
+  and marker self-organization are still separate experiments.
 
 ## Research continuation: dimensional compatibility (2026-09-08)
 

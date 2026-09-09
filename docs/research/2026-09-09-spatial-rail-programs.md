@@ -1,5 +1,7 @@
 # Editable spatial programs survive two lifts, including autonomous transport
 
+**Follow-up, 2026-09-09:** the [editable-routing checkpoint](2026-09-09-editable-routing-tables.md) answers the next question below for table contents: every added selector becomes an eight-bit spatial program. This original construction, its smaller storage budget, and both frozen results remain unchanged.
+
 One fixed selector construction now gives an exact **1D → 2D → 3D** realization with programs stored in physical cells. It works for every ECA starting program and for arbitrary heterogeneous program fields. A local instruction edit changes one physical program cell, and the same program grammar applies again at the second interface.
 
 A separately frozen extension also works when live sites autonomously copy their left neighbor's program. The programs need not remain fixed during evolution.

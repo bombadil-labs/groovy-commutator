@@ -1,0 +1,1376 @@
+{
+  "appended_table_contract": {
+    "canonical": 172,
+    "failed_words": 192,
+    "failure_witnesses": [
+      {
+        "actual": 0,
+        "expected": 1,
+        "inner_output": 1,
+        "word": 0
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "inner_output": 1,
+        "word": 1
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "inner_output": 0,
+        "word": 2
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "inner_output": 0,
+        "word": 3
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "inner_output": 1,
+        "word": 4
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "inner_output": 1,
+        "word": 5
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "inner_output": 0,
+        "word": 6
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "inner_output": 0,
+        "word": 7
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "inner_output": 1,
+        "word": 8
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "inner_output": 1,
+        "word": 9
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "inner_output": 0,
+        "word": 10
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "inner_output": 0,
+        "word": 11
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "inner_output": 1,
+        "word": 12
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "inner_output": 1,
+        "word": 13
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "inner_output": 0,
+        "word": 14
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "inner_output": 0,
+        "word": 15
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "inner_output": 1,
+        "word": 16
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "inner_output": 1,
+        "word": 17
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "inner_output": 0,
+        "word": 18
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "inner_output": 0,
+        "word": 19
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "inner_output": 1,
+        "word": 20
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "inner_output": 1,
+        "word": 21
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "inner_output": 0,
+        "word": 22
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "inner_output": 0,
+        "word": 23
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "inner_output": 1,
+        "word": 24
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "inner_output": 1,
+        "word": 25
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "inner_output": 0,
+        "word": 26
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "inner_output": 0,
+        "word": 27
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "inner_output": 1,
+        "word": 28
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "inner_output": 1,
+        "word": 29
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "inner_output": 0,
+        "word": 30
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "inner_output": 0,
+        "word": 31
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "inner_output": 0,
+        "word": 34
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "inner_output": 0,
+        "word": 35
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "inner_output": 0,
+        "word": 38
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "inner_output": 0,
+        "word": 39
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "inner_output": 0,
+        "word": 42
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "inner_output": 0,
+        "word": 43
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "inner_output": 0,
+        "word": 46
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "inner_output": 0,
+        "word": 47
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "inner_output": 0,
+        "word": 50
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "inner_output": 0,
+        "word": 51
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "inner_output": 0,
+        "word": 54
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "inner_output": 0,
+        "word": 55
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "inner_output": 0,
+        "word": 58
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "inner_output": 0,
+        "word": 59
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "inner_output": 0,
+        "word": 62
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "inner_output": 0,
+        "word": 63
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "inner_output": 1,
+        "word": 64
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "inner_output": 1,
+        "word": 65
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "inner_output": 0,
+        "word": 66
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "inner_output": 0,
+        "word": 67
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "inner_output": 1,
+        "word": 68
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "inner_output": 1,
+        "word": 69
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "inner_output": 0,
+        "word": 70
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "inner_output": 0,
+        "word": 71
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "inner_output": 1,
+        "word": 72
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "inner_output": 1,
+        "word": 73
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "inner_output": 0,
+        "word": 74
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "inner_output": 0,
+        "word": 75
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "inner_output": 1,
+        "word": 76
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "inner_output": 1,
+        "word": 77
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "inner_output": 0,
+        "word": 78
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "inner_output": 0,
+        "word": 79
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "inner_output": 1,
+        "word": 80
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "inner_output": 1,
+        "word": 81
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "inner_output": 0,
+        "word": 82
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "inner_output": 0,
+        "word": 83
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "inner_output": 1,
+        "word": 84
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "inner_output": 1,
+        "word": 85
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "inner_output": 0,
+        "word": 86
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "inner_output": 0,
+        "word": 87
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "inner_output": 1,
+        "word": 88
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "inner_output": 1,
+        "word": 89
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "inner_output": 0,
+        "word": 90
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "inner_output": 0,
+        "word": 91
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "inner_output": 1,
+        "word": 92
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "inner_output": 1,
+        "word": 93
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "inner_output": 0,
+        "word": 94
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "inner_output": 0,
+        "word": 95
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "inner_output": 0,
+        "word": 98
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "inner_output": 0,
+        "word": 99
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "inner_output": 0,
+        "word": 102
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "inner_output": 0,
+        "word": 103
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "inner_output": 0,
+        "word": 106
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "inner_output": 0,
+        "word": 107
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "inner_output": 0,
+        "word": 110
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "inner_output": 0,
+        "word": 111
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "inner_output": 0,
+        "word": 114
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "inner_output": 0,
+        "word": 115
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "inner_output": 0,
+        "word": 118
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "inner_output": 0,
+        "word": 119
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "inner_output": 0,
+        "word": 122
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "inner_output": 0,
+        "word": 123
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "inner_output": 0,
+        "word": 126
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "inner_output": 0,
+        "word": 127
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "inner_output": 1,
+        "word": 128
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "inner_output": 1,
+        "word": 129
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "inner_output": 0,
+        "word": 130
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "inner_output": 0,
+        "word": 131
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "inner_output": 1,
+        "word": 132
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "inner_output": 1,
+        "word": 133
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "inner_output": 0,
+        "word": 134
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "inner_output": 0,
+        "word": 135
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "inner_output": 1,
+        "word": 136
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "inner_output": 1,
+        "word": 137
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "inner_output": 0,
+        "word": 138
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "inner_output": 0,
+        "word": 139
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "inner_output": 1,
+        "word": 140
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "inner_output": 1,
+        "word": 141
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "inner_output": 0,
+        "word": 142
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "inner_output": 0,
+        "word": 143
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "inner_output": 1,
+        "word": 144
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "inner_output": 1,
+        "word": 145
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "inner_output": 0,
+        "word": 146
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "inner_output": 0,
+        "word": 147
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "inner_output": 1,
+        "word": 148
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "inner_output": 1,
+        "word": 149
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "inner_output": 0,
+        "word": 150
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "inner_output": 0,
+        "word": 151
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "inner_output": 1,
+        "word": 152
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "inner_output": 1,
+        "word": 153
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "inner_output": 0,
+        "word": 154
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "inner_output": 0,
+        "word": 155
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "inner_output": 1,
+        "word": 156
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "inner_output": 1,
+        "word": 157
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "inner_output": 0,
+        "word": 158
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "inner_output": 0,
+        "word": 159
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "inner_output": 0,
+        "word": 162
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "inner_output": 0,
+        "word": 163
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "inner_output": 0,
+        "word": 166
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "inner_output": 0,
+        "word": 167
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "inner_output": 0,
+        "word": 170
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "inner_output": 0,
+        "word": 171
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "inner_output": 0,
+        "word": 174
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "inner_output": 0,
+        "word": 175
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "inner_output": 0,
+        "word": 178
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "inner_output": 0,
+        "word": 179
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "inner_output": 0,
+        "word": 182
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "inner_output": 0,
+        "word": 183
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "inner_output": 0,
+        "word": 186
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "inner_output": 0,
+        "word": 187
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "inner_output": 0,
+        "word": 190
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "inner_output": 0,
+        "word": 191
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "inner_output": 1,
+        "word": 192
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "inner_output": 1,
+        "word": 193
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "inner_output": 0,
+        "word": 194
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "inner_output": 0,
+        "word": 195
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "inner_output": 1,
+        "word": 196
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "inner_output": 1,
+        "word": 197
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "inner_output": 0,
+        "word": 198
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "inner_output": 0,
+        "word": 199
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "inner_output": 1,
+        "word": 200
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "inner_output": 1,
+        "word": 201
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "inner_output": 0,
+        "word": 202
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "inner_output": 0,
+        "word": 203
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "inner_output": 1,
+        "word": 204
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "inner_output": 1,
+        "word": 205
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "inner_output": 0,
+        "word": 206
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "inner_output": 0,
+        "word": 207
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "inner_output": 1,
+        "word": 208
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "inner_output": 1,
+        "word": 209
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "inner_output": 0,
+        "word": 210
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "inner_output": 0,
+        "word": 211
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "inner_output": 1,
+        "word": 212
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "inner_output": 1,
+        "word": 213
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "inner_output": 0,
+        "word": 214
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "inner_output": 0,
+        "word": 215
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "inner_output": 1,
+        "word": 216
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "inner_output": 1,
+        "word": 217
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "inner_output": 0,
+        "word": 218
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "inner_output": 0,
+        "word": 219
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "inner_output": 1,
+        "word": 220
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "inner_output": 1,
+        "word": 221
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "inner_output": 0,
+        "word": 222
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "inner_output": 0,
+        "word": 223
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "inner_output": 0,
+        "word": 226
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "inner_output": 0,
+        "word": 227
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "inner_output": 0,
+        "word": 230
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "inner_output": 0,
+        "word": 231
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "inner_output": 0,
+        "word": 234
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "inner_output": 0,
+        "word": 235
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "inner_output": 0,
+        "word": 238
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "inner_output": 0,
+        "word": 239
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "inner_output": 0,
+        "word": 242
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "inner_output": 0,
+        "word": 243
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "inner_output": 0,
+        "word": 246
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "inner_output": 0,
+        "word": 247
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "inner_output": 0,
+        "word": 250
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "inner_output": 0,
+        "word": 251
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "inner_output": 0,
+        "word": 254
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "inner_output": 0,
+        "word": 255
+      }
+    ],
+    "neutral_words": [
+      32,
+      33,
+      36,
+      37,
+      40,
+      41,
+      44,
+      45,
+      48,
+      49,
+      52,
+      53,
+      56,
+      57,
+      60,
+      61,
+      96,
+      97,
+      100,
+      101,
+      104,
+      105,
+      108,
+      109,
+      112,
+      113,
+      116,
+      117,
+      120,
+      121,
+      124,
+      125,
+      160,
+      161,
+      164,
+      165,
+      168,
+      169,
+      172,
+      173,
+      176,
+      177,
+      180,
+      181,
+      184,
+      185,
+      188,
+      189,
+      224,
+      225,
+      228,
+      229,
+      232,
+      233,
+      236,
+      237,
+      240,
+      241,
+      244,
+      245,
+      248,
+      249,
+      252,
+      253
+    ]
+  },
+  "assertions": 2236434,
+  "dormant_then_inherited_instruction_witness": {
+    "address": 0,
+    "after": [
+      1,
+      1
+    ],
+    "before": [
+      0,
+      0
+    ],
+    "edited_positions": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        1,
+        0
+      ]
+    ]
+  },
+  "implementation_corrections": [],
+  "interface_checks": {
+    "first_all_layers": 10240,
+    "second_central": 2097152,
+    "uniform_and_boundary_guard_checks": 40
+  },
+  "isolated_physical_table_evaluations": {
+    "1": 2048,
+    "2": 4096,
+    "3": 6144,
+    "4": 8192
+  },
+  "local_program_copy_cases": 640,
+  "malformed_layout_checks": 128,
+  "physical": {
+    "alphabet": [
+      "B",
+      "D0",
+      "D1",
+      "P0",
+      "P1"
+    ],
+    "macrocell_sites_by_dimension": [
+      9,
+      81,
+      729,
+      6561
+    ],
+    "occupied_sites_by_dimension": [
+      9,
+      17,
+      25,
+      33
+    ],
+    "program_bits_by_dimension": [
+      8,
+      16,
+      24,
+      32
+    ],
+    "radius": 9,
+    "scale": 9,
+    "tick_ratio": 1
+  },
+  "physical_fields": {
+    "copy": {
+      "arbitrary_three_dimensional_source": {
+        "autonomous_source_word_changes_by_stage": [
+          82,
+          82,
+          77
+        ],
+        "cases": 8,
+        "compared_symbols": 73728,
+        "physical_payload_edits": 192,
+        "target_timepoints": 24
+      },
+      "arbitrary_two_dimensional_source": {
+        "autonomous_source_word_changes_by_stage": [
+          219,
+          219
+        ],
+        "cases": 16,
+        "compared_symbols": 124992,
+        "physical_payload_edits": 384,
+        "target_timepoints": 64
+      },
+      "one_dimensional_and_two_lifts": {
+        "autonomous_source_word_changes_by_stage": [
+          59
+        ],
+        "cases": 8,
+        "compared_symbols": 170360,
+        "physical_payload_edits": 144,
+        "target_timepoints": 48
+      }
+    },
+    "hold": {
+      "arbitrary_three_dimensional_source": {
+        "autonomous_source_word_changes_by_stage": [
+          0,
+          0,
+          0
+        ],
+        "cases": 8,
+        "compared_symbols": 73728,
+        "physical_payload_edits": 192,
+        "target_timepoints": 24
+      },
+      "arbitrary_two_dimensional_source": {
+        "autonomous_source_word_changes_by_stage": [
+          0,
+          0
+        ],
+        "cases": 16,
+        "compared_symbols": 124992,
+        "physical_payload_edits": 384,
+        "target_timepoints": 64
+      },
+      "one_dimensional_and_two_lifts": {
+        "autonomous_source_word_changes_by_stage": [
+          0
+        ],
+        "cases": 8,
+        "compared_symbols": 170360,
+        "physical_payload_edits": 144,
+        "target_timepoints": 48
+      }
+    }
+  },
+  "physical_instruction_edit_witnesses": {
+    "1": 2048,
+    "2": 4096,
+    "3": 6144,
+    "4": 8192
+  },
+  "protocol": "docs/research/protocols/editable-routing-tables-20260909.md",
+  "protocol_deviations": [],
+  "protocol_freeze_commit": "68f8437ef7166e6fa85ddc812d77b4c5381d31ac",
+  "schema_version": 1,
+  "scope": "Editable table contents in a fixed axis-ordered chain, with hold/copy policies; prepared roles and guard backgrounds; no unrestricted editable syntax or novelty claim.",
+  "two_dimensional_semantics": {
+    "alias_checks": 65536,
+    "data_stencils_each": 32,
+    "distinct_data_functions": 30496,
+    "stored_programs": 65536
+  }
+}
