@@ -1,0 +1,29 @@
+{
+  "date": "2026-09-09",
+  "embedding": "E(s)(x,y)=s(x+y)",
+  "source_family": "all 256 elementary cellular automata",
+  "protocols": [
+    "docs/research/protocols/dimensional-intertwining-20260909.md",
+    "docs/research/protocols/dimensional-intertwining-strong-20260909.md"
+  ],
+  "checks": {
+    "local_active_intertwining_failures": 0,
+    "local_two_site_gate_intertwining_failures": 0,
+    "local_four_site_gate_intertwining_failures": 0,
+    "active_linear_rank_2_rules": 228,
+    "active_affine_dimension_2_rules": 218,
+    "two_site_gate_linear_rank_2_rules": 256,
+    "four_site_gate_affine_dimension_2_rules": 256,
+    "selected_global_periodic_construction_state_checks": 2160,
+    "selected_global_periodic_failures": 0
+  },
+  "selected_global_rules": [0, 30, 54, 90, 110, 255],
+  "selected_global_widths": [3, 4, 5, 6],
+  "interpretation": {
+    "exact_commuting_lift": true,
+    "full_2d_rule_can_be_affinely_irreducible": true,
+    "encoded_family_has_independent_2d_degrees_of_freedom": false,
+    "extra_2d_gate_is_active_on_encoded_states": false
+  },
+  "reproduce": "python scripts/verify_dimensional_intertwining.py"
+}
