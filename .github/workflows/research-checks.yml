@@ -56,7 +56,7 @@ jobs:
           python scripts/check_block3_representation_design_rule24_n15.py
           --output /tmp/block3-rule24-n15.json
 
-  site-research:
+  program-publisher:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
@@ -66,11 +66,39 @@ jobs:
           node-version: 22
           cache: npm
           cache-dependency-path: site/package-lock.json
-      - name: Install site dependencies
-        run: npm ci
+      - run: npm ci
         working-directory: site
-      - name: Validate research publisher
-        run: npm run test:research
+      - name: Test Program publisher
+        run: node --test scripts/research-program.test.mjs
+        working-directory: site
+
+  research-legacy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: site/package-lock.json
+      - run: npm ci
+        working-directory: site
+      - name: Test Research and Knowledge publishers
+        run: node --test scripts/research.test.mjs scripts/knowledge.test.mjs
+        working-directory: site
+
+  site-build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: site/package-lock.json
+      - run: npm ci
         working-directory: site
       - name: Build site
         run: npm run build
