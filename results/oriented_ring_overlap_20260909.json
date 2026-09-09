@@ -1,0 +1,128 @@
+{
+  "d4_map_count": 8,
+  "exploratory_post_primary": {
+    "description": "center-conditioned D4 ring orbit pairs on 4x4; defined after primary result was known",
+    "field_count": 38,
+    "pair_count": 6,
+    "pairs": [
+      {
+        "center0_orbit_canonical": 14,
+        "center1_orbit_canonical": 31,
+        "field_count": 8,
+        "selector_persistence": {
+          "horizontal": [
+            {"closed_cycle": false, "cycle_length": null, "field_count": 4, "valid_steps": 1},
+            {"closed_cycle": true, "cycle_length": 4, "field_count": 4, "valid_steps": 4}
+          ],
+          "vertical": [
+            {"closed_cycle": false, "cycle_length": null, "field_count": 4, "valid_steps": 1},
+            {"closed_cycle": true, "cycle_length": 1, "field_count": 4, "valid_steps": 1}
+          ]
+        },
+        "witness_rows": ["1111", "1111", "0000", "0000"],
+        "witness_state": 255
+      },
+      {
+        "center0_orbit_canonical": 39,
+        "center1_orbit_canonical": 54,
+        "field_count": 8,
+        "selector_persistence": {
+          "horizontal": [
+            {"closed_cycle": false, "cycle_length": null, "field_count": 8, "valid_steps": 1}
+          ],
+          "vertical": [
+            {"closed_cycle": false, "cycle_length": null, "field_count": 4, "valid_steps": 1},
+            {"closed_cycle": true, "cycle_length": 4, "field_count": 4, "valid_steps": 4}
+          ]
+        },
+        "witness_rows": ["1001", "0011", "0110", "1100"],
+        "witness_state": 14790
+      },
+      {
+        "center0_orbit_canonical": 54,
+        "center1_orbit_canonical": 39,
+        "field_count": 8,
+        "selector_persistence": {
+          "horizontal": [
+            {"closed_cycle": false, "cycle_length": null, "field_count": 8, "valid_steps": 1}
+          ],
+          "vertical": [
+            {"closed_cycle": false, "cycle_length": null, "field_count": 8, "valid_steps": 1}
+          ]
+        },
+        "witness_rows": ["0011", "0011", "1100", "1100"],
+        "witness_state": 13260
+      },
+      {
+        "center0_orbit_canonical": 85,
+        "center1_orbit_canonical": 170,
+        "field_count": 2,
+        "selector_persistence": {
+          "horizontal": [
+            {"closed_cycle": false, "cycle_length": null, "field_count": 2, "valid_steps": 1}
+          ],
+          "vertical": [
+            {"closed_cycle": false, "cycle_length": null, "field_count": 2, "valid_steps": 1}
+          ]
+        },
+        "witness_rows": ["0101", "1010", "0101", "1010"],
+        "witness_state": 21930
+      },
+      {
+        "center0_orbit_canonical": 91,
+        "center1_orbit_canonical": 41,
+        "field_count": 8,
+        "selector_persistence": {
+          "horizontal": [
+            {"closed_cycle": false, "cycle_length": null, "field_count": 4, "valid_steps": 1},
+            {"closed_cycle": true, "cycle_length": 4, "field_count": 4, "valid_steps": 4}
+          ],
+          "vertical": [
+            {"closed_cycle": false, "cycle_length": null, "field_count": 4, "valid_steps": 1},
+            {"closed_cycle": true, "cycle_length": 4, "field_count": 4, "valid_steps": 4}
+          ]
+        },
+        "witness_rows": ["0011", "1100", "0011", "1100"],
+        "witness_state": 15420
+      },
+      {
+        "center0_orbit_canonical": 187,
+        "center1_orbit_canonical": 17,
+        "field_count": 4,
+        "selector_persistence": {
+          "horizontal": [
+            {"closed_cycle": true, "cycle_length": 2, "field_count": 4, "valid_steps": 2}
+          ],
+          "vertical": [
+            {"closed_cycle": false, "cycle_length": null, "field_count": 4, "valid_steps": 1}
+          ]
+        },
+        "witness_rows": ["1111", "0000", "1111", "0000"],
+        "witness_state": 3855
+      }
+    ]
+  },
+  "orbit_size_histogram": {"1": 4, "2": 8, "4": 100, "8": 144},
+  "primary": {
+    "3": {
+      "counts": {"0": 1, "255": 1},
+      "passing_rule_count": 2,
+      "passing_rules": [0, 255],
+      "witnesses": {
+        "0": {"rows": ["000", "000", "000"], "state": 0},
+        "255": {"rows": ["111", "111", "111"], "state": 511}
+      }
+    },
+    "4": {
+      "counts": {"0": 1, "255": 1},
+      "passing_rule_count": 2,
+      "passing_rules": [0, 255],
+      "witnesses": {
+        "0": {"rows": ["0000", "0000", "0000", "0000"], "state": 0},
+        "255": {"rows": ["1111", "1111", "1111", "1111"], "state": 65535}
+      }
+    }
+  },
+  "protocol": "docs/research/protocols/oriented-ring-overlap-20260909.md",
+  "rule_ring_order": ["N", "NE", "E", "SE", "S", "SW", "W", "NW"]
+}

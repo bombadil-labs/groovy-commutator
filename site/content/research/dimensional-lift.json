@@ -1,0 +1,24 @@
+[
+  {
+    "slug": "ternary-commutator-lift",
+    "number": "032",
+    "title": "The commuting square grows a ternary spatial address",
+    "date": "2026-09-09",
+    "updated": "2026-09-09",
+    "kind": "Exact semantic lift with finite-map and intrinsic local censuses",
+    "evidence": "exact",
+    "topic": "Algebra and closure",
+    "summary": "The two paths around a commuting square and their XOR residual define a rule-independent recursive L/R/C lift. Depth-d words form a 3^d ternary address space with a forced algebraic quotient; finite-map and infinite-lattice local censuses show broad but rule-dependent role growth rather than a Class-IV-exclusive signature.",
+    "takeaway": "The commutator can be represented as a new coordinate rather than only measured: each added semantic dimension stores the two operation orders and their residual. The next target is a native autonomous higher-dimensional CA realization, likely organized around the correction map rather than full ternary-vocabulary closure.",
+    "source": "docs/research/2026-09-09-ternary-commutator-lift.md",
+    "promotion": {
+      "stage": "research"
+    },
+    "related": [
+      "dimensional-lift",
+      "shared-state-rule",
+      "observation-closure",
+      "block-compatibility"
+    ]
+  }
+]

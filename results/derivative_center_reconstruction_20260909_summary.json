@@ -1,0 +1,11 @@
+{
+  "protocol": "docs/research/protocols/derivative-center-reconstruction-20260909.md",
+  "class_labels_loaded": false,
+  "rules_checked": 64,
+  "five_cell_histories_per_rule": 32,
+  "exact_reconstruction_count": 2,
+  "exact_reconstruction_eca_rules": [0, 255],
+  "ambiguity_count_histogram": {"0": 2, "1": 8, "2": 16, "3": 10, "4": 8, "5": 16, "6": 4},
+  "posthoc_ordered_left_right_delta_exact_count": 2,
+  "posthoc_ordered_left_right_delta_exact_rules": [0, 255]
+}
