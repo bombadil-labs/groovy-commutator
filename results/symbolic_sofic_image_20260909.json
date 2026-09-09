@@ -1,0 +1,67 @@
+{
+  "ok": true,
+  "experiment": "symbolic-sofic-image",
+  "working_identity": "symbolic-sofic-image",
+  "hmax": 6,
+  "frontier_questions": 170,
+  "frontier_seed_languages": 22,
+  "frontier_rules": [122, 154, 161, 164, 166, 180, 210, 218],
+  "status_counts": {
+    "no-recurrence-through-6": 170
+  },
+  "status_by_wolfram_class": {
+    "no-recurrence-through-6": {
+      "II": 158,
+      "III": 12
+    }
+  },
+  "temporal_recurrence_certificates": 0,
+  "unresolved_after_recurrence": 170,
+  "censored": 0,
+  "primary_hypothesis": "fail",
+  "max_mdd_nodes": {
+    "count": 1142614,
+    "rules": [122, 161],
+    "horizon": 6
+  },
+  "max_comparison_states": {
+    "count": 633,
+    "rule": 164,
+    "h": 6,
+    "j": 5,
+    "delta": 0
+  },
+  "controls": {
+    "ok": true,
+    "rule5": {
+      "recurrence": {
+        "h": 3,
+        "j": 1,
+        "delta": 0,
+        "comparison_states": 15
+      },
+      "exhaustive": {
+        "ok": true,
+        "checked": 2097152
+      }
+    },
+    "rule35": {
+      "recurrences": [],
+      "h3_witness": true
+    }
+  },
+  "source_hashes": {
+    "scripts/experiment_symbolic_sofic_image.py": "a391f6c0d435c003e26299959de261d213b7622ab843d99a33f0cb64e5ebc9cc",
+    "docs/research/protocols/symbolic-sofic-image-20260909.md": "99ac1ca17428828737e98e3b8d9e1d230378e7fed20d46eff707c2be581d28a0"
+  },
+  "rules": [
+    {"rule": 122, "wclass": "III", "frontier_questions": 6, "frontier_seed_languages": 6, "h6_mdd_nodes": 1142614, "status": "no-recurrence-through-6"},
+    {"rule": 154, "wclass": "II", "frontier_questions": 31, "frontier_seed_languages": 1, "h6_mdd_nodes": 807, "status": "no-recurrence-through-6"},
+    {"rule": 161, "wclass": "III", "frontier_questions": 6, "frontier_seed_languages": 6, "h6_mdd_nodes": 1142614, "status": "no-recurrence-through-6"},
+    {"rule": 164, "wclass": "II", "frontier_questions": 17, "frontier_seed_languages": 3, "h6_mdd_nodes": 9702, "status": "no-recurrence-through-6"},
+    {"rule": 166, "wclass": "II", "frontier_questions": 31, "frontier_seed_languages": 1, "h6_mdd_nodes": 807, "status": "no-recurrence-through-6"},
+    {"rule": 180, "wclass": "II", "frontier_questions": 31, "frontier_seed_languages": 1, "h6_mdd_nodes": 2337, "status": "no-recurrence-through-6"},
+    {"rule": 210, "wclass": "II", "frontier_questions": 31, "frontier_seed_languages": 1, "h6_mdd_nodes": 2337, "status": "no-recurrence-through-6"},
+    {"rule": 218, "wclass": "II", "frontier_questions": 17, "frontier_seed_languages": 3, "h6_mdd_nodes": 9702, "status": "no-recurrence-through-6"}
+  ]
+}
