@@ -34,7 +34,7 @@
     "pair": "0-2",
     "pair_index": 1,
     "generated_symbol_count": 48,
-    "symbol_rounds": 4,
+    "symbol_rounds": 5,
     "generated_edge_count": 153,
     "edge_rounds": 3,
     "target_id": 102,
@@ -112,7 +112,7 @@
     "pair": "0-2",
     "pair_index": 1,
     "generated_symbol_count": 64,
-    "symbol_rounds": 3,
+    "symbol_rounds": 5,
     "generated_edge_count": 230,
     "edge_rounds": 4,
     "target_id": 102,
@@ -403,7 +403,7 @@
     }
   ],
   "source_hashes": {
-    "scripts/experiment_reachable_context_invariants.py": "f4f18603b4353045345b4ee795c73bbec3d93c3de528684ed2b3bad5abc90e84",
+    "scripts/experiment_reachable_context_invariants.py": "ea08998aaf3aa59d976a625c58ca14bd74be3926a0050f44866c5b768cd5acc1",
     "docs/research/protocols/reachable-context-invariants-20260909.md": "9145882dcd97938496c68d55c442da946be37ecc6fa26db4a4cce09374fba2ad"
   }
 }
