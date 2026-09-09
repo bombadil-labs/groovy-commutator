@@ -23,6 +23,7 @@
       "causal-witness-automaton",
       "reachable-context-invariants",
       "window3-reachable-language",
+      "sofic-defect-orbit",
       "selector-shielding",
       "pulse-shape-scattering",
       "pulse-scattering"
