@@ -26,6 +26,16 @@ GATED_OFFSETS = {
     "gate_b": (1, 1),
 }
 
+STRONG_OFFSETS = {
+    "left": (-1, 0),
+    "center": (0, 0),
+    "right": (1, 0),
+    "gate_p_a": (2, 0),
+    "gate_p_b": (1, 1),
+    "gate_m_a": (-2, 0),
+    "gate_m_b": (-1, -1),
+}
+
 
 def eca(rule: int, left: int, center: int, right: int) -> int:
     idx = (left << 2) | (center << 1) | right
@@ -57,6 +67,19 @@ def directional_rank(offsets: list[tuple[int, int]]) -> int:
     return 1
 
 
+def affine_dimension(points: list[tuple[int, int]]) -> int:
+    if len(points) <= 1:
+        return 0
+    x0, y0 = points[0]
+    vectors = [(x - x0, y - y0) for x, y in points[1:]]
+    first = next((v for v in vectors if v != (0, 0)), None)
+    if first is None:
+        return 0
+    if any(first[0] * v[1] - first[1] * v[0] != 0 for v in vectors):
+        return 2
+    return 1
+
+
 def active_output(rule: int, values: dict[str, int]) -> int:
     return eca(rule, values["left"], values["center"], values["right"])
 
@@ -64,6 +87,33 @@ def active_output(rule: int, values: dict[str, int]) -> int:
 def gated_output(rule: int, values: dict[str, int]) -> int:
     base = eca(rule, values["left"], values["center"], values["right"])
     return base ^ values["gate_a"] ^ values["gate_b"]
+
+
+def strong_output(rule: int, values: dict[str, int]) -> int:
+    base = eca(rule, values["left"], values["center"], values["right"])
+    return (
+        base
+        ^ values["gate_p_a"]
+        ^ values["gate_p_b"]
+        ^ values["gate_m_a"]
+        ^ values["gate_m_b"]
+    )
+
+
+def strong_essential(rule: int) -> dict[str, bool]:
+    names = list(STRONG_OFFSETS)
+    out: dict[str, bool] = {}
+    for name in names:
+        essential = False
+        for bits in itertools.product((0, 1), repeat=len(names)):
+            values = dict(zip(names, bits))
+            flipped = dict(values)
+            flipped[name] ^= 1
+            if strong_output(rule, values) != strong_output(rule, flipped):
+                essential = True
+                break
+        out[name] = essential
+    return out
 
 
 def gated_essential(rule: int) -> dict[str, bool]:
@@ -111,6 +161,26 @@ def step_active(rule: int, field: tuple[tuple[int, ...], ...]) -> tuple[tuple[in
     )
 
 
+def step_strong(rule: int, field: tuple[tuple[int, ...], ...]) -> tuple[tuple[int, ...], ...]:
+    n = len(field)
+    return tuple(
+        tuple(
+            eca(
+                rule,
+                field[y][(x - 1) % n],
+                field[y][x],
+                field[y][(x + 1) % n],
+            )
+            ^ field[y][(x + 2) % n]
+            ^ field[(y + 1) % n][(x + 1) % n]
+            ^ field[y][(x - 2) % n]
+            ^ field[(y - 1) % n][(x - 1) % n]
+            for x in range(n)
+        )
+        for y in range(n)
+    )
+
+
 def step_gated(rule: int, field: tuple[tuple[int, ...], ...]) -> tuple[tuple[int, ...], ...]:
     n = len(field)
     return tuple(
@@ -134,6 +204,9 @@ def main() -> None:
     local_gated_failures: list[dict[str, object]] = []
     active_rank2_rules: list[int] = []
     gated_rank2_rules: list[int] = []
+    active_affine2_rules: list[int] = []
+    strong_affine2_rules: list[int] = []
+    local_strong_failures: list[dict[str, object]] = []
     all_rule_details: dict[str, object] = {}
 
     for rule in range(256):
@@ -163,8 +236,11 @@ def main() -> None:
             ACTIVE_OFFSETS[name] for name, essential in source_ess.items() if essential
         ]
         active_rank = directional_rank(active_essential_offsets)
+        active_affine = affine_dimension(active_essential_offsets)
         if active_rank == 2:
             active_rank2_rules.append(rule)
+        if active_affine == 2:
+            active_affine2_rules.append(rule)
 
         gated_ess = gated_essential(rule)
         gated_essential_offsets = [
@@ -174,11 +250,43 @@ def main() -> None:
         if gated_rank == 2:
             gated_rank2_rules.append(rule)
 
+        strong_ess = strong_essential(rule)
+        strong_essential_offsets = [
+            STRONG_OFFSETS[name] for name, essential in strong_ess.items() if essential
+        ]
+        strong_affine = affine_dimension(strong_essential_offsets)
+        if strong_affine == 2:
+            strong_affine2_rules.append(rule)
+
+        for triple in itertools.product((0, 1), repeat=3):
+            for plus_two, minus_two in itertools.product((0, 1), repeat=2):
+                strong_values = {
+                    "left": triple[0],
+                    "center": triple[1],
+                    "right": triple[2],
+                    "gate_p_a": plus_two,
+                    "gate_p_b": plus_two,
+                    "gate_m_a": minus_two,
+                    "gate_m_b": minus_two,
+                }
+                if strong_output(rule, strong_values) != eca(rule, *triple):
+                    local_strong_failures.append(
+                        {
+                            "rule": rule,
+                            "triple": triple,
+                            "plus_two": plus_two,
+                            "minus_two": minus_two,
+                        }
+                    )
+
         all_rule_details[str(rule)] = {
             "source_essential": source_ess,
             "active_directional_rank": active_rank,
+            "active_affine_dimension": active_affine,
             "gated_essential": gated_ess,
             "gated_directional_rank": gated_rank,
+            "strong_essential": strong_ess,
+            "strong_affine_dimension": strong_affine,
         }
 
     global_failures: list[dict[str, object]] = []
@@ -192,6 +300,7 @@ def main() -> None:
                 for construction, actual in (
                     ("active", step_active(rule, encoded)),
                     ("gated", step_gated(rule, encoded)),
+                    ("strong", step_strong(rule, encoded)),
                 ):
                     global_checks += 1
                     if actual != expected:
@@ -209,6 +318,7 @@ def main() -> None:
         "embedding": "E(s)(x,y)=s((x+y) mod n) on finite tori; same formula over Z in the proof",
         "active_offsets": ACTIVE_OFFSETS,
         "gated_offsets": GATED_OFFSETS,
+        "strong_offsets": STRONG_OFFSETS,
         "local": {
             "eca_rules_checked": 256,
             "source_triples_per_rule": 8,
@@ -219,6 +329,12 @@ def main() -> None:
             "active_rank_lt2_rules": [r for r in range(256) if r not in active_rank2_rules],
             "gated_rank2_count": len(gated_rank2_rules),
             "gated_rank2_rules": gated_rank2_rules,
+            "active_affine2_count": len(active_affine2_rules),
+            "active_affine2_rules": active_affine2_rules,
+            "active_affine_lt2_rules": [r for r in range(256) if r not in active_affine2_rules],
+            "strong_failures": local_strong_failures,
+            "strong_affine2_count": len(strong_affine2_rules),
+            "strong_affine2_rules": strong_affine2_rules,
         },
         "global_periodic_audit": {
             "rules": SELECTED_GLOBAL_RULES,
@@ -236,11 +352,16 @@ def main() -> None:
     assert not local_gated_failures
     assert len(active_rank2_rules) == 228
     assert len(gated_rank2_rules) == 256
+    assert len(active_affine2_rules) == 218
+    assert not local_strong_failures
+    assert len(strong_affine2_rules) == 256
     assert not global_failures
 
     print(json.dumps({
         "active_rank2_count": len(active_rank2_rules),
         "gated_rank2_count": len(gated_rank2_rules),
+        "active_affine2_count": len(active_affine2_rules),
+        "strong_affine2_count": len(strong_affine2_rules),
         "global_checks": global_checks,
         "result": str(RESULT_PATH),
     }, indent=2))
