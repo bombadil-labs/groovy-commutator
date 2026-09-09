@@ -45,7 +45,7 @@ def paired_table(g):
  p=np.arange(64,dtype=np.int16);u=p//8;v=p%8;x=p[:,None,None];y=p[None,:,None];z=p[None,None,:]
  return (8*g[64*u[x]+8*u[y]+u[z]]+g[64*v[x]+8*v[y]+v[z]]).astype(np.uint8).reshape(-1)
 def symbol_closure(ph,seed):
- s=np.asarray(sorted(set(DIAGONAL+(seed,))),dtype=np.int16);rounds=0
+ s=np.asarray(sorted(set(DIAGONAL+(seed,))),dtype=np.intp);rounds=0
  while True:
   idx=(4096*s[:,None,None]+64*s[None,:,None]+s[None,None,:]).reshape(-1);n=np.unique(np.concatenate((s,ph[idx].astype(np.int16))));rounds+=1
   if len(n)==len(s):return s,rounds
