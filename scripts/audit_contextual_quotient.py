@@ -31,7 +31,7 @@ def audit_case(rule,key):
  nodes={p:node_metrics(p,oc.get(p),cinf,classes,N//3) for p in ints}
  ht=nodes[target]['H_encoder'];closed=[p for p in ints if nodes[p]['closed']]
  min_added=min(nodes[p]['H_encoder']-ht for p in closed)
- opts=sorted(p for p in closed if abs((nodes[p]['H_encoder']-ht)-min_added)<TOL,key=pkey)
+ opts=sorted((p for p in closed if abs((nodes[p]['H_encoder']-ht)-min_added)<TOL),key=pkey)
  q=contextual_quotient(cinf);qm=nodes[q];qadded=qm['H_encoder']-ht
  return {'rule':rule,'target':key,'interval_nodes':len(ints),'quotient':pkey(q),'quotient_closed':qm['closed'],
          'quotient_added_bits':qadded,'global_min_added_bits':min_added,'global_optima':[pkey(p) for p in opts],
