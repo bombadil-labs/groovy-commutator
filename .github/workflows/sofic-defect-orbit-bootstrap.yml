@@ -28,11 +28,27 @@ jobs:
           cache: pip
       - run: python -m pip install -e . pandas
       - name: Validate exact sofic semantics on frozen controls
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
           mkdir -p artifacts
+          set +e
           python scripts/experiment_sofic_defect_orbit.py \
             --controls-only \
-            --output artifacts/sofic-controls.json
+            --output artifacts/sofic-controls.json > /tmp/sofic-sentinel.log 2>&1
+          status=$?
+          cat /tmp/sofic-sentinel.log
+          if [ "$status" -ne 0 ]; then
+            {
+              echo '## Research035 sentinel failure'
+              echo
+              echo '```text'
+              tail -n 120 /tmp/sofic-sentinel.log
+              echo '```'
+            } > /tmp/sentinel-comment.md
+            gh pr comment 41 --repo bombadil-labs/groovy-commutator --body-file /tmp/sentinel-comment.md || true
+            exit "$status"
+          fi
       - uses: actions/upload-artifact@v4
         with:
           name: sofic-defect-orbit-controls
