@@ -1,0 +1,172 @@
+{
+  "ok": true,
+  "method": "independent scalar macro rule, exhaustive contexts through h2, explicit h3 witness, direct fine-ECA replay",
+  "standard_symmetry_orbit": [
+    35,
+    49,
+    59,
+    115
+  ],
+  "rows": [
+    {
+      "rule": 35,
+      "target": "00000001",
+      "pair": "2-6",
+      "no_witness_context_counts_h0_h2": {
+        "0": 1,
+        "1": 192,
+        "2": 20480
+      },
+      "witness": {
+        "horizon": 3,
+        "axis": 3,
+        "word_a": [
+          0,
+          0,
+          0,
+          2,
+          1,
+          5,
+          2
+        ],
+        "word_b": [
+          0,
+          0,
+          0,
+          6,
+          1,
+          5,
+          2
+        ],
+        "macro_output_a": 3,
+        "macro_output_b": 7,
+        "target_a": 0,
+        "target_b": 1,
+        "contexts_checked_until_witness": 786539,
+        "fine_output_a": 3,
+        "fine_output_b": 7,
+        "fine_ticks": 9
+      }
+    },
+    {
+      "rule": 49,
+      "target": "00000001",
+      "pair": "2-3",
+      "no_witness_context_counts_h0_h2": {
+        "0": 1,
+        "1": 192,
+        "2": 20480
+      },
+      "witness": {
+        "horizon": 3,
+        "axis": 2,
+        "word_a": [
+          2,
+          5,
+          2,
+          0,
+          1,
+          0,
+          0
+        ],
+        "word_b": [
+          2,
+          5,
+          3,
+          0,
+          1,
+          0,
+          0
+        ],
+        "macro_output_a": 6,
+        "macro_output_b": 7,
+        "target_a": 0,
+        "target_b": 1,
+        "contexts_checked_until_witness": 610369,
+        "fine_output_a": 6,
+        "fine_output_b": 7,
+        "fine_ticks": 9
+      }
+    },
+    {
+      "rule": 59,
+      "target": "01111111",
+      "pair": "1-5",
+      "no_witness_context_counts_h0_h2": {
+        "0": 1,
+        "1": 192,
+        "2": 20480
+      },
+      "witness": {
+        "horizon": 3,
+        "axis": 3,
+        "word_a": [
+          0,
+          6,
+          7,
+          1,
+          2,
+          1,
+          0
+        ],
+        "word_b": [
+          0,
+          6,
+          7,
+          5,
+          2,
+          1,
+          0
+        ],
+        "macro_output_a": 0,
+        "macro_output_b": 4,
+        "target_a": 0,
+        "target_b": 1,
+        "contexts_checked_until_witness": 814729,
+        "fine_output_a": 0,
+        "fine_output_b": 4,
+        "fine_ticks": 9
+      }
+    },
+    {
+      "rule": 115,
+      "target": "01111111",
+      "pair": "4-5",
+      "no_witness_context_counts_h0_h2": {
+        "0": 1,
+        "1": 192,
+        "2": 20480
+      },
+      "witness": {
+        "horizon": 3,
+        "axis": 2,
+        "word_a": [
+          4,
+          2,
+          4,
+          0,
+          6,
+          3,
+          0
+        ],
+        "word_b": [
+          4,
+          2,
+          5,
+          0,
+          6,
+          3,
+          0
+        ],
+        "macro_output_a": 0,
+        "macro_output_b": 1,
+        "target_a": 0,
+        "target_b": 1,
+        "contexts_checked_until_witness": 663961,
+        "fine_output_a": 0,
+        "fine_output_b": 1,
+        "fine_ticks": 9
+      }
+    }
+  ]
+}
