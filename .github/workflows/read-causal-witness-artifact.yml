@@ -1,0 +1,60 @@
+name: Surface Research031 causal witness artifact
+
+on:
+  push:
+    branches:
+      - research/causal-witness-horizon-20260909
+    paths:
+      - '.github/workflows/read-causal-witness-artifact.yml'
+
+permissions:
+  actions: read
+  contents: read
+  pull-requests: write
+
+jobs:
+  surface:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download green publication artifact
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p artifact
+          gh run download 34330667980 \
+            --repo bombadil-labs/groovy-commutator \
+            --name causal-witness-publication \
+            --dir artifact
+          find artifact -maxdepth 2 -type f -print
+      - name: Build exact summary comment
+        run: |
+          python - <<'PY'
+          import json, pathlib
+          p=pathlib.Path('artifact/causal-witness-summary.json')
+          x=json.loads(p.read_text())
+          mm=x['local_ring_mismatch_by_horizon']
+          lines=[
+            '## Research031 green light-cone aggregate',
+            '',
+            'Extracted from Actions run `34330667980` publication artifact.',
+            '',
+            f"- rule/target cases: **{x['targets']}**",
+            f"- local/ring mismatches at h=0: **{mm['0']}**; h=1: **{mm['1']}**; h=2: **{mm['2']}**; h=3: **{mm['3']}**",
+            f"- local quotient changes from h=1 to h=2: **{x['q1_to_q2_target_changes']}** target cases",
+            f"- local quotient changes from h=2 to h=3: **{x['q2_to_q3_target_changes']}** target cases",
+            f"- symbol-pair/target distinctions born first at h=3: **{x['h3_new_pair_target_events']}**",
+            f"- target cases with at least one h=3 birth: **{x['h3_target_cases']}**",
+            f"- ECA rules with at least one h=3 birth: **{x['h3_rules']}**",
+            f"- ring-Q2 versus local-Q3 target mismatches: **{x['ring_q2_vs_local_q3_target_mismatches']}**",
+          ]
+          if x['first_h3_events']:
+            lines += ['', '### First horizon-3 events']
+            for e in x['first_h3_events'][:10]:
+              lines.append(f"- Rule {e['rule']} ({e['wclass']}), target `{e['target']}`, pair `{e['pair']}`, local {e['local_chain']}")
+          pathlib.Path('/tmp/summary.md').write_text('\n'.join(lines)+'\n')
+          print('\n'.join(lines))
+          PY
+      - name: Post summary to PR 36
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh pr comment 36 --repo bombadil-labs/groovy-commutator --body-file /tmp/summary.md
