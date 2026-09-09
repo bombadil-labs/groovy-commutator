@@ -1,0 +1,26 @@
+name: Research031 follow-up validation
+
+on:
+  push:
+    branches: [research/causal-witness-horizon-20260909]
+    paths:
+      - '.github/workflows/causal-witness-followup-validation.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+      - run: python -m pip install -e . pandas
+      - name: Independent scalar witness audit
+        run: python scripts/audit_causal_witness_horizon.py --output /tmp/causal-witness-audit.json
+      - name: Frozen 4/5/6/7-block controls
+        run: python scripts/check_causal_witness_ring_sizes.py --output /tmp/causal-witness-ring-sizes.json
