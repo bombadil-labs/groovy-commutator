@@ -1,0 +1,100 @@
+name: Research035 lazy-union exact sofic recovery
+
+on:
+  push:
+    branches: ['research/sofic-defect-orbit-20260909']
+    paths:
+      - 'scripts/experiment_sofic_defect_orbit_lazy.py'
+      - 'scripts/aggregate_sofic_defect_orbit_lazy.py'
+      - 'docs/research/protocols/sofic-defect-orbit-lazy-union-recovery-20260909.md'
+      - '.github/workflows/sofic-defect-orbit-lazy-recovery.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  shard:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+      - run: python -m pip install -e . pandas
+      - name: Run exact lazy-union recovery shard
+        env:
+          SHARD: ${{ matrix.shard }}
+        run: |
+          start=$((SHARD * 8))
+          end=$((start + 8))
+          mkdir -p artifacts
+          python scripts/experiment_sofic_defect_orbit_lazy.py \
+            --rule-start "$start" --rule-end "$end" \
+            --output "artifacts/sofic-lazy-${start}-${end}.json"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: sofic-lazy-shard-${{ matrix.shard }}
+          path: artifacts/*.json
+          if-no-files-found: error
+          retention-days: 30
+
+  aggregate:
+    needs: shard
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+      - run: python -m pip install -e . pandas
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: sofic-lazy-shard-*
+          path: artifacts/shards
+          merge-multiple: true
+      - name: Aggregate recovery
+        run: |
+          mkdir -p artifacts/final
+          python scripts/aggregate_sofic_defect_orbit_lazy.py \
+            --input-dir artifacts/shards \
+            --output artifacts/final/sofic-defect-orbit-lazy-summary.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: sofic-defect-orbit-lazy-publication
+          path: artifacts/final/*.json
+          retention-days: 90
+      - name: Surface recovery on PR 41
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python - <<'PY' > /tmp/comment.md
+          import json
+          x=json.load(open('artifacts/final/sofic-defect-orbit-lazy-summary.json'))
+          print('## Research035 lazy-union recovery')
+          print()
+          print(f"- Research034 survivors: **{x['research034_survivors']}**")
+          print(f"- finite witnesses: **{x['finite_witness_resolutions']}**")
+          print(f"- finite sofic closures: **{x['finite_sofic_closure_resolutions']}**")
+          print(f"- unresolved through h12: **{x['unresolved_through_12']}**")
+          print(f"- censored: **{x['censored']}**")
+          print(f"- total resolved: **{x['resolved_total']} ({x['resolved_fraction']:.6%})**")
+          print(f"- censoring by stage: **{x['censoring_by_stage']}**")
+          print()
+          print('Frozen hypotheses:')
+          for k,v in x['primary_hypotheses'].items(): print(f'- `{k}`: **{v}**')
+          if x['first_finite_witness']:
+              print(f"\nFirst deeper witness: {x['first_finite_witness']}")
+          if x['first_finite_sofic_closure']:
+              print(f"\nFirst exact closure: {x['first_finite_sofic_closure']}")
+          PY
+          gh pr comment 41 --repo bombadil-labs/groovy-commutator --body-file /tmp/comment.md
