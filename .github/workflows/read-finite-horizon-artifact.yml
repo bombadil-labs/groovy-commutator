@@ -9,13 +9,16 @@ on:
 
 permissions:
   actions: read
-  contents: read
+  contents: write
   pull-requests: write
 
 jobs:
   surface:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: research/finite-horizon-quotients-20260909
       - name: Download green publication artifact
         env:
           GH_TOKEN: ${{ github.token }}
@@ -54,8 +57,21 @@ jobs:
             ratio='—' if r['dq_over_hstar'] is None else f"{r['dq_over_hstar']:.6g}"
             lines.append(f"| {r['rule']} | `{r['target']}` | {r['hstar']} | {r['quotient_discovery_time']} | {ratio} |")
           pathlib.Path('/tmp/summary.md').write_text('\n'.join(lines)+'\n')
-          print('\n'.join(lines))
           PY
+      - name: Promote exact JSON artifacts
+        run: |
+          cp artifact/finite-horizon-quotients-summary.json results/finite_horizon_quotients_20260909_summary.json
+          cp artifact/finite-horizon-quotients-audit.json results/finite_horizon_quotients_20260909_audit.json
+          cp artifact/finite-horizon-quotients-n15.json results/finite_horizon_quotients_n15_20260909.json
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add results/finite_horizon_quotients_20260909_summary.json \
+                  results/finite_horizon_quotients_20260909_audit.json \
+                  results/finite_horizon_quotients_n15_20260909.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'Research030: promote exact CI publication artifacts'
+            git push origin HEAD:research/finite-horizon-quotients-20260909
+          fi
       - name: Post summary to PR 34
         env:
           GH_TOKEN: ${{ github.token }}
