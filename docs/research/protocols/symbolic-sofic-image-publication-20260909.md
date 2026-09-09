@@ -12,4 +12,6 @@ After the complete result was frozen, the current shared research catalog was ch
 
 The protocol, script, and result filenames retain only the working slug and date. The public number is editorial metadata and was not part of the frozen hypothesis, domain, resource ceilings, or evaluation code.
 
+The final publication record is `site/content/research/symbolic-sofic-image.json`; the source note is `docs/research/2026-09-09-symbolic-sofic-image.md`.
+
 If parallel work changes the public catalog before merge, only this publication note, the catalog number, and prose references may be updated. The scientific identity remains `symbolic-sofic-image`.
