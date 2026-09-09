@@ -47,7 +47,8 @@
       "ternary-commutator-lift",
       "correction-future-coordinates",
       "selector-two-lift",
-      "dimensional-intertwining"
+      "dimensional-intertwining",
+      "program-edit-locality"
     ]
   }
 ]

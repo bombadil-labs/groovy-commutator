@@ -229,6 +229,27 @@ It also does not realize the ternary L/R/C roles. It is an exact control for
 recursive syntax and spatial consistency, while the stronger active-program
 requirement remains open.
 
+## Program edits need a locality budget
+
+The [program-edit checkpoint](2026-09-09-program-edit-locality.md) corrects an
+ambiguity in the earlier next-step proposal. A finite edit of one globally
+applied rule instruction cannot be implemented by finitely many target-cell
+edits while changing the whole infinite source at a common finite time,
+under one fixed local interpreter and a properly anchored local decoder.
+Finite disagreements remain inside finite causal cones; a global rule
+change has periodic witnesses with infinitely many changed outputs.
+
+Local program-field edits remain well posed. Global rule replacement must
+instead declare distributed edit support or a finite-world latency budget.
+This distinction does not invalidate an internal program interpretation.
+
+The same checkpoint quantifies the recovered stripe encoding: one source
+bit edit changes an entire diagonal, and an n-by-n patch contains exactly
+2n-1 independent bits. Any deterministic encoding with a fixed O(n)-site
+source footprint has zero information per target area. Rich dynamics and
+meaningful spatial organization remain possible; positive area entropy
+cannot be demanded without supplying the corresponding input resources.
+
 ## Relation to the Class-IV hope
 
 The motivating conjecture was deliberately strong: perhaps Class IV, and only Class IV, supports recursive dimensional closure.
@@ -269,13 +290,18 @@ The immediate proof problem is constructive:
 
 > **Find a locally prepared higher-dimensional realization that preserves the spatial program grammar through a second lift.**
 
-The semantic operator, an infinite-stack local update, and an exact recursive
-routing control are known. The next task must declare inherited **mutable
-program cells**, state, decoder, preparation radius, and boundary budget.
-It should require a finite source-program edit to become an edit of those
-cells under the same interpreter, then verify operational preservation and
-program inheritance at the first two dimensional interfaces. The routing
-control supplies the baseline; changing the ambient law when the source
-program changes does not settle the stronger target.
+The semantic operator, an infinite-stack local update, exact quotient
+intertwiners, and an exact recursive routing control are known. The next task
+must declare inherited **mutable program cells**, their scope (site, finite
+region, or distributed field), state, decoder, preparation footprint, and
+edit-support/latency budget.
+
+Local program edits should become local physical edits under the same
+interpreter. A global uniform rule replacement needs distributed edits or a
+finite-world propagation budget; it cannot be required to act everywhere
+through a finite edit at fixed finite cadence. With those operations fixed,
+verify operational preservation and native program inheritance at the first
+two dimensional interfaces. Existing controls supply the comparison, while
+active spatial-program closure remains open.
 
 If that succeeds, dimensional projection stops being an analogy. It becomes an explicit commuting diagram implemented in space.

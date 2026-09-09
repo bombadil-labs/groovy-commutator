@@ -1,0 +1,33 @@
+name: Program edit locality audit
+
+on:
+  pull_request:
+    paths:
+      - 'scripts/verify_program_edit_locality.py'
+      - 'scripts/verify_dimensional_intertwining.py'
+      - 'results/program_edit_locality_20260909.json'
+      - '.github/workflows/research-program-edit-locality.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/verify_program_edit_locality.py'
+      - 'scripts/verify_dimensional_intertwining.py'
+      - 'results/program_edit_locality_20260909.json'
+      - '.github/workflows/research-program-edit-locality.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  edit-locality-audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Audit program edits, patch counts, and physical propagation
+        run: python scripts/verify_program_edit_locality.py > /tmp/program-edit-locality.json
+      - name: Compare with the committed research result
+        run: diff -u results/program_edit_locality_20260909.json /tmp/program-edit-locality.json
