@@ -36,5 +36,9 @@
     "beam_endpoint": "01230456",
     "beam_added_bits": 7.754887502163468
   },
+  "publication_regressions": {
+    "independent_rule24_audit": "pass",
+    "fresh_rule24_n15": "pass"
+  },
   "publication_note": "Compact exact summary. Full 16-shard census remains in the GitHub Actions run artifacts; independent audit and fresh-size records are committed separately."
 }
