@@ -4,17 +4,18 @@ import fs from 'node:fs';
 import path from 'node:path';
 import os from 'node:os';
 import { readKnowledge, validateKnowledge, dependencyPaths, buildKnowledge } from './knowledge.mjs';
-import { ROOT, CATALOG, buildResearch } from './research.mjs';
+import { ROOT } from './research.mjs';
+import { readResearchRecords, buildResearchProgram } from './research-program.mjs';
 import { matchesKnowledge } from '../src/knowledge-index.js';
 
-const research = JSON.parse(fs.readFileSync(CATALOG, 'utf8'));
+const research = readResearchRecords();
 const output = fs.mkdtempSync(path.join(os.tmpdir(), 'groovy-knowledge-'));
 const fixtureDir = fs.mkdtempSync(path.join(ROOT, 'docs/knowledge/knowledge-test-'));
 after(() => {
   fs.rmSync(output, { recursive: true, force: true });
   fs.rmSync(fixtureDir, { recursive: true, force: true });
 });
-const render = (graph = readKnowledge()) => buildKnowledge({ graph, research, output });
+const render = (graph = readKnowledge()) => buildKnowledge({ graph, output });
 const html = (id) => fs.readFileSync(path.join(output, `${id}.html`), 'utf8');
 
 test('knowledge pages show typed backlinks, research provenance, and an export', () => {
@@ -110,7 +111,7 @@ test('a catalog addition creates its page, semantic backlink, and research backl
   assert.match(html('new-question'), /href="observed-history.html">the observation/);
   assert.match(html('new-question'), /href="\.\.\/history-repairability.html">the experiment/);
   const notesOutput = path.join(output, 'notes');
-  buildResearch({ entries: structuredClone(research), knowledge: graph.nodes, output: notesOutput });
+  buildResearchProgram({ records: structuredClone(research), knowledge: graph.nodes, output: notesOutput });
   assert.match(fs.readFileSync(path.join(notesOutput, 'history-repairability.html'), 'utf8'), /href="knowledge\/new-question.html"/);
   render(); assert.equal(fs.existsSync(path.join(output, 'new-question.html')), false);
 });
