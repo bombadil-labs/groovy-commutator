@@ -10,7 +10,8 @@ Wolfram-class search or a claim to have solved recursive program spatialization.
 
 ## The finite-coordinate theorem
 
-Let X be a binary configuration space, F:X->X any deterministic evolution, and
+Let X be the full binary configuration space on a fixed set of sites,
+F:X->X any deterministic evolution, and
 A:X->X an observation with the same output type. F need not be linear,
 invertible, or zero-preserving. Use zero-based correction indexing here:
 
@@ -213,8 +214,8 @@ A factorization on one finite ring does not satisfy its premise.
 
 ## The program-inheritance requirement still matters
 
-The attached guidance correctly emphasizes factored programs over expanded
-truth tables. But one binding distinction must be explicit.
+Factored programs avoid the expanded truth-table storage problem. But one
+binding distinction must be explicit.
 
 For a fixed spatial assignment sigma, the original selector is
 
@@ -255,8 +256,7 @@ A sharp next protocol should declare, before scoring rules:
 For the intervention check, hold the declared input fixed wherever compatible
 with the shared program/state geometry, change the inherited program, and
 determine which decoded outputs can change. Explicitly record alias constraints
-when the same cells supply both input and program. A
-many-to-one lift is allowed, but a constant map into one ambient interpreter
+when the same cells supply both input and program. A many-to-one lift is allowed, but a constant map into one ambient interpreter
 must be reported as such. This is a necessary audit, not a demand that every
 source bit remain significant forever.
 

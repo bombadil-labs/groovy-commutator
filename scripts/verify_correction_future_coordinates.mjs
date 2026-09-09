@@ -206,4 +206,10 @@ function runAudit() {
   return result;
 }
 
-console.log(JSON.stringify(runAudit(), null, 2));
+function canonical(value) {
+  if (Array.isArray(value)) return value.map(canonical);
+  if (value !== null && typeof value === 'object')
+    return Object.fromEntries(Object.keys(value).sort().map(key => [key, canonical(value[key])]));
+  return value;
+}
+console.log(JSON.stringify(canonical(runAudit()), null, 2));

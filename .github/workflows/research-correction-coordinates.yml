@@ -20,43 +20,12 @@ jobs:
   exact-audit:
     runs-on: ubuntu-latest
     timeout-minutes: 5
-    outputs:
-      detail: ${{ steps.verify.outputs.detail || format('checkout {0}; node setup {1}; verification {2}', steps.checkout.outcome, steps.node.outcome, steps.verify.outcome) }}
     steps:
-      - id: checkout
-        uses: actions/checkout@v4
-      - id: node
-        uses: actions/setup-node@v4
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
           node-version: 22
-      - name: Run audits and compare the committed result
-        id: verify
-        shell: bash
-        run: |
-          set +e
-          node scripts/verify_correction_future_coordinates.mjs > /tmp/correction-coordinates.json 2> /tmp/correction-error.txt
-          audit_status=$?
-          if [ "$audit_status" -eq 0 ]; then
-            diff -u results/correction_future_coordinates_20260909.json /tmp/correction-coordinates.json > /tmp/correction-error.txt 2>&1
-            audit_status=$?
-          fi
-          python3 - <<'PY'
-          import os
-          from pathlib import Path
-          detail = " ".join(Path("/tmp/correction-error.txt").read_text().split())[:220] or "all checks and result comparison passed"
-          with open(os.environ["GITHUB_OUTPUT"], "a") as output:
-              output.write("detail=" + detail + "\n")
-          PY
-          cat /tmp/correction-error.txt
-          exit "$audit_status"
-
-  audit-result:
-    needs: exact-audit
-    if: always()
-    name: "Audit detail - ${{ needs.exact-audit.outputs.detail }}"
-    runs-on: ubuntu-latest
-    steps:
-      - name: Preserve verification status
-        env:
-          AUDIT_RESULT: ${{ needs.exact-audit.result }}
-        run: test "$AUDIT_RESULT" = success
+      - name: Run exhaustive coordinate and local transport audits
+        run: node scripts/verify_correction_future_coordinates.mjs > /tmp/correction-coordinates.json
+      - name: Compare with the committed research result
+        run: diff -u results/correction_future_coordinates_20260909.json /tmp/correction-coordinates.json
