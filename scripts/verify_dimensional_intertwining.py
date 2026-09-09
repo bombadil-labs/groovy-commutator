@@ -357,6 +357,22 @@ def main() -> None:
     assert len(strong_affine2_rules) == 256
     assert not global_failures
 
+    # Keep the published compact summary tied to this executable census.
+    summary = json.loads(Path("results/dimensional_intertwining_20260909_summary.json").read_text())
+    assert summary["checks"] == {
+        "local_active_intertwining_failures": len(local_active_failures),
+        "local_two_site_gate_intertwining_failures": len(local_gated_failures),
+        "local_four_site_gate_intertwining_failures": len(local_strong_failures),
+        "active_linear_rank_2_rules": len(active_rank2_rules),
+        "active_affine_dimension_2_rules": len(active_affine2_rules),
+        "two_site_gate_linear_rank_2_rules": len(gated_rank2_rules),
+        "four_site_gate_affine_dimension_2_rules": len(strong_affine2_rules),
+        "selected_global_periodic_construction_state_checks": global_checks,
+        "selected_global_periodic_failures": len(global_failures),
+    }
+    assert summary["selected_global_rules"] == SELECTED_GLOBAL_RULES
+    assert summary["selected_global_widths"] == WIDTHS
+
     print(json.dumps({
         "active_rank2_count": len(active_rank2_rules),
         "gated_rank2_count": len(gated_rank2_rules),

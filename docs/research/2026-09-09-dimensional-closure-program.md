@@ -16,6 +16,20 @@ Two early constructions made lower-dimensional rules literal spatial data one di
 
 Those results established **rule as geometry**, not recursive dimensional closure.
 
+## Exact intertwining supplies a baseline
+
+The [dimensional-intertwining checkpoint](2026-09-09-dimensional-intertwining.md)
+embeds every finite-radius 1D CA into a local 2D CA by the quotient encoding
+E(S)(x,y)=S(x+y). For ECA, the active stencil has affine dimension two for
+218 rules; a four-site coupling that vanishes on valid encoded states gives
+an affinely 2D ambient rule for all 256.
+
+The encoded fields still repeat one-dimensional information along diagonals.
+One logical bit flip changes an entire diagonal. Exact trajectory
+intertwining, ambient geometric dependence, and locally implementable edits
+are therefore separate requirements. The result is a baseline for the
+stronger program-inheritance search.
+
 ## The target is a rule-independent lift
 
 The research therefore shifted from finding favorable encodings for particular rules to finding one operator that is fixed before rule outcomes.

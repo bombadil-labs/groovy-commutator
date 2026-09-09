@@ -264,3 +264,13 @@ under those stronger conditions, and how common they are.
 A particularly sharp version is: **can a 1D CA be represented by a 2D invariant family with genuine two-dimensional local degrees of freedom, while its decoded evolution remains exactly the original 1D law?**
 
 That is no longer answered by diagonal stripes. It is the next place where cross-dimensional commutation might become selective rather than universal.
+
+## Integration review, 2026-09-09
+
+This previously unmerged checkpoint was rechecked against the current repository. The original verifier reproduces the published local counts and all 2,160 periodic comparisons. It now also checks that the compact published summary matches the executed census. The initial and stronger protocols are preserved.
+
+The current [dimensional program](2026-09-09-dimensional-closure-program.md) uses this result as a baseline for cross-dimensional intertwining. The [two-rail checkpoint](2026-09-09-selector-two-lift.md) adds a different encoding with explicit recursive routing syntax. Neither result supplies mutable spatial program inheritance.
+
+A further operational distinction matters: flipping source bit j in the present quotient encoding changes every physical site satisfying x+y=j. On the infinite lattice this is an infinite diagonal; on the n-by-n torus it contains n sites. The encoding formula proves this directly. A spatially local program/state intervention therefore needs its own resource accounting, beyond exact trajectory intertwining.
+
+The historical next-research proposals above are retained as proposals. In particular, “independent two-dimensional degrees of freedom” needs a precise information/preparation budget before it can be used as a selective criterion.
