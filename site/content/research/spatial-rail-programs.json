@@ -1,0 +1,26 @@
+[
+  {
+    "slug": "spatial-rail-programs",
+    "recordType": "checkpoint",
+    "label": "Spatial program checkpoint",
+    "title": "Editable spatial programs survive two lifts, including autonomous transport",
+    "date": "2026-09-09",
+    "updated": "2026-09-09",
+    "kind": "Exact native program realization and guard rescue",
+    "evidence": "exact",
+    "topic": "Algebra and closure",
+    "summary": "A five-symbol radius-nine interpreter stores Rail-program leaf bits in physical cells. A separate guard admits all ECA starting programs, preserves one-cell edits through recursive lifts, and supports autonomous state-gated program transport.",
+    "takeaway": "Separating source and guard programs rescues a failed boundary choice. Native program inheritance is constructive under explicit role, layout, and wrapper budgets.",
+    "source": "docs/research/2026-09-09-spatial-rail-programs.md",
+    "promotion": {
+      "stage": "research"
+    },
+    "related": [
+      "selector-two-lift",
+      "program-edit-locality",
+      "shared-state-rule",
+      "dimensional-intertwining",
+      "correction-future-coordinates"
+    ]
+  }
+]
