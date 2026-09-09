@@ -19,6 +19,7 @@
     "finite-horizon-quotients",
     "causal-witness-horizon",
     "causal-witness-automaton",
+    "reachable-context-invariants",
     "selector-shielding",
     "pulse-shape-scattering",
     "pulse-scattering"

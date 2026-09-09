@@ -123,5 +123,30 @@
       "fiber-visibility",
       "selector-shielding"
     ]
+  },
+  {
+    "slug": "reachable-context-invariants",
+    "number": "033",
+    "title": "The context is in the edges",
+    "date": "2026-09-09",
+    "updated": "2026-09-09",
+    "kind": "Exact paired-language invariant theorem and full residual census",
+    "evidence": "exact",
+    "topic": "Observation and memory",
+    "summary": "A nearest-neighbor invariant of the paired macro dynamics proves permanent invisibility for 5,132 of the 5,360 cases left unresolved by Research032’s all-context congruence, leaving 228. Generated-symbol closure alone adds zero cases.",
+    "takeaway": "Causal safety can depend on spatial grammar: which hidden paired states may be adjacent can matter more than the set of states alone.",
+    "source": "docs/research/2026-09-09-reachable-context-invariants.md",
+    "promotion": {
+      "stage": "candidate",
+      "idea": "Causal safety can live in the grammar of spatial relationships",
+      "destination": "Concepts"
+    },
+    "related": [
+      "causal-witness-automaton",
+      "causal-witness-horizon",
+      "finite-horizon-quotients",
+      "contextual-quotient",
+      "fiber-visibility"
+    ]
   }
 ]
