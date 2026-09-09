@@ -110,7 +110,7 @@ def choose(opts,policy):
  raise ValueError(policy)
 
 def replay(target,cinf,qstar,oc,policy):
- cur=target;path=[pkey(cur)];steps=[];different_zero=0
+ cur=target;path=[pkey(cur)];steps=[]
  while cur!=qstar:
   h,w,_=metric(cur,cinf,oc);opts=[]
   for child in covers(cur):
@@ -143,15 +143,19 @@ def scan_rule(rule):
    rows.append({'rule':rule,'wclass':FULL_CLASS[rule],'target':pkey(target),'closed':True,'hstar':hstar,'quotient':pkey(q),
                 'quotient_entropy':metric(q,cinf,oc)[0]});continue
   canonical=replay(target,cinf,q,oc,'canonical');cost=replay(target,cinf,q,oc,'cost')
-  cmargins=[s['margin'] for s in canonical['steps'] if math.isfinite(s['margin'])]
+  cmargins=[x['margin'] for x in canonical['steps'] if math.isfinite(x['margin'])]
+  kmargins=[x['margin'] for x in cost['steps'] if math.isfinite(x['margin'])]
   minmargin=min(cmargins,default=math.inf);minabs=min((abs(x) for x in cmargins),default=math.inf)
+  minpositive=min((x for x in cmargins if x>TOL),default=math.inf)
   zero_steps=sum(abs(x)<=TOL for x in cmargins);negative_steps=sum(x < -TOL for x in cmargins)
+  cost_zero=sum(abs(x)<=TOL for x in kmargins);cost_negative=sum(x < -TOL for x in kmargins)
   rows.append({'rule':rule,'wclass':FULL_CLASS[rule],'target':pkey(target),'closed':False,'hstar':hstar,'quotient':pkey(q),
                'quotient_entropy':metric(q,cinf,oc)[0],'canonical_optimal':canonical['optimal'],'cost_optimal':cost['optimal'],
                'paths_differ':canonical['path']!=cost['path'],'canonical_path':canonical['path'],'cost_path':cost['path'],
-               'canonical_min_margin':minmargin,'canonical_min_abs_margin':minabs,'canonical_zero_margin_steps':zero_steps,
-               'canonical_strict_negative_steps':negative_steps,'canonical_first_unsafe':canonical['first_unsafe'],
-               'cost_first_unsafe':cost['first_unsafe']})
+               'canonical_min_margin':minmargin,'canonical_min_abs_margin':minabs,'canonical_min_positive_margin':minpositive,
+               'canonical_zero_margin_steps':zero_steps,'canonical_strict_negative_steps':negative_steps,
+               'cost_zero_margin_steps':cost_zero,'cost_strict_negative_steps':cost_negative,
+               'canonical_first_unsafe':canonical['first_unsafe'],'cost_first_unsafe':cost['first_unsafe']})
  return {'rule':rule,'wclass':FULL_CLASS[rule],'targets':rows,'cached_observers':len(oc.cache)}
 
 def hashes():
