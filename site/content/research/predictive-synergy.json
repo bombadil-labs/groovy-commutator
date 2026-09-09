@@ -2,26 +2,25 @@
   {
     "slug": "block3-representation-design",
     "number": "028",
-    "title": "Predictive synergy breaks greedy repair",
-    "date": "2026-09-08",
-    "updated": "2026-09-08",
-    "kind": "Exact block-3 representation-design census with independent audit",
+    "title": "Predictive synergy breaks greedy representation repair",
+    "date": "2026-09-09",
+    "updated": "2026-09-09",
+    "kind": "Exact block-3 partition-lattice repair census",
     "evidence": "exact",
     "topic": "Observation and memory",
-    "summary": "Across 30,856 nonclosed block-3 target cases, greedy fixed-target Shannon repair is globally optimal in 30,852 but fails exactly four times. The first failure requires crossing a zero-immediate-gain distinction that amplifies a later split's predictive value by 13.26x.",
-    "takeaway": "Closure defects provide an exceptionally strong local repair gradient, but the cheapest sufficient representation can require synergistic bundles of distinctions whose components are not individually predictive.",
+    "summary": "An exact block-3 repair census finds that greedy minimum-information closure repair remains globally optimal in 30,852 of 30,856 nonclosed cases, but fails exactly four times in the Rule-24/231 conjugacy family because a zero-immediate-gain distinction unlocks a later 13.2613× predictive gain.",
+    "takeaway": "The value of representing a distinction can depend on representational context: predictive synergy is common, but only a rare zero-gain bridge creates a fatal greedy trap in this complete block-3 domain.",
     "source": "docs/research/2026-09-08-block3-representation-design.md",
     "promotion": {
       "stage": "candidate",
-      "idea": "Predictive synergy is the first obstruction to greedy representation repair",
+      "idea": "Predictive synergy and greedy representation repair",
       "destination": "Concepts"
     },
     "related": [
       "representation-design",
       "possibility-frontier",
       "fiber-visibility",
-      "history-lift-closure",
-      "observer-search"
+      "history-lift-closure"
     ]
   },
   {
@@ -30,20 +29,21 @@
     "title": "The future-context quotient is the canonical repair target",
     "date": "2026-09-09",
     "updated": "2026-09-09",
-    "kind": "Universal quotient theorem with exact block-3 safety census",
+    "kind": "Exact contextual quotient theorem and greedy-safety census",
     "evidence": "exact",
     "topic": "Observation and memory",
-    "summary": "Context substitution induces a unique coarsest sufficient uniform local quotient for any deterministic future label. In the full block-3 ECA census, canonical greedy never encounters a strictly better unsafe edit: all four known failures lie exactly on a zero safety-margin boundary.",
-    "takeaway": "Greedy regret has a canonical structural certificate: the first refinement that splits a distinction the future-context quotient still merges. Generic synergy is common; fatal synergy requires leaving the quotient-compatible region.",
+    "summary": "The future-context quotient is the unique coarsest uniform local representation sufficient for the complete future target. Across 30,856 nonclosed block-3 targets, every strict greedy failure occurs at an exact zero-margin tie between quotient-safe and quotient-unsafe edits; no unsafe edit ever has strictly greater immediate predictive gain than every safe edit.",
+    "takeaway": "Fatal predictive synergy is a quotient-boundary phenomenon in this exact domain: greedy becomes globally suboptimal only when an immediate-gain tie lets it split a distinction the canonical sufficient quotient says should remain merged.",
     "source": "docs/research/2026-09-09-contextual-quotient.md",
     "promotion": {
       "stage": "candidate",
-      "idea": "Future-context equivalence gives the canonical local repair target",
+      "idea": "The future-context quotient is the canonical local predictive representation",
       "destination": "Concepts"
     },
     "related": [
       "block3-representation-design",
       "representation-design",
+      "history-lift-closure",
       "fiber-visibility",
       "observer-search",
       "possibility-frontier"
@@ -97,6 +97,31 @@
       "fiber-visibility",
       "selector-shielding",
       "history-lift-closure"
+    ]
+  },
+  {
+    "slug": "causal-witness-automaton",
+    "number": "032",
+    "title": "A symbolic light cone finds a desert after the third step",
+    "date": "2026-09-09",
+    "updated": "2026-09-09",
+    "kind": "Exact symbolic witness automaton, horizon-4–6 census, and congruence certificates",
+    "evidence": "exact",
+    "topic": "Observation and memory",
+    "summary": "A reduced eight-valued decision automaton replaces explicit light-cone enumeration and extends the complete block-3 ECA causal-witness census through horizon 6. The only new births remain the four symmetry-related horizon-3 events: none occur at horizons 4, 5, or 6. Of 52,712 distinctions still unresolved after horizon 5, 47,352 receive exact all-time target-congruence certificates; 5,360 remain dynamically unresolved.",
+    "takeaway": "Causal-witness search can be compressed symbolically by many orders of magnitude, and most apparently unresolved distinctions can be separated into proved-permanent versus genuinely reachability-dependent cases without simply searching deeper horizons.",
+    "source": "docs/research/2026-09-09-causal-witness-automaton.md",
+    "promotion": {
+      "stage": "candidate",
+      "idea": "Causal witness horizons admit symbolic search and all-time congruence certificates",
+      "destination": "Concepts"
+    },
+    "related": [
+      "causal-witness-horizon",
+      "finite-horizon-quotients",
+      "contextual-quotient",
+      "fiber-visibility",
+      "selector-shielding"
     ]
   }
 ]

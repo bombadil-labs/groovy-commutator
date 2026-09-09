@@ -18,6 +18,7 @@
     "contextual-quotient",
     "finite-horizon-quotients",
     "causal-witness-horizon",
+    "causal-witness-automaton",
     "selector-shielding",
     "pulse-shape-scattering",
     "pulse-scattering"
