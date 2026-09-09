@@ -1,0 +1,26 @@
+[
+  {
+    "slug": "symbolic-sofic-image",
+    "number": "037",
+    "title": "Symbolic recurrence clears the representation wall but not the frontier",
+    "date": "2026-09-09",
+    "updated": "2026-09-09",
+    "kind": "Exact symbolic temporal-recurrence census",
+    "evidence": "exact",
+    "topic": "Observation and memory",
+    "summary": "Exact MDD local maps recover the Rule-5 closure as the stronger identity G^3=G and evaluate all 170 Research034 frontier questions without censoring. None has temporal recurrence or translated recurrence through horizon 6, so the missing exact reachability certificate must allow a different source provenance rather than merely recognizing ordinary temporal periodicity.",
+    "takeaway": "The graph-presentation wall can be cleared symbolically, but compact local dynamics is not yet compact reachability: exact closure now needs a relational proof object that can re-present an output from a different source history.",
+    "source": "docs/research/2026-09-09-symbolic-sofic-image.md",
+    "promotion": {
+      "stage": "candidate",
+      "idea": "Exact reachability can require changing provenance",
+      "destination": "Concepts"
+    },
+    "related": [
+      "sofic-defect-orbit",
+      "causal-witness-automaton",
+      "window3-reachable-language",
+      "reachable-context-invariants"
+    ]
+  }
+]
