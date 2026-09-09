@@ -78,7 +78,7 @@ Because the complete future partition stabilizes at `h*` on a finite determinist
 More importantly, `Q_h` gives a **one-sided sound certificate** for representation repair. If the currently observed quotient already refines a candidate encoder `Z`,
 
 \[
-Q_h\preceq Z,
+Z\preceq Q_h,
 \]
 
 then every later quotient refines `Q_h`, so
