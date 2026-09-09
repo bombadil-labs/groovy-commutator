@@ -2,7 +2,8 @@
 
 **Status:** frozen before block-3 evaluation.  
 **Branch:** `research/block3-representation-design-20260908`.  
-**Dependency:** Research027 on `main`.
+**Dependency:** Research027 on `main`.  
+**Execution:** sentinel plus full sharded CI via `.github/workflows/research-run.yml`.
 
 ## Question
 
@@ -175,6 +176,7 @@ The sentinel phase is an implementation/resource gate, not a hypothesis test; do
 - identity has `W_T=0`;
 - every globally optimal repair found by enumeration has `W_T=0`;
 - for block-3 Boolean targets already measured in Research026, the base target `W_T(T)` and `h*` reproduce the earlier block-3 values exactly;
+- the full aggregate reproduces exactly 1,656 canonical closed block-3 targets and 141 fine rules with at least one closed target;
 - output-complement targets are exact relabelings and need not be recomputed independently.
 
 ## Scope and nonclaims
