@@ -147,7 +147,7 @@ The exact one-seed trajectories are contained in a target-safe forward-invariant
 
 ## 6. Hierarchy in window width
 
-Increasing window width retains strictly more spatial compatibility information.
+Increasing window width retains weakly more spatial compatibility information.
 
 Let `pi_k` project a length-(k+1) word to its consecutive length-k subwords. The initial width-(k+1) language projects into the width-k initial language, and the CA image operation commutes with taking consecutive subwords. By induction over closure rounds, every width-k subword of a word in
 
