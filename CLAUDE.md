@@ -391,6 +391,40 @@ larger grids; separately specify a locally represented changeable decoder.
 Do not infer that expanding same-time instructions to a fixed local rule
 makes them meaningless, or that memory is the only interesting mechanism.
 
+## Research continuation: editable spatial Rail programs (2026-09-09)
+
+The dimensional workstream now has an exact stored-program witness; see
+docs/research/2026-09-09-spatial-rail-programs.md and its two frozen protocols.
+It is separate from the Erased Distinctions workstream and does not unpark a
+special-dimension hypothesis.
+
+- Native programs are ECA leaf words with one Rail wrapper per added dimension.
+  Eight program bits occupy actual P cells, with one D cell and B padding in
+  each 9^d-site macrocell. A uniform five-symbol CA of radius nine executes the
+  grammar in one tick. Tags/layout and wrapper structure are fixed resources.
+- Place the source program/data at the new central interface; use a fixed
+  identity guard program (204) with zero/one data off the interface. The guard
+  repairs the earlier repeated-program 64-source limitation: all 256 starting
+  ECA programs and arbitrary heterogeneous native fields lift exactly.
+- One local data or program-bit edit is one physical symbol edit through both
+  lifts. The second interface applies to arbitrary valid 2D program/data fields,
+  not just first-lift images. Local proofs give all finite higher dimensions.
+- A separately frozen extension preserves state-gated left-neighbor copying of
+  entire program words. Programs change autonomously while the same complete
+  commuting identities hold. This is transport, not arbitrary program synthesis.
+- Audit scripts verify_spatial_rail_programs.py and verify_spatial_rail_transport.py
+  reproduce the paired results/spatial_rail_*_20260909.json files. The main audit
+  passes 109,876 assertions and the transport extension 974, including actual
+  program changes. Do not conflate aggregate field equality with independent
+  samples or claim an optimized binary radius-one realization.
+- User clarification: Class IV is background intuition only; do not use it to
+  motivate reasoning, architecture selection, or a selectivity requirement.
+  Negative findings are scoped to an attempt and can be revisited by an explicit
+  revision. Preserve the failed candidate and freeze a rescue before evaluation.
+- Next focused question: make an introduced Rail instruction locally editable,
+  accounting for additional instruction cells and changed guard conditions.
+  Smaller role alphabets and marker self-organization are separate experiments.
+
 ## Research continuation: dimensional compatibility (2026-09-08)
 
 `docs/research/2026-09-08-dimensional-lift.md` defines the outer-totalistic

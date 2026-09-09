@@ -1,0 +1,29 @@
+{
+  "assertions": 974,
+  "guard": 204,
+  "local_program_cases": 192,
+  "malformed_layout_checks": 12,
+  "physical_fields": {
+    "arbitrary_second_interface": {
+      "autonomous_source_program_changes": 349,
+      "cases": 32,
+      "compared_symbols": 62208,
+      "external_payload_edits": 384,
+      "timepoints": 96
+    },
+    "heterogeneous_source_and_two_lifts": {
+      "autonomous_source_program_changes": 129,
+      "cases": 16,
+      "compared_symbols": 224640,
+      "external_payload_edits": 384,
+      "timepoints": 128
+    }
+  },
+  "physical_radius": 9,
+  "protocol": "docs/research/protocols/spatial-rail-transport-20260909.md",
+  "protocol_deviations": [],
+  "protocol_freeze_commit": "7d2db9eef4e682e4926553138193852a8548c252",
+  "retained_data_audit": "results/spatial_rail_programs_20260909.json",
+  "schema_version": 1,
+  "scope": "Autonomous state-gated copying of complete spatial program words; no program synthesis or mutable wrapper syntax."
+}

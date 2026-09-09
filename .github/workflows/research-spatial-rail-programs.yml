@@ -1,0 +1,39 @@
+name: Spatial Rail program audits
+
+on:
+  pull_request:
+    paths:
+      - 'scripts/verify_spatial_rail_programs.py'
+      - 'scripts/verify_spatial_rail_transport.py'
+      - 'results/spatial_rail_programs_20260909.json'
+      - 'results/spatial_rail_transport_20260909.json'
+      - '.github/workflows/research-spatial-rail-programs.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/verify_spatial_rail_programs.py'
+      - 'scripts/verify_spatial_rail_transport.py'
+      - 'results/spatial_rail_programs_20260909.json'
+      - 'results/spatial_rail_transport_20260909.json'
+      - '.github/workflows/research-spatial-rail-programs.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  spatial-program-audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Audit retained spatial programs, guards, and both lifts
+        run: python scripts/verify_spatial_rail_programs.py > /tmp/spatial-rail-programs.json
+      - name: Compare retained-program result
+        run: diff -u results/spatial_rail_programs_20260909.json /tmp/spatial-rail-programs.json
+      - name: Audit autonomous spatial program transport
+        run: python scripts/verify_spatial_rail_transport.py > /tmp/spatial-rail-transport.json
+      - name: Compare transport result
+        run: diff -u results/spatial_rail_transport_20260909.json /tmp/spatial-rail-transport.json

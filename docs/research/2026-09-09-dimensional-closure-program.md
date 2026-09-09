@@ -250,20 +250,45 @@ source footprint has zero information per target area. Rich dynamics and
 meaningful spatial organization remain possible; positive area entropy
 cannot be demanded without supplying the corresponding input resources.
 
+## Editable spatial programs now have a constructive witness
+
+The [spatial Rail checkpoint](2026-09-09-spatial-rail-programs.md) realizes the
+native Rail grammar with eight actual program cells beside each datum. One
+uniform interpreter per dimension reads these cells. The same layout recipe
+puts the program word along the newly added axis at each lift.
+
+A separate fixed guard program, ECA 204, keeps the off-interface backgrounds
+stable. This repairs the earlier 64-source restriction: every ECA starting
+program and every heterogeneous native program field now has an exact lift.
+One local state or instruction edit remains one physical cell edit. The
+second interface works on arbitrary valid 2D program/data fields, and the
+proof continues to every finite dimension.
+
+A separately frozen extension also preserves state-gated copying of whole
+program words from the left neighbor. Program values can therefore change
+autonomously while the commuting identities continue to hold.
+
+This is a witness for a declared family, with five cell symbols, radius nine,
+a prepared 9^d-site macrocell layout, and infinite guard backgrounds. Eight
+leaf instructions are mutable; Rail wrapper structure is fixed by dimension.
+It does not encode arbitrary physical rules or realize the ternary L/R/C
+roles. These architectural limits define subsequent experiments.
+
 ## Relation to the Class-IV hope
 
-The motivating conjecture was deliberately strong: perhaps Class IV, and only Class IV, supports recursive dimensional closure.
+The original Class-IV conjecture records the intuition that motivated this
+thread. On 2026-09-09 the user clarified that it must not motivate the
+reasoning or construction choices. It is background, not an active selection
+criterion or a planned classification gate.
 
-Several candidate criteria have already failed that exclusivity test:
+Earlier closure and growth statistics already failed exclusivity tests.
+The current positive result works across all 256 ECA starting programs, which
+is useful evidence for the declared architecture.
 
-- literal overlapping rule-ring tilings collapse to constants or small spatial crystals;
-- simple rule/state/derivative role stacks do not recursively close on changing trajectories;
-- finite commutator-tower length is sensitive to ring size;
-- ternary role closure and maximal role growth both include rules from multiple Wolfram classes.
-
-None of those failures falsifies the stronger native-spatial-closure conjecture, because none is yet the final physical lift.
-
-The discipline remains unchanged: fix the higher-dimensional architecture first, then attach class labels.
+Negative findings remain local to the attempted grammar, encoding, and
+budget. Preserve them and state each proposed rescue explicitly; neither a
+failed candidate nor a successful broad family settles every version of
+recursive spatial-program closure.
 
 ## What is exact now
 
@@ -277,31 +302,29 @@ The discipline remains unchanged: fix the higher-dimensional architecture first,
 
 8. **A two-rail routing grammar closes recursively.** The fixed interface encoding is exact if and only if the source preserves both uniform states. All 256 ECA programs remain distinguishable through two lifts; 64 source dynamics embed through both and every subsequent lift. This retains program instructions as static routing code, not active lattice data.
 
+9. **Editable spatial Rail programs have exact recursive realizations.** A five-symbol, radius-nine interpreter with a separate guard program preserves all native source program/data fields through both interfaces and every further finite lift. It also preserves autonomous state-gated program transport. Fixed role markers and wrapper structure remain architectural resources.
+
 ## What remains open
 
 - A bounded local law exists for an infinitely prepared correction stack. A finite, locally prepared realization satisfying the intended program grammar remains open.
-- The correction-stack law includes the source rule as part of its update. Spatializing that program as active inherited data, with exact overlap consistency and recursive typing, remains open.
+- The Rail family now has active spatial program storage and recursive typing under explicit marker/layout budgets. Mutable wrapper instructions, smaller alphabets, and self-maintained role structure remain open; this does not spatialize the correction-stack program.
 - The relationship between correction depth, spatial dimension, and growing within-dimension radius is not yet characterized.
-- No native dimensional-closure criterion has yet earned comparison against a complete Wolfram-class taxonomy.
+- Class-IV correspondence is background motivation only and does not direct the current search.
 
 ## The next theoretical target
 
-The immediate proof problem is constructive:
+The constructive witness now supports a more specific question:
 
-> **Find a locally prepared higher-dimensional realization that preserves the spatial program grammar through a second lift.**
+> **Can an introduced Rail instruction itself become locally editable, while the same spatial layout, guard conditions, and recursive action contract remain valid?**
 
-The semantic operator, an infinite-stack local update, exact quotient
-intertwiners, and an exact recursive routing control are known. The next task
-must declare inherited **mutable program cells**, their scope (site, finite
-region, or distributed field), state, decoder, preparation footprint, and
-edit-support/latency budget.
+The current grammar stores and transports eight mutable ECA leaf bits but
+fixes every Rail wrapper through the ambient dimension. Add any new
+instruction bit explicitly to the program layout and account for its
+physical support. Derive the modified guard and inheritance equations before
+evaluation. A failed placement or guard should be retained as a scoped result,
+with a proposed rescue frozen separately.
 
-Local program edits should become local physical edits under the same
-interpreter. A global uniform rule replacement needs distributed edits or a
-finite-world propagation budget; it cannot be required to act everywhere
-through a finite edit at fixed finite cadence. With those operations fixed,
-verify operational preservation and native program inheritance at the first
-two dimensional interfaces. Existing controls supply the comparison, while
-active spatial-program closure remains open.
-
-If that succeeds, dimensional projection stops being an analogy. It becomes an explicit commuting diagram implemented in space.
+Reducing the five-symbol role alphabet or sparse macrocell overhead is a
+separate workstream. Arbitrary program synthesis, marker self-organization,
+and realization of the ternary correction roles are not implied by the
+present witness.
