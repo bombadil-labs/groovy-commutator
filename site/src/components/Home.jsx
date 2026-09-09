@@ -97,9 +97,11 @@ export default function Home() {
           </p>
 
           <p style={pBody}>
-            The <a href="research/index.html" style={{ color: 'var(--accent)' }}>Research section</a> keeps the ongoing
-            work: experiments, corrections, and open questions, with their methods and evidence. As an idea becomes
-            ready to explain, it finds its way into these main pages.
+            The <a href="research/index.html" style={{ color: 'var(--accent)' }}>Research section</a> is the project's
+            working scientific record. It now includes a living Program synthesis, chronological experiments and
+            corrections, and a knowledge base of reusable findings. These main pages remain the accessible entrance
+            to the original calculus and instruments; mature technical ideas do not have to leave Research in order
+            to count as part of the project.
           </p>
 
           <p style={pBody}>

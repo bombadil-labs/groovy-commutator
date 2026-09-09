@@ -1,0 +1,19 @@
+{
+  "title": "Dynamics of Erased Distinctions",
+  "eyebrow": "Working research program",
+  "date": "2026-09-08",
+  "updated": "2026-09-08",
+  "status": "living",
+  "summary": "A living synthesis of the project’s current view: closure is the forward invariance of what a representation declares indistinguishable, and the central physics lies in whether erased distinctions return to causal visibility or remain safely shielded.",
+  "thesis": "Groovy Commutator studies the dynamics of distinctions erased by a representation.",
+  "source": "docs/research/2026-09-08-dynamics-of-erased-distinctions.md",
+  "supports": [
+    "observation-closure",
+    "history-lift-closure",
+    "observer-search",
+    "fiber-visibility",
+    "selector-shielding",
+    "pulse-shape-scattering",
+    "pulse-scattering"
+  ]
+}

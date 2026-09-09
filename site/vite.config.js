@@ -1,12 +1,13 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import { resolve } from 'path';
-import { buildResearch, researchWatch } from './scripts/research.mjs';
+import { researchWatch } from './scripts/research.mjs';
+import { buildResearchProgram } from './scripts/research-program.mjs';
 import { readKnowledge, buildKnowledge, knowledgeAsset } from './scripts/knowledge.mjs';
 
 const graph = readKnowledge();
 const knowledge = buildKnowledge({ graph });
-const research = buildResearch({ knowledge: graph.nodes });
+const research = buildResearchProgram({ knowledge: graph.nodes });
 
 // Curated React pages plus static Research pages generated from Markdown.
 // Output goes to ../public (repo root) --
