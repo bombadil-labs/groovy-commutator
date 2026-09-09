@@ -24,6 +24,7 @@
       "reachable-context-invariants",
       "window3-reachable-language",
       "sofic-defect-orbit",
+      "symbolic-sofic-image",
       "selector-shielding",
       "pulse-shape-scattering",
       "pulse-scattering"
@@ -36,7 +37,7 @@
     "date": "2026-09-09",
     "updated": "2026-09-09",
     "status": "living",
-    "summary": "A parallel program on rules becoming higher-dimensional space. Correction coordinates identify observed-future information, and a two-rail routing grammar now closes recursively on an exact source family; inherited mutable spatial programs remain open.",
+    "summary": "A parallel program on rules becoming higher-dimensional space. Editable spatial Rail programs now preserve complete dynamics through recursive lifts under explicit layout budgets; mutable wrapper structure and less prescribed role geometry remain open.",
     "thesis": "When two dynamical paths fail to commute, represent the disagreement as a new coordinate and ask whether the enlarged representation closes.",
     "source": "docs/research/2026-09-09-dimensional-closure-program.md",
     "supports": [
@@ -48,7 +49,8 @@
       "correction-future-coordinates",
       "selector-two-lift",
       "dimensional-intertwining",
-      "program-edit-locality"
+      "program-edit-locality",
+      "spatial-rail-programs"
     ]
   }
 ]
