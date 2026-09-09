@@ -123,7 +123,7 @@ for all 256 ECAs.
 
 For any ECA whose left, center, and right inputs are all essential, those three physical dependency sites are noncollinear. The rule therefore has affine dependency dimension two: no fixed lattice change of basis plus uniform moving frame can place all of its essential reads on a single line.
 
-The exhaustive source-rule audit finds **218 of 256 ECAs** with all three logical inputs essential. Rules 30, 54, 90, and 110 are among them. Thus, for these familiar examples, the two-dimensional dependence is active on the encoded trajectory itself; it is not merely an unused ambient direction.
+The exhaustive source-rule audit finds **218 of 256 ECAs** with all three logical inputs essential. Rules 30, 54, and 110 are among them. Rule 90 is not: it ignores the center input, so its active lift has only affine dimension one despite spanning two directions relative to the output cell. Thus, for the 218-rule family, the two-dimensional dependence is active on the encoded trajectory itself; it is not merely an unused ambient direction.
 
 For example, a Rule-110 source state becomes diagonal stripes. At every physical cell the 2D rule reads west, self, and north. Those three bits are exactly the Rule-110 left, center, and right inputs of the corresponding logical site. The resulting 2D field remains in the stripe family forever and is exactly the encoded Rule-110 future.
 
