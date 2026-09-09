@@ -1,0 +1,56 @@
+name: Research032 parallel h6 PySAT audit
+
+on:
+  push:
+    branches: ['research/causal-witness-automaton-20260909']
+    paths:
+      - '.github/workflows/causal-witness-h6-pysat-only.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+      - run: python -m pip install -e . pandas python-sat
+      - name: Run hand-built CNF recovery audit
+        run: |
+          python scripts/audit_causal_witness_h6_pysat.py \
+            --output /tmp/causal_witness_h6_pysat.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: causal-witness-h6-pysat-partial
+          path: /tmp/causal_witness_h6_pysat.json
+          retention-days: 30
+      - name: Surface independent partial result on PR 37
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python - <<'PY' > /tmp/comment.md
+          import json
+          s=json.load(open('/tmp/causal_witness_h6_pysat.json'))
+          print('## Research032 h=6 independent CNF audit — parallel partial result')
+          print()
+          print(f"- frozen pair/target cases: **{len(s['cases'])}**")
+          print(f"- exact axis checks: **{sum(len(r['axes']) for r in s['cases'])}**")
+          print(f"- SAT cases: **{s['sat_cases']}**")
+          print(f"- UNSAT cases: **{s['unsat_cases']}**")
+          if s['sat_cases']:
+              print('\n### SAT witnesses')
+              for r in s['cases']:
+                  if r['h6_witness_exists']:
+                      w=r['first_witness']
+                      print(f"- Rule {r['rule']}, target `{r['target']}`, pair `{r['pair']}`, axis {w['axis']}")
+          else:
+              print('\nThe independent CNF encoding finds no h=6 witness in the 12 MDD-censored cases. This remains a partial result until the already-running Z3 encoding agrees.')
+          PY
+          gh pr comment 37 --body-file /tmp/comment.md
