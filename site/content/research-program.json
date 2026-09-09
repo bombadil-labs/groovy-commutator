@@ -35,7 +35,7 @@
     "date": "2026-09-09",
     "updated": "2026-09-09",
     "status": "living",
-    "summary": "A parallel program on when a lower-dimensional rule can become higher-dimensional space. The current exact object is a rule-independent semantic lift in which the two paths around a commuting square and their residual become ternary coordinates; the open problem is a native autonomous spatial realization.",
+    "summary": "A parallel program on rules becoming higher-dimensional space. The semantic commutator lift now has an exact connection to observed futures and a local infinite-stack update; finite preparation and inherited spatial program grammar remain open.",
     "thesis": "When two dynamical paths fail to commute, represent the disagreement as a new coordinate and ask whether the enlarged representation closes.",
     "source": "docs/research/2026-09-09-dimensional-closure-program.md",
     "supports": [
@@ -43,7 +43,8 @@
       "dimensional-lift",
       "column-compatibility",
       "block-compatibility",
-      "ternary-commutator-lift"
+      "ternary-commutator-lift",
+      "correction-future-coordinates"
     ]
   }
 ]

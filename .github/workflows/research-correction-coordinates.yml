@@ -1,0 +1,31 @@
+name: Correction coordinate audit
+
+on:
+  pull_request:
+    paths:
+      - 'scripts/verify_correction_future_coordinates.mjs'
+      - 'results/correction_future_coordinates_20260909.json'
+      - '.github/workflows/research-correction-coordinates.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/verify_correction_future_coordinates.mjs'
+      - 'results/correction_future_coordinates_20260909.json'
+      - '.github/workflows/research-correction-coordinates.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  exact-audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Run exhaustive coordinate and local transport audits
+        run: node scripts/verify_correction_future_coordinates.mjs > /tmp/correction-coordinates.json
+      - name: Compare with the committed research result
+        run: diff -u results/correction_future_coordinates_20260909.json /tmp/correction-coordinates.json

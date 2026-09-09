@@ -139,13 +139,20 @@ Neither finite closure nor maximal growth is Class-IV-exclusive. That negative r
 
 ## Semantic lift versus physical lift
 
-The current result is exact but semantic.
+The ternary-block result is exact but semantic. A subsequent
+[correction-coordinate checkpoint](2026-09-09-correction-future-coordinates.md)
+adds an explicit local law for an infinitely prepared correction stack; it does
+not establish finite local preparation or recursive spatial program inheritance.
 
 \[
 J_d
 \]
 
-tells us what the higher-dimensional coordinates **mean**. It does not yet supply one bounded native \((d+1)\)-dimensional CA whose ordinary local evolution preserves that meaning autonomously.
+tells us what the higher-dimensional coordinates **mean**. The ternary block alone does not supply such an autonomous law. For the
+correction stack, the checkpoint gives the bounded local update
+`U'_k = F(U_k) XOR U_(k+1)` on nonnegative layers. That construction supplies
+all corrections initially and keeps the source rule in the upper law; it does
+not yet meet the stronger program-spatialization target.
 
 This distinction is now the central boundary of the program.
 
@@ -164,6 +171,26 @@ A(F(S))=F(A(S))\oplus C_F(A)(S)
 \]
 
 requires only the role and its correction. This points toward a **correction-stack realization** rather than a literal physical copy of the full ternary tree.
+
+## Correction information versus correction vocabulary
+
+The [correction-coordinate checkpoint](2026-09-09-correction-future-coordinates.md)
+proves that the joint fields \((A_0,\ldots,A_h)\), with
+\(A_0=D\) and \(A_{k+1}=C_F(A_k)\), are related by a bijective triangular
+transformation to the observed future \((D,DF,\ldots,DF^h)\).
+Their fibers are identical. A stack closes when the next correction is a
+function of the joint represented state, even if individual correction maps
+continue to change.
+
+Thus full-map vocabulary growth is not itself a lower bound on the
+information required for closure. This gives an exact bridge to the
+future-equivalence relation in the parallel Program.
+
+The checkpoint also isolates a program-binding requirement: for a fixed
+Moore-ring decoder, changing the initial eight rule bits changes spatial
+program data under one ambient selector law. Producing an inherited next
+program requires an explicit additional construction; the generic
+correction-stack law does not supply that interface.
 
 ## Relation to the Class-IV hope
 
@@ -188,11 +215,12 @@ The discipline remains unchanged: fix the higher-dimensional architecture first,
 4. **The ternary semantic lift is rule-independent.** `L/R/C` recursion gives a dimension-uniform exact semantic block for every deterministic source rule.
 5. **The ternary address has a forced quotient.** `LR=RL` and `LC=CL` bound exact-depth semantic roles by `2^(d+1)-1`.
 6. **Role-growth statistics are not Class-IV-exclusive.** Finite-map and intrinsic local censuses both rule out simple closure/growth statistics as the dimensional razor.
+7. **Correction tuples and observed futures have identical fibers.** The exact triangular coordinate change separates joint information growth from growth in the vocabulary of individual maps. An infinitely prepared correction stack has a bounded local spatial update.
 
 ## What remains open
 
-- No fixed bounded native higher-dimensional CA realization of the ternary or correction-stack lift has been established.
-- It is unknown whether a bounded Euclidean geometry can carry the required correction roles without hidden external state.
+- A bounded local law exists for an infinitely prepared correction stack. A finite, locally prepared realization satisfying the intended program grammar remains open.
+- The correction-stack law includes the source rule as part of its update. Spatializing that program as active inherited data, with exact overlap consistency and recursive typing, remains open.
 - The relationship between correction depth, spatial dimension, and growing within-dimension radius is not yet characterized.
 - No native dimensional-closure criterion has yet earned comparison against a complete Wolfram-class taxonomy.
 
@@ -200,8 +228,12 @@ The discipline remains unchanged: fix the higher-dimensional architecture first,
 
 The immediate proof problem is constructive:
 
-> **Find a fixed local higher-dimensional CA realization of the commutator correction lift.**
+> **Find a locally prepared higher-dimensional realization that preserves the spatial program grammar through a second lift.**
 
-The semantic operator is already known. The next task is to make it physical: determine whether the correction required to transport a lower-dimensional role can be stored in adjacent spatial channels so that one ordinary higher-dimensional update advances the whole represented system and leaves it ready to lift again.
+The semantic operator and an infinite-stack local update are known. The next
+task must declare the inherited program, mutable state, decoder, preparation
+radius, and boundary budget, then verify both operational preservation and
+program inheritance at the first two dimensional interfaces. Merely adding
+arbitrarily prepared correction layers does not settle this target.
 
 If that succeeds, dimensional projection stops being an analogy. It becomes an explicit commuting diagram implemented in space.

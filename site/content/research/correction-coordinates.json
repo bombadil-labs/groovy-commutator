@@ -1,0 +1,26 @@
+[
+  {
+    "slug": "correction-future-coordinates",
+    "recordType": "checkpoint",
+    "label": "Theoretical checkpoint",
+    "title": "Correction stacks are coordinates for observed futures",
+    "date": "2026-09-09",
+    "updated": "2026-09-09",
+    "kind": "Exact coordinate theorem and dimensional-program review",
+    "evidence": "exact",
+    "topic": "Algebra and closure",
+    "summary": "A triangular bijection equates finite correction stacks with finite observed futures. A prepared infinite stack has a bounded local CA update, while finite preparation and inherited spatial programs remain separate requirements.",
+    "takeaway": "Count the distinctions retained jointly, not only the number of correction maps. Recursive spatial program inheritance requires more than transporting a prepared stack.",
+    "source": "docs/research/2026-09-09-correction-future-coordinates.md",
+    "promotion": {
+      "stage": "research"
+    },
+    "related": [
+      "ternary-commutator-lift",
+      "history-lift-closure",
+      "fiber-visibility",
+      "shared-state-rule",
+      "observation-closure"
+    ]
+  }
+]

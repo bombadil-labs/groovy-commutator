@@ -1,0 +1,3103 @@
+{
+  "arbitrary_maps": {
+    "arbitrary_word_roundtrips": 65536,
+    "evolution_observation_state_checks": 262144,
+    "evolutions": 256,
+    "max_correction_index": 3,
+    "observations_per_evolution": 256,
+    "partition_checks": 262144,
+    "state_bits": 2
+  },
+  "class_labels_loaded": false,
+  "eca_rings": {
+    "max_correction_index": 4,
+    "partition_checks": 1280,
+    "records": [
+      {
+        "distinct_correction_maps_through_4": 2,
+        "first_closed_index_through_3": 0,
+        "predictive_fiber_counts": [
+          256,
+          256,
+          256,
+          256,
+          256
+        ],
+        "rule": 0
+      },
+      {
+        "distinct_correction_maps_through_4": 2,
+        "first_closed_index_through_3": 1,
+        "predictive_fiber_counts": [
+          131,
+          233,
+          233,
+          233,
+          233
+        ],
+        "rule": 1
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 1,
+        "predictive_fiber_counts": [
+          148,
+          256,
+          256,
+          256,
+          256
+        ],
+        "rule": 2
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 1,
+        "predictive_fiber_counts": [
+          47,
+          255,
+          255,
+          255,
+          255
+        ],
+        "rule": 3
+      },
+      {
+        "distinct_correction_maps_through_4": 2,
+        "first_closed_index_through_3": 0,
+        "predictive_fiber_counts": [
+          90,
+          90,
+          90,
+          90,
+          90
+        ],
+        "rule": 4
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 1,
+        "predictive_fiber_counts": [
+          150,
+          202,
+          202,
+          202,
+          202
+        ],
+        "rule": 5
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 3,
+        "predictive_fiber_counts": [
+          130,
+          206,
+          238,
+          254,
+          254
+        ],
+        "rule": 6
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 1,
+        "predictive_fiber_counts": [
+          130,
+          254,
+          254,
+          254,
+          254
+        ],
+        "rule": 7
+      },
+      {
+        "distinct_correction_maps_through_4": 4,
+        "first_closed_index_through_3": 1,
+        "predictive_fiber_counts": [
+          148,
+          256,
+          256,
+          256,
+          256
+        ],
+        "rule": 8
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 1,
+        "predictive_fiber_counts": [
+          147,
+          253,
+          253,
+          253,
+          253
+        ],
+        "rule": 9
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 1,
+        "predictive_fiber_counts": [
+          168,
+          254,
+          254,
+          254,
+          254
+        ],
+        "rule": 10
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 1,
+        "predictive_fiber_counts": [
+          131,
+          233,
+          233,
+          233,
+          233
+        ],
+        "rule": 11
+      },
+      {
+        "distinct_correction_maps_through_4": 2,
+        "first_closed_index_through_3": 0,
+        "predictive_fiber_counts": [
+          90,
+          90,
+          90,
+          90,
+          90
+        ],
+        "rule": 12
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 1,
+        "predictive_fiber_counts": [
+          154,
+          214,
+          214,
+          214,
+          214
+        ],
+        "rule": 13
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 2,
+        "predictive_fiber_counts": [
+          156,
+          216,
+          232,
+          232,
+          232
+        ],
+        "rule": 14
+      },
+      {
+        "distinct_correction_maps_through_4": 2,
+        "first_closed_index_through_3": 0,
+        "predictive_fiber_counts": [
+          128,
+          128,
+          128,
+          128,
+          128
+        ],
+        "rule": 15
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 1,
+        "predictive_fiber_counts": [
+          148,
+          256,
+          256,
+          256,
+          256
+        ],
+        "rule": 16
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 1,
+        "predictive_fiber_counts": [
+          47,
+          255,
+          255,
+          255,
+          255
+        ],
+        "rule": 17
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 2,
+        "predictive_fiber_counts": [
+          104,
+          249,
+          253,
+          253,
+          253
+        ],
+        "rule": 18
+      },
+      {
+        "distinct_correction_maps_through_4": 3,
+        "first_closed_index_through_3": 1,
+        "predictive_fiber_counts": [
+          47,
+          75,
+          75,
+          75,
+          75
+        ],
+        "rule": 19
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 3,
+        "predictive_fiber_counts": [
+          130,
+          206,
+          238,
+          254,
+          254
+        ],
+        "rule": 20
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 1,
+        "predictive_fiber_counts": [
+          130,
+          254,
+          254,
+          254,
+          254
+        ],
+        "rule": 21
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 2,
+        "predictive_fiber_counts": [
+          120,
+          235,
+          243,
+          243,
+          243
+        ],
+        "rule": 22
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 0,
+        "predictive_fiber_counts": [
+          66,
+          66,
+          66,
+          66,
+          66
+        ],
+        "rule": 23
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 1,
+        "predictive_fiber_counts": [
+          136,
+          256,
+          256,
+          256,
+          256
+        ],
+        "rule": 24
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 1,
+        "predictive_fiber_counts": [
+          131,
+          255,
+          255,
+          255,
+          255
+        ],
+        "rule": 25
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 1,
+        "predictive_fiber_counts": [
+          148,
+          256,
+          256,
+          256,
+          256
+        ],
+        "rule": 26
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 2,
+        "predictive_fiber_counts": [
+          99,
+          239,
+          255,
+          255,
+          255
+        ],
+        "rule": 27
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": null,
+        "predictive_fiber_counts": [
+          90,
+          142,
+          166,
+          182,
+          190
+        ],
+        "rule": 28
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 1,
+        "predictive_fiber_counts": [
+          46,
+          146,
+          146,
+          146,
+          146
+        ],
+        "rule": 29
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 1,
+        "predictive_fiber_counts": [
+          240,
+          254,
+          254,
+          254,
+          254
+        ],
+        "rule": 30
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 1,
+        "predictive_fiber_counts": [
+          130,
+          254,
+          254,
+          254,
+          254
+        ],
+        "rule": 31
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 1,
+        "predictive_fiber_counts": [
+          90,
+          255,
+          255,
+          255,
+          255
+        ],
+        "rule": 32
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 2,
+        "predictive_fiber_counts": [
+          67,
+          217,
+          229,
+          229,
+          229
+        ],
+        "rule": 33
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 1,
+        "predictive_fiber_counts": [
+          90,
+          255,
+          255,
+          255,
+          255
+        ],
+        "rule": 34
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": null,
+        "predictive_fiber_counts": [
+          21,
+          157,
+          213,
+          237,
+          245
+        ],
+        "rule": 35
+      },
+      {
+        "distinct_correction_maps_through_4": 4,
+        "first_closed_index_through_3": 1,
+        "predictive_fiber_counts": [
+          96,
+          152,
+          152,
+          152,
+          152
+        ],
+        "rule": 36
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 1,
+        "predictive_fiber_counts": [
+          167,
+          243,
+          243,
+          243,
+          243
+        ],
+        "rule": 37
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 1,
+        "predictive_fiber_counts": [
+          148,
+          256,
+          256,
+          256,
+          256
+        ],
+        "rule": 38
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 2,
+        "predictive_fiber_counts": [
+          99,
+          239,
+          255,
+          255,
+          255
+        ],
+        "rule": 39
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 1,
+        "predictive_fiber_counts": [
+          130,
+          255,
+          255,
+          255,
+          255
+        ],
+        "rule": 40
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 1,
+        "predictive_fiber_counts": [
+          147,
+          251,
+          251,
+          251,
+          251
+        ],
+        "rule": 41
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 1,
+        "predictive_fiber_counts": [
+          156,
+          233,
+          233,
+          233,
+          233
+        ],
+        "rule": 42
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 2,
+        "predictive_fiber_counts": [
+          47,
+          111,
+          127,
+          127,
+          127
+        ],
+        "rule": 43
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 1,
+        "predictive_fiber_counts": [
+          148,
+          204,
+          204,
+          204,
+          204
+        ],
+        "rule": 44
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 1,
+        "predictive_fiber_counts": [
+          223,
+          255,
+          255,
+          255,
+          255
+        ],
+        "rule": 45
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 1,
+        "predictive_fiber_counts": [
+          132,
+          254,
+          254,
+          254,
+          254
+        ],
+        "rule": 46
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 1,
+        "predictive_fiber_counts": [
+          131,
+          233,
+          233,
+          233,
+          233
+        ],
+        "rule": 47
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 1,
+        "predictive_fiber_counts": [
+          90,
+          255,
+          255,
+          255,
+          255
+        ],
+        "rule": 48
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": null,
+        "predictive_fiber_counts": [
+          21,
+          157,
+          213,
+          237,
+          245
+        ],
+        "rule": 49
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 1,
+        "predictive_fiber_counts": [
+          46,
+          131,
+          131,
+          131,
+          131
+        ],
+        "rule": 50
+      },
+      {
+        "distinct_correction_maps_through_4": 1,
+        "first_closed_index_through_3": 0,
+        "predictive_fiber_counts": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "rule": 51
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 1,
+        "predictive_fiber_counts": [
+          148,
+          256,
+          256,
+          256,
+          256
+        ],
+        "rule": 52
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 2,
+        "predictive_fiber_counts": [
+          99,
+          239,
+          255,
+          255,
+          255
+        ],
+        "rule": 53
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 2,
+        "predictive_fiber_counts": [
+          100,
+          215,
+          249,
+          249,
+          249
+        ],
+        "rule": 54
+      },
+      {
+        "distinct_correction_maps_through_4": 3,
+        "first_closed_index_through_3": 1,
+        "predictive_fiber_counts": [
+          47,
+          75,
+          75,
+          75,
+          75
+        ],
+        "rule": 55
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 1,
+        "predictive_fiber_counts": [
+          90,
+          255,
+          255,
+          255,
+          255
+        ],
+        "rule": 56
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 2,
+        "predictive_fiber_counts": [
+          49,
+          237,
+          253,
+          253,
+          253
+        ],
+        "rule": 57
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 1,
+        "predictive_fiber_counts": [
+          94,
+          255,
+          255,
+          255,
+          255
+        ],
+        "rule": 58
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": null,
+        "predictive_fiber_counts": [
+          21,
+          157,
+          213,
+          237,
+          245
+        ],
+        "rule": 59
+      },
+      {
+        "distinct_correction_maps_through_4": 2,
+        "first_closed_index_through_3": 0,
+        "predictive_fiber_counts": [
+          256,
+          256,
+          256,
+          256,
+          256
+        ],
+        "rule": 60
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 1,
+        "predictive_fiber_counts": [
+          131,
+          255,
+          255,
+          255,
+          255
+        ],
+        "rule": 61
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 1,
+        "predictive_fiber_counts": [
+          104,
+          256,
+          256,
+          256,
+          256
+        ],
+        "rule": 62
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 1,
+        "predictive_fiber_counts": [
+          47,
+          255,
+          255,
+          255,
+          255
+        ],
+        "rule": 63
+      },
+      {
+        "distinct_correction_maps_through_4": 4,
+        "first_closed_index_through_3": 1,
+        "predictive_fiber_counts": [
+          148,
+          256,
+          256,
+          256,
+          256
+        ],
+        "rule": 64
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 1,
+        "predictive_fiber_counts": [
+          147,
+          253,
+          253,
+          253,
+          253
+        ],
+        "rule": 65
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 1,
+        "predictive_fiber_counts": [
+          136,
+          256,
+          256,
+          256,
+          256
+        ],
+        "rule": 66
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 1,
+        "predictive_fiber_counts": [
+          131,
+          255,
+          255,
+          255,
+          255
+        ],
+        "rule": 67
+      },
+      {
+        "distinct_correction_maps_through_4": 2,
+        "first_closed_index_through_3": 0,
+        "predictive_fiber_counts": [
+          90,
+          90,
+          90,
+          90,
+          90
+        ],
+        "rule": 68
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 1,
+        "predictive_fiber_counts": [
+          154,
+          214,
+          214,
+          214,
+          214
+        ],
+        "rule": 69
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": null,
+        "predictive_fiber_counts": [
+          90,
+          142,
+          166,
+          182,
+          190
+        ],
+        "rule": 70
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 1,
+        "predictive_fiber_counts": [
+          46,
+          146,
+          146,
+          146,
+          146
+        ],
+        "rule": 71
+      },
+      {
+        "distinct_correction_maps_through_4": 4,
+        "first_closed_index_through_3": 1,
+        "predictive_fiber_counts": [
+          104,
+          148,
+          148,
+          148,
+          148
+        ],
+        "rule": 72
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 2,
+        "predictive_fiber_counts": [
+          132,
+          218,
+          242,
+          242,
+          242
+        ],
+        "rule": 73
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 2,
+        "predictive_fiber_counts": [
+          148,
+          248,
+          256,
+          256,
+          256
+        ],
+        "rule": 74
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 1,
+        "predictive_fiber_counts": [
+          223,
+          255,
+          255,
+          255,
+          255
+        ],
+        "rule": 75
+      },
+      {
+        "distinct_correction_maps_through_4": 2,
+        "first_closed_index_through_3": 0,
+        "predictive_fiber_counts": [
+          46,
+          46,
+          46,
+          46,
+          46
+        ],
+        "rule": 76
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 0,
+        "predictive_fiber_counts": [
+          66,
+          66,
+          66,
+          66,
+          66
+        ],
+        "rule": 77
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": null,
+        "predictive_fiber_counts": [
+          94,
+          182,
+          206,
+          222,
+          230
+        ],
+        "rule": 78
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 1,
+        "predictive_fiber_counts": [
+          154,
+          214,
+          214,
+          214,
+          214
+        ],
+        "rule": 79
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 1,
+        "predictive_fiber_counts": [
+          168,
+          254,
+          254,
+          254,
+          254
+        ],
+        "rule": 80
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 1,
+        "predictive_fiber_counts": [
+          131,
+          233,
+          233,
+          233,
+          233
+        ],
+        "rule": 81
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 1,
+        "predictive_fiber_counts": [
+          148,
+          256,
+          256,
+          256,
+          256
+        ],
+        "rule": 82
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 2,
+        "predictive_fiber_counts": [
+          99,
+          239,
+          255,
+          255,
+          255
+        ],
+        "rule": 83
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 2,
+        "predictive_fiber_counts": [
+          156,
+          216,
+          232,
+          232,
+          232
+        ],
+        "rule": 84
+      },
+      {
+        "distinct_correction_maps_through_4": 2,
+        "first_closed_index_through_3": 0,
+        "predictive_fiber_counts": [
+          128,
+          128,
+          128,
+          128,
+          128
+        ],
+        "rule": 85
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 1,
+        "predictive_fiber_counts": [
+          240,
+          254,
+          254,
+          254,
+          254
+        ],
+        "rule": 86
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 1,
+        "predictive_fiber_counts": [
+          130,
+          254,
+          254,
+          254,
+          254
+        ],
+        "rule": 87
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 2,
+        "predictive_fiber_counts": [
+          148,
+          248,
+          256,
+          256,
+          256
+        ],
+        "rule": 88
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 1,
+        "predictive_fiber_counts": [
+          223,
+          255,
+          255,
+          255,
+          255
+        ],
+        "rule": 89
+      },
+      {
+        "distinct_correction_maps_through_4": 2,
+        "first_closed_index_through_3": 0,
+        "predictive_fiber_counts": [
+          256,
+          256,
+          256,
+          256,
+          256
+        ],
+        "rule": 90
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 1,
+        "predictive_fiber_counts": [
+          167,
+          243,
+          243,
+          243,
+          243
+        ],
+        "rule": 91
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": null,
+        "predictive_fiber_counts": [
+          94,
+          182,
+          206,
+          222,
+          230
+        ],
+        "rule": 92
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 1,
+        "predictive_fiber_counts": [
+          154,
+          214,
+          214,
+          214,
+          214
+        ],
+        "rule": 93
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 1,
+        "predictive_fiber_counts": [
+          140,
+          222,
+          222,
+          222,
+          222
+        ],
+        "rule": 94
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 1,
+        "predictive_fiber_counts": [
+          150,
+          202,
+          202,
+          202,
+          202
+        ],
+        "rule": 95
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 1,
+        "predictive_fiber_counts": [
+          130,
+          255,
+          255,
+          255,
+          255
+        ],
+        "rule": 96
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 1,
+        "predictive_fiber_counts": [
+          147,
+          251,
+          251,
+          251,
+          251
+        ],
+        "rule": 97
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 1,
+        "predictive_fiber_counts": [
+          90,
+          255,
+          255,
+          255,
+          255
+        ],
+        "rule": 98
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 2,
+        "predictive_fiber_counts": [
+          49,
+          237,
+          253,
+          253,
+          253
+        ],
+        "rule": 99
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 1,
+        "predictive_fiber_counts": [
+          148,
+          204,
+          204,
+          204,
+          204
+        ],
+        "rule": 100
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 1,
+        "predictive_fiber_counts": [
+          223,
+          255,
+          255,
+          255,
+          255
+        ],
+        "rule": 101
+      },
+      {
+        "distinct_correction_maps_through_4": 2,
+        "first_closed_index_through_3": 0,
+        "predictive_fiber_counts": [
+          256,
+          256,
+          256,
+          256,
+          256
+        ],
+        "rule": 102
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 1,
+        "predictive_fiber_counts": [
+          131,
+          255,
+          255,
+          255,
+          255
+        ],
+        "rule": 103
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 2,
+        "predictive_fiber_counts": [
+          120,
+          209,
+          225,
+          225,
+          225
+        ],
+        "rule": 104
+      },
+      {
+        "distinct_correction_maps_through_4": 2,
+        "first_closed_index_through_3": 0,
+        "predictive_fiber_counts": [
+          64,
+          64,
+          64,
+          64,
+          64
+        ],
+        "rule": 105
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 1,
+        "predictive_fiber_counts": [
+          240,
+          253,
+          253,
+          253,
+          253
+        ],
+        "rule": 106
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 1,
+        "predictive_fiber_counts": [
+          147,
+          251,
+          251,
+          251,
+          251
+        ],
+        "rule": 107
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 1,
+        "predictive_fiber_counts": [
+          100,
+          174,
+          174,
+          174,
+          174
+        ],
+        "rule": 108
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 2,
+        "predictive_fiber_counts": [
+          132,
+          218,
+          242,
+          242,
+          242
+        ],
+        "rule": 109
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 1,
+        "predictive_fiber_counts": [
+          104,
+          254,
+          254,
+          254,
+          254
+        ],
+        "rule": 110
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 1,
+        "predictive_fiber_counts": [
+          147,
+          253,
+          253,
+          253,
+          253
+        ],
+        "rule": 111
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 1,
+        "predictive_fiber_counts": [
+          156,
+          233,
+          233,
+          233,
+          233
+        ],
+        "rule": 112
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 2,
+        "predictive_fiber_counts": [
+          47,
+          111,
+          127,
+          127,
+          127
+        ],
+        "rule": 113
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 1,
+        "predictive_fiber_counts": [
+          94,
+          255,
+          255,
+          255,
+          255
+        ],
+        "rule": 114
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": null,
+        "predictive_fiber_counts": [
+          21,
+          157,
+          213,
+          237,
+          245
+        ],
+        "rule": 115
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 1,
+        "predictive_fiber_counts": [
+          132,
+          254,
+          254,
+          254,
+          254
+        ],
+        "rule": 116
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 1,
+        "predictive_fiber_counts": [
+          131,
+          233,
+          233,
+          233,
+          233
+        ],
+        "rule": 117
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 1,
+        "predictive_fiber_counts": [
+          104,
+          256,
+          256,
+          256,
+          256
+        ],
+        "rule": 118
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 1,
+        "predictive_fiber_counts": [
+          47,
+          255,
+          255,
+          255,
+          255
+        ],
+        "rule": 119
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 1,
+        "predictive_fiber_counts": [
+          240,
+          253,
+          253,
+          253,
+          253
+        ],
+        "rule": 120
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 1,
+        "predictive_fiber_counts": [
+          147,
+          251,
+          251,
+          251,
+          251
+        ],
+        "rule": 121
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 1,
+        "predictive_fiber_counts": [
+          140,
+          253,
+          253,
+          253,
+          253
+        ],
+        "rule": 122
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 2,
+        "predictive_fiber_counts": [
+          67,
+          217,
+          229,
+          229,
+          229
+        ],
+        "rule": 123
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 1,
+        "predictive_fiber_counts": [
+          104,
+          254,
+          254,
+          254,
+          254
+        ],
+        "rule": 124
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 1,
+        "predictive_fiber_counts": [
+          147,
+          253,
+          253,
+          253,
+          253
+        ],
+        "rule": 125
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 1,
+        "predictive_fiber_counts": [
+          96,
+          252,
+          252,
+          252,
+          252
+        ],
+        "rule": 126
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 1,
+        "predictive_fiber_counts": [
+          131,
+          233,
+          233,
+          233,
+          233
+        ],
+        "rule": 127
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 1,
+        "predictive_fiber_counts": [
+          131,
+          255,
+          255,
+          255,
+          255
+        ],
+        "rule": 128
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 1,
+        "predictive_fiber_counts": [
+          96,
+          252,
+          252,
+          252,
+          252
+        ],
+        "rule": 129
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 1,
+        "predictive_fiber_counts": [
+          147,
+          255,
+          255,
+          255,
+          255
+        ],
+        "rule": 130
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 1,
+        "predictive_fiber_counts": [
+          104,
+          256,
+          256,
+          256,
+          256
+        ],
+        "rule": 131
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 1,
+        "predictive_fiber_counts": [
+          67,
+          87,
+          87,
+          87,
+          87
+        ],
+        "rule": 132
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 1,
+        "predictive_fiber_counts": [
+          140,
+          222,
+          222,
+          222,
+          222
+        ],
+        "rule": 133
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 2,
+        "predictive_fiber_counts": [
+          147,
+          237,
+          253,
+          253,
+          253
+        ],
+        "rule": 134
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 1,
+        "predictive_fiber_counts": [
+          240,
+          254,
+          254,
+          254,
+          254
+        ],
+        "rule": 135
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": null,
+        "predictive_fiber_counts": [
+          47,
+          131,
+          191,
+          223,
+          239
+        ],
+        "rule": 136
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 1,
+        "predictive_fiber_counts": [
+          104,
+          254,
+          254,
+          254,
+          254
+        ],
+        "rule": 137
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 1,
+        "predictive_fiber_counts": [
+          131,
+          233,
+          233,
+          233,
+          233
+        ],
+        "rule": 138
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 1,
+        "predictive_fiber_counts": [
+          132,
+          254,
+          254,
+          254,
+          254
+        ],
+        "rule": 139
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": null,
+        "predictive_fiber_counts": [
+          21,
+          49,
+          65,
+          73,
+          81
+        ],
+        "rule": 140
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": null,
+        "predictive_fiber_counts": [
+          94,
+          182,
+          206,
+          222,
+          230
+        ],
+        "rule": 141
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 2,
+        "predictive_fiber_counts": [
+          47,
+          111,
+          127,
+          127,
+          127
+        ],
+        "rule": 142
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 2,
+        "predictive_fiber_counts": [
+          156,
+          216,
+          232,
+          232,
+          232
+        ],
+        "rule": 143
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 1,
+        "predictive_fiber_counts": [
+          147,
+          255,
+          255,
+          255,
+          255
+        ],
+        "rule": 144
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 1,
+        "predictive_fiber_counts": [
+          104,
+          256,
+          256,
+          256,
+          256
+        ],
+        "rule": 145
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 1,
+        "predictive_fiber_counts": [
+          132,
+          252,
+          252,
+          252,
+          252
+        ],
+        "rule": 146
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 2,
+        "predictive_fiber_counts": [
+          100,
+          215,
+          249,
+          249,
+          249
+        ],
+        "rule": 147
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 2,
+        "predictive_fiber_counts": [
+          147,
+          237,
+          253,
+          253,
+          253
+        ],
+        "rule": 148
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 1,
+        "predictive_fiber_counts": [
+          240,
+          254,
+          254,
+          254,
+          254
+        ],
+        "rule": 149
+      },
+      {
+        "distinct_correction_maps_through_4": 2,
+        "first_closed_index_through_3": 0,
+        "predictive_fiber_counts": [
+          64,
+          64,
+          64,
+          64,
+          64
+        ],
+        "rule": 150
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 2,
+        "predictive_fiber_counts": [
+          120,
+          235,
+          243,
+          243,
+          243
+        ],
+        "rule": 151
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 3,
+        "predictive_fiber_counts": [
+          131,
+          223,
+          247,
+          255,
+          255
+        ],
+        "rule": 152
+      },
+      {
+        "distinct_correction_maps_through_4": 3,
+        "first_closed_index_through_3": 0,
+        "predictive_fiber_counts": [
+          256,
+          256,
+          256,
+          256,
+          256
+        ],
+        "rule": 153
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 1,
+        "predictive_fiber_counts": [
+          223,
+          255,
+          255,
+          255,
+          255
+        ],
+        "rule": 154
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 1,
+        "predictive_fiber_counts": [
+          148,
+          256,
+          256,
+          256,
+          256
+        ],
+        "rule": 155
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": null,
+        "predictive_fiber_counts": [
+          49,
+          125,
+          165,
+          181,
+          197
+        ],
+        "rule": 156
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": null,
+        "predictive_fiber_counts": [
+          90,
+          142,
+          166,
+          182,
+          190
+        ],
+        "rule": 157
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 2,
+        "predictive_fiber_counts": [
+          147,
+          237,
+          253,
+          253,
+          253
+        ],
+        "rule": 158
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 3,
+        "predictive_fiber_counts": [
+          130,
+          206,
+          238,
+          254,
+          254
+        ],
+        "rule": 159
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 1,
+        "predictive_fiber_counts": [
+          150,
+          254,
+          254,
+          254,
+          254
+        ],
+        "rule": 160
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 1,
+        "predictive_fiber_counts": [
+          140,
+          253,
+          253,
+          253,
+          253
+        ],
+        "rule": 161
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 1,
+        "predictive_fiber_counts": [
+          154,
+          254,
+          254,
+          254,
+          254
+        ],
+        "rule": 162
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 1,
+        "predictive_fiber_counts": [
+          94,
+          255,
+          255,
+          255,
+          255
+        ],
+        "rule": 163
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 1,
+        "predictive_fiber_counts": [
+          167,
+          203,
+          203,
+          203,
+          203
+        ],
+        "rule": 164
+      },
+      {
+        "distinct_correction_maps_through_4": 3,
+        "first_closed_index_through_3": 0,
+        "predictive_fiber_counts": [
+          256,
+          256,
+          256,
+          256,
+          256
+        ],
+        "rule": 165
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 1,
+        "predictive_fiber_counts": [
+          223,
+          255,
+          255,
+          255,
+          255
+        ],
+        "rule": 166
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 1,
+        "predictive_fiber_counts": [
+          148,
+          256,
+          256,
+          256,
+          256
+        ],
+        "rule": 167
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": null,
+        "predictive_fiber_counts": [
+          130,
+          190,
+          222,
+          238,
+          246
+        ],
+        "rule": 168
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 1,
+        "predictive_fiber_counts": [
+          240,
+          253,
+          253,
+          253,
+          253
+        ],
+        "rule": 169
+      },
+      {
+        "distinct_correction_maps_through_4": 2,
+        "first_closed_index_through_3": 0,
+        "predictive_fiber_counts": [
+          128,
+          128,
+          128,
+          128,
+          128
+        ],
+        "rule": 170
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 1,
+        "predictive_fiber_counts": [
+          156,
+          233,
+          233,
+          233,
+          233
+        ],
+        "rule": 171
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": null,
+        "predictive_fiber_counts": [
+          99,
+          171,
+          187,
+          195,
+          203
+        ],
+        "rule": 172
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 2,
+        "predictive_fiber_counts": [
+          148,
+          248,
+          256,
+          256,
+          256
+        ],
+        "rule": 173
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 1,
+        "predictive_fiber_counts": [
+          131,
+          233,
+          233,
+          233,
+          233
+        ],
+        "rule": 174
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 1,
+        "predictive_fiber_counts": [
+          168,
+          254,
+          254,
+          254,
+          254
+        ],
+        "rule": 175
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 1,
+        "predictive_fiber_counts": [
+          154,
+          254,
+          254,
+          254,
+          254
+        ],
+        "rule": 176
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 1,
+        "predictive_fiber_counts": [
+          94,
+          255,
+          255,
+          255,
+          255
+        ],
+        "rule": 177
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 0,
+        "predictive_fiber_counts": [
+          66,
+          66,
+          66,
+          66,
+          66
+        ],
+        "rule": 178
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 1,
+        "predictive_fiber_counts": [
+          46,
+          131,
+          131,
+          131,
+          131
+        ],
+        "rule": 179
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 1,
+        "predictive_fiber_counts": [
+          223,
+          255,
+          255,
+          255,
+          255
+        ],
+        "rule": 180
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 1,
+        "predictive_fiber_counts": [
+          148,
+          256,
+          256,
+          256,
+          256
+        ],
+        "rule": 181
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 1,
+        "predictive_fiber_counts": [
+          132,
+          252,
+          252,
+          252,
+          252
+        ],
+        "rule": 182
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 2,
+        "predictive_fiber_counts": [
+          104,
+          249,
+          253,
+          253,
+          253
+        ],
+        "rule": 183
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 3,
+        "predictive_fiber_counts": [
+          46,
+          190,
+          238,
+          254,
+          254
+        ],
+        "rule": 184
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 1,
+        "predictive_fiber_counts": [
+          90,
+          255,
+          255,
+          255,
+          255
+        ],
+        "rule": 185
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 1,
+        "predictive_fiber_counts": [
+          154,
+          254,
+          254,
+          254,
+          254
+        ],
+        "rule": 186
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 1,
+        "predictive_fiber_counts": [
+          90,
+          255,
+          255,
+          255,
+          255
+        ],
+        "rule": 187
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 3,
+        "predictive_fiber_counts": [
+          131,
+          223,
+          247,
+          255,
+          255
+        ],
+        "rule": 188
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 1,
+        "predictive_fiber_counts": [
+          136,
+          256,
+          256,
+          256,
+          256
+        ],
+        "rule": 189
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 1,
+        "predictive_fiber_counts": [
+          147,
+          255,
+          255,
+          255,
+          255
+        ],
+        "rule": 190
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 1,
+        "predictive_fiber_counts": [
+          148,
+          256,
+          256,
+          256,
+          256
+        ],
+        "rule": 191
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": null,
+        "predictive_fiber_counts": [
+          47,
+          131,
+          191,
+          223,
+          239
+        ],
+        "rule": 192
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 1,
+        "predictive_fiber_counts": [
+          104,
+          254,
+          254,
+          254,
+          254
+        ],
+        "rule": 193
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 3,
+        "predictive_fiber_counts": [
+          131,
+          223,
+          247,
+          255,
+          255
+        ],
+        "rule": 194
+      },
+      {
+        "distinct_correction_maps_through_4": 3,
+        "first_closed_index_through_3": 0,
+        "predictive_fiber_counts": [
+          256,
+          256,
+          256,
+          256,
+          256
+        ],
+        "rule": 195
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": null,
+        "predictive_fiber_counts": [
+          21,
+          49,
+          65,
+          73,
+          81
+        ],
+        "rule": 196
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": null,
+        "predictive_fiber_counts": [
+          94,
+          182,
+          206,
+          222,
+          230
+        ],
+        "rule": 197
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": null,
+        "predictive_fiber_counts": [
+          49,
+          125,
+          165,
+          181,
+          197
+        ],
+        "rule": 198
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": null,
+        "predictive_fiber_counts": [
+          90,
+          142,
+          166,
+          182,
+          190
+        ],
+        "rule": 199
+      },
+      {
+        "distinct_correction_maps_through_4": 2,
+        "first_closed_index_through_3": 0,
+        "predictive_fiber_counts": [
+          47,
+          47,
+          47,
+          47,
+          47
+        ],
+        "rule": 200
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 1,
+        "predictive_fiber_counts": [
+          100,
+          174,
+          174,
+          174,
+          174
+        ],
+        "rule": 201
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": null,
+        "predictive_fiber_counts": [
+          99,
+          171,
+          187,
+          195,
+          203
+        ],
+        "rule": 202
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 1,
+        "predictive_fiber_counts": [
+          148,
+          204,
+          204,
+          204,
+          204
+        ],
+        "rule": 203
+      },
+      {
+        "distinct_correction_maps_through_4": 1,
+        "first_closed_index_through_3": 0,
+        "predictive_fiber_counts": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "rule": 204
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 0,
+        "predictive_fiber_counts": [
+          46,
+          46,
+          46,
+          46,
+          46
+        ],
+        "rule": 205
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": null,
+        "predictive_fiber_counts": [
+          21,
+          49,
+          65,
+          73,
+          81
+        ],
+        "rule": 206
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 0,
+        "predictive_fiber_counts": [
+          90,
+          90,
+          90,
+          90,
+          90
+        ],
+        "rule": 207
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 1,
+        "predictive_fiber_counts": [
+          131,
+          233,
+          233,
+          233,
+          233
+        ],
+        "rule": 208
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 1,
+        "predictive_fiber_counts": [
+          132,
+          254,
+          254,
+          254,
+          254
+        ],
+        "rule": 209
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 1,
+        "predictive_fiber_counts": [
+          223,
+          255,
+          255,
+          255,
+          255
+        ],
+        "rule": 210
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 1,
+        "predictive_fiber_counts": [
+          148,
+          256,
+          256,
+          256,
+          256
+        ],
+        "rule": 211
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 2,
+        "predictive_fiber_counts": [
+          47,
+          111,
+          127,
+          127,
+          127
+        ],
+        "rule": 212
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 2,
+        "predictive_fiber_counts": [
+          156,
+          216,
+          232,
+          232,
+          232
+        ],
+        "rule": 213
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 2,
+        "predictive_fiber_counts": [
+          147,
+          237,
+          253,
+          253,
+          253
+        ],
+        "rule": 214
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 3,
+        "predictive_fiber_counts": [
+          130,
+          206,
+          238,
+          254,
+          254
+        ],
+        "rule": 215
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": null,
+        "predictive_fiber_counts": [
+          99,
+          171,
+          187,
+          195,
+          203
+        ],
+        "rule": 216
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 1,
+        "predictive_fiber_counts": [
+          148,
+          204,
+          204,
+          204,
+          204
+        ],
+        "rule": 217
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 1,
+        "predictive_fiber_counts": [
+          167,
+          203,
+          203,
+          203,
+          203
+        ],
+        "rule": 218
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 1,
+        "predictive_fiber_counts": [
+          96,
+          152,
+          152,
+          152,
+          152
+        ],
+        "rule": 219
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": null,
+        "predictive_fiber_counts": [
+          21,
+          49,
+          65,
+          73,
+          81
+        ],
+        "rule": 220
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 0,
+        "predictive_fiber_counts": [
+          90,
+          90,
+          90,
+          90,
+          90
+        ],
+        "rule": 221
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 1,
+        "predictive_fiber_counts": [
+          67,
+          87,
+          87,
+          87,
+          87
+        ],
+        "rule": 222
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 0,
+        "predictive_fiber_counts": [
+          90,
+          90,
+          90,
+          90,
+          90
+        ],
+        "rule": 223
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": null,
+        "predictive_fiber_counts": [
+          130,
+          190,
+          222,
+          238,
+          246
+        ],
+        "rule": 224
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 1,
+        "predictive_fiber_counts": [
+          240,
+          253,
+          253,
+          253,
+          253
+        ],
+        "rule": 225
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 3,
+        "predictive_fiber_counts": [
+          46,
+          190,
+          238,
+          254,
+          254
+        ],
+        "rule": 226
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 1,
+        "predictive_fiber_counts": [
+          90,
+          255,
+          255,
+          255,
+          255
+        ],
+        "rule": 227
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": null,
+        "predictive_fiber_counts": [
+          99,
+          171,
+          187,
+          195,
+          203
+        ],
+        "rule": 228
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 2,
+        "predictive_fiber_counts": [
+          148,
+          248,
+          256,
+          256,
+          256
+        ],
+        "rule": 229
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 3,
+        "predictive_fiber_counts": [
+          131,
+          223,
+          247,
+          255,
+          255
+        ],
+        "rule": 230
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 1,
+        "predictive_fiber_counts": [
+          136,
+          256,
+          256,
+          256,
+          256
+        ],
+        "rule": 231
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 0,
+        "predictive_fiber_counts": [
+          66,
+          66,
+          66,
+          66,
+          66
+        ],
+        "rule": 232
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 2,
+        "predictive_fiber_counts": [
+          120,
+          209,
+          225,
+          225,
+          225
+        ],
+        "rule": 233
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": null,
+        "predictive_fiber_counts": [
+          130,
+          190,
+          222,
+          238,
+          246
+        ],
+        "rule": 234
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 1,
+        "predictive_fiber_counts": [
+          130,
+          255,
+          255,
+          255,
+          255
+        ],
+        "rule": 235
+      },
+      {
+        "distinct_correction_maps_through_4": 2,
+        "first_closed_index_through_3": 0,
+        "predictive_fiber_counts": [
+          47,
+          47,
+          47,
+          47,
+          47
+        ],
+        "rule": 236
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 1,
+        "predictive_fiber_counts": [
+          104,
+          148,
+          148,
+          148,
+          148
+        ],
+        "rule": 237
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": null,
+        "predictive_fiber_counts": [
+          47,
+          131,
+          191,
+          223,
+          239
+        ],
+        "rule": 238
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 1,
+        "predictive_fiber_counts": [
+          148,
+          256,
+          256,
+          256,
+          256
+        ],
+        "rule": 239
+      },
+      {
+        "distinct_correction_maps_through_4": 2,
+        "first_closed_index_through_3": 0,
+        "predictive_fiber_counts": [
+          128,
+          128,
+          128,
+          128,
+          128
+        ],
+        "rule": 240
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 1,
+        "predictive_fiber_counts": [
+          156,
+          233,
+          233,
+          233,
+          233
+        ],
+        "rule": 241
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 1,
+        "predictive_fiber_counts": [
+          154,
+          254,
+          254,
+          254,
+          254
+        ],
+        "rule": 242
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 1,
+        "predictive_fiber_counts": [
+          90,
+          255,
+          255,
+          255,
+          255
+        ],
+        "rule": 243
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 1,
+        "predictive_fiber_counts": [
+          131,
+          233,
+          233,
+          233,
+          233
+        ],
+        "rule": 244
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 1,
+        "predictive_fiber_counts": [
+          168,
+          254,
+          254,
+          254,
+          254
+        ],
+        "rule": 245
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 1,
+        "predictive_fiber_counts": [
+          147,
+          255,
+          255,
+          255,
+          255
+        ],
+        "rule": 246
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 1,
+        "predictive_fiber_counts": [
+          148,
+          256,
+          256,
+          256,
+          256
+        ],
+        "rule": 247
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": null,
+        "predictive_fiber_counts": [
+          130,
+          190,
+          222,
+          238,
+          246
+        ],
+        "rule": 248
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 1,
+        "predictive_fiber_counts": [
+          130,
+          255,
+          255,
+          255,
+          255
+        ],
+        "rule": 249
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 1,
+        "predictive_fiber_counts": [
+          150,
+          254,
+          254,
+          254,
+          254
+        ],
+        "rule": 250
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 1,
+        "predictive_fiber_counts": [
+          90,
+          255,
+          255,
+          255,
+          255
+        ],
+        "rule": 251
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": null,
+        "predictive_fiber_counts": [
+          47,
+          131,
+          191,
+          223,
+          239
+        ],
+        "rule": 252
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 1,
+        "predictive_fiber_counts": [
+          148,
+          256,
+          256,
+          256,
+          256
+        ],
+        "rule": 253
+      },
+      {
+        "distinct_correction_maps_through_4": 5,
+        "first_closed_index_through_3": 1,
+        "predictive_fiber_counts": [
+          131,
+          255,
+          255,
+          255,
+          255
+        ],
+        "rule": 254
+      },
+      {
+        "distinct_correction_maps_through_4": 3,
+        "first_closed_index_through_3": 0,
+        "predictive_fiber_counts": [
+          256,
+          256,
+          256,
+          256,
+          256
+        ],
+        "rule": 255
+      }
+    ],
+    "rules": 256,
+    "state_checks": 65536,
+    "width": 8
+  },
+  "failures": 0,
+  "local_windows": {
+    "coordinate_bit_checks": 2621440,
+    "max_correction_index": 4,
+    "rules": 256,
+    "transport_bit_checks": 2097152,
+    "window_bits": 11,
+    "windows": 524288
+  },
+  "protocol": "deductive audit; no preregistered empirical prediction"
+}
