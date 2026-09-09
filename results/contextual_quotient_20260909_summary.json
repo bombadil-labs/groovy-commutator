@@ -1,0 +1,27 @@
+{
+  "ok": true,
+  "experiment": "contextual-quotient",
+  "ring_width": 12,
+  "block_size": 3,
+  "cadence": 3,
+  "target_cases": 32512,
+  "closed_targets": 1656,
+  "nonclosed_targets": 30856,
+  "closed_fine_rules": 141,
+  "canonical_failures": 4,
+  "strict_negative_margin_cases": 0,
+  "cost_aware_failures": 2,
+  "paths_differ": 1682,
+  "minimum_positive_canonical_safety_margin": 0.0010322449040430074,
+  "canonical_failure_cases": [
+    {"rule": 24, "target": "01000010", "quotient": "01230243", "margin": -5.473945327271462e-16},
+    {"rule": 24, "target": "01000110", "quotient": "01230453", "margin": 0.0},
+    {"rule": 231, "target": "01000010", "quotient": "01230243", "margin": -5.473945327271462e-16},
+    {"rule": 231, "target": "01100010", "quotient": "01230453", "margin": 0.0}
+  ],
+  "canonical_failure_margins_are_zero_within_tolerance": 1e-10,
+  "cost_aware_prediction_pass": false,
+  "interpretation": "The future-context quotient is the canonical minimum sufficient uniform local encoder. Canonical greedy never encounters a strictly better unsafe edit in the exact block-3 domain; its four failures are zero-margin tie-sensitive departures from quotient compatibility. The frozen cost-aware tie heuristic repairs the sentinel family but introduces two failures elsewhere.",
+  "ci_run": 34322446640,
+  "publication_note": "Compact exact summary from the fresh Research029 CI aggregate. Large shard outputs remain retained as workflow artifacts."
+}
