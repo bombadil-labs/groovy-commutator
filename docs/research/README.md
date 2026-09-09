@@ -1,9 +1,18 @@
 # Writing research, then explaining it
 
-Research is the public working record. The main site is an accessible route
-into the ideas. Keep a finding's full methods and qualifications in a research
-note, then give selected insights their own explanation in the main pages.
-Both remain available and link to each other.
+Research is the public working scientific record. It now has three layers:
+
+1. **Program** — a living synthesis of what the project currently thinks, with
+   exact results and open proof boundaries stated together.
+2. **Notes and checkpoints** — the chronological lab record: protocols,
+   experiments, corrections, failed predictions, and bounded claims.
+3. **Knowledge** — compact reusable findings and relationships extracted from
+   the record without erasing their evidence trail.
+
+The main React pages remain an accessible route into the original calculus and
+instruments. Promotion to those pages is still useful when an idea deserves a
+newcomer-facing explanation, but Research is no longer only a staging area for
+main-site content. Some mature technical ideas belong in the Program itself.
 
 The [knowledge base](../knowledge/README.md) keeps the current account of
 individual findings, questions, theories, and experiments, with typed
@@ -11,7 +20,19 @@ relationships and dependency paths. After a substantial research checkpoint,
 update the relevant knowledge entries and their relationships. Cite the note
 from each entry; the site generates links back in both directions.
 
-## Add a research note
+## Update the living Program
+
+The current Program metadata lives in `site/content/research-program.json`; its
+Markdown source is named there. The public route is
+`/groovy-commutator/research/program.html`.
+
+Update the Program when multiple notes change the project's working theory, not
+after every experiment. Treat it as a compression layer rather than a new
+research result: preserve uncertainty, link every major claim to supporting
+records, and keep failed predictions in the chronological notes instead of
+rewriting history. The `supports` list must name registered research records.
+
+## Add a research note or checkpoint
 
 1. Write `docs/research/YYYY-MM-DD-short-name.md`. Start with a single `#`
    title, then use `##` sections. Lead with the question and a plain-language
@@ -20,9 +41,13 @@ from each entry; the site generates links back in both directions.
    reproducible scripts and saved results; include seeds, sizes, parameters,
    and uncertainty where relevant. Distinguish measured results, exact claims,
    and interpretation. Preserve negative results and failed conjectures.
-3. Add an entry to `site/content/research.json` using the next unused note
-   number. The catalog title, summary, and takeaway are the accessible entrance
-   to the longer note. Choose a stable slug; its public path is
+3. Add an entry to the research catalog. `site/content/research.json` is the
+   original catalog; larger research waves may be kept as JSON array shards
+   under `site/content/research/`. Ordinary notes use the next unused note
+   number. A deliberately unnumbered research checkpoint may instead use
+   `"recordType": "checkpoint"` plus a short `label`. The catalog title,
+   summary, and takeaway are the accessible entrance to the longer record.
+   Choose a stable slug; its public path is
    `/groovy-commutator/research/<slug>.html`.
 4. Validate and build from the repository root:
 
@@ -33,7 +58,7 @@ from each entry; the site generates links back in both directions.
    ```
 
 No page component or route list needs editing. Vite generates the index and
-all registered notes, renders equations at build time, and bundles local
+all registered records, renders equations at build time, and bundles local
 figures and math fonts. The generated `site/research/` and repo-root `public/`
 directories are ignored by git. The existing Pages workflow deploys from
 `main`; changes under `site/`, `docs/research/`, or `results/` trigger it.
@@ -58,10 +83,12 @@ Example catalog entry (replace every example value with the actual note):
 }
 ```
 
-The index orders notes by most recent update, then note number. Keep the
-original publication date and update `updated` when the substance changes.
-Use existing topic names when continuing a thread. `kind` describes the
-document (for example Experiment, Correction, or Research plan).
+Catalog identities are validated across the original file and every shard. The
+index orders records by most recent update, then note number; unnumbered
+checkpoints follow numbered notes from the same update date. Keep the original
+publication date and update `updated` when the substance changes. Use existing
+topic names when continuing a thread. `kind` describes the document (for
+example Experiment, Correction, or Research plan).
 
 ## Evidence and editorial readiness are separate
 
@@ -74,8 +101,8 @@ document (for example Experiment, Correction, or Research plan).
 | `superseded` | A retained record whose current account is another registered note; set `supersededBy` to that note's slug. |
 
 A note can contain claims with different strengths. Choose the label for its
-central result and qualify individual claims in the body. An exact result
-can remain specialist material; an open question can deserve an accessible
+central result and qualify individual claims in the body. An exact result can
+remain specialist material; an open question can deserve an accessible
 explanation. Promotion does not upgrade the evidence label.
 
 | Promotion stage | Fields | Effect |
@@ -124,6 +151,8 @@ larger editorial pass. Record what changed and why in Research.
   original datasets and archived conversation files instead of silently
   rewriting the evidence.
 
-`site/scripts/research.mjs` owns rendering and catalog validation.
-`site/src/styles/research.css` owns Research styling. All pages share the
-navigation entries in `site/src/data/navigation.js`.
+`site/scripts/research-program.mjs` owns the Program/records publishing model
+and reuses the Markdown primitives in `site/scripts/research.mjs`.
+`site/src/styles/research.css` owns the established Research styling;
+`site/src/styles/research-program.css` adds the Program layer. All pages share
+the navigation entries in `site/src/data/navigation.js`.
