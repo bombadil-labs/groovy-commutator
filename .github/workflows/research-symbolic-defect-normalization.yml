@@ -32,7 +32,7 @@ jobs:
           python-version: '3.12'
           cache: pip
       - name: Install research runtime
-        run: python -m pip install -e .
+        run: python -m pip install -e . pandas
       - name: Compile symbolic normalization instrument
         run: python -m py_compile scripts/experiment_symbolic_defect_normalization.py scripts/aggregate_symbolic_defect_normalization.py
       - name: Run frozen published controls
