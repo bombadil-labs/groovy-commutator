@@ -1,0 +1,31 @@
+name: Selector two-lift audit
+
+on:
+  pull_request:
+    paths:
+      - 'scripts/verify_selector_two_lift.mjs'
+      - 'results/selector_two_lift_20260909.json'
+      - '.github/workflows/research-selector-two-lift.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/verify_selector_two_lift.mjs'
+      - 'results/selector_two_lift_20260909.json'
+      - '.github/workflows/research-selector-two-lift.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  selector-audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Audit program inheritance and overlapping spatial evolution
+        run: node scripts/verify_selector_two_lift.mjs > /tmp/selector-two-lift.json
+      - name: Compare with the committed research result
+        run: diff -u results/selector_two_lift_20260909.json /tmp/selector-two-lift.json

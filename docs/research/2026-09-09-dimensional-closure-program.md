@@ -192,6 +192,29 @@ program data under one ambient selector law. Producing an inherited next
 program requires an explicit additional construction; the generic
 correction-stack law does not supply that interface.
 
+## A recursively closed routing control
+
+The [two-rail selector checkpoint](2026-09-09-selector-two-lift.md) freezes a
+different physical control. A lifted rule evaluates its inherited source
+program on the central slice, then uses that output to read one of the two
+neighbors in the new dimension. The same Rail constructor applies again,
+retaining every source instruction in a compact native grammar.
+
+Encode the source between a positive zero half-space and a negative one
+half-space. This complete encoding intertwines the dynamics if and only if
+the source preserves both uniform configurations: exactly 64 ECA rules.
+Every first descendant acquires that property, so all 256 descendants pass
+the second interface and the 64 successful original sources continue through
+every higher dimension. The proof accounts for every overlapping site and
+preserves matched source bit flips.
+
+This construction needs no source-dependent nonlocal preparation, but
+supplies infinite homogeneous backgrounds and a distinguished interface.
+Its program is static routing code in the law, not mutable program cells.
+It also does not realize the ternary L/R/C roles. It is an exact control for
+recursive syntax and spatial consistency, while the stronger active-program
+requirement remains open.
+
 ## Relation to the Class-IV hope
 
 The motivating conjecture was deliberately strong: perhaps Class IV, and only Class IV, supports recursive dimensional closure.
@@ -217,6 +240,8 @@ The discipline remains unchanged: fix the higher-dimensional architecture first,
 6. **Role-growth statistics are not Class-IV-exclusive.** Finite-map and intrinsic local censuses both rule out simple closure/growth statistics as the dimensional razor.
 7. **Correction tuples and observed futures have identical fibers.** The exact triangular coordinate change separates joint information growth from growth in the vocabulary of individual maps. An infinitely prepared correction stack has a bounded local spatial update.
 
+8. **A two-rail routing grammar closes recursively.** The fixed interface encoding is exact if and only if the source preserves both uniform states. All 256 ECA programs remain distinguishable through two lifts; 64 source dynamics embed through both and every subsequent lift. This retains program instructions as static routing code, not active lattice data.
+
 ## What remains open
 
 - A bounded local law exists for an infinitely prepared correction stack. A finite, locally prepared realization satisfying the intended program grammar remains open.
@@ -230,10 +255,13 @@ The immediate proof problem is constructive:
 
 > **Find a locally prepared higher-dimensional realization that preserves the spatial program grammar through a second lift.**
 
-The semantic operator and an infinite-stack local update are known. The next
-task must declare the inherited program, mutable state, decoder, preparation
-radius, and boundary budget, then verify both operational preservation and
-program inheritance at the first two dimensional interfaces. Merely adding
-arbitrarily prepared correction layers does not settle this target.
+The semantic operator, an infinite-stack local update, and an exact recursive
+routing control are known. The next task must declare inherited **mutable
+program cells**, state, decoder, preparation radius, and boundary budget.
+It should require a finite source-program edit to become an edit of those
+cells under the same interpreter, then verify operational preservation and
+program inheritance at the first two dimensional interfaces. The routing
+control supplies the baseline; changing the ambient law when the source
+program changes does not settle the stronger target.
 
 If that succeeds, dimensional projection stops being an analogy. It becomes an explicit commuting diagram implemented in space.

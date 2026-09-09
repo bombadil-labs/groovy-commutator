@@ -1,0 +1,27 @@
+[
+  {
+    "date": "2026-09-09",
+    "evidence": "exact",
+    "kind": "Exact selector inheritance and spatial-interface theorem",
+    "label": "Selector program checkpoint",
+    "promotion": {
+      "stage": "research"
+    },
+    "recordType": "checkpoint",
+    "related": [
+      "correction-future-coordinates",
+      "shared-state-rule",
+      "dimensional-lift",
+      "column-compatibility",
+      "block-compatibility",
+      "ternary-commutator-lift"
+    ],
+    "slug": "selector-two-lift",
+    "source": "docs/research/2026-09-09-selector-two-lift.md",
+    "summary": "One routing constructor retains every ECA program and closes the full spatial encoding exactly for sources preserving both uniform states. Every first descendant passes the second interface; active mutable program data remain open.",
+    "takeaway": "Recursive routing and exact source dynamics can coexist under a simple boundary criterion. This is a control for the stronger active-program target, not its resolution.",
+    "title": "A two-rail grammar closes recursively on exactly 64 ECA sources",
+    "topic": "Algebra and closure",
+    "updated": "2026-09-09"
+  }
+]
