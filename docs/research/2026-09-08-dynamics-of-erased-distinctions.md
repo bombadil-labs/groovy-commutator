@@ -127,6 +127,28 @@ The extremes both have zero repertoire: identity forgets nothing and therefore l
 
 This adds a second design pressure to the Program. A representation can be good because it is a compact sufficient state for prediction, or because it preserves a rich structured family of still-distinguishable continuations. Useful representations may need to negotiate between those objectives rather than maximizing one scalar notion of compression.
 
+## Constructive repair meets predictive synergy
+
+[Research027](2026-09-08-representation-design.md) turns closure failure into a constructive problem. With future semantics fixed, let `Z` refine present target `T` and define
+
+\[
+W_T(Z)=H(C_\infty^T\mid Z(S)).
+\]
+
+A one-step refinement gain is the unresolved future information removed per added present bit. On the complete two-cell local partition lattice, greedily taking the best such split finds the globally minimum-information exact repair in all 1,590 nonclosed cases tested. Closure failure therefore supplies a real local representation gradient.
+
+[Research028](2026-09-08-block3-representation-design.md) finds the first exact boundary of that result. On the much larger block-3 repair intervals, greedy remains globally optimal in 30,852 of 30,856 nonclosed cases—**99.987%**—but fails exactly four times. All four failures belong to the Rule-24/231 conjugacy family.
+
+The first counterexample reveals why. An optimal path first adds a distinction with essentially zero immediate predictive gain. Once that distinction is present, the predictive gain of another fixed split increases by a factor of about `13.26`. In information-theoretic form, for a refinement `Z'` of `Z`,
+
+\[
+W_T(Z)-W_T(Z')=I(C_\infty^T;Z'\mid Z).
+\]
+
+So the value of a missing distinction can depend strongly on which other distinctions are already represented. The cheapest sufficient representation may require crossing a **zero-gain bridge** that a purely myopic gradient will never choose.
+
+Research028 explicitly tests local diminishing returns and finds violations in about 79% of comparable same-split cases, even though greedy global failure is extremely rare. Generic synergy is therefore common but usually benign. The sharper theoretical object is **fatal predictive synergy**: conditional complementarity strong enough to make a locally inferior representation path globally cheaper. An independent implementation reproduces the first counterexample, and a frozen `n=15` test preserves the same greedy failure and `13.26x` gain amplification.
+
 ## Hidden modes have dynamics
 
 The discarded distinctions are not abstract bookkeeping. They can propagate, decay, orbit, collide, or change shape while remaining invisible.
@@ -171,6 +193,8 @@ The program should distinguish its stable results from its motivating language. 
 8. **Stripe diode.** The reported period-2 stripe phase is an exact phase with directional selector behavior.
 9. **Bounded scattering laws.** The single-pulse all-displacement law and the 1,600-case small-shape census are exact within their declared architectures.
 10. **Possibility frontier.** In the frozen static observer family at `n=12`, 222 of 247 rules with any closure breaker separate the least-forgetting closure breaker from the maximum-future-repertoire observer; all six frozen observer pairs preserve that ordering on the fresh `n=18` validation.
+11. **Constructive local repair.** On the complete two-cell partition lattice, greedy fixed-target Shannon repair reaches the globally minimum-information exact closure repair in all 1,590 nonclosed target cases, while bulk-entropy and worst-case-tail repair already select different first edits in 326 cases.
+12. **Predictive-synergy obstruction.** On the complete block-3 target-refinement intervals, greedy remains globally optimal in 30,852 of 30,856 nonclosed cases but has four exact one-bit-regret failures in the Rule-24/231 conjugacy family. The first counterexample independently audits and persists at `n=15`; a zero-immediate-gain distinction amplifies a later split's predictive gain by about `13.26x`.
 
 ## What remains open
 
@@ -180,31 +204,27 @@ Several tempting generalizations are not yet earned:
 - The Rule-106 2-adic lifetime recurrence is confirmed on a fresh finite range, not proved for all ring sizes or the infinite lattice.
 - No general nonlinear local criterion yet tells us whether an arbitrary hidden distinction belongs to `R_infinity`.
 - The static block-observer searches do not establish an optimal representation family; good effective variables may need to be relational, dynamical, stateful, or adaptive.
+- The near-perfect greedy repair result has no general theorem behind it. Block-3 gives exact counterexamples, and the project does not yet know what separates benign predictive synergy from synergy that makes a local repair gradient globally wrong.
+- The Rule-24 zero-gain-bridge mechanism is confirmed at `n=12` and `n=15`, not proved for all compatible ring widths.
 - The project has not established that the four Wolfram classes are the right organizing taxonomy for these closure profiles.
 
-## The next theoretical target
+## The next theoretical targets
 
-The two strongest lines now point to the same problem:
+The current Program has two complementary proof problems.
+
+The first remains physical **safe forgetting**:
 
 > **Find a local criterion for forward invariance of observational indistinguishability.**
 
-In a linear system this resembles an unobservable invariant subspace. In the nonlinear systems studied here, the corresponding object is state- or trajectory-relative: a hidden mode can be safe in one context and latent in another, and a selector can dynamically create walls that block one direction of causal influence.
+In a linear system this resembles an unobservable invariant subspace. In the nonlinear systems studied here, the corresponding object is state- or trajectory-relative: a hidden mode can be safe in one context and latent in another, and a selector can dynamically create walls that block one direction of causal influence. Rule 106 and selector shielding are the first worked examples.
 
-A useful future theory should therefore explain when
+The second is now constructive **representation geometry**:
 
-\[
-(s,s')\in R_0
-\]
+> **Characterize fatal predictive synergy: when must a globally cheapest sufficient representation include a distinction whose marginal predictive value is too small—or zero—for a greedy repair rule to select?**
 
-implies
+Research027 shows that the local closure gradient can be extraordinarily effective. Research028 proves it is not universally sufficient and supplies a minimal finite counterexample. The next useful theory should explain why 79% of tested local gain comparisons can violate diminishing returns while only four of 30,856 nonclosed block-3 targets actually defeat greedy global repair.
 
-\[
-F^t(s,s')\in R_0\quad\text{for every }t\ge0
-\]
-
-without requiring exhaustive future simulation. Rule 106 and selector shielding are the first two worked examples against which such a criterion should be tested.
-
-Research026 adds a dual constructive question: once a hidden distinction is classified as latent or shielded, can we deliberately add or remove macro variables to move a representation along the closure/possibility Pareto frontier? That would replace blind observer search with controlled representation design.
+That shifts the representation-design problem from blind observer search toward a higher-order calculus: marginal relevance describes first-order repair, while conditional complementarity describes interactions among distinctions. A successful theory should say when those interaction terms can safely be ignored and when they must be represented explicitly.
 
 ## How to read the record
 
