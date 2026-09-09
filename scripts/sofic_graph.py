@@ -159,6 +159,7 @@ def compress_block_language(
     max_states=200_000,
     max_edges=2_000_000,
     max_pretrim_edges=5_000_000,
+    max_image_pair_states=None,  # shared limit bundle compatibility; enforced only by image_compressed
 ):
     graph = trim_biinfinite(graph)
     if graph.n_states == 0:
