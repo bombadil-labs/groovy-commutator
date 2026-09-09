@@ -2,25 +2,26 @@
   {
     "slug": "block3-representation-design",
     "number": "028",
-    "title": "Predictive synergy breaks greedy representation repair",
-    "date": "2026-09-09",
-    "updated": "2026-09-09",
-    "kind": "Exact block-3 partition-lattice repair census",
+    "title": "Predictive synergy breaks greedy repair",
+    "date": "2026-09-08",
+    "updated": "2026-09-08",
+    "kind": "Exact block-3 representation-design census with independent audit",
     "evidence": "exact",
     "topic": "Observation and memory",
-    "summary": "An exact block-3 repair census finds that greedy minimum-information closure repair remains globally optimal in 30,852 of 30,856 nonclosed cases, but fails exactly four times in the Rule-24/231 conjugacy family because a zero-immediate-gain distinction unlocks a later 13.2613× predictive gain.",
-    "takeaway": "The value of representing a distinction can depend on representational context: predictive synergy is common, but only a rare zero-gain bridge creates a fatal greedy trap in this complete block-3 domain.",
+    "summary": "Across 30,856 nonclosed block-3 target cases, greedy fixed-target Shannon repair is globally optimal in 30,852 but fails exactly four times. The first failure requires crossing a zero-immediate-gain distinction that amplifies a later split's predictive value by 13.26x.",
+    "takeaway": "Closure defects provide an exceptionally strong local repair gradient, but the cheapest sufficient representation can require synergistic bundles of distinctions whose components are not individually predictive.",
     "source": "docs/research/2026-09-08-block3-representation-design.md",
     "promotion": {
       "stage": "candidate",
-      "idea": "Predictive synergy and greedy representation repair",
+      "idea": "Predictive synergy is the first obstruction to greedy representation repair",
       "destination": "Concepts"
     },
     "related": [
       "representation-design",
       "possibility-frontier",
       "fiber-visibility",
-      "history-lift-closure"
+      "history-lift-closure",
+      "observer-search"
     ]
   },
   {
@@ -29,21 +30,20 @@
     "title": "The future-context quotient is the canonical repair target",
     "date": "2026-09-09",
     "updated": "2026-09-09",
-    "kind": "Exact contextual quotient theorem and greedy-safety census",
+    "kind": "Universal quotient theorem with exact block-3 safety census",
     "evidence": "exact",
     "topic": "Observation and memory",
-    "summary": "The future-context quotient is the unique coarsest uniform local representation sufficient for the complete future target. Across 30,856 nonclosed block-3 targets, every strict greedy failure occurs at an exact zero-margin tie between quotient-safe and quotient-unsafe edits; no unsafe edit ever has strictly greater immediate predictive gain than every safe edit.",
-    "takeaway": "Fatal predictive synergy is a quotient-boundary phenomenon in this exact domain: greedy becomes globally suboptimal only when an immediate-gain tie lets it split a distinction the canonical sufficient quotient says should remain merged.",
+    "summary": "Context substitution induces a unique coarsest sufficient uniform local quotient for any deterministic future label. In the full block-3 ECA census, canonical greedy never encounters a strictly better unsafe edit: all four known failures lie exactly on a zero safety-margin boundary.",
+    "takeaway": "Greedy regret has a canonical structural certificate: the first refinement that splits a distinction the future-context quotient still merges. Generic synergy is common; fatal synergy requires leaving the quotient-compatible region.",
     "source": "docs/research/2026-09-09-contextual-quotient.md",
     "promotion": {
       "stage": "candidate",
-      "idea": "The future-context quotient is the canonical local predictive representation",
+      "idea": "Future-context equivalence gives the canonical local repair target",
       "destination": "Concepts"
     },
     "related": [
       "block3-representation-design",
       "representation-design",
-      "history-lift-closure",
       "fiber-visibility",
       "observer-search",
       "possibility-frontier"
