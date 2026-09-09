@@ -1,0 +1,39 @@
+name: Promote Research034 audit
+
+on:
+  push:
+    branches: ['research/window3-reachable-language-20260909']
+    paths:
+      - '.github/workflows/promote-window3-audit.yml'
+  workflow_dispatch:
+
+permissions:
+  actions: read
+  contents: write
+
+jobs:
+  promote:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: research/window3-reachable-language-20260909
+      - name: Download green audit aggregate
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p /tmp/r034-audit
+          gh run download 34384584689 \
+            --repo bombadil-labs/groovy-commutator \
+            --name window3-reachable-language-audit-publication \
+            --dir /tmp/r034-audit
+      - name: Promote exact audit artifact
+        run: |
+          cp /tmp/r034-audit/window3_reachable_language_20260909_audit.json results/window3_reachable_language_20260909_audit.json
+      - name: Commit publication artifact
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add results/window3_reachable_language_20260909_audit.json
+          git commit -m 'Research034: promote independent width-3 audit'
+          git push origin HEAD:research/window3-reachable-language-20260909
