@@ -30,26 +30,29 @@ jobs:
         run: |
           python - <<'PY'
           import json, pathlib
-          p=pathlib.Path('artifact/finite-horizon-quotients-summary.json')
-          x=json.loads(p.read_text())
+          root=pathlib.Path('artifact')
+          x=json.loads((root/'finite-horizon-quotients-summary.json').read_text())
+          audit=json.loads((root/'finite-horizon-quotients-audit.json').read_text())
+          n15=json.loads((root/'finite-horizon-quotients-n15.json').read_text())
           lm=x['long_memory_hstar_ge_10']
           lines=[
-            '## Research030 green aggregate',
-            '',
-            'Extracted from Actions run `34327714933` publication artifact.',
-            '',
+            '## Research030 green aggregate + audit', '',
+            'Extracted from Actions run `34327714933` publication artifact.', '',
             f"- nonclosed targets: **{x['nonclosed_targets']}**",
             f"- quotient discovered before full predictive closure: **{x['early_quotient_count']}/{x['nonclosed_targets']} = {x['early_quotient_fraction']:.6%}**",
             f"- final local quotient already reached by `h*/2`: **{x['quotient_by_half_hstar_count']}/{x['nonclosed_targets']} = {x['quotient_by_half_hstar_fraction']:.6%}**",
             f"- at least half of final representation information certified before `h*/2`: **{x['half_info_before_half_hstar_count']}/{x['nonclosed_targets']} = {x['half_info_before_half_hstar_fraction']:.6%}**",
-            f"- median `d_Q/h*`: **{x['median_dq_over_hstar']:.6g}**",
-            f"- mean `d_Q/h*`: **{x['mean_dq_over_hstar']:.6g}**",
-            f"- maximum `d_Q`: **{x['max_quotient_discovery_time']}**",
-            f"- maximum `h*`: **{x['max_hstar']}**",
+            f"- median `d_Q/h*`: **{x['median_dq_over_hstar']:.6g}**; mean: **{x['mean_dq_over_hstar']:.6g}**",
+            f"- maximum `d_Q`: **{x['max_quotient_discovery_time']}**; maximum `h*`: **{x['max_hstar']}**",
             f"- long-memory (`h*>=10`) cases: **{lm['cases']}**; all early: **{lm['all_early']}**; all `d_Q=1`: **{lm['all_dq_one']}**; median `d_Q/h*`: **{lm['median_dq_over_hstar']:.6g}**",
-            '',
-            'Selected max-memory and mechanism cases are preserved in the JSON artifact.'
+            f"- independent explicit-context audit: **{'PASS' if audit['ok'] else 'FAIL'}** ({len(audit['selected_checks'])} selected cases)",
+            f"- frozen `n=15` primary long-memory check: **{'PASS' if n15['primary_long_memory_pass'] else 'FAIL'}**", '',
+            '### Frozen n=15 cases', '',
+            '| Rule | Target | h* | d_Q | d_Q/h* |', '|---:|---|---:|---:|---:|'
           ]
+          for r in n15['rows']:
+            ratio='—' if r['dq_over_hstar'] is None else f"{r['dq_over_hstar']:.6g}"
+            lines.append(f"| {r['rule']} | `{r['target']}` | {r['hstar']} | {r['quotient_discovery_time']} | {ratio} |")
           pathlib.Path('/tmp/summary.md').write_text('\n'.join(lines)+'\n')
           print('\n'.join(lines))
           PY
