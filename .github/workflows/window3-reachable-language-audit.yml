@@ -1,0 +1,76 @@
+name: Research034 independent width-3 audit
+
+on:
+  push:
+    branches: ['research/window3-reachable-language-20260909']
+    paths:
+      - 'scripts/audit_window3_reachable_language.py'
+      - 'docs/research/protocols/window3-reachable-language-audit-20260909.md'
+      - '.github/workflows/window3-reachable-language-audit.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  audit-case:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    strategy:
+      fail-fast: false
+      matrix:
+        case: [0,1,2,3,4,5,6,7,8,9,10,11,12]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+      - run: python -m pip install -e . pandas
+      - name: Reconstruct frozen case independently
+        env:
+          CASE: ${{ matrix.case }}
+        run: |
+          mkdir -p artifacts
+          python scripts/audit_window3_reachable_language.py \
+            --case-index "$CASE" \
+            --output "artifacts/audit-${CASE}.json"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: window3-audit-${{ matrix.case }}
+          path: artifacts/*.json
+          if-no-files-found: error
+          retention-days: 30
+
+  aggregate-audit:
+    needs: audit-case
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: window3-audit-*
+          path: artifacts
+          merge-multiple: true
+      - name: Require all frozen cases to pass
+        run: |
+          python - <<'PY'
+          import json, glob
+          rows=[json.load(open(p)) for p in sorted(glob.glob('artifacts/*.json'))]
+          assert len(rows)==13, len(rows)
+          assert sorted(r['index'] for r in rows)==list(range(13))
+          assert all(r['passes'] for r in rows)
+          out={'ok':True,'method':'independent dense Boolean 64^3 window tensor + scalar edge reconstruction','cases':rows}
+          json.dump(out,open('window3_reachable_language_20260909_audit.json','w'),indent=2)
+          print(json.dumps({'cases':len(rows),'passed':sum(r['passes'] for r in rows)},indent=2))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: window3-reachable-language-audit-publication
+          path: window3_reachable_language_20260909_audit.json
+          retention-days: 90
+      - name: Surface audit result on PR 40
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh pr comment 40 --repo bombadil-labs/groovy-commutator --body '## Research034 independent audit\n\nAll **13/13** frozen width-3 cases reproduced exactly under the independent dense-tensor implementation, including direct fixed-point verification and the width-3 ⊆ edge hierarchy check.'
