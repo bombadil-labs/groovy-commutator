@@ -1,0 +1,96 @@
+name: Research033 reachable-context invariants
+
+on:
+  push:
+    branches: ['research/reachable-context-invariants-20260909']
+    paths:
+      - 'scripts/experiment_reachable_context_invariants.py'
+      - 'scripts/aggregate_reachable_context_invariants.py'
+      - 'docs/research/protocols/reachable-context-invariants-20260909.md'
+      - '.github/workflows/reachable-context-invariants-bootstrap.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  shard:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: [0,1,2,3,4,5,6,7]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+      - run: python -m pip install -e . pandas
+      - name: Run exact rule shard
+        env:
+          SHARD: ${{ matrix.shard }}
+        run: |
+          start=$((SHARD * 32))
+          end=$((start + 32))
+          mkdir -p artifacts
+          python scripts/experiment_reachable_context_invariants.py \
+            --rule-start "$start" --rule-end "$end" \
+            --output "artifacts/reachable-context-${start}-${end}.json"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: reachable-context-shard-${{ matrix.shard }}
+          path: artifacts/*.json
+          if-no-files-found: error
+          retention-days: 30
+
+  aggregate:
+    needs: shard
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+      - run: python -m pip install -e . pandas
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: reachable-context-shard-*
+          path: artifacts/shards
+          merge-multiple: true
+      - name: Aggregate exact census
+        run: |
+          mkdir -p artifacts/final
+          python scripts/aggregate_reachable_context_invariants.py \
+            --input-dir artifacts/shards \
+            --output artifacts/final/reachable-context-invariants-summary.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: reachable-context-invariants-publication
+          path: artifacts/final/*.json
+          if-no-files-found: error
+          retention-days: 90
+      - name: Surface exact result on PR
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python - <<'PY' > /tmp/comment.md
+          import json
+          x=json.load(open('artifacts/final/reachable-context-invariants-summary.json'))
+          print('## Research033 exact reachable-context census')
+          print()
+          print(f"- Research032 residual: **{x['research032_noncongruence_residual']}**")
+          print(f"- new generated-symbol certificates: **{x['new_generated_symbol_certificates']}**")
+          print(f"- adjacency-aware edge certificates: **{x['generated_edge_certificates']}**")
+          print(f"- edge-only gain: **{x['edge_only_certificates']}**")
+          print(f"- remaining after edge closure: **{x['remaining_after_edge']}**")
+          print(f"- fraction of residual resolved by edge language: **{x['resolved_fraction_of_r032_residual_by_edge']:.6%}**")
+          print()
+          print('Frozen hypotheses:')
+          for k,v in x['primary_hypotheses'].items(): print(f'- `{k}`: **{v}**')
+          PY
+          gh pr comment 38 --repo bombadil-labs/groovy-commutator --body-file /tmp/comment.md || true
