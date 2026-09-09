@@ -61,6 +61,9 @@ def main():
     statuses = Counter()
     status_classes = {}
     horizon_counts = {}
+    censor_reasons = Counter()
+    censor_horizons = Counter()
+    censor_classes = Counter()
     sentinel = []
     for r in rows:
         for lang in r["languages"]:
@@ -72,6 +75,10 @@ def main():
                 horizon_counts.setdefault(s["status"], Counter())[str(s["horizon"])] += 1
                 if s["status"] == "finite-witness":
                     assert s["horizon"] >= 7, (r["rule"], lang["pair"], s)
+                elif s["status"] == "censored":
+                    censor_reasons[s.get("reason", "unknown")] += 1
+                    censor_horizons[str(s["horizon"])] += 1
+                    censor_classes[r["wclass"]] += 1
     assert sum(statuses.values()) == EXPECTED_SURVIVORS
     sentinel_questions = sum(len(l["statuses"]) for l in sentinel)
     assert sentinel_questions == 12
@@ -82,6 +89,13 @@ def main():
     unresolved = statuses.get("unresolved-through-12", 0)
     censored = statuses.get("censored", 0)
     assert resolved + unresolved + censored == EXPECTED_SURVIVORS
+
+    def hypothesis_status(success):
+        if success:
+            return "pass"
+        if censored:
+            return "inconclusive-due-to-censoring"
+        return "fail"
 
     out = {
         "ok": True,
@@ -100,9 +114,12 @@ def main():
         "censored": censored,
         "resolved_fraction": resolved / survivors,
         "primary_hypotheses": {
-            "exact_sofic_adds_information_beyond_width3": resolved > 0,
-            "finite_window_danger_sometimes_spurious": finite_closure > 0,
+            "exact_sofic_adds_information_beyond_width3": hypothesis_status(resolved > 0),
+            "finite_window_danger_sometimes_spurious": hypothesis_status(finite_closure > 0),
         },
+        "censoring_by_reason": dict(sorted(censor_reasons.items())),
+        "censoring_by_horizon": dict(sorted(censor_horizons.items(), key=lambda kv: int(kv[0]))),
+        "censoring_by_wolfram_class": dict(sorted(censor_classes.items())),
         "status_by_wolfram_class": {k: dict(sorted(v.items())) for k, v in sorted(status_classes.items())},
         "status_by_horizon": {k: dict(sorted(v.items(), key=lambda kv: int(kv[0]))) for k, v in sorted(horizon_counts.items())},
         "first_finite_witness": canonical(rows, "finite-witness"),
