@@ -1,0 +1,97 @@
+name: Research034 width-3 reachable paired language
+
+on:
+  push:
+    branches: ['research/window3-reachable-language-20260909']
+    paths:
+      - 'scripts/experiment_window3_reachable_language.py'
+      - 'scripts/aggregate_window3_reachable_language.py'
+      - 'docs/research/protocols/window3-reachable-language-20260909.md'
+      - '.github/workflows/window3-reachable-language-bootstrap.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  shard:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+      - run: python -m pip install -e . pandas
+      - name: Run exact rule shard
+        env:
+          SHARD: ${{ matrix.shard }}
+        run: |
+          start=$((SHARD * 16))
+          end=$((start + 16))
+          mkdir -p artifacts
+          python scripts/experiment_window3_reachable_language.py \
+            --rule-start "$start" --rule-end "$end" \
+            --output "artifacts/window3-${start}-${end}.json"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: window3-shard-${{ matrix.shard }}
+          path: artifacts/*.json
+          if-no-files-found: error
+          retention-days: 30
+
+  aggregate:
+    needs: shard
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+      - run: python -m pip install -e . pandas
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: window3-shard-*
+          path: artifacts/shards
+          merge-multiple: true
+      - name: Aggregate exact census
+        run: |
+          mkdir -p artifacts/final
+          python scripts/aggregate_window3_reachable_language.py \
+            --input-dir artifacts/shards \
+            --output artifacts/final/window3-reachable-language-summary.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: window3-reachable-language-publication
+          path: artifacts/final/*.json
+          if-no-files-found: error
+          retention-days: 90
+      - name: Surface exact result on PR 40
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python - <<'PY' > /tmp/comment.md
+          import json
+          x=json.load(open('artifacts/final/window3-reachable-language-summary.json'))
+          print('## Research034 exact width-3 reachable-language census')
+          print()
+          print(f"- Research033 edge survivors: **{x['research033_edge_survivors']}**")
+          print(f"- width-3 permanence certificates: **{x['width3_certificates']}**")
+          print(f"- remaining after width 3: **{x['remaining_after_width3']}**")
+          print(f"- fraction of edge residue resolved: **{x['resolved_fraction_of_r033_residual']:.6%}**")
+          print()
+          print('Frozen hypotheses:')
+          for k,v in x['primary_hypotheses'].items(): print(f'- `{k}`: **{v}**')
+          m=x['rule5_mechanism']
+          print()
+          print(f"Rule 5 mechanism: {m['width3_word_count']} words in {m['width3_rounds']} rounds; certified target ids {m['width3_certified_target_ids']}; unresolved {m['width3_unresolved_target_ids']}.")
+          PY
+          gh pr comment 40 --repo bombadil-labs/groovy-commutator --body-file /tmp/comment.md
