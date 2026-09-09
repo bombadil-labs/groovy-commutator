@@ -39,6 +39,38 @@ and, in the strongest form, the promotion should continue:
 
 The open technical problem is to define the middle `decode natively` arrow canonically enough that it is not merely another externally supplied interpreter.
 
+## Spatialization is a family, not a single map
+
+There is not one canonical way for a rule table to become space. The spatialization itself has degrees of freedom, and the earlier selector census already showed that changing the truth-table-entry-to-position assignment can change the induced dynamics.
+
+For the unrestricted ECA Moore-ring lift, let `sigma` denote a bijection from the eight truth-table addresses to the eight surrounding cells. There are
+
+`8! = 40,320`
+
+labeled assignments. The physical square has the eight-element dihedral symmetry group `D4`; consistently rotating or reflecting the entire construction is a coordinate equivalence rather than new evidence. Because `D4` acts freely on labeled bijections, the unrestricted assignment space has
+
+`40,320 / 8 = 5,040`
+
+geometric orbits before considering any additional decoder conventions.
+
+Even the much narrower convention "write rule entries 0 through 7 consecutively around the perimeter" is not unique. It has eight choices for where entry 0 first materializes and two traversal directions, for 16 labeled placements. Modulo actual square symmetries, two distinct geometric cases remain: entry 0 begins on an edge-center or on a corner. A one-step cyclic shift around the eight-site ring is not a symmetry of the square lattice because it exchanges those geometric roles.
+
+Other declared choices can enlarge the family further: which three-cell line supplies the input address, axis orientation, bit significance along that line, and in higher-dimensional layered constructions the transverse direction, axis ordering, and rule-entry ordering within storage layers. Some of these are related by full coordinate conjugacies; others are genuine interventions when the rest of the construction is held fixed.
+
+The closure question should therefore first be written as a relation
+
+`Q(R, sigma)`
+
+between a rule and an admissible spatialization, not immediately as a predicate of the rule alone. Natural rule-level summaries include:
+
+- **existential liftability:** does any preregistered `sigma` close?;
+- **universal liftability:** do all admissible `sigma` close?;
+- **liftability fraction:** what fraction of symmetry-inequivalent `sigma` close?;
+- **best closure depth:** what is the strongest recursive level attained over the frozen family?;
+- **geometry sensitivity:** how concentrated are successful lifts in particular spatialization orbits?
+
+For the Class-IV conjecture, the most naive hope is existential: perhaps Class-IV rules are exactly those for which at least one natural spatialization closes nontrivially. But this must be tested over a frozen, class-blind family rather than by selecting a favorable placement after seeing the labels.
+
 ## Why Class IV is a plausible target but not a premise
 
 Wolfram's original Class IV is the regime of long-lived localized structures and complex interactions, often described as lying between simple periodic behavior and disordered chaos. It is therefore tempting to imagine dimensional closure as another expression of the same balance: enough regularity to preserve a rule representation, enough nontriviality for that representation to remain dynamically active rather than collapse or randomize.
@@ -60,3 +92,5 @@ A negative result is also useful: if the natural dimensional closure properties 
 ## Guardrail
 
 The accompanying preregistered protocol forbids using Class-IV labels to choose the lift geometry, decoder convention, score, tolerance, orientation, or search objective. The dimensional object must be defined first; class labels are attached only after the structural table is frozen.
+
+When multiple spatializations are admissible, the full frozen family or a mathematically declared symmetry reduction must be evaluated. A post-hoc favorable `sigma` does not count as evidence for the Class-IV hypothesis.
