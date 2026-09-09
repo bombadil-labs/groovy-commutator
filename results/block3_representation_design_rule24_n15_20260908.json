@@ -1,0 +1,36 @@
+{
+  "ok": true,
+  "rule": 24,
+  "ring_width": 15,
+  "cadence": 3,
+  "target": "01000010",
+  "target_hstar": 1,
+  "target_W": 0.8609023444260844,
+  "interval_nodes": 406,
+  "greedy_path": ["01000010", "01200210", "01200213", "01200234", "01230245"],
+  "greedy_added_bits": 8.443609377704336,
+  "global_min_added_bits": 7.193609377704336,
+  "regret": 1.25,
+  "global_optima": ["01230243"],
+  "zero_bridge": {
+    "partition": "01000020",
+    "delta_W": -8.881784197001252e-16,
+    "delta_H": 1.2499999999999991,
+    "g": -7.105427357601007e-16
+  },
+  "same_split_before": {
+    "partition": "01020012",
+    "delta_W": 0.04135351663912612,
+    "delta_H": 3.4436093777043357,
+    "g": 0.012008771060640515
+  },
+  "same_split_after_bridge": {
+    "partition": "01020032",
+    "delta_W": 0.5484023444260853,
+    "delta_H": 3.4436093777043366,
+    "g": 0.15925219276516045
+  },
+  "gain_amplification": 13.261323074691573,
+  "old_global_still_optimal": true,
+  "old_greedy_still_endpoint": true
+}
