@@ -1,0 +1,26 @@
+.research-program-feature {
+  border: 1px solid var(--ink);
+  padding: 1.5rem 1.6rem;
+  margin: 0 0 2.75rem;
+  background: var(--bg-alt);
+}
+.research-program-feature .research-kicker { margin-bottom: .65rem; }
+.research-program-feature h2 {
+  font-size: clamp(1.55rem, 4vw, 2rem);
+  line-height: 1.25;
+  font-weight: 500;
+  margin: 0 0 .7rem;
+}
+.research-program-feature h2 a { color: var(--ink); text-decoration: none; }
+.research-program-feature h2 a:hover { text-decoration: underline; text-underline-offset: .2em; }
+.research-program-feature > p:not(.research-kicker) { max-width: 70ch; color: var(--ink-soft); }
+.research-program-feature .research-entry-foot {
+  font-family: 'IBM Plex Mono', monospace;
+  color: var(--ink-soft);
+}
+.research-status.program-living {
+  color: var(--accent-dark);
+  border-color: var(--accent);
+  background: var(--accent-soft);
+}
+.research-program-article .research-heading { max-width: 18ch; }
