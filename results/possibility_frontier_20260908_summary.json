@@ -1,0 +1,127 @@
+{
+  "ring_width": 12,
+  "controls": {
+    "block2_closed_fine_rules": 92,
+    "block2_canonical_factors": 202,
+    "block2_full_factors": 404,
+    "block3_closed_fine_rules": 141,
+    "block3_canonical_factors": 1656,
+    "block3_full_factors": 3312,
+    "derivative_closed_rules": 30
+  },
+  "primary": {
+    "rules_with_breaker": 247,
+    "rules_without_breaker": 9,
+    "optimizer_overlap_rules": 25,
+    "optimizer_nonoverlap_rules": 222,
+    "optimizer_nonoverlap_fraction": 0.8987854251012146,
+    "minimum_forgetting_distribution": {
+      "6.0": 236,
+      "7.132331253245202": 8,
+      "8.0": 3
+    },
+    "maximum_repertoire_kind_counts": {
+      "block3": 171,
+      "block2": 76
+    },
+    "interior_curve_kind_counts": {
+      "nonmonotone": 227,
+      "strictly_increasing": 20,
+      "nondecreasing": 9
+    },
+    "pareto_point_count": {
+      "minimum": 1,
+      "median": 4.0,
+      "maximum": 7
+    }
+  },
+  "by_wolfram_class": {
+    "I": {
+      "rules_with_breaker": 18,
+      "minimum_maximum_overlap_rules": 2,
+      "minimum_maximum_overlap_fraction": 0.1111111111111111,
+      "median_minimum_breaking_forgetting_bits": 6.0,
+      "median_maximum_future_repertoire_bits": 3.2887400195732868,
+      "mean_maximum_future_repertoire_bits": 2.923850581833026,
+      "median_forgetting_at_maximum_repertoire_bits": 7.132331253245203,
+      "median_maximum_possibility_efficiency": 0.47769735642038064,
+      "mean_maximum_possibility_efficiency": 0.4403515440821855,
+      "median_pareto_points": 3.0
+    },
+    "II": {
+      "rules_with_breaker": 189,
+      "minimum_maximum_overlap_rules": 23,
+      "minimum_maximum_overlap_fraction": 0.12169312169312169,
+      "median_minimum_breaking_forgetting_bits": 6.0,
+      "median_maximum_future_repertoire_bits": 5.443211725955198,
+      "mean_maximum_future_repertoire_bits": 5.233443344576939,
+      "median_forgetting_at_maximum_repertoire_bits": 8.0,
+      "median_maximum_possibility_efficiency": 0.7417503873730403,
+      "mean_maximum_possibility_efficiency": 0.7266114774982063,
+      "median_pareto_points": 4.0
+    },
+    "III": {
+      "rules_with_breaker": 26,
+      "minimum_maximum_overlap_rules": 0,
+      "minimum_maximum_overlap_fraction": 0.0,
+      "median_minimum_breaking_forgetting_bits": 6.0,
+      "median_maximum_future_repertoire_bits": 7.318967329122997,
+      "mean_maximum_future_repertoire_bits": 7.788732532249977,
+      "median_forgetting_at_maximum_repertoire_bits": 8.754887502163468,
+      "median_maximum_possibility_efficiency": 0.9398872580531511,
+      "mean_maximum_possibility_efficiency": 0.9121246599788709,
+      "median_pareto_points": 6.0
+    },
+    "IV": {
+      "rules_with_breaker": 14,
+      "minimum_maximum_overlap_rules": 0,
+      "minimum_maximum_overlap_fraction": 0.0,
+      "median_minimum_breaking_forgetting_bits": 6.0,
+      "median_maximum_future_repertoire_bits": 8.360612574594457,
+      "mean_maximum_future_repertoire_bits": 8.31455146601626,
+      "median_forgetting_at_maximum_repertoire_bits": 9.825742227201614,
+      "median_maximum_possibility_efficiency": 0.9670729266160922,
+      "mean_maximum_possibility_efficiency": 0.9720974191658721,
+      "median_pareto_points": 7.0
+    }
+  },
+  "derivative_vs_static": {
+    "I": {"rules": 24, "nondominated": 24, "beats_best_static_efficiency": 22},
+    "II": {"rules": 192, "nondominated": 168, "beats_best_static_efficiency": 130},
+    "III": {"rules": 26, "nondominated": 22, "beats_best_static_efficiency": 10},
+    "IV": {"rules": 14, "nondominated": 14, "beats_best_static_efficiency": 10}
+  },
+  "selected_examples": {
+    "30": {
+      "minimum_breaker": {"observer":"block2:3","forgotten_bits":6.0,"future_repertoire_bits":5.99951171875,"shielded_bits":0.00048828125,"possibility_efficiency":0.9999186197916666,"hstar":5},
+      "maximum_repertoire": {"observer":"block3:1","forgotten_bits":9.825742227201614,"future_repertoire_bits":9.546018980867677,"shielded_bits":0.27972324633393697,"possibility_efficiency":0.9715315912156183,"hstar":14},
+      "derivative": {"observer":"derivative","forgotten_bits":0.0314342987065821,"future_repertoire_bits":0.0302734375,"shielded_bits":0.0011608612065820978,"possibility_efficiency":0.963070236832132,"hstar":1}
+    },
+    "54": {
+      "minimum_breaker": {"observer":"block2:3","forgotten_bits":6.0,"future_repertoire_bits":5.735193695052512,"shielded_bits":0.2648063049474878,"possibility_efficiency":0.9558656158420854,"hstar":3},
+      "maximum_repertoire": {"observer":"block3:1","forgotten_bits":9.825742227201614,"future_repertoire_bits":7.918165732287255,"shielded_bits":1.907576494914359,"possibility_efficiency":0.8058592978723359,"hstar":7},
+      "derivative": {"observer":"derivative","forgotten_bits":3.612124219966951,"future_repertoire_bits":3.608217969966951,"shielded_bits":0.00390625,"possibility_efficiency":0.9989185726287022,"hstar":2}
+    },
+    "90": {
+      "minimum_breaker": {"observer":"block2:2","forgotten_bits":7.132331253245203,"future_repertoire_bits":3.988476286553711,"shielded_bits":3.1438549666914923,"possibility_efficiency":0.5592107468002077,"hstar":1},
+      "maximum_repertoire": {"observer":"block3:30","forgotten_bits":8.0,"future_repertoire_bits":7.021848332858651,"shielded_bits":0.9781516671413488,"possibility_efficiency":0.8777310416073314,"hstar":2},
+      "derivative": {"observer":"derivative","forgotten_bits":2.0,"future_repertoire_bits":0.0,"shielded_bits":2.0,"possibility_efficiency":0.0,"hstar":0}
+    },
+    "106": {
+      "minimum_breaker": {"observer":"block2:6","forgotten_bits":6.0,"future_repertoire_bits":5.802437559696553,"shielded_bits":0.1975624403034466,"possibility_efficiency":0.9670729266160922,"hstar":13},
+      "maximum_repertoire": {"observer":"block3:127","forgotten_bits":9.825742227201614,"future_repertoire_bits":8.904991454768838,"shielded_bits":0.9207507724327755,"possibility_efficiency":0.9062919878069092,"hstar":19},
+      "derivative": {"observer":"derivative","forgotten_bits":0.0314342987065821,"future_repertoire_bits":0.029969454956582098,"shielded_bits":0.00146484375,"possibility_efficiency":0.9533998272500581,"hstar":1}
+    },
+    "110": {
+      "minimum_breaker": {"observer":"block2:3","forgotten_bits":6.0,"future_repertoire_bits":5.9931640625,"shielded_bits":0.0068359375,"possibility_efficiency":0.9988606770833334,"hstar":4},
+      "maximum_repertoire": {"observer":"block3:64","forgotten_bits":9.825742227201614,"future_repertoire_bits":8.360612574594457,"shielded_bits":1.4651296526071569,"possibility_efficiency":0.8508886536275002,"hstar":9},
+      "derivative": {"observer":"derivative","forgotten_bits":2.469862387671345,"future_repertoire_bits":2.468885825171345,"shielded_bits":0.0009765625,"possibility_efficiency":0.999604608538162,"hstar":1}
+    },
+    "184": {
+      "minimum_breaker": {"observer":"block2:3","forgotten_bits":6.0,"future_repertoire_bits":3.963925903130164,"shielded_bits":2.036074096869836,"possibility_efficiency":0.6606543171883607,"hstar":3},
+      "maximum_repertoire": {"observer":"block2:4","forgotten_bits":7.132331253245203,"future_repertoire_bits":5.000555869758868,"shielded_bits":2.1317753834863353,"possibility_efficiency":0.7011109961393928,"hstar":3},
+      "derivative": {"observer":"derivative","forgotten_bits":3.866213647655284,"future_repertoire_bits":3.865237085155284,"shielded_bits":0.0009765625,"possibility_efficiency":0.9997474111394252,"hstar":5}
+    }
+  },
+  "publication_note": "Compact exact summary. scripts/experiment_possibility_frontier.py regenerates the full static/derivative atlases, Pareto table, rule summary, and repertoire curves."
+}

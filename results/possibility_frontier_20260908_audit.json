@@ -1,0 +1,8 @@
+{
+  "ok": true,
+  "selected_direct_future_partition_checks": 24,
+  "output_complement_relabel_checks": 134,
+  "selected_checks_pass": true,
+  "interpretation": "Selected V_infinity values independently reproduce as entropy of explicit finite observed-future words through h*, and every quotient-complement observer is exact bitwise relabeling.",
+  "publication_note": "Compact audit summary. scripts/audit_possibility_frontier.py regenerates all selected direct-partition records."
+}
