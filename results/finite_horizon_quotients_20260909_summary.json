@@ -1,0 +1,294 @@
+{
+  "ok": true,
+  "experiment": "finite-horizon-quotients",
+  "ring_width": 12,
+  "block_size": 3,
+  "cadence": 3,
+  "target_cases": 32512,
+  "closed_targets": 1656,
+  "nonclosed_targets": 30856,
+  "closed_fine_rules": 141,
+  "early_quotient_count": 23588,
+  "early_quotient_fraction": 0.7644542390458906,
+  "quotient_by_half_hstar_count": 23252,
+  "quotient_by_half_hstar_fraction": 0.7535649468498833,
+  "half_info_before_half_hstar_count": 18094,
+  "half_info_before_half_hstar_fraction": 0.5864013481980814,
+  "quotient_discovery_time_distribution": {
+    "1": 29480,
+    "2": 1376
+  },
+  "max_quotient_discovery_time": 2,
+  "median_dq_over_hstar": 0.3333333333333333,
+  "mean_dq_over_hstar": 0.4783294765873453,
+  "max_hstar": 23,
+  "change_chain_length_distribution": {
+    "2": 29480,
+    "3": 1376
+  },
+  "final_quotient_class_distribution": {
+    "3": 700,
+    "4": 888,
+    "5": 1428,
+    "6": 1962,
+    "7": 3830,
+    "8": 22048
+  },
+  "long_memory_hstar_ge_10": {
+    "cases": 672,
+    "all_early": true,
+    "all_dq_one": true,
+    "median_dq_over_hstar": 0.09090909090909091
+  },
+  "by_wolfram_class": {
+    "I": {
+      "nonclosed": 2254,
+      "early_count": 1584,
+      "early_fraction": 0.7027506654835848,
+      "median_dq_over_hstar": 0.5,
+      "half_info_before_half_hstar_count": 1168,
+      "half_info_before_half_hstar_fraction": 0.518189884649512
+    },
+    "II": {
+      "nonclosed": 23528,
+      "early_count": 16984,
+      "early_fraction": 0.7218633117987079,
+      "median_dq_over_hstar": 0.4,
+      "half_info_before_half_hstar_count": 12240,
+      "half_info_before_half_hstar_fraction": 0.5202312138728323
+    },
+    "III": {
+      "nonclosed": 3296,
+      "early_count": 3242,
+      "early_fraction": 0.9836165048543689,
+      "median_dq_over_hstar": 0.2,
+      "half_info_before_half_hstar_count": 2908,
+      "half_info_before_half_hstar_fraction": 0.8822815533980582
+    },
+    "IV": {
+      "nonclosed": 1778,
+      "early_count": 1778,
+      "early_fraction": 1.0,
+      "median_dq_over_hstar": 0.16666666666666666,
+      "half_info_before_half_hstar_count": 1778,
+      "half_info_before_half_hstar_fraction": 1.0
+    }
+  },
+  "fatal_synergy_cases": [
+    {
+      "rule": 24,
+      "target": "01000110",
+      "hstar": 1,
+      "dQ": 1,
+      "final_quotient": "01230453",
+      "bridge_1_6_birth": 1,
+      "change_chain": [
+        {
+          "h": 0,
+          "quotient": "01000110",
+          "classes": 2,
+          "local_entropy": 0.954434002924965,
+          "global_encoder_entropy": 3.81773601169986,
+          "rho": 0.0
+        },
+        {
+          "h": 1,
+          "quotient": "01230453",
+          "classes": 6,
+          "local_entropy": 2.5,
+          "global_encoder_entropy": 10.0,
+          "rho": 1.0
+        }
+      ]
+    },
+    {
+      "rule": 24,
+      "target": "01000010",
+      "hstar": 1,
+      "dQ": 1,
+      "final_quotient": "01230243",
+      "bridge_1_6_birth": 1,
+      "change_chain": [
+        {
+          "h": 0,
+          "quotient": "01000010",
+          "classes": 2,
+          "local_entropy": 0.8112781244591328,
+          "global_encoder_entropy": 3.2451124978365313,
+          "rho": 0.0
+        },
+        {
+          "h": 1,
+          "quotient": "01230243",
+          "classes": 5,
+          "local_entropy": 2.25,
+          "global_encoder_entropy": 9.0,
+          "rho": 1.0
+        }
+      ]
+    },
+    {
+      "rule": 231,
+      "target": "01100010",
+      "hstar": 1,
+      "dQ": 1,
+      "final_quotient": "01230453",
+      "bridge_1_6_birth": 1,
+      "change_chain": [
+        {
+          "h": 0,
+          "quotient": "01100010",
+          "classes": 2,
+          "local_entropy": 0.954434002924965,
+          "global_encoder_entropy": 3.81773601169986,
+          "rho": 0.0
+        },
+        {
+          "h": 1,
+          "quotient": "01230453",
+          "classes": 6,
+          "local_entropy": 2.5,
+          "global_encoder_entropy": 10.0,
+          "rho": 1.0
+        }
+      ]
+    },
+    {
+      "rule": 231,
+      "target": "01000010",
+      "hstar": 1,
+      "dQ": 1,
+      "final_quotient": "01230243",
+      "bridge_1_6_birth": 1,
+      "change_chain": [
+        {
+          "h": 0,
+          "quotient": "01000010",
+          "classes": 2,
+          "local_entropy": 0.8112781244591328,
+          "global_encoder_entropy": 3.2451124978365313,
+          "rho": 0.0
+        },
+        {
+          "h": 1,
+          "quotient": "01230243",
+          "classes": 5,
+          "local_entropy": 2.25,
+          "global_encoder_entropy": 9.0,
+          "rho": 1.0
+        }
+      ]
+    }
+  ],
+  "max_hstar_cases": [
+    {
+      "rule": 45,
+      "wclass": "III",
+      "target": "00010000",
+      "hstar": 23,
+      "dQ": 1,
+      "dq_over_hstar": 0.043478260869565216,
+      "change_chain": [
+        {
+          "h": 0,
+          "quotient": "00010000",
+          "classes": 2,
+          "local_entropy": 0.5435644431995964,
+          "global_encoder_entropy": 2.1742577727983856,
+          "rho": 0.0
+        },
+        {
+          "h": 1,
+          "quotient": "01234567",
+          "classes": 8,
+          "local_entropy": 3.0,
+          "global_encoder_entropy": 12.0,
+          "rho": 1.0
+        }
+      ]
+    },
+    {
+      "rule": 75,
+      "wclass": "III",
+      "target": "00001000",
+      "hstar": 23,
+      "dQ": 1,
+      "dq_over_hstar": 0.043478260869565216,
+      "change_chain": [
+        {
+          "h": 0,
+          "quotient": "00001000",
+          "classes": 2,
+          "local_entropy": 0.5435644431995964,
+          "global_encoder_entropy": 2.1742577727983856,
+          "rho": 0.0
+        },
+        {
+          "h": 1,
+          "quotient": "01234567",
+          "classes": 8,
+          "local_entropy": 3.0,
+          "global_encoder_entropy": 12.0,
+          "rho": 1.0
+        }
+      ]
+    },
+    {
+      "rule": 89,
+      "wclass": "III",
+      "target": "01000000",
+      "hstar": 23,
+      "dQ": 1,
+      "dq_over_hstar": 0.043478260869565216,
+      "change_chain": [
+        {
+          "h": 0,
+          "quotient": "01000000",
+          "classes": 2,
+          "local_entropy": 0.5435644431995964,
+          "global_encoder_entropy": 2.1742577727983856,
+          "rho": 0.0
+        },
+        {
+          "h": 1,
+          "quotient": "01234567",
+          "classes": 8,
+          "local_entropy": 3.0,
+          "global_encoder_entropy": 12.0,
+          "rho": 1.0
+        }
+      ]
+    },
+    {
+      "rule": 101,
+      "wclass": "III",
+      "target": "00000010",
+      "hstar": 23,
+      "dQ": 1,
+      "dq_over_hstar": 0.043478260869565216,
+      "change_chain": [
+        {
+          "h": 0,
+          "quotient": "00000010",
+          "classes": 2,
+          "local_entropy": 0.5435644431995964,
+          "global_encoder_entropy": 2.1742577727983856,
+          "rho": 0.0
+        },
+        {
+          "h": 1,
+          "quotient": "01234567",
+          "classes": 8,
+          "local_entropy": 3.0,
+          "global_encoder_entropy": 12.0,
+          "rho": 1.0
+        }
+      ]
+    }
+  ],
+  "source_hashes": {
+    "scripts/experiment_finite_horizon_quotients.py": "806547d6a0756d29f9dae310a25fe7f559472c0e74a277bf47cd45969999e761",
+    "docs/research/protocols/finite-horizon-quotients-20260909.md": "d7a449d2c850fa03aa8dc5def99f6674305ccce88c737d6e30aeeb673fa638d1",
+    "docs/research/protocols/finite-horizon-quotients-order-correction-20260909.md": "a8abb4af2c7bab792132839afc896c22f0c70a3b725f68287686724d2b62cfd6"
+  }
+}

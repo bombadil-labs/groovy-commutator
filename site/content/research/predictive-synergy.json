@@ -48,5 +48,55 @@
       "observer-search",
       "possibility-frontier"
     ]
+  },
+  {
+    "slug": "finite-horizon-quotients",
+    "number": "030",
+    "title": "The local variables arrive before the state does",
+    "date": "2026-09-09",
+    "updated": "2026-09-09",
+    "kind": "Exact finite-horizon quotient theorem and block-3 timing census",
+    "evidence": "exact",
+    "topic": "Observation and memory",
+    "summary": "Finite-horizon future-context quotients refine monotonically and provide one-sided permanent safety certificates. In the exact block-3 census, the final local quotient is discovered before global predictive closure in 23,588 of 30,856 nonclosed cases; every long-memory case with h* >= 10 has d_Q = 1.",
+    "takeaway": "Representation discovery and state resolution are different dynamical timescales: the local vocabulary of future-relevant distinctions can stabilize almost immediately while global predictive history remains long.",
+    "source": "docs/research/2026-09-09-finite-horizon-quotients.md",
+    "promotion": {
+      "stage": "candidate",
+      "idea": "Local predictive variables can stabilize before the global predictive state",
+      "destination": "Concepts"
+    },
+    "related": [
+      "contextual-quotient",
+      "block3-representation-design",
+      "representation-design",
+      "history-lift-closure",
+      "fiber-visibility"
+    ]
+  },
+  {
+    "slug": "causal-witness-horizon",
+    "number": "031",
+    "title": "The ring hid the third-step witness",
+    "date": "2026-09-09",
+    "updated": "2026-09-09",
+    "kind": "Exact local light-cone census with independent witness audit",
+    "evidence": "exact",
+    "topic": "Observation and memory",
+    "summary": "A wrap-free causal-cone search shows that the four-block ring used in Research030 suppresses real local predictive contexts: 54 rule/target quotients are already underestimated at horizon 2, and exactly four symmetry-related cases contain a local distinction whose first possible witness is horizon 3.",
+    "takeaway": "Predictive distinctions have their own causal witness horizon, and finite periodic topology can make that horizon look artificially short by removing admissible surrounding contexts.",
+    "source": "docs/research/2026-09-09-causal-witness-horizon.md",
+    "promotion": {
+      "stage": "candidate",
+      "idea": "Local predictive distinctions have a causal witness horizon",
+      "destination": "Concepts"
+    },
+    "related": [
+      "finite-horizon-quotients",
+      "contextual-quotient",
+      "fiber-visibility",
+      "selector-shielding",
+      "history-lift-closure"
+    ]
   }
 ]

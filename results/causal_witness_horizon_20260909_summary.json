@@ -1,0 +1,102 @@
+{
+  "ok": true,
+  "experiment": "causal-witness-horizon",
+  "rules": 256,
+  "targets": 32512,
+  "local_ring_mismatch_by_horizon": {
+    "0": 0,
+    "1": 0,
+    "2": 54,
+    "3": 58
+  },
+  "q1_to_q2_target_changes": 1394,
+  "q2_to_q3_target_changes": 4,
+  "h3_new_pair_target_events": 4,
+  "h3_target_cases": 4,
+  "h3_rules": 4,
+  "h3_events_by_class": {
+    "II": 4
+  },
+  "h3_target_cases_by_class": {
+    "II": 4
+  },
+  "ring_q2_vs_local_q3_target_mismatches": 58,
+  "first_h3_events": [
+    {
+      "rule": 35,
+      "wclass": "II",
+      "target": "00000001",
+      "pair": "2-6",
+      "local_chain": [
+        "00000001",
+        "01234325",
+        "01234526",
+        "01234567"
+      ],
+      "ring_chain": [
+        "00000001",
+        "01234325",
+        "01234526",
+        "01234526"
+      ]
+    },
+    {
+      "rule": 49,
+      "wclass": "II",
+      "target": "00000001",
+      "pair": "2-3",
+      "local_chain": [
+        "00000001",
+        "01223445",
+        "01223456",
+        "01234567"
+      ],
+      "ring_chain": [
+        "00000001",
+        "01223445",
+        "01223456",
+        "01223456"
+      ]
+    },
+    {
+      "rule": 59,
+      "wclass": "II",
+      "target": "01111111",
+      "pair": "1-5",
+      "local_chain": [
+        "01111111",
+        "01232145",
+        "01234156",
+        "01234567"
+      ],
+      "ring_chain": [
+        "01111111",
+        "01232145",
+        "01234156",
+        "01234156"
+      ]
+    },
+    {
+      "rule": 115,
+      "wclass": "II",
+      "target": "01111111",
+      "pair": "4-5",
+      "local_chain": [
+        "01111111",
+        "01123345",
+        "01234456",
+        "01234567"
+      ],
+      "ring_chain": [
+        "01111111",
+        "01123345",
+        "01234456",
+        "01234456"
+      ]
+    }
+  ],
+  "source_hashes": {
+    "scripts/experiment_causal_witness_horizon.py": "9c6e314b0a34f7bcb1e28a94e75b8f5be798ac492d90cbbb90aefd5dfc16013e",
+    "docs/research/protocols/causal-witness-horizon-20260909.md": "498d258caf04ee6a1ec69b4280427c099a01f9edd0f73bda06b67c0f237398af"
+  }
+}

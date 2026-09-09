@@ -1,0 +1,118 @@
+{
+  "ok": true,
+  "method": "explicit product-context enumeration, independent of tensor quotient helper",
+  "selected_checks": [
+    {
+      "rule": 24,
+      "target": "01000010",
+      "hstar": 1,
+      "dQ": 1,
+      "final_quotient": "01230243",
+      "change_chain": [
+        {
+          "h": 0,
+          "quotient": "01000010"
+        },
+        {
+          "h": 1,
+          "quotient": "01230243"
+        }
+      ],
+      "passes": true
+    },
+    {
+      "rule": 90,
+      "target": "00110011",
+      "hstar": 2,
+      "dQ": 2,
+      "final_quotient": "01234567",
+      "change_chain": [
+        {
+          "h": 0,
+          "quotient": "00110011"
+        },
+        {
+          "h": 1,
+          "quotient": "01231032"
+        },
+        {
+          "h": 2,
+          "quotient": "01234567"
+        }
+      ],
+      "passes": true
+    },
+    {
+      "rule": 101,
+      "target": "00000010",
+      "hstar": 23,
+      "dQ": 1,
+      "final_quotient": "01234567",
+      "change_chain": [
+        {
+          "h": 0,
+          "quotient": "00000010"
+        },
+        {
+          "h": 1,
+          "quotient": "01234567"
+        }
+      ],
+      "passes": true
+    },
+    {
+      "rule": 106,
+      "target": "00000001",
+      "hstar": 19,
+      "dQ": 1,
+      "final_quotient": "01234567",
+      "change_chain": [
+        {
+          "h": 0,
+          "quotient": "00000001"
+        },
+        {
+          "h": 1,
+          "quotient": "01234567"
+        }
+      ],
+      "passes": true
+    },
+    {
+      "rule": 110,
+      "target": "00000100",
+      "hstar": 13,
+      "dQ": 1,
+      "final_quotient": "01234567",
+      "change_chain": [
+        {
+          "h": 0,
+          "quotient": "00000100"
+        },
+        {
+          "h": 1,
+          "quotient": "01234567"
+        }
+      ],
+      "passes": true
+    },
+    {
+      "rule": 184,
+      "target": "00000001",
+      "hstar": 2,
+      "dQ": 1,
+      "final_quotient": "01232445",
+      "change_chain": [
+        {
+          "h": 0,
+          "quotient": "00000001"
+        },
+        {
+          "h": 1,
+          "quotient": "01232445"
+        }
+      ],
+      "passes": true
+    }
+  ]
+}
