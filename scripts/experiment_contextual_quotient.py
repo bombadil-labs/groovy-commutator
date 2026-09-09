@@ -152,7 +152,9 @@ def scan_rule(rule):
   rows.append({'rule':rule,'wclass':FULL_CLASS[rule],'target':pkey(target),'closed':False,'hstar':hstar,'quotient':pkey(q),
                'quotient_entropy':metric(q,cinf,oc)[0],'canonical_optimal':canonical['optimal'],'cost_optimal':cost['optimal'],
                'paths_differ':canonical['path']!=cost['path'],'canonical_path':canonical['path'],'cost_path':cost['path'],
-               'canonical_min_margin':minmargin,'canonical_min_abs_margin':minabs,'canonical_min_positive_margin':minpositive,
+               'canonical_min_margin':None if not math.isfinite(minmargin) else minmargin,
+               'canonical_min_abs_margin':None if not math.isfinite(minabs) else minabs,
+               'canonical_min_positive_margin':None if not math.isfinite(minpositive) else minpositive,
                'canonical_zero_margin_steps':zero_steps,'canonical_strict_negative_steps':negative_steps,
                'cost_zero_margin_steps':cost_zero,'cost_strict_negative_steps':cost_negative,
                'canonical_first_unsafe':canonical['first_unsafe'],'cost_first_unsafe':cost['first_unsafe']})
