@@ -1,0 +1,2247 @@
+{
+  "assertionCount": 21349890,
+  "fields": {
+    "composed": {
+      "cases": 2048,
+      "initialTransverseRadii": [
+        5,
+        5
+      ],
+      "siteComparisons": 1679360,
+      "sourceRingWidth": 5,
+      "ticks": 4
+    },
+    "composedWithActions": {
+      "cases": 2048,
+      "initialTransverseRadii": [
+        5,
+        5
+      ],
+      "siteComparisons": 1679360,
+      "sourceRingWidth": 5,
+      "ticks": 4
+    },
+    "first": {
+      "cases": 2048,
+      "initialTransverseRadius": 5,
+      "siteComparisons": 245760,
+      "sourceRingWidth": 5,
+      "ticks": 4
+    },
+    "second": {
+      "cases": 131072,
+      "initialTransverseRadius": 4,
+      "siteComparisons": 17694720,
+      "sourceTorus": [
+        3,
+        3
+      ],
+      "ticks": 3
+    }
+  },
+  "interfaces": {
+    "endpointGroups": {
+      "10": 64,
+      "11": 64,
+      "00": 64,
+      "01": 64
+    },
+    "firstComparisons": 10240,
+    "firstFailureWitnesses": [
+      {
+        "actual": 0,
+        "expected": 1,
+        "layer": -1,
+        "patch": [
+          0,
+          0,
+          0
+        ],
+        "rule": 0
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "layer": -1,
+        "patch": [
+          0,
+          0,
+          0
+        ],
+        "rule": 1
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "layer": -1,
+        "patch": [
+          0,
+          0,
+          0
+        ],
+        "rule": 2
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "layer": -1,
+        "patch": [
+          0,
+          0,
+          0
+        ],
+        "rule": 3
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "layer": -1,
+        "patch": [
+          0,
+          0,
+          0
+        ],
+        "rule": 4
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "layer": -1,
+        "patch": [
+          0,
+          0,
+          0
+        ],
+        "rule": 5
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "layer": -1,
+        "patch": [
+          0,
+          0,
+          0
+        ],
+        "rule": 6
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "layer": -1,
+        "patch": [
+          0,
+          0,
+          0
+        ],
+        "rule": 7
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "layer": -1,
+        "patch": [
+          0,
+          0,
+          0
+        ],
+        "rule": 8
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "layer": -1,
+        "patch": [
+          0,
+          0,
+          0
+        ],
+        "rule": 9
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "layer": -1,
+        "patch": [
+          0,
+          0,
+          0
+        ],
+        "rule": 10
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "layer": -1,
+        "patch": [
+          0,
+          0,
+          0
+        ],
+        "rule": 11
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "layer": -1,
+        "patch": [
+          0,
+          0,
+          0
+        ],
+        "rule": 12
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "layer": -1,
+        "patch": [
+          0,
+          0,
+          0
+        ],
+        "rule": 13
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "layer": -1,
+        "patch": [
+          0,
+          0,
+          0
+        ],
+        "rule": 14
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "layer": -1,
+        "patch": [
+          0,
+          0,
+          0
+        ],
+        "rule": 15
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "layer": -1,
+        "patch": [
+          0,
+          0,
+          0
+        ],
+        "rule": 16
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "layer": -1,
+        "patch": [
+          0,
+          0,
+          0
+        ],
+        "rule": 17
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "layer": -1,
+        "patch": [
+          0,
+          0,
+          0
+        ],
+        "rule": 18
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "layer": -1,
+        "patch": [
+          0,
+          0,
+          0
+        ],
+        "rule": 19
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "layer": -1,
+        "patch": [
+          0,
+          0,
+          0
+        ],
+        "rule": 20
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "layer": -1,
+        "patch": [
+          0,
+          0,
+          0
+        ],
+        "rule": 21
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "layer": -1,
+        "patch": [
+          0,
+          0,
+          0
+        ],
+        "rule": 22
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "layer": -1,
+        "patch": [
+          0,
+          0,
+          0
+        ],
+        "rule": 23
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "layer": -1,
+        "patch": [
+          0,
+          0,
+          0
+        ],
+        "rule": 24
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "layer": -1,
+        "patch": [
+          0,
+          0,
+          0
+        ],
+        "rule": 25
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "layer": -1,
+        "patch": [
+          0,
+          0,
+          0
+        ],
+        "rule": 26
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "layer": -1,
+        "patch": [
+          0,
+          0,
+          0
+        ],
+        "rule": 27
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "layer": -1,
+        "patch": [
+          0,
+          0,
+          0
+        ],
+        "rule": 28
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "layer": -1,
+        "patch": [
+          0,
+          0,
+          0
+        ],
+        "rule": 29
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "layer": -1,
+        "patch": [
+          0,
+          0,
+          0
+        ],
+        "rule": 30
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "layer": -1,
+        "patch": [
+          0,
+          0,
+          0
+        ],
+        "rule": 31
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "layer": -1,
+        "patch": [
+          0,
+          0,
+          0
+        ],
+        "rule": 32
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "layer": -1,
+        "patch": [
+          0,
+          0,
+          0
+        ],
+        "rule": 33
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "layer": -1,
+        "patch": [
+          0,
+          0,
+          0
+        ],
+        "rule": 34
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "layer": -1,
+        "patch": [
+          0,
+          0,
+          0
+        ],
+        "rule": 35
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "layer": -1,
+        "patch": [
+          0,
+          0,
+          0
+        ],
+        "rule": 36
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "layer": -1,
+        "patch": [
+          0,
+          0,
+          0
+        ],
+        "rule": 37
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "layer": -1,
+        "patch": [
+          0,
+          0,
+          0
+        ],
+        "rule": 38
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "layer": -1,
+        "patch": [
+          0,
+          0,
+          0
+        ],
+        "rule": 39
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "layer": -1,
+        "patch": [
+          0,
+          0,
+          0
+        ],
+        "rule": 40
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "layer": -1,
+        "patch": [
+          0,
+          0,
+          0
+        ],
+        "rule": 41
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "layer": -1,
+        "patch": [
+          0,
+          0,
+          0
+        ],
+        "rule": 42
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "layer": -1,
+        "patch": [
+          0,
+          0,
+          0
+        ],
+        "rule": 43
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "layer": -1,
+        "patch": [
+          0,
+          0,
+          0
+        ],
+        "rule": 44
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "layer": -1,
+        "patch": [
+          0,
+          0,
+          0
+        ],
+        "rule": 45
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "layer": -1,
+        "patch": [
+          0,
+          0,
+          0
+        ],
+        "rule": 46
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "layer": -1,
+        "patch": [
+          0,
+          0,
+          0
+        ],
+        "rule": 47
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "layer": -1,
+        "patch": [
+          0,
+          0,
+          0
+        ],
+        "rule": 48
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "layer": -1,
+        "patch": [
+          0,
+          0,
+          0
+        ],
+        "rule": 49
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "layer": -1,
+        "patch": [
+          0,
+          0,
+          0
+        ],
+        "rule": 50
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "layer": -1,
+        "patch": [
+          0,
+          0,
+          0
+        ],
+        "rule": 51
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "layer": -1,
+        "patch": [
+          0,
+          0,
+          0
+        ],
+        "rule": 52
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "layer": -1,
+        "patch": [
+          0,
+          0,
+          0
+        ],
+        "rule": 53
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "layer": -1,
+        "patch": [
+          0,
+          0,
+          0
+        ],
+        "rule": 54
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "layer": -1,
+        "patch": [
+          0,
+          0,
+          0
+        ],
+        "rule": 55
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "layer": -1,
+        "patch": [
+          0,
+          0,
+          0
+        ],
+        "rule": 56
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "layer": -1,
+        "patch": [
+          0,
+          0,
+          0
+        ],
+        "rule": 57
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "layer": -1,
+        "patch": [
+          0,
+          0,
+          0
+        ],
+        "rule": 58
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "layer": -1,
+        "patch": [
+          0,
+          0,
+          0
+        ],
+        "rule": 59
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "layer": -1,
+        "patch": [
+          0,
+          0,
+          0
+        ],
+        "rule": 60
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "layer": -1,
+        "patch": [
+          0,
+          0,
+          0
+        ],
+        "rule": 61
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "layer": -1,
+        "patch": [
+          0,
+          0,
+          0
+        ],
+        "rule": 62
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "layer": -1,
+        "patch": [
+          0,
+          0,
+          0
+        ],
+        "rule": 63
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "layer": -1,
+        "patch": [
+          0,
+          0,
+          0
+        ],
+        "rule": 64
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "layer": -1,
+        "patch": [
+          0,
+          0,
+          0
+        ],
+        "rule": 65
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "layer": -1,
+        "patch": [
+          0,
+          0,
+          0
+        ],
+        "rule": 66
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "layer": -1,
+        "patch": [
+          0,
+          0,
+          0
+        ],
+        "rule": 67
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "layer": -1,
+        "patch": [
+          0,
+          0,
+          0
+        ],
+        "rule": 68
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "layer": -1,
+        "patch": [
+          0,
+          0,
+          0
+        ],
+        "rule": 69
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "layer": -1,
+        "patch": [
+          0,
+          0,
+          0
+        ],
+        "rule": 70
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "layer": -1,
+        "patch": [
+          0,
+          0,
+          0
+        ],
+        "rule": 71
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "layer": -1,
+        "patch": [
+          0,
+          0,
+          0
+        ],
+        "rule": 72
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "layer": -1,
+        "patch": [
+          0,
+          0,
+          0
+        ],
+        "rule": 73
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "layer": -1,
+        "patch": [
+          0,
+          0,
+          0
+        ],
+        "rule": 74
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "layer": -1,
+        "patch": [
+          0,
+          0,
+          0
+        ],
+        "rule": 75
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "layer": -1,
+        "patch": [
+          0,
+          0,
+          0
+        ],
+        "rule": 76
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "layer": -1,
+        "patch": [
+          0,
+          0,
+          0
+        ],
+        "rule": 77
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "layer": -1,
+        "patch": [
+          0,
+          0,
+          0
+        ],
+        "rule": 78
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "layer": -1,
+        "patch": [
+          0,
+          0,
+          0
+        ],
+        "rule": 79
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "layer": -1,
+        "patch": [
+          0,
+          0,
+          0
+        ],
+        "rule": 80
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "layer": -1,
+        "patch": [
+          0,
+          0,
+          0
+        ],
+        "rule": 81
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "layer": -1,
+        "patch": [
+          0,
+          0,
+          0
+        ],
+        "rule": 82
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "layer": -1,
+        "patch": [
+          0,
+          0,
+          0
+        ],
+        "rule": 83
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "layer": -1,
+        "patch": [
+          0,
+          0,
+          0
+        ],
+        "rule": 84
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "layer": -1,
+        "patch": [
+          0,
+          0,
+          0
+        ],
+        "rule": 85
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "layer": -1,
+        "patch": [
+          0,
+          0,
+          0
+        ],
+        "rule": 86
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "layer": -1,
+        "patch": [
+          0,
+          0,
+          0
+        ],
+        "rule": 87
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "layer": -1,
+        "patch": [
+          0,
+          0,
+          0
+        ],
+        "rule": 88
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "layer": -1,
+        "patch": [
+          0,
+          0,
+          0
+        ],
+        "rule": 89
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "layer": -1,
+        "patch": [
+          0,
+          0,
+          0
+        ],
+        "rule": 90
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "layer": -1,
+        "patch": [
+          0,
+          0,
+          0
+        ],
+        "rule": 91
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "layer": -1,
+        "patch": [
+          0,
+          0,
+          0
+        ],
+        "rule": 92
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "layer": -1,
+        "patch": [
+          0,
+          0,
+          0
+        ],
+        "rule": 93
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "layer": -1,
+        "patch": [
+          0,
+          0,
+          0
+        ],
+        "rule": 94
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "layer": -1,
+        "patch": [
+          0,
+          0,
+          0
+        ],
+        "rule": 95
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "layer": -1,
+        "patch": [
+          0,
+          0,
+          0
+        ],
+        "rule": 96
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "layer": -1,
+        "patch": [
+          0,
+          0,
+          0
+        ],
+        "rule": 97
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "layer": -1,
+        "patch": [
+          0,
+          0,
+          0
+        ],
+        "rule": 98
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "layer": -1,
+        "patch": [
+          0,
+          0,
+          0
+        ],
+        "rule": 99
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "layer": -1,
+        "patch": [
+          0,
+          0,
+          0
+        ],
+        "rule": 100
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "layer": -1,
+        "patch": [
+          0,
+          0,
+          0
+        ],
+        "rule": 101
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "layer": -1,
+        "patch": [
+          0,
+          0,
+          0
+        ],
+        "rule": 102
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "layer": -1,
+        "patch": [
+          0,
+          0,
+          0
+        ],
+        "rule": 103
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "layer": -1,
+        "patch": [
+          0,
+          0,
+          0
+        ],
+        "rule": 104
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "layer": -1,
+        "patch": [
+          0,
+          0,
+          0
+        ],
+        "rule": 105
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "layer": -1,
+        "patch": [
+          0,
+          0,
+          0
+        ],
+        "rule": 106
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "layer": -1,
+        "patch": [
+          0,
+          0,
+          0
+        ],
+        "rule": 107
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "layer": -1,
+        "patch": [
+          0,
+          0,
+          0
+        ],
+        "rule": 108
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "layer": -1,
+        "patch": [
+          0,
+          0,
+          0
+        ],
+        "rule": 109
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "layer": -1,
+        "patch": [
+          0,
+          0,
+          0
+        ],
+        "rule": 110
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "layer": -1,
+        "patch": [
+          0,
+          0,
+          0
+        ],
+        "rule": 111
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "layer": -1,
+        "patch": [
+          0,
+          0,
+          0
+        ],
+        "rule": 112
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "layer": -1,
+        "patch": [
+          0,
+          0,
+          0
+        ],
+        "rule": 113
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "layer": -1,
+        "patch": [
+          0,
+          0,
+          0
+        ],
+        "rule": 114
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "layer": -1,
+        "patch": [
+          0,
+          0,
+          0
+        ],
+        "rule": 115
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "layer": -1,
+        "patch": [
+          0,
+          0,
+          0
+        ],
+        "rule": 116
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "layer": -1,
+        "patch": [
+          0,
+          0,
+          0
+        ],
+        "rule": 117
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "layer": -1,
+        "patch": [
+          0,
+          0,
+          0
+        ],
+        "rule": 118
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "layer": -1,
+        "patch": [
+          0,
+          0,
+          0
+        ],
+        "rule": 119
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "layer": -1,
+        "patch": [
+          0,
+          0,
+          0
+        ],
+        "rule": 120
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "layer": -1,
+        "patch": [
+          0,
+          0,
+          0
+        ],
+        "rule": 121
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "layer": -1,
+        "patch": [
+          0,
+          0,
+          0
+        ],
+        "rule": 122
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "layer": -1,
+        "patch": [
+          0,
+          0,
+          0
+        ],
+        "rule": 123
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "layer": -1,
+        "patch": [
+          0,
+          0,
+          0
+        ],
+        "rule": 124
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "layer": -1,
+        "patch": [
+          0,
+          0,
+          0
+        ],
+        "rule": 125
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "layer": -1,
+        "patch": [
+          0,
+          0,
+          0
+        ],
+        "rule": 126
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "layer": -1,
+        "patch": [
+          0,
+          0,
+          0
+        ],
+        "rule": 127
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "layer": 1,
+        "patch": [
+          0,
+          1,
+          0
+        ],
+        "rule": 129
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "layer": 1,
+        "patch": [
+          0,
+          1,
+          0
+        ],
+        "rule": 131
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "layer": 1,
+        "patch": [
+          0,
+          1,
+          0
+        ],
+        "rule": 133
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "layer": 1,
+        "patch": [
+          0,
+          1,
+          0
+        ],
+        "rule": 135
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "layer": 1,
+        "patch": [
+          0,
+          1,
+          0
+        ],
+        "rule": 137
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "layer": 1,
+        "patch": [
+          0,
+          1,
+          0
+        ],
+        "rule": 139
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "layer": 1,
+        "patch": [
+          0,
+          1,
+          0
+        ],
+        "rule": 141
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "layer": 1,
+        "patch": [
+          0,
+          1,
+          0
+        ],
+        "rule": 143
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "layer": 1,
+        "patch": [
+          0,
+          1,
+          0
+        ],
+        "rule": 145
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "layer": 1,
+        "patch": [
+          0,
+          1,
+          0
+        ],
+        "rule": 147
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "layer": 1,
+        "patch": [
+          0,
+          1,
+          0
+        ],
+        "rule": 149
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "layer": 1,
+        "patch": [
+          0,
+          1,
+          0
+        ],
+        "rule": 151
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "layer": 1,
+        "patch": [
+          0,
+          1,
+          0
+        ],
+        "rule": 153
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "layer": 1,
+        "patch": [
+          0,
+          1,
+          0
+        ],
+        "rule": 155
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "layer": 1,
+        "patch": [
+          0,
+          1,
+          0
+        ],
+        "rule": 157
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "layer": 1,
+        "patch": [
+          0,
+          1,
+          0
+        ],
+        "rule": 159
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "layer": 1,
+        "patch": [
+          0,
+          1,
+          0
+        ],
+        "rule": 161
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "layer": 1,
+        "patch": [
+          0,
+          1,
+          0
+        ],
+        "rule": 163
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "layer": 1,
+        "patch": [
+          0,
+          1,
+          0
+        ],
+        "rule": 165
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "layer": 1,
+        "patch": [
+          0,
+          1,
+          0
+        ],
+        "rule": 167
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "layer": 1,
+        "patch": [
+          0,
+          1,
+          0
+        ],
+        "rule": 169
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "layer": 1,
+        "patch": [
+          0,
+          1,
+          0
+        ],
+        "rule": 171
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "layer": 1,
+        "patch": [
+          0,
+          1,
+          0
+        ],
+        "rule": 173
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "layer": 1,
+        "patch": [
+          0,
+          1,
+          0
+        ],
+        "rule": 175
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "layer": 1,
+        "patch": [
+          0,
+          1,
+          0
+        ],
+        "rule": 177
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "layer": 1,
+        "patch": [
+          0,
+          1,
+          0
+        ],
+        "rule": 179
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "layer": 1,
+        "patch": [
+          0,
+          1,
+          0
+        ],
+        "rule": 181
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "layer": 1,
+        "patch": [
+          0,
+          1,
+          0
+        ],
+        "rule": 183
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "layer": 1,
+        "patch": [
+          0,
+          1,
+          0
+        ],
+        "rule": 185
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "layer": 1,
+        "patch": [
+          0,
+          1,
+          0
+        ],
+        "rule": 187
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "layer": 1,
+        "patch": [
+          0,
+          1,
+          0
+        ],
+        "rule": 189
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "layer": 1,
+        "patch": [
+          0,
+          1,
+          0
+        ],
+        "rule": 191
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "layer": 1,
+        "patch": [
+          0,
+          1,
+          0
+        ],
+        "rule": 193
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "layer": 1,
+        "patch": [
+          0,
+          1,
+          0
+        ],
+        "rule": 195
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "layer": 1,
+        "patch": [
+          0,
+          1,
+          0
+        ],
+        "rule": 197
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "layer": 1,
+        "patch": [
+          0,
+          1,
+          0
+        ],
+        "rule": 199
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "layer": 1,
+        "patch": [
+          0,
+          1,
+          0
+        ],
+        "rule": 201
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "layer": 1,
+        "patch": [
+          0,
+          1,
+          0
+        ],
+        "rule": 203
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "layer": 1,
+        "patch": [
+          0,
+          1,
+          0
+        ],
+        "rule": 205
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "layer": 1,
+        "patch": [
+          0,
+          1,
+          0
+        ],
+        "rule": 207
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "layer": 1,
+        "patch": [
+          0,
+          1,
+          0
+        ],
+        "rule": 209
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "layer": 1,
+        "patch": [
+          0,
+          1,
+          0
+        ],
+        "rule": 211
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "layer": 1,
+        "patch": [
+          0,
+          1,
+          0
+        ],
+        "rule": 213
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "layer": 1,
+        "patch": [
+          0,
+          1,
+          0
+        ],
+        "rule": 215
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "layer": 1,
+        "patch": [
+          0,
+          1,
+          0
+        ],
+        "rule": 217
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "layer": 1,
+        "patch": [
+          0,
+          1,
+          0
+        ],
+        "rule": 219
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "layer": 1,
+        "patch": [
+          0,
+          1,
+          0
+        ],
+        "rule": 221
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "layer": 1,
+        "patch": [
+          0,
+          1,
+          0
+        ],
+        "rule": 223
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "layer": 1,
+        "patch": [
+          0,
+          1,
+          0
+        ],
+        "rule": 225
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "layer": 1,
+        "patch": [
+          0,
+          1,
+          0
+        ],
+        "rule": 227
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "layer": 1,
+        "patch": [
+          0,
+          1,
+          0
+        ],
+        "rule": 229
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "layer": 1,
+        "patch": [
+          0,
+          1,
+          0
+        ],
+        "rule": 231
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "layer": 1,
+        "patch": [
+          0,
+          1,
+          0
+        ],
+        "rule": 233
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "layer": 1,
+        "patch": [
+          0,
+          1,
+          0
+        ],
+        "rule": 235
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "layer": 1,
+        "patch": [
+          0,
+          1,
+          0
+        ],
+        "rule": 237
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "layer": 1,
+        "patch": [
+          0,
+          1,
+          0
+        ],
+        "rule": 239
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "layer": 1,
+        "patch": [
+          0,
+          1,
+          0
+        ],
+        "rule": 241
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "layer": 1,
+        "patch": [
+          0,
+          1,
+          0
+        ],
+        "rule": 243
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "layer": 1,
+        "patch": [
+          0,
+          1,
+          0
+        ],
+        "rule": 245
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "layer": 1,
+        "patch": [
+          0,
+          1,
+          0
+        ],
+        "rule": 247
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "layer": 1,
+        "patch": [
+          0,
+          1,
+          0
+        ],
+        "rule": 249
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "layer": 1,
+        "patch": [
+          0,
+          1,
+          0
+        ],
+        "rule": 251
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "layer": 1,
+        "patch": [
+          0,
+          1,
+          0
+        ],
+        "rule": 253
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "layer": 1,
+        "patch": [
+          0,
+          1,
+          0
+        ],
+        "rule": 255
+      }
+    ],
+    "firstPassingCount": 64,
+    "firstPassingRules": [
+      128,
+      130,
+      132,
+      134,
+      136,
+      138,
+      140,
+      142,
+      144,
+      146,
+      148,
+      150,
+      152,
+      154,
+      156,
+      158,
+      160,
+      162,
+      164,
+      166,
+      168,
+      170,
+      172,
+      174,
+      176,
+      178,
+      180,
+      182,
+      184,
+      186,
+      188,
+      190,
+      192,
+      194,
+      196,
+      198,
+      200,
+      202,
+      204,
+      206,
+      208,
+      210,
+      212,
+      214,
+      216,
+      218,
+      220,
+      222,
+      224,
+      226,
+      228,
+      230,
+      232,
+      234,
+      236,
+      238,
+      240,
+      242,
+      244,
+      246,
+      248,
+      250,
+      252,
+      254
+    ],
+    "secondComparisons": 40960,
+    "secondPassingCount": 256
+  },
+  "local": {
+    "firstDistinctPrograms": 256,
+    "firstLiftComparisons": 8192,
+    "instructionInterventionWitnesses": 4096,
+    "secondDistinctPrograms": 256,
+    "secondLiftComparisons": 32768,
+    "sources": 256
+  },
+  "protocol": "docs/research/2026-09-09-selector-two-lift-protocol.md",
+  "protocolDeviations": [],
+  "protocolFreezeCommit": "344e67434e735b948b3ff4aaa81cb24f25be8c44",
+  "schemaVersion": 1,
+  "scope": "Exact audits of a routing grammar and half-space encoding; active mutable program data are not established."
+}
