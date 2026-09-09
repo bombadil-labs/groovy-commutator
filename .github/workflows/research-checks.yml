@@ -7,6 +7,7 @@ on:
       - 'scripts/**'
       - 'docs/research/**'
       - 'results/**'
+      - 'site/**'
       - 'pyproject.toml'
       - 'requirements.txt'
       - '.github/workflows/research-*.yml'
@@ -17,6 +18,7 @@ on:
       - 'scripts/**'
       - 'docs/research/**'
       - 'results/**'
+      - 'site/**'
       - 'pyproject.toml'
       - 'requirements.txt'
       - '.github/workflows/research-*.yml'
@@ -53,3 +55,51 @@ jobs:
         run: >-
           python scripts/check_block3_representation_design_rule24_n15.py
           --output /tmp/block3-rule24-n15.json
+
+  program-publisher:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: site/package-lock.json
+      - run: npm ci
+        working-directory: site
+      - name: Test Program publisher
+        run: node --test scripts/research-program.test.mjs
+        working-directory: site
+
+  research-legacy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: site/package-lock.json
+      - run: npm ci
+        working-directory: site
+      - name: Test Research and Knowledge publishers
+        run: node --test scripts/research.test.mjs scripts/knowledge.test.mjs
+        working-directory: site
+
+  site-build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: site/package-lock.json
+      - run: npm ci
+        working-directory: site
+      - name: Build site
+        run: npm run build
+        working-directory: site
