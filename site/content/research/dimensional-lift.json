@@ -1,0 +1,24 @@
+[
+  {
+    "slug": "ternary-commutator-lift",
+    "number": "032",
+    "title": "The commuting square grows a ternary spatial address",
+    "date": "2026-09-09",
+    "updated": "2026-09-09",
+    "kind": "Exact semantic lift and all-ECA role-growth census",
+    "evidence": "exact",
+    "topic": "Algebra and closure",
+    "summary": "The two paths around a commuting square and their XOR residual define a rule-independent recursive L/R/C lift. Depth-d words form a 3^d ternary address space with a forced algebraic quotient; 33 ECAs close within depth six and 107 saturate the maximum tested role growth.",
+    "takeaway": "The commutator can be represented as a new coordinate rather than only measured: each added semantic dimension stores the two operation orders and their residual. A native autonomous higher-dimensional CA realization remains open.",
+    "source": "docs/research/2026-09-09-ternary-commutator-lift.md",
+    "promotion": {
+      "stage": "research"
+    },
+    "related": [
+      "dimensional-lift",
+      "shared-state-rule",
+      "observation-closure",
+      "block-compatibility"
+    ]
+  }
+]
