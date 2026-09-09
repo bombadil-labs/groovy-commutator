@@ -116,9 +116,15 @@ If greedy failure occurs, freeze the lexicographically first counterexample orde
 2. one globally optimal path;
 3. the first decision at which the paths diverge;
 4. the information regret introduced by that decision;
-5. whether a beam of width `2`, `4`, or `8`, ranked by cumulative added information then residual `W`, recovers a global optimum.
+5. whether a beam of width `2`, `4`, or `8` recovers a global optimum.
 
-Beam-search results are descriptive unless their ranking rule is implemented before the first full census result is inspected.
+The beam ranking is frozen before the census: at each depth keep the `k` unique encoder states with smallest tuple
+
+\[
+(A_T(Z),\;W_T(Z),\;\mathrm{canonical\ partition\ key}).
+\]
+
+Beam results are descriptive diagnostics, not part of the primary hypothesis.
 
 ## Diminishing-returns audit
 
