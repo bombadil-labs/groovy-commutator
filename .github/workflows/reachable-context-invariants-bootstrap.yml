@@ -93,4 +93,4 @@ jobs:
           print('Frozen hypotheses:')
           for k,v in x['primary_hypotheses'].items(): print(f'- `{k}`: **{v}**')
           PY
-          gh pr comment 38 --repo bombadil-labs/groovy-commutator --body-file /tmp/comment.md || true
+          gh pr comment 39 --repo bombadil-labs/groovy-commutator --body-file /tmp/comment.md
