@@ -1,0 +1,39 @@
+name: Promote Research033 exact result
+
+on:
+  push:
+    branches: ['research/reachable-context-invariants-20260909']
+    paths:
+      - '.github/workflows/promote-reachable-context-results.yml'
+  workflow_dispatch:
+
+permissions:
+  actions: read
+  contents: write
+
+jobs:
+  promote:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: research/reachable-context-invariants-20260909
+      - name: Download green aggregate
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p /tmp/r033
+          gh run download 34381030169 \
+            --repo bombadil-labs/groovy-commutator \
+            --name reachable-context-invariants-publication \
+            --dir /tmp/r033
+      - name: Promote exact compact result
+        run: |
+          cp /tmp/r033/reachable-context-invariants-summary.json results/reachable_context_invariants_20260909.json
+      - name: Commit publication artifact
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add results/reachable_context_invariants_20260909.json
+          git commit -m 'Research033: promote exact reachable-context result'
+          git push origin HEAD:research/reachable-context-invariants-20260909
