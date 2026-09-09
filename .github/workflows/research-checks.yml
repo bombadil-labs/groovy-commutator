@@ -23,6 +23,8 @@ on:
 
 permissions:
   contents: read
+  actions: read
+  pull-requests: write
 
 jobs:
   python-fast:
@@ -53,3 +55,27 @@ jobs:
         run: >-
           python scripts/check_block3_representation_design_rule24_n15.py
           --output /tmp/block3-rule24-n15.json
+      - name: Surface Research029 retained cost-aware counterexamples
+        if: github.event_name == 'pull_request' && startsWith(github.head_ref, 'research/fatal-predictive-synergy-')
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          rm -rf /tmp/r029-publication
+          mkdir -p /tmp/r029-publication
+          gh run download 34321656128 --repo "$GITHUB_REPOSITORY" --name contextual-quotient-publication --dir /tmp/r029-publication
+          python - <<'PY' > /tmp/r029-cost-failures.md
+          import json
+          from pathlib import Path
+          files=list(Path('/tmp/r029-publication').rglob('contextual-quotient-summary.json'))
+          if len(files)!=1:
+              raise SystemExit(f'expected one summary, found {files}')
+          x=json.loads(files[0].read_text())
+          print('## Research029 retained cost-aware counterexamples')
+          print()
+          print(f"Frozen cost-aware prediction: **{x['cost_aware_failures']} failures**.")
+          print()
+          for r in x['cost_aware_failure_cases']:
+              print(f"- Rule **{r['rule']}**, target `{r['target']}`, quotient `{r['quotient']}`")
+              print(f"  - first unsafe: `{json.dumps(r['first_unsafe'], sort_keys=True)}`")
+          PY
+          gh pr comment "${{ github.event.pull_request.number }}" --body-file /tmp/r029-cost-failures.md
