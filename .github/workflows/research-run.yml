@@ -1,1 +1,102 @@
-<omitted>
+name: Research validation
+
+on:
+  workflow_dispatch:
+    inputs:
+      experiment:
+        description: Frozen research workload
+        required: true
+        default: representation-design
+        type: choice
+        options:
+          - representation-design
+  pull_request:
+    branches:
+      - research/possibility-frontier-20260908
+    paths:
+      - 'scripts/experiment_representation_design.py'
+      - 'scripts/aggregate_representation_design.py'
+      - 'scripts/audit_representation_design.py'
+      - 'scripts/check_representation_design_rule106_n18.py'
+      - 'docs/research/protocols/representation-design-*.md'
+      - '.github/workflows/research-run.yml'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: research-validation-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  representation-design-shard:
+    if: github.event_name == 'workflow_dispatch' || startsWith(github.head_ref, 'research/representation-design-')
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: [0, 1, 2, 3, 4, 5, 6, 7]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+      - name: Install package
+        run: python -m pip install -e .
+      - name: Run frozen shard
+        env:
+          SHARD: ${{ matrix.shard }}
+        run: |
+          start=$((SHARD * 32))
+          end=$((start + 32))
+          mkdir -p artifacts
+          python scripts/experiment_representation_design.py \
+            --rule-start "$start" --rule-end "$end" --n 12 --max-steps 128 \
+            --output "artifacts/representation-design-${start}-${end}.json"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: representation-design-shard-${{ matrix.shard }}
+          path: artifacts/*.json
+          if-no-files-found: error
+          retention-days: 30
+
+  representation-design-aggregate:
+    needs: representation-design-shard
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+      - name: Install package
+        run: python -m pip install -e .
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: representation-design-shard-*
+          path: artifacts/shards
+          merge-multiple: true
+      - name: Aggregate exact census
+        run: |
+          mkdir -p artifacts/final
+          python scripts/aggregate_representation_design.py \
+            --input-dir artifacts/shards \
+            --output artifacts/final/representation-design-summary.json
+      - name: Independent fixed-target audit
+        run: >-
+          python scripts/audit_representation_design.py
+          --summary artifacts/final/representation-design-summary.json
+          --output artifacts/final/representation-design-audit.json
+      - name: Frozen fresh-size confirmation
+        run: >-
+          python scripts/check_representation_design_rule106_n18.py
+          --output artifacts/final/representation-design-rule106-n18.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: representation-design-publication
+          path: artifacts/final/*.json
+          if-no-files-found: error
+          retention-days: 90
