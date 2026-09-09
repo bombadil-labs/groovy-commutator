@@ -1,0 +1,27 @@
+[
+  {
+    "slug": "sofic-defect-orbit",
+    "number": "036",
+    "title": "Exact reachability hits a representation-complexity wall",
+    "date": "2026-09-09",
+    "updated": "2026-09-09",
+    "kind": "Exact sofic-orbit criterion with complete censored recovery study",
+    "evidence": "exact",
+    "topic": "Observation and memory",
+    "summary": "Exact sofic orbit closure gives a representation-independent route to either finite causal witnesses or all-time permanence, and bounded controls reproduce both a known h3 witness and a finite exact Rule-5 orbit closure. But all 170 Research034 survivors censor under the frozen explicit-graph presentations; lazy union localizes the bottleneck to slice imaging, while raw nondeterministic images exceed 6 million transitions before the known h3 control can be constructed.",
+    "takeaway": "Exact reachable context exists as a finite-state object at each fixed time, but explicit graph presentation can dominate the proof cost. The next frontier is symbolic sliding-block image representation, not larger windows or higher resource ceilings.",
+    "source": "docs/research/2026-09-09-sofic-defect-orbit.md",
+    "promotion": {
+      "stage": "candidate",
+      "idea": "Reachability and the complexity of representing reachability are distinct",
+      "destination": "Concepts"
+    },
+    "related": [
+      "window3-reachable-language",
+      "reachable-context-invariants",
+      "causal-witness-automaton",
+      "causal-witness-horizon",
+      "ternary-commutator-lift"
+    ]
+  }
+]

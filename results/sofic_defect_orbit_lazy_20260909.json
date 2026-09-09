@@ -1,0 +1,1135 @@
+{
+  "ok": true,
+  "experiment": "sofic-defect-orbit-lazy-recovery",
+  "rules": 256,
+  "hmax": 12,
+  "research034_survivors": 170,
+  "survivor_seed_languages": 22,
+  "status_counts": {
+    "censored": 170
+  },
+  "finite_witness_resolutions": 0,
+  "finite_sofic_closure_resolutions": 0,
+  "resolved_total": 0,
+  "unresolved_through_12": 0,
+  "censored": 170,
+  "resolved_fraction": 0.0,
+  "primary_hypotheses": {
+    "exact_sofic_adds_information_beyond_width3": "inconclusive-due-to-censoring",
+    "finite_window_danger_sometimes_spurious": "inconclusive-due-to-censoring"
+  },
+  "status_by_wolfram_class": {
+    "censored": {
+      "II": 158,
+      "III": 12
+    }
+  },
+  "status_by_horizon": {
+    "censored": {
+      "1": 46,
+      "2": 62,
+      "4": 62
+    }
+  },
+  "censoring_by_stage": {
+    "image": 170
+  },
+  "censoring_by_reason": {
+    "determinization-subset-states": 34,
+    "image-pair-states": 136
+  },
+  "censoring_by_horizon": {
+    "1": 46,
+    "2": 62,
+    "4": 62
+  },
+  "first_finite_witness": null,
+  "first_finite_sofic_closure": null,
+  "first_unresolved": null,
+  "first_censored": {
+    "rule": 122,
+    "wclass": "III",
+    "pair": "1-4",
+    "seed_symbol": 12,
+    "width3_word_count": 138795,
+    "target_id": 125,
+    "status": "censored",
+    "horizon": 1,
+    "reason": "image-pair-states",
+    "stage": "image",
+    "closure_horizon": null,
+    "censoring": {
+      "horizon": 1,
+      "stage": "image",
+      "kind": "image-pair-states",
+      "limit": 1000000,
+      "observed": 1788606
+    }
+  },
+  "rule122_161_sentinels": [
+    {
+      "rule": 122,
+      "wclass": "III",
+      "pair_index": 9,
+      "pair": "1-4",
+      "seed_symbol": 12,
+      "width3_word_count": 138795,
+      "width3_rounds": 8,
+      "is_r122_161_sentinel": true,
+      "incoming_target_ids": [
+        125
+      ],
+      "initial_compression": {
+        "subset_states": 2,
+        "pretrim_states": 2,
+        "pretrim_edges": 17
+      },
+      "closure_horizon": null,
+      "censoring": {
+        "horizon": 1,
+        "stage": "image",
+        "kind": "image-pair-states",
+        "limit": 1000000,
+        "observed": 1788606
+      },
+      "statuses": [
+        {
+          "target_id": 125,
+          "status": "censored",
+          "horizon": 1,
+          "reason": "image-pair-states",
+          "stage": "image"
+        }
+      ],
+      "slices": [
+        {
+          "horizon": 0,
+          "slice": {
+            "states": 2,
+            "edges": 17,
+            "labels": 9
+          },
+          "visible_target_ids": [],
+          "first_witness_target_ids_so_far": [],
+          "slice_count": 1,
+          "next_image": {
+            "states": 18703,
+            "edges": 216767,
+            "labels": 34,
+            "image_pair_states": 144,
+            "subset_states": 18739,
+            "pretrim_states": 18739,
+            "pretrim_edges": 217130,
+            "transition_visits": 5135344
+          },
+          "lazy_union": {
+            "states": 2,
+            "edges": 17,
+            "labels": 9,
+            "component_slices": 1,
+            "pretrim_states": 2,
+            "pretrim_edges": 17
+          },
+          "next_subset_lazy_union": false,
+          "inclusion_subset_pairs": 2,
+          "inclusion_counterexample_length": 1
+        },
+        {
+          "horizon": 1,
+          "slice": {
+            "states": 18703,
+            "edges": 216767,
+            "labels": 34
+          },
+          "visible_target_ids": [],
+          "first_witness_target_ids_so_far": [],
+          "slice_count": 2,
+          "censored": {
+            "horizon": 1,
+            "stage": "image",
+            "kind": "image-pair-states",
+            "limit": 1000000,
+            "observed": 1788606
+          }
+        }
+      ]
+    },
+    {
+      "rule": 122,
+      "wclass": "III",
+      "pair_index": 10,
+      "pair": "1-5",
+      "seed_symbol": 13,
+      "width3_word_count": 138676,
+      "width3_rounds": 8,
+      "is_r122_161_sentinel": true,
+      "incoming_target_ids": [
+        125
+      ],
+      "initial_compression": {
+        "subset_states": 2,
+        "pretrim_states": 2,
+        "pretrim_edges": 17
+      },
+      "closure_horizon": null,
+      "censoring": {
+        "horizon": 1,
+        "stage": "image",
+        "kind": "image-pair-states",
+        "limit": 1000000,
+        "observed": 1440081
+      },
+      "statuses": [
+        {
+          "target_id": 125,
+          "status": "censored",
+          "horizon": 1,
+          "reason": "image-pair-states",
+          "stage": "image"
+        }
+      ],
+      "slices": [
+        {
+          "horizon": 0,
+          "slice": {
+            "states": 2,
+            "edges": 17,
+            "labels": 9
+          },
+          "visible_target_ids": [],
+          "first_witness_target_ids_so_far": [],
+          "slice_count": 1,
+          "next_image": {
+            "states": 18511,
+            "edges": 186669,
+            "labels": 23,
+            "image_pair_states": 144,
+            "subset_states": 18522,
+            "pretrim_states": 18522,
+            "pretrim_edges": 186805,
+            "transition_visits": 5241716
+          },
+          "lazy_union": {
+            "states": 2,
+            "edges": 17,
+            "labels": 9,
+            "component_slices": 1,
+            "pretrim_states": 2,
+            "pretrim_edges": 17
+          },
+          "next_subset_lazy_union": false,
+          "inclusion_subset_pairs": 2,
+          "inclusion_counterexample_length": 1
+        },
+        {
+          "horizon": 1,
+          "slice": {
+            "states": 18511,
+            "edges": 186669,
+            "labels": 23
+          },
+          "visible_target_ids": [],
+          "first_witness_target_ids_so_far": [],
+          "slice_count": 2,
+          "censored": {
+            "horizon": 1,
+            "stage": "image",
+            "kind": "image-pair-states",
+            "limit": 1000000,
+            "observed": 1440081
+          }
+        }
+      ]
+    },
+    {
+      "rule": 122,
+      "wclass": "III",
+      "pair_index": 20,
+      "pair": "3-6",
+      "seed_symbol": 30,
+      "width3_word_count": 138591,
+      "width3_rounds": 8,
+      "is_r122_161_sentinel": true,
+      "incoming_target_ids": [
+        125
+      ],
+      "initial_compression": {
+        "subset_states": 2,
+        "pretrim_states": 2,
+        "pretrim_edges": 17
+      },
+      "closure_horizon": null,
+      "censoring": {
+        "horizon": 1,
+        "stage": "image",
+        "kind": "image-pair-states",
+        "limit": 1000000,
+        "observed": 2205330
+      },
+      "statuses": [
+        {
+          "target_id": 125,
+          "status": "censored",
+          "horizon": 1,
+          "reason": "image-pair-states",
+          "stage": "image"
+        }
+      ],
+      "slices": [
+        {
+          "horizon": 0,
+          "slice": {
+            "states": 2,
+            "edges": 17,
+            "labels": 9
+          },
+          "visible_target_ids": [],
+          "first_witness_target_ids_so_far": [],
+          "slice_count": 1,
+          "next_image": {
+            "states": 19202,
+            "edges": 240242,
+            "labels": 41,
+            "image_pair_states": 144,
+            "subset_states": 19291,
+            "pretrim_states": 19291,
+            "pretrim_edges": 241219,
+            "transition_visits": 5315230
+          },
+          "lazy_union": {
+            "states": 2,
+            "edges": 17,
+            "labels": 9,
+            "component_slices": 1,
+            "pretrim_states": 2,
+            "pretrim_edges": 17
+          },
+          "next_subset_lazy_union": false,
+          "inclusion_subset_pairs": 2,
+          "inclusion_counterexample_length": 1
+        },
+        {
+          "horizon": 1,
+          "slice": {
+            "states": 19202,
+            "edges": 240242,
+            "labels": 41
+          },
+          "visible_target_ids": [],
+          "first_witness_target_ids_so_far": [],
+          "slice_count": 2,
+          "censored": {
+            "horizon": 1,
+            "stage": "image",
+            "kind": "image-pair-states",
+            "limit": 1000000,
+            "observed": 2205330
+          }
+        }
+      ]
+    },
+    {
+      "rule": 122,
+      "wclass": "III",
+      "pair_index": 21,
+      "pair": "3-7",
+      "seed_symbol": 31,
+      "width3_word_count": 138626,
+      "width3_rounds": 8,
+      "is_r122_161_sentinel": true,
+      "incoming_target_ids": [
+        125
+      ],
+      "initial_compression": {
+        "subset_states": 2,
+        "pretrim_states": 2,
+        "pretrim_edges": 17
+      },
+      "closure_horizon": null,
+      "censoring": {
+        "horizon": 1,
+        "stage": "image",
+        "kind": "image-pair-states",
+        "limit": 1000000,
+        "observed": 1857118
+      },
+      "statuses": [
+        {
+          "target_id": 125,
+          "status": "censored",
+          "horizon": 1,
+          "reason": "image-pair-states",
+          "stage": "image"
+        }
+      ],
+      "slices": [
+        {
+          "horizon": 0,
+          "slice": {
+            "states": 2,
+            "edges": 17,
+            "labels": 9
+          },
+          "visible_target_ids": [],
+          "first_witness_target_ids_so_far": [],
+          "slice_count": 1,
+          "next_image": {
+            "states": 18725,
+            "edges": 226723,
+            "labels": 41,
+            "image_pair_states": 144,
+            "subset_states": 18756,
+            "pretrim_states": 18756,
+            "pretrim_edges": 227069,
+            "transition_visits": 5150249
+          },
+          "lazy_union": {
+            "states": 2,
+            "edges": 17,
+            "labels": 9,
+            "component_slices": 1,
+            "pretrim_states": 2,
+            "pretrim_edges": 17
+          },
+          "next_subset_lazy_union": false,
+          "inclusion_subset_pairs": 2,
+          "inclusion_counterexample_length": 1
+        },
+        {
+          "horizon": 1,
+          "slice": {
+            "states": 18725,
+            "edges": 226723,
+            "labels": 41
+          },
+          "visible_target_ids": [],
+          "first_witness_target_ids_so_far": [],
+          "slice_count": 2,
+          "censored": {
+            "horizon": 1,
+            "stage": "image",
+            "kind": "image-pair-states",
+            "limit": 1000000,
+            "observed": 1857118
+          }
+        }
+      ]
+    },
+    {
+      "rule": 122,
+      "wclass": "III",
+      "pair_index": 22,
+      "pair": "4-5",
+      "seed_symbol": 37,
+      "width3_word_count": 138676,
+      "width3_rounds": 8,
+      "is_r122_161_sentinel": true,
+      "incoming_target_ids": [
+        125
+      ],
+      "initial_compression": {
+        "subset_states": 2,
+        "pretrim_states": 2,
+        "pretrim_edges": 17
+      },
+      "closure_horizon": null,
+      "censoring": {
+        "horizon": 1,
+        "stage": "image",
+        "kind": "image-pair-states",
+        "limit": 1000000,
+        "observed": 1504824
+      },
+      "statuses": [
+        {
+          "target_id": 125,
+          "status": "censored",
+          "horizon": 1,
+          "reason": "image-pair-states",
+          "stage": "image"
+        }
+      ],
+      "slices": [
+        {
+          "horizon": 0,
+          "slice": {
+            "states": 2,
+            "edges": 17,
+            "labels": 9
+          },
+          "visible_target_ids": [],
+          "first_witness_target_ids_so_far": [],
+          "slice_count": 1,
+          "next_image": {
+            "states": 18707,
+            "edges": 197153,
+            "labels": 23,
+            "image_pair_states": 144,
+            "subset_states": 18741,
+            "pretrim_states": 18741,
+            "pretrim_edges": 197436,
+            "transition_visits": 5204073
+          },
+          "lazy_union": {
+            "states": 2,
+            "edges": 17,
+            "labels": 9,
+            "component_slices": 1,
+            "pretrim_states": 2,
+            "pretrim_edges": 17
+          },
+          "next_subset_lazy_union": false,
+          "inclusion_subset_pairs": 2,
+          "inclusion_counterexample_length": 1
+        },
+        {
+          "horizon": 1,
+          "slice": {
+            "states": 18707,
+            "edges": 197153,
+            "labels": 23
+          },
+          "visible_target_ids": [],
+          "first_witness_target_ids_so_far": [],
+          "slice_count": 2,
+          "censored": {
+            "horizon": 1,
+            "stage": "image",
+            "kind": "image-pair-states",
+            "limit": 1000000,
+            "observed": 1504824
+          }
+        }
+      ]
+    },
+    {
+      "rule": 122,
+      "wclass": "III",
+      "pair_index": 27,
+      "pair": "6-7",
+      "seed_symbol": 55,
+      "width3_word_count": 138626,
+      "width3_rounds": 8,
+      "is_r122_161_sentinel": true,
+      "incoming_target_ids": [
+        125
+      ],
+      "initial_compression": {
+        "subset_states": 2,
+        "pretrim_states": 2,
+        "pretrim_edges": 17
+      },
+      "closure_horizon": null,
+      "censoring": {
+        "horizon": 1,
+        "stage": "image",
+        "kind": "image-pair-states",
+        "limit": 1000000,
+        "observed": 1860162
+      },
+      "statuses": [
+        {
+          "target_id": 125,
+          "status": "censored",
+          "horizon": 1,
+          "reason": "image-pair-states",
+          "stage": "image"
+        }
+      ],
+      "slices": [
+        {
+          "horizon": 0,
+          "slice": {
+            "states": 2,
+            "edges": 17,
+            "labels": 9
+          },
+          "visible_target_ids": [],
+          "first_witness_target_ids_so_far": [],
+          "slice_count": 1,
+          "next_image": {
+            "states": 18725,
+            "edges": 225150,
+            "labels": 41,
+            "image_pair_states": 144,
+            "subset_states": 18743,
+            "pretrim_states": 18743,
+            "pretrim_edges": 225385,
+            "transition_visits": 5065081
+          },
+          "lazy_union": {
+            "states": 2,
+            "edges": 17,
+            "labels": 9,
+            "component_slices": 1,
+            "pretrim_states": 2,
+            "pretrim_edges": 17
+          },
+          "next_subset_lazy_union": false,
+          "inclusion_subset_pairs": 2,
+          "inclusion_counterexample_length": 1
+        },
+        {
+          "horizon": 1,
+          "slice": {
+            "states": 18725,
+            "edges": 225150,
+            "labels": 41
+          },
+          "visible_target_ids": [],
+          "first_witness_target_ids_so_far": [],
+          "slice_count": 2,
+          "censored": {
+            "horizon": 1,
+            "stage": "image",
+            "kind": "image-pair-states",
+            "limit": 1000000,
+            "observed": 1860162
+          }
+        }
+      ]
+    },
+    {
+      "rule": 161,
+      "wclass": "III",
+      "pair_index": 0,
+      "pair": "0-1",
+      "seed_symbol": 1,
+      "width3_word_count": 138626,
+      "width3_rounds": 8,
+      "is_r122_161_sentinel": true,
+      "incoming_target_ids": [
+        111
+      ],
+      "initial_compression": {
+        "subset_states": 2,
+        "pretrim_states": 2,
+        "pretrim_edges": 17
+      },
+      "closure_horizon": null,
+      "censoring": {
+        "horizon": 1,
+        "stage": "image",
+        "kind": "image-pair-states",
+        "limit": 1000000,
+        "observed": 1860162
+      },
+      "statuses": [
+        {
+          "target_id": 111,
+          "status": "censored",
+          "horizon": 1,
+          "reason": "image-pair-states",
+          "stage": "image"
+        }
+      ],
+      "slices": [
+        {
+          "horizon": 0,
+          "slice": {
+            "states": 2,
+            "edges": 17,
+            "labels": 9
+          },
+          "visible_target_ids": [],
+          "first_witness_target_ids_so_far": [],
+          "slice_count": 1,
+          "next_image": {
+            "states": 18725,
+            "edges": 225150,
+            "labels": 41,
+            "image_pair_states": 144,
+            "subset_states": 18743,
+            "pretrim_states": 18743,
+            "pretrim_edges": 225385,
+            "transition_visits": 5065081
+          },
+          "lazy_union": {
+            "states": 2,
+            "edges": 17,
+            "labels": 9,
+            "component_slices": 1,
+            "pretrim_states": 2,
+            "pretrim_edges": 17
+          },
+          "next_subset_lazy_union": false,
+          "inclusion_subset_pairs": 3,
+          "inclusion_counterexample_length": 1
+        },
+        {
+          "horizon": 1,
+          "slice": {
+            "states": 18725,
+            "edges": 225150,
+            "labels": 41
+          },
+          "visible_target_ids": [],
+          "first_witness_target_ids_so_far": [],
+          "slice_count": 2,
+          "censored": {
+            "horizon": 1,
+            "stage": "image",
+            "kind": "image-pair-states",
+            "limit": 1000000,
+            "observed": 1860162
+          }
+        }
+      ]
+    },
+    {
+      "rule": 161,
+      "wclass": "III",
+      "pair_index": 3,
+      "pair": "0-4",
+      "seed_symbol": 4,
+      "width3_word_count": 138626,
+      "width3_rounds": 8,
+      "is_r122_161_sentinel": true,
+      "incoming_target_ids": [
+        111
+      ],
+      "initial_compression": {
+        "subset_states": 2,
+        "pretrim_states": 2,
+        "pretrim_edges": 17
+      },
+      "closure_horizon": null,
+      "censoring": {
+        "horizon": 1,
+        "stage": "image",
+        "kind": "image-pair-states",
+        "limit": 1000000,
+        "observed": 1857118
+      },
+      "statuses": [
+        {
+          "target_id": 111,
+          "status": "censored",
+          "horizon": 1,
+          "reason": "image-pair-states",
+          "stage": "image"
+        }
+      ],
+      "slices": [
+        {
+          "horizon": 0,
+          "slice": {
+            "states": 2,
+            "edges": 17,
+            "labels": 9
+          },
+          "visible_target_ids": [],
+          "first_witness_target_ids_so_far": [],
+          "slice_count": 1,
+          "next_image": {
+            "states": 18725,
+            "edges": 226723,
+            "labels": 41,
+            "image_pair_states": 144,
+            "subset_states": 18756,
+            "pretrim_states": 18756,
+            "pretrim_edges": 227069,
+            "transition_visits": 5150249
+          },
+          "lazy_union": {
+            "states": 2,
+            "edges": 17,
+            "labels": 9,
+            "component_slices": 1,
+            "pretrim_states": 2,
+            "pretrim_edges": 17
+          },
+          "next_subset_lazy_union": false,
+          "inclusion_subset_pairs": 2,
+          "inclusion_counterexample_length": 1
+        },
+        {
+          "horizon": 1,
+          "slice": {
+            "states": 18725,
+            "edges": 226723,
+            "labels": 41
+          },
+          "visible_target_ids": [],
+          "first_witness_target_ids_so_far": [],
+          "slice_count": 2,
+          "censored": {
+            "horizon": 1,
+            "stage": "image",
+            "kind": "image-pair-states",
+            "limit": 1000000,
+            "observed": 1857118
+          }
+        }
+      ]
+    },
+    {
+      "rule": 161,
+      "wclass": "III",
+      "pair_index": 9,
+      "pair": "1-4",
+      "seed_symbol": 12,
+      "width3_word_count": 138591,
+      "width3_rounds": 8,
+      "is_r122_161_sentinel": true,
+      "incoming_target_ids": [
+        111
+      ],
+      "initial_compression": {
+        "subset_states": 2,
+        "pretrim_states": 2,
+        "pretrim_edges": 17
+      },
+      "closure_horizon": null,
+      "censoring": {
+        "horizon": 1,
+        "stage": "image",
+        "kind": "image-pair-states",
+        "limit": 1000000,
+        "observed": 2205330
+      },
+      "statuses": [
+        {
+          "target_id": 111,
+          "status": "censored",
+          "horizon": 1,
+          "reason": "image-pair-states",
+          "stage": "image"
+        }
+      ],
+      "slices": [
+        {
+          "horizon": 0,
+          "slice": {
+            "states": 2,
+            "edges": 17,
+            "labels": 9
+          },
+          "visible_target_ids": [],
+          "first_witness_target_ids_so_far": [],
+          "slice_count": 1,
+          "next_image": {
+            "states": 19202,
+            "edges": 240242,
+            "labels": 41,
+            "image_pair_states": 144,
+            "subset_states": 19291,
+            "pretrim_states": 19291,
+            "pretrim_edges": 241219,
+            "transition_visits": 5315230
+          },
+          "lazy_union": {
+            "states": 2,
+            "edges": 17,
+            "labels": 9,
+            "component_slices": 1,
+            "pretrim_states": 2,
+            "pretrim_edges": 17
+          },
+          "next_subset_lazy_union": false,
+          "inclusion_subset_pairs": 2,
+          "inclusion_counterexample_length": 1
+        },
+        {
+          "horizon": 1,
+          "slice": {
+            "states": 19202,
+            "edges": 240242,
+            "labels": 41
+          },
+          "visible_target_ids": [],
+          "first_witness_target_ids_so_far": [],
+          "slice_count": 2,
+          "censored": {
+            "horizon": 1,
+            "stage": "image",
+            "kind": "image-pair-states",
+            "limit": 1000000,
+            "observed": 2205330
+          }
+        }
+      ]
+    },
+    {
+      "rule": 161,
+      "wclass": "III",
+      "pair_index": 13,
+      "pair": "2-3",
+      "seed_symbol": 19,
+      "width3_word_count": 138676,
+      "width3_rounds": 8,
+      "is_r122_161_sentinel": true,
+      "incoming_target_ids": [
+        111
+      ],
+      "initial_compression": {
+        "subset_states": 2,
+        "pretrim_states": 2,
+        "pretrim_edges": 17
+      },
+      "closure_horizon": null,
+      "censoring": {
+        "horizon": 1,
+        "stage": "image",
+        "kind": "image-pair-states",
+        "limit": 1000000,
+        "observed": 1504824
+      },
+      "statuses": [
+        {
+          "target_id": 111,
+          "status": "censored",
+          "horizon": 1,
+          "reason": "image-pair-states",
+          "stage": "image"
+        }
+      ],
+      "slices": [
+        {
+          "horizon": 0,
+          "slice": {
+            "states": 2,
+            "edges": 17,
+            "labels": 9
+          },
+          "visible_target_ids": [],
+          "first_witness_target_ids_so_far": [],
+          "slice_count": 1,
+          "next_image": {
+            "states": 18707,
+            "edges": 197153,
+            "labels": 23,
+            "image_pair_states": 144,
+            "subset_states": 18741,
+            "pretrim_states": 18741,
+            "pretrim_edges": 197436,
+            "transition_visits": 5204073
+          },
+          "lazy_union": {
+            "states": 2,
+            "edges": 17,
+            "labels": 9,
+            "component_slices": 1,
+            "pretrim_states": 2,
+            "pretrim_edges": 17
+          },
+          "next_subset_lazy_union": false,
+          "inclusion_subset_pairs": 2,
+          "inclusion_counterexample_length": 1
+        },
+        {
+          "horizon": 1,
+          "slice": {
+            "states": 18707,
+            "edges": 197153,
+            "labels": 23
+          },
+          "visible_target_ids": [],
+          "first_witness_target_ids_so_far": [],
+          "slice_count": 2,
+          "censored": {
+            "horizon": 1,
+            "stage": "image",
+            "kind": "image-pair-states",
+            "limit": 1000000,
+            "observed": 1504824
+          }
+        }
+      ]
+    },
+    {
+      "rule": 161,
+      "wclass": "III",
+      "pair_index": 16,
+      "pair": "2-6",
+      "seed_symbol": 22,
+      "width3_word_count": 138676,
+      "width3_rounds": 8,
+      "is_r122_161_sentinel": true,
+      "incoming_target_ids": [
+        111
+      ],
+      "initial_compression": {
+        "subset_states": 2,
+        "pretrim_states": 2,
+        "pretrim_edges": 17
+      },
+      "closure_horizon": null,
+      "censoring": {
+        "horizon": 1,
+        "stage": "image",
+        "kind": "image-pair-states",
+        "limit": 1000000,
+        "observed": 1440081
+      },
+      "statuses": [
+        {
+          "target_id": 111,
+          "status": "censored",
+          "horizon": 1,
+          "reason": "image-pair-states",
+          "stage": "image"
+        }
+      ],
+      "slices": [
+        {
+          "horizon": 0,
+          "slice": {
+            "states": 2,
+            "edges": 17,
+            "labels": 9
+          },
+          "visible_target_ids": [],
+          "first_witness_target_ids_so_far": [],
+          "slice_count": 1,
+          "next_image": {
+            "states": 18511,
+            "edges": 186669,
+            "labels": 23,
+            "image_pair_states": 144,
+            "subset_states": 18522,
+            "pretrim_states": 18522,
+            "pretrim_edges": 186805,
+            "transition_visits": 5241716
+          },
+          "lazy_union": {
+            "states": 2,
+            "edges": 17,
+            "labels": 9,
+            "component_slices": 1,
+            "pretrim_states": 2,
+            "pretrim_edges": 17
+          },
+          "next_subset_lazy_union": false,
+          "inclusion_subset_pairs": 2,
+          "inclusion_counterexample_length": 1
+        },
+        {
+          "horizon": 1,
+          "slice": {
+            "states": 18511,
+            "edges": 186669,
+            "labels": 23
+          },
+          "visible_target_ids": [],
+          "first_witness_target_ids_so_far": [],
+          "slice_count": 2,
+          "censored": {
+            "horizon": 1,
+            "stage": "image",
+            "kind": "image-pair-states",
+            "limit": 1000000,
+            "observed": 1440081
+          }
+        }
+      ]
+    },
+    {
+      "rule": 161,
+      "wclass": "III",
+      "pair_index": 20,
+      "pair": "3-6",
+      "seed_symbol": 30,
+      "width3_word_count": 138795,
+      "width3_rounds": 8,
+      "is_r122_161_sentinel": true,
+      "incoming_target_ids": [
+        111
+      ],
+      "initial_compression": {
+        "subset_states": 2,
+        "pretrim_states": 2,
+        "pretrim_edges": 17
+      },
+      "closure_horizon": null,
+      "censoring": {
+        "horizon": 1,
+        "stage": "image",
+        "kind": "image-pair-states",
+        "limit": 1000000,
+        "observed": 1788606
+      },
+      "statuses": [
+        {
+          "target_id": 111,
+          "status": "censored",
+          "horizon": 1,
+          "reason": "image-pair-states",
+          "stage": "image"
+        }
+      ],
+      "slices": [
+        {
+          "horizon": 0,
+          "slice": {
+            "states": 2,
+            "edges": 17,
+            "labels": 9
+          },
+          "visible_target_ids": [],
+          "first_witness_target_ids_so_far": [],
+          "slice_count": 1,
+          "next_image": {
+            "states": 18703,
+            "edges": 216767,
+            "labels": 34,
+            "image_pair_states": 144,
+            "subset_states": 18739,
+            "pretrim_states": 18739,
+            "pretrim_edges": 217130,
+            "transition_visits": 5135344
+          },
+          "lazy_union": {
+            "states": 2,
+            "edges": 17,
+            "labels": 9,
+            "component_slices": 1,
+            "pretrim_states": 2,
+            "pretrim_edges": 17
+          },
+          "next_subset_lazy_union": false,
+          "inclusion_subset_pairs": 2,
+          "inclusion_counterexample_length": 1
+        },
+        {
+          "horizon": 1,
+          "slice": {
+            "states": 18703,
+            "edges": 216767,
+            "labels": 34
+          },
+          "visible_target_ids": [],
+          "first_witness_target_ids_so_far": [],
+          "slice_count": 2,
+          "censored": {
+            "horizon": 1,
+            "stage": "image",
+            "kind": "image-pair-states",
+            "limit": 1000000,
+            "observed": 1788606
+          }
+        }
+      ]
+    }
+  ],
+  "primary_censoring_baseline": {
+    "censored": 170,
+    "resolved": 0
+  },
+  "resource_limits": {
+    "max_states": 200000,
+    "max_edges": 2000000,
+    "max_subset_states": 500000,
+    "max_pretrim_edges": 5000000,
+    "max_image_pair_states": 1000000,
+    "max_inclusion_subset_pairs": 2000000,
+    "max_lazy_union_states": 1000000,
+    "max_lazy_union_edges": 10000000
+  },
+  "source_hashes": {
+    "scripts/experiment_sofic_defect_orbit_lazy.py": "7ecce3d7712615aa3859dde620036f284c076be0669e462ce59d9455db2008b4",
+    "docs/research/protocols/sofic-defect-orbit-20260909.md": "9bd8ecb8c50c5129e3025d439caff7be4a70c3f434aa25d8121bdf7014d51e6a",
+    "docs/research/protocols/sofic-defect-orbit-resource-addendum-20260909.md": "9866475a4df1b06ffcb05ce3f18e2f845bf0988fd319c815a61bfae5887d0396",
+    "docs/research/protocols/sofic-defect-orbit-lazy-union-recovery-20260909.md": "079c3f1e3920dd522fa079c426545342e987ae81c2266deaef93fc29e9ff464f"
+  }
+}
