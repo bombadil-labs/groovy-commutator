@@ -2,7 +2,7 @@
 
 **Status:** frozen before evaluating any Research034 frontier survivor under this certificate.  
 **Branch:** `research/symbolic-sofic-image-20260909`.  
-**Working identity:** `symbolic-sofic-image`; no public research-note number is part of this frozen protocol. Publication numbering is recorded separately after the result.  
+**Working identity:** `symbolic-sofic-image`; no public research-note number is assigned until publication.  
 **Dependency:** Note 036 / `sofic-defect-orbit`, Research032 symbolic causal-witness search and h=6 recovery, Research034 width-3 reachable language.
 
 ## Why this checkpoint exists
