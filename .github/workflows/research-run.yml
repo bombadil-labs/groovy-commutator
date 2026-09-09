@@ -26,6 +26,7 @@ on:
 
 permissions:
   contents: read
+  pull-requests: write
 
 concurrency:
   group: research-validation-${{ github.workflow }}-${{ github.ref }}
@@ -191,6 +192,37 @@ jobs:
           python scripts/aggregate_block3_representation_design.py \
             --input-dir artifacts/shards \
             --output artifacts/final/block3-representation-design-summary.json
+      - name: Build compact PR report
+        if: github.event_name == 'pull_request'
+        run: |
+          python - <<'PY'
+          import json
+          x=json.load(open('artifacts/final/block3-representation-design-summary.json'))
+          first=x.get('first_counterexample')
+          lines=[
+            '## Research028 exact CI summary',
+            '',
+            f"- target cases: **{x['target_cases']:,}** ({x['nonclosed_targets']:,} nonclosed)",
+            f"- greedy globally optimal: **{x['greedy_global_optimal']:,}/{x['nonclosed_targets']:,} ({100*x['greedy_success_fraction']:.4f}%)**",
+            f"- greedy failures: **{x['greedy_failures']:,}**",
+            f"- diminishing-return violations: **{x['diminishing_returns']['violations']:,}/{x['diminishing_returns']['comparisons']:,}**",
+          ]
+          if first:
+            lines += [
+              '',
+              f"First counterexample: Rule **{first['rule']}**, target `{first['target']}`, balance {first['balance']}/8.",
+              f"Greedy cost `{first['greedy_added_bits']:.12g}` vs global `{first['global_min_added_bits']:.12g}`; regret `{first['regret']:.12g}`.",
+              f"Beam diagnostics: `{json.dumps(first['counterexample']['beam'], sort_keys=True)}`",
+            ]
+          else:
+            lines += ['', '**No greedy counterexample exists in the frozen block-3 census.**']
+          open('/tmp/block3-report.md','w').write('\n'.join(lines)+'\n')
+          PY
+      - name: Comment compact exact summary
+        if: github.event_name == 'pull_request'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh pr comment "${{ github.event.pull_request.number }}" --body-file /tmp/block3-report.md
       - uses: actions/upload-artifact@v4
         with:
           name: block3-representation-design-publication
