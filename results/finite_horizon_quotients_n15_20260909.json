@@ -1,0 +1,165 @@
+{
+  "ok": true,
+  "ring_width": 15,
+  "block_size": 3,
+  "cadence": 3,
+  "primary_long_memory_pass": true,
+  "rows": [
+    {
+      "rule": 101,
+      "target": "00000010",
+      "hstar": 18,
+      "quotient_discovery_time": 1,
+      "final_quotient": "01234567",
+      "dq_over_hstar": 0.05555555555555555,
+      "change_chain": [
+        {
+          "h": 0,
+          "quotient": "00000010",
+          "classes": 2,
+          "local_entropy": 0.5435644431995964
+        },
+        {
+          "h": 1,
+          "quotient": "01234567",
+          "classes": 8,
+          "local_entropy": 3.0
+        }
+      ],
+      "predicted_dq": 1,
+      "dq_prediction_pass": true,
+      "early_prediction_pass": true
+    },
+    {
+      "rule": 106,
+      "target": "00000001",
+      "hstar": 36,
+      "quotient_discovery_time": 1,
+      "final_quotient": "01234567",
+      "dq_over_hstar": 0.027777777777777776,
+      "change_chain": [
+        {
+          "h": 0,
+          "quotient": "00000001",
+          "classes": 2,
+          "local_entropy": 0.5435644431995964
+        },
+        {
+          "h": 1,
+          "quotient": "01234567",
+          "classes": 8,
+          "local_entropy": 3.0
+        }
+      ],
+      "predicted_dq": 1,
+      "dq_prediction_pass": true,
+      "early_prediction_pass": true
+    },
+    {
+      "rule": 110,
+      "target": "00000100",
+      "hstar": 14,
+      "quotient_discovery_time": 1,
+      "final_quotient": "01234567",
+      "dq_over_hstar": 0.07142857142857142,
+      "change_chain": [
+        {
+          "h": 0,
+          "quotient": "00000100",
+          "classes": 2,
+          "local_entropy": 0.5435644431995964
+        },
+        {
+          "h": 1,
+          "quotient": "01234567",
+          "classes": 8,
+          "local_entropy": 3.0
+        }
+      ],
+      "predicted_dq": 1,
+      "dq_prediction_pass": true,
+      "early_prediction_pass": true
+    },
+    {
+      "rule": 90,
+      "target": "00110011",
+      "hstar": 2,
+      "quotient_discovery_time": 2,
+      "final_quotient": "01234567",
+      "dq_over_hstar": 1.0,
+      "change_chain": [
+        {
+          "h": 0,
+          "quotient": "00110011",
+          "classes": 2,
+          "local_entropy": 1.0
+        },
+        {
+          "h": 1,
+          "quotient": "01231032",
+          "classes": 4,
+          "local_entropy": 2.0
+        },
+        {
+          "h": 2,
+          "quotient": "01234567",
+          "classes": 8,
+          "local_entropy": 3.0
+        }
+      ],
+      "predicted_dq": 2,
+      "dq_prediction_pass": true,
+      "early_prediction_pass": true
+    },
+    {
+      "rule": 24,
+      "target": "01000010",
+      "hstar": 1,
+      "quotient_discovery_time": 1,
+      "final_quotient": "01230243",
+      "dq_over_hstar": 1.0,
+      "change_chain": [
+        {
+          "h": 0,
+          "quotient": "01000010",
+          "classes": 2,
+          "local_entropy": 0.8112781244591328
+        },
+        {
+          "h": 1,
+          "quotient": "01230243",
+          "classes": 5,
+          "local_entropy": 2.25
+        }
+      ],
+      "predicted_dq": 1,
+      "dq_prediction_pass": true,
+      "early_prediction_pass": true
+    },
+    {
+      "rule": 184,
+      "target": "00000001",
+      "hstar": 2,
+      "quotient_discovery_time": 1,
+      "final_quotient": "01232445",
+      "dq_over_hstar": 0.5,
+      "change_chain": [
+        {
+          "h": 0,
+          "quotient": "00000001",
+          "classes": 2,
+          "local_entropy": 0.5435644431995964
+        },
+        {
+          "h": 1,
+          "quotient": "01232445",
+          "classes": 6,
+          "local_entropy": 2.5
+        }
+      ],
+      "predicted_dq": 1,
+      "dq_prediction_pass": true,
+      "early_prediction_pass": true
+    }
+  ]
+}
