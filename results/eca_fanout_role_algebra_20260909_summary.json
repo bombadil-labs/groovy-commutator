@@ -1,0 +1,12 @@
+{
+  "protocol": "docs/research/protocols/eca-fanout-role-algebra-20260909.md",
+  "class_labels_loaded": false,
+  "source_rules_checked": 256,
+  "predecessor_states_per_source": 256,
+  "candidate_algebras_per_source": 1296,
+  "successful_source_count": 11,
+  "successful_sources": [0,4,51,60,90,102,150,170,200,204,240],
+  "zero_groovy_commutator_sources": [0,4,60,90,102,150,170,200,204,240],
+  "fanout_equals_zero_commutator_union_rule51": true,
+  "rule51_mechanism": "incoming derivative is the constant all-ones pattern; derivative-mode transport can keep it closed even though the Groovy commutator is constant one rather than zero"
+}

@@ -1,0 +1,13 @@
+{
+  "protocol": "docs/research/protocols/role-stack-recursive-chain-20260909.md",
+  "class_labels_loaded": false,
+  "uniform_two_step_closure_rules": [],
+  "second_liftable_transition_counts": {"0":3,"1":0,"2":2,"3":0,"4":2,"5":0,"6":0,"7":0},
+  "rule90": {
+    "source_rule_code": 2,
+    "eca_equivalent": 90,
+    "second_liftable_predecessors": ["000","101"],
+    "second_liftable_images": [2,42],
+    "note": "Both passing predecessors are fixed states with zero incoming derivative."
+  }
+}

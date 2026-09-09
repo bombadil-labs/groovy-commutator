@@ -1,6 +1,6 @@
 # Dynamics of Erased Distinctions
 
-This page is the **working synthesis** of the Groovy Commutator research program. It is not a chronological experiment and it is not a claim that every open mechanism has been solved. It records the smallest common theory that currently survives the exact closure work, the history and observer searches, the fiber-visibility census, and the selector-shielding results.
+This page is the **working synthesis** of the Groovy Commutator research program around coarse-graining, memory, and representation repair. It is not a chronological experiment and it is not a claim that every open mechanism has been solved. It records the smallest common theory that currently survives the exact closure work, the history and observer searches, the fiber-visibility census, and the selector-shielding results.
 
 The current thesis is:
 
@@ -149,6 +149,8 @@ So the value of a missing distinction can depend strongly on which other distinc
 
 Research028 explicitly tests local diminishing returns and finds violations in about 79% of comparable same-split cases, even though greedy global failure is extremely rare. Generic synergy is therefore common but usually benign. The sharper theoretical object is **fatal predictive synergy**: conditional complementarity strong enough to make a locally inferior representation path globally cheaper. An independent implementation reproduces the first counterexample, and a frozen `n=15` test preserves the same greedy failure and `13.26x` gain amplification.
 
+The later causal-witness line sharpens the same issue. Research031 shows that finite periodic topology can hide genuinely admissible predictive contexts. Research032 replaces explicit light-cone enumeration with a symbolic witness automaton, while Research033 and Research034 progressively constrain unresolved cases by the grammar of reachable paired contexts. The resulting hierarchy separates local distinctions that are impossible in the actual dynamics from distinctions that merely look possible under a coarser context language.
+
 ## Hidden modes have dynamics
 
 The discarded distinctions are not abstract bookkeeping. They can propagate, decay, orbit, collide, or change shape while remaining invisible.
@@ -195,6 +197,7 @@ The program should distinguish its stable results from its motivating language. 
 10. **Possibility frontier.** In the frozen static observer family at `n=12`, 222 of 247 rules with any closure breaker separate the least-forgetting closure breaker from the maximum-future-repertoire observer; all six frozen observer pairs preserve that ordering on the fresh `n=18` validation.
 11. **Constructive local repair.** On the complete two-cell partition lattice, greedy fixed-target Shannon repair reaches the globally minimum-information exact closure repair in all 1,590 nonclosed target cases, while bulk-entropy and worst-case-tail repair already select different first edits in 326 cases.
 12. **Predictive-synergy obstruction.** On the complete block-3 target-refinement intervals, greedy remains globally optimal in 30,852 of 30,856 nonclosed cases but has four exact one-bit-regret failures in the Rule-24/231 conjugacy family. The first counterexample independently audits and persists at `n=15`; a zero-immediate-gain distinction amplifies a later split's predictive gain by about `13.26x`.
+13. **Reachable-context refinement.** Symbolic light-cone and finite-state language constructions progressively eliminate false predictive possibilities introduced by periodic or insufficiently composable context approximations; Research032–034 provide exact finite certificates for the stated horizons and language widths.
 
 ## What remains open
 
@@ -206,11 +209,12 @@ Several tempting generalizations are not yet earned:
 - The static block-observer searches do not establish an optimal representation family; good effective variables may need to be relational, dynamical, stateful, or adaptive.
 - The near-perfect greedy repair result has no general theorem behind it. Block-3 gives exact counterexamples, and the project does not yet know what separates benign predictive synergy from synergy that makes a local repair gradient globally wrong.
 - The Rule-24 zero-gain-bridge mechanism is confirmed at `n=12` and `n=15`, not proved for all compatible ring widths.
+- The finite reachable-language hierarchy is only an outer-approximation ladder; the 170 cases left after Research034 are not classified by the current width-3 grammar.
 - The project has not established that the four Wolfram classes are the right organizing taxonomy for these closure profiles.
 
 ## The next theoretical targets
 
-The current Program has two complementary proof problems.
+This Program currently has two complementary proof problems.
 
 The first remains physical **safe forgetting**:
 
@@ -218,13 +222,17 @@ The first remains physical **safe forgetting**:
 
 In a linear system this resembles an unobservable invariant subspace. In the nonlinear systems studied here, the corresponding object is state- or trajectory-relative: a hidden mode can be safe in one context and latent in another, and a selector can dynamically create walls that block one direction of causal influence. Rule 106 and selector shielding are the first worked examples.
 
-The second is now constructive **representation geometry**:
+The second is constructive **representation geometry**:
 
 > **Characterize fatal predictive synergy: when must a globally cheapest sufficient representation include a distinction whose marginal predictive value is too small—or zero—for a greedy repair rule to select?**
 
-Research027 shows that the local closure gradient can be extraordinarily effective. Research028 proves it is not universally sufficient and supplies a minimal finite counterexample. The next useful theory should explain why 79% of tested local gain comparisons can violate diminishing returns while only four of 30,856 nonclosed block-3 targets actually defeat greedy global repair.
+Research027 shows that the local closure gradient can be extraordinarily effective. Research028 proves it is not universally sufficient and supplies a minimal finite counterexample. The later context-language results suggest that representation repair and causal certification may ultimately share a common object: a sufficiently rich grammar of distinctions whose combinations are actually reachable.
 
-That shifts the representation-design problem from blind observer search toward a higher-order calculus: marginal relevance describes first-order repair, while conditional complementarity describes interactions among distinctions. A successful theory should say when those interaction terms can safely be ignored and when they must be represented explicitly.
+That shifts the representation-design problem from blind observer search toward a higher-order calculus: marginal relevance describes first-order repair, conditional complementarity describes interactions among distinctions, and reachable-context languages constrain which apparent interactions can occur at all.
+
+## Parallel program
+
+The separate [Dimensional Closure and the Commutator Lift](2026-09-09-dimensional-closure-program.md) Program follows a different but related question: when evolution and transformation disagree, can their residual be promoted into an additional spatial coordinate so that the enlarged representation closes? The two Programs share notes and algebra, but maintain distinct proof targets.
 
 ## How to read the record
 

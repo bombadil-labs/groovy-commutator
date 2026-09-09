@@ -1,0 +1,37 @@
+{
+  "protocol": "docs/research/protocols/center-conditioned-ring-fresh-size-20260909.md",
+  "sizes": {
+    "5": [
+      {"field_count":0,"fields":[],"pair":[14,31],"transition_edge_count":4,"transition_state_count":4,"witness_audit":true},
+      {"field_count":0,"fields":[],"pair":[39,54],"transition_edge_count":0,"transition_state_count":0,"witness_audit":true},
+      {"field_count":0,"fields":[],"pair":[54,39],"transition_edge_count":0,"transition_state_count":0,"witness_audit":true},
+      {"field_count":0,"fields":[],"pair":[85,170],"transition_edge_count":0,"transition_state_count":0,"witness_audit":true},
+      {"field_count":0,"fields":[],"pair":[91,41],"transition_edge_count":0,"transition_state_count":0,"witness_audit":true},
+      {"field_count":0,"fields":[],"pair":[187,17],"transition_edge_count":2,"transition_state_count":2,"witness_audit":true}
+    ],
+    "6": [
+      {"field_count":0,"fields":[],"pair":[14,31],"transition_edge_count":4,"transition_state_count":4,"witness_audit":true},
+      {"field_count":0,"fields":[],"pair":[39,54],"transition_edge_count":0,"transition_state_count":0,"witness_audit":true},
+      {"field_count":0,"fields":[],"pair":[54,39],"transition_edge_count":0,"transition_state_count":0,"witness_audit":true},
+      {
+        "field_count":2,
+        "fields":[
+          {"horizontal":{"cycle":null,"pairs":[[85,170],null],"valid_steps":1},"rows":["101010","010101","101010","010101","101010","010101"],"state":45460576917,"vertical":{"cycle":null,"pairs":[[85,170],null],"valid_steps":1}},
+          {"horizontal":{"cycle":null,"pairs":[[85,170],null],"valid_steps":1},"rows":["010101","101010","010101","101010","010101","101010"],"state":23258899818,"vertical":{"cycle":null,"pairs":[[85,170],null],"valid_steps":1}}
+        ],
+        "pair":[85,170],"transition_edge_count":2,"transition_state_count":2,"witness_audit":true
+      },
+      {"field_count":0,"fields":[],"pair":[91,41],"transition_edge_count":4,"transition_state_count":4,"witness_audit":true},
+      {
+        "field_count":4,
+        "fields":[
+          {"horizontal":{"cycle":2,"pairs":[[187,17],[187,17],[187,17]],"valid_steps":2},"rows":["000000","111111","000000","111111","000000","111111"],"state":67662254016,"vertical":{"cycle":null,"pairs":[[187,17],null],"valid_steps":1}},
+          {"horizontal":{"cycle":2,"pairs":[[187,17],[187,17],[187,17]],"valid_steps":2},"rows":["101010","101010","101010","101010","101010","101010"],"state":22906492245,"vertical":{"cycle":null,"pairs":[[187,17],null],"valid_steps":1}},
+          {"horizontal":{"cycle":2,"pairs":[[187,17],[187,17],[187,17]],"valid_steps":2},"rows":["010101","010101","010101","010101","010101","010101"],"state":45812984490,"vertical":{"cycle":null,"pairs":[[187,17],null],"valid_steps":1}},
+          {"horizontal":{"cycle":2,"pairs":[[187,17],[187,17],[187,17]],"valid_steps":2},"rows":["111111","000000","111111","000000","111111","000000"],"state":1057222719,"vertical":{"cycle":null,"pairs":[[187,17],null],"valid_steps":1}}
+        ],
+        "pair":[187,17],"transition_edge_count":4,"transition_state_count":4,"witness_audit":true
+      }
+    ]
+  }
+}

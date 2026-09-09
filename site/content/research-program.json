@@ -1,28 +1,49 @@
-{
-  "title": "Dynamics of Erased Distinctions",
-  "eyebrow": "Working research program",
-  "date": "2026-09-08",
-  "updated": "2026-09-09",
-  "status": "living",
-  "summary": "A living synthesis of the project’s current view: closure is the forward invariance of what a representation declares indistinguishable, and the central physics lies in whether erased distinctions return to causal visibility or remain safely shielded.",
-  "thesis": "Groovy Commutator studies the dynamics of distinctions erased by a representation.",
-  "source": "docs/research/2026-09-08-dynamics-of-erased-distinctions.md",
-  "supports": [
-    "observation-closure",
-    "history-lift-closure",
-    "observer-search",
-    "fiber-visibility",
-    "possibility-frontier",
-    "representation-design",
-    "block3-representation-design",
-    "contextual-quotient",
-    "finite-horizon-quotients",
-    "causal-witness-horizon",
-    "causal-witness-automaton",
-    "reachable-context-invariants",
-    "window3-reachable-language",
-    "selector-shielding",
-    "pulse-shape-scattering",
-    "pulse-scattering"
-  ]
-}
+[
+  {
+    "slug": "erased-distinctions",
+    "title": "Dynamics of Erased Distinctions",
+    "eyebrow": "Working research program",
+    "date": "2026-09-08",
+    "updated": "2026-09-09",
+    "status": "living",
+    "summary": "A living synthesis of the project’s current view of coarse-graining: closure tracks which distinctions remain causally relevant, how erased distinctions return to visibility, and when representation repair must restore them.",
+    "thesis": "Groovy Commutator studies the dynamics of distinctions erased by a representation.",
+    "source": "docs/research/2026-09-08-dynamics-of-erased-distinctions.md",
+    "supports": [
+      "observation-closure",
+      "history-lift-closure",
+      "observer-search",
+      "fiber-visibility",
+      "possibility-frontier",
+      "representation-design",
+      "block3-representation-design",
+      "contextual-quotient",
+      "finite-horizon-quotients",
+      "causal-witness-horizon",
+      "causal-witness-automaton",
+      "reachable-context-invariants",
+      "window3-reachable-language",
+      "selector-shielding",
+      "pulse-shape-scattering",
+      "pulse-scattering"
+    ]
+  },
+  {
+    "slug": "dimensional-lift",
+    "title": "Dimensional Closure and the Commutator Lift",
+    "eyebrow": "Working research program",
+    "date": "2026-09-09",
+    "updated": "2026-09-09",
+    "status": "living",
+    "summary": "A parallel program on when a lower-dimensional rule can become higher-dimensional space. The current exact object is a rule-independent semantic lift in which the two paths around a commuting square and their residual become ternary coordinates; the open problem is a native autonomous spatial realization.",
+    "thesis": "When two dynamical paths fail to commute, represent the disagreement as a new coordinate and ask whether the enlarged representation closes.",
+    "source": "docs/research/2026-09-09-dimensional-closure-program.md",
+    "supports": [
+      "shared-state-rule",
+      "dimensional-lift",
+      "column-compatibility",
+      "block-compatibility",
+      "ternary-commutator-lift"
+    ]
+  }
+]
