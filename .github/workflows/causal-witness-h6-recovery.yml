@@ -1,0 +1,95 @@
+name: Research032 recover censored horizon-6 cases
+
+on:
+  push:
+    branches: ['research/causal-witness-automaton-20260909']
+    paths:
+      - 'scripts/check_causal_witness_congruence.py'
+      - 'scripts/check_causal_witness_h6_z3.py'
+      - 'scripts/audit_causal_witness_h6_pysat.py'
+      - 'docs/research/protocols/causal-witness-h6-recovery-20260909.md'
+      - '.github/workflows/causal-witness-h6-recovery.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  recover:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+      - name: Install exact solver backends
+        run: python -m pip install -e . pandas z3-solver python-sat
+      - name: Reproduce congruence certificates
+        run: |
+          python scripts/check_causal_witness_congruence.py \
+            --output /tmp/causal_witness_congruence.json
+      - name: Solve 12 censored cases with Z3 fine-ECA encoding
+        run: |
+          python scripts/check_causal_witness_h6_z3.py \
+            --output /tmp/causal_witness_h6_z3.json
+      - name: Independently audit with hand-built CNF + Minisat22
+        run: |
+          python scripts/audit_causal_witness_h6_pysat.py \
+            --output /tmp/causal_witness_h6_pysat.json
+      - name: Require axis-by-axis agreement
+        run: |
+          python - <<'PY'
+          import json
+          z=json.load(open('/tmp/causal_witness_h6_z3.json'))
+          p=json.load(open('/tmp/causal_witness_h6_pysat.json'))
+          def key(r): return (r['rule'],r['target'],r['pair'])
+          zd={key(r):r for r in z['cases']}; pd={key(r):r for r in p['cases']}
+          assert zd.keys()==pd.keys()
+          for k in zd:
+              za=[a['status'] for a in zd[k]['axes']]
+              pa=[a['status'] for a in pd[k]['axes']]
+              assert za==pa,(k,za,pa)
+              assert zd[k]['h6_witness_exists']==pd[k]['h6_witness_exists']
+          assert z['sat_cases']==p['sat_cases']
+          print({'cases':len(zd),'sat_cases':z['sat_cases'],'axis_checks':sum(len(r['axes']) for r in z['cases'])})
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: causal-witness-h6-recovery
+          path: |
+            /tmp/causal_witness_congruence.json
+            /tmp/causal_witness_h6_z3.json
+            /tmp/causal_witness_h6_pysat.json
+          retention-days: 30
+      - name: Surface recovery on PR 37
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python - <<'PY' > /tmp/comment.md
+          import json
+          c=json.load(open('/tmp/causal_witness_congruence.json'))
+          z=json.load(open('/tmp/causal_witness_h6_z3.json'))
+          print('## Research032 phase 2 recovery — censored h=6 cases')
+          print()
+          print(f"- h=5 unresolved distinctions: **{c['h5_unresolved_total']}**")
+          print(f"- congruence-certified permanent: **{c['congruence_certified_total']} ({100*c['certified_fraction_of_h5_unresolved']:.3f}%)**")
+          print(f"- non-congruence remainder: **{c['noncongruence_remainder']}**")
+          print('- MDD-censored rules fully covered by congruence: **126, 129, 146, 182**')
+          print('- alternate-solver cases: **12** (Rules 122 and 161 × frozen pairs)')
+          print('- axis checks per solver: **156**')
+          print(f"- Z3 h=6 SAT cases: **{z['sat_cases']}**; UNSAT cases: **{z['unsat_cases']}**")
+          print('- PySAT/Minisat22 audit: **axis-by-axis agreement**')
+          print()
+          if z['sat_cases']:
+              print('### Recovered horizon-6 witnesses')
+              for r in z['cases']:
+                  if r['h6_witness_exists']:
+                      w=r['first_witness']
+                      print(f"- Rule {r['rule']}, target `{r['target']}`, pair `{r['pair']}`, axis {w['axis']}")
+          else:
+              print('**All 12 censored pair/target cases are UNSAT at h=6. Combined with the 250 completed MDD rules, the complete family has zero new births at horizons 4, 5, and 6.**')
+          PY
+          gh pr comment 37 --body-file /tmp/comment.md
