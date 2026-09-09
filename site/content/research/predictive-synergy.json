@@ -73,5 +73,30 @@
       "history-lift-closure",
       "fiber-visibility"
     ]
+  },
+  {
+    "slug": "causal-witness-horizon",
+    "number": "031",
+    "title": "The ring hid the third-step witness",
+    "date": "2026-09-09",
+    "updated": "2026-09-09",
+    "kind": "Exact local light-cone census with independent witness audit",
+    "evidence": "exact",
+    "topic": "Observation and memory",
+    "summary": "A wrap-free causal-cone search shows that the four-block ring used in Research030 suppresses real local predictive contexts: 54 rule/target quotients are already underestimated at horizon 2, and exactly four symmetry-related cases contain a local distinction whose first possible witness is horizon 3.",
+    "takeaway": "Predictive distinctions have their own causal witness horizon, and finite periodic topology can make that horizon look artificially short by removing admissible surrounding contexts.",
+    "source": "docs/research/2026-09-09-causal-witness-horizon.md",
+    "promotion": {
+      "stage": "candidate",
+      "idea": "Local predictive distinctions have a causal witness horizon",
+      "destination": "Concepts"
+    },
+    "related": [
+      "finite-horizon-quotients",
+      "contextual-quotient",
+      "fiber-visibility",
+      "selector-shielding",
+      "history-lift-closure"
+    ]
   }
 ]
