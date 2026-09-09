@@ -1,0 +1,25 @@
+[
+  {
+    "slug": "program-edit-locality",
+    "recordType": "checkpoint",
+    "label": "Program edit checkpoint",
+    "title": "A spatial program needs an explicit edit budget",
+    "date": "2026-09-09",
+    "updated": "2026-09-09",
+    "kind": "Exact locality and dimensional information-budget constraints",
+    "evidence": "exact",
+    "topic": "Algebra and closure",
+    "summary": "Finite-speed propagation rules out finite-support global reprogramming at a common finite cadence. A linear input footprint also cannot supply independent area information; local program fields and explicit resource budgets keep the spatial-program search well posed.",
+    "takeaway": "Specify where a program acts, how its edits propagate, and which independent inputs are supplied before demanding recursive spatial closure.",
+    "source": "docs/research/2026-09-09-program-edit-locality.md",
+    "promotion": {
+      "stage": "research"
+    },
+    "related": [
+      "dimensional-intertwining",
+      "selector-two-lift",
+      "shared-state-rule",
+      "correction-future-coordinates"
+    ]
+  }
+]

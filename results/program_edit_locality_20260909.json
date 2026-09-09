@@ -1,0 +1,210 @@
+{
+  "assertions": 104220,
+  "finite_propagation": {
+    "field_cases": 64,
+    "field_generator": "LCG: x = (1664525*x + 1013904223) mod 2^32; output high bit",
+    "maximum_observed_distance": {
+      "active": 4,
+      "strong": 8
+    },
+    "outside_cone_comparisons": 89600,
+    "radius_bounds": {
+      "active": 1,
+      "strong": 2
+    },
+    "rules": [
+      0,
+      30,
+      54,
+      90,
+      110,
+      150,
+      204,
+      255
+    ],
+    "seeds": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "ticks": 4,
+    "timepoint_checks": 256,
+    "width": 21
+  },
+  "global_instruction_edits": {
+    "cases": 6144,
+    "disagreement_counts_by_width": {
+      "15": [
+        5,
+        15
+      ],
+      "21": [
+        7,
+        21
+      ],
+      "9": [
+        3,
+        9
+      ]
+    },
+    "instruction_bits": 8,
+    "rules": 256,
+    "widths": [
+      9,
+      15,
+      21
+    ]
+  },
+  "patch_counts": [
+    {
+      "interface_patterns": 2,
+      "side": 1,
+      "stripe_patterns": 2,
+      "unrestricted_binary_patterns": 2
+    },
+    {
+      "interface_patterns": 4,
+      "side": 2,
+      "stripe_patterns": 8,
+      "unrestricted_binary_patterns": 16
+    },
+    {
+      "interface_patterns": 8,
+      "side": 3,
+      "stripe_patterns": 32,
+      "unrestricted_binary_patterns": 512
+    },
+    {
+      "interface_patterns": 16,
+      "side": 4,
+      "stripe_patterns": 128,
+      "unrestricted_binary_patterns": 65536
+    },
+    {
+      "interface_patterns": 32,
+      "side": 5,
+      "stripe_patterns": 512,
+      "unrestricted_binary_patterns": 33554432
+    },
+    {
+      "interface_patterns": 64,
+      "side": 6,
+      "stripe_patterns": 2048,
+      "unrestricted_binary_patterns": 68719476736
+    },
+    {
+      "interface_patterns": 128,
+      "side": 7,
+      "stripe_patterns": 8192,
+      "unrestricted_binary_patterns": 562949953421312
+    }
+  ],
+  "per_site_program_edits": {
+    "cases": 2048,
+    "changed_output_support": [
+      0
+    ],
+    "width": 9
+  },
+  "protocol": "docs/research/protocols/program-edit-locality-20260909.md",
+  "protocol_deviations": [],
+  "protocol_freeze_commit": "d665bc9ecd3cf15ee2842f8531996a4a4516b872",
+  "schema_version": 1,
+  "scope": "Finite audits support explicit locality/counting proofs; no impossibility of recursive spatial programs is claimed.",
+  "stripe_state_edits": {
+    "by_width": [
+      {
+        "support_sizes": [
+          2
+        ],
+        "width": 2
+      },
+      {
+        "support_sizes": [
+          3
+        ],
+        "width": 3
+      },
+      {
+        "support_sizes": [
+          4
+        ],
+        "width": 4
+      },
+      {
+        "support_sizes": [
+          5
+        ],
+        "width": 5
+      },
+      {
+        "support_sizes": [
+          6
+        ],
+        "width": 6
+      },
+      {
+        "support_sizes": [
+          7
+        ],
+        "width": 7
+      },
+      {
+        "support_sizes": [
+          8
+        ],
+        "width": 8
+      },
+      {
+        "support_sizes": [
+          9
+        ],
+        "width": 9
+      },
+      {
+        "support_sizes": [
+          10
+        ],
+        "width": 10
+      },
+      {
+        "support_sizes": [
+          11
+        ],
+        "width": 11
+      },
+      {
+        "support_sizes": [
+          12
+        ],
+        "width": 12
+      },
+      {
+        "support_sizes": [
+          13
+        ],
+        "width": 13
+      },
+      {
+        "support_sizes": [
+          14
+        ],
+        "width": 14
+      },
+      {
+        "support_sizes": [
+          15
+        ],
+        "width": 15
+      },
+      {
+        "support_sizes": [
+          16
+        ],
+        "width": 16
+      }
+    ],
+    "cases": 135
+  }
+}
