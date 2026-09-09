@@ -275,4 +275,10 @@ The new question is:
 
 > **Can the exact image of the one-defect sofic shift be carried symbolically across time while preserving enough structure to decide target visibility and orbit inclusion?**
 
-That is now the narrow computational/theoretical frontier.
+[Research037](2026-09-09-symbolic-sofic-image.md) takes the first exact step. Reduced decision diagrams carry ordinary temporal-recurrence and translated-recurrence tests across all 170 frontier questions with zero censoring, and recover the Rule-5 control as the stronger identity `G^3=G`. But none of the frontier rules recurs through horizon 6. The missing closure therefore cannot be reduced, at this horizon, to recognizing that the same source provenance has returned to an earlier local map.
+
+That sharpens the frontier again:
+
+> **Can every new exact output be re-presented by an earlier slice using a different admissible source provenance?**
+
+The next proof object should be a finite-state source recoder, graph endomorphism, or two-tape simulation relation over the exact one-defect source presentation. The goal is still exact orbit inclusion, but without projecting the reachable image into a giant explicit graph.
