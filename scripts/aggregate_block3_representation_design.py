@@ -1,7 +1,6 @@
 """Aggregate exact sharded Research028 block-3 representation-design results."""
 from __future__ import annotations
 import argparse,json
-from collections import Counter
 from pathlib import Path
 
 EXPECTED_TARGETS=127
