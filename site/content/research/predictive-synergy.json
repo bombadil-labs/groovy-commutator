@@ -148,5 +148,30 @@
       "contextual-quotient",
       "fiber-visibility"
     ]
+  },
+  {
+    "slug": "window3-reachable-language",
+    "number": "034",
+    "title": "One more word of context removes another layer of false danger",
+    "date": "2026-09-09",
+    "updated": "2026-09-09",
+    "kind": "Exact width-3 paired-language invariant theorem and residual census",
+    "evidence": "exact",
+    "topic": "Observation and memory",
+    "summary": "A length-3 de Bruijn invariant proves permanent invisibility for 58 of the 228 cases left unresolved by Research033’s nearest-neighbor grammar, leaving 170. The preregistered Rule-5 splice case is rescued exactly, showing that legal edges can compose into an impossible longer context.",
+    "takeaway": "Causal possibility depends on composability: remembering longer spatial phrases can eliminate futures that exist only because a coarser grammar splices locally legal pieces into globally unreachable contexts.",
+    "source": "docs/research/2026-09-09-window3-reachable-language.md",
+    "promotion": {
+      "stage": "candidate",
+      "idea": "Causal possibility requires composable spatial context",
+      "destination": "Concepts"
+    },
+    "related": [
+      "reachable-context-invariants",
+      "causal-witness-automaton",
+      "causal-witness-horizon",
+      "finite-horizon-quotients",
+      "contextual-quotient"
+    ]
   }
 ]
