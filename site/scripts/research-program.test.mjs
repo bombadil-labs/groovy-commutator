@@ -26,6 +26,16 @@ test('the extended record contains numbered notes plus one unnumbered checkpoint
   assert.equal(checkpoint.label, 'Checkpoint');
 });
 
+test('same-day numbered notes render newest number first', () => {
+  buildResearchProgram({ output });
+  const html = page('index.html');
+  const pos35 = html.indexOf('href="ternary-commutator-lift.html"');
+  const pos34 = html.indexOf('href="window3-reachable-language.html"');
+  const pos33 = html.indexOf('href="reachable-context-invariants.html"');
+  assert.ok(pos35 >= 0 && pos34 >= 0 && pos33 >= 0);
+  assert.ok(pos35 < pos34 && pos34 < pos33);
+});
+
 test('the living program validates against registered evidence', () => {
   assert.doesNotThrow(() => validateProgram(program(), records()));
   const bad = program();
