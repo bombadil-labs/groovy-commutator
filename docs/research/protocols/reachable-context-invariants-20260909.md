@@ -17,7 +17,7 @@ The next question is therefore:
 
 > **Can permanent invisibility be certified by an invariant that tracks only contexts generated from a single hidden defect inside an otherwise diagonal background?**
 
-This checkpoint tests the first two levels of a spatial-language hierarchy: generated pair-symbol closure and generated nearest-neighbor edge closure.
+This note tests the first two levels of a spatial-language hierarchy: generated pair-symbol closure and generated nearest-neighbor edge closure.
 
 ## Exact paired macro dynamics
 

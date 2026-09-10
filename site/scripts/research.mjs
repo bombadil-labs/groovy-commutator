@@ -19,6 +19,7 @@ export const CATALOG = path.join(SITE, 'content/research.json');
 export const EVIDENCE = {
   open: 'Open question', exploratory: 'Exploratory', replicated: 'Replicated experiment',
   exact: 'Exact within stated bounds', superseded: 'Superseded',
+  state: 'Checkpoint · state, no new evidence',
 };
 const STAGES = ['research', 'candidate', 'promoted'];
 export const esc = (x) => String(x).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));

@@ -1,6 +1,6 @@
 # Frozen protocol: editable routing tables in every dimension
 
-Date: 2026-09-09. This extends the spatial Rail program checkpoint after the user authorized making the added instructions editable. Class-IV labels do not inform the construction. This is an exact construction/audit, not a novelty claim or a hypothesis about a privileged physical dimension.
+Date: 2026-09-09. This extends the spatial Rail program note after the user authorized making the added instructions editable. Class-IV labels do not inform the construction. This is an exact construction/audit, not a novelty claim or a hypothesis about a privileged physical dimension.
 
 ## Declared program language
 

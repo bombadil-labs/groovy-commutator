@@ -30,8 +30,8 @@ from historical influence within the dynamics and from future capability.
 The finite repertoire and costed/returning-task comparisons are complete;
 learning reusable primitives remains open. The latest completed unit is the
 interface-state experiment and unbounded-escape proof. The 3D hypothesis is parked by explicit user
-instruction; continue the fixed 2D workstream. Read its continuation in `docs/research/continuations/history-and-possibility.md`,
-which also holds the agenda checkpoint of unfinished threads.
+instruction; continue the fixed 2D workstream. Read its checkpoint log in `docs/research/checkpoints/history-and-possibility.md`
+and the lab-scope [unfinished-threads checkpoint](docs/research/2026-09-08-unfinished-threads.md).
 Do not promote earlier dialogue's unverified numbers or ethical analogies into results.
 
 Capture each substantial new experiment, correction, or open research plan
@@ -300,11 +300,12 @@ workflow; research source and result changes now also trigger that workflow.
    site-wide: identity map = blackboard 𝟙 (NOT `I`, which stays
    integration); φ = the base's rule, ψ = a gauge's ingredient rule.
 
-## Research continuations (read before continuing any workstream)
+## Checkpoint logs (read before continuing any workstream)
 
-Each Program keeps its own dated continuation log under
-`docs/research/continuations/` (what each unit completed, what is frozen and
-unrun, what not to infer):
+A checkpoint is a dated statement of state: what a unit completed, what is
+frozen and unrun, what is parked, what not to infer. It adds no evidence and
+carries no evidence label. Each Program keeps its checkpoints in a log under
+`docs/research/checkpoints/`:
 
 - `dimensional-lift.md` — Dimensional Closure and the Commutator Lift, including
   its 2D encoding lineage and the dimensional vision contract.
@@ -313,9 +314,11 @@ unrun, what not to infer):
 - `history-and-possibility.md` — the history-and-possibility precursor, from
   which the planned learning-and-revising-primitives program branches.
 
-Read the most recent section for the workstream you are continuing, plus its
-Program page, before doing anything. Add new continuations there, not here. A
-new Program gets a new file and an entry in `site/content/research-program.json`.
+Read the most recent checkpoint for the workstream you are continuing, plus its
+Program page, before doing anything. Add new checkpoints there, not here. A
+checkpoint that should be public is also registered in the research catalog
+with `recordType: "checkpoint"` (see `docs/research/README.md`). A new Program
+gets a new log and an entry in `site/content/research-program.json`.
 
 ## New instruments (added 2026-06-30, from a separate chat-interface exploration)
 
@@ -457,7 +460,7 @@ to rerun it to trust it. If a finding is suggestive but small-sample
 findings read as settled.
 
 **Git workflow:**
-- Commit at meaningful checkpoints (a result lands, a sweep finishes, a
+- Commit at meaningful milestones (a result lands, a sweep finishes, a
   module is added) rather than after every small edit — but don't let
   uncommitted work pile up across sessions either.
 - Write commit messages that explain *why* a change happened, not just

@@ -97,7 +97,7 @@ Before attaching class labels, group rules by complete tower signature:
 - sequence of image sizes for the first 16 levels;
 - sequence of nonzero-state counts for the first 16 levels.
 
-Also cross-check that the known zero-commutator family has `A2=0` exactly and that constant-commutator rules have constant `A2`, reproducing the earlier algebra checkpoint.
+Also cross-check that the known zero-commutator family has `A2=0` exactly and that constant-commutator rules have constant `A2`, reproducing the earlier algebra note.
 
 ## Interpretation
 

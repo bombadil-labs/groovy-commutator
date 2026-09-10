@@ -267,9 +267,9 @@ That is no longer answered by diagonal stripes. It is the next place where cross
 
 ## Integration review, 2026-09-09
 
-This previously unmerged checkpoint was rechecked against the current repository. The original verifier reproduces the published local counts and all 2,160 periodic comparisons. It now also checks that the compact published summary matches the executed census. The initial and stronger protocols are preserved.
+This previously unmerged note was rechecked against the current repository. The original verifier reproduces the published local counts and all 2,160 periodic comparisons. It now also checks that the compact published summary matches the executed census. The initial and stronger protocols are preserved.
 
-The current [dimensional program](2026-09-09-dimensional-closure-program.md) uses this result as a baseline for cross-dimensional intertwining. The [two-rail checkpoint](2026-09-09-selector-two-lift.md) adds a different encoding with explicit recursive routing syntax. Neither result supplies mutable spatial program inheritance.
+The current [dimensional program](2026-09-09-dimensional-closure-program.md) uses this result as a baseline for cross-dimensional intertwining. The [two-rail note](2026-09-09-selector-two-lift.md) adds a different encoding with explicit recursive routing syntax. Neither result supplies mutable spatial program inheritance.
 
 A further operational distinction matters: flipping source bit j in the present quotient encoding changes every physical site satisfying x+y=j. On the infinite lattice this is an infinite diagonal; on the n-by-n torus it contains n sites. The encoding formula proves this directly. A spatially local program/state intervention therefore needs its own resource accounting, beyond exact trajectory intertwining.
 

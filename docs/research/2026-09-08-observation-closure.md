@@ -1,6 +1,6 @@
 # Observation closure: the commutator is the same-rule slice
 
-**Research checkpoint, 2026-09-08.** This follows the
+**Research note, 2026-09-08.** This follows the
 [observation-closure protocol](protocols/observation-closure-20260908.md).
 The motivating question is broader than differentiation: when a representation
 throws information away, does the observed state still support autonomous

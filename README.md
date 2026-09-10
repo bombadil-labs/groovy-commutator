@@ -22,13 +22,13 @@ To add a note or promote an insight, follow
 `docs/research/` and register it in `site/content/research.json`; the normal
 site build creates its page and updates the index automatically.
 
-### First research checkpoint
+### First research note
 
 [Observed history and coarse-grained prediction](docs/research/2026-09-07-history-repairability.md)
 continues **Analysis of Collusion Wiki**: recovered Rule 90/110 notes, reproduced
 broad sweeps, exact algebra checks, and new independent-seed history curves.
 The simple Class-IV identification failed; repair depends on the observation.
-This checkpoint also corrects the old affine converse: nonlinear Rules 4 and
+This note also corrects the old affine converse: nonlinear Rules 4 and
 200 have zero commutator. Start with the research note for methods and limits.
 
 ## Layout

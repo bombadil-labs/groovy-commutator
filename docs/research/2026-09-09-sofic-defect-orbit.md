@@ -1,6 +1,6 @@
 # Exact reachability hits a representation-complexity wall
 
-> **Publication identity.** This checkpoint is **Note 036**, with canonical slug `sofic-defect-orbit`. A temporary prepublication number collided with a parallel research note and was normalized before publication. Immutable Git history and the recorded frozen source hashes preserve the preregistration; there is no alternate internal note number.
+> **Publication identity.** This note is **Note 036**, with canonical slug `sofic-defect-orbit`. A temporary prepublication number collided with a parallel research note and was normalized before publication. Immutable Git history and the recorded frozen source hashes preserve the preregistration; there is no alternate internal note number.
 
 Research034 ended with a small but stubborn frontier:
 
@@ -259,7 +259,7 @@ Within the declared block-3/cadence-3 paired ECA setting:
 
 ## What remains unresolved
 
-- None of the 170 Research034 survivors is classified by this checkpoint.
+- None of the 170 Research034 survivors is classified by this note.
 - The two original sofic hypotheses remain unevaluated because of complete censoring.
 - No horizon-7+ witness is established.
 - No finite sofic closure is established for a member of the 170-case frontier.

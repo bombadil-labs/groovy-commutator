@@ -1,6 +1,6 @@
 # Frozen next experiment: local correction caps versus observation and source controls
 
-Date: 2026-09-10. Status: planned, not executed. This follows the stored correction-transport checkpoint. Its bounded goal is a local factorization census; a physical cap realization is a subsequent task.
+Date: 2026-09-10. Status: planned, not executed. This follows the stored correction-transport note. Its bounded goal is a local factorization census; a physical cap realization is a subsequent task.
 
 ## Domain and budgets
 

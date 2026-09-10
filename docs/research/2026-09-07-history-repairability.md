@@ -1,6 +1,6 @@
 # When does the path restore what an observation loses?
 
-**Research checkpoint, 2026-09-07.** Continuation of **Analysis of Collusion
+**Research note, 2026-09-07.** Continuation of **Analysis of Collusion
 Wiki**, recovered through targeted conversation retrieval and the original
 research artifacts. The full conversation transcript was not available. This
 record preserves the mathematical work, its conceptual motivation, and the
@@ -33,7 +33,7 @@ interpretive continuation belongs in [NOTES.md §11](../../NOTES.md#11-from-the-
 
 ## What was recovered, and what was checked
 
-| Material or claim | Status at this checkpoint |
+| Material or claim | Status at this note |
 | --- | --- |
 | [Original Rule 90/110 comparison](archive/rule90_rule110_wet_math_comparison.md) | Preserved unchanged; 16 sections covering derivatives, coarse-graining, memory, information, reversibility, and perturbations |
 | [Later broad-sweep note](archive/history_repairable_nonclosure.md) | Preserved unchanged, including the failed simple Class-IV proposal |
@@ -263,4 +263,4 @@ prediction** in Rule 110, with labels or a background detector independent of
 the predictor. Then compare training-budget curves, additional initial-state
 ensembles, block origins, and feature-capacity controls before interpreting
 H*(ε) scaling. Explicit memory kernels remain a promising subsequent model,
-not something fitted or established by this checkpoint.
+not something fitted or established by this note.

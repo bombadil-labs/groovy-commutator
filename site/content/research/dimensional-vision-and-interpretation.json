@@ -1,13 +1,14 @@
 [
   {
     "recordType": "checkpoint",
+    "scope": "dimensional-lift",
     "slug": "dimensional-vision-and-interpretation",
     "label": "Dimensional vision and interpretation",
     "title": "The dimensional vision: rules, states, and interpretation",
     "date": "2026-09-10",
     "updated": "2026-09-10",
-    "kind": "Research perspective and interpretation contract",
-    "evidence": "open",
+    "kind": "Checkpoint: research direction and interpretation contract",
+    "evidence": "state",
     "topic": "Algebra and closure",
     "summary": "A durable account of the user's dimensional-beam vision, the absence of an automatically preferred rule-as-state layout, and the distinct requirements of preservation, faithful representation, restoration, and endogenous organization.",
     "takeaway": "Keep law, state family, and interpretation explicit. Compare representations under declared causal and resource constraints, while preserving exact controls and scoped negative findings.",

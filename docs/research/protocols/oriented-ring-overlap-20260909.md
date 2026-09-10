@@ -62,4 +62,4 @@ If a selective set passes, the next preregistered test should add the existing s
 
 ## C4 hypothesis relation
 
-The user-supplied strong hope is that dimensional rule closure may characterize Class IV. This overlap census is only an early necessary-condition candidate. We will report its rule set first and compare to frozen class labels second. Failure to isolate Class IV here is not grounds to change the orientation group or ring permutation within this checkpoint.
+The user-supplied strong hope is that dimensional rule closure may characterize Class IV. This overlap census is only an early necessary-condition candidate. We will report its rule set first and compare to frozen class labels second. Failure to isolate Class IV here is not grounds to change the orientation group or ring permutation within this note.

@@ -1,6 +1,5 @@
 [
   {
-    "recordType": "checkpoint",
     "slug": "constructor-inventory",
     "label": "Constructor inventory",
     "title": "Four rule sets, four declared tests",

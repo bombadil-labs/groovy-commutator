@@ -1,6 +1,5 @@
 [
   {
-    "recordType": "checkpoint",
     "slug": "second-lift-completion-protocol",
     "label": "Second-lift protocol",
     "title": "Completion-independent information, coordinate-dependent cost",

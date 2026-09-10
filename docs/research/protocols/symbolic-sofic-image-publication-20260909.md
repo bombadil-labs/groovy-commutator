@@ -1,6 +1,6 @@
 # Publication identity — symbolic sofic image line
 
-The experimental work in this checkpoint used the number-independent working identity `symbolic-sofic-image` throughout preregistration, implementation, and primary evaluation.
+The experimental work in this note used the number-independent working identity `symbolic-sofic-image` throughout preregistration, implementation, and primary evaluation.
 
 The frozen protocol is `docs/research/protocols/symbolic-sofic-image-20260909.md`, whose SHA-256 in the committed primary result is
 
@@ -8,7 +8,7 @@ The frozen protocol is `docs/research/protocols/symbolic-sofic-image-20260909.md
 
 Its bytes are left unchanged after evaluation.
 
-After the complete result was frozen, the current shared research catalog was checked. Public Notes 035 and 036 were already occupied by `ternary-commutator-lift` and `sofic-defect-orbit`; no later numbered note existed. This checkpoint is therefore published as **Note 037**.
+After the complete result was frozen, the current shared research catalog was checked. Public Notes 035 and 036 were already occupied by `ternary-commutator-lift` and `sofic-defect-orbit`; no later numbered note existed. This note is therefore published as **Note 037**.
 
 The protocol, script, and result filenames retain only the working slug and date. The public number is editorial metadata and was not part of the frozen hypothesis, domain, resource ceilings, or evaluation code.
 

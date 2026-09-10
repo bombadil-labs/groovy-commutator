@@ -167,7 +167,7 @@ The user requested that this unit be finished and then research execution pause 
 | [#67](https://github.com/bombadil-labs/groovy-commutator/issues/67#issuecomment-5622839866) | Freeze the bounded second-lift comparison under two declared completions. |
 | [#68](https://github.com/bombadil-labs/groovy-commutator/issues/68#issuecomment-5622840298) | Promote the four resonance distinctions to Concepts without upgrading evidence. |
 
-None is a no-op: each retains concrete writing, archival, editorial, or experimental work. Agreement on scope is not completion. This audit is related to #63 and supplies the requested preceding checkpoint for #67, but completes neither issue. Future PRs should include `Closes #N` only when they complete the issue's agreed scope; genuinely redundant issues can instead be closed with a signed explanation.
+None is a no-op: each retains concrete writing, archival, editorial, or experimental work. Agreement on scope is not completion. This audit is related to #63 and supplies the requested preceding note for #67, but completes neither issue. Future PRs should include `Closes #N` only when they complete the issue's agreed scope; genuinely redundant issues can instead be closed with a signed explanation.
 
 ## Issue burndown
 

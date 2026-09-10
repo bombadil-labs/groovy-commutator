@@ -1,61 +1,23 @@
-# Continuations: History and Possibility
+# Checkpoints: History and Possibility
 
-Running continuation log for the history-and-possibility precursor: observed
+Checkpoint log for the history-and-possibility precursor: observed
 history repair, provenance and action responses, costed and returning tasks,
 and the 2026-09-08 agenda checkpoint of unfinished threads.
 The planned learning-and-revising-primitives program branches from here.
 
-Sections are dated; the most recent unit is first except where an orientation
+Each section is a Program-scoped checkpoint: a dated statement of state that adds no evidence. The most recent unit is first except where an orientation
 section is deliberately placed at the top. Each records what a unit completed,
-what is frozen and unrun, and what not to infer. Add a new section at the top
+what is frozen and unrun, and what not to infer. Add a new checkpoint at the top
 when a substantial unit completes; keep the bounded-claim style. Text moved from
 `CLAUDE.md` on 2026-09-10 is verbatim.
 
 Program page: `docs/research/2026-09-07-history-and-possibility.md` (precursor program, not a living Program page)
 
-## Research agenda checkpoint: preserve unfinished threads (2026-09-08)
+## Checkpoint 2026-09-08: preserve unfinished threads
 
-After discussing [Thinking Like a Function](https://myk.pub/thinking-like-a-function-16),
-the user asked to record the boundary question and revisit earlier unfinished
-work before choosing the next experiment. No new experiment was selected or
-run at this checkpoint. The following is a backlog, not a new frozen protocol.
+Registered as the lab-scope checkpoint [Research agenda checkpoint: preserve unfinished threads](../2026-09-08-unfinished-threads.md); the full text lives there.
 
-- **Previously recorded next priority — dimensional compatibility.** The local
-  encoding and symmetry audit are complete; a globally compatible evolving
-  representation remains open. Specify how overlapping encodings coexist,
-  remain valid under evolution, and decode across dimensions with a fixed
-  budget. The provenance experiment is complete but does not supply that
-  higher-dimensional dynamics. It adds the requirement to distinguish rule
-  identity, natural continuation, and responses to declared interventions.
-- **Related open question — remainder feedback.** Can a specified feedback
-  law sustain compatibility between representations? Earlier mutual and
-  derivative replacement models cycled on the tested finite systems. Feeding
-  a compatibility mismatch back into the dimensional construction remains
-  undefined and untested. Full-base-state change transport closes by identity;
-  a bounded-context criterion would need separate design and evaluation.
-- **Deferred spatial controls.** Compare Gray-code and geometric assignments
-  on larger grids; separately define a locally stored changeable decoder.
-  The dimensional-compatibility priority explicitly deferred these questions,
-  rather than completing them. See the shared-state/rule continuation above.
-- **Earlier open branches.** Learning/discovering reusable primitives with
-  charged search and uncertain future tasks; residual-error structure and
-  training-budget controls in the regional history experiment; selective
-  historical influence, reciprocal constraint, and decomposition/reconstitution
-  in `docs/research/2026-09-07-history-and-possibility.md`. Earlier dialogue's
-  state-gated derivative-memory measurements still require artifact recovery
-  and verification; the separate `mu(S_previous)` reversibility study is not
-  a substitute for that model.
-- **Parked boundary/individuation question.** How are process boundaries
-  established, sustained, changed, or dissolved, and which forms of continuity
-  let a unit remain usable within larger processes? Record the user's
-  function-as-holon correction as motivation for later operational definitions.
-  This question does not automatically supersede the unfinished work above.
-
-The proposed Class-IV connection remains downstream of a defined, nontrivial
-compatibility criterion; there is still no persistence score or enrichment
-result. This checkpoint adds no experimental finding.
-
-## Research continuation: history and possibility (2026-09-07)
+## Checkpoint 2026-09-07: history and possibility
 
 `docs/research/2026-09-07-future-repertoire.md` records a protocol committed
 before evaluation: all initial states on widths 6/9/11, 66 pairs from rules
@@ -117,7 +79,7 @@ gist and explicitly selected shared state/rule spaces and the eight-neighbor
 2D connection as the next experiment; the full parallel-chat tail remains
 unavailable and is not treated as evidence.
 
-## Research continuation: provenance and action responses (2026-09-08)
+## Checkpoint 2026-09-08: provenance and action responses
 
 `docs/research/2026-09-08-spacetime-provenance.md` answers the user's provenance
 question for 1D rows stacked into a 2D panel. Protocol and implementation were
@@ -152,7 +114,7 @@ representation budget and decoder before scoring. This full-ECA observational
 map does not yet implement a higher-dimensional evolutionary law or remove the
 outer-totalistic domain restriction from the separate dimensional interpreter.
 
-## Research continuation: observed history (2026-09-07)
+## Checkpoint 2026-09-07: observed history
 
 Recovered **Analysis of Collusion Wiki** research is indexed in
 `docs/research/2026-09-07-history-repairability.md`. Read that first for this

@@ -6,7 +6,7 @@ Note 036 ended at an awkward but useful boundary. The exact one-defect orbit is 
 
 The immediate temptation was to build a more compact graph.
 
-This checkpoint takes a narrower route first: avoid projected image graphs entirely and ask whether the orbit closes for the simplest possible symbolic reason — **ordinary temporal recurrence of the underlying macro cellular automaton**.
+This note takes a narrower route first: avoid projected image graphs entirely and ask whether the orbit closes for the simplest possible symbolic reason — **ordinary temporal recurrence of the underlying macro cellular automaton**.
 
 The answer is cleanly negative on the frontier.
 
@@ -180,7 +180,7 @@ paired symbolic states, for Rule 164 when comparing horizon 6 with horizon 5 at 
 
 By contrast, Note 036's raw exact graph control already required 6,029,312 higher-block transitions merely to construct the known Rule-35 horizon-3 slice.
 
-So this checkpoint separates two claims that were still entangled after Note 036:
+So this note separates two claims that were still entangled after Note 036:
 
 1. **Can the relevant exact local dynamics be represented compactly enough to compute with?** Here, yes.
 2. **Does simple temporal recurrence give the needed exact orbit inclusion?** On the 170-case frontier through horizon 6, no.
@@ -231,7 +231,7 @@ The two-state one-defect source graph gives this search a natural finite-state s
 
 If that family is still too restrictive, the natural endpoint is a two-tape simulation relation between source presentations: prove earlier-slice representation existentially while retaining the latent source automaton on both tapes.
 
-## What this checkpoint establishes
+## What this note establishes
 
 Within the declared block-3/cadence-3 ECA macro family:
 

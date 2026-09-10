@@ -34,7 +34,7 @@ This produces up to eight lifted rules per source rule, with duplicates retained
 
 Do not search any new 2D -> 3D geometry.
 
-Use exactly the algebraic zero-guard closure condition obtained in the preregistered scale-up checkpoint for a nine-bit 2D rule `q`:
+Use exactly the algebraic zero-guard closure condition obtained in the preregistered scale-up note for a nine-bit 2D rule `q`:
 
 - `q[0] = 0`;
 - `q[8] = 0`;

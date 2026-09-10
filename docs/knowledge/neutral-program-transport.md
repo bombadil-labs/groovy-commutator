@@ -1,6 +1,6 @@
 # Instructions can evolve while remaining invisible to the encoded data
 
-The [extension-freedom checkpoint](../research/2026-09-10-extension-freedom.md) permits top words128+32*lambda_x in the Rule32 correction strip. The differing instruction bit5 addresses top neighborhood101, absent from every prepared correction image. Any lambda field therefore gives the same represented data dynamics.
+The [extension-freedom note](../research/2026-09-10-extension-freedom.md) permits top words128+32*lambda_x in the Rule32 correction strip. The differing instruction bit5 addresses top neighborhood101, absent from every prepared correction image. Any lambda field therefore gives the same represented data dynamics.
 
 The existing copying interpreter evolves lambda'_x=lambda_(x-1) when old V_x=1, otherwise lambda_x. Copied words remain compatible and the next data pair remains a valid source image, proving all-time closure of this neutral extension. The complete width4 audit covers256 source/program fields through4 ticks and records288 actual instruction-bit changes.
 

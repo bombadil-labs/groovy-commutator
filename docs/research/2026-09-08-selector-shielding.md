@@ -1,6 +1,6 @@
 # Selector-relative shielding: interaction can create a causal diode
 
-**Research checkpoint, 2026-09-08.** This note is deliberately unnumbered while another research session is landing work in parallel. It is stacked on the pulse-shape scattering branch and follows the frozen [shielding](protocols/selector-shielding-20260908.md) and [dyadic confirmation](protocols/selector-shielding-dyadic-20260908.md) protocols.
+**Research note, 2026-09-08.** This note is deliberately unnumbered while another research session is landing work in parallel. It is stacked on the pulse-shape scattering branch and follows the frozen [shielding](protocols/selector-shielding-20260908.md) and [dyadic confirmation](protocols/selector-shielding-dyadic-20260908.md) protocols.
 
 Research021 found a state just outside its preregistered four-site shape family with a qualitatively new fate. The upper side escapes, but the lower outer Rule-90 row remains bit-for-bit identical to the isolated lower strip even though the neighboring inner row is already strongly contaminated.
 
@@ -12,7 +12,7 @@ A=\{-5,0\},\qquad B=\{0,1,3,4,6\},
 
 with `A` encoded in rows 0/1 and `B` in rows 2/3.
 
-The main result of this checkpoint is an **exact reduction** of the shielding question. For an exact lower strip, the outer row reads the inner row at exactly the inner-row sites whose reference value is one. Therefore, as long as the lower half-plane is still equal, the outer row stays equal for one more tick **if and only if** the coupled inner row never turns a reference `1` into `0`.
+The main result of this note is an **exact reduction** of the shielding question. For an exact lower strip, the outer row reads the inner row at exactly the inner-row sites whose reference value is one. Therefore, as long as the lower half-plane is still equal, the outer row stays equal for one more tick **if and only if** the coupled inner row never turns a reference `1` into `0`.
 
 For the witness, all directly checked inner-row damage has the opposite polarity: it is `0 -> 1`. A fresh dyadic prediction at tick 256 passed exactly under two independent update implementations. The remaining open step is to prove that this one-sided damage polarity persists for all time.
 
@@ -111,7 +111,7 @@ Equivalently, coupled/reference row-2 differences may be `0 -> 1` but never `1 -
 
 The converse is operationally sharp: a first `1 -> 0` inner-row difference is read by the corresponding outer-row destination on the next tick, so shielding breaks one tick later.
 
-This is the core theorem of the checkpoint. The all-time witness question is now the much narrower statement
+This is the core theorem of the note. The all-time witness question is now the much narrower statement
 
 \[
 C_t(2,\cdot)\ge L_t(2,\cdot)\quad\forall t.

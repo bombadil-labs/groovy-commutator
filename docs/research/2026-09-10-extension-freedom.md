@@ -4,11 +4,11 @@ Date: 2026-09-10. Evidence: exact local census, complete physical controls, and 
 
 The Rule32 correction representation admits multiple ambient updates with identical encoded evolution. Even at the same radius and stored-program budget, two top rules agree on every prepared source state and differ after one off-image data edit. An endogenous program can also circulate compatible instruction variants while its represented data stays unchanged. This is neutral instruction transport, not yet a change in the represented source law.
 
-This checkpoint quantifies a choice left open by the [physical-cap construction](2026-09-10-rule32-physical-cap.md). Exact compatibility does not by itself select the dynamics outside the compatible subset.
+This note quantifies a choice left open by the [physical-cap construction](2026-09-10-rule32-physical-cap.md). Exact compatibility does not by itself select the dynamics outside the compatible subset.
 
 ## Why this experiment
 
-The user clarified the intended dimensional program after the physical-cap checkpoint: seek a recurring way of passing from 1D to 2D to 3D and onward, with coherent lower-dimensional trajectories and genuinely additional possibilities at higher levels. They call the sought continuity a "turtle beam," with "unus mundus" as an interpretive analogy. These names are motivation, not established physical or metaphysical conclusions.
+The user clarified the intended dimensional program after the physical-cap note: seek a recurring way of passing from 1D to 2D to 3D and onward, with coherent lower-dimensional trajectories and genuinely additional possibilities at higher levels. They call the sought continuity a "turtle beam," with "unus mundus" as an interpretive analogy. These names are motivation, not established physical or metaphysical conclusions.
 
 Correction depth, spatial dimension and time are distinct. A correction row is part of a plane; adding another row does not add a spatial axis. The guarded constructions remain useful instruments and controlled examples. Their prepared roles must not silently replace the stronger objective of finding a consistently generated higher-dimensional organization.
 

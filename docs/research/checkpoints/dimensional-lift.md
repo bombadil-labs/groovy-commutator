@@ -1,19 +1,19 @@
-# Continuations: Dimensional Closure and the Commutator Lift
+# Checkpoints: Dimensional Closure and the Commutator Lift
 
-Running continuation log for the dimensional workstream, including its 2D
+Checkpoint log for the dimensional workstream, including its 2D
 encoding lineage (column and block compatibility, encoded defects, strips,
 the interface escape) that preceded the Program page's own supports list, the
 shared state/rule construction, and the dimensional vision contract.
 
-Sections are dated; the most recent unit is first except where an orientation
+Each section is a Program-scoped checkpoint: a dated statement of state that adds no evidence. The most recent unit is first except where an orientation
 section is deliberately placed at the top. Each records what a unit completed,
-what is frozen and unrun, and what not to infer. Add a new section at the top
+what is frozen and unrun, and what not to infer. Add a new checkpoint at the top
 when a substantial unit completes; keep the bounded-claim style. Text moved from
 `CLAUDE.md` on 2026-09-10 is verbatim.
 
 Program page: `docs/research/2026-09-09-dimensional-closure-program.md`
 
-## Research continuation: shared state and rule space (2026-09-08)
+## Checkpoint 2026-09-08: shared state and rule space
 
 Completed `docs/research/2026-09-08-shared-state-rule.md`, with protocol and
 implementation committed before evaluation. `experiment_shared_state_rule.py`
@@ -45,7 +45,7 @@ larger grids; separately specify a locally represented changeable decoder.
 Do not infer that expanding same-time instructions to a fixed local rule
 makes them meaningless, or that memory is the only interesting mechanism.
 
-## Dimensional research direction and interpretation contract (2026-09-10)
+## Checkpoint 2026-09-10: dimensional research direction and interpretation contract
 
 Read docs/research/2026-09-10-dimensional-vision-and-interpretation.md for the
 durable user-requested account of the vision. Keep it visible in the Program.
@@ -68,10 +68,10 @@ durable user-requested account of the vision. Keep it visible in the Program.
 - The completed transverse-difference test below resolves whether erased
   per-column baselines affect future differences, relative to that observation.
 
-## Research continuation: gradient interventions completed; pause for issues (2026-09-10)
+## Checkpoint 2026-09-10: gradient interventions completed; pause for issues
 
 Read docs/research/2026-09-10-gradient-intervention-costs.md. This is the current
-dimensional checkpoint. Preserve parallel Erased Distinctions work and unrelated
+dimensional note. Preserve parallel Erased Distinctions work and unrelated
 metadata. The user requested completion of this unit, then a pause to address
 the agreed issues. Do not automatically start another experiment.
 
@@ -107,7 +107,7 @@ the agreed issues. Do not automatically start another experiment.
   89093341369ef505d6bb2d2a53cd7be00864bbb035adcd4072360c006c3d3630.
   Dedicated CI replays the exact output using the unchanged loop evaluators.
 - The ordered issue burndown and completion criteria are now in the intervention
-  checkpoint's `Issue burndown` section: #61, #62, #65, #66, #68, #67, #63, #64.
+  note's `Issue burndown` section: #61, #62, #65, #66, #68, #67, #63, #64.
   The first five consolidate/publish existing work. #67/#63 are agreed protocol
   deliverables: register later implementation/evaluation explicitly as planned
   work before closing the proposals. #64 requires the working online arm.
@@ -116,16 +116,16 @@ the agreed issues. Do not automatically start another experiment.
   finite successor sets; #63 freeze hidden-state static intervention channels;
   #64 conservative online suffix learner; #65 archive relabeling/transport;
   #66 cross-constructor inventory; #67 bounded two-completion second lift;
-  #68 Concepts promotion. Signed final agreement links are in the checkpoint.
+  #68 Concepts promotion. Signed final agreement links are in the note.
   Original issue bodies include withdrawn claims: use the signed scope, not
   those claims. The current gradient audit does not complete #63 or #67.
 - User workflow preference: each PR that fully implements an issue's agreed
   scope should say `Closes #N`. Related or prerequisite work should only link
   the issue. Truly redundant/no-op issues may be closed with a signed reason.
   None of #61–68 is a no-op: each retains concrete work. Agreement on scope
-  is not completion. No issues are closed by this checkpoint.
+  is not completion. No issues are closed by this note.
 
-## Research continuation: gradient loops completed (2026-09-10)
+## Checkpoint 2026-09-10: gradient loops completed
 
 Read docs/research/2026-09-10-gradient-loop-invariants.md. Preserve the parallel
 Erased Distinctions work and unrelated metadata.
@@ -155,7 +155,7 @@ Erased Distinctions work and unrelated metadata.
 - The separately frozen intervention protocol is now completed in the
   continuation above. The original protocol remains unchanged as its freeze.
 
-## Research continuation: full-gradient closure completed (2026-09-10)
+## Checkpoint 2026-09-10: full-gradient closure completed
 
 Read docs/research/2026-09-10-full-gradient-closure.md. Preserve the parallel
 Erased Distinctions work and all unrelated metadata.
@@ -189,7 +189,7 @@ Erased Distinctions work and all unrelated metadata.
   Its invariant depends on declared topology; it does not establish intrinsic
   dimension, prime factors, self-assembly, or affordable intervention.
 
-## Research continuation: transverse-difference closure completed (2026-09-10)
+## Checkpoint 2026-09-10: transverse-difference closure completed
 
 Read docs/research/2026-09-10-transverse-difference-closure.md. Preserve the
 parallel Erased Distinctions work and all unrelated metadata.
@@ -219,7 +219,7 @@ parallel Erased Distinctions work and all unrelated metadata.
   Its added information and storage cost remain explicit, and the original
   transverse-only failures and certificates remain unchanged.
 
-## Research continuation: guard-free axial family completed (2026-09-10)
+## Checkpoint 2026-09-10: guard-free axial family completed
 
 Read docs/research/2026-09-10-guard-free-axial-lift.md. Continue only the
 dimensional workstream; preserve parallel Erased Distinctions sources and metadata.
@@ -250,7 +250,7 @@ dimensional workstream; preserve parallel Erased Distinctions sources and metada
   Preserve its original protocol, the finite aliasing, and the separately
   frozen witness-extension supplement. Guarded controls remain useful.
 
-## Research continuation: extension freedom and dimensional-beam objective (2026-09-10)
+## Checkpoint 2026-09-10: extension freedom and dimensional-beam objective
 
 Read docs/research/2026-09-10-extension-freedom.md. This is the dimensional
 workstream; preserve the parallel Erased Distinctions sources and metadata.
@@ -284,7 +284,7 @@ workstream; preserve the parallel Erased Distinctions sources and metadata.
   above. Its frozen protocol remains unchanged; preserve all failures and
   distinguish its prepared replication from naturally selected organization.
 
-## Research continuation: finite physical correction cap completed (2026-09-10)
+## Checkpoint 2026-09-10: finite physical correction cap completed
 
 Read docs/research/2026-09-10-rule32-physical-cap.md. Preserve the parallel
 Erased Distinctions workstream and its shared metadata entries.
@@ -321,7 +321,7 @@ Erased Distinctions workstream and its shared metadata entries.
   a specified semantic target. No further routing polishing as a substitute.
 - Scope failures to this law. No C4, novelty or universal-program claims.
 
-## Research continuation: exact local caps and the Rule32 candidate (2026-09-10)
+## Checkpoint 2026-09-10: exact local caps and the Rule32 candidate
 
 The local-cap census is complete. Read docs/research/2026-09-10-local-correction-caps.md.
 Preserve the parallel Erased Distinctions files and shared metadata entries.
@@ -351,7 +351,7 @@ Preserve the parallel Erased Distinctions files and shared metadata entries.
   from finite-ring tests. Freeze any rescue separately.
 - No C4 selection, novelty, compression, or universal-program claim.
 
-## Research continuation: finite boundaries and stored correction transport (2026-09-10)
+## Checkpoint 2026-09-10: finite boundaries and stored correction transport
 
 The dimensional control now has finite transverse preparation; the workstream
 has returned to commutator correction closure. Read both new notes before
@@ -392,7 +392,7 @@ continuing. Preserve the parallel Erased Distinctions work and metadata.
 - C4 remains background only. Scope failures to budget/architecture, retain
   them, and freeze rescues. No novelty or intrinsic-universality claim.
 
-## Research continuation: added routing tables are editable (2026-09-09)
+## Checkpoint 2026-09-09: added routing tables are editable
 
 The next dimensional unit is complete; see
 docs/research/2026-09-09-editable-routing-tables.md and its frozen protocol.
@@ -420,7 +420,7 @@ Preserve the parallel Erased Distinctions thread and its publication metadata.
   JSON is results/editable_routing_tables_20260909.json. Protocol and code
   were committed before execution, with no corrections/deviations. CI
   reproduces the exact result. Counts are not independent scientific samples.
-- Follow-up complete: the finite-boundary checkpoint above retains occupancy
+- Follow-up complete: the finite-boundary note above retains occupancy
   explicitly and uses missing-input retention. The current target is a local
   correction cap, not further boundary optimization.
 - Existing exact CA simulation theory is the comparison baseline. No
@@ -428,7 +428,7 @@ Preserve the parallel Erased Distinctions thread and its publication metadata.
   claim is established. C4 remains background only. Scope failures to the
   attempted architecture and freeze rescues before evaluation.
 
-## Research continuation: editable spatial Rail programs (2026-09-09)
+## Checkpoint 2026-09-09: editable spatial Rail programs
 
 The dimensional workstream now has an exact stored-program witness; see
 docs/research/2026-09-09-spatial-rail-programs.md and its two frozen protocols.
@@ -458,11 +458,11 @@ special-dimension hypothesis.
   motivate reasoning, architecture selection, or a selectivity requirement.
   Negative findings are scoped to an attempt and can be revisited by an explicit
   revision. Preserve the failed candidate and freeze a rescue before evaluation.
-- Follow-up completed: the editable-routing checkpoint above stores each added
+- Follow-up completed: the editable-routing note above stores each added
   table explicitly. Its ordered topology remains fixed. Smaller role alphabets
   and marker self-organization are still separate experiments.
 
-## Research continuation: dimensional compatibility (2026-09-08)
+## Checkpoint 2026-09-08: dimensional compatibility
 
 `docs/research/2026-09-08-dimensional-lift.md` defines the outer-totalistic
 2*3^d-bit table encoding in two adjacent layers and the ternary interpreter.
@@ -498,7 +498,7 @@ attempting the full ECA comparison. Keep symmetry equivalence and disputed
 class labels explicit. Recovered parallel-session material is now supplied by
 the user in this thread; its conjectures are not experimental results.
 
-## Research continuation: invariant column encodings (2026-09-08)
+## Checkpoint 2026-09-08: invariant column encodings
 
 `docs/research/2026-09-08-column-compatibility.md` completes the next fixed-
 interpreter compatibility unit. Protocol and instrument were committed before
@@ -541,7 +541,7 @@ Seek interactions beyond transport. Do not extend the failed radius-one
 criterion into an unrestricted impossibility claim. Remainder feedback still
 needs its own law and controls; the boundary question remains parked.
 
-## Research continuation: blocks and moving frames (2026-09-08)
+## Checkpoint 2026-09-08: blocks and moving frames
 
 `docs/research/2026-09-08-block-compatibility.md` completes the previous next
 step. Protocol a968c9d and both instruments 6d246c4 were committed before
@@ -584,7 +584,7 @@ rows in a 2D block are not three spatial dimensions. Do not invent a mechanism
 to fit three or conflate ordinary storage with operational invariance. The
 boundary/individuation question remains parked; remainder feedback undefined.
 
-## Research continuation: isolated and periodic defects (2026-09-08)
+## Checkpoint 2026-09-08: isolated and periodic defects
 
 User explicitly parked the three-dimensional hypothesis and requested work on
 what is already before us. Do not ask for its formulation or make a dimensional
@@ -625,7 +625,7 @@ a structural constraint before calling a survivor persistent. Preserve the
 distinction between loss of the original code and loss of all organization.
 Remainder feedback remains undefined; boundary/individuation stays parked.
 
-## Research continuation: longer fates and a finite strip (2026-09-08)
+## Checkpoint 2026-09-08: longer fates and a finite strip
 
 `docs/research/2026-09-08-defect-fates.md` completes the 32-tick unit. Frozen
 protocol 7512927, both instruments and wording clarification 1a9a923. 6,912
@@ -663,7 +663,7 @@ adjacent as a coupling test. Determine exact coexistence and interaction laws
 before making claims about compositional computation. The ambient F stays
 fixed; no fitted decoder. 3D and boundary/individuation remain parked.
 
-## Research continuation: strips compose or interact (2026-09-08)
+## Checkpoint 2026-09-08: strips compose or interact
 
 `docs/research/2026-09-08-coupled-strips.md` completes the two-strip unit.
 Protocol c186318 and three instruments 06edcb9 committed before evaluation.
@@ -706,7 +706,7 @@ testing closure under repeated F. Adjacency's current-code failure is not a
 no-go for all coupled descriptions. The physical F remains fixed. 3D and
 the separate boundary/individuation thread remain parked.
 
-## Research continuation: the interface escapes (2026-09-08)
+## Checkpoint 2026-09-08: the interface escapes
 
 `docs/research/2026-09-08-interface-state.md` completes Research019. Main
 protocol 740e12f; instruments/storage clarification bd222be; NumPy index-type

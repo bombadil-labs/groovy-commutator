@@ -9,7 +9,7 @@ The finite width-eight ternary-lift census found strong rule-dependent role grow
 
 The ternary descendants themselves are local translation-invariant maps on the infinite one-dimensional lattice. Their **minimal local rule representations** can therefore be computed without choosing a finite ring.
 
-This checkpoint measures that intrinsic local growth.
+This note measures that intrinsic local growth.
 
 ## Source family
 
@@ -61,7 +61,7 @@ The universal semantic ceiling at depths `0..4` is
 
 The maximum declared radius is five and the largest local truth table has `2^11 = 2048` rows.
 
-Depth four is fixed before outcomes. No source is extended further based on its result in this checkpoint.
+Depth four is fixed before outcomes. No source is extended further based on its result in this note.
 
 ## Primary outputs per source rule
 

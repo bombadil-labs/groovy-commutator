@@ -107,7 +107,7 @@ A **universal role algebra** succeeds for all eight source rules. A **nontrivial
 ## Anti-overfitting
 
 - All 162 candidates are frozen before evaluation.
-- No spatial guard pattern is chosen in this checkpoint.
+- No spatial guard pattern is chosen in this note.
 - No Wolfram class labels are loaded.
 - Candidate selectors/permutations are applied to every source rule; none is chosen using a favored rule number.
 

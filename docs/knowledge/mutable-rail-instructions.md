@@ -1,6 +1,6 @@
 # Can introduced Rail instructions themselves become locally editable?
 
-**Answered for table contents in a fixed axis-ordered grammar, 2026-09-09.** The [editable-routing checkpoint](../research/2026-09-09-editable-routing-tables.md) gives every introduced instruction its own eight-bit physical table. Arbitrary native program/data fields, inherited one-cell edits, and state-gated copying of all tables lift exactly through every finite dimension.
+**Answered for table contents in a fixed axis-ordered grammar, 2026-09-09.** The [editable-routing note](../research/2026-09-09-editable-routing-tables.md) gives every introduced instruction its own eight-bit physical table. Arbitrary native program/data fields, inherited one-cell edits, and state-gated copying of all tables lift exactly through every finite dimension.
 
 The [earlier spatial program witness](../research/2026-09-09-spatial-rail-programs.md) edited and copied the ECA leaf but fixed each added selector. The extension changes placement to one table along each axis and increases occupied storage from nine to 8d+1 sites per macrocell. Five symbols, radius nine, and one-tick execution remain.
 

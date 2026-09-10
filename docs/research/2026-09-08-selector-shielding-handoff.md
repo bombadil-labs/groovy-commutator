@@ -1,6 +1,6 @@
 # Selector-shielding synthesis handoff
 
-**Unnumbered handoff checkpoint, 2026-09-08.** This file records the latest state of the selector-shielding branch immediately before merge into `main`. It supersedes only the stale proof-status statements in `2026-09-08-selector-shielding.md`; the detailed derivations and protocols remain there.
+**Unnumbered handoff note, 2026-09-08.** This file records the latest state of the selector-shielding branch immediately before merge into `main`. It supersedes only the stale proof-status statements in `2026-09-08-selector-shielding.md`; the detailed derivations and protocols remain there.
 
 ## What is exact
 
@@ -96,4 +96,4 @@ The two research trains now meet naturally. Observation-closure/history-lift ask
 
 A useful synthesis question is therefore not merely whether information was discarded or whether a defect exists, but whether that distinction is **causally visible to the future effective state**. The failed short-prefix shielding prediction is especially consistent with the parallel finding that hidden relevance can depend on history rather than on a small instantaneous observer.
 
-This checkpoint is deliberately unnumbered: Research025 is already occupied on `main` by the parallel train. The synthesis session should assign any next number only after deciding whether shielding remains a standalone result or becomes part of a unified causal-visibility / observation-closure program.
+This note is deliberately unnumbered: Research025 is already occupied on `main` by the parallel train. The synthesis session should assign any next number only after deciding whether shielding remains a standalone result or becomes part of a unified causal-visibility / observation-closure program.

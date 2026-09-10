@@ -12,7 +12,7 @@ The practical problem is harder:
 
 > **Can the canonical quotient, or at least the safety of individual representation edits, be learned before the complete future is known?**
 
-This checkpoint studies the exact finite-horizon quotients that approach the final quotient as longer target futures are revealed.
+This note studies the exact finite-horizon quotients that approach the final quotient as longer target futures are revealed.
 
 ## Setup
 
@@ -220,11 +220,11 @@ An independently written audit must reconstruct selected `Q_h` chains directly f
 - All empirical claims are exact for the stated finite periodic systems only.
 - The monotone quotient/certification theorem is finite and deterministic but not specific to ECA.
 - `Q_h` uses exhaustive exact contexts. It is not yet a practical local sampling algorithm.
-- Knowing `C_h` exactly may itself be expensive; this checkpoint asks what information is theoretically available at finite horizon, not how to estimate it cheaply from sparse data.
+- Knowing `C_h` exactly may itself be expensive; this note asks what information is theoretically available at finite horizon, not how to estimate it cheaply from sparse data.
 - A finite-horizon quotient is intentionally under-refined relative to the final quotient. It certifies that certain merges remain safe so far and that certain splits are definitely required; it does not certify that currently merged symbols will remain merged forever.
 - No block-4 scale-up is attempted here.
 
-## Decision rule for the next checkpoint
+## Decision rule for the next note
 
 If `d_Q` is often substantially smaller than `h*`, the next problem is to infer `Q_h` from **partial contexts or sampled trajectories** while preserving one-sided safety guarantees.
 

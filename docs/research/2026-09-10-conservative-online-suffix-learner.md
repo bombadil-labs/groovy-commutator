@@ -1,6 +1,6 @@
-# Conservative online suffix learner: implementation checkpoint
+# Conservative online suffix learner: implementation note
 
-Issue #64's agreed online arm is implemented as a deliberately conservative sequence learner. This checkpoint records an instrument, **not a new cellular-automaton result**.
+Issue #64's agreed online arm is implemented as a deliberately conservative sequence learner. This note records an instrument, **not a new cellular-automaton result**.
 
 The frozen contract is in [protocols/conservative-online-suffix-learner-20260910.md](protocols/conservative-online-suffix-learner-20260910.md). The implementation lives in [src/groovy/online_suffix.py](../../src/groovy/online_suffix.py); [scripts/check_conservative_online_suffix.py](../../scripts/check_conservative_online_suffix.py) exercises hand-checkable traces.
 

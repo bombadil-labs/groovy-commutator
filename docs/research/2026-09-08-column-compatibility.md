@@ -23,7 +23,7 @@ preserved; arbitrary physical damage is a separate question.
 The [protocol](protocols/column-compatibility-20260908.md) was
 [committed before evaluation](https://github.com/bombadil-labs/groovy-commutator/commit/9143873c3bf11874bd9a695f3276652fb862f1db),
 followed by the
-[implementation checkpoint](https://github.com/bombadil-labs/groovy-commutator/commit/ce5cd3be5335cfd11332f1ec20cc0cb4e1cda872).
+[implementation note](https://github.com/bombadil-labs/groovy-commutator/commit/ce5cd3be5335cfd11332f1ec20cc0cb4e1cda872).
 The conveyor argument and independent audit were written after the primary
 enumeration and are identified below as follow-ups. No class labels were loaded.
 

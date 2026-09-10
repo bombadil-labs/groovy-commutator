@@ -1,6 +1,6 @@
 # Frozen two-rail selector protocol
 
-Frozen on 2026-09-09 before the numerical census. This is a control construction for the [dimensional program](2026-09-09-dimensional-closure-program.md), following the [correction-coordinate checkpoint](2026-09-09-correction-future-coordinates.md). No Wolfram-class labels enter construction or selection.
+Frozen on 2026-09-09 before the numerical census. This is a control construction for the [dimensional program](2026-09-09-dimensional-closure-program.md), following the [correction-coordinate note](2026-09-09-correction-future-coordinates.md). No Wolfram-class labels enter construction or selection.
 
 ## Question and scope
 

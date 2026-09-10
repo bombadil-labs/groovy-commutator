@@ -9,7 +9,7 @@ The frozen three-cell totalistic control found a nonconstant fanout role algebra
 
 The next outcome-independent step is to apply **the identical role-algebra family** to the full elementary cellular-automaton rule space using the project's existing eight-bit shared state/rule substrate.
 
-No new operation, role encoding, or favorable rule-specific mapping is added in this checkpoint.
+No new operation, role encoding, or favorable rule-specific mapping is added in this note.
 
 ## Shared eight-bit substrate
 
@@ -21,7 +21,7 @@ Freeze the default identity rule-table mapping from the earlier shared-state-rul
 - ECA input address is `4L+2C+R`;
 - all updates are synchronous.
 
-Alternative ring permutations are **not** searched in this checkpoint. They remain a later spatialization-family question if the fixed algebra produces a selective source set.
+Alternative ring permutations are **not** searched in this note. They remain a later spatialization-family question if the fixed algebra produces a selective source set.
 
 Let
 

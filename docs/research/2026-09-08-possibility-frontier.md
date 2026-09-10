@@ -1,6 +1,6 @@
 # Possibility lives on a forgetting frontier
 
-Research022–025 asked which distinctions a representation erases, which of those distinctions return to causal relevance, and which can be forgotten safely. This checkpoint turns that decomposition around.
+Research022–025 asked which distinctions a representation erases, which of those distinctions return to causal relevance, and which can be forgotten safely. This note turns that decomposition around.
 
 The motivating question is:
 

@@ -1,6 +1,6 @@
 # History lift: when a lossy observation becomes a state again
 
-**Research checkpoint, 2026-09-08.** This is a stacked continuation of
+**Research note, 2026-09-08.** This is a stacked continuation of
 [observation closure](2026-09-08-observation-closure.md). That work separated
 ordinary factor closure,
 

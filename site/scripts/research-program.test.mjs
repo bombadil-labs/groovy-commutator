@@ -4,7 +4,7 @@ import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
 import { ROOT } from './research.mjs';
-import { buildResearchProgram, readResearchRecords, readPrograms, validateProgram, validatePrograms, PROGRAM } from './research-program.mjs';
+import { buildResearchProgram, readResearchRecords, readPrograms, validateProgram, validatePrograms, validateRecords, PROGRAM } from './research-program.mjs';
 
 const output = fs.mkdtempSync(path.join(os.tmpdir(), 'groovy-program-'));
 const records = () => readResearchRecords();
@@ -12,19 +12,41 @@ const programs = () => readPrograms();
 const page = (name) => fs.readFileSync(path.join(output, name), 'utf8');
 after(() => fs.rmSync(output, { recursive: true, force: true }));
 
-test('the extended record contains numbered notes and unnumbered checkpoints', () => {
+test('the record contains numbered notes, labeled notes, and scoped checkpoints', () => {
   const all = records();
   const notes = all.filter((entry) => (entry.recordType || 'note') === 'note');
+  const numbered = notes.filter((entry) => entry.number !== undefined);
+  const labeled = notes.filter((entry) => entry.number === undefined);
   const checkpoints = all.filter((entry) => entry.recordType === 'checkpoint');
-  assert.ok(notes.length >= 25);
-  assert.ok(checkpoints.length >= 1);
-  assert.ok(checkpoints.every((entry) => entry.number === undefined && typeof entry.label === 'string' && entry.label.trim()));
-  assert.equal(new Set(notes.map((entry) => entry.number)).size, notes.length);
-  assert.ok(notes.every((entry) => typeof entry.number === 'string' && entry.number.length > 0));
-  const checkpoint = checkpoints.find((entry) => entry.slug === 'selector-shielding');
-  assert.equal(checkpoint.slug, 'selector-shielding');
-  assert.equal(checkpoint.number, undefined);
-  assert.equal(checkpoint.label, 'Checkpoint');
+  assert.ok(numbered.length >= 25);
+  assert.ok(labeled.length >= 1);
+  assert.ok(checkpoints.length >= 2);
+  assert.equal(new Set(numbered.map((entry) => entry.number)).size, numbered.length);
+  assert.ok(labeled.every((entry) => typeof entry.label === 'string' && entry.label.trim() && entry.scope === undefined));
+  assert.ok(checkpoints.every((entry) => entry.number === undefined && entry.evidence === 'state' && typeof entry.scope === 'string'));
+  const shielding = labeled.find((entry) => entry.slug === 'selector-shielding');
+  assert.equal(shielding.label, 'Selector shielding');
+  assert.ok(labeled.every((entry) => !/checkpoint/i.test(entry.label)), 'labels no longer use the word checkpoint for notes');
+  const lab = checkpoints.find((entry) => entry.slug === 'unfinished-threads');
+  assert.equal(lab.scope, 'lab');
+  const vision = checkpoints.find((entry) => entry.slug === 'dimensional-vision-and-interpretation');
+  assert.equal(vision.scope, 'dimensional-lift');
+});
+
+test('checkpoint validation: scope, state evidence, no number, not evidence for a program', () => {
+  const all = records();
+  const slugs = programs().map((p) => p.slug);
+  assert.doesNotThrow(() => validateRecords(all, slugs));
+  const cp = structuredClone(all.find((entry) => entry.slug === 'unfinished-threads'));
+  assert.throws(() => validateRecords([...all.filter((e) => e.slug !== cp.slug), { ...cp, scope: 'nowhere' }], slugs), /scope must be "lab" or a Program slug/);
+  assert.throws(() => validateRecords([...all.filter((e) => e.slug !== cp.slug), { ...cp, evidence: 'exact' }], slugs), /carries evidence "state"/);
+  assert.throws(() => validateRecords([...all.filter((e) => e.slug !== cp.slug), { ...cp, number: '999' }], slugs), /never numbered/);
+  const note = structuredClone(all.find((entry) => entry.slug === 'selector-shielding'));
+  assert.throws(() => validateRecords([...all.filter((e) => e.slug !== note.slug), { ...note, evidence: 'state' }], slugs), /reserved for checkpoints/);
+  assert.throws(() => validateRecords([...all.filter((e) => e.slug !== note.slug), { ...note, scope: 'lab' }], slugs), /only checkpoints carry a scope/);
+  const program = structuredClone(programs()[0]);
+  program.supports = [...program.supports, 'unfinished-threads'];
+  assert.throws(() => validateProgram(program, all), /checkpoint is not evidence/);
 });
 
 test('sofic defect-orbit has one canonical publication identity', () => {
@@ -107,7 +129,10 @@ test('program landing, program routes, records, and local evidence links render 
   assert.match(page('program-dimensional-lift.html'), /href="program-erased-distinctions.html">Dynamics of Erased Distinctions/);
   assert.match(page('fiber-visibility.html'), /Note 025 · Exact fiber-visibility census/);
   assert.match(page('block3-representation-design.html'), /Note 028 · Exact block-3 representation-design census/);
-  assert.match(page('selector-shielding.html'), /Checkpoint · Exact selector theorem/);
+  assert.match(page('selector-shielding.html'), /Selector shielding · Exact selector theorem/);
+  assert.match(page('unfinished-threads.html'), /Checkpoint · Lab · Checkpoint: lab-wide backlog/);
+  assert.match(page('dimensional-vision-and-interpretation.html'), /Checkpoint · Dimensional Closure and the Commutator Lift/);
+  assert.match(page('index.html'), /Checkpoint · state, no new evidence/);
   assert.match(page('selector-shielding.html'), /Source record and revision history/);
 });
 

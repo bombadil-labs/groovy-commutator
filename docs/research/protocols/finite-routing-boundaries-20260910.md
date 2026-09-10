@@ -1,6 +1,6 @@
 # Frozen protocol: finite routing boundaries with explicit occupancy
 
-Date: 2026-09-10. This follows the editable-routing checkpoint and the approved plan to reduce prepared boundary resources before returning to commutator correction closure. No Class-IV or novelty criterion is used.
+Date: 2026-09-10. This follows the editable-routing note and the approved plan to reduce prepared boundary resources before returning to commutator correction closure. No Class-IV or novelty criterion is used.
 
 ## Fixed physical law; expanded typed source space
 

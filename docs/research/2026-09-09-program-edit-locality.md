@@ -1,6 +1,6 @@
 # A spatial program needs an explicit edit budget
 
-The recovered [dimensional-intertwining checkpoint](2026-09-09-dimensional-intertwining.md) is useful because it makes two hidden costs visible. Its source bits are replicated along infinite diagonals, and its two-dimensional fields contain only a one-dimensional amount of independent information.
+The recovered [dimensional-intertwining note](2026-09-09-dimensional-intertwining.md) is useful because it makes two hidden costs visible. Its source bits are replicated along infinite diagonals, and its two-dimensional fields contain only a one-dimensional amount of independent information.
 
 Together with locality, this sharpens the next program-inheritance question:
 
@@ -11,7 +11,7 @@ These are elementary locality and counting results, derived below. They constrai
 
 ## Review and correction of the previous proposal
 
-The [two-rail checkpoint](2026-09-09-selector-two-lift.md) suggested requiring a finite source-program edit to become an edit of program cells under the same interpreter. That is a good requirement for a **program attached to a finite region or individual site**. Its globally uniform interpretation is too strong if the physical edit must also have finite support and the whole infinite source must switch rules at a common finite time.
+The [two-rail note](2026-09-09-selector-two-lift.md) suggested requiring a finite source-program edit to become an edit of program cells under the same interpreter. That is a good requirement for a **program attached to a finite region or individual site**. Its globally uniform interpretation is too strong if the physical edit must also have finite support and the whole infinite source must switch rules at a common finite time.
 
 This qualification was missing from the proposal. The two-rail theorem and its 64-rule result remain unchanged. Here we correct the next-step specification before treating it as a selection test.
 

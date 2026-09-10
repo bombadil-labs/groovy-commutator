@@ -1,6 +1,6 @@
 # A third representation objective: the control channel is now specified
 
-The [parallel-agent protocol](protocols/representation-empowerment-20260910.md) completes the proposal-writing scope of [issue63](https://github.com/bombadil-labs/groovy-commutator/issues/63#issuecomment-5622837474). The [named representation-empowerment census](../knowledge/representation-empowerment-planned.md) is **planned and unrun**. This checkpoint registers the work and records the source and certification contract; it reports no new channel measurement.
+The [parallel-agent protocol](protocols/representation-empowerment-20260910.md) completes the proposal-writing scope of [issue63](https://github.com/bombadil-labs/groovy-commutator/issues/63#issuecomment-5622837474). The [named representation-empowerment census](../knowledge/representation-empowerment-planned.md) is **planned and unrun**. This note registers the work and records the source and certification contract; it reports no new channel measurement.
 
 ## Preserve the observer and its clock
 

@@ -1,9 +1,9 @@
 # Observer search: hidden information has a lifetime
 
-**Research checkpoint, 2026-09-08.** Research022 reframed the Groovy
+**Research note, 2026-09-08.** Research022 reframed the Groovy
 Commutator as an observation-closure problem, and Research023 showed that an
 instantaneously nonclosed observation can become exact after finite observed
-history. This checkpoint turns the observer itself into the experimental
+history. This note turns the observer itself into the experimental
 variable.
 
 The main question is deliberately simple:

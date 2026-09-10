@@ -41,7 +41,7 @@ The pinned source at commit 40ee57a5672df36a6793a5bcdd720e1cc565212e is [experim
 
 Retain the static list: identity, constant, all 14 nonconstant block-two maps and all 254 nonconstant block-three maps, or the same 7/127 output-complement representatives with exact outcome relabeling. The derivative remains a separate diagnostic and does not enter the static optimum. Block origin and bit ordering remain those in the source implementation. A horizon h below means h macro steps, or hq fine ticks. No action occurs between the fine ticks of a macro step.
 
-See the [publication checkpoint](../2026-09-10-representation-empowerment-protocol.md) for source provenance and the explicit rational-input capacity bounds.
+See the [publication note](../2026-09-10-representation-empowerment-protocol.md) for source provenance and the explicit rational-input capacity bounds.
 
 ## Initial-state distribution
 
@@ -248,6 +248,6 @@ The subsequent planned experiment is named **`representation-empowerment-census`
 3. reproduce Research026 closure/repertoire values as a blocking control;
 4. commit the implementation before any new census evaluation;
 5. run the frozen 247-rule primary denominator plus the separately labeled nine-rule controls;
-6. save canonical machine-readable results and a human-readable checkpoint with provenance.
+6. save canonical machine-readable results and a human-readable note with provenance.
 
 Until those steps are executed, `representation-empowerment-census` has status **planned / unrun** and supplies no new numerical evidence. The Erased Distinctions Program should link this protocol under that planned name when shared Program metadata is integrated; this branch deliberately does not edit the shared Program file.

@@ -1,6 +1,6 @@
 # The closure defect can design its own repair
 
-Research026 showed that representation choice has a forgetting / future-possibility frontier. This checkpoint asks a more constructive question:
+Research026 showed that representation choice has a forgetting / future-possibility frontier. This note asks a more constructive question:
 
 > **Can the distinctions responsible for closure failure tell us how to edit the representation, instead of forcing us to search blindly over complete observers?**
 

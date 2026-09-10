@@ -1,6 +1,6 @@
 # Freeze the second lift around its actual open question
 
-The [bounded protocol](protocols/second-lift-completion-comparison-20260910.md) is now specified after the completed gradient intervention audit. Its [implementation and evaluation](../knowledge/second-lift-completion-comparison.md) remain **planned and unrun**. This checkpoint completes the agreed protocol-writing scope of [issue67](https://github.com/bombadil-labs/groovy-commutator/issues/67#issuecomment-5622839866).
+The [bounded protocol](protocols/second-lift-completion-comparison-20260910.md) is now specified after the completed gradient intervention audit. Its [implementation and evaluation](../knowledge/second-lift-completion-comparison.md) remain **planned and unrun**. This note completes the agreed protocol-writing scope of [issue67](https://github.com/bombadil-labs/groovy-commutator/issues/67#issuecomment-5622839866).
 
 ## What is already settled
 
@@ -50,4 +50,4 @@ Archival replay matches the complete original stdout against ca.py blob 38ef0e7c
 
 ## Execution remains a visible planned task
 
-The [planned experiment](../knowledge/second-lift-completion-comparison.md) is linked from the dimensional Program and this checkpoint. Its acceptance checklist requires a pinned implementation before primary evaluation, complete local domains, independent digests and witnesses, the stated recoding controls and a final matrix with resource accounting. The proposal may be closed when this protocol is merged; the experiment stays planned until that separate deliverable is complete.
+The [planned experiment](../knowledge/second-lift-completion-comparison.md) is linked from the dimensional Program and this note. Its acceptance checklist requires a pinned implementation before primary evaluation, complete local domains, independent digests and witnesses, the stated recoding controls and a final matrix with resource accounting. The proposal may be closed when this protocol is merged; the experiment stays planned until that separate deliverable is complete.

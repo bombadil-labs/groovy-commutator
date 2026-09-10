@@ -1,6 +1,5 @@
 [
   {
-    "recordType": "checkpoint",
     "slug": "rule32-physical-cap",
     "label": "Finite physical correction cap",
     "title": "A physically stored finite correction cap closes indefinitely, without general repair",

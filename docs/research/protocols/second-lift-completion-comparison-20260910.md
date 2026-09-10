@@ -2,7 +2,7 @@
 
 Date: 2026-09-10. Version: issue67 protocol v1. Status: **frozen design; implementation and evaluation planned, not run**.
 
-This protocol implements the [signed issue67 scope](https://github.com/bombadil-labs/groovy-commutator/issues/67#issuecomment-5622839866) after the completed [gradient intervention audit](../2026-09-10-gradient-intervention-costs.md). The [research checkpoint](../2026-09-10-second-lift-completion-protocol.md) records the analytic result and prior exploratory work. Closing the proposal issue completes protocol writing; it does not complete the [planned experiment](../../knowledge/second-lift-completion-comparison.md).
+This protocol implements the [signed issue67 scope](https://github.com/bombadil-labs/groovy-commutator/issues/67#issuecomment-5622839866) after the completed [gradient intervention audit](../2026-09-10-gradient-intervention-costs.md). The [research note](../2026-09-10-second-lift-completion-protocol.md) records the analytic result and prior exploratory work. Closing the proposal issue completes protocol writing; it does not complete the [planned experiment](../../knowledge/second-lift-completion-comparison.md).
 
 ## 1. Typed input and constructor
 
