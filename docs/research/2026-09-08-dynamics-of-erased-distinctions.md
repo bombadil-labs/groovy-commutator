@@ -151,6 +151,8 @@ Research028 explicitly tests local diminishing returns and finds violations in a
 
 The later causal-witness line sharpens the same issue. Research031 shows that finite periodic topology can hide genuinely admissible predictive contexts. Research032 replaces explicit light-cone enumeration with a symbolic witness automaton, while Research033 and Research034 progressively constrain unresolved cases by the grammar of reachable paired contexts. Research036 then attacks the remaining frontier from the complementary direction: represent the exact one-defect orbit as a sofic shift rather than widening a local context window. The exact criterion works on bounded controls, but the obvious explicit graph presentations hit severe proof-object growth. The resulting hierarchy now separates not only real from spurious causal possibility, but **dynamical reachability from the complexity of representing reachability**.
 
+Research037 then separates the representation problem from the closure mechanism itself. Reduced decision diagrams carry every declared temporal-recurrence test across the full 170-case frontier with zero censoring, but no frontier rule satisfies `G^h = sigma^delta G^j` through horizon 6. Rule 5 does satisfy the stronger control identity `G^3=G`. The result is a genuine negative rather than another resource boundary: compact exact local dynamics is available, but the missing reachability certificate must allow an output to be re-presented from **different source provenance**.
+
 ## Hidden modes have dynamics
 
 The discarded distinctions are not abstract bookkeeping. They can propagate, decay, orbit, collide, or change shape while remaining invisible.
@@ -169,13 +171,15 @@ The [selector-shielding checkpoint](2026-09-08-selector-shielding.md) attacks sa
 
 A protected exact Rule-90 strip can remain bit-for-bit correct on its outer row even while the neighboring inner row is strongly contaminated. The reason is not geometric distance. The update rule selects a state-dependent subset of nearby source cells. The checkpoint proves an exact one-step dominance criterion: while the protected lower half-plane is still equal, `0 -> 1` inner-row damage can remain unread, while a first harmful `1 -> 0` defect is necessarily read by the protected row one tick later.
 
-The branch then proves exact recurring moving boundary walls and an exact period-2 stripe-diode phase whose selector orientation gives one-way causal flow. These are concrete mechanisms for maintaining causal invisibility.
+The branch then proves exact recurring moving boundary walls and an exact period-2 stripe-diode phase whose selector orientation gives one-way causal flow. These are concrete mechanisms for **safe forgetting by causal shielding** rather than by a global observer congruence.
 
-The all-time fate of the widening middle of the particular shielding witness remains open. A failed fresh-tail prediction also shows that short local motifs are insufficient to classify shielding: wider context can determine whether a difference eventually leaks through. That negative result agrees with the Rule-106 defect-in-context result rather than weakening it.
+## Interaction can rewrite the causal boundary
 
-## Interaction can change causal visibility without reassembling objects
+The scattering work originally asked whether hidden structure could interact to create, erase, or reorganize effective objects.
 
-The strip-scattering line supplies another important constraint. [Research020](2026-09-08-pulse-scattering.md) proves that relative position alone changes exact launch timing and boundary signature, not qualitative fate, for the single-pulse family. [Research021](2026-09-08-pulse-shape-scattering.md) extends that negative result across 1,600 bounded pulse-shape encounters: all launch two persistent boundary channels.
+The single-pulse line proves a rigid all-displacement scattering law for one exact family. The broader small-shape census then preregisters five named fates: extinction, exact reconstitution, fan-out, fold-in, and persistent-channel scattering. In 1,600 frozen mixed-shape cases it finds **none** of the first four, but every case launches both top and bottom persistent boundary channels.
+
+That null result is informative: fan-out and fold-in should not be imported into the ontology merely because the words are suggestive. For the tested architecture the robust outcome is a pair of persistent outward causal channels, not clean multiplication or reassembly of the original encoded units.
 
 The more interesting event appears just outside that frozen family. Interaction can generate a selector-relative shield that changes **which physical differences an existing organization reads**, even without cleanly reconstituting the interaction into a new countable set of separated organizations.
 
@@ -199,6 +203,7 @@ The program should distinguish its stable results from its motivating language. 
 12. **Predictive-synergy obstruction.** On the complete block-3 target-refinement intervals, greedy remains globally optimal in 30,852 of 30,856 nonclosed cases but has four exact one-bit-regret failures in the Rule-24/231 conjugacy family. The first counterexample independently audits and persists at `n=15`; a zero-immediate-gain distinction amplifies a later split's predictive gain by about `13.26x`.
 13. **Reachable-context refinement.** Symbolic light-cone and finite-state language constructions progressively eliminate false predictive possibilities introduced by periodic or insufficiently composable context approximations; Research032–034 provide exact finite certificates for the stated horizons and language widths.
 14. **Exact sofic orbit criterion and representation boundary.** Every fixed-time image of the one-defect sofic shift has an exact finite labeled-graph presentation, and finite orbit containment gives an exact all-time permanence certificate. Bounded controls reproduce the known Rule-35 horizon-3 witness and a finite exact Rule-5 orbit closure. On the 170 Research034 survivors, however, the frozen explicit-graph methods are completely censored: lazy union localizes the bottleneck to slice imaging, while the raw higher-block control requires 6,029,312 transitions before constructing the known horizon-3 witness.
+15. **Symbolic recurrence clears the graph wall but does not close the frontier.** Exact MDD local functions recover the Rule-5 mechanism as `G^3=G` and complete every frozen identity/translation recurrence test through horizon 6 on all 170 Research034 survivors. None receives a recurrence certificate and none is censored. The next exact proof object must therefore be relational: it must permit an earlier-slice representation with different latent source provenance.
 
 ## What remains open
 
@@ -210,7 +215,7 @@ Several tempting generalizations are not yet earned:
 - The static block-observer searches do not establish an optimal representation family; good effective variables may need to be relational, dynamical, stateful, or adaptive.
 - The near-perfect greedy repair result has no general theorem behind it. Block-3 gives exact counterexamples, and the project does not yet know what separates benign predictive synergy from synergy that makes a local repair gradient globally wrong.
 - The Rule-24 zero-gain-bridge mechanism is confirmed at `n=12` and `n=15`, not proved for all compatible ring widths.
-- The 170 cases left after Research034 remain dynamically unclassified. Research036 supplies an exact sofic criterion, but all 170 primary questions are censored under the frozen explicit-graph resource envelope; this is a representation-complexity boundary, not evidence for permanence, finite witnessing, or intrinsic dynamical hardness.
+- The 170 cases left after Research034 remain dynamically unclassified. Research036 supplies an exact sofic criterion but hits an explicit-graph representation boundary. Research037 clears that computational wall for the narrower temporal-recurrence certificate and obtains a complete negative through horizon 6: none of the 170 closes by ordinary time recurrence or translation. This still does not imply a future witness or rule out a more general relational orbit-inclusion certificate.
 - The project has not established that the four Wolfram classes are the right organizing taxonomy for these closure profiles.
 
 ## The next theoretical targets
@@ -231,11 +236,11 @@ Research027 shows that the local closure gradient can be extraordinarily effecti
 
 That shifts the representation-design problem from blind observer search toward a higher-order calculus: marginal relevance describes first-order repair, conditional complementarity describes interactions among distinctions, and reachable-context languages constrain which apparent interactions can occur at all.
 
-The third is exact **symbolic reachability**:
+The third is exact **relational reachability**:
 
-> **Represent sliding-block images of reachable defect languages symbolically, without materializing the follower-state or higher-block graph explosion.**
+> **Construct a finite-state source recoder or simulation relation that proves earlier-slice representation without projecting the reachable image into an explicit follower graph.**
 
-Research036 proves that exact sofic orbit closure is the right semantic object but that three literal finite-graph presentations hit different computational walls. The next representation should preserve target visibility and exact orbit inclusion while carrying the image symbolically — for example through a transducer, decision diagram, target-aware quotient, or a hybrid of local composability constraints and latent automaton state. This is now a proof-representation problem rather than a reason to raise resource ceilings or blindly increase spatial window width.
+Research036 proves that exact sofic orbit closure is the right semantic object but that literal finite-graph presentations hit different computational walls. Research037 shows that reduced decision diagrams can carry the exact local dynamics cheaply enough across the full frontier, while ordinary temporal recurrence still resolves none of the 170 cases. The missing flexibility is provenance: general inclusion may represent a time-`h` output by an earlier slice generated from a different admissible source row. The next candidate is therefore a transducer or graph endomorphism over the exact two-state one-defect source language, eventually generalized to a two-tape simulation relation if a deterministic recoder is too restrictive.
 
 ## Parallel program
 

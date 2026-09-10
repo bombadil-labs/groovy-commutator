@@ -17,6 +17,7 @@
       "destination": "Concepts"
     },
     "related": [
+      "symbolic-sofic-image",
       "window3-reachable-language",
       "reachable-context-invariants",
       "causal-witness-automaton",

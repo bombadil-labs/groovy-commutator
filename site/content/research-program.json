@@ -24,6 +24,7 @@
       "reachable-context-invariants",
       "window3-reachable-language",
       "sofic-defect-orbit",
+      "symbolic-sofic-image",
       "selector-shielding",
       "pulse-shape-scattering",
       "pulse-scattering"
