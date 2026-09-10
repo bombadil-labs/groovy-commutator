@@ -1,0 +1,114 @@
+name: One-shot compact phase-splice report
+
+on:
+  push:
+    branches:
+      - 'research/relational-source-recoder-20260909'
+    paths:
+      - '.github/workflows/summarize-phase-splice-result.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  summarize:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build compact durable summaries
+        run: |
+          python - <<'PY'
+          import hashlib, json
+          from collections import Counter
+          from pathlib import Path
+
+          src = Path('results/phase_splice_source_recoder_20260909.json')
+          raw = src.read_bytes()
+          x = json.loads(raw)
+
+          keep = [
+              'ok','experiment','working_identity','public_note_number','primary_rules',
+              'seed_languages','target_questions','target_questions_by_wolfram_class',
+              'fresh_policies','seed_status_counts','certified_seed_languages',
+              'unresolved_seed_languages','censored_seed_languages',
+              'exact_permanence_resolutions','unresolved_target_questions',
+              'censored_target_questions','primary_hypothesis','first_canonical_certificate',
+              'certificate_parameter_counts','maximum_mdd_nodes_observed','resource_limits',
+          ]
+          summary = {k: x[k] for k in keep}
+          summary['full_result'] = str(src)
+          summary['full_result_sha256'] = hashlib.sha256(raw).hexdigest()
+
+          sent = x.get('rule122_161_sentinels', [])
+          summary['rule122_161_sentinels'] = {
+              'questions': sum(len(r.get('incoming_target_ids', [])) for r in sent),
+              'seed_languages': len(sent),
+              'status_counts': dict(sorted(Counter(r['status'] for r in sent).items())),
+              'max_mdd_nodes': max((r.get('max_mdd_nodes', 0) for r in sent), default=0),
+          }
+          controls = x.get('controls', {})
+          summary['controls'] = {
+              'ok': controls.get('ok'),
+              'rule5_status': controls.get('rule5', {}).get('status'),
+              'rule35_all_fail': controls.get('rule35', {}).get('all_fail'),
+              'rule35_fresh_candidates_t_le_3': controls.get('rule35', {}).get('fresh_candidates_t_le_3'),
+          }
+
+          out_json = Path('results/phase_splice_source_recoder_20260909_summary.json')
+          out_json.write_text(json.dumps(summary, indent=2) + '\n')
+
+          first = summary['first_canonical_certificate']
+          first_text = 'None.' if first is None else (
+              f"Rule {first['rule']} seed {first['pair']}: "
+              f"t={first['t']}, k={first['k']}, j={first['j']}, "
+              f"delta={first['delta']}, policy={first['policy']}."
+          )
+          s = summary['rule122_161_sentinels']
+          md = f'''# Phase-splice source-recoder primary census — compact report
+
+This is the concise companion to the full durable audit output at `{src}`.
+
+## Primary outcome
+
+- Frozen hypothesis: **{summary['primary_hypothesis']}**
+- Seed languages: **{summary['seed_languages']}**
+- Target questions: **{summary['target_questions']}**
+- Seed status counts: `{summary['seed_status_counts']}`
+- Exact permanence resolutions: **{summary['exact_permanence_resolutions']}**
+- Unresolved target questions: **{summary['unresolved_target_questions']}**
+- Censored target questions: **{summary['censored_target_questions']}**
+- First canonical certificate: {first_text}
+
+## Hard Rule-122/161 sentinels
+
+- Sentinel seed languages: **{s['seed_languages']}**
+- Sentinel target questions: **{s['questions']}**
+- Status counts: `{s['status_counts']}`
+- Maximum MDD nodes observed among sentinels: **{s['max_mdd_nodes']}**
+
+## Symbolic cost
+
+- Maximum MDD nodes observed anywhere in the primary census: **{summary['maximum_mdd_nodes_observed']}**
+- Frozen limits: `{summary['resource_limits']}`
+
+## Controls
+
+- Rule 5 disclosed positive control: **{summary['controls']['rule5_status']}**
+- Rule 35 fresh-family candidates through t=3 all fail: **{summary['controls']['rule35_all_fail']}** ({summary['controls']['rule35_fresh_candidates_t_le_3']} candidates)
+
+## Provenance
+
+- Full result SHA-256: `{summary['full_result_sha256']}`
+- Full result remains the canonical audit record; this file is only a compact reporting layer.
+'''
+          Path('docs/research/phase-splice-source-recoder-20260909-summary.md').write_text(md)
+          PY
+      - name: Commit summaries and retire one-shot summarizer
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git rm .github/workflows/summarize-phase-splice-result.yml
+          git add results/phase_splice_source_recoder_20260909_summary.json docs/research/phase-splice-source-recoder-20260909-summary.md
+          git commit -m 'research: add compact phase-splice primary report'
+          git push origin HEAD:${GITHUB_REF_NAME}
