@@ -1,4 +1,4 @@
-name: One-shot two-switch rail-selector wall-enforced rerun
+name: One-shot two-switch rail-selector process-supervised rerun
 
 on:
   push:
@@ -21,15 +21,15 @@ jobs:
           python-version: '3.12'
           cache: pip
       - run: python -m pip install -e . pandas python-sat
-      - run: python -m py_compile scripts/experiment_two_switch_rail_selector_sat.py scripts/experiment_two_switch_rail_selector_sat_wall.py scripts/aggregate_two_switch_rail_selector.py
-      - name: Run frozen controls
+      - run: python -m py_compile scripts/experiment_two_switch_rail_selector_sat.py scripts/experiment_two_switch_rail_selector_sat_wall.py scripts/run_two_switch_process_wall.py scripts/aggregate_two_switch_rail_selector.py
+      - name: Run frozen controls through supervisor provenance
         run: >-
-          python scripts/experiment_two_switch_rail_selector_sat_wall.py
+          python scripts/run_two_switch_process_wall.py
           --controls-only
           --output artifacts/controls.json
       - uses: actions/upload-artifact@v4
         with:
-          name: two-switch-wall-controls
+          name: two-switch-process-controls
           path: artifacts/controls.json
           if-no-files-found: error
           retention-days: 90
@@ -49,17 +49,17 @@ jobs:
           python-version: '3.12'
           cache: pip
       - run: python -m pip install -e . pandas python-sat
-      - name: Run frozen seed language with solver-granularity wall
+      - name: Run frozen seed language under process supervisor
         env:
           SEED_INDEX: ${{ matrix.seed_index }}
         run: |
           mkdir -p artifacts
-          python scripts/experiment_two_switch_rail_selector_sat_wall.py \
+          python scripts/run_two_switch_process_wall.py \
             --seed-index "$SEED_INDEX" \
             --output "artifacts/two-switch-seed-${SEED_INDEX}.json"
       - uses: actions/upload-artifact@v4
         with:
-          name: two-switch-wall-seed-${{ matrix.seed_index }}
+          name: two-switch-process-seed-${{ matrix.seed_index }}
           path: artifacts/*.json
           if-no-files-found: error
           retention-days: 90
@@ -74,11 +74,11 @@ jobs:
           fetch-depth: 0
       - uses: actions/download-artifact@v4
         with:
-          name: two-switch-wall-controls
+          name: two-switch-process-controls
           path: artifacts/controls
       - uses: actions/download-artifact@v4
         with:
-          pattern: two-switch-wall-seed-*
+          pattern: two-switch-process-seed-*
           path: artifacts/seeds
           merge-multiple: true
       - name: Build durable full audit and compact reports
@@ -89,7 +89,7 @@ jobs:
           --full-output results/two_switch_rail_selector_20260910.json
           --summary-output results/two_switch_rail_selector_20260910_summary.json
           --markdown-output docs/research/two-switch-rail-selector-20260910-summary.md
-      - name: Commit result and retire both one-shot runners
+      - name: Commit result and retire one-shot runners
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
@@ -98,5 +98,5 @@ jobs:
           git add results/two_switch_rail_selector_20260910.json \
                   results/two_switch_rail_selector_20260910_summary.json \
                   docs/research/two-switch-rail-selector-20260910-summary.md
-          git commit -m 'research: record wall-enforced two-switch rail-selector census'
+          git commit -m 'research: record process-supervised two-switch rail-selector census'
           git push origin HEAD:${GITHUB_REF_NAME}
