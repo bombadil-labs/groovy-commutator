@@ -106,6 +106,7 @@ const TOC = [
   ['#coupling', 'Coupling rules'],
   ['#prehoc', 'The fourth input'],
   ['#rulefield', 'Rule fields'],
+  ['#resonance', 'Four meanings of resonance'],
 ];
 
 const pill = { fontFamily: "'IBM Plex Mono',monospace", fontSize: '0.76rem', fontWeight: 600, textDecoration: 'none', background: 'var(--bg-alt)', color: 'var(--ink-soft)', padding: '0.35rem 0.7rem', borderRadius: 999 };
@@ -1670,6 +1671,92 @@ export default function Concepts() {
             active. That asymmetry turns out to be a selection pressure &mdash; see the{' '}
             <a href="questions.html#rule-as-state" style={{ color: 'var(--accent)' }}>questions page</a> for the
             evolution that falls out of it.
+          </p>
+        </section>
+
+        <section id="resonance" style={{ padding: '1.6rem 0', borderTop: '1px solid var(--rule)' }}>
+          <div style={sectionKicker}>Law, state, and interpretation</div>
+          <h2 style={h2Style}>Four questions about resonance</h2>
+          <p style={pBody}>
+            Some states may fit a rule in a useful way. “Resonance” names that question;
+            it is not yet a single score. To make the relationship precise, declare
+            the law, the state family, and the interpretation connecting them.
+          </p>
+          <div style={{ overflowX: 'auto', margin: '1rem 0' }}>
+            <table style={{ borderCollapse: 'collapse', width: '100%', minWidth: 620, fontSize: '0.9rem', color: 'var(--ink-soft)' }}>
+              <caption style={{ textAlign: 'left', marginBottom: '0.6rem' }}>Different claims need different evidence.</caption>
+              <thead>
+                <tr style={{ textAlign: 'left', color: 'var(--ink)' }}>
+                  <th scope="col" style={{ padding: '0.65rem', width: '20%' }}>Relationship</th>
+                  <th scope="col" style={{ padding: '0.65rem', width: '32%' }}>What must hold</th>
+                  <th scope="col" style={{ padding: '0.65rem' }}>Example and boundary</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr style={{ borderTop: '1px solid var(--rule)', verticalAlign: 'top' }}>
+                  <th scope="row" style={{ padding: '0.65rem', textAlign: 'left', color: 'var(--ink)' }}>Preservation</th>
+                  <td style={{ padding: '0.65rem' }}>
+                    F(B) ⊆ B: evolution keeps states inside the family B. Individual states may keep changing.
+                  </td>
+                  <td style={{ padding: '0.65rem' }}>
+                    All 256 axial laws preserve fields copied along the added axis. This follows from translation symmetry;
+                    it does not identify the induced law inside that family.{' '}
+                    <a href="research/dimensional-vision-and-interpretation.html#refinement-preserving-the-beam-versus-preserving-the-old-law">Source</a>
+                  </td>
+                </tr>
+                <tr style={{ borderTop: '1px solid var(--rule)', verticalAlign: 'top' }}>
+                  <th scope="row" style={{ padding: '0.65rem', textAlign: 'left', color: 'var(--ink)' }}>Faithful representation</th>
+                  <td style={{ padding: '0.65rem' }}>
+                    H ∘ E = E ∘ F: encoding and evolution agree, at the declared cadence and on the declared family.
+                  </td>
+                  <td style={{ padding: '0.65rem' }}>
+                    For 66 axial sources, the copied field executes the original lower-dimensional law at the same macro cadence.{' '}
+                    <a href="research/guard-free-axial-lift.html">Exact compatibility</a>
+                  </td>
+                </tr>
+                <tr style={{ borderTop: '1px solid var(--rule)', verticalAlign: 'top' }}>
+                  <th scope="row" style={{ padding: '0.65rem', textAlign: 'left', color: 'var(--ink)' }}>Restoration</th>
+                  <td style={{ padding: '0.65rem' }}>
+                    Declared perturbations return toward a valid family or a specified trajectory, under an explicit metric and domain.
+                  </td>
+                  <td style={{ padding: '0.65rem' }}>
+                    After a fixed one-cell perturbation on the Rule23 code's 2×7 torus, 28 of 128 initial states regain valid code
+                    after four ticks; only 18 match undamaged evolution.{' '}
+                    <a href="research/knowledge/encoding-is-not-repair.html">Validity versus content</a>.
+                    The Rule32 physical cap also has an expanding one-cell defect.{' '}
+                    <a href="research/rule32-physical-cap.html">Non-repair example</a>
+                  </td>
+                </tr>
+                <tr style={{ borderTop: '1px solid var(--rule)', verticalAlign: 'top' }}>
+                  <th scope="row" style={{ padding: '0.65rem', textAlign: 'left', color: 'var(--ink)' }}>Endogenous organization</th>
+                  <td style={{ padding: '0.65rem' }}>
+                    The unfolding establishes or maintains the relevant organization and interpretation, with initial resources declared.
+                  </td>
+                  <td style={{ padding: '0.65rem' }}>
+                    Endogenous establishment of the interpretation remains open. Guarded constructions supply prepared organization;
+                    successful execution alone does not show that it formed itself.{' '}
+                    <a href="research/knowledge/dimensional-beam.html">Open question</a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p style={pBody}>
+            These properties do not imply one another in general. Returning to some valid state can change its content.
+            Preserved geometry and successful decoding do not establish attraction or spontaneous preparation.
+          </p>
+          <p style={pBody}>
+            A further exact control concerns changing the ambient law. If H and H′ agree on a shared invariant family B,
+            their derivative observations A = I ⊕ H and A′ = I ⊕ H′, and their finite-depth observed-future tuples, agree there. The{' '}
+            <a href="research/correction-future-coordinates.html">triangular coordinate theorem</a>{' '}
+            then relates their correction tuples by an invertible local recoding. At each fixed finite depth, whole-field
+            fibers and factor existence agree on B; coordinate radius and cost can differ. This is an analytic consequence,
+            not a completed second-lift census.
+          </p>
+          <p style={{ ...pBody, marginBottom: 0 }}>
+            Read the <a href="research/dimensional-vision-and-interpretation.html">dimensional vision note</a>{' '}
+            and the <a href="research/knowledge/representation-contract.html">representation contract</a>{' '}
+            for the broader question. The vision remains open; giving these distinctions an explanation does not change its evidence status.
           </p>
         </section>
 

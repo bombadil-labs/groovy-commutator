@@ -12,7 +12,15 @@
     "summary": "A durable account of the user's dimensional-beam vision, the absence of an automatically preferred rule-as-state layout, and the distinct requirements of preservation, faithful representation, restoration, and endogenous organization.",
     "takeaway": "Keep law, state family, and interpretation explicit. Compare representations under declared causal and resource constraints, while preserving exact controls and scoped negative findings.",
     "source": "docs/research/2026-09-10-dimensional-vision-and-interpretation.md",
-    "promotion": {"stage": "research"},
-    "related": ["guard-free-axial-lift", "extension-freedom", "program-edit-locality"]
+    "promotion": {
+      "stage": "promoted",
+      "title": "Four questions about resonance",
+      "href": "concepts.html#resonance"
+    },
+    "related": [
+      "guard-free-axial-lift",
+      "extension-freedom",
+      "program-edit-locality"
+    ]
   }
 ]
