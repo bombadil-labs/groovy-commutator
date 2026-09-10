@@ -599,3 +599,9 @@ and commit its implementation before evaluation.
 ## Open direction: sound approximation after closure fails
 
 The [archived Rule110 example](2026-09-10-successor-set-archive.md) compares exact whole-field successor sets with sound local Cartesian products on the eight-cell ring. The general question remains open: which ordered representation domains preserve useful precision at a declared resource cost? Whole-field correlations, cell-frequency metrics and prior-weighted entropy bounds are distinct. This is a reproduced exploratory example; new substrates and infinite-lattice claims require a separate frozen protocol.
+
+## Planned execution: bounded second-lift completion comparison
+
+The [frozen protocol](protocols/second-lift-completion-comparison-20260910.md) follows the completed gradient audit. Its [registered experiment](../knowledge/second-lift-completion-comparison.md) remains planned: implementation and primary evaluation are unrun. The [checkpoint](2026-09-10-second-lift-completion-protocol.md) distinguishes prior exploratory checks from the existing analytic invariant.
+
+For H128/H160 on the shared invariant Rule32 pair family, finite-depth correction tuples are invertibly locally recoded and retain identical whole-field fibers. The open measurement is local cap radius and representation cost, with a separate full-four-symbol ambient control. This constructor increases a product alphabet and correction depth on the same spatial lattice. Proposal completion does not claim the census has run or that a new spatial dimension has been established.

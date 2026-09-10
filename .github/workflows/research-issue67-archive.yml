@@ -1,0 +1,39 @@
+name: Issue67 prior-example replay
+
+on:
+  pull_request:
+    paths:
+      - 'exploratory/issue67-completion-recoding/**'
+      - 'src/groovy/ca.py'
+      - '.github/workflows/research-issue67-archive.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'exploratory/issue67-completion-recoding/**'
+      - 'src/groovy/ca.py'
+      - '.github/workflows/research-issue67-archive.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  prior-recoding-replay:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -e .
+      - name: Replay the inspected example and compare complete stdout
+        run: |
+          python - <<'PY'
+          import pathlib, subprocess, sys
+          root = pathlib.Path("exploratory/issue67-completion-recoding")
+          got = subprocess.check_output([sys.executable, str(root / "completion_recoding_rule32.py")])
+          expected = (root / "output.txt").read_bytes()
+          assert got == expected, got.decode()
+          print(got.decode(), end="")
+          PY
