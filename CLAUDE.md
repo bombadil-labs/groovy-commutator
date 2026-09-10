@@ -447,8 +447,14 @@ checkpoint's burndown status, PR link and date current in that same PR.
 - #68 Concepts: completed in PR76 (2026-09-10), at concepts.html#resonance.
   Four sourced relationships remain distinct; the vision note is promoted
   editorially while its evidence stays open. The knowledge contract links back.
-- Next in order: freeze issue67's bounded second-lift comparison. No new census
-  is authorized by this protocol-writing deliverable; register execution as planned.
+- #67 protocol: completed in PR77 (2026-09-10). Read the second-lift completion
+  protocol/checkpoint. The GF(2)^2 constructor, inherited family, H128/H160,
+  local budgets, causal domains, canonical completions and independent checks
+  are frozen. The named second-lift-completion-comparison experiment remains
+  planned and unrun; whole-field completion invariance is a prior theorem.
+- All six primary-owned issues are complete. Integrate/review the parallel
+  #63/#64 PRs when ready; preserve their protocol/implementation freeze and
+  distinguish proposal completion from a new experimental result.
 
 ## Research continuation: gradient interventions completed; pause for issues (2026-09-10)
 
