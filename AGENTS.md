@@ -30,8 +30,8 @@ from historical influence within the dynamics and from future capability.
 The finite repertoire and costed/returning-task comparisons are complete;
 learning reusable primitives remains open. The latest completed unit is the
 interface-state experiment and unbounded-escape proof. The 3D hypothesis is parked by explicit user
-instruction; continue the fixed 2D workstream. Read its continuation in `docs/research/continuations/history-and-possibility.md`
-and the lab-wide agenda checkpoint in `docs/research/continuations/lab.md`.
+instruction; continue the fixed 2D workstream. Read its continuation in `docs/research/continuations/history-and-possibility.md`,
+which also holds the agenda checkpoint of unfinished threads.
 Do not promote earlier dialogue's unverified numbers or ethical analogies into results.
 
 Capture each substantial new experiment, correction, or open research plan
@@ -312,7 +312,6 @@ unrun, what not to infer):
   is the Program page; the log starts from the next unit).
 - `history-and-possibility.md` — the history-and-possibility precursor, from
   which the planned learning-and-revising-primitives program branches.
-- `lab.md` — cross-program checkpoints (issue burndown, unfinished-threads agenda).
 
 Read the most recent section for the workstream you are continuing, plus its
 Program page, before doing anything. Add new continuations there, not here. A

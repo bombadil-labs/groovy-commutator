@@ -35,7 +35,7 @@ rewriting history. The `supports` list must name registered research records.
 ## Keep the Program's continuation log
 
 Each Program has a dated continuation log in `docs/research/continuations/`
-(one file per Program, plus `lab.md` for cross-program checkpoints). When a
+(one file per Program). When a
 substantial unit completes, add a section at the top of the relevant file:
 what was completed, what is frozen and unrun, and what not to infer. The logs
 are read by agent sessions before continuing a workstream; `AGENTS.md` points
