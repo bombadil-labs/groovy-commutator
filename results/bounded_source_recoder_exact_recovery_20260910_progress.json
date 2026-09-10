@@ -1,0 +1,373 @@
+{
+  "all_22_classified": false,
+  "certified_seed_languages": 0,
+  "completed_seed_languages": 0,
+  "controls": {
+    "forced_split_direct_leaf": {
+      "direct_leaves": 2,
+      "last_solver_error": {},
+      "partition_splits": 1,
+      "solver_decisions": {},
+      "solver_errors": {},
+      "solver_seconds": {
+        "cadical195": 0.003393055000003642,
+        "glucose4": 0.0033324589999992327,
+        "maplechrono": 0.003364550999997107,
+        "minisat22": 0.0033447029999891242
+      },
+      "solver_timeouts": {
+        "cadical195": 3,
+        "glucose4": 3,
+        "maplechrono": 3,
+        "minisat22": 3
+      },
+      "solver_unavailable": {}
+    },
+    "ok": true,
+    "portfolio_stats": {
+      "direct_leaves": 0,
+      "last_solver_error": {},
+      "partition_splits": 0,
+      "solver_decisions": {
+        "cadical195": 71
+      },
+      "solver_errors": {},
+      "solver_seconds": {
+        "cadical195": 0.8972656129999947
+      },
+      "solver_timeouts": {},
+      "solver_unavailable": {}
+    },
+    "rule35_exact_negative_structures": 16,
+    "rule35_replayed_counterexample": {
+      "actual_outputs": [
+        5,
+        2
+      ],
+      "background": {
+        "-1": 5,
+        "-2": 2,
+        "-3": 3,
+        "-4": 7,
+        "-5": 3,
+        "1": 5,
+        "2": 2,
+        "3": 6,
+        "4": 5
+      },
+      "coords": [
+        -5,
+        -4,
+        -3,
+        -2,
+        -1,
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "p": -2,
+      "recoded_outputs": [
+        5,
+        5
+      ],
+      "replay_pass": true
+    },
+    "rule5_verified_positions": 7
+  },
+  "exact_total_classified_seed_languages": 14,
+  "experiment": "bounded-source-recoder-exact-recovery",
+  "ok": true,
+  "parent_exact_negative_seed_languages": 14,
+  "pending_seed_languages": 8,
+  "recovery_seed_languages": 8,
+  "seeds": [
+    {
+      "batches": 1,
+      "certificate": null,
+      "current_ordinal": 84,
+      "pair": "1-5",
+      "parent_start_ordinal": 84,
+      "recovery_exact_negative_structures": 0,
+      "remaining_structures": 256,
+      "rule": 122,
+      "seed_index": 1,
+      "stats": {
+        "direct_leaves": 0,
+        "last_solver_error": {},
+        "partition_splits": 61,
+        "solver_decisions": {
+          "cadical195": 45
+        },
+        "solver_errors": {},
+        "solver_seconds": {
+          "cadical195": 882.7065881439987,
+          "glucose4": 610.6584281919994,
+          "maplechrono": 610.6599505840001,
+          "minisat22": 610.6157160590006
+        },
+        "solver_timeouts": {
+          "cadical195": 61,
+          "glucose4": 61,
+          "maplechrono": 61,
+          "minisat22": 61
+        },
+        "solver_unavailable": {}
+      },
+      "status": "pending"
+    },
+    {
+      "batches": 1,
+      "certificate": null,
+      "current_ordinal": 253,
+      "pair": "6-7",
+      "parent_start_ordinal": 250,
+      "recovery_exact_negative_structures": 3,
+      "remaining_structures": 87,
+      "rule": 154,
+      "seed_index": 6,
+      "stats": {
+        "direct_leaves": 0,
+        "last_solver_error": {},
+        "partition_splits": 59,
+        "solver_decisions": {
+          "cadical195": 62
+        },
+        "solver_errors": {},
+        "solver_seconds": {
+          "cadical195": 934.22180016,
+          "glucose4": 590.624842292001,
+          "maplechrono": 590.6395613530003,
+          "minisat22": 590.6320438589987
+        },
+        "solver_timeouts": {
+          "cadical195": 59,
+          "glucose4": 59,
+          "maplechrono": 59,
+          "minisat22": 59
+        },
+        "solver_unavailable": {}
+      },
+      "status": "pending"
+    },
+    {
+      "batches": 1,
+      "certificate": null,
+      "current_ordinal": 155,
+      "pair": "2-6",
+      "parent_start_ordinal": 124,
+      "recovery_exact_negative_structures": 31,
+      "remaining_structures": 185,
+      "rule": 161,
+      "seed_index": 11,
+      "stats": {
+        "direct_leaves": 0,
+        "last_solver_error": {},
+        "partition_splits": 56,
+        "solver_decisions": {
+          "cadical195": 155,
+          "minisat22": 2
+        },
+        "solver_errors": {},
+        "solver_seconds": {
+          "cadical195": 973.3680978940002,
+          "glucose4": 580.6095583429993,
+          "maplechrono": 580.6001898160016,
+          "minisat22": 573.9914212590002
+        },
+        "solver_timeouts": {
+          "cadical195": 58,
+          "glucose4": 58,
+          "maplechrono": 58,
+          "minisat22": 56
+        },
+        "solver_unavailable": {}
+      },
+      "status": "pending"
+    },
+    {
+      "batches": 1,
+      "certificate": null,
+      "current_ordinal": 252,
+      "pair": "0-4",
+      "parent_start_ordinal": 214,
+      "recovery_exact_negative_structures": 38,
+      "remaining_structures": 88,
+      "rule": 164,
+      "seed_index": 14,
+      "stats": {
+        "direct_leaves": 0,
+        "last_solver_error": {},
+        "partition_splits": 50,
+        "solver_decisions": {
+          "cadical195": 288,
+          "minisat22": 4
+        },
+        "solver_errors": {},
+        "solver_seconds": {
+          "cadical195": 1079.5203443369987,
+          "glucose4": 540.5917078030003,
+          "maplechrono": 540.602114199,
+          "minisat22": 536.8342415789999
+        },
+        "solver_timeouts": {
+          "cadical195": 54,
+          "glucose4": 54,
+          "maplechrono": 54,
+          "minisat22": 50
+        },
+        "solver_unavailable": {}
+      },
+      "status": "pending"
+    },
+    {
+      "batches": 1,
+      "certificate": null,
+      "current_ordinal": 338,
+      "pair": "0-1",
+      "parent_start_ordinal": 330,
+      "recovery_exact_negative_structures": 8,
+      "remaining_structures": 2,
+      "rule": 166,
+      "seed_index": 16,
+      "stats": {
+        "direct_leaves": 0,
+        "last_solver_error": {},
+        "partition_splits": 61,
+        "solver_decisions": {
+          "cadical195": 85
+        },
+        "solver_errors": {},
+        "solver_seconds": {
+          "cadical195": 903.0810277410028,
+          "glucose4": 610.6366800099989,
+          "maplechrono": 610.6247993760011,
+          "minisat22": 610.6281938980003
+        },
+        "solver_timeouts": {
+          "cadical195": 61,
+          "glucose4": 61,
+          "maplechrono": 61,
+          "minisat22": 61
+        },
+        "solver_unavailable": {}
+      },
+      "status": "pending"
+    },
+    {
+      "batches": 1,
+      "certificate": null,
+      "current_ordinal": 82,
+      "pair": "0-4",
+      "parent_start_ordinal": 72,
+      "recovery_exact_negative_structures": 10,
+      "remaining_structures": 258,
+      "rule": 180,
+      "seed_index": 17,
+      "stats": {
+        "direct_leaves": 0,
+        "last_solver_error": {},
+        "partition_splits": 58,
+        "solver_decisions": {
+          "cadical195": 133
+        },
+        "solver_errors": {},
+        "solver_seconds": {
+          "cadical195": 973.9117958229995,
+          "glucose4": 580.5900527310018,
+          "maplechrono": 580.6146440429984,
+          "minisat22": 580.5825012259988
+        },
+        "solver_timeouts": {
+          "cadical195": 58,
+          "glucose4": 58,
+          "maplechrono": 58,
+          "minisat22": 58
+        },
+        "solver_unavailable": {}
+      },
+      "status": "pending"
+    },
+    {
+      "batches": 1,
+      "certificate": null,
+      "current_ordinal": 82,
+      "pair": "3-7",
+      "parent_start_ordinal": 72,
+      "recovery_exact_negative_structures": 10,
+      "remaining_structures": 258,
+      "rule": 210,
+      "seed_index": 18,
+      "stats": {
+        "direct_leaves": 0,
+        "last_solver_error": {},
+        "partition_splits": 59,
+        "solver_decisions": {
+          "cadical195": 132
+        },
+        "solver_errors": {},
+        "solver_seconds": {
+          "cadical195": 936.8332260980017,
+          "glucose4": 590.6118138289996,
+          "maplechrono": 590.6221114829999,
+          "minisat22": 590.6134540760011
+        },
+        "solver_timeouts": {
+          "cadical195": 59,
+          "glucose4": 59,
+          "maplechrono": 59,
+          "minisat22": 59
+        },
+        "solver_unavailable": {}
+      },
+      "status": "pending"
+    },
+    {
+      "batches": 1,
+      "certificate": null,
+      "current_ordinal": 252,
+      "pair": "3-7",
+      "parent_start_ordinal": 244,
+      "recovery_exact_negative_structures": 8,
+      "remaining_structures": 88,
+      "rule": 218,
+      "seed_index": 20,
+      "stats": {
+        "direct_leaves": 0,
+        "last_solver_error": {},
+        "partition_splits": 55,
+        "solver_decisions": {
+          "cadical195": 90,
+          "glucose4": 1,
+          "minisat22": 5
+        },
+        "solver_errors": {},
+        "solver_seconds": {
+          "cadical195": 896.5906085030005,
+          "glucose4": 609.9174449299994,
+          "maplechrono": 600.6449674109983,
+          "minisat22": 594.4816333850017
+        },
+        "solver_timeouts": {
+          "cadical195": 61,
+          "glucose4": 60,
+          "maplechrono": 60,
+          "minisat22": 55
+        },
+        "solver_unavailable": {}
+      },
+      "status": "pending"
+    }
+  ],
+  "source_hashes": {
+    "docs/research/protocols/bounded-source-recoder-exact-recovery-20260910.md": "e61c3f2b13890e6f950d104dac5cd45450835f02b5eeb492a48d9c56db59b30a",
+    "parent_instrument": "318fb61959b0ad34b4cc21e0c5509f9c09b65ce521cfb080bd243eec955be259",
+    "results/bounded_source_recoder_synthesis_20260910.json": "2d28a4d5e4b668f9a201f3658a986060712a2f9069577810aacd08a49e7f12f2",
+    "scripts/recover_bounded_source_recoder_exact.py": "09e12f31d6a1347784f9550780801ae80059d55cb896a0a7e4700fa1c82a4cde"
+  },
+  "status": "pending",
+  "status_counts": {
+    "pending": 8
+  }
+}
