@@ -1,13 +1,23 @@
 # Writing research, then explaining it
 
-Research is the public working scientific record. It now has three layers:
+Research is the public working scientific record. It is built from five
+primitives, each with one job:
 
-1. **Program** — a living synthesis of what the project currently thinks, with
-   exact results and open proof boundaries stated together.
-2. **Notes and checkpoints** — the chronological lab record: protocols,
-   experiments, corrections, failed predictions, and bounded claims.
-3. **Knowledge** — compact reusable findings and relationships extracted from
-   the record without erasing their evidence trail.
+1. **Note** — adds evidence and carries an evidence label: an experiment, a
+   proof, a correction, a failed prediction, a bounded claim. Numbered, or
+   labeled when deliberately unnumbered.
+2. **Protocol** — frozen intent, written and committed before any evidence
+   exists (`docs/research/protocols/`).
+3. **Checkpoint** — a dated statement of state: what is settled, open, parked,
+   and what the next frozen thing is. It adds no evidence and carries no
+   evidence label. Every checkpoint has a scope: one Program, or the lab.
+4. **Program** — a living synthesis of what one research line currently
+   thinks, with exact results and open proof boundaries stated together.
+5. **Knowledge entry** — one compact reusable claim with typed relationships,
+   extracted from the record without erasing its evidence trail.
+
+A checkpoint must never be the only record of a result: if it states a number,
+the number lives in a note and the checkpoint cites it.
 
 The main React pages remain an accessible route into the original calculus and
 instruments. Promotion to those pages is still useful when an idea deserves a
@@ -16,7 +26,7 @@ main-site content. Some mature technical ideas belong in the Program itself.
 
 The [knowledge base](../knowledge/README.md) keeps the current account of
 individual findings, questions, theories, and experiments, with typed
-relationships and dependency paths. After a substantial research checkpoint,
+relationships and dependency paths. After a substantial research unit,
 update the relevant knowledge entries and their relationships. Cite the note
 from each entry; the site generates links back in both directions.
 
@@ -32,7 +42,20 @@ research result: preserve uncertainty, link every major claim to supporting
 records, and keep failed predictions in the chronological notes instead of
 rewriting history. The `supports` list must name registered research records.
 
-## Add a research note or checkpoint
+## Keep the Program's checkpoint log
+
+Each Program has a dated checkpoint log in `docs/research/checkpoints/` (one
+file per Program). When a substantial unit completes, add a checkpoint at the
+top of the relevant file: what was completed, what is frozen and unrun, and
+what not to infer. The logs are read by agent sessions before continuing a
+workstream; `AGENTS.md` points at them. A new Program gets a new log when it
+is registered. A checkpoint that should be public, such as a lab-wide agenda,
+is written as its own dated Markdown file and registered in the catalog with
+`"recordType": "checkpoint"`, a `scope` (`"lab"` or a Program slug), a
+`label`, and `"evidence": "state"`; it never appears in a Program's `supports`
+list because it is not evidence.
+
+## Add a research note
 
 1. Write `docs/research/YYYY-MM-DD-short-name.md`. Start with a single `#`
    title, then use `##` sections. Lead with the question and a plain-language
@@ -44,8 +67,8 @@ rewriting history. The `supports` list must name registered research records.
 3. Add an entry to the research catalog. `site/content/research.json` is the
    original catalog; larger research waves may be kept as JSON array shards
    under `site/content/research/`. Ordinary notes use the next unused note
-   number. A deliberately unnumbered research checkpoint may instead use
-   `"recordType": "checkpoint"` plus a short `label`. The catalog title,
+   number. A deliberately unnumbered note instead carries a short `label` in
+   place of `number` (and no `recordType`). The catalog title,
    summary, and takeaway are the accessible entrance to the longer record.
    Choose a stable slug; its public path is
    `/groovy-commutator/research/<slug>.html`.
@@ -85,7 +108,8 @@ Example catalog entry (replace every example value with the actual note):
 
 Catalog identities are validated across the original file and every shard. The
 index orders records by most recent update, then note number; unnumbered
-checkpoints follow numbered notes from the same update date. Keep the original
+labeled notes follow numbered notes from the same update date, and
+checkpoints follow both. Keep the original
 publication date and update `updated` when the substance changes. Use existing
 topic names when continuing a thread. `kind` describes the document (for
 example Experiment, Correction, or Research plan).
@@ -99,6 +123,7 @@ example Experiment, Correction, or Research plan).
 | `replicated` | An experiment repeated under the controls described in the note; not a universal theorem or a claim of external replication. |
 | `exact` | An algebraic derivation or exhaustive computation, with its domain and bounds stated. |
 | `superseded` | A retained record whose current account is another registered note; set `supersededBy` to that note's slug. |
+| `state` | A checkpoint: a dated statement of state with no new evidence. Only valid with `"recordType": "checkpoint"`. |
 
 A note can contain claims with different strengths. Choose the label for its
 central result and qualify individual claims in the body. An exact result can
@@ -128,6 +153,23 @@ as a candidate for Questions.
 
 Correct false claims in the main content when discovered; do not wait for a
 larger editorial pass. Record what changed and why in Research.
+
+## Authorship and review
+
+Notes, checkpoints, and frozen protocols carry a short provenance line near the
+top, after the title and status:
+
+```
+Authored by: <person or agent session>. Reviewed by: <person or agent session>, <date>.
+```
+
+Name agents by their signed identity as used in issues (for example
+"Codex (OpenAI)" or "Claude Code, Fable 5.1") and people by name. For a frozen
+protocol the review happens **before** the implementation commit and before any
+evaluation; record the reviewer and date on the protocol itself, and link the
+issue thread or PR where the review took place. A note with no reviewer says
+`Reviewed by: none` rather than omitting the line. Existing notes are not
+edited retroactively; add the line when a note is next revised.
 
 ## Formatting, evidence links, and revisions
 

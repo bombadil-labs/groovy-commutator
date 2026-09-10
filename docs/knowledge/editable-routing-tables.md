@@ -8,7 +8,7 @@ A new routing edit can change the new-dimensional behavior and need not preserve
 
 There are 30,496 distinct local data functions among 65,536 stored two-word programs. Different tuples can have the same data output, and some inner instructions can be suppressed by enclosing tables. Every instruction slot has an explicit context where its one-cell edit affects the output; universal activity in every context is not claimed.
 
-The [checkpoint](../research/2026-09-09-editable-routing-tables.md) gives proofs, cost accounting, retained failure witnesses, and a frozen 2,236,434-assertion audit. Finite physical comparisons reach dimension four and include actual autonomous routing-word changes.
+The [note](../research/2026-09-09-editable-routing-tables.md) gives proofs, cost accounting, retained failure witnesses, and a frozen 2,236,434-assertion audit. Finite physical comparisons reach dimension four and include actual autonomous routing-word changes.
 
 Table order, axis assignments, protected roles, prepared layout, and infinite guards remain fixed resources. The result does not establish arbitrary syntax editing, self-organization, intrinsic universality, or novelty.
 

@@ -1,0 +1,25 @@
+[
+  {
+    "recordType": "checkpoint",
+    "scope": "lab",
+    "slug": "unfinished-threads",
+    "label": "Unfinished threads",
+    "title": "Research agenda checkpoint: preserve unfinished threads",
+    "date": "2026-09-08",
+    "updated": "2026-09-10",
+    "kind": "Checkpoint: lab-wide backlog of open threads",
+    "evidence": "state",
+    "topic": "History and possibility",
+    "summary": "A dated statement of which research threads were open, deferred, or parked on 2026-09-08 before the next experiment was chosen: dimensional compatibility, remainder feedback, deferred spatial controls, earlier open branches, and the parked boundary/individuation question.",
+    "takeaway": "A checkpoint records where the lab stands and adds no evidence. This one preserves the unfinished threads so that later choices are made against the full backlog rather than the most recent result.",
+    "source": "docs/research/2026-09-08-unfinished-threads.md",
+    "promotion": {
+      "stage": "research"
+    },
+    "related": [
+      "history-and-possibility",
+      "spacetime-provenance",
+      "shared-state-rule"
+    ]
+  }
+]

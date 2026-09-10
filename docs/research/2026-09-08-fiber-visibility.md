@@ -1,6 +1,6 @@
 # Which forgotten distinctions come back?
 
-Research022–024 moved the Groovy Commutator away from a same-rule commutator test and toward a general question about lossy representations. This checkpoint asks the next exact question: **when an observation identifies two microstates, which hidden distinctions later return to the observed variables, and which remain invisible forever?**
+Research022–024 moved the Groovy Commutator away from a same-rule commutator test and toward a general question about lossy representations. This note asks the next exact question: **when an observation identifies two microstates, which hidden distinctions later return to the observed variables, and which remain invisible forever?**
 
 The finite-state answer gives a useful decomposition of coarse-graining. Some discarded information is merely **latent**: it is invisible now but still lies in the causal future of the observation. Other discarded information is **shielded**: no future observation can distinguish it. The stable future-equivalence partition is the smallest exact predictive refinement of the chosen observation.
 
@@ -104,7 +104,7 @@ This gives three complementary questions:
 2. **Memory:** how long can a distinction remain hidden before it exits observational equivalence?
 3. **Safe forgetting:** which distinctions remain observationally equivalent forever, and what physical mechanism keeps them that way?
 
-The concurrent [selector-shielding checkpoint](2026-09-08-selector-shielding.md) attacks the third question from the opposite direction: instead of computing future equivalence by partition refinement, it identifies state-dependent physical read geometry that can keep nearby differences causally invisible.
+The concurrent [selector-shielding note](2026-09-08-selector-shielding.md) attacks the third question from the opposite direction: instead of computing future equivalence by partition refinement, it identifies state-dependent physical read geometry that can keep nearby differences causally invisible.
 
 ## Limits and next question
 

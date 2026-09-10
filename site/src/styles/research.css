@@ -30,6 +30,7 @@
 .research-status.exact { color: var(--accent-dark); border-color: var(--accent); background: var(--accent-soft); }
 .research-status.open { border-style: dashed; }
 .research-status.superseded { color: var(--ink-soft); }
+.research-status.state { border-style: dotted; color: var(--ink-soft); }
 .research-promotion { color: var(--accent-dark); font-size: .875rem; }
 .research-sidebar { font-size: 1rem; }
 .research-sidebar section { border-top: 1px solid var(--ink); padding-top: 1rem; margin-bottom: 2.25rem; }

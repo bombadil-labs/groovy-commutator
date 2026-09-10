@@ -6,7 +6,7 @@ A_0=A and A_(k+1)=A_k F XOR F A_k. The whole-field tuples
 transformation. They identify exactly the same microstate pairs.
 
 This is an algebraic result for every finite h; the
-[research checkpoint](../research/2026-09-09-correction-future-coordinates.md)
+[research note](../research/2026-09-09-correction-future-coordinates.md)
 contains the proof, exhaustive audits, and limits.
 
 A finite tuple closes when the next correction is determined by that joint

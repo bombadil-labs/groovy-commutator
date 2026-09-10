@@ -1,6 +1,6 @@
 # Does loop information survive gradient evolution and dimensional lifting?
 
-Revision 2026-09-10: completed under the [original frozen protocol](../research/protocols/gradient-loops-and-dimensional-compatibility-20260910.md). The [checkpoint](../research/2026-09-10-gradient-loop-invariants.md) establishes native execution and preservation of every wrapping-loop parity for the eight nonconstant self-dual sources. Constants erase the loop vector. Replication appends a zero loop bit while preserving the inherited ones.
+Revision 2026-09-10: completed under the [original frozen protocol](../research/protocols/gradient-loops-and-dimensional-compatibility-20260910.md). The [note](../research/2026-09-10-gradient-loop-invariants.md) establishes native execution and preservation of every wrapping-loop parity for the eight nonconstant self-dual sources. Constants erase the loop vector. Replication appends a zero loop bit while preserving the inherited ones.
 
 All 42,880 base updates on the complete declared 1D/2D/3D flat-field ensembles and 1,920 interface ticks agree with independent twisted-potential references. Geometry ranks certify the ensemble parameterization. The all-dimensional proof follows from translation covariance and complement response, not finite extrapolation. The first frozen implementation passed without corrections or protocol deviations.
 

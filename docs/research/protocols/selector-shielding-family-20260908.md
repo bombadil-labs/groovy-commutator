@@ -6,7 +6,7 @@ Frozen before evaluating the 512 cases below. This is a follow-up to the one-sid
 
 ## Fixed physical system
 
-Use the same selector law, alternating background, phase, and adjacent two-strip encoding as Research018–021 and the selector-shielding checkpoint.
+Use the same selector law, alternating background, phase, and adjacent two-strip encoding as Research018–021 and the selector-shielding note.
 
 For a finite logical support `S`, encode
 

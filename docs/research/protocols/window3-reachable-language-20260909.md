@@ -18,7 +18,7 @@ The next question is:
 
 > **Does remembering allowed length-3 paired words remove enough spurious context to certify additional permanent invisibility?**
 
-This checkpoint tests only width 3. It does not search a deeper causal horizon and it does not adapt the window width after seeing outcomes.
+This note tests only width 3. It does not search a deeper causal horizon and it does not adapt the window width after seeing outcomes.
 
 ## Exact paired macro dynamics
 

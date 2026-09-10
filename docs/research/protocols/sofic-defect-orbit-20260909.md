@@ -18,7 +18,7 @@ The next question is:
 
 > **Can the exact orbit of the one-defect regular language be represented directly as a finite-state sofic shift, so that a survivor is resolved either by an actual deeper witness or by finite stabilization of its exact forward orbit closure?**
 
-This checkpoint does **not** increase the window width and does not assume a universal finite-state closure exists.
+This note does **not** increase the window width and does not assume a universal finite-state closure exists.
 
 ## Exact initial sofic shift
 

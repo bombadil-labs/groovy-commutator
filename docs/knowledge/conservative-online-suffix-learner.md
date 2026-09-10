@@ -1,8 +1,8 @@
 # Conservative online suffix learner
 
-**Status:** implemented research instrument; no new CA evaluation in this checkpoint.  
+**Status:** implemented research instrument; no new CA evaluation in this note.  
 **Protocol:** [conservative-online-suffix-learner-20260910.md](../research/protocols/conservative-online-suffix-learner-20260910.md).  
-**Checkpoint:** [2026-09-10-conservative-online-suffix-learner.md](../research/2026-09-10-conservative-online-suffix-learner.md).  
+**Note:** [2026-09-10-conservative-online-suffix-learner.md](../research/2026-09-10-conservative-online-suffix-learner.md).  
 **Issue:** #64.
 
 The learner keeps a single global suffix depth and a successor-set table over observed histories. It predicts before the next observation is delivered. Unseen and conflicting keys cause abstention. Only a wrong definite prediction raises the suffix depth; rebuilding reuses retained raw observation history.

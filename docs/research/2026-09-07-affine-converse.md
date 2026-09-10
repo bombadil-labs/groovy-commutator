@@ -9,7 +9,7 @@ yet both have an identically zero commutator.
 
 This is a correction to the explanation, not a change to the CA engine.
 The counterexamples were already visible in the older two-engine sweep;
-the exhaustive check in the September research checkpoint made the
+the exhaustive check in the September research note made the
 contradiction explicit.
 
 ## The statement that survives

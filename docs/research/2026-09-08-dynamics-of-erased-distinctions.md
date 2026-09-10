@@ -189,9 +189,9 @@ In linear systems the limiting case is simpler: observer-null differences can fo
 
 ## Physical shielding: when nearby differences are not read
 
-The [selector-shielding checkpoint](2026-09-08-selector-shielding.md) attacks safe forgetting from a complementary direction in the project’s 2D selector law.
+The [selector-shielding note](2026-09-08-selector-shielding.md) attacks safe forgetting from a complementary direction in the project’s 2D selector law.
 
-A protected exact Rule-90 strip can remain bit-for-bit correct on its outer row even while the neighboring inner row is strongly contaminated. The reason is not geometric distance. The update rule selects a state-dependent subset of nearby source cells. The checkpoint proves an exact one-step dominance criterion: while the protected lower half-plane is still equal, `0 -> 1` inner-row damage can remain unread, while a first harmful `1 -> 0` defect is necessarily read by the protected row one tick later.
+A protected exact Rule-90 strip can remain bit-for-bit correct on its outer row even while the neighboring inner row is strongly contaminated. The reason is not geometric distance. The update rule selects a state-dependent subset of nearby source cells. The note proves an exact one-step dominance criterion: while the protected lower half-plane is still equal, `0 -> 1` inner-row damage can remain unread, while a first harmful `1 -> 0` defect is necessarily read by the protected row one tick later.
 
 The branch then proves exact recurring moving boundary walls and an exact period-2 stripe-diode phase whose selector orientation gives one-way causal flow. These are concrete mechanisms for **safe forgetting by causal shielding** rather than by a global observer congruence.
 
@@ -217,7 +217,7 @@ The program should distinguish its stable results from its motivating language. 
 4. **Rule-106 context dependence.** The same observer-null adjacent defect is permanently shielded in one common context and latent in another. Its local difference evolution has an exact context-dependent formula.
 5. **Rule-106 finite scaling confirmation.** A frozen arithmetic lifetime prediction for one latent defect passed all 50 fresh even ring widths from 102 through 200.
 6. **Selector/dominance theorem.** For the declared exact lower-strip reference, one-step shielding is equivalent to preservation of the row-2 reference ones.
-7. **Moving shielding walls.** The left and right boundary-wall recurrences established in the shielding checkpoint are exact for all future time within their proved moving-frame domains.
+7. **Moving shielding walls.** The left and right boundary-wall recurrences established in the shielding note are exact for all future time within their proved moving-frame domains.
 8. **Stripe diode.** The reported period-2 stripe phase is an exact phase with directional selector behavior.
 9. **Bounded scattering laws.** The single-pulse all-displacement law and the 1,600-case small-shape census are exact within their declared architectures.
 10. **Possibility frontier.** In the frozen static observer family at `n=12`, 222 of 247 rules with any closure breaker separate the least-forgetting closure breaker from the maximum-future-repertoire observer; all six frozen observer pairs preserve that ordering on the fresh `n=18` validation.
@@ -280,12 +280,12 @@ The [archived Rule110 example](2026-09-10-successor-set-archive.md) compares exa
 
 ## Planned execution: representation empowerment census
 
-The [frozen no-op/flip protocol](protocols/representation-empowerment-20260910.md) and its [registered experiment](../knowledge/representation-empowerment-planned.md) add a control question to the existing repertoire frontier. The [publication checkpoint](2026-09-10-representation-empowerment-protocol.md) records observer/cadence provenance and the exact-input capacity certificate. Implementation and new numerical evaluation remain planned and unrun.
+The [frozen no-op/flip protocol](protocols/representation-empowerment-20260910.md) and its [registered experiment](../knowledge/representation-empowerment-planned.md) add a control question to the existing repertoire frontier. The [publication note](2026-09-10-representation-empowerment-protocol.md) records observer/cadence provenance and the exact-input capacity certificate. Implementation and new numerical evaluation remain planned and unrun.
 
 The controller sees only P(S_0), with a uniform prior within its fiber, and receives a declared future readout after one intervention. Uniform-action information and optimized capacity are distinct; both use the original macrostate weights. Research026's observer-specific cadence is preserved. This is independent of issue64's learner and uses a different information/action contract from the completed gradient audit.
 
 ## Implemented instrument: conservative online suffix learner
 
-The [implementation checkpoint](2026-09-10-conservative-online-suffix-learner.md) and [knowledge entry](../knowledge/conservative-online-suffix-learner.md) register issue64's agreed online arm. The instrument predicts before seeing the next observation, abstains on unseen or conflicting keys, and raises one global suffix depth only after a wrong definite prediction. Rebuilding retains raw history; held-out runs start fresh histories under a frozen table and depth.
+The [implementation note](2026-09-10-conservative-online-suffix-learner.md) and [knowledge entry](../knowledge/conservative-online-suffix-learner.md) register issue64's agreed online arm. The instrument predicts before seeing the next observation, abstains on unseen or conflicting keys, and raises one global suffix depth only after a wrong definite prediction. Rebuilding retains raw history; held-out runs start fresh histories under a frozen table and depth.
 
 This is an implemented research instrument with deterministic trace checks, not a new CA result. It does not construct the forward future-equivalence relation or prove an optimal visibility/memory depth. Coarsening, the oracle-assisted arm and any new Rule106/Research028 evaluation remain deferred to separate frozen work. The static empowerment census does not depend on this learner.

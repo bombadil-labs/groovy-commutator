@@ -1,6 +1,6 @@
 # Dimensional rule closure: the Class-IV hypothesis
 
-This checkpoint records a deliberately strong conjecture before the dimensional-closure operator is finalized:
+This note records a deliberately strong conjecture before the dimensional-closure operator is finalized:
 
 > **Perhaps Wolfram Class IV, and only Class IV, consists of rules whose rule table can be promoted into the next spatial dimension by the project's existing rule-as-geometry construction and there become a native rule that can itself be promoted again.**
 

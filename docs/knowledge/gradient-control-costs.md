@@ -1,6 +1,6 @@
 # Loop revision has a support cost; inherited control has a replication cost
 
-Status: exact under the declared flat-mask action contract. The [intervention checkpoint](../research/2026-09-10-gradient-intervention-costs.md) proves that changing loop vector h on a rectangular periodic lattice costs at least, and exactly, the sum of N/n_i over changed directions in flipped stored edges. Disjoint wrapping loops give the lower bound and flat seam masks attain it. Zero-loop masks are periodic-potential gradients and cannot revise the loop sector.
+Status: exact under the declared flat-mask action contract. The [intervention note](../research/2026-09-10-gradient-intervention-costs.md) proves that changing loop vector h on a rectangular periodic lattice costs at least, and exactly, the sum of N/n_i over changed directions in flipped stored edges. Disjoint wrapping loops give the lower bound and flat seam masks attain it. Zero-loop masks are periodic-potential gradients and cannot revise the loop sector.
 
 The eight nonconstant self-dual sources preserve the action-selected loop vector; constants erase every edited gradient after one update. Replication into an added period m preserves edited trajectories while multiplying both changed-edge and touched-site costs by m. These are simultaneous support costs under an external one-shot action interface, not a local or endogenous controller.
 

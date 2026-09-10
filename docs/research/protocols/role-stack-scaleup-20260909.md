@@ -19,7 +19,7 @@ E(s)=[s,0,0],
 
 where `s` is the current lower 2D state and both guard slices are all zero. No drift is allowed.
 
-No alternative guards, periods, offsets, blockings, or decoders are introduced in this checkpoint.
+No alternative guards, periods, offsets, blockings, or decoders are introduced in this note.
 
 ## Lower family
 

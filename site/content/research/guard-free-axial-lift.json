@@ -1,6 +1,5 @@
 [
   {
-    "recordType": "checkpoint",
     "slug": "guard-free-axial-lift",
     "label": "Guard-free axial lift",
     "title": "A guard-free dimensional tower: compatibility and axis order",
@@ -12,7 +11,14 @@
     "summary": "A binary axial constructor preserves literal replication for exactly 66 ECA sources at every dimensional interface. Twenty-four rules are independent of axis order; 14 satisfy both requirements.",
     "takeaway": "Guard rows are not necessary for exact dimensional compatibility, but replication and usually axis order remain supplied choices. The next test asks whether transverse differences have autonomous dynamics.",
     "source": "docs/research/2026-09-10-guard-free-axial-lift.md",
-    "promotion": {"stage": "research"},
-    "related": ["extension-freedom", "rule32-physical-cap", "dimensional-intertwining", "selector-two-lift"]
+    "promotion": {
+      "stage": "research"
+    },
+    "related": [
+      "extension-freedom",
+      "rule32-physical-cap",
+      "dimensional-intertwining",
+      "selector-two-lift"
+    ]
   }
 ]

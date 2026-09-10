@@ -1,6 +1,5 @@
 [
   {
-    "recordType": "checkpoint",
     "date": "2026-09-10",
     "updated": "2026-09-10",
     "evidence": "exact",
@@ -9,7 +8,7 @@
       "stage": "research"
     },
     "slug": "finite-routing-boundaries",
-    "label": "Finite boundary checkpoint",
+    "label": "Finite routing boundaries",
     "title": "Finite routing boundaries work when absence remains explicit",
     "kind": "Exact occupancy-aware finite lift",
     "summary": "Three complete macrocell layers replace infinite transverse guards under the unchanged interpreter. Explicit occupancy preserves recursive typing, program transport and local edits; zero-filling absence fails.",

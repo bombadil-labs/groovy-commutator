@@ -24,7 +24,7 @@ $$
 
 Necessity follows by applying B to equal observations. For sufficiency define $B(P(s))=P(T(s))$; the inclusion makes this independent of which representative s is chosen. Forward invariance makes the output belong to $P(X)$. The definition also proves uniqueness on that image.
 
-This is existence of a whole-state function. Locality, radius, alphabet, computational cost and membership in a chosen model family are additional requirements. Values outside $P(X)$ are not determined by the factor identity. The [extension-freedom checkpoint](2026-09-10-extension-freedom.md) and [full-gradient result](2026-09-10-full-gradient-closure.md) keep those distinctions explicit.
+This is existence of a whole-state function. Locality, radius, alphabet, computational cost and membership in a chosen model family are additional requirements. Values outside $P(X)$ are not determined by the factor identity. The [extension-freedom note](2026-09-10-extension-freedom.md) and [full-gradient result](2026-09-10-full-gradient-closure.md) keep those distinctions explicit.
 
 ## The error of a particular candidate law
 

@@ -1,6 +1,5 @@
 [
   {
-    "recordType": "checkpoint",
     "slug": "rule-field-relabeling",
     "label": "Rule-field relabeling",
     "title": "The interpreter must transform with the rule field",

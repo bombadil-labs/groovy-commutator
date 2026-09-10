@@ -1,6 +1,6 @@
 # A finite physically stored correction cap closes indefinitely
 
-The [Rule32 physical-cap checkpoint](../research/2026-09-10-rule32-physical-cap.md) realizes the exact pair U'=F_32(U) xor V, V'=F_128(V), prepared as (A_0(S),A_1(S)), with programs(32,60) and(128,240). Two frozen guard rows complete the unchanged five-symbol, radius-nine interpreter. The complete physical identity holds for every source configuration and time by local proof and induction.
+The [Rule32 physical-cap note](../research/2026-09-10-rule32-physical-cap.md) realizes the exact pair U'=F_32(U) xor V, V'=F_128(V), prepared as (A_0(S),A_1(S)), with programs(32,60) and(128,240). Two frozen guard rows complete the unchanged five-symbol, radius-nine interpreter. The complete physical identity holds for every source configuration and time by local proof and induction.
 
 Resources are 68 occupied symbols per horizontal source site, 36 transverse coordinates, scale9, one tick per source tick and preparation radius at most2. Prepared roles and blank boundaries remain resources. This is neither source reconstruction nor compression.
 

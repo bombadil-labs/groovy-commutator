@@ -5,7 +5,7 @@ intuition and must not motivate reasoning. The historical class-selectivity
 proposals below are retained as history, not current requirements. Success
 across an entire declared family is useful; a failure applies to the tested
 architecture and may admit an explicit rescue. The
-[spatial Rail checkpoint](2026-09-09-spatial-rail-programs.md) now supplies a
+[spatial Rail note](2026-09-09-spatial-rail-programs.md) now supplies a
 recursive stored-program witness under explicit five-symbol, radius-nine
 budgets. The current constructive target is locally editable wrapper
 instructions, as stated in the [living Program](2026-09-09-dimensional-closure-program.md).

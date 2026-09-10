@@ -20,7 +20,7 @@ Evaluate exactly the six ordered pairs above on periodic square lattices of size
 - `5x5`
 - `6x6`
 
-No additional pairs, arbitrary ring permutations, complement operations, or non-D4 orientations may be introduced in this checkpoint.
+No additional pairs, arbitrary ring permutations, complement operations, or non-D4 orientations may be introduced in this note.
 
 For pair `(r0,r1)`, a field is valid iff:
 
@@ -69,4 +69,4 @@ The fresh-size test is not designed to prove the Class-IV conjecture. It asks wh
 
 The Class-IV lead becomes more interesting if pair(s) containing Rule 54 survive at fresh sizes while many other discovered pairs disappear or fail dynamically. It becomes less interesting if all six survive similarly, if Rule-54 pairs disappear, or if persistence is controlled by an obvious periodic/symmetry mechanism unrelated to complexity.
 
-No geometry may be retuned in this checkpoint to rescue Rule 54.
+No geometry may be retuned in this note to rescue Rule 54.

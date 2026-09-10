@@ -30,19 +30,36 @@ export function readPrograms() {
   return Array.isArray(raw) ? raw : [{ slug: 'current', ...raw }];
 }
 
-export function validateRecords(records) {
-  const normalized = records.map((entry) => entry.recordType === 'checkpoint'
-    ? { ...entry, number: `checkpoint-${entry.slug}` }
+export const RECORD_TYPES = ['note', 'checkpoint'];
+export const LAB_SCOPE = 'lab';
+export function recordType(entry) { return entry.recordType || 'note'; }
+export function isCheckpoint(entry) { return recordType(entry) === 'checkpoint'; }
+export function isLabeledNote(entry) { return recordType(entry) === 'note' && entry.number === undefined; }
+
+export function validateRecords(records, programSlugs = readPrograms().map((program) => program.slug)) {
+  const normalized = records.map((entry) => entry.number === undefined
+    ? { ...entry, number: `${recordType(entry)}-${entry.slug}` }
     : entry);
   validateLegacyCatalog(normalized);
-  const checkpointLabels = new Set();
+  const labels = new Set();
   for (const entry of records) {
-    const type = entry.recordType || 'note';
-    if (!['note', 'checkpoint'].includes(type)) throw new Error(`Research: unknown record type in ${entry.slug}`);
-    if (type === 'checkpoint') {
-      if (typeof entry.label !== 'string' || !entry.label.trim()) throw new Error(`Research: checkpoint needs a label in ${entry.slug}`);
-      if (checkpointLabels.has(entry.label)) throw new Error(`Research: duplicate checkpoint label ${entry.label}`);
-      checkpointLabels.add(entry.label);
+    const type = recordType(entry);
+    if (!RECORD_TYPES.includes(type)) throw new Error(`Research: unknown record type in ${entry.slug}`);
+    const hasNumber = entry.number !== undefined;
+    const hasLabel = typeof entry.label === 'string' && entry.label.trim().length > 0;
+    if (type === 'note') {
+      if (hasNumber === hasLabel) throw new Error(`Research: a note needs exactly one of number or label in ${entry.slug}`);
+      if (entry.scope !== undefined) throw new Error(`Research: only checkpoints carry a scope (${entry.slug})`);
+      if (entry.evidence === 'state') throw new Error(`Research: evidence "state" is reserved for checkpoints (${entry.slug})`);
+    } else {
+      if (hasNumber) throw new Error(`Research: a checkpoint is never numbered (${entry.slug})`);
+      if (!hasLabel) throw new Error(`Research: checkpoint needs a label in ${entry.slug}`);
+      if (entry.evidence !== 'state') throw new Error(`Research: a checkpoint carries evidence "state", not "${entry.evidence}" (${entry.slug})`);
+      if (entry.scope !== LAB_SCOPE && !programSlugs.includes(entry.scope)) throw new Error(`Research: checkpoint scope must be "lab" or a Program slug (${entry.slug})`);
+    }
+    if (hasLabel) {
+      if (labels.has(entry.label)) throw new Error(`Research: duplicate record label ${entry.label}`);
+      labels.add(entry.label);
     }
   }
   return records;
@@ -56,8 +73,11 @@ export function validateProgram(program, records) {
   if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(program.slug)) throw new Error(`Research: invalid program slug ${program.slug}`);
   if (!['living', 'stable', 'superseded'].includes(program.status)) throw new Error('Research: unknown program status');
   if (!Array.isArray(program.supports) || !program.supports.length) throw new Error('Research: program needs supporting records');
-  const slugs = new Set(records.map((entry) => entry.slug));
-  for (const slug of program.supports) if (!slugs.has(slug)) throw new Error(`Research: unknown program support ${slug}`);
+  const bySlug = new Map(records.map((entry) => [entry.slug, entry]));
+  for (const slug of program.supports) {
+    if (!bySlug.has(slug)) throw new Error(`Research: unknown program support ${slug}`);
+    if (isCheckpoint(bySlug.get(slug))) throw new Error(`Research: a checkpoint is not evidence and cannot support a program (${slug})`);
+  }
   const source = path.resolve(ROOT, program.source);
   if (!source.startsWith(ROOT + path.sep) || !fs.existsSync(source)) throw new Error(`Research: missing program source ${program.source}`);
   return program;
@@ -98,8 +118,16 @@ function promotion(entry) {
   if (p.stage === 'candidate') return '<span class="research-promotion">Candidate for an explainer</span>';
   return '<span class="research-promotion">Research only</span>';
 }
-function railLabel(entry) { return entry.recordType === 'checkpoint' ? '◆' : entry.number; }
-function publicLabel(entry) { return entry.recordType === 'checkpoint' ? entry.label : `Note ${entry.number}`; }
+function railLabel(entry) { return isCheckpoint(entry) ? '◇' : isLabeledNote(entry) ? '◆' : entry.number; }
+function scopeName(entry, programs = []) {
+  if (entry.scope === LAB_SCOPE) return 'Lab';
+  const program = programs.find((p) => p.slug === entry.scope);
+  return program ? program.title : entry.scope;
+}
+function publicLabel(entry, programs = []) {
+  if (isCheckpoint(entry)) return `Checkpoint · ${scopeName(entry, programs)}`;
+  return isLabeledNote(entry) ? entry.label : `Note ${entry.number}`;
+}
 function programStatus(program) { return program.status === 'living' ? 'Living synthesis' : program.status; }
 
 function programCard(program, { heading = 'h2' } = {}) {
@@ -121,7 +149,7 @@ function renderIndex(records, programs) {
   const programCards = programs.map((program) => programCard(program)).join('');
   return layout('Research', 'Living programs, chronological research records, and the knowledge base of the Groovy Commutator project.', `
     <p class="research-kicker">The working record</p><h1 class="research-heading">Research</h1>
-    <p class="research-intro">The project now keeps three layers here: living Programs that compress distinct active research agendas, chronological Notes and checkpoints that preserve how the evidence developed, and a Knowledge base of smaller reusable claims.</p>
+    <p class="research-intro">The project now keeps three layers here: living Programs that compress distinct active research agendas, chronological Notes that preserve how the evidence developed, dated Checkpoints that state where a Program or the lab stands without adding evidence, and a Knowledge base of smaller reusable claims.</p>
     <section aria-labelledby="programs"><h2 id="programs" class="research-section-title">Living programs · ${programs.length}</h2>${programCards}</section>
     <div class="research-layout"><section aria-labelledby="notes"><h2 id="notes" class="research-section-title">Research notes and checkpoints · ${records.length} records</h2>${rows}</section>
     <aside class="research-sidebar" aria-label="About the research">
@@ -141,7 +169,7 @@ function renderProgramsIndex(programs) {
   </article>`, { section: 'programs' });
 }
 
-function renderProgram(program, records, context) {
+function renderProgram(program, records, context, programs = [program]) {
   const source = path.resolve(ROOT, program.source);
   const { body, headings, minutes } = renderMarkdown(source, context);
   const supports = program.supports.map((slug) => records.find((entry) => entry.slug === slug));
@@ -154,7 +182,7 @@ function renderProgram(program, records, context) {
     ${headings.length ? `<details class="research-toc"><summary>In this program</summary><ul>${headings.map((h) => `<li><a href="#${h.id}">${esc(h.text)}</a></li>`).join('')}</ul></details>` : ''}
     <div class="research-prose">${body}</div>
     <p class="research-source"><a href="${esc(repoUrl(program.source, context.ref))}">Source synthesis and revision history</a></p>
-    <section class="research-related"><h2>Evidence lineage</h2><p>This synthesis is supported by the records below. Mixed evidence strengths and open boundaries remain stated in the source records.</p><ul>${supports.map((entry) => `<li><a href="${entryUrl(entry)}">${esc(entry.title)}</a> <span class="kb-inline-kind">${esc(publicLabel(entry))}</span></li>`).join('')}</ul></section>
+    <section class="research-related"><h2>Evidence lineage</h2><p>This synthesis is supported by the records below. Mixed evidence strengths and open boundaries remain stated in the source records.</p><ul>${supports.map((entry) => `<li><a href="${entryUrl(entry)}">${esc(entry.title)}</a> <span class="kb-inline-kind">${esc(publicLabel(entry, programs))}</span></li>`).join('')}</ul></section>
   </article>`, { section: 'programs' });
 }
 
@@ -175,17 +203,17 @@ function patchKnowledgeNavigation(output) {
 }
 
 export function buildResearchProgram({ records: suppliedRecords, programs: suppliedPrograms, program: suppliedProgram, knowledge = [], output = path.join(SITE, 'research') } = {}) {
-  const records = validateRecords(suppliedRecords ?? readResearchRecords())
+  const programList = suppliedPrograms ?? (suppliedProgram ? [suppliedProgram] : readPrograms());
+  const records = validateRecords(suppliedRecords ?? readResearchRecords(), programList.map((program) => program.slug))
     .sort((a, b) => {
       const byUpdated = b.updated.localeCompare(a.updated);
       if (byUpdated) return byUpdated;
-      const aCheckpoint = a.recordType === 'checkpoint';
-      const bCheckpoint = b.recordType === 'checkpoint';
-      if (aCheckpoint !== bCheckpoint) return aCheckpoint ? 1 : -1;
-      if (aCheckpoint) return String(a.label).localeCompare(String(b.label));
+      const rank = (entry) => isCheckpoint(entry) ? 2 : isLabeledNote(entry) ? 1 : 0;
+      if (rank(a) !== rank(b)) return rank(a) - rank(b);
+      if (rank(a) > 0) return String(a.label).localeCompare(String(b.label));
       return String(b.number).localeCompare(String(a.number));
     });
-  const programs = validatePrograms(suppliedPrograms ?? (suppliedProgram ? [suppliedProgram] : readPrograms()), records)
+  const programs = validatePrograms(programList, records)
     .sort((a, b) => b.updated.localeCompare(a.updated) || b.date.localeCompare(a.date) || a.title.localeCompare(b.title));
   fs.mkdirSync(output, { recursive: true });
   for (const file of fs.readdirSync(output)) if (file.endsWith('.html')) fs.unlinkSync(path.join(output, file));
@@ -204,7 +232,7 @@ export function buildResearchProgram({ records: suppliedRecords, programs: suppl
   fs.writeFileSync(inputs['research-programs'], renderProgramsIndex(programs));
   for (const program of programs) {
     const file = path.join(output, programUrl(program));
-    fs.writeFileSync(file, renderProgram(program, records, context));
+    fs.writeFileSync(file, renderProgram(program, records, context, programs));
     inputs[`research-program-${program.slug}`] = file;
   }
   for (const entry of records) {
@@ -215,7 +243,7 @@ export function buildResearchProgram({ records: suppliedRecords, programs: suppl
     const related = entry.related.map((slug) => records.find((other) => other.slug === slug));
     const html = layout(entry.title, entry.summary, `<article class="research-article">
       <a class="research-back" href="index.html">← All research</a>
-      <div class="research-meta"><span>${esc(publicLabel(entry))} · ${esc(entry.kind)}</span><time datetime="${entry.date}">${dateLabel(entry.date)}</time><span>${minutes} min read</span></div>
+      <div class="research-meta"><span>${esc(publicLabel(entry, programs))} · ${esc(entry.kind)}</span><time datetime="${entry.date}">${dateLabel(entry.date)}</time><span>${minutes} min read</span></div>
       <h1 class="research-heading">${esc(entry.title)}</h1><p class="research-summary">${esc(entry.summary)}</p>
       <div class="research-article-status">${badge(entry)}${promotion(entry)}</div>
       ${replacement ? `<div class="research-correction">This record has been superseded. Continue with <a href="${entryUrl(replacement)}">${esc(replacement.title)}</a>.</div>` : ''}

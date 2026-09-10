@@ -135,4 +135,4 @@ Failure is informative. Record whether dimensional closure tracks:
 - universality candidates;
 - an entirely different partition of ECA rule space.
 
-Do not redesign the construction to recover Class IV in the same research checkpoint.
+Do not redesign the construction to recover Class IV in the same research note.

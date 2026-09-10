@@ -5,7 +5,7 @@
 
 ## Question
 
-Research022–025 separate information erased by an observation into two parts: distinctions that later return to observed relevance and distinctions that remain absent from the entire observed future. The motivating intuition for this checkpoint is that representation choice may therefore face two different pressures:
+Research022–025 separate information erased by an observation into two parts: distinctions that later return to observed relevance and distinctions that remain absent from the entire observed future. The motivating intuition for this note is that representation choice may therefore face two different pressures:
 
 1. **break closure with as little forgetting as possible**; and
 2. **make as many genuinely different futures compatible with the present macrostate as possible**.

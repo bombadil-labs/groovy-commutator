@@ -6,4 +6,4 @@ Every nonconstant source has both bits in the one-site output range of its axial
 
 The encoding remains prepared replication, with zero added-axis information density and infinite support for a copied local edit. It proves exact trajectories on that image, not spontaneous organization, a unique extension, mutable spatial programs, or an intrinsic minimum dimension. Rule32 fails this recipe without invalidating its separate correction-cap result.
 
-The [completed checkpoint](../research/2026-09-10-guard-free-axial-lift.md) provides proofs, all256-source causal-window checks, independent Boolean audits, and73,728 finite macro updates. The next question is closure of transverse differences outside the replication image.
+The [completed note](../research/2026-09-10-guard-free-axial-lift.md) provides proofs, all256-source causal-window checks, independent Boolean audits, and73,728 finite macro updates. The next question is closure of transverse differences outside the replication image.

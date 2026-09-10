@@ -5,7 +5,7 @@
 **Working identity:** `symbolic-sofic-image`; no public research-note number is assigned until publication.  
 **Dependency:** Note 036 / `sofic-defect-orbit`, Research032 symbolic causal-witness search and h=6 recovery, Research034 width-3 reachable language.
 
-## Why this checkpoint exists
+## Why this note exists
 
 Note 036 established an exact orbit-closure criterion for the one-defect paired language, but every one of the 170 Research034 survivor questions censored under the frozen explicit graph representations. Lazy orbit union localized the active bottleneck to exact slice imaging, and a raw-NFA recovery crossed the five-million-transition ceiling while trying to construct the already-known Rule-35 horizon-3 witness.
 

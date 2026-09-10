@@ -1,6 +1,6 @@
 # Successor sets and local product approximations
 
-This checkpoint archives the already inspected Rule110 example from [issue62](https://github.com/bombadil-labs/groovy-commutator/issues/62#issuecomment-5614870127), under the [signed scope](https://github.com/bombadil-labs/groovy-commutator/issues/62#issuecomment-5622836947). Its status remains **exploratory, reproduced using the same implementation**. Archival replay is not preregistration or an independent algorithmic audit.
+This note archives the already inspected Rule110 example from [issue62](https://github.com/bombadil-labs/groovy-commutator/issues/62#issuecomment-5614870127), under the [signed scope](https://github.com/bombadil-labs/groovy-commutator/issues/62#issuecomment-5622836947). Its status remains **exploratory, reproduced using the same implementation**. Archival replay is not preregistration or an independent algorithmic audit.
 
 ## Declared object
 

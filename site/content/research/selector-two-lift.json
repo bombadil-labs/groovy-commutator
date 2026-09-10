@@ -3,11 +3,10 @@
     "date": "2026-09-09",
     "evidence": "exact",
     "kind": "Exact selector inheritance and spatial-interface theorem",
-    "label": "Selector program checkpoint",
+    "label": "Selector two-lift",
     "promotion": {
       "stage": "research"
     },
-    "recordType": "checkpoint",
     "related": [
       "correction-future-coordinates",
       "shared-state-rule",

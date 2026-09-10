@@ -1,6 +1,5 @@
 [
   {
-    "recordType": "checkpoint",
     "slug": "gradient-intervention-costs",
     "label": "Gradient intervention costs",
     "title": "Persistent loop information has an exact intervention cost",
@@ -12,7 +11,13 @@
     "summary": "Loop-changing edits require a precise transverse support. Replication multiplies action cost while native higher-dimensional edits enable additional outcomes. All frozen endpoint queries agree independently; period-two reversibility limits the finite full-field comparison.",
     "takeaway": "Persistent information can be deliberately revised under a declared external action interface, at a measurable support cost. Controlled dimensional compatibility and equal native capabilities are different claims. This unit is complete; execution pauses for the agreed issue queue.",
     "source": "docs/research/2026-09-10-gradient-intervention-costs.md",
-    "promotion": {"stage": "research"},
-    "related": ["gradient-loop-invariants", "full-gradient-closure", "dimensional-vision-and-interpretation"]
+    "promotion": {
+      "stage": "research"
+    },
+    "related": [
+      "gradient-loop-invariants",
+      "full-gradient-closure",
+      "dimensional-vision-and-interpretation"
+    ]
   }
 ]

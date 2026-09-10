@@ -1,6 +1,5 @@
 [
   {
-    "recordType": "checkpoint",
     "slug": "shared-closure-account",
     "label": "Shared closure account",
     "title": "One representation contract, two different failures",

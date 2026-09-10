@@ -1,1 +1,189 @@
-[{"slug":"pulse-shape-scattering","number":"021","title":"Does pulse shape change the scattering fate?","date":"2026-09-08","updated":"2026-09-08","kind":"Exact bounded scattering census","evidence":"exact","topic":"History and possibility","summary":"Every one of 1,600 preregistered four-site pulse-shape encounters launches persistent supports in both vertical directions. Shape changes the outgoing signature, but not the exact terminal class in this bounded family.","takeaway":"Changing a small finite logical state changes what the outgoing channels carry without changing their qualitative fate; the first qualitatively new lead appears just outside the frozen family.","source":"docs/research/2026-09-08-pulse-shape-scattering.md","promotion":{"stage":"research"},"related":["pulse-scattering","interface-state","selector-shielding"]},{"slug":"observation-closure","number":"022","title":"The commutator is the same-rule slice","date":"2026-09-08","updated":"2026-09-08","kind":"Exact closure census and local audit","evidence":"exact","topic":"Observation and memory","summary":"A lossy observation can support autonomous dynamics even when it does not commute with the original rule. Exact derivative and block-factor searches separate closure, model-family closure, and self-similarity.","takeaway":"Noncommutation does not mean a representation fails to close; the important question is whether erased distinctions can change the future observed state.","source":"docs/research/2026-09-08-observation-closure.md","promotion":{"stage":"candidate","idea":"A coarse description can close under a different law","destination":"Concepts"},"related":["history-repairability","history-lift-closure","observer-search","fiber-visibility"]},{"slug":"history-lift-closure","number":"023","title":"When a lossy observation becomes a state again","date":"2026-09-08","updated":"2026-09-08","kind":"Exact finite-memory closure census","evidence":"exact","topic":"Observation and memory","summary":"Observed history often restores exact deterministic closure after an instantaneous coarse state fails. The required temporal memory and spatial range depend strongly on the observer and on system size.","takeaway":"Coarse-graining generally creates memory: history restores distinctions that the present observation erased before their causal influence was finished.","source":"docs/research/2026-09-08-history-lift-closure.md","promotion":{"stage":"candidate","idea":"Coarse-graining creates memory","destination":"Questions"},"related":["observation-closure","history-repairability","observer-search","fiber-visibility"]},{"slug":"observer-search","number":"024","title":"Hidden information has a lifetime","date":"2026-09-08","updated":"2026-09-08","kind":"Exact observer search and mechanism audit","evidence":"exact","topic":"Observation and memory","summary":"Exhaustive static block-observer search finds no universal coarse variable. A Rule-106 witness shows that long macro-memory can literally be the lifetime of a coherent defect that the observer cannot see.","takeaway":"A useful macrovariable is not just lossy; it must forget distinctions only after they have stopped mattering to the observed future.","source":"docs/research/2026-09-08-observer-search.md","promotion":{"stage":"research"},"related":["observation-closure","history-lift-closure","fiber-visibility","selector-shielding"]},{"slug":"fiber-visibility","number":"025","title":"Which forgotten distinctions come back?","date":"2026-09-08","updated":"2026-09-08","kind":"Exact fiber-visibility census and mechanism study","evidence":"exact","topic":"Observation and memory","summary":"Future-equivalence splits information erased by a representation into latent distinctions that later return and shielded distinctions that never affect any future observation. Rule 106 gives both fates for the same hidden defect in different contexts.","takeaway":"Safe forgetting is future-relative: the minimal predictive refinement restores exactly the hidden distinctions that can still return to visibility.","source":"docs/research/2026-09-08-fiber-visibility.md","promotion":{"stage":"candidate","idea":"Latent information versus safe forgetting","destination":"Concepts"},"related":["observer-search","history-lift-closure","observation-closure","selector-shielding"]},{"slug":"possibility-frontier","number":"026","title":"Possibility lives on a forgetting frontier","date":"2026-09-08","updated":"2026-09-08","kind":"Exact observer frontier census with fresh-size validation","evidence":"exact","topic":"Observation and memory","summary":"Future-equivalence makes latent information equal to the entropy of distinguishable observed futures hidden inside the present macrostate. Across static block observers, the least forgetting that breaks closure and the largest future repertoire are different optima for 222 of 247 rules with a closure breaker.","takeaway":"A representation negotiates between closure and possibility: cheaply breaking closure and maximizing the repertoire of distinct futures are usually different objectives.","source":"docs/research/2026-09-08-possibility-frontier.md","promotion":{"stage":"candidate","idea":"Closure and future possibility are distinct representation objectives","destination":"Concepts"},"related":["fiber-visibility","observer-search","history-lift-closure","observation-closure","selector-shielding"]},{"slug":"representation-design","number":"027","title":"The closure defect can design its own repair","date":"2026-09-08","updated":"2026-09-08","kind":"Exact constructive representation-design census with CI validation","evidence":"exact","topic":"Observation and memory","summary":"On the complete local partition lattice of a two-cell block, a greedy fixed-target Shannon gradient finds the globally minimum-information closure repair in all 1,590 nonclosed ECA target cases. But average residual uncertainty and worst-case latent lifetime select different first repairs in 326 cases.","takeaway":"Closure failure is not only diagnostic: it supplies a constructive gradient for adding state. But representation repair is intrinsically multi-objective—bulk predictive uncertainty and rare long-lived hidden modes can demand different variables.","source":"docs/research/2026-09-08-representation-design.md","promotion":{"stage":"candidate","idea":"Closure defects can guide constructive representation repair","destination":"Concepts"},"related":["possibility-frontier","fiber-visibility","observer-search","history-lift-closure","selector-shielding"]},{"slug":"selector-shielding","recordType":"checkpoint","label":"Checkpoint","title":"Interaction can create a causal diode","date":"2026-09-08","updated":"2026-09-08","kind":"Exact selector theorem with open all-time witness","evidence":"exact","topic":"Observation and memory","summary":"A protected Rule-90 organization reads only a state-dependent subset of nearby differences. Exact dominance, moving-wall, and stripe-diode results show mechanisms that keep physical damage causally unread, while all-time shielding of the widening middle remains open.","takeaway":"Physical proximity is not causal visibility: an evolving process can remain exact while nearby differences grow outside the sources it actually reads.","source":"docs/research/2026-09-08-selector-shielding.md","promotion":{"stage":"research"},"related":["pulse-shape-scattering","fiber-visibility","observer-search","coupled-strips"]}]
+[
+  {
+    "slug": "pulse-shape-scattering",
+    "number": "021",
+    "title": "Does pulse shape change the scattering fate?",
+    "date": "2026-09-08",
+    "updated": "2026-09-08",
+    "kind": "Exact bounded scattering census",
+    "evidence": "exact",
+    "topic": "History and possibility",
+    "summary": "Every one of 1,600 preregistered four-site pulse-shape encounters launches persistent supports in both vertical directions. Shape changes the outgoing signature, but not the exact terminal class in this bounded family.",
+    "takeaway": "Changing a small finite logical state changes what the outgoing channels carry without changing their qualitative fate; the first qualitatively new lead appears just outside the frozen family.",
+    "source": "docs/research/2026-09-08-pulse-shape-scattering.md",
+    "promotion": {
+      "stage": "research"
+    },
+    "related": [
+      "pulse-scattering",
+      "interface-state",
+      "selector-shielding"
+    ]
+  },
+  {
+    "slug": "observation-closure",
+    "number": "022",
+    "title": "The commutator is the same-rule slice",
+    "date": "2026-09-08",
+    "updated": "2026-09-08",
+    "kind": "Exact closure census and local audit",
+    "evidence": "exact",
+    "topic": "Observation and memory",
+    "summary": "A lossy observation can support autonomous dynamics even when it does not commute with the original rule. Exact derivative and block-factor searches separate closure, model-family closure, and self-similarity.",
+    "takeaway": "Noncommutation does not mean a representation fails to close; the important question is whether erased distinctions can change the future observed state.",
+    "source": "docs/research/2026-09-08-observation-closure.md",
+    "promotion": {
+      "stage": "candidate",
+      "idea": "A coarse description can close under a different law",
+      "destination": "Concepts"
+    },
+    "related": [
+      "history-repairability",
+      "history-lift-closure",
+      "observer-search",
+      "fiber-visibility"
+    ]
+  },
+  {
+    "slug": "history-lift-closure",
+    "number": "023",
+    "title": "When a lossy observation becomes a state again",
+    "date": "2026-09-08",
+    "updated": "2026-09-08",
+    "kind": "Exact finite-memory closure census",
+    "evidence": "exact",
+    "topic": "Observation and memory",
+    "summary": "Observed history often restores exact deterministic closure after an instantaneous coarse state fails. The required temporal memory and spatial range depend strongly on the observer and on system size.",
+    "takeaway": "Coarse-graining generally creates memory: history restores distinctions that the present observation erased before their causal influence was finished.",
+    "source": "docs/research/2026-09-08-history-lift-closure.md",
+    "promotion": {
+      "stage": "candidate",
+      "idea": "Coarse-graining creates memory",
+      "destination": "Questions"
+    },
+    "related": [
+      "observation-closure",
+      "history-repairability",
+      "observer-search",
+      "fiber-visibility"
+    ]
+  },
+  {
+    "slug": "observer-search",
+    "number": "024",
+    "title": "Hidden information has a lifetime",
+    "date": "2026-09-08",
+    "updated": "2026-09-08",
+    "kind": "Exact observer search and mechanism audit",
+    "evidence": "exact",
+    "topic": "Observation and memory",
+    "summary": "Exhaustive static block-observer search finds no universal coarse variable. A Rule-106 witness shows that long macro-memory can literally be the lifetime of a coherent defect that the observer cannot see.",
+    "takeaway": "A useful macrovariable is not just lossy; it must forget distinctions only after they have stopped mattering to the observed future.",
+    "source": "docs/research/2026-09-08-observer-search.md",
+    "promotion": {
+      "stage": "research"
+    },
+    "related": [
+      "observation-closure",
+      "history-lift-closure",
+      "fiber-visibility",
+      "selector-shielding"
+    ]
+  },
+  {
+    "slug": "fiber-visibility",
+    "number": "025",
+    "title": "Which forgotten distinctions come back?",
+    "date": "2026-09-08",
+    "updated": "2026-09-08",
+    "kind": "Exact fiber-visibility census and mechanism study",
+    "evidence": "exact",
+    "topic": "Observation and memory",
+    "summary": "Future-equivalence splits information erased by a representation into latent distinctions that later return and shielded distinctions that never affect any future observation. Rule 106 gives both fates for the same hidden defect in different contexts.",
+    "takeaway": "Safe forgetting is future-relative: the minimal predictive refinement restores exactly the hidden distinctions that can still return to visibility.",
+    "source": "docs/research/2026-09-08-fiber-visibility.md",
+    "promotion": {
+      "stage": "candidate",
+      "idea": "Latent information versus safe forgetting",
+      "destination": "Concepts"
+    },
+    "related": [
+      "observer-search",
+      "history-lift-closure",
+      "observation-closure",
+      "selector-shielding"
+    ]
+  },
+  {
+    "slug": "possibility-frontier",
+    "number": "026",
+    "title": "Possibility lives on a forgetting frontier",
+    "date": "2026-09-08",
+    "updated": "2026-09-08",
+    "kind": "Exact observer frontier census with fresh-size validation",
+    "evidence": "exact",
+    "topic": "Observation and memory",
+    "summary": "Future-equivalence makes latent information equal to the entropy of distinguishable observed futures hidden inside the present macrostate. Across static block observers, the least forgetting that breaks closure and the largest future repertoire are different optima for 222 of 247 rules with a closure breaker.",
+    "takeaway": "A representation negotiates between closure and possibility: cheaply breaking closure and maximizing the repertoire of distinct futures are usually different objectives.",
+    "source": "docs/research/2026-09-08-possibility-frontier.md",
+    "promotion": {
+      "stage": "candidate",
+      "idea": "Closure and future possibility are distinct representation objectives",
+      "destination": "Concepts"
+    },
+    "related": [
+      "fiber-visibility",
+      "observer-search",
+      "history-lift-closure",
+      "observation-closure",
+      "selector-shielding"
+    ]
+  },
+  {
+    "slug": "representation-design",
+    "number": "027",
+    "title": "The closure defect can design its own repair",
+    "date": "2026-09-08",
+    "updated": "2026-09-08",
+    "kind": "Exact constructive representation-design census with CI validation",
+    "evidence": "exact",
+    "topic": "Observation and memory",
+    "summary": "On the complete local partition lattice of a two-cell block, a greedy fixed-target Shannon gradient finds the globally minimum-information closure repair in all 1,590 nonclosed ECA target cases. But average residual uncertainty and worst-case latent lifetime select different first repairs in 326 cases.",
+    "takeaway": "Closure failure is not only diagnostic: it supplies a constructive gradient for adding state. But representation repair is intrinsically multi-objective—bulk predictive uncertainty and rare long-lived hidden modes can demand different variables.",
+    "source": "docs/research/2026-09-08-representation-design.md",
+    "promotion": {
+      "stage": "candidate",
+      "idea": "Closure defects can guide constructive representation repair",
+      "destination": "Concepts"
+    },
+    "related": [
+      "possibility-frontier",
+      "fiber-visibility",
+      "observer-search",
+      "history-lift-closure",
+      "selector-shielding"
+    ]
+  },
+  {
+    "slug": "selector-shielding",
+    "label": "Selector shielding",
+    "title": "Interaction can create a causal diode",
+    "date": "2026-09-08",
+    "updated": "2026-09-08",
+    "kind": "Exact selector theorem with open all-time witness",
+    "evidence": "exact",
+    "topic": "Observation and memory",
+    "summary": "A protected Rule-90 organization reads only a state-dependent subset of nearby differences. Exact dominance, moving-wall, and stripe-diode results show mechanisms that keep physical damage causally unread, while all-time shielding of the widening middle remains open.",
+    "takeaway": "Physical proximity is not causal visibility: an evolving process can remain exact while nearby differences grow outside the sources it actually reads.",
+    "source": "docs/research/2026-09-08-selector-shielding.md",
+    "promotion": {
+      "stage": "research"
+    },
+    "related": [
+      "pulse-shape-scattering",
+      "fiber-visibility",
+      "observer-search",
+      "coupled-strips"
+    ]
+  }
+]

@@ -1,6 +1,6 @@
 # Added routing instructions can be edited, executed, and lifted again
 
-**Follow-up, 2026-09-10:** the [finite-boundary checkpoint](2026-09-10-finite-routing-boundaries.md) replaces infinite guard half-spaces with three layers under an explicit occupancy-aware source type. The construction and frozen result below remain unchanged.
+**Follow-up, 2026-09-10:** the [finite-boundary note](2026-09-10-finite-routing-boundaries.md) replaces infinite guard half-spaces with three layers under an explicit occupancy-aware source type. The construction and frozen result below remain unchanged.
 
 The next construction makes the contents of every added routing instruction explicit program data. A dimension-d program now has d eight-bit tables: the original ECA table and one table for each added axis. Every table entry occupies one physical cell.
 
@@ -8,7 +8,7 @@ The complete system still lifts exactly: execution, inherited local edits, and s
 
 The remaining fixed resources are clear: the order of the table chain, its axis assignments, protected symbol roles, a prepared scale-nine layout, and infinite guard backgrounds. Table contents are editable; arbitrary syntax and geometry are not.
 
-## What changed from the previous checkpoint
+## What changed from the previous note
 
 The [spatial Rail witness](2026-09-09-spatial-rail-programs.md) stored eight ECA leaf bits but made each added selector a fixed part of the interpreter. The new grammar stores the added selector's truth table as another eight physical program bits.
 
@@ -249,7 +249,7 @@ The entire audit passes **2,236,434 assertions**. Whole-field assertions compare
 
 ## Significance and the next boundary
 
-Exact encoded CA simulation is an established framework. Ollinger's [survey of intrinsic universality](https://arxiv.org/abs/0906.3213) describes commuting encodings, block simulation, and universal constructions. Its usual rescaling definitions concern a fixed spatial dimension; our dimensional embedding and program-edit contract must be compared separately. This checkpoint does not establish novelty or intrinsic universality for arbitrary CA.
+Exact encoded CA simulation is an established framework. Ollinger's [survey of intrinsic universality](https://arxiv.org/abs/0906.3213) describes commuting encodings, block simulation, and universal constructions. Its usual rescaling definitions concern a fixed spatial dimension; our dimensional embedding and program-edit contract must be compared separately. This note does not establish novelty or intrinsic universality for arbitrary CA.
 
 The contribution to this research program is specific: the previous fixed routing contents can be made spatially editable and autonomously transported without increasing the five-symbol alphabet or radius. The proof gives an explicit costed family and distinguishes inherited edits from new-dimensional interventions.
 

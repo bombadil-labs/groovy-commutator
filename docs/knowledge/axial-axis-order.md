@@ -6,4 +6,4 @@ Exactly14 also preserve the literal-replication beam:0,128,136,150,160,170,192,2
 
 This concerns permutations of axes, not reflection invariance or arbitrary higher-dimensional rules. Simple or degenerate controls remain in the count. Full ambient Rule128/150/254 respectively take AND/parity/OR over the entire3^d block, so guard-free compatibility is not restricted to one-site copies.
 
-See the [checkpoint](../research/2026-09-10-guard-free-axial-lift.md) for exact lists, witnesses, proof, and independent reproduction. No novelty or Class-IV inference is made.
+See the [note](../research/2026-09-10-guard-free-axial-lift.md) for exact lists, witnesses, proof, and independent reproduction. No novelty or Class-IV inference is made.

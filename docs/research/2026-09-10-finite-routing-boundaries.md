@@ -6,7 +6,7 @@ The guards stay fixed because their outward data neighbor is absent: the existin
 
 Repeated lifting requires a corresponding representation change. An absent macrocell is not a zero-valued occupied macrocell. Making occupancy explicit gives a native masked source family, and its complete program/data evolution, inherited edits, and program copying commute with the same finite lift in every finite dimension.
 
-A separate [correction-transport checkpoint](2026-09-10-stored-correction-transport.md) now returns to the original commutator question. Finite routing boundaries are not automatically valid correction closures.
+A separate [correction-transport note](2026-09-10-stored-correction-transport.md) now returns to the original commutator question. Finite routing boundaries are not automatically valid correction closures.
 
 ## The unchanged interpreter and the expanded source type
 
@@ -154,7 +154,7 @@ Both failures and the successful occupancy-preserving three-layer construction w
 
 The [protocol](protocols/finite-routing-boundaries-20260910.md) was frozen at [c7072fb](https://github.com/bombadil-labs/groovy-commutator/commit/c7072fb1143d1b545f21a89fd47cb3ddc858846d). The [implementation](../../scripts/verify_finite_routing_boundaries.py) was committed before execution at [cc6f59f](https://github.com/bombadil-labs/groovy-commutator/commit/cc6f59ffff405ba9dc6fded49862fa62471fcf8d). Neither needed a correction or protocol deviation.
 
-The verifier calls the unchanged physical interpreter from the editable-routing checkpoint and independently specifies occupancy-aware logical evolution.
+The verifier calls the unchanged physical interpreter from the editable-routing note and independently specifies occupancy-aware logical evolution.
 
     python scripts/verify_finite_routing_boundaries.py > /tmp/finite-routing-boundaries.json
     diff -u results/finite_routing_boundaries_20260910.json /tmp/finite-routing-boundaries.json

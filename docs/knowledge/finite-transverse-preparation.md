@@ -1,6 +1,6 @@
 # Can recursive program lifts use finitely thick prepared boundaries?
 
-**Answered under explicit occupancy semantics, 2026-09-10.** The [finite-boundary checkpoint](../research/2026-09-10-finite-routing-boundaries.md) replaces the editable-routing family's infinite guard half-spaces by one complete guard layer on each side of the source.
+**Answered under explicit occupancy semantics, 2026-09-10.** The [finite-boundary note](../research/2026-09-10-finite-routing-boundaries.md) replaces the editable-routing family's infinite guard half-spaces by one complete guard layer on each side of the source.
 
 The physical interpreter is unchanged. Guard data retain their values because their outward required neighbor is absent. A logical source now includes its fixed occupancy mask; missing sites are distinct from occupied zeros. This source type is invariant and can be lifted repeatedly, preserving execution, inherited one-cell edits and gated program copying.
 

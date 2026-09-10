@@ -1,6 +1,5 @@
 [
   {
-    "recordType": "checkpoint",
     "label": "Local correction caps",
     "slug": "local-correction-caps",
     "title": "Finite correction caps exist, but local coordinates have a cost",

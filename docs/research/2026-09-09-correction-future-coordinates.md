@@ -1,7 +1,7 @@
 # Correction stacks are coordinates for observed futures
 
 A commutator tower can keep producing different maps after its information has
-already stopped growing. This checkpoint proves the distinction and gives an
+already stopped growing. This note proves the distinction and gives an
 explicit local evolution law for a prepared correction stack. It then identifies
 what these results leave unresolved about **rules becoming spatial programs**.
 
@@ -296,5 +296,5 @@ constructed shrinking-window trajectories and triangular differences. All
 checks pass. The algebraic proofs establish the unbounded statements; the
 computations audit explicit finite instances.
 
-This checkpoint was derived after reading the prior results. Its numbers are
+This note was derived after reading the prior results. Its numbers are
 audits, not preregistered predictions or independent research replications.

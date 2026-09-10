@@ -1,8 +1,7 @@
 [
   {
     "slug": "correction-future-coordinates",
-    "recordType": "checkpoint",
-    "label": "Theoretical checkpoint",
+    "label": "Correction coordinates",
     "title": "Correction stacks are coordinates for observed futures",
     "date": "2026-09-09",
     "updated": "2026-09-09",

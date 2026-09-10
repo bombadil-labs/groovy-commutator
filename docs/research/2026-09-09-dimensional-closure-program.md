@@ -47,7 +47,7 @@ Those results established **rule as geometry**, not recursive dimensional closur
 
 ## Exact intertwining supplies a baseline
 
-The [dimensional-intertwining checkpoint](2026-09-09-dimensional-intertwining.md)
+The [dimensional-intertwining note](2026-09-09-dimensional-intertwining.md)
 embeds every finite-radius 1D CA into a local 2D CA by the quotient encoding
 E(S)(x,y)=S(x+y). For ECA, the active stencil has affine dimension two for
 218 rules; a four-site coupling that vanishes on valid encoded states gives
@@ -183,7 +183,7 @@ Neither finite closure nor maximal growth is Class-IV-exclusive. That negative r
 ## Semantic lift versus physical lift
 
 The ternary-block result is exact but semantic. A subsequent
-[correction-coordinate checkpoint](2026-09-09-correction-future-coordinates.md)
+[correction-coordinate note](2026-09-09-correction-future-coordinates.md)
 adds an explicit local law for an infinitely prepared correction stack; it does
 not establish finite local preparation or recursive spatial program inheritance.
 
@@ -192,7 +192,7 @@ J_d
 \]
 
 tells us what the higher-dimensional coordinates **mean**. The ternary block alone does not supply such an autonomous law. For the
-correction stack, the checkpoint gives the bounded local update
+correction stack, the note gives the bounded local update
 `U'_k = F(U_k) XOR U_(k+1)` on nonnegative layers. That construction supplies
 all corrections initially and keeps the source rule in the upper law; it does
 not yet meet the stronger program-spatialization target.
@@ -217,7 +217,7 @@ requires only the role and its correction. This points toward a **correction-sta
 
 ## Correction information versus correction vocabulary
 
-The [correction-coordinate checkpoint](2026-09-09-correction-future-coordinates.md)
+The [correction-coordinate note](2026-09-09-correction-future-coordinates.md)
 proves that the joint fields \((A_0,\ldots,A_h)\), with
 \(A_0=D\) and \(A_{k+1}=C_F(A_k)\), are related by a bijective triangular
 transformation to the observed future \((D,DF,\ldots,DF^h)\).
@@ -229,7 +229,7 @@ Thus full-map vocabulary growth is not itself a lower bound on the
 information required for closure. This gives an exact bridge to the
 future-equivalence relation in the parallel Program.
 
-The checkpoint also isolates a program-binding requirement: for a fixed
+The note also isolates a program-binding requirement: for a fixed
 Moore-ring decoder, changing the initial eight rule bits changes spatial
 program data under one ambient selector law. Producing an inherited next
 program requires an explicit additional construction; the generic
@@ -237,7 +237,7 @@ correction-stack law does not supply that interface.
 
 ## A recursively closed routing control
 
-The [two-rail selector checkpoint](2026-09-09-selector-two-lift.md) freezes a
+The [two-rail selector note](2026-09-09-selector-two-lift.md) freezes a
 different physical control. A lifted rule evaluates its inherited source
 program on the central slice, then uses that output to read one of the two
 neighbors in the new dimension. The same Rail constructor applies again,
@@ -260,7 +260,7 @@ requirement remains open.
 
 ## Program edits need a locality budget
 
-The [program-edit checkpoint](2026-09-09-program-edit-locality.md) corrects an
+The [program-edit note](2026-09-09-program-edit-locality.md) corrects an
 ambiguity in the earlier next-step proposal. A finite edit of one globally
 applied rule instruction cannot be implemented by finitely many target-cell
 edits while changing the whole infinite source at a common finite time,
@@ -272,7 +272,7 @@ Local program-field edits remain well posed. Global rule replacement must
 instead declare distributed edit support or a finite-world latency budget.
 This distinction does not invalidate an internal program interpretation.
 
-The same checkpoint quantifies the recovered stripe encoding: one source
+The same note quantifies the recovered stripe encoding: one source
 bit edit changes an entire diagonal, and an n-by-n patch contains exactly
 2n-1 independent bits. Any deterministic encoding with a fixed O(n)-site
 source footprint has zero information per target area. Rich dynamics and
@@ -281,7 +281,7 @@ cannot be demanded without supplying the corresponding input resources.
 
 ## Editable spatial programs now have a constructive witness
 
-The [spatial Rail checkpoint](2026-09-09-spatial-rail-programs.md) realizes the
+The [spatial Rail note](2026-09-09-spatial-rail-programs.md) realizes the
 native Rail grammar with eight actual program cells beside each datum. One
 uniform interpreter per dimension reads these cells. The same layout recipe
 puts the program word along the newly added axis at each lift.
@@ -305,7 +305,7 @@ roles. These architectural limits define subsequent experiments.
 
 ## Added routing contents are now spatial program data
 
-The [editable-routing checkpoint](2026-09-09-editable-routing-tables.md) stores
+The [editable-routing note](2026-09-09-editable-routing-tables.md) stores
 one eight-bit table per axis. The original table reads the first-axis source
 neighborhood; every later table reads the preceding result and its two
 axis-neighbors. Both data execution and gated copying of the complete tuple
@@ -333,7 +333,7 @@ an established novelty claim.
 
 ## Finite boundaries and the return to correction closure
 
-The [finite-boundary checkpoint](2026-09-10-finite-routing-boundaries.md)
+The [finite-boundary note](2026-09-10-finite-routing-boundaries.md)
 replaces the infinite routing guards with three complete macrocell layers.
 The physical rule is unchanged: guard data freeze because their outward
 required inputs are absent. The native source type now explicitly retains
@@ -344,7 +344,7 @@ lift. Both execution modes, program copying and inherited one-cell edits
 commute for arbitrary masked source fields. This gives finite transverse
 thickness, with absorbing blank exterior, not spontaneous role formation.
 
-The [stored-correction checkpoint](2026-09-10-stored-correction-transport.md)
+The [stored-correction note](2026-09-10-stored-correction-transport.md)
 then returns to the original commutator. Program(r,60) physically executes
 F(row) XOR the next correction row, with both instructions stored in cells.
 A stack prepared through H is exact when k+t<=H. A constant zero cap does
@@ -355,7 +355,7 @@ The [local-cap census](2026-09-10-local-correction-caps.md) now supplies exact
 local certificates or conflicts for all4,608 frozen budgets. A post-census
 Rule32 witness closes two rows: U'=F_32(U) XOR V and V'=F_128(V), with
 nonconstant cap V_left AND V_right. This holds at every time for correctly
-prepared source images. The [physical-cap checkpoint](2026-09-10-rule32-physical-cap.md)
+prepared source images. The [physical-cap note](2026-09-10-rule32-physical-cap.md)
 now executes this pair with stored programs and finite guards, with a complete
 all-time field identity. Matched edits execute faithfully, but a persistent
 one-cell-error witness refutes general semantic recovery under this cap.
@@ -383,7 +383,7 @@ compatible dynamics. These deductions concern the chosen tower; an intrinsic
 notion must avoid merely detecting its padding. No arithmetic-prime analogy
 is established.
 
-The [extension-freedom checkpoint](2026-09-10-extension-freedom.md) gives a
+The [extension-freedom note](2026-09-10-extension-freedom.md) gives a
 concrete diagnostic. The Rule32 image leaves98 output bits free in the broad
 radius-one pair grammar. In the existing guarded table-chain grammar,128 top
 program tuples induce four compatible functions; top ECA128 and160 both
@@ -397,7 +397,7 @@ of represented data dynamics therefore remain distinct achievements.
 
 ## A guard-free dimensional comparison
 
-The [axial-family checkpoint](2026-09-10-guard-free-axial-lift.md) applies the
+The [axial-family note](2026-09-10-guard-free-axial-lift.md) applies the
 same source ECA along each spatial axis in sequence. This gives a binary CA
 on every ambient field in every dimension, without guards or reserved roles.
 Literal copying along the new axis preserves the source dynamics exactly for
@@ -420,7 +420,7 @@ are actual causal inputs. This does not settle intrinsic representation dimensio
 
 ## Transverse differences expose the missing baseline information
 
-The [transverse-difference checkpoint](2026-09-10-transverse-difference-closure.md)
+The [transverse-difference note](2026-09-10-transverse-difference-closure.md)
 asks whether T(X)(x,y)=X(x,y) XOR X(x,y+1) closes under the unchanged axial
 laws for all66 compatible sources. Exactly six do:0,150,170,204,240,255.
 Their difference laws are zero, identity, diagonal shifts, and3-by3 parity.
@@ -444,7 +444,7 @@ and autonomous dynamics of departures from it.
 
 ## Full gradients restore nonlinear closure
 
-The [full-gradient checkpoint](2026-09-10-full-gradient-closure.md) retains both
+The [full-gradient note](2026-09-10-full-gradient-closure.md) retains both
 horizontal and vertical differences under the same 66 ordered axial laws.
 The observation loses only a global complement choice. Exactly 10 sources
 close, admitting nonlinear majority variants 142,178,212,232 in addition to
@@ -469,7 +469,7 @@ closure nor a temporary integration anchor selects a canonical interpretation.
 
 ## Loop information persists; control remains a separate question
 
-The [loop checkpoint](2026-09-10-gradient-loop-invariants.md) implements native
+The [loop note](2026-09-10-gradient-loop-invariants.md) implements native
 gradient evolution and independently checks twisted binary potentials in 1D,
 2D, and 3D. All 42,880 base updates and both dimensional interfaces agree.
 Eight nonconstant self-dual sources conserve every wrapping-loop parity;
@@ -492,7 +492,7 @@ now includes this refinement; no endogenous control mechanism is claimed.
 
 ## Loop revision costs support; native control adds choices
 
-The [intervention checkpoint](2026-09-10-gradient-intervention-costs.md)
+The [intervention note](2026-09-10-gradient-intervention-costs.md)
 completes the frozen known-state, one-shot flat-mask comparison. Changing loop
 vector h on a rectangular torus requires exactly the sum of N/n_i over changed
 directions in flipped stored edges. Disjoint wrapping loops give the lower
@@ -579,12 +579,12 @@ recursive spatial-program closure.
 
 Revision 2026-09-10: the user has now authorized the ordered burndown. The
 [shared closure synthesis](2026-09-10-shared-closure-account.md) completes its
-first issue; the checkpoint tracks the remaining scopes and closing PRs. The
+first issue; the burndown record tracks the remaining scopes and closing PRs. The
 pause described below records the boundary after the gradient experiment.
 
 The [frozen intervention protocol](protocols/gradient-intervention-costs-20260910.md)
-is complete in the checkpoint above. At the user's request, execution pauses
-here before starting the issues agreed with Fable/Claude. The checkpoint's
+is complete in the note above. At the user's request, execution pauses
+here before starting the issues agreed with Fable/Claude. The note's
 [handoff](2026-09-10-gradient-intervention-costs.md#certificates-limits-and-handoff)
 links the signed scope agreements for issues61–68 and records their remaining
 work. Scope agreement alone does not close an issue; each still has a concrete
@@ -602,6 +602,6 @@ The [archived Rule110 example](2026-09-10-successor-set-archive.md) compares exa
 
 ## Planned execution: bounded second-lift completion comparison
 
-The [frozen protocol](protocols/second-lift-completion-comparison-20260910.md) follows the completed gradient audit. Its [registered experiment](../knowledge/second-lift-completion-comparison.md) remains planned: implementation and primary evaluation are unrun. The [checkpoint](2026-09-10-second-lift-completion-protocol.md) distinguishes prior exploratory checks from the existing analytic invariant.
+The [frozen protocol](protocols/second-lift-completion-comparison-20260910.md) follows the completed gradient audit. Its [registered experiment](../knowledge/second-lift-completion-comparison.md) remains planned: implementation and primary evaluation are unrun. The [note](2026-09-10-second-lift-completion-protocol.md) distinguishes prior exploratory checks from the existing analytic invariant.
 
 For H128/H160 on the shared invariant Rule32 pair family, finite-depth correction tuples are invertibly locally recoded and retain identical whole-field fibers. The open measurement is local cap radius and representation cost, with a separate full-four-symbol ambient control. This constructor increases a product alphabet and correction depth on the same spatial lattice. Proposal completion does not claim the census has run or that a new spatial dimension has been established.

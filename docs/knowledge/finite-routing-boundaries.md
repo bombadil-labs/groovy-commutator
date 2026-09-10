@@ -8,6 +8,6 @@ The finite lift changes the mask to Omega times {-1,0,1}, appends table172 centr
 
 Each added axis occupies three logical layers, or 27 physical coordinate positions for complete macrocells. After k lifts from dimension d, there are 3^k[8(d+k)+1] occupied physical sites per initial occupied logical site. Infinite sources still have infinite total support.
 
-The [checkpoint](../research/2026-09-10-finite-routing-boundaries.md) proves the identities and retains failures of zero-filling absent cells and omitting a guard. The frozen audit passes 26,619 assertions.
+The [note](../research/2026-09-10-finite-routing-boundaries.md) proves the identities and retains failures of zero-filling absent cells and omitting a guard. The frozen audit passes 26,619 assertions.
 
 This is a missing-input boundary mechanism, not self-organization or an arbitrary minimum-width theorem. Occupancy edits and tag repair remain outside the action contract.

@@ -8,7 +8,7 @@
 
 Implement the agreed conservative learner as a concrete research instrument without attaching the withdrawn Research023 visibility-depth or optimality claims to it. The harness owns concrete states and dynamics. The learner receives only the declared observation sequence.
 
-This unit is an implementation checkpoint, not a new ECA census. Explicit deterministic traces are implementation checks, not research evaluation.
+This unit is an implementation note, not a new ECA census. Explicit deterministic traces are implementation checks, not research evaluation.
 
 ## Frozen learner state
 

@@ -1,6 +1,5 @@
 [
   {
-    "recordType": "checkpoint",
     "slug": "conservative-online-suffix-learner",
     "label": "Conservative online observer",
     "title": "A suffix learner with explicit abstention and history costs",
