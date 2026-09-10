@@ -28,7 +28,8 @@
       "selector-shielding",
       "pulse-shape-scattering",
       "pulse-scattering",
-      "shared-closure-account"
+      "shared-closure-account",
+      "successor-set-archive"
     ]
   },
   {
@@ -64,7 +65,8 @@
       "full-gradient-closure",
       "gradient-loop-invariants",
       "gradient-intervention-costs",
-      "shared-closure-account"
+      "shared-closure-account",
+      "successor-set-archive"
     ]
   }
 ]

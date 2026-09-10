@@ -273,3 +273,7 @@ The separate [Dimensional Closure and the Commutator Lift](2026-09-09-dimensiona
 This Program page is deliberately not a replacement for the research notes. It is a **living compression** of them. The notes retain protocols, failed predictions, exact bounds, and the historical path by which the project changed its mind. The Knowledge base keeps smaller reusable claims.
 
 The earlier [History and possibility program](2026-09-07-history-and-possibility.md) remains an important precursor: it widened the project from prediction to available action and revisability. The present synthesis narrows one strand of that broader question into a more precise mathematical program about representations, hidden distinctions, and causal visibility.
+
+## Open direction: sound approximation after closure fails
+
+The [archived Rule110 example](2026-09-10-successor-set-archive.md) compares exact whole-field successor sets with sound local Cartesian products on the eight-cell ring. The general question remains open: which ordered representation domains preserve useful precision at a declared resource cost? Whole-field correlations, cell-frequency metrics and prior-weighted entropy bounds are distinct. This is a reproduced exploratory example; new substrates and infinite-lattice claims require a separate frozen protocol.
