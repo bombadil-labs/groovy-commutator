@@ -313,6 +313,8 @@ carries no evidence label. Each Program keeps its checkpoints in a log under
   is the Program page; the log starts from the next unit).
 - `history-and-possibility.md` — the history-and-possibility precursor, from
   which the planned learning-and-revising-primitives program branches.
+- `representation-invariants.md` — Invariants Across Representation Contracts,
+  opened 2026-09-10: which properties survive a declared change of interpreter.
 
 Read the most recent checkpoint for the workstream you are continuing, plus its
 Program page, before doing anything. Add new checkpoints there, not here. A

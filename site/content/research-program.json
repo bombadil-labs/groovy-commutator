@@ -70,5 +70,27 @@
       "successor-set-archive",
       "second-lift-completion-protocol"
     ]
+  },
+  {
+    "slug": "representation-invariants",
+    "title": "Invariants Across Representation Contracts",
+    "eyebrow": "Working research program",
+    "date": "2026-09-10",
+    "updated": "2026-09-10",
+    "status": "living",
+    "summary": "A represented dynamics has properties that belong to the dynamics and properties that belong to the interpreter. The program declares admissible changes of interpreter, what each transports, and what each costs, then classifies existing claims as preserved, covariant, or changed.",
+    "thesis": "Which properties of a represented dynamics survive a declared change of representation contract, after transporting what must be transported, and at what cost?",
+    "source": "docs/research/2026-09-10-representation-invariants-program.md",
+    "supports": [
+      "rule-field-relabeling",
+      "second-lift-completion-protocol",
+      "correction-future-coordinates",
+      "extension-freedom",
+      "affine-converse",
+      "observation-closure",
+      "shared-closure-account",
+      "full-gradient-closure",
+      "gradient-loop-invariants"
+    ]
   }
 ]
