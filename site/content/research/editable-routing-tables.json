@@ -1,0 +1,25 @@
+[
+  {
+    "slug": "editable-routing-tables",
+    "recordType": "checkpoint",
+    "label": "Editable routing checkpoint",
+    "title": "Added routing instructions can be edited, executed, and lifted again",
+    "date": "2026-09-09",
+    "updated": "2026-09-09",
+    "kind": "Exact programmable-routing realization",
+    "evidence": "exact",
+    "topic": "Algebra and closure",
+    "summary": "One editable eight-bit table per axis gives exact recursive program/data lifts under a five-symbol radius-nine interpreter. Routing edits and autonomous copying survive the next lift; inherited edits and newly available edits have distinct contracts.",
+    "takeaway": "Added routing contents can become physical program data. The order of the program chain, prepared role geometry, and infinite boundary resources remain fixed.",
+    "source": "docs/research/2026-09-09-editable-routing-tables.md",
+    "promotion": {
+      "stage": "research"
+    },
+    "related": [
+      "spatial-rail-programs",
+      "selector-two-lift",
+      "program-edit-locality",
+      "shared-state-rule"
+    ]
+  }
+]

@@ -250,20 +250,103 @@ source footprint has zero information per target area. Rich dynamics and
 meaningful spatial organization remain possible; positive area entropy
 cannot be demanded without supplying the corresponding input resources.
 
+## Editable spatial programs now have a constructive witness
+
+The [spatial Rail checkpoint](2026-09-09-spatial-rail-programs.md) realizes the
+native Rail grammar with eight actual program cells beside each datum. One
+uniform interpreter per dimension reads these cells. The same layout recipe
+puts the program word along the newly added axis at each lift.
+
+A separate fixed guard program, ECA 204, keeps the off-interface backgrounds
+stable. This repairs the earlier 64-source restriction: every ECA starting
+program and every heterogeneous native program field now has an exact lift.
+One local state or instruction edit remains one physical cell edit. The
+second interface works on arbitrary valid 2D program/data fields, and the
+proof continues to every finite dimension.
+
+A separately frozen extension also preserves state-gated copying of whole
+program words from the left neighbor. Program values can therefore change
+autonomously while the commuting identities continue to hold.
+
+This is a witness for a declared family, with five cell symbols, radius nine,
+a prepared 9^d-site macrocell layout, and infinite guard backgrounds. Eight
+leaf instructions are mutable; Rail wrapper structure is fixed by dimension.
+It does not encode arbitrary physical rules or realize the ternary L/R/C
+roles. These architectural limits define subsequent experiments.
+
+## Added routing contents are now spatial program data
+
+The [editable-routing checkpoint](2026-09-09-editable-routing-tables.md) stores
+one eight-bit table per axis. The original table reads the first-axis source
+neighborhood; every later table reads the preceding result and its two
+axis-neighbors. Both data execution and gated copying of the complete tuple
+have exact physical realizations.
+
+A lift appends the canonical selector table 172 and keeps separate guard
+programs. Every native source field lifts, including arbitrary previously
+edited 2D and 3D routing programs. Local proofs give every finite dimension;
+the physical audit reaches dimension four. Inherited edits remain single
+physical-symbol edits.
+
+A newly introduced instruction is a new operation: editing it can change
+the new-dimensional dynamics. Exactly 64 of 256 appended tables preserve
+unchanged old behavior on the canonical rails, but all 256 table values are
+allowed within a source being lifted next. Distinct stored programs also
+need not have distinct data functions: the 65,536 two-word programs give
+30,496 local data functions.
+
+Storage is 8d+1 occupied sites per 9^d-site macrocell, still with five
+symbols, radius nine and one-tick cadence. Local processing evaluates d
+tables; its circuit cost is not dimension-independent. Contents are mutable;
+stage order, axis assignments, protected roles and infinite guard backgrounds
+remain prepared architecture. This is a scoped constructive result without
+an established novelty claim.
+
+## Finite boundaries and the return to correction closure
+
+The [finite-boundary checkpoint](2026-09-10-finite-routing-boundaries.md)
+replaces the infinite routing guards with three complete macrocell layers.
+The physical rule is unchanged: guard data freeze because their outward
+required inputs are absent. The native source type now explicitly retains
+an occupancy mask; absent cells are not occupied zeros.
+
+The mask lifts as Omega times {-1,0,1}, so it remains native for the next
+lift. Both execution modes, program copying and inherited one-cell edits
+commute for arbitrary masked source fields. This gives finite transverse
+thickness, with absorbing blank exterior, not spontaneous role formation.
+
+The [stored-correction checkpoint](2026-09-10-stored-correction-transport.md)
+then returns to the original commutator. Program(r,60) physically executes
+F(row) XOR the next correction row, with both instructions stored in cells.
+A stack prepared through H is exact when k+t<=H. A constant zero cap does
+not generally close it: the retained Rule255 example corrupts row0 at tick3
+when H=2, despite an entirely valid and stable physical layout.
+
+The [local-cap census](2026-09-10-local-correction-caps.md) now supplies exact
+local certificates or conflicts for all4,608 frozen budgets. A post-census
+Rule32 witness closes two rows: U'=F_32(U) XOR V and V'=F_128(V), with
+nonconstant cap V_left AND V_right. This holds at every time for correctly
+prepared source images. The [physical-cap checkpoint](2026-09-10-rule32-physical-cap.md)
+now executes this pair with stored programs and finite guards, with a complete
+all-time field identity. Matched edits execute faithfully, but a persistent
+one-cell-error witness refutes general semantic recovery under this cap.
+Boundary stability, information sufficiency, and recovery remain distinct.
+
 ## Relation to the Class-IV hope
 
-The motivating conjecture was deliberately strong: perhaps Class IV, and only Class IV, supports recursive dimensional closure.
+The original Class-IV conjecture records the intuition that motivated this
+thread. On 2026-09-09 the user clarified that it must not motivate the
+reasoning or construction choices. It is background, not an active selection
+criterion or a planned classification gate.
 
-Several candidate criteria have already failed that exclusivity test:
+Earlier closure and growth statistics already failed exclusivity tests.
+The current positive result works across all 256 ECA starting programs, which
+is useful evidence for the declared architecture.
 
-- literal overlapping rule-ring tilings collapse to constants or small spatial crystals;
-- simple rule/state/derivative role stacks do not recursively close on changing trajectories;
-- finite commutator-tower length is sensitive to ring size;
-- ternary role closure and maximal role growth both include rules from multiple Wolfram classes.
-
-None of those failures falsifies the stronger native-spatial-closure conjecture, because none is yet the final physical lift.
-
-The discipline remains unchanged: fix the higher-dimensional architecture first, then attach class labels.
+Negative findings remain local to the attempted grammar, encoding, and
+budget. Preserve them and state each proposed rescue explicitly; neither a
+failed candidate nor a successful broad family settles every version of
+recursive spatial-program closure.
 
 ## What is exact now
 
@@ -277,31 +360,43 @@ The discipline remains unchanged: fix the higher-dimensional architecture first,
 
 8. **A two-rail routing grammar closes recursively.** The fixed interface encoding is exact if and only if the source preserves both uniform states. All 256 ECA programs remain distinguishable through two lifts; 64 source dynamics embed through both and every subsequent lift. This retains program instructions as static routing code, not active lattice data.
 
+9. **Editable spatial Rail programs have exact recursive realizations.** A five-symbol, radius-nine interpreter with a separate guard program preserves all native source program/data fields through both interfaces and every further finite lift. It also preserves autonomous state-gated program transport. Fixed role markers and wrapper structure remain architectural resources.
+
+10. **Introduced routing-table contents can be edited and inherited.** One eight-bit table per axis gives exact physical execution and lifts for arbitrary native source programs, including autonomous copying of the added words. The grammar's ordered topology and prepared boundary resources remain fixed.
+
+11. **Finite routing boundaries preserve explicit occupancy.** Three macrocell layers suffice for the unchanged interpreter and give exact recursive lifts of masked source fields, including program copying and inherited edits.
+
+12. **Stored programs execute correction transport.** Program(r,60) gives the interior correction law and exact finite prepared triangle. A constant zero cap has an explicit failure; indefinite local cap closure is not yet established by this construction.
+
+13. **Finite logical correction caps have exact certificates.** The all-ECA full-shift census finds1,094 passing budgets and3,514 conflicts for h=0..2,R=0..2 in K/O coordinates. Rule32 has a nonconstant two-row all-time logical closure. Different local radii do not contradict K/O whole-field fiber equivalence, and source retention remains a cheaper raw storage baseline.
+
+14. **A finite physical correction cap now closes indefinitely.** Rule32's two-row pair is realized by stored programs(32,60)/(128,240) and finite guards. The complete identity holds at every time. All1,360 tested matched edits execute faithfully; a separate persistent-background proof shows expanding disagreement after one top data or instruction edit, so this is not general repair.
+
 ## What remains open
 
-- A bounded local law exists for an infinitely prepared correction stack. A finite, locally prepared realization satisfying the intended program grammar remains open.
-- The correction-stack law includes the source rule as part of its update. Spatializing that program as active inherited data, with exact overlap consistency and recursive typing, remains open.
+- Rule32's finite-height physical cap and matched-edit contract are established. Broader cap compilation and intentional semantic program revision remain open; the current law does not generally restore the undamaged represented trajectory.
+- Finite-thickness routing boundaries are constructive under fixed occupancy and missing-input retention. Occupancy edits, mutable stage topology, smaller alphabets and self-maintained roles remain open.
 - The relationship between correction depth, spatial dimension, and growing within-dimension radius is not yet characterized.
-- No native dimensional-closure criterion has yet earned comparison against a complete Wolfram-class taxonomy.
+- Class-IV correspondence is background motivation only and does not direct the current search.
 
 ## The next theoretical target
 
-The immediate proof problem is constructive:
+The [physical-cap checkpoint](2026-09-10-rule32-physical-cap.md) completes the
+immediate construction: a locally prepared, finite-height correction pair
+with physically stored programs and an all-time complete-field identity.
 
-> **Find a locally prepared higher-dimensional realization that preserves the spatial program grammar through a second lift.**
+The next question is semantic program revision, not another routing control:
+which intended changes preserve the old interpretation, which establish a new
+one, and what local re-preparation or maintained structure is required?
+Faithfully executing an edited native program does not decide these questions.
 
-The semantic operator, an infinite-stack local update, exact quotient
-intertwiners, and an exact recursive routing control are known. The next task
-must declare inherited **mutable program cells**, their scope (site, finite
-region, or distributed field), state, decoder, preparation footprint, and
-edit-support/latency budget.
+The odd-ring edit panel has extinguishing baselines, so its data recovery is
+not a maintenance result. On a persistent alternating-source background the
+encoded pair is(1,1); one top zero spreads forever under Rule128. The analogous
+top instruction edit also produces an expanding error. These are scoped
+counterexamples to recovery under the present law, not a rejection of other
+repair architectures. Freeze any concrete rescue and its edit/semantic
+contract before evaluating it.
 
-Local program edits should become local physical edits under the same
-interpreter. A global uniform rule replacement needs distributed edits or a
-finite-world propagation budget; it cannot be required to act everywhere
-through a finite edit at fixed finite cadence. With those operations fixed,
-verify operational preservation and native program inheritance at the first
-two dimensional interfaces. Existing controls supply the comparison, while
-active spatial-program closure remains open.
-
-If that succeeds, dimensional projection stops being an analogy. It becomes an explicit commuting diagram implemented in space.
+No Class-IV selection, novelty, source-compression or universal-program claim
+is established.

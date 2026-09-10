@@ -391,6 +391,183 @@ larger grids; separately specify a locally represented changeable decoder.
 Do not infer that expanding same-time instructions to a fixed local rule
 makes them meaningless, or that memory is the only interesting mechanism.
 
+## Research continuation: finite physical correction cap completed (2026-09-10)
+
+Read docs/research/2026-09-10-rule32-physical-cap.md. Preserve the parallel
+Erased Distinctions workstream and its shared metadata entries.
+
+- The frozen Rule32 physical/edit protocol is complete. Existing H2, hold
+  mode, scale9, rows-1..2; bottom(32,60), top(128,240), guards(204,240)/0.
+  H2 J E(S)=J E(F32(S)) for every source and time by local proof/induction.
+  No extra future rows. Prepared roles/occupancy remain architectural resources.
+- 68 occupied symbols/source site (64 program+4 data), span36, radius9,
+  source preparation radius<=2, one tick. No source reconstruction/compression.
+- verify_rule32_physical_cap.py and matching dated JSON reproduce384 local
+  semantic assertions,64 physical neighborhoods,64 guard cases, and15,520
+  field timepoints (4,854,656 occupied/29,857,376 explicit blank comparisons).
+- Protocol f65a63ea; implementation1edb7f77 corrected before first execution
+  at4d71ba01: derivative test window centering off by one. Recorded correction,
+  no protocol deviations, ambient interpreter unchanged.
+- All40 width3/5 source words pass40ticks. Zero-cap control fails first at
+  width5/source11/tick1: actual(28,0), expected(28,8). Ten mismatched timepoints.
+- All1,360 single native instruction/data edits match complete physical fields
+  through8ticks. Of1,280 program edits,260 ever change undamaged data and145
+  leave the same-ring K1 image. No edited instruction reverts in hold mode.
+- All80 data edits recover bytick5, but ALL baseline pairs extinguish bytick3.
+  Do not infer general maintenance, durable recovery from tick8 agreement,
+  or full-shift image membership from finite-ring membership.
+- Post-audit DEDUCTION: alternating infinite S has K1=(1,1), a persistent
+  encoded fixed point. One top data zero expands exactly to|x|<=t under128.
+  Top leaf bit7 edit128->0 atx0 creates zeros|x|<=t-1 for t>=1. Thus even
+  data-trajectory recovery is not general; these are not just unrepaired bits.
+- NEXT research question: intentional semantic program revision. Decide the
+  old/new interpretation, allowed edit and re-preparation/maintenance resources
+  before freezing a concrete next experiment. Do not automatically treat an
+  intended new native dynamics as an error, or add repair machinery without
+  a specified semantic target. No further routing polishing as a substitute.
+- Scope failures to this law. No C4, novelty or universal-program claims.
+
+## Research continuation: exact local caps and the Rule32 candidate (2026-09-10)
+
+The local-cap census is complete. Read docs/research/2026-09-10-local-correction-caps.md.
+Preserve the parallel Erased Distinctions files and shared metadata entries.
+
+- Frozen protocol1a012ae and implementation1fa5353b precede evaluation.
+  All256 homogeneous ECA, K/O, h0..2,R0..2, full causal windows<=11bits.
+  4,608 budgets:1,094 pass and3,514 explicit conflicts. No fixes/deviations.
+- Independent tuple recursion checks348,160 truth entries and reconstructs
+  all2,064,384 source-window fibers, matching the integer-table evaluator.
+  CI reproduces results/local_correction_caps_20260910.json.
+- Union of passing depths/radii:135 rules in K,150 in O. At h1/R2 counts
+  are123/120; at h2/R2 they are94/150. Depth can increase the required cap
+  radius (Rule11 h1/R2 passes, h2/R2 fails). Whole-field fibers still agree.
+- Post-census exact Rule32 identity: A2[x]=A1[x-1] AND A1[x+1]. Thus
+  U'=F32(U) XOR V, V'=F128(V) closes (A0,A1) for all source states/times.
+  Standalone verify_rule32_cap_identity.py checks128 seven-bit windows.
+  Nonconstant cap160; top update128. No derivative-only cap at testedR<=2,
+  but no arbitrary-radius exclusion. Two represented bits/site vs one for S.
+- Follow-up complete above: docs/research/protocols/rule32-physical-cap-20260910.md.
+  Historical frozen setup: Commit implementation before evaluation. ExistingH2,
+  hold mode, rows-1..2, bottom(32,60), top(128,240), guards(204,240)/data0.
+  Audit complete symbols, local proof, widths3/5 all source words40ticks,
+  failed zero-cap control, and34 one-cell edits through8ticks.
+- Edited-native execution, undamaged data recovery, ring-image membership,
+  and program recovery are different contracts. No automatic semantic repair.
+  Do not claim generic source-law editing or full-shift image membership
+  from finite-ring tests. Freeze any rescue separately.
+- No C4 selection, novelty, compression, or universal-program claim.
+
+## Research continuation: finite boundaries and stored correction transport (2026-09-10)
+
+The dimensional control now has finite transverse preparation; the workstream
+has returned to commutator correction closure. Read both new notes before
+continuing. Preserve the parallel Erased Distinctions work and metadata.
+
+- docs/research/2026-09-10-finite-routing-boundaries.md: unchanged five-symbol
+  radius-nine H_d realizes masked sources (Omega,P,S). Missing neighbors
+  freeze data; absent left programs cannot be copied. B is not occupied zero.
+- The lift has mask Omega times {-1,0,1}, inherited P appended with172
+  centrally, and constant guard tuples/data1,0. Guards freeze because their
+  outward neighbor is absent. Execution, gated whole-program copying and
+  inherited one-cell edits commute recursively for every finite dimension.
+- Complete-macrocell thickness is27 physical coordinates per new axis;
+  occupied sites per initial logical site after k lifts are3^k[8(d+k)+1].
+  This is finite transverse thickness, not finite total support for an
+  infinite source. Occupancy edits and role self-assembly are not established.
+- The finite-boundary frozen audit passes26,619 assertions, with both
+  missing-as-zero and insufficient-thickness failures retained. No protocol
+  changes or implementation corrections were needed.
+- docs/research/2026-09-10-stored-correction-transport.md: tuple(r,60)
+  physically executes F(row) XOR next row. All source and transport bits
+  occupy cells. Source r is homogeneous and held in this extension.
+- Preparing A_0..A_H gives exact U_k(t)=A_k(F^t(S)) for k+t<=H.
+  The zero cap is NOT indefinite closure: Rule255/all-zero source/H=2 has
+  first wrong rows2,1,0 at ticks1,2,3. Layout stays valid. The separate
+  frozen audit passes51,202 assertions and retains this scoped cap failure.
+- Both results are reproduced by verify_finite_routing_boundaries.py and
+  verify_stored_correction_transport.py, with matching dated JSON files.
+- Follow-up completed in the local-cap continuation above; historical next protocol:
+  docs/research/protocols/local-correction-caps-20260910.md.
+  All256 fixed ECA, h=0..2, capR=0..2, full causal windows (max11 bits).
+  Compare K_h and O_h local caps with the complete-source baseline; retain
+  failure pairs and certificate hashes. Recover known affine/Rule232 controls.
+- A local cap certificate is not yet a physically encoded cap. After the
+  census select a representable nontrivial candidate and freeze its physical
+  program and instruction-edit repair contract separately. No further
+  control-family polishing unless it serves this correction question.
+- C4 remains background only. Scope failures to budget/architecture, retain
+  them, and freeze rescues. No novelty or intrinsic-universality claim.
+
+## Research continuation: added routing tables are editable (2026-09-09)
+
+The next dimensional unit is complete; see
+docs/research/2026-09-09-editable-routing-tables.md and its frozen protocol.
+Preserve the parallel Erased Distinctions thread and its publication metadata.
+
+- Native P=(r,h2,...,hd) has d editable eight-bit tables. Each added table
+  reads the preceding result and the two data neighbors on its axis.
+  The ordered chain, axis assignments and hold/copy policy remain fixed.
+- Place byte j along axis j in a scale-nine macrocell: 8d+1 occupied sites
+  out of 9^d, five symbols, radius nine, one tick. Local evaluation reads
+  8d program bits and 2d+1 data bits and evaluates d tables; constant tick
+  count does not mean constant circuit complexity as dimension grows.
+- Appending selector word 172 with separate guard Qd=(204,172,...) lifts
+  every native source program/data field. Both retention and state-gated
+  copying of the entire tuple commute, including inherited one-cell edits.
+  The proof repeats for every finite d; whole-field audits reach 4D.
+- Newly introduced table edits may alter the relation to the previous source.
+  Exactly 64 appended words preserve old dynamics on the (0,1) rails
+  (bits 1=0, 5=1); 192 counterexamples are retained. This does not restrict
+  the routing words allowed in a source being lifted next.
+- There are 30,496 local data functions among 65,536 two-word programs.
+  Syntax aliases and dormant instructions are explicit; every program slot
+  has a causal context, not guaranteed activity in every enclosing program.
+- verify_editable_routing_tables.py passes 2,236,434 assertions; canonical
+  JSON is results/editable_routing_tables_20260909.json. Protocol and code
+  were committed before execution, with no corrections/deviations. CI
+  reproduces the exact result. Counts are not independent scientific samples.
+- Follow-up complete: the finite-boundary checkpoint above retains occupancy
+  explicitly and uses missing-input retention. The current target is a local
+  correction cap, not further boundary optimization.
+- Existing exact CA simulation theory is the comparison baseline. No
+  novelty, intrinsic-universality, arbitrary editable syntax, or self-assembly
+  claim is established. C4 remains background only. Scope failures to the
+  attempted architecture and freeze rescues before evaluation.
+
+## Research continuation: editable spatial Rail programs (2026-09-09)
+
+The dimensional workstream now has an exact stored-program witness; see
+docs/research/2026-09-09-spatial-rail-programs.md and its two frozen protocols.
+It is separate from the Erased Distinctions workstream and does not unpark a
+special-dimension hypothesis.
+
+- Native programs are ECA leaf words with one Rail wrapper per added dimension.
+  Eight program bits occupy actual P cells, with one D cell and B padding in
+  each 9^d-site macrocell. A uniform five-symbol CA of radius nine executes the
+  grammar in one tick. Tags/layout and wrapper structure are fixed resources.
+- Place the source program/data at the new central interface; use a fixed
+  identity guard program (204) with zero/one data off the interface. The guard
+  repairs the earlier repeated-program 64-source limitation: all 256 starting
+  ECA programs and arbitrary heterogeneous native fields lift exactly.
+- One local data or program-bit edit is one physical symbol edit through both
+  lifts. The second interface applies to arbitrary valid 2D program/data fields,
+  not just first-lift images. Local proofs give all finite higher dimensions.
+- A separately frozen extension preserves state-gated left-neighbor copying of
+  entire program words. Programs change autonomously while the same complete
+  commuting identities hold. This is transport, not arbitrary program synthesis.
+- Audit scripts verify_spatial_rail_programs.py and verify_spatial_rail_transport.py
+  reproduce the paired results/spatial_rail_*_20260909.json files. The main audit
+  passes 109,876 assertions and the transport extension 974, including actual
+  program changes. Do not conflate aggregate field equality with independent
+  samples or claim an optimized binary radius-one realization.
+- User clarification: Class IV is background intuition only; do not use it to
+  motivate reasoning, architecture selection, or a selectivity requirement.
+  Negative findings are scoped to an attempt and can be revisited by an explicit
+  revision. Preserve the failed candidate and freeze a rescue before evaluation.
+- Follow-up completed: the editable-routing checkpoint above stores each added
+  table explicitly. Its ordered topology remains fixed. Smaller role alphabets
+  and marker self-organization are still separate experiments.
+
 ## Research continuation: dimensional compatibility (2026-09-08)
 
 `docs/research/2026-09-08-dimensional-lift.md` defines the outer-totalistic

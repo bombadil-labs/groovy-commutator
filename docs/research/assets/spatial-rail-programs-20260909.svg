@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="840" height="490" viewBox="0 0 840 490">
+<rect width="840" height="490" rx="12" fill="#faf9f5"/>
+<g font-family="Arial, sans-serif" fill="#233445">
+<text x="30" y="32" font-size="20" font-weight="700">The 2D interpreter reads a program stored in cells</text>
+<text x="30" y="56" font-size="13">One grid step is one physical lattice spacing. Neighboring data sites are nine cells apart.</text>
+<g stroke="#dce3e5" stroke-width="1">
+<path d="M 40 80 V 440 M 40 80 H 400"/>
+<path d="M 60 80 V 440 M 40 100 H 400"/>
+<path d="M 80 80 V 440 M 40 120 H 400"/>
+<path d="M 100 80 V 440 M 40 140 H 400"/>
+<path d="M 120 80 V 440 M 40 160 H 400"/>
+<path d="M 140 80 V 440 M 40 180 H 400"/>
+<path d="M 160 80 V 440 M 40 200 H 400"/>
+<path d="M 180 80 V 440 M 40 220 H 400"/>
+<path d="M 200 80 V 440 M 40 240 H 400"/>
+<path d="M 220 80 V 440 M 40 260 H 400"/>
+<path d="M 240 80 V 440 M 40 280 H 400"/>
+<path d="M 260 80 V 440 M 40 300 H 400"/>
+<path d="M 280 80 V 440 M 40 320 H 400"/>
+<path d="M 300 80 V 440 M 40 340 H 400"/>
+<path d="M 320 80 V 440 M 40 360 H 400"/>
+<path d="M 340 80 V 440 M 40 380 H 400"/>
+<path d="M 360 80 V 440 M 40 400 H 400"/>
+<path d="M 380 80 V 440 M 40 420 H 400"/>
+<path d="M 400 80 V 440 M 40 440 H 400"/>
+</g>
+<g stroke="#78909a" stroke-width="2"><path d="M 40 260 H 400 M 220 80 V 440"/></g>
+<rect x="212" y="232" width="16" height="16" rx="3" fill="#e9aa46" stroke="#a76e15"/><text x="236" y="245" font-size="12">p0</text>
+<rect x="212" y="212" width="16" height="16" rx="3" fill="#e9aa46" stroke="#a76e15"/><text x="236" y="225" font-size="12">p1</text>
+<rect x="212" y="192" width="16" height="16" rx="3" fill="#e9aa46" stroke="#a76e15"/><text x="236" y="205" font-size="12">p2</text>
+<rect x="212" y="172" width="16" height="16" rx="3" fill="#e9aa46" stroke="#a76e15"/><text x="236" y="185" font-size="12">p3</text>
+<rect x="212" y="152" width="16" height="16" rx="3" fill="#e9aa46" stroke="#a76e15"/><text x="236" y="165" font-size="12">p4</text>
+<rect x="212" y="132" width="16" height="16" rx="3" fill="#e9aa46" stroke="#a76e15"/><text x="236" y="145" font-size="12">p5</text>
+<rect x="212" y="112" width="16" height="16" rx="3" fill="#e9aa46" stroke="#a76e15"/><text x="236" y="125" font-size="12">p6</text>
+<rect x="212" y="92" width="16" height="16" rx="3" fill="#e9aa46" stroke="#a76e15"/><text x="236" y="105" font-size="12">p7</text>
+<rect x="206" y="246" width="28" height="28" rx="5" fill="#23677d"/><text x="220" y="265" text-anchor="middle" font-size="15" font-weight="700" fill="white">C</text>
+<rect x="26" y="246" width="28" height="28" rx="5" fill="#23677d"/><text x="40" y="265" text-anchor="middle" font-size="15" font-weight="700" fill="white">L</text>
+<rect x="386" y="246" width="28" height="28" rx="5" fill="#23677d"/><text x="400" y="265" text-anchor="middle" font-size="15" font-weight="700" fill="white">R</text>
+<rect x="206" y="66" width="28" height="28" rx="5" fill="#23677d"/><text x="220" y="85" text-anchor="middle" font-size="15" font-weight="700" fill="white">N</text>
+<rect x="206" y="426" width="28" height="28" rx="5" fill="#23677d"/><text x="220" y="445" text-anchor="middle" font-size="15" font-weight="700" fill="white">S</text>
+<text x="442" y="109" font-size="16" font-weight="700">Data update</text>
+<text x="442" y="139" font-size="15">q = 4L + 2C + R</text>
+<text x="442" y="166" font-size="15">Read b = p[q] from the program cells.</text>
+<text x="442" y="193" font-size="15">Copy N when b = 0; copy S when b = 1.</text>
+<text x="442" y="245" font-size="16" font-weight="700">Program update</text>
+<text x="442" y="274" font-size="15">Retain the word, or in transport mode:</text>
+<text x="442" y="301" font-size="15">when C = 1, copy the left neighbor's</text>
+<text x="442" y="325" font-size="15">whole eight-cell program word.</text>
+<rect x="442" y="361" width="15" height="15" rx="3" fill="#23677d"/><text x="468" y="374" font-size="13">D0 / D1: data symbols</text>
+<rect x="442" y="389" width="15" height="15" rx="3" fill="#e9aa46"/><text x="468" y="402" font-size="13">P0 / P1: program symbols</text>
+<text x="442" y="439" font-size="13">Other program words are omitted from this stencil view.</text>
+<text x="30" y="476" font-size="12">One fixed local law updates every site. Tags and layout are prepared; no external program register is used.</text>
+</g></svg>

@@ -1,0 +1,24 @@
+[
+  {
+    "recordType": "checkpoint",
+    "slug": "rule32-physical-cap",
+    "label": "Finite physical correction cap",
+    "title": "A physically stored finite correction cap closes indefinitely, without general repair",
+    "date": "2026-09-10",
+    "updated": "2026-09-10",
+    "kind": "Exact physical realization and edit audit",
+    "evidence": "exact",
+    "topic": "Algebra and closure",
+    "summary": "The unchanged interpreter realizes Rule32's two-row correction cap at every time. All1,360 matched edits execute faithfully, but persistent-background one-cell errors can spread rather than heal.",
+    "takeaway": "Closure, faithful instruction editing and recovery of the represented trajectory are distinct guarantees.",
+    "source": "docs/research/2026-09-10-rule32-physical-cap.md",
+    "promotion": {
+      "stage": "research"
+    },
+    "related": [
+      "local-correction-caps",
+      "finite-routing-boundaries",
+      "stored-correction-transport"
+    ]
+  }
+]
