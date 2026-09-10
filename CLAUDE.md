@@ -414,6 +414,57 @@ durable user-requested account of the vision. Keep it visible in the Program.
 - The completed transverse-difference test below resolves whether erased
   per-column baselines affect future differences, relative to that observation.
 
+## Research continuation: gradient interventions completed; pause for issues (2026-09-10)
+
+Read docs/research/2026-09-10-gradient-intervention-costs.md. This is the current
+dimensional checkpoint. Preserve parallel Erased Distinctions work and unrelated
+metadata. The user requested completion of this unit, then a pause to address
+the agreed issues. Do not automatically start another experiment.
+
+- Protocol frozen at f69b156c; implementation 8fe10964 precedes execution.
+  First execution passed without corrections or protocol deviations.
+- All flat fields and simultaneous flat XOR actions on (4),(2,2),(2,2,2),
+  ten sources, horizons 0/1/4, every changed-edge budget. Mask enumeration
+  matches an independent plaquette-nullspace enumeration word for word.
+- 31,495,680 endpoint queries; 1,558,080 state/budget/observation comparisons;
+  38,400 interface endpoint checks. Native/reference evolution and minimum-cost
+  versus direct reachable-set counts agree; zero discrepancies.
+- General edge-support theorem: minimum cost to change loop vector h is
+  sum N/n_i over changed directions. Disjoint parallel loops give the lower
+  bound; seam masks attain it. Zero-loop masks are periodic-potential gradients.
+  Edge and owning-site minima are separate; first witnesses need not coincide.
+- Eight nonconstant self-dual sources preserve the chosen loop sector.
+  Constants erase every edited gradient after one step. Under the known-state,
+  deterministic, one-shot hard-budget contract, capacity is log2 of the integer
+  reachable-outcome count. No uncertain-state prior or endogenous controller.
+- Period-two geometry makes all eight nonconstants bijective on flat fields:
+  twisted l=r XOR h reduces each axial pass to a shift/identity and possibly
+  complement. Their 2D/3D full-field counts describe action geometry, not
+  general nonlinear reversibility. The four-site ring loses within-sector
+  distinctions for 142/212 (12 outputs) and 178/232 (8), despite conserved loops.
+- P multiplies edge and site costs by the added period m while preserving
+  edited trajectories. Both tested interfaces have m=2. Of 1,024 native (2,2,2)
+  masks,32 are inherited,512 outside-image masks change the new loop bit, and
+  480 outside-image masks leave it zero. At target budget8, inherited actions
+  give27 full-field outcomes versus126 native for nonconstants at t=0/1/4.
+  Native (4,2) frontiers were not enumerated. Minimum old-loop revision costs
+  are not improved by native (2,2,2) masks, though available outcomes increase.
+- Canonical JSON results/gradient_interventions_20260910.json SHA256:
+  89093341369ef505d6bb2d2a53cd7be00864bbb035adcd4072360c006c3d3630.
+  Dedicated CI replays the exact output using the unchanged loop evaluators.
+- PAUSE / agreed issue queue: #61 synthesis and missing provenance; #62 archive
+  finite successor sets; #63 freeze hidden-state static intervention channels;
+  #64 conservative online suffix learner; #65 archive relabeling/transport;
+  #66 cross-constructor inventory; #67 bounded two-completion second lift;
+  #68 Concepts promotion. Signed final agreement links are in the checkpoint.
+  Original issue bodies include withdrawn claims: use the signed scope, not
+  those claims. The current gradient audit does not complete #63 or #67.
+- User workflow preference: each PR that fully implements an issue's agreed
+  scope should say `Closes #N`. Related or prerequisite work should only link
+  the issue. Truly redundant/no-op issues may be closed with a signed reason.
+  None of #61–68 is a no-op: each retains concrete work. Agreement on scope
+  is not completion. No issues are closed by this checkpoint.
+
 ## Research continuation: gradient loops completed (2026-09-10)
 
 Read docs/research/2026-09-10-gradient-loop-invariants.md. Preserve the parallel
@@ -441,13 +492,8 @@ Erased Distinctions work and unrelated metadata.
   possible futures, and usable intervention power differ. A measurement of
   control is not an implemented endogenous mechanism. Do not claim empowerment
   from arbitrary observed action correlation or entropy without a probability law.
-- NEXT: docs/research/protocols/gradient-intervention-costs-20260910.md is frozen,
-  UNRUN. All flat XOR actions on the same ensembles; changed-edge budgets and
-  touched-site costs; full-field versus loop outcomes at t=0,1,4.
-  Minimum loop-changing support prediction: sum N/n_i over changed directions.
-  Check replicated action cost and controlled compatibility. This assumes
-  external simultaneous known-state actions, not a sequential local controller.
-  Commit implementation before evaluation and preserve failures.
+- The separately frozen intervention protocol is now completed in the
+  continuation above. The original protocol remains unchanged as its freeze.
 
 ## Research continuation: full-gradient closure completed (2026-09-10)
 

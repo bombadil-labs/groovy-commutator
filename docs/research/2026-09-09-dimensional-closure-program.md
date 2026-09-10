@@ -470,6 +470,30 @@ Persistence, possible futures, and steerable futures therefore require separate
 accounts. The [vision record](2026-09-10-dimensional-vision-and-interpretation.md)
 now includes this refinement; no endogenous control mechanism is claimed.
 
+## Loop revision costs support; native control adds choices
+
+The [intervention checkpoint](2026-09-10-gradient-intervention-costs.md)
+completes the frozen known-state, one-shot flat-mask comparison. Changing loop
+vector h on a rectangular torus requires exactly the sum of N/n_i over changed
+directions in flipped stored edges. Disjoint wrapping loops give the lower
+bound; flat seam masks attain it. Replication into an added period m preserves
+edited trajectories while multiplying both edge and owning-site costs by m.
+
+All 31,495,680 base endpoint queries and 38,400 dimensional-interface endpoint
+checks agree independently. At target budget eight on (2,2,2), inherited (2,2)
+actions provide 27 full-field outcomes and native actions provide 126 for every
+nonconstant source and declared horizon. Only 32 of 1,024 native masks are
+inherited; 480 additional masks even leave the new loop bit zero. Native action
+geometry is therefore not determined by the loop vector alone.
+
+The full-field comparison has a specific finite-geometry limit: period-two
+twists reduce all eight nonconstant axial laws to invertible shifts or identity
+within each sector, possibly with global complement. Their counts describe
+action geometry, not general nonlinear reversibility. The four-site ring
+already loses within-sector distinctions for the four nonlinear sources while
+preserving loop bits. The actor's distributed simultaneous action interface
+remains supplied. No endogenous control or sequential local actuator is built.
+
 ## Relation to the Class-IV hope
 
 The original Class-IV conjecture records the intuition that motivated this
@@ -521,26 +545,28 @@ recursive spatial-program closure.
 
 19. **Loop sectors persist through the declared gradient tower.** Eight self-dual sources preserve the full periodic loop vector; constants erase it. Native updates and both interfaces agree with independent references. The invariant is topology-dependent and does not by itself establish revisability or control.
 
+20. **Loop revision and inherited control have exact support costs.** Changing a loop vector requires the sum of transverse cross-section sizes over its changed directions. Replication multiplies both edge and site costs by the added period while preserving edited trajectories. The exhaustive known-state flat-mask audit measures additional native higher-dimensional choices; its period-two full-field counts do not establish general nonlinear reversibility or an endogenous controller.
+
 ## What remains open
 
 - Rule32's finite-height physical cap and matched-edit contract are established. Broader cap compilation and intentional semantic program revision remain open; the current law does not generally restore the undamaged represented trajectory.
 - Finite-thickness routing boundaries are constructive under fixed occupancy and missing-input retention. Occupancy edits, mutable stage topology, smaller alphabets and self-maintained roles remain open.
 - The relationship between correction depth, spatial dimension, growing spatial radius and minimum causal representation dimension is not yet characterized. A fixed code's ancestral rank may primarily reflect its layout.
-- Transverse-only closure, full-gradient closure, native execution, and wrapping-loop conservation are established in their declared domains. Affordable interventions and usable higher-dimensional futures are the next frozen comparison. Different observations, correction state, endogenous control, and the natural establishment of interpretations remain separate open questions.
+- Transverse-only closure, full-gradient closure, native execution, loop conservation, and costed external flat-mask control are established in their declared domains. Larger-period nonlinear frontiers, different observations, correction state, endogenous control, and the natural establishment of interpretations remain separate open questions.
 - Class-IV correspondence is background motivation only and does not direct the current search.
 
-## The next theoretical target
+## Pause for the agreed issue queue
 
-The [next frozen protocol](protocols/gradient-intervention-costs-20260910.md)
-declares simultaneous flat XOR masks as actions, with changed-edge budgets and
-separate touched-site counts. Enumerate every source state and action on the
-same small periodic ensembles; count distinguishable full-field and loop-vector
-endpoints at horizons 0,1,4. Test minimum loop-changing support, inherited
-action costs, and controlled compatibility at both dimensional interfaces.
+The [frozen intervention protocol](protocols/gradient-intervention-costs-20260910.md)
+is complete in the checkpoint above. At the user's request, execution pauses
+here before starting the issues agreed with Fable/Claude. The checkpoint's
+[handoff](2026-09-10-gradient-intervention-costs.md#certificates-limits-and-handoff)
+links the signed scope agreements for issues61–68 and records their remaining
+work. Scope agreement alone does not close an issue; each still has a concrete
+deliverable. Future PRs should use closing references when they complete the
+agreed scope. This audit does not close the distinct hidden-state channel
+proposal in issue63 or the second-lift proposal in issue67.
 
-This is unrun. It assumes a known initial field and an external action interface.
-It does not supply a local sequential actuator, an endogenous controller,
-an unknown-state probability law, or dynamics for curl-violating states.
-Native edits may leave the replicated image while remaining in the defined
-flat-field domain. Commit implementation before execution; preserve failures,
-topology, action geometry, and all resource costs.
+No new experiment is frozen or begun by this handoff. Any resumed experiment
+must preserve topology, action geometry, state assumptions, and resource costs,
+and commit its implementation before evaluation.

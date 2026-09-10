@@ -1,0 +1,35 @@
+name: Gradient intervention cost audit
+
+on:
+  pull_request:
+    paths:
+      - 'scripts/verify_gradient_interventions.py'
+      - 'scripts/verify_gradient_loops.py'
+      - 'results/gradient_interventions_20260910.json'
+      - 'docs/research/protocols/gradient-intervention-costs-20260910.md'
+      - '.github/workflows/research-gradient-interventions.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/verify_gradient_interventions.py'
+      - 'scripts/verify_gradient_loops.py'
+      - 'results/gradient_interventions_20260910.json'
+      - 'docs/research/protocols/gradient-intervention-costs-20260910.md'
+      - '.github/workflows/research-gradient-interventions.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  gradient-intervention-audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Audit flat-mask costs, reachable outcomes, and dimensional interfaces
+        run: python scripts/verify_gradient_interventions.py > /tmp/gradient-interventions.json
+      - name: Reproduce exact canonical result
+        run: diff -u results/gradient_interventions_20260910.json /tmp/gradient-interventions.json
