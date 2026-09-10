@@ -432,8 +432,11 @@ checkpoint's burndown status, PR link and date current in that same PR.
   prerequisite edges and unchanged prior nodes/edges. No experiment was rerun
   and no earlier evidence label changed. Preserve the parallel source-recoder
   work; its current PR55 does not edit these Program sources or knowledge files.
-- Next in order: archive issue62's reproduced successor-set example; retain its
-  original exploratory provenance and exact weighting conventions.
+- #62 successor-set archive: completed in PR73 (2026-09-10). The original
+  script/stdout, reproducible replay and research/knowledge account retain
+  exploratory provenance, finite-ring scope and exact weighting conventions.
+  Both Programs leave the broader sound-approximation question open.
+- Next in order: archive issue65's relabeling identity and synchronous transport.
 
 ## Research continuation: gradient interventions completed; pause for issues (2026-09-10)
 

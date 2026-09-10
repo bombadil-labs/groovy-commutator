@@ -1,0 +1,24 @@
+[
+  {
+    "recordType": "checkpoint",
+    "slug": "successor-set-archive",
+    "label": "Successor-set archive",
+    "title": "Exact alternatives and sound local products",
+    "date": "2026-09-10",
+    "updated": "2026-09-10",
+    "kind": "Archive of an explored finite example",
+    "evidence": "exploratory",
+    "topic": "Algebra and closure",
+    "summary": "Rule110 under its derivative observation on the eight-cell ring has 104 successor rows. The archived example compares whole-field alternatives with sound local product sets and preserves the distinct weighting conventions.",
+    "takeaway": "Soundness does not imply precise whole-field prediction. The reproduced example leaves the general approximation question open.",
+    "source": "docs/research/2026-09-10-successor-set-archive.md",
+    "promotion": {
+      "stage": "research"
+    },
+    "related": [
+      "shared-closure-account",
+      "observation-closure",
+      "local-correction-caps"
+    ]
+  }
+]
