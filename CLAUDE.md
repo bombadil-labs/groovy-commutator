@@ -391,6 +391,47 @@ larger grids; separately specify a locally represented changeable decoder.
 Do not infer that expanding same-time instructions to a fixed local rule
 makes them meaningless, or that memory is the only interesting mechanism.
 
+## Research continuation: finite boundaries and stored correction transport (2026-09-10)
+
+The dimensional control now has finite transverse preparation; the workstream
+has returned to commutator correction closure. Read both new notes before
+continuing. Preserve the parallel Erased Distinctions work and metadata.
+
+- docs/research/2026-09-10-finite-routing-boundaries.md: unchanged five-symbol
+  radius-nine H_d realizes masked sources (Omega,P,S). Missing neighbors
+  freeze data; absent left programs cannot be copied. B is not occupied zero.
+- The lift has mask Omega times {-1,0,1}, inherited P appended with172
+  centrally, and constant guard tuples/data1,0. Guards freeze because their
+  outward neighbor is absent. Execution, gated whole-program copying and
+  inherited one-cell edits commute recursively for every finite dimension.
+- Complete-macrocell thickness is27 physical coordinates per new axis;
+  occupied sites per initial logical site after k lifts are3^k[8(d+k)+1].
+  This is finite transverse thickness, not finite total support for an
+  infinite source. Occupancy edits and role self-assembly are not established.
+- The finite-boundary frozen audit passes26,619 assertions, with both
+  missing-as-zero and insufficient-thickness failures retained. No protocol
+  changes or implementation corrections were needed.
+- docs/research/2026-09-10-stored-correction-transport.md: tuple(r,60)
+  physically executes F(row) XOR next row. All source and transport bits
+  occupy cells. Source r is homogeneous and held in this extension.
+- Preparing A_0..A_H gives exact U_k(t)=A_k(F^t(S)) for k+t<=H.
+  The zero cap is NOT indefinite closure: Rule255/all-zero source/H=2 has
+  first wrong rows2,1,0 at ticks1,2,3. Layout stays valid. The separate
+  frozen audit passes51,202 assertions and retains this scoped cap failure.
+- Both results are reproduced by verify_finite_routing_boundaries.py and
+  verify_stored_correction_transport.py, with matching dated JSON files.
+- NEXT: execute the frozen, still-unrun protocol
+  docs/research/protocols/local-correction-caps-20260910.md.
+  All256 fixed ECA, h=0..2, capR=0..2, full causal windows (max11 bits).
+  Compare K_h and O_h local caps with the complete-source baseline; retain
+  failure pairs and certificate hashes. Recover known affine/Rule232 controls.
+- A local cap certificate is not yet a physically encoded cap. After the
+  census select a representable nontrivial candidate and freeze its physical
+  program and instruction-edit repair contract separately. No further
+  control-family polishing unless it serves this correction question.
+- C4 remains background only. Scope failures to budget/architecture, retain
+  them, and freeze rescues. No novelty or intrinsic-universality claim.
+
 ## Research continuation: added routing tables are editable (2026-09-09)
 
 The next dimensional unit is complete; see
@@ -419,10 +460,9 @@ Preserve the parallel Erased Distinctions thread and its publication metadata.
   JSON is results/editable_routing_tables_20260909.json. Protocol and code
   were committed before execution, with no corrections/deviations. CI
   reproduces the exact result. Counts are not independent scientific samples.
-- Next bounded target: finite-thickness transverse preparation with an
-  explicit boundary rule, local decoder, and recursive source/action contract.
-  Freezing because required inputs are absent is an architectural resource.
-  This reduction has not been audited or established by the current result.
+- Follow-up complete: the finite-boundary checkpoint above retains occupancy
+  explicitly and uses missing-input retention. The current target is a local
+  correction cap, not further boundary optimization.
 - Existing exact CA simulation theory is the comparison baseline. No
   novelty, intrinsic-universality, arbitrary editable syntax, or self-assembly
   claim is established. C4 remains background only. Scope failures to the

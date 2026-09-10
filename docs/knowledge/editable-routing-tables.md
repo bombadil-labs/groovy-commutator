@@ -11,3 +11,5 @@ There are 30,496 distinct local data functions among 65,536 stored two-word prog
 The [checkpoint](../research/2026-09-09-editable-routing-tables.md) gives proofs, cost accounting, retained failure witnesses, and a frozen 2,236,434-assertion audit. Finite physical comparisons reach dimension four and include actual autonomous routing-word changes.
 
 Table order, axis assignments, protected roles, prepared layout, and infinite guards remain fixed resources. The result does not establish arbitrary syntax editing, self-organization, intrinsic universality, or novelty.
+
+Revision 2026-09-10: the [finite-boundary extension](../research/2026-09-10-finite-routing-boundaries.md) replaces infinite guards by three complete macrocell layers under explicit fixed occupancy semantics. The original full-field result and its budget remain valid.

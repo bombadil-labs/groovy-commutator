@@ -1,0 +1,1836 @@
+{
+  "assertions": 26619,
+  "edited_guard_then_lifted": {
+    "copy": {
+      "compared_symbols": 5520,
+      "edited_source_position": [
+        0,
+        1
+      ],
+      "ticks": 4
+    },
+    "hold": {
+      "compared_symbols": 5520,
+      "edited_source_position": [
+        0,
+        1
+      ],
+      "ticks": 4
+    }
+  },
+  "implementation_corrections": [],
+  "insufficient_thickness_control": [
+    {
+      "intertwines_this_witness": false,
+      "layers": [
+        0
+      ],
+      "source_next": 1,
+      "target_next": 0
+    },
+    {
+      "intertwines_this_witness": false,
+      "layers": [
+        -1,
+        0
+      ],
+      "source_next": 1,
+      "target_next": 0
+    },
+    {
+      "intertwines_this_witness": false,
+      "layers": [
+        0,
+        1
+      ],
+      "source_next": 1,
+      "target_next": 0
+    },
+    {
+      "intertwines_this_witness": true,
+      "layers": [
+        -1,
+        0,
+        1
+      ],
+      "source_next": 1,
+      "target_next": 1
+    }
+  ],
+  "local_mask_and_guard_cases": 4608,
+  "local_presence_sensitive_copy_cases": 1280,
+  "missing_as_zero_control": {
+    "cases": 512,
+    "failed_data_cases": 256,
+    "failure_witnesses": [
+      {
+        "actual": 0,
+        "datum": 1,
+        "expected": 1,
+        "word": 0
+      },
+      {
+        "actual": 1,
+        "datum": 0,
+        "expected": 0,
+        "word": 1
+      },
+      {
+        "actual": 0,
+        "datum": 1,
+        "expected": 1,
+        "word": 1
+      },
+      {
+        "actual": 0,
+        "datum": 1,
+        "expected": 1,
+        "word": 2
+      },
+      {
+        "actual": 1,
+        "datum": 0,
+        "expected": 0,
+        "word": 3
+      },
+      {
+        "actual": 0,
+        "datum": 1,
+        "expected": 1,
+        "word": 3
+      },
+      {
+        "actual": 1,
+        "datum": 0,
+        "expected": 0,
+        "word": 5
+      },
+      {
+        "actual": 1,
+        "datum": 0,
+        "expected": 0,
+        "word": 7
+      },
+      {
+        "actual": 0,
+        "datum": 1,
+        "expected": 1,
+        "word": 8
+      },
+      {
+        "actual": 1,
+        "datum": 0,
+        "expected": 0,
+        "word": 9
+      },
+      {
+        "actual": 0,
+        "datum": 1,
+        "expected": 1,
+        "word": 9
+      },
+      {
+        "actual": 0,
+        "datum": 1,
+        "expected": 1,
+        "word": 10
+      },
+      {
+        "actual": 1,
+        "datum": 0,
+        "expected": 0,
+        "word": 11
+      },
+      {
+        "actual": 0,
+        "datum": 1,
+        "expected": 1,
+        "word": 11
+      },
+      {
+        "actual": 1,
+        "datum": 0,
+        "expected": 0,
+        "word": 13
+      },
+      {
+        "actual": 1,
+        "datum": 0,
+        "expected": 0,
+        "word": 15
+      },
+      {
+        "actual": 0,
+        "datum": 1,
+        "expected": 1,
+        "word": 16
+      },
+      {
+        "actual": 1,
+        "datum": 0,
+        "expected": 0,
+        "word": 17
+      },
+      {
+        "actual": 0,
+        "datum": 1,
+        "expected": 1,
+        "word": 17
+      },
+      {
+        "actual": 0,
+        "datum": 1,
+        "expected": 1,
+        "word": 18
+      },
+      {
+        "actual": 1,
+        "datum": 0,
+        "expected": 0,
+        "word": 19
+      },
+      {
+        "actual": 0,
+        "datum": 1,
+        "expected": 1,
+        "word": 19
+      },
+      {
+        "actual": 1,
+        "datum": 0,
+        "expected": 0,
+        "word": 21
+      },
+      {
+        "actual": 1,
+        "datum": 0,
+        "expected": 0,
+        "word": 23
+      },
+      {
+        "actual": 0,
+        "datum": 1,
+        "expected": 1,
+        "word": 24
+      },
+      {
+        "actual": 1,
+        "datum": 0,
+        "expected": 0,
+        "word": 25
+      },
+      {
+        "actual": 0,
+        "datum": 1,
+        "expected": 1,
+        "word": 25
+      },
+      {
+        "actual": 0,
+        "datum": 1,
+        "expected": 1,
+        "word": 26
+      },
+      {
+        "actual": 1,
+        "datum": 0,
+        "expected": 0,
+        "word": 27
+      },
+      {
+        "actual": 0,
+        "datum": 1,
+        "expected": 1,
+        "word": 27
+      },
+      {
+        "actual": 1,
+        "datum": 0,
+        "expected": 0,
+        "word": 29
+      },
+      {
+        "actual": 1,
+        "datum": 0,
+        "expected": 0,
+        "word": 31
+      },
+      {
+        "actual": 0,
+        "datum": 1,
+        "expected": 1,
+        "word": 32
+      },
+      {
+        "actual": 1,
+        "datum": 0,
+        "expected": 0,
+        "word": 33
+      },
+      {
+        "actual": 0,
+        "datum": 1,
+        "expected": 1,
+        "word": 33
+      },
+      {
+        "actual": 0,
+        "datum": 1,
+        "expected": 1,
+        "word": 34
+      },
+      {
+        "actual": 1,
+        "datum": 0,
+        "expected": 0,
+        "word": 35
+      },
+      {
+        "actual": 0,
+        "datum": 1,
+        "expected": 1,
+        "word": 35
+      },
+      {
+        "actual": 1,
+        "datum": 0,
+        "expected": 0,
+        "word": 37
+      },
+      {
+        "actual": 1,
+        "datum": 0,
+        "expected": 0,
+        "word": 39
+      },
+      {
+        "actual": 0,
+        "datum": 1,
+        "expected": 1,
+        "word": 40
+      },
+      {
+        "actual": 1,
+        "datum": 0,
+        "expected": 0,
+        "word": 41
+      },
+      {
+        "actual": 0,
+        "datum": 1,
+        "expected": 1,
+        "word": 41
+      },
+      {
+        "actual": 0,
+        "datum": 1,
+        "expected": 1,
+        "word": 42
+      },
+      {
+        "actual": 1,
+        "datum": 0,
+        "expected": 0,
+        "word": 43
+      },
+      {
+        "actual": 0,
+        "datum": 1,
+        "expected": 1,
+        "word": 43
+      },
+      {
+        "actual": 1,
+        "datum": 0,
+        "expected": 0,
+        "word": 45
+      },
+      {
+        "actual": 1,
+        "datum": 0,
+        "expected": 0,
+        "word": 47
+      },
+      {
+        "actual": 0,
+        "datum": 1,
+        "expected": 1,
+        "word": 48
+      },
+      {
+        "actual": 1,
+        "datum": 0,
+        "expected": 0,
+        "word": 49
+      },
+      {
+        "actual": 0,
+        "datum": 1,
+        "expected": 1,
+        "word": 49
+      },
+      {
+        "actual": 0,
+        "datum": 1,
+        "expected": 1,
+        "word": 50
+      },
+      {
+        "actual": 1,
+        "datum": 0,
+        "expected": 0,
+        "word": 51
+      },
+      {
+        "actual": 0,
+        "datum": 1,
+        "expected": 1,
+        "word": 51
+      },
+      {
+        "actual": 1,
+        "datum": 0,
+        "expected": 0,
+        "word": 53
+      },
+      {
+        "actual": 1,
+        "datum": 0,
+        "expected": 0,
+        "word": 55
+      },
+      {
+        "actual": 0,
+        "datum": 1,
+        "expected": 1,
+        "word": 56
+      },
+      {
+        "actual": 1,
+        "datum": 0,
+        "expected": 0,
+        "word": 57
+      },
+      {
+        "actual": 0,
+        "datum": 1,
+        "expected": 1,
+        "word": 57
+      },
+      {
+        "actual": 0,
+        "datum": 1,
+        "expected": 1,
+        "word": 58
+      },
+      {
+        "actual": 1,
+        "datum": 0,
+        "expected": 0,
+        "word": 59
+      },
+      {
+        "actual": 0,
+        "datum": 1,
+        "expected": 1,
+        "word": 59
+      },
+      {
+        "actual": 1,
+        "datum": 0,
+        "expected": 0,
+        "word": 61
+      },
+      {
+        "actual": 1,
+        "datum": 0,
+        "expected": 0,
+        "word": 63
+      },
+      {
+        "actual": 0,
+        "datum": 1,
+        "expected": 1,
+        "word": 64
+      },
+      {
+        "actual": 1,
+        "datum": 0,
+        "expected": 0,
+        "word": 65
+      },
+      {
+        "actual": 0,
+        "datum": 1,
+        "expected": 1,
+        "word": 65
+      },
+      {
+        "actual": 0,
+        "datum": 1,
+        "expected": 1,
+        "word": 66
+      },
+      {
+        "actual": 1,
+        "datum": 0,
+        "expected": 0,
+        "word": 67
+      },
+      {
+        "actual": 0,
+        "datum": 1,
+        "expected": 1,
+        "word": 67
+      },
+      {
+        "actual": 1,
+        "datum": 0,
+        "expected": 0,
+        "word": 69
+      },
+      {
+        "actual": 1,
+        "datum": 0,
+        "expected": 0,
+        "word": 71
+      },
+      {
+        "actual": 0,
+        "datum": 1,
+        "expected": 1,
+        "word": 72
+      },
+      {
+        "actual": 1,
+        "datum": 0,
+        "expected": 0,
+        "word": 73
+      },
+      {
+        "actual": 0,
+        "datum": 1,
+        "expected": 1,
+        "word": 73
+      },
+      {
+        "actual": 0,
+        "datum": 1,
+        "expected": 1,
+        "word": 74
+      },
+      {
+        "actual": 1,
+        "datum": 0,
+        "expected": 0,
+        "word": 75
+      },
+      {
+        "actual": 0,
+        "datum": 1,
+        "expected": 1,
+        "word": 75
+      },
+      {
+        "actual": 1,
+        "datum": 0,
+        "expected": 0,
+        "word": 77
+      },
+      {
+        "actual": 1,
+        "datum": 0,
+        "expected": 0,
+        "word": 79
+      },
+      {
+        "actual": 0,
+        "datum": 1,
+        "expected": 1,
+        "word": 80
+      },
+      {
+        "actual": 1,
+        "datum": 0,
+        "expected": 0,
+        "word": 81
+      },
+      {
+        "actual": 0,
+        "datum": 1,
+        "expected": 1,
+        "word": 81
+      },
+      {
+        "actual": 0,
+        "datum": 1,
+        "expected": 1,
+        "word": 82
+      },
+      {
+        "actual": 1,
+        "datum": 0,
+        "expected": 0,
+        "word": 83
+      },
+      {
+        "actual": 0,
+        "datum": 1,
+        "expected": 1,
+        "word": 83
+      },
+      {
+        "actual": 1,
+        "datum": 0,
+        "expected": 0,
+        "word": 85
+      },
+      {
+        "actual": 1,
+        "datum": 0,
+        "expected": 0,
+        "word": 87
+      },
+      {
+        "actual": 0,
+        "datum": 1,
+        "expected": 1,
+        "word": 88
+      },
+      {
+        "actual": 1,
+        "datum": 0,
+        "expected": 0,
+        "word": 89
+      },
+      {
+        "actual": 0,
+        "datum": 1,
+        "expected": 1,
+        "word": 89
+      },
+      {
+        "actual": 0,
+        "datum": 1,
+        "expected": 1,
+        "word": 90
+      },
+      {
+        "actual": 1,
+        "datum": 0,
+        "expected": 0,
+        "word": 91
+      },
+      {
+        "actual": 0,
+        "datum": 1,
+        "expected": 1,
+        "word": 91
+      },
+      {
+        "actual": 1,
+        "datum": 0,
+        "expected": 0,
+        "word": 93
+      },
+      {
+        "actual": 1,
+        "datum": 0,
+        "expected": 0,
+        "word": 95
+      },
+      {
+        "actual": 0,
+        "datum": 1,
+        "expected": 1,
+        "word": 96
+      },
+      {
+        "actual": 1,
+        "datum": 0,
+        "expected": 0,
+        "word": 97
+      },
+      {
+        "actual": 0,
+        "datum": 1,
+        "expected": 1,
+        "word": 97
+      },
+      {
+        "actual": 0,
+        "datum": 1,
+        "expected": 1,
+        "word": 98
+      },
+      {
+        "actual": 1,
+        "datum": 0,
+        "expected": 0,
+        "word": 99
+      },
+      {
+        "actual": 0,
+        "datum": 1,
+        "expected": 1,
+        "word": 99
+      },
+      {
+        "actual": 1,
+        "datum": 0,
+        "expected": 0,
+        "word": 101
+      },
+      {
+        "actual": 1,
+        "datum": 0,
+        "expected": 0,
+        "word": 103
+      },
+      {
+        "actual": 0,
+        "datum": 1,
+        "expected": 1,
+        "word": 104
+      },
+      {
+        "actual": 1,
+        "datum": 0,
+        "expected": 0,
+        "word": 105
+      },
+      {
+        "actual": 0,
+        "datum": 1,
+        "expected": 1,
+        "word": 105
+      },
+      {
+        "actual": 0,
+        "datum": 1,
+        "expected": 1,
+        "word": 106
+      },
+      {
+        "actual": 1,
+        "datum": 0,
+        "expected": 0,
+        "word": 107
+      },
+      {
+        "actual": 0,
+        "datum": 1,
+        "expected": 1,
+        "word": 107
+      },
+      {
+        "actual": 1,
+        "datum": 0,
+        "expected": 0,
+        "word": 109
+      },
+      {
+        "actual": 1,
+        "datum": 0,
+        "expected": 0,
+        "word": 111
+      },
+      {
+        "actual": 0,
+        "datum": 1,
+        "expected": 1,
+        "word": 112
+      },
+      {
+        "actual": 1,
+        "datum": 0,
+        "expected": 0,
+        "word": 113
+      },
+      {
+        "actual": 0,
+        "datum": 1,
+        "expected": 1,
+        "word": 113
+      },
+      {
+        "actual": 0,
+        "datum": 1,
+        "expected": 1,
+        "word": 114
+      },
+      {
+        "actual": 1,
+        "datum": 0,
+        "expected": 0,
+        "word": 115
+      },
+      {
+        "actual": 0,
+        "datum": 1,
+        "expected": 1,
+        "word": 115
+      },
+      {
+        "actual": 1,
+        "datum": 0,
+        "expected": 0,
+        "word": 117
+      },
+      {
+        "actual": 1,
+        "datum": 0,
+        "expected": 0,
+        "word": 119
+      },
+      {
+        "actual": 0,
+        "datum": 1,
+        "expected": 1,
+        "word": 120
+      },
+      {
+        "actual": 1,
+        "datum": 0,
+        "expected": 0,
+        "word": 121
+      },
+      {
+        "actual": 0,
+        "datum": 1,
+        "expected": 1,
+        "word": 121
+      },
+      {
+        "actual": 0,
+        "datum": 1,
+        "expected": 1,
+        "word": 122
+      },
+      {
+        "actual": 1,
+        "datum": 0,
+        "expected": 0,
+        "word": 123
+      },
+      {
+        "actual": 0,
+        "datum": 1,
+        "expected": 1,
+        "word": 123
+      },
+      {
+        "actual": 1,
+        "datum": 0,
+        "expected": 0,
+        "word": 125
+      },
+      {
+        "actual": 1,
+        "datum": 0,
+        "expected": 0,
+        "word": 127
+      },
+      {
+        "actual": 0,
+        "datum": 1,
+        "expected": 1,
+        "word": 128
+      },
+      {
+        "actual": 1,
+        "datum": 0,
+        "expected": 0,
+        "word": 129
+      },
+      {
+        "actual": 0,
+        "datum": 1,
+        "expected": 1,
+        "word": 129
+      },
+      {
+        "actual": 0,
+        "datum": 1,
+        "expected": 1,
+        "word": 130
+      },
+      {
+        "actual": 1,
+        "datum": 0,
+        "expected": 0,
+        "word": 131
+      },
+      {
+        "actual": 0,
+        "datum": 1,
+        "expected": 1,
+        "word": 131
+      },
+      {
+        "actual": 1,
+        "datum": 0,
+        "expected": 0,
+        "word": 133
+      },
+      {
+        "actual": 1,
+        "datum": 0,
+        "expected": 0,
+        "word": 135
+      },
+      {
+        "actual": 0,
+        "datum": 1,
+        "expected": 1,
+        "word": 136
+      },
+      {
+        "actual": 1,
+        "datum": 0,
+        "expected": 0,
+        "word": 137
+      },
+      {
+        "actual": 0,
+        "datum": 1,
+        "expected": 1,
+        "word": 137
+      },
+      {
+        "actual": 0,
+        "datum": 1,
+        "expected": 1,
+        "word": 138
+      },
+      {
+        "actual": 1,
+        "datum": 0,
+        "expected": 0,
+        "word": 139
+      },
+      {
+        "actual": 0,
+        "datum": 1,
+        "expected": 1,
+        "word": 139
+      },
+      {
+        "actual": 1,
+        "datum": 0,
+        "expected": 0,
+        "word": 141
+      },
+      {
+        "actual": 1,
+        "datum": 0,
+        "expected": 0,
+        "word": 143
+      },
+      {
+        "actual": 0,
+        "datum": 1,
+        "expected": 1,
+        "word": 144
+      },
+      {
+        "actual": 1,
+        "datum": 0,
+        "expected": 0,
+        "word": 145
+      },
+      {
+        "actual": 0,
+        "datum": 1,
+        "expected": 1,
+        "word": 145
+      },
+      {
+        "actual": 0,
+        "datum": 1,
+        "expected": 1,
+        "word": 146
+      },
+      {
+        "actual": 1,
+        "datum": 0,
+        "expected": 0,
+        "word": 147
+      },
+      {
+        "actual": 0,
+        "datum": 1,
+        "expected": 1,
+        "word": 147
+      },
+      {
+        "actual": 1,
+        "datum": 0,
+        "expected": 0,
+        "word": 149
+      },
+      {
+        "actual": 1,
+        "datum": 0,
+        "expected": 0,
+        "word": 151
+      },
+      {
+        "actual": 0,
+        "datum": 1,
+        "expected": 1,
+        "word": 152
+      },
+      {
+        "actual": 1,
+        "datum": 0,
+        "expected": 0,
+        "word": 153
+      },
+      {
+        "actual": 0,
+        "datum": 1,
+        "expected": 1,
+        "word": 153
+      },
+      {
+        "actual": 0,
+        "datum": 1,
+        "expected": 1,
+        "word": 154
+      },
+      {
+        "actual": 1,
+        "datum": 0,
+        "expected": 0,
+        "word": 155
+      },
+      {
+        "actual": 0,
+        "datum": 1,
+        "expected": 1,
+        "word": 155
+      },
+      {
+        "actual": 1,
+        "datum": 0,
+        "expected": 0,
+        "word": 157
+      },
+      {
+        "actual": 1,
+        "datum": 0,
+        "expected": 0,
+        "word": 159
+      },
+      {
+        "actual": 0,
+        "datum": 1,
+        "expected": 1,
+        "word": 160
+      },
+      {
+        "actual": 1,
+        "datum": 0,
+        "expected": 0,
+        "word": 161
+      },
+      {
+        "actual": 0,
+        "datum": 1,
+        "expected": 1,
+        "word": 161
+      },
+      {
+        "actual": 0,
+        "datum": 1,
+        "expected": 1,
+        "word": 162
+      },
+      {
+        "actual": 1,
+        "datum": 0,
+        "expected": 0,
+        "word": 163
+      },
+      {
+        "actual": 0,
+        "datum": 1,
+        "expected": 1,
+        "word": 163
+      },
+      {
+        "actual": 1,
+        "datum": 0,
+        "expected": 0,
+        "word": 165
+      },
+      {
+        "actual": 1,
+        "datum": 0,
+        "expected": 0,
+        "word": 167
+      },
+      {
+        "actual": 0,
+        "datum": 1,
+        "expected": 1,
+        "word": 168
+      },
+      {
+        "actual": 1,
+        "datum": 0,
+        "expected": 0,
+        "word": 169
+      },
+      {
+        "actual": 0,
+        "datum": 1,
+        "expected": 1,
+        "word": 169
+      },
+      {
+        "actual": 0,
+        "datum": 1,
+        "expected": 1,
+        "word": 170
+      },
+      {
+        "actual": 1,
+        "datum": 0,
+        "expected": 0,
+        "word": 171
+      },
+      {
+        "actual": 0,
+        "datum": 1,
+        "expected": 1,
+        "word": 171
+      },
+      {
+        "actual": 1,
+        "datum": 0,
+        "expected": 0,
+        "word": 173
+      },
+      {
+        "actual": 1,
+        "datum": 0,
+        "expected": 0,
+        "word": 175
+      },
+      {
+        "actual": 0,
+        "datum": 1,
+        "expected": 1,
+        "word": 176
+      },
+      {
+        "actual": 1,
+        "datum": 0,
+        "expected": 0,
+        "word": 177
+      },
+      {
+        "actual": 0,
+        "datum": 1,
+        "expected": 1,
+        "word": 177
+      },
+      {
+        "actual": 0,
+        "datum": 1,
+        "expected": 1,
+        "word": 178
+      },
+      {
+        "actual": 1,
+        "datum": 0,
+        "expected": 0,
+        "word": 179
+      },
+      {
+        "actual": 0,
+        "datum": 1,
+        "expected": 1,
+        "word": 179
+      },
+      {
+        "actual": 1,
+        "datum": 0,
+        "expected": 0,
+        "word": 181
+      },
+      {
+        "actual": 1,
+        "datum": 0,
+        "expected": 0,
+        "word": 183
+      },
+      {
+        "actual": 0,
+        "datum": 1,
+        "expected": 1,
+        "word": 184
+      },
+      {
+        "actual": 1,
+        "datum": 0,
+        "expected": 0,
+        "word": 185
+      },
+      {
+        "actual": 0,
+        "datum": 1,
+        "expected": 1,
+        "word": 185
+      },
+      {
+        "actual": 0,
+        "datum": 1,
+        "expected": 1,
+        "word": 186
+      },
+      {
+        "actual": 1,
+        "datum": 0,
+        "expected": 0,
+        "word": 187
+      },
+      {
+        "actual": 0,
+        "datum": 1,
+        "expected": 1,
+        "word": 187
+      },
+      {
+        "actual": 1,
+        "datum": 0,
+        "expected": 0,
+        "word": 189
+      },
+      {
+        "actual": 1,
+        "datum": 0,
+        "expected": 0,
+        "word": 191
+      },
+      {
+        "actual": 0,
+        "datum": 1,
+        "expected": 1,
+        "word": 192
+      },
+      {
+        "actual": 1,
+        "datum": 0,
+        "expected": 0,
+        "word": 193
+      },
+      {
+        "actual": 0,
+        "datum": 1,
+        "expected": 1,
+        "word": 193
+      },
+      {
+        "actual": 0,
+        "datum": 1,
+        "expected": 1,
+        "word": 194
+      },
+      {
+        "actual": 1,
+        "datum": 0,
+        "expected": 0,
+        "word": 195
+      },
+      {
+        "actual": 0,
+        "datum": 1,
+        "expected": 1,
+        "word": 195
+      },
+      {
+        "actual": 1,
+        "datum": 0,
+        "expected": 0,
+        "word": 197
+      },
+      {
+        "actual": 1,
+        "datum": 0,
+        "expected": 0,
+        "word": 199
+      },
+      {
+        "actual": 0,
+        "datum": 1,
+        "expected": 1,
+        "word": 200
+      },
+      {
+        "actual": 1,
+        "datum": 0,
+        "expected": 0,
+        "word": 201
+      },
+      {
+        "actual": 0,
+        "datum": 1,
+        "expected": 1,
+        "word": 201
+      },
+      {
+        "actual": 0,
+        "datum": 1,
+        "expected": 1,
+        "word": 202
+      },
+      {
+        "actual": 1,
+        "datum": 0,
+        "expected": 0,
+        "word": 203
+      },
+      {
+        "actual": 0,
+        "datum": 1,
+        "expected": 1,
+        "word": 203
+      },
+      {
+        "actual": 1,
+        "datum": 0,
+        "expected": 0,
+        "word": 205
+      },
+      {
+        "actual": 1,
+        "datum": 0,
+        "expected": 0,
+        "word": 207
+      },
+      {
+        "actual": 0,
+        "datum": 1,
+        "expected": 1,
+        "word": 208
+      },
+      {
+        "actual": 1,
+        "datum": 0,
+        "expected": 0,
+        "word": 209
+      },
+      {
+        "actual": 0,
+        "datum": 1,
+        "expected": 1,
+        "word": 209
+      },
+      {
+        "actual": 0,
+        "datum": 1,
+        "expected": 1,
+        "word": 210
+      },
+      {
+        "actual": 1,
+        "datum": 0,
+        "expected": 0,
+        "word": 211
+      },
+      {
+        "actual": 0,
+        "datum": 1,
+        "expected": 1,
+        "word": 211
+      },
+      {
+        "actual": 1,
+        "datum": 0,
+        "expected": 0,
+        "word": 213
+      },
+      {
+        "actual": 1,
+        "datum": 0,
+        "expected": 0,
+        "word": 215
+      },
+      {
+        "actual": 0,
+        "datum": 1,
+        "expected": 1,
+        "word": 216
+      },
+      {
+        "actual": 1,
+        "datum": 0,
+        "expected": 0,
+        "word": 217
+      },
+      {
+        "actual": 0,
+        "datum": 1,
+        "expected": 1,
+        "word": 217
+      },
+      {
+        "actual": 0,
+        "datum": 1,
+        "expected": 1,
+        "word": 218
+      },
+      {
+        "actual": 1,
+        "datum": 0,
+        "expected": 0,
+        "word": 219
+      },
+      {
+        "actual": 0,
+        "datum": 1,
+        "expected": 1,
+        "word": 219
+      },
+      {
+        "actual": 1,
+        "datum": 0,
+        "expected": 0,
+        "word": 221
+      },
+      {
+        "actual": 1,
+        "datum": 0,
+        "expected": 0,
+        "word": 223
+      },
+      {
+        "actual": 0,
+        "datum": 1,
+        "expected": 1,
+        "word": 224
+      },
+      {
+        "actual": 1,
+        "datum": 0,
+        "expected": 0,
+        "word": 225
+      },
+      {
+        "actual": 0,
+        "datum": 1,
+        "expected": 1,
+        "word": 225
+      },
+      {
+        "actual": 0,
+        "datum": 1,
+        "expected": 1,
+        "word": 226
+      },
+      {
+        "actual": 1,
+        "datum": 0,
+        "expected": 0,
+        "word": 227
+      },
+      {
+        "actual": 0,
+        "datum": 1,
+        "expected": 1,
+        "word": 227
+      },
+      {
+        "actual": 1,
+        "datum": 0,
+        "expected": 0,
+        "word": 229
+      },
+      {
+        "actual": 1,
+        "datum": 0,
+        "expected": 0,
+        "word": 231
+      },
+      {
+        "actual": 0,
+        "datum": 1,
+        "expected": 1,
+        "word": 232
+      },
+      {
+        "actual": 1,
+        "datum": 0,
+        "expected": 0,
+        "word": 233
+      },
+      {
+        "actual": 0,
+        "datum": 1,
+        "expected": 1,
+        "word": 233
+      },
+      {
+        "actual": 0,
+        "datum": 1,
+        "expected": 1,
+        "word": 234
+      },
+      {
+        "actual": 1,
+        "datum": 0,
+        "expected": 0,
+        "word": 235
+      },
+      {
+        "actual": 0,
+        "datum": 1,
+        "expected": 1,
+        "word": 235
+      },
+      {
+        "actual": 1,
+        "datum": 0,
+        "expected": 0,
+        "word": 237
+      },
+      {
+        "actual": 1,
+        "datum": 0,
+        "expected": 0,
+        "word": 239
+      },
+      {
+        "actual": 0,
+        "datum": 1,
+        "expected": 1,
+        "word": 240
+      },
+      {
+        "actual": 1,
+        "datum": 0,
+        "expected": 0,
+        "word": 241
+      },
+      {
+        "actual": 0,
+        "datum": 1,
+        "expected": 1,
+        "word": 241
+      },
+      {
+        "actual": 0,
+        "datum": 1,
+        "expected": 1,
+        "word": 242
+      },
+      {
+        "actual": 1,
+        "datum": 0,
+        "expected": 0,
+        "word": 243
+      },
+      {
+        "actual": 0,
+        "datum": 1,
+        "expected": 1,
+        "word": 243
+      },
+      {
+        "actual": 1,
+        "datum": 0,
+        "expected": 0,
+        "word": 245
+      },
+      {
+        "actual": 1,
+        "datum": 0,
+        "expected": 0,
+        "word": 247
+      },
+      {
+        "actual": 0,
+        "datum": 1,
+        "expected": 1,
+        "word": 248
+      },
+      {
+        "actual": 1,
+        "datum": 0,
+        "expected": 0,
+        "word": 249
+      },
+      {
+        "actual": 0,
+        "datum": 1,
+        "expected": 1,
+        "word": 249
+      },
+      {
+        "actual": 0,
+        "datum": 1,
+        "expected": 1,
+        "word": 250
+      },
+      {
+        "actual": 1,
+        "datum": 0,
+        "expected": 0,
+        "word": 251
+      },
+      {
+        "actual": 0,
+        "datum": 1,
+        "expected": 1,
+        "word": 251
+      },
+      {
+        "actual": 1,
+        "datum": 0,
+        "expected": 0,
+        "word": 253
+      },
+      {
+        "actual": 1,
+        "datum": 0,
+        "expected": 0,
+        "word": 255
+      }
+    ],
+    "words_passing_both_data_values": [
+      4,
+      6,
+      12,
+      14,
+      20,
+      22,
+      28,
+      30,
+      36,
+      38,
+      44,
+      46,
+      52,
+      54,
+      60,
+      62,
+      68,
+      70,
+      76,
+      78,
+      84,
+      86,
+      92,
+      94,
+      100,
+      102,
+      108,
+      110,
+      116,
+      118,
+      124,
+      126,
+      132,
+      134,
+      140,
+      142,
+      148,
+      150,
+      156,
+      158,
+      164,
+      166,
+      172,
+      174,
+      180,
+      182,
+      188,
+      190,
+      196,
+      198,
+      204,
+      206,
+      212,
+      214,
+      220,
+      222,
+      228,
+      230,
+      236,
+      238,
+      244,
+      246,
+      252,
+      254
+    ]
+  },
+  "physical_budget": {
+    "alphabet_size": 5,
+    "exterior": "absorbing B; finite transverse support, not necessarily finite total support",
+    "logical_layers_per_added_axis": 3,
+    "occupied_sites_per_original_1d_site_after_0_to_3_lifts": [
+      9,
+      51,
+      225,
+      891
+    ],
+    "physical_band_width": 27,
+    "radius": 9,
+    "tick_ratio": 1
+  },
+  "physical_fields": {
+    "copy": {
+      "finite_nonperiodic_1d": {
+        "autonomous_data_changes": 17,
+        "autonomous_program_word_changes": [
+          27
+        ],
+        "cases": 8,
+        "compared_symbols": 36480,
+        "physical_payload_edits": 192,
+        "target_timepoints": 64,
+        "ticks_each": 4
+      },
+      "full_1d": {
+        "autonomous_data_changes": 79,
+        "autonomous_program_word_changes": [
+          74
+        ],
+        "cases": 8,
+        "compared_symbols": 188160,
+        "physical_payload_edits": 256,
+        "target_timepoints": 96,
+        "ticks_each": 4
+      },
+      "full_2d": {
+        "autonomous_data_changes": 138,
+        "autonomous_program_word_changes": [
+          100,
+          100
+        ],
+        "cases": 8,
+        "compared_symbols": 112032,
+        "physical_payload_edits": 288,
+        "target_timepoints": 64,
+        "ticks_each": 4
+      },
+      "holed_1d": {
+        "autonomous_data_changes": 0,
+        "autonomous_program_word_changes": [
+          8
+        ],
+        "cases": 8,
+        "compared_symbols": 27360,
+        "physical_payload_edits": 192,
+        "target_timepoints": 64,
+        "ticks_each": 4
+      },
+      "holed_2d": {
+        "autonomous_data_changes": 12,
+        "autonomous_program_word_changes": [
+          35,
+          35
+        ],
+        "cases": 8,
+        "compared_symbols": 87136,
+        "physical_payload_edits": 288,
+        "target_timepoints": 64,
+        "ticks_each": 4
+      },
+      "holed_3d": {
+        "autonomous_data_changes": 17,
+        "autonomous_program_word_changes": [
+          58,
+          58,
+          58
+        ],
+        "cases": 8,
+        "compared_symbols": 39680,
+        "physical_payload_edits": 256,
+        "target_timepoints": 32,
+        "ticks_each": 4
+      }
+    },
+    "hold": {
+      "finite_nonperiodic_1d": {
+        "autonomous_data_changes": 19,
+        "autonomous_program_word_changes": [
+          0
+        ],
+        "cases": 8,
+        "compared_symbols": 36480,
+        "physical_payload_edits": 192,
+        "target_timepoints": 64,
+        "ticks_each": 4
+      },
+      "full_1d": {
+        "autonomous_data_changes": 87,
+        "autonomous_program_word_changes": [
+          0
+        ],
+        "cases": 8,
+        "compared_symbols": 188160,
+        "physical_payload_edits": 256,
+        "target_timepoints": 96,
+        "ticks_each": 4
+      },
+      "full_2d": {
+        "autonomous_data_changes": 130,
+        "autonomous_program_word_changes": [
+          0,
+          0
+        ],
+        "cases": 8,
+        "compared_symbols": 112032,
+        "physical_payload_edits": 288,
+        "target_timepoints": 64,
+        "ticks_each": 4
+      },
+      "holed_1d": {
+        "autonomous_data_changes": 0,
+        "autonomous_program_word_changes": [
+          0
+        ],
+        "cases": 8,
+        "compared_symbols": 27360,
+        "physical_payload_edits": 192,
+        "target_timepoints": 64,
+        "ticks_each": 4
+      },
+      "holed_2d": {
+        "autonomous_data_changes": 8,
+        "autonomous_program_word_changes": [
+          0,
+          0
+        ],
+        "cases": 8,
+        "compared_symbols": 87136,
+        "physical_payload_edits": 288,
+        "target_timepoints": 64,
+        "ticks_each": 4
+      },
+      "holed_3d": {
+        "autonomous_data_changes": 19,
+        "autonomous_program_word_changes": [
+          0,
+          0,
+          0
+        ],
+        "cases": 8,
+        "compared_symbols": 39680,
+        "physical_payload_edits": 256,
+        "target_timepoints": 32,
+        "ticks_each": 4
+      }
+    }
+  },
+  "protocol": "docs/research/protocols/finite-routing-boundaries-20260910.md",
+  "protocol_deviations": [],
+  "protocol_freeze_commit": "c7072fb1143d1b545f21a89fd47cb3ddc858846d",
+  "schema_version": 1,
+  "scope": "Fixed occupancy masks and complete macrocells; missing-input guard freezing; inherited payload edits only. No occupancy edits, self-assembly, or commutator-closure result.",
+  "unchanged_interpreter": "scripts/verify_editable_routing_tables.py"
+}

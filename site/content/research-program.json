@@ -34,9 +34,9 @@
     "title": "Dimensional Closure and the Commutator Lift",
     "eyebrow": "Working research program",
     "date": "2026-09-09",
-    "updated": "2026-09-09",
+    "updated": "2026-09-10",
     "status": "living",
-    "summary": "A parallel program on rules becoming higher-dimensional space. Editable tables for every added axis preserve complete dynamics, local edits, and program transport through recursive lifts; program topology and prepared boundary resources remain explicit constraints.",
+    "summary": "Editable spatial programs now lift through finite prepared boundaries when occupancy is explicit. The same interpreter executes correction transport; a locally sufficient finite correction cap is the next unresolved step.",
     "thesis": "When two dynamical paths fail to commute, represent the disagreement as a new coordinate and ask whether the enlarged representation closes.",
     "source": "docs/research/2026-09-09-dimensional-closure-program.md",
     "supports": [
@@ -50,7 +50,9 @@
       "dimensional-intertwining",
       "program-edit-locality",
       "spatial-rail-programs",
-      "editable-routing-tables"
+      "editable-routing-tables",
+      "finite-routing-boundaries",
+      "stored-correction-transport"
     ]
   }
 ]

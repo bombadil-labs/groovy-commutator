@@ -302,6 +302,31 @@ stage order, axis assignments, protected roles and infinite guard backgrounds
 remain prepared architecture. This is a scoped constructive result without
 an established novelty claim.
 
+## Finite boundaries and the return to correction closure
+
+The [finite-boundary checkpoint](2026-09-10-finite-routing-boundaries.md)
+replaces the infinite routing guards with three complete macrocell layers.
+The physical rule is unchanged: guard data freeze because their outward
+required inputs are absent. The native source type now explicitly retains
+an occupancy mask; absent cells are not occupied zeros.
+
+The mask lifts as Omega times {-1,0,1}, so it remains native for the next
+lift. Both execution modes, program copying and inherited one-cell edits
+commute for arbitrary masked source fields. This gives finite transverse
+thickness, with absorbing blank exterior, not spontaneous role formation.
+
+The [stored-correction checkpoint](2026-09-10-stored-correction-transport.md)
+then returns to the original commutator. Program(r,60) physically executes
+F(row) XOR the next correction row, with both instructions stored in cells.
+A stack prepared through H is exact when k+t<=H. A constant zero cap does
+not generally close it: the retained Rule255 example corrupts row0 at tick3
+when H=2, despite an entirely valid and stable physical layout.
+
+The next missing object is a locally computable cap g_h(K_h). The planned
+census compares correction coordinates, their forward-observation equivalent,
+and the complete source baseline before attempting a physical cap program.
+Boundary stability and retained information sufficiency are distinct.
+
 ## Relation to the Class-IV hope
 
 The original Class-IV conjecture records the intuition that motivated this
@@ -334,27 +359,36 @@ recursive spatial-program closure.
 
 10. **Introduced routing-table contents can be edited and inherited.** One eight-bit table per axis gives exact physical execution and lifts for arbitrary native source programs, including autonomous copying of the added words. The grammar's ordered topology and prepared boundary resources remain fixed.
 
+11. **Finite routing boundaries preserve explicit occupancy.** Three macrocell layers suffice for the unchanged interpreter and give exact recursive lifts of masked source fields, including program copying and inherited edits.
+
+12. **Stored programs execute correction transport.** Program(r,60) gives the interior correction law and exact finite prepared triangle. A constant zero cap has an explicit failure; indefinite local cap closure is not yet established by this construction.
+
 ## What remains open
 
-- A bounded local law exists for an infinitely prepared correction stack. A finite, locally prepared realization satisfying the intended program grammar remains open.
-- Added routing-table contents are now active spatial program data. Mutable stage topology, finite-thickness boundaries, smaller alphabets, and self-maintained role structure remain open; this does not spatialize the correction-stack program.
+- Correction transport now has a finite physically programmed realization for its protected time triangle. An indefinitely valid finite-height cap with an explicit physical program and edit contract remains open.
+- Finite-thickness routing boundaries are constructive under fixed occupancy and missing-input retention. Occupancy edits, mutable stage topology, smaller alphabets and self-maintained roles remain open.
 - The relationship between correction depth, spatial dimension, and growing within-dimension radius is not yet characterized.
 - Class-IV correspondence is background motivation only and does not direct the current search.
 
 ## The next theoretical target
 
-The table-content question now has an explicit answer. The next bounded
-resource question is:
+The control construction now has finite boundaries, and the correction
+interior has a physical instruction. Return to the missing information:
 
-> **Can the infinite guard half-spaces be replaced by a finite-thickness prepared boundary while preserving execution, inherited edits, and recursive source typing?**
+> **Can the next correction be computed from a bounded local patch of the retained correction tuple, and then executed by an explicitly represented finite cap?**
 
-Specify the boundary symbols and rule, source family, local decoder, and
-preparation support before evaluation. A cell that freezes because an input
-is absent is still a supplied boundary mechanism; count it explicitly.
-Freeze the candidate and retain failures with their precise scope.
+The [next frozen protocol](protocols/local-correction-caps-20260910.md) is
+planned, not executed. It tests all256 fixed homogeneous ECA rules at
+h=0,1,2 and cap radius R=0,1,2, with complete infinite-lattice causal
+windows. Each passing budget supplies a local factorization certificate;
+each failing budget retains a conflicting pair of source windows.
 
-This would reduce one preparation resource. It would not by itself establish
-spontaneous roles, arbitrary program synthesis, mutable axis topology, or
-physical realization of the ternary correction roles. Those remain separate
-targets. A literature comparison is also needed before claiming novelty for
-this particular combination of simulation and edit guarantees.
+Compare K_h with its whole-field-equivalent forward-observation tuple O_h
+and with retaining S. Count preparation radius, represented bits, update
+radius and cap-table cost. Closure is not automatically a compression gain.
+
+After the census, freeze a physical cap and instruction-edit/repair contract
+for a suitably representable candidate, or record that none was found in
+budget. Broader revisability and dynamically maintained roles come after
+that decision. Further routing refinements should serve the cap question,
+not postpone the return to the commutator.

@@ -1,0 +1,45 @@
+name: Finite routing and stored correction audits
+
+on:
+  pull_request:
+    paths:
+      - 'scripts/verify_editable_routing_tables.py'
+      - 'scripts/verify_finite_routing_boundaries.py'
+      - 'scripts/verify_stored_correction_transport.py'
+      - 'results/finite_routing_boundaries_20260910.json'
+      - 'results/stored_correction_transport_20260910.json'
+      - 'docs/research/protocols/finite-routing-boundaries-20260910.md'
+      - 'docs/research/protocols/stored-correction-transport-20260910.md'
+      - '.github/workflows/research-finite-routing.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/verify_editable_routing_tables.py'
+      - 'scripts/verify_finite_routing_boundaries.py'
+      - 'scripts/verify_stored_correction_transport.py'
+      - 'results/finite_routing_boundaries_20260910.json'
+      - 'results/stored_correction_transport_20260910.json'
+      - 'docs/research/protocols/finite-routing-boundaries-20260910.md'
+      - 'docs/research/protocols/stored-correction-transport-20260910.md'
+      - '.github/workflows/research-finite-routing.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  finite-routing-audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Audit finite boundaries and repeated masked lifts
+        run: python scripts/verify_finite_routing_boundaries.py > /tmp/finite-routing-boundaries.json
+      - name: Reproduce finite-boundary result
+        run: diff -u results/finite_routing_boundaries_20260910.json /tmp/finite-routing-boundaries.json
+      - name: Audit stored correction transport and the failed zero cap
+        run: python scripts/verify_stored_correction_transport.py > /tmp/stored-correction-transport.json
+      - name: Reproduce correction-transport result
+        run: diff -u results/stored_correction_transport_20260910.json /tmp/stored-correction-transport.json
