@@ -391,6 +391,63 @@ larger grids; separately specify a locally represented changeable decoder.
 Do not infer that expanding same-time instructions to a fixed local rule
 makes them meaningless, or that memory is the only interesting mechanism.
 
+## Dimensional research direction and interpretation contract (2026-09-10)
+
+Read docs/research/2026-09-10-dimensional-vision-and-interpretation.md for the
+durable user-requested account of the vision. Keep it visible in the Program.
+
+- Seek recurring spatial dimensions, coherent trajectories, new native states,
+  and organization increasingly sustained by the unfolding. "Turtle beam" is
+  the objective; metaphysical and prime analogies are not established results.
+- Truth-table bits have configuration addresses; state bits have spatial
+  addresses. Eight bits supplies no unique physical arrangement. State-as-rule
+  claims must state the law, state family, and encoding/interpreter together.
+- Separate family preservation, exact representation, restoration, and
+  endogenous organization. ALL256 axial rules preserve copied-field symmetry;
+  the special66 additionally reproduce the old law at the same macro cadence.
+- Compensated re-encodings may change locality and edit costs. Invertible
+  observation relabelings preserve closure automatically; substantive tests
+  compare different retained information or explicit physical constraints.
+- Radius, alphabet, correction depth, spatial dimension, time, and program
+  edit support are separate resources. Guarded controls remain useful. No C4
+  scoring or naturalness claim; retain failed attempts and freeze rescues.
+- The completed transverse-difference test below resolves whether erased
+  per-column baselines affect future differences, relative to that observation.
+
+## Research continuation: transverse-difference closure completed (2026-09-10)
+
+Read docs/research/2026-09-10-transverse-difference-closure.md. Preserve the
+parallel Erased Distinctions work and all unrelated metadata.
+
+- Original protocol at869bc08f; implementation0b0475a9 precedes evaluation.
+  No implementation corrections or original-protocol deviations. All66 axial
+  compatible sources, observation T_y(X)=X XOR its next-y translate.
+- Radius0 closes exactly0,204,255; radius1 exactly0,150,170,204,240,255.
+  These six are the selected affine controls: zero, identity, diagonal shifts,
+  and3x3 parity on differences. All512 local T neighborhoods are reachable.
+- All60 other sources fail R1. Identical nine vertical edges on a3x4 source
+  patch imply column-constant source XOR. Periods3/4 extend every local pair
+  to identical complete T fields with different next T. No deterministic
+  update on T alone, even nonlocal, exists for any of these60 sources.
+- Original3x3 periodic census finds57 full-field obstructions;128,232,254
+  appear closed because AND/majority/OR produce uniform outputs on that torus.
+  Preserve this finite aliasing. Supplement protocol+verifier2bfd6fb8 precede
+  replay of ALL60 local witnesses; no selection, altered law, or repair.
+- Original audit:270,336 local windows,540,672 rule/budget windows;33,792
+  periodic updates,304,128 output cells,41,472 cap-cell predictions. Supplement:
+  120 periodic updates,1,440 output cells. Independent Boolean/local evaluators,
+  exact canonical artifacts, source digest, and dedicated CI reproduction.
+- Full-field counterexamples remain counterexamples when copied into higher
+  axes, retaining the observed second-axis direction, by exact intertwining.
+  This does not classify all possible observations or orientations.
+- NEXT: docs/research/protocols/full-gradient-closure-20260910.md is separately
+  frozen and UNRUN. Keep both T_x and T_y for the same66 ordered laws. The
+  connected-lattice fibers lose only a global complement; storage is two
+  component bits/site, not compression. Image gradients satisfy loop constraints.
+  Test R0/R1 on all32,768 assignments to the15-site union, local complement
+  criteria, and3x3 periodic controls. Commit implementation before evaluation.
+  No preferred encoding, off-image extension, Class-IV, or self-assembly claim.
+
 ## Research continuation: guard-free axial family completed (2026-09-10)
 
 Read docs/research/2026-09-10-guard-free-axial-lift.md. Continue only the
@@ -418,13 +475,9 @@ dimensional workstream; preserve parallel Erased Distinctions sources and metada
   a source edit changes an infinite line. Original r remains in the law.
   Costs:d sequential lattice passes or(3^d-1)/2 naive lookups per output.
   No endogenous program, self-assembly, novelty, or intrinsic-dimension claim.
-- NEXT: execute docs/research/protocols/transverse-difference-closure-20260910.md,
-  newly frozen and unrun. T(X)=X XOR its next-y translate detects departure
-  from the replicated beam. All66 sources, R=0/1, complete3x4 source patches;
-  test whether T has an autonomous law. Full3x3 torus fibers can certify
-  all-radius impossibility when they collide. Commit implementation first.
-  Preserve finite-budget vs full-field failures; freeze any rescue separately.
-  No C4 scoring. Guarded/correction controls remain useful comparisons.
+- The transverse-difference experiment is completed in the continuation above.
+  Preserve its original protocol, the finite aliasing, and the separately
+  frozen witness-extension supplement. Guarded controls remain useful.
 
 ## Research continuation: extension freedom and dimensional-beam objective (2026-09-10)
 

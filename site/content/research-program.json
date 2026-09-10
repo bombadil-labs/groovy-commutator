@@ -37,7 +37,7 @@
     "date": "2026-09-09",
     "updated": "2026-09-10",
     "status": "living",
-    "summary": "A guard-free axial constructor now preserves literal replication for exactly 66 ECA sources at every dimensional interface; 14 also permit every axis order. The next frozen test asks whether transverse differences evolve autonomously outside that beam.",
+    "summary": "The dimensional vision now has an explicit interpretation contract. Transverse differences close for six of 66 compatible axial sources; the other sixty need erased baseline information. The next frozen comparison retains both spatial differences.",
     "thesis": "When two dynamical paths fail to commute, represent the disagreement as a new coordinate and ask whether the enlarged representation closes.",
     "source": "docs/research/2026-09-09-dimensional-closure-program.md",
     "supports": [
@@ -57,7 +57,9 @@
       "local-correction-caps",
       "rule32-physical-cap",
       "extension-freedom",
-      "guard-free-axial-lift"
+      "guard-free-axial-lift",
+      "dimensional-vision-and-interpretation",
+      "transverse-difference-closure"
     ]
   }
 ]

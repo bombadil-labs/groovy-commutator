@@ -6,6 +6,15 @@ This page is the **working synthesis** of the dimensional-lift research program.
 
 The program is parallel to [Dynamics of Erased Distinctions](2026-09-08-dynamics-of-erased-distinctions.md). That program asks when information can be forgotten safely and how a lossy representation repairs itself. This one asks what additional structure must be represented when evolution and transformation refuse to agree.
 
+## Read the research direction
+
+The [dimensional vision and interpretation note](2026-09-10-dimensional-vision-and-interpretation.md)
+records the user's objective and the nuanced constraints guiding this program.
+It keeps law, state family, and interpreter explicit; distinguishes preservation,
+faithful representation, restoration, and endogenous organization; and explains
+why a rule's binary truth table does not supply a unique spatial arrangement.
+This is a visible orientation record, not a new experimental conclusion.
+
 ## The original dimensional observation
 
 Two early constructions made lower-dimensional rules literal spatial data one dimension higher.
@@ -389,6 +398,30 @@ volume, and a local source edit changes an infinite target line. Yet ambient
 Rule128/150/254 use every site of their3^d neighborhood, so their extra axes
 are actual causal inputs. This does not settle intrinsic representation dimension.
 
+## Transverse differences expose the missing baseline information
+
+The [transverse-difference checkpoint](2026-09-10-transverse-difference-closure.md)
+asks whether T(X)(x,y)=X(x,y) XOR X(x,y+1) closes under the unchanged axial
+laws for all66 compatible sources. Exactly six do:0,150,170,204,240,255.
+Their difference laws are zero, identity, diagonal shifts, and3-by3 parity.
+
+For each of the other60 sources, a pair of complete infinite periodic fields
+has identical T and different next T. Equal T erases one baseline bit per
+column; those hidden choices remain causally relevant. Extending the exact
+radius-one local witnesses to periods3 and4 proves that no larger neighborhood
+of T, or even the entire T field, can resolve the ambiguity. The extension
+supplement was frozen before independent replay of all60 pairs.
+
+The original3-by3 control exposes57 cases and hides AND128, majority232, and
+OR254 because their outputs become uniform on that small torus. This finite
+aliasing remains in the record. The result is an exact observation-relative
+obstruction, not a rejection of different observations or additional state.
+
+Copied-field symmetry itself is preserved by all256 axial laws; the66-source
+result specifies faithful reproduction of the original lower-dimensional law.
+The present experiment strengthens the distinction between invariant geometry
+and autonomous dynamics of departures from it.
+
 ## Relation to the Class-IV hope
 
 The original Class-IV conjecture records the intuition that motivated this
@@ -434,27 +467,28 @@ recursive spatial-program closure.
 
 16. **A guard-free binary axial family has an exact all-dimensional classification.** Literal replication intertwines every adjacent interface for exactly66 ECA sources. Exactly24 sources commute across axes and14 satisfy both properties. Uniform local recursion can preserve a beam without guards, while replication and source-law dependence remain supplied resources.
 
+17. **Transverse differences close for exactly six compatible axial sources.** The other60 have full-field ambiguity witnesses, so no deterministic update on that observation alone exists at any radius. A separately frozen supplement extends every failed radius-one certificate and preserves the three obstructions hidden by the original small torus.
+
 ## What remains open
 
 - Rule32's finite-height physical cap and matched-edit contract are established. Broader cap compilation and intentional semantic program revision remain open; the current law does not generally restore the undamaged represented trajectory.
 - Finite-thickness routing boundaries are constructive under fixed occupancy and missing-input retention. Occupancy edits, mutable stage topology, smaller alphabets and self-maintained roles remain open.
 - The relationship between correction depth, spatial dimension, growing spatial radius and minimum causal representation dimension is not yet characterized. A fixed code's ancestral rank may primarily reflect its layout.
-- The guard-free replication beam is invariant for66 sources. Whether transverse differences form an autonomous dynamical state, or need base information and correction state, is the next frozen test. This is distinct from self-assembly or autonomous changes to the source law.
+- Transverse-only closure is classified for the66 compatible sources. The next frozen comparison retains both spatial differences, erasing only a global complement while using two components per site. Different observations, correction state, and the natural establishment of interpretations remain separate open questions.
 - Class-IV correspondence is background motivation only and does not direct the current search.
 
 ## The next theoretical target
 
-The [next frozen protocol](protocols/transverse-difference-closure-20260910.md)
-observes T(X)(x,y)=X(x,y) XOR X(x,y+1) under the unchanged axial laws for all66
-compatible sources. T=0 identifies the replication beam. Ask whether T evolves
-autonomously at radius0 or1 using every3-by4 source patch. Separately, complete
-3-by3 periodic observation fibers can supply full-field obstructions to any
-autonomous T law when they contain conflicting next observations. It is unrun.
+The [next frozen protocol](protocols/full-gradient-closure-20260910.md) retains
+both T_x and T_y under the same66 ordered axial laws. Equal full gradients on
+the connected lattice leave only a global complement choice. Test radius0/1
+on the complete15-site source support and derive the relevant complement
+criterion, with independent3-by3 periodic controls. The comparison is unrun.
 
-This tests whether off-beam organization can be described by transverse
-differences alone, before adding source or correction state. Preserve the
-distinction between a failed local budget and an all-radius obstruction.
-Commit implementation before execution and freeze any rescue separately.
-Earlier stored-program and correction instruments remain useful comparisons.
-C4, prime analogies and metaphysical interpretations do not select rules or
-upgrade evidence.
+This changes the retained information rather than merely renaming the previous
+observation. It costs two component bits per site, has gradient-image
+constraints, and supplies no uniquely preferred ambient completion. Commit
+implementation before evaluation; retain finite aliasing and separately scope
+any full-field extension proofs. The [vision note](2026-09-10-dimensional-vision-and-interpretation.md)
+remains the guiding contract. Earlier stored-program and correction instruments
+remain useful comparisons; C4 and analogies do not select rules or upgrade evidence.

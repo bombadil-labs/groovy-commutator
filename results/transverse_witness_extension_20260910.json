@@ -1,0 +1,1098 @@
+{
+  "census_protocol_commit": "869bc08f998b0b3afe47c878acdf6f2fc3869103",
+  "census_sha256": "bebab62447d2839df75fb47ed4a0500ba10d5768d21401ae038b7f3b4bf01d88",
+  "certificates": [
+    {
+      "center_next_transverse_bits": [
+        1,
+        0
+      ],
+      "column_baseline_mask": 1,
+      "next_transverse_words": [
+        63,
+        0
+      ],
+      "observed_periodic_word": 4032,
+      "rule": 128,
+      "source_words": [
+        511,
+        950
+      ]
+    },
+    {
+      "center_next_transverse_bits": [
+        0,
+        1
+      ],
+      "column_baseline_mask": 1,
+      "next_transverse_words": [
+        2304,
+        306
+      ],
+      "observed_periodic_word": 864,
+      "rule": 130,
+      "source_words": [
+        329,
+        768
+      ]
+    },
+    {
+      "center_next_transverse_bits": [
+        0,
+        1
+      ],
+      "column_baseline_mask": 1,
+      "next_transverse_words": [
+        585,
+        594
+      ],
+      "observed_periodic_word": 594,
+      "rule": 132,
+      "source_words": [
+        89,
+        528
+      ]
+    },
+    {
+      "center_next_transverse_bits": [
+        0,
+        1
+      ],
+      "column_baseline_mask": 1,
+      "next_transverse_words": [
+        2925,
+        3705
+      ],
+      "observed_periodic_word": 594,
+      "rule": 134,
+      "source_words": [
+        89,
+        528
+      ]
+    },
+    {
+      "center_next_transverse_bits": [
+        1,
+        0
+      ],
+      "column_baseline_mask": 2,
+      "next_transverse_words": [
+        18,
+        0
+      ],
+      "observed_periodic_word": 1412,
+      "rule": 136,
+      "source_words": [
+        434,
+        1312
+      ]
+    },
+    {
+      "center_next_transverse_bits": [
+        0,
+        1
+      ],
+      "column_baseline_mask": 1,
+      "next_transverse_words": [
+        2080,
+        306
+      ],
+      "observed_periodic_word": 864,
+      "rule": 138,
+      "source_words": [
+        329,
+        768
+      ]
+    },
+    {
+      "center_next_transverse_bits": [
+        0,
+        1
+      ],
+      "column_baseline_mask": 1,
+      "next_transverse_words": [
+        520,
+        594
+      ],
+      "observed_periodic_word": 594,
+      "rule": 140,
+      "source_words": [
+        89,
+        528
+      ]
+    },
+    {
+      "center_next_transverse_bits": [
+        0,
+        1
+      ],
+      "column_baseline_mask": 1,
+      "next_transverse_words": [
+        2860,
+        3705
+      ],
+      "observed_periodic_word": 594,
+      "rule": 142,
+      "source_words": [
+        89,
+        528
+      ]
+    },
+    {
+      "center_next_transverse_bits": [
+        1,
+        0
+      ],
+      "column_baseline_mask": 1,
+      "next_transverse_words": [
+        18,
+        1026
+      ],
+      "observed_periodic_word": 576,
+      "rule": 144,
+      "source_words": [
+        73,
+        512
+      ]
+    },
+    {
+      "center_next_transverse_bits": [
+        0,
+        1
+      ],
+      "column_baseline_mask": 1,
+      "next_transverse_words": [
+        390,
+        2015
+      ],
+      "observed_periodic_word": 1602,
+      "rule": 146,
+      "source_words": [
+        75,
+        514
+      ]
+    },
+    {
+      "center_next_transverse_bits": [
+        1,
+        0
+      ],
+      "column_baseline_mask": 1,
+      "next_transverse_words": [
+        27,
+        195
+      ],
+      "observed_periodic_word": 576,
+      "rule": 148,
+      "source_words": [
+        73,
+        512
+      ]
+    },
+    {
+      "center_next_transverse_bits": [
+        1,
+        0
+      ],
+      "column_baseline_mask": 1,
+      "next_transverse_words": [
+        1040,
+        1026
+      ],
+      "observed_periodic_word": 576,
+      "rule": 152,
+      "source_words": [
+        73,
+        512
+      ]
+    },
+    {
+      "center_next_transverse_bits": [
+        1,
+        0
+      ],
+      "column_baseline_mask": 1,
+      "next_transverse_words": [
+        432,
+        3078
+      ],
+      "observed_periodic_word": 65,
+      "rule": 154,
+      "source_words": [
+        72,
+        513
+      ]
+    },
+    {
+      "center_next_transverse_bits": [
+        1,
+        0
+      ],
+      "column_baseline_mask": 1,
+      "next_transverse_words": [
+        1560,
+        195
+      ],
+      "observed_periodic_word": 576,
+      "rule": 156,
+      "source_words": [
+        73,
+        512
+      ]
+    },
+    {
+      "center_next_transverse_bits": [
+        1,
+        0
+      ],
+      "column_baseline_mask": 1,
+      "next_transverse_words": [
+        504,
+        3591
+      ],
+      "observed_periodic_word": 65,
+      "rule": 158,
+      "source_words": [
+        72,
+        513
+      ]
+    },
+    {
+      "center_next_transverse_bits": [
+        1,
+        0
+      ],
+      "column_baseline_mask": 1,
+      "next_transverse_words": [
+        1170,
+        0
+      ],
+      "observed_periodic_word": 2916,
+      "rule": 160,
+      "source_words": [
+        333,
+        772
+      ]
+    },
+    {
+      "center_next_transverse_bits": [
+        1,
+        0
+      ],
+      "column_baseline_mask": 1,
+      "next_transverse_words": [
+        4050,
+        1890
+      ],
+      "observed_periodic_word": 3906,
+      "rule": 162,
+      "source_words": [
+        367,
+        806
+      ]
+    },
+    {
+      "center_next_transverse_bits": [
+        0,
+        1
+      ],
+      "column_baseline_mask": 1,
+      "next_transverse_words": [
+        36,
+        594
+      ],
+      "observed_periodic_word": 594,
+      "rule": 164,
+      "source_words": [
+        89,
+        528
+      ]
+    },
+    {
+      "center_next_transverse_bits": [
+        0,
+        1
+      ],
+      "column_baseline_mask": 1,
+      "next_transverse_words": [
+        2340,
+        3120
+      ],
+      "observed_periodic_word": 594,
+      "rule": 166,
+      "source_words": [
+        89,
+        528
+      ]
+    },
+    {
+      "center_next_transverse_bits": [
+        1,
+        0
+      ],
+      "column_baseline_mask": 1,
+      "next_transverse_words": [
+        3510,
+        0
+      ],
+      "observed_periodic_word": 2916,
+      "rule": 168,
+      "source_words": [
+        333,
+        772
+      ]
+    },
+    {
+      "center_next_transverse_bits": [
+        0,
+        1
+      ],
+      "column_baseline_mask": 1,
+      "next_transverse_words": [
+        108,
+        594
+      ],
+      "observed_periodic_word": 594,
+      "rule": 172,
+      "source_words": [
+        89,
+        528
+      ]
+    },
+    {
+      "center_next_transverse_bits": [
+        0,
+        1
+      ],
+      "column_baseline_mask": 1,
+      "next_transverse_words": [
+        360,
+        3120
+      ],
+      "observed_periodic_word": 594,
+      "rule": 174,
+      "source_words": [
+        89,
+        528
+      ]
+    },
+    {
+      "center_next_transverse_bits": [
+        1,
+        0
+      ],
+      "column_baseline_mask": 1,
+      "next_transverse_words": [
+        1170,
+        1026
+      ],
+      "observed_periodic_word": 576,
+      "rule": 176,
+      "source_words": [
+        73,
+        512
+      ]
+    },
+    {
+      "center_next_transverse_bits": [
+        0,
+        1
+      ],
+      "column_baseline_mask": 1,
+      "next_transverse_words": [
+        2470,
+        2015
+      ],
+      "observed_periodic_word": 1602,
+      "rule": 178,
+      "source_words": [
+        75,
+        514
+      ]
+    },
+    {
+      "center_next_transverse_bits": [
+        1,
+        0
+      ],
+      "column_baseline_mask": 1,
+      "next_transverse_words": [
+        1755,
+        195
+      ],
+      "observed_periodic_word": 576,
+      "rule": 180,
+      "source_words": [
+        73,
+        512
+      ]
+    },
+    {
+      "center_next_transverse_bits": [
+        1,
+        0
+      ],
+      "column_baseline_mask": 1,
+      "next_transverse_words": [
+        1495,
+        455
+      ],
+      "observed_periodic_word": 2628,
+      "rule": 182,
+      "source_words": [
+        77,
+        516
+      ]
+    },
+    {
+      "center_next_transverse_bits": [
+        1,
+        0
+      ],
+      "column_baseline_mask": 1,
+      "next_transverse_words": [
+        144,
+        1026
+      ],
+      "observed_periodic_word": 576,
+      "rule": 184,
+      "source_words": [
+        73,
+        512
+      ]
+    },
+    {
+      "center_next_transverse_bits": [
+        1,
+        0
+      ],
+      "column_baseline_mask": 1,
+      "next_transverse_words": [
+        432,
+        3078
+      ],
+      "observed_periodic_word": 65,
+      "rule": 186,
+      "source_words": [
+        72,
+        513
+      ]
+    },
+    {
+      "center_next_transverse_bits": [
+        1,
+        0
+      ],
+      "column_baseline_mask": 1,
+      "next_transverse_words": [
+        216,
+        195
+      ],
+      "observed_periodic_word": 576,
+      "rule": 188,
+      "source_words": [
+        73,
+        512
+      ]
+    },
+    {
+      "center_next_transverse_bits": [
+        1,
+        0
+      ],
+      "column_baseline_mask": 1,
+      "next_transverse_words": [
+        504,
+        3591
+      ],
+      "observed_periodic_word": 65,
+      "rule": 190,
+      "source_words": [
+        72,
+        513
+      ]
+    },
+    {
+      "center_next_transverse_bits": [
+        1,
+        0
+      ],
+      "column_baseline_mask": 1,
+      "next_transverse_words": [
+        18,
+        0
+      ],
+      "observed_periodic_word": 1616,
+      "rule": 192,
+      "source_words": [
+        91,
+        530
+      ]
+    },
+    {
+      "center_next_transverse_bits": [
+        1,
+        0
+      ],
+      "column_baseline_mask": 1,
+      "next_transverse_words": [
+        1206,
+        873
+      ],
+      "observed_periodic_word": 1616,
+      "rule": 194,
+      "source_words": [
+        91,
+        530
+      ]
+    },
+    {
+      "center_next_transverse_bits": [
+        1,
+        0
+      ],
+      "column_baseline_mask": 1,
+      "next_transverse_words": [
+        119,
+        612
+      ],
+      "observed_periodic_word": 630,
+      "rule": 196,
+      "source_words": [
+        121,
+        560
+      ]
+    },
+    {
+      "center_next_transverse_bits": [
+        0,
+        1
+      ],
+      "column_baseline_mask": 1,
+      "next_transverse_words": [
+        2405,
+        3900
+      ],
+      "observed_periodic_word": 612,
+      "rule": 198,
+      "source_words": [
+        105,
+        544
+      ]
+    },
+    {
+      "center_next_transverse_bits": [
+        1,
+        0
+      ],
+      "column_baseline_mask": 1,
+      "next_transverse_words": [
+        1560,
+        0
+      ],
+      "observed_periodic_word": 1616,
+      "rule": 200,
+      "source_words": [
+        91,
+        530
+      ]
+    },
+    {
+      "center_next_transverse_bits": [
+        1,
+        0
+      ],
+      "column_baseline_mask": 1,
+      "next_transverse_words": [
+        252,
+        360
+      ],
+      "observed_periodic_word": 1616,
+      "rule": 202,
+      "source_words": [
+        91,
+        530
+      ]
+    },
+    {
+      "center_next_transverse_bits": [
+        0,
+        1
+      ],
+      "column_baseline_mask": 1,
+      "next_transverse_words": [
+        2880,
+        3900
+      ],
+      "observed_periodic_word": 612,
+      "rule": 206,
+      "source_words": [
+        105,
+        544
+      ]
+    },
+    {
+      "center_next_transverse_bits": [
+        1,
+        0
+      ],
+      "column_baseline_mask": 1,
+      "next_transverse_words": [
+        1049,
+        1035
+      ],
+      "observed_periodic_word": 2628,
+      "rule": 208,
+      "source_words": [
+        77,
+        516
+      ]
+    },
+    {
+      "center_next_transverse_bits": [
+        0,
+        1
+      ],
+      "column_baseline_mask": 1,
+      "next_transverse_words": [
+        390,
+        3510
+      ],
+      "observed_periodic_word": 576,
+      "rule": 210,
+      "source_words": [
+        73,
+        512
+      ]
+    },
+    {
+      "center_next_transverse_bits": [
+        0,
+        1
+      ],
+      "column_baseline_mask": 1,
+      "next_transverse_words": [
+        650,
+        3185
+      ],
+      "observed_periodic_word": 1602,
+      "rule": 212,
+      "source_words": [
+        75,
+        514
+      ]
+    },
+    {
+      "center_next_transverse_bits": [
+        0,
+        1
+      ],
+      "column_baseline_mask": 1,
+      "next_transverse_words": [
+        455,
+        63
+      ],
+      "observed_periodic_word": 576,
+      "rule": 214,
+      "source_words": [
+        73,
+        512
+      ]
+    },
+    {
+      "center_next_transverse_bits": [
+        0,
+        1
+      ],
+      "column_baseline_mask": 1,
+      "next_transverse_words": [
+        1026,
+        144
+      ],
+      "observed_periodic_word": 65,
+      "rule": 216,
+      "source_words": [
+        72,
+        513
+      ]
+    },
+    {
+      "center_next_transverse_bits": [
+        0,
+        1
+      ],
+      "column_baseline_mask": 1,
+      "next_transverse_words": [
+        3456,
+        3510
+      ],
+      "observed_periodic_word": 576,
+      "rule": 218,
+      "source_words": [
+        73,
+        512
+      ]
+    },
+    {
+      "center_next_transverse_bits": [
+        0,
+        1
+      ],
+      "column_baseline_mask": 1,
+      "next_transverse_words": [
+        1539,
+        216
+      ],
+      "observed_periodic_word": 65,
+      "rule": 220,
+      "source_words": [
+        72,
+        513
+      ]
+    },
+    {
+      "center_next_transverse_bits": [
+        0,
+        1
+      ],
+      "column_baseline_mask": 1,
+      "next_transverse_words": [
+        4032,
+        63
+      ],
+      "observed_periodic_word": 576,
+      "rule": 222,
+      "source_words": [
+        73,
+        512
+      ]
+    },
+    {
+      "center_next_transverse_bits": [
+        1,
+        0
+      ],
+      "column_baseline_mask": 1,
+      "next_transverse_words": [
+        54,
+        0
+      ],
+      "observed_periodic_word": 1616,
+      "rule": 224,
+      "source_words": [
+        91,
+        530
+      ]
+    },
+    {
+      "center_next_transverse_bits": [
+        1,
+        0
+      ],
+      "column_baseline_mask": 1,
+      "next_transverse_words": [
+        3222,
+        873
+      ],
+      "observed_periodic_word": 1616,
+      "rule": 226,
+      "source_words": [
+        91,
+        530
+      ]
+    },
+    {
+      "center_next_transverse_bits": [
+        1,
+        0
+      ],
+      "column_baseline_mask": 1,
+      "next_transverse_words": [
+        531,
+        612
+      ],
+      "observed_periodic_word": 612,
+      "rule": 228,
+      "source_words": [
+        105,
+        544
+      ]
+    },
+    {
+      "center_next_transverse_bits": [
+        1,
+        0
+      ],
+      "column_baseline_mask": 1,
+      "next_transverse_words": [
+        3605,
+        0
+      ],
+      "observed_periodic_word": 630,
+      "rule": 230,
+      "source_words": [
+        121,
+        560
+      ]
+    },
+    {
+      "center_next_transverse_bits": [
+        1,
+        0
+      ],
+      "column_baseline_mask": 1,
+      "next_transverse_words": [
+        3640,
+        0
+      ],
+      "observed_periodic_word": 1616,
+      "rule": 232,
+      "source_words": [
+        91,
+        530
+      ]
+    },
+    {
+      "center_next_transverse_bits": [
+        1,
+        0
+      ],
+      "column_baseline_mask": 1,
+      "next_transverse_words": [
+        216,
+        360
+      ],
+      "observed_periodic_word": 1616,
+      "rule": 234,
+      "source_words": [
+        91,
+        530
+      ]
+    },
+    {
+      "center_next_transverse_bits": [
+        1,
+        0
+      ],
+      "column_baseline_mask": 1,
+      "next_transverse_words": [
+        54,
+        612
+      ],
+      "observed_periodic_word": 612,
+      "rule": 236,
+      "source_words": [
+        105,
+        544
+      ]
+    },
+    {
+      "center_next_transverse_bits": [
+        0,
+        1
+      ],
+      "column_baseline_mask": 2,
+      "next_transverse_words": [
+        0,
+        1560
+      ],
+      "observed_periodic_word": 1152,
+      "rule": 238,
+      "source_words": [
+        146,
+        1024
+      ]
+    },
+    {
+      "center_next_transverse_bits": [
+        0,
+        1
+      ],
+      "column_baseline_mask": 1,
+      "next_transverse_words": [
+        3078,
+        3510
+      ],
+      "observed_periodic_word": 576,
+      "rule": 242,
+      "source_words": [
+        73,
+        512
+      ]
+    },
+    {
+      "center_next_transverse_bits": [
+        0,
+        1
+      ],
+      "column_baseline_mask": 1,
+      "next_transverse_words": [
+        3626,
+        3185
+      ],
+      "observed_periodic_word": 1602,
+      "rule": 244,
+      "source_words": [
+        75,
+        514
+      ]
+    },
+    {
+      "center_next_transverse_bits": [
+        0,
+        1
+      ],
+      "column_baseline_mask": 1,
+      "next_transverse_words": [
+        3591,
+        63
+      ],
+      "observed_periodic_word": 576,
+      "rule": 246,
+      "source_words": [
+        73,
+        512
+      ]
+    },
+    {
+      "center_next_transverse_bits": [
+        0,
+        1
+      ],
+      "column_baseline_mask": 1,
+      "next_transverse_words": [
+        1026,
+        144
+      ],
+      "observed_periodic_word": 65,
+      "rule": 248,
+      "source_words": [
+        72,
+        513
+      ]
+    },
+    {
+      "center_next_transverse_bits": [
+        0,
+        1
+      ],
+      "column_baseline_mask": 1,
+      "next_transverse_words": [
+        0,
+        3510
+      ],
+      "observed_periodic_word": 576,
+      "rule": 250,
+      "source_words": [
+        73,
+        512
+      ]
+    },
+    {
+      "center_next_transverse_bits": [
+        0,
+        1
+      ],
+      "column_baseline_mask": 1,
+      "next_transverse_words": [
+        1539,
+        216
+      ],
+      "observed_periodic_word": 65,
+      "rule": 252,
+      "source_words": [
+        72,
+        513
+      ]
+    },
+    {
+      "center_next_transverse_bits": [
+        0,
+        1
+      ],
+      "column_baseline_mask": 1,
+      "next_transverse_words": [
+        0,
+        63
+      ],
+      "observed_periodic_word": 576,
+      "rule": 254,
+      "source_words": [
+        73,
+        512
+      ]
+    }
+  ],
+  "checksum_convention": "failed source rules ascending, first then second source; current T,next T uint16LE",
+  "counts": {
+    "compared_output_cells": 1440,
+    "periodic_macro_updates": 120,
+    "witness_pairs": 60
+  },
+  "full_field_obstruction_rules": [
+    128,
+    130,
+    132,
+    134,
+    136,
+    138,
+    140,
+    142,
+    144,
+    146,
+    148,
+    152,
+    154,
+    156,
+    158,
+    160,
+    162,
+    164,
+    166,
+    168,
+    172,
+    174,
+    176,
+    178,
+    180,
+    182,
+    184,
+    186,
+    188,
+    190,
+    192,
+    194,
+    196,
+    198,
+    200,
+    202,
+    206,
+    208,
+    210,
+    212,
+    214,
+    216,
+    218,
+    220,
+    222,
+    224,
+    226,
+    228,
+    230,
+    232,
+    234,
+    236,
+    238,
+    242,
+    244,
+    246,
+    248,
+    250,
+    252,
+    254
+  ],
+  "independent_sha256": "e262603af2e6c3b94bff71e44e660f12c31299f063b7608cb12b2001577e1391",
+  "primary_sha256": "e262603af2e6c3b94bff71e44e660f12c31299f063b7608cb12b2001577e1391",
+  "supplement_protocol": "docs/research/protocols/transverse-witness-extension-20260910.md",
+  "word_convention": "bit x+3*y on periodic x=0..2,y=0..3; central observed site is (1,1)"
+}

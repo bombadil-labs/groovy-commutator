@@ -1,0 +1,18 @@
+[
+  {
+    "recordType": "checkpoint",
+    "slug": "transverse-difference-closure",
+    "label": "Transverse-difference closure",
+    "title": "Transverse differences close for six rules; the other sixty need more information",
+    "date": "2026-09-10",
+    "updated": "2026-09-10",
+    "kind": "Exact closure census and full-field obstruction proof",
+    "evidence": "exact",
+    "topic": "Algebra and closure",
+    "summary": "Exactly six of 66 compatible axial sources have autonomous transverse-difference dynamics. For the other sixty, complete identical observations produce different next observations; an independently audited extension proof resolves three obstructions hidden by the small torus.",
+    "takeaway": "Forgotten column baselines affect future differences. A larger neighborhood of the same observation cannot repair that loss; the next separately frozen comparison retains both spatial differences.",
+    "source": "docs/research/2026-09-10-transverse-difference-closure.md",
+    "promotion": {"stage": "research"},
+    "related": ["dimensional-vision-and-interpretation", "guard-free-axial-lift", "extension-freedom", "correction-future-coordinates"]
+  }
+]
