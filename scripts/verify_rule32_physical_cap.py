@@ -65,7 +65,7 @@ def local_semantics():
 
     count = 0
     for row in itertools.product((0, 1), repeat=7):
-        u = tuple(a(0, row[i:i+3]) for i in range(2, 5))
+        u = tuple(a(0, row[i:i+3]) for i in range(1, 4))
         v = tuple(a(1, row[i:i+5]) for i in range(3))
         assert f(u)[0] ^ v[1] == a(0, f(row)[1:4])
         assert (v[0] & v[1] & v[2]) == a(1, f(row))
@@ -193,7 +193,8 @@ def audit():
     assert len(edit_records) == 1360 and len(baselines) == 40
     return {"schema": 1, "protocol": "rule32-physical-cap-20260910",
             "protocol_freeze_commit": FREEZE,
-            "protocol_deviations": [], "implementation_corrections": [],
+            "protocol_deviations": [],
+            "implementation_corrections": ["Pre-execution review: center the three A0 windows at source indices2,3,4 (slice starts1,2,3), not3,4,5. No evaluation preceded this correction."],
             "counts": counts, "unmodified_cases": 40, "ticks_unmodified": 40,
             "zero_cap": {"cases": 40, "ticks": 40, "mismatched_timepoints": zero_mismatches,
                          "first_witness": zero_witness},
