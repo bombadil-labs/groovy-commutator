@@ -1747,7 +1747,7 @@ export default function Concepts() {
           </p>
           <p style={pBody}>
             A further exact control concerns changing the ambient law. If H and H′ agree on a shared invariant family B,
-            their finite-depth observed-future tuples agree there. The{' '}
+            their derivative observations A = I ⊕ H and A′ = I ⊕ H′, and their finite-depth observed-future tuples, agree there. The{' '}
             <a href="research/correction-future-coordinates.html">triangular coordinate theorem</a>{' '}
             then relates their correction tuples by an invertible local recoding. At each fixed finite depth, whole-field
             fibers and factor existence agree on B; coordinate radius and cost can differ. This is an analytic consequence,
