@@ -2,7 +2,7 @@
 
 **Date:** 2026-09-10  
 **Program:** Dynamics of Erased Distinctions  
-**Status:** program synthesis; no new experiment in this note  
+**Status:** provisional program synthesis; exact recovery of the eight bounded-recoder verification censorings is active  
 **Scope:** the matched block-3/cadence-3 ECA observer and one-defect frontier developed in Research022 onward. Claims below inherit the domains and caveats of their cited checkpoints; they are not statements about arbitrary cellular automata or arbitrary coarse-grainings.
 
 ## The question that survived the program
@@ -81,7 +81,7 @@ The frozen terminal ladder was `m=1,2,3,4`, `t<=6`, with a 1,200-second wall per
 
 The controls passed: Rule5 supplies a positive synthesis control and Rule35 supplies bounded negative controls.
 
-Primary terminal result:
+Initial bounded-synthesis checkpoint:
 
 - seed languages: **22**;
 - target questions: **170**;
@@ -91,11 +91,31 @@ Primary terminal result:
 - infrastructure-censored seed languages: **0**;
 - exact-negative target questions: **30**;
 - scientifically censored target questions: **140**;
-- primary outcome: **terminal-inconclusive-due-to-censoring**.
+- checkpoint outcome: **inconclusive under the original per-seed wall; exact recovery required before program closure**.
 
 All eight censored seeds reached the frozen scientific wall during universal verification. Their censoring is not converted into a negative result.
 
 The durable audit is `results/bounded_source_recoder_synthesis_20260910.json`, SHA-256 `2d28a4d5e4b668f9a201f3658a986060712a2f9069577810aacd08a49e7f12f2`. The compact companion is `results/bounded_source_recoder_synthesis_20260910_summary.json`.
+
+### 6. Resource censoring triggered backend recovery, not program termination
+
+The 1,200-second wall was preregistered to keep the original synthesis experiment interpretable. It is not a mathematical boundary. Because all eight unresolved cases stopped during universal verification, the machine grammar itself need not be enlarged to continue the exact question.
+
+A separate recovery protocol therefore holds fixed every scientific parameter of the terminal search -- the same 22 seed languages, `m<=4`, `t<=6`, deterministic adaptive rail-selection grammar, source semantics, structural order, and exact certificate criterion -- and changes only the verification backend.
+
+Hard universal-verification SAT queries are solved by an exact resumable decomposition. A solver portfolio first attempts the whole query. If it does not decide the query within an operational slice, the remaining finite background assignment space is partitioned on a source bit. Subproblems are solved independently and may be partitioned again. At fully assigned leaves the CA equality is evaluated directly, so repeated solver timeout cannot become a scientific terminal state. Work queues are checkpointed and resumed across infrastructure runs.
+
+Under this recovery regime, an unfinished batch is reported only as **pending**. The recovery terminates scientifically only when each of the eight previously censored seed languages is either supplied an exact bounded-recorder certificate or exhausted as an exact bounded negative.
+
+The required program-level finish condition is therefore:
+
+```
+22 / 22 frontier seed languages exactly classified
+for the frozen m <= 4, t <= 6 adaptive recoder class.
+```
+
+No larger machine state budget, longer structural horizon, new selector geometry, or relaxed certificate semantics is introduced by this recovery.
+
 
 ## The proof-state hierarchy
 
@@ -111,7 +131,7 @@ same-source temporal recurrence
 
 This is not claimed to be a universal complexity hierarchy. It is a controlled sequence of increasingly expressive proof grammars for one exact frontier.
 
-What the sequence establishes is more modest and more useful: no positive frontier certificate appeared before the terminal finite-state rung, the one-cut family is exactly negative on the full frontier, and the terminal generalized family is partially exact-negative and partially resource-censored.
+What the sequence establishes so far is more modest and more useful: no positive frontier certificate appeared before the terminal finite-state rung, the one-cut family is exactly negative on the full frontier, and the initial generalized finite-state run proved 14 seed languages negative while identifying eight exact-verification cases that require backend recovery. Their mathematical status remains open until the recovery completes.
 
 This suggests a quantity worth future formalization but not claimed here as an established invariant: the **proof-state complexity of erased distinctions** -- the minimum additional state or representation complexity needed to restore an exact closure/permanence argument after an observation erases a distinction. The current program measures lower bounds and representation barriers for one concrete family; it does not yet prove that such a minimum is well-defined or representation-independent in general.
 
@@ -130,21 +150,23 @@ The following are deliberately *not* conclusions of this work:
 
 The program repeatedly found reasons to keep these distinctions explicit rather than collapse them into one narrative.
 
-## Why this is a natural terminus
+## Why exact recovery now precedes the terminus
 
-Continuing by increasing `m`, increasing `t`, adding more rail-selector geometries, or raising solver ceilings would answer only progressively larger bounded versions of the same question. No principled next threshold has been supplied by the present theory.
+Increasing `m`, increasing `t`, or inventing further selector geometries would enlarge the scientific hypothesis. That remains outside this program.
 
-The final experiment was preregistered specifically to avoid that open-ended search. Its allowed terminal outcomes were a verified small machine, a bounded exact negative, or a resource boundary. We obtained the third globally, with a substantial exact-negative subset inside it.
+Changing the backend for the eight already-frozen cases is different. Their question is finite and exact, and the earlier phase-splice recovery already demonstrated that a representation wall can disappear under another exact encoding. Ending the program merely because an arbitrary wall expired would therefore mistake an implementation budget for a mathematical conclusion.
 
-Accordingly, this program stops here.
+The current recovery is consequently part of finishing the existing experiment, not a new rung of the selector hierarchy. It has no scientific timeout outcome: infrastructure slices may end, but unresolved work is checkpointed as pending and resumed.
 
-Future work may reopen one of three qualitatively new questions:
+Once all eight cases are decided, the program has a principled stopping point. At that point every frontier seed language will have an exact classification for the declared `m<=4`, `t<=6` adaptive-recorder class. Any subsequent increase of machine state, horizon, or proof grammar would require a newly motivated research question rather than being an unfinished obligation.
+
+Future work may still reopen qualitatively new questions:
 
 1. prove a structural theorem giving a principled bound (or impossibility result) for source-recoder state;
 2. change the proof object qualitatively -- for example an invariant, order-theoretic abstraction, or another exact quotient -- rather than merely enlarge the present selector grammar;
 3. study intervention-relative revisability/empowerment or adaptive observation as separate representation questions under their own frozen protocols.
 
-Those are new research programs or explicitly registered continuations, not unfinished obligations of this one.
+Those remain separate continuations.
 
 ## Program conclusion
 
@@ -157,6 +179,6 @@ The durable result is therefore not a single positive recurrence formula. It is 
 - **same provenance** versus **admissible changed provenance**;
 - and, finally, **hidden causal information** versus the **proof-state required to make that information dynamically manageable**.
 
-Within the declared frontier, the program has pushed each distinction to an exact theorem, an exact negative, or an explicitly labeled resource boundary. That is sufficient closure for the present research line.
+Within the declared frontier, the program has pushed each distinction to an exact theorem or exact negative except for the eight bounded-recorder verification cases now under exact backend recovery. Those cases must be classified before this note becomes the program's final closure record.
 
-**Recommendation:** publish this synthesis with the final source-recoder checkpoint, mark *Dynamics of Erased Distinctions* **complete / dormant**, preserve the frozen empowerment and online-observer continuations as separate planned work, and do not silently resume the selector-state ladder.
+**Recommendation after recovery:** publish this synthesis with the completed source-recoder classification, mark *Dynamics of Erased Distinctions* **complete / dormant**, preserve the frozen empowerment and online-observer continuations as separate planned work, and do not silently resume the selector-state ladder.
