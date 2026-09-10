@@ -1,83 +1,17 @@
-# Research continuations
+# Continuations: Dimensional Closure and the Commutator Lift
 
-This file is the running log of research continuations that used to live inline
-in `CLAUDE.md`. It was split out on 2026-09-10 to keep `CLAUDE.md` readable;
-the text below is moved verbatim and unchanged, in the order it stood in
-`CLAUDE.md` at that time: two orientation sections (history and possibility;
-shared state and rule space), the dimensional vision contract, then the dated
-continuations most recent first. Each section records what a workstream
-completed, what is frozen and unrun, and what not to infer.
+Running continuation log for the dimensional workstream, including its 2D
+encoding lineage (column and block compatibility, encoded defects, strips,
+the interface escape) that preceded the Program page's own supports list, the
+shared state/rule construction, and the dimensional vision contract.
 
-**How to use it.** Before continuing any workstream, read its most recent
-continuation section here and the Program page it belongs to
-(`docs/research/2026-09-08-dynamics-of-erased-distinctions.md`,
-`docs/research/2026-09-09-dimensional-closure-program.md`). Add a new section
-at the top when a substantial unit completes, in the same style: dated title,
-bounded claims, explicit "do not infer" lines, and the next frozen protocol.
-`CLAUDE.md` keeps only the established results, instruments, conventions, and
-working guidelines.
+Sections are dated; the most recent unit is first except where an orientation
+section is deliberately placed at the top. Each records what a unit completed,
+what is frozen and unrun, and what not to infer. Add a new section at the top
+when a substantial unit completes; keep the bounded-claim style. Text moved from
+`CLAUDE.md` on 2026-09-10 is verbatim.
 
-## Research continuation: history and possibility (2026-09-07)
-
-`docs/research/2026-09-07-future-repertoire.md` records a protocol committed
-before evaluation: all initial states on widths 6/9/11, 66 pairs from rules
-{0,4,30,51,54,90,110,150,170,184,204,250}, all exactly-h action words for
-h=0..6, identity and population-count views. Scripts
-`experiment_future_repertoire.py` and `report_future_repertoire.py` generate
-2,772 aggregate rows, six independently replayed witnesses, summary and figure.
-Engine, direct-word/set, zero-horizon, and identity/reset controls pass.
-
-At h=6 under identity, equal-size/different-set cases are 258/2763/10615
-and equal-set/different-action-map cases are 281/831/2399 at widths 6/9/11.
-The respective denominators are 4224/33792/135168 pair-state cases. These are
-exact bounded counts, not independent samples. Simple reset/complement and
-Rule 4/30 examples separate counts, set membership, and action responses;
-the reset/complement example also restores an option at two ticks that was
-absent at one. These distinctions are not unique to complex rules.
-
-Possibility here comes from declared external actions. Different histories
-act through different complete present states; no intrinsic agency, viability,
-or new action invention was measured. Exactly-h sets need not grow with h,
-and different pairs have different action alphabets. Do not rank intrinsic
-freedom by their set sizes.
-
-The next unit is now complete in `docs/research/2026-09-07-costed-primitives.md`
-and `docs/research/2026-09-07-macro-local-equivalence.md`. Scripts
-`experiment_revisable_primitives.py` and `experiment_macro_local_equivalence.py`
-compare four library policies with explicit physical, dispatch, construction,
-trace, and revision costs. There are 294,912 finite configurations plus 98,304
-all-width local-map configurations; all encodings, engine, witness, and
-price-bound checks pass. All-width equivalence is established on every
-17-bit causal window for words up to eight ticks; shortest-program search
-is still bounded to eight ticks.
-
-At primary dispatch=1, trace=4, K=4, useful inherited macros give revision
-wins over replacement in 364/384 one-edit changes (mean saving 0.802), versus
-91/1056 farther changes (mean saving -1.902). No unchanged task wins. The
-single-transition saving is bounded by 5 minus trace price, so at most one
-unit here: a property of the cost schedule, not a new CA law. Macro expansion
-preserves physical-budget reachability; savings require priced dispatch.
-The first six-cell shortcut ABBBA = ABBAABBA for rules 4/30 fails on 11,264
-of 131,072 unrestricted windows; preserve its bounded scope and counterexample.
-
-The original revisable-primitives proposal is partly implemented. Given
-macros, free oracle planning, and one task transition are explicit limits.
-The returning-task extension is now complete in
-`docs/research/2026-09-07-returning-tasks.md`: 294,912 configurations using
-only all-width kernels; direct enumeration of 4,194,304 two-block macro paths
-agrees with dynamic programming. A free-trace Rule 4/30 witness saves one
-unit on the changed job but adds two on the returning job. A separate
-present-cost tie leaves returning costs of 13 versus 10. At primary prices,
-farther-change hindsight revision wins rise from 430/1056 for one return
-cycle (mean -0.691 units) to 893/1056 for four (mean +8.599). These are shared
-configurations, not independent replicates. Reactive policies deliberately
-do not learn the recurring schedule; oracle gains include future information.
-The original future-repertoire insight is promoted into Concepts #possibility.
-Separately address learning/discovery and search costs before claiming
-adaptation. The user subsequently confirmed the recovered Narrative Calculus
-gist and explicitly selected shared state/rule spaces and the eight-neighbor
-2D connection as the next experiment; the full parallel-chat tail remains
-unavailable and is not treated as evidence.
+Program page: `docs/research/2026-09-09-dimensional-closure-program.md`
 
 ## Research continuation: shared state and rule space (2026-09-08)
 
@@ -133,58 +67,6 @@ durable user-requested account of the vision. Keep it visible in the Program.
   scoring or naturalness claim; retain failed attempts and freeze rescues.
 - The completed transverse-difference test below resolves whether erased
   per-column baselines affect future differences, relative to that observation.
-
-## Research continuation: agreed issue burndown underway (2026-09-10)
-
-The user authorized executing the ordered burndown. The gradient experiment
-remains complete. This primary session owns #61,#62,#65,#66,#68,#67. At the
-user's request, #63/#64 are reserved for a parallel agent using their signed
-scopes. The primary session integrates shared catalogs, Program pages, this
-continuation and the burndown, then reviews and merges the parallel PRs. Protocol-writing issues do not authorize claiming unrun results.
-Use one substantive PR per issue and `Closes #N` on its completing PR. Keep the
-checkpoint's burndown status, PR link and date current in that same PR.
-
-- #61 shared synthesis: completed in PR71 (2026-09-10). Read
-  docs/research/2026-09-10-shared-closure-account.md. Both Programs now state the
-  same invariant-family/cadence contract and distinguish a candidate-law error
-  from failure of every factor. Rule255 supplies the unchanged exact control.
-- Eight knowledge entries restore Research022–028/035 provenance, with explicit
-  prerequisite edges and unchanged prior nodes/edges. No experiment was rerun
-  and no earlier evidence label changed. Preserve the parallel source-recoder
-  work; its current PR55 does not edit these Program sources or knowledge files.
-- #62 successor-set archive: completed in PR73 (2026-09-10). The original
-  script/stdout, reproducible replay and research/knowledge account retain
-  exploratory provenance, finite-ring scope and exact weighting conventions.
-  Both Programs leave the broader sound-approximation question open.
-- #65 relabeling archive: completed in PR74 (2026-09-10). The exact local
-  identity and transformed transport use a decoded old-state gate and old
-  arrays. The original script/stdout retain exploratory provenance; the
-  unspecified rule-field lift remains open. No geometric or selection claim.
-- #66 inventory: completed in PR75 (2026-09-10). Four source-hashed sets and
-  all six pairwise intersections preserve finite/intrinsic role budgets and
-  distinct constructors. The four nonlinear gradient sources remain visible.
-  No new CA census or conserved-density search was run.
-- #68 Concepts: completed in PR76 (2026-09-10), at concepts.html#resonance.
-  Four sourced relationships remain distinct; the vision note is promoted
-  editorially while its evidence stays open. The knowledge contract links back.
-- #67 protocol: completed in PR77 (2026-09-10). Read the second-lift completion
-  protocol/checkpoint. The GF(2)^2 constructor, inherited family, H128/H160,
-  local budgets, causal domains, canonical completions and independent checks
-  are frozen. The named second-lift-completion-comparison experiment remains
-  planned and unrun; whole-field completion invariance is a prior theorem.
-- All six primary-owned issues are complete.
-- #63 protocol: the parallel agent's PR72 completes protocol writing; primary
-  integration registers representation-empowerment-census as planned/unrun and
-  links it from the Erased Distinctions Program. Preserve the original (P,q)
-  clocks and the distinction between exact rational channels and numerical
-  capacity certificates. No new census was run.
-- #64 instrument: the parallel agent's PR78 completes the conservative online
-  suffix learner. Primary integration registers its checkpoint/knowledge and
-  Program links. No CA performance census, coarsening or oracle arm was run.
-- The eight-issue burndown is complete. The representation-empowerment-census
-  and second-lift-completion-comparison remain named planned experiments;
-  each requires its implementation/evaluation gates before claiming results.
-  Preserve the separate source-recoder workstream (PR55).
 
 ## Research continuation: gradient interventions completed; pause for issues (2026-09-10)
 
@@ -616,41 +498,6 @@ attempting the full ECA comparison. Keep symmetry equivalence and disputed
 class labels explicit. Recovered parallel-session material is now supplied by
 the user in this thread; its conjectures are not experimental results.
 
-## Research continuation: provenance and action responses (2026-09-08)
-
-`docs/research/2026-09-08-spacetime-provenance.md` answers the user's provenance
-question for 1D rows stacked into a 2D panel. Protocol and implementation were
-committed before evaluation. All 256 rules and every initial ring at n=6/8/10,
-observed transitions 0..6, future horizons 1..4, autonomous and fixed cell-0 flip:
-168 aggregate rows. Candidate rules are exactly r & M = V for visited-input
-mask M, hence 2^(8-popcount(M)) candidates. The rule remains fixed for every
-entire future; no re-selection at each step.
-
-Primary t=2,h=4: autonomous/flipped ambiguous panels are 1384/2260 of 6696 at
-n6, 5444/8998 of 36154 at n8, and 17604/29548 of 173148 at n10. At n8,t6,h4,
-96/42718 panels have natural future ambiguity versus 4134 after the flip;
-10430 still have rule ambiguity. Report distinct-panel denominators; CSV also
-retains generating-pair weighting. No class labels or independent replicates.
-
-The zero n6 panel has 128 possible rules, identical natural futures forever,
-and 38 four-step futures after a flip. Panel [3,25,8] under rules9/137 agrees
-at next row35 then diverges to40/41. Seed23 at n8 exposes all eight rule-table
-inputs in one transition; [23,0] uniquely identifies rule0. Purpose-specific
-future codes can need fewer bits than identifying the rule; codebook/decoder
-cost is not modeled and side information is not inferred from absent data.
-
-32,768 package-engine comparisons, 1,300,744 candidate multiplicities,
-189 direct row-partition checks, 10,405,952 future bounds, 2,064,384 nested-mask
-cases and 135 witness replays pass. The content-addressed witness provenance
-JSON has eight nodes and 135 derivation edges; it is not the full enumeration
-and is separate from the semantic knowledge graph.
-
-Next compatibility work must distinguish preserving a rule, preserving natural
-continuation, and preserving responses to a declared action set. Choose target,
-representation budget and decoder before scoring. This full-ECA observational
-map does not yet implement a higher-dimensional evolutionary law or remove the
-outer-totalistic domain restriction from the separate dimensional interpreter.
-
 ## Research continuation: invariant column encodings (2026-09-08)
 
 `docs/research/2026-09-08-column-compatibility.md` completes the next fixed-
@@ -895,87 +742,3 @@ position, classifying which encounters launch outward fronts versus cancel or
 remain unresolved. Use the extreme-row identity where applicable; finite runs
 do not prove indefinite confinement. No fold-in or logical gate established.
 The 3D and separate boundary/individuation threads remain parked.
-
-## Research agenda checkpoint: preserve unfinished threads (2026-09-08)
-
-After discussing [Thinking Like a Function](https://myk.pub/thinking-like-a-function-16),
-the user asked to record the boundary question and revisit earlier unfinished
-work before choosing the next experiment. No new experiment was selected or
-run at this checkpoint. The following is a backlog, not a new frozen protocol.
-
-- **Previously recorded next priority — dimensional compatibility.** The local
-  encoding and symmetry audit are complete; a globally compatible evolving
-  representation remains open. Specify how overlapping encodings coexist,
-  remain valid under evolution, and decode across dimensions with a fixed
-  budget. The provenance experiment is complete but does not supply that
-  higher-dimensional dynamics. It adds the requirement to distinguish rule
-  identity, natural continuation, and responses to declared interventions.
-- **Related open question — remainder feedback.** Can a specified feedback
-  law sustain compatibility between representations? Earlier mutual and
-  derivative replacement models cycled on the tested finite systems. Feeding
-  a compatibility mismatch back into the dimensional construction remains
-  undefined and untested. Full-base-state change transport closes by identity;
-  a bounded-context criterion would need separate design and evaluation.
-- **Deferred spatial controls.** Compare Gray-code and geometric assignments
-  on larger grids; separately define a locally stored changeable decoder.
-  The dimensional-compatibility priority explicitly deferred these questions,
-  rather than completing them. See the shared-state/rule continuation above.
-- **Earlier open branches.** Learning/discovering reusable primitives with
-  charged search and uncertain future tasks; residual-error structure and
-  training-budget controls in the regional history experiment; selective
-  historical influence, reciprocal constraint, and decomposition/reconstitution
-  in `docs/research/2026-09-07-history-and-possibility.md`. Earlier dialogue's
-  state-gated derivative-memory measurements still require artifact recovery
-  and verification; the separate `mu(S_previous)` reversibility study is not
-  a substitute for that model.
-- **Parked boundary/individuation question.** How are process boundaries
-  established, sustained, changed, or dissolved, and which forms of continuity
-  let a unit remain usable within larger processes? Record the user's
-  function-as-holon correction as motivation for later operational definitions.
-  This question does not automatically supersede the unfinished work above.
-
-The proposed Class-IV connection remains downstream of a defined, nontrivial
-compatibility criterion; there is still no persistence score or enrichment
-result. This checkpoint adds no experimental finding.
-
-## Research continuation: observed history (2026-09-07)
-
-Recovered **Analysis of Collusion Wiki** research is indexed in
-`docs/research/2026-09-07-history-repairability.md`. Read that first for this
-workstream; the unchanged earlier notes and source hashes are under
-`docs/research/archive/`.
-
-- **Exact checks:** D90=150, D110=162; G110 has degree 4, four monomials,
-  10/32 nonzero local windows. The reported dyadic derivative ANF counts
-  through horizon 8 reproduce. Rule 90 has exact dyadic parity closure;
-  Rule 110 has no radius-one closure for any nonconstant binary block map
-  at b=2, strides 1–2, or b=3, strides 1–3. These are bounded claims.
-- **Reproduced broad sweep:** all values in the recovered 176-row parity
-  and 256-row majority tables reproduced to 1e-12 (the recovered script's
-  `wclass` header differs from the archived CSV's `class`). Summary JSON
-  reproduced byte for byte. The legacy canonical label for 41 conflicts
-  with its cited source; 106's III/IV status is disputed. Keep class
-  enrichment exploratory, and don't count equivalent rules as independent.
-- **Independent-seed validation:** `experiment_history_validation.py`, 12
-  rules × 5 observations × 2 ring widths × 4 test seeds × 7 depths = 3,360
-  rows, trained on a disjoint eight-seed ensemble. Matched targets and
-  low-support backoff reproduce strong Rule-110 repair, while Rule 30
-  also repairs under majority and derivative observations. There is no
-  projection-independent Class-IV classifier here. Report seed ranges,
-  coverage, and exact projection/cadence with every error curve.
-- **Regional follow-up completed:** see `docs/research/2026-09-07-ether-regions.md`
-  and `scripts/experiment_ether_regions.py`. Frozen-protocol Rule 110 test:
-  two training ensembles, eight shared held-out seeds, widths 420/840, five
-  observers, two past-only ether detectors. All 320 departure-region paired
-  comparisons improve at h=6; these share data and are not independent
-  replicates. Departures contribute 40.4–74.8% of total gain depending on
-  observation, width, and detector; background also contributes substantially.
-  Primary-detector departure neighborhoods contain 97.2–100% of pooled
-  residual error. History beats the equal-bit radius-ten snapshot in all
-  160 paired seed comparisons, with better support coverage: this is an
-  estimator/budget finding, not proof of irreducible temporal information.
-  The detector labels local incompatibility, not glider species or collisions.
-- **Next within this workstream:** independently classify residual-error structures; separately vary
-  training budget at fixed width for spatial versus temporal contexts. Only
-  then estimate sufficient-history scaling or fit reduced dynamics with
-  explicit memory. Low empirical error does not prove finite-memory closure.
