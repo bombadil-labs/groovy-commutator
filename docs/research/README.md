@@ -129,6 +129,23 @@ as a candidate for Questions.
 Correct false claims in the main content when discovered; do not wait for a
 larger editorial pass. Record what changed and why in Research.
 
+## Authorship and review
+
+Notes, checkpoints, and frozen protocols carry a short provenance line near the
+top, after the title and status:
+
+```
+Authored by: <person or agent session>. Reviewed by: <person or agent session>, <date>.
+```
+
+Name agents by their signed identity as used in issues (for example
+"Codex (OpenAI)" or "Claude Code, Fable 5.1") and people by name. For a frozen
+protocol the review happens **before** the implementation commit and before any
+evaluation; record the reviewer and date on the protocol itself, and link the
+issue thread or PR where the review took place. A note with no reviewer says
+`Reviewed by: none` rather than omitting the line. Existing notes are not
+edited retroactively; add the line when a note is next revised.
+
 ## Formatting, evidence links, and revisions
 
 - Use ordinary Markdown, fenced code blocks, and tables. Raw HTML is displayed
