@@ -1,0 +1,49 @@
+{
+  "ok": true,
+  "experiment": "phase-splice-sat-recovery",
+  "working_identity": "phase-splice-sat-recovery",
+  "solver": "Minisat22 via python-sat",
+  "encoding": "manual CNF over original fine-ECA shrinking cones",
+  "recovery_domain_seed_languages": 12,
+  "recovery_domain_target_questions": 12,
+  "seed_status_counts": {
+    "no-phase-splice-through-6": 12
+  },
+  "certified_seed_languages": 0,
+  "exact_negative_seed_languages": 12,
+  "censored_seed_languages": 0,
+  "recovery_hypothesis": "pass",
+  "first_certificate": null,
+  "maximum_cnf_variables": 1314,
+  "maximum_cnf_clauses": 9943,
+  "same_seed_wall_seconds_as_primary": 1200,
+  "full_result": "results/phase_splice_sat_recovery_20260910.json",
+  "full_result_sha256": "0540fc2a4bf3801e7cd5f8dad9514022c120bda773d2591fcc78d6a17d0aa90f",
+  "primary_phase_splice_completion": "complete-exact-negative-22-of-22",
+  "total_phase_splice_seed_languages": 22,
+  "previous_exact_negative_class_ii_seed_languages": 10,
+  "recovered_sentinel_exact_negative_seed_languages": 12,
+  "remaining_censored_seed_languages": 0,
+  "controls": {
+    "ok": true,
+    "rule5": {
+      "status": "pass",
+      "candidate": {
+        "t": 3,
+        "k": 2,
+        "j": 1,
+        "delta": 0,
+        "policy": "LL"
+      },
+      "positions": 7,
+      "max_cnf_variables": 282,
+      "max_cnf_clauses": 1897
+    },
+    "rule35": {
+      "all_fail": true,
+      "fresh_candidates_t_le_3": 22,
+      "max_cnf_variables": 348,
+      "max_cnf_clauses": 2425
+    }
+  }
+}
