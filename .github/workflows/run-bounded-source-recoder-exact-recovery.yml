@@ -10,6 +10,7 @@ on:
 
 permissions:
   contents: write
+  actions: write
 
 jobs:
   controls:
@@ -108,4 +109,12 @@ jobs:
           if ! git diff --cached --quiet; then
             git commit -m 'research: checkpoint exact bounded-recoder recovery'
             git push origin HEAD:${GITHUB_REF_NAME}
+          fi
+      - name: Dispatch next recovery batch when pending
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          STATUS=$(python -c "import json; print(json.load(open('results/bounded_source_recoder_exact_recovery_20260910_progress.json'))['status'])")
+          if [[ "$STATUS" == "pending" ]]; then
+            gh workflow run run-bounded-source-recoder-exact-recovery.yml --ref "$GITHUB_REF_NAME"
           fi
