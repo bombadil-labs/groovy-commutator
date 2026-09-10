@@ -1,0 +1,41 @@
+name: Transverse-difference closure and full-field witnesses
+
+on:
+  pull_request:
+    paths:
+      - 'scripts/verify_transverse_difference_closure.py'
+      - 'scripts/verify_transverse_witness_extension.py'
+      - 'scripts/verify_guard_free_axial_lift.py'
+      - 'results/transverse_difference_closure_20260910.json'
+      - 'results/transverse_witness_extension_20260910.json'
+      - '.github/workflows/research-transverse-difference.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/verify_transverse_difference_closure.py'
+      - 'scripts/verify_transverse_witness_extension.py'
+      - 'scripts/verify_guard_free_axial_lift.py'
+      - 'results/transverse_difference_closure_20260910.json'
+      - 'results/transverse_witness_extension_20260910.json'
+      - '.github/workflows/research-transverse-difference.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  transverse-difference-audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Reproduce original local and periodic census
+        run: python scripts/verify_transverse_difference_closure.py > /tmp/transverse-difference-closure.json
+      - name: Check exact original artifact
+        run: diff -u results/transverse_difference_closure_20260910.json /tmp/transverse-difference-closure.json
+      - name: Replay every failed radius-one witness as a full field
+        run: python scripts/verify_transverse_witness_extension.py > /tmp/transverse-witness-extension.json
+      - name: Check exact supplemental artifact
+        run: diff -u results/transverse_witness_extension_20260910.json /tmp/transverse-witness-extension.json
