@@ -36,7 +36,7 @@
     "date": "2026-09-09",
     "updated": "2026-09-10",
     "status": "living",
-    "summary": "Editable spatial programs lift through finite prepared boundaries. Exact local-cap certificates now include a nonconstant two-row Rule32 closure; its physical execution and instruction-edit contract are frozen next.",
+    "summary": "A nonconstant Rule32 correction cap now closes indefinitely with physically stored instructions and finite guards. Native edits execute faithfully, but semantic recovery is separate and fails on a persistent one-cell-error witness.",
     "thesis": "When two dynamical paths fail to commute, represent the disagreement as a new coordinate and ask whether the enlarged representation closes.",
     "source": "docs/research/2026-09-09-dimensional-closure-program.md",
     "supports": [
@@ -53,7 +53,8 @@
       "editable-routing-tables",
       "finite-routing-boundaries",
       "stored-correction-transport",
-      "local-correction-caps"
+      "local-correction-caps",
+      "rule32-physical-cap"
     ]
   }
 ]
