@@ -436,7 +436,11 @@ checkpoint's burndown status, PR link and date current in that same PR.
   script/stdout, reproducible replay and research/knowledge account retain
   exploratory provenance, finite-ring scope and exact weighting conventions.
   Both Programs leave the broader sound-approximation question open.
-- Next in order: archive issue65's relabeling identity and synchronous transport.
+- #65 relabeling archive: completed in PR74 (2026-09-10). The exact local
+  identity and transformed transport use a decoded old-state gate and old
+  arrays. The original script/stdout retain exploratory provenance; the
+  unspecified rule-field lift remains open. No geometric or selection claim.
+- Next in order: issue66's descriptive cross-constructor inventory.
 
 ## Research continuation: gradient interventions completed; pause for issues (2026-09-10)
 
