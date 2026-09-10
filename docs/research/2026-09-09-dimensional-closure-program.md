@@ -6,6 +6,15 @@ This page is the **working synthesis** of the dimensional-lift research program.
 
 The program is parallel to [Dynamics of Erased Distinctions](2026-09-08-dynamics-of-erased-distinctions.md). That program asks when information can be forgotten safely and how a lossy representation repairs itself. This one asks what additional structure must be represented when evolution and transformation refuse to agree.
 
+## Read the research direction
+
+The [dimensional vision and interpretation note](2026-09-10-dimensional-vision-and-interpretation.md)
+records the user's objective and the nuanced constraints guiding this program.
+It keeps law, state family, and interpreter explicit; distinguishes preservation,
+faithful representation, restoration, and endogenous organization; and explains
+why a rule's binary truth table does not supply a unique spatial arrangement.
+This is a visible orientation record, not a new experimental conclusion.
+
 ## The original dimensional observation
 
 Two early constructions made lower-dimensional rules literal spatial data one dimension higher.

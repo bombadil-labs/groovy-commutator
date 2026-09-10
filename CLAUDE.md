@@ -391,6 +391,29 @@ larger grids; separately specify a locally represented changeable decoder.
 Do not infer that expanding same-time instructions to a fixed local rule
 makes them meaningless, or that memory is the only interesting mechanism.
 
+## Dimensional research direction and interpretation contract (2026-09-10)
+
+Read docs/research/2026-09-10-dimensional-vision-and-interpretation.md for the
+durable user-requested account of the vision. Keep it visible in the Program.
+
+- Seek recurring spatial dimensions, coherent trajectories, new native states,
+  and organization increasingly sustained by the unfolding. "Turtle beam" is
+  the objective; metaphysical and prime analogies are not established results.
+- Truth-table bits have configuration addresses; state bits have spatial
+  addresses. Eight bits supplies no unique physical arrangement. State-as-rule
+  claims must state the law, state family, and encoding/interpreter together.
+- Separate family preservation, exact representation, restoration, and
+  endogenous organization. ALL256 axial rules preserve copied-field symmetry;
+  the special66 additionally reproduce the old law at the same macro cadence.
+- Compensated re-encodings may change locality and edit costs. Invertible
+  observation relabelings preserve closure automatically; substantive tests
+  compare different retained information or explicit physical constraints.
+- Radius, alphabet, correction depth, spatial dimension, time, and program
+  edit support are separate resources. Guarded controls remain useful. No C4
+  scoring or naturalness claim; retain failed attempts and freeze rescues.
+- Continue the frozen transverse-difference test below. It asks whether erased
+  per-column baselines affect future differences, relative to that observation.
+
 ## Research continuation: guard-free axial family completed (2026-09-10)
 
 Read docs/research/2026-09-10-guard-free-axial-lift.md. Continue only the
