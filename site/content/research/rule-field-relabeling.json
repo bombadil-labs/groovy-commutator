@@ -1,0 +1,23 @@
+[
+  {
+    "recordType": "checkpoint",
+    "slug": "rule-field-relabeling",
+    "label": "Rule-field relabeling",
+    "title": "The interpreter must transform with the rule field",
+    "date": "2026-09-10",
+    "updated": "2026-09-10",
+    "kind": "Exact identities with archived exploratory checks",
+    "evidence": "exploratory",
+    "topic": "Algebra and closure",
+    "summary": "Local table conjugation preserves decoded state evolution; synchronous transport must transform both its old-state gate and the copied table. The original seeded checks and finite orbit count are preserved.",
+    "takeaway": "The algebra is exact, the saved numerical checks remain exploratory, and a dimensional rule-field lift is still an unspecified proposal.",
+    "source": "docs/research/2026-09-10-rule-field-relabeling.md",
+    "promotion": {
+      "stage": "research"
+    },
+    "related": [
+      "shared-closure-account",
+      "dimensional-vision-and-interpretation"
+    ]
+  }
+]
