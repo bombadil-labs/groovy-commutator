@@ -452,6 +452,12 @@ the agreed issues. Do not automatically start another experiment.
 - Canonical JSON results/gradient_interventions_20260910.json SHA256:
   89093341369ef505d6bb2d2a53cd7be00864bbb035adcd4072360c006c3d3630.
   Dedicated CI replays the exact output using the unchanged loop evaluators.
+- The ordered issue burndown and completion criteria are now in the intervention
+  checkpoint's `Issue burndown` section: #61, #62, #65, #66, #68, #67, #63, #64.
+  The first five consolidate/publish existing work. #67/#63 are agreed protocol
+  deliverables: register later implementation/evaluation explicitly as planned
+  work before closing the proposals. #64 requires the working online arm.
+  This checklist update does not resume experiments or close any issue.
 - PAUSE / agreed issue queue: #61 synthesis and missing provenance; #62 archive
   finite successor sets; #63 freeze hidden-state static intervention channels;
   #64 conservative online suffix learner; #65 archive relabeling/transport;
