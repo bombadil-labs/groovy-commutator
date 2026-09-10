@@ -332,6 +332,40 @@ all-time field identity. Matched edits execute faithfully, but a persistent
 one-cell-error witness refutes general semantic recovery under this cap.
 Boundary stability, information sufficiency, and recovery remain distinct.
 
+## Clarified dimensional-beam objective
+
+On2026-09-10 the user made the destination explicit: a recurring dimensional
+construction, coherent lower-dimensional trajectories, additional native
+possibilities at higher levels, and organization increasingly governed by the
+program's own unfolding. "Turtle beam" names this sought continuity;
+"unus mundus" is an interpretive analogy, not an established conclusion.
+
+Correction depth, spatial dimension and time are different quantities. The
+current two-row correction system occupies one plane; adding another correction
+row does not add a spatial axis. The existing lift can carry the whole native
+plane onward. Guarded constructions remain valuable controls and instruments,
+but their prepared invariant subsets do not settle the stronger objective.
+
+Minimum representation dimension requires a declared encoding, causal and
+resource contract. In a coherent tower of total adjacent lifts, a composed
+path cannot skip its intermediate levels. Under injective lifts, minimum
+ancestral dimension is preserved by lifting and cannot increase under the
+compatible dynamics. These deductions concern the chosen tower; an intrinsic
+notion must avoid merely detecting its padding. No arithmetic-prime analogy
+is established.
+
+The [extension-freedom checkpoint](2026-09-10-extension-freedom.md) gives a
+concrete diagnostic. The Rule32 image leaves98 output bits free in the broad
+radius-one pair grammar. In the existing guarded table-chain grammar,128 top
+program tuples induce four compatible functions; top ECA128 and160 both
+preserve every encoded data trajectory while responding differently to an
+off-image defect. The ambient completion is not uniquely selected by its beam.
+
+The differing instruction bit can also circulate autonomously under existing
+state-gated copying, with exact encoded data and physical program evolution.
+It is dormant on that data image. Endogenous instruction change and revision
+of represented data dynamics therefore remain distinct achievements.
+
 ## Relation to the Class-IV hope
 
 The original Class-IV conjecture records the intuition that motivated this
@@ -372,31 +406,30 @@ recursive spatial-program closure.
 
 14. **A finite physical correction cap now closes indefinitely.** Rule32's two-row pair is realized by stored programs(32,60)/(128,240) and finite guards. The complete identity holds at every time. All1,360 tested matched edits execute faithfully; a separate persistent-background proof shows expanding disagreement after one top data or instruction edit, so this is not general repair.
 
+15. **Encoded compatibility leaves ambient freedom.** Exact local constraints admit multiple stored-program completions with different off-image behavior. Compatible instruction variants can move autonomously while their distinguishing bit remains dormant on the encoded data image.
+
 ## What remains open
 
 - Rule32's finite-height physical cap and matched-edit contract are established. Broader cap compilation and intentional semantic program revision remain open; the current law does not generally restore the undamaged represented trajectory.
 - Finite-thickness routing boundaries are constructive under fixed occupancy and missing-input retention. Occupancy edits, mutable stage topology, smaller alphabets and self-maintained roles remain open.
-- The relationship between correction depth, spatial dimension, and growing within-dimension radius is not yet characterized.
+- The relationship between correction depth, spatial dimension, growing spatial radius and minimum causal representation dimension is not yet characterized. A fixed code's ancestral rank may primarily reflect its layout.
 - Class-IV correspondence is background motivation only and does not direct the current search.
 
 ## The next theoretical target
 
-The [physical-cap checkpoint](2026-09-10-rule32-physical-cap.md) completes the
-immediate construction: a locally prepared, finite-height correction pair
-with physically stored programs and an all-time complete-field identity.
+The [next frozen protocol](protocols/guard-free-axial-lift-20260910.md) tests a
+binary family built by applying the original ECA along each axis in sequence.
+The same recursive recipe defines every dimension on the entire ambient
+state space, with no guards or reserved program/data roles. It is not yet run.
 
-The next question is semantic program revision, not another routing control:
-which intended changes preserve the old interpretation, which establish a new
-one, and what local re-preparation or maintained structure is required?
-Faithfully executing an edited native program does not decide these questions.
+Test all256 sources for literal-replication compatibility at both interfaces,
+axis-order dependence on complete two-dimensional causal windows, and the
+all-dimensional consequences that actually follow. Account for ordered axes,
+replication constraints and d lattice passes per macro update. The original
+word remains in the law; spatial program mutability is not retained by default.
 
-The odd-ring edit panel has extinguishing baselines, so its data recovery is
-not a maintenance result. On a persistent alternating-source background the
-encoded pair is(1,1); one top zero spreads forever under Rule128. The analogous
-top instruction edit also produces an expanding error. These are scoped
-counterexamples to recovery under the present law, not a rejection of other
-repair architectures. Freeze any concrete rescue and its edit/semantic
-contract before evaluating it.
-
-No Class-IV selection, novelty, source-compression or universal-program claim
-is established.
+This is one proposed uniform constructor, not a uniquely natural choice.
+Preserve every failure and freeze any rescue before evaluation. The earlier
+stored-program and correction instruments remain useful for subsequent
+comparisons. C4, prime analogies and metaphysical interpretations do not select
+rules or upgrade evidence.
