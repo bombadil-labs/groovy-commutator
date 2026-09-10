@@ -1,0 +1,110 @@
+name: Exact bounded source-recoder recovery
+
+on:
+  push:
+    branches:
+      - 'research/relational-source-recoder-20260909'
+    paths:
+      - '.github/workflows/run-bounded-source-recoder-exact-recovery.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  controls:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+      - run: python -m pip install -e . pandas python-sat
+      - run: python -m py_compile scripts/recover_bounded_source_recoder_exact.py scripts/aggregate_bounded_source_recoder_exact_recovery.py
+      - name: Run exact recovery controls
+        run: >-
+          python scripts/recover_bounded_source_recoder_exact.py
+          --controls-only
+          --output artifacts/controls.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: bounded-recoder-exact-recovery-controls
+          path: artifacts/controls.json
+          if-no-files-found: error
+          retention-days: 90
+
+  recovery-seeds:
+    needs: controls
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    strategy:
+      fail-fast: false
+      matrix:
+        seed_index: [1,6,11,14,16,17,18,20]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+      - run: python -m pip install -e . pandas python-sat
+      - name: Run resumable exact recovery slice
+        env:
+          SEED_INDEX: ${{ matrix.seed_index }}
+        run: |
+          mkdir -p artifacts
+          CP="results/bounded_source_recoder_recovery/checkpoint-seed-${SEED_INDEX}.json"
+          EXTRA=()
+          if [[ -f "$CP" ]]; then
+            EXTRA+=(--checkpoint-in "$CP")
+          fi
+          python scripts/recover_bounded_source_recoder_exact.py \
+            --seed-index "$SEED_INDEX" \
+            --batch-seconds 2700 \
+            --solver-slice-seconds 10 \
+            "${EXTRA[@]}" \
+            --output "artifacts/recovery-seed-${SEED_INDEX}.json"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: bounded-recoder-exact-recovery-seed-${{ matrix.seed_index }}
+          path: artifacts/recovery-seed-*.json
+          if-no-files-found: error
+          retention-days: 90
+
+  aggregate:
+    needs: [controls, recovery-seeds]
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/download-artifact@v4
+        with:
+          name: bounded-recoder-exact-recovery-controls
+          path: artifacts/controls
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: bounded-recoder-exact-recovery-seed-*
+          path: artifacts/seeds
+          merge-multiple: true
+      - name: Aggregate exact progress and durable checkpoints
+        run: >-
+          python scripts/aggregate_bounded_source_recoder_exact_recovery.py
+          --input-dir artifacts/seeds
+          --controls artifacts/controls/controls.json
+          --checkpoint-dir results/bounded_source_recoder_recovery
+          --progress-output results/bounded_source_recoder_exact_recovery_20260910_progress.json
+          --markdown-output docs/research/bounded-source-recoder-exact-recovery-20260910-progress.md
+      - name: Commit recovery progress
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add results/bounded_source_recoder_recovery \
+                  results/bounded_source_recoder_exact_recovery_20260910_progress.json \
+                  docs/research/bounded-source-recoder-exact-recovery-20260910-progress.md
+          if ! git diff --cached --quiet; then
+            git commit -m 'research: checkpoint exact bounded-recoder recovery'
+            git push origin HEAD:${GITHUB_REF_NAME}
+          fi
