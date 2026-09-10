@@ -1,0 +1,5 @@
+Claim 1 on 200 random (S,R,c), n=12: True
+Claim 2 covariant transport commutes on 200 random cases: True
+unchanged transport on transformed data disagrees in 200 of 200 cases
+n=4: pure-gauge rule fields = 1974 of 256^4 = 4294967296
+rule 110 uniform, c=(1,0,0,0) -> [100 230 110 157]
