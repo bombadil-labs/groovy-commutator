@@ -1,0 +1,24 @@
+[
+  {
+    "recordType": "checkpoint",
+    "slug": "representation-empowerment-protocol",
+    "label": "Representation empowerment protocol",
+    "title": "Passive repertoire and accessible control",
+    "date": "2026-09-10",
+    "updated": "2026-09-10",
+    "kind": "Frozen protocol and planned experiment registration",
+    "evidence": "open",
+    "topic": "Algebra and closure",
+    "summary": "A static observer/cadence census will compare stable future repertoire with the no-op/flip control channel under hidden-state uncertainty. The source clocks, exact priors and capacity certificates are explicit.",
+    "takeaway": "The protocol is a design deliverable. Its representation-empowerment census remains planned and unrun, separate from the gradient audit and online learner.",
+    "source": "docs/research/2026-09-10-representation-empowerment-protocol.md",
+    "promotion": {
+      "stage": "research"
+    },
+    "related": [
+      "possibility-frontier",
+      "fiber-visibility",
+      "shared-closure-account"
+    ]
+  }
+]

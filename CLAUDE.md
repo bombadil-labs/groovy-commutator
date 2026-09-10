@@ -452,9 +452,14 @@ checkpoint's burndown status, PR link and date current in that same PR.
   local budgets, causal domains, canonical completions and independent checks
   are frozen. The named second-lift-completion-comparison experiment remains
   planned and unrun; whole-field completion invariance is a prior theorem.
-- All six primary-owned issues are complete. Integrate/review the parallel
-  #63/#64 PRs when ready; preserve their protocol/implementation freeze and
-  distinguish proposal completion from a new experimental result.
+- All six primary-owned issues are complete.
+- #63 protocol: the parallel agent's PR72 completes protocol writing; primary
+  integration registers representation-empowerment-census as planned/unrun and
+  links it from the Erased Distinctions Program. Preserve the original (P,q)
+  clocks and the distinction between exact rational channels and numerical
+  capacity certificates. No new census was run.
+- Remaining: #64 is reserved for the parallel agent. Review/integrate its
+  conservative learner PR when ready; do not duplicate its implementation.
 
 ## Research continuation: gradient interventions completed; pause for issues (2026-09-10)
 

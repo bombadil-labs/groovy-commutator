@@ -277,3 +277,9 @@ The earlier [History and possibility program](2026-09-07-history-and-possibility
 ## Open direction: sound approximation after closure fails
 
 The [archived Rule110 example](2026-09-10-successor-set-archive.md) compares exact whole-field successor sets with sound local Cartesian products on the eight-cell ring. The general question remains open: which ordered representation domains preserve useful precision at a declared resource cost? Whole-field correlations, cell-frequency metrics and prior-weighted entropy bounds are distinct. This is a reproduced exploratory example; new substrates and infinite-lattice claims require a separate frozen protocol.
+
+## Planned execution: representation empowerment census
+
+The [frozen no-op/flip protocol](protocols/representation-empowerment-20260910.md) and its [registered experiment](../knowledge/representation-empowerment-planned.md) add a control question to the existing repertoire frontier. The [publication checkpoint](2026-09-10-representation-empowerment-protocol.md) records observer/cadence provenance and the exact-input capacity certificate. Implementation and new numerical evaluation remain planned and unrun.
+
+The controller sees only P(S_0), with a uniform prior within its fiber, and receives a declared future readout after one intervention. Uniform-action information and optimized capacity are distinct; both use the original macrostate weights. Research026's observer-specific cadence is preserved. This is independent of issue64's learner and uses a different information/action contract from the completed gradient audit.
