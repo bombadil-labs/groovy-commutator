@@ -1,0 +1,61 @@
+{
+  "ok": true,
+  "experiment": "phase-splice-source-recoder",
+  "working_identity": "phase-splice-source-recoder",
+  "public_note_number": null,
+  "primary_rules": [
+    122,
+    154,
+    161,
+    164,
+    166,
+    180,
+    210,
+    218
+  ],
+  "seed_languages": 22,
+  "target_questions": 170,
+  "target_questions_by_wolfram_class": {
+    "II": 158,
+    "III": 12
+  },
+  "fresh_policies": [
+    "LR",
+    "RL"
+  ],
+  "seed_status_counts": {
+    "censored": 12,
+    "no-phase-splice-through-6": 10
+  },
+  "certified_seed_languages": 0,
+  "unresolved_seed_languages": 10,
+  "censored_seed_languages": 12,
+  "exact_permanence_resolutions": 0,
+  "unresolved_target_questions": 158,
+  "censored_target_questions": 12,
+  "primary_hypothesis": "inconclusive-due-to-censoring",
+  "first_canonical_certificate": null,
+  "certificate_parameter_counts": {},
+  "maximum_mdd_nodes_observed": 1747841,
+  "resource_limits": {
+    "mdd_nodes_per_position": 5000000,
+    "seed_wall_seconds": 1200,
+    "tmax": 6
+  },
+  "full_result": "results/phase_splice_source_recoder_20260909.json",
+  "full_result_sha256": "af00ce04f134bd98ecd2d2bd7a0bf2a00b2c2c5d9b7d34c2ebcd9cc22e329138",
+  "rule122_161_sentinels": {
+    "questions": 12,
+    "seed_languages": 12,
+    "status_counts": {
+      "censored": 12
+    },
+    "max_mdd_nodes": 1747841
+  },
+  "controls": {
+    "ok": true,
+    "rule5_status": "pass",
+    "rule35_all_fail": true,
+    "rule35_fresh_candidates_t_le_3": 22
+  }
+}
