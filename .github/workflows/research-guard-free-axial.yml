@@ -1,0 +1,31 @@
+name: Guard-free axial dimensional audit
+
+on:
+  pull_request:
+    paths:
+      - 'scripts/verify_guard_free_axial_lift.py'
+      - 'results/guard_free_axial_lift_20260910.json'
+      - '.github/workflows/research-guard-free-axial.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/verify_guard_free_axial_lift.py'
+      - 'results/guard_free_axial_lift_20260910.json'
+      - '.github/workflows/research-guard-free-axial.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  guard-free-axial-audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Audit exact interfaces, axis orders, and finite lattices
+        run: python scripts/verify_guard_free_axial_lift.py > /tmp/guard-free-axial-lift.json
+      - name: Reproduce exact canonical result
+        run: diff -u results/guard_free_axial_lift_20260910.json /tmp/guard-free-axial-lift.json
