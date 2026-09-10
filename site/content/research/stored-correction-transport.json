@@ -1,0 +1,24 @@
+[
+  {
+    "recordType": "checkpoint",
+    "date": "2026-09-10",
+    "updated": "2026-09-10",
+    "evidence": "exact",
+    "topic": "Algebra and closure",
+    "promotion": {
+      "stage": "research"
+    },
+    "slug": "stored-correction-transport",
+    "label": "Stored correction transport",
+    "title": "Stored instructions execute correction transport, but a zero cap does not close it",
+    "kind": "Exact interior law and finite-cap counterexample",
+    "summary": "Program(r,60) physically executes F(row) xor the next correction row. A finite prepared stack has an exact protected time triangle, but a frozen zero cap can corrupt the bottom; local cap factorization is the next test.",
+    "takeaway": "Boundary stability and correction sufficiency are different conditions. The physical interior law works; an indefinitely valid finite cap remains to be constructed.",
+    "source": "docs/research/2026-09-10-stored-correction-transport.md",
+    "related": [
+      "finite-routing-boundaries",
+      "editable-routing-tables",
+      "correction-future-coordinates"
+    ]
+  }
+]

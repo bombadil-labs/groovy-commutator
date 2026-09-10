@@ -1,5 +1,7 @@
 # Added routing instructions can be edited, executed, and lifted again
 
+**Follow-up, 2026-09-10:** the [finite-boundary checkpoint](2026-09-10-finite-routing-boundaries.md) replaces infinite guard half-spaces with three layers under an explicit occupancy-aware source type. The construction and frozen result below remain unchanged.
+
 The next construction makes the contents of every added routing instruction explicit program data. A dimension-d program now has d eight-bit tables: the original ECA table and one table for each added axis. Every table entry occupies one physical cell.
 
 The complete system still lifts exactly: execution, inherited local edits, and state-gated copying of whole programs commute with the same construction. This holds for arbitrary native source program/data fields, including fields whose added routing tables have already been edited. Local proofs establish every finite dimension; the frozen audit checks physical execution through dimension four.

@@ -1,0 +1,25 @@
+[
+  {
+    "recordType": "checkpoint",
+    "date": "2026-09-10",
+    "updated": "2026-09-10",
+    "evidence": "exact",
+    "topic": "Algebra and closure",
+    "promotion": {
+      "stage": "research"
+    },
+    "slug": "finite-routing-boundaries",
+    "label": "Finite boundary checkpoint",
+    "title": "Finite routing boundaries work when absence remains explicit",
+    "kind": "Exact occupancy-aware finite lift",
+    "summary": "Three complete macrocell layers replace infinite transverse guards under the unchanged interpreter. Explicit occupancy preserves recursive typing, program transport and local edits; zero-filling absence fails.",
+    "takeaway": "A finite boundary can be stable because inputs are absent. Preserving that distinction makes the finite lift repeatable, with all preparation and role costs explicit.",
+    "source": "docs/research/2026-09-10-finite-routing-boundaries.md",
+    "related": [
+      "editable-routing-tables",
+      "spatial-rail-programs",
+      "program-edit-locality",
+      "stored-correction-transport"
+    ]
+  }
+]
