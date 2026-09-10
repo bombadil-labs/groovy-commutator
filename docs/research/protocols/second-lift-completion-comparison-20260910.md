@@ -46,7 +46,7 @@ $$
 
 Thus the whole-field fibers of K_h^H and K_h^{H'} on B are equal, and existence of a whole-field autonomous factor at that fixed h is completion-independent. This includes any declared probability law on a finite ensemble, with no entropy prior needed for the fiber identity.
 
-Construct T by U_j^(t+1)=H(U_j^t) XOR U_(j+1)^t, reading the left edge; invert by U_(j+1)^t=U_j^(t+1) XOR H(U_j^t). Each direction has radius at most h for these H. The cross-completion recoding and its inverse consequently have radius at most 2h, with h(h+1) evaluations of a two-component H or H' per direction. At h=1 the sharper formula is
+Construct T by U_j^(t+1)=H(U_j^t) XOR U_(j+1)^t, reading the left edge; invert by U_(j+1)^t=U_j^(t+1) XOR H(U_j^t). Each direction has radius at most h for these H. The cross-completion recoding and its inverse consequently have radius at most 2h, with h(h+1) whole-field applications of a two-component H or H' per cross-recoding direction. At h=1 the sharper formula is
 
 $$
 (u,v)\longmapsto(u,v\oplus H(u)\oplus H'(u)),
