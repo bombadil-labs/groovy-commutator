@@ -1,0 +1,27 @@
+[
+  {
+    "recordType": "checkpoint",
+    "slug": "shared-closure-account",
+    "label": "Shared closure account",
+    "title": "One representation contract, two different failures",
+    "date": "2026-09-10",
+    "updated": "2026-09-10",
+    "kind": "Synthesis of established closure and refinement results",
+    "evidence": "exact",
+    "topic": "Algebra and closure",
+    "summary": "A shared invariant-family and cadence contract separates candidate-law disagreement from factor nonexistence. Rule255 illustrates the difference; future refinement and explicit probability laws connect both Programs without changing their evidence.",
+    "takeaway": "Ask separately whether a proposed effective law is correct, whether any effective law exists, and which hidden distinctions become visible. Eight knowledge entries restore the missing provenance for Research022–028 and035.",
+    "source": "docs/research/2026-09-10-shared-closure-account.md",
+    "promotion": {
+      "stage": "research"
+    },
+    "related": [
+      "observation-closure",
+      "history-lift-closure",
+      "fiber-visibility",
+      "ternary-commutator-lift",
+      "correction-future-coordinates",
+      "full-gradient-closure"
+    ]
+  }
+]

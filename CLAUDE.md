@@ -414,6 +414,27 @@ durable user-requested account of the vision. Keep it visible in the Program.
 - The completed transverse-difference test below resolves whether erased
   per-column baselines affect future differences, relative to that observation.
 
+## Research continuation: agreed issue burndown underway (2026-09-10)
+
+The user authorized executing the ordered burndown. The gradient experiment
+remains complete. This primary session owns #61,#62,#65,#66,#68,#67. At the
+user's request, #63/#64 are reserved for a parallel agent using their signed
+scopes. The primary session integrates shared catalogs, Program pages, this
+continuation and the burndown, then reviews and merges the parallel PRs. Protocol-writing issues do not authorize claiming unrun results.
+Use one substantive PR per issue and `Closes #N` on its completing PR. Keep the
+checkpoint's burndown status, PR link and date current in that same PR.
+
+- #61 shared synthesis: completed in PR71 (2026-09-10). Read
+  docs/research/2026-09-10-shared-closure-account.md. Both Programs now state the
+  same invariant-family/cadence contract and distinguish a candidate-law error
+  from failure of every factor. Rule255 supplies the unchanged exact control.
+- Eight knowledge entries restore Research022–028/035 provenance, with explicit
+  prerequisite edges and unchanged prior nodes/edges. No experiment was rerun
+  and no earlier evidence label changed. Preserve the parallel source-recoder
+  work; its current PR55 does not edit these Program sources or knowledge files.
+- Next in order: archive issue62's reproduced successor-set example; retain its
+  original exploratory provenance and exact weighting conventions.
+
 ## Research continuation: gradient interventions completed; pause for issues (2026-09-10)
 
 Read docs/research/2026-09-10-gradient-intervention-costs.md. This is the current

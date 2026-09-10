@@ -10,7 +10,7 @@ The original derivative/evolution commutator is still one useful instrument, but
 
 ## The core object: indistinguishability under dynamics
 
-Fix dynamics `E`, cadence `q`, and a representation or observation `P`. Define the present observational relation
+Fix dynamics `E`, positive cadence `q`, and a representation or observation `P` on a declared family X with E^q(X) contained in X. All pairs and iterations below are restricted to that family. Define the present observational relation
 
 \[
 R_0=\{(s,s'):P(s)=P(s')\}.
@@ -37,6 +37,28 @@ This formulation compresses several research threads into one object.
 - **Memory depth** measures the longest finite residence time inside present indistinguishability.
 - **Fiber visibility** separates latent distinctions from permanently shielded ones.
 - **Selector shielding** searches for local physical mechanisms that make portions of `R_infinity` invariant.
+
+## Shared representation contract
+
+Revision 2026-09-10: the [shared account](2026-09-10-shared-closure-account.md)
+records the synthesis agreed with the dimensional workstream. With the family
+and cadence fixed, an autonomous factor exists exactly when equal present
+observations have equal next observations. It is unique on the observed image;
+locality and off-image extension are additional requirements. A candidate-law
+error instead compares one proposed law with the actual observed update. Use
+XOR only when the observation space has the required binary-group structure.
+
+For Rule255, D is invertible complementation, D(E(s)) is zero, E(D(s)) is one,
+and G is everywhere one. The actual derivative factor is constant zero: there
+is maximal same-rule disagreement without any erased-information failure.
+The dimensional Program also tests factor existence directly through its
+transverse/full-gradient observations, so the two Programs are not partitioned
+into disjoint kinds of defect. Existing findings and evidence labels are unchanged.
+
+The R_t below describes forward observed-word partitions of initial states,
+using the same cadence. It is not itself an online suffix learner or an
+adaptive observer's stored state. The new knowledge entries in the shared
+account make the Research022–028 and Research035 provenance explicit.
 
 ## Closure is not the same as commutation
 
