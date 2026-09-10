@@ -9,7 +9,7 @@
 
 Research026 already separates two objectives for a lossy representation `P`:
 
-1. **closure breaking / repair cost** — how little extra information is needed to obtain an autonomous factor;
+1. **closure breaking** — how little present information a static observation can discard while making its future ambiguous;
 2. **future repertoire** — how much stable-future uncertainty remains after observing the present macrostate.
 
 This protocol adds a third, intervention-relative objective:
