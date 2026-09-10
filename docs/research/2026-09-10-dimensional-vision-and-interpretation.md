@@ -59,6 +59,20 @@ The user asks for the lowest dimension in which a state is representable, and wh
 
 These statements concern the chosen embeddings. An intrinsic minimum representation dimension needs locality, decoding, dynamics, and resource constraints that prevent arbitrary coding from deciding the answer. There are additional local degrees of freedom as lattice boxes grow from length to area to volume; this is not a claim that the unrestricted infinite binary configuration sets have different cardinalities. Prime-like decomposition and uniqueness remain questions, not established arithmetic structure.
 
+## Control refinement: persistent history, possible futures, and usable interventions
+
+Further user clarification on 2026-09-10 adds a third axis: alongside which historical distinctions remain consequential and which futures are possible, ask which futures can deliberately be made to unfold. These are research questions, not demonstrated drives or optimization objectives of the current CA.
+
+Persistence of information does not imply that it is affordably revisable. A set of possible outcomes is not an entropy until probabilities are supplied. A control quantity needs an action interface, a causal intervention model, an observation, a time horizon, and a resource budget. Ordinary action/outcome correlation alone does not establish intervention power.
+
+Empowerment is a relevant information-theoretic control concept: channel capacity from actions to subsequent sensor states, optimized over action distributions under a stated model ([overview](https://arxiv.org/abs/1310.1863)). It is not control instead of information theory. Neither identifying a useful quantity nor measuring a channel supplies an endogenous controller.
+
+For a dimensional lift L, evolution compatibility F_target L = L F_source does not automatically preserve cheap interventions. An action A needs a corresponding target action with A_target L = L A_source, together with an explicit cost comparison. Literal replication copies an edit along the new axis. Alternatively, native target edits may leave the inherited image and enable additional behavior; that is not automatically a failed lift.
+
+The [loop checkpoint](2026-09-10-gradient-loop-invariants.md) supplies a conserved observation for eight source rules, under explicit periodic topology. The [next frozen intervention protocol](protocols/gradient-intervention-costs-20260910.md) will compare flat XOR edits, changed-edge costs, touched sites, and distinguishable terminal outcomes. It is unrun and assumes external simultaneous interventions on a known state. Sequential local implementation and changes driven by the unfolding program itself remain further questions.
+
+The sharpened target is organization that persists under ordinary evolution while permitting affordable intentional revision. Do not treat stability, selectable futures, and a mechanism straddling them as already equivalent or already achieved.
+
 ## How experiments should advance the vision
 
 Two complementary goals remain open: find relationships stable across admissible changes of representation, and explain how a particular interpretation becomes physically established. A constructor can supply a strong exact control without settling either goal.

@@ -447,6 +447,29 @@ their consistency. Many ambient completions remain available outside that
 image, and the underlying axial law still has its declared order. Neither
 closure nor a temporary integration anchor selects a canonical interpretation.
 
+## Loop information persists; control remains a separate question
+
+The [loop checkpoint](2026-09-10-gradient-loop-invariants.md) implements native
+gradient evolution and independently checks twisted binary potentials in 1D,
+2D, and 3D. All 42,880 base updates and both dimensional interfaces agree.
+Eight nonconstant self-dual sources conserve every wrapping-loop parity;
+the two constant controls erase them. Translation covariance and complement
+symmetry prove this in every dimension, beyond the finite audit.
+
+A periodic flat field need not be the gradient of a periodic binary potential.
+Nonzero loop sectors have twisted potentials on the infinite cover, so the
+local gradient law already determines their dynamics. Replication appends a
+zero loop component while retaining the old ones. This is one explicit
+topology-dependent invariant, not a complete classification of the beam.
+
+The user adds a control question: which persistent distinctions can be
+deliberately revised, with what support and latency? Evolution intertwining
+does not ensure equal intervention cost. A copied edit touches an entire
+added-axis fiber, while a native edit may leave the inherited image.
+Persistence, possible futures, and steerable futures therefore require separate
+accounts. The [vision record](2026-09-10-dimensional-vision-and-interpretation.md)
+now includes this refinement; no endogenous control mechanism is claimed.
+
 ## Relation to the Class-IV hope
 
 The original Class-IV conjecture records the intuition that motivated this
@@ -496,27 +519,28 @@ recursive spatial-program closure.
 
 18. **Full gradients restore closure for four nonlinear sources.** Keeping both spatial differences gives exactly 10 closed sources in the 66-rule axial family. A constant local complement response is necessary and sufficient; all 56 failures have full-field certificates. The all-dimensional gradient corollary retains source dynamics modulo global complement, with explicit component and image costs.
 
+19. **Loop sectors persist through the declared gradient tower.** Eight self-dual sources preserve the full periodic loop vector; constants erase it. Native updates and both interfaces agree with independent references. The invariant is topology-dependent and does not by itself establish revisability or control.
+
 ## What remains open
 
 - Rule32's finite-height physical cap and matched-edit contract are established. Broader cap compilation and intentional semantic program revision remain open; the current law does not generally restore the undamaged represented trajectory.
 - Finite-thickness routing boundaries are constructive under fixed occupancy and missing-input retention. Occupancy edits, mutable stage topology, smaller alphabets and self-maintained roles remain open.
 - The relationship between correction depth, spatial dimension, growing spatial radius and minimum causal representation dimension is not yet characterized. A fixed code's ancestral rank may primarily reflect its layout.
-- Both transverse-only and full-gradient closure are classified for the 66 compatible sources. Native gradient execution across dimensions and the fate of wrapping-loop information under periodic boundaries are the next frozen comparison. Different observations, correction state, and the natural establishment of interpretations remain separate open questions.
+- Transverse-only closure, full-gradient closure, native execution, and wrapping-loop conservation are established in their declared domains. Affordable interventions and usable higher-dimensional futures are the next frozen comparison. Different observations, correction state, endogenous control, and the natural establishment of interpretations remain separate open questions.
 - Class-IV correspondence is background motivation only and does not direct the current search.
 
 ## The next theoretical target
 
-The [next frozen protocol](protocols/gradient-loops-and-dimensional-compatibility-20260910.md)
-implements native gradient evolution for the ten closed sources and tests its
-dimensional replication. On periodic fields, distinguish zero local curl from
-the additional requirement of zero wrapping-loop parities for a periodic
-binary potential. The frozen prediction is that the eight nonconstant
-self-dual sources preserve these loop bits, while constants erase them.
+The [next frozen protocol](protocols/gradient-intervention-costs-20260910.md)
+declares simultaneous flat XOR masks as actions, with changed-edge budgets and
+separate touched-site counts. Enumerate every source state and action on the
+same small periodic ensembles; count distinguishable full-field and loop-vector
+endpoints at horizons 0,1,4. Test minimum loop-changing support, inherited
+action costs, and controlled compatibility at both dimensional interfaces.
 
-Enumerate all declared flat-field ensembles in 1D/2D/3D, compare native updates
-with independently evolved twisted potentials for four ticks, and check both
-replication interfaces. This is unrun. No arbitrary behavior on curl-violating
-neighborhoods is chosen. Boundary topology, d component bits per site, ordered
-passes, and local integration costs remain explicit. The [vision note](2026-09-10-dimensional-vision-and-interpretation.md)
-remains the guiding contract; loop sectors are not intrinsic dimension or
-prime factors. Commit implementation before execution and preserve all failures.
+This is unrun. It assumes a known initial field and an external action interface.
+It does not supply a local sequential actuator, an endogenous controller,
+an unknown-state probability law, or dynamics for curl-violating states.
+Native edits may leave the replicated image while remaining in the defined
+flat-field domain. Commit implementation before execution; preserve failures,
+topology, action geometry, and all resource costs.

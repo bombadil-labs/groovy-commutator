@@ -1,0 +1,7030 @@
+{
+  "checksums": {
+    "base": {
+      "independent": "a46b0fc488c1ab585cb709ae90e40ee486ea4eab68113249133d4f2b5fc34833",
+      "native": "a46b0fc488c1ab585cb709ae90e40ee486ea4eab68113249133d4f2b5fc34833"
+    },
+    "interfaces": {
+      "independent": "b8f631e6267a0860e1beb4dac6f1e22398399fb21db0223b70b645c3a878e2a8",
+      "native": "b8f631e6267a0860e1beb4dac6f1e22398399fb21db0223b70b645c3a878e2a8"
+    }
+  },
+  "conventions": {
+    "checksums": "ASCII compact JSON array per update plus newline; prefix shape,rule,initial potential word,initial loop word,tick; base adds previous edge word,next edge word,next loop word; interfaces add next source edge word,next target edge word,next target loop word",
+    "coordinates": "lexicographic; last axis fastest; axis 0 evolves first",
+    "gradient": "bit dimension*site_index+axis; outgoing positive edge",
+    "loop_word": "bit axis; positive wrapping-loop XOR",
+    "potential": "bit site_index; origin anchored zero in initial enumeration"
+  },
+  "counts": {
+    "base_component_comparisons": 995840,
+    "base_initial_rule_field_cases": 10720,
+    "base_macro_updates": 42880,
+    "ensemble_fields": 1072,
+    "interface_initial_rule_field_cases": 480,
+    "interface_target_component_comparisons": 40960,
+    "interface_updates": 1920
+  },
+  "discrepancies": [],
+  "geometry": [
+    {
+      "fields_per_sector": 8,
+      "flat_fields": 16,
+      "local_edge_reads": 3,
+      "local_potential_vertices": 4,
+      "loop_sectors": 2,
+      "plaquette_equations": 0,
+      "plaquette_rank": 0,
+      "shape": [
+        4
+      ],
+      "sites": 4,
+      "stored_edge_bits": 4
+    },
+    {
+      "fields_per_sector": 8,
+      "flat_fields": 32,
+      "local_edge_reads": 18,
+      "local_potential_vertices": 15,
+      "loop_sectors": 4,
+      "plaquette_equations": 4,
+      "plaquette_rank": 3,
+      "shape": [
+        2,
+        2
+      ],
+      "sites": 4,
+      "stored_edge_bits": 8
+    },
+    {
+      "fields_per_sector": 128,
+      "flat_fields": 1024,
+      "local_edge_reads": 81,
+      "local_potential_vertices": 54,
+      "loop_sectors": 8,
+      "plaquette_equations": 24,
+      "plaquette_rank": 14,
+      "shape": [
+        2,
+        2,
+        2
+      ],
+      "sites": 8,
+      "stored_edge_bits": 24
+    }
+  ],
+  "native_cache": {
+    "integrated_neighborhoods": 1068,
+    "rule_neighborhoods_both_anchors": 10680
+  },
+  "protocol_commit": "9e5de20f127f7a0047f3d6201abe7f83cd131981",
+  "records": [
+    {
+      "certificates": [
+        {
+          "initial_loop_word": 0,
+          "initial_potential_word": 0,
+          "trajectory": [
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            }
+          ]
+        },
+        {
+          "initial_loop_word": 1,
+          "initial_potential_word": 0,
+          "trajectory": [
+            {
+              "edge_word": 8,
+              "loop_word": 1
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            }
+          ]
+        }
+      ],
+      "loop_transitions": [
+        {
+          "count": 8,
+          "from": 0,
+          "tick": 1,
+          "to": 0
+        },
+        {
+          "count": 8,
+          "from": 1,
+          "tick": 1,
+          "to": 0
+        },
+        {
+          "count": 16,
+          "from": 0,
+          "tick": 2,
+          "to": 0
+        },
+        {
+          "count": 16,
+          "from": 0,
+          "tick": 3,
+          "to": 0
+        },
+        {
+          "count": 16,
+          "from": 0,
+          "tick": 4,
+          "to": 0
+        }
+      ],
+      "rule": 0,
+      "shape": [
+        4
+      ]
+    },
+    {
+      "certificates": [
+        {
+          "initial_loop_word": 0,
+          "initial_potential_word": 0,
+          "trajectory": [
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            }
+          ]
+        },
+        {
+          "initial_loop_word": 1,
+          "initial_potential_word": 0,
+          "trajectory": [
+            {
+              "edge_word": 8,
+              "loop_word": 1
+            },
+            {
+              "edge_word": 4,
+              "loop_word": 1
+            },
+            {
+              "edge_word": 2,
+              "loop_word": 1
+            },
+            {
+              "edge_word": 1,
+              "loop_word": 1
+            },
+            {
+              "edge_word": 8,
+              "loop_word": 1
+            }
+          ]
+        }
+      ],
+      "loop_transitions": [
+        {
+          "count": 8,
+          "from": 0,
+          "tick": 1,
+          "to": 0
+        },
+        {
+          "count": 8,
+          "from": 1,
+          "tick": 1,
+          "to": 1
+        },
+        {
+          "count": 8,
+          "from": 0,
+          "tick": 2,
+          "to": 0
+        },
+        {
+          "count": 8,
+          "from": 1,
+          "tick": 2,
+          "to": 1
+        },
+        {
+          "count": 8,
+          "from": 0,
+          "tick": 3,
+          "to": 0
+        },
+        {
+          "count": 8,
+          "from": 1,
+          "tick": 3,
+          "to": 1
+        },
+        {
+          "count": 8,
+          "from": 0,
+          "tick": 4,
+          "to": 0
+        },
+        {
+          "count": 8,
+          "from": 1,
+          "tick": 4,
+          "to": 1
+        }
+      ],
+      "rule": 142,
+      "shape": [
+        4
+      ]
+    },
+    {
+      "certificates": [
+        {
+          "initial_loop_word": 0,
+          "initial_potential_word": 0,
+          "trajectory": [
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            }
+          ]
+        },
+        {
+          "initial_loop_word": 1,
+          "initial_potential_word": 0,
+          "trajectory": [
+            {
+              "edge_word": 8,
+              "loop_word": 1
+            },
+            {
+              "edge_word": 13,
+              "loop_word": 1
+            },
+            {
+              "edge_word": 8,
+              "loop_word": 1
+            },
+            {
+              "edge_word": 13,
+              "loop_word": 1
+            },
+            {
+              "edge_word": 8,
+              "loop_word": 1
+            }
+          ]
+        }
+      ],
+      "loop_transitions": [
+        {
+          "count": 8,
+          "from": 0,
+          "tick": 1,
+          "to": 0
+        },
+        {
+          "count": 8,
+          "from": 1,
+          "tick": 1,
+          "to": 1
+        },
+        {
+          "count": 8,
+          "from": 0,
+          "tick": 2,
+          "to": 0
+        },
+        {
+          "count": 8,
+          "from": 1,
+          "tick": 2,
+          "to": 1
+        },
+        {
+          "count": 8,
+          "from": 0,
+          "tick": 3,
+          "to": 0
+        },
+        {
+          "count": 8,
+          "from": 1,
+          "tick": 3,
+          "to": 1
+        },
+        {
+          "count": 8,
+          "from": 0,
+          "tick": 4,
+          "to": 0
+        },
+        {
+          "count": 8,
+          "from": 1,
+          "tick": 4,
+          "to": 1
+        }
+      ],
+      "rule": 150,
+      "shape": [
+        4
+      ]
+    },
+    {
+      "certificates": [
+        {
+          "initial_loop_word": 0,
+          "initial_potential_word": 0,
+          "trajectory": [
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            }
+          ]
+        },
+        {
+          "initial_loop_word": 1,
+          "initial_potential_word": 0,
+          "trajectory": [
+            {
+              "edge_word": 8,
+              "loop_word": 1
+            },
+            {
+              "edge_word": 4,
+              "loop_word": 1
+            },
+            {
+              "edge_word": 2,
+              "loop_word": 1
+            },
+            {
+              "edge_word": 1,
+              "loop_word": 1
+            },
+            {
+              "edge_word": 8,
+              "loop_word": 1
+            }
+          ]
+        }
+      ],
+      "loop_transitions": [
+        {
+          "count": 8,
+          "from": 0,
+          "tick": 1,
+          "to": 0
+        },
+        {
+          "count": 8,
+          "from": 1,
+          "tick": 1,
+          "to": 1
+        },
+        {
+          "count": 8,
+          "from": 0,
+          "tick": 2,
+          "to": 0
+        },
+        {
+          "count": 8,
+          "from": 1,
+          "tick": 2,
+          "to": 1
+        },
+        {
+          "count": 8,
+          "from": 0,
+          "tick": 3,
+          "to": 0
+        },
+        {
+          "count": 8,
+          "from": 1,
+          "tick": 3,
+          "to": 1
+        },
+        {
+          "count": 8,
+          "from": 0,
+          "tick": 4,
+          "to": 0
+        },
+        {
+          "count": 8,
+          "from": 1,
+          "tick": 4,
+          "to": 1
+        }
+      ],
+      "rule": 170,
+      "shape": [
+        4
+      ]
+    },
+    {
+      "certificates": [
+        {
+          "initial_loop_word": 0,
+          "initial_potential_word": 0,
+          "trajectory": [
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            }
+          ]
+        },
+        {
+          "initial_loop_word": 1,
+          "initial_potential_word": 0,
+          "trajectory": [
+            {
+              "edge_word": 8,
+              "loop_word": 1
+            },
+            {
+              "edge_word": 13,
+              "loop_word": 1
+            },
+            {
+              "edge_word": 13,
+              "loop_word": 1
+            },
+            {
+              "edge_word": 13,
+              "loop_word": 1
+            },
+            {
+              "edge_word": 13,
+              "loop_word": 1
+            }
+          ]
+        }
+      ],
+      "loop_transitions": [
+        {
+          "count": 8,
+          "from": 0,
+          "tick": 1,
+          "to": 0
+        },
+        {
+          "count": 8,
+          "from": 1,
+          "tick": 1,
+          "to": 1
+        },
+        {
+          "count": 8,
+          "from": 0,
+          "tick": 2,
+          "to": 0
+        },
+        {
+          "count": 8,
+          "from": 1,
+          "tick": 2,
+          "to": 1
+        },
+        {
+          "count": 8,
+          "from": 0,
+          "tick": 3,
+          "to": 0
+        },
+        {
+          "count": 8,
+          "from": 1,
+          "tick": 3,
+          "to": 1
+        },
+        {
+          "count": 8,
+          "from": 0,
+          "tick": 4,
+          "to": 0
+        },
+        {
+          "count": 8,
+          "from": 1,
+          "tick": 4,
+          "to": 1
+        }
+      ],
+      "rule": 178,
+      "shape": [
+        4
+      ]
+    },
+    {
+      "certificates": [
+        {
+          "initial_loop_word": 0,
+          "initial_potential_word": 0,
+          "trajectory": [
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            }
+          ]
+        },
+        {
+          "initial_loop_word": 1,
+          "initial_potential_word": 0,
+          "trajectory": [
+            {
+              "edge_word": 8,
+              "loop_word": 1
+            },
+            {
+              "edge_word": 8,
+              "loop_word": 1
+            },
+            {
+              "edge_word": 8,
+              "loop_word": 1
+            },
+            {
+              "edge_word": 8,
+              "loop_word": 1
+            },
+            {
+              "edge_word": 8,
+              "loop_word": 1
+            }
+          ]
+        }
+      ],
+      "loop_transitions": [
+        {
+          "count": 8,
+          "from": 0,
+          "tick": 1,
+          "to": 0
+        },
+        {
+          "count": 8,
+          "from": 1,
+          "tick": 1,
+          "to": 1
+        },
+        {
+          "count": 8,
+          "from": 0,
+          "tick": 2,
+          "to": 0
+        },
+        {
+          "count": 8,
+          "from": 1,
+          "tick": 2,
+          "to": 1
+        },
+        {
+          "count": 8,
+          "from": 0,
+          "tick": 3,
+          "to": 0
+        },
+        {
+          "count": 8,
+          "from": 1,
+          "tick": 3,
+          "to": 1
+        },
+        {
+          "count": 8,
+          "from": 0,
+          "tick": 4,
+          "to": 0
+        },
+        {
+          "count": 8,
+          "from": 1,
+          "tick": 4,
+          "to": 1
+        }
+      ],
+      "rule": 204,
+      "shape": [
+        4
+      ]
+    },
+    {
+      "certificates": [
+        {
+          "initial_loop_word": 0,
+          "initial_potential_word": 0,
+          "trajectory": [
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            }
+          ]
+        },
+        {
+          "initial_loop_word": 1,
+          "initial_potential_word": 0,
+          "trajectory": [
+            {
+              "edge_word": 8,
+              "loop_word": 1
+            },
+            {
+              "edge_word": 1,
+              "loop_word": 1
+            },
+            {
+              "edge_word": 2,
+              "loop_word": 1
+            },
+            {
+              "edge_word": 4,
+              "loop_word": 1
+            },
+            {
+              "edge_word": 8,
+              "loop_word": 1
+            }
+          ]
+        }
+      ],
+      "loop_transitions": [
+        {
+          "count": 8,
+          "from": 0,
+          "tick": 1,
+          "to": 0
+        },
+        {
+          "count": 8,
+          "from": 1,
+          "tick": 1,
+          "to": 1
+        },
+        {
+          "count": 8,
+          "from": 0,
+          "tick": 2,
+          "to": 0
+        },
+        {
+          "count": 8,
+          "from": 1,
+          "tick": 2,
+          "to": 1
+        },
+        {
+          "count": 8,
+          "from": 0,
+          "tick": 3,
+          "to": 0
+        },
+        {
+          "count": 8,
+          "from": 1,
+          "tick": 3,
+          "to": 1
+        },
+        {
+          "count": 8,
+          "from": 0,
+          "tick": 4,
+          "to": 0
+        },
+        {
+          "count": 8,
+          "from": 1,
+          "tick": 4,
+          "to": 1
+        }
+      ],
+      "rule": 212,
+      "shape": [
+        4
+      ]
+    },
+    {
+      "certificates": [
+        {
+          "initial_loop_word": 0,
+          "initial_potential_word": 0,
+          "trajectory": [
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            }
+          ]
+        },
+        {
+          "initial_loop_word": 1,
+          "initial_potential_word": 0,
+          "trajectory": [
+            {
+              "edge_word": 8,
+              "loop_word": 1
+            },
+            {
+              "edge_word": 8,
+              "loop_word": 1
+            },
+            {
+              "edge_word": 8,
+              "loop_word": 1
+            },
+            {
+              "edge_word": 8,
+              "loop_word": 1
+            },
+            {
+              "edge_word": 8,
+              "loop_word": 1
+            }
+          ]
+        }
+      ],
+      "loop_transitions": [
+        {
+          "count": 8,
+          "from": 0,
+          "tick": 1,
+          "to": 0
+        },
+        {
+          "count": 8,
+          "from": 1,
+          "tick": 1,
+          "to": 1
+        },
+        {
+          "count": 8,
+          "from": 0,
+          "tick": 2,
+          "to": 0
+        },
+        {
+          "count": 8,
+          "from": 1,
+          "tick": 2,
+          "to": 1
+        },
+        {
+          "count": 8,
+          "from": 0,
+          "tick": 3,
+          "to": 0
+        },
+        {
+          "count": 8,
+          "from": 1,
+          "tick": 3,
+          "to": 1
+        },
+        {
+          "count": 8,
+          "from": 0,
+          "tick": 4,
+          "to": 0
+        },
+        {
+          "count": 8,
+          "from": 1,
+          "tick": 4,
+          "to": 1
+        }
+      ],
+      "rule": 232,
+      "shape": [
+        4
+      ]
+    },
+    {
+      "certificates": [
+        {
+          "initial_loop_word": 0,
+          "initial_potential_word": 0,
+          "trajectory": [
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            }
+          ]
+        },
+        {
+          "initial_loop_word": 1,
+          "initial_potential_word": 0,
+          "trajectory": [
+            {
+              "edge_word": 8,
+              "loop_word": 1
+            },
+            {
+              "edge_word": 1,
+              "loop_word": 1
+            },
+            {
+              "edge_word": 2,
+              "loop_word": 1
+            },
+            {
+              "edge_word": 4,
+              "loop_word": 1
+            },
+            {
+              "edge_word": 8,
+              "loop_word": 1
+            }
+          ]
+        }
+      ],
+      "loop_transitions": [
+        {
+          "count": 8,
+          "from": 0,
+          "tick": 1,
+          "to": 0
+        },
+        {
+          "count": 8,
+          "from": 1,
+          "tick": 1,
+          "to": 1
+        },
+        {
+          "count": 8,
+          "from": 0,
+          "tick": 2,
+          "to": 0
+        },
+        {
+          "count": 8,
+          "from": 1,
+          "tick": 2,
+          "to": 1
+        },
+        {
+          "count": 8,
+          "from": 0,
+          "tick": 3,
+          "to": 0
+        },
+        {
+          "count": 8,
+          "from": 1,
+          "tick": 3,
+          "to": 1
+        },
+        {
+          "count": 8,
+          "from": 0,
+          "tick": 4,
+          "to": 0
+        },
+        {
+          "count": 8,
+          "from": 1,
+          "tick": 4,
+          "to": 1
+        }
+      ],
+      "rule": 240,
+      "shape": [
+        4
+      ]
+    },
+    {
+      "certificates": [
+        {
+          "initial_loop_word": 0,
+          "initial_potential_word": 0,
+          "trajectory": [
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            }
+          ]
+        },
+        {
+          "initial_loop_word": 1,
+          "initial_potential_word": 0,
+          "trajectory": [
+            {
+              "edge_word": 8,
+              "loop_word": 1
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            }
+          ]
+        }
+      ],
+      "loop_transitions": [
+        {
+          "count": 8,
+          "from": 0,
+          "tick": 1,
+          "to": 0
+        },
+        {
+          "count": 8,
+          "from": 1,
+          "tick": 1,
+          "to": 0
+        },
+        {
+          "count": 16,
+          "from": 0,
+          "tick": 2,
+          "to": 0
+        },
+        {
+          "count": 16,
+          "from": 0,
+          "tick": 3,
+          "to": 0
+        },
+        {
+          "count": 16,
+          "from": 0,
+          "tick": 4,
+          "to": 0
+        }
+      ],
+      "rule": 255,
+      "shape": [
+        4
+      ]
+    },
+    {
+      "certificates": [
+        {
+          "initial_loop_word": 0,
+          "initial_potential_word": 0,
+          "trajectory": [
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            }
+          ]
+        },
+        {
+          "initial_loop_word": 1,
+          "initial_potential_word": 0,
+          "trajectory": [
+            {
+              "edge_word": 80,
+              "loop_word": 1
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            }
+          ]
+        },
+        {
+          "initial_loop_word": 2,
+          "initial_potential_word": 0,
+          "trajectory": [
+            {
+              "edge_word": 136,
+              "loop_word": 2
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            }
+          ]
+        },
+        {
+          "initial_loop_word": 3,
+          "initial_potential_word": 0,
+          "trajectory": [
+            {
+              "edge_word": 216,
+              "loop_word": 3
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            }
+          ]
+        }
+      ],
+      "loop_transitions": [
+        {
+          "count": 8,
+          "from": 0,
+          "tick": 1,
+          "to": 0
+        },
+        {
+          "count": 8,
+          "from": 1,
+          "tick": 1,
+          "to": 0
+        },
+        {
+          "count": 8,
+          "from": 2,
+          "tick": 1,
+          "to": 0
+        },
+        {
+          "count": 8,
+          "from": 3,
+          "tick": 1,
+          "to": 0
+        },
+        {
+          "count": 32,
+          "from": 0,
+          "tick": 2,
+          "to": 0
+        },
+        {
+          "count": 32,
+          "from": 0,
+          "tick": 3,
+          "to": 0
+        },
+        {
+          "count": 32,
+          "from": 0,
+          "tick": 4,
+          "to": 0
+        }
+      ],
+      "rule": 0,
+      "shape": [
+        2,
+        2
+      ]
+    },
+    {
+      "certificates": [
+        {
+          "initial_loop_word": 0,
+          "initial_potential_word": 0,
+          "trajectory": [
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            }
+          ]
+        },
+        {
+          "initial_loop_word": 1,
+          "initial_potential_word": 0,
+          "trajectory": [
+            {
+              "edge_word": 80,
+              "loop_word": 1
+            },
+            {
+              "edge_word": 5,
+              "loop_word": 1
+            },
+            {
+              "edge_word": 80,
+              "loop_word": 1
+            },
+            {
+              "edge_word": 5,
+              "loop_word": 1
+            },
+            {
+              "edge_word": 80,
+              "loop_word": 1
+            }
+          ]
+        },
+        {
+          "initial_loop_word": 2,
+          "initial_potential_word": 0,
+          "trajectory": [
+            {
+              "edge_word": 136,
+              "loop_word": 2
+            },
+            {
+              "edge_word": 34,
+              "loop_word": 2
+            },
+            {
+              "edge_word": 136,
+              "loop_word": 2
+            },
+            {
+              "edge_word": 34,
+              "loop_word": 2
+            },
+            {
+              "edge_word": 136,
+              "loop_word": 2
+            }
+          ]
+        },
+        {
+          "initial_loop_word": 3,
+          "initial_potential_word": 0,
+          "trajectory": [
+            {
+              "edge_word": 216,
+              "loop_word": 3
+            },
+            {
+              "edge_word": 39,
+              "loop_word": 3
+            },
+            {
+              "edge_word": 216,
+              "loop_word": 3
+            },
+            {
+              "edge_word": 39,
+              "loop_word": 3
+            },
+            {
+              "edge_word": 216,
+              "loop_word": 3
+            }
+          ]
+        }
+      ],
+      "loop_transitions": [
+        {
+          "count": 8,
+          "from": 0,
+          "tick": 1,
+          "to": 0
+        },
+        {
+          "count": 8,
+          "from": 1,
+          "tick": 1,
+          "to": 1
+        },
+        {
+          "count": 8,
+          "from": 2,
+          "tick": 1,
+          "to": 2
+        },
+        {
+          "count": 8,
+          "from": 3,
+          "tick": 1,
+          "to": 3
+        },
+        {
+          "count": 8,
+          "from": 0,
+          "tick": 2,
+          "to": 0
+        },
+        {
+          "count": 8,
+          "from": 1,
+          "tick": 2,
+          "to": 1
+        },
+        {
+          "count": 8,
+          "from": 2,
+          "tick": 2,
+          "to": 2
+        },
+        {
+          "count": 8,
+          "from": 3,
+          "tick": 2,
+          "to": 3
+        },
+        {
+          "count": 8,
+          "from": 0,
+          "tick": 3,
+          "to": 0
+        },
+        {
+          "count": 8,
+          "from": 1,
+          "tick": 3,
+          "to": 1
+        },
+        {
+          "count": 8,
+          "from": 2,
+          "tick": 3,
+          "to": 2
+        },
+        {
+          "count": 8,
+          "from": 3,
+          "tick": 3,
+          "to": 3
+        },
+        {
+          "count": 8,
+          "from": 0,
+          "tick": 4,
+          "to": 0
+        },
+        {
+          "count": 8,
+          "from": 1,
+          "tick": 4,
+          "to": 1
+        },
+        {
+          "count": 8,
+          "from": 2,
+          "tick": 4,
+          "to": 2
+        },
+        {
+          "count": 8,
+          "from": 3,
+          "tick": 4,
+          "to": 3
+        }
+      ],
+      "rule": 142,
+      "shape": [
+        2,
+        2
+      ]
+    },
+    {
+      "certificates": [
+        {
+          "initial_loop_word": 0,
+          "initial_potential_word": 0,
+          "trajectory": [
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            }
+          ]
+        },
+        {
+          "initial_loop_word": 1,
+          "initial_potential_word": 0,
+          "trajectory": [
+            {
+              "edge_word": 80,
+              "loop_word": 1
+            },
+            {
+              "edge_word": 80,
+              "loop_word": 1
+            },
+            {
+              "edge_word": 80,
+              "loop_word": 1
+            },
+            {
+              "edge_word": 80,
+              "loop_word": 1
+            },
+            {
+              "edge_word": 80,
+              "loop_word": 1
+            }
+          ]
+        },
+        {
+          "initial_loop_word": 2,
+          "initial_potential_word": 0,
+          "trajectory": [
+            {
+              "edge_word": 136,
+              "loop_word": 2
+            },
+            {
+              "edge_word": 136,
+              "loop_word": 2
+            },
+            {
+              "edge_word": 136,
+              "loop_word": 2
+            },
+            {
+              "edge_word": 136,
+              "loop_word": 2
+            },
+            {
+              "edge_word": 136,
+              "loop_word": 2
+            }
+          ]
+        },
+        {
+          "initial_loop_word": 3,
+          "initial_potential_word": 0,
+          "trajectory": [
+            {
+              "edge_word": 216,
+              "loop_word": 3
+            },
+            {
+              "edge_word": 216,
+              "loop_word": 3
+            },
+            {
+              "edge_word": 216,
+              "loop_word": 3
+            },
+            {
+              "edge_word": 216,
+              "loop_word": 3
+            },
+            {
+              "edge_word": 216,
+              "loop_word": 3
+            }
+          ]
+        }
+      ],
+      "loop_transitions": [
+        {
+          "count": 8,
+          "from": 0,
+          "tick": 1,
+          "to": 0
+        },
+        {
+          "count": 8,
+          "from": 1,
+          "tick": 1,
+          "to": 1
+        },
+        {
+          "count": 8,
+          "from": 2,
+          "tick": 1,
+          "to": 2
+        },
+        {
+          "count": 8,
+          "from": 3,
+          "tick": 1,
+          "to": 3
+        },
+        {
+          "count": 8,
+          "from": 0,
+          "tick": 2,
+          "to": 0
+        },
+        {
+          "count": 8,
+          "from": 1,
+          "tick": 2,
+          "to": 1
+        },
+        {
+          "count": 8,
+          "from": 2,
+          "tick": 2,
+          "to": 2
+        },
+        {
+          "count": 8,
+          "from": 3,
+          "tick": 2,
+          "to": 3
+        },
+        {
+          "count": 8,
+          "from": 0,
+          "tick": 3,
+          "to": 0
+        },
+        {
+          "count": 8,
+          "from": 1,
+          "tick": 3,
+          "to": 1
+        },
+        {
+          "count": 8,
+          "from": 2,
+          "tick": 3,
+          "to": 2
+        },
+        {
+          "count": 8,
+          "from": 3,
+          "tick": 3,
+          "to": 3
+        },
+        {
+          "count": 8,
+          "from": 0,
+          "tick": 4,
+          "to": 0
+        },
+        {
+          "count": 8,
+          "from": 1,
+          "tick": 4,
+          "to": 1
+        },
+        {
+          "count": 8,
+          "from": 2,
+          "tick": 4,
+          "to": 2
+        },
+        {
+          "count": 8,
+          "from": 3,
+          "tick": 4,
+          "to": 3
+        }
+      ],
+      "rule": 150,
+      "shape": [
+        2,
+        2
+      ]
+    },
+    {
+      "certificates": [
+        {
+          "initial_loop_word": 0,
+          "initial_potential_word": 0,
+          "trajectory": [
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            }
+          ]
+        },
+        {
+          "initial_loop_word": 1,
+          "initial_potential_word": 0,
+          "trajectory": [
+            {
+              "edge_word": 80,
+              "loop_word": 1
+            },
+            {
+              "edge_word": 5,
+              "loop_word": 1
+            },
+            {
+              "edge_word": 80,
+              "loop_word": 1
+            },
+            {
+              "edge_word": 5,
+              "loop_word": 1
+            },
+            {
+              "edge_word": 80,
+              "loop_word": 1
+            }
+          ]
+        },
+        {
+          "initial_loop_word": 2,
+          "initial_potential_word": 0,
+          "trajectory": [
+            {
+              "edge_word": 136,
+              "loop_word": 2
+            },
+            {
+              "edge_word": 34,
+              "loop_word": 2
+            },
+            {
+              "edge_word": 136,
+              "loop_word": 2
+            },
+            {
+              "edge_word": 34,
+              "loop_word": 2
+            },
+            {
+              "edge_word": 136,
+              "loop_word": 2
+            }
+          ]
+        },
+        {
+          "initial_loop_word": 3,
+          "initial_potential_word": 0,
+          "trajectory": [
+            {
+              "edge_word": 216,
+              "loop_word": 3
+            },
+            {
+              "edge_word": 39,
+              "loop_word": 3
+            },
+            {
+              "edge_word": 216,
+              "loop_word": 3
+            },
+            {
+              "edge_word": 39,
+              "loop_word": 3
+            },
+            {
+              "edge_word": 216,
+              "loop_word": 3
+            }
+          ]
+        }
+      ],
+      "loop_transitions": [
+        {
+          "count": 8,
+          "from": 0,
+          "tick": 1,
+          "to": 0
+        },
+        {
+          "count": 8,
+          "from": 1,
+          "tick": 1,
+          "to": 1
+        },
+        {
+          "count": 8,
+          "from": 2,
+          "tick": 1,
+          "to": 2
+        },
+        {
+          "count": 8,
+          "from": 3,
+          "tick": 1,
+          "to": 3
+        },
+        {
+          "count": 8,
+          "from": 0,
+          "tick": 2,
+          "to": 0
+        },
+        {
+          "count": 8,
+          "from": 1,
+          "tick": 2,
+          "to": 1
+        },
+        {
+          "count": 8,
+          "from": 2,
+          "tick": 2,
+          "to": 2
+        },
+        {
+          "count": 8,
+          "from": 3,
+          "tick": 2,
+          "to": 3
+        },
+        {
+          "count": 8,
+          "from": 0,
+          "tick": 3,
+          "to": 0
+        },
+        {
+          "count": 8,
+          "from": 1,
+          "tick": 3,
+          "to": 1
+        },
+        {
+          "count": 8,
+          "from": 2,
+          "tick": 3,
+          "to": 2
+        },
+        {
+          "count": 8,
+          "from": 3,
+          "tick": 3,
+          "to": 3
+        },
+        {
+          "count": 8,
+          "from": 0,
+          "tick": 4,
+          "to": 0
+        },
+        {
+          "count": 8,
+          "from": 1,
+          "tick": 4,
+          "to": 1
+        },
+        {
+          "count": 8,
+          "from": 2,
+          "tick": 4,
+          "to": 2
+        },
+        {
+          "count": 8,
+          "from": 3,
+          "tick": 4,
+          "to": 3
+        }
+      ],
+      "rule": 170,
+      "shape": [
+        2,
+        2
+      ]
+    },
+    {
+      "certificates": [
+        {
+          "initial_loop_word": 0,
+          "initial_potential_word": 0,
+          "trajectory": [
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            }
+          ]
+        },
+        {
+          "initial_loop_word": 1,
+          "initial_potential_word": 0,
+          "trajectory": [
+            {
+              "edge_word": 80,
+              "loop_word": 1
+            },
+            {
+              "edge_word": 80,
+              "loop_word": 1
+            },
+            {
+              "edge_word": 80,
+              "loop_word": 1
+            },
+            {
+              "edge_word": 80,
+              "loop_word": 1
+            },
+            {
+              "edge_word": 80,
+              "loop_word": 1
+            }
+          ]
+        },
+        {
+          "initial_loop_word": 2,
+          "initial_potential_word": 0,
+          "trajectory": [
+            {
+              "edge_word": 136,
+              "loop_word": 2
+            },
+            {
+              "edge_word": 136,
+              "loop_word": 2
+            },
+            {
+              "edge_word": 136,
+              "loop_word": 2
+            },
+            {
+              "edge_word": 136,
+              "loop_word": 2
+            },
+            {
+              "edge_word": 136,
+              "loop_word": 2
+            }
+          ]
+        },
+        {
+          "initial_loop_word": 3,
+          "initial_potential_word": 0,
+          "trajectory": [
+            {
+              "edge_word": 216,
+              "loop_word": 3
+            },
+            {
+              "edge_word": 216,
+              "loop_word": 3
+            },
+            {
+              "edge_word": 216,
+              "loop_word": 3
+            },
+            {
+              "edge_word": 216,
+              "loop_word": 3
+            },
+            {
+              "edge_word": 216,
+              "loop_word": 3
+            }
+          ]
+        }
+      ],
+      "loop_transitions": [
+        {
+          "count": 8,
+          "from": 0,
+          "tick": 1,
+          "to": 0
+        },
+        {
+          "count": 8,
+          "from": 1,
+          "tick": 1,
+          "to": 1
+        },
+        {
+          "count": 8,
+          "from": 2,
+          "tick": 1,
+          "to": 2
+        },
+        {
+          "count": 8,
+          "from": 3,
+          "tick": 1,
+          "to": 3
+        },
+        {
+          "count": 8,
+          "from": 0,
+          "tick": 2,
+          "to": 0
+        },
+        {
+          "count": 8,
+          "from": 1,
+          "tick": 2,
+          "to": 1
+        },
+        {
+          "count": 8,
+          "from": 2,
+          "tick": 2,
+          "to": 2
+        },
+        {
+          "count": 8,
+          "from": 3,
+          "tick": 2,
+          "to": 3
+        },
+        {
+          "count": 8,
+          "from": 0,
+          "tick": 3,
+          "to": 0
+        },
+        {
+          "count": 8,
+          "from": 1,
+          "tick": 3,
+          "to": 1
+        },
+        {
+          "count": 8,
+          "from": 2,
+          "tick": 3,
+          "to": 2
+        },
+        {
+          "count": 8,
+          "from": 3,
+          "tick": 3,
+          "to": 3
+        },
+        {
+          "count": 8,
+          "from": 0,
+          "tick": 4,
+          "to": 0
+        },
+        {
+          "count": 8,
+          "from": 1,
+          "tick": 4,
+          "to": 1
+        },
+        {
+          "count": 8,
+          "from": 2,
+          "tick": 4,
+          "to": 2
+        },
+        {
+          "count": 8,
+          "from": 3,
+          "tick": 4,
+          "to": 3
+        }
+      ],
+      "rule": 178,
+      "shape": [
+        2,
+        2
+      ]
+    },
+    {
+      "certificates": [
+        {
+          "initial_loop_word": 0,
+          "initial_potential_word": 0,
+          "trajectory": [
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            }
+          ]
+        },
+        {
+          "initial_loop_word": 1,
+          "initial_potential_word": 0,
+          "trajectory": [
+            {
+              "edge_word": 80,
+              "loop_word": 1
+            },
+            {
+              "edge_word": 80,
+              "loop_word": 1
+            },
+            {
+              "edge_word": 80,
+              "loop_word": 1
+            },
+            {
+              "edge_word": 80,
+              "loop_word": 1
+            },
+            {
+              "edge_word": 80,
+              "loop_word": 1
+            }
+          ]
+        },
+        {
+          "initial_loop_word": 2,
+          "initial_potential_word": 0,
+          "trajectory": [
+            {
+              "edge_word": 136,
+              "loop_word": 2
+            },
+            {
+              "edge_word": 136,
+              "loop_word": 2
+            },
+            {
+              "edge_word": 136,
+              "loop_word": 2
+            },
+            {
+              "edge_word": 136,
+              "loop_word": 2
+            },
+            {
+              "edge_word": 136,
+              "loop_word": 2
+            }
+          ]
+        },
+        {
+          "initial_loop_word": 3,
+          "initial_potential_word": 0,
+          "trajectory": [
+            {
+              "edge_word": 216,
+              "loop_word": 3
+            },
+            {
+              "edge_word": 216,
+              "loop_word": 3
+            },
+            {
+              "edge_word": 216,
+              "loop_word": 3
+            },
+            {
+              "edge_word": 216,
+              "loop_word": 3
+            },
+            {
+              "edge_word": 216,
+              "loop_word": 3
+            }
+          ]
+        }
+      ],
+      "loop_transitions": [
+        {
+          "count": 8,
+          "from": 0,
+          "tick": 1,
+          "to": 0
+        },
+        {
+          "count": 8,
+          "from": 1,
+          "tick": 1,
+          "to": 1
+        },
+        {
+          "count": 8,
+          "from": 2,
+          "tick": 1,
+          "to": 2
+        },
+        {
+          "count": 8,
+          "from": 3,
+          "tick": 1,
+          "to": 3
+        },
+        {
+          "count": 8,
+          "from": 0,
+          "tick": 2,
+          "to": 0
+        },
+        {
+          "count": 8,
+          "from": 1,
+          "tick": 2,
+          "to": 1
+        },
+        {
+          "count": 8,
+          "from": 2,
+          "tick": 2,
+          "to": 2
+        },
+        {
+          "count": 8,
+          "from": 3,
+          "tick": 2,
+          "to": 3
+        },
+        {
+          "count": 8,
+          "from": 0,
+          "tick": 3,
+          "to": 0
+        },
+        {
+          "count": 8,
+          "from": 1,
+          "tick": 3,
+          "to": 1
+        },
+        {
+          "count": 8,
+          "from": 2,
+          "tick": 3,
+          "to": 2
+        },
+        {
+          "count": 8,
+          "from": 3,
+          "tick": 3,
+          "to": 3
+        },
+        {
+          "count": 8,
+          "from": 0,
+          "tick": 4,
+          "to": 0
+        },
+        {
+          "count": 8,
+          "from": 1,
+          "tick": 4,
+          "to": 1
+        },
+        {
+          "count": 8,
+          "from": 2,
+          "tick": 4,
+          "to": 2
+        },
+        {
+          "count": 8,
+          "from": 3,
+          "tick": 4,
+          "to": 3
+        }
+      ],
+      "rule": 204,
+      "shape": [
+        2,
+        2
+      ]
+    },
+    {
+      "certificates": [
+        {
+          "initial_loop_word": 0,
+          "initial_potential_word": 0,
+          "trajectory": [
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            }
+          ]
+        },
+        {
+          "initial_loop_word": 1,
+          "initial_potential_word": 0,
+          "trajectory": [
+            {
+              "edge_word": 80,
+              "loop_word": 1
+            },
+            {
+              "edge_word": 5,
+              "loop_word": 1
+            },
+            {
+              "edge_word": 80,
+              "loop_word": 1
+            },
+            {
+              "edge_word": 5,
+              "loop_word": 1
+            },
+            {
+              "edge_word": 80,
+              "loop_word": 1
+            }
+          ]
+        },
+        {
+          "initial_loop_word": 2,
+          "initial_potential_word": 0,
+          "trajectory": [
+            {
+              "edge_word": 136,
+              "loop_word": 2
+            },
+            {
+              "edge_word": 34,
+              "loop_word": 2
+            },
+            {
+              "edge_word": 136,
+              "loop_word": 2
+            },
+            {
+              "edge_word": 34,
+              "loop_word": 2
+            },
+            {
+              "edge_word": 136,
+              "loop_word": 2
+            }
+          ]
+        },
+        {
+          "initial_loop_word": 3,
+          "initial_potential_word": 0,
+          "trajectory": [
+            {
+              "edge_word": 216,
+              "loop_word": 3
+            },
+            {
+              "edge_word": 39,
+              "loop_word": 3
+            },
+            {
+              "edge_word": 216,
+              "loop_word": 3
+            },
+            {
+              "edge_word": 39,
+              "loop_word": 3
+            },
+            {
+              "edge_word": 216,
+              "loop_word": 3
+            }
+          ]
+        }
+      ],
+      "loop_transitions": [
+        {
+          "count": 8,
+          "from": 0,
+          "tick": 1,
+          "to": 0
+        },
+        {
+          "count": 8,
+          "from": 1,
+          "tick": 1,
+          "to": 1
+        },
+        {
+          "count": 8,
+          "from": 2,
+          "tick": 1,
+          "to": 2
+        },
+        {
+          "count": 8,
+          "from": 3,
+          "tick": 1,
+          "to": 3
+        },
+        {
+          "count": 8,
+          "from": 0,
+          "tick": 2,
+          "to": 0
+        },
+        {
+          "count": 8,
+          "from": 1,
+          "tick": 2,
+          "to": 1
+        },
+        {
+          "count": 8,
+          "from": 2,
+          "tick": 2,
+          "to": 2
+        },
+        {
+          "count": 8,
+          "from": 3,
+          "tick": 2,
+          "to": 3
+        },
+        {
+          "count": 8,
+          "from": 0,
+          "tick": 3,
+          "to": 0
+        },
+        {
+          "count": 8,
+          "from": 1,
+          "tick": 3,
+          "to": 1
+        },
+        {
+          "count": 8,
+          "from": 2,
+          "tick": 3,
+          "to": 2
+        },
+        {
+          "count": 8,
+          "from": 3,
+          "tick": 3,
+          "to": 3
+        },
+        {
+          "count": 8,
+          "from": 0,
+          "tick": 4,
+          "to": 0
+        },
+        {
+          "count": 8,
+          "from": 1,
+          "tick": 4,
+          "to": 1
+        },
+        {
+          "count": 8,
+          "from": 2,
+          "tick": 4,
+          "to": 2
+        },
+        {
+          "count": 8,
+          "from": 3,
+          "tick": 4,
+          "to": 3
+        }
+      ],
+      "rule": 212,
+      "shape": [
+        2,
+        2
+      ]
+    },
+    {
+      "certificates": [
+        {
+          "initial_loop_word": 0,
+          "initial_potential_word": 0,
+          "trajectory": [
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            }
+          ]
+        },
+        {
+          "initial_loop_word": 1,
+          "initial_potential_word": 0,
+          "trajectory": [
+            {
+              "edge_word": 80,
+              "loop_word": 1
+            },
+            {
+              "edge_word": 80,
+              "loop_word": 1
+            },
+            {
+              "edge_word": 80,
+              "loop_word": 1
+            },
+            {
+              "edge_word": 80,
+              "loop_word": 1
+            },
+            {
+              "edge_word": 80,
+              "loop_word": 1
+            }
+          ]
+        },
+        {
+          "initial_loop_word": 2,
+          "initial_potential_word": 0,
+          "trajectory": [
+            {
+              "edge_word": 136,
+              "loop_word": 2
+            },
+            {
+              "edge_word": 136,
+              "loop_word": 2
+            },
+            {
+              "edge_word": 136,
+              "loop_word": 2
+            },
+            {
+              "edge_word": 136,
+              "loop_word": 2
+            },
+            {
+              "edge_word": 136,
+              "loop_word": 2
+            }
+          ]
+        },
+        {
+          "initial_loop_word": 3,
+          "initial_potential_word": 0,
+          "trajectory": [
+            {
+              "edge_word": 216,
+              "loop_word": 3
+            },
+            {
+              "edge_word": 216,
+              "loop_word": 3
+            },
+            {
+              "edge_word": 216,
+              "loop_word": 3
+            },
+            {
+              "edge_word": 216,
+              "loop_word": 3
+            },
+            {
+              "edge_word": 216,
+              "loop_word": 3
+            }
+          ]
+        }
+      ],
+      "loop_transitions": [
+        {
+          "count": 8,
+          "from": 0,
+          "tick": 1,
+          "to": 0
+        },
+        {
+          "count": 8,
+          "from": 1,
+          "tick": 1,
+          "to": 1
+        },
+        {
+          "count": 8,
+          "from": 2,
+          "tick": 1,
+          "to": 2
+        },
+        {
+          "count": 8,
+          "from": 3,
+          "tick": 1,
+          "to": 3
+        },
+        {
+          "count": 8,
+          "from": 0,
+          "tick": 2,
+          "to": 0
+        },
+        {
+          "count": 8,
+          "from": 1,
+          "tick": 2,
+          "to": 1
+        },
+        {
+          "count": 8,
+          "from": 2,
+          "tick": 2,
+          "to": 2
+        },
+        {
+          "count": 8,
+          "from": 3,
+          "tick": 2,
+          "to": 3
+        },
+        {
+          "count": 8,
+          "from": 0,
+          "tick": 3,
+          "to": 0
+        },
+        {
+          "count": 8,
+          "from": 1,
+          "tick": 3,
+          "to": 1
+        },
+        {
+          "count": 8,
+          "from": 2,
+          "tick": 3,
+          "to": 2
+        },
+        {
+          "count": 8,
+          "from": 3,
+          "tick": 3,
+          "to": 3
+        },
+        {
+          "count": 8,
+          "from": 0,
+          "tick": 4,
+          "to": 0
+        },
+        {
+          "count": 8,
+          "from": 1,
+          "tick": 4,
+          "to": 1
+        },
+        {
+          "count": 8,
+          "from": 2,
+          "tick": 4,
+          "to": 2
+        },
+        {
+          "count": 8,
+          "from": 3,
+          "tick": 4,
+          "to": 3
+        }
+      ],
+      "rule": 232,
+      "shape": [
+        2,
+        2
+      ]
+    },
+    {
+      "certificates": [
+        {
+          "initial_loop_word": 0,
+          "initial_potential_word": 0,
+          "trajectory": [
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            }
+          ]
+        },
+        {
+          "initial_loop_word": 1,
+          "initial_potential_word": 0,
+          "trajectory": [
+            {
+              "edge_word": 80,
+              "loop_word": 1
+            },
+            {
+              "edge_word": 5,
+              "loop_word": 1
+            },
+            {
+              "edge_word": 80,
+              "loop_word": 1
+            },
+            {
+              "edge_word": 5,
+              "loop_word": 1
+            },
+            {
+              "edge_word": 80,
+              "loop_word": 1
+            }
+          ]
+        },
+        {
+          "initial_loop_word": 2,
+          "initial_potential_word": 0,
+          "trajectory": [
+            {
+              "edge_word": 136,
+              "loop_word": 2
+            },
+            {
+              "edge_word": 34,
+              "loop_word": 2
+            },
+            {
+              "edge_word": 136,
+              "loop_word": 2
+            },
+            {
+              "edge_word": 34,
+              "loop_word": 2
+            },
+            {
+              "edge_word": 136,
+              "loop_word": 2
+            }
+          ]
+        },
+        {
+          "initial_loop_word": 3,
+          "initial_potential_word": 0,
+          "trajectory": [
+            {
+              "edge_word": 216,
+              "loop_word": 3
+            },
+            {
+              "edge_word": 39,
+              "loop_word": 3
+            },
+            {
+              "edge_word": 216,
+              "loop_word": 3
+            },
+            {
+              "edge_word": 39,
+              "loop_word": 3
+            },
+            {
+              "edge_word": 216,
+              "loop_word": 3
+            }
+          ]
+        }
+      ],
+      "loop_transitions": [
+        {
+          "count": 8,
+          "from": 0,
+          "tick": 1,
+          "to": 0
+        },
+        {
+          "count": 8,
+          "from": 1,
+          "tick": 1,
+          "to": 1
+        },
+        {
+          "count": 8,
+          "from": 2,
+          "tick": 1,
+          "to": 2
+        },
+        {
+          "count": 8,
+          "from": 3,
+          "tick": 1,
+          "to": 3
+        },
+        {
+          "count": 8,
+          "from": 0,
+          "tick": 2,
+          "to": 0
+        },
+        {
+          "count": 8,
+          "from": 1,
+          "tick": 2,
+          "to": 1
+        },
+        {
+          "count": 8,
+          "from": 2,
+          "tick": 2,
+          "to": 2
+        },
+        {
+          "count": 8,
+          "from": 3,
+          "tick": 2,
+          "to": 3
+        },
+        {
+          "count": 8,
+          "from": 0,
+          "tick": 3,
+          "to": 0
+        },
+        {
+          "count": 8,
+          "from": 1,
+          "tick": 3,
+          "to": 1
+        },
+        {
+          "count": 8,
+          "from": 2,
+          "tick": 3,
+          "to": 2
+        },
+        {
+          "count": 8,
+          "from": 3,
+          "tick": 3,
+          "to": 3
+        },
+        {
+          "count": 8,
+          "from": 0,
+          "tick": 4,
+          "to": 0
+        },
+        {
+          "count": 8,
+          "from": 1,
+          "tick": 4,
+          "to": 1
+        },
+        {
+          "count": 8,
+          "from": 2,
+          "tick": 4,
+          "to": 2
+        },
+        {
+          "count": 8,
+          "from": 3,
+          "tick": 4,
+          "to": 3
+        }
+      ],
+      "rule": 240,
+      "shape": [
+        2,
+        2
+      ]
+    },
+    {
+      "certificates": [
+        {
+          "initial_loop_word": 0,
+          "initial_potential_word": 0,
+          "trajectory": [
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            }
+          ]
+        },
+        {
+          "initial_loop_word": 1,
+          "initial_potential_word": 0,
+          "trajectory": [
+            {
+              "edge_word": 80,
+              "loop_word": 1
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            }
+          ]
+        },
+        {
+          "initial_loop_word": 2,
+          "initial_potential_word": 0,
+          "trajectory": [
+            {
+              "edge_word": 136,
+              "loop_word": 2
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            }
+          ]
+        },
+        {
+          "initial_loop_word": 3,
+          "initial_potential_word": 0,
+          "trajectory": [
+            {
+              "edge_word": 216,
+              "loop_word": 3
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            }
+          ]
+        }
+      ],
+      "loop_transitions": [
+        {
+          "count": 8,
+          "from": 0,
+          "tick": 1,
+          "to": 0
+        },
+        {
+          "count": 8,
+          "from": 1,
+          "tick": 1,
+          "to": 0
+        },
+        {
+          "count": 8,
+          "from": 2,
+          "tick": 1,
+          "to": 0
+        },
+        {
+          "count": 8,
+          "from": 3,
+          "tick": 1,
+          "to": 0
+        },
+        {
+          "count": 32,
+          "from": 0,
+          "tick": 2,
+          "to": 0
+        },
+        {
+          "count": 32,
+          "from": 0,
+          "tick": 3,
+          "to": 0
+        },
+        {
+          "count": 32,
+          "from": 0,
+          "tick": 4,
+          "to": 0
+        }
+      ],
+      "rule": 255,
+      "shape": [
+        2,
+        2
+      ]
+    },
+    {
+      "certificates": [
+        {
+          "initial_loop_word": 0,
+          "initial_potential_word": 0,
+          "trajectory": [
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            }
+          ]
+        },
+        {
+          "initial_loop_word": 1,
+          "initial_potential_word": 0,
+          "trajectory": [
+            {
+              "edge_word": 2396160,
+              "loop_word": 1
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            }
+          ]
+        },
+        {
+          "initial_loop_word": 2,
+          "initial_potential_word": 0,
+          "trajectory": [
+            {
+              "edge_word": 4719744,
+              "loop_word": 2
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            }
+          ]
+        },
+        {
+          "initial_loop_word": 3,
+          "initial_potential_word": 0,
+          "trajectory": [
+            {
+              "edge_word": 7115904,
+              "loop_word": 3
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            }
+          ]
+        },
+        {
+          "initial_loop_word": 4,
+          "initial_potential_word": 0,
+          "trajectory": [
+            {
+              "edge_word": 8521760,
+              "loop_word": 4
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            }
+          ]
+        },
+        {
+          "initial_loop_word": 5,
+          "initial_potential_word": 0,
+          "trajectory": [
+            {
+              "edge_word": 10917920,
+              "loop_word": 5
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            }
+          ]
+        },
+        {
+          "initial_loop_word": 6,
+          "initial_potential_word": 0,
+          "trajectory": [
+            {
+              "edge_word": 13241504,
+              "loop_word": 6
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            }
+          ]
+        },
+        {
+          "initial_loop_word": 7,
+          "initial_potential_word": 0,
+          "trajectory": [
+            {
+              "edge_word": 15637664,
+              "loop_word": 7
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            }
+          ]
+        }
+      ],
+      "loop_transitions": [
+        {
+          "count": 128,
+          "from": 0,
+          "tick": 1,
+          "to": 0
+        },
+        {
+          "count": 128,
+          "from": 1,
+          "tick": 1,
+          "to": 0
+        },
+        {
+          "count": 128,
+          "from": 2,
+          "tick": 1,
+          "to": 0
+        },
+        {
+          "count": 128,
+          "from": 3,
+          "tick": 1,
+          "to": 0
+        },
+        {
+          "count": 128,
+          "from": 4,
+          "tick": 1,
+          "to": 0
+        },
+        {
+          "count": 128,
+          "from": 5,
+          "tick": 1,
+          "to": 0
+        },
+        {
+          "count": 128,
+          "from": 6,
+          "tick": 1,
+          "to": 0
+        },
+        {
+          "count": 128,
+          "from": 7,
+          "tick": 1,
+          "to": 0
+        },
+        {
+          "count": 1024,
+          "from": 0,
+          "tick": 2,
+          "to": 0
+        },
+        {
+          "count": 1024,
+          "from": 0,
+          "tick": 3,
+          "to": 0
+        },
+        {
+          "count": 1024,
+          "from": 0,
+          "tick": 4,
+          "to": 0
+        }
+      ],
+      "rule": 0,
+      "shape": [
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "certificates": [
+        {
+          "initial_loop_word": 0,
+          "initial_potential_word": 0,
+          "trajectory": [
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            }
+          ]
+        },
+        {
+          "initial_loop_word": 1,
+          "initial_potential_word": 0,
+          "trajectory": [
+            {
+              "edge_word": 2396160,
+              "loop_word": 1
+            },
+            {
+              "edge_word": 585,
+              "loop_word": 1
+            },
+            {
+              "edge_word": 2396160,
+              "loop_word": 1
+            },
+            {
+              "edge_word": 585,
+              "loop_word": 1
+            },
+            {
+              "edge_word": 2396160,
+              "loop_word": 1
+            }
+          ]
+        },
+        {
+          "initial_loop_word": 2,
+          "initial_potential_word": 0,
+          "trajectory": [
+            {
+              "edge_word": 4719744,
+              "loop_word": 2
+            },
+            {
+              "edge_word": 73746,
+              "loop_word": 2
+            },
+            {
+              "edge_word": 4719744,
+              "loop_word": 2
+            },
+            {
+              "edge_word": 73746,
+              "loop_word": 2
+            },
+            {
+              "edge_word": 4719744,
+              "loop_word": 2
+            }
+          ]
+        },
+        {
+          "initial_loop_word": 3,
+          "initial_potential_word": 0,
+          "trajectory": [
+            {
+              "edge_word": 7115904,
+              "loop_word": 3
+            },
+            {
+              "edge_word": 74331,
+              "loop_word": 3
+            },
+            {
+              "edge_word": 7115904,
+              "loop_word": 3
+            },
+            {
+              "edge_word": 74331,
+              "loop_word": 3
+            },
+            {
+              "edge_word": 7115904,
+              "loop_word": 3
+            }
+          ]
+        },
+        {
+          "initial_loop_word": 4,
+          "initial_potential_word": 0,
+          "trajectory": [
+            {
+              "edge_word": 8521760,
+              "loop_word": 4
+            },
+            {
+              "edge_word": 1065220,
+              "loop_word": 4
+            },
+            {
+              "edge_word": 8521760,
+              "loop_word": 4
+            },
+            {
+              "edge_word": 1065220,
+              "loop_word": 4
+            },
+            {
+              "edge_word": 8521760,
+              "loop_word": 4
+            }
+          ]
+        },
+        {
+          "initial_loop_word": 5,
+          "initial_potential_word": 0,
+          "trajectory": [
+            {
+              "edge_word": 10917920,
+              "loop_word": 5
+            },
+            {
+              "edge_word": 1065805,
+              "loop_word": 5
+            },
+            {
+              "edge_word": 10917920,
+              "loop_word": 5
+            },
+            {
+              "edge_word": 1065805,
+              "loop_word": 5
+            },
+            {
+              "edge_word": 10917920,
+              "loop_word": 5
+            }
+          ]
+        },
+        {
+          "initial_loop_word": 6,
+          "initial_potential_word": 0,
+          "trajectory": [
+            {
+              "edge_word": 13241504,
+              "loop_word": 6
+            },
+            {
+              "edge_word": 1138966,
+              "loop_word": 6
+            },
+            {
+              "edge_word": 13241504,
+              "loop_word": 6
+            },
+            {
+              "edge_word": 1138966,
+              "loop_word": 6
+            },
+            {
+              "edge_word": 13241504,
+              "loop_word": 6
+            }
+          ]
+        },
+        {
+          "initial_loop_word": 7,
+          "initial_potential_word": 0,
+          "trajectory": [
+            {
+              "edge_word": 15637664,
+              "loop_word": 7
+            },
+            {
+              "edge_word": 1139551,
+              "loop_word": 7
+            },
+            {
+              "edge_word": 15637664,
+              "loop_word": 7
+            },
+            {
+              "edge_word": 1139551,
+              "loop_word": 7
+            },
+            {
+              "edge_word": 15637664,
+              "loop_word": 7
+            }
+          ]
+        }
+      ],
+      "loop_transitions": [
+        {
+          "count": 128,
+          "from": 0,
+          "tick": 1,
+          "to": 0
+        },
+        {
+          "count": 128,
+          "from": 1,
+          "tick": 1,
+          "to": 1
+        },
+        {
+          "count": 128,
+          "from": 2,
+          "tick": 1,
+          "to": 2
+        },
+        {
+          "count": 128,
+          "from": 3,
+          "tick": 1,
+          "to": 3
+        },
+        {
+          "count": 128,
+          "from": 4,
+          "tick": 1,
+          "to": 4
+        },
+        {
+          "count": 128,
+          "from": 5,
+          "tick": 1,
+          "to": 5
+        },
+        {
+          "count": 128,
+          "from": 6,
+          "tick": 1,
+          "to": 6
+        },
+        {
+          "count": 128,
+          "from": 7,
+          "tick": 1,
+          "to": 7
+        },
+        {
+          "count": 128,
+          "from": 0,
+          "tick": 2,
+          "to": 0
+        },
+        {
+          "count": 128,
+          "from": 1,
+          "tick": 2,
+          "to": 1
+        },
+        {
+          "count": 128,
+          "from": 2,
+          "tick": 2,
+          "to": 2
+        },
+        {
+          "count": 128,
+          "from": 3,
+          "tick": 2,
+          "to": 3
+        },
+        {
+          "count": 128,
+          "from": 4,
+          "tick": 2,
+          "to": 4
+        },
+        {
+          "count": 128,
+          "from": 5,
+          "tick": 2,
+          "to": 5
+        },
+        {
+          "count": 128,
+          "from": 6,
+          "tick": 2,
+          "to": 6
+        },
+        {
+          "count": 128,
+          "from": 7,
+          "tick": 2,
+          "to": 7
+        },
+        {
+          "count": 128,
+          "from": 0,
+          "tick": 3,
+          "to": 0
+        },
+        {
+          "count": 128,
+          "from": 1,
+          "tick": 3,
+          "to": 1
+        },
+        {
+          "count": 128,
+          "from": 2,
+          "tick": 3,
+          "to": 2
+        },
+        {
+          "count": 128,
+          "from": 3,
+          "tick": 3,
+          "to": 3
+        },
+        {
+          "count": 128,
+          "from": 4,
+          "tick": 3,
+          "to": 4
+        },
+        {
+          "count": 128,
+          "from": 5,
+          "tick": 3,
+          "to": 5
+        },
+        {
+          "count": 128,
+          "from": 6,
+          "tick": 3,
+          "to": 6
+        },
+        {
+          "count": 128,
+          "from": 7,
+          "tick": 3,
+          "to": 7
+        },
+        {
+          "count": 128,
+          "from": 0,
+          "tick": 4,
+          "to": 0
+        },
+        {
+          "count": 128,
+          "from": 1,
+          "tick": 4,
+          "to": 1
+        },
+        {
+          "count": 128,
+          "from": 2,
+          "tick": 4,
+          "to": 2
+        },
+        {
+          "count": 128,
+          "from": 3,
+          "tick": 4,
+          "to": 3
+        },
+        {
+          "count": 128,
+          "from": 4,
+          "tick": 4,
+          "to": 4
+        },
+        {
+          "count": 128,
+          "from": 5,
+          "tick": 4,
+          "to": 5
+        },
+        {
+          "count": 128,
+          "from": 6,
+          "tick": 4,
+          "to": 6
+        },
+        {
+          "count": 128,
+          "from": 7,
+          "tick": 4,
+          "to": 7
+        }
+      ],
+      "rule": 142,
+      "shape": [
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "certificates": [
+        {
+          "initial_loop_word": 0,
+          "initial_potential_word": 0,
+          "trajectory": [
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            }
+          ]
+        },
+        {
+          "initial_loop_word": 1,
+          "initial_potential_word": 0,
+          "trajectory": [
+            {
+              "edge_word": 2396160,
+              "loop_word": 1
+            },
+            {
+              "edge_word": 2396160,
+              "loop_word": 1
+            },
+            {
+              "edge_word": 2396160,
+              "loop_word": 1
+            },
+            {
+              "edge_word": 2396160,
+              "loop_word": 1
+            },
+            {
+              "edge_word": 2396160,
+              "loop_word": 1
+            }
+          ]
+        },
+        {
+          "initial_loop_word": 2,
+          "initial_potential_word": 0,
+          "trajectory": [
+            {
+              "edge_word": 4719744,
+              "loop_word": 2
+            },
+            {
+              "edge_word": 4719744,
+              "loop_word": 2
+            },
+            {
+              "edge_word": 4719744,
+              "loop_word": 2
+            },
+            {
+              "edge_word": 4719744,
+              "loop_word": 2
+            },
+            {
+              "edge_word": 4719744,
+              "loop_word": 2
+            }
+          ]
+        },
+        {
+          "initial_loop_word": 3,
+          "initial_potential_word": 0,
+          "trajectory": [
+            {
+              "edge_word": 7115904,
+              "loop_word": 3
+            },
+            {
+              "edge_word": 7115904,
+              "loop_word": 3
+            },
+            {
+              "edge_word": 7115904,
+              "loop_word": 3
+            },
+            {
+              "edge_word": 7115904,
+              "loop_word": 3
+            },
+            {
+              "edge_word": 7115904,
+              "loop_word": 3
+            }
+          ]
+        },
+        {
+          "initial_loop_word": 4,
+          "initial_potential_word": 0,
+          "trajectory": [
+            {
+              "edge_word": 8521760,
+              "loop_word": 4
+            },
+            {
+              "edge_word": 8521760,
+              "loop_word": 4
+            },
+            {
+              "edge_word": 8521760,
+              "loop_word": 4
+            },
+            {
+              "edge_word": 8521760,
+              "loop_word": 4
+            },
+            {
+              "edge_word": 8521760,
+              "loop_word": 4
+            }
+          ]
+        },
+        {
+          "initial_loop_word": 5,
+          "initial_potential_word": 0,
+          "trajectory": [
+            {
+              "edge_word": 10917920,
+              "loop_word": 5
+            },
+            {
+              "edge_word": 10917920,
+              "loop_word": 5
+            },
+            {
+              "edge_word": 10917920,
+              "loop_word": 5
+            },
+            {
+              "edge_word": 10917920,
+              "loop_word": 5
+            },
+            {
+              "edge_word": 10917920,
+              "loop_word": 5
+            }
+          ]
+        },
+        {
+          "initial_loop_word": 6,
+          "initial_potential_word": 0,
+          "trajectory": [
+            {
+              "edge_word": 13241504,
+              "loop_word": 6
+            },
+            {
+              "edge_word": 13241504,
+              "loop_word": 6
+            },
+            {
+              "edge_word": 13241504,
+              "loop_word": 6
+            },
+            {
+              "edge_word": 13241504,
+              "loop_word": 6
+            },
+            {
+              "edge_word": 13241504,
+              "loop_word": 6
+            }
+          ]
+        },
+        {
+          "initial_loop_word": 7,
+          "initial_potential_word": 0,
+          "trajectory": [
+            {
+              "edge_word": 15637664,
+              "loop_word": 7
+            },
+            {
+              "edge_word": 15637664,
+              "loop_word": 7
+            },
+            {
+              "edge_word": 15637664,
+              "loop_word": 7
+            },
+            {
+              "edge_word": 15637664,
+              "loop_word": 7
+            },
+            {
+              "edge_word": 15637664,
+              "loop_word": 7
+            }
+          ]
+        }
+      ],
+      "loop_transitions": [
+        {
+          "count": 128,
+          "from": 0,
+          "tick": 1,
+          "to": 0
+        },
+        {
+          "count": 128,
+          "from": 1,
+          "tick": 1,
+          "to": 1
+        },
+        {
+          "count": 128,
+          "from": 2,
+          "tick": 1,
+          "to": 2
+        },
+        {
+          "count": 128,
+          "from": 3,
+          "tick": 1,
+          "to": 3
+        },
+        {
+          "count": 128,
+          "from": 4,
+          "tick": 1,
+          "to": 4
+        },
+        {
+          "count": 128,
+          "from": 5,
+          "tick": 1,
+          "to": 5
+        },
+        {
+          "count": 128,
+          "from": 6,
+          "tick": 1,
+          "to": 6
+        },
+        {
+          "count": 128,
+          "from": 7,
+          "tick": 1,
+          "to": 7
+        },
+        {
+          "count": 128,
+          "from": 0,
+          "tick": 2,
+          "to": 0
+        },
+        {
+          "count": 128,
+          "from": 1,
+          "tick": 2,
+          "to": 1
+        },
+        {
+          "count": 128,
+          "from": 2,
+          "tick": 2,
+          "to": 2
+        },
+        {
+          "count": 128,
+          "from": 3,
+          "tick": 2,
+          "to": 3
+        },
+        {
+          "count": 128,
+          "from": 4,
+          "tick": 2,
+          "to": 4
+        },
+        {
+          "count": 128,
+          "from": 5,
+          "tick": 2,
+          "to": 5
+        },
+        {
+          "count": 128,
+          "from": 6,
+          "tick": 2,
+          "to": 6
+        },
+        {
+          "count": 128,
+          "from": 7,
+          "tick": 2,
+          "to": 7
+        },
+        {
+          "count": 128,
+          "from": 0,
+          "tick": 3,
+          "to": 0
+        },
+        {
+          "count": 128,
+          "from": 1,
+          "tick": 3,
+          "to": 1
+        },
+        {
+          "count": 128,
+          "from": 2,
+          "tick": 3,
+          "to": 2
+        },
+        {
+          "count": 128,
+          "from": 3,
+          "tick": 3,
+          "to": 3
+        },
+        {
+          "count": 128,
+          "from": 4,
+          "tick": 3,
+          "to": 4
+        },
+        {
+          "count": 128,
+          "from": 5,
+          "tick": 3,
+          "to": 5
+        },
+        {
+          "count": 128,
+          "from": 6,
+          "tick": 3,
+          "to": 6
+        },
+        {
+          "count": 128,
+          "from": 7,
+          "tick": 3,
+          "to": 7
+        },
+        {
+          "count": 128,
+          "from": 0,
+          "tick": 4,
+          "to": 0
+        },
+        {
+          "count": 128,
+          "from": 1,
+          "tick": 4,
+          "to": 1
+        },
+        {
+          "count": 128,
+          "from": 2,
+          "tick": 4,
+          "to": 2
+        },
+        {
+          "count": 128,
+          "from": 3,
+          "tick": 4,
+          "to": 3
+        },
+        {
+          "count": 128,
+          "from": 4,
+          "tick": 4,
+          "to": 4
+        },
+        {
+          "count": 128,
+          "from": 5,
+          "tick": 4,
+          "to": 5
+        },
+        {
+          "count": 128,
+          "from": 6,
+          "tick": 4,
+          "to": 6
+        },
+        {
+          "count": 128,
+          "from": 7,
+          "tick": 4,
+          "to": 7
+        }
+      ],
+      "rule": 150,
+      "shape": [
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "certificates": [
+        {
+          "initial_loop_word": 0,
+          "initial_potential_word": 0,
+          "trajectory": [
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            }
+          ]
+        },
+        {
+          "initial_loop_word": 1,
+          "initial_potential_word": 0,
+          "trajectory": [
+            {
+              "edge_word": 2396160,
+              "loop_word": 1
+            },
+            {
+              "edge_word": 585,
+              "loop_word": 1
+            },
+            {
+              "edge_word": 2396160,
+              "loop_word": 1
+            },
+            {
+              "edge_word": 585,
+              "loop_word": 1
+            },
+            {
+              "edge_word": 2396160,
+              "loop_word": 1
+            }
+          ]
+        },
+        {
+          "initial_loop_word": 2,
+          "initial_potential_word": 0,
+          "trajectory": [
+            {
+              "edge_word": 4719744,
+              "loop_word": 2
+            },
+            {
+              "edge_word": 73746,
+              "loop_word": 2
+            },
+            {
+              "edge_word": 4719744,
+              "loop_word": 2
+            },
+            {
+              "edge_word": 73746,
+              "loop_word": 2
+            },
+            {
+              "edge_word": 4719744,
+              "loop_word": 2
+            }
+          ]
+        },
+        {
+          "initial_loop_word": 3,
+          "initial_potential_word": 0,
+          "trajectory": [
+            {
+              "edge_word": 7115904,
+              "loop_word": 3
+            },
+            {
+              "edge_word": 74331,
+              "loop_word": 3
+            },
+            {
+              "edge_word": 7115904,
+              "loop_word": 3
+            },
+            {
+              "edge_word": 74331,
+              "loop_word": 3
+            },
+            {
+              "edge_word": 7115904,
+              "loop_word": 3
+            }
+          ]
+        },
+        {
+          "initial_loop_word": 4,
+          "initial_potential_word": 0,
+          "trajectory": [
+            {
+              "edge_word": 8521760,
+              "loop_word": 4
+            },
+            {
+              "edge_word": 1065220,
+              "loop_word": 4
+            },
+            {
+              "edge_word": 8521760,
+              "loop_word": 4
+            },
+            {
+              "edge_word": 1065220,
+              "loop_word": 4
+            },
+            {
+              "edge_word": 8521760,
+              "loop_word": 4
+            }
+          ]
+        },
+        {
+          "initial_loop_word": 5,
+          "initial_potential_word": 0,
+          "trajectory": [
+            {
+              "edge_word": 10917920,
+              "loop_word": 5
+            },
+            {
+              "edge_word": 1065805,
+              "loop_word": 5
+            },
+            {
+              "edge_word": 10917920,
+              "loop_word": 5
+            },
+            {
+              "edge_word": 1065805,
+              "loop_word": 5
+            },
+            {
+              "edge_word": 10917920,
+              "loop_word": 5
+            }
+          ]
+        },
+        {
+          "initial_loop_word": 6,
+          "initial_potential_word": 0,
+          "trajectory": [
+            {
+              "edge_word": 13241504,
+              "loop_word": 6
+            },
+            {
+              "edge_word": 1138966,
+              "loop_word": 6
+            },
+            {
+              "edge_word": 13241504,
+              "loop_word": 6
+            },
+            {
+              "edge_word": 1138966,
+              "loop_word": 6
+            },
+            {
+              "edge_word": 13241504,
+              "loop_word": 6
+            }
+          ]
+        },
+        {
+          "initial_loop_word": 7,
+          "initial_potential_word": 0,
+          "trajectory": [
+            {
+              "edge_word": 15637664,
+              "loop_word": 7
+            },
+            {
+              "edge_word": 1139551,
+              "loop_word": 7
+            },
+            {
+              "edge_word": 15637664,
+              "loop_word": 7
+            },
+            {
+              "edge_word": 1139551,
+              "loop_word": 7
+            },
+            {
+              "edge_word": 15637664,
+              "loop_word": 7
+            }
+          ]
+        }
+      ],
+      "loop_transitions": [
+        {
+          "count": 128,
+          "from": 0,
+          "tick": 1,
+          "to": 0
+        },
+        {
+          "count": 128,
+          "from": 1,
+          "tick": 1,
+          "to": 1
+        },
+        {
+          "count": 128,
+          "from": 2,
+          "tick": 1,
+          "to": 2
+        },
+        {
+          "count": 128,
+          "from": 3,
+          "tick": 1,
+          "to": 3
+        },
+        {
+          "count": 128,
+          "from": 4,
+          "tick": 1,
+          "to": 4
+        },
+        {
+          "count": 128,
+          "from": 5,
+          "tick": 1,
+          "to": 5
+        },
+        {
+          "count": 128,
+          "from": 6,
+          "tick": 1,
+          "to": 6
+        },
+        {
+          "count": 128,
+          "from": 7,
+          "tick": 1,
+          "to": 7
+        },
+        {
+          "count": 128,
+          "from": 0,
+          "tick": 2,
+          "to": 0
+        },
+        {
+          "count": 128,
+          "from": 1,
+          "tick": 2,
+          "to": 1
+        },
+        {
+          "count": 128,
+          "from": 2,
+          "tick": 2,
+          "to": 2
+        },
+        {
+          "count": 128,
+          "from": 3,
+          "tick": 2,
+          "to": 3
+        },
+        {
+          "count": 128,
+          "from": 4,
+          "tick": 2,
+          "to": 4
+        },
+        {
+          "count": 128,
+          "from": 5,
+          "tick": 2,
+          "to": 5
+        },
+        {
+          "count": 128,
+          "from": 6,
+          "tick": 2,
+          "to": 6
+        },
+        {
+          "count": 128,
+          "from": 7,
+          "tick": 2,
+          "to": 7
+        },
+        {
+          "count": 128,
+          "from": 0,
+          "tick": 3,
+          "to": 0
+        },
+        {
+          "count": 128,
+          "from": 1,
+          "tick": 3,
+          "to": 1
+        },
+        {
+          "count": 128,
+          "from": 2,
+          "tick": 3,
+          "to": 2
+        },
+        {
+          "count": 128,
+          "from": 3,
+          "tick": 3,
+          "to": 3
+        },
+        {
+          "count": 128,
+          "from": 4,
+          "tick": 3,
+          "to": 4
+        },
+        {
+          "count": 128,
+          "from": 5,
+          "tick": 3,
+          "to": 5
+        },
+        {
+          "count": 128,
+          "from": 6,
+          "tick": 3,
+          "to": 6
+        },
+        {
+          "count": 128,
+          "from": 7,
+          "tick": 3,
+          "to": 7
+        },
+        {
+          "count": 128,
+          "from": 0,
+          "tick": 4,
+          "to": 0
+        },
+        {
+          "count": 128,
+          "from": 1,
+          "tick": 4,
+          "to": 1
+        },
+        {
+          "count": 128,
+          "from": 2,
+          "tick": 4,
+          "to": 2
+        },
+        {
+          "count": 128,
+          "from": 3,
+          "tick": 4,
+          "to": 3
+        },
+        {
+          "count": 128,
+          "from": 4,
+          "tick": 4,
+          "to": 4
+        },
+        {
+          "count": 128,
+          "from": 5,
+          "tick": 4,
+          "to": 5
+        },
+        {
+          "count": 128,
+          "from": 6,
+          "tick": 4,
+          "to": 6
+        },
+        {
+          "count": 128,
+          "from": 7,
+          "tick": 4,
+          "to": 7
+        }
+      ],
+      "rule": 170,
+      "shape": [
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "certificates": [
+        {
+          "initial_loop_word": 0,
+          "initial_potential_word": 0,
+          "trajectory": [
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            }
+          ]
+        },
+        {
+          "initial_loop_word": 1,
+          "initial_potential_word": 0,
+          "trajectory": [
+            {
+              "edge_word": 2396160,
+              "loop_word": 1
+            },
+            {
+              "edge_word": 2396160,
+              "loop_word": 1
+            },
+            {
+              "edge_word": 2396160,
+              "loop_word": 1
+            },
+            {
+              "edge_word": 2396160,
+              "loop_word": 1
+            },
+            {
+              "edge_word": 2396160,
+              "loop_word": 1
+            }
+          ]
+        },
+        {
+          "initial_loop_word": 2,
+          "initial_potential_word": 0,
+          "trajectory": [
+            {
+              "edge_word": 4719744,
+              "loop_word": 2
+            },
+            {
+              "edge_word": 4719744,
+              "loop_word": 2
+            },
+            {
+              "edge_word": 4719744,
+              "loop_word": 2
+            },
+            {
+              "edge_word": 4719744,
+              "loop_word": 2
+            },
+            {
+              "edge_word": 4719744,
+              "loop_word": 2
+            }
+          ]
+        },
+        {
+          "initial_loop_word": 3,
+          "initial_potential_word": 0,
+          "trajectory": [
+            {
+              "edge_word": 7115904,
+              "loop_word": 3
+            },
+            {
+              "edge_word": 7115904,
+              "loop_word": 3
+            },
+            {
+              "edge_word": 7115904,
+              "loop_word": 3
+            },
+            {
+              "edge_word": 7115904,
+              "loop_word": 3
+            },
+            {
+              "edge_word": 7115904,
+              "loop_word": 3
+            }
+          ]
+        },
+        {
+          "initial_loop_word": 4,
+          "initial_potential_word": 0,
+          "trajectory": [
+            {
+              "edge_word": 8521760,
+              "loop_word": 4
+            },
+            {
+              "edge_word": 8521760,
+              "loop_word": 4
+            },
+            {
+              "edge_word": 8521760,
+              "loop_word": 4
+            },
+            {
+              "edge_word": 8521760,
+              "loop_word": 4
+            },
+            {
+              "edge_word": 8521760,
+              "loop_word": 4
+            }
+          ]
+        },
+        {
+          "initial_loop_word": 5,
+          "initial_potential_word": 0,
+          "trajectory": [
+            {
+              "edge_word": 10917920,
+              "loop_word": 5
+            },
+            {
+              "edge_word": 10917920,
+              "loop_word": 5
+            },
+            {
+              "edge_word": 10917920,
+              "loop_word": 5
+            },
+            {
+              "edge_word": 10917920,
+              "loop_word": 5
+            },
+            {
+              "edge_word": 10917920,
+              "loop_word": 5
+            }
+          ]
+        },
+        {
+          "initial_loop_word": 6,
+          "initial_potential_word": 0,
+          "trajectory": [
+            {
+              "edge_word": 13241504,
+              "loop_word": 6
+            },
+            {
+              "edge_word": 13241504,
+              "loop_word": 6
+            },
+            {
+              "edge_word": 13241504,
+              "loop_word": 6
+            },
+            {
+              "edge_word": 13241504,
+              "loop_word": 6
+            },
+            {
+              "edge_word": 13241504,
+              "loop_word": 6
+            }
+          ]
+        },
+        {
+          "initial_loop_word": 7,
+          "initial_potential_word": 0,
+          "trajectory": [
+            {
+              "edge_word": 15637664,
+              "loop_word": 7
+            },
+            {
+              "edge_word": 15637664,
+              "loop_word": 7
+            },
+            {
+              "edge_word": 15637664,
+              "loop_word": 7
+            },
+            {
+              "edge_word": 15637664,
+              "loop_word": 7
+            },
+            {
+              "edge_word": 15637664,
+              "loop_word": 7
+            }
+          ]
+        }
+      ],
+      "loop_transitions": [
+        {
+          "count": 128,
+          "from": 0,
+          "tick": 1,
+          "to": 0
+        },
+        {
+          "count": 128,
+          "from": 1,
+          "tick": 1,
+          "to": 1
+        },
+        {
+          "count": 128,
+          "from": 2,
+          "tick": 1,
+          "to": 2
+        },
+        {
+          "count": 128,
+          "from": 3,
+          "tick": 1,
+          "to": 3
+        },
+        {
+          "count": 128,
+          "from": 4,
+          "tick": 1,
+          "to": 4
+        },
+        {
+          "count": 128,
+          "from": 5,
+          "tick": 1,
+          "to": 5
+        },
+        {
+          "count": 128,
+          "from": 6,
+          "tick": 1,
+          "to": 6
+        },
+        {
+          "count": 128,
+          "from": 7,
+          "tick": 1,
+          "to": 7
+        },
+        {
+          "count": 128,
+          "from": 0,
+          "tick": 2,
+          "to": 0
+        },
+        {
+          "count": 128,
+          "from": 1,
+          "tick": 2,
+          "to": 1
+        },
+        {
+          "count": 128,
+          "from": 2,
+          "tick": 2,
+          "to": 2
+        },
+        {
+          "count": 128,
+          "from": 3,
+          "tick": 2,
+          "to": 3
+        },
+        {
+          "count": 128,
+          "from": 4,
+          "tick": 2,
+          "to": 4
+        },
+        {
+          "count": 128,
+          "from": 5,
+          "tick": 2,
+          "to": 5
+        },
+        {
+          "count": 128,
+          "from": 6,
+          "tick": 2,
+          "to": 6
+        },
+        {
+          "count": 128,
+          "from": 7,
+          "tick": 2,
+          "to": 7
+        },
+        {
+          "count": 128,
+          "from": 0,
+          "tick": 3,
+          "to": 0
+        },
+        {
+          "count": 128,
+          "from": 1,
+          "tick": 3,
+          "to": 1
+        },
+        {
+          "count": 128,
+          "from": 2,
+          "tick": 3,
+          "to": 2
+        },
+        {
+          "count": 128,
+          "from": 3,
+          "tick": 3,
+          "to": 3
+        },
+        {
+          "count": 128,
+          "from": 4,
+          "tick": 3,
+          "to": 4
+        },
+        {
+          "count": 128,
+          "from": 5,
+          "tick": 3,
+          "to": 5
+        },
+        {
+          "count": 128,
+          "from": 6,
+          "tick": 3,
+          "to": 6
+        },
+        {
+          "count": 128,
+          "from": 7,
+          "tick": 3,
+          "to": 7
+        },
+        {
+          "count": 128,
+          "from": 0,
+          "tick": 4,
+          "to": 0
+        },
+        {
+          "count": 128,
+          "from": 1,
+          "tick": 4,
+          "to": 1
+        },
+        {
+          "count": 128,
+          "from": 2,
+          "tick": 4,
+          "to": 2
+        },
+        {
+          "count": 128,
+          "from": 3,
+          "tick": 4,
+          "to": 3
+        },
+        {
+          "count": 128,
+          "from": 4,
+          "tick": 4,
+          "to": 4
+        },
+        {
+          "count": 128,
+          "from": 5,
+          "tick": 4,
+          "to": 5
+        },
+        {
+          "count": 128,
+          "from": 6,
+          "tick": 4,
+          "to": 6
+        },
+        {
+          "count": 128,
+          "from": 7,
+          "tick": 4,
+          "to": 7
+        }
+      ],
+      "rule": 178,
+      "shape": [
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "certificates": [
+        {
+          "initial_loop_word": 0,
+          "initial_potential_word": 0,
+          "trajectory": [
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            }
+          ]
+        },
+        {
+          "initial_loop_word": 1,
+          "initial_potential_word": 0,
+          "trajectory": [
+            {
+              "edge_word": 2396160,
+              "loop_word": 1
+            },
+            {
+              "edge_word": 2396160,
+              "loop_word": 1
+            },
+            {
+              "edge_word": 2396160,
+              "loop_word": 1
+            },
+            {
+              "edge_word": 2396160,
+              "loop_word": 1
+            },
+            {
+              "edge_word": 2396160,
+              "loop_word": 1
+            }
+          ]
+        },
+        {
+          "initial_loop_word": 2,
+          "initial_potential_word": 0,
+          "trajectory": [
+            {
+              "edge_word": 4719744,
+              "loop_word": 2
+            },
+            {
+              "edge_word": 4719744,
+              "loop_word": 2
+            },
+            {
+              "edge_word": 4719744,
+              "loop_word": 2
+            },
+            {
+              "edge_word": 4719744,
+              "loop_word": 2
+            },
+            {
+              "edge_word": 4719744,
+              "loop_word": 2
+            }
+          ]
+        },
+        {
+          "initial_loop_word": 3,
+          "initial_potential_word": 0,
+          "trajectory": [
+            {
+              "edge_word": 7115904,
+              "loop_word": 3
+            },
+            {
+              "edge_word": 7115904,
+              "loop_word": 3
+            },
+            {
+              "edge_word": 7115904,
+              "loop_word": 3
+            },
+            {
+              "edge_word": 7115904,
+              "loop_word": 3
+            },
+            {
+              "edge_word": 7115904,
+              "loop_word": 3
+            }
+          ]
+        },
+        {
+          "initial_loop_word": 4,
+          "initial_potential_word": 0,
+          "trajectory": [
+            {
+              "edge_word": 8521760,
+              "loop_word": 4
+            },
+            {
+              "edge_word": 8521760,
+              "loop_word": 4
+            },
+            {
+              "edge_word": 8521760,
+              "loop_word": 4
+            },
+            {
+              "edge_word": 8521760,
+              "loop_word": 4
+            },
+            {
+              "edge_word": 8521760,
+              "loop_word": 4
+            }
+          ]
+        },
+        {
+          "initial_loop_word": 5,
+          "initial_potential_word": 0,
+          "trajectory": [
+            {
+              "edge_word": 10917920,
+              "loop_word": 5
+            },
+            {
+              "edge_word": 10917920,
+              "loop_word": 5
+            },
+            {
+              "edge_word": 10917920,
+              "loop_word": 5
+            },
+            {
+              "edge_word": 10917920,
+              "loop_word": 5
+            },
+            {
+              "edge_word": 10917920,
+              "loop_word": 5
+            }
+          ]
+        },
+        {
+          "initial_loop_word": 6,
+          "initial_potential_word": 0,
+          "trajectory": [
+            {
+              "edge_word": 13241504,
+              "loop_word": 6
+            },
+            {
+              "edge_word": 13241504,
+              "loop_word": 6
+            },
+            {
+              "edge_word": 13241504,
+              "loop_word": 6
+            },
+            {
+              "edge_word": 13241504,
+              "loop_word": 6
+            },
+            {
+              "edge_word": 13241504,
+              "loop_word": 6
+            }
+          ]
+        },
+        {
+          "initial_loop_word": 7,
+          "initial_potential_word": 0,
+          "trajectory": [
+            {
+              "edge_word": 15637664,
+              "loop_word": 7
+            },
+            {
+              "edge_word": 15637664,
+              "loop_word": 7
+            },
+            {
+              "edge_word": 15637664,
+              "loop_word": 7
+            },
+            {
+              "edge_word": 15637664,
+              "loop_word": 7
+            },
+            {
+              "edge_word": 15637664,
+              "loop_word": 7
+            }
+          ]
+        }
+      ],
+      "loop_transitions": [
+        {
+          "count": 128,
+          "from": 0,
+          "tick": 1,
+          "to": 0
+        },
+        {
+          "count": 128,
+          "from": 1,
+          "tick": 1,
+          "to": 1
+        },
+        {
+          "count": 128,
+          "from": 2,
+          "tick": 1,
+          "to": 2
+        },
+        {
+          "count": 128,
+          "from": 3,
+          "tick": 1,
+          "to": 3
+        },
+        {
+          "count": 128,
+          "from": 4,
+          "tick": 1,
+          "to": 4
+        },
+        {
+          "count": 128,
+          "from": 5,
+          "tick": 1,
+          "to": 5
+        },
+        {
+          "count": 128,
+          "from": 6,
+          "tick": 1,
+          "to": 6
+        },
+        {
+          "count": 128,
+          "from": 7,
+          "tick": 1,
+          "to": 7
+        },
+        {
+          "count": 128,
+          "from": 0,
+          "tick": 2,
+          "to": 0
+        },
+        {
+          "count": 128,
+          "from": 1,
+          "tick": 2,
+          "to": 1
+        },
+        {
+          "count": 128,
+          "from": 2,
+          "tick": 2,
+          "to": 2
+        },
+        {
+          "count": 128,
+          "from": 3,
+          "tick": 2,
+          "to": 3
+        },
+        {
+          "count": 128,
+          "from": 4,
+          "tick": 2,
+          "to": 4
+        },
+        {
+          "count": 128,
+          "from": 5,
+          "tick": 2,
+          "to": 5
+        },
+        {
+          "count": 128,
+          "from": 6,
+          "tick": 2,
+          "to": 6
+        },
+        {
+          "count": 128,
+          "from": 7,
+          "tick": 2,
+          "to": 7
+        },
+        {
+          "count": 128,
+          "from": 0,
+          "tick": 3,
+          "to": 0
+        },
+        {
+          "count": 128,
+          "from": 1,
+          "tick": 3,
+          "to": 1
+        },
+        {
+          "count": 128,
+          "from": 2,
+          "tick": 3,
+          "to": 2
+        },
+        {
+          "count": 128,
+          "from": 3,
+          "tick": 3,
+          "to": 3
+        },
+        {
+          "count": 128,
+          "from": 4,
+          "tick": 3,
+          "to": 4
+        },
+        {
+          "count": 128,
+          "from": 5,
+          "tick": 3,
+          "to": 5
+        },
+        {
+          "count": 128,
+          "from": 6,
+          "tick": 3,
+          "to": 6
+        },
+        {
+          "count": 128,
+          "from": 7,
+          "tick": 3,
+          "to": 7
+        },
+        {
+          "count": 128,
+          "from": 0,
+          "tick": 4,
+          "to": 0
+        },
+        {
+          "count": 128,
+          "from": 1,
+          "tick": 4,
+          "to": 1
+        },
+        {
+          "count": 128,
+          "from": 2,
+          "tick": 4,
+          "to": 2
+        },
+        {
+          "count": 128,
+          "from": 3,
+          "tick": 4,
+          "to": 3
+        },
+        {
+          "count": 128,
+          "from": 4,
+          "tick": 4,
+          "to": 4
+        },
+        {
+          "count": 128,
+          "from": 5,
+          "tick": 4,
+          "to": 5
+        },
+        {
+          "count": 128,
+          "from": 6,
+          "tick": 4,
+          "to": 6
+        },
+        {
+          "count": 128,
+          "from": 7,
+          "tick": 4,
+          "to": 7
+        }
+      ],
+      "rule": 204,
+      "shape": [
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "certificates": [
+        {
+          "initial_loop_word": 0,
+          "initial_potential_word": 0,
+          "trajectory": [
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            }
+          ]
+        },
+        {
+          "initial_loop_word": 1,
+          "initial_potential_word": 0,
+          "trajectory": [
+            {
+              "edge_word": 2396160,
+              "loop_word": 1
+            },
+            {
+              "edge_word": 585,
+              "loop_word": 1
+            },
+            {
+              "edge_word": 2396160,
+              "loop_word": 1
+            },
+            {
+              "edge_word": 585,
+              "loop_word": 1
+            },
+            {
+              "edge_word": 2396160,
+              "loop_word": 1
+            }
+          ]
+        },
+        {
+          "initial_loop_word": 2,
+          "initial_potential_word": 0,
+          "trajectory": [
+            {
+              "edge_word": 4719744,
+              "loop_word": 2
+            },
+            {
+              "edge_word": 73746,
+              "loop_word": 2
+            },
+            {
+              "edge_word": 4719744,
+              "loop_word": 2
+            },
+            {
+              "edge_word": 73746,
+              "loop_word": 2
+            },
+            {
+              "edge_word": 4719744,
+              "loop_word": 2
+            }
+          ]
+        },
+        {
+          "initial_loop_word": 3,
+          "initial_potential_word": 0,
+          "trajectory": [
+            {
+              "edge_word": 7115904,
+              "loop_word": 3
+            },
+            {
+              "edge_word": 74331,
+              "loop_word": 3
+            },
+            {
+              "edge_word": 7115904,
+              "loop_word": 3
+            },
+            {
+              "edge_word": 74331,
+              "loop_word": 3
+            },
+            {
+              "edge_word": 7115904,
+              "loop_word": 3
+            }
+          ]
+        },
+        {
+          "initial_loop_word": 4,
+          "initial_potential_word": 0,
+          "trajectory": [
+            {
+              "edge_word": 8521760,
+              "loop_word": 4
+            },
+            {
+              "edge_word": 1065220,
+              "loop_word": 4
+            },
+            {
+              "edge_word": 8521760,
+              "loop_word": 4
+            },
+            {
+              "edge_word": 1065220,
+              "loop_word": 4
+            },
+            {
+              "edge_word": 8521760,
+              "loop_word": 4
+            }
+          ]
+        },
+        {
+          "initial_loop_word": 5,
+          "initial_potential_word": 0,
+          "trajectory": [
+            {
+              "edge_word": 10917920,
+              "loop_word": 5
+            },
+            {
+              "edge_word": 1065805,
+              "loop_word": 5
+            },
+            {
+              "edge_word": 10917920,
+              "loop_word": 5
+            },
+            {
+              "edge_word": 1065805,
+              "loop_word": 5
+            },
+            {
+              "edge_word": 10917920,
+              "loop_word": 5
+            }
+          ]
+        },
+        {
+          "initial_loop_word": 6,
+          "initial_potential_word": 0,
+          "trajectory": [
+            {
+              "edge_word": 13241504,
+              "loop_word": 6
+            },
+            {
+              "edge_word": 1138966,
+              "loop_word": 6
+            },
+            {
+              "edge_word": 13241504,
+              "loop_word": 6
+            },
+            {
+              "edge_word": 1138966,
+              "loop_word": 6
+            },
+            {
+              "edge_word": 13241504,
+              "loop_word": 6
+            }
+          ]
+        },
+        {
+          "initial_loop_word": 7,
+          "initial_potential_word": 0,
+          "trajectory": [
+            {
+              "edge_word": 15637664,
+              "loop_word": 7
+            },
+            {
+              "edge_word": 1139551,
+              "loop_word": 7
+            },
+            {
+              "edge_word": 15637664,
+              "loop_word": 7
+            },
+            {
+              "edge_word": 1139551,
+              "loop_word": 7
+            },
+            {
+              "edge_word": 15637664,
+              "loop_word": 7
+            }
+          ]
+        }
+      ],
+      "loop_transitions": [
+        {
+          "count": 128,
+          "from": 0,
+          "tick": 1,
+          "to": 0
+        },
+        {
+          "count": 128,
+          "from": 1,
+          "tick": 1,
+          "to": 1
+        },
+        {
+          "count": 128,
+          "from": 2,
+          "tick": 1,
+          "to": 2
+        },
+        {
+          "count": 128,
+          "from": 3,
+          "tick": 1,
+          "to": 3
+        },
+        {
+          "count": 128,
+          "from": 4,
+          "tick": 1,
+          "to": 4
+        },
+        {
+          "count": 128,
+          "from": 5,
+          "tick": 1,
+          "to": 5
+        },
+        {
+          "count": 128,
+          "from": 6,
+          "tick": 1,
+          "to": 6
+        },
+        {
+          "count": 128,
+          "from": 7,
+          "tick": 1,
+          "to": 7
+        },
+        {
+          "count": 128,
+          "from": 0,
+          "tick": 2,
+          "to": 0
+        },
+        {
+          "count": 128,
+          "from": 1,
+          "tick": 2,
+          "to": 1
+        },
+        {
+          "count": 128,
+          "from": 2,
+          "tick": 2,
+          "to": 2
+        },
+        {
+          "count": 128,
+          "from": 3,
+          "tick": 2,
+          "to": 3
+        },
+        {
+          "count": 128,
+          "from": 4,
+          "tick": 2,
+          "to": 4
+        },
+        {
+          "count": 128,
+          "from": 5,
+          "tick": 2,
+          "to": 5
+        },
+        {
+          "count": 128,
+          "from": 6,
+          "tick": 2,
+          "to": 6
+        },
+        {
+          "count": 128,
+          "from": 7,
+          "tick": 2,
+          "to": 7
+        },
+        {
+          "count": 128,
+          "from": 0,
+          "tick": 3,
+          "to": 0
+        },
+        {
+          "count": 128,
+          "from": 1,
+          "tick": 3,
+          "to": 1
+        },
+        {
+          "count": 128,
+          "from": 2,
+          "tick": 3,
+          "to": 2
+        },
+        {
+          "count": 128,
+          "from": 3,
+          "tick": 3,
+          "to": 3
+        },
+        {
+          "count": 128,
+          "from": 4,
+          "tick": 3,
+          "to": 4
+        },
+        {
+          "count": 128,
+          "from": 5,
+          "tick": 3,
+          "to": 5
+        },
+        {
+          "count": 128,
+          "from": 6,
+          "tick": 3,
+          "to": 6
+        },
+        {
+          "count": 128,
+          "from": 7,
+          "tick": 3,
+          "to": 7
+        },
+        {
+          "count": 128,
+          "from": 0,
+          "tick": 4,
+          "to": 0
+        },
+        {
+          "count": 128,
+          "from": 1,
+          "tick": 4,
+          "to": 1
+        },
+        {
+          "count": 128,
+          "from": 2,
+          "tick": 4,
+          "to": 2
+        },
+        {
+          "count": 128,
+          "from": 3,
+          "tick": 4,
+          "to": 3
+        },
+        {
+          "count": 128,
+          "from": 4,
+          "tick": 4,
+          "to": 4
+        },
+        {
+          "count": 128,
+          "from": 5,
+          "tick": 4,
+          "to": 5
+        },
+        {
+          "count": 128,
+          "from": 6,
+          "tick": 4,
+          "to": 6
+        },
+        {
+          "count": 128,
+          "from": 7,
+          "tick": 4,
+          "to": 7
+        }
+      ],
+      "rule": 212,
+      "shape": [
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "certificates": [
+        {
+          "initial_loop_word": 0,
+          "initial_potential_word": 0,
+          "trajectory": [
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            }
+          ]
+        },
+        {
+          "initial_loop_word": 1,
+          "initial_potential_word": 0,
+          "trajectory": [
+            {
+              "edge_word": 2396160,
+              "loop_word": 1
+            },
+            {
+              "edge_word": 2396160,
+              "loop_word": 1
+            },
+            {
+              "edge_word": 2396160,
+              "loop_word": 1
+            },
+            {
+              "edge_word": 2396160,
+              "loop_word": 1
+            },
+            {
+              "edge_word": 2396160,
+              "loop_word": 1
+            }
+          ]
+        },
+        {
+          "initial_loop_word": 2,
+          "initial_potential_word": 0,
+          "trajectory": [
+            {
+              "edge_word": 4719744,
+              "loop_word": 2
+            },
+            {
+              "edge_word": 4719744,
+              "loop_word": 2
+            },
+            {
+              "edge_word": 4719744,
+              "loop_word": 2
+            },
+            {
+              "edge_word": 4719744,
+              "loop_word": 2
+            },
+            {
+              "edge_word": 4719744,
+              "loop_word": 2
+            }
+          ]
+        },
+        {
+          "initial_loop_word": 3,
+          "initial_potential_word": 0,
+          "trajectory": [
+            {
+              "edge_word": 7115904,
+              "loop_word": 3
+            },
+            {
+              "edge_word": 7115904,
+              "loop_word": 3
+            },
+            {
+              "edge_word": 7115904,
+              "loop_word": 3
+            },
+            {
+              "edge_word": 7115904,
+              "loop_word": 3
+            },
+            {
+              "edge_word": 7115904,
+              "loop_word": 3
+            }
+          ]
+        },
+        {
+          "initial_loop_word": 4,
+          "initial_potential_word": 0,
+          "trajectory": [
+            {
+              "edge_word": 8521760,
+              "loop_word": 4
+            },
+            {
+              "edge_word": 8521760,
+              "loop_word": 4
+            },
+            {
+              "edge_word": 8521760,
+              "loop_word": 4
+            },
+            {
+              "edge_word": 8521760,
+              "loop_word": 4
+            },
+            {
+              "edge_word": 8521760,
+              "loop_word": 4
+            }
+          ]
+        },
+        {
+          "initial_loop_word": 5,
+          "initial_potential_word": 0,
+          "trajectory": [
+            {
+              "edge_word": 10917920,
+              "loop_word": 5
+            },
+            {
+              "edge_word": 10917920,
+              "loop_word": 5
+            },
+            {
+              "edge_word": 10917920,
+              "loop_word": 5
+            },
+            {
+              "edge_word": 10917920,
+              "loop_word": 5
+            },
+            {
+              "edge_word": 10917920,
+              "loop_word": 5
+            }
+          ]
+        },
+        {
+          "initial_loop_word": 6,
+          "initial_potential_word": 0,
+          "trajectory": [
+            {
+              "edge_word": 13241504,
+              "loop_word": 6
+            },
+            {
+              "edge_word": 13241504,
+              "loop_word": 6
+            },
+            {
+              "edge_word": 13241504,
+              "loop_word": 6
+            },
+            {
+              "edge_word": 13241504,
+              "loop_word": 6
+            },
+            {
+              "edge_word": 13241504,
+              "loop_word": 6
+            }
+          ]
+        },
+        {
+          "initial_loop_word": 7,
+          "initial_potential_word": 0,
+          "trajectory": [
+            {
+              "edge_word": 15637664,
+              "loop_word": 7
+            },
+            {
+              "edge_word": 15637664,
+              "loop_word": 7
+            },
+            {
+              "edge_word": 15637664,
+              "loop_word": 7
+            },
+            {
+              "edge_word": 15637664,
+              "loop_word": 7
+            },
+            {
+              "edge_word": 15637664,
+              "loop_word": 7
+            }
+          ]
+        }
+      ],
+      "loop_transitions": [
+        {
+          "count": 128,
+          "from": 0,
+          "tick": 1,
+          "to": 0
+        },
+        {
+          "count": 128,
+          "from": 1,
+          "tick": 1,
+          "to": 1
+        },
+        {
+          "count": 128,
+          "from": 2,
+          "tick": 1,
+          "to": 2
+        },
+        {
+          "count": 128,
+          "from": 3,
+          "tick": 1,
+          "to": 3
+        },
+        {
+          "count": 128,
+          "from": 4,
+          "tick": 1,
+          "to": 4
+        },
+        {
+          "count": 128,
+          "from": 5,
+          "tick": 1,
+          "to": 5
+        },
+        {
+          "count": 128,
+          "from": 6,
+          "tick": 1,
+          "to": 6
+        },
+        {
+          "count": 128,
+          "from": 7,
+          "tick": 1,
+          "to": 7
+        },
+        {
+          "count": 128,
+          "from": 0,
+          "tick": 2,
+          "to": 0
+        },
+        {
+          "count": 128,
+          "from": 1,
+          "tick": 2,
+          "to": 1
+        },
+        {
+          "count": 128,
+          "from": 2,
+          "tick": 2,
+          "to": 2
+        },
+        {
+          "count": 128,
+          "from": 3,
+          "tick": 2,
+          "to": 3
+        },
+        {
+          "count": 128,
+          "from": 4,
+          "tick": 2,
+          "to": 4
+        },
+        {
+          "count": 128,
+          "from": 5,
+          "tick": 2,
+          "to": 5
+        },
+        {
+          "count": 128,
+          "from": 6,
+          "tick": 2,
+          "to": 6
+        },
+        {
+          "count": 128,
+          "from": 7,
+          "tick": 2,
+          "to": 7
+        },
+        {
+          "count": 128,
+          "from": 0,
+          "tick": 3,
+          "to": 0
+        },
+        {
+          "count": 128,
+          "from": 1,
+          "tick": 3,
+          "to": 1
+        },
+        {
+          "count": 128,
+          "from": 2,
+          "tick": 3,
+          "to": 2
+        },
+        {
+          "count": 128,
+          "from": 3,
+          "tick": 3,
+          "to": 3
+        },
+        {
+          "count": 128,
+          "from": 4,
+          "tick": 3,
+          "to": 4
+        },
+        {
+          "count": 128,
+          "from": 5,
+          "tick": 3,
+          "to": 5
+        },
+        {
+          "count": 128,
+          "from": 6,
+          "tick": 3,
+          "to": 6
+        },
+        {
+          "count": 128,
+          "from": 7,
+          "tick": 3,
+          "to": 7
+        },
+        {
+          "count": 128,
+          "from": 0,
+          "tick": 4,
+          "to": 0
+        },
+        {
+          "count": 128,
+          "from": 1,
+          "tick": 4,
+          "to": 1
+        },
+        {
+          "count": 128,
+          "from": 2,
+          "tick": 4,
+          "to": 2
+        },
+        {
+          "count": 128,
+          "from": 3,
+          "tick": 4,
+          "to": 3
+        },
+        {
+          "count": 128,
+          "from": 4,
+          "tick": 4,
+          "to": 4
+        },
+        {
+          "count": 128,
+          "from": 5,
+          "tick": 4,
+          "to": 5
+        },
+        {
+          "count": 128,
+          "from": 6,
+          "tick": 4,
+          "to": 6
+        },
+        {
+          "count": 128,
+          "from": 7,
+          "tick": 4,
+          "to": 7
+        }
+      ],
+      "rule": 232,
+      "shape": [
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "certificates": [
+        {
+          "initial_loop_word": 0,
+          "initial_potential_word": 0,
+          "trajectory": [
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            }
+          ]
+        },
+        {
+          "initial_loop_word": 1,
+          "initial_potential_word": 0,
+          "trajectory": [
+            {
+              "edge_word": 2396160,
+              "loop_word": 1
+            },
+            {
+              "edge_word": 585,
+              "loop_word": 1
+            },
+            {
+              "edge_word": 2396160,
+              "loop_word": 1
+            },
+            {
+              "edge_word": 585,
+              "loop_word": 1
+            },
+            {
+              "edge_word": 2396160,
+              "loop_word": 1
+            }
+          ]
+        },
+        {
+          "initial_loop_word": 2,
+          "initial_potential_word": 0,
+          "trajectory": [
+            {
+              "edge_word": 4719744,
+              "loop_word": 2
+            },
+            {
+              "edge_word": 73746,
+              "loop_word": 2
+            },
+            {
+              "edge_word": 4719744,
+              "loop_word": 2
+            },
+            {
+              "edge_word": 73746,
+              "loop_word": 2
+            },
+            {
+              "edge_word": 4719744,
+              "loop_word": 2
+            }
+          ]
+        },
+        {
+          "initial_loop_word": 3,
+          "initial_potential_word": 0,
+          "trajectory": [
+            {
+              "edge_word": 7115904,
+              "loop_word": 3
+            },
+            {
+              "edge_word": 74331,
+              "loop_word": 3
+            },
+            {
+              "edge_word": 7115904,
+              "loop_word": 3
+            },
+            {
+              "edge_word": 74331,
+              "loop_word": 3
+            },
+            {
+              "edge_word": 7115904,
+              "loop_word": 3
+            }
+          ]
+        },
+        {
+          "initial_loop_word": 4,
+          "initial_potential_word": 0,
+          "trajectory": [
+            {
+              "edge_word": 8521760,
+              "loop_word": 4
+            },
+            {
+              "edge_word": 1065220,
+              "loop_word": 4
+            },
+            {
+              "edge_word": 8521760,
+              "loop_word": 4
+            },
+            {
+              "edge_word": 1065220,
+              "loop_word": 4
+            },
+            {
+              "edge_word": 8521760,
+              "loop_word": 4
+            }
+          ]
+        },
+        {
+          "initial_loop_word": 5,
+          "initial_potential_word": 0,
+          "trajectory": [
+            {
+              "edge_word": 10917920,
+              "loop_word": 5
+            },
+            {
+              "edge_word": 1065805,
+              "loop_word": 5
+            },
+            {
+              "edge_word": 10917920,
+              "loop_word": 5
+            },
+            {
+              "edge_word": 1065805,
+              "loop_word": 5
+            },
+            {
+              "edge_word": 10917920,
+              "loop_word": 5
+            }
+          ]
+        },
+        {
+          "initial_loop_word": 6,
+          "initial_potential_word": 0,
+          "trajectory": [
+            {
+              "edge_word": 13241504,
+              "loop_word": 6
+            },
+            {
+              "edge_word": 1138966,
+              "loop_word": 6
+            },
+            {
+              "edge_word": 13241504,
+              "loop_word": 6
+            },
+            {
+              "edge_word": 1138966,
+              "loop_word": 6
+            },
+            {
+              "edge_word": 13241504,
+              "loop_word": 6
+            }
+          ]
+        },
+        {
+          "initial_loop_word": 7,
+          "initial_potential_word": 0,
+          "trajectory": [
+            {
+              "edge_word": 15637664,
+              "loop_word": 7
+            },
+            {
+              "edge_word": 1139551,
+              "loop_word": 7
+            },
+            {
+              "edge_word": 15637664,
+              "loop_word": 7
+            },
+            {
+              "edge_word": 1139551,
+              "loop_word": 7
+            },
+            {
+              "edge_word": 15637664,
+              "loop_word": 7
+            }
+          ]
+        }
+      ],
+      "loop_transitions": [
+        {
+          "count": 128,
+          "from": 0,
+          "tick": 1,
+          "to": 0
+        },
+        {
+          "count": 128,
+          "from": 1,
+          "tick": 1,
+          "to": 1
+        },
+        {
+          "count": 128,
+          "from": 2,
+          "tick": 1,
+          "to": 2
+        },
+        {
+          "count": 128,
+          "from": 3,
+          "tick": 1,
+          "to": 3
+        },
+        {
+          "count": 128,
+          "from": 4,
+          "tick": 1,
+          "to": 4
+        },
+        {
+          "count": 128,
+          "from": 5,
+          "tick": 1,
+          "to": 5
+        },
+        {
+          "count": 128,
+          "from": 6,
+          "tick": 1,
+          "to": 6
+        },
+        {
+          "count": 128,
+          "from": 7,
+          "tick": 1,
+          "to": 7
+        },
+        {
+          "count": 128,
+          "from": 0,
+          "tick": 2,
+          "to": 0
+        },
+        {
+          "count": 128,
+          "from": 1,
+          "tick": 2,
+          "to": 1
+        },
+        {
+          "count": 128,
+          "from": 2,
+          "tick": 2,
+          "to": 2
+        },
+        {
+          "count": 128,
+          "from": 3,
+          "tick": 2,
+          "to": 3
+        },
+        {
+          "count": 128,
+          "from": 4,
+          "tick": 2,
+          "to": 4
+        },
+        {
+          "count": 128,
+          "from": 5,
+          "tick": 2,
+          "to": 5
+        },
+        {
+          "count": 128,
+          "from": 6,
+          "tick": 2,
+          "to": 6
+        },
+        {
+          "count": 128,
+          "from": 7,
+          "tick": 2,
+          "to": 7
+        },
+        {
+          "count": 128,
+          "from": 0,
+          "tick": 3,
+          "to": 0
+        },
+        {
+          "count": 128,
+          "from": 1,
+          "tick": 3,
+          "to": 1
+        },
+        {
+          "count": 128,
+          "from": 2,
+          "tick": 3,
+          "to": 2
+        },
+        {
+          "count": 128,
+          "from": 3,
+          "tick": 3,
+          "to": 3
+        },
+        {
+          "count": 128,
+          "from": 4,
+          "tick": 3,
+          "to": 4
+        },
+        {
+          "count": 128,
+          "from": 5,
+          "tick": 3,
+          "to": 5
+        },
+        {
+          "count": 128,
+          "from": 6,
+          "tick": 3,
+          "to": 6
+        },
+        {
+          "count": 128,
+          "from": 7,
+          "tick": 3,
+          "to": 7
+        },
+        {
+          "count": 128,
+          "from": 0,
+          "tick": 4,
+          "to": 0
+        },
+        {
+          "count": 128,
+          "from": 1,
+          "tick": 4,
+          "to": 1
+        },
+        {
+          "count": 128,
+          "from": 2,
+          "tick": 4,
+          "to": 2
+        },
+        {
+          "count": 128,
+          "from": 3,
+          "tick": 4,
+          "to": 3
+        },
+        {
+          "count": 128,
+          "from": 4,
+          "tick": 4,
+          "to": 4
+        },
+        {
+          "count": 128,
+          "from": 5,
+          "tick": 4,
+          "to": 5
+        },
+        {
+          "count": 128,
+          "from": 6,
+          "tick": 4,
+          "to": 6
+        },
+        {
+          "count": 128,
+          "from": 7,
+          "tick": 4,
+          "to": 7
+        }
+      ],
+      "rule": 240,
+      "shape": [
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "certificates": [
+        {
+          "initial_loop_word": 0,
+          "initial_potential_word": 0,
+          "trajectory": [
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            }
+          ]
+        },
+        {
+          "initial_loop_word": 1,
+          "initial_potential_word": 0,
+          "trajectory": [
+            {
+              "edge_word": 2396160,
+              "loop_word": 1
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            }
+          ]
+        },
+        {
+          "initial_loop_word": 2,
+          "initial_potential_word": 0,
+          "trajectory": [
+            {
+              "edge_word": 4719744,
+              "loop_word": 2
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            }
+          ]
+        },
+        {
+          "initial_loop_word": 3,
+          "initial_potential_word": 0,
+          "trajectory": [
+            {
+              "edge_word": 7115904,
+              "loop_word": 3
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            }
+          ]
+        },
+        {
+          "initial_loop_word": 4,
+          "initial_potential_word": 0,
+          "trajectory": [
+            {
+              "edge_word": 8521760,
+              "loop_word": 4
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            }
+          ]
+        },
+        {
+          "initial_loop_word": 5,
+          "initial_potential_word": 0,
+          "trajectory": [
+            {
+              "edge_word": 10917920,
+              "loop_word": 5
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            }
+          ]
+        },
+        {
+          "initial_loop_word": 6,
+          "initial_potential_word": 0,
+          "trajectory": [
+            {
+              "edge_word": 13241504,
+              "loop_word": 6
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            }
+          ]
+        },
+        {
+          "initial_loop_word": 7,
+          "initial_potential_word": 0,
+          "trajectory": [
+            {
+              "edge_word": 15637664,
+              "loop_word": 7
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            },
+            {
+              "edge_word": 0,
+              "loop_word": 0
+            }
+          ]
+        }
+      ],
+      "loop_transitions": [
+        {
+          "count": 128,
+          "from": 0,
+          "tick": 1,
+          "to": 0
+        },
+        {
+          "count": 128,
+          "from": 1,
+          "tick": 1,
+          "to": 0
+        },
+        {
+          "count": 128,
+          "from": 2,
+          "tick": 1,
+          "to": 0
+        },
+        {
+          "count": 128,
+          "from": 3,
+          "tick": 1,
+          "to": 0
+        },
+        {
+          "count": 128,
+          "from": 4,
+          "tick": 1,
+          "to": 0
+        },
+        {
+          "count": 128,
+          "from": 5,
+          "tick": 1,
+          "to": 0
+        },
+        {
+          "count": 128,
+          "from": 6,
+          "tick": 1,
+          "to": 0
+        },
+        {
+          "count": 128,
+          "from": 7,
+          "tick": 1,
+          "to": 0
+        },
+        {
+          "count": 1024,
+          "from": 0,
+          "tick": 2,
+          "to": 0
+        },
+        {
+          "count": 1024,
+          "from": 0,
+          "tick": 3,
+          "to": 0
+        },
+        {
+          "count": 1024,
+          "from": 0,
+          "tick": 4,
+          "to": 0
+        }
+      ],
+      "rule": 255,
+      "shape": [
+        2,
+        2,
+        2
+      ]
+    }
+  ],
+  "source_rules": [
+    0,
+    142,
+    150,
+    170,
+    178,
+    204,
+    212,
+    232,
+    240,
+    255
+  ],
+  "ticks": 4
+}

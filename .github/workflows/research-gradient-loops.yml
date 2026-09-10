@@ -1,0 +1,31 @@
+name: Native gradient and loop invariant audit
+
+on:
+  pull_request:
+    paths:
+      - 'scripts/verify_gradient_loops.py'
+      - 'results/gradient_loops_20260910.json'
+      - '.github/workflows/research-gradient-loops.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/verify_gradient_loops.py'
+      - 'results/gradient_loops_20260910.json'
+      - '.github/workflows/research-gradient-loops.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  gradient-loop-audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Audit native gradients, twisted potentials, and both interfaces
+        run: python scripts/verify_gradient_loops.py > /tmp/gradient-loops.json
+      - name: Reproduce exact canonical result
+        run: diff -u results/gradient_loops_20260910.json /tmp/gradient-loops.json
