@@ -283,3 +283,9 @@ The [archived Rule110 example](2026-09-10-successor-set-archive.md) compares exa
 The [frozen no-op/flip protocol](protocols/representation-empowerment-20260910.md) and its [registered experiment](../knowledge/representation-empowerment-planned.md) add a control question to the existing repertoire frontier. The [publication checkpoint](2026-09-10-representation-empowerment-protocol.md) records observer/cadence provenance and the exact-input capacity certificate. Implementation and new numerical evaluation remain planned and unrun.
 
 The controller sees only P(S_0), with a uniform prior within its fiber, and receives a declared future readout after one intervention. Uniform-action information and optimized capacity are distinct; both use the original macrostate weights. Research026's observer-specific cadence is preserved. This is independent of issue64's learner and uses a different information/action contract from the completed gradient audit.
+
+## Implemented instrument: conservative online suffix learner
+
+The [implementation checkpoint](2026-09-10-conservative-online-suffix-learner.md) and [knowledge entry](../knowledge/conservative-online-suffix-learner.md) register issue64's agreed online arm. The instrument predicts before seeing the next observation, abstains on unseen or conflicting keys, and raises one global suffix depth only after a wrong definite prediction. Rebuilding retains raw history; held-out runs start fresh histories under a frozen table and depth.
+
+This is an implemented research instrument with deterministic trace checks, not a new CA result. It does not construct the forward future-equivalence relation or prove an optimal visibility/memory depth. Coarsening, the oracle-assisted arm and any new Rule106/Research028 evaluation remain deferred to separate frozen work. The static empowerment census does not depend on this learner.
