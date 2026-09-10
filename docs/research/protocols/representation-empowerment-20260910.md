@@ -30,7 +30,7 @@ For every `(rule, observer)` pair, use the same source ring, ECA update law, obs
 
 The reused domain is a set of **(P,q) observer/cadence pairs**. Write E for one fine ECA tick and T=E^q for that observer's macro step. All outcome sequences and the stable future relation below use T.
 
-The pinned source at commit 40ee57a5672df36a6793a5bcdd720e1cc565212e is [experiment_possibility_frontier.py](../../../scripts/experiment_possibility_frontier.py), especially run_rule and build_observer. Its [summary](../../../results/possibility_frontier_20260908_summary.json) and [audit](../../../results/possibility_frontier_20260908_audit.json) fix the prior controls.
+The pinned source at commit 40ee57a5672df36a6793a5bcdd720e1cc565212e is [experiment_possibility_frontier.py](../../../scripts/experiment_possibility_frontier.py), especially scan_rule and obs_from_id. Its [summary](../../../results/possibility_frontier_20260908_summary.json) and [audit](../../../results/possibility_frontier_20260908_audit.json) fix the prior controls.
 
 | Observer | Fine ticks per macro step q |
 | --- | --- |
