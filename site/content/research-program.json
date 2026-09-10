@@ -35,9 +35,9 @@
     "title": "Dimensional Closure and the Commutator Lift",
     "eyebrow": "Working research program",
     "date": "2026-09-09",
-    "updated": "2026-09-09",
+    "updated": "2026-09-10",
     "status": "living",
-    "summary": "A parallel program on rules becoming higher-dimensional space. Editable spatial Rail programs now preserve complete dynamics through recursive lifts under explicit layout budgets; mutable wrapper structure and less prescribed role geometry remain open.",
+    "summary": "A nonconstant Rule32 correction cap now closes indefinitely with physically stored instructions and finite guards. Native edits execute faithfully, but semantic recovery is separate and fails on a persistent one-cell-error witness.",
     "thesis": "When two dynamical paths fail to commute, represent the disagreement as a new coordinate and ask whether the enlarged representation closes.",
     "source": "docs/research/2026-09-09-dimensional-closure-program.md",
     "supports": [
@@ -50,7 +50,12 @@
       "selector-two-lift",
       "dimensional-intertwining",
       "program-edit-locality",
-      "spatial-rail-programs"
+      "spatial-rail-programs",
+      "editable-routing-tables",
+      "finite-routing-boundaries",
+      "stored-correction-transport",
+      "local-correction-caps",
+      "rule32-physical-cap"
     ]
   }
 ]
