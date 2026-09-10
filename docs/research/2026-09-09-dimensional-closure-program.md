@@ -326,9 +326,11 @@ The [local-cap census](2026-09-10-local-correction-caps.md) now supplies exact
 local certificates or conflicts for all4,608 frozen budgets. A post-census
 Rule32 witness closes two rows: U'=F_32(U) XOR V and V'=F_128(V), with
 nonconstant cap V_left AND V_right. This holds at every time for correctly
-prepared source images. Its physical strip and edit contract are frozen next.
-Boundary stability, logical information sufficiency, and edited semantic
-validity remain distinct conditions.
+prepared source images. The [physical-cap checkpoint](2026-09-10-rule32-physical-cap.md)
+now executes this pair with stored programs and finite guards, with a complete
+all-time field identity. Matched edits execute faithfully, but a persistent
+one-cell-error witness refutes general semantic recovery under this cap.
+Boundary stability, information sufficiency, and recovery remain distinct.
 
 ## Relation to the Class-IV hope
 
@@ -368,27 +370,33 @@ recursive spatial-program closure.
 
 13. **Finite logical correction caps have exact certificates.** The all-ECA full-shift census finds1,094 passing budgets and3,514 conflicts for h=0..2,R=0..2 in K/O coordinates. Rule32 has a nonconstant two-row all-time logical closure. Different local radii do not contradict K/O whole-field fiber equivalence, and source retention remains a cheaper raw storage baseline.
 
+14. **A finite physical correction cap now closes indefinitely.** Rule32's two-row pair is realized by stored programs(32,60)/(128,240) and finite guards. The complete identity holds at every time. All1,360 tested matched edits execute faithfully; a separate persistent-background proof shows expanding disagreement after one top data or instruction edit, so this is not general repair.
+
 ## What remains open
 
-- Rule32 now has an indefinitely valid two-row logical cap with a compact candidate program. Its complete physical strip and instruction-edit/semantic-recovery audit remain the next frozen task.
+- Rule32's finite-height physical cap and matched-edit contract are established. Broader cap compilation and intentional semantic program revision remain open; the current law does not generally restore the undamaged represented trajectory.
 - Finite-thickness routing boundaries are constructive under fixed occupancy and missing-input retention. Occupancy edits, mutable stage topology, smaller alphabets and self-maintained roles remain open.
 - The relationship between correction depth, spatial dimension, and growing within-dimension radius is not yet characterized.
 - Class-IV correspondence is background motivation only and does not direct the current search.
 
 ## The next theoretical target
 
-The information census is complete. Move the Rule32 two-row closure into the
-existing interpreter with bottom program(32,60), top program(128,240), and two
-finite guard rows. The [next frozen protocol](protocols/rule32-physical-cap-20260910.md)
-has not been executed. It fixes the complete physical identity, resource costs,
-local audits, and finite-ring controls before evaluation.
+The [physical-cap checkpoint](2026-09-10-rule32-physical-cap.md) completes the
+immediate construction: a locally prepared, finite-height correction pair
+with physically stored programs and an all-time complete-field identity.
 
-Matched instruction edits must reproduce the edited native program, but this
-does not automatically preserve the fixed-Rule32 correction interpretation.
-Measure return to the undamaged data trajectory and finite-ring represented
-image separately, without presupposing repair. Any rescue is frozen afterward.
+The next question is semantic program revision, not another routing control:
+which intended changes preserve the old interpretation, which establish a new
+one, and what local re-preparation or maintained structure is required?
+Faithfully executing an edited native program does not decide these questions.
 
-Broader cap programs, dynamic repairs and maintained roles follow that test.
-Preserve the census's failed budgets; neither its successes nor its scoped
-failures settle the larger rule space. No Class-IV selection or novelty claim
+The odd-ring edit panel has extinguishing baselines, so its data recovery is
+not a maintenance result. On a persistent alternating-source background the
+encoded pair is(1,1); one top zero spreads forever under Rule128. The analogous
+top instruction edit also produces an expanding error. These are scoped
+counterexamples to recovery under the present law, not a rejection of other
+repair architectures. Freeze any concrete rescue and its edit/semantic
+contract before evaluating it.
+
+No Class-IV selection, novelty, source-compression or universal-program claim
 is established.

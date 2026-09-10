@@ -1,0 +1,35 @@
+name: Rule32 physical cap and edit audit
+
+on:
+  pull_request:
+    paths:
+      - 'scripts/verify_rule32_physical_cap.py'
+      - 'scripts/verify_editable_routing_tables.py'
+      - 'scripts/verify_finite_routing_boundaries.py'
+      - 'results/rule32_physical_cap_20260910.json'
+      - '.github/workflows/research-rule32-physical-cap.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/verify_rule32_physical_cap.py'
+      - 'scripts/verify_editable_routing_tables.py'
+      - 'scripts/verify_finite_routing_boundaries.py'
+      - 'results/rule32_physical_cap_20260910.json'
+      - '.github/workflows/research-rule32-physical-cap.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  rule32-physical-cap-audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Audit complete fields, stored cap, zero-cap control and edits
+        run: python scripts/verify_rule32_physical_cap.py > /tmp/rule32-physical-cap.json
+      - name: Reproduce canonical result
+        run: diff -u results/rule32_physical_cap_20260910.json /tmp/rule32-physical-cap.json

@@ -391,6 +391,42 @@ larger grids; separately specify a locally represented changeable decoder.
 Do not infer that expanding same-time instructions to a fixed local rule
 makes them meaningless, or that memory is the only interesting mechanism.
 
+## Research continuation: finite physical correction cap completed (2026-09-10)
+
+Read docs/research/2026-09-10-rule32-physical-cap.md. Preserve the parallel
+Erased Distinctions workstream and its shared metadata entries.
+
+- The frozen Rule32 physical/edit protocol is complete. Existing H2, hold
+  mode, scale9, rows-1..2; bottom(32,60), top(128,240), guards(204,240)/0.
+  H2 J E(S)=J E(F32(S)) for every source and time by local proof/induction.
+  No extra future rows. Prepared roles/occupancy remain architectural resources.
+- 68 occupied symbols/source site (64 program+4 data), span36, radius9,
+  source preparation radius<=2, one tick. No source reconstruction/compression.
+- verify_rule32_physical_cap.py and matching dated JSON reproduce384 local
+  semantic assertions,64 physical neighborhoods,64 guard cases, and15,520
+  field timepoints (4,854,656 occupied/29,857,376 explicit blank comparisons).
+- Protocol f65a63ea; implementation1edb7f77 corrected before first execution
+  at4d71ba01: derivative test window centering off by one. Recorded correction,
+  no protocol deviations, ambient interpreter unchanged.
+- All40 width3/5 source words pass40ticks. Zero-cap control fails first at
+  width5/source11/tick1: actual(28,0), expected(28,8). Ten mismatched timepoints.
+- All1,360 single native instruction/data edits match complete physical fields
+  through8ticks. Of1,280 program edits,260 ever change undamaged data and145
+  leave the same-ring K1 image. No edited instruction reverts in hold mode.
+- All80 data edits recover bytick5, but ALL baseline pairs extinguish bytick3.
+  Do not infer general maintenance, durable recovery from tick8 agreement,
+  or full-shift image membership from finite-ring membership.
+- Post-audit DEDUCTION: alternating infinite S has K1=(1,1), a persistent
+  encoded fixed point. One top data zero expands exactly to|x|<=t under128.
+  Top leaf bit7 edit128->0 atx0 creates zeros|x|<=t-1 for t>=1. Thus even
+  data-trajectory recovery is not general; these are not just unrepaired bits.
+- NEXT research question: intentional semantic program revision. Decide the
+  old/new interpretation, allowed edit and re-preparation/maintenance resources
+  before freezing a concrete next experiment. Do not automatically treat an
+  intended new native dynamics as an error, or add repair machinery without
+  a specified semantic target. No further routing polishing as a substitute.
+- Scope failures to this law. No C4, novelty or universal-program claims.
+
 ## Research continuation: exact local caps and the Rule32 candidate (2026-09-10)
 
 The local-cap census is complete. Read docs/research/2026-09-10-local-correction-caps.md.
@@ -410,8 +446,8 @@ Preserve the parallel Erased Distinctions files and shared metadata entries.
   Standalone verify_rule32_cap_identity.py checks128 seven-bit windows.
   Nonconstant cap160; top update128. No derivative-only cap at testedR<=2,
   but no arbitrary-radius exclusion. Two represented bits/site vs one for S.
-- NEXT: execute docs/research/protocols/rule32-physical-cap-20260910.md,
-  now frozen and unrun. Commit implementation before evaluation. ExistingH2,
+- Follow-up complete above: docs/research/protocols/rule32-physical-cap-20260910.md.
+  Historical frozen setup: Commit implementation before evaluation. ExistingH2,
   hold mode, rows-1..2, bottom(32,60), top(128,240), guards(204,240)/data0.
   Audit complete symbols, local proof, widths3/5 all source words40ticks,
   failed zero-cap control, and34 one-cell edits through8ticks.
