@@ -1,0 +1,39 @@
+name: Local correction cap audits
+
+on:
+  pull_request:
+    paths:
+      - 'scripts/verify_local_correction_caps.py'
+      - 'scripts/verify_rule32_cap_identity.py'
+      - 'results/local_correction_caps_20260910.json'
+      - 'results/rule32_cap_identity_20260910.json'
+      - '.github/workflows/research-local-caps.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/verify_local_correction_caps.py'
+      - 'scripts/verify_rule32_cap_identity.py'
+      - 'results/local_correction_caps_20260910.json'
+      - 'results/rule32_cap_identity_20260910.json'
+      - '.github/workflows/research-local-caps.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  local-cap-audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Reconstruct every cap and independently audit every local fiber
+        run: python scripts/verify_local_correction_caps.py > /tmp/local-correction-caps.json
+      - name: Reproduce canonical census
+        run: diff -u results/local_correction_caps_20260910.json /tmp/local-correction-caps.json
+      - name: Audit post-census compact Rule32 identity
+        run: python scripts/verify_rule32_cap_identity.py > /tmp/rule32-cap-identity.json
+      - name: Reproduce compact identity result
+        run: diff -u results/rule32_cap_identity_20260910.json /tmp/rule32-cap-identity.json

@@ -391,6 +391,36 @@ larger grids; separately specify a locally represented changeable decoder.
 Do not infer that expanding same-time instructions to a fixed local rule
 makes them meaningless, or that memory is the only interesting mechanism.
 
+## Research continuation: exact local caps and the Rule32 candidate (2026-09-10)
+
+The local-cap census is complete. Read docs/research/2026-09-10-local-correction-caps.md.
+Preserve the parallel Erased Distinctions files and shared metadata entries.
+
+- Frozen protocol1a012ae and implementation1fa5353b precede evaluation.
+  All256 homogeneous ECA, K/O, h0..2,R0..2, full causal windows<=11bits.
+  4,608 budgets:1,094 pass and3,514 explicit conflicts. No fixes/deviations.
+- Independent tuple recursion checks348,160 truth entries and reconstructs
+  all2,064,384 source-window fibers, matching the integer-table evaluator.
+  CI reproduces results/local_correction_caps_20260910.json.
+- Union of passing depths/radii:135 rules in K,150 in O. At h1/R2 counts
+  are123/120; at h2/R2 they are94/150. Depth can increase the required cap
+  radius (Rule11 h1/R2 passes, h2/R2 fails). Whole-field fibers still agree.
+- Post-census exact Rule32 identity: A2[x]=A1[x-1] AND A1[x+1]. Thus
+  U'=F32(U) XOR V, V'=F128(V) closes (A0,A1) for all source states/times.
+  Standalone verify_rule32_cap_identity.py checks128 seven-bit windows.
+  Nonconstant cap160; top update128. No derivative-only cap at testedR<=2,
+  but no arbitrary-radius exclusion. Two represented bits/site vs one for S.
+- NEXT: execute docs/research/protocols/rule32-physical-cap-20260910.md,
+  now frozen and unrun. Commit implementation before evaluation. ExistingH2,
+  hold mode, rows-1..2, bottom(32,60), top(128,240), guards(204,240)/data0.
+  Audit complete symbols, local proof, widths3/5 all source words40ticks,
+  failed zero-cap control, and34 one-cell edits through8ticks.
+- Edited-native execution, undamaged data recovery, ring-image membership,
+  and program recovery are different contracts. No automatic semantic repair.
+  Do not claim generic source-law editing or full-shift image membership
+  from finite-ring tests. Freeze any rescue separately.
+- No C4 selection, novelty, compression, or universal-program claim.
+
 ## Research continuation: finite boundaries and stored correction transport (2026-09-10)
 
 The dimensional control now has finite transverse preparation; the workstream
@@ -420,7 +450,7 @@ continuing. Preserve the parallel Erased Distinctions work and metadata.
   frozen audit passes51,202 assertions and retains this scoped cap failure.
 - Both results are reproduced by verify_finite_routing_boundaries.py and
   verify_stored_correction_transport.py, with matching dated JSON files.
-- NEXT: execute the frozen, still-unrun protocol
+- Follow-up completed in the local-cap continuation above; historical next protocol:
   docs/research/protocols/local-correction-caps-20260910.md.
   All256 fixed ECA, h=0..2, capR=0..2, full causal windows (max11 bits).
   Compare K_h and O_h local caps with the complete-source baseline; retain

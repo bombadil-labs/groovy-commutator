@@ -1,9 +1,9 @@
 # When can a finite correction stack compute its own missing top correction?
 
-A finite tuple K_h=(A_0,...,A_h) closes when A_(h+1) factors through that tuple. The next concrete test asks whether the factor has a bounded spatial radius on the represented image.
+Revision 2026-09-10: partly answered by the [local-cap census](../research/2026-09-10-local-correction-caps.md). All256 fixed homogeneous ECA rules were tested at h=0,1,2 and cap radius R=0,1,2 on complete infinite-lattice causal windows. There are1,094 passing budgets and3,514 saved local conflicts across correction and observation coordinates. The union of passing correction budgets covers135 rules; observation budgets cover150.
 
-The [stored-transport checkpoint](../research/2026-09-10-stored-correction-transport.md) establishes the physical interior update but retains a failed constant-zero cap. Its linked next protocol is frozen and **not yet executed**: all256 fixed homogeneous ECA rules, h=0,1,2, and cap radius R=0,1,2, with complete infinite-lattice causal windows.
+Rule32 has an exact two-row logical closure: U'=F_32(U) xor V and V'=F_128(V), with (U,V)=(A_0(S),A_1(S)). The nonconstant missing correction is V_left AND V_right. Induction gives every time, not merely a finite trajectory check. Derivative-only caps fail at tested radii0..2; this does not exclude larger radius.
 
-Compare correction coordinates with their whole-field-equivalent forward-observation coordinates and with retaining the original source. Count storage, preparation, cap radius and program-table cost. A local conflict refutes only its chosen depth/radius budget.
+A larger correction tuple can require a wider cap even when a smaller tuple closes: Rule11 passes h1/R2 and fails h2/R2. K and O preserve the same whole-field information but arrange local inputs differently. Source retention still uses one bit per site; this is not a compression result.
 
-A successful local factorization would supply a logical cap certificate. Representing and executing that cap under a declared physical program grammar, and specifying the cost of instruction edits, remain subsequent tasks. No novelty or Class-IV criterion is used.
+The physical strip and instruction-edit/repair contract are [frozen separately](../research/protocols/rule32-physical-cap-20260910.md), not yet executed. Arbitrary-radius classification, broader cap programs, and semantic recovery after instruction edits remain open. No Class-IV or novelty criterion is used.

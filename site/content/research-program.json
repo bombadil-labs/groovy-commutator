@@ -36,7 +36,7 @@
     "date": "2026-09-09",
     "updated": "2026-09-10",
     "status": "living",
-    "summary": "Editable spatial programs now lift through finite prepared boundaries when occupancy is explicit. The same interpreter executes correction transport; a locally sufficient finite correction cap is the next unresolved step.",
+    "summary": "Editable spatial programs lift through finite prepared boundaries. Exact local-cap certificates now include a nonconstant two-row Rule32 closure; its physical execution and instruction-edit contract are frozen next.",
     "thesis": "When two dynamical paths fail to commute, represent the disagreement as a new coordinate and ask whether the enlarged representation closes.",
     "source": "docs/research/2026-09-09-dimensional-closure-program.md",
     "supports": [
@@ -52,7 +52,8 @@
       "spatial-rail-programs",
       "editable-routing-tables",
       "finite-routing-boundaries",
-      "stored-correction-transport"
+      "stored-correction-transport",
+      "local-correction-caps"
     ]
   }
 ]
