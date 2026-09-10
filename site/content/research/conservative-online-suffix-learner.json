@@ -1,0 +1,24 @@
+[
+  {
+    "recordType": "checkpoint",
+    "slug": "conservative-online-suffix-learner",
+    "label": "Conservative online observer",
+    "title": "A suffix learner with explicit abstention and history costs",
+    "date": "2026-09-10",
+    "updated": "2026-09-10",
+    "kind": "Implemented instrument with deterministic trace checks",
+    "evidence": "exploratory",
+    "topic": "Algebra and closure",
+    "summary": "The agreed online arm predicts before observing the successor, refines only a wrong definite prediction, retains history across rebuilds and freezes its model for held-out trajectories.",
+    "takeaway": "The instrument is implemented; no new CA research evaluation is claimed. Future-equivalence, coarsening, oracle learning and performance predictions remain separate.",
+    "source": "docs/research/2026-09-10-conservative-online-suffix-learner.md",
+    "promotion": {
+      "stage": "research"
+    },
+    "related": [
+      "shared-closure-account",
+      "history-lift-closure",
+      "representation-design"
+    ]
+  }
+]

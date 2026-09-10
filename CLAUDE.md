@@ -458,8 +458,13 @@ checkpoint's burndown status, PR link and date current in that same PR.
   links it from the Erased Distinctions Program. Preserve the original (P,q)
   clocks and the distinction between exact rational channels and numerical
   capacity certificates. No new census was run.
-- Remaining: #64 is reserved for the parallel agent. Review/integrate its
-  conservative learner PR when ready; do not duplicate its implementation.
+- #64 instrument: the parallel agent's PR78 completes the conservative online
+  suffix learner. Primary integration registers its checkpoint/knowledge and
+  Program links. No CA performance census, coarsening or oracle arm was run.
+- The eight-issue burndown is complete. The representation-empowerment-census
+  and second-lift-completion-comparison remain named planned experiments;
+  each requires its implementation/evaluation gates before claiming results.
+  Preserve the separate source-recoder workstream (PR55).
 
 ## Research continuation: gradient interventions completed; pause for issues (2026-09-10)
 
