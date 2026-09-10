@@ -1,0 +1,23 @@
+{
+  "R": 1,
+  "cap": "A_2(S)[x] = A_1(S)[x-1] AND A_1(S)[x+1]",
+  "cap_outputs_sha256": "6dc5ebe1abf260a5daed00d0688278f8e7aaa0c9a638b4a3d8431255a4857ffa",
+  "eca_cap": 160,
+  "h": 1,
+  "identity_assertions": 384,
+  "physical_edit_experiment_executed": false,
+  "realized_top_neighborhoods": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    6,
+    7
+  ],
+  "rule": 32,
+  "selection": "post-census, compact nonconstant spatial cap",
+  "source_windows": 128,
+  "top_eca": 128,
+  "top_update": "A_1(F_32(S)) = F_128(A_1(S))"
+}

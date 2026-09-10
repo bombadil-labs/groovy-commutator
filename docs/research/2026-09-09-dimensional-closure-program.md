@@ -322,10 +322,13 @@ A stack prepared through H is exact when k+t<=H. A constant zero cap does
 not generally close it: the retained Rule255 example corrupts row0 at tick3
 when H=2, despite an entirely valid and stable physical layout.
 
-The next missing object is a locally computable cap g_h(K_h). The planned
-census compares correction coordinates, their forward-observation equivalent,
-and the complete source baseline before attempting a physical cap program.
-Boundary stability and retained information sufficiency are distinct.
+The [local-cap census](2026-09-10-local-correction-caps.md) now supplies exact
+local certificates or conflicts for all4,608 frozen budgets. A post-census
+Rule32 witness closes two rows: U'=F_32(U) XOR V and V'=F_128(V), with
+nonconstant cap V_left AND V_right. This holds at every time for correctly
+prepared source images. Its physical strip and edit contract are frozen next.
+Boundary stability, logical information sufficiency, and edited semantic
+validity remain distinct conditions.
 
 ## Relation to the Class-IV hope
 
@@ -363,32 +366,29 @@ recursive spatial-program closure.
 
 12. **Stored programs execute correction transport.** Program(r,60) gives the interior correction law and exact finite prepared triangle. A constant zero cap has an explicit failure; indefinite local cap closure is not yet established by this construction.
 
+13. **Finite logical correction caps have exact certificates.** The all-ECA full-shift census finds1,094 passing budgets and3,514 conflicts for h=0..2,R=0..2 in K/O coordinates. Rule32 has a nonconstant two-row all-time logical closure. Different local radii do not contradict K/O whole-field fiber equivalence, and source retention remains a cheaper raw storage baseline.
+
 ## What remains open
 
-- Correction transport now has a finite physically programmed realization for its protected time triangle. An indefinitely valid finite-height cap with an explicit physical program and edit contract remains open.
+- Rule32 now has an indefinitely valid two-row logical cap with a compact candidate program. Its complete physical strip and instruction-edit/semantic-recovery audit remain the next frozen task.
 - Finite-thickness routing boundaries are constructive under fixed occupancy and missing-input retention. Occupancy edits, mutable stage topology, smaller alphabets and self-maintained roles remain open.
 - The relationship between correction depth, spatial dimension, and growing within-dimension radius is not yet characterized.
 - Class-IV correspondence is background motivation only and does not direct the current search.
 
 ## The next theoretical target
 
-The control construction now has finite boundaries, and the correction
-interior has a physical instruction. Return to the missing information:
+The information census is complete. Move the Rule32 two-row closure into the
+existing interpreter with bottom program(32,60), top program(128,240), and two
+finite guard rows. The [next frozen protocol](protocols/rule32-physical-cap-20260910.md)
+has not been executed. It fixes the complete physical identity, resource costs,
+local audits, and finite-ring controls before evaluation.
 
-> **Can the next correction be computed from a bounded local patch of the retained correction tuple, and then executed by an explicitly represented finite cap?**
+Matched instruction edits must reproduce the edited native program, but this
+does not automatically preserve the fixed-Rule32 correction interpretation.
+Measure return to the undamaged data trajectory and finite-ring represented
+image separately, without presupposing repair. Any rescue is frozen afterward.
 
-The [next frozen protocol](protocols/local-correction-caps-20260910.md) is
-planned, not executed. It tests all256 fixed homogeneous ECA rules at
-h=0,1,2 and cap radius R=0,1,2, with complete infinite-lattice causal
-windows. Each passing budget supplies a local factorization certificate;
-each failing budget retains a conflicting pair of source windows.
-
-Compare K_h with its whole-field-equivalent forward-observation tuple O_h
-and with retaining S. Count preparation radius, represented bits, update
-radius and cap-table cost. Closure is not automatically a compression gain.
-
-After the census, freeze a physical cap and instruction-edit/repair contract
-for a suitably representable candidate, or record that none was found in
-budget. Broader revisability and dynamically maintained roles come after
-that decision. Further routing refinements should serve the cap question,
-not postpone the return to the commutator.
+Broader cap programs, dynamic repairs and maintained roles follow that test.
+Preserve the census's failed budgets; neither its successes nor its scoped
+failures settle the larger rule space. No Class-IV selection or novelty claim
+is established.

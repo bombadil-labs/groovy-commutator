@@ -1,0 +1,24 @@
+[
+  {
+    "recordType": "checkpoint",
+    "label": "Local correction caps",
+    "slug": "local-correction-caps",
+    "title": "Finite correction caps exist, but local coordinates have a cost",
+    "date": "2026-09-10",
+    "updated": "2026-09-10",
+    "kind": "Exact local factorization census",
+    "evidence": "exact",
+    "topic": "Algebra and closure",
+    "summary": "An all-ECA full-shift census retains1,094 exact cap budgets and3,514 conflicts. Rule32 has a compact nonconstant two-row closure; correction and observation coordinates have different local costs.",
+    "takeaway": "Finite correction closure is possible without retaining the source, but extra rows need not simplify the cap and closure is not automatically compression.",
+    "source": "docs/research/2026-09-10-local-correction-caps.md",
+    "promotion": {
+      "stage": "research"
+    },
+    "related": [
+      "stored-correction-transport",
+      "correction-future-coordinates",
+      "finite-routing-boundaries"
+    ]
+  }
+]
