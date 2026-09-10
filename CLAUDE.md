@@ -391,6 +391,43 @@ larger grids; separately specify a locally represented changeable decoder.
 Do not infer that expanding same-time instructions to a fixed local rule
 makes them meaningless, or that memory is the only interesting mechanism.
 
+## Research continuation: extension freedom and dimensional-beam objective (2026-09-10)
+
+Read docs/research/2026-09-10-extension-freedom.md. This is the dimensional
+workstream; preserve the parallel Erased Distinctions sources and metadata.
+
+- User clarified the destination: recurring dimensional construction, coherent
+  lower-dimensional trajectories, additional higher-level possibilities, and
+  endogenous organization. "Turtle beam"/"unus mundus" are motivation, not
+  established claims. Guarded constructions remain useful controls; do not
+  substitute their supplied compatibility for naturally selected organization.
+- Spatial dimension, correction depth and time differ. Minimum ancestry needs
+  an encoding/causal/resource contract; no skipped levels along composed total
+  adjacent lifts. Injective lifts preserve ancestral rank; compatible dynamics
+  cannot increase it. No intrinsic dimension or prime-factor result follows.
+- Extension-freedom protocol f4caa22f, implementation1ecaba36 precede evaluation;
+  no corrections/deviations. Source Rule32, all128 seven-bit causal windows.
+  Of64 pair neighborhoods15 are realized;2^98 radius-one pair updates agree.
+  This broad logical grammar is not wholly executable by the physical one.
+- All65,536 native top tuples were independently audited on16 contexts.
+  128 pass, giving four effective functions with32 aliases each. Top ECA-only
+  choices are exactly128/160. Their difference detects top101, absent on-image.
+  Physical encodings differ in stored programs, even when data images agree.
+- Complete physical controls: all source words at widths4/6, both caps,8ticks;
+  off-image top zero at width21,8ticks; all256 source/lambda fields at width4,
+  copying mode,4ticks. 2,738 timepoints,922,216 stored-symbol comparisons.
+- With top words128+32*lambda, old V gates lambda copying from the left.
+  288 actual instruction-bit changes; encoded data remain exact. This neutral
+  freedom is dormant on the image, not autonomous revision of source dynamics.
+- Off-image top zero grows as[-t,t] under128 and{-t,-t+2,...,t} under160.
+  Neither heals generally. Same encoded dynamics does not fix ambient dynamics.
+- NEXT: execute docs/research/protocols/guard-free-axial-lift-20260910.md,
+  frozen and unrun. Apply original F_r along every spatial axis in order;
+  binary full lattice, no guards/tags. Test both replication interfaces and
+  axis-order dependence for ALL256 r. Commit implementation before evaluation.
+  Account for costs and preserved restrictions. This is one constructor, not
+  a uniquely natural law. Keep failures and freeze rescues; no C4 scoring.
+
 ## Research continuation: finite physical correction cap completed (2026-09-10)
 
 Read docs/research/2026-09-10-rule32-physical-cap.md. Preserve the parallel
@@ -420,7 +457,8 @@ Erased Distinctions workstream and its shared metadata entries.
   encoded fixed point. One top data zero expands exactly to|x|<=t under128.
   Top leaf bit7 edit128->0 atx0 creates zeros|x|<=t-1 for t>=1. Thus even
   data-trajectory recovery is not general; these are not just unrepaired bits.
-- NEXT research question: intentional semantic program revision. Decide the
+- Follow-up and user clarification are recorded in the extension-freedom continuation above.
+  The earlier next question was intentional semantic program revision. Decide the
   old/new interpretation, allowed edit and re-preparation/maintenance resources
   before freezing a concrete next experiment. Do not automatically treat an
   intended new native dynamics as an error, or add repair machinery without

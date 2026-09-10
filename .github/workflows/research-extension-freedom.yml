@@ -1,0 +1,39 @@
+name: Extension freedom and neutral program audit
+
+on:
+  pull_request:
+    paths:
+      - 'scripts/verify_extension_freedom.py'
+      - 'scripts/verify_local_correction_caps.py'
+      - 'scripts/verify_rule32_physical_cap.py'
+      - 'scripts/verify_finite_routing_boundaries.py'
+      - 'scripts/verify_editable_routing_tables.py'
+      - 'results/extension_freedom_20260910.json'
+      - '.github/workflows/research-extension-freedom.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/verify_extension_freedom.py'
+      - 'scripts/verify_local_correction_caps.py'
+      - 'scripts/verify_rule32_physical_cap.py'
+      - 'scripts/verify_finite_routing_boundaries.py'
+      - 'scripts/verify_editable_routing_tables.py'
+      - 'results/extension_freedom_20260910.json'
+      - '.github/workflows/research-extension-freedom.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  extension-freedom-audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Audit every extension and the independent physical/program controls
+        run: python scripts/verify_extension_freedom.py > /tmp/extension-freedom.json
+      - name: Reproduce exact canonical result
+        run: diff -u results/extension_freedom_20260910.json /tmp/extension-freedom.json

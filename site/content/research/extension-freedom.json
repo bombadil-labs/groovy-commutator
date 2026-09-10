@@ -1,0 +1,24 @@
+[
+  {
+    "recordType": "checkpoint",
+    "slug": "extension-freedom",
+    "label": "Extension freedom",
+    "title": "The encoded dynamics does not uniquely determine its larger world",
+    "date": "2026-09-10",
+    "updated": "2026-09-10",
+    "kind": "Exact extension census and endogenous-program control",
+    "evidence": "exact",
+    "topic": "Algebra and closure",
+    "summary": "Compatible Rule32 top programs preserve every encoded data trajectory while differing off-image. Their neutral instruction variants can also circulate autonomously. A guard-free dimensional constructor is frozen next.",
+    "takeaway": "Compatibility fixes behavior on an encoded image while leaving ambient choices; instruction changes may be real but dormant for the represented data.",
+    "source": "docs/research/2026-09-10-extension-freedom.md",
+    "promotion": {
+      "stage": "research"
+    },
+    "related": [
+      "rule32-physical-cap",
+      "local-correction-caps",
+      "editable-routing-tables"
+    ]
+  }
+]
