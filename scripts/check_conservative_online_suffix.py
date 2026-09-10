@@ -24,14 +24,17 @@ from groovy.online_suffix import (
 
 def check_predict_before_record_and_refine():
     learner = ConservativeSuffixLearner[str]()
-    p0 = learner.learn_transition("A", "B")
-    p1 = learner.learn_transition("B", "A")
-    p2 = learner.learn_transition("A", "C")
-    assert p0.kind == ABSTAIN_UNSEEN
-    assert p1.kind == ABSTAIN_UNSEEN
-    assert p2.kind == DEFINITE and p2.value == "B"
+    assert learner.begin_step("A").kind == ABSTAIN_UNSEEN
+    learner.finish_step("B")
+    assert learner.begin_step("B").kind == ABSTAIN_UNSEEN
+    learner.finish_step("A")
+
+    p = learner.begin_step("A")
+    assert p.kind == DEFINITE and p.value == "B"
+    learner.finish_step("C")
     assert learner.stats.wrong == 1
     assert learner.stats.rebuilds == 1
+    assert learner.work.rebuilds == 1
     assert learner.h == 2
     assert learner.table == {("A", "B"): {"A"}, ("B", "A"): {"C"}}
     assert learner.raw == ["A", "B", "A"]
@@ -46,15 +49,17 @@ def check_predict_before_record_and_refine():
 def check_abstentions_do_not_refine():
     learner = ConservativeSuffixLearner[str]()
     learner.table[("X",)] = {"A", "B"}
-    p = learner.learn_transition("X", "C")
+    p = learner.begin_step("X")
     assert p.kind == ABSTAIN_CONFLICT
+    learner.finish_step("C")
     assert learner.h == 1
     assert learner.stats.rebuilds == 0
     assert learner.stats.abstain_conflict == 1
 
     fresh = ConservativeSuffixLearner[str]()
-    p = fresh.learn_transition("U", "V")
+    p = fresh.begin_step("U")
     assert p.kind == ABSTAIN_UNSEEN
+    fresh.finish_step("V")
     assert fresh.h == 1
     assert fresh.stats.rebuilds == 0
 
@@ -79,6 +84,8 @@ def check_held_out_freeze_and_fresh_history():
     assert model.h == 2
     assert dict(model.table) == frozen_table
     assert result.history == ["A", "B", "A"]
+    assert result.storage.retained_history_symbols == 3
+    assert result.storage.table_keys == len(frozen_table)
 
 
 def check_prequential_single_advance_and_accounting():
@@ -95,6 +102,7 @@ def check_prequential_single_advance_and_accounting():
     assert result.work.predictions == 3
     assert result.work.record_operations == 3
     assert result.work.successor_insertions == 3
+    assert result.work.rebuilds == 1
     assert result.work.rebuild_windows == 2
     assert result.work.rebuild_successor_insertions == 2
     assert result.h_trace == [1, 1, 2]
@@ -109,12 +117,31 @@ def check_conflict_prediction_from_frozen_model():
     assert work.prediction_key_symbols == 1
 
 
+def check_step_protocol_guards():
+    learner = ConservativeSuffixLearner[str]()
+    try:
+        learner.finish_step("X")
+    except RuntimeError:
+        pass
+    else:
+        raise AssertionError("finish_step without begin_step should fail")
+    learner.begin_step("A")
+    try:
+        learner.begin_step("B")
+    except RuntimeError:
+        pass
+    else:
+        raise AssertionError("double begin_step should fail")
+    learner.finish_step("B")
+
+
 def main():
     check_predict_before_record_and_refine()
     check_abstentions_do_not_refine()
     check_held_out_freeze_and_fresh_history()
     check_prequential_single_advance_and_accounting()
     check_conflict_prediction_from_frozen_model()
+    check_step_protocol_guards()
     print("conservative-online-suffix checks: PASS")
 
 

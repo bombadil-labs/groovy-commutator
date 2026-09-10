@@ -51,6 +51,7 @@ class WorkStats:
     prediction_key_symbols: int = 0
     record_operations: int = 0
     successor_insertions: int = 0
+    rebuilds: int = 0
     rebuild_windows: int = 0
     rebuild_key_symbols: int = 0
     rebuild_successor_insertions: int = 0
@@ -62,6 +63,12 @@ class StorageAccount:
     table_keys: int
     table_key_symbols: int
     table_successor_entries: int
+
+
+def _table_storage(table: Mapping[tuple[Obs, ...], object]) -> tuple[int, int]:
+    key_symbols = sum(len(key) for key in table)
+    successor_entries = sum(len(values) for values in table.values())  # type: ignore[arg-type]
+    return key_symbols, successor_entries
 
 
 @dataclass(frozen=True)
@@ -88,6 +95,15 @@ class FrozenSuffixModel(Generic[Obs]):
             return Prediction(ABSTAIN_CONFLICT)
         return Prediction(DEFINITE, next(iter(successors)))
 
+    def storage(self, held_out_history_symbols: int = 0) -> StorageAccount:
+        key_symbols, successor_entries = _table_storage(self.table)
+        return StorageAccount(
+            retained_history_symbols=held_out_history_symbols,
+            table_keys=len(self.table),
+            table_key_symbols=key_symbols,
+            table_successor_entries=successor_entries,
+        )
+
 
 @dataclass
 class HeldOutResult(Generic[Obs]):
@@ -95,6 +111,7 @@ class HeldOutResult(Generic[Obs]):
     work: WorkStats
     history: list[Obs]
     h_trace: list[int]
+    storage: StorageAccount
 
 
 @dataclass
@@ -114,6 +131,8 @@ class ConservativeSuffixLearner(Generic[Obs]):
     work: WorkStats = field(default_factory=WorkStats)
     h_trace: list[int] = field(default_factory=list)
     storage_trace: list[StorageAccount] = field(default_factory=list)
+    _pending_prediction: Prediction[Obs] | None = field(default=None, init=False, repr=False)
+    _pending_key: tuple[Obs, ...] | None = field(default=None, init=False, repr=False)
 
     def __post_init__(self) -> None:
         if self.h < 1:
@@ -131,6 +150,16 @@ class ConservativeSuffixLearner(Generic[Obs]):
         if len(successors) > 1:
             return Prediction(ABSTAIN_CONFLICT)
         return Prediction(DEFINITE, next(iter(successors)))
+
+    def begin_step(self, current: Obs) -> Prediction[Obs]:
+        """Receive the current observation and predict before the outcome exists."""
+        if self._pending_prediction is not None:
+            raise RuntimeError("finish the pending step before beginning another")
+        self.raw.append(current)
+        prediction = self._predict_current()
+        self._pending_prediction = prediction
+        self._pending_key = tuple(self.raw[-self.h :]) if len(self.raw) >= self.h else None
+        return prediction
 
     def _record(self, key: tuple[Obs, ...], successor: Obs) -> None:
         self.work.record_operations += 1
@@ -156,36 +185,48 @@ class ConservativeSuffixLearner(Generic[Obs]):
         self.table = rebuilt
 
     def storage(self) -> StorageAccount:
+        key_symbols, successor_entries = _table_storage(self.table)
         return StorageAccount(
             retained_history_symbols=len(self.raw),
             table_keys=len(self.table),
-            table_key_symbols=sum(len(key) for key in self.table),
-            table_successor_entries=sum(len(values) for values in self.table.values()),
+            table_key_symbols=key_symbols,
+            table_successor_entries=successor_entries,
         )
 
-    def learn_transition(self, current: Obs, successor: Obs) -> Prediction[Obs]:
-        """Predict, score, record, then refine on a wrong definite prediction."""
-        self.raw.append(current)
-        prediction = self._predict_current()
+    def finish_step(self, successor: Obs) -> Prediction[Obs]:
+        """Receive the successor, then score, record, and possibly refine."""
+        if self._pending_prediction is None:
+            raise RuntimeError("begin_step must be called before finish_step")
+        prediction = self._pending_prediction
+        pending_key = self._pending_key
         self.stats.score(prediction, successor)
 
-        if len(self.raw) >= self.h:
-            key = tuple(self.raw[-self.h :])
-            self._record(key, successor)
+        if pending_key is not None:
+            self._record(pending_key, successor)
 
         wrong_definite = prediction.kind == DEFINITE and prediction.value != successor
         if wrong_definite:
             self.h += 1
             self.stats.rebuilds += 1
-            # The new successor is available for re-keying, but is not appended
-            # to raw until it becomes the next current observation.
+            self.work.rebuilds += 1
+            # successor is available for re-keying now, but is not appended to
+            # raw until it becomes the next current observation.
             self._rebuild(self.raw + [successor])
 
         self.h_trace.append(self.h)
         self.storage_trace.append(self.storage())
+        self._pending_prediction = None
+        self._pending_key = None
         return prediction
 
+    def learn_transition(self, current: Obs, successor: Obs) -> Prediction[Obs]:
+        """Convenience helper preserving the begin/finish ordering internally."""
+        self.begin_step(current)
+        return self.finish_step(successor)
+
     def freeze(self) -> FrozenSuffixModel[Obs]:
+        if self._pending_prediction is not None:
+            raise RuntimeError("cannot freeze with a pending prediction")
         table = {key: frozenset(values) for key, values in self.table.items()}
         return FrozenSuffixModel(self.h, MappingProxyType(table))
 
@@ -200,15 +241,16 @@ def run_prequential(
     observe: Callable[[State], Obs],
     steps: int,
 ) -> TrainingResult[Obs]:
-    """Run a concrete harness; learner receives observations only."""
+    """Run a concrete harness; learner receives only observations in order."""
     if steps < 0:
         raise ValueError("steps must be non-negative")
     state = initial_state
     current = observe(state)
     for _ in range(steps):
+        learner.begin_step(current)
         next_state = transition(state)
         successor = observe(next_state)
-        learner.learn_transition(current, successor)
+        learner.finish_step(successor)
         state = next_state
         current = successor
     return learner.training_result()
@@ -239,4 +281,10 @@ def run_held_out(
         h_trace.append(model.h)
         state = next_state
         current = successor
-    return HeldOutResult(stats=stats, work=work, history=history, h_trace=h_trace)
+    return HeldOutResult(
+        stats=stats,
+        work=work,
+        history=history,
+        h_trace=h_trace,
+        storage=model.storage(held_out_history_symbols=len(history)),
+    )
