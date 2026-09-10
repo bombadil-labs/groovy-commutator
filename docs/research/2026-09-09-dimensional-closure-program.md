@@ -422,6 +422,31 @@ result specifies faithful reproduction of the original lower-dimensional law.
 The present experiment strengthens the distinction between invariant geometry
 and autonomous dynamics of departures from it.
 
+## Full gradients restore nonlinear closure
+
+The [full-gradient checkpoint](2026-09-10-full-gradient-closure.md) retains both
+horizontal and vertical differences under the same 66 ordered axial laws.
+The observation loses only a global complement choice. Exactly 10 sources
+close, admitting nonlinear majority variants 142,178,212,232 in addition to
+the previous six affine controls. Their new caps jointly use both components.
+
+A binary local CA factors through the full gradient exactly when its local
+response to complementing every input is constant. In the nonconstant part
+of this source family, that condition is self-duality. The 56 failures have
+complete-field witnesses, including 128/254 hidden by the 3-by-3 periodic control.
+
+An analytic corollary supplies a gradient tower in every dimension: the eight
+self-dual source composites and two constants factor through J_d, and the
+gradient embedding copies old components and appends zero. This intertwines
+the quotient dynamics under replication. It retains the source only modulo
+global complement; it does not reconstruct the absolute source state.
+
+The representation costs d component bits per site. In 2D only 16,384 of 262,144
+local gradient neighborhoods are reachable; four plaquette constraints encode
+their consistency. Many ambient completions remain available outside that
+image, and the underlying axial law still has its declared order. Neither
+closure nor a temporary integration anchor selects a canonical interpretation.
+
 ## Relation to the Class-IV hope
 
 The original Class-IV conjecture records the intuition that motivated this
@@ -469,26 +494,29 @@ recursive spatial-program closure.
 
 17. **Transverse differences close for exactly six compatible axial sources.** The other60 have full-field ambiguity witnesses, so no deterministic update on that observation alone exists at any radius. A separately frozen supplement extends every failed radius-one certificate and preserves the three obstructions hidden by the original small torus.
 
+18. **Full gradients restore closure for four nonlinear sources.** Keeping both spatial differences gives exactly 10 closed sources in the 66-rule axial family. A constant local complement response is necessary and sufficient; all 56 failures have full-field certificates. The all-dimensional gradient corollary retains source dynamics modulo global complement, with explicit component and image costs.
+
 ## What remains open
 
 - Rule32's finite-height physical cap and matched-edit contract are established. Broader cap compilation and intentional semantic program revision remain open; the current law does not generally restore the undamaged represented trajectory.
 - Finite-thickness routing boundaries are constructive under fixed occupancy and missing-input retention. Occupancy edits, mutable stage topology, smaller alphabets and self-maintained roles remain open.
 - The relationship between correction depth, spatial dimension, growing spatial radius and minimum causal representation dimension is not yet characterized. A fixed code's ancestral rank may primarily reflect its layout.
-- Transverse-only closure is classified for the66 compatible sources. The next frozen comparison retains both spatial differences, erasing only a global complement while using two components per site. Different observations, correction state, and the natural establishment of interpretations remain separate open questions.
+- Both transverse-only and full-gradient closure are classified for the 66 compatible sources. Native gradient execution across dimensions and the fate of wrapping-loop information under periodic boundaries are the next frozen comparison. Different observations, correction state, and the natural establishment of interpretations remain separate open questions.
 - Class-IV correspondence is background motivation only and does not direct the current search.
 
 ## The next theoretical target
 
-The [next frozen protocol](protocols/full-gradient-closure-20260910.md) retains
-both T_x and T_y under the same66 ordered axial laws. Equal full gradients on
-the connected lattice leave only a global complement choice. Test radius0/1
-on the complete15-site source support and derive the relevant complement
-criterion, with independent3-by3 periodic controls. The comparison is unrun.
+The [next frozen protocol](protocols/gradient-loops-and-dimensional-compatibility-20260910.md)
+implements native gradient evolution for the ten closed sources and tests its
+dimensional replication. On periodic fields, distinguish zero local curl from
+the additional requirement of zero wrapping-loop parities for a periodic
+binary potential. The frozen prediction is that the eight nonconstant
+self-dual sources preserve these loop bits, while constants erase them.
 
-This changes the retained information rather than merely renaming the previous
-observation. It costs two component bits per site, has gradient-image
-constraints, and supplies no uniquely preferred ambient completion. Commit
-implementation before evaluation; retain finite aliasing and separately scope
-any full-field extension proofs. The [vision note](2026-09-10-dimensional-vision-and-interpretation.md)
-remains the guiding contract. Earlier stored-program and correction instruments
-remain useful comparisons; C4 and analogies do not select rules or upgrade evidence.
+Enumerate all declared flat-field ensembles in 1D/2D/3D, compare native updates
+with independently evolved twisted potentials for four ticks, and check both
+replication interfaces. This is unrun. No arbitrary behavior on curl-violating
+neighborhoods is chosen. Boundary topology, d component bits per site, ordered
+passes, and local integration costs remain explicit. The [vision note](2026-09-10-dimensional-vision-and-interpretation.md)
+remains the guiding contract; loop sectors are not intrinsic dimension or
+prime factors. Commit implementation before execution and preserve all failures.

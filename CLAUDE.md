@@ -414,6 +414,44 @@ durable user-requested account of the vision. Keep it visible in the Program.
 - The completed transverse-difference test below resolves whether erased
   per-column baselines affect future differences, relative to that observation.
 
+## Research continuation: full-gradient closure completed (2026-09-10)
+
+Read docs/research/2026-09-10-full-gradient-closure.md. Preserve the parallel
+Erased Distinctions work and all unrelated metadata.
+
+- Protocol at e1a1ef70; verifier 33d19a2e precedes evaluation. No corrections
+  or deviations. Same 66 ordered axial laws, observation J=(T_x,T_y).
+- R0 passes 0,204,255. R1 passes 0,142,150,170,178,204,212,232,240,255.
+  The four new nonlinear sources are majority with zero or one input negated.
+  Their joint gradient caps are not componentwise copies of the source rule;
+  the source axial order remains significant for these four.
+- General binary local criterion: g(p) XOR g(complement p) must be constant.
+  If it varies, two disjoint windows force different next gradients for a
+  source and its complement. In this 66-rule domain, nonconstant passing
+  sources are exactly the eight self-dual ECA; constants have response 0.
+- All 56 R1 failures give complementary 15-site patches. Fill the omitted
+  corner 0/1 and repeat 4x4: complete identical J fields, different next J.
+  All witnesses independently replayed. The 3x3 torus hides 128/254 by uniform
+  outputs; preserve its 12 finite-functional sources rather than claiming 10.
+- Audit:2,162,688 local windows,4,325,376 window/budget checks;33,792 Boolean
+  G windows and complement pairs;33,792 periodic updates,304,128 output cells;
+  59,904 cap-site checks;112 extension updates,1,792 output cells. Canonical CI.
+- Of 262,144 local 18-bit gradient neighborhoods,16,384 are reachable, with
+  two source preimages and four independent plaquette constraints. Packed
+  R1 cap 4,096 bytes; d edge bits/site. Broad ambient 4-symbol grammar permits
+  2^491520 off-image completions; none is selected as physically preferred.
+- Analytic all-dimension consequence: self-dual axial composites factor
+  through all d gradients; replication copies components and appends zero.
+  Q_(d+1)P=P Q_d on valid gradients. This is a proof, not a higher-d census,
+  and retains source dynamics only modulo global complement.
+- NEXT: docs/research/protocols/gradient-loops-and-dimensional-compatibility-20260910.md
+  is frozen and UNRUN. Implement native Q_d and independent twisted-potential
+  controls. All flat fields on shapes (4),(2,2),(2,2,2), ten sources, four ticks;
+  test 1D/2D and 2D/3D replication. Predicted loop preservation for eight
+  self-dual sources, erasure for constants; distinguish local curl from global
+  periodic-source representability. Commit implementation before evaluation.
+  Topology is declared; no intrinsic dimension, prime-factor, or self-assembly claim.
+
 ## Research continuation: transverse-difference closure completed (2026-09-10)
 
 Read docs/research/2026-09-10-transverse-difference-closure.md. Preserve the
@@ -440,13 +478,9 @@ parallel Erased Distinctions work and all unrelated metadata.
 - Full-field counterexamples remain counterexamples when copied into higher
   axes, retaining the observed second-axis direction, by exact intertwining.
   This does not classify all possible observations or orientations.
-- NEXT: docs/research/protocols/full-gradient-closure-20260910.md is separately
-  frozen and UNRUN. Keep both T_x and T_y for the same66 ordered laws. The
-  connected-lattice fibers lose only a global complement; storage is two
-  component bits/site, not compression. Image gradients satisfy loop constraints.
-  Test R0/R1 on all32,768 assignments to the15-site union, local complement
-  criteria, and3x3 periodic controls. Commit implementation before evaluation.
-  No preferred encoding, off-image extension, Class-IV, or self-assembly claim.
+- The separately frozen full-gradient comparison is now completed above.
+  Its added information and storage cost remain explicit, and the original
+  transverse-only failures and certificates remain unchanged.
 
 ## Research continuation: guard-free axial family completed (2026-09-10)
 

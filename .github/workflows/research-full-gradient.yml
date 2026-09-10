@@ -1,0 +1,33 @@
+name: Full-gradient closure and complement audit
+
+on:
+  pull_request:
+    paths:
+      - 'scripts/verify_full_gradient_closure.py'
+      - 'scripts/verify_guard_free_axial_lift.py'
+      - 'results/full_gradient_closure_20260910.json'
+      - '.github/workflows/research-full-gradient.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/verify_full_gradient_closure.py'
+      - 'scripts/verify_guard_free_axial_lift.py'
+      - 'results/full_gradient_closure_20260910.json'
+      - '.github/workflows/research-full-gradient.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  full-gradient-audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Audit local gradients, complement criterion, and full-field witnesses
+        run: python scripts/verify_full_gradient_closure.py > /tmp/full-gradient-closure.json
+      - name: Reproduce exact canonical result
+        run: diff -u results/full_gradient_closure_20260910.json /tmp/full-gradient-closure.json
