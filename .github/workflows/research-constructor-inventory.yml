@@ -1,0 +1,24 @@
+name: Constructor inventory
+on:
+  pull_request:
+    paths:
+      - 'scripts/extract_constructor_inventory.py'
+      - 'results/constructor_inventory_20260910.json'
+      - 'results/ternary_commutator_lift_20260909_summary.json'
+      - 'results/local_ternary_lift_20260909_summary.json'
+      - 'results/full_gradient_closure_20260910.json'
+      - 'results/guard_free_axial_lift_20260910.json'
+      - '.github/workflows/research-constructor-inventory.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  constructor-inventory:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python scripts/extract_constructor_inventory.py --check results/constructor_inventory_20260910.json

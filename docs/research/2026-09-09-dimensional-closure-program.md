@@ -15,6 +15,26 @@ faithful representation, restoration, and endogenous organization; and explains
 why a rule's binary truth table does not supply a unique spatial arrangement.
 This is a visible orientation record, not a new experimental conclusion.
 
+## Shared representation contract
+
+The [shared account](2026-09-10-shared-closure-account.md), agreed in issue61,
+fixes a source family X invariant under F^q, an observation P, and one cadence q.
+An autonomous whole-field factor exists exactly when equal current observations
+have equal next observations; it is unique on P(X). Locality, radius and values
+outside that image require additional choices.
+
+The commutator's correction compares a particular candidate law with the
+actual observed update. Rule255 has invertible derivative D and G identically
+one, yet its exact derivative factor is constant zero. Nonzero correction does
+not by itself establish erased-information failure. The transverse/full-gradient
+work asks the separate question of whether any factor exists.
+
+The future-refinement chain uses the same F^q and tracks when hidden differences
+become visible. The correction/future coordinate theorem connects its finite
+observed words to correction tuples without identifying vocabulary growth with
+joint information growth. Both Programs use this account; no evidence label or
+RG interpretation is changed by the synthesis.
+
 ## The original dimensional observation
 
 Two early constructions made lower-dimensional rules literal spatial data one dimension higher.
@@ -557,6 +577,11 @@ recursive spatial-program closure.
 
 ## Pause for the agreed issue queue
 
+Revision 2026-09-10: the user has now authorized the ordered burndown. The
+[shared closure synthesis](2026-09-10-shared-closure-account.md) completes its
+first issue; the checkpoint tracks the remaining scopes and closing PRs. The
+pause described below records the boundary after the gradient experiment.
+
 The [frozen intervention protocol](protocols/gradient-intervention-costs-20260910.md)
 is complete in the checkpoint above. At the user's request, execution pauses
 here before starting the issues agreed with Fable/Claude. The checkpoint's
@@ -570,3 +595,13 @@ proposal in issue63 or the second-lift proposal in issue67.
 No new experiment is frozen or begun by this handoff. Any resumed experiment
 must preserve topology, action geometry, state assumptions, and resource costs,
 and commit its implementation before evaluation.
+
+## Open direction: sound approximation after closure fails
+
+The [archived Rule110 example](2026-09-10-successor-set-archive.md) compares exact whole-field successor sets with sound local Cartesian products on the eight-cell ring. The general question remains open: which ordered representation domains preserve useful precision at a declared resource cost? Whole-field correlations, cell-frequency metrics and prior-weighted entropy bounds are distinct. This is a reproduced exploratory example; new substrates and infinite-lattice claims require a separate frozen protocol.
+
+## Planned execution: bounded second-lift completion comparison
+
+The [frozen protocol](protocols/second-lift-completion-comparison-20260910.md) follows the completed gradient audit. Its [registered experiment](../knowledge/second-lift-completion-comparison.md) remains planned: implementation and primary evaluation are unrun. The [checkpoint](2026-09-10-second-lift-completion-protocol.md) distinguishes prior exploratory checks from the existing analytic invariant.
+
+For H128/H160 on the shared invariant Rule32 pair family, finite-depth correction tuples are invertibly locally recoded and retain identical whole-field fibers. The open measurement is local cap radius and representation cost, with a separate full-four-symbol ambient control. This constructor increases a product alphabet and correction depth on the same spatial lattice. Proposal completion does not claim the census has run or that a new spatial dimension has been established.

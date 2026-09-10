@@ -1,0 +1,258 @@
+{
+  "nonlinear_gradient_comparisons": [
+    {
+      "axial_axis_order": false,
+      "finite_role": false,
+      "full_gradient": true,
+      "intrinsic_role": false,
+      "rule": 142
+    },
+    {
+      "axial_axis_order": false,
+      "finite_role": false,
+      "full_gradient": true,
+      "intrinsic_role": false,
+      "rule": 178
+    },
+    {
+      "axial_axis_order": false,
+      "finite_role": false,
+      "full_gradient": true,
+      "intrinsic_role": false,
+      "rule": 212
+    },
+    {
+      "axial_axis_order": false,
+      "finite_role": true,
+      "full_gradient": true,
+      "intrinsic_role": false,
+      "rule": 232
+    }
+  ],
+  "pairwise_intersections": [
+    {
+      "left": "finite_role",
+      "right": "intrinsic_role",
+      "rules": [
+        0,
+        1,
+        4,
+        8,
+        12,
+        19,
+        36,
+        51,
+        55,
+        64,
+        68,
+        72,
+        76,
+        200,
+        204,
+        219,
+        223,
+        236,
+        239,
+        253,
+        255
+      ]
+    },
+    {
+      "left": "finite_role",
+      "right": "full_gradient",
+      "rules": [
+        0,
+        150,
+        204,
+        232,
+        255
+      ]
+    },
+    {
+      "left": "finite_role",
+      "right": "axial_axis_order",
+      "rules": [
+        0,
+        128,
+        136,
+        150,
+        192,
+        204,
+        255
+      ]
+    },
+    {
+      "left": "intrinsic_role",
+      "right": "full_gradient",
+      "rules": [
+        0,
+        204,
+        255
+      ]
+    },
+    {
+      "left": "intrinsic_role",
+      "right": "axial_axis_order",
+      "rules": [
+        0,
+        204,
+        255
+      ]
+    },
+    {
+      "left": "full_gradient",
+      "right": "axial_axis_order",
+      "rules": [
+        0,
+        150,
+        170,
+        204,
+        240,
+        255
+      ]
+    }
+  ],
+  "sets": {
+    "axial_axis_order": {
+      "constructor": "axial replication plus axis-order independence",
+      "count": 14,
+      "rules": [
+        0,
+        128,
+        136,
+        150,
+        160,
+        170,
+        192,
+        204,
+        238,
+        240,
+        250,
+        252,
+        254,
+        255
+      ],
+      "substrate": "local infinite-lattice 1D-to-2D and 2D-to-3D interfaces"
+    },
+    "finite_role": {
+      "constructor": "cumulative L/R/C role vocabulary",
+      "count": 33,
+      "max_depth": 6,
+      "rules": [
+        0,
+        1,
+        4,
+        8,
+        12,
+        19,
+        23,
+        32,
+        36,
+        51,
+        55,
+        64,
+        68,
+        72,
+        76,
+        90,
+        105,
+        128,
+        132,
+        136,
+        150,
+        165,
+        192,
+        200,
+        204,
+        219,
+        223,
+        232,
+        236,
+        239,
+        251,
+        253,
+        255
+      ],
+      "substrate": "binary periodic ring n=8"
+    },
+    "full_gradient": {
+      "constructor": "full-gradient factor of ordered two-axis macro law",
+      "count": 10,
+      "max_radius": 1,
+      "rules": [
+        0,
+        142,
+        150,
+        170,
+        178,
+        204,
+        212,
+        232,
+        240,
+        255
+      ],
+      "substrate": "infinite binary two-dimensional lattice; 66 replication-compatible sources"
+    },
+    "intrinsic_role": {
+      "constructor": "cumulative L/R/C local-rule vocabulary",
+      "count": 21,
+      "max_depth": 4,
+      "rules": [
+        0,
+        1,
+        4,
+        8,
+        12,
+        19,
+        36,
+        51,
+        55,
+        64,
+        68,
+        72,
+        76,
+        200,
+        204,
+        219,
+        223,
+        236,
+        239,
+        253,
+        255
+      ],
+      "substrate": "infinite binary one-dimensional lattice"
+    }
+  },
+  "source_files": {
+    "axial_axis_order": {
+      "path": "results/guard_free_axial_lift_20260910.json",
+      "sha256": "46871e2a280c8f08d177deb2e9b85ad8a60b25438ab9e350a46027603fe9079d"
+    },
+    "finite_role": {
+      "path": "results/ternary_commutator_lift_20260909_summary.json",
+      "sha256": "0b26d03365e6eeb74c5780e059dbb380c0ea84da8e3a5cf54ea5e654cbb1852a"
+    },
+    "full_gradient": {
+      "path": "results/full_gradient_closure_20260910.json",
+      "sha256": "9a137928c87222a7414bd56a172f49f026d5593944d1903c47f6be01a699085b"
+    },
+    "intrinsic_role": {
+      "path": "results/local_ternary_lift_20260909_summary.json",
+      "sha256": "b3f074e2174a736cbdc3dc3268503322a3bf58764abb35c172e1094dde2b4564"
+    }
+  },
+  "status": "descriptive extraction of existing results; not an experiment",
+  "triple_intersections": {
+    "finite_role_full_gradient_axial_axis_order": [
+      0,
+      150,
+      204,
+      255
+    ],
+    "intrinsic_role_full_gradient_axial_axis_order": [
+      0,
+      204,
+      255
+    ]
+  }
+}

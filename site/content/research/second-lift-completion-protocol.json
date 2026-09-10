@@ -1,0 +1,25 @@
+[
+  {
+    "recordType": "checkpoint",
+    "slug": "second-lift-completion-protocol",
+    "label": "Second-lift protocol",
+    "title": "Completion-independent information, coordinate-dependent cost",
+    "date": "2026-09-10",
+    "updated": "2026-09-10",
+    "kind": "Frozen protocol with prior analytic and exploratory controls",
+    "evidence": "open",
+    "topic": "Algebra and closure",
+    "summary": "The Rule32 product-alphabet comparison fixes both completions, the inherited family, K/O depth/radius budgets, causal bounds and independent checks. Whole-field invariance is an existing theorem control; the new census remains unrun.",
+    "takeaway": "Measure local radius and representation cost without treating a coordinate change as a change of retained whole-field dynamics. Implementation and evaluation remain a registered planned experiment.",
+    "source": "docs/research/2026-09-10-second-lift-completion-protocol.md",
+    "promotion": {
+      "stage": "research"
+    },
+    "related": [
+      "correction-future-coordinates",
+      "extension-freedom",
+      "constructor-inventory",
+      "gradient-intervention-costs"
+    ]
+  }
+]

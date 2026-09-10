@@ -1,0 +1,6 @@
+reachable y = 104; singleton = 50; mean |B_set| = 127/52 = 2.4423; max = 6
+cell-occurrence denominator = 2^n * n = 2048
+R=0: windows=2, singleton windows=0, cell-occurrences determined=0/2048=0.0000; whole-field: product==exact for 0/104 y, mean product size=256=256.000, max product size=256
+R=1: windows=8, singleton windows=5, cell-occurrences determined=832/2048=0.4062; whole-field: product==exact for 2/104 y, mean product size=1457/52=28.019, max product size=256
+R=2: windows=27, singleton windows=22, cell-occurrences determined=1216/2048=0.5938; whole-field: product==exact for 10/104 y, mean product size=421/52=8.096, max product size=32
+R=3: windows=72, singleton windows=58, cell-occurrences determined=1376/2048=0.6719; whole-field: product==exact for 38/104 y, mean product size=301/52=5.788, max product size=32

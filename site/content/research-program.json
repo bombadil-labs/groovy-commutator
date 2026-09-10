@@ -4,7 +4,7 @@
     "title": "Dynamics of Erased Distinctions",
     "eyebrow": "Working research program",
     "date": "2026-09-08",
-    "updated": "2026-09-09",
+    "updated": "2026-09-10",
     "status": "living",
     "summary": "A living synthesis of the project’s current view of coarse-graining: closure tracks which distinctions remain causally relevant, how erased distinctions return to visibility, and when representation repair must restore them.",
     "thesis": "Groovy Commutator studies the dynamics of distinctions erased by a representation.",
@@ -27,7 +27,10 @@
       "symbolic-sofic-image",
       "selector-shielding",
       "pulse-shape-scattering",
-      "pulse-scattering"
+      "pulse-scattering",
+      "shared-closure-account",
+      "successor-set-archive",
+      "representation-empowerment-protocol"
     ]
   },
   {
@@ -37,7 +40,7 @@
     "date": "2026-09-09",
     "updated": "2026-09-10",
     "status": "living",
-    "summary": "Loop revision has an exact transverse support cost, and replication multiplies intervention cost while preserving edited dynamics. Native 3D actions offer additional outcomes on the declared finite grids. The frozen audit is complete; execution pauses for the agreed issue queue.",
+    "summary": "Loop revision has an exact transverse support cost, and replication multiplies intervention cost while preserving edited dynamics. Native 3D actions offer additional outcomes on the declared finite grids. The frozen audit is complete; the agreed issue burndown is underway.",
     "thesis": "When two dynamical paths fail to commute, represent the disagreement as a new coordinate and ask whether the enlarged representation closes.",
     "source": "docs/research/2026-09-09-dimensional-closure-program.md",
     "supports": [
@@ -62,7 +65,10 @@
       "transverse-difference-closure",
       "full-gradient-closure",
       "gradient-loop-invariants",
-      "gradient-intervention-costs"
+      "gradient-intervention-costs",
+      "shared-closure-account",
+      "successor-set-archive",
+      "second-lift-completion-protocol"
     ]
   }
 ]

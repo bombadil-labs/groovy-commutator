@@ -1,0 +1,3 @@
+family size 256 (distinct 255); H128==H160 on family: 256/256
+A_0(X) leaves family: 164/256
+depth-one recoding (u, v^H(u)^H'(u)) holds: 256/256

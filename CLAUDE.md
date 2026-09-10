@@ -414,6 +414,53 @@ durable user-requested account of the vision. Keep it visible in the Program.
 - The completed transverse-difference test below resolves whether erased
   per-column baselines affect future differences, relative to that observation.
 
+## Research continuation: agreed issue burndown underway (2026-09-10)
+
+The user authorized executing the ordered burndown. The gradient experiment
+remains complete. This primary session owns #61,#62,#65,#66,#68,#67. At the
+user's request, #63/#64 are reserved for a parallel agent using their signed
+scopes. The primary session integrates shared catalogs, Program pages, this
+continuation and the burndown, then reviews and merges the parallel PRs. Protocol-writing issues do not authorize claiming unrun results.
+Use one substantive PR per issue and `Closes #N` on its completing PR. Keep the
+checkpoint's burndown status, PR link and date current in that same PR.
+
+- #61 shared synthesis: completed in PR71 (2026-09-10). Read
+  docs/research/2026-09-10-shared-closure-account.md. Both Programs now state the
+  same invariant-family/cadence contract and distinguish a candidate-law error
+  from failure of every factor. Rule255 supplies the unchanged exact control.
+- Eight knowledge entries restore Research022–028/035 provenance, with explicit
+  prerequisite edges and unchanged prior nodes/edges. No experiment was rerun
+  and no earlier evidence label changed. Preserve the parallel source-recoder
+  work; its current PR55 does not edit these Program sources or knowledge files.
+- #62 successor-set archive: completed in PR73 (2026-09-10). The original
+  script/stdout, reproducible replay and research/knowledge account retain
+  exploratory provenance, finite-ring scope and exact weighting conventions.
+  Both Programs leave the broader sound-approximation question open.
+- #65 relabeling archive: completed in PR74 (2026-09-10). The exact local
+  identity and transformed transport use a decoded old-state gate and old
+  arrays. The original script/stdout retain exploratory provenance; the
+  unspecified rule-field lift remains open. No geometric or selection claim.
+- #66 inventory: completed in PR75 (2026-09-10). Four source-hashed sets and
+  all six pairwise intersections preserve finite/intrinsic role budgets and
+  distinct constructors. The four nonlinear gradient sources remain visible.
+  No new CA census or conserved-density search was run.
+- #68 Concepts: completed in PR76 (2026-09-10), at concepts.html#resonance.
+  Four sourced relationships remain distinct; the vision note is promoted
+  editorially while its evidence stays open. The knowledge contract links back.
+- #67 protocol: completed in PR77 (2026-09-10). Read the second-lift completion
+  protocol/checkpoint. The GF(2)^2 constructor, inherited family, H128/H160,
+  local budgets, causal domains, canonical completions and independent checks
+  are frozen. The named second-lift-completion-comparison experiment remains
+  planned and unrun; whole-field completion invariance is a prior theorem.
+- All six primary-owned issues are complete.
+- #63 protocol: the parallel agent's PR72 completes protocol writing; primary
+  integration registers representation-empowerment-census as planned/unrun and
+  links it from the Erased Distinctions Program. Preserve the original (P,q)
+  clocks and the distinction between exact rational channels and numerical
+  capacity certificates. No new census was run.
+- Remaining: #64 is reserved for the parallel agent. Review/integrate its
+  conservative learner PR when ready; do not duplicate its implementation.
+
 ## Research continuation: gradient interventions completed; pause for issues (2026-09-10)
 
 Read docs/research/2026-09-10-gradient-intervention-costs.md. This is the current
