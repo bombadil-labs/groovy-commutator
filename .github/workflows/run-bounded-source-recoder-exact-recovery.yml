@@ -1,11 +1,12 @@
 name: Exact bounded source-recoder recovery
 
 on:
+  workflow_dispatch:
   push:
     branches:
       - 'research/relational-source-recoder-20260909'
     paths:
-      - '.github/workflows/run-bounded-source-recoder-exact-recovery.yml'
+      - 'results/bounded_source_recoder_recovery/**'
 
 permissions:
   contents: write
