@@ -4,6 +4,8 @@ The eight nonconstant sources in the full-gradient family preserve every wrappin
 
 This supplies a specific invariant across the chosen dimensional tower. Its scope matters: loop bits belong to the declared periodic boundary topology, not to intrinsic dimension, prime factors, or a representation-independent physics. The [vision record](2026-09-10-dimensional-vision-and-interpretation.md) remains the guiding contract. The intervention question added in discussion is now a [separately frozen next experiment](protocols/gradient-intervention-costs-20260910.md), not a result of this audit.
 
+Update 2026-09-10: the separately frozen [intervention audit](2026-09-10-gradient-intervention-costs.md) is now complete. It establishes minimum loop-changing support, inherited action costs, and native outcome counts under an explicit external action interface. The future-tense discussion below records the earlier freeze.
+
 ## Frozen setup and reproducibility
 
 The [protocol](protocols/gradient-loops-and-dimensional-compatibility-20260910.md) is frozen at main commit `9e5de20f127f7a0047f3d6201abe7f83cd131981`. The standalone [verifier](../../scripts/verify_gradient_loops.py) was committed at `bf62df70e71c6a8c5825f430b78e6868735e69d1` before evaluation. The first execution passed without implementation corrections or protocol changes.
