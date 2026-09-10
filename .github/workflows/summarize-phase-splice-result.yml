@@ -26,7 +26,6 @@ jobs:
           src = Path('results/phase_splice_source_recoder_20260909.json')
           raw = src.read_bytes()
           x = json.loads(raw)
-
           keep = [
               'ok','experiment','working_identity','public_note_number','primary_rules',
               'seed_languages','target_questions','target_questions_by_wolfram_class',
@@ -39,7 +38,6 @@ jobs:
           summary = {k: x[k] for k in keep}
           summary['full_result'] = str(src)
           summary['full_result_sha256'] = hashlib.sha256(raw).hexdigest()
-
           sent = x.get('rule122_161_sentinels', [])
           summary['rule122_161_sentinels'] = {
               'questions': sum(len(r.get('incoming_target_ids', [])) for r in sent),
@@ -54,55 +52,56 @@ jobs:
               'rule35_all_fail': controls.get('rule35', {}).get('all_fail'),
               'rule35_fresh_candidates_t_le_3': controls.get('rule35', {}).get('fresh_candidates_t_le_3'),
           }
-
-          out_json = Path('results/phase_splice_source_recoder_20260909_summary.json')
-          out_json.write_text(json.dumps(summary, indent=2) + '\n')
+          Path('results/phase_splice_source_recoder_20260909_summary.json').write_text(json.dumps(summary, indent=2) + '\n')
 
           first = summary['first_canonical_certificate']
-          first_text = 'None.' if first is None else (
-              f"Rule {first['rule']} seed {first['pair']}: "
-              f"t={first['t']}, k={first['k']}, j={first['j']}, "
-              f"delta={first['delta']}, policy={first['policy']}."
-          )
+          if first is None:
+              first_text = 'None.'
+          else:
+              first_text = (
+                  f"Rule {first['rule']} seed {first['pair']}: t={first['t']}, k={first['k']}, "
+                  f"j={first['j']}, delta={first['delta']}, policy={first['policy']}."
+              )
           s = summary['rule122_161_sentinels']
-          md = f'''# Phase-splice source-recoder primary census — compact report
-
-This is the concise companion to the full durable audit output at `{src}`.
-
-## Primary outcome
-
-- Frozen hypothesis: **{summary['primary_hypothesis']}**
-- Seed languages: **{summary['seed_languages']}**
-- Target questions: **{summary['target_questions']}**
-- Seed status counts: `{summary['seed_status_counts']}`
-- Exact permanence resolutions: **{summary['exact_permanence_resolutions']}**
-- Unresolved target questions: **{summary['unresolved_target_questions']}**
-- Censored target questions: **{summary['censored_target_questions']}**
-- First canonical certificate: {first_text}
-
-## Hard Rule-122/161 sentinels
-
-- Sentinel seed languages: **{s['seed_languages']}**
-- Sentinel target questions: **{s['questions']}**
-- Status counts: `{s['status_counts']}`
-- Maximum MDD nodes observed among sentinels: **{s['max_mdd_nodes']}**
-
-## Symbolic cost
-
-- Maximum MDD nodes observed anywhere in the primary census: **{summary['maximum_mdd_nodes_observed']}**
-- Frozen limits: `{summary['resource_limits']}`
-
-## Controls
-
-- Rule 5 disclosed positive control: **{summary['controls']['rule5_status']}**
-- Rule 35 fresh-family candidates through t=3 all fail: **{summary['controls']['rule35_all_fail']}** ({summary['controls']['rule35_fresh_candidates_t_le_3']} candidates)
-
-## Provenance
-
-- Full result SHA-256: `{summary['full_result_sha256']}`
-- Full result remains the canonical audit record; this file is only a compact reporting layer.
-'''
-          Path('docs/research/phase-splice-source-recoder-20260909-summary.md').write_text(md)
+          lines = [
+              '# Phase-splice source-recoder primary census — compact report',
+              '',
+              f'This is the concise companion to the full durable audit output at `{src}`.',
+              '',
+              '## Primary outcome',
+              '',
+              f"- Frozen hypothesis: **{summary['primary_hypothesis']}**",
+              f"- Seed languages: **{summary['seed_languages']}**",
+              f"- Target questions: **{summary['target_questions']}**",
+              f"- Seed status counts: `{summary['seed_status_counts']}`",
+              f"- Exact permanence resolutions: **{summary['exact_permanence_resolutions']}**",
+              f"- Unresolved target questions: **{summary['unresolved_target_questions']}**",
+              f"- Censored target questions: **{summary['censored_target_questions']}**",
+              f'- First canonical certificate: {first_text}',
+              '',
+              '## Hard Rule-122/161 sentinels',
+              '',
+              f"- Sentinel seed languages: **{s['seed_languages']}**",
+              f"- Sentinel target questions: **{s['questions']}**",
+              f"- Status counts: `{s['status_counts']}`",
+              f"- Maximum MDD nodes observed among sentinels: **{s['max_mdd_nodes']}**",
+              '',
+              '## Symbolic cost',
+              '',
+              f"- Maximum MDD nodes observed anywhere in the primary census: **{summary['maximum_mdd_nodes_observed']}**",
+              f"- Frozen limits: `{summary['resource_limits']}`",
+              '',
+              '## Controls',
+              '',
+              f"- Rule 5 disclosed positive control: **{summary['controls']['rule5_status']}**",
+              f"- Rule 35 fresh-family candidates through t=3 all fail: **{summary['controls']['rule35_all_fail']}** ({summary['controls']['rule35_fresh_candidates_t_le_3']} candidates)",
+              '',
+              '## Provenance',
+              '',
+              f"- Full result SHA-256: `{summary['full_result_sha256']}`",
+              '- Full result remains the canonical audit record; this file is only a compact reporting layer.',
+          ]
+          Path('docs/research/phase-splice-source-recoder-20260909-summary.md').write_text('\n'.join(lines) + '\n')
           PY
       - name: Commit summaries and retire one-shot summarizer
         run: |
