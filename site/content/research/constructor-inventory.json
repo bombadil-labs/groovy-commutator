@@ -1,0 +1,24 @@
+[
+  {
+    "recordType": "checkpoint",
+    "slug": "constructor-inventory",
+    "label": "Constructor inventory",
+    "title": "Four rule sets, four declared tests",
+    "date": "2026-09-10",
+    "updated": "2026-09-10",
+    "kind": "Descriptive extraction from saved results",
+    "evidence": "exact",
+    "topic": "Algebra and closure",
+    "summary": "Four explicitly scoped sets and all six pairwise intersections distinguish finite-role closure, intrinsic local closure, full-gradient factors and axial axis-order independence.",
+    "takeaway": "The four nonlinear gradient sources remain visible. Intersections of inspected lists are bookkeeping, and different constructors do not supply a common-tower theorem.",
+    "source": "docs/research/2026-09-10-constructor-inventory.md",
+    "promotion": {
+      "stage": "research"
+    },
+    "related": [
+      "ternary-commutator-lift",
+      "full-gradient-closure",
+      "guard-free-axial-lift"
+    ]
+  }
+]

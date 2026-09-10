@@ -440,7 +440,11 @@ checkpoint's burndown status, PR link and date current in that same PR.
   identity and transformed transport use a decoded old-state gate and old
   arrays. The original script/stdout retain exploratory provenance; the
   unspecified rule-field lift remains open. No geometric or selection claim.
-- Next in order: issue66's descriptive cross-constructor inventory.
+- #66 inventory: completed in PR75 (2026-09-10). Four source-hashed sets and
+  all six pairwise intersections preserve finite/intrinsic role budgets and
+  distinct constructors. The four nonlinear gradient sources remain visible.
+  No new CA census or conserved-density search was run.
+- Next in order: issue68's Concepts resonance distinctions.
 
 ## Research continuation: gradient interventions completed; pause for issues (2026-09-10)
 
