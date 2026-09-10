@@ -366,6 +366,29 @@ state-gated copying, with exact encoded data and physical program evolution.
 It is dormant on that data image. Endogenous instruction change and revision
 of represented data dynamics therefore remain distinct achievements.
 
+## A guard-free dimensional comparison
+
+The [axial-family checkpoint](2026-09-10-guard-free-axial-lift.md) applies the
+same source ECA along each spatial axis in sequence. This gives a binary CA
+on every ambient field in every dimension, without guards or reserved roles.
+Literal copying along the new axis preserves the source dynamics exactly for
+66 rules:0,255 and every even word from128 through254. The same condition is
+necessary and sufficient at every interface, not just the first two checked.
+
+Exactly24 sources have commuting axial operators, and14 satisfy both
+replication compatibility and axis-permutation equivariance. Another52 preserve
+the beam while retaining an axis order. The14 are constants, copies, parity,
+AND/OR functions. Rule32 fails this constructor; its distinct correction-cap
+closure remains valid. Axis permutations do not imply reflection symmetry.
+
+This removes guard machinery at a cost: replication is still supplied, the
+source word remains in the law, and mutable spatial programs are not retained.
+One macro update costs d lattice passes or(3^d-1)/2 naive ECA lookups per
+output. The replicated image has zero information per added-dimensional
+volume, and a local source edit changes an infinite target line. Yet ambient
+Rule128/150/254 use every site of their3^d neighborhood, so their extra axes
+are actual causal inputs. This does not settle intrinsic representation dimension.
+
 ## Relation to the Class-IV hope
 
 The original Class-IV conjecture records the intuition that motivated this
@@ -374,8 +397,9 @@ reasoning or construction choices. It is background, not an active selection
 criterion or a planned classification gate.
 
 Earlier closure and growth statistics already failed exclusivity tests.
-The current positive result works across all 256 ECA starting programs, which
-is useful evidence for the declared architecture.
+The stored-program control works across all256 ECA starting programs; the
+guard-free axial recipe preserves replication for66. Each count concerns its
+own declared architecture and is not a Class-IV selection result.
 
 Negative findings remain local to the attempted grammar, encoding, and
 budget. Preserve them and state each proposed rescue explicitly; neither a
@@ -408,28 +432,29 @@ recursive spatial-program closure.
 
 15. **Encoded compatibility leaves ambient freedom.** Exact local constraints admit multiple stored-program completions with different off-image behavior. Compatible instruction variants can move autonomously while their distinguishing bit remains dormant on the encoded data image.
 
+16. **A guard-free binary axial family has an exact all-dimensional classification.** Literal replication intertwines every adjacent interface for exactly66 ECA sources. Exactly24 sources commute across axes and14 satisfy both properties. Uniform local recursion can preserve a beam without guards, while replication and source-law dependence remain supplied resources.
+
 ## What remains open
 
 - Rule32's finite-height physical cap and matched-edit contract are established. Broader cap compilation and intentional semantic program revision remain open; the current law does not generally restore the undamaged represented trajectory.
 - Finite-thickness routing boundaries are constructive under fixed occupancy and missing-input retention. Occupancy edits, mutable stage topology, smaller alphabets and self-maintained roles remain open.
 - The relationship between correction depth, spatial dimension, growing spatial radius and minimum causal representation dimension is not yet characterized. A fixed code's ancestral rank may primarily reflect its layout.
+- The guard-free replication beam is invariant for66 sources. Whether transverse differences form an autonomous dynamical state, or need base information and correction state, is the next frozen test. This is distinct from self-assembly or autonomous changes to the source law.
 - Class-IV correspondence is background motivation only and does not direct the current search.
 
 ## The next theoretical target
 
-The [next frozen protocol](protocols/guard-free-axial-lift-20260910.md) tests a
-binary family built by applying the original ECA along each axis in sequence.
-The same recursive recipe defines every dimension on the entire ambient
-state space, with no guards or reserved program/data roles. It is not yet run.
+The [next frozen protocol](protocols/transverse-difference-closure-20260910.md)
+observes T(X)(x,y)=X(x,y) XOR X(x,y+1) under the unchanged axial laws for all66
+compatible sources. T=0 identifies the replication beam. Ask whether T evolves
+autonomously at radius0 or1 using every3-by4 source patch. Separately, complete
+3-by3 periodic observation fibers can supply full-field obstructions to any
+autonomous T law when they contain conflicting next observations. It is unrun.
 
-Test all256 sources for literal-replication compatibility at both interfaces,
-axis-order dependence on complete two-dimensional causal windows, and the
-all-dimensional consequences that actually follow. Account for ordered axes,
-replication constraints and d lattice passes per macro update. The original
-word remains in the law; spatial program mutability is not retained by default.
-
-This is one proposed uniform constructor, not a uniquely natural choice.
-Preserve every failure and freeze any rescue before evaluation. The earlier
-stored-program and correction instruments remain useful for subsequent
-comparisons. C4, prime analogies and metaphysical interpretations do not select
-rules or upgrade evidence.
+This tests whether off-beam organization can be described by transverse
+differences alone, before adding source or correction state. Preserve the
+distinction between a failed local budget and an all-radius obstruction.
+Commit implementation before execution and freeze any rescue separately.
+Earlier stored-program and correction instruments remain useful comparisons.
+C4, prime analogies and metaphysical interpretations do not select rules or
+upgrade evidence.

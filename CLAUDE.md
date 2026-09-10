@@ -391,6 +391,41 @@ larger grids; separately specify a locally represented changeable decoder.
 Do not infer that expanding same-time instructions to a fixed local rule
 makes them meaningless, or that memory is the only interesting mechanism.
 
+## Research continuation: guard-free axial family completed (2026-09-10)
+
+Read docs/research/2026-09-10-guard-free-axial-lift.md. Continue only the
+dimensional workstream; preserve parallel Erased Distinctions sources and metadata.
+
+- Protocol c5c380ec and implementation3e694a1f precede evaluation. No corrections
+  or deviations. G_(r,d) applies the same ECA along each axis, in fixed order.
+  Full binary ambient lattice, no guards or role species, Moore radius<=1.
+- Exactly66 sources preserve literal replication at EVERY interface:0,255,
+  and all even words128..254. First and second exact censuses agree. For any
+  nonconstant source the local composite has both bits in its one-site range,
+  by independent child slabs. Hence f000=0,f111=1 is necessary and sufficient
+  at every dimension; constants also pass. This is not global surjectivity.
+- Exactly24 sources commute across axes: all16 affine plus eight AND/OR
+  functions. Pairwise commutation on slices implies all-dimensional axis
+  permutation equivariance. This does not mean reflection invariance.
+- Exactly14 satisfy both:0,128,136,150,160,170,192,204,238,240,250,252,254,255.
+  They are constants, copies, parity, AND/OR. Another52 are compatible with
+  ordered axes. Rule32 fails this recipe; its correction-cap result stands.
+- Complete audits:2,048 first-interface cases,131,072 second-interface cases,
+  131,072 axis-order cases; independent Boolean array evaluator. Every width4,
+  2x2,2x2x2 state for all256 rules:73,728 macro updates,557,056 output cells,
+  independently checked by a local recursive tree. Canonical JSON and CI.
+- Replication is still prepared and gives zero added-axis information density;
+  a source edit changes an infinite line. Original r remains in the law.
+  Costs:d sequential lattice passes or(3^d-1)/2 naive lookups per output.
+  No endogenous program, self-assembly, novelty, or intrinsic-dimension claim.
+- NEXT: execute docs/research/protocols/transverse-difference-closure-20260910.md,
+  newly frozen and unrun. T(X)=X XOR its next-y translate detects departure
+  from the replicated beam. All66 sources, R=0/1, complete3x4 source patches;
+  test whether T has an autonomous law. Full3x3 torus fibers can certify
+  all-radius impossibility when they collide. Commit implementation first.
+  Preserve finite-budget vs full-field failures; freeze any rescue separately.
+  No C4 scoring. Guarded/correction controls remain useful comparisons.
+
 ## Research continuation: extension freedom and dimensional-beam objective (2026-09-10)
 
 Read docs/research/2026-09-10-extension-freedom.md. This is the dimensional
@@ -421,12 +456,9 @@ workstream; preserve the parallel Erased Distinctions sources and metadata.
   freedom is dormant on the image, not autonomous revision of source dynamics.
 - Off-image top zero grows as[-t,t] under128 and{-t,-t+2,...,t} under160.
   Neither heals generally. Same encoded dynamics does not fix ambient dynamics.
-- NEXT: execute docs/research/protocols/guard-free-axial-lift-20260910.md,
-  frozen and unrun. Apply original F_r along every spatial axis in order;
-  binary full lattice, no guards/tags. Test both replication interfaces and
-  axis-order dependence for ALL256 r. Commit implementation before evaluation.
-  Account for costs and preserved restrictions. This is one constructor, not
-  a uniquely natural law. Keep failures and freeze rescues; no C4 scoring.
+- The planned guard-free axial experiment is now completed in the continuation
+  above. Its frozen protocol remains unchanged; preserve all failures and
+  distinguish its prepared replication from naturally selected organization.
 
 ## Research continuation: finite physical correction cap completed (2026-09-10)
 
