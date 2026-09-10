@@ -219,3 +219,18 @@ This prediction concerns the static Research026 observer family only. Earlier ph
 - Numerical ambiguity is reported as ambiguity, not resolved by increasing precision after inspecting which rules are close.
 
 No adaptive observer is introduced by this protocol; #64 is a separate research object.
+
+## Named planned implementation and evaluation
+
+This protocol closes the protocol-design deliverable only. It does **not** execute the census above.
+
+The subsequent planned experiment is named **`representation-empowerment-census`**. Its stable specification is this protocol. Planned work, in order:
+
+1. implement exact channel enumeration against the unchanged Research026 observer census;
+2. implement the degenerate-channel controls and certified capacity brackets above;
+3. reproduce Research026 closure/repertoire values as a blocking control;
+4. commit the implementation before any new census evaluation;
+5. run the frozen 247-rule primary denominator plus the separately labeled nine-rule controls;
+6. save canonical machine-readable results and a human-readable checkpoint with provenance.
+
+Until those steps are executed, `representation-empowerment-census` has status **planned / unrun** and supplies no new numerical evidence. The Erased Distinctions Program should link this protocol under that planned name when shared Program metadata is integrated; this branch deliberately does not edit the shared Program file.
