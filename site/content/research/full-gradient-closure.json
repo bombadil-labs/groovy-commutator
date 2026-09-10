@@ -1,0 +1,18 @@
+[
+  {
+    "recordType": "checkpoint",
+    "slug": "full-gradient-closure",
+    "label": "Full-gradient closure",
+    "title": "Both spatial differences restore closure for four nonlinear rules",
+    "date": "2026-09-10",
+    "updated": "2026-09-10",
+    "kind": "Exact closure census and complement-factor proof",
+    "evidence": "exact",
+    "topic": "Algebra and closure",
+    "summary": "The joint horizontal/vertical gradient closes for ten of 66 compatible axial sources, admitting four nonlinear majority variants. The remaining 56 have full-field ambiguity witnesses. A local complement criterion explains the exact classification.",
+    "takeaway": "Retaining the other derivative component restores nonlinear closure when the remaining global bit flip is invisible to future gradients. Storage, gradient-image constraints, ordered axes, and ambient extension freedom remain explicit.",
+    "source": "docs/research/2026-09-10-full-gradient-closure.md",
+    "promotion": {"stage": "research"},
+    "related": ["transverse-difference-closure", "dimensional-vision-and-interpretation", "guard-free-axial-lift", "extension-freedom"]
+  }
+]
