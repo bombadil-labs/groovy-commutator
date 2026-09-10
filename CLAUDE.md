@@ -422,7 +422,7 @@ signed scopes. Protocol-writing issues do not authorize claiming unrun results.
 Use one substantive PR per issue and `Closes #N` on its completing PR. Keep the
 checkpoint's burndown status, PR link and date current in that same PR.
 
-- #61 shared synthesis: implementation PR in preparation. Read
+- #61 shared synthesis: completed in PR71 (2026-09-10). Read
   docs/research/2026-09-10-shared-closure-account.md. Both Programs now state the
   same invariant-family/cadence contract and distinguish a candidate-law error
   from failure of every factor. Rule255 supplies the unchanged exact control.

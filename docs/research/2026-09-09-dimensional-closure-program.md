@@ -577,6 +577,11 @@ recursive spatial-program closure.
 
 ## Pause for the agreed issue queue
 
+Revision 2026-09-10: the user has now authorized the ordered burndown. The
+[shared closure synthesis](2026-09-10-shared-closure-account.md) completes its
+first issue; the checkpoint tracks the remaining scopes and closing PRs. The
+pause described below records the boundary after the gradient experiment.
+
 The [frozen intervention protocol](protocols/gradient-intervention-costs-20260910.md)
 is complete in the checkpoint above. At the user's request, execution pauses
 here before starting the issues agreed with Fable/Claude. The checkpoint's
