@@ -135,6 +135,40 @@ def check_step_protocol_guards():
     learner.finish_step("B")
 
 
+def check_direct_frozen_model_snapshots_inputs():
+    successors = {"B"}
+    table = {("A",): successors}
+    model = FrozenSuffixModel(1, table)
+    successors.add("C")
+    table[("A",)] = frozenset({"D"})
+    table[("Z",)] = frozenset({"Z"})
+    assert model.predict(["A"]).value == "B"
+    assert model.predict(["Z"]).kind == ABSTAIN_UNSEEN
+    try:
+        model.table[("A",)] = frozenset({"E"})
+    except TypeError:
+        pass
+    else:
+        raise AssertionError("frozen model table must reject mutation")
+    try:
+        model.table[("A",)].add("E")
+    except AttributeError:
+        pass
+    else:
+        raise AssertionError("frozen successor sets must reject mutation")
+
+
+def check_key_accounting_across_refinement():
+    learner = ConservativeSuffixLearner[str]()
+    for current, successor in zip("ABABCAB", "BABCABA"):
+        learner.learn_transition(current, successor)
+    # Four h=1 keys precede the first wrong prediction; three h=2 keys follow.
+    assert learner.work.predictions == 7
+    assert learner.work.prediction_key_symbols == 10
+    assert learner.work.record_operations == 7
+    assert learner.h == 2
+
+
 def main():
     check_predict_before_record_and_refine()
     check_abstentions_do_not_refine()
@@ -142,6 +176,8 @@ def main():
     check_prequential_single_advance_and_accounting()
     check_conflict_prediction_from_frozen_model()
     check_step_protocol_guards()
+    check_direct_frozen_model_snapshots_inputs()
+    check_key_accounting_across_refinement()
     print("conservative-online-suffix checks: PASS")
 
 

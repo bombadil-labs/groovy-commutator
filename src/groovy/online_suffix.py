@@ -79,6 +79,9 @@ class FrozenSuffixModel(Generic[Obs]):
     def __post_init__(self) -> None:
         if self.h < 1:
             raise ValueError("h must be >= 1")
+        # Snapshot caller-owned mappings and values as well as attribute bindings.
+        snapshot = {key: frozenset(values) for key, values in self.table.items()}
+        object.__setattr__(self, "table", MappingProxyType(snapshot))
 
     def predict(self, history: list[Obs], work: WorkStats | None = None) -> Prediction[Obs]:
         if work is not None:
@@ -140,10 +143,10 @@ class ConservativeSuffixLearner(Generic[Obs]):
 
     def _predict_current(self) -> Prediction[Obs]:
         self.work.predictions += 1
-        if len(self.raw) < self.h:
+        key = self._pending_key
+        if key is None:
             return Prediction(ABSTAIN_UNSEEN)
-        key = tuple(self.raw[-self.h :])
-        self.work.prediction_key_symbols += self.h
+        self.work.prediction_key_symbols += len(key)
         successors = self.table.get(key, set())
         if not successors:
             return Prediction(ABSTAIN_UNSEEN)
@@ -156,9 +159,10 @@ class ConservativeSuffixLearner(Generic[Obs]):
         if self._pending_prediction is not None:
             raise RuntimeError("finish the pending step before beginning another")
         self.raw.append(current)
+        # Construct the key once; prediction and recording use this same tuple.
+        self._pending_key = tuple(self.raw[-self.h :]) if len(self.raw) >= self.h else None
         prediction = self._predict_current()
         self._pending_prediction = prediction
-        self._pending_key = tuple(self.raw[-self.h :]) if len(self.raw) >= self.h else None
         return prediction
 
     def _record(self, key: tuple[Obs, ...], successor: Obs) -> None:
@@ -228,7 +232,7 @@ class ConservativeSuffixLearner(Generic[Obs]):
         if self._pending_prediction is not None:
             raise RuntimeError("cannot freeze with a pending prediction")
         table = {key: frozenset(values) for key, values in self.table.items()}
-        return FrozenSuffixModel(self.h, MappingProxyType(table))
+        return FrozenSuffixModel(self.h, table)
 
     def training_result(self) -> TrainingResult[Obs]:
         return TrainingResult(self.stats, self.work, list(self.h_trace), list(self.storage_trace))
