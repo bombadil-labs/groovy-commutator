@@ -414,6 +414,41 @@ durable user-requested account of the vision. Keep it visible in the Program.
 - The completed transverse-difference test below resolves whether erased
   per-column baselines affect future differences, relative to that observation.
 
+## Research continuation: gradient loops completed (2026-09-10)
+
+Read docs/research/2026-09-10-gradient-loop-invariants.md. Preserve the parallel
+Erased Distinctions work and unrelated metadata.
+
+- Frozen protocol at 9e5de20f; implementation bf62df70 precedes evaluation.
+  First execution passed; no corrections or protocol deviations.
+- Native Q_d integrates local edge neighborhoods under both temporary anchors.
+  Independent Boolean halo contraction evolves twisted binary potentials and
+  infers output twists from endpoint differences, not the predicted invariant.
+- All flat fields on (4), (2,2), (2,2,2): 16, 32, 1,024. Plaquette ranks
+  0, 3, 14 certify completeness alongside unique anchored-potential encoding.
+- Eight nonconstant sources preserve all loop bits; constants 0/255 erase them.
+  General proof: translation covariance plus complement response kappa gives
+  h'=kappa*h. This is all-dimensional; finite tests validate implementations.
+- Replication copies edge components and appends zero; inherited loop bits
+  persist. Nonzero loop sectors are gradients of twisted infinite potentials,
+  not periodic tile potentials. No curl-violating ambient updates are chosen.
+- 10,720 base rule/field cases, 42,880 macro updates, 995,840 component checks.
+  480 interface cases, 1,920 interface ticks, 40,960 target component checks.
+  Both native/reference streams agree. Canonical JSON has all sector transitions.
+- Local edge reads 3/18/81 and reconstructed vertices 4/15/54 in 1D/2D/3D.
+  Storage d bits/site; periodic topology and supplied replication remain costs.
+- User's control refinement is recorded visibly in the vision note: persistence,
+  possible futures, and usable intervention power differ. A measurement of
+  control is not an implemented endogenous mechanism. Do not claim empowerment
+  from arbitrary observed action correlation or entropy without a probability law.
+- NEXT: docs/research/protocols/gradient-intervention-costs-20260910.md is frozen,
+  UNRUN. All flat XOR actions on the same ensembles; changed-edge budgets and
+  touched-site costs; full-field versus loop outcomes at t=0,1,4.
+  Minimum loop-changing support prediction: sum N/n_i over changed directions.
+  Check replicated action cost and controlled compatibility. This assumes
+  external simultaneous known-state actions, not a sequential local controller.
+  Commit implementation before evaluation and preserve failures.
+
 ## Research continuation: full-gradient closure completed (2026-09-10)
 
 Read docs/research/2026-09-10-full-gradient-closure.md. Preserve the parallel
@@ -444,13 +479,9 @@ Erased Distinctions work and all unrelated metadata.
   through all d gradients; replication copies components and appends zero.
   Q_(d+1)P=P Q_d on valid gradients. This is a proof, not a higher-d census,
   and retains source dynamics only modulo global complement.
-- NEXT: docs/research/protocols/gradient-loops-and-dimensional-compatibility-20260910.md
-  is frozen and UNRUN. Implement native Q_d and independent twisted-potential
-  controls. All flat fields on shapes (4),(2,2),(2,2,2), ten sources, four ticks;
-  test 1D/2D and 2D/3D replication. Predicted loop preservation for eight
-  self-dual sources, erasure for constants; distinguish local curl from global
-  periodic-source representability. Commit implementation before evaluation.
-  Topology is declared; no intrinsic dimension, prime-factor, or self-assembly claim.
+- The separately frozen native-gradient and loop experiment is completed above.
+  Its invariant depends on declared topology; it does not establish intrinsic
+  dimension, prime factors, self-assembly, or affordable intervention.
 
 ## Research continuation: transverse-difference closure completed (2026-09-10)
 

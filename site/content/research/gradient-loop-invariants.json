@@ -1,0 +1,18 @@
+[
+  {
+    "recordType": "checkpoint",
+    "slug": "gradient-loop-invariants",
+    "label": "Gradient loop invariants",
+    "title": "Loop information survives gradient evolution and dimensional lifting",
+    "date": "2026-09-10",
+    "updated": "2026-09-10",
+    "kind": "Exact native-gradient audit and loop conservation proof",
+    "evidence": "exact",
+    "topic": "Algebra and closure",
+    "summary": "Eight self-dual sources preserve wrapping-loop parities; two constants erase them. Native gradient dynamics match twisted-potential references through 1D, 2D, and 3D and both replication interfaces. Periodic topology and costs remain explicit.",
+    "takeaway": "The chosen gradient tower preserves a specific kind of loop information. Persistence is not yet affordable revisability: the next frozen test declares an action interface and counts usable futures under edit budgets.",
+    "source": "docs/research/2026-09-10-gradient-loop-invariants.md",
+    "promotion": {"stage": "research"},
+    "related": ["full-gradient-closure", "guard-free-axial-lift", "dimensional-vision-and-interpretation"]
+  }
+]

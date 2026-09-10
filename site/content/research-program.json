@@ -37,7 +37,7 @@
     "date": "2026-09-09",
     "updated": "2026-09-10",
     "status": "living",
-    "summary": "Keeping both spatial differences restores closure for four nonlinear rules, giving ten compatible axial sources with a gradient tower modulo global complement. The next frozen test examines native dimensional execution and wrapping-loop information under explicit topology.",
+    "summary": "Eight self-dual sources preserve wrapping-loop information through native gradient evolution and dimensional replication; constants erase it. The next frozen test asks which persistent distinctions can be affordably revised and which futures can be deliberately selected.",
     "thesis": "When two dynamical paths fail to commute, represent the disagreement as a new coordinate and ask whether the enlarged representation closes.",
     "source": "docs/research/2026-09-09-dimensional-closure-program.md",
     "supports": [
@@ -60,7 +60,8 @@
       "guard-free-axial-lift",
       "dimensional-vision-and-interpretation",
       "transverse-difference-closure",
-      "full-gradient-closure"
+      "full-gradient-closure",
+      "gradient-loop-invariants"
     ]
   }
 ]
