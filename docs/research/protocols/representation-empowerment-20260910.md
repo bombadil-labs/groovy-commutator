@@ -26,6 +26,23 @@ The primary rule denominator is the **247 ECA rules for which Research026 found 
 
 For every `(rule, observer)` pair, use the same source ring, ECA update law, observer semantics, and stable future-equivalence construction already used by Research025/026.
 
+## Source observer/cadence contract
+
+The reused domain is a set of **(P,q) observer/cadence pairs**. Write E for one fine ECA tick and T=E^q for that observer's macro step. All outcome sequences and the stable future relation below use T.
+
+The pinned source at commit 40ee57a5672df36a6793a5bcdd720e1cc565212e is [experiment_possibility_frontier.py](../../../scripts/experiment_possibility_frontier.py), especially run_rule and build_observer. Its [summary](../../../results/possibility_frontier_20260908_summary.json) and [audit](../../../results/possibility_frontier_20260908_audit.json) fix the prior controls.
+
+| Observer | Fine ticks per macro step q |
+| --- | --- |
+| Identity | 1 |
+| Constant | 1 |
+| Each nonconstant block-two map | 2 |
+| Each nonconstant block-three map | 3 |
+
+Retain the static list: identity, constant, all 14 nonconstant block-two maps and all 254 nonconstant block-three maps, or the same 7/127 output-complement representatives with exact outcome relabeling. The derivative remains a separate diagnostic and does not enter the static optimum. Block origin and bit ordering remain those in the source implementation. A horizon h below means h macro steps, or hq fine ticks. No action occurs between the fine ticks of a macro step.
+
+See the [publication checkpoint](../2026-09-10-representation-empowerment-protocol.md) for source provenance and the explicit rational-input capacity bounds.
+
 ## Initial-state distribution
 
 The initial concrete microstate is uniform on the complete `2^12` ring state space:
@@ -69,7 +86,7 @@ After the one-shot intervention the dynamics is autonomous under the original EC
 Let
 
 \[
-S_1=F(a(S_0)),\qquad S_{r+1}=F(S_r).
+S_1=T(a(S_0)),\qquad S_{r+1}=T(S_r).
 \]
 
 Report both finite-horizon conventions below; the first is primary.
@@ -96,9 +113,9 @@ This convention is the finite-horizon analogue of the existing `R_infinity` futu
 
 ### Stable future class `C_infinity`
 
-`C_infinity(a(S_0))` is the existing stable future-equivalence class of the post-action state under the unperturbed `(F,P)` dynamics. It is an **idealized readout of the complete future observation sequence**, not a finite-horizon physical sensor.
+`C_infinity(a(S_0))` is the existing stable future-equivalence class of the post-action state under the unperturbed `(T,P)` dynamics. It is an **idealized readout of the complete future observation sequence**, not a finite-horizon physical sensor.
 
-Compute the stable relation once for `(F,P)` and evaluate the two post-action states in that relation. Do not redefine the relation separately for each action.
+Compute the stable relation once for `(T,P)` and evaluate the two post-action states in that relation. Do not redefine the relation separately for each action.
 
 ## Per-macrostate information quantities
 
@@ -159,7 +176,7 @@ For every remaining binary-input channel:
 3. iteration cap: `10^4`;
 4. retain the floating-point lower/upper bracket and flag iteration-cap hits;
 5. round the final input distribution to an explicit rational;
-6. re-evaluate the lower and upper expressions using interval arithmetic with directed outward rounding at the exact rational channel entries;
+6. form the exact mixture m=pW for the final rational input law p, and evaluate the achievable lower bound I(p,W) and upper bound max_a D(W_a || m) using base-two logarithms and directed outward rounding at exact rational channel entries; zero-mass summands are zero and positive mass against zero mixture gives an infinite, unresolved upper bound;
 7. retain this outward-rounded interval as the capacity certificate;
 8. list every macrostate for which the certified interval is wider than the floating-point bracket by more than `1e-9`.
 
