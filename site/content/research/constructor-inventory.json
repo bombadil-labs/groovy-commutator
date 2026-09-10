@@ -17,7 +17,6 @@
     },
     "related": [
       "ternary-commutator-lift",
-      "local-ternary-lift",
       "full-gradient-closure",
       "guard-free-axial-lift"
     ]
