@@ -15,6 +15,26 @@ faithful representation, restoration, and endogenous organization; and explains
 why a rule's binary truth table does not supply a unique spatial arrangement.
 This is a visible orientation record, not a new experimental conclusion.
 
+## Shared representation contract
+
+The [shared account](2026-09-10-shared-closure-account.md), agreed in issue61,
+fixes a source family X invariant under F^q, an observation P, and one cadence q.
+An autonomous whole-field factor exists exactly when equal current observations
+have equal next observations; it is unique on P(X). Locality, radius and values
+outside that image require additional choices.
+
+The commutator's correction compares a particular candidate law with the
+actual observed update. Rule255 has invertible derivative D and G identically
+one, yet its exact derivative factor is constant zero. Nonzero correction does
+not by itself establish erased-information failure. The transverse/full-gradient
+work asks the separate question of whether any factor exists.
+
+The future-refinement chain uses the same F^q and tracks when hidden differences
+become visible. The correction/future coordinate theorem connects its finite
+observed words to correction tuples without identifying vocabulary growth with
+joint information growth. Both Programs use this account; no evidence label or
+RG interpretation is changed by the synthesis.
+
 ## The original dimensional observation
 
 Two early constructions made lower-dimensional rules literal spatial data one dimension higher.
