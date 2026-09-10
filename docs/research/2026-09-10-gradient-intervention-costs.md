@@ -196,6 +196,22 @@ Clear the five consolidation and publication items first. They make the existing
 - #63 does not depend on #64. A static channel can be defined and studied without an adaptive learner. Scheduling it before #64 keeps the intervention assumptions settled before any later comparison with learning.
 - #64 implements the conservative online arm only. Coarsening, partition-oracle design, conserved-density searches, a new rule-field lift, larger-period gradient sweeps, and orbit/fixed-point classification are outside this burndown.
 
+### Parallel work boundaries
+
+The user requested a parallel-agent subset after execution began. The primary
+session owns #61,#62,#65,#66,#68,#67. Issues #63 and #64 are reserved for the
+parallel agent: the hidden-state protocol and conservative learner have
+separate feature files and do not require the second-lift experiment.
+
+The parallel agent should use separate branches/PRs and may add new scripts,
+tests, research/protocol notes, knowledge files and unique research-catalog
+shards. The primary session owns integration edits to CLAUDE.md, knowledge.json,
+research-program.json, both existing Program pages and this burndown. Proposed
+shared additions belong in the parallel PR descriptions; the primary session
+integrates them and performs final review/CI/merge. Preserve any existing
+research PR as a separate workstream. Reservation does not mark either issue
+complete or claim that its implementation has begun.
+
 ### PR and closure rules
 
 Use one substantive PR per issue by default. Each PR cites the signed scope agreement, states its completion criteria, and includes the relevant reproduction or publication checks. If several commits are needed, preserve the protocol/implementation freeze before evaluation within that work.

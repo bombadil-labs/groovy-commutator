@@ -417,8 +417,10 @@ durable user-requested account of the vision. Keep it visible in the Program.
 ## Research continuation: agreed issue burndown underway (2026-09-10)
 
 The user authorized executing the ordered burndown. The gradient experiment
-remains complete; proceed through #61,#62,#65,#66,#68,#67,#63,#64 under their
-signed scopes. Protocol-writing issues do not authorize claiming unrun results.
+remains complete. This primary session owns #61,#62,#65,#66,#68,#67. At the
+user's request, #63/#64 are reserved for a parallel agent using their signed
+scopes. The primary session integrates shared catalogs, Program pages, this
+continuation and the burndown, then reviews and merges the parallel PRs. Protocol-writing issues do not authorize claiming unrun results.
 Use one substantive PR per issue and `Closes #N` on its completing PR. Keep the
 checkpoint's burndown status, PR link and date current in that same PR.
 
