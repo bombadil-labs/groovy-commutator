@@ -1,33 +1,25 @@
 #!/usr/bin/env python3
-"""Finite-width packing and transverse-freedom diagnostic.
+"""Finite-width packing and transverse-freedom diagnostic (frozen 2026-09-11).
 
-Implements the frozen 2026-09-11 protocol after Claude/Fable Gate-1 approval.
-The theorem controls (T1--T3 plus closed-form strip controls) are available via
-``--controls-only`` and do not execute the bounded T4 primary diagnostic.
-
-Primary T4 domain:
-  n = 6..12
-  completions = H128, H160
-  coordinates = K, O
-  depths h = 0..4
-  inherited Rule32 first-image family only
-
-The implementation uses exact finite-ring integer bitsets. Bit position i is
-site i; left/right neighbors wrap modulo n. Counts and partitions are invariant
-to this internal site-label convention.
+The theorem controls T1-T3 are analytic. The bounded primary diagnostic T4
+measures full-ring image/fiber counts for the inherited Rule32 correction
+family on n=6..12 and h=0..4. ``--controls-only`` deliberately avoids every
+T4 count so it is safe on an implementation-only commit before evaluation.
 """
 from __future__ import annotations
 
 import argparse
-from functools import lru_cache
 import hashlib
 import json
 import math
 import os
-from pathlib import Path
+import pathlib
 import subprocess
+from collections import Counter
 
-ROOT = Path(__file__).resolve().parents[1]
+import numpy as np
+
+ROOT = pathlib.Path(__file__).resolve().parents[1]
 OUT = ROOT / "results/transverse_freedom_20260911.json"
 PROTOCOL = ROOT / "docs/research/protocols/transverse-freedom-20260911.md"
 RINGS = tuple(range(6, 13))
@@ -36,305 +28,530 @@ KINDS = ("K", "O")
 DEPTHS = tuple(range(5))
 
 
-def sha_file(path: Path) -> str:
+def sha_bytes(data: bytes) -> str:
+    return hashlib.sha256(data).hexdigest()
+
+
+def sha_file(path: pathlib.Path) -> str:
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
-def ring_step(state: int, n: int, rule: int) -> int:
-    """Exact ECA update on an n-ring, site i stored in bit i."""
-    out = 0
-    for i in range(n):
-        left = (state >> ((i - 1) % n)) & 1
-        center = (state >> i) & 1
-        right = (state >> ((i + 1) % n)) & 1
-        code = (left << 2) | (center << 1) | right
-        out |= ((rule >> code) & 1) << i
-    return out
+def truth(rule: int) -> np.ndarray:
+    return np.array([(rule >> i) & 1 for i in range(8)], dtype=np.uint8)
 
 
-def pair_xor(a: tuple[int, int], b: tuple[int, int]) -> tuple[int, int]:
-    return a[0] ^ b[0], a[1] ^ b[1]
+TRUTH = {r: truth(r) for r in (32, 128, 160)}
 
 
-def first_image(source: int, n: int) -> tuple[int, int]:
-    """E(S)=(D(S),G(S)) on the periodic ring for Rule32."""
-    fs = ring_step(source, n, 32)
-    d = source ^ fs
-    d_fs = fs ^ ring_step(fs, n, 32)
-    f_d = ring_step(d, n, 32)
-    g = d_fs ^ f_d
+def decode_binary_states(n: int) -> np.ndarray:
+    vals = np.arange(1 << n, dtype=np.uint64)
+    shifts = np.arange(n - 1, -1, -1, dtype=np.uint64)
+    return ((vals[:, None] >> shifts) & 1).astype(np.uint8)
+
+
+def ring_step(bits: np.ndarray, rule: int, ref: bool = False) -> np.ndarray:
+    l = np.roll(bits, 1, axis=1)
+    c = bits
+    r = np.roll(bits, -1, axis=1)
+    if ref:
+        if rule == 32:
+            return l & (1 ^ c) & r
+        if rule == 128:
+            return l & c & r
+        if rule == 160:
+            return l & r
+        raise ValueError(rule)
+    return TRUTH[rule][4 * l + 2 * c + r]
+
+
+def encode_first_image(source: np.ndarray, ref: bool = False) -> tuple[np.ndarray, np.ndarray]:
+    f = ring_step(source, 32, ref=ref)
+    d = source ^ f
+    g = (f ^ ring_step(f, 32, ref=ref)) ^ ring_step(d, 32, ref=ref)
     return d, g
 
 
-def make_ops(n: int, top: int):
-    @lru_cache(maxsize=None)
-    def H(pair: tuple[int, int]) -> tuple[int, int]:
-        u, v = pair
-        return ring_step(u, n, 32) ^ v, ring_step(v, n, top)
-
-    @lru_cache(maxsize=None)
-    def A(j: int, pair: tuple[int, int]) -> tuple[int, int]:
-        if j == 0:
-            return pair_xor(pair, H(pair))
-        return pair_xor(A(j - 1, H(pair)), H(A(j - 1, pair)))
-
-    @lru_cache(maxsize=None)
-    def Hpow(j: int, pair: tuple[int, int]) -> tuple[int, int]:
-        cur = pair
-        for _ in range(j):
-            cur = H(cur)
-        return cur
-
-    @lru_cache(maxsize=None)
-    def O(j: int, pair: tuple[int, int]) -> tuple[int, int]:
-        return A(0, Hpow(j, pair))
-
-    return H, A, O
+def H(pair: tuple[np.ndarray, np.ndarray], top: int, ref: bool = False) -> tuple[np.ndarray, np.ndarray]:
+    u, v = pair
+    return ring_step(u, 32, ref=ref) ^ v, ring_step(v, top, ref=ref)
 
 
-def tuple_key(rows: list[tuple[int, int]]) -> tuple[int, ...]:
-    out: list[int] = []
-    for u, v in rows:
-        out.extend((u, v))
-    return tuple(out)
+def xor_pair(a: tuple[np.ndarray, np.ndarray], b: tuple[np.ndarray, np.ndarray]) -> tuple[np.ndarray, np.ndarray]:
+    return a[0] ^ b[0], a[1] ^ b[1]
 
 
-def partition_signature(values: list[tuple[int, ...]]) -> tuple[int, ...]:
-    """Canonical equality-partition label sequence in encounter order."""
-    label: dict[tuple[int, ...], int] = {}
-    out: list[int] = []
-    for value in values:
-        if value not in label:
-            label[value] = len(label)
-        out.append(label[value])
-    return tuple(out)
+def pair_equal(a: tuple[np.ndarray, np.ndarray], b: tuple[np.ndarray, np.ndarray]) -> bool:
+    return bool(np.array_equal(a[0], b[0]) and np.array_equal(a[1], b[1]))
 
 
-def t1_controls() -> list[dict]:
-    """Small exact pack/unpack indexing controls; T1 itself is analytic."""
-    checks = []
-    alphabet = 3
-    n = 5
-    for w in (1, 2, 3, 4):
-        rows = [[(11 * y + 7 * x + 2) % alphabet for x in range(n)] for y in range(w)]
-        packed = [tuple(rows[y][x] for y in range(w)) for x in range(n)]
-        unpacked = [[packed[x][y] for x in range(n)] for y in range(w)]
-        ok = unpacked == rows
-        if not ok:
-            raise AssertionError(("T1 pack roundtrip", w))
-        checks.append({"alphabet_size": alphabet, "ring": n, "width": w, "roundtrip": True})
-    return checks
+def A(pair: tuple[np.ndarray, np.ndarray], top: int, j: int, ref: bool = False) -> tuple[np.ndarray, np.ndarray]:
+    if j == 0:
+        return xor_pair(pair, H(pair, top, ref=ref))
+    return xor_pair(
+        A(H(pair, top, ref=ref), top, j - 1, ref=ref),
+        H(A(pair, top, j - 1, ref=ref), top, ref=ref),
+    )
 
 
-def t2_controls() -> list[dict]:
-    """Declared exact finite samples of the analytic capacity inequality."""
-    rows = []
-    A = 4
-    q = 4
-    for K in (1, 2):
-        for n in (3, 5):
-            for w in (1, 2, 3, 4):
-                source = A ** (w * n)
-                target = q ** (K * n)
-                fits = source <= target
-                expected = w <= K
-                if fits != expected:
-                    raise AssertionError(("T2 sample", K, n, w, source, target))
-                rows.append({
-                    "source_alphabet": A,
-                    "target_alphabet": q,
-                    "K": K,
-                    "ring": n,
+def O(pair: tuple[np.ndarray, np.ndarray], top: int, j: int, ref: bool = False) -> tuple[np.ndarray, np.ndarray]:
+    cur = pair
+    for _ in range(j):
+        cur = H(cur, top, ref=ref)
+    return A(cur, top, 0, ref=ref)
+
+
+def pair_state_keys(pair: tuple[np.ndarray, np.ndarray]) -> np.ndarray:
+    symbols = (2 * pair[0] + pair[1]).astype(np.uint64)
+    keys = np.zeros(symbols.shape[0], dtype=np.uint64)
+    for x in range(symbols.shape[1]):
+        keys = (keys << np.uint64(2)) | symbols[:, x]
+    return keys
+
+
+def tuple_symbols(rows: list[tuple[np.ndarray, np.ndarray]]) -> np.ndarray:
+    return np.concatenate([(2 * u + v).astype(np.uint8) for u, v in rows], axis=1)
+
+
+def partition_stats(symbols: np.ndarray) -> tuple[int, np.ndarray, dict[str, int], str, str]:
+    arr = np.ascontiguousarray(symbols, dtype=np.uint8)
+    width_bytes = arr.dtype.itemsize * arr.shape[1]
+    raw = arr.view(np.dtype((np.void, width_bytes))).reshape(-1)
+    _, inverse = np.unique(raw, return_inverse=True)
+    image_count = int(inverse.max()) + 1 if len(inverse) else 0
+    first = np.full(image_count, len(inverse), dtype=np.uint32)
+    if image_count:
+        np.minimum.at(first, inverse, np.arange(len(inverse), dtype=np.uint32))
+    signature = first[inverse] if image_count else np.empty(0, dtype=np.uint32)
+    sizes = np.bincount(inverse, minlength=image_count) if image_count else np.empty(0, dtype=np.int64)
+    hist = Counter(int(x) for x in sizes.tolist())
+    return (
+        image_count,
+        signature,
+        {str(size): int(hist[size]) for size in sorted(hist)},
+        sha_bytes(signature.astype("<u4", copy=False).tobytes()),
+        sha_bytes(arr.tobytes()),
+    )
+
+
+def T_from_K_rows(
+    krows: list[tuple[np.ndarray, np.ndarray]], top: int, ref: bool = False
+) -> list[tuple[np.ndarray, np.ndarray]]:
+    current = krows
+    out: list[tuple[np.ndarray, np.ndarray]] = []
+    while current:
+        out.append(current[0])
+        if len(current) == 1:
+            break
+        current = [
+            xor_pair(H(current[j], top, ref=ref), current[j + 1])
+            for j in range(len(current) - 1)
+        ]
+    return out
+
+
+def inverse_T_from_O_rows(
+    orows: list[tuple[np.ndarray, np.ndarray]], top: int, ref: bool = False
+) -> list[tuple[np.ndarray, np.ndarray]]:
+    current = orows
+    out: list[tuple[np.ndarray, np.ndarray]] = []
+    while current:
+        out.append(current[0])
+        if len(current) == 1:
+            break
+        current = [
+            xor_pair(current[j + 1], H(current[j], top, ref=ref))
+            for j in range(len(current) - 1)
+        ]
+    return out
+
+
+def rows_equal(
+    a: list[tuple[np.ndarray, np.ndarray]], b: list[tuple[np.ndarray, np.ndarray]]
+) -> bool:
+    return len(a) == len(b) and all(pair_equal(x, y) for x, y in zip(a, b))
+
+
+def round_metric(x: float) -> float:
+    return round(float(x), 12)
+
+
+def t1_indexing_control() -> dict:
+    n, w = 3, 3
+    total = 1 << (n * w)
+    bits = decode_binary_states(n * w).reshape(total, n, w)
+    packed = np.zeros((total, n), dtype=np.uint8)
+    for y in range(w):
+        packed = (packed << 1) | bits[:, :, y]
+    unpacked = np.empty_like(bits)
+    for y in range(w):
+        shift = w - 1 - y
+        unpacked[:, :, y] = (packed >> shift) & 1
+    if not np.array_equal(bits, unpacked):
+        raise AssertionError("T1 column packing roundtrip failed")
+    shifted_packed = np.roll(packed, -1, axis=1)
+    shifted_bits = np.roll(bits, -1, axis=1)
+    repacked_shifted = np.zeros_like(packed)
+    for y in range(w):
+        repacked_shifted = (repacked_shifted << 1) | shifted_bits[:, :, y]
+    if not np.array_equal(shifted_packed, repacked_shifted):
+        raise AssertionError("T1 horizontal shift conjugacy failed")
+    if len(np.unique(packed, axis=0)) != total:
+        raise AssertionError("T1 packed states are not injective")
+    return {
+        "alphabet_size": 2,
+        "n": n,
+        "width": w,
+        "states_checked": total,
+        "roundtrip": True,
+        "horizontal_shift_commutes": True,
+        "injective": True,
+    }
+
+
+def t2_capacity_controls() -> list[dict]:
+    samples = [
+        {"source_alphabet": 4, "q": 2, "K": 2, "n": 3, "widths": (1, 2, 3)},
+        {"source_alphabet": 4, "q": 4, "K": 2, "n": 5, "widths": (1, 2, 3)},
+        {"source_alphabet": 4, "q": 8, "K": 2, "n": 4, "widths": (2, 3, 4)},
+        {"source_alphabet": 2, "q": 2, "K": 3, "n": 7, "widths": (2, 3, 4)},
+    ]
+    out = []
+    for sample in samples:
+        rows = []
+        for w in sample["widths"]:
+            source_count = sample["source_alphabet"] ** (w * sample["n"])
+            target_count = sample["q"] ** (sample["K"] * sample["n"])
+            rows.append(
+                {
                     "width": w,
-                    "source_states": source,
-                    "target_capacity": target,
-                    "fits_capacity": fits,
-                })
-    return rows
+                    "source_count": source_count,
+                    "target_count": target_count,
+                    "capacity_allows_injection": bool(source_count <= target_count),
+                }
+            )
+        if not any(r["capacity_allows_injection"] for r in rows) or not any(
+            not r["capacity_allows_injection"] for r in rows
+        ):
+            raise AssertionError(("T2 sample must straddle capacity threshold", sample))
+        out.append({**{k: v for k, v in sample.items() if k != "widths"}, "cases": rows})
+    return out
 
 
-def strip_controls() -> list[dict]:
-    """Tiny enumerations checking independent/duplicated-row closed forms."""
-    rows = []
-    for n in (2, 3):
-        base = 4 ** n
-        for w in (1, 2, 3):
-            independent_expected = 4 ** (w * n)
-            independent_seen = len({x for x in range(independent_expected)})
-            duplicated_seen = len({tuple([x] * w) for x in range(base)})
-            if independent_seen != independent_expected or duplicated_seen != base:
-                raise AssertionError(("strip controls", n, w))
-            rows.append({
-                "ring": n,
+def strip_count_controls() -> dict:
+    # Small exhaustive enumeration checks the closed forms used for the large
+    # diagnostic table; the theorem itself is just product counting.
+    checks = []
+    n = 2
+    for w in (1, 2, 3):
+        total = 4 ** (w * n)
+        vals = np.arange(total, dtype=np.uint64)
+        digits = np.empty((total, w * n), dtype=np.uint8)
+        cur = vals.copy()
+        for j in range(w * n - 1, -1, -1):
+            digits[:, j] = (cur & 3).astype(np.uint8)
+            cur >>= 2
+        independent = len(np.unique(digits, axis=0))
+        base_total = 4**n
+        base_vals = np.arange(base_total, dtype=np.uint64)
+        base = np.empty((base_total, n), dtype=np.uint8)
+        cur = base_vals.copy()
+        for j in range(n - 1, -1, -1):
+            base[:, j] = (cur & 3).astype(np.uint8)
+            cur >>= 2
+        duplicated = np.tile(base, (1, w))
+        duplicate_count = len(np.unique(duplicated, axis=0))
+        if independent != 4 ** (w * n) or duplicate_count != 4**n:
+            raise AssertionError(("strip count control", w, independent, duplicate_count))
+        checks.append(
+            {
+                "n": n,
                 "width": w,
-                "independent_count": independent_seen,
-                "independent_closed_form": independent_expected,
-                "duplicated_count": duplicated_seen,
-                "duplicated_closed_form": base,
-            })
-    return rows
+                "independent_enumerated": independent,
+                "independent_closed_form": 4 ** (w * n),
+                "duplicated_enumerated": duplicate_count,
+                "duplicated_closed_form": 4**n,
+            }
+        )
+    return {"small_exhaustive": checks}
+
+
+def truth_formula_control() -> dict:
+    neighborhoods = decode_binary_states(3)
+    for rule in (32, 128, 160):
+        l, c, r = neighborhoods[:, 0], neighborhoods[:, 1], neighborhoods[:, 2]
+        codes = 4 * l + 2 * c + r
+        table = TRUTH[rule][codes]
+        if rule == 32:
+            formula = l & (1 ^ c) & r
+        elif rule == 128:
+            formula = l & c & r
+        else:
+            formula = l & r
+        if not np.array_equal(table, formula):
+            raise AssertionError(("truth formula", rule))
+    return {"rules": [32, 128, 160], "neighborhoods_per_rule": 8, "agreement": True}
 
 
 def controls_only() -> dict:
     return {
-        "T1_column_pack": t1_controls(),
-        "T2_capacity_samples": t2_controls(),
-        "strip_closed_forms": strip_controls(),
-        "status": "all theorem/indexing controls passed; T4 primary diagnostic not executed",
+        "truth_formula": truth_formula_control(),
+        "T1_column_packing": t1_indexing_control(),
+        "T2_capacity_samples": t2_capacity_controls(),
+        "strip_closed_forms": strip_count_controls(),
+        "note": "Analytic theorem controls and indexing checks only; no n=6..12 Rule32 tuple image count is computed here.",
     }
 
 
-def base_family(n: int) -> tuple[list[tuple[int, int]], dict[tuple[int, int], list[int]]]:
-    fibers: dict[tuple[int, int], list[int]] = {}
-    for source in range(1 << n):
-        x = first_image(source, n)
-        fibers.setdefault(x, []).append(source)
-    return sorted(fibers), fibers
-
-
-def cell_metrics(values: list[tuple[int, ...]], b_count: int, n: int, h: int) -> dict:
-    c_count = len(set(values))
-    if c_count > b_count:
-        raise AssertionError(("T3 source bound", n, h, c_count, b_count))
-    log_c = math.log2(c_count) if c_count else float("-inf")
-    log_b = math.log2(b_count) if b_count else float("-inf")
-    return {
-        "B_count": b_count,
-        "C_count": c_count,
-        "information_rate_bits_per_longitudinal_site": log_c / n,
-        "nominal_represented_bits_per_site": 2 * (h + 1),
-        "log2_C_over_log2_B": (log_c / log_b) if b_count > 1 else None,
-    }
-
-
-def evaluate_ring(n: int) -> dict:
-    B, fibers = base_family(n)
-    b_count = len(B)
-    if b_count > (1 << n):
-        raise AssertionError(("B source bound", n, b_count))
-
-    by_top: dict[int, dict] = {}
-    raw: dict[tuple[int, str, int], list[tuple[int, ...]]] = {}
-
-    for top in COMPLETIONS:
-        _, A, O = make_ops(n, top)
-        top_data = {"K": {}, "O": {}}
-        previous_counts = {"K": None, "O": None}
-        for kind in KINDS:
-            for h in DEPTHS:
-                vals = []
-                for x in B:
-                    rows = [(A(j, x) if kind == "K" else O(j, x)) for j in range(h + 1)]
-                    vals.append(tuple_key(rows))
-                raw[(top, kind, h)] = vals
-                metrics = cell_metrics(vals, b_count, n, h)
-                prev = previous_counts[kind]
-                if prev is not None and metrics["C_count"] < prev:
-                    raise AssertionError(("T4 monotonicity", n, top, kind, h, prev, metrics["C_count"]))
-                previous_counts[kind] = metrics["C_count"]
-                top_data[kind][str(h)] = metrics
-        by_top[top] = top_data
-
-    controls = []
-    for top in COMPLETIONS:
-        for h in DEPTHS:
-            ksig = partition_signature(raw[(top, "K", h)])
-            osig = partition_signature(raw[(top, "O", h)])
-            if ksig != osig:
-                raise AssertionError(("K/O partition", n, top, h))
-            controls.append({"type": "K_O_same_partition", "completion": top, "h": h, "ok": True})
-
-    for kind in KINDS:
-        for h in DEPTHS:
-            s128 = partition_signature(raw[(128, kind, h)])
-            s160 = partition_signature(raw[(160, kind, h)])
-            if s128 != s160:
-                raise AssertionError(("completion partition", n, kind, h))
-            controls.append({"type": "H128_H160_same_partition", "kind": kind, "h": h, "ok": True})
-
-    for h in DEPTHS:
-        if raw[(128, "O", h)] != raw[(160, "O", h)]:
-            raise AssertionError(("O literal completion independence", n, h))
-        controls.append({"type": "O_literal_equal", "h": h, "ok": True})
-
-    source_fiber_hist: dict[str, int] = {}
-    for preimages in fibers.values():
-        k = str(len(preimages))
-        source_fiber_hist[k] = source_fiber_hist.get(k, 0) + 1
-
-    return {
-        "n": n,
-        "binary_source_states": 1 << n,
-        "B_count": b_count,
-        "B_source_fiber_histogram": dict(sorted(source_fiber_hist.items(), key=lambda kv: int(kv[0]))),
-        "cells": {str(top): by_top[top] for top in COMPLETIONS},
-        "controls": controls,
-    }
-
-
-def git_last_change(path: Path) -> str | None:
-    env_key = "TRANSVERSE_FREEDOM_IMPLEMENTATION_COMMIT" if path.resolve() == Path(__file__).resolve() else None
-    if env_key and env_key in os.environ:
+def git_last_change(path: pathlib.Path) -> str | None:
+    resolved = path.resolve()
+    env_key = None
+    if resolved == pathlib.Path(__file__).resolve():
+        env_key = "TRANSVERSE_FREEDOM_IMPLEMENTATION_COMMIT"
+    elif resolved == PROTOCOL.resolve():
+        env_key = "TRANSVERSE_FREEDOM_PROTOCOL_COMMIT"
+    if env_key and os.environ.get(env_key):
         return os.environ[env_key]
     try:
-        rel = str(path.resolve().relative_to(ROOT.resolve()))
-        return subprocess.check_output(["git", "-C", str(ROOT), "log", "-1", "--format=%H", "--", rel], text=True).strip() or None
+        rel = str(resolved.relative_to(ROOT.resolve()))
+        return (
+            subprocess.check_output(
+                ["git", "-C", str(ROOT), "log", "-1", "--format=%H", "--", rel],
+                text=True,
+            ).strip()
+            or None
+        )
     except Exception:
         return None
 
 
-def run_full() -> dict:
-    controls = controls_only()
-    rings = [evaluate_ring(n) for n in RINGS]
+def full_ring_diagnostic() -> tuple[list[dict], list[dict], dict]:
+    cells: list[dict] = []
+    ring_summaries: list[dict] = []
+    total_reference_row_arrays = 0
+    total_recoding_state_checks = 0
 
-    counts = []
-    for ring in rings:
+    for n in RINGS:
+        source = decode_binary_states(n)
+        xp = encode_first_image(source, ref=False)
+        xr = encode_first_image(source, ref=True)
+        if not pair_equal(xp, xr):
+            raise AssertionError(("first image reference mismatch", n))
+
+        keys = pair_state_keys(xp)
+        unique_keys, first = np.unique(keys, return_index=True)
+        order = np.argsort(unique_keys)
+        first = first[order]
+        X = (xp[0][first], xp[1][first])
+        b_count = int(len(first))
+        if b_count > (1 << n):
+            raise AssertionError(("B source bound", n, b_count))
+
+        rows_by_top: dict[int, dict[str, list[tuple[np.ndarray, np.ndarray]]]] = {}
+        rows_ref_by_top: dict[int, dict[str, list[tuple[np.ndarray, np.ndarray]]]] = {}
+        stats: dict[
+            tuple[int, str, int], tuple[int, np.ndarray, dict[str, int], str, str]
+        ] = {}
+
+        for top in COMPLETIONS:
+            krows = [A(X, top, j, ref=False) for j in DEPTHS]
+            orows = [O(X, top, j, ref=False) for j in DEPTHS]
+            krows_ref = [A(X, top, j, ref=True) for j in DEPTHS]
+            orows_ref = [O(X, top, j, ref=True) for j in DEPTHS]
+            for primary_rows, reference_rows, kind in (
+                (krows, krows_ref, "K"),
+                (orows, orows_ref, "O"),
+            ):
+                for j, (p, r) in enumerate(zip(primary_rows, reference_rows)):
+                    if not pair_equal(p, r):
+                        raise AssertionError(("reference tuple row mismatch", n, top, kind, j))
+                    total_reference_row_arrays += 1
+            rows_by_top[top] = {"K": krows, "O": orows}
+            rows_ref_by_top[top] = {"K": krows_ref, "O": orows_ref}
+
+            for h in DEPTHS:
+                direct_k = krows[: h + 1]
+                direct_o = orows[: h + 1]
+                if not rows_equal(T_from_K_rows(direct_k, top), direct_o):
+                    raise AssertionError(("K->O recoding", n, top, h))
+                if not rows_equal(inverse_T_from_O_rows(direct_o, top), direct_k):
+                    raise AssertionError(("O->K recoding", n, top, h))
+                total_recoding_state_checks += 2 * b_count
+
+        for j in DEPTHS:
+            if not pair_equal(rows_by_top[128]["O"][j], rows_by_top[160]["O"][j]):
+                raise AssertionError(("O pointwise completion equality", n, j))
+
+        for h in DEPTHS:
+            o128 = rows_by_top[128]["O"][: h + 1]
+            o160 = rows_by_top[160]["O"][: h + 1]
+            k128 = rows_by_top[128]["K"][: h + 1]
+            k160 = rows_by_top[160]["K"][: h + 1]
+            if not rows_equal(inverse_T_from_O_rows(o128, 160), k160):
+                raise AssertionError(("H128->H160 recoding", n, h))
+            if not rows_equal(inverse_T_from_O_rows(o160, 128), k128):
+                raise AssertionError(("H160->H128 recoding", n, h))
+            total_recoding_state_checks += 2 * b_count
+
         for top in COMPLETIONS:
             for kind in KINDS:
+                rows = rows_by_top[top][kind]
+                rows_ref = rows_ref_by_top[top][kind]
                 for h in DEPTHS:
-                    counts.append(ring["cells"][str(top)][kind][str(h)]["C_count"])
-    if len(counts) != 140:
-        raise AssertionError(("cell count", len(counts)))
+                    symbols = tuple_symbols(rows[: h + 1])
+                    symbols_ref = tuple_symbols(rows_ref[: h + 1])
+                    if not np.array_equal(symbols, symbols_ref):
+                        raise AssertionError(("reference tuple mismatch", n, top, kind, h))
+                    image_count, signature, fiber_hist, sig_sha, tuple_sha = partition_stats(symbols)
+                    ref_count, ref_sig, ref_hist, ref_sig_sha, ref_tuple_sha = partition_stats(
+                        symbols_ref
+                    )
+                    if (
+                        image_count,
+                        fiber_hist,
+                        sig_sha,
+                        tuple_sha,
+                    ) != (ref_count, ref_hist, ref_sig_sha, ref_tuple_sha) or not np.array_equal(
+                        signature, ref_sig
+                    ):
+                        raise AssertionError(("reference partition mismatch", n, top, kind, h))
+                    if image_count > b_count:
+                        raise AssertionError(
+                            ("T3 source bound", n, top, kind, h, image_count, b_count)
+                        )
+                    log_c = math.log2(image_count) if image_count else 0.0
+                    log_b = math.log2(b_count) if b_count else 0.0
+                    cell = {
+                        "n": n,
+                        "completion": top,
+                        "kind": kind,
+                        "h": h,
+                        "B_n_states": b_count,
+                        "tuple_image_states": image_count,
+                        "tuple_information_rate_bits_per_longitudinal_site": round_metric(
+                            log_c / n
+                        ),
+                        "nominal_represented_bits_per_site": 2 * (h + 1),
+                        "fraction_of_B_log_capacity_exposed": round_metric(log_c / log_b)
+                        if log_b
+                        else None,
+                        "source_bound_margin_states": b_count - image_count,
+                        "fiber_histogram_over_distinct_B_states": fiber_hist,
+                        "fiber_signature_sha256": sig_sha,
+                        "tuple_symbols_sha256": tuple_sha,
+                    }
+                    cells.append(cell)
+                    stats[(top, kind, h)] = (
+                        image_count,
+                        signature,
+                        fiber_hist,
+                        sig_sha,
+                        tuple_sha,
+                    )
 
+        for h in DEPTHS:
+            base_sig = stats[(128, "K", h)][1]
+            for top in COMPLETIONS:
+                for kind in KINDS:
+                    if not np.array_equal(base_sig, stats[(top, kind, h)][1]):
+                        raise AssertionError(("fiber control", n, h, top, kind))
+
+        common_counts = [stats[(128, "K", h)][0] for h in DEPTHS]
+        if any(b < a for a, b in zip(common_counts, common_counts[1:])):
+            raise AssertionError(("depth monotonicity", n, common_counts))
+        terminal_plateau_start = None
+        for h in range(len(DEPTHS) - 1):
+            if all(x == common_counts[h] for x in common_counts[h:]):
+                terminal_plateau_start = h
+                break
+        ring_summaries.append(
+            {
+                "n": n,
+                "binary_source_states": 1 << n,
+                "B_n_states": b_count,
+                "B_n_information_rate_bits_per_longitudinal_site": round_metric(
+                    math.log2(b_count) / n
+                ),
+                "source_aliases_under_E": (1 << n) - b_count,
+                "tuple_image_states_by_depth": common_counts,
+                "tuple_image_increments": [common_counts[0]]
+                + [common_counts[j] - common_counts[j - 1] for j in range(1, len(common_counts))],
+                "terminal_plateau_start_within_h0_to_h4": terminal_plateau_start,
+                "all_four_completion_coordinate_partitions_identical": True,
+                "O_pointwise_identical_across_completions": True,
+                "K_O_recoding_both_directions": True,
+                "cross_completion_recoding_both_directions": True,
+                "source_bound_holds": all(c <= b_count for c in common_counts),
+                "closed_form_controls": [
+                    {
+                        "h": h,
+                        "width": h + 1,
+                        "independent_strip_states": 4 ** ((h + 1) * n),
+                        "independent_strip_information_rate_bits_per_site": 2 * (h + 1),
+                        "duplicated_row_states": 4**n,
+                        "duplicated_row_information_rate_bits_per_site": 2,
+                    }
+                    for h in DEPTHS
+                ],
+            }
+        )
+
+    summary = {
+        "rings": list(RINGS),
+        "depths": list(DEPTHS),
+        "completions": list(COMPLETIONS),
+        "coordinate_systems": list(KINDS),
+        "diagnostic_cells": len(cells),
+        "all_source_bounds_hold": True,
+        "all_fixed_depth_fiber_controls_hold": True,
+        "all_K_O_recoding_controls_hold": True,
+        "all_cross_completion_recoding_controls_hold": True,
+        "all_primary_reference_rows_agree": True,
+        "reference_tuple_row_arrays_compared": total_reference_row_arrays,
+        "recoding_state_checks": total_recoding_state_checks,
+        "claim_scope": "bounded n=6..12, h=0..4 inherited Rule32 diagnostic; theorem T3 is analytic for every finite h; no intrinsic-dimension claim",
+    }
+    return cells, ring_summaries, summary
+
+
+def run_full() -> dict:
+    theorem_controls = controls_only()
+    cells, rings, summary = full_ring_diagnostic()
     result = {
-        "protocol": "finite-width packing and transverse freedom — 2026-09-11",
-        "implementation_commit": git_last_change(Path(__file__)),
-        "source_hashes": {
-            "script": sha_file(Path(__file__)),
-            "protocol": sha_file(PROTOCOL),
-        },
-        "frozen_domain": {
-            "rings": list(RINGS),
+        "protocol": "transverse-freedom-20260911",
+        "scope": {
+            "ring_sizes": list(RINGS),
             "completions": list(COMPLETIONS),
             "coordinates": list(KINDS),
             "depths": list(DEPTHS),
-            "domain": "inherited Rule32 first-image family only",
+            "domain": "distinct Rule32 first-image pair states B_n on periodic rings",
+            "primary_question": "independent transverse state capacity under a fixed representation budget",
         },
-        "theorem_controls": controls,
-        "rings": rings,
-        "summary": {
-            "ring_count": len(rings),
-            "diagnostic_cells": len(counts),
-            "all_controls_passed": True,
-            "max_C_count": max(counts),
-            "min_C_count": min(counts),
-            "interpretation": "bounded exact image-count diagnostic; theorem controls T1-T3 remain analytic statements",
+        "source_hashes": {
+            "script": sha_file(pathlib.Path(__file__)),
+            "protocol": sha_file(PROTOCOL),
         },
+        "implementation_commit": git_last_change(pathlib.Path(__file__)),
+        "protocol_commit": git_last_change(PROTOCOL),
+        "theorem_and_indexing_controls": theorem_controls,
+        "ring_summaries": rings,
+        "cells": cells,
+        "summary": summary,
+        "interpretation_limit": "Finite-width packing and fixed-budget capacity are representation/resource statements. The bounded Rule32 diagnostic does not define intrinsic spatial dimension, establish a new spatial axis, or extrapolate the measured h<=4 pattern to h->infinity.",
     }
     OUT.parent.mkdir(parents=True, exist_ok=True)
-    OUT.write_text(json.dumps(result, sort_keys=True, indent=2, allow_nan=False) + "\n")
+    OUT.write_text(json.dumps(result, indent=2, sort_keys=True) + "\n")
     return result
 
 
 def main() -> int:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--controls-only", action="store_true", help="run theorem/indexing controls only; do not execute T4 or write result")
+    parser.add_argument("--controls-only", action="store_true")
     args = parser.parse_args()
     if args.controls_only:
-        print(json.dumps(controls_only(), sort_keys=True, indent=2))
+        print(json.dumps(controls_only(), indent=2, sort_keys=True))
         return 0
     result = run_full()
-    print(json.dumps(result["summary"], sort_keys=True))
+    print(json.dumps(result["summary"], indent=2, sort_keys=True))
     return 0
 
 
