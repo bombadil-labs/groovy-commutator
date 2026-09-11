@@ -6,7 +6,7 @@
     "date": "2026-09-08",
     "updated": "2026-09-10",
     "status": "living",
-    "summary": "A living synthesis of the project’s current view of coarse-graining: closure tracks which distinctions remain causally relevant, how erased distinctions return to visibility, and when representation repair must restore them.",
+    "summary": "A living synthesis of the project\u2019s current view of coarse-graining: closure tracks which distinctions remain causally relevant, how erased distinctions return to visibility, and when representation repair must restore them.",
     "thesis": "Groovy Commutator studies the dynamics of distinctions erased by a representation.",
     "source": "docs/research/2026-09-08-dynamics-of-erased-distinctions.md",
     "supports": [
@@ -41,7 +41,7 @@
     "date": "2026-09-09",
     "updated": "2026-09-11",
     "status": "living",
-    "summary": "Finite-width packing now separates nominal transverse rows from independent transverse capacity: every fixed width collapses into a product alphabet, while unbounded independent width defeats a fixed (q,K) representation budget. The inherited Rule32 correction tuples remain source-bounded and add no whole-field distinctions beyond depth zero through h=4 on rings 6–12; a sufficient causal or topological criterion for a genuine spatial axis remains open.",
+    "summary": "Transverse intervention independence now supplies an operational axis witness beyond state capacity: separated Rule90 channels have unbounded constant-support native intervention rank, while copied width does not; even with unlimited total 1D storage, a fixed alphabet and fixed common local endpoint window eventually cannot preserve all channel actions. This remains a representation-relative resource theorem, not an intrinsic-dimension criterion.",
     "thesis": "When two dynamical paths fail to commute, represent the disagreement as a new coordinate and ask whether the enlarged representation closes.",
     "source": "docs/research/2026-09-09-dimensional-closure-program.md",
     "supports": [
@@ -69,7 +69,8 @@
       "shared-closure-account",
       "successor-set-archive",
       "second-lift-completion-protocol",
-      "transverse-freedom"
+      "transverse-freedom",
+      "intervention-axis"
     ]
   },
   {
