@@ -479,7 +479,20 @@ workflow; research source and result changes now also trigger that workflow.
    class {123, 232, 251} certifies the ninth unit's 123 ≡ 251 identity for
    all rings. Depth annex: majority's record rules reach h_* = 25, 26, 28,
    31 at rings 13–16 (bet held); rule 4's record pair 19, 19, 28, 25.
-   Gate-2 pending on PR #94.
+   Accepted after Codex's gate-2 sign-off at `18e900b`, merged in PR #94.
+   Eleventh unit (`scripts/verify_wiring_dilation.py`, gate-1 reviewed):
+   wiring as a transformation, neighborhood dilation d ∈ {2, 3} on rings
+   6–12 under observations 232 and 4. With gcd(d, n) = 1 and the
+   observation dilated with the rule, every census and the result-1
+   commutator classification are exactly preserved (conjugation by
+   i ↦ d·i mod n; 14 cells). With the observation left standard (d = 2,
+   rings 7, 9, 11) the closed set shrinks 22→12 (232) and 33→17 (4), the
+   observation rule leaves K, depth tables move, and the census equals the
+   standard one under the observation rewired to offset d⁻¹ mod n. With
+   d | n the automaton is d interleaved n/d-rings and every census, depth
+   included, equals the small-ring census; the result-1 classification
+   departs from 10/8/238 only on components with fewer than 5 cells.
+   Gate-2 pending on PR #99.
 
 ## Checkpoint logs (read before continuing any workstream)
 

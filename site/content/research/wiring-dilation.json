@@ -1,0 +1,17 @@
+[
+  {
+    "slug": "wiring-dilation",
+    "label": "Wiring dilation",
+    "title": "Rewiring the ring by dilation is a relabeling when the factor is coprime, a change when the observation stays put, and a split when it divides",
+    "date": "2026-09-11",
+    "updated": "2026-09-11",
+    "kind": "Exact audit of the program's first change of interaction graph, with theorem controls",
+    "evidence": "exact",
+    "topic": "Algebra and closure",
+    "summary": "Reading the same rule table at offsets ±d instead of ±1: when d is coprime to the ring and the observation is dilated too, every census and the commutator classification are exactly preserved, because the rewiring is a site permutation. When the observation stays standard, the closed set shrinks and the observation rule leaves the commuter set, and the change equals observing the standard automaton through an inverse-offset observation. When d divides the ring, the system splits into d interleaved rings and the census, depth included, equals the small-ring census.",
+    "takeaway": "A change of wiring is a coordinate change only when the whole contract travels with it; otherwise it is a real change, and the program's three verdicts sort it exactly.",
+    "source": "docs/research/2026-09-11-wiring-dilation.md",
+    "promotion": { "stage": "research" },
+    "related": ["complement-observation", "isolated-cell", "block-majority", "representation-invariants-audit"]
+  }
+]
