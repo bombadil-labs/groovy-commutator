@@ -1,0 +1,23 @@
+[
+  {
+    "slug": "transverse-freedom",
+    "label": "Transverse freedom",
+    "title": "Finite width can be packed; Rule32 correction depth adds no independent transverse capacity through depth four",
+    "date": "2026-09-11",
+    "updated": "2026-09-11",
+    "kind": "Exact capacity theorem and bounded diagnostic",
+    "evidence": "exact",
+    "topic": "Algebra and closure",
+    "summary": "Any fixed finite strip width can be column-packed into a 1D product alphabet, while an unbounded full strip defeats every fixed target alphabet and longitudinal expansion budget. On the inherited Rule32 family, correction tuples add no new whole-field distinctions beyond depth zero through h=4 on rings 6–12.",
+    "takeaway": "Nominal transverse width is not enough: a candidate spatial axis needs a resource that cannot simply be packed into fixed one-dimensional state. The Rule32 correction stack remains source-bounded under this test.",
+    "source": "docs/research/2026-09-11-transverse-freedom.md",
+    "promotion": {
+      "stage": "research"
+    },
+    "related": [
+      "second-lift-completion",
+      "dimensional-lift",
+      "wiring-dilation"
+    ]
+  }
+]
