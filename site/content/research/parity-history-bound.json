@@ -1,0 +1,17 @@
+[
+  {
+    "slug": "parity-history-bound",
+    "label": "Parity history bound",
+    "title": "Two steps of history are always enough under neighbor-parity coarse-graining",
+    "date": "2026-09-11",
+    "updated": "2026-09-11",
+    "kind": "Finite certificate proving a history bound for every ring size, with an exhaustive check at unvisited rings",
+    "evidence": "exact",
+    "topic": "Algebra and closure",
+    "summary": "A local check on admissible 8-words, with a stated lemma, proves that every elementary rule has refinement depth at most 2 under neighbor parity on every ring; exactly eight rules need the second step, each already on the 5-cell ring; rings 7, 9, 11 and 14 reproduce the certified depths exactly.",
+    "takeaway": "The memory cost of this coarse-graining contract is a theorem: at most two steps for any rule, one step for all but eight. The fifth unit's post-hoc observation is now certified.",
+    "source": "docs/research/2026-09-11-parity-history-bound.md",
+    "promotion": { "stage": "research" },
+    "related": ["parity-coarse-graining", "history-lift-closure", "shared-closure-account", "representation-invariants-audit"]
+  }
+]

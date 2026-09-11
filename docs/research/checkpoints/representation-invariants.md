@@ -7,6 +7,54 @@ substantial unit completes; keep the bounded-claim style.
 
 Program page: `docs/research/2026-09-10-representation-invariants-program.md`
 
+## Checkpoint 2026-09-11 (sixth unit run): parity history bound certified, gate-2 pending
+
+- Run authorized by Myk before any other-model review (recorded on the
+  protocol); Codex's gate-1 sign-off arrived retrospectively at the same
+  frozen revision with no change; verifier committed at `c16cee0` before the
+  run. Evaluation preceded review; gate 2 not waived.
+- All four predictions held. D1 literal: no violating L-admissible 8-word for
+  any rule, so h_* <= 2 on every ring (theorem via the frozen lemma). D2:
+  depth-2 set exactly {22,73,104,109,146,151,182,233}, realized at n=5. D3:
+  rings 7/9/11/14 reproduce 32/216/8. D4: T_c and T_m invariance holds.
+- Post hoc, do not promote without a frozen follow-up: 32 non-closed rules
+  have no L-admissible 8-word (no pair survives two complementary steps).
+- Runtime ~38 min (ring-14 census); CI job limit raised in the workflow only.
+- Pending: Codex's gate-2 sign-off on PR #89 at its head. Not accepted until then.
+- Next unit candidates: a second non-injective map (2-block projection or
+  block majority) to test whether the constant-response criterion is
+  parity-specific; or the general question of which observations admit a
+  finite history certificate of this kind.
+
+## Checkpoint 2026-09-11 (sixth unit opened): parity history bound, protocol frozen, review pending
+
+- Frozen and unrun: `protocols/parity-history-bound-20260911.md`. Turns the
+  fifth unit's post-hoc h_* <= 2 into predictions D1-D4: a finite certificate
+  (equal adjacent g∘F² values on every L-admissible 8-word, with a frozen
+  lemma extending it to every ring size), the exact depth classification
+  (8 rules at depth 2, 216 at depth 1) from 6-word cycle checks, an
+  independent exhaustive census at n in {7, 9, 11, 14}, and the T_c/T_m
+  invariance of h_*.
+- Pending: Codex's gate-1 review. No verifier committed, nothing run. Do not
+  infer: that the certificate passes.
+
+## Checkpoint 2026-09-11 (fifth unit accepted): parity coarse-graining merged
+
+- Gate 2 met: Codex signed off at `36be4bc` (one record correction first: the
+  ring-12 pair count is 2,046 of 2,048, not 1,022 of 1,024; prose only).
+  Merged to main via PR #88 at `48b6cf3` with a merge commit; five checks
+  green including the parity replay. Unit accepted.
+- State of the program: global relabelings (units 1-3), one local injective
+  recoding (unit 4), one non-injective coarse-graining (unit 5) declared and
+  audited. Undeclared: change of completion (Codex's second-lift protocol).
+- Next unit candidates, in order of preference: (a) freeze h_* <= 2 under
+  neighbor parity as a prediction at n in {14, 16} with a proof attempt on the
+  complement-response structure; (b) a second non-injective map (2-block
+  projection or block majority) to test whether the constant-response
+  criterion is parity-specific. Protocol review by Codex before any run.
+- Open for Myk, unchanged: the editorial default for the commutator under
+  relabeling.
+
 ## Checkpoint 2026-09-11 (fifth unit run): parity coarse-graining, final review pending
 
 - Gate 1 met: Codex reviewed the protocol at `9997462` before implementation;
