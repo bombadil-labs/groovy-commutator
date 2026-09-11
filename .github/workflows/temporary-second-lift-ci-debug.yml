@@ -1,0 +1,47 @@
+name: Temporary second-lift CI debug runner
+
+on:
+  push:
+    branches:
+      - codex/second-lift-report
+    paths:
+      - '.github/workflows/temporary-second-lift-ci-debug.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  debug:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: site/package-lock.json
+      - name: Capture publisher failures
+        shell: bash
+        run: |
+          cd site
+          npm ci >/tmp/ci-debug.txt 2>&1
+          set +e
+          echo '\n=== research-program ===' >>/tmp/ci-debug.txt
+          node --test scripts/research-program.test.mjs >>/tmp/ci-debug.txt 2>&1
+          echo "status=$?" >>/tmp/ci-debug.txt
+          echo '\n=== research-legacy ===' >>/tmp/ci-debug.txt
+          node --test scripts/research.test.mjs scripts/knowledge.test.mjs >>/tmp/ci-debug.txt 2>&1
+          echo "status=$?" >>/tmp/ci-debug.txt
+          echo '\n=== build ===' >>/tmp/ci-debug.txt
+          npm run build >>/tmp/ci-debug.txt 2>&1
+          echo "status=$?" >>/tmp/ci-debug.txt
+          set -e
+          cd ..
+          cp /tmp/ci-debug.txt second-lift-ci-debug.txt
+          git config user.name 'Codex CI debugger'
+          git config user.email 'noreply@openai.com'
+          git add second-lift-ci-debug.txt
+          git commit -m 'Capture second-lift publisher CI failure log'
+          git push origin "HEAD:${GITHUB_REF_NAME}"
