@@ -44,6 +44,9 @@ No single group is assumed, no "intrinsic" invariant is claimed, and invariance 
 | Commutator class, derivative closure, cap budgets | reflection | preserved | same |
 | Local-cap minimum radius, K | complement conjugation | covariant with a bounded radius cost: shift 0, 1 or 2 over the whole census at `R ≤ 4`, never a loss of existence | [extension](2026-09-11-cap-census-complement-extension.md), [shift census](2026-09-11-cap-shift-census.md) |
 | Local-cap pass table, O | complement conjugation | preserved at every radius (`B_j = D∘F^j` is a difference) | [shift census](2026-09-11-cap-shift-census.md) |
+| Cap radius, K and O | 2-block recoding (forward radius 1, inverse 0) | covariant, cost at most one unit, zero in 665 of 674 cells | [recoding note](2026-09-11-higher-block-recoding.md) |
+| Derivative, commutator, derivative closure | 2-block recoding | preserved componentwise (algebra; run is a control) | same |
+| Possibility-frontier census summaries | complement, reflection | preserved, by closure of the observer family (deduction) | same |
 | Sweep regime labels | reflection, complement | 95% / 94% stable; not an invariance | same |
 
 Nothing in that table is new. The program's first job is to make the table complete and exact for the transformations the repository already uses implicitly.
@@ -61,6 +64,10 @@ The protocol It declares two global transformations of elementary CA (complement
 ## Third unit: complete
 
 [Cap shift census](protocols/cap-shift-census-20260911.md), frozen and run 2026-09-11, reported in the [shift census note](2026-09-11-cap-shift-census.md). All six predictions held over all 256 rules at `R ≤ 4`: O caps are exactly complement-invariant, K caps shift by at most two, no cap is created or destroyed, reflection is exact. A post-hoc observation: the depth-0 cap set of either kind is exactly the derivative-closure set from the first audit. The global relabelings are now exhausted; the next transformation type is a local recoding with a locality budget or a change of completion.
+
+## Fourth unit: complete
+
+[Higher-block recoding](protocols/higher-block-recoding-20260911.md), frozen and run 2026-09-11, reported in the [recoding note](2026-09-11-higher-block-recoding.md). The first transformation of a local, alphabet-changing type. All four predictions held: cap radius within `[mpr − 1, mpr]` and unchanged in 665 of 674 cells; derivative, commutator and closure preserved componentwise; the Research026 observer family closed under complement and reversal, so that census is covariant by deduction. Remaining undeclared types: change of completion (runs under the second-lift protocol) and non-injective coarse-graining (the Erased Distinctions object).
 
 ## What would count as progress
 

@@ -1,0 +1,3404 @@
+{
+ "protocol": "higher-block-recoding-20260911",
+ "schema": 1,
+ "R_max": 4,
+ "source_hashes": {
+  "script": "5a192f71357383e09e117e165ac0a14d1520aa5e661f1b020509d5b07bf52e30",
+  "local_correction_caps": "9975a0e45e6cde51ca6a7bdb9bf269ab03be21c61eb2973ba27a803c41f5c69a",
+  "cap_shift_census": "529a86c924f9a1d5b483bf0a699f1460de5d8259d931c89fac8fadc27f4b8ea3"
+ },
+ "costs": {
+  "forward_radius": 1,
+  "inverse_radius": 0,
+  "alphabet": "2 -> 4",
+  "family": "full shift -> consistent-pair subshift",
+  "information": 0
+ },
+ "mpr_block": [
+  {
+   "rule": 0,
+   "K": [
+    0,
+    0,
+    0
+   ],
+   "O": [
+    0,
+    0,
+    0
+   ]
+  },
+  {
+   "rule": 1,
+   "K": [
+    null,
+    0,
+    0
+   ],
+   "O": [
+    null,
+    0,
+    0
+   ]
+  },
+  {
+   "rule": 2,
+   "K": [
+    null,
+    1,
+    1
+   ],
+   "O": [
+    null,
+    1,
+    1
+   ]
+  },
+  {
+   "rule": 3,
+   "K": [
+    null,
+    null,
+    1
+   ],
+   "O": [
+    null,
+    null,
+    1
+   ]
+  },
+  {
+   "rule": 4,
+   "K": [
+    0,
+    0,
+    0
+   ],
+   "O": [
+    0,
+    0,
+    0
+   ]
+  },
+  {
+   "rule": 5,
+   "K": [
+    null,
+    2,
+    1
+   ],
+   "O": [
+    null,
+    0,
+    0
+   ]
+  },
+  {
+   "rule": 6,
+   "K": [
+    null,
+    null,
+    null
+   ],
+   "O": [
+    null,
+    null,
+    null
+   ]
+  },
+  {
+   "rule": 7,
+   "K": [
+    null,
+    null,
+    null
+   ],
+   "O": [
+    null,
+    null,
+    null
+   ]
+  },
+  {
+   "rule": 8,
+   "K": [
+    null,
+    1,
+    0
+   ],
+   "O": [
+    null,
+    0,
+    0
+   ]
+  },
+  {
+   "rule": 9,
+   "K": [
+    null,
+    null,
+    3
+   ],
+   "O": [
+    null,
+    null,
+    2
+   ]
+  },
+  {
+   "rule": 10,
+   "K": [
+    null,
+    2,
+    2
+   ],
+   "O": [
+    null,
+    1,
+    1
+   ]
+  },
+  {
+   "rule": 11,
+   "K": [
+    null,
+    2,
+    3
+   ],
+   "O": [
+    null,
+    2,
+    1
+   ]
+  },
+  {
+   "rule": 12,
+   "K": [
+    1,
+    0,
+    0
+   ],
+   "O": [
+    0,
+    0,
+    0
+   ]
+  },
+  {
+   "rule": 13,
+   "K": [
+    null,
+    2,
+    3
+   ],
+   "O": [
+    null,
+    1,
+    1
+   ]
+  },
+  {
+   "rule": 14,
+   "K": [
+    null,
+    null,
+    null
+   ],
+   "O": [
+    null,
+    null,
+    null
+   ]
+  },
+  {
+   "rule": 15,
+   "K": [
+    0,
+    0,
+    0
+   ],
+   "O": [
+    1,
+    1,
+    1
+   ]
+  },
+  {
+   "rule": 16,
+   "K": [
+    null,
+    1,
+    1
+   ],
+   "O": [
+    null,
+    1,
+    1
+   ]
+  },
+  {
+   "rule": 17,
+   "K": [
+    null,
+    null,
+    1
+   ],
+   "O": [
+    null,
+    null,
+    1
+   ]
+  },
+  {
+   "rule": 18,
+   "K": [
+    null,
+    null,
+    3
+   ],
+   "O": [
+    null,
+    null,
+    2
+   ]
+  },
+  {
+   "rule": 19,
+   "K": [
+    null,
+    0,
+    0
+   ],
+   "O": [
+    null,
+    0,
+    0
+   ]
+  },
+  {
+   "rule": 20,
+   "K": [
+    null,
+    null,
+    null
+   ],
+   "O": [
+    null,
+    null,
+    null
+   ]
+  },
+  {
+   "rule": 21,
+   "K": [
+    null,
+    null,
+    null
+   ],
+   "O": [
+    null,
+    null,
+    null
+   ]
+  },
+  {
+   "rule": 22,
+   "K": [
+    null,
+    null,
+    null
+   ],
+   "O": [
+    null,
+    null,
+    null
+   ]
+  },
+  {
+   "rule": 23,
+   "K": [
+    1,
+    1,
+    1
+   ],
+   "O": [
+    1,
+    1,
+    1
+   ]
+  },
+  {
+   "rule": 24,
+   "K": [
+    null,
+    2,
+    2
+   ],
+   "O": [
+    null,
+    2,
+    1
+   ]
+  },
+  {
+   "rule": 25,
+   "K": [
+    null,
+    null,
+    null
+   ],
+   "O": [
+    null,
+    null,
+    null
+   ]
+  },
+  {
+   "rule": 26,
+   "K": [
+    null,
+    null,
+    3
+   ],
+   "O": [
+    null,
+    null,
+    3
+   ]
+  },
+  {
+   "rule": 27,
+   "K": [
+    null,
+    null,
+    2
+   ],
+   "O": [
+    null,
+    null,
+    1
+   ]
+  },
+  {
+   "rule": 28,
+   "K": [
+    null,
+    null,
+    null
+   ],
+   "O": [
+    null,
+    null,
+    null
+   ]
+  },
+  {
+   "rule": 29,
+   "K": [
+    null,
+    2,
+    2
+   ],
+   "O": [
+    null,
+    0,
+    0
+   ]
+  },
+  {
+   "rule": 30,
+   "K": [
+    null,
+    null,
+    3
+   ],
+   "O": [
+    null,
+    null,
+    3
+   ]
+  },
+  {
+   "rule": 31,
+   "K": [
+    null,
+    null,
+    null
+   ],
+   "O": [
+    null,
+    null,
+    null
+   ]
+  },
+  {
+   "rule": 32,
+   "K": [
+    null,
+    1,
+    1
+   ],
+   "O": [
+    null,
+    1,
+    1
+   ]
+  },
+  {
+   "rule": 33,
+   "K": [
+    null,
+    null,
+    1
+   ],
+   "O": [
+    null,
+    null,
+    1
+   ]
+  },
+  {
+   "rule": 34,
+   "K": [
+    null,
+    1,
+    1
+   ],
+   "O": [
+    null,
+    1,
+    1
+   ]
+  },
+  {
+   "rule": 35,
+   "K": [
+    null,
+    null,
+    null
+   ],
+   "O": [
+    null,
+    null,
+    null
+   ]
+  },
+  {
+   "rule": 36,
+   "K": [
+    null,
+    1,
+    1
+   ],
+   "O": [
+    null,
+    0,
+    0
+   ]
+  },
+  {
+   "rule": 37,
+   "K": [
+    null,
+    null,
+    null
+   ],
+   "O": [
+    null,
+    null,
+    null
+   ]
+  },
+  {
+   "rule": 38,
+   "K": [
+    null,
+    2,
+    2
+   ],
+   "O": [
+    null,
+    2,
+    1
+   ]
+  },
+  {
+   "rule": 39,
+   "K": [
+    null,
+    null,
+    2
+   ],
+   "O": [
+    null,
+    null,
+    1
+   ]
+  },
+  {
+   "rule": 40,
+   "K": [
+    null,
+    2,
+    3
+   ],
+   "O": [
+    null,
+    1,
+    1
+   ]
+  },
+  {
+   "rule": 41,
+   "K": [
+    null,
+    null,
+    null
+   ],
+   "O": [
+    null,
+    null,
+    null
+   ]
+  },
+  {
+   "rule": 42,
+   "K": [
+    null,
+    2,
+    2
+   ],
+   "O": [
+    null,
+    1,
+    1
+   ]
+  },
+  {
+   "rule": 43,
+   "K": [
+    null,
+    null,
+    null
+   ],
+   "O": [
+    null,
+    null,
+    null
+   ]
+  },
+  {
+   "rule": 44,
+   "K": [
+    null,
+    2,
+    3
+   ],
+   "O": [
+    null,
+    2,
+    1
+   ]
+  },
+  {
+   "rule": 45,
+   "K": [
+    null,
+    null,
+    3
+   ],
+   "O": [
+    null,
+    null,
+    3
+   ]
+  },
+  {
+   "rule": 46,
+   "K": [
+    null,
+    2,
+    2
+   ],
+   "O": [
+    null,
+    2,
+    1
+   ]
+  },
+  {
+   "rule": 47,
+   "K": [
+    null,
+    2,
+    3
+   ],
+   "O": [
+    null,
+    2,
+    1
+   ]
+  },
+  {
+   "rule": 48,
+   "K": [
+    null,
+    1,
+    1
+   ],
+   "O": [
+    null,
+    1,
+    1
+   ]
+  },
+  {
+   "rule": 49,
+   "K": [
+    null,
+    null,
+    null
+   ],
+   "O": [
+    null,
+    null,
+    null
+   ]
+  },
+  {
+   "rule": 50,
+   "K": [
+    null,
+    1,
+    1
+   ],
+   "O": [
+    null,
+    1,
+    1
+   ]
+  },
+  {
+   "rule": 51,
+   "K": [
+    0,
+    0,
+    0
+   ],
+   "O": [
+    0,
+    0,
+    0
+   ]
+  },
+  {
+   "rule": 52,
+   "K": [
+    null,
+    2,
+    2
+   ],
+   "O": [
+    null,
+    2,
+    1
+   ]
+  },
+  {
+   "rule": 53,
+   "K": [
+    null,
+    null,
+    2
+   ],
+   "O": [
+    null,
+    null,
+    1
+   ]
+  },
+  {
+   "rule": 54,
+   "K": [
+    null,
+    null,
+    3
+   ],
+   "O": [
+    null,
+    null,
+    2
+   ]
+  },
+  {
+   "rule": 55,
+   "K": [
+    null,
+    0,
+    0
+   ],
+   "O": [
+    null,
+    0,
+    0
+   ]
+  },
+  {
+   "rule": 56,
+   "K": [
+    null,
+    2,
+    3
+   ],
+   "O": [
+    null,
+    2,
+    1
+   ]
+  },
+  {
+   "rule": 57,
+   "K": [
+    null,
+    null,
+    3
+   ],
+   "O": [
+    null,
+    null,
+    2
+   ]
+  },
+  {
+   "rule": 58,
+   "K": [
+    null,
+    null,
+    3
+   ],
+   "O": [
+    null,
+    null,
+    1
+   ]
+  },
+  {
+   "rule": 59,
+   "K": [
+    null,
+    null,
+    null
+   ],
+   "O": [
+    null,
+    null,
+    null
+   ]
+  },
+  {
+   "rule": 60,
+   "K": [
+    0,
+    0,
+    0
+   ],
+   "O": [
+    1,
+    1,
+    1
+   ]
+  },
+  {
+   "rule": 61,
+   "K": [
+    null,
+    null,
+    null
+   ],
+   "O": [
+    null,
+    null,
+    null
+   ]
+  },
+  {
+   "rule": 62,
+   "K": [
+    null,
+    3,
+    3
+   ],
+   "O": [
+    null,
+    3,
+    2
+   ]
+  },
+  {
+   "rule": 63,
+   "K": [
+    null,
+    null,
+    2
+   ],
+   "O": [
+    null,
+    null,
+    1
+   ]
+  },
+  {
+   "rule": 64,
+   "K": [
+    null,
+    1,
+    0
+   ],
+   "O": [
+    null,
+    0,
+    0
+   ]
+  },
+  {
+   "rule": 65,
+   "K": [
+    null,
+    null,
+    3
+   ],
+   "O": [
+    null,
+    null,
+    2
+   ]
+  },
+  {
+   "rule": 66,
+   "K": [
+    null,
+    2,
+    2
+   ],
+   "O": [
+    null,
+    2,
+    1
+   ]
+  },
+  {
+   "rule": 67,
+   "K": [
+    null,
+    null,
+    null
+   ],
+   "O": [
+    null,
+    null,
+    null
+   ]
+  },
+  {
+   "rule": 68,
+   "K": [
+    1,
+    0,
+    0
+   ],
+   "O": [
+    0,
+    0,
+    0
+   ]
+  },
+  {
+   "rule": 69,
+   "K": [
+    null,
+    2,
+    3
+   ],
+   "O": [
+    null,
+    1,
+    1
+   ]
+  },
+  {
+   "rule": 70,
+   "K": [
+    null,
+    null,
+    null
+   ],
+   "O": [
+    null,
+    null,
+    null
+   ]
+  },
+  {
+   "rule": 71,
+   "K": [
+    null,
+    2,
+    2
+   ],
+   "O": [
+    null,
+    0,
+    0
+   ]
+  },
+  {
+   "rule": 72,
+   "K": [
+    null,
+    1,
+    1
+   ],
+   "O": [
+    null,
+    0,
+    0
+   ]
+  },
+  {
+   "rule": 73,
+   "K": [
+    null,
+    null,
+    3
+   ],
+   "O": [
+    null,
+    null,
+    1
+   ]
+  },
+  {
+   "rule": 74,
+   "K": [
+    null,
+    null,
+    null
+   ],
+   "O": [
+    null,
+    null,
+    null
+   ]
+  },
+  {
+   "rule": 75,
+   "K": [
+    null,
+    null,
+    3
+   ],
+   "O": [
+    null,
+    null,
+    3
+   ]
+  },
+  {
+   "rule": 76,
+   "K": [
+    1,
+    0,
+    0
+   ],
+   "O": [
+    0,
+    0,
+    0
+   ]
+  },
+  {
+   "rule": 77,
+   "K": [
+    1,
+    2,
+    3
+   ],
+   "O": [
+    1,
+    1,
+    1
+   ]
+  },
+  {
+   "rule": 78,
+   "K": [
+    null,
+    null,
+    null
+   ],
+   "O": [
+    null,
+    null,
+    null
+   ]
+  },
+  {
+   "rule": 79,
+   "K": [
+    null,
+    2,
+    3
+   ],
+   "O": [
+    null,
+    1,
+    1
+   ]
+  },
+  {
+   "rule": 80,
+   "K": [
+    null,
+    2,
+    2
+   ],
+   "O": [
+    null,
+    1,
+    1
+   ]
+  },
+  {
+   "rule": 81,
+   "K": [
+    null,
+    2,
+    3
+   ],
+   "O": [
+    null,
+    2,
+    1
+   ]
+  },
+  {
+   "rule": 82,
+   "K": [
+    null,
+    null,
+    3
+   ],
+   "O": [
+    null,
+    null,
+    3
+   ]
+  },
+  {
+   "rule": 83,
+   "K": [
+    null,
+    null,
+    2
+   ],
+   "O": [
+    null,
+    null,
+    1
+   ]
+  },
+  {
+   "rule": 84,
+   "K": [
+    null,
+    null,
+    null
+   ],
+   "O": [
+    null,
+    null,
+    null
+   ]
+  },
+  {
+   "rule": 85,
+   "K": [
+    0,
+    0,
+    0
+   ],
+   "O": [
+    1,
+    1,
+    1
+   ]
+  },
+  {
+   "rule": 86,
+   "K": [
+    null,
+    null,
+    3
+   ],
+   "O": [
+    null,
+    null,
+    3
+   ]
+  },
+  {
+   "rule": 87,
+   "K": [
+    null,
+    null,
+    null
+   ],
+   "O": [
+    null,
+    null,
+    null
+   ]
+  },
+  {
+   "rule": 88,
+   "K": [
+    null,
+    null,
+    null
+   ],
+   "O": [
+    null,
+    null,
+    null
+   ]
+  },
+  {
+   "rule": 89,
+   "K": [
+    null,
+    null,
+    3
+   ],
+   "O": [
+    null,
+    null,
+    3
+   ]
+  },
+  {
+   "rule": 90,
+   "K": [
+    0,
+    0,
+    0
+   ],
+   "O": [
+    1,
+    1,
+    1
+   ]
+  },
+  {
+   "rule": 91,
+   "K": [
+    null,
+    null,
+    null
+   ],
+   "O": [
+    null,
+    null,
+    null
+   ]
+  },
+  {
+   "rule": 92,
+   "K": [
+    null,
+    null,
+    null
+   ],
+   "O": [
+    null,
+    null,
+    null
+   ]
+  },
+  {
+   "rule": 93,
+   "K": [
+    null,
+    2,
+    3
+   ],
+   "O": [
+    null,
+    1,
+    1
+   ]
+  },
+  {
+   "rule": 94,
+   "K": [
+    null,
+    null,
+    3
+   ],
+   "O": [
+    null,
+    null,
+    3
+   ]
+  },
+  {
+   "rule": 95,
+   "K": [
+    null,
+    2,
+    2
+   ],
+   "O": [
+    null,
+    0,
+    0
+   ]
+  },
+  {
+   "rule": 96,
+   "K": [
+    null,
+    2,
+    3
+   ],
+   "O": [
+    null,
+    1,
+    1
+   ]
+  },
+  {
+   "rule": 97,
+   "K": [
+    null,
+    null,
+    null
+   ],
+   "O": [
+    null,
+    null,
+    null
+   ]
+  },
+  {
+   "rule": 98,
+   "K": [
+    null,
+    2,
+    3
+   ],
+   "O": [
+    null,
+    2,
+    1
+   ]
+  },
+  {
+   "rule": 99,
+   "K": [
+    null,
+    null,
+    3
+   ],
+   "O": [
+    null,
+    null,
+    2
+   ]
+  },
+  {
+   "rule": 100,
+   "K": [
+    null,
+    2,
+    3
+   ],
+   "O": [
+    null,
+    2,
+    1
+   ]
+  },
+  {
+   "rule": 101,
+   "K": [
+    null,
+    null,
+    3
+   ],
+   "O": [
+    null,
+    null,
+    3
+   ]
+  },
+  {
+   "rule": 102,
+   "K": [
+    0,
+    0,
+    0
+   ],
+   "O": [
+    1,
+    1,
+    1
+   ]
+  },
+  {
+   "rule": 103,
+   "K": [
+    null,
+    null,
+    null
+   ],
+   "O": [
+    null,
+    null,
+    null
+   ]
+  },
+  {
+   "rule": 104,
+   "K": [
+    null,
+    null,
+    3
+   ],
+   "O": [
+    null,
+    null,
+    4
+   ]
+  },
+  {
+   "rule": 105,
+   "K": [
+    0,
+    0,
+    0
+   ],
+   "O": [
+    1,
+    1,
+    1
+   ]
+  },
+  {
+   "rule": 106,
+   "K": [
+    null,
+    null,
+    2
+   ],
+   "O": [
+    null,
+    null,
+    3
+   ]
+  },
+  {
+   "rule": 107,
+   "K": [
+    null,
+    null,
+    null
+   ],
+   "O": [
+    null,
+    null,
+    null
+   ]
+  },
+  {
+   "rule": 108,
+   "K": [
+    null,
+    2,
+    2
+   ],
+   "O": [
+    null,
+    1,
+    0
+   ]
+  },
+  {
+   "rule": 109,
+   "K": [
+    null,
+    null,
+    3
+   ],
+   "O": [
+    null,
+    null,
+    1
+   ]
+  },
+  {
+   "rule": 110,
+   "K": [
+    null,
+    null,
+    null
+   ],
+   "O": [
+    null,
+    null,
+    null
+   ]
+  },
+  {
+   "rule": 111,
+   "K": [
+    null,
+    null,
+    3
+   ],
+   "O": [
+    null,
+    null,
+    2
+   ]
+  },
+  {
+   "rule": 112,
+   "K": [
+    null,
+    2,
+    2
+   ],
+   "O": [
+    null,
+    1,
+    1
+   ]
+  },
+  {
+   "rule": 113,
+   "K": [
+    null,
+    null,
+    null
+   ],
+   "O": [
+    null,
+    null,
+    null
+   ]
+  },
+  {
+   "rule": 114,
+   "K": [
+    null,
+    null,
+    3
+   ],
+   "O": [
+    null,
+    null,
+    1
+   ]
+  },
+  {
+   "rule": 115,
+   "K": [
+    null,
+    null,
+    null
+   ],
+   "O": [
+    null,
+    null,
+    null
+   ]
+  },
+  {
+   "rule": 116,
+   "K": [
+    null,
+    2,
+    2
+   ],
+   "O": [
+    null,
+    2,
+    1
+   ]
+  },
+  {
+   "rule": 117,
+   "K": [
+    null,
+    2,
+    3
+   ],
+   "O": [
+    null,
+    2,
+    1
+   ]
+  },
+  {
+   "rule": 118,
+   "K": [
+    null,
+    3,
+    3
+   ],
+   "O": [
+    null,
+    3,
+    2
+   ]
+  },
+  {
+   "rule": 119,
+   "K": [
+    null,
+    null,
+    2
+   ],
+   "O": [
+    null,
+    null,
+    1
+   ]
+  },
+  {
+   "rule": 120,
+   "K": [
+    null,
+    null,
+    2
+   ],
+   "O": [
+    null,
+    null,
+    3
+   ]
+  },
+  {
+   "rule": 121,
+   "K": [
+    null,
+    null,
+    null
+   ],
+   "O": [
+    null,
+    null,
+    null
+   ]
+  },
+  {
+   "rule": 122,
+   "K": [
+    null,
+    2,
+    3
+   ],
+   "O": [
+    null,
+    3,
+    3
+   ]
+  },
+  {
+   "rule": 123,
+   "K": [
+    null,
+    null,
+    2
+   ],
+   "O": [
+    null,
+    null,
+    1
+   ]
+  },
+  {
+   "rule": 124,
+   "K": [
+    null,
+    null,
+    null
+   ],
+   "O": [
+    null,
+    null,
+    null
+   ]
+  },
+  {
+   "rule": 125,
+   "K": [
+    null,
+    null,
+    3
+   ],
+   "O": [
+    null,
+    null,
+    2
+   ]
+  },
+  {
+   "rule": 126,
+   "K": [
+    null,
+    2,
+    3
+   ],
+   "O": [
+    null,
+    1,
+    1
+   ]
+  },
+  {
+   "rule": 127,
+   "K": [
+    null,
+    1,
+    1
+   ],
+   "O": [
+    null,
+    0,
+    0
+   ]
+  },
+  {
+   "rule": 128,
+   "K": [
+    null,
+    1,
+    1
+   ],
+   "O": [
+    null,
+    1,
+    1
+   ]
+  },
+  {
+   "rule": 129,
+   "K": [
+    null,
+    2,
+    3
+   ],
+   "O": [
+    null,
+    1,
+    1
+   ]
+  },
+  {
+   "rule": 130,
+   "K": [
+    null,
+    2,
+    3
+   ],
+   "O": [
+    null,
+    2,
+    1
+   ]
+  },
+  {
+   "rule": 131,
+   "K": [
+    null,
+    3,
+    3
+   ],
+   "O": [
+    null,
+    3,
+    2
+   ]
+  },
+  {
+   "rule": 132,
+   "K": [
+    null,
+    1,
+    1
+   ],
+   "O": [
+    null,
+    1,
+    1
+   ]
+  },
+  {
+   "rule": 133,
+   "K": [
+    null,
+    null,
+    4
+   ],
+   "O": [
+    null,
+    null,
+    3
+   ]
+  },
+  {
+   "rule": 134,
+   "K": [
+    null,
+    null,
+    null
+   ],
+   "O": [
+    null,
+    null,
+    null
+   ]
+  },
+  {
+   "rule": 135,
+   "K": [
+    null,
+    null,
+    3
+   ],
+   "O": [
+    null,
+    null,
+    3
+   ]
+  },
+  {
+   "rule": 136,
+   "K": [
+    null,
+    null,
+    null
+   ],
+   "O": [
+    null,
+    null,
+    null
+   ]
+  },
+  {
+   "rule": 137,
+   "K": [
+    null,
+    null,
+    null
+   ],
+   "O": [
+    null,
+    null,
+    null
+   ]
+  },
+  {
+   "rule": 138,
+   "K": [
+    null,
+    2,
+    2
+   ],
+   "O": [
+    null,
+    1,
+    1
+   ]
+  },
+  {
+   "rule": 139,
+   "K": [
+    null,
+    2,
+    3
+   ],
+   "O": [
+    null,
+    2,
+    1
+   ]
+  },
+  {
+   "rule": 140,
+   "K": [
+    null,
+    null,
+    null
+   ],
+   "O": [
+    null,
+    null,
+    null
+   ]
+  },
+  {
+   "rule": 141,
+   "K": [
+    null,
+    null,
+    null
+   ],
+   "O": [
+    null,
+    null,
+    null
+   ]
+  },
+  {
+   "rule": 142,
+   "K": [
+    null,
+    null,
+    null
+   ],
+   "O": [
+    null,
+    null,
+    null
+   ]
+  },
+  {
+   "rule": 143,
+   "K": [
+    null,
+    null,
+    null
+   ],
+   "O": [
+    null,
+    null,
+    null
+   ]
+  },
+  {
+   "rule": 144,
+   "K": [
+    null,
+    2,
+    3
+   ],
+   "O": [
+    null,
+    2,
+    1
+   ]
+  },
+  {
+   "rule": 145,
+   "K": [
+    null,
+    3,
+    3
+   ],
+   "O": [
+    null,
+    3,
+    2
+   ]
+  },
+  {
+   "rule": 146,
+   "K": [
+    null,
+    3,
+    3
+   ],
+   "O": [
+    null,
+    2,
+    2
+   ]
+  },
+  {
+   "rule": 147,
+   "K": [
+    null,
+    null,
+    3
+   ],
+   "O": [
+    null,
+    null,
+    2
+   ]
+  },
+  {
+   "rule": 148,
+   "K": [
+    null,
+    null,
+    null
+   ],
+   "O": [
+    null,
+    null,
+    null
+   ]
+  },
+  {
+   "rule": 149,
+   "K": [
+    null,
+    null,
+    3
+   ],
+   "O": [
+    null,
+    null,
+    3
+   ]
+  },
+  {
+   "rule": 150,
+   "K": [
+    0,
+    0,
+    0
+   ],
+   "O": [
+    1,
+    1,
+    1
+   ]
+  },
+  {
+   "rule": 151,
+   "K": [
+    null,
+    null,
+    null
+   ],
+   "O": [
+    null,
+    null,
+    null
+   ]
+  },
+  {
+   "rule": 152,
+   "K": [
+    null,
+    null,
+    null
+   ],
+   "O": [
+    null,
+    null,
+    null
+   ]
+  },
+  {
+   "rule": 153,
+   "K": [
+    0,
+    0,
+    0
+   ],
+   "O": [
+    1,
+    1,
+    1
+   ]
+  },
+  {
+   "rule": 154,
+   "K": [
+    null,
+    null,
+    3
+   ],
+   "O": [
+    null,
+    null,
+    3
+   ]
+  },
+  {
+   "rule": 155,
+   "K": [
+    null,
+    2,
+    3
+   ],
+   "O": [
+    null,
+    2,
+    1
+   ]
+  },
+  {
+   "rule": 156,
+   "K": [
+    null,
+    null,
+    null
+   ],
+   "O": [
+    null,
+    null,
+    null
+   ]
+  },
+  {
+   "rule": 157,
+   "K": [
+    null,
+    null,
+    null
+   ],
+   "O": [
+    null,
+    null,
+    null
+   ]
+  },
+  {
+   "rule": 158,
+   "K": [
+    null,
+    null,
+    null
+   ],
+   "O": [
+    null,
+    null,
+    null
+   ]
+  },
+  {
+   "rule": 159,
+   "K": [
+    null,
+    null,
+    null
+   ],
+   "O": [
+    null,
+    null,
+    null
+   ]
+  },
+  {
+   "rule": 160,
+   "K": [
+    null,
+    1,
+    1
+   ],
+   "O": [
+    null,
+    1,
+    1
+   ]
+  },
+  {
+   "rule": 161,
+   "K": [
+    null,
+    2,
+    3
+   ],
+   "O": [
+    null,
+    3,
+    3
+   ]
+  },
+  {
+   "rule": 162,
+   "K": [
+    null,
+    2,
+    3
+   ],
+   "O": [
+    null,
+    1,
+    1
+   ]
+  },
+  {
+   "rule": 163,
+   "K": [
+    null,
+    null,
+    3
+   ],
+   "O": [
+    null,
+    null,
+    1
+   ]
+  },
+  {
+   "rule": 164,
+   "K": [
+    null,
+    null,
+    3
+   ],
+   "O": [
+    null,
+    null,
+    3
+   ]
+  },
+  {
+   "rule": 165,
+   "K": [
+    0,
+    0,
+    0
+   ],
+   "O": [
+    1,
+    1,
+    1
+   ]
+  },
+  {
+   "rule": 166,
+   "K": [
+    null,
+    null,
+    3
+   ],
+   "O": [
+    null,
+    null,
+    3
+   ]
+  },
+  {
+   "rule": 167,
+   "K": [
+    null,
+    null,
+    3
+   ],
+   "O": [
+    null,
+    null,
+    3
+   ]
+  },
+  {
+   "rule": 168,
+   "K": [
+    null,
+    null,
+    null
+   ],
+   "O": [
+    null,
+    null,
+    null
+   ]
+  },
+  {
+   "rule": 169,
+   "K": [
+    null,
+    null,
+    3
+   ],
+   "O": [
+    null,
+    null,
+    3
+   ]
+  },
+  {
+   "rule": 170,
+   "K": [
+    0,
+    0,
+    0
+   ],
+   "O": [
+    1,
+    1,
+    1
+   ]
+  },
+  {
+   "rule": 171,
+   "K": [
+    null,
+    2,
+    2
+   ],
+   "O": [
+    null,
+    1,
+    1
+   ]
+  },
+  {
+   "rule": 172,
+   "K": [
+    null,
+    null,
+    null
+   ],
+   "O": [
+    null,
+    null,
+    null
+   ]
+  },
+  {
+   "rule": 173,
+   "K": [
+    null,
+    null,
+    null
+   ],
+   "O": [
+    null,
+    null,
+    null
+   ]
+  },
+  {
+   "rule": 174,
+   "K": [
+    null,
+    2,
+    1
+   ],
+   "O": [
+    null,
+    1,
+    1
+   ]
+  },
+  {
+   "rule": 175,
+   "K": [
+    null,
+    2,
+    2
+   ],
+   "O": [
+    null,
+    1,
+    1
+   ]
+  },
+  {
+   "rule": 176,
+   "K": [
+    null,
+    2,
+    3
+   ],
+   "O": [
+    null,
+    1,
+    1
+   ]
+  },
+  {
+   "rule": 177,
+   "K": [
+    null,
+    null,
+    3
+   ],
+   "O": [
+    null,
+    null,
+    1
+   ]
+  },
+  {
+   "rule": 178,
+   "K": [
+    1,
+    2,
+    3
+   ],
+   "O": [
+    1,
+    1,
+    1
+   ]
+  },
+  {
+   "rule": 179,
+   "K": [
+    null,
+    2,
+    2
+   ],
+   "O": [
+    null,
+    1,
+    1
+   ]
+  },
+  {
+   "rule": 180,
+   "K": [
+    null,
+    null,
+    3
+   ],
+   "O": [
+    null,
+    null,
+    3
+   ]
+  },
+  {
+   "rule": 181,
+   "K": [
+    null,
+    null,
+    3
+   ],
+   "O": [
+    null,
+    null,
+    3
+   ]
+  },
+  {
+   "rule": 182,
+   "K": [
+    null,
+    2,
+    3
+   ],
+   "O": [
+    null,
+    2,
+    2
+   ]
+  },
+  {
+   "rule": 183,
+   "K": [
+    null,
+    null,
+    3
+   ],
+   "O": [
+    null,
+    null,
+    2
+   ]
+  },
+  {
+   "rule": 184,
+   "K": [
+    null,
+    null,
+    null
+   ],
+   "O": [
+    null,
+    null,
+    null
+   ]
+  },
+  {
+   "rule": 185,
+   "K": [
+    null,
+    2,
+    3
+   ],
+   "O": [
+    null,
+    2,
+    1
+   ]
+  },
+  {
+   "rule": 186,
+   "K": [
+    null,
+    2,
+    3
+   ],
+   "O": [
+    null,
+    1,
+    1
+   ]
+  },
+  {
+   "rule": 187,
+   "K": [
+    null,
+    2,
+    2
+   ],
+   "O": [
+    null,
+    1,
+    1
+   ]
+  },
+  {
+   "rule": 188,
+   "K": [
+    null,
+    null,
+    null
+   ],
+   "O": [
+    null,
+    null,
+    null
+   ]
+  },
+  {
+   "rule": 189,
+   "K": [
+    null,
+    2,
+    2
+   ],
+   "O": [
+    null,
+    2,
+    1
+   ]
+  },
+  {
+   "rule": 190,
+   "K": [
+    null,
+    2,
+    3
+   ],
+   "O": [
+    null,
+    2,
+    1
+   ]
+  },
+  {
+   "rule": 191,
+   "K": [
+    null,
+    1,
+    1
+   ],
+   "O": [
+    null,
+    1,
+    1
+   ]
+  },
+  {
+   "rule": 192,
+   "K": [
+    null,
+    null,
+    null
+   ],
+   "O": [
+    null,
+    null,
+    null
+   ]
+  },
+  {
+   "rule": 193,
+   "K": [
+    null,
+    null,
+    null
+   ],
+   "O": [
+    null,
+    null,
+    null
+   ]
+  },
+  {
+   "rule": 194,
+   "K": [
+    null,
+    null,
+    null
+   ],
+   "O": [
+    null,
+    null,
+    null
+   ]
+  },
+  {
+   "rule": 195,
+   "K": [
+    0,
+    0,
+    0
+   ],
+   "O": [
+    1,
+    1,
+    1
+   ]
+  },
+  {
+   "rule": 196,
+   "K": [
+    null,
+    null,
+    null
+   ],
+   "O": [
+    null,
+    null,
+    null
+   ]
+  },
+  {
+   "rule": 197,
+   "K": [
+    null,
+    null,
+    null
+   ],
+   "O": [
+    null,
+    null,
+    null
+   ]
+  },
+  {
+   "rule": 198,
+   "K": [
+    null,
+    null,
+    null
+   ],
+   "O": [
+    null,
+    null,
+    null
+   ]
+  },
+  {
+   "rule": 199,
+   "K": [
+    null,
+    null,
+    null
+   ],
+   "O": [
+    null,
+    null,
+    null
+   ]
+  },
+  {
+   "rule": 200,
+   "K": [
+    0,
+    0,
+    0
+   ],
+   "O": [
+    0,
+    0,
+    0
+   ]
+  },
+  {
+   "rule": 201,
+   "K": [
+    null,
+    2,
+    1
+   ],
+   "O": [
+    null,
+    1,
+    0
+   ]
+  },
+  {
+   "rule": 202,
+   "K": [
+    null,
+    null,
+    null
+   ],
+   "O": [
+    null,
+    null,
+    null
+   ]
+  },
+  {
+   "rule": 203,
+   "K": [
+    null,
+    2,
+    3
+   ],
+   "O": [
+    null,
+    2,
+    1
+   ]
+  },
+  {
+   "rule": 204,
+   "K": [
+    0,
+    0,
+    0
+   ],
+   "O": [
+    0,
+    0,
+    0
+   ]
+  },
+  {
+   "rule": 205,
+   "K": [
+    1,
+    0,
+    1
+   ],
+   "O": [
+    0,
+    0,
+    0
+   ]
+  },
+  {
+   "rule": 206,
+   "K": [
+    null,
+    null,
+    null
+   ],
+   "O": [
+    null,
+    null,
+    null
+   ]
+  },
+  {
+   "rule": 207,
+   "K": [
+    1,
+    0,
+    1
+   ],
+   "O": [
+    0,
+    0,
+    0
+   ]
+  },
+  {
+   "rule": 208,
+   "K": [
+    null,
+    2,
+    2
+   ],
+   "O": [
+    null,
+    1,
+    1
+   ]
+  },
+  {
+   "rule": 209,
+   "K": [
+    null,
+    2,
+    3
+   ],
+   "O": [
+    null,
+    2,
+    1
+   ]
+  },
+  {
+   "rule": 210,
+   "K": [
+    null,
+    null,
+    3
+   ],
+   "O": [
+    null,
+    null,
+    3
+   ]
+  },
+  {
+   "rule": 211,
+   "K": [
+    null,
+    2,
+    3
+   ],
+   "O": [
+    null,
+    2,
+    1
+   ]
+  },
+  {
+   "rule": 212,
+   "K": [
+    null,
+    null,
+    null
+   ],
+   "O": [
+    null,
+    null,
+    null
+   ]
+  },
+  {
+   "rule": 213,
+   "K": [
+    null,
+    null,
+    null
+   ],
+   "O": [
+    null,
+    null,
+    null
+   ]
+  },
+  {
+   "rule": 214,
+   "K": [
+    null,
+    null,
+    null
+   ],
+   "O": [
+    null,
+    null,
+    null
+   ]
+  },
+  {
+   "rule": 215,
+   "K": [
+    null,
+    null,
+    null
+   ],
+   "O": [
+    null,
+    null,
+    null
+   ]
+  },
+  {
+   "rule": 216,
+   "K": [
+    null,
+    null,
+    null
+   ],
+   "O": [
+    null,
+    null,
+    null
+   ]
+  },
+  {
+   "rule": 217,
+   "K": [
+    null,
+    2,
+    3
+   ],
+   "O": [
+    null,
+    2,
+    1
+   ]
+  },
+  {
+   "rule": 218,
+   "K": [
+    null,
+    null,
+    3
+   ],
+   "O": [
+    null,
+    null,
+    3
+   ]
+  },
+  {
+   "rule": 219,
+   "K": [
+    null,
+    1,
+    1
+   ],
+   "O": [
+    null,
+    0,
+    0
+   ]
+  },
+  {
+   "rule": 220,
+   "K": [
+    null,
+    null,
+    null
+   ],
+   "O": [
+    null,
+    null,
+    null
+   ]
+  },
+  {
+   "rule": 221,
+   "K": [
+    1,
+    0,
+    1
+   ],
+   "O": [
+    0,
+    0,
+    0
+   ]
+  },
+  {
+   "rule": 222,
+   "K": [
+    null,
+    2,
+    3
+   ],
+   "O": [
+    null,
+    1,
+    1
+   ]
+  },
+  {
+   "rule": 223,
+   "K": [
+    1,
+    0,
+    0
+   ],
+   "O": [
+    0,
+    0,
+    0
+   ]
+  },
+  {
+   "rule": 224,
+   "K": [
+    null,
+    null,
+    null
+   ],
+   "O": [
+    null,
+    null,
+    null
+   ]
+  },
+  {
+   "rule": 225,
+   "K": [
+    null,
+    null,
+    3
+   ],
+   "O": [
+    null,
+    null,
+    3
+   ]
+  },
+  {
+   "rule": 226,
+   "K": [
+    null,
+    null,
+    null
+   ],
+   "O": [
+    null,
+    null,
+    null
+   ]
+  },
+  {
+   "rule": 227,
+   "K": [
+    null,
+    2,
+    3
+   ],
+   "O": [
+    null,
+    2,
+    1
+   ]
+  },
+  {
+   "rule": 228,
+   "K": [
+    null,
+    null,
+    null
+   ],
+   "O": [
+    null,
+    null,
+    null
+   ]
+  },
+  {
+   "rule": 229,
+   "K": [
+    null,
+    null,
+    null
+   ],
+   "O": [
+    null,
+    null,
+    null
+   ]
+  },
+  {
+   "rule": 230,
+   "K": [
+    null,
+    null,
+    null
+   ],
+   "O": [
+    null,
+    null,
+    null
+   ]
+  },
+  {
+   "rule": 231,
+   "K": [
+    null,
+    2,
+    2
+   ],
+   "O": [
+    null,
+    2,
+    1
+   ]
+  },
+  {
+   "rule": 232,
+   "K": [
+    1,
+    1,
+    1
+   ],
+   "O": [
+    1,
+    1,
+    1
+   ]
+  },
+  {
+   "rule": 233,
+   "K": [
+    null,
+    null,
+    3
+   ],
+   "O": [
+    null,
+    null,
+    4
+   ]
+  },
+  {
+   "rule": 234,
+   "K": [
+    null,
+    null,
+    null
+   ],
+   "O": [
+    null,
+    null,
+    null
+   ]
+  },
+  {
+   "rule": 235,
+   "K": [
+    null,
+    2,
+    3
+   ],
+   "O": [
+    null,
+    1,
+    1
+   ]
+  },
+  {
+   "rule": 236,
+   "K": [
+    1,
+    0,
+    0
+   ],
+   "O": [
+    0,
+    0,
+    0
+   ]
+  },
+  {
+   "rule": 237,
+   "K": [
+    null,
+    2,
+    1
+   ],
+   "O": [
+    null,
+    0,
+    0
+   ]
+  },
+  {
+   "rule": 238,
+   "K": [
+    null,
+    null,
+    null
+   ],
+   "O": [
+    null,
+    null,
+    null
+   ]
+  },
+  {
+   "rule": 239,
+   "K": [
+    null,
+    1,
+    1
+   ],
+   "O": [
+    null,
+    0,
+    0
+   ]
+  },
+  {
+   "rule": 240,
+   "K": [
+    0,
+    0,
+    0
+   ],
+   "O": [
+    1,
+    1,
+    1
+   ]
+  },
+  {
+   "rule": 241,
+   "K": [
+    null,
+    2,
+    2
+   ],
+   "O": [
+    null,
+    1,
+    1
+   ]
+  },
+  {
+   "rule": 242,
+   "K": [
+    null,
+    2,
+    3
+   ],
+   "O": [
+    null,
+    1,
+    1
+   ]
+  },
+  {
+   "rule": 243,
+   "K": [
+    null,
+    2,
+    2
+   ],
+   "O": [
+    null,
+    1,
+    1
+   ]
+  },
+  {
+   "rule": 244,
+   "K": [
+    null,
+    2,
+    1
+   ],
+   "O": [
+    null,
+    1,
+    1
+   ]
+  },
+  {
+   "rule": 245,
+   "K": [
+    null,
+    2,
+    2
+   ],
+   "O": [
+    null,
+    1,
+    1
+   ]
+  },
+  {
+   "rule": 246,
+   "K": [
+    null,
+    2,
+    3
+   ],
+   "O": [
+    null,
+    2,
+    1
+   ]
+  },
+  {
+   "rule": 247,
+   "K": [
+    null,
+    1,
+    1
+   ],
+   "O": [
+    null,
+    1,
+    1
+   ]
+  },
+  {
+   "rule": 248,
+   "K": [
+    null,
+    null,
+    null
+   ],
+   "O": [
+    null,
+    null,
+    null
+   ]
+  },
+  {
+   "rule": 249,
+   "K": [
+    null,
+    2,
+    3
+   ],
+   "O": [
+    null,
+    1,
+    1
+   ]
+  },
+  {
+   "rule": 250,
+   "K": [
+    null,
+    2,
+    3
+   ],
+   "O": [
+    null,
+    1,
+    1
+   ]
+  },
+  {
+   "rule": 251,
+   "K": [
+    null,
+    1,
+    1
+   ],
+   "O": [
+    null,
+    1,
+    1
+   ]
+  },
+  {
+   "rule": 252,
+   "K": [
+    null,
+    null,
+    null
+   ],
+   "O": [
+    null,
+    null,
+    null
+   ]
+  },
+  {
+   "rule": 253,
+   "K": [
+    null,
+    1,
+    1
+   ],
+   "O": [
+    null,
+    0,
+    0
+   ]
+  },
+  {
+   "rule": 254,
+   "K": [
+    null,
+    1,
+    2
+   ],
+   "O": [
+    null,
+    1,
+    1
+   ]
+  },
+  {
+   "rule": 255,
+   "K": [
+    0,
+    0,
+    0
+   ],
+   "O": [
+    0,
+    0,
+    0
+   ]
+  }
+ ],
+ "shift_distribution_mpr_minus_block": {
+  "K": {
+   "0": {
+    "0": 30
+   },
+   "1": {
+    "0": 127,
+    "1": 1
+   },
+   "2": {
+    "0": 178,
+    "1": 2
+   }
+  },
+  "O": {
+   "0": {
+    "0": 30
+   },
+   "1": {
+    "0": 126,
+    "1": 2
+   },
+   "2": {
+    "0": 174,
+    "1": 4
+   }
+  }
+ },
+ "B1_violations": [],
+ "B2_covariance_violations_by_ring": {
+  "8": [],
+  "10": []
+ },
+ "B3_closure_violations_by_ring": {
+  "8": [],
+  "10": []
+ },
+ "B4_family_closure": {
+  "2": {
+   "closed_under_input_complement": true,
+   "closed_under_input_reversal": true,
+   "output_complement_pairs_preserved": true,
+   "ring12_block_alignment_preserved_by_reflection": true
+  },
+  "3": {
+   "closed_under_input_complement": true,
+   "closed_under_input_reversal": true,
+   "output_complement_pairs_preserved": true,
+   "ring12_block_alignment_preserved_by_reflection": true
+  }
+ },
+ "summary": {
+  "B1": true,
+  "B2": true,
+  "B3": true,
+  "B4": true
+ }
+}

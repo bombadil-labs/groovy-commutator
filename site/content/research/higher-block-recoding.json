@@ -1,0 +1,17 @@
+[
+  {
+    "slug": "higher-block-recoding",
+    "label": "Higher-block recoding",
+    "title": "What does the higher-block recoding cost, and what does it leave alone?",
+    "date": "2026-09-11",
+    "updated": "2026-09-11",
+    "kind": "Exact audit of a declared local recoding with locality budget",
+    "evidence": "exact",
+    "topic": "Algebra and closure",
+    "summary": "The 2-block recoding, forward radius 1 and inverse radius 0, leaves the minimum cap radius unchanged in 665 of 674 decided cells and reduces it by one in 9, never more; derivative and commutator transport componentwise; derivative closure is preserved; the Research026 observer family is closed under complement and reversal, so that census is covariant by deduction.",
+    "takeaway": "A 2-block recoding is nearly free in cap radius and invisible to closure and the commutator. Two constructions that differ by it should not count as different primitives.",
+    "source": "docs/research/2026-09-11-higher-block-recoding.md",
+    "promotion": { "stage": "research" },
+    "related": ["cap-shift-census", "representation-invariants-audit", "second-lift-completion-protocol", "possibility-frontier"]
+  }
+]

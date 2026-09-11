@@ -1,0 +1,3 @@
+# The 2-block recoding costs at most one unit of cap radius and usually none
+
+Under `S'_i = (S_i, S_{i+1})`, an injective recoding with forward radius 1 and inverse radius 0, the minimum passing local-cap radius in block coordinates satisfies `mpr − 1 ≤ mpr_β ≤ mpr` in every decided cell over all 256 rules, K and O, `h ≤ 2`, `R ≤ 4`. It is unchanged in 665 of 674 cells and reduced by one in 9 (K 55, 109, 233; O 73, 109, 146, 182). Derivative, commutator, and derivative-observation closure transport componentwise and are preserved. See the [recoding note](../research/2026-09-11-higher-block-recoding.md). Scope: one recoding, `R ≤ 4`.
