@@ -502,8 +502,9 @@ workflow; research source and result changes now also trigger that workflow.
    every other closed rule under 200 and 4 has ρ ≤ 1. Under the
    non-idempotent 232, 32, 22 every closed rule present at all seven rings
    has ρ ≤ 1 (census; the frozen bet was ≤ 2), except rule 223 at ring 6
-   under 22, closed at that ring only, with ρ = 3 = the ring (the one
-   failed cell). Collapse ρ = 0, commuters ρ ≤ 1, radius 0 also covers
+   under 22, closed at that ring only, with ρ = 3, a window covering the
+   whole six-cell configuration (the one failed cell; a warning sign in
+   this census, not a characterization of finite-ring closures). Collapse ρ = 0, commuters ρ ≤ 1, radius 0 also covers
    cellwise factors such as the identity's; tables reflection-invariant
    and complement-covariant to 236 and 223. Gate-2 pending on PR #110.
 

@@ -119,10 +119,14 @@ def main():
     cov = {f'{psi}<->{CONTROLS[psi]}': all(set(conj(r) for r in T[psi][n]['closed']) == set(U[psi][n]['closed']) and all(rho(psi, n, r) == U[psi][n]['rho'][str(conj(r))] for r in T[psi][n]['closed']) for n in RINGS) for psi in CONTROLS}
     P['R6_symmetries'] = {'reflection_invariant': refl, 'complement_covariant_controls': cov, 'pass': all(refl.values()) and all(cov.values())}
     hist = {str(psi): {str(n): {str(k): sum(1 for r in T[psi][n]['closed'] if str(rho(psi, n, r)) == str(k)) for k in (0, 1, 2, 3, '>3')} for n in RINGS} for psi in OBS}
-    report = {'protocol': 'factor-radius-20260911', 'schema': 1, 'observations': list(OBS), 'conjugate_controls': CONTROLS, 'rings': list(RINGS), 'radii': list(RADII),
+    report = {'protocol': 'factor-radius-20260911', 'schema': 2, 'observations': list(OBS), 'conjugate_controls': CONTROLS, 'rings': list(RINGS), 'radii': list(RADII),
               'source_hashes': {'script': sha(pathlib.Path(__file__)), 'block_majority_result': sha(MAJORITY), 'isolated_cell_result': sha(ISOLATED), 'complement_observation_result': sha(COMPLEMENT)},
               'idempotent': idem, 'rho': {str(psi): {str(n): T[psi][n]['rho'] for n in RINGS} for psi in OBS}, 'rho_histogram': hist,
               'conflicts_radius1_n12': {str(psi): T[psi][12]['conflicts_r1'] for psi in OBS}, 'conflicts_radius2_n12': {str(psi): T[psi][12]['conflicts_r2'] for psi in OBS},
+              # Gate-2 artifact-completeness correction (Codex, 2026-09-11): Section 3 promises the
+              # conflicting windows for every cell above radius 1 at every ring, not only at n = 12.
+              'conflicts_radius1_by_ring': {str(psi): {str(n): T[psi][n]['conflicts_r1'] for n in RINGS} for psi in OBS},
+              'conflicts_radius2_by_ring': {str(psi): {str(n): T[psi][n]['conflicts_r2'] for n in RINGS} for psi in OBS},
               'closed_by_ring': {str(psi): {str(n): T[psi][n]['closed'] for n in RINGS} for psi in OBS},
               'predictions': P, 'summary': {k: v.get('pass', 'reported') for k, v in P.items()}}
     OUT.write_text(json.dumps(report, indent=1, ensure_ascii=False, default=jsonable) + '\n')

@@ -12,7 +12,8 @@ Program page: `docs/research/2026-09-10-representation-invariants-program.md`
 - Gate 1 met at `46d9a7c` after one witness correction; verifier committed
   at `6ef1b6b`; single run (7 s), rerun byte-identical.
 - R1, R2, R4, R5, R6 held. R3 failed at one cell: rule 223 at ring 6 under
-  22 (closed at ring 6 only) has rho = 3, the whole ring; radius-2 conflict
+  22 (closed at ring 6 only) has rho = 3, a 7-cell window covering the
+  whole 6-cell configuration; radius-2 conflict
   window 00100. All other cells: under 200 the sixteen at rho = 2, 16 at 0,
   10 at 1; under 4, 32: 26 at 0, 7 at 1; under 232: 12 at 0, 10 at 1;
   under 22 (rings 7-12): 7 at 0, 4 at 1. rho ring-independent for every
@@ -20,9 +21,16 @@ Program page: `docs/research/2026-09-10-representation-invariants-program.md`
   includes cellwise factors (identity), not only collapses.
 - Do not infer: that non-idempotent observations always have radius <= 1
   factors (census only); anything about other observations.
+- Codex's first gate-2 round (2026-09-11) required four corrections,
+  applied: title scoped to the idempotent case; the Program's stale
+  frozen section removed; the result regenerated so every cell above
+  radius 1 carries its conflict windows at every ring (artifact
+  completeness after evaluation, verdicts and counts unchanged); the
+  finite-ring reading narrowed to a warning sign in this census.
 - Pending: Codex's gate-2 sign-off and reviewer merge on PR #110.
 - Candidate next units: the ring-dependent closure under 22 (which rings
-  admit finite-ring closures, characterized by factor radius = ring size);
+  admit finite-ring closures, and whether whole-ring factor support
+  accompanies them as it did in the one observed cell);
   the depth threads.
 
 ## Checkpoint 2026-09-11 (twelfth unit opened): factor radius, protocol frozen, review pending
