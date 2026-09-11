@@ -1,0 +1,69 @@
+name: Finalize first interface-factor evaluation (one-shot)
+
+# Repository bookkeeping only. The frozen evaluation already ran from the
+# pinned verifier and produced the canonical JSON before this workflow existed.
+# This registers that result with the generic integrity checker, then removes
+# both one-shot workflows while retaining all orchestration commits in history.
+
+on:
+  push:
+    branches:
+      - 'research/interface-factor-evaluation'
+    paths:
+      - '.github/workflows/interface-factor-evaluation-finalize.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  finalize:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: research/interface-factor-evaluation
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Verify generated result hashes before bookkeeping
+        run: |
+          python - <<'PY'
+          import hashlib, json, pathlib
+          root = pathlib.Path('.')
+          result = json.loads((root / 'results/interface_factor_20260911.json').read_text())
+          expected = {
+              'script': root / 'scripts/verify_interface_factor.py',
+              'protocol': root / 'docs/research/protocols/interface-factor-20260911.md',
+          }
+          for key, path in expected.items():
+              got = hashlib.sha256(path.read_bytes()).hexdigest()
+              assert got == result['source_hashes'][key], (key, got, result['source_hashes'][key])
+          print('canonical source hashes match')
+          PY
+      - name: Register canonical result with generic integrity checker
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p = Path('scripts/check_result_integrity.py')
+          text = p.read_text()
+          key = "'results/interface_factor_20260911.json'"
+          assert key not in text
+          marker = "\n}\n\ndef sha("
+          assert text.count(marker) == 1
+          entry = ("    'results/interface_factor_20260911.json': {\n"
+                   "        'script': 'scripts/verify_interface_factor.py',\n"
+                   "        'protocol': 'docs/research/protocols/interface-factor-20260911.md'},\n")
+          text = text.replace(marker, "\n" + entry + "}\n\ndef sha(")
+          p.write_text(text)
+          PY
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add scripts/check_result_integrity.py
+          git commit -m 'Register interface-factor canonical result integrity'
+      - name: Remove one-shot orchestration
+        run: |
+          git rm .github/workflows/interface-factor-first-evaluation.yml
+          git rm .github/workflows/interface-factor-evaluation-finalize.yml
+          git commit -m 'Remove one-shot interface-factor evaluation runners'
+          git push origin HEAD:research/interface-factor-evaluation
