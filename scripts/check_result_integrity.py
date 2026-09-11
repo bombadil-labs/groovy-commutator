@@ -76,6 +76,9 @@ REGISTRY = {
     'results/transverse_freedom_20260911.json': {
         'script': 'scripts/verify_transverse_freedom.py',
         'protocol': 'docs/research/protocols/transverse-freedom-20260911.md'},
+    'results/intervention_axis_20260911.json': {
+        'script': 'scripts/verify_intervention_axis.py',
+        'protocol': 'docs/research/protocols/intervention-axis-20260911.md'},
 }
 
 def sha(p: pathlib.Path) -> str: return hashlib.sha256(p.read_bytes()).hexdigest()
