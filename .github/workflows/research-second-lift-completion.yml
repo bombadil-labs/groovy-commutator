@@ -37,6 +37,9 @@ jobs:
       - run: python -m pip install -e .
       - name: Frozen pre-evaluation controls
         run: python scripts/verify_second_lift_completion.py --controls-only
+      - name: Recorded source hashes match the tree (provenance coherence)
+        if: ${{ hashFiles('results/second_lift_completion_20260911.json') != '' }}
+        run: python scripts/check_result_integrity.py results/second_lift_completion_20260911.json
       - name: Does this revision carry the canonical evaluation?
         id: result
         shell: bash
