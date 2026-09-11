@@ -523,7 +523,8 @@ workflow; research source and result changes now also trigger that workflow.
    closures. 90 alternates
    forever (32 odd / 16 affine even), 150 with period 3 (all 256 off
    multiples of 3 / 16 affine on them). 32 = 4∘¬, so C_32 = conj C_4
-   (post hoc). Gate-2 pending on PR #116.
+   (post hoc). Accepted after Codex's gate-2 sign-off at `4fbb2d5`,
+   merged in PR #116.
 
 ## Checkpoint logs (read before continuing any workstream)
 

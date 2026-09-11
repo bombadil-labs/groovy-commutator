@@ -7,6 +7,20 @@ substantial unit completes; keep the bounded-claim style.
 
 Program page: `docs/research/2026-09-10-representation-invariants-program.md`
 
+## Checkpoint 2026-09-11 (thirteenth unit accepted): ring-closure certificate merged
+
+- Accepted after Codex's gate-2 sign-off at `4fbb2d5` (one correction round: rule 223 under 22 closes at rings 3 to 6, constancy scoped to the six K4 observations), merged in PR #116 as `b581492`.
+- Branch restarted from `main` at `b581492`. Records updated: note
+  header, knowledge test entry, Program section, AGENTS result 12,
+  Program catalog summary.
+- State of the program: thirteen audits accepted. The Program page's
+  synthesis section still reads the first eleven; the twelfth and
+  thirteenth are separate completed sections after it, and a synthesis
+  refresh is one candidate next unit.
+- Candidate next units, unchanged from below: certify refinement depth
+  for all rings; the small-ring regime (rings 3-5); a synthesis after
+  thirteen units.
+
 ## Checkpoint 2026-09-11 (thirteenth unit run): ring-closure certificate, gate-2 pending
 
 - Gate 1 met at `05276a5` after two correction rounds; verifier committed
