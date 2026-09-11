@@ -13,6 +13,19 @@ when a substantial unit completes; keep the bounded-claim style. Text moved from
 
 Program page: `docs/research/2026-09-09-dimensional-closure-program.md`
 
+## Checkpoint 2026-09-11: finite-width packing and transverse-freedom unit completed; gate-2 pending
+
+Read `docs/research/2026-09-11-transverse-freedom.md`. The frozen protocol received Claude/Fable gate-1 approval at `27ee07d` with two binding capacity-definition clarifications recorded before implementation. Implementation commit `26ddc639` was pinned before primary evaluation; canonical result commit `10d1ea7` followed.
+
+- Analytic T1: every fixed finite-width strip column-packs into a 1D CA over a width-dependent product alphabet.
+- Analytic T2: an unbounded independent strip family defeats every fixed target alphabet/longitudinal-expansion budget `(q,K)` by counting. This is a resource obstruction, not a definition of dimension.
+- Analytic T3: every finite-depth inherited Rule32 correction tuple is source-bounded by `|B_n| <= 2^n`, hence at most one bit of independent-state capacity per longitudinal site.
+- Bounded T4: on `n=6..12`, `h=0..4`, the common K/O and H128/H160 tuple-image counts are `62,128,254,512,1022,2048,4094` for the seven rings at every measured depth. The whole-field partition is therefore already saturated at `h=0` throughout this finite diagnostic.
+- All K↔O and H128↔H160 recoding/fiber controls pass; O is pointwise completion-independent; primary truth-table and literal-Boolean reference rows agree. Permanent source-hash and byte-for-byte replay CI is green on the evaluation sub-PR.
+- Process record: controls-only debugging preceded the pinned implementation but computed no T4 count. Two one-shot evaluation workflows were added nearly simultaneously; the first wrote the canonical result and the second unchanged rerun produced no result diff. Both runs and cleanup remain visible in history.
+- Do not infer `h→∞` saturation, an all-ring formula from the even/odd finite pattern, a sufficient criterion for spatial dimension, or a new spatial axis. The stronger topology/intervention/symmetry criterion remains open.
+- **Review state:** reporting is complete on the gathering branch only after its reporting sub-PR merges. External Claude/Fable gate-2 review of the final gathering head remains required before `main`.
+
 ## Checkpoint 2026-09-11: bounded second-lift completion comparison completed
 
 Read `docs/research/2026-09-11-second-lift-completion.md`. This is the newest
