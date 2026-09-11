@@ -1,0 +1,146 @@
+name: Temporary transverse-freedom report integration
+
+on:
+  push:
+    branches:
+      - work/dimensional-spatial-axis/report
+    paths:
+      - '.github/workflows/temporary-transverse-freedom-report.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  integrate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: work/dimensional-spatial-axis/report
+      - name: Update Program, checkpoint, metadata and knowledge graph
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          # Program synthesis.
+          p = Path('docs/research/2026-09-09-dimensional-closure-program.md')
+          s = p.read_text()
+          item = """22. **Finite width is packable; Rule32 correction depth adds no independent transverse capacity through depth four.** Every fixed finite strip width column-packs into a one-dimensional product alphabet, while an unbounded full strip eventually defeats any fixed target alphabet and longitudinal expansion budget. On the inherited Rule32 family, the exact `n=6..12`, `h=0..4` diagnostic finds the fixed-depth whole-field partition already saturated at `h=0` for H128/H160 and K/O. This is a necessary anti-packing resource criterion, not an intrinsic-dimension theorem.\n\n"""
+          if '22. **Finite width is packable' not in s:
+              marker = '## What remains open\n'
+              if marker not in s:
+                  raise SystemExit('Program What remains open marker missing')
+              s = s.replace(marker, item + marker, 1)
+          old = "- The relationship between correction depth, spatial dimension, growing spatial radius and minimum causal representation dimension is not yet characterized. The completed second-lift comparison keeps the spatial lattice one-dimensional while growing the represented product alphabet; its radius-one inherited closure therefore does not settle how a genuinely new spatial axis should arise. A fixed code's ancestral rank may primarily reflect its layout."
+          new = "- The relationship between correction depth, spatial dimension, growing spatial radius and minimum causal representation dimension is not yet characterized. The finite-width packing theorem now shows that bounded transverse width can be absorbed into a product alphabet, and the fixed-`(q,K)` counting obstruction gives one necessary anti-packing resource for unbounded independent width. The inherited Rule32 correction tuples remain source-bounded and, on rings 6–12 through depth four, add no whole-field distinctions beyond depth zero. What remains open is a sufficient spatial criterion: causal topology, independently addressable interventions, transverse translation structure, or another contract may carry the missing content."
+          if old in s:
+              s = s.replace(old, new, 1)
+          elif new not in s:
+              raise SystemExit('Program dimensional open-item text not found')
+          section = """
+
+## Completed execution: finite-width packing and transverse freedom
+
+The [frozen protocol](protocols/transverse-freedom-20260911.md) is complete; see the [result note](2026-09-11-transverse-freedom.md) and [knowledge record](../knowledge/transverse-freedom-criterion.md). Claude/Fable reviewed the protocol before implementation and required two clarifications to the fixed-resource contract. The verifier was pinned before the primary `n=6..12`, `h=0..4` diagnostic, and the permanent workflow now replays the canonical result byte for byte.
+
+The analytic boundary is simple. Every fixed finite-width strip can be column-packed into a one-dimensional CA over a width-dependent product alphabet. Conversely, if the target alphabet `q` and longitudinal expansion `K` are fixed independently of width, injectivity of the full width-`w` strip requires `|A|^(wn) <= q^(Kn)` and therefore fails for sufficiently large `w`. Unbounded independent transverse capacity is thus a necessary anti-packing resource under this contract, not a sufficient definition of spatial dimension.
+
+The inherited Rule32 correction family falls on the packed side of that distinction. Every finite-depth tuple is a deterministic image of the first-image family and has at most one bit of independent-state capacity per longitudinal source site. In the bounded diagnostic, the common H128/H160 and K/O tuple-image counts are already saturated at depth zero on every tested ring: `62, 128, 254, 512, 1022, 2048, 4094` for rings `6..12`, respectively, while nominal storage grows from 2 through 10 bits per site across `h=0..4`. The odd/even count pattern is recorded only for these rings; no all-ring theorem or `h→∞` empirical extrapolation is claimed.
+
+This result sharpens the next dimensional question. Local closure plus another represented row is not enough. A genuine spatial-axis claim needs some resource that survives a uniform representation contract and cannot merely be absorbed into same-dimensional state. Causal wiring and intervention structure are natural next candidates; no follow-up experiment is frozen here.
+"""
+          if '## Completed execution: finite-width packing and transverse freedom' not in s:
+              s = s.rstrip() + section + '\n'
+          p.write_text(s)
+
+          # Checkpoint: result complete, final cross-model acceptance pending.
+          p = Path('docs/research/checkpoints/dimensional-lift.md')
+          s = p.read_text()
+          block = """## Checkpoint 2026-09-11: finite-width packing and transverse freedom completed; final review pending
+
+Read `docs/research/2026-09-11-transverse-freedom.md`. The protocol, implementation and exact bounded diagnostic are complete on the dimensional gathering branch; final Claude/Fable Gate-2 review of the combined unit is still pending, so this checkpoint does not call the unit accepted on `main` yet.
+
+- Gate 1: Claude/Fable approved the frozen protocol at `27ee07d`, with two binding clarifications applied before implementation: output length is exactly `Kn` under fixed `(q,K)`, and uniform non-packability means some width has no admissible encoding under those fixed resources.
+- Analytic controls: every fixed finite strip width column-packs into a one-dimensional product alphabet. A full unbounded-width strip cannot inject into fixed alphabet `q` with fixed longitudinal expansion `K` once `w log2|A| > K log2 q`. This is a necessary anti-packing resource statement only.
+- The Rule32 correction tuples are source-bounded for every finite depth: each is a deterministic image of `B_n`, hence has at most one bit of independent-state capacity per longitudinal source site even as nominal tuple storage grows.
+- Exact diagnostic: for rings `n=6..12`, H128/H160, K/O and `h=0..4`, the tuple-image count is already saturated at `h=0`. The `B_n` counts are `63,128,255,512,1023,2048,4095`; the corresponding common tuple counts at every tested depth are `62,128,254,512,1022,2048,4094`.
+- Every K/O and cross-completion fixed-depth fiber/recoding control passes, primary truth-table and independent literal-Boolean rows agree, and the permanent CI performs source-hash integrity plus byte-for-byte result replay.
+- Process record: the interactive session and hourly continuation cycle briefly overlapped on one-shot evaluation/inspection helpers after the implementation was pinned. The unchanged repeat produced no result diff; temporary helpers/artifacts were removed and the duplicate history is retained.
+- Do not infer an intrinsic-dimension theorem, sufficiency of entropy/capacity, an all-ring odd/even law, `h→∞` saturation, self-assembly, endogenous control or a Class-IV criterion. The next unresolved distinction is causal/topological/intervention content that cannot be packed into a fixed one-dimensional representation contract.
+
+"""
+          marker = 'Program page: `docs/research/2026-09-09-dimensional-closure-program.md`\n\n'
+          if 'finite-width packing and transverse freedom completed; final review pending' not in s:
+              if marker not in s:
+                  raise SystemExit('checkpoint insertion marker missing')
+              s = s.replace(marker, marker + block, 1)
+          p.write_text(s)
+
+          # Program metadata.
+          p = Path('site/content/research-program.json')
+          data = json.loads(p.read_text())
+          prog = next(x for x in data if x['slug'] == 'dimensional-lift')
+          prog['updated'] = '2026-09-11'
+          prog['summary'] = ('Finite-width packing separates nominal transverse rows from independent transverse capacity: every fixed width collapses into a product alphabet, while unbounded independent width defeats a fixed (q,K) representation budget. The inherited Rule32 correction tuples remain source-bounded and add no whole-field distinctions beyond depth zero through h=4 on rings 6–12; a sufficient causal/topological criterion for a genuine spatial axis remains open.')
+          if 'transverse-freedom' not in prog['supports']:
+              prog['supports'].append('transverse-freedom')
+          p.write_text(json.dumps(data, indent=2, ensure_ascii=False) + '\n')
+
+          # Knowledge graph.
+          p = Path('site/content/knowledge.json')
+          kg = json.loads(p.read_text())
+          node = {
+              'id': 'transverse-freedom-criterion',
+              'kind': 'finding',
+              'status': 'exact',
+              'title': 'Finite width packs; independent unbounded transverse freedom defeats a fixed capacity budget',
+              'summary': 'Every fixed finite strip width column-packs into a one-dimensional product alphabet, while full unbounded independent width eventually exceeds any fixed target alphabet and longitudinal expansion budget. The inherited Rule32 correction tuples are source-bounded and, on rings 6–12 through h=4, add no whole-field distinctions beyond depth zero.',
+              'updated': '2026-09-11',
+              'source': 'docs/knowledge/transverse-freedom-criterion.md',
+              'research': ['transverse-freedom']
+          }
+          kg['nodes'] = [node if n.get('id') == node['id'] else n for n in kg['nodes']]
+          if not any(n.get('id') == node['id'] for n in kg['nodes']):
+              kg['nodes'].append(node)
+          beam = next(n for n in kg['nodes'] if n.get('id') == 'dimensional-beam')
+          if 'transverse-freedom' not in beam.setdefault('research', []):
+              beam['research'].append('transverse-freedom')
+          beam['updated'] = '2026-09-11'
+          beam['summary'] = ('The dimensional program now has a necessary anti-packing capacity criterion: fixed finite width can be absorbed into product state, while unbounded independent transverse width cannot fit a fixed (q,K) 1D budget. Rule32 correction depth stays source-bounded in the tested tower. A sufficient representation-independent criterion based on causal topology, interventions or transverse structure remains open.')
+          new_edges = [
+              {
+                  'source': 'transverse-freedom-criterion', 'type': 'depends_on', 'target': 'representation-contract',
+                  'reason': 'Packability and non-packability are meaningful only after fixing the target alphabet, longitudinal expansion, encoding class and resource budget.',
+                  'research': ['transverse-freedom', 'dimensional-vision-and-interpretation']
+              },
+              {
+                  'source': 'transverse-freedom-criterion', 'type': 'depends_on', 'target': 'second-lift-completion-comparison',
+                  'reason': 'The bounded second-lift result exposed growing tuple storage on a fixed one-dimensional lattice and motivates testing whether those rows add independent state capacity.',
+                  'research': ['second-lift-completion', 'transverse-freedom']
+              },
+              {
+                  'source': 'transverse-freedom-criterion', 'type': 'tests', 'target': 'dimensional-beam',
+                  'reason': 'Tests one necessary resource distinction for the beam: correction depth alone does not supply independent transverse state capacity under the declared contract.',
+                  'research': ['transverse-freedom']
+              }
+          ]
+          for e in new_edges:
+              key = (e['source'], e['type'], e['target'])
+              kg['edges'] = [x for x in kg['edges'] if (x.get('source'), x.get('type'), x.get('target')) != key]
+              kg['edges'].append(e)
+          p.write_text(json.dumps(kg, separators=(',', ':'), ensure_ascii=False) + '\n')
+          PY
+
+          git config user.name "Codex report integrator"
+          git config user.email "noreply@openai.com"
+          git add docs/research/2026-09-09-dimensional-closure-program.md \
+                  docs/research/checkpoints/dimensional-lift.md \
+                  site/content/research-program.json \
+                  site/content/knowledge.json
+          git rm .github/workflows/temporary-transverse-freedom-report.yml
+          git commit -m "Integrate transverse-freedom result into Program and knowledge"
+          git push origin HEAD:work/dimensional-spatial-axis/report
