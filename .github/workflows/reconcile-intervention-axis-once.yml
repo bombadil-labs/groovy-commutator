@@ -1,0 +1,104 @@
+name: Reconcile intervention-axis gathering once
+
+on:
+  push:
+    branches: [gather/dimensional-intervention-axis]
+    paths:
+      - '.github/workflows/reconcile-intervention-axis-once.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  reconcile:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Merge current main and resolve shared research registries
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git fetch origin main
+          git merge --no-commit --no-ff origin/main || true
+
+          python - <<'PY'
+          import json
+          import pathlib
+          import subprocess
+
+          def show_stage(stage: int, path: str) -> str:
+              return subprocess.check_output(["git", "show", f":{stage}:{path}"], text=True)
+
+          def conflicted(path: str) -> bool:
+              out = subprocess.check_output(["git", "diff", "--name-only", "--diff-filter=U"], text=True).splitlines()
+              return path in out
+
+          # Shared knowledge registry: current main is authoritative for all
+          # existing records. Layer in only this unit's new node/edge, with the
+          # Gate-2 provenance correction applied.
+          kp = "site/content/knowledge.json"
+          if conflicted(kp):
+              ours = json.loads(show_stage(2, kp))
+              main = json.loads(show_stage(3, kp))
+              node = next(n for n in ours["nodes"] if n.get("id") == "transverse-intervention-independence")
+              node = dict(node)
+              node["research"] = ["intervention-axis"]
+              main["nodes"] = [n for n in main["nodes"] if n.get("id") != node["id"]] + [node]
+              edge = next(e for e in ours["edges"] if e.get("source") == "transverse-intervention-independence" and e.get("target") == "transverse-freedom-capacity")
+              edge = dict(edge)
+              edge["research"] = ["intervention-axis"]
+              main["edges"] = [e for e in main["edges"] if not (e.get("source") == edge["source"] and e.get("target") == edge["target"] and e.get("type") == edge.get("type"))] + [edge]
+              pathlib.Path(kp).write_text(json.dumps(main, ensure_ascii=False, separators=(",", ":")) + "\n")
+              subprocess.check_call(["git", "add", kp])
+
+          # Program registry: retain current-main updates for every other
+          # program, while replacing only the dimensional-program object with
+          # this gathering branch's newer intervention-axis account.
+          rp = "site/content/research-program.json"
+          if conflicted(rp):
+              ours = json.loads(show_stage(2, rp))
+              main = json.loads(show_stage(3, rp))
+              source = "docs/research/2026-09-09-dimensional-closure-program.md"
+              dimensional = next(x for x in ours if x.get("source") == source)
+              merged = [dimensional if x.get("source") == source else x for x in main]
+              pathlib.Path(rp).write_text(json.dumps(merged, ensure_ascii=False, indent=2) + "\n")
+              subprocess.check_call(["git", "add", rp])
+
+          # Result-integrity registry: start from current main so the freshly
+          # accepted ring-certificate entry is retained, then register this
+          # unit if the ordinary text merge conflicted.
+          ip = "scripts/check_result_integrity.py"
+          if conflicted(ip):
+              text = show_stage(3, ip)
+              key = "results/intervention_axis_20260911.json"
+              if key not in text:
+                  block = (
+                      "    'results/intervention_axis_20260911.json': {\n"
+                      "        'script': 'scripts/verify_intervention_axis.py',\n"
+                      "        'protocol': 'docs/research/protocols/intervention-axis-20260911.md'},\n"
+                  )
+                  marker = "\n}\n\ndef sha"
+                  if marker not in text:
+                      raise SystemExit("integrity registry insertion marker not found")
+                  text = text.replace(marker, "\n" + block + "}\n\ndef sha", 1)
+              pathlib.Path(ip).write_text(text)
+              subprocess.check_call(["git", "add", ip])
+          PY
+
+          # Any conflict not explicitly understood above is a hard stop.
+          remaining="$(git diff --name-only --diff-filter=U)"
+          if [ -n "$remaining" ]; then
+            echo "Unresolved merge conflicts:" >&2
+            echo "$remaining" >&2
+            exit 1
+          fi
+
+          # The one-shot runner is intentionally absent from the final tree.
+          git rm .github/workflows/reconcile-intervention-axis-once.yml
+          git add -A
+          git commit -m "Reconcile intervention-axis gathering with accepted ring-certificate work"
+          git push origin HEAD:gather/dimensional-intervention-axis
