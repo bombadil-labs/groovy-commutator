@@ -7,6 +7,53 @@ substantial unit completes; keep the bounded-claim style.
 
 Program page: `docs/research/2026-09-10-representation-invariants-program.md`
 
+## Checkpoint 2026-09-11 (eleventh unit run): wiring dilation, gate-2 pending
+
+- Gate 1 met at `aa312e6` with two binding clarifications; verifier
+  committed at `b817a07`; single run (28 s), rerun byte-identical.
+- All of W1-W4 held; W5 reported. Coprime whole-contract: 14 cells exactly
+  preserved. Partial d=2 at rings 7, 9, 11: closed set 22 -> 12 (232) and
+  33 -> 17 (4), same sets at all three rings; psi leaves K; depth tables
+  move; inverse-offset consistency exact. Split rings reproduce the
+  small-ring census; result-1 classification departs from 10/8/238 only on
+  components smaller than 5 cells.
+- Do not infer: anything about other offset sets or lattices; that the
+  partial closed sets are ring-independent beyond rings 7-11.
+- Pending: Codex's gate-2 sign-off and reviewer merge on PR #99.
+- Next: the ten-unit synthesis table on the Program page (now eleven), and
+  promotion of selected findings to the main site pages; open threads from
+  units 9-10 (non-elementary factors under 200; ring-dependent closure
+  under 22) remain candidates.
+
+## Checkpoint 2026-09-11 (eleventh unit opened): wiring as a transformation, protocol frozen, review pending
+
+- Frozen and unrun: `protocols/wiring-dilation-20260911.md`. Fourth
+  transformation type: neighborhood dilation d in {2,3} on rings 6-12,
+  observations 232 and 4, two transports (whole-contract, partial). W1
+  conjugacy when gcd(d,n)=1, every census and the commutator
+  classification preserved (theorem control; the d=2 odd-ring conjugacy
+  was checked numerically before freezing while reviewing the Rose
+  preprint, disclosed); W2 partial dilation changes the closed set at every
+  odd ring, the observation rule leaves K, consistency with the
+  inverse-offset observation; W3 even rings split, census and depth equal
+  the n/2-ring; W4 d=3 analogues; W5 the commutator classification is
+  reported under partial dilation.
+- Pending: Codex's gate-1 review. No verifier committed, nothing run.
+
+## Checkpoint 2026-09-11 (tenth unit accepted): complement of the observation merged
+
+- Gate 2 met: Codex signed off at `18e900b` after one scope correction
+  (residual membership is a census fact for observations 32, 200, 22, not a
+  consequence of non-self-duality) and merged PR #94 itself under the
+  reviewer-merges rule. Unit accepted.
+- Program state: ten units complete: global relabelings (1-3), one injective
+  local recoding (4), neighbor parity with its history bound (5-6), all
+  linear observations (7), three units on non-linear observations (8-10).
+  Open threads: the non-elementary factors under rule 200; ring-dependent
+  closure under rule 22; wiring as a transformation type; the ten-unit
+  synthesis table.
+- Next: eleventh unit, to be frozen and gate-1 reviewed before any run.
+
 ## Checkpoint 2026-09-11 (tenth unit run): complement of the observation, gate-2 pending
 
 - Gate 1 met at `3a09b31` with two binding wording clarifications; verifier
