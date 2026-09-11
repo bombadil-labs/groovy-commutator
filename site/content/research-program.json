@@ -39,9 +39,9 @@
     "title": "Dimensional Closure and the Commutator Lift",
     "eyebrow": "Working research program",
     "date": "2026-09-09",
-    "updated": "2026-09-10",
+    "updated": "2026-09-11",
     "status": "living",
-    "summary": "Loop revision has an exact transverse support cost, and replication multiplies intervention cost while preserving edited dynamics. Native 3D actions offer additional outcomes on the declared finite grids. The frozen audit is complete; the agreed issue burndown is underway.",
+    "summary": "Finite-width packing now separates nominal transverse rows from independent transverse capacity: every fixed width collapses into a product alphabet, while unbounded independent width defeats a fixed (q,K) representation budget. The inherited Rule32 correction tuples remain source-bounded and add no whole-field distinctions beyond depth zero through h=4 on rings 6–12; a sufficient causal or topological criterion for a genuine spatial axis remains open.",
     "thesis": "When two dynamical paths fail to commute, represent the disagreement as a new coordinate and ask whether the enlarged representation closes.",
     "source": "docs/research/2026-09-09-dimensional-closure-program.md",
     "supports": [
@@ -68,7 +68,8 @@
       "gradient-intervention-costs",
       "shared-closure-account",
       "successor-set-archive",
-      "second-lift-completion-protocol"
+      "second-lift-completion-protocol",
+      "transverse-freedom"
     ]
   },
   {
