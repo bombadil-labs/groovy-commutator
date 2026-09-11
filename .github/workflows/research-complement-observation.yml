@@ -14,7 +14,6 @@ on:
       - 'results/complement_observation_20260911.json'
       - 'results/isolated_cell_20260911.json'
       - 'results/block_majority_20260911.json'
-      - 'results/block_majority_20260911.json'
       - 'scripts/check_result_integrity.py'
       - '.github/workflows/research-complement-observation.yml'
   push:
@@ -23,7 +22,6 @@ on:
       - 'scripts/verify_complement_observation.py'
       - 'results/complement_observation_20260911.json'
       - 'results/isolated_cell_20260911.json'
-      - 'results/block_majority_20260911.json'
       - 'results/block_majority_20260911.json'
       - 'scripts/check_result_integrity.py'
       - '.github/workflows/research-complement-observation.yml'
