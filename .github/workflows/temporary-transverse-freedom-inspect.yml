@@ -1,0 +1,46 @@
+name: Temporary transverse-freedom inspection summary
+
+on:
+  push:
+    branches:
+      - work/dimensional-spatial-axis/evaluation
+    paths:
+      - '.github/workflows/temporary-transverse-freedom-inspect.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  summarize:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: work/dimensional-spatial-axis/evaluation
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Write compact inspection record
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          src = json.loads(Path('results/transverse_freedom_20260911.json').read_text())
+          out = {
+              'source_hashes': src.get('source_hashes'),
+              'implementation_commit': src.get('implementation_commit'),
+              'protocol_commit': src.get('protocol_commit'),
+              'summary': src.get('summary'),
+              'ring_summaries': src.get('ring_summaries'),
+          }
+          Path('results/transverse_freedom_inspection.tmp.json').write_text(json.dumps(out, indent=2, sort_keys=True) + '\n')
+          PY
+          git config user.name 'Codex inspection runner'
+          git config user.email 'noreply@openai.com'
+          git add results/transverse_freedom_inspection.tmp.json
+          git rm .github/workflows/temporary-transverse-freedom-inspect.yml
+          git commit -m 'Add temporary transverse-freedom inspection summary'
+          git push origin HEAD:work/dimensional-spatial-axis/evaluation
