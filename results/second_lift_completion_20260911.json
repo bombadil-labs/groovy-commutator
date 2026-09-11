@@ -1,0 +1,5098 @@
+{
+ "canonical_table_record": "4 little-endian key bytes + 1 target-membership-mask byte, sorted unsigned key; unseen key target defaults to symbol 0; artifact stores base64 of exact record bytes",
+ "cases": [
+  {
+   "R": 0,
+   "complete_law_if_pass": null,
+   "complete_law_radius_if_pass": null,
+   "complete_law_windows_independently_verified": 0,
+   "completion": 128,
+   "conflict": {
+    "evaluation_convention": "inherited: binary source MSB-first; ambient: base-four pair symbols MSB-first; feature site-major x then row j then U,V",
+    "feature_patch_bits_msb": "00",
+    "key": 0,
+    "preimage_source_words_msb": [
+     "000000000",
+     "001010100"
+    ],
+    "preimages": [
+     0,
+     84
+    ],
+    "targets": [
+     0,
+     1
+    ]
+   },
+   "default_unrealized_target": 0,
+   "domain": "inherited",
+   "feature_bits": 2,
+   "feature_target_sha256": "73137c7c9d6a07d39717840071455cad4ba57ba6a182f0836ba10bbe6d4178e0",
+   "h": 0,
+   "independent_feature_target_sha256": "73137c7c9d6a07d39717840071455cad4ba57ba6a182f0836ba10bbe6d4178e0",
+   "input_width": 9,
+   "input_words": 512,
+   "kind": "K",
+   "pair_radius": 2,
+   "pass": false,
+   "realized_keys": 3,
+   "table_artifact": {
+    "encoding": "base64 of canonical 5-byte records",
+    "path": "results/second_lift_completion_tables_20260911/H128_inherited_K_h0_R0.records.b64",
+    "stored_bytes": 21
+   },
+   "table_record_count": 3,
+   "table_sha256": "b7ea77bfa13d809437a520cb2aa7cfa1a90bdad1cef8e08fe308badb0a7f503b",
+   "target_bits": 2
+  },
+  {
+   "R": 1,
+   "complete_law_if_pass": "rows j<h: H(A_j) XOR A_(j+1); top: H(A_h) XOR cap(K_h patch)",
+   "complete_law_radius_if_pass": 1,
+   "complete_law_windows_independently_verified": 512,
+   "completion": 128,
+   "conflict": null,
+   "default_unrealized_target": 0,
+   "domain": "inherited",
+   "feature_bits": 6,
+   "feature_target_sha256": "992ee13832a98bcfe7335af1e7ee2612d4ca987c1414638e91dfd8c16429a84d",
+   "h": 0,
+   "independent_feature_target_sha256": "992ee13832a98bcfe7335af1e7ee2612d4ca987c1414638e91dfd8c16429a84d",
+   "input_width": 9,
+   "input_words": 512,
+   "kind": "K",
+   "pair_radius": 2,
+   "pass": true,
+   "realized_keys": 17,
+   "table_artifact": {
+    "encoding": "base64 of canonical 5-byte records",
+    "path": "results/second_lift_completion_tables_20260911/H128_inherited_K_h0_R1.records.b64",
+    "stored_bytes": 117
+   },
+   "table_record_count": 17,
+   "table_sha256": "2eeddcfbd2925a1faf31135c0050b5b62c1acc270dc6993c0a6393bb57cfb71a",
+   "target_bits": 2
+  },
+  {
+   "R": 2,
+   "complete_law_if_pass": "rows j<h: H(A_j) XOR A_(j+1); top: H(A_h) XOR cap(K_h patch)",
+   "complete_law_radius_if_pass": 2,
+   "complete_law_windows_independently_verified": 2048,
+   "completion": 128,
+   "conflict": null,
+   "default_unrealized_target": 0,
+   "domain": "inherited",
+   "feature_bits": 10,
+   "feature_target_sha256": "5cf53e4a236dbef49ffcd748c4d8ea7d446c0f704d4eefc750dce746463bd146",
+   "h": 0,
+   "independent_feature_target_sha256": "5cf53e4a236dbef49ffcd748c4d8ea7d446c0f704d4eefc750dce746463bd146",
+   "input_width": 11,
+   "input_words": 2048,
+   "kind": "K",
+   "pair_radius": 3,
+   "pass": true,
+   "realized_keys": 66,
+   "table_artifact": {
+    "encoding": "base64 of canonical 5-byte records",
+    "path": "results/second_lift_completion_tables_20260911/H128_inherited_K_h0_R2.records.b64",
+    "stored_bytes": 441
+   },
+   "table_record_count": 66,
+   "table_sha256": "8606b1a21e3f5fd6e26303eb2c7394ea27b01088e3f24e6918fdf9d15020dbcc",
+   "target_bits": 2
+  },
+  {
+   "R": 0,
+   "complete_law_if_pass": null,
+   "complete_law_radius_if_pass": null,
+   "complete_law_windows_independently_verified": 0,
+   "completion": 128,
+   "conflict": {
+    "evaluation_convention": "inherited: binary source MSB-first; ambient: base-four pair symbols MSB-first; feature site-major x then row j then U,V",
+    "feature_patch_bits_msb": "0000",
+    "key": 0,
+    "preimage_source_words_msb": [
+     "00000000000",
+     "00101010100"
+    ],
+    "preimages": [
+     0,
+     340
+    ],
+    "targets": [
+     0,
+     1
+    ]
+   },
+   "default_unrealized_target": 0,
+   "domain": "inherited",
+   "feature_bits": 4,
+   "feature_target_sha256": "b60e7dd0c1e757d99d02a7d9d08b80f2a3a4f395b71264bd6566f2cc765feed0",
+   "h": 1,
+   "independent_feature_target_sha256": "b60e7dd0c1e757d99d02a7d9d08b80f2a3a4f395b71264bd6566f2cc765feed0",
+   "input_width": 11,
+   "input_words": 2048,
+   "kind": "K",
+   "pair_radius": 3,
+   "pass": false,
+   "realized_keys": 5,
+   "table_artifact": {
+    "encoding": "base64 of canonical 5-byte records",
+    "path": "results/second_lift_completion_tables_20260911/H128_inherited_K_h1_R0.records.b64",
+    "stored_bytes": 37
+   },
+   "table_record_count": 5,
+   "table_sha256": "b14d0a682f7eadf721d67b564ee83301dbb95e1eb61cb7e36fe9292bd8dadcb9",
+   "target_bits": 2
+  },
+  {
+   "R": 1,
+   "complete_law_if_pass": "rows j<h: H(A_j) XOR A_(j+1); top: H(A_h) XOR cap(K_h patch)",
+   "complete_law_radius_if_pass": 1,
+   "complete_law_windows_independently_verified": 2048,
+   "completion": 128,
+   "conflict": null,
+   "default_unrealized_target": 0,
+   "domain": "inherited",
+   "feature_bits": 12,
+   "feature_target_sha256": "a7734da4462fc9848497506205f427295b5b7a8c40ae175d457151542e7a7388",
+   "h": 1,
+   "independent_feature_target_sha256": "a7734da4462fc9848497506205f427295b5b7a8c40ae175d457151542e7a7388",
+   "input_width": 11,
+   "input_words": 2048,
+   "kind": "K",
+   "pair_radius": 3,
+   "pass": true,
+   "realized_keys": 24,
+   "table_artifact": {
+    "encoding": "base64 of canonical 5-byte records",
+    "path": "results/second_lift_completion_tables_20260911/H128_inherited_K_h1_R1.records.b64",
+    "stored_bytes": 161
+   },
+   "table_record_count": 24,
+   "table_sha256": "e01dedd55e0ae7b39ae63ba1e36a3c5349173ca6fdf93d46823a1b5076482a27",
+   "target_bits": 2
+  },
+  {
+   "R": 2,
+   "complete_law_if_pass": "rows j<h: H(A_j) XOR A_(j+1); top: H(A_h) XOR cap(K_h patch)",
+   "complete_law_radius_if_pass": 2,
+   "complete_law_windows_independently_verified": 8192,
+   "completion": 128,
+   "conflict": null,
+   "default_unrealized_target": 0,
+   "domain": "inherited",
+   "feature_bits": 20,
+   "feature_target_sha256": "80019a978ad0a5d97b51f9f0488f7d40516e0a7967a331d36cf97a62a75c3b66",
+   "h": 1,
+   "independent_feature_target_sha256": "80019a978ad0a5d97b51f9f0488f7d40516e0a7967a331d36cf97a62a75c3b66",
+   "input_width": 13,
+   "input_words": 8192,
+   "kind": "K",
+   "pair_radius": 4,
+   "pass": true,
+   "realized_keys": 88,
+   "table_artifact": {
+    "encoding": "base64 of canonical 5-byte records",
+    "path": "results/second_lift_completion_tables_20260911/H128_inherited_K_h1_R2.records.b64",
+    "stored_bytes": 589
+   },
+   "table_record_count": 88,
+   "table_sha256": "f4a3ec3a774a4e9b4c7c4e41621dbd4369dc90bdcc8f4cf552e5704eb7f8ec28",
+   "target_bits": 2
+  },
+  {
+   "R": 0,
+   "complete_law_if_pass": null,
+   "complete_law_radius_if_pass": null,
+   "complete_law_windows_independently_verified": 0,
+   "completion": 128,
+   "conflict": {
+    "evaluation_convention": "inherited: binary source MSB-first; ambient: base-four pair symbols MSB-first; feature site-major x then row j then U,V",
+    "feature_patch_bits_msb": "000000",
+    "key": 0,
+    "preimage_source_words_msb": [
+     "0000000000000",
+     "0010101010100"
+    ],
+    "preimages": [
+     0,
+     1364
+    ],
+    "targets": [
+     0,
+     1
+    ]
+   },
+   "default_unrealized_target": 0,
+   "domain": "inherited",
+   "feature_bits": 6,
+   "feature_target_sha256": "309e6587cff23628cff3e6187683079f72ae0261687087c916633f1f8d59f405",
+   "h": 2,
+   "independent_feature_target_sha256": "309e6587cff23628cff3e6187683079f72ae0261687087c916633f1f8d59f405",
+   "input_width": 13,
+   "input_words": 8192,
+   "kind": "K",
+   "pair_radius": 4,
+   "pass": false,
+   "realized_keys": 7,
+   "table_artifact": {
+    "encoding": "base64 of canonical 5-byte records",
+    "path": "results/second_lift_completion_tables_20260911/H128_inherited_K_h2_R0.records.b64",
+    "stored_bytes": 49
+   },
+   "table_record_count": 7,
+   "table_sha256": "f3af08730b9478ae52bb1271bbba2d371a9e80a36d3fff2d57e164a095797a11",
+   "target_bits": 2
+  },
+  {
+   "R": 1,
+   "complete_law_if_pass": "rows j<h: H(A_j) XOR A_(j+1); top: H(A_h) XOR cap(K_h patch)",
+   "complete_law_radius_if_pass": 1,
+   "complete_law_windows_independently_verified": 8192,
+   "completion": 128,
+   "conflict": null,
+   "default_unrealized_target": 0,
+   "domain": "inherited",
+   "feature_bits": 18,
+   "feature_target_sha256": "79851f85a312d4b8f3c35d96d0c973a6930ac97592170a2a414ab0d296ae7461",
+   "h": 2,
+   "independent_feature_target_sha256": "79851f85a312d4b8f3c35d96d0c973a6930ac97592170a2a414ab0d296ae7461",
+   "input_width": 13,
+   "input_words": 8192,
+   "kind": "K",
+   "pair_radius": 4,
+   "pass": true,
+   "realized_keys": 29,
+   "table_artifact": {
+    "encoding": "base64 of canonical 5-byte records",
+    "path": "results/second_lift_completion_tables_20260911/H128_inherited_K_h2_R1.records.b64",
+    "stored_bytes": 197
+   },
+   "table_record_count": 29,
+   "table_sha256": "8cec98bd8e5c2d652e1a9a127aa820fdf479a660bf9ad38160dc6e36197c8076",
+   "target_bits": 2
+  },
+  {
+   "R": 2,
+   "complete_law_if_pass": "rows j<h: H(A_j) XOR A_(j+1); top: H(A_h) XOR cap(K_h patch)",
+   "complete_law_radius_if_pass": 2,
+   "complete_law_windows_independently_verified": 32768,
+   "completion": 128,
+   "conflict": null,
+   "default_unrealized_target": 0,
+   "domain": "inherited",
+   "feature_bits": 30,
+   "feature_target_sha256": "b11a9c95baeff18a490b5176c0caf8f2720d78f1b725ebaa866f4490a40d6673",
+   "h": 2,
+   "independent_feature_target_sha256": "b11a9c95baeff18a490b5176c0caf8f2720d78f1b725ebaa866f4490a40d6673",
+   "input_width": 15,
+   "input_words": 32768,
+   "kind": "K",
+   "pair_radius": 5,
+   "pass": true,
+   "realized_keys": 103,
+   "table_artifact": {
+    "encoding": "base64 of canonical 5-byte records",
+    "path": "results/second_lift_completion_tables_20260911/H128_inherited_K_h2_R2.records.b64",
+    "stored_bytes": 689
+   },
+   "table_record_count": 103,
+   "table_sha256": "0b6e53f277183ae23f36e4edf22778281b800bbd73fdb03d01d3bf5c0b2f384a",
+   "target_bits": 2
+  },
+  {
+   "R": 0,
+   "complete_law_if_pass": null,
+   "complete_law_radius_if_pass": null,
+   "complete_law_windows_independently_verified": 0,
+   "completion": 128,
+   "conflict": {
+    "evaluation_convention": "inherited: binary source MSB-first; ambient: base-four pair symbols MSB-first; feature site-major x then row j then U,V",
+    "feature_patch_bits_msb": "00",
+    "key": 0,
+    "preimage_source_words_msb": [
+     "000000000",
+     "001010100"
+    ],
+    "preimages": [
+     0,
+     84
+    ],
+    "targets": [
+     0,
+     1
+    ]
+   },
+   "default_unrealized_target": 0,
+   "domain": "inherited",
+   "feature_bits": 2,
+   "feature_target_sha256": "1bba823e0cd8962ef2ffa6293ed3897d3235dff32ba924d4dba4bac5d6c4a0e6",
+   "h": 0,
+   "independent_feature_target_sha256": "1bba823e0cd8962ef2ffa6293ed3897d3235dff32ba924d4dba4bac5d6c4a0e6",
+   "input_width": 9,
+   "input_words": 512,
+   "kind": "O",
+   "pair_radius": 2,
+   "pass": false,
+   "realized_keys": 3,
+   "table_artifact": {
+    "encoding": "base64 of canonical 5-byte records",
+    "path": "results/second_lift_completion_tables_20260911/H128_inherited_O_h0_R0.records.b64",
+    "stored_bytes": 21
+   },
+   "table_record_count": 3,
+   "table_sha256": "2ae999fd38603876de210f05e795569535baf05208de50986b5bbe86520d3539",
+   "target_bits": 2
+  },
+  {
+   "R": 1,
+   "complete_law_if_pass": "rows j<h: shift to O_(j+1); top: cap(O_h patch)",
+   "complete_law_radius_if_pass": 1,
+   "complete_law_windows_independently_verified": 512,
+   "completion": 128,
+   "conflict": null,
+   "default_unrealized_target": 0,
+   "domain": "inherited",
+   "feature_bits": 6,
+   "feature_target_sha256": "7e9e65e23d43e21e5727531329e6f157d6fe5855e28ab27dc21db26f8fe7ff19",
+   "h": 0,
+   "independent_feature_target_sha256": "7e9e65e23d43e21e5727531329e6f157d6fe5855e28ab27dc21db26f8fe7ff19",
+   "input_width": 9,
+   "input_words": 512,
+   "kind": "O",
+   "pair_radius": 2,
+   "pass": true,
+   "realized_keys": 17,
+   "table_artifact": {
+    "encoding": "base64 of canonical 5-byte records",
+    "path": "results/second_lift_completion_tables_20260911/H128_inherited_O_h0_R1.records.b64",
+    "stored_bytes": 117
+   },
+   "table_record_count": 17,
+   "table_sha256": "9b0fdc6f6b887b334c88b51af76e5393bf2e05cb5105f92294f1569819662aa1",
+   "target_bits": 2
+  },
+  {
+   "R": 2,
+   "complete_law_if_pass": "rows j<h: shift to O_(j+1); top: cap(O_h patch)",
+   "complete_law_radius_if_pass": 2,
+   "complete_law_windows_independently_verified": 2048,
+   "completion": 128,
+   "conflict": null,
+   "default_unrealized_target": 0,
+   "domain": "inherited",
+   "feature_bits": 10,
+   "feature_target_sha256": "64aca6846bbbcdec993d6088e1af9e780c8fc596a3b49b9db3d352f4508e96d4",
+   "h": 0,
+   "independent_feature_target_sha256": "64aca6846bbbcdec993d6088e1af9e780c8fc596a3b49b9db3d352f4508e96d4",
+   "input_width": 11,
+   "input_words": 2048,
+   "kind": "O",
+   "pair_radius": 3,
+   "pass": true,
+   "realized_keys": 66,
+   "table_artifact": {
+    "encoding": "base64 of canonical 5-byte records",
+    "path": "results/second_lift_completion_tables_20260911/H128_inherited_O_h0_R2.records.b64",
+    "stored_bytes": 441
+   },
+   "table_record_count": 66,
+   "table_sha256": "b57ec4f052b245be1c8b0ce69dbfbebe349c1f79aa48a54e6bc5af78c2a759a0",
+   "target_bits": 2
+  },
+  {
+   "R": 0,
+   "complete_law_if_pass": null,
+   "complete_law_radius_if_pass": null,
+   "complete_law_windows_independently_verified": 0,
+   "completion": 128,
+   "conflict": {
+    "evaluation_convention": "inherited: binary source MSB-first; ambient: base-four pair symbols MSB-first; feature site-major x then row j then U,V",
+    "feature_patch_bits_msb": "0000",
+    "key": 0,
+    "preimage_source_words_msb": [
+     "00000000000",
+     "00101010100"
+    ],
+    "preimages": [
+     0,
+     340
+    ],
+    "targets": [
+     0,
+     1
+    ]
+   },
+   "default_unrealized_target": 0,
+   "domain": "inherited",
+   "feature_bits": 4,
+   "feature_target_sha256": "a894ace56bee83edab16cc67a428792cd09e159bb41d84ee9eb043f20ff7500d",
+   "h": 1,
+   "independent_feature_target_sha256": "a894ace56bee83edab16cc67a428792cd09e159bb41d84ee9eb043f20ff7500d",
+   "input_width": 11,
+   "input_words": 2048,
+   "kind": "O",
+   "pair_radius": 3,
+   "pass": false,
+   "realized_keys": 4,
+   "table_artifact": {
+    "encoding": "base64 of canonical 5-byte records",
+    "path": "results/second_lift_completion_tables_20260911/H128_inherited_O_h1_R0.records.b64",
+    "stored_bytes": 29
+   },
+   "table_record_count": 4,
+   "table_sha256": "92fa32a490e9c6f4b2527c9080df7b3e8f4d09e99677590d29ed362875aca887",
+   "target_bits": 2
+  },
+  {
+   "R": 1,
+   "complete_law_if_pass": "rows j<h: shift to O_(j+1); top: cap(O_h patch)",
+   "complete_law_radius_if_pass": 1,
+   "complete_law_windows_independently_verified": 2048,
+   "completion": 128,
+   "conflict": null,
+   "default_unrealized_target": 0,
+   "domain": "inherited",
+   "feature_bits": 12,
+   "feature_target_sha256": "c895ccd1e77528175e99722926e00c2500c3a53f5ebe95be000e395cc85840c6",
+   "h": 1,
+   "independent_feature_target_sha256": "c895ccd1e77528175e99722926e00c2500c3a53f5ebe95be000e395cc85840c6",
+   "input_width": 11,
+   "input_words": 2048,
+   "kind": "O",
+   "pair_radius": 3,
+   "pass": true,
+   "realized_keys": 20,
+   "table_artifact": {
+    "encoding": "base64 of canonical 5-byte records",
+    "path": "results/second_lift_completion_tables_20260911/H128_inherited_O_h1_R1.records.b64",
+    "stored_bytes": 137
+   },
+   "table_record_count": 20,
+   "table_sha256": "9ef96c6e83338db6a94042c65b193ca6024b6efef7118d52729c665a2600ac1e",
+   "target_bits": 2
+  },
+  {
+   "R": 2,
+   "complete_law_if_pass": "rows j<h: shift to O_(j+1); top: cap(O_h patch)",
+   "complete_law_radius_if_pass": 2,
+   "complete_law_windows_independently_verified": 8192,
+   "completion": 128,
+   "conflict": null,
+   "default_unrealized_target": 0,
+   "domain": "inherited",
+   "feature_bits": 20,
+   "feature_target_sha256": "0ec8363697034f96f39e183255ec056420f77a4d228920e3649c1f0e7f6b0f22",
+   "h": 1,
+   "independent_feature_target_sha256": "0ec8363697034f96f39e183255ec056420f77a4d228920e3649c1f0e7f6b0f22",
+   "input_width": 13,
+   "input_words": 8192,
+   "kind": "O",
+   "pair_radius": 4,
+   "pass": true,
+   "realized_keys": 71,
+   "table_artifact": {
+    "encoding": "base64 of canonical 5-byte records",
+    "path": "results/second_lift_completion_tables_20260911/H128_inherited_O_h1_R2.records.b64",
+    "stored_bytes": 477
+   },
+   "table_record_count": 71,
+   "table_sha256": "d03cd5e879d798c6c3ba3fba0518a7e30431a6a334a354b2a4cf99cc861b0188",
+   "target_bits": 2
+  },
+  {
+   "R": 0,
+   "complete_law_if_pass": null,
+   "complete_law_radius_if_pass": null,
+   "complete_law_windows_independently_verified": 0,
+   "completion": 128,
+   "conflict": {
+    "evaluation_convention": "inherited: binary source MSB-first; ambient: base-four pair symbols MSB-first; feature site-major x then row j then U,V",
+    "feature_patch_bits_msb": "000000",
+    "key": 0,
+    "preimage_source_words_msb": [
+     "0000000000000",
+     "0010101010100"
+    ],
+    "preimages": [
+     0,
+     1364
+    ],
+    "targets": [
+     0,
+     1
+    ]
+   },
+   "default_unrealized_target": 0,
+   "domain": "inherited",
+   "feature_bits": 6,
+   "feature_target_sha256": "d4b59b1009916ee126daa536acaa397bf29ddcd16f1ee207021c8f07da6f47ac",
+   "h": 2,
+   "independent_feature_target_sha256": "d4b59b1009916ee126daa536acaa397bf29ddcd16f1ee207021c8f07da6f47ac",
+   "input_width": 13,
+   "input_words": 8192,
+   "kind": "O",
+   "pair_radius": 4,
+   "pass": false,
+   "realized_keys": 5,
+   "table_artifact": {
+    "encoding": "base64 of canonical 5-byte records",
+    "path": "results/second_lift_completion_tables_20260911/H128_inherited_O_h2_R0.records.b64",
+    "stored_bytes": 37
+   },
+   "table_record_count": 5,
+   "table_sha256": "8aa3f4ed34a36f7f7f625f4e8af39ba09f77210576f545405d76017f88b0e48d",
+   "target_bits": 2
+  },
+  {
+   "R": 1,
+   "complete_law_if_pass": "rows j<h: shift to O_(j+1); top: cap(O_h patch)",
+   "complete_law_radius_if_pass": 1,
+   "complete_law_windows_independently_verified": 8192,
+   "completion": 128,
+   "conflict": null,
+   "default_unrealized_target": 0,
+   "domain": "inherited",
+   "feature_bits": 18,
+   "feature_target_sha256": "a0f2b871d749641969dda3db789f5c166185ce85a4f266a91f22c57b0992b93b",
+   "h": 2,
+   "independent_feature_target_sha256": "a0f2b871d749641969dda3db789f5c166185ce85a4f266a91f22c57b0992b93b",
+   "input_width": 13,
+   "input_words": 8192,
+   "kind": "O",
+   "pair_radius": 4,
+   "pass": true,
+   "realized_keys": 23,
+   "table_artifact": {
+    "encoding": "base64 of canonical 5-byte records",
+    "path": "results/second_lift_completion_tables_20260911/H128_inherited_O_h2_R1.records.b64",
+    "stored_bytes": 157
+   },
+   "table_record_count": 23,
+   "table_sha256": "84c45dbfbba24adf0792e738b5c115c069993d6664d68f60cebc9dca2485dc02",
+   "target_bits": 2
+  },
+  {
+   "R": 2,
+   "complete_law_if_pass": "rows j<h: shift to O_(j+1); top: cap(O_h patch)",
+   "complete_law_radius_if_pass": 2,
+   "complete_law_windows_independently_verified": 32768,
+   "completion": 128,
+   "conflict": null,
+   "default_unrealized_target": 0,
+   "domain": "inherited",
+   "feature_bits": 30,
+   "feature_target_sha256": "60e1448b94dde5bdfdbba07b00a84ca859ccabb6e3d893f9d0a4c6fd98e9604b",
+   "h": 2,
+   "independent_feature_target_sha256": "60e1448b94dde5bdfdbba07b00a84ca859ccabb6e3d893f9d0a4c6fd98e9604b",
+   "input_width": 15,
+   "input_words": 32768,
+   "kind": "O",
+   "pair_radius": 5,
+   "pass": true,
+   "realized_keys": 76,
+   "table_artifact": {
+    "encoding": "base64 of canonical 5-byte records",
+    "path": "results/second_lift_completion_tables_20260911/H128_inherited_O_h2_R2.records.b64",
+    "stored_bytes": 509
+   },
+   "table_record_count": 76,
+   "table_sha256": "61f7a902eabb2dc2ea45f6cca638a77d9d019fad0cac73e5314f121a991979bc",
+   "target_bits": 2
+  },
+  {
+   "R": 0,
+   "complete_law_if_pass": null,
+   "complete_law_radius_if_pass": null,
+   "complete_law_windows_independently_verified": 0,
+   "completion": 128,
+   "conflict": {
+    "evaluation_convention": "inherited: binary source MSB-first; ambient: base-four pair symbols MSB-first; feature site-major x then row j then U,V",
+    "feature_patch_bits_msb": "00",
+    "key": 0,
+    "preimage_pair_symbols_msb": [
+     [
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     [
+      0,
+      1,
+      3,
+      1,
+      2
+     ]
+    ],
+    "preimages": [
+     0,
+     118
+    ],
+    "targets": [
+     0,
+     1
+    ]
+   },
+   "default_unrealized_target": 0,
+   "domain": "ambient",
+   "feature_bits": 2,
+   "feature_target_sha256": "9603eef3ffb06e73c5c13f6b86af2bb74db62b07da8d89d54a4826274a20e645",
+   "h": 0,
+   "independent_feature_target_sha256": "9603eef3ffb06e73c5c13f6b86af2bb74db62b07da8d89d54a4826274a20e645",
+   "input_width": 5,
+   "input_words": 1024,
+   "kind": "K",
+   "pair_radius": 2,
+   "pass": false,
+   "realized_keys": 4,
+   "table_artifact": {
+    "encoding": "base64 of canonical 5-byte records",
+    "path": "results/second_lift_completion_tables_20260911/H128_ambient_K_h0_R0.records.b64",
+    "stored_bytes": 29
+   },
+   "table_record_count": 4,
+   "table_sha256": "3252341b08534e8aeeed6e5a3eb47db502a30a7bdf68855755cff6ad56c3f382",
+   "target_bits": 2
+  },
+  {
+   "R": 1,
+   "complete_law_if_pass": null,
+   "complete_law_radius_if_pass": null,
+   "complete_law_windows_independently_verified": 0,
+   "completion": 128,
+   "conflict": {
+    "evaluation_convention": "inherited: binary source MSB-first; ambient: base-four pair symbols MSB-first; feature site-major x then row j then U,V",
+    "feature_patch_bits_msb": "000001",
+    "key": 1,
+    "preimage_pair_symbols_msb": [
+     [
+      0,
+      0,
+      0,
+      3,
+      0
+     ],
+     [
+      1,
+      3,
+      1,
+      3,
+      0
+     ]
+    ],
+    "preimages": [
+     12,
+     476
+    ],
+    "targets": [
+     0,
+     1
+    ]
+   },
+   "default_unrealized_target": 0,
+   "domain": "ambient",
+   "feature_bits": 6,
+   "feature_target_sha256": "dc1c933b5e1345f7a50a2eb2645fca3661ea095f214436a10a2d8e320236ec2b",
+   "h": 0,
+   "independent_feature_target_sha256": "dc1c933b5e1345f7a50a2eb2645fca3661ea095f214436a10a2d8e320236ec2b",
+   "input_width": 5,
+   "input_words": 1024,
+   "kind": "K",
+   "pair_radius": 2,
+   "pass": false,
+   "realized_keys": 54,
+   "table_artifact": {
+    "encoding": "base64 of canonical 5-byte records",
+    "path": "results/second_lift_completion_tables_20260911/H128_ambient_K_h0_R1.records.b64",
+    "stored_bytes": 361
+   },
+   "table_record_count": 54,
+   "table_sha256": "8e0ac0d89d1b65e58a5a18d474431a3ff8a346bf6815dad78e658f4f893be935",
+   "target_bits": 2
+  },
+  {
+   "R": 2,
+   "complete_law_if_pass": null,
+   "complete_law_radius_if_pass": null,
+   "complete_law_windows_independently_verified": 0,
+   "completion": 128,
+   "conflict": {
+    "evaluation_convention": "inherited: binary source MSB-first; ambient: base-four pair symbols MSB-first; feature site-major x then row j then U,V",
+    "feature_patch_bits_msb": "0000000100",
+    "key": 4,
+    "preimage_pair_symbols_msb": [
+     [
+      0,
+      0,
+      0,
+      0,
+      3,
+      0,
+      0
+     ],
+     [
+      1,
+      3,
+      1,
+      3,
+      3,
+      0,
+      0
+     ]
+    ],
+    "preimages": [
+     48,
+     7664
+    ],
+    "targets": [
+     0,
+     1
+    ]
+   },
+   "default_unrealized_target": 0,
+   "domain": "ambient",
+   "feature_bits": 10,
+   "feature_target_sha256": "9ccb7903af1c4524a4fcbac1cf8e6f452a5084f319dd76140c25a518a47b66c1",
+   "h": 0,
+   "independent_feature_target_sha256": "9ccb7903af1c4524a4fcbac1cf8e6f452a5084f319dd76140c25a518a47b66c1",
+   "input_width": 7,
+   "input_words": 16384,
+   "kind": "K",
+   "pair_radius": 3,
+   "pass": false,
+   "realized_keys": 609,
+   "table_artifact": {
+    "encoding": "base64 of canonical 5-byte records",
+    "path": "results/second_lift_completion_tables_20260911/H128_ambient_K_h0_R2.records.b64",
+    "stored_bytes": 4061
+   },
+   "table_record_count": 609,
+   "table_sha256": "9e234a6dfa8a6156e46f860dcc2d7c90026fe78c03aea2be2e441bb4a3514ef8",
+   "target_bits": 2
+  },
+  {
+   "R": 0,
+   "complete_law_if_pass": null,
+   "complete_law_radius_if_pass": null,
+   "complete_law_windows_independently_verified": 0,
+   "completion": 128,
+   "conflict": {
+    "evaluation_convention": "inherited: binary source MSB-first; ambient: base-four pair symbols MSB-first; feature site-major x then row j then U,V",
+    "feature_patch_bits_msb": "0000",
+    "key": 0,
+    "preimage_pair_symbols_msb": [
+     [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     [
+      0,
+      1,
+      1,
+      3,
+      1,
+      3,
+      0
+     ]
+    ],
+    "preimages": [
+     0,
+     1500
+    ],
+    "targets": [
+     0,
+     1
+    ]
+   },
+   "default_unrealized_target": 0,
+   "domain": "ambient",
+   "feature_bits": 4,
+   "feature_target_sha256": "f1d83ef3445142644d09758efc30bc3b7527f38de4e02bf0a17f6703c4bf7c81",
+   "h": 1,
+   "independent_feature_target_sha256": "f1d83ef3445142644d09758efc30bc3b7527f38de4e02bf0a17f6703c4bf7c81",
+   "input_width": 7,
+   "input_words": 16384,
+   "kind": "K",
+   "pair_radius": 3,
+   "pass": false,
+   "realized_keys": 10,
+   "table_artifact": {
+    "encoding": "base64 of canonical 5-byte records",
+    "path": "results/second_lift_completion_tables_20260911/H128_ambient_K_h1_R0.records.b64",
+    "stored_bytes": 69
+   },
+   "table_record_count": 10,
+   "table_sha256": "019d8c6f0d4c88e9dbafce359f7f1c8ac067f01b74addb54b41089ac5d7186fe",
+   "target_bits": 2
+  },
+  {
+   "R": 1,
+   "complete_law_if_pass": null,
+   "complete_law_radius_if_pass": null,
+   "complete_law_windows_independently_verified": 0,
+   "completion": 128,
+   "conflict": {
+    "evaluation_convention": "inherited: binary source MSB-first; ambient: base-four pair symbols MSB-first; feature site-major x then row j then U,V",
+    "feature_patch_bits_msb": "000000010100",
+    "key": 20,
+    "preimage_pair_symbols_msb": [
+     [
+      1,
+      1,
+      3,
+      1,
+      3,
+      0,
+      0
+     ],
+     [
+      1,
+      1,
+      3,
+      3,
+      3,
+      0,
+      0
+     ]
+    ],
+    "preimages": [
+     6000,
+     6128
+    ],
+    "targets": [
+     0,
+     2
+    ]
+   },
+   "default_unrealized_target": 0,
+   "domain": "ambient",
+   "feature_bits": 12,
+   "feature_target_sha256": "46985411a1eb474d59ec2023529b503ac6018da655000a68ad1229fab2844c5a",
+   "h": 1,
+   "independent_feature_target_sha256": "46985411a1eb474d59ec2023529b503ac6018da655000a68ad1229fab2844c5a",
+   "input_width": 7,
+   "input_words": 16384,
+   "kind": "K",
+   "pair_radius": 3,
+   "pass": false,
+   "realized_keys": 271,
+   "table_artifact": {
+    "encoding": "base64 of canonical 5-byte records",
+    "path": "results/second_lift_completion_tables_20260911/H128_ambient_K_h1_R1.records.b64",
+    "stored_bytes": 1809
+   },
+   "table_record_count": 271,
+   "table_sha256": "d415ec0a5ee3ec73416d6dfcc679fa3b54251ba93bcbec4573279e3203aa6747",
+   "target_bits": 2
+  },
+  {
+   "R": 2,
+   "complete_law_if_pass": null,
+   "complete_law_radius_if_pass": null,
+   "complete_law_windows_independently_verified": 0,
+   "completion": 128,
+   "conflict": {
+    "evaluation_convention": "inherited: binary source MSB-first; ambient: base-four pair symbols MSB-first; feature site-major x then row j then U,V",
+    "feature_patch_bits_msb": "00000000000101000000",
+    "key": 320,
+    "preimage_pair_symbols_msb": [
+     [
+      1,
+      1,
+      3,
+      3,
+      1,
+      3,
+      0,
+      0,
+      0
+     ],
+     [
+      1,
+      1,
+      3,
+      1,
+      3,
+      3,
+      0,
+      0,
+      0
+     ]
+    ],
+    "preimages": [
+     97728,
+     96192
+    ],
+    "targets": [
+     0,
+     2
+    ]
+   },
+   "default_unrealized_target": 0,
+   "domain": "ambient",
+   "feature_bits": 20,
+   "feature_target_sha256": "d54f7d2d6b9252a019ba68e8189373889e6c2b7b3f080d4f63f1a18a80a24d18",
+   "h": 1,
+   "independent_feature_target_sha256": "d54f7d2d6b9252a019ba68e8189373889e6c2b7b3f080d4f63f1a18a80a24d18",
+   "input_width": 9,
+   "input_words": 262144,
+   "kind": "K",
+   "pair_radius": 4,
+   "pass": false,
+   "realized_keys": 3655,
+   "table_artifact": {
+    "encoding": "base64 of canonical 5-byte records",
+    "path": "results/second_lift_completion_tables_20260911/H128_ambient_K_h1_R2.records.b64",
+    "stored_bytes": 24369
+   },
+   "table_record_count": 3655,
+   "table_sha256": "f2d1257d8b966573c48229a677d13b77d56483ff12fb7d0a395be8d390317794",
+   "target_bits": 2
+  },
+  {
+   "R": 0,
+   "complete_law_if_pass": null,
+   "complete_law_radius_if_pass": null,
+   "complete_law_windows_independently_verified": 0,
+   "completion": 128,
+   "conflict": {
+    "evaluation_convention": "inherited: binary source MSB-first; ambient: base-four pair symbols MSB-first; feature site-major x then row j then U,V",
+    "feature_patch_bits_msb": "000000",
+    "key": 0,
+    "preimage_pair_symbols_msb": [
+     [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     [
+      0,
+      1,
+      1,
+      1,
+      3,
+      1,
+      3,
+      1,
+      0
+     ]
+    ],
+    "preimages": [
+     0,
+     22388
+    ],
+    "targets": [
+     0,
+     1
+    ]
+   },
+   "default_unrealized_target": 0,
+   "domain": "ambient",
+   "feature_bits": 6,
+   "feature_target_sha256": "5e21024d88c56edd40a726808e0bd3970975a92ff5da09437489a8e696c3baf9",
+   "h": 2,
+   "independent_feature_target_sha256": "5e21024d88c56edd40a726808e0bd3970975a92ff5da09437489a8e696c3baf9",
+   "input_width": 9,
+   "input_words": 262144,
+   "kind": "K",
+   "pair_radius": 4,
+   "pass": false,
+   "realized_keys": 23,
+   "table_artifact": {
+    "encoding": "base64 of canonical 5-byte records",
+    "path": "results/second_lift_completion_tables_20260911/H128_ambient_K_h2_R0.records.b64",
+    "stored_bytes": 157
+   },
+   "table_record_count": 23,
+   "table_sha256": "486f8a7a1f2787693bbaba096ac30305efd1768736e49aeb7be374219ce23578",
+   "target_bits": 2
+  },
+  {
+   "R": 1,
+   "complete_law_if_pass": null,
+   "complete_law_radius_if_pass": null,
+   "complete_law_windows_independently_verified": 0,
+   "completion": 128,
+   "conflict": {
+    "evaluation_convention": "inherited: binary source MSB-first; ambient: base-four pair symbols MSB-first; feature site-major x then row j then U,V",
+    "feature_patch_bits_msb": "000000000001000110",
+    "key": 70,
+    "preimage_pair_symbols_msb": [
+     [
+      1,
+      1,
+      1,
+      3,
+      3,
+      3,
+      1,
+      0,
+      0
+     ],
+     [
+      1,
+      1,
+      1,
+      3,
+      1,
+      3,
+      1,
+      0,
+      0
+     ]
+    ],
+    "preimages": [
+     90064,
+     89552
+    ],
+    "targets": [
+     0,
+     2
+    ]
+   },
+   "default_unrealized_target": 0,
+   "domain": "ambient",
+   "feature_bits": 18,
+   "feature_target_sha256": "6d489efe0a226cc980b71c4abe37587db29f4ff5e783aad731f6ccc115383746",
+   "h": 2,
+   "independent_feature_target_sha256": "6d489efe0a226cc980b71c4abe37587db29f4ff5e783aad731f6ccc115383746",
+   "input_width": 9,
+   "input_words": 262144,
+   "kind": "K",
+   "pair_radius": 4,
+   "pass": false,
+   "realized_keys": 654,
+   "table_artifact": {
+    "encoding": "base64 of canonical 5-byte records",
+    "path": "results/second_lift_completion_tables_20260911/H128_ambient_K_h2_R1.records.b64",
+    "stored_bytes": 4361
+   },
+   "table_record_count": 654,
+   "table_sha256": "08fe4e836f2fc9778c64457da5305ab25dc1bc1687d5d4cc1ec7849e137e61e5",
+   "target_bits": 2
+  },
+  {
+   "R": 2,
+   "complete_law_if_pass": null,
+   "complete_law_radius_if_pass": null,
+   "complete_law_windows_independently_verified": 0,
+   "completion": 128,
+   "conflict": {
+    "evaluation_convention": "inherited: binary source MSB-first; ambient: base-four pair symbols MSB-first; feature site-major x then row j then U,V",
+    "feature_patch_bits_msb": "000000000000000001000110010000",
+    "key": 4496,
+    "preimage_pair_symbols_msb": [
+     [
+      1,
+      1,
+      1,
+      3,
+      1,
+      3,
+      3,
+      3,
+      0,
+      0,
+      0
+     ],
+     [
+      1,
+      1,
+      1,
+      3,
+      3,
+      1,
+      3,
+      3,
+      0,
+      0,
+      0
+     ]
+    ],
+    "preimages": [
+     1433536,
+     1439680
+    ],
+    "targets": [
+     0,
+     2
+    ]
+   },
+   "default_unrealized_target": 0,
+   "domain": "ambient",
+   "feature_bits": 30,
+   "feature_target_sha256": "8d55bd401286942bb7f44ea5f56c4ad84cb9fbdf36df30c69c96085cd2706477",
+   "h": 2,
+   "independent_feature_target_sha256": "8d55bd401286942bb7f44ea5f56c4ad84cb9fbdf36df30c69c96085cd2706477",
+   "input_width": 11,
+   "input_words": 4194304,
+   "kind": "K",
+   "pair_radius": 5,
+   "pass": false,
+   "realized_keys": 9057,
+   "table_artifact": {
+    "encoding": "base64 of canonical 5-byte records",
+    "path": "results/second_lift_completion_tables_20260911/H128_ambient_K_h2_R2.records.b64",
+    "stored_bytes": 60381
+   },
+   "table_record_count": 9057,
+   "table_sha256": "babfa810590fa06d16b6cd55e0baf38630e7e8eab2b025e6934ac642b0dab730",
+   "target_bits": 2
+  },
+  {
+   "R": 0,
+   "complete_law_if_pass": null,
+   "complete_law_radius_if_pass": null,
+   "complete_law_windows_independently_verified": 0,
+   "completion": 128,
+   "conflict": {
+    "evaluation_convention": "inherited: binary source MSB-first; ambient: base-four pair symbols MSB-first; feature site-major x then row j then U,V",
+    "feature_patch_bits_msb": "00",
+    "key": 0,
+    "preimage_pair_symbols_msb": [
+     [
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     [
+      0,
+      1,
+      3,
+      1,
+      0
+     ]
+    ],
+    "preimages": [
+     0,
+     116
+    ],
+    "targets": [
+     0,
+     1
+    ]
+   },
+   "default_unrealized_target": 0,
+   "domain": "ambient",
+   "feature_bits": 2,
+   "feature_target_sha256": "d8865385c5c8215cd8f4c2b52b00942a2cb988e786dd71fa4a7f1c3f6ede422c",
+   "h": 0,
+   "independent_feature_target_sha256": "d8865385c5c8215cd8f4c2b52b00942a2cb988e786dd71fa4a7f1c3f6ede422c",
+   "input_width": 5,
+   "input_words": 1024,
+   "kind": "O",
+   "pair_radius": 2,
+   "pass": false,
+   "realized_keys": 4,
+   "table_artifact": {
+    "encoding": "base64 of canonical 5-byte records",
+    "path": "results/second_lift_completion_tables_20260911/H128_ambient_O_h0_R0.records.b64",
+    "stored_bytes": 29
+   },
+   "table_record_count": 4,
+   "table_sha256": "e7dce543ae154edefdce1e9b156c3660f8dbd8e98b705c726675a17f7494b53f",
+   "target_bits": 2
+  },
+  {
+   "R": 1,
+   "complete_law_if_pass": null,
+   "complete_law_radius_if_pass": null,
+   "complete_law_windows_independently_verified": 0,
+   "completion": 128,
+   "conflict": {
+    "evaluation_convention": "inherited: binary source MSB-first; ambient: base-four pair symbols MSB-first; feature site-major x then row j then U,V",
+    "feature_patch_bits_msb": "000001",
+    "key": 1,
+    "preimage_pair_symbols_msb": [
+     [
+      0,
+      0,
+      0,
+      3,
+      0
+     ],
+     [
+      1,
+      3,
+      1,
+      3,
+      0
+     ]
+    ],
+    "preimages": [
+     12,
+     476
+    ],
+    "targets": [
+     0,
+     1
+    ]
+   },
+   "default_unrealized_target": 0,
+   "domain": "ambient",
+   "feature_bits": 6,
+   "feature_target_sha256": "f35294a43c7fbf9b0f1a98482051c6391e9501c0cee595006d1eb7f3e620533b",
+   "h": 0,
+   "independent_feature_target_sha256": "f35294a43c7fbf9b0f1a98482051c6391e9501c0cee595006d1eb7f3e620533b",
+   "input_width": 5,
+   "input_words": 1024,
+   "kind": "O",
+   "pair_radius": 2,
+   "pass": false,
+   "realized_keys": 54,
+   "table_artifact": {
+    "encoding": "base64 of canonical 5-byte records",
+    "path": "results/second_lift_completion_tables_20260911/H128_ambient_O_h0_R1.records.b64",
+    "stored_bytes": 361
+   },
+   "table_record_count": 54,
+   "table_sha256": "666dbe6721a10bd19934091e4b171b0fd2620a1264940bb80680e0ccbf329165",
+   "target_bits": 2
+  },
+  {
+   "R": 2,
+   "complete_law_if_pass": null,
+   "complete_law_radius_if_pass": null,
+   "complete_law_windows_independently_verified": 0,
+   "completion": 128,
+   "conflict": {
+    "evaluation_convention": "inherited: binary source MSB-first; ambient: base-four pair symbols MSB-first; feature site-major x then row j then U,V",
+    "feature_patch_bits_msb": "0000000100",
+    "key": 4,
+    "preimage_pair_symbols_msb": [
+     [
+      0,
+      0,
+      0,
+      0,
+      3,
+      0,
+      0
+     ],
+     [
+      1,
+      3,
+      1,
+      3,
+      3,
+      0,
+      0
+     ]
+    ],
+    "preimages": [
+     48,
+     7664
+    ],
+    "targets": [
+     0,
+     1
+    ]
+   },
+   "default_unrealized_target": 0,
+   "domain": "ambient",
+   "feature_bits": 10,
+   "feature_target_sha256": "c1ce9f1d2f051ec8141ebdaf83324c823e1f30d125bda07bb0db80ab104a3ca3",
+   "h": 0,
+   "independent_feature_target_sha256": "c1ce9f1d2f051ec8141ebdaf83324c823e1f30d125bda07bb0db80ab104a3ca3",
+   "input_width": 7,
+   "input_words": 16384,
+   "kind": "O",
+   "pair_radius": 3,
+   "pass": false,
+   "realized_keys": 609,
+   "table_artifact": {
+    "encoding": "base64 of canonical 5-byte records",
+    "path": "results/second_lift_completion_tables_20260911/H128_ambient_O_h0_R2.records.b64",
+    "stored_bytes": 4061
+   },
+   "table_record_count": 609,
+   "table_sha256": "aa749ed315d0251eb83fe5ff9eebec36ed192cc015c6ddad9c774b093322f86a",
+   "target_bits": 2
+  },
+  {
+   "R": 0,
+   "complete_law_if_pass": null,
+   "complete_law_radius_if_pass": null,
+   "complete_law_windows_independently_verified": 0,
+   "completion": 128,
+   "conflict": {
+    "evaluation_convention": "inherited: binary source MSB-first; ambient: base-four pair symbols MSB-first; feature site-major x then row j then U,V",
+    "feature_patch_bits_msb": "0000",
+    "key": 0,
+    "preimage_pair_symbols_msb": [
+     [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     [
+      0,
+      1,
+      1,
+      3,
+      1,
+      1,
+      0
+     ]
+    ],
+    "preimages": [
+     0,
+     1492
+    ],
+    "targets": [
+     0,
+     1
+    ]
+   },
+   "default_unrealized_target": 0,
+   "domain": "ambient",
+   "feature_bits": 4,
+   "feature_target_sha256": "ab1fb94bd246b67af7d7f2949917f307b234141593f3181dbb7257c924655306",
+   "h": 1,
+   "independent_feature_target_sha256": "ab1fb94bd246b67af7d7f2949917f307b234141593f3181dbb7257c924655306",
+   "input_width": 7,
+   "input_words": 16384,
+   "kind": "O",
+   "pair_radius": 3,
+   "pass": false,
+   "realized_keys": 9,
+   "table_artifact": {
+    "encoding": "base64 of canonical 5-byte records",
+    "path": "results/second_lift_completion_tables_20260911/H128_ambient_O_h1_R0.records.b64",
+    "stored_bytes": 61
+   },
+   "table_record_count": 9,
+   "table_sha256": "72d35cd885bad19d1fbb84ac1a45c8fe1de5daf88aec55b22bb503ca33a73aa5",
+   "target_bits": 2
+  },
+  {
+   "R": 1,
+   "complete_law_if_pass": null,
+   "complete_law_radius_if_pass": null,
+   "complete_law_windows_independently_verified": 0,
+   "completion": 128,
+   "conflict": {
+    "evaluation_convention": "inherited: binary source MSB-first; ambient: base-four pair symbols MSB-first; feature site-major x then row j then U,V",
+    "feature_patch_bits_msb": "000000010110",
+    "key": 22,
+    "preimage_pair_symbols_msb": [
+     [
+      1,
+      1,
+      3,
+      1,
+      3,
+      0,
+      0
+     ],
+     [
+      1,
+      1,
+      3,
+      3,
+      3,
+      0,
+      0
+     ]
+    ],
+    "preimages": [
+     6000,
+     6128
+    ],
+    "targets": [
+     0,
+     2
+    ]
+   },
+   "default_unrealized_target": 0,
+   "domain": "ambient",
+   "feature_bits": 12,
+   "feature_target_sha256": "ea3a5e5178c7ae8e5ce62af625cb53765100316f8378080e3cbf43bfc39809c8",
+   "h": 1,
+   "independent_feature_target_sha256": "ea3a5e5178c7ae8e5ce62af625cb53765100316f8378080e3cbf43bfc39809c8",
+   "input_width": 7,
+   "input_words": 16384,
+   "kind": "O",
+   "pair_radius": 3,
+   "pass": false,
+   "realized_keys": 220,
+   "table_artifact": {
+    "encoding": "base64 of canonical 5-byte records",
+    "path": "results/second_lift_completion_tables_20260911/H128_ambient_O_h1_R1.records.b64",
+    "stored_bytes": 1469
+   },
+   "table_record_count": 220,
+   "table_sha256": "5f8431f8dc6cb5a8a709c3139bccec7de6706b3b1a9937b28c7346d18e7ba90a",
+   "target_bits": 2
+  },
+  {
+   "R": 2,
+   "complete_law_if_pass": null,
+   "complete_law_radius_if_pass": null,
+   "complete_law_windows_independently_verified": 0,
+   "completion": 128,
+   "conflict": {
+    "evaluation_convention": "inherited: binary source MSB-first; ambient: base-four pair symbols MSB-first; feature site-major x then row j then U,V",
+    "feature_patch_bits_msb": "00000000000101100000",
+    "key": 352,
+    "preimage_pair_symbols_msb": [
+     [
+      1,
+      1,
+      3,
+      3,
+      1,
+      3,
+      0,
+      0,
+      0
+     ],
+     [
+      1,
+      1,
+      3,
+      1,
+      3,
+      3,
+      0,
+      0,
+      0
+     ]
+    ],
+    "preimages": [
+     97728,
+     96192
+    ],
+    "targets": [
+     0,
+     2
+    ]
+   },
+   "default_unrealized_target": 0,
+   "domain": "ambient",
+   "feature_bits": 20,
+   "feature_target_sha256": "158ec6f674fea5583418cdada17329382360266beb65bed0c5d3f155d4cf54bd",
+   "h": 1,
+   "independent_feature_target_sha256": "158ec6f674fea5583418cdada17329382360266beb65bed0c5d3f155d4cf54bd",
+   "input_width": 9,
+   "input_words": 262144,
+   "kind": "O",
+   "pair_radius": 4,
+   "pass": false,
+   "realized_keys": 2837,
+   "table_artifact": {
+    "encoding": "base64 of canonical 5-byte records",
+    "path": "results/second_lift_completion_tables_20260911/H128_ambient_O_h1_R2.records.b64",
+    "stored_bytes": 18917
+   },
+   "table_record_count": 2837,
+   "table_sha256": "27479c2c5c0daee71d1ed2cb80bb8b3cf129129d6959f7ee5b432bab2d2f5797",
+   "target_bits": 2
+  },
+  {
+   "R": 0,
+   "complete_law_if_pass": null,
+   "complete_law_radius_if_pass": null,
+   "complete_law_windows_independently_verified": 0,
+   "completion": 128,
+   "conflict": {
+    "evaluation_convention": "inherited: binary source MSB-first; ambient: base-four pair symbols MSB-first; feature site-major x then row j then U,V",
+    "feature_patch_bits_msb": "000000",
+    "key": 0,
+    "preimage_pair_symbols_msb": [
+     [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     [
+      0,
+      1,
+      1,
+      1,
+      3,
+      1,
+      1,
+      1,
+      0
+     ]
+    ],
+    "preimages": [
+     0,
+     22356
+    ],
+    "targets": [
+     0,
+     1
+    ]
+   },
+   "default_unrealized_target": 0,
+   "domain": "ambient",
+   "feature_bits": 6,
+   "feature_target_sha256": "45bfa795e7d91113fc72c64057f11c455429425f4ebbacc4176cbfb8cfffdc7e",
+   "h": 2,
+   "independent_feature_target_sha256": "45bfa795e7d91113fc72c64057f11c455429425f4ebbacc4176cbfb8cfffdc7e",
+   "input_width": 9,
+   "input_words": 262144,
+   "kind": "O",
+   "pair_radius": 4,
+   "pass": false,
+   "realized_keys": 15,
+   "table_artifact": {
+    "encoding": "base64 of canonical 5-byte records",
+    "path": "results/second_lift_completion_tables_20260911/H128_ambient_O_h2_R0.records.b64",
+    "stored_bytes": 101
+   },
+   "table_record_count": 15,
+   "table_sha256": "2dd39f49f51b17cb5dcdf99b72cf6d4007997ff62055573fd6d390d8d8c0338f",
+   "target_bits": 2
+  },
+  {
+   "R": 1,
+   "complete_law_if_pass": null,
+   "complete_law_radius_if_pass": null,
+   "complete_law_windows_independently_verified": 0,
+   "completion": 128,
+   "conflict": {
+    "evaluation_convention": "inherited: binary source MSB-first; ambient: base-four pair symbols MSB-first; feature site-major x then row j then U,V",
+    "feature_patch_bits_msb": "000000000001000110",
+    "key": 70,
+    "preimage_pair_symbols_msb": [
+     [
+      1,
+      1,
+      1,
+      3,
+      1,
+      3,
+      1,
+      0,
+      0
+     ],
+     [
+      1,
+      1,
+      1,
+      3,
+      3,
+      3,
+      1,
+      0,
+      0
+     ]
+    ],
+    "preimages": [
+     89552,
+     90064
+    ],
+    "targets": [
+     0,
+     2
+    ]
+   },
+   "default_unrealized_target": 0,
+   "domain": "ambient",
+   "feature_bits": 18,
+   "feature_target_sha256": "fae7e3eba706c5acb2b62db7c6d7c32ac70fa31fc0d32354b52eeb2c4c044d10",
+   "h": 2,
+   "independent_feature_target_sha256": "fae7e3eba706c5acb2b62db7c6d7c32ac70fa31fc0d32354b52eeb2c4c044d10",
+   "input_width": 9,
+   "input_words": 262144,
+   "kind": "O",
+   "pair_radius": 4,
+   "pass": false,
+   "realized_keys": 404,
+   "table_artifact": {
+    "encoding": "base64 of canonical 5-byte records",
+    "path": "results/second_lift_completion_tables_20260911/H128_ambient_O_h2_R1.records.b64",
+    "stored_bytes": 2697
+   },
+   "table_record_count": 404,
+   "table_sha256": "5d6d25d920ab42af6a5e04443cefcec8f7341e1ea7969d314b604f6f07b575dc",
+   "target_bits": 2
+  },
+  {
+   "R": 2,
+   "complete_law_if_pass": null,
+   "complete_law_radius_if_pass": null,
+   "complete_law_windows_independently_verified": 0,
+   "completion": 128,
+   "conflict": {
+    "evaluation_convention": "inherited: binary source MSB-first; ambient: base-four pair symbols MSB-first; feature site-major x then row j then U,V",
+    "feature_patch_bits_msb": "000000000000000001000110010000",
+    "key": 4496,
+    "preimage_pair_symbols_msb": [
+     [
+      1,
+      1,
+      1,
+      3,
+      3,
+      1,
+      3,
+      1,
+      2,
+      0,
+      0
+     ],
+     [
+      1,
+      1,
+      1,
+      3,
+      1,
+      3,
+      3,
+      1,
+      2,
+      0,
+      0
+     ]
+    ],
+    "preimages": [
+     1439584,
+     1433440
+    ],
+    "targets": [
+     0,
+     2
+    ]
+   },
+   "default_unrealized_target": 0,
+   "domain": "ambient",
+   "feature_bits": 30,
+   "feature_target_sha256": "cbb9b90945d4d7de0fde47611c3e447f6e3f273cccc77126c449c6e36bd0f60b",
+   "h": 2,
+   "independent_feature_target_sha256": "cbb9b90945d4d7de0fde47611c3e447f6e3f273cccc77126c449c6e36bd0f60b",
+   "input_width": 11,
+   "input_words": 4194304,
+   "kind": "O",
+   "pair_radius": 5,
+   "pass": false,
+   "realized_keys": 5144,
+   "table_artifact": {
+    "encoding": "base64 of canonical 5-byte records",
+    "path": "results/second_lift_completion_tables_20260911/H128_ambient_O_h2_R2.records.b64",
+    "stored_bytes": 34297
+   },
+   "table_record_count": 5144,
+   "table_sha256": "ef84da9afd6fb6dcd8516d4863c4b98e27063b719f90f333a79036e198afa1c7",
+   "target_bits": 2
+  },
+  {
+   "R": 0,
+   "complete_law_if_pass": null,
+   "complete_law_radius_if_pass": null,
+   "complete_law_windows_independently_verified": 0,
+   "completion": 160,
+   "conflict": {
+    "evaluation_convention": "inherited: binary source MSB-first; ambient: base-four pair symbols MSB-first; feature site-major x then row j then U,V",
+    "feature_patch_bits_msb": "00",
+    "key": 0,
+    "preimage_source_words_msb": [
+     "000000000",
+     "001010101"
+    ],
+    "preimages": [
+     0,
+     85
+    ],
+    "targets": [
+     0,
+     1
+    ]
+   },
+   "default_unrealized_target": 0,
+   "domain": "inherited",
+   "feature_bits": 2,
+   "feature_target_sha256": "ab2f35836cd65db00533df33e3a406025d3bc13973906f9ec31f0c2bdc80eee3",
+   "h": 0,
+   "independent_feature_target_sha256": "ab2f35836cd65db00533df33e3a406025d3bc13973906f9ec31f0c2bdc80eee3",
+   "input_width": 9,
+   "input_words": 512,
+   "kind": "K",
+   "pair_radius": 2,
+   "pass": false,
+   "realized_keys": 3,
+   "table_artifact": {
+    "encoding": "base64 of canonical 5-byte records",
+    "path": "results/second_lift_completion_tables_20260911/H160_inherited_K_h0_R0.records.b64",
+    "stored_bytes": 21
+   },
+   "table_record_count": 3,
+   "table_sha256": "b7ea77bfa13d809437a520cb2aa7cfa1a90bdad1cef8e08fe308badb0a7f503b",
+   "target_bits": 2
+  },
+  {
+   "R": 1,
+   "complete_law_if_pass": "rows j<h: H(A_j) XOR A_(j+1); top: H(A_h) XOR cap(K_h patch)",
+   "complete_law_radius_if_pass": 1,
+   "complete_law_windows_independently_verified": 512,
+   "completion": 160,
+   "conflict": null,
+   "default_unrealized_target": 0,
+   "domain": "inherited",
+   "feature_bits": 6,
+   "feature_target_sha256": "9192a0a3e90823a60efcc286ddb38d94a33c9b7c5648762b494536ae7e25cb35",
+   "h": 0,
+   "independent_feature_target_sha256": "9192a0a3e90823a60efcc286ddb38d94a33c9b7c5648762b494536ae7e25cb35",
+   "input_width": 9,
+   "input_words": 512,
+   "kind": "K",
+   "pair_radius": 2,
+   "pass": true,
+   "realized_keys": 17,
+   "table_artifact": {
+    "encoding": "base64 of canonical 5-byte records",
+    "path": "results/second_lift_completion_tables_20260911/H160_inherited_K_h0_R1.records.b64",
+    "stored_bytes": 117
+   },
+   "table_record_count": 17,
+   "table_sha256": "4ac60f87032c893f631846a7bc8f62e58243b917de7cb395f540eeb304705915",
+   "target_bits": 2
+  },
+  {
+   "R": 2,
+   "complete_law_if_pass": "rows j<h: H(A_j) XOR A_(j+1); top: H(A_h) XOR cap(K_h patch)",
+   "complete_law_radius_if_pass": 2,
+   "complete_law_windows_independently_verified": 2048,
+   "completion": 160,
+   "conflict": null,
+   "default_unrealized_target": 0,
+   "domain": "inherited",
+   "feature_bits": 10,
+   "feature_target_sha256": "ada62e351e14275ab1bc00ee845cce3e366fa393717773af5647133b2ac41d94",
+   "h": 0,
+   "independent_feature_target_sha256": "ada62e351e14275ab1bc00ee845cce3e366fa393717773af5647133b2ac41d94",
+   "input_width": 11,
+   "input_words": 2048,
+   "kind": "K",
+   "pair_radius": 3,
+   "pass": true,
+   "realized_keys": 66,
+   "table_artifact": {
+    "encoding": "base64 of canonical 5-byte records",
+    "path": "results/second_lift_completion_tables_20260911/H160_inherited_K_h0_R2.records.b64",
+    "stored_bytes": 441
+   },
+   "table_record_count": 66,
+   "table_sha256": "5d964405b6e46b8a5b8792a38e89d4ff6f428b56f0883bbaf2a9f32a24f5a28d",
+   "target_bits": 2
+  },
+  {
+   "R": 0,
+   "complete_law_if_pass": null,
+   "complete_law_radius_if_pass": null,
+   "complete_law_windows_independently_verified": 0,
+   "completion": 160,
+   "conflict": {
+    "evaluation_convention": "inherited: binary source MSB-first; ambient: base-four pair symbols MSB-first; feature site-major x then row j then U,V",
+    "feature_patch_bits_msb": "0000",
+    "key": 0,
+    "preimage_source_words_msb": [
+     "00000000000",
+     "00101010100"
+    ],
+    "preimages": [
+     0,
+     340
+    ],
+    "targets": [
+     0,
+     1
+    ]
+   },
+   "default_unrealized_target": 0,
+   "domain": "inherited",
+   "feature_bits": 4,
+   "feature_target_sha256": "9e09684f62d0101a99fac6afd836fc1b808442a5d21b8f00b472b80b016b691f",
+   "h": 1,
+   "independent_feature_target_sha256": "9e09684f62d0101a99fac6afd836fc1b808442a5d21b8f00b472b80b016b691f",
+   "input_width": 11,
+   "input_words": 2048,
+   "kind": "K",
+   "pair_radius": 3,
+   "pass": false,
+   "realized_keys": 5,
+   "table_artifact": {
+    "encoding": "base64 of canonical 5-byte records",
+    "path": "results/second_lift_completion_tables_20260911/H160_inherited_K_h1_R0.records.b64",
+    "stored_bytes": 37
+   },
+   "table_record_count": 5,
+   "table_sha256": "c9cf9bbaa560dd87cf7cae9b29626214e3c2599d3822ae40a16d6325f8dabfd7",
+   "target_bits": 2
+  },
+  {
+   "R": 1,
+   "complete_law_if_pass": "rows j<h: H(A_j) XOR A_(j+1); top: H(A_h) XOR cap(K_h patch)",
+   "complete_law_radius_if_pass": 1,
+   "complete_law_windows_independently_verified": 2048,
+   "completion": 160,
+   "conflict": null,
+   "default_unrealized_target": 0,
+   "domain": "inherited",
+   "feature_bits": 12,
+   "feature_target_sha256": "76020aeca7bf6963586462f7af3352113dd7e7e45354a6ed0038ba158788fffe",
+   "h": 1,
+   "independent_feature_target_sha256": "76020aeca7bf6963586462f7af3352113dd7e7e45354a6ed0038ba158788fffe",
+   "input_width": 11,
+   "input_words": 2048,
+   "kind": "K",
+   "pair_radius": 3,
+   "pass": true,
+   "realized_keys": 26,
+   "table_artifact": {
+    "encoding": "base64 of canonical 5-byte records",
+    "path": "results/second_lift_completion_tables_20260911/H160_inherited_K_h1_R1.records.b64",
+    "stored_bytes": 177
+   },
+   "table_record_count": 26,
+   "table_sha256": "2619bb4969953de883d6deecef976930c5f2227cd1ae3898fa99af9488b1135c",
+   "target_bits": 2
+  },
+  {
+   "R": 2,
+   "complete_law_if_pass": "rows j<h: H(A_j) XOR A_(j+1); top: H(A_h) XOR cap(K_h patch)",
+   "complete_law_radius_if_pass": 2,
+   "complete_law_windows_independently_verified": 8192,
+   "completion": 160,
+   "conflict": null,
+   "default_unrealized_target": 0,
+   "domain": "inherited",
+   "feature_bits": 20,
+   "feature_target_sha256": "775a18a5eebfb71511564dad7b87976978690e86f2ad36c72a7699f8258d3ed5",
+   "h": 1,
+   "independent_feature_target_sha256": "775a18a5eebfb71511564dad7b87976978690e86f2ad36c72a7699f8258d3ed5",
+   "input_width": 13,
+   "input_words": 8192,
+   "kind": "K",
+   "pair_radius": 4,
+   "pass": true,
+   "realized_keys": 98,
+   "table_artifact": {
+    "encoding": "base64 of canonical 5-byte records",
+    "path": "results/second_lift_completion_tables_20260911/H160_inherited_K_h1_R2.records.b64",
+    "stored_bytes": 657
+   },
+   "table_record_count": 98,
+   "table_sha256": "1a685e061e923a7d042c760e3768a99461a3e5cbca445862b138c90652f8f42d",
+   "target_bits": 2
+  },
+  {
+   "R": 0,
+   "complete_law_if_pass": null,
+   "complete_law_radius_if_pass": null,
+   "complete_law_windows_independently_verified": 0,
+   "completion": 160,
+   "conflict": {
+    "evaluation_convention": "inherited: binary source MSB-first; ambient: base-four pair symbols MSB-first; feature site-major x then row j then U,V",
+    "feature_patch_bits_msb": "000000",
+    "key": 0,
+    "preimage_source_words_msb": [
+     "0000000000000",
+     "0010101010101"
+    ],
+    "preimages": [
+     0,
+     1365
+    ],
+    "targets": [
+     0,
+     1
+    ]
+   },
+   "default_unrealized_target": 0,
+   "domain": "inherited",
+   "feature_bits": 6,
+   "feature_target_sha256": "3a3ce160adc0df0c2cf54078db48fa4f741e1c60da99b6e7fd47464a885e7cfc",
+   "h": 2,
+   "independent_feature_target_sha256": "3a3ce160adc0df0c2cf54078db48fa4f741e1c60da99b6e7fd47464a885e7cfc",
+   "input_width": 13,
+   "input_words": 8192,
+   "kind": "K",
+   "pair_radius": 4,
+   "pass": false,
+   "realized_keys": 7,
+   "table_artifact": {
+    "encoding": "base64 of canonical 5-byte records",
+    "path": "results/second_lift_completion_tables_20260911/H160_inherited_K_h2_R0.records.b64",
+    "stored_bytes": 49
+   },
+   "table_record_count": 7,
+   "table_sha256": "520f614a9db56c32fc7f180d0811baf1275529ba2b6e1302f74f7240a2ee32c6",
+   "target_bits": 2
+  },
+  {
+   "R": 1,
+   "complete_law_if_pass": "rows j<h: H(A_j) XOR A_(j+1); top: H(A_h) XOR cap(K_h patch)",
+   "complete_law_radius_if_pass": 1,
+   "complete_law_windows_independently_verified": 8192,
+   "completion": 160,
+   "conflict": null,
+   "default_unrealized_target": 0,
+   "domain": "inherited",
+   "feature_bits": 18,
+   "feature_target_sha256": "be9fbc2b44e53bad1983b0b87299679edc11a665357ab04b3b4d1b6395099a8c",
+   "h": 2,
+   "independent_feature_target_sha256": "be9fbc2b44e53bad1983b0b87299679edc11a665357ab04b3b4d1b6395099a8c",
+   "input_width": 13,
+   "input_words": 8192,
+   "kind": "K",
+   "pair_radius": 4,
+   "pass": true,
+   "realized_keys": 29,
+   "table_artifact": {
+    "encoding": "base64 of canonical 5-byte records",
+    "path": "results/second_lift_completion_tables_20260911/H160_inherited_K_h2_R1.records.b64",
+    "stored_bytes": 197
+   },
+   "table_record_count": 29,
+   "table_sha256": "184803ff566ca20362de578995156487e937809531839313cd2877cce37d1fb7",
+   "target_bits": 2
+  },
+  {
+   "R": 2,
+   "complete_law_if_pass": "rows j<h: H(A_j) XOR A_(j+1); top: H(A_h) XOR cap(K_h patch)",
+   "complete_law_radius_if_pass": 2,
+   "complete_law_windows_independently_verified": 32768,
+   "completion": 160,
+   "conflict": null,
+   "default_unrealized_target": 0,
+   "domain": "inherited",
+   "feature_bits": 30,
+   "feature_target_sha256": "2756f0e02494cce83f2097eb53a377f3313860ef987b4db30756a52c251dc5a1",
+   "h": 2,
+   "independent_feature_target_sha256": "2756f0e02494cce83f2097eb53a377f3313860ef987b4db30756a52c251dc5a1",
+   "input_width": 15,
+   "input_words": 32768,
+   "kind": "K",
+   "pair_radius": 5,
+   "pass": true,
+   "realized_keys": 103,
+   "table_artifact": {
+    "encoding": "base64 of canonical 5-byte records",
+    "path": "results/second_lift_completion_tables_20260911/H160_inherited_K_h2_R2.records.b64",
+    "stored_bytes": 689
+   },
+   "table_record_count": 103,
+   "table_sha256": "d72624f3db13aa3341bd66234f583399027a3c91f92e5d6f6d9d8fc667e86199",
+   "target_bits": 2
+  },
+  {
+   "R": 0,
+   "complete_law_if_pass": null,
+   "complete_law_radius_if_pass": null,
+   "complete_law_windows_independently_verified": 0,
+   "completion": 160,
+   "conflict": {
+    "evaluation_convention": "inherited: binary source MSB-first; ambient: base-four pair symbols MSB-first; feature site-major x then row j then U,V",
+    "feature_patch_bits_msb": "00",
+    "key": 0,
+    "preimage_source_words_msb": [
+     "000000000",
+     "001010100"
+    ],
+    "preimages": [
+     0,
+     84
+    ],
+    "targets": [
+     0,
+     1
+    ]
+   },
+   "default_unrealized_target": 0,
+   "domain": "inherited",
+   "feature_bits": 2,
+   "feature_target_sha256": "1bba823e0cd8962ef2ffa6293ed3897d3235dff32ba924d4dba4bac5d6c4a0e6",
+   "h": 0,
+   "independent_feature_target_sha256": "1bba823e0cd8962ef2ffa6293ed3897d3235dff32ba924d4dba4bac5d6c4a0e6",
+   "input_width": 9,
+   "input_words": 512,
+   "kind": "O",
+   "pair_radius": 2,
+   "pass": false,
+   "realized_keys": 3,
+   "table_artifact": {
+    "encoding": "base64 of canonical 5-byte records",
+    "path": "results/second_lift_completion_tables_20260911/H160_inherited_O_h0_R0.records.b64",
+    "stored_bytes": 21
+   },
+   "table_record_count": 3,
+   "table_sha256": "2ae999fd38603876de210f05e795569535baf05208de50986b5bbe86520d3539",
+   "target_bits": 2
+  },
+  {
+   "R": 1,
+   "complete_law_if_pass": "rows j<h: shift to O_(j+1); top: cap(O_h patch)",
+   "complete_law_radius_if_pass": 1,
+   "complete_law_windows_independently_verified": 512,
+   "completion": 160,
+   "conflict": null,
+   "default_unrealized_target": 0,
+   "domain": "inherited",
+   "feature_bits": 6,
+   "feature_target_sha256": "7e9e65e23d43e21e5727531329e6f157d6fe5855e28ab27dc21db26f8fe7ff19",
+   "h": 0,
+   "independent_feature_target_sha256": "7e9e65e23d43e21e5727531329e6f157d6fe5855e28ab27dc21db26f8fe7ff19",
+   "input_width": 9,
+   "input_words": 512,
+   "kind": "O",
+   "pair_radius": 2,
+   "pass": true,
+   "realized_keys": 17,
+   "table_artifact": {
+    "encoding": "base64 of canonical 5-byte records",
+    "path": "results/second_lift_completion_tables_20260911/H160_inherited_O_h0_R1.records.b64",
+    "stored_bytes": 117
+   },
+   "table_record_count": 17,
+   "table_sha256": "9b0fdc6f6b887b334c88b51af76e5393bf2e05cb5105f92294f1569819662aa1",
+   "target_bits": 2
+  },
+  {
+   "R": 2,
+   "complete_law_if_pass": "rows j<h: shift to O_(j+1); top: cap(O_h patch)",
+   "complete_law_radius_if_pass": 2,
+   "complete_law_windows_independently_verified": 2048,
+   "completion": 160,
+   "conflict": null,
+   "default_unrealized_target": 0,
+   "domain": "inherited",
+   "feature_bits": 10,
+   "feature_target_sha256": "64aca6846bbbcdec993d6088e1af9e780c8fc596a3b49b9db3d352f4508e96d4",
+   "h": 0,
+   "independent_feature_target_sha256": "64aca6846bbbcdec993d6088e1af9e780c8fc596a3b49b9db3d352f4508e96d4",
+   "input_width": 11,
+   "input_words": 2048,
+   "kind": "O",
+   "pair_radius": 3,
+   "pass": true,
+   "realized_keys": 66,
+   "table_artifact": {
+    "encoding": "base64 of canonical 5-byte records",
+    "path": "results/second_lift_completion_tables_20260911/H160_inherited_O_h0_R2.records.b64",
+    "stored_bytes": 441
+   },
+   "table_record_count": 66,
+   "table_sha256": "b57ec4f052b245be1c8b0ce69dbfbebe349c1f79aa48a54e6bc5af78c2a759a0",
+   "target_bits": 2
+  },
+  {
+   "R": 0,
+   "complete_law_if_pass": null,
+   "complete_law_radius_if_pass": null,
+   "complete_law_windows_independently_verified": 0,
+   "completion": 160,
+   "conflict": {
+    "evaluation_convention": "inherited: binary source MSB-first; ambient: base-four pair symbols MSB-first; feature site-major x then row j then U,V",
+    "feature_patch_bits_msb": "0000",
+    "key": 0,
+    "preimage_source_words_msb": [
+     "00000000000",
+     "00101010100"
+    ],
+    "preimages": [
+     0,
+     340
+    ],
+    "targets": [
+     0,
+     1
+    ]
+   },
+   "default_unrealized_target": 0,
+   "domain": "inherited",
+   "feature_bits": 4,
+   "feature_target_sha256": "a894ace56bee83edab16cc67a428792cd09e159bb41d84ee9eb043f20ff7500d",
+   "h": 1,
+   "independent_feature_target_sha256": "a894ace56bee83edab16cc67a428792cd09e159bb41d84ee9eb043f20ff7500d",
+   "input_width": 11,
+   "input_words": 2048,
+   "kind": "O",
+   "pair_radius": 3,
+   "pass": false,
+   "realized_keys": 4,
+   "table_artifact": {
+    "encoding": "base64 of canonical 5-byte records",
+    "path": "results/second_lift_completion_tables_20260911/H160_inherited_O_h1_R0.records.b64",
+    "stored_bytes": 29
+   },
+   "table_record_count": 4,
+   "table_sha256": "92fa32a490e9c6f4b2527c9080df7b3e8f4d09e99677590d29ed362875aca887",
+   "target_bits": 2
+  },
+  {
+   "R": 1,
+   "complete_law_if_pass": "rows j<h: shift to O_(j+1); top: cap(O_h patch)",
+   "complete_law_radius_if_pass": 1,
+   "complete_law_windows_independently_verified": 2048,
+   "completion": 160,
+   "conflict": null,
+   "default_unrealized_target": 0,
+   "domain": "inherited",
+   "feature_bits": 12,
+   "feature_target_sha256": "c895ccd1e77528175e99722926e00c2500c3a53f5ebe95be000e395cc85840c6",
+   "h": 1,
+   "independent_feature_target_sha256": "c895ccd1e77528175e99722926e00c2500c3a53f5ebe95be000e395cc85840c6",
+   "input_width": 11,
+   "input_words": 2048,
+   "kind": "O",
+   "pair_radius": 3,
+   "pass": true,
+   "realized_keys": 20,
+   "table_artifact": {
+    "encoding": "base64 of canonical 5-byte records",
+    "path": "results/second_lift_completion_tables_20260911/H160_inherited_O_h1_R1.records.b64",
+    "stored_bytes": 137
+   },
+   "table_record_count": 20,
+   "table_sha256": "9ef96c6e83338db6a94042c65b193ca6024b6efef7118d52729c665a2600ac1e",
+   "target_bits": 2
+  },
+  {
+   "R": 2,
+   "complete_law_if_pass": "rows j<h: shift to O_(j+1); top: cap(O_h patch)",
+   "complete_law_radius_if_pass": 2,
+   "complete_law_windows_independently_verified": 8192,
+   "completion": 160,
+   "conflict": null,
+   "default_unrealized_target": 0,
+   "domain": "inherited",
+   "feature_bits": 20,
+   "feature_target_sha256": "0ec8363697034f96f39e183255ec056420f77a4d228920e3649c1f0e7f6b0f22",
+   "h": 1,
+   "independent_feature_target_sha256": "0ec8363697034f96f39e183255ec056420f77a4d228920e3649c1f0e7f6b0f22",
+   "input_width": 13,
+   "input_words": 8192,
+   "kind": "O",
+   "pair_radius": 4,
+   "pass": true,
+   "realized_keys": 71,
+   "table_artifact": {
+    "encoding": "base64 of canonical 5-byte records",
+    "path": "results/second_lift_completion_tables_20260911/H160_inherited_O_h1_R2.records.b64",
+    "stored_bytes": 477
+   },
+   "table_record_count": 71,
+   "table_sha256": "d03cd5e879d798c6c3ba3fba0518a7e30431a6a334a354b2a4cf99cc861b0188",
+   "target_bits": 2
+  },
+  {
+   "R": 0,
+   "complete_law_if_pass": null,
+   "complete_law_radius_if_pass": null,
+   "complete_law_windows_independently_verified": 0,
+   "completion": 160,
+   "conflict": {
+    "evaluation_convention": "inherited: binary source MSB-first; ambient: base-four pair symbols MSB-first; feature site-major x then row j then U,V",
+    "feature_patch_bits_msb": "000000",
+    "key": 0,
+    "preimage_source_words_msb": [
+     "0000000000000",
+     "0010101010100"
+    ],
+    "preimages": [
+     0,
+     1364
+    ],
+    "targets": [
+     0,
+     1
+    ]
+   },
+   "default_unrealized_target": 0,
+   "domain": "inherited",
+   "feature_bits": 6,
+   "feature_target_sha256": "d4b59b1009916ee126daa536acaa397bf29ddcd16f1ee207021c8f07da6f47ac",
+   "h": 2,
+   "independent_feature_target_sha256": "d4b59b1009916ee126daa536acaa397bf29ddcd16f1ee207021c8f07da6f47ac",
+   "input_width": 13,
+   "input_words": 8192,
+   "kind": "O",
+   "pair_radius": 4,
+   "pass": false,
+   "realized_keys": 5,
+   "table_artifact": {
+    "encoding": "base64 of canonical 5-byte records",
+    "path": "results/second_lift_completion_tables_20260911/H160_inherited_O_h2_R0.records.b64",
+    "stored_bytes": 37
+   },
+   "table_record_count": 5,
+   "table_sha256": "8aa3f4ed34a36f7f7f625f4e8af39ba09f77210576f545405d76017f88b0e48d",
+   "target_bits": 2
+  },
+  {
+   "R": 1,
+   "complete_law_if_pass": "rows j<h: shift to O_(j+1); top: cap(O_h patch)",
+   "complete_law_radius_if_pass": 1,
+   "complete_law_windows_independently_verified": 8192,
+   "completion": 160,
+   "conflict": null,
+   "default_unrealized_target": 0,
+   "domain": "inherited",
+   "feature_bits": 18,
+   "feature_target_sha256": "a0f2b871d749641969dda3db789f5c166185ce85a4f266a91f22c57b0992b93b",
+   "h": 2,
+   "independent_feature_target_sha256": "a0f2b871d749641969dda3db789f5c166185ce85a4f266a91f22c57b0992b93b",
+   "input_width": 13,
+   "input_words": 8192,
+   "kind": "O",
+   "pair_radius": 4,
+   "pass": true,
+   "realized_keys": 23,
+   "table_artifact": {
+    "encoding": "base64 of canonical 5-byte records",
+    "path": "results/second_lift_completion_tables_20260911/H160_inherited_O_h2_R1.records.b64",
+    "stored_bytes": 157
+   },
+   "table_record_count": 23,
+   "table_sha256": "84c45dbfbba24adf0792e738b5c115c069993d6664d68f60cebc9dca2485dc02",
+   "target_bits": 2
+  },
+  {
+   "R": 2,
+   "complete_law_if_pass": "rows j<h: shift to O_(j+1); top: cap(O_h patch)",
+   "complete_law_radius_if_pass": 2,
+   "complete_law_windows_independently_verified": 32768,
+   "completion": 160,
+   "conflict": null,
+   "default_unrealized_target": 0,
+   "domain": "inherited",
+   "feature_bits": 30,
+   "feature_target_sha256": "60e1448b94dde5bdfdbba07b00a84ca859ccabb6e3d893f9d0a4c6fd98e9604b",
+   "h": 2,
+   "independent_feature_target_sha256": "60e1448b94dde5bdfdbba07b00a84ca859ccabb6e3d893f9d0a4c6fd98e9604b",
+   "input_width": 15,
+   "input_words": 32768,
+   "kind": "O",
+   "pair_radius": 5,
+   "pass": true,
+   "realized_keys": 76,
+   "table_artifact": {
+    "encoding": "base64 of canonical 5-byte records",
+    "path": "results/second_lift_completion_tables_20260911/H160_inherited_O_h2_R2.records.b64",
+    "stored_bytes": 509
+   },
+   "table_record_count": 76,
+   "table_sha256": "61f7a902eabb2dc2ea45f6cca638a77d9d019fad0cac73e5314f121a991979bc",
+   "target_bits": 2
+  },
+  {
+   "R": 0,
+   "complete_law_if_pass": null,
+   "complete_law_radius_if_pass": null,
+   "complete_law_windows_independently_verified": 0,
+   "completion": 160,
+   "conflict": {
+    "evaluation_convention": "inherited: binary source MSB-first; ambient: base-four pair symbols MSB-first; feature site-major x then row j then U,V",
+    "feature_patch_bits_msb": "00",
+    "key": 0,
+    "preimage_pair_symbols_msb": [
+     [
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     [
+      0,
+      1,
+      3,
+      1,
+      3
+     ]
+    ],
+    "preimages": [
+     0,
+     119
+    ],
+    "targets": [
+     0,
+     1
+    ]
+   },
+   "default_unrealized_target": 0,
+   "domain": "ambient",
+   "feature_bits": 2,
+   "feature_target_sha256": "088d3ad0223d91914208b9e26cd902008a7d3dbed68abbeb29095861d8d8e797",
+   "h": 0,
+   "independent_feature_target_sha256": "088d3ad0223d91914208b9e26cd902008a7d3dbed68abbeb29095861d8d8e797",
+   "input_width": 5,
+   "input_words": 1024,
+   "kind": "K",
+   "pair_radius": 2,
+   "pass": false,
+   "realized_keys": 4,
+   "table_artifact": {
+    "encoding": "base64 of canonical 5-byte records",
+    "path": "results/second_lift_completion_tables_20260911/H160_ambient_K_h0_R0.records.b64",
+    "stored_bytes": 29
+   },
+   "table_record_count": 4,
+   "table_sha256": "8674925b10cf3cbc344ebc4f472db8e1dffd8327e434e303aebec968133fa6ef",
+   "target_bits": 2
+  },
+  {
+   "R": 1,
+   "complete_law_if_pass": null,
+   "complete_law_radius_if_pass": null,
+   "complete_law_windows_independently_verified": 0,
+   "completion": 160,
+   "conflict": {
+    "evaluation_convention": "inherited: binary source MSB-first; ambient: base-four pair symbols MSB-first; feature site-major x then row j then U,V",
+    "feature_patch_bits_msb": "000001",
+    "key": 1,
+    "preimage_pair_symbols_msb": [
+     [
+      0,
+      0,
+      0,
+      3,
+      0
+     ],
+     [
+      1,
+      3,
+      1,
+      3,
+      0
+     ]
+    ],
+    "preimages": [
+     12,
+     476
+    ],
+    "targets": [
+     0,
+     1
+    ]
+   },
+   "default_unrealized_target": 0,
+   "domain": "ambient",
+   "feature_bits": 6,
+   "feature_target_sha256": "8330df526c84b7db67b542012ffe1bc4f7582680bc4c92180a1478c9141e58e4",
+   "h": 0,
+   "independent_feature_target_sha256": "8330df526c84b7db67b542012ffe1bc4f7582680bc4c92180a1478c9141e58e4",
+   "input_width": 5,
+   "input_words": 1024,
+   "kind": "K",
+   "pair_radius": 2,
+   "pass": false,
+   "realized_keys": 63,
+   "table_artifact": {
+    "encoding": "base64 of canonical 5-byte records",
+    "path": "results/second_lift_completion_tables_20260911/H160_ambient_K_h0_R1.records.b64",
+    "stored_bytes": 421
+   },
+   "table_record_count": 63,
+   "table_sha256": "3c8694055972cce6c4f3e8a00847b3557fcb34763087dff3f025ec8aded722ca",
+   "target_bits": 2
+  },
+  {
+   "R": 2,
+   "complete_law_if_pass": null,
+   "complete_law_radius_if_pass": null,
+   "complete_law_windows_independently_verified": 0,
+   "completion": 160,
+   "conflict": {
+    "evaluation_convention": "inherited: binary source MSB-first; ambient: base-four pair symbols MSB-first; feature site-major x then row j then U,V",
+    "feature_patch_bits_msb": "0000000100",
+    "key": 4,
+    "preimage_pair_symbols_msb": [
+     [
+      0,
+      0,
+      0,
+      0,
+      3,
+      0,
+      0
+     ],
+     [
+      1,
+      3,
+      1,
+      3,
+      3,
+      0,
+      0
+     ]
+    ],
+    "preimages": [
+     48,
+     7664
+    ],
+    "targets": [
+     0,
+     1
+    ]
+   },
+   "default_unrealized_target": 0,
+   "domain": "ambient",
+   "feature_bits": 10,
+   "feature_target_sha256": "a03da87087a48c80ed40d89d21a74e1dc2b84c057d41479b23eecb13ea65c90e",
+   "h": 0,
+   "independent_feature_target_sha256": "a03da87087a48c80ed40d89d21a74e1dc2b84c057d41479b23eecb13ea65c90e",
+   "input_width": 7,
+   "input_words": 16384,
+   "kind": "K",
+   "pair_radius": 3,
+   "pass": false,
+   "realized_keys": 750,
+   "table_artifact": {
+    "encoding": "base64 of canonical 5-byte records",
+    "path": "results/second_lift_completion_tables_20260911/H160_ambient_K_h0_R2.records.b64",
+    "stored_bytes": 5001
+   },
+   "table_record_count": 750,
+   "table_sha256": "3f4b7567708de68492e09fbe71c9d69fad967f071a2bf0879edd49a009aa9c19",
+   "target_bits": 2
+  },
+  {
+   "R": 0,
+   "complete_law_if_pass": null,
+   "complete_law_radius_if_pass": null,
+   "complete_law_windows_independently_verified": 0,
+   "completion": 160,
+   "conflict": {
+    "evaluation_convention": "inherited: binary source MSB-first; ambient: base-four pair symbols MSB-first; feature site-major x then row j then U,V",
+    "feature_patch_bits_msb": "0000",
+    "key": 0,
+    "preimage_pair_symbols_msb": [
+     [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     [
+      0,
+      1,
+      1,
+      3,
+      1,
+      3,
+      0
+     ]
+    ],
+    "preimages": [
+     0,
+     1500
+    ],
+    "targets": [
+     0,
+     1
+    ]
+   },
+   "default_unrealized_target": 0,
+   "domain": "ambient",
+   "feature_bits": 4,
+   "feature_target_sha256": "eeebd3b3c447289b307c66c8fb859146d4a5aa3d0834ab9202838b370397dfe8",
+   "h": 1,
+   "independent_feature_target_sha256": "eeebd3b3c447289b307c66c8fb859146d4a5aa3d0834ab9202838b370397dfe8",
+   "input_width": 7,
+   "input_words": 16384,
+   "kind": "K",
+   "pair_radius": 3,
+   "pass": false,
+   "realized_keys": 14,
+   "table_artifact": {
+    "encoding": "base64 of canonical 5-byte records",
+    "path": "results/second_lift_completion_tables_20260911/H160_ambient_K_h1_R0.records.b64",
+    "stored_bytes": 97
+   },
+   "table_record_count": 14,
+   "table_sha256": "264dc9a475e78cee2f8a0bbec50287418b58d9dc0e03c8ceea4556bd6bc60aed",
+   "target_bits": 2
+  },
+  {
+   "R": 1,
+   "complete_law_if_pass": null,
+   "complete_law_radius_if_pass": null,
+   "complete_law_windows_independently_verified": 0,
+   "completion": 160,
+   "conflict": {
+    "evaluation_convention": "inherited: binary source MSB-first; ambient: base-four pair symbols MSB-first; feature site-major x then row j then U,V",
+    "feature_patch_bits_msb": "000000010100",
+    "key": 20,
+    "preimage_pair_symbols_msb": [
+     [
+      1,
+      1,
+      3,
+      1,
+      3,
+      0,
+      0
+     ],
+     [
+      1,
+      1,
+      3,
+      3,
+      3,
+      0,
+      0
+     ]
+    ],
+    "preimages": [
+     6000,
+     6128
+    ],
+    "targets": [
+     0,
+     2
+    ]
+   },
+   "default_unrealized_target": 0,
+   "domain": "ambient",
+   "feature_bits": 12,
+   "feature_target_sha256": "704adf1fef3a47daa0079123f96173eb66eae371184d95f8cc37f09e1d439e20",
+   "h": 1,
+   "independent_feature_target_sha256": "704adf1fef3a47daa0079123f96173eb66eae371184d95f8cc37f09e1d439e20",
+   "input_width": 7,
+   "input_words": 16384,
+   "kind": "K",
+   "pair_radius": 3,
+   "pass": false,
+   "realized_keys": 588,
+   "table_artifact": {
+    "encoding": "base64 of canonical 5-byte records",
+    "path": "results/second_lift_completion_tables_20260911/H160_ambient_K_h1_R1.records.b64",
+    "stored_bytes": 3921
+   },
+   "table_record_count": 588,
+   "table_sha256": "dae006348a8bbdf7a3a24031bc2ab09c4d147ae3b81cfb61aa28104c56c1cb56",
+   "target_bits": 2
+  },
+  {
+   "R": 2,
+   "complete_law_if_pass": null,
+   "complete_law_radius_if_pass": null,
+   "complete_law_windows_independently_verified": 0,
+   "completion": 160,
+   "conflict": {
+    "evaluation_convention": "inherited: binary source MSB-first; ambient: base-four pair symbols MSB-first; feature site-major x then row j then U,V",
+    "feature_patch_bits_msb": "00000000000101000000",
+    "key": 320,
+    "preimage_pair_symbols_msb": [
+     [
+      1,
+      1,
+      3,
+      3,
+      1,
+      3,
+      0,
+      0,
+      0
+     ],
+     [
+      1,
+      1,
+      3,
+      1,
+      3,
+      3,
+      0,
+      0,
+      0
+     ]
+    ],
+    "preimages": [
+     97728,
+     96192
+    ],
+    "targets": [
+     0,
+     2
+    ]
+   },
+   "default_unrealized_target": 0,
+   "domain": "ambient",
+   "feature_bits": 20,
+   "feature_target_sha256": "4e1b3ff1bfb8be689eb7f8a33c0e09c1b796de2d6f3694d514d3fa6124848c5b",
+   "h": 1,
+   "independent_feature_target_sha256": "4e1b3ff1bfb8be689eb7f8a33c0e09c1b796de2d6f3694d514d3fa6124848c5b",
+   "input_width": 9,
+   "input_words": 262144,
+   "kind": "K",
+   "pair_radius": 4,
+   "pass": false,
+   "realized_keys": 7758,
+   "table_artifact": {
+    "encoding": "base64 of canonical 5-byte records",
+    "path": "results/second_lift_completion_tables_20260911/H160_ambient_K_h1_R2.records.b64",
+    "stored_bytes": 51721
+   },
+   "table_record_count": 7758,
+   "table_sha256": "77a569264666c8ff989d72cd651c44f95869216d6da53d2727b6066e17aec420",
+   "target_bits": 2
+  },
+  {
+   "R": 0,
+   "complete_law_if_pass": null,
+   "complete_law_radius_if_pass": null,
+   "complete_law_windows_independently_verified": 0,
+   "completion": 160,
+   "conflict": {
+    "evaluation_convention": "inherited: binary source MSB-first; ambient: base-four pair symbols MSB-first; feature site-major x then row j then U,V",
+    "feature_patch_bits_msb": "000000",
+    "key": 0,
+    "preimage_pair_symbols_msb": [
+     [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     [
+      0,
+      1,
+      1,
+      1,
+      3,
+      1,
+      3,
+      1,
+      1
+     ]
+    ],
+    "preimages": [
+     0,
+     22389
+    ],
+    "targets": [
+     0,
+     1
+    ]
+   },
+   "default_unrealized_target": 0,
+   "domain": "ambient",
+   "feature_bits": 6,
+   "feature_target_sha256": "83b702752453ab88b2b3333f0af106b9062946767fc778442f57ade6f52454f9",
+   "h": 2,
+   "independent_feature_target_sha256": "83b702752453ab88b2b3333f0af106b9062946767fc778442f57ade6f52454f9",
+   "input_width": 9,
+   "input_words": 262144,
+   "kind": "K",
+   "pair_radius": 4,
+   "pass": false,
+   "realized_keys": 42,
+   "table_artifact": {
+    "encoding": "base64 of canonical 5-byte records",
+    "path": "results/second_lift_completion_tables_20260911/H160_ambient_K_h2_R0.records.b64",
+    "stored_bytes": 281
+   },
+   "table_record_count": 42,
+   "table_sha256": "006978458b3c3c63bee0b5f7a8ec7aca6814f6445642b828953cc9d23719e889",
+   "target_bits": 2
+  },
+  {
+   "R": 1,
+   "complete_law_if_pass": null,
+   "complete_law_radius_if_pass": null,
+   "complete_law_windows_independently_verified": 0,
+   "completion": 160,
+   "conflict": {
+    "evaluation_convention": "inherited: binary source MSB-first; ambient: base-four pair symbols MSB-first; feature site-major x then row j then U,V",
+    "feature_patch_bits_msb": "000000000001000110",
+    "key": 70,
+    "preimage_pair_symbols_msb": [
+     [
+      1,
+      1,
+      1,
+      3,
+      3,
+      3,
+      1,
+      0,
+      0
+     ],
+     [
+      1,
+      1,
+      1,
+      3,
+      1,
+      3,
+      1,
+      0,
+      0
+     ]
+    ],
+    "preimages": [
+     90064,
+     89552
+    ],
+    "targets": [
+     0,
+     2
+    ]
+   },
+   "default_unrealized_target": 0,
+   "domain": "ambient",
+   "feature_bits": 18,
+   "feature_target_sha256": "7b388cb6589449eb6f000daf4d5802781dd195feb34892bc4ab02cab20b702e6",
+   "h": 2,
+   "independent_feature_target_sha256": "7b388cb6589449eb6f000daf4d5802781dd195feb34892bc4ab02cab20b702e6",
+   "input_width": 9,
+   "input_words": 262144,
+   "kind": "K",
+   "pair_radius": 4,
+   "pass": false,
+   "realized_keys": 1718,
+   "table_artifact": {
+    "encoding": "base64 of canonical 5-byte records",
+    "path": "results/second_lift_completion_tables_20260911/H160_ambient_K_h2_R1.records.b64",
+    "stored_bytes": 11457
+   },
+   "table_record_count": 1718,
+   "table_sha256": "d5467221369f05613a2240faaf0f07728588bdf01f3135449bf475d9431a6db0",
+   "target_bits": 2
+  },
+  {
+   "R": 2,
+   "complete_law_if_pass": null,
+   "complete_law_radius_if_pass": null,
+   "complete_law_windows_independently_verified": 0,
+   "completion": 160,
+   "conflict": {
+    "evaluation_convention": "inherited: binary source MSB-first; ambient: base-four pair symbols MSB-first; feature site-major x then row j then U,V",
+    "feature_patch_bits_msb": "000000000000000001000110010000",
+    "key": 4496,
+    "preimage_pair_symbols_msb": [
+     [
+      1,
+      1,
+      1,
+      3,
+      1,
+      3,
+      3,
+      3,
+      0,
+      0,
+      0
+     ],
+     [
+      1,
+      1,
+      1,
+      3,
+      3,
+      1,
+      3,
+      3,
+      0,
+      0,
+      0
+     ]
+    ],
+    "preimages": [
+     1433536,
+     1439680
+    ],
+    "targets": [
+     0,
+     2
+    ]
+   },
+   "default_unrealized_target": 0,
+   "domain": "ambient",
+   "feature_bits": 30,
+   "feature_target_sha256": "32ad6f227b648f5186d58d8f0aec685a6c527afd66e0b7b6c24c5c1dcaea5ff2",
+   "h": 2,
+   "independent_feature_target_sha256": "32ad6f227b648f5186d58d8f0aec685a6c527afd66e0b7b6c24c5c1dcaea5ff2",
+   "input_width": 11,
+   "input_words": 4194304,
+   "kind": "K",
+   "pair_radius": 5,
+   "pass": false,
+   "realized_keys": 22562,
+   "table_artifact": {
+    "encoding": "base64 of canonical 5-byte records",
+    "path": "results/second_lift_completion_tables_20260911/H160_ambient_K_h2_R2.records.b64",
+    "stored_bytes": 150417
+   },
+   "table_record_count": 22562,
+   "table_sha256": "47f53c80e5d5fd2d15fb24dd852bc6567fa1081b1da72afe7c8f15e78490ab9d",
+   "target_bits": 2
+  },
+  {
+   "R": 0,
+   "complete_law_if_pass": null,
+   "complete_law_radius_if_pass": null,
+   "complete_law_windows_independently_verified": 0,
+   "completion": 160,
+   "conflict": {
+    "evaluation_convention": "inherited: binary source MSB-first; ambient: base-four pair symbols MSB-first; feature site-major x then row j then U,V",
+    "feature_patch_bits_msb": "00",
+    "key": 0,
+    "preimage_pair_symbols_msb": [
+     [
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     [
+      0,
+      1,
+      3,
+      1,
+      0
+     ]
+    ],
+    "preimages": [
+     0,
+     116
+    ],
+    "targets": [
+     0,
+     1
+    ]
+   },
+   "default_unrealized_target": 0,
+   "domain": "ambient",
+   "feature_bits": 2,
+   "feature_target_sha256": "1ed8721489fd590af8ec49bcd893103400feaa7e7fb5d1e8a9c0138b5708599a",
+   "h": 0,
+   "independent_feature_target_sha256": "1ed8721489fd590af8ec49bcd893103400feaa7e7fb5d1e8a9c0138b5708599a",
+   "input_width": 5,
+   "input_words": 1024,
+   "kind": "O",
+   "pair_radius": 2,
+   "pass": false,
+   "realized_keys": 4,
+   "table_artifact": {
+    "encoding": "base64 of canonical 5-byte records",
+    "path": "results/second_lift_completion_tables_20260911/H160_ambient_O_h0_R0.records.b64",
+    "stored_bytes": 29
+   },
+   "table_record_count": 4,
+   "table_sha256": "b7b6862c1fa9214d899d2fc2db353dedf0ebd344b5261f7d08711bd70897ad36",
+   "target_bits": 2
+  },
+  {
+   "R": 1,
+   "complete_law_if_pass": null,
+   "complete_law_radius_if_pass": null,
+   "complete_law_windows_independently_verified": 0,
+   "completion": 160,
+   "conflict": {
+    "evaluation_convention": "inherited: binary source MSB-first; ambient: base-four pair symbols MSB-first; feature site-major x then row j then U,V",
+    "feature_patch_bits_msb": "000001",
+    "key": 1,
+    "preimage_pair_symbols_msb": [
+     [
+      0,
+      0,
+      0,
+      3,
+      0
+     ],
+     [
+      1,
+      3,
+      1,
+      3,
+      0
+     ]
+    ],
+    "preimages": [
+     12,
+     476
+    ],
+    "targets": [
+     0,
+     1
+    ]
+   },
+   "default_unrealized_target": 0,
+   "domain": "ambient",
+   "feature_bits": 6,
+   "feature_target_sha256": "6f415fe5350c13f433408cca80d2b7f183ce2d3d445f19fea07434ef849fe2ac",
+   "h": 0,
+   "independent_feature_target_sha256": "6f415fe5350c13f433408cca80d2b7f183ce2d3d445f19fea07434ef849fe2ac",
+   "input_width": 5,
+   "input_words": 1024,
+   "kind": "O",
+   "pair_radius": 2,
+   "pass": false,
+   "realized_keys": 63,
+   "table_artifact": {
+    "encoding": "base64 of canonical 5-byte records",
+    "path": "results/second_lift_completion_tables_20260911/H160_ambient_O_h0_R1.records.b64",
+    "stored_bytes": 421
+   },
+   "table_record_count": 63,
+   "table_sha256": "0233c4024a1d66a104c4d7049761d62c94a8dc2ad5d30e7a11f5674b65b50883",
+   "target_bits": 2
+  },
+  {
+   "R": 2,
+   "complete_law_if_pass": null,
+   "complete_law_radius_if_pass": null,
+   "complete_law_windows_independently_verified": 0,
+   "completion": 160,
+   "conflict": {
+    "evaluation_convention": "inherited: binary source MSB-first; ambient: base-four pair symbols MSB-first; feature site-major x then row j then U,V",
+    "feature_patch_bits_msb": "0000000100",
+    "key": 4,
+    "preimage_pair_symbols_msb": [
+     [
+      0,
+      0,
+      0,
+      0,
+      3,
+      0,
+      0
+     ],
+     [
+      1,
+      3,
+      1,
+      3,
+      3,
+      0,
+      0
+     ]
+    ],
+    "preimages": [
+     48,
+     7664
+    ],
+    "targets": [
+     0,
+     1
+    ]
+   },
+   "default_unrealized_target": 0,
+   "domain": "ambient",
+   "feature_bits": 10,
+   "feature_target_sha256": "a10902e89d43a13a8d5d31d293f5c18781858aaae66a7ed1f12b8e4e68357cea",
+   "h": 0,
+   "independent_feature_target_sha256": "a10902e89d43a13a8d5d31d293f5c18781858aaae66a7ed1f12b8e4e68357cea",
+   "input_width": 7,
+   "input_words": 16384,
+   "kind": "O",
+   "pair_radius": 3,
+   "pass": false,
+   "realized_keys": 750,
+   "table_artifact": {
+    "encoding": "base64 of canonical 5-byte records",
+    "path": "results/second_lift_completion_tables_20260911/H160_ambient_O_h0_R2.records.b64",
+    "stored_bytes": 5001
+   },
+   "table_record_count": 750,
+   "table_sha256": "0893c56427e70299be21ec0c1e48b02e7d810f59a5cd145bfce9a645b437d07f",
+   "target_bits": 2
+  },
+  {
+   "R": 0,
+   "complete_law_if_pass": null,
+   "complete_law_radius_if_pass": null,
+   "complete_law_windows_independently_verified": 0,
+   "completion": 160,
+   "conflict": {
+    "evaluation_convention": "inherited: binary source MSB-first; ambient: base-four pair symbols MSB-first; feature site-major x then row j then U,V",
+    "feature_patch_bits_msb": "0000",
+    "key": 0,
+    "preimage_pair_symbols_msb": [
+     [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     [
+      0,
+      1,
+      1,
+      3,
+      1,
+      1,
+      0
+     ]
+    ],
+    "preimages": [
+     0,
+     1492
+    ],
+    "targets": [
+     0,
+     1
+    ]
+   },
+   "default_unrealized_target": 0,
+   "domain": "ambient",
+   "feature_bits": 4,
+   "feature_target_sha256": "954e5fab8cfa49fc2bac6beeb41e16fa53763e914bdc56b5ff6ea5dd59065e22",
+   "h": 1,
+   "independent_feature_target_sha256": "954e5fab8cfa49fc2bac6beeb41e16fa53763e914bdc56b5ff6ea5dd59065e22",
+   "input_width": 7,
+   "input_words": 16384,
+   "kind": "O",
+   "pair_radius": 3,
+   "pass": false,
+   "realized_keys": 12,
+   "table_artifact": {
+    "encoding": "base64 of canonical 5-byte records",
+    "path": "results/second_lift_completion_tables_20260911/H160_ambient_O_h1_R0.records.b64",
+    "stored_bytes": 81
+   },
+   "table_record_count": 12,
+   "table_sha256": "8c7dfe3382f712319e8e323c3606278957607a94eb7669f710c0edddb72afd4c",
+   "target_bits": 2
+  },
+  {
+   "R": 1,
+   "complete_law_if_pass": null,
+   "complete_law_radius_if_pass": null,
+   "complete_law_windows_independently_verified": 0,
+   "completion": 160,
+   "conflict": {
+    "evaluation_convention": "inherited: binary source MSB-first; ambient: base-four pair symbols MSB-first; feature site-major x then row j then U,V",
+    "feature_patch_bits_msb": "000000010110",
+    "key": 22,
+    "preimage_pair_symbols_msb": [
+     [
+      1,
+      1,
+      3,
+      1,
+      3,
+      0,
+      0
+     ],
+     [
+      1,
+      1,
+      3,
+      3,
+      3,
+      0,
+      0
+     ]
+    ],
+    "preimages": [
+     6000,
+     6128
+    ],
+    "targets": [
+     0,
+     2
+    ]
+   },
+   "default_unrealized_target": 0,
+   "domain": "ambient",
+   "feature_bits": 12,
+   "feature_target_sha256": "59df387ce2ed8b1d35d2a78af853e98a86aa02847284eed9573b28f2b8115cfb",
+   "h": 1,
+   "independent_feature_target_sha256": "59df387ce2ed8b1d35d2a78af853e98a86aa02847284eed9573b28f2b8115cfb",
+   "input_width": 7,
+   "input_words": 16384,
+   "kind": "O",
+   "pair_radius": 3,
+   "pass": false,
+   "realized_keys": 387,
+   "table_artifact": {
+    "encoding": "base64 of canonical 5-byte records",
+    "path": "results/second_lift_completion_tables_20260911/H160_ambient_O_h1_R1.records.b64",
+    "stored_bytes": 2581
+   },
+   "table_record_count": 387,
+   "table_sha256": "ac0c84319b2bae134988757e69b263190f51dac26478bed26b1f43579ee5ecc7",
+   "target_bits": 2
+  },
+  {
+   "R": 2,
+   "complete_law_if_pass": null,
+   "complete_law_radius_if_pass": null,
+   "complete_law_windows_independently_verified": 0,
+   "completion": 160,
+   "conflict": {
+    "evaluation_convention": "inherited: binary source MSB-first; ambient: base-four pair symbols MSB-first; feature site-major x then row j then U,V",
+    "feature_patch_bits_msb": "00000000000101100000",
+    "key": 352,
+    "preimage_pair_symbols_msb": [
+     [
+      1,
+      1,
+      3,
+      3,
+      1,
+      3,
+      0,
+      0,
+      0
+     ],
+     [
+      1,
+      1,
+      3,
+      1,
+      3,
+      3,
+      0,
+      0,
+      0
+     ]
+    ],
+    "preimages": [
+     97728,
+     96192
+    ],
+    "targets": [
+     0,
+     2
+    ]
+   },
+   "default_unrealized_target": 0,
+   "domain": "ambient",
+   "feature_bits": 20,
+   "feature_target_sha256": "ec7e84f48776281c7c973ca425a48cb1a8578e10b2464f6409f4f1ba91094310",
+   "h": 1,
+   "independent_feature_target_sha256": "ec7e84f48776281c7c973ca425a48cb1a8578e10b2464f6409f4f1ba91094310",
+   "input_width": 9,
+   "input_words": 262144,
+   "kind": "O",
+   "pair_radius": 4,
+   "pass": false,
+   "realized_keys": 4807,
+   "table_artifact": {
+    "encoding": "base64 of canonical 5-byte records",
+    "path": "results/second_lift_completion_tables_20260911/H160_ambient_O_h1_R2.records.b64",
+    "stored_bytes": 32049
+   },
+   "table_record_count": 4807,
+   "table_sha256": "20815d473d74c9a9973da662076cdbd4fb0640a374e94e4643ea84ea93f38a57",
+   "target_bits": 2
+  },
+  {
+   "R": 0,
+   "complete_law_if_pass": null,
+   "complete_law_radius_if_pass": null,
+   "complete_law_windows_independently_verified": 0,
+   "completion": 160,
+   "conflict": {
+    "evaluation_convention": "inherited: binary source MSB-first; ambient: base-four pair symbols MSB-first; feature site-major x then row j then U,V",
+    "feature_patch_bits_msb": "000000",
+    "key": 0,
+    "preimage_pair_symbols_msb": [
+     [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     [
+      0,
+      1,
+      1,
+      1,
+      3,
+      1,
+      1,
+      1,
+      0
+     ]
+    ],
+    "preimages": [
+     0,
+     22356
+    ],
+    "targets": [
+     0,
+     1
+    ]
+   },
+   "default_unrealized_target": 0,
+   "domain": "ambient",
+   "feature_bits": 6,
+   "feature_target_sha256": "aedc8de2539dde1d6476d45bfeb6b59fe5b701df817ebc1ffc974c00725f61a8",
+   "h": 2,
+   "independent_feature_target_sha256": "aedc8de2539dde1d6476d45bfeb6b59fe5b701df817ebc1ffc974c00725f61a8",
+   "input_width": 9,
+   "input_words": 262144,
+   "kind": "O",
+   "pair_radius": 4,
+   "pass": false,
+   "realized_keys": 28,
+   "table_artifact": {
+    "encoding": "base64 of canonical 5-byte records",
+    "path": "results/second_lift_completion_tables_20260911/H160_ambient_O_h2_R0.records.b64",
+    "stored_bytes": 189
+   },
+   "table_record_count": 28,
+   "table_sha256": "1f2f9767f68a1b63b4c090249670496afffd06d7168b7ffd20b415edef04a486",
+   "target_bits": 2
+  },
+  {
+   "R": 1,
+   "complete_law_if_pass": null,
+   "complete_law_radius_if_pass": null,
+   "complete_law_windows_independently_verified": 0,
+   "completion": 160,
+   "conflict": {
+    "evaluation_convention": "inherited: binary source MSB-first; ambient: base-four pair symbols MSB-first; feature site-major x then row j then U,V",
+    "feature_patch_bits_msb": "000000000001000110",
+    "key": 70,
+    "preimage_pair_symbols_msb": [
+     [
+      1,
+      1,
+      1,
+      3,
+      1,
+      3,
+      1,
+      0,
+      0
+     ],
+     [
+      1,
+      1,
+      1,
+      3,
+      3,
+      3,
+      1,
+      0,
+      0
+     ]
+    ],
+    "preimages": [
+     89552,
+     90064
+    ],
+    "targets": [
+     0,
+     2
+    ]
+   },
+   "default_unrealized_target": 0,
+   "domain": "ambient",
+   "feature_bits": 18,
+   "feature_target_sha256": "85bd89e07a6d5507314ffdc6b1fc22f62652322141bb4f0ce51f6720ff74a832",
+   "h": 2,
+   "independent_feature_target_sha256": "85bd89e07a6d5507314ffdc6b1fc22f62652322141bb4f0ce51f6720ff74a832",
+   "input_width": 9,
+   "input_words": 262144,
+   "kind": "O",
+   "pair_radius": 4,
+   "pass": false,
+   "realized_keys": 916,
+   "table_artifact": {
+    "encoding": "base64 of canonical 5-byte records",
+    "path": "results/second_lift_completion_tables_20260911/H160_ambient_O_h2_R1.records.b64",
+    "stored_bytes": 6109
+   },
+   "table_record_count": 916,
+   "table_sha256": "7bfec0aec18e8bf32ce326c9add3c43ca0abb23ce9fad6f2cd30bbdf00dd79d8",
+   "target_bits": 2
+  },
+  {
+   "R": 2,
+   "complete_law_if_pass": null,
+   "complete_law_radius_if_pass": null,
+   "complete_law_windows_independently_verified": 0,
+   "completion": 160,
+   "conflict": {
+    "evaluation_convention": "inherited: binary source MSB-first; ambient: base-four pair symbols MSB-first; feature site-major x then row j then U,V",
+    "feature_patch_bits_msb": "000000000000000001000110010000",
+    "key": 4496,
+    "preimage_pair_symbols_msb": [
+     [
+      1,
+      1,
+      1,
+      3,
+      3,
+      1,
+      3,
+      1,
+      2,
+      0,
+      0
+     ],
+     [
+      1,
+      1,
+      1,
+      3,
+      1,
+      3,
+      3,
+      1,
+      2,
+      0,
+      0
+     ]
+    ],
+    "preimages": [
+     1439584,
+     1433440
+    ],
+    "targets": [
+     0,
+     2
+    ]
+   },
+   "default_unrealized_target": 0,
+   "domain": "ambient",
+   "feature_bits": 30,
+   "feature_target_sha256": "3cb56cbcf594c66d0eaa2ad4596987c979c50184dcd47b0202dbd7f54b960b4a",
+   "h": 2,
+   "independent_feature_target_sha256": "3cb56cbcf594c66d0eaa2ad4596987c979c50184dcd47b0202dbd7f54b960b4a",
+   "input_width": 11,
+   "input_words": 4194304,
+   "kind": "O",
+   "pair_radius": 5,
+   "pass": false,
+   "realized_keys": 11815,
+   "table_artifact": {
+    "encoding": "base64 of canonical 5-byte records",
+    "path": "results/second_lift_completion_tables_20260911/H160_ambient_O_h2_R2.records.b64",
+    "stored_bytes": 78769
+   },
+   "table_record_count": 11815,
+   "table_sha256": "68001ded2b4fed4aadf73c047db6ba7beaa1b978ba7b2d8594c65164eaac29e6",
+   "target_bits": 2
+  }
+ ],
+ "controls": {
+  "completion_difference_after_A0": 40,
+  "depth1_recoding_ok": 256,
+  "first_completion_difference_source": 21,
+  "first_image_source_windows": 128,
+  "forbidden_top101_hits": 0,
+  "n8_distinct_family_states": 255,
+  "n8_source_cases": 256,
+  "ordering_binary_words_width3": 8,
+  "ordering_pair_words_width2": 16
+ },
+ "finite_diagnostics": {
+  "ambient_n4": {
+   "128": {
+    "0": {
+     "K_fiber_hist": {
+      "1": 80,
+      "2": 22,
+      "3": 6,
+      "7": 14,
+      "8": 2
+     },
+     "K_image": 124,
+     "O_fiber_hist": {
+      "1": 80,
+      "2": 22,
+      "3": 6,
+      "7": 14,
+      "8": 2
+     },
+     "O_image": 124,
+     "states": 256
+    },
+    "1": {
+     "K_fiber_hist": {
+      "1": 196,
+      "2": 14,
+      "4": 6,
+      "8": 1
+     },
+     "K_image": 217,
+     "O_fiber_hist": {
+      "1": 196,
+      "2": 14,
+      "4": 6,
+      "8": 1
+     },
+     "O_image": 217,
+     "states": 256
+    },
+    "2": {
+     "K_fiber_hist": {
+      "1": 236,
+      "2": 6,
+      "8": 1
+     },
+     "K_image": 243,
+     "O_fiber_hist": {
+      "1": 236,
+      "2": 6,
+      "8": 1
+     },
+     "O_image": 243,
+     "states": 256
+    }
+   },
+   "160": {
+    "0": {
+     "K_fiber_hist": {
+      "1": 124,
+      "2": 8,
+      "7": 12,
+      "8": 4
+     },
+     "K_image": 148,
+     "O_fiber_hist": {
+      "1": 124,
+      "2": 8,
+      "7": 12,
+      "8": 4
+     },
+     "O_image": 148,
+     "states": 256
+    },
+    "1": {
+     "K_fiber_hist": {
+      "1": 192,
+      "2": 16,
+      "4": 6,
+      "8": 1
+     },
+     "K_image": 215,
+     "O_fiber_hist": {
+      "1": 192,
+      "2": 16,
+      "4": 6,
+      "8": 1
+     },
+     "O_image": 215,
+     "states": 256
+    },
+    "2": {
+     "K_fiber_hist": {
+      "1": 232,
+      "2": 8,
+      "8": 1
+     },
+     "K_image": 241,
+     "O_fiber_hist": {
+      "1": 232,
+      "2": 8,
+      "8": 1
+     },
+     "O_image": 241,
+     "states": 256
+    }
+   }
+  },
+  "inherited_n8": {
+   "128": {
+    "0": {
+     "K_O_same_partition": true,
+     "source_weighted": {
+      "K_fiber_hist": {
+       "1": 253,
+       "3": 1
+      },
+      "K_image": 254,
+      "O_fiber_hist": {
+       "1": 253,
+       "3": 1
+      },
+      "O_image": 254
+     },
+     "uniform_distinct_X": {
+      "K_fiber_hist": {
+       "1": 253,
+       "2": 1
+      },
+      "K_image": 254,
+      "O_fiber_hist": {
+       "1": 253,
+       "2": 1
+      },
+      "O_image": 254,
+      "family_states": 255
+     }
+    },
+    "1": {
+     "K_O_same_partition": true,
+     "source_weighted": {
+      "K_fiber_hist": {
+       "1": 253,
+       "3": 1
+      },
+      "K_image": 254,
+      "O_fiber_hist": {
+       "1": 253,
+       "3": 1
+      },
+      "O_image": 254
+     },
+     "uniform_distinct_X": {
+      "K_fiber_hist": {
+       "1": 253,
+       "2": 1
+      },
+      "K_image": 254,
+      "O_fiber_hist": {
+       "1": 253,
+       "2": 1
+      },
+      "O_image": 254,
+      "family_states": 255
+     }
+    },
+    "2": {
+     "K_O_same_partition": true,
+     "source_weighted": {
+      "K_fiber_hist": {
+       "1": 253,
+       "3": 1
+      },
+      "K_image": 254,
+      "O_fiber_hist": {
+       "1": 253,
+       "3": 1
+      },
+      "O_image": 254
+     },
+     "uniform_distinct_X": {
+      "K_fiber_hist": {
+       "1": 253,
+       "2": 1
+      },
+      "K_image": 254,
+      "O_fiber_hist": {
+       "1": 253,
+       "2": 1
+      },
+      "O_image": 254,
+      "family_states": 255
+     }
+    }
+   },
+   "160": {
+    "0": {
+     "K_O_same_partition": true,
+     "source_weighted": {
+      "K_fiber_hist": {
+       "1": 253,
+       "3": 1
+      },
+      "K_image": 254,
+      "O_fiber_hist": {
+       "1": 253,
+       "3": 1
+      },
+      "O_image": 254
+     },
+     "uniform_distinct_X": {
+      "K_fiber_hist": {
+       "1": 253,
+       "2": 1
+      },
+      "K_image": 254,
+      "O_fiber_hist": {
+       "1": 253,
+       "2": 1
+      },
+      "O_image": 254,
+      "family_states": 255
+     }
+    },
+    "1": {
+     "K_O_same_partition": true,
+     "source_weighted": {
+      "K_fiber_hist": {
+       "1": 253,
+       "3": 1
+      },
+      "K_image": 254,
+      "O_fiber_hist": {
+       "1": 253,
+       "3": 1
+      },
+      "O_image": 254
+     },
+     "uniform_distinct_X": {
+      "K_fiber_hist": {
+       "1": 253,
+       "2": 1
+      },
+      "K_image": 254,
+      "O_fiber_hist": {
+       "1": 253,
+       "2": 1
+      },
+      "O_image": 254,
+      "family_states": 255
+     }
+    },
+    "2": {
+     "K_O_same_partition": true,
+     "source_weighted": {
+      "K_fiber_hist": {
+       "1": 253,
+       "3": 1
+      },
+      "K_image": 254,
+      "O_fiber_hist": {
+       "1": 253,
+       "3": 1
+      },
+      "O_image": 254
+     },
+     "uniform_distinct_X": {
+      "K_fiber_hist": {
+       "1": 253,
+       "2": 1
+      },
+      "K_image": 254,
+      "O_fiber_hist": {
+       "1": 253,
+       "2": 1
+      },
+      "O_image": 254,
+      "family_states": 255
+     }
+    }
+   }
+  }
+ },
+ "implementation_corrections": [],
+ "inherited_O_literal_table_equality": {
+  "h0_R0": true,
+  "h0_R1": true,
+  "h0_R2": true,
+  "h1_R0": true,
+  "h1_R1": true,
+  "h1_R2": true,
+  "h2_R0": true,
+  "h2_R1": true,
+  "h2_R2": true
+ },
+ "matrix": {
+  "R": [
+   0,
+   1,
+   2
+  ],
+  "case_count": 72,
+  "completions": [
+   128,
+   160
+  ],
+  "coordinates": [
+   "K",
+   "O"
+  ],
+  "domains": [
+   "inherited",
+   "ambient"
+  ],
+  "h": [
+   0,
+   1,
+   2
+  ]
+ },
+ "minimum_passing_radius": [
+  {
+   "completion": 128,
+   "domain": "inherited",
+   "h": 0,
+   "kind": "K",
+   "minimum_passing_R_through_2": 1
+  },
+  {
+   "completion": 128,
+   "domain": "inherited",
+   "h": 1,
+   "kind": "K",
+   "minimum_passing_R_through_2": 1
+  },
+  {
+   "completion": 128,
+   "domain": "inherited",
+   "h": 2,
+   "kind": "K",
+   "minimum_passing_R_through_2": 1
+  },
+  {
+   "completion": 128,
+   "domain": "inherited",
+   "h": 0,
+   "kind": "O",
+   "minimum_passing_R_through_2": 1
+  },
+  {
+   "completion": 128,
+   "domain": "inherited",
+   "h": 1,
+   "kind": "O",
+   "minimum_passing_R_through_2": 1
+  },
+  {
+   "completion": 128,
+   "domain": "inherited",
+   "h": 2,
+   "kind": "O",
+   "minimum_passing_R_through_2": 1
+  },
+  {
+   "completion": 128,
+   "domain": "ambient",
+   "h": 0,
+   "kind": "K",
+   "minimum_passing_R_through_2": null
+  },
+  {
+   "completion": 128,
+   "domain": "ambient",
+   "h": 1,
+   "kind": "K",
+   "minimum_passing_R_through_2": null
+  },
+  {
+   "completion": 128,
+   "domain": "ambient",
+   "h": 2,
+   "kind": "K",
+   "minimum_passing_R_through_2": null
+  },
+  {
+   "completion": 128,
+   "domain": "ambient",
+   "h": 0,
+   "kind": "O",
+   "minimum_passing_R_through_2": null
+  },
+  {
+   "completion": 128,
+   "domain": "ambient",
+   "h": 1,
+   "kind": "O",
+   "minimum_passing_R_through_2": null
+  },
+  {
+   "completion": 128,
+   "domain": "ambient",
+   "h": 2,
+   "kind": "O",
+   "minimum_passing_R_through_2": null
+  },
+  {
+   "completion": 160,
+   "domain": "inherited",
+   "h": 0,
+   "kind": "K",
+   "minimum_passing_R_through_2": 1
+  },
+  {
+   "completion": 160,
+   "domain": "inherited",
+   "h": 1,
+   "kind": "K",
+   "minimum_passing_R_through_2": 1
+  },
+  {
+   "completion": 160,
+   "domain": "inherited",
+   "h": 2,
+   "kind": "K",
+   "minimum_passing_R_through_2": 1
+  },
+  {
+   "completion": 160,
+   "domain": "inherited",
+   "h": 0,
+   "kind": "O",
+   "minimum_passing_R_through_2": 1
+  },
+  {
+   "completion": 160,
+   "domain": "inherited",
+   "h": 1,
+   "kind": "O",
+   "minimum_passing_R_through_2": 1
+  },
+  {
+   "completion": 160,
+   "domain": "inherited",
+   "h": 2,
+   "kind": "O",
+   "minimum_passing_R_through_2": 1
+  },
+  {
+   "completion": 160,
+   "domain": "ambient",
+   "h": 0,
+   "kind": "K",
+   "minimum_passing_R_through_2": null
+  },
+  {
+   "completion": 160,
+   "domain": "ambient",
+   "h": 1,
+   "kind": "K",
+   "minimum_passing_R_through_2": null
+  },
+  {
+   "completion": 160,
+   "domain": "ambient",
+   "h": 2,
+   "kind": "K",
+   "minimum_passing_R_through_2": null
+  },
+  {
+   "completion": 160,
+   "domain": "ambient",
+   "h": 0,
+   "kind": "O",
+   "minimum_passing_R_through_2": null
+  },
+  {
+   "completion": 160,
+   "domain": "ambient",
+   "h": 1,
+   "kind": "O",
+   "minimum_passing_R_through_2": null
+  },
+  {
+   "completion": 160,
+   "domain": "ambient",
+   "h": 2,
+   "kind": "O",
+   "minimum_passing_R_through_2": null
+  }
+ ],
+ "packing": "source/pair words MSB-first; pair symbol=2U+V; feature site-major x then row j then U,V; uint32 key; target pair 2U+V",
+ "protocol": "second-lift-completion-comparison-20260910",
+ "protocol_deviations": [
+  {
+   "description": "Before the implementation commit was pinned, the theorem-backed K\u2194O/cross-completion recoding audits and the Section 8 finite n=8/n=4 diagnostic helper were executed while validating the harness. No 72-case primary cap matrix or table artifact was run or inspected, no protocol choice or scientific logic was changed in response, and all of these controls/diagnostics are rerun canonically after the pinned implementation. This procedural deviation is retained rather than hidden.",
+   "stage": "pre-pin harness development"
+  }
+ ],
+ "recoding_audits": {
+  "K_O": {
+   "128": {
+    "0": {
+     "binary_source_radius": 3,
+     "forward_ok": 128,
+     "inverse_ok": 128,
+     "source_words": 128
+    },
+    "1": {
+     "binary_source_radius": 5,
+     "forward_ok": 2048,
+     "inverse_ok": 2048,
+     "source_words": 2048
+    },
+    "2": {
+     "binary_source_radius": 7,
+     "forward_ok": 32768,
+     "inverse_ok": 32768,
+     "source_words": 32768
+    }
+   },
+   "160": {
+    "0": {
+     "binary_source_radius": 3,
+     "forward_ok": 128,
+     "inverse_ok": 128,
+     "source_words": 128
+    },
+    "1": {
+     "binary_source_radius": 5,
+     "forward_ok": 2048,
+     "inverse_ok": 2048,
+     "source_words": 2048
+    },
+    "2": {
+     "binary_source_radius": 7,
+     "forward_ok": 32768,
+     "inverse_ok": 32768,
+     "source_words": 32768
+    }
+   }
+  },
+  "cross_completion": {
+   "0": {
+    "128_to_160_ok": 128,
+    "160_to_128_ok": 128,
+    "binary_source_radius": 3,
+    "source_words": 128
+   },
+   "1": {
+    "128_to_160_ok": 8192,
+    "160_to_128_ok": 8192,
+    "binary_source_radius": 6,
+    "source_words": 8192
+   },
+   "2": {
+    "128_to_160_ok": 524288,
+    "160_to_128_ok": 524288,
+    "binary_source_radius": 9,
+    "source_words": 524288
+   }
+  }
+ },
+ "recoding_cost_bounds": {
+  "T_or_inverse_radius_at_depth_h": "<= h for radius-one H",
+  "cross_completion_H_applications_each_direction": "h(h+1) whole-field applications of a two-component H/H'",
+  "cross_completion_radius_each_direction": "<= 2h",
+  "depth1_sharp_formula": "(u,v) -> (u, v XOR H(u) XOR H'(u)), radius <= 1",
+  "status": "constructive upper bounds, not minimum radii or gate lower bounds",
+  "transferred_complete_law_radius": "if one coordinate law has radius r, conservative conjugated bound <= r+4h"
+ },
+ "resource_accounting": {
+  "alphabet": "GF(2)^2 input; K_h/O_h represented alphabet GF(2)^(2(h+1))",
+  "case_timeout_seconds": 14400,
+  "chunk_words": 65536,
+  "declared_active_case_memory_limit_bytes": 2147483648,
+  "note": "alphabet growth and correction depth are resources; no new spatial axis",
+  "spatial_lattice": "Z unchanged"
+ },
+ "schema": 1,
+ "source_commits": {
+  "implementation_commit": "57e9613ea4cb6d06ac4a707085f5ca0e40b2462a",
+  "protocol_last_change_commit": "2759b35b0d1e3818a1a92b1a79560e8200400b60"
+ },
+ "source_hashes": {
+  "protocol": "a8be739a4b0f80f8b9b6f132c3441bb550f9e67995e0dcf0ea3d9258f4b83157",
+  "script": "ba7cb1e0fd02442498add84f9be1656b79d4efec8190664211cad4047889c05c"
+ },
+ "summary": {
+  "all_independent_digests_match": true,
+  "case_count": 72,
+  "conflicting_cases": 48,
+  "passing_cases": 24
+ },
+ "table_manifest": [
+  {
+   "R": 0,
+   "completion": 128,
+   "default_unrealized_target": 0,
+   "domain": "inherited",
+   "h": 0,
+   "kind": "K",
+   "table_artifact": {
+    "encoding": "base64 of canonical 5-byte records",
+    "path": "results/second_lift_completion_tables_20260911/H128_inherited_K_h0_R0.records.b64",
+    "stored_bytes": 21
+   },
+   "table_record_count": 3,
+   "table_sha256": "b7ea77bfa13d809437a520cb2aa7cfa1a90bdad1cef8e08fe308badb0a7f503b"
+  },
+  {
+   "R": 1,
+   "completion": 128,
+   "default_unrealized_target": 0,
+   "domain": "inherited",
+   "h": 0,
+   "kind": "K",
+   "table_artifact": {
+    "encoding": "base64 of canonical 5-byte records",
+    "path": "results/second_lift_completion_tables_20260911/H128_inherited_K_h0_R1.records.b64",
+    "stored_bytes": 117
+   },
+   "table_record_count": 17,
+   "table_sha256": "2eeddcfbd2925a1faf31135c0050b5b62c1acc270dc6993c0a6393bb57cfb71a"
+  },
+  {
+   "R": 2,
+   "completion": 128,
+   "default_unrealized_target": 0,
+   "domain": "inherited",
+   "h": 0,
+   "kind": "K",
+   "table_artifact": {
+    "encoding": "base64 of canonical 5-byte records",
+    "path": "results/second_lift_completion_tables_20260911/H128_inherited_K_h0_R2.records.b64",
+    "stored_bytes": 441
+   },
+   "table_record_count": 66,
+   "table_sha256": "8606b1a21e3f5fd6e26303eb2c7394ea27b01088e3f24e6918fdf9d15020dbcc"
+  },
+  {
+   "R": 0,
+   "completion": 128,
+   "default_unrealized_target": 0,
+   "domain": "inherited",
+   "h": 1,
+   "kind": "K",
+   "table_artifact": {
+    "encoding": "base64 of canonical 5-byte records",
+    "path": "results/second_lift_completion_tables_20260911/H128_inherited_K_h1_R0.records.b64",
+    "stored_bytes": 37
+   },
+   "table_record_count": 5,
+   "table_sha256": "b14d0a682f7eadf721d67b564ee83301dbb95e1eb61cb7e36fe9292bd8dadcb9"
+  },
+  {
+   "R": 1,
+   "completion": 128,
+   "default_unrealized_target": 0,
+   "domain": "inherited",
+   "h": 1,
+   "kind": "K",
+   "table_artifact": {
+    "encoding": "base64 of canonical 5-byte records",
+    "path": "results/second_lift_completion_tables_20260911/H128_inherited_K_h1_R1.records.b64",
+    "stored_bytes": 161
+   },
+   "table_record_count": 24,
+   "table_sha256": "e01dedd55e0ae7b39ae63ba1e36a3c5349173ca6fdf93d46823a1b5076482a27"
+  },
+  {
+   "R": 2,
+   "completion": 128,
+   "default_unrealized_target": 0,
+   "domain": "inherited",
+   "h": 1,
+   "kind": "K",
+   "table_artifact": {
+    "encoding": "base64 of canonical 5-byte records",
+    "path": "results/second_lift_completion_tables_20260911/H128_inherited_K_h1_R2.records.b64",
+    "stored_bytes": 589
+   },
+   "table_record_count": 88,
+   "table_sha256": "f4a3ec3a774a4e9b4c7c4e41621dbd4369dc90bdcc8f4cf552e5704eb7f8ec28"
+  },
+  {
+   "R": 0,
+   "completion": 128,
+   "default_unrealized_target": 0,
+   "domain": "inherited",
+   "h": 2,
+   "kind": "K",
+   "table_artifact": {
+    "encoding": "base64 of canonical 5-byte records",
+    "path": "results/second_lift_completion_tables_20260911/H128_inherited_K_h2_R0.records.b64",
+    "stored_bytes": 49
+   },
+   "table_record_count": 7,
+   "table_sha256": "f3af08730b9478ae52bb1271bbba2d371a9e80a36d3fff2d57e164a095797a11"
+  },
+  {
+   "R": 1,
+   "completion": 128,
+   "default_unrealized_target": 0,
+   "domain": "inherited",
+   "h": 2,
+   "kind": "K",
+   "table_artifact": {
+    "encoding": "base64 of canonical 5-byte records",
+    "path": "results/second_lift_completion_tables_20260911/H128_inherited_K_h2_R1.records.b64",
+    "stored_bytes": 197
+   },
+   "table_record_count": 29,
+   "table_sha256": "8cec98bd8e5c2d652e1a9a127aa820fdf479a660bf9ad38160dc6e36197c8076"
+  },
+  {
+   "R": 2,
+   "completion": 128,
+   "default_unrealized_target": 0,
+   "domain": "inherited",
+   "h": 2,
+   "kind": "K",
+   "table_artifact": {
+    "encoding": "base64 of canonical 5-byte records",
+    "path": "results/second_lift_completion_tables_20260911/H128_inherited_K_h2_R2.records.b64",
+    "stored_bytes": 689
+   },
+   "table_record_count": 103,
+   "table_sha256": "0b6e53f277183ae23f36e4edf22778281b800bbd73fdb03d01d3bf5c0b2f384a"
+  },
+  {
+   "R": 0,
+   "completion": 128,
+   "default_unrealized_target": 0,
+   "domain": "inherited",
+   "h": 0,
+   "kind": "O",
+   "table_artifact": {
+    "encoding": "base64 of canonical 5-byte records",
+    "path": "results/second_lift_completion_tables_20260911/H128_inherited_O_h0_R0.records.b64",
+    "stored_bytes": 21
+   },
+   "table_record_count": 3,
+   "table_sha256": "2ae999fd38603876de210f05e795569535baf05208de50986b5bbe86520d3539"
+  },
+  {
+   "R": 1,
+   "completion": 128,
+   "default_unrealized_target": 0,
+   "domain": "inherited",
+   "h": 0,
+   "kind": "O",
+   "table_artifact": {
+    "encoding": "base64 of canonical 5-byte records",
+    "path": "results/second_lift_completion_tables_20260911/H128_inherited_O_h0_R1.records.b64",
+    "stored_bytes": 117
+   },
+   "table_record_count": 17,
+   "table_sha256": "9b0fdc6f6b887b334c88b51af76e5393bf2e05cb5105f92294f1569819662aa1"
+  },
+  {
+   "R": 2,
+   "completion": 128,
+   "default_unrealized_target": 0,
+   "domain": "inherited",
+   "h": 0,
+   "kind": "O",
+   "table_artifact": {
+    "encoding": "base64 of canonical 5-byte records",
+    "path": "results/second_lift_completion_tables_20260911/H128_inherited_O_h0_R2.records.b64",
+    "stored_bytes": 441
+   },
+   "table_record_count": 66,
+   "table_sha256": "b57ec4f052b245be1c8b0ce69dbfbebe349c1f79aa48a54e6bc5af78c2a759a0"
+  },
+  {
+   "R": 0,
+   "completion": 128,
+   "default_unrealized_target": 0,
+   "domain": "inherited",
+   "h": 1,
+   "kind": "O",
+   "table_artifact": {
+    "encoding": "base64 of canonical 5-byte records",
+    "path": "results/second_lift_completion_tables_20260911/H128_inherited_O_h1_R0.records.b64",
+    "stored_bytes": 29
+   },
+   "table_record_count": 4,
+   "table_sha256": "92fa32a490e9c6f4b2527c9080df7b3e8f4d09e99677590d29ed362875aca887"
+  },
+  {
+   "R": 1,
+   "completion": 128,
+   "default_unrealized_target": 0,
+   "domain": "inherited",
+   "h": 1,
+   "kind": "O",
+   "table_artifact": {
+    "encoding": "base64 of canonical 5-byte records",
+    "path": "results/second_lift_completion_tables_20260911/H128_inherited_O_h1_R1.records.b64",
+    "stored_bytes": 137
+   },
+   "table_record_count": 20,
+   "table_sha256": "9ef96c6e83338db6a94042c65b193ca6024b6efef7118d52729c665a2600ac1e"
+  },
+  {
+   "R": 2,
+   "completion": 128,
+   "default_unrealized_target": 0,
+   "domain": "inherited",
+   "h": 1,
+   "kind": "O",
+   "table_artifact": {
+    "encoding": "base64 of canonical 5-byte records",
+    "path": "results/second_lift_completion_tables_20260911/H128_inherited_O_h1_R2.records.b64",
+    "stored_bytes": 477
+   },
+   "table_record_count": 71,
+   "table_sha256": "d03cd5e879d798c6c3ba3fba0518a7e30431a6a334a354b2a4cf99cc861b0188"
+  },
+  {
+   "R": 0,
+   "completion": 128,
+   "default_unrealized_target": 0,
+   "domain": "inherited",
+   "h": 2,
+   "kind": "O",
+   "table_artifact": {
+    "encoding": "base64 of canonical 5-byte records",
+    "path": "results/second_lift_completion_tables_20260911/H128_inherited_O_h2_R0.records.b64",
+    "stored_bytes": 37
+   },
+   "table_record_count": 5,
+   "table_sha256": "8aa3f4ed34a36f7f7f625f4e8af39ba09f77210576f545405d76017f88b0e48d"
+  },
+  {
+   "R": 1,
+   "completion": 128,
+   "default_unrealized_target": 0,
+   "domain": "inherited",
+   "h": 2,
+   "kind": "O",
+   "table_artifact": {
+    "encoding": "base64 of canonical 5-byte records",
+    "path": "results/second_lift_completion_tables_20260911/H128_inherited_O_h2_R1.records.b64",
+    "stored_bytes": 157
+   },
+   "table_record_count": 23,
+   "table_sha256": "84c45dbfbba24adf0792e738b5c115c069993d6664d68f60cebc9dca2485dc02"
+  },
+  {
+   "R": 2,
+   "completion": 128,
+   "default_unrealized_target": 0,
+   "domain": "inherited",
+   "h": 2,
+   "kind": "O",
+   "table_artifact": {
+    "encoding": "base64 of canonical 5-byte records",
+    "path": "results/second_lift_completion_tables_20260911/H128_inherited_O_h2_R2.records.b64",
+    "stored_bytes": 509
+   },
+   "table_record_count": 76,
+   "table_sha256": "61f7a902eabb2dc2ea45f6cca638a77d9d019fad0cac73e5314f121a991979bc"
+  },
+  {
+   "R": 0,
+   "completion": 128,
+   "default_unrealized_target": 0,
+   "domain": "ambient",
+   "h": 0,
+   "kind": "K",
+   "table_artifact": {
+    "encoding": "base64 of canonical 5-byte records",
+    "path": "results/second_lift_completion_tables_20260911/H128_ambient_K_h0_R0.records.b64",
+    "stored_bytes": 29
+   },
+   "table_record_count": 4,
+   "table_sha256": "3252341b08534e8aeeed6e5a3eb47db502a30a7bdf68855755cff6ad56c3f382"
+  },
+  {
+   "R": 1,
+   "completion": 128,
+   "default_unrealized_target": 0,
+   "domain": "ambient",
+   "h": 0,
+   "kind": "K",
+   "table_artifact": {
+    "encoding": "base64 of canonical 5-byte records",
+    "path": "results/second_lift_completion_tables_20260911/H128_ambient_K_h0_R1.records.b64",
+    "stored_bytes": 361
+   },
+   "table_record_count": 54,
+   "table_sha256": "8e0ac0d89d1b65e58a5a18d474431a3ff8a346bf6815dad78e658f4f893be935"
+  },
+  {
+   "R": 2,
+   "completion": 128,
+   "default_unrealized_target": 0,
+   "domain": "ambient",
+   "h": 0,
+   "kind": "K",
+   "table_artifact": {
+    "encoding": "base64 of canonical 5-byte records",
+    "path": "results/second_lift_completion_tables_20260911/H128_ambient_K_h0_R2.records.b64",
+    "stored_bytes": 4061
+   },
+   "table_record_count": 609,
+   "table_sha256": "9e234a6dfa8a6156e46f860dcc2d7c90026fe78c03aea2be2e441bb4a3514ef8"
+  },
+  {
+   "R": 0,
+   "completion": 128,
+   "default_unrealized_target": 0,
+   "domain": "ambient",
+   "h": 1,
+   "kind": "K",
+   "table_artifact": {
+    "encoding": "base64 of canonical 5-byte records",
+    "path": "results/second_lift_completion_tables_20260911/H128_ambient_K_h1_R0.records.b64",
+    "stored_bytes": 69
+   },
+   "table_record_count": 10,
+   "table_sha256": "019d8c6f0d4c88e9dbafce359f7f1c8ac067f01b74addb54b41089ac5d7186fe"
+  },
+  {
+   "R": 1,
+   "completion": 128,
+   "default_unrealized_target": 0,
+   "domain": "ambient",
+   "h": 1,
+   "kind": "K",
+   "table_artifact": {
+    "encoding": "base64 of canonical 5-byte records",
+    "path": "results/second_lift_completion_tables_20260911/H128_ambient_K_h1_R1.records.b64",
+    "stored_bytes": 1809
+   },
+   "table_record_count": 271,
+   "table_sha256": "d415ec0a5ee3ec73416d6dfcc679fa3b54251ba93bcbec4573279e3203aa6747"
+  },
+  {
+   "R": 2,
+   "completion": 128,
+   "default_unrealized_target": 0,
+   "domain": "ambient",
+   "h": 1,
+   "kind": "K",
+   "table_artifact": {
+    "encoding": "base64 of canonical 5-byte records",
+    "path": "results/second_lift_completion_tables_20260911/H128_ambient_K_h1_R2.records.b64",
+    "stored_bytes": 24369
+   },
+   "table_record_count": 3655,
+   "table_sha256": "f2d1257d8b966573c48229a677d13b77d56483ff12fb7d0a395be8d390317794"
+  },
+  {
+   "R": 0,
+   "completion": 128,
+   "default_unrealized_target": 0,
+   "domain": "ambient",
+   "h": 2,
+   "kind": "K",
+   "table_artifact": {
+    "encoding": "base64 of canonical 5-byte records",
+    "path": "results/second_lift_completion_tables_20260911/H128_ambient_K_h2_R0.records.b64",
+    "stored_bytes": 157
+   },
+   "table_record_count": 23,
+   "table_sha256": "486f8a7a1f2787693bbaba096ac30305efd1768736e49aeb7be374219ce23578"
+  },
+  {
+   "R": 1,
+   "completion": 128,
+   "default_unrealized_target": 0,
+   "domain": "ambient",
+   "h": 2,
+   "kind": "K",
+   "table_artifact": {
+    "encoding": "base64 of canonical 5-byte records",
+    "path": "results/second_lift_completion_tables_20260911/H128_ambient_K_h2_R1.records.b64",
+    "stored_bytes": 4361
+   },
+   "table_record_count": 654,
+   "table_sha256": "08fe4e836f2fc9778c64457da5305ab25dc1bc1687d5d4cc1ec7849e137e61e5"
+  },
+  {
+   "R": 2,
+   "completion": 128,
+   "default_unrealized_target": 0,
+   "domain": "ambient",
+   "h": 2,
+   "kind": "K",
+   "table_artifact": {
+    "encoding": "base64 of canonical 5-byte records",
+    "path": "results/second_lift_completion_tables_20260911/H128_ambient_K_h2_R2.records.b64",
+    "stored_bytes": 60381
+   },
+   "table_record_count": 9057,
+   "table_sha256": "babfa810590fa06d16b6cd55e0baf38630e7e8eab2b025e6934ac642b0dab730"
+  },
+  {
+   "R": 0,
+   "completion": 128,
+   "default_unrealized_target": 0,
+   "domain": "ambient",
+   "h": 0,
+   "kind": "O",
+   "table_artifact": {
+    "encoding": "base64 of canonical 5-byte records",
+    "path": "results/second_lift_completion_tables_20260911/H128_ambient_O_h0_R0.records.b64",
+    "stored_bytes": 29
+   },
+   "table_record_count": 4,
+   "table_sha256": "e7dce543ae154edefdce1e9b156c3660f8dbd8e98b705c726675a17f7494b53f"
+  },
+  {
+   "R": 1,
+   "completion": 128,
+   "default_unrealized_target": 0,
+   "domain": "ambient",
+   "h": 0,
+   "kind": "O",
+   "table_artifact": {
+    "encoding": "base64 of canonical 5-byte records",
+    "path": "results/second_lift_completion_tables_20260911/H128_ambient_O_h0_R1.records.b64",
+    "stored_bytes": 361
+   },
+   "table_record_count": 54,
+   "table_sha256": "666dbe6721a10bd19934091e4b171b0fd2620a1264940bb80680e0ccbf329165"
+  },
+  {
+   "R": 2,
+   "completion": 128,
+   "default_unrealized_target": 0,
+   "domain": "ambient",
+   "h": 0,
+   "kind": "O",
+   "table_artifact": {
+    "encoding": "base64 of canonical 5-byte records",
+    "path": "results/second_lift_completion_tables_20260911/H128_ambient_O_h0_R2.records.b64",
+    "stored_bytes": 4061
+   },
+   "table_record_count": 609,
+   "table_sha256": "aa749ed315d0251eb83fe5ff9eebec36ed192cc015c6ddad9c774b093322f86a"
+  },
+  {
+   "R": 0,
+   "completion": 128,
+   "default_unrealized_target": 0,
+   "domain": "ambient",
+   "h": 1,
+   "kind": "O",
+   "table_artifact": {
+    "encoding": "base64 of canonical 5-byte records",
+    "path": "results/second_lift_completion_tables_20260911/H128_ambient_O_h1_R0.records.b64",
+    "stored_bytes": 61
+   },
+   "table_record_count": 9,
+   "table_sha256": "72d35cd885bad19d1fbb84ac1a45c8fe1de5daf88aec55b22bb503ca33a73aa5"
+  },
+  {
+   "R": 1,
+   "completion": 128,
+   "default_unrealized_target": 0,
+   "domain": "ambient",
+   "h": 1,
+   "kind": "O",
+   "table_artifact": {
+    "encoding": "base64 of canonical 5-byte records",
+    "path": "results/second_lift_completion_tables_20260911/H128_ambient_O_h1_R1.records.b64",
+    "stored_bytes": 1469
+   },
+   "table_record_count": 220,
+   "table_sha256": "5f8431f8dc6cb5a8a709c3139bccec7de6706b3b1a9937b28c7346d18e7ba90a"
+  },
+  {
+   "R": 2,
+   "completion": 128,
+   "default_unrealized_target": 0,
+   "domain": "ambient",
+   "h": 1,
+   "kind": "O",
+   "table_artifact": {
+    "encoding": "base64 of canonical 5-byte records",
+    "path": "results/second_lift_completion_tables_20260911/H128_ambient_O_h1_R2.records.b64",
+    "stored_bytes": 18917
+   },
+   "table_record_count": 2837,
+   "table_sha256": "27479c2c5c0daee71d1ed2cb80bb8b3cf129129d6959f7ee5b432bab2d2f5797"
+  },
+  {
+   "R": 0,
+   "completion": 128,
+   "default_unrealized_target": 0,
+   "domain": "ambient",
+   "h": 2,
+   "kind": "O",
+   "table_artifact": {
+    "encoding": "base64 of canonical 5-byte records",
+    "path": "results/second_lift_completion_tables_20260911/H128_ambient_O_h2_R0.records.b64",
+    "stored_bytes": 101
+   },
+   "table_record_count": 15,
+   "table_sha256": "2dd39f49f51b17cb5dcdf99b72cf6d4007997ff62055573fd6d390d8d8c0338f"
+  },
+  {
+   "R": 1,
+   "completion": 128,
+   "default_unrealized_target": 0,
+   "domain": "ambient",
+   "h": 2,
+   "kind": "O",
+   "table_artifact": {
+    "encoding": "base64 of canonical 5-byte records",
+    "path": "results/second_lift_completion_tables_20260911/H128_ambient_O_h2_R1.records.b64",
+    "stored_bytes": 2697
+   },
+   "table_record_count": 404,
+   "table_sha256": "5d6d25d920ab42af6a5e04443cefcec8f7341e1ea7969d314b604f6f07b575dc"
+  },
+  {
+   "R": 2,
+   "completion": 128,
+   "default_unrealized_target": 0,
+   "domain": "ambient",
+   "h": 2,
+   "kind": "O",
+   "table_artifact": {
+    "encoding": "base64 of canonical 5-byte records",
+    "path": "results/second_lift_completion_tables_20260911/H128_ambient_O_h2_R2.records.b64",
+    "stored_bytes": 34297
+   },
+   "table_record_count": 5144,
+   "table_sha256": "ef84da9afd6fb6dcd8516d4863c4b98e27063b719f90f333a79036e198afa1c7"
+  },
+  {
+   "R": 0,
+   "completion": 160,
+   "default_unrealized_target": 0,
+   "domain": "inherited",
+   "h": 0,
+   "kind": "K",
+   "table_artifact": {
+    "encoding": "base64 of canonical 5-byte records",
+    "path": "results/second_lift_completion_tables_20260911/H160_inherited_K_h0_R0.records.b64",
+    "stored_bytes": 21
+   },
+   "table_record_count": 3,
+   "table_sha256": "b7ea77bfa13d809437a520cb2aa7cfa1a90bdad1cef8e08fe308badb0a7f503b"
+  },
+  {
+   "R": 1,
+   "completion": 160,
+   "default_unrealized_target": 0,
+   "domain": "inherited",
+   "h": 0,
+   "kind": "K",
+   "table_artifact": {
+    "encoding": "base64 of canonical 5-byte records",
+    "path": "results/second_lift_completion_tables_20260911/H160_inherited_K_h0_R1.records.b64",
+    "stored_bytes": 117
+   },
+   "table_record_count": 17,
+   "table_sha256": "4ac60f87032c893f631846a7bc8f62e58243b917de7cb395f540eeb304705915"
+  },
+  {
+   "R": 2,
+   "completion": 160,
+   "default_unrealized_target": 0,
+   "domain": "inherited",
+   "h": 0,
+   "kind": "K",
+   "table_artifact": {
+    "encoding": "base64 of canonical 5-byte records",
+    "path": "results/second_lift_completion_tables_20260911/H160_inherited_K_h0_R2.records.b64",
+    "stored_bytes": 441
+   },
+   "table_record_count": 66,
+   "table_sha256": "5d964405b6e46b8a5b8792a38e89d4ff6f428b56f0883bbaf2a9f32a24f5a28d"
+  },
+  {
+   "R": 0,
+   "completion": 160,
+   "default_unrealized_target": 0,
+   "domain": "inherited",
+   "h": 1,
+   "kind": "K",
+   "table_artifact": {
+    "encoding": "base64 of canonical 5-byte records",
+    "path": "results/second_lift_completion_tables_20260911/H160_inherited_K_h1_R0.records.b64",
+    "stored_bytes": 37
+   },
+   "table_record_count": 5,
+   "table_sha256": "c9cf9bbaa560dd87cf7cae9b29626214e3c2599d3822ae40a16d6325f8dabfd7"
+  },
+  {
+   "R": 1,
+   "completion": 160,
+   "default_unrealized_target": 0,
+   "domain": "inherited",
+   "h": 1,
+   "kind": "K",
+   "table_artifact": {
+    "encoding": "base64 of canonical 5-byte records",
+    "path": "results/second_lift_completion_tables_20260911/H160_inherited_K_h1_R1.records.b64",
+    "stored_bytes": 177
+   },
+   "table_record_count": 26,
+   "table_sha256": "2619bb4969953de883d6deecef976930c5f2227cd1ae3898fa99af9488b1135c"
+  },
+  {
+   "R": 2,
+   "completion": 160,
+   "default_unrealized_target": 0,
+   "domain": "inherited",
+   "h": 1,
+   "kind": "K",
+   "table_artifact": {
+    "encoding": "base64 of canonical 5-byte records",
+    "path": "results/second_lift_completion_tables_20260911/H160_inherited_K_h1_R2.records.b64",
+    "stored_bytes": 657
+   },
+   "table_record_count": 98,
+   "table_sha256": "1a685e061e923a7d042c760e3768a99461a3e5cbca445862b138c90652f8f42d"
+  },
+  {
+   "R": 0,
+   "completion": 160,
+   "default_unrealized_target": 0,
+   "domain": "inherited",
+   "h": 2,
+   "kind": "K",
+   "table_artifact": {
+    "encoding": "base64 of canonical 5-byte records",
+    "path": "results/second_lift_completion_tables_20260911/H160_inherited_K_h2_R0.records.b64",
+    "stored_bytes": 49
+   },
+   "table_record_count": 7,
+   "table_sha256": "520f614a9db56c32fc7f180d0811baf1275529ba2b6e1302f74f7240a2ee32c6"
+  },
+  {
+   "R": 1,
+   "completion": 160,
+   "default_unrealized_target": 0,
+   "domain": "inherited",
+   "h": 2,
+   "kind": "K",
+   "table_artifact": {
+    "encoding": "base64 of canonical 5-byte records",
+    "path": "results/second_lift_completion_tables_20260911/H160_inherited_K_h2_R1.records.b64",
+    "stored_bytes": 197
+   },
+   "table_record_count": 29,
+   "table_sha256": "184803ff566ca20362de578995156487e937809531839313cd2877cce37d1fb7"
+  },
+  {
+   "R": 2,
+   "completion": 160,
+   "default_unrealized_target": 0,
+   "domain": "inherited",
+   "h": 2,
+   "kind": "K",
+   "table_artifact": {
+    "encoding": "base64 of canonical 5-byte records",
+    "path": "results/second_lift_completion_tables_20260911/H160_inherited_K_h2_R2.records.b64",
+    "stored_bytes": 689
+   },
+   "table_record_count": 103,
+   "table_sha256": "d72624f3db13aa3341bd66234f583399027a3c91f92e5d6f6d9d8fc667e86199"
+  },
+  {
+   "R": 0,
+   "completion": 160,
+   "default_unrealized_target": 0,
+   "domain": "inherited",
+   "h": 0,
+   "kind": "O",
+   "table_artifact": {
+    "encoding": "base64 of canonical 5-byte records",
+    "path": "results/second_lift_completion_tables_20260911/H160_inherited_O_h0_R0.records.b64",
+    "stored_bytes": 21
+   },
+   "table_record_count": 3,
+   "table_sha256": "2ae999fd38603876de210f05e795569535baf05208de50986b5bbe86520d3539"
+  },
+  {
+   "R": 1,
+   "completion": 160,
+   "default_unrealized_target": 0,
+   "domain": "inherited",
+   "h": 0,
+   "kind": "O",
+   "table_artifact": {
+    "encoding": "base64 of canonical 5-byte records",
+    "path": "results/second_lift_completion_tables_20260911/H160_inherited_O_h0_R1.records.b64",
+    "stored_bytes": 117
+   },
+   "table_record_count": 17,
+   "table_sha256": "9b0fdc6f6b887b334c88b51af76e5393bf2e05cb5105f92294f1569819662aa1"
+  },
+  {
+   "R": 2,
+   "completion": 160,
+   "default_unrealized_target": 0,
+   "domain": "inherited",
+   "h": 0,
+   "kind": "O",
+   "table_artifact": {
+    "encoding": "base64 of canonical 5-byte records",
+    "path": "results/second_lift_completion_tables_20260911/H160_inherited_O_h0_R2.records.b64",
+    "stored_bytes": 441
+   },
+   "table_record_count": 66,
+   "table_sha256": "b57ec4f052b245be1c8b0ce69dbfbebe349c1f79aa48a54e6bc5af78c2a759a0"
+  },
+  {
+   "R": 0,
+   "completion": 160,
+   "default_unrealized_target": 0,
+   "domain": "inherited",
+   "h": 1,
+   "kind": "O",
+   "table_artifact": {
+    "encoding": "base64 of canonical 5-byte records",
+    "path": "results/second_lift_completion_tables_20260911/H160_inherited_O_h1_R0.records.b64",
+    "stored_bytes": 29
+   },
+   "table_record_count": 4,
+   "table_sha256": "92fa32a490e9c6f4b2527c9080df7b3e8f4d09e99677590d29ed362875aca887"
+  },
+  {
+   "R": 1,
+   "completion": 160,
+   "default_unrealized_target": 0,
+   "domain": "inherited",
+   "h": 1,
+   "kind": "O",
+   "table_artifact": {
+    "encoding": "base64 of canonical 5-byte records",
+    "path": "results/second_lift_completion_tables_20260911/H160_inherited_O_h1_R1.records.b64",
+    "stored_bytes": 137
+   },
+   "table_record_count": 20,
+   "table_sha256": "9ef96c6e83338db6a94042c65b193ca6024b6efef7118d52729c665a2600ac1e"
+  },
+  {
+   "R": 2,
+   "completion": 160,
+   "default_unrealized_target": 0,
+   "domain": "inherited",
+   "h": 1,
+   "kind": "O",
+   "table_artifact": {
+    "encoding": "base64 of canonical 5-byte records",
+    "path": "results/second_lift_completion_tables_20260911/H160_inherited_O_h1_R2.records.b64",
+    "stored_bytes": 477
+   },
+   "table_record_count": 71,
+   "table_sha256": "d03cd5e879d798c6c3ba3fba0518a7e30431a6a334a354b2a4cf99cc861b0188"
+  },
+  {
+   "R": 0,
+   "completion": 160,
+   "default_unrealized_target": 0,
+   "domain": "inherited",
+   "h": 2,
+   "kind": "O",
+   "table_artifact": {
+    "encoding": "base64 of canonical 5-byte records",
+    "path": "results/second_lift_completion_tables_20260911/H160_inherited_O_h2_R0.records.b64",
+    "stored_bytes": 37
+   },
+   "table_record_count": 5,
+   "table_sha256": "8aa3f4ed34a36f7f7f625f4e8af39ba09f77210576f545405d76017f88b0e48d"
+  },
+  {
+   "R": 1,
+   "completion": 160,
+   "default_unrealized_target": 0,
+   "domain": "inherited",
+   "h": 2,
+   "kind": "O",
+   "table_artifact": {
+    "encoding": "base64 of canonical 5-byte records",
+    "path": "results/second_lift_completion_tables_20260911/H160_inherited_O_h2_R1.records.b64",
+    "stored_bytes": 157
+   },
+   "table_record_count": 23,
+   "table_sha256": "84c45dbfbba24adf0792e738b5c115c069993d6664d68f60cebc9dca2485dc02"
+  },
+  {
+   "R": 2,
+   "completion": 160,
+   "default_unrealized_target": 0,
+   "domain": "inherited",
+   "h": 2,
+   "kind": "O",
+   "table_artifact": {
+    "encoding": "base64 of canonical 5-byte records",
+    "path": "results/second_lift_completion_tables_20260911/H160_inherited_O_h2_R2.records.b64",
+    "stored_bytes": 509
+   },
+   "table_record_count": 76,
+   "table_sha256": "61f7a902eabb2dc2ea45f6cca638a77d9d019fad0cac73e5314f121a991979bc"
+  },
+  {
+   "R": 0,
+   "completion": 160,
+   "default_unrealized_target": 0,
+   "domain": "ambient",
+   "h": 0,
+   "kind": "K",
+   "table_artifact": {
+    "encoding": "base64 of canonical 5-byte records",
+    "path": "results/second_lift_completion_tables_20260911/H160_ambient_K_h0_R0.records.b64",
+    "stored_bytes": 29
+   },
+   "table_record_count": 4,
+   "table_sha256": "8674925b10cf3cbc344ebc4f472db8e1dffd8327e434e303aebec968133fa6ef"
+  },
+  {
+   "R": 1,
+   "completion": 160,
+   "default_unrealized_target": 0,
+   "domain": "ambient",
+   "h": 0,
+   "kind": "K",
+   "table_artifact": {
+    "encoding": "base64 of canonical 5-byte records",
+    "path": "results/second_lift_completion_tables_20260911/H160_ambient_K_h0_R1.records.b64",
+    "stored_bytes": 421
+   },
+   "table_record_count": 63,
+   "table_sha256": "3c8694055972cce6c4f3e8a00847b3557fcb34763087dff3f025ec8aded722ca"
+  },
+  {
+   "R": 2,
+   "completion": 160,
+   "default_unrealized_target": 0,
+   "domain": "ambient",
+   "h": 0,
+   "kind": "K",
+   "table_artifact": {
+    "encoding": "base64 of canonical 5-byte records",
+    "path": "results/second_lift_completion_tables_20260911/H160_ambient_K_h0_R2.records.b64",
+    "stored_bytes": 5001
+   },
+   "table_record_count": 750,
+   "table_sha256": "3f4b7567708de68492e09fbe71c9d69fad967f071a2bf0879edd49a009aa9c19"
+  },
+  {
+   "R": 0,
+   "completion": 160,
+   "default_unrealized_target": 0,
+   "domain": "ambient",
+   "h": 1,
+   "kind": "K",
+   "table_artifact": {
+    "encoding": "base64 of canonical 5-byte records",
+    "path": "results/second_lift_completion_tables_20260911/H160_ambient_K_h1_R0.records.b64",
+    "stored_bytes": 97
+   },
+   "table_record_count": 14,
+   "table_sha256": "264dc9a475e78cee2f8a0bbec50287418b58d9dc0e03c8ceea4556bd6bc60aed"
+  },
+  {
+   "R": 1,
+   "completion": 160,
+   "default_unrealized_target": 0,
+   "domain": "ambient",
+   "h": 1,
+   "kind": "K",
+   "table_artifact": {
+    "encoding": "base64 of canonical 5-byte records",
+    "path": "results/second_lift_completion_tables_20260911/H160_ambient_K_h1_R1.records.b64",
+    "stored_bytes": 3921
+   },
+   "table_record_count": 588,
+   "table_sha256": "dae006348a8bbdf7a3a24031bc2ab09c4d147ae3b81cfb61aa28104c56c1cb56"
+  },
+  {
+   "R": 2,
+   "completion": 160,
+   "default_unrealized_target": 0,
+   "domain": "ambient",
+   "h": 1,
+   "kind": "K",
+   "table_artifact": {
+    "encoding": "base64 of canonical 5-byte records",
+    "path": "results/second_lift_completion_tables_20260911/H160_ambient_K_h1_R2.records.b64",
+    "stored_bytes": 51721
+   },
+   "table_record_count": 7758,
+   "table_sha256": "77a569264666c8ff989d72cd651c44f95869216d6da53d2727b6066e17aec420"
+  },
+  {
+   "R": 0,
+   "completion": 160,
+   "default_unrealized_target": 0,
+   "domain": "ambient",
+   "h": 2,
+   "kind": "K",
+   "table_artifact": {
+    "encoding": "base64 of canonical 5-byte records",
+    "path": "results/second_lift_completion_tables_20260911/H160_ambient_K_h2_R0.records.b64",
+    "stored_bytes": 281
+   },
+   "table_record_count": 42,
+   "table_sha256": "006978458b3c3c63bee0b5f7a8ec7aca6814f6445642b828953cc9d23719e889"
+  },
+  {
+   "R": 1,
+   "completion": 160,
+   "default_unrealized_target": 0,
+   "domain": "ambient",
+   "h": 2,
+   "kind": "K",
+   "table_artifact": {
+    "encoding": "base64 of canonical 5-byte records",
+    "path": "results/second_lift_completion_tables_20260911/H160_ambient_K_h2_R1.records.b64",
+    "stored_bytes": 11457
+   },
+   "table_record_count": 1718,
+   "table_sha256": "d5467221369f05613a2240faaf0f07728588bdf01f3135449bf475d9431a6db0"
+  },
+  {
+   "R": 2,
+   "completion": 160,
+   "default_unrealized_target": 0,
+   "domain": "ambient",
+   "h": 2,
+   "kind": "K",
+   "table_artifact": {
+    "encoding": "base64 of canonical 5-byte records",
+    "path": "results/second_lift_completion_tables_20260911/H160_ambient_K_h2_R2.records.b64",
+    "stored_bytes": 150417
+   },
+   "table_record_count": 22562,
+   "table_sha256": "47f53c80e5d5fd2d15fb24dd852bc6567fa1081b1da72afe7c8f15e78490ab9d"
+  },
+  {
+   "R": 0,
+   "completion": 160,
+   "default_unrealized_target": 0,
+   "domain": "ambient",
+   "h": 0,
+   "kind": "O",
+   "table_artifact": {
+    "encoding": "base64 of canonical 5-byte records",
+    "path": "results/second_lift_completion_tables_20260911/H160_ambient_O_h0_R0.records.b64",
+    "stored_bytes": 29
+   },
+   "table_record_count": 4,
+   "table_sha256": "b7b6862c1fa9214d899d2fc2db353dedf0ebd344b5261f7d08711bd70897ad36"
+  },
+  {
+   "R": 1,
+   "completion": 160,
+   "default_unrealized_target": 0,
+   "domain": "ambient",
+   "h": 0,
+   "kind": "O",
+   "table_artifact": {
+    "encoding": "base64 of canonical 5-byte records",
+    "path": "results/second_lift_completion_tables_20260911/H160_ambient_O_h0_R1.records.b64",
+    "stored_bytes": 421
+   },
+   "table_record_count": 63,
+   "table_sha256": "0233c4024a1d66a104c4d7049761d62c94a8dc2ad5d30e7a11f5674b65b50883"
+  },
+  {
+   "R": 2,
+   "completion": 160,
+   "default_unrealized_target": 0,
+   "domain": "ambient",
+   "h": 0,
+   "kind": "O",
+   "table_artifact": {
+    "encoding": "base64 of canonical 5-byte records",
+    "path": "results/second_lift_completion_tables_20260911/H160_ambient_O_h0_R2.records.b64",
+    "stored_bytes": 5001
+   },
+   "table_record_count": 750,
+   "table_sha256": "0893c56427e70299be21ec0c1e48b02e7d810f59a5cd145bfce9a645b437d07f"
+  },
+  {
+   "R": 0,
+   "completion": 160,
+   "default_unrealized_target": 0,
+   "domain": "ambient",
+   "h": 1,
+   "kind": "O",
+   "table_artifact": {
+    "encoding": "base64 of canonical 5-byte records",
+    "path": "results/second_lift_completion_tables_20260911/H160_ambient_O_h1_R0.records.b64",
+    "stored_bytes": 81
+   },
+   "table_record_count": 12,
+   "table_sha256": "8c7dfe3382f712319e8e323c3606278957607a94eb7669f710c0edddb72afd4c"
+  },
+  {
+   "R": 1,
+   "completion": 160,
+   "default_unrealized_target": 0,
+   "domain": "ambient",
+   "h": 1,
+   "kind": "O",
+   "table_artifact": {
+    "encoding": "base64 of canonical 5-byte records",
+    "path": "results/second_lift_completion_tables_20260911/H160_ambient_O_h1_R1.records.b64",
+    "stored_bytes": 2581
+   },
+   "table_record_count": 387,
+   "table_sha256": "ac0c84319b2bae134988757e69b263190f51dac26478bed26b1f43579ee5ecc7"
+  },
+  {
+   "R": 2,
+   "completion": 160,
+   "default_unrealized_target": 0,
+   "domain": "ambient",
+   "h": 1,
+   "kind": "O",
+   "table_artifact": {
+    "encoding": "base64 of canonical 5-byte records",
+    "path": "results/second_lift_completion_tables_20260911/H160_ambient_O_h1_R2.records.b64",
+    "stored_bytes": 32049
+   },
+   "table_record_count": 4807,
+   "table_sha256": "20815d473d74c9a9973da662076cdbd4fb0640a374e94e4643ea84ea93f38a57"
+  },
+  {
+   "R": 0,
+   "completion": 160,
+   "default_unrealized_target": 0,
+   "domain": "ambient",
+   "h": 2,
+   "kind": "O",
+   "table_artifact": {
+    "encoding": "base64 of canonical 5-byte records",
+    "path": "results/second_lift_completion_tables_20260911/H160_ambient_O_h2_R0.records.b64",
+    "stored_bytes": 189
+   },
+   "table_record_count": 28,
+   "table_sha256": "1f2f9767f68a1b63b4c090249670496afffd06d7168b7ffd20b415edef04a486"
+  },
+  {
+   "R": 1,
+   "completion": 160,
+   "default_unrealized_target": 0,
+   "domain": "ambient",
+   "h": 2,
+   "kind": "O",
+   "table_artifact": {
+    "encoding": "base64 of canonical 5-byte records",
+    "path": "results/second_lift_completion_tables_20260911/H160_ambient_O_h2_R1.records.b64",
+    "stored_bytes": 6109
+   },
+   "table_record_count": 916,
+   "table_sha256": "7bfec0aec18e8bf32ce326c9add3c43ca0abb23ce9fad6f2cd30bbdf00dd79d8"
+  },
+  {
+   "R": 2,
+   "completion": 160,
+   "default_unrealized_target": 0,
+   "domain": "ambient",
+   "h": 2,
+   "kind": "O",
+   "table_artifact": {
+    "encoding": "base64 of canonical 5-byte records",
+    "path": "results/second_lift_completion_tables_20260911/H160_ambient_O_h2_R2.records.b64",
+    "stored_bytes": 78769
+   },
+   "table_record_count": 11815,
+   "table_sha256": "68001ded2b4fed4aadf73c047db6ba7beaa1b978ba7b2d8594c65164eaac29e6"
+  }
+ ]
+}
