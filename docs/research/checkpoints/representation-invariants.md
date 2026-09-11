@@ -7,6 +7,20 @@ substantial unit completes; keep the bounded-claim style.
 
 Program page: `docs/research/2026-09-10-representation-invariants-program.md`
 
+## Checkpoint 2026-09-11 (eleventh unit accepted): wiring dilation merged
+
+- Gate 2 met: Codex signed off at `1b1e071` after one knowledge-edge
+  correction (an analogy is not a supports edge) and merged PR #99 itself
+  under the reviewer-merges rule. Unit accepted.
+- Program state: eleven units complete across four transformation types:
+  global relabelings (1-3), one injective local recoding (4), observations
+  linear (5-7) and non-linear (8-10), and wiring (11).
+- Next: the synthesis, a table of every declared transformation against
+  every audited property with the verdict (preserved, covariant with a
+  named transport, changed) on the Program page, plus promotion of
+  selected findings to the main site pages. Open experimental threads:
+  non-elementary factors under rule 200; ring-dependent closure under 22.
+
 ## Checkpoint 2026-09-11 (eleventh unit run): wiring dilation, gate-2 pending
 
 - Gate 1 met at `aa312e6` with two binding clarifications; verifier

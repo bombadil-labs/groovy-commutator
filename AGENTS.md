@@ -492,7 +492,7 @@ workflow; research source and result changes now also trigger that workflow.
    d | n the automaton is d interleaved n/d-rings and every census, depth
    included, equals the small-ring census; the result-1 classification
    departs from 10/8/238 only on components with fewer than 5 cells.
-   Gate-2 pending on PR #99.
+   Accepted after Codex's gate-2 sign-off at `1b1e071`, merged in PR #99.
 
 ## Checkpoint logs (read before continuing any workstream)
 
