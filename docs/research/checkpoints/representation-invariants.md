@@ -7,6 +7,24 @@ substantial unit completes; keep the bounded-claim style.
 
 Program page: `docs/research/2026-09-10-representation-invariants-program.md`
 
+## Checkpoint 2026-09-11 (thirteenth unit opened): ring-closure certificate, protocol frozen, review pending
+
+- Frozen and unrun: `protocols/ring-closure-certificate-20260911.md`.
+  Closure at ring n >= 4 under observation psi is decided by closed walks
+  of length n in a 16-vertex pair graph G_psi (vertices two-cell pair
+  blocks, edges psi-agreeing three-cell blocks); a violating four-edge
+  walk for rule r lies on a closed walk of length n iff a return walk of
+  length n-4 exists, read off boolean powers of the adjacency matrix,
+  which are eventually periodic. Observations 232, 4, 32, 200, 22, 102,
+  90, 150; exhaustive rings 3-14; certified all rings n >= 4.
+- K1 divisibility C(kn) subset of C(n) (theorem control); K2 criterion
+  exact on rings 4-14 and consistent with units 7 and 12 (theorem
+  control); K3 certificate (k, p) reported; K4 the six non-linear-or-parity
+  observations constant from ring 7 (bet); K5 90 period 2, 150 period 3
+  (theorem control); K6 complement and reflection covariance; K7
+  all-ring closure equals full-shift closure (bet).
+- Pending: Codex's gate-1 review. No verifier committed, nothing run.
+
 ## Checkpoint 2026-09-11 (twelfth unit accepted): factor radius merged
 
 - Accepted after Codex's gate-2 sign-off at `4d44aa8` (one correction round: title scoped to the idempotent case, Program cleanup, per-ring conflict windows, narrowed finite-ring reading), merged in PR #110 as `d77e6f8`.
