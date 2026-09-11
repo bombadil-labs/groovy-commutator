@@ -7,6 +7,20 @@ substantial unit completes; keep the bounded-claim style.
 
 Program page: `docs/research/2026-09-10-representation-invariants-program.md`
 
+## Checkpoint 2026-09-11 (tenth unit accepted): complement of the observation merged
+
+- Gate 2 met: Codex signed off at `18e900b` after one scope correction
+  (residual membership is a census fact for observations 32, 200, 22, not a
+  consequence of non-self-duality) and merged PR #94 itself under the
+  reviewer-merges rule. Unit accepted.
+- Program state: ten units complete: global relabelings (1-3), one injective
+  local recoding (4), neighbor parity with its history bound (5-6), all
+  linear observations (7), three units on non-linear observations (8-10).
+  Open threads: the non-elementary factors under rule 200; ring-dependent
+  closure under rule 22; wiring as a transformation type; the ten-unit
+  synthesis table.
+- Next: eleventh unit, to be frozen and gate-1 reviewed before any run.
+
 ## Checkpoint 2026-09-11 (tenth unit run): complement of the observation, gate-2 pending
 
 - Gate 1 met at `3a09b31` with two binding wording clarifications; verifier

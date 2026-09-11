@@ -479,7 +479,7 @@ workflow; research source and result changes now also trigger that workflow.
    class {123, 232, 251} certifies the ninth unit's 123 ≡ 251 identity for
    all rings. Depth annex: majority's record rules reach h_* = 25, 26, 28,
    31 at rings 13–16 (bet held); rule 4's record pair 19, 19, 28, 25.
-   Gate-2 pending on PR #94.
+   Accepted after Codex's gate-2 sign-off at `18e900b`, merged in PR #94.
 
 ## Checkpoint logs (read before continuing any workstream)
 
