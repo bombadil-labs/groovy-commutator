@@ -75,7 +75,7 @@ One row per declared transformation, with its declared costs, then the propertie
 | --- | --- | --- | --- | --- |
 | Neighbor parity `π` (rule 102 as an observation) | two-to-one, one global bit, forward radius 1, no local inverse | factor closure | closed for exactly the 32 constant-complement-response rules at every ring `n ≤ 12`; not closed for 224 | [parity coarse-graining](2026-09-11-parity-coarse-graining.md) |
 | Neighbor parity `π` | same | law, derivative, commutator of a closed rule | closed with an elementary factor (explicit formula; `r` and `r̃` share a factor; the 8 linear rules are fixed); commutator covariant by linearity | same |
-| Neighbor parity `π` | same | non-closed rules | not closed; `h_* ≤ 2` certified on every ring by a finite 8-word check and lemma: 1 for 216 rules, 2 for 8 (realized on the 5-cell ring); exhaustive at rings 6–14 | [parity history bound](2026-09-11-parity-history-bound.md) |
+| Neighbor parity `π` | same | non-closed rules | not closed; `h_* ≤ 2` certified on every ring by a finite 8-word check and lemma: 1 for 216 rules, 2 for 8 (realized on the 5-cell ring); exhaustive at rings 6–12 and 14 | [parity history bound](2026-09-11-parity-history-bound.md) |
 
 ## First unit: complete
 
