@@ -171,13 +171,17 @@ These are bounded census facts. They are not promoted to an all-time minimal-sta
 
 ### J6 — canonical conflict witnesses
 
-Every failing mask/radius retains a canonical earliest conflict ordered by:
+Every failing mask/radius retains a deterministic canonical conflict. Treat each contributing record as the tuple
 
-1. earliest coarse transition `t`;
-2. smaller ring `n`;
-3. lexicographically smaller first source pair;
-4. logical site;
-5. second source pair.
+`(t, n, source_pair_lex, logical_site)`
+
+where `source_pair_lex` is the lexicographic `(a,b)` bitstring pair. For each conflicting local-neighborhood key, take the lexicographically first two records with distinct next-center symbols after sorting by that tuple. The canonical witness for the mask/radius is then the lexicographically smallest ordered pair
+
+`(record_1, record_2)`
+
+across all conflicting keys.
+
+Thus witnesses may come from different coarse times or ring sizes; the total order remains deterministic across the pooled domain.
 
 For the full observation `P_15`, any primary or stress conflict is independently replayed from its two original source pairs. The result records whether the two conflicting physical current states differ outside rows `0..3` inside the next-step physical causal neighborhood of the observed center.
 
