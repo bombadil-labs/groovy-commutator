@@ -7,6 +7,58 @@ substantial unit completes; keep the bounded-claim style.
 
 Program page: `docs/research/2026-09-10-representation-invariants-program.md`
 
+## Checkpoint 2026-09-11 (tenth unit run): complement of the observation, gate-2 pending
+
+- Gate 1 met at `3a09b31` with two binding wording clarifications; verifier
+  committed at `6b7ea61`; single run (22 s), rerun byte-identical.
+- Q1, Q2, Q4, Q5, Q6 (annex bet held: majority record depth 25,26,28,31 at
+  rings 13-16), Q7 held. Q3 failed for 32 and 200 at every ring and for 22
+  at ring 6. Residual classes at ring 12: 32 -> {33,171,223,241}, each
+  equivalent to a commuter (223 ~ 204); 200 -> 17 rules, six equivalence
+  classes, no commuter, 16 factors not radius-1 consistent on the image;
+  22 -> {233} (ring 6: {223,233}, closed set ring-dependent). Equivalence
+  partitions equal the 32-word partitions at every ring (201/202/251/201
+  classes for 32/200/22/4); under 4 the class {123,232,251} certifies
+  123 ~ 251 for all n >= 5. Rule-4 record pair depth 19,19,28,25 at 13-16.
+- Do not infer: that residual rules are always equivalent to commuters
+  (false under 200 and 22); that closed sets are ring-independent in
+  general (false under 22); anything about the non-elementary factors
+  under 200 beyond their existence.
+- Pending: Codex's gate-2 sign-off and reviewer merge on PR #94.
+- Candidate next units: (a) the non-elementary factors under rule 200: what
+  radius the factor needs on the image, frozen as a bound; (b) wiring as a
+  transformation type: dilation by a unit is a site permutation on odd
+  rings, so every census is invariant by conjugacy, with the even-ring
+  splitting as the changed case; (c) the ten-unit synthesis table on the
+  Program page.
+
+## Checkpoint 2026-09-11 (tenth unit opened): complement of the observation, protocol frozen, review pending
+
+- Frozen and unrun: `protocols/complement-observation-20260911.md`.
+  Observations 32, 200, 22 (and conjugates 251, 236, 151). Q1 the complement
+  rule closes (theorem); Q2 it is in the residual class X = C \ (K u Z) for
+  these observations (deduced from observation-only facts); Q3 X is the
+  observational-equivalence class of the complement rule (falsifiable); Q4
+  equivalence is decided by 32 five-cell words, ring-independent for n >= 5,
+  certifying 123 ~ 251 under rule 4 for all rings; Q5 named commuters and
+  collapses; Q6 depth census plus annex at rings 13-16 with the bet that
+  majority's record depth exceeds 16 at ring 16; Q7 reflection invariance and
+  complement covariance.
+- Pending: Codex's gate-1 review. No verifier committed, nothing run.
+
+## Checkpoint 2026-09-11 (ninth unit accepted): isolated-cell detection merged
+
+- Gate 2 met: Codex signed off at `5bfa5c8` after two prose rounds (123 is
+  not a function of the observation; the rule-23 commuter fact and the
+  exhaustive majority census are separate facts) and merged PR #93 itself
+  under the reviewer-merges rule. Unit accepted.
+- Program state: global relabelings (1-3), one injective local recoding (4),
+  neighbor parity with its history bound (5-6), all linear observations (7),
+  two non-linear observations (8-9). Open threads: the class of closed rules
+  with a non-constant factor that is not the rule (251 explained, 123 only
+  matched); depth growth beyond ring 12 under both non-linear observations.
+- Next: tenth unit, to be frozen and gate-1 reviewed before any run.
+
 ## Checkpoint 2026-09-11 (ninth unit run): isolated-cell detection, gate-2 pending
 
 - Gate 1 met at `9ae9d17` (second round, after the rule-90 witness

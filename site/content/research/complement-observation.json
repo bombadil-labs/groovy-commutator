@@ -1,0 +1,24 @@
+[
+  {
+    "slug": "complement-observation",
+    "label": "Complement of the observation",
+    "title": "The complement of the observation always closes, but the residual class is not its equivalence class",
+    "date": "2026-09-11",
+    "updated": "2026-09-11",
+    "kind": "Exact audit of three non-linear observations with an observational-equivalence census and a depth annex",
+    "evidence": "exact",
+    "topic": "Algebra and closure",
+    "summary": "For observations 32, 200 and 22 the complement rule closes and lies in the residual class of closed rules with a non-constant factor that is not the rule, as frozen. The frozen prediction that every residual rule is observationally equivalent to the complement rule failed for 32 and 200. Observational equivalence is decided by five-cell words and is ring-independent, which certifies the ninth unit's rule-123 identity for every ring. Majority's record depth grows to 31 at ring 16.",
+    "takeaway": "The complement rule always closes, and for the three tested observations it lies in the residual class; the residual class is not its equivalence class, so closure under an observation splits into commuters, collapses, and a residual that must be censused per observation.",
+    "source": "docs/research/2026-09-11-complement-observation.md",
+    "promotion": {
+      "stage": "research"
+    },
+    "related": [
+      "isolated-cell",
+      "block-majority",
+      "linear-observations",
+      "observation-closure"
+    ]
+  }
+]
