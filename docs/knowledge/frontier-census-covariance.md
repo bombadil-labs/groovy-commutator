@@ -1,0 +1,3 @@
+# The possibility-frontier census is covariant under complement and reflection
+
+The static observer family of Research026, all nonconstant Boolean functions of 2-cell and 3-cell blocks with output-complement pairs identified, is closed under input complement and input reversal, and the 12-ring block alignment is preserved by reflection for both block sizes (finite check in the [recoding note](../research/2026-09-11-higher-block-recoding.md)). By conjugacy, each per-rule summary of the [census](../research/2026-09-08-possibility-frontier.md) is identical for a rule, its complement-conjugate, and its mirror. This is a deduction from a finite check; the per-rule tables are not in the repository, so the numerical equality has not been run.

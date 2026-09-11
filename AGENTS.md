@@ -326,7 +326,12 @@ workflow; research source and result changes now also trigger that workflow.
    O-coordinate caps are exactly complement-invariant at every radius; K
    shifts are 0/1/2 with max 2 (132↔222, 160↔250 at h=2); no cap is created
    or destroyed; the depth-0 cap set of either kind equals the 30-rule
-   derivative-closure set (post hoc, exact within budgets).
+   derivative-closure set (post hoc, exact within budgets). The 2-block
+   recoding (`scripts/verify_higher_block_recoding.py`, forward radius 1,
+   inverse 0) leaves cap radius unchanged in 665 of 674 decided cells and
+   reduces it by one in 9, never more; D, G and derivative closure transport
+   componentwise. The Research026 observer family is closed under complement
+   and reversal, so that census is covariant by deduction.
 
 ## Checkpoint logs (read before continuing any workstream)
 

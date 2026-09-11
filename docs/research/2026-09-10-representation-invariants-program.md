@@ -29,24 +29,47 @@ The first counterexample was found during review before any protocol existed. Sw
 
 No single group is assumed, no "intrinsic" invariant is claimed, and invariance under a declared family is not the dimensional beam: a projection may discard, a constant projection discards everything, and classifying invariants leaves organization, repair, and native capability open. Those remain the other Programs' questions.
 
-## What the record already says
+## The transformation table
 
-| Property | Transformation | Status in the record | Source |
-| --- | --- | --- | --- |
-| Closure of `(P, F)` | any invertible relabeling of the observation with conjugated update | preserved, by algebra | [vision note](2026-09-10-dimensional-vision-and-interpretation.md), [shared closure account](2026-09-10-shared-closure-account.md) |
-| Retained information and factor existence at fixed correction depth | change of completion on a shared invariant family | preserved, by the triangular coordinate theorem | [correction coordinates](2026-09-09-correction-future-coordinates.md), [second-lift protocol](2026-09-10-second-lift-completion-protocol.md) |
-| Literal correction maps, cap radius, cap cost | change of completion | changed | same |
-| Decoded rule-field dynamics | local Z2 relabeling with covariant transport | preserved | [rule-field relabeling](2026-09-10-rule-field-relabeling.md) |
-| Quiescence-selection gradient | local Z2 relabeling | changed (convention-dependent) | same, established result 8 |
-| Wrapping-loop parity | replication to a new axis | preserved | [gradient loop invariants](2026-09-10-gradient-loop-invariants.md) |
-| Commutator bias of affine rules | global complement conjugation | changed (`c ↦ c ⊕ M𝟙 ⊕ 1`; Rule 0 ↦ Rule 255) | [audit note](2026-09-11-representation-invariants-audit.md) |
-| Native commutator field | complement conjugation | covariant iff self-dual; covariant for all rules with the derivative transported as a state | same |
-| Commutator class, derivative closure, cap budgets | reflection | preserved | same |
-| Local-cap minimum radius, K | complement conjugation | covariant with a bounded radius cost: shift 0, 1 or 2 over the whole census at `R ≤ 4`, never a loss of existence | [extension](2026-09-11-cap-census-complement-extension.md), [shift census](2026-09-11-cap-shift-census.md) |
-| Local-cap pass table, O | complement conjugation | preserved at every radius (`B_j = D∘F^j` is a difference) | [shift census](2026-09-11-cap-shift-census.md) |
-| Sweep regime labels | reflection, complement | 95% / 94% stable; not an invariance | same |
+One row per declared transformation, with its declared costs, then the properties audited against it. "Preserved" means the value is unchanged; "covariant" means unchanged after the stated transport; "changed" means neither. Every entry names its source. Where a result follows by algebra the run was a control, and the source says so.
 
-Nothing in that table is new. The program's first job is to make the table complete and exact for the transformations the repository already uses implicitly.
+### Global relabelings (injective, information 0, locality 0)
+
+| Transformation | Touched sites | Property | Status | Source |
+| --- | --- | --- | --- | --- |
+| Reflection `T_m` | 0 (addresses reindexed) | commutator class; pointwise commutator; derivative closure; all 4,608 cap budgets at `R ≤ 2`, both kinds at `R ≤ 4` | preserved / covariant with reversal | [audit](2026-09-11-representation-invariants-audit.md), [shift census](2026-09-11-cap-shift-census.md) |
+| Reflection `T_m` | 0 | sweep regime labels | 95.1% stable; not an invariance (fixed seeds) | [audit](2026-09-11-representation-invariants-audit.md) |
+| Complement conjugation `T_c` | `n` | closure of `(P, F)`; derivative-observation closure | preserved | [audit](2026-09-11-representation-invariants-audit.md) |
+| Complement conjugation `T_c` | `n` | native commutator field | covariant iff self-dual (16 rules); covariant for all 256 with the derivative transported as a state | same |
+| Complement conjugation `T_c` | `n` | commutator class; affine bias | changed: `c ↦ c ⊕ M𝟙 ⊕ 1`; 4, 200 ↦ 223, 236 leave the zero-G set | same |
+| Complement conjugation `T_c` | `n` | O-coordinate cap table | preserved at every radius (`B_j = D∘F^j` is a difference) | [shift census](2026-09-11-cap-shift-census.md) |
+| Complement conjugation `T_c` | `n` | K-coordinate cap radius | covariant with bounded cost: shift 0, 1 or 2; never a loss of existence at `R ≤ 4` | [extension](2026-09-11-cap-census-complement-extension.md), [shift census](2026-09-11-cap-shift-census.md) |
+| Complement conjugation `T_c` | `n` | sweep regime labels | 93.9% stable; not an invariance | [audit](2026-09-11-representation-invariants-audit.md) |
+| `T_c`, `T_m` | — | possibility-frontier census summaries | preserved, by closure of the observer family (deduction; tables not in repo) | [recoding note](2026-09-11-higher-block-recoding.md) |
+
+### Local recodings (injective, alphabet-changing, declared locality)
+
+| Transformation | Forward / inverse radius | Property | Status | Source |
+| --- | --- | --- | --- | --- |
+| 2-block recoding `T_β` | 1 / 0, alphabet 2 → 4, family a subshift | derivative, commutator, derivative closure | preserved componentwise (algebra; control) | [recoding note](2026-09-11-higher-block-recoding.md) |
+| 2-block recoding `T_β` | 1 / 0 | cap radius, K and O | covariant, cost at most one unit, zero in 665 of 674 cells | same |
+| Local Z2 relabeling of rule fields | 0 / 0 on state; tables conjugated by neighbors | decoded rule-field dynamics, with covariant transport | preserved | [rule-field relabeling](2026-09-10-rule-field-relabeling.md) |
+| Local Z2 relabeling of rule fields | — | quiescence-selection statistic | changed (convention-dependent) | same; established result 8 |
+
+### Changes of completion (identity on a shared invariant family)
+
+| Transformation | Cost | Property | Status | Source |
+| --- | --- | --- | --- | --- |
+| Completion `H ↦ H'` agreeing on `B` | local triangular recoding of correction rows | retained information and factor existence at fixed depth | preserved (theorem) | [correction coordinates](2026-09-09-correction-future-coordinates.md), [second-lift protocol](2026-09-10-second-lift-completion-protocol.md) |
+| Completion `H ↦ H'` agreeing on `B` | same | literal correction maps, cap radius, cap cost | changed; bounded by the recoding radius | same; unrun protocol |
+
+### Replication to a new axis
+
+| Transformation | Cost | Property | Status | Source |
+| --- | --- | --- | --- | --- |
+| Copy along a new axis | zero added information density | wrapping-loop parity | preserved | [gradient loop invariants](2026-09-10-gradient-loop-invariants.md) |
+
+Not yet declared: non-injective coarse-graining, where "preserved" must be replaced by "closed" and the object is the Erased Distinctions Program's `R_∞`.
 
 ## First unit: complete
 
@@ -61,6 +84,10 @@ The protocol It declares two global transformations of elementary CA (complement
 ## Third unit: complete
 
 [Cap shift census](protocols/cap-shift-census-20260911.md), frozen and run 2026-09-11, reported in the [shift census note](2026-09-11-cap-shift-census.md). All six predictions held over all 256 rules at `R ≤ 4`: O caps are exactly complement-invariant, K caps shift by at most two, no cap is created or destroyed, reflection is exact. A post-hoc observation: the depth-0 cap set of either kind is exactly the derivative-closure set from the first audit. The global relabelings are now exhausted; the next transformation type is a local recoding with a locality budget or a change of completion.
+
+## Fourth unit: complete
+
+[Higher-block recoding](protocols/higher-block-recoding-20260911.md), frozen and run 2026-09-11, reported in the [recoding note](2026-09-11-higher-block-recoding.md). The first transformation of a local, alphabet-changing type. All four predictions held: cap radius within `[mpr − 1, mpr]` and unchanged in 665 of 674 cells; derivative, commutator and closure preserved componentwise; the Research026 observer family closed under complement and reversal, so that census is covariant by deduction. Remaining undeclared types: change of completion (runs under the second-lift protocol) and non-injective coarse-graining (the Erased Distinctions object).
 
 ## What would count as progress
 

@@ -7,6 +7,27 @@ substantial unit completes; keep the bounded-claim style.
 
 Program page: `docs/research/2026-09-10-representation-invariants-program.md`
 
+## Checkpoint 2026-09-11 (fourth unit): first local transformation; recoding is nearly free
+
+- Protocol and verifier committed before the single deterministic run; no
+  corrections. Note: `2026-09-11-higher-block-recoding.md`.
+- T_beta (2-block recoding): forward radius 1, inverse 0, alphabet 2->4,
+  family the consistent-pair subshift. All four predictions held: cap radius
+  in [mpr-1, mpr] on all 674 decided cells, unchanged in 665, reduced by one
+  in 9 (K 55,109,233; O 73,109,146,182); D and G covariant componentwise on
+  rings 8/10 (algebra; control); derivative closure preserved; Research026
+  observer family closed under input complement/reversal with 12-ring block
+  alignment, hence census summaries covariant (deduction; tables not in repo).
+- Do not infer: anything about k>2 recodings, non-injective recodings, or
+  radii above 4; that the deduction has been numerically run.
+- Open for Myk: default reading of the commutator under relabeling
+  (state-transport of the derivative), editorial.
+- Next: consolidate the program's transformation table into one page; then
+  either run Codex's second-lift protocol for the completion type (Codex's
+  to run) or declare the non-injective coarse-graining type against the
+  Erased Distinctions closure object. Codex review of all four protocols
+  is still outstanding.
+
 ## Checkpoint 2026-09-11 (third unit): shift census over all rules; global relabelings exhausted
 
 - Protocol and verifier committed before the single deterministic run; no

@@ -1,0 +1,36 @@
+name: Higher-block recoding audit
+
+on:
+  pull_request:
+    paths:
+      - 'scripts/verify_higher_block_recoding.py'
+      - 'scripts/verify_local_correction_caps.py'
+      - 'results/higher_block_recoding_20260911.json'
+      - 'results/cap_shift_census_20260911.json'
+      - '.github/workflows/research-higher-block-recoding.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/verify_higher_block_recoding.py'
+      - 'results/higher_block_recoding_20260911.json'
+      - '.github/workflows/research-higher-block-recoding.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  recoding:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -e .
+      - name: Rerun the frozen audit and compare the canonical JSON byte for byte
+        run: |
+          cp results/higher_block_recoding_20260911.json /tmp/expected.json
+          python scripts/verify_higher_block_recoding.py > /dev/null
+          cmp /tmp/expected.json results/higher_block_recoding_20260911.json
