@@ -2,7 +2,7 @@
 
 **Status:** frozen before implementation and evaluation. Nothing run.
 **Program:** [Invariants Across Representation Contracts](../2026-09-10-representation-invariants-program.md), fifth unit.
-**Authored by:** Claude Code, Fable 5.1. **Protocol review:** pending; requested from Codex (OpenAI) on the gathering PR before any implementation or evaluation, per the [gathering-branch workflow](../../../AGENTS.md#gathering-branches-and-cross-model-review).
+**Authored by:** Claude Code, Fable 5.1. **Protocol review:** Codex (OpenAI), 2026-09-11, reviewed revision `9997462e730a9f2b1a7cfc923e2caf03377517c8`, gate-1 approval on [PR #88](https://github.com/bombadil-labs/groovy-commutator/pull/88) before implementation and evaluation, per the [gathering-branch workflow](../../../AGENTS.md#gathering-branches-and-cross-model-review). Clarifications recorded in Section 5; frozen text of Sections 1–4 unchanged.
 **Why this transformation:** the program's transformation table lists non-injective coarse-graining as the one undeclared type, with the note that "preserved" must be replaced by "closed" and that the object is the Erased Distinctions Program's `R_∞`. This protocol declares the simplest local non-injective map on binary configurations and audits closure, the factor's locality, and the commutator against it, reusing the closure definitions of [Research022](../2026-09-08-observation-closure.md) and the refinement chain of [Research023](../2026-09-08-history-lift-closure.md) and the [shared closure account](../2026-09-10-shared-closure-account.md).
 
 ## 1. The transformation and its costs
@@ -39,3 +39,13 @@ Definitions used unchanged: factor closure means a deterministic `B` on the imag
 ## 4. Not claimed
 
 Nothing about other coarse-grainings (block majority, 2-block projection, any non-linear `π`), about `k`-cell parities with `k > 2`, about the infinite line beyond what the finite identities imply, or about locality of `R_∞` itself for the non-closed rules; Research023 already shows that `h_*` can grow with `n`. No Class IV, novelty, or renormalization claim: exact parity coarse-graining of Rule 90 is a textbook fact and is used here only as a frozen control value. C3 is a theorem; its run is a control, and the note will say so.
+
+## 5. Protocol review record (2026-09-11, before implementation)
+
+Codex reviewed revision `9997462` and confirmed the C1 threshold argument, the C2 factor formula and extraction (every three-bit parity-field neighborhood occurs in an even-parity `n = 8` state, so the extraction determines a unique elementary extension), the C3 intertwining proof (the parity image is an XOR subspace preserved by `B` and `D_B`; the all-configuration claims about `G_B` use the explicit elementary extension and established result 1, not surjectivity), the `h_*` restatement (an `R_0` pair survives `R_h` exactly until its first observed separation; equality `R_h = R_{h+1}` is absorbing), and the C4 termination bound as a count over unsplit ordered pairs (`2^n` equal plus `2^n` complementary), not the product space. Non-blocking clarifications, binding on the implementation and the note:
+
+1. Cadence is `q = 1`. Count each initial complement pair once (fix one source bit) and use `2^{n−1}` as the split-fraction denominator. Record first separation times with the convention that a pair separating first at time `t ≥ 1` contributes `h_* ≥ t`. "Never separates" is asserted only by the termination proof (equality is absorbing; stop at equality), never by an arbitrary runtime cutoff. Memoization or exact cycle detection may be used without changing the domain or predictions.
+2. A right-inverse of `π` can fix an anchor (for example `S_0 = 0`) rather than receive a bit; recovering the original fiber member requires the missing anchor bit; both are non-local. "One bit lost" means `log₂` of the fiber size, equivalently the conditional entropy under a uniform prior, not an entropy statement for every prior.
+3. This is overlapping neighbor parity at the original lattice spacing and cadence one, distinct from the non-overlapping dyadic-parity, cadence-two coarse-graining cited as context in the history-repairability note. Rule 90 being fixed here follows from commuting linear maps; the two contracts stay distinct.
+
+Codex's reading of the unit: the new empirical content is C4's timing and fraction of complement distinctions that become observable; C1–C3 and C5 calibrate the construction against available algebra. Material changes to domain, predictions, budgets or scoring require renewed review.
