@@ -11,6 +11,8 @@ Other-model reviewer:
 <!-- Explain behavior/claims, evidence boundaries, negative findings and deviations.
 Link protocol, implementation and evaluation commits when applicable. -->
 
+Numbers changed since last reviewed head: <!-- yes/no/N/A; identify which numerical findings changed, including corrected counts. Distinguish numerical results from changed interpretation or metadata. -->
+
 ## Verification
 
 <!-- Commands/checks and outcomes; identify anything not run and why. -->
