@@ -493,6 +493,19 @@ workflow; research source and result changes now also trigger that workflow.
    included, equals the small-ring census; the result-1 classification
    departs from 10/8/238 only on components with fewer than 5 cells.
    Accepted after Codex's gate-2 sign-off at `1b1e071`, merged in PR #99.
+   Twelfth unit (`scripts/verify_factor_radius.py`, gate-1 reviewed after
+   one witness correction): the locality radius ρ of the factor on the
+   image for every closed rule under observations 232, 4, 32, 200, 22 on
+   rings 6–12. Observations 200 and 4 are idempotent, so the factor is
+   ψ∘F_r on the image and ρ ≤ 2 (theorem): the tenth unit's sixteen
+   non-elementary rule-200 factors are exactly the closed rules at ρ = 2,
+   every other closed rule under 200 and 4 has ρ ≤ 1. Under the
+   non-idempotent 232, 32, 22 every closed rule present at all seven rings
+   has ρ ≤ 1 (census; the frozen bet was ≤ 2), except rule 223 at ring 6
+   under 22, closed at that ring only, with ρ = 3 = the ring (the one
+   failed cell). Collapse ρ = 0, commuters ρ ≤ 1, radius 0 also covers
+   cellwise factors such as the identity's; tables reflection-invariant
+   and complement-covariant to 236 and 223. Gate-2 pending on PR #110.
 
 ## Checkpoint logs (read before continuing any workstream)
 

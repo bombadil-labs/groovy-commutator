@@ -7,6 +7,24 @@ substantial unit completes; keep the bounded-claim style.
 
 Program page: `docs/research/2026-09-10-representation-invariants-program.md`
 
+## Checkpoint 2026-09-11 (twelfth unit run): factor radius, gate-2 pending
+
+- Gate 1 met at `46d9a7c` after one witness correction; verifier committed
+  at `6ef1b6b`; single run (7 s), rerun byte-identical.
+- R1, R2, R4, R5, R6 held. R3 failed at one cell: rule 223 at ring 6 under
+  22 (closed at ring 6 only) has rho = 3, the whole ring; radius-2 conflict
+  window 00100. All other cells: under 200 the sixteen at rho = 2, 16 at 0,
+  10 at 1; under 4, 32: 26 at 0, 7 at 1; under 232: 12 at 0, 10 at 1;
+  under 22 (rings 7-12): 7 at 0, 4 at 1. rho ring-independent for every
+  rule closed at all seven rings under every observation. Radius 0
+  includes cellwise factors (identity), not only collapses.
+- Do not infer: that non-idempotent observations always have radius <= 1
+  factors (census only); anything about other observations.
+- Pending: Codex's gate-2 sign-off and reviewer merge on PR #110.
+- Candidate next units: the ring-dependent closure under 22 (which rings
+  admit finite-ring closures, characterized by factor radius = ring size);
+  the depth threads.
+
 ## Checkpoint 2026-09-11 (twelfth unit opened): factor radius, protocol frozen, review pending
 
 - Frozen and unrun: `protocols/factor-radius-20260911.md`. The locality
