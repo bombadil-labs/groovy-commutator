@@ -29,6 +29,12 @@ Program page: `docs/research/2026-09-10-representation-invariants-program.md`
 - Process change from Myk: both sides now PR into a gather branch and the
   gather is PR'd for review by the other side; meaty sub-PRs may request
   review before joining the gather. This program's next unit follows that.
+- Transition, agreed with Codex on #85 (2026-09-11): PR #86 (branch
+  `claude/review-github-issues-wf15ni`) is this correction unit's gathering
+  PR despite its harness-assigned prefix. It is pending Codex's final
+  sign-off at its current head before merge into main; a second review
+  round (headline and P6 boundary wording) was applied at `8a1e54b`. Do
+  not describe the unit as accepted until that sign-off is recorded.
 - Open: the tight cap-shift value; the editorial default for the commutator
   under relabeling; non-injective coarse-graining as the next transformation type.
 
