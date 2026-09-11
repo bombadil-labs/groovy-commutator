@@ -1,0 +1,528 @@
+{
+  "implementation_commit": "26ddc63938ab129c3488003e31997b20160238c9",
+  "protocol_commit": "359044de89a6e1c4b06e1105866faa53ef1220c9",
+  "ring_summaries": [
+    {
+      "B_n_information_rate_bits_per_longitudinal_site": 0.996213320583,
+      "B_n_states": 63,
+      "K_O_recoding_both_directions": true,
+      "O_pointwise_identical_across_completions": true,
+      "all_four_completion_coordinate_partitions_identical": true,
+      "binary_source_states": 64,
+      "closed_form_controls": [
+        {
+          "duplicated_row_information_rate_bits_per_site": 2,
+          "duplicated_row_states": 4096,
+          "h": 0,
+          "independent_strip_information_rate_bits_per_site": 2,
+          "independent_strip_states": 4096,
+          "width": 1
+        },
+        {
+          "duplicated_row_information_rate_bits_per_site": 2,
+          "duplicated_row_states": 4096,
+          "h": 1,
+          "independent_strip_information_rate_bits_per_site": 4,
+          "independent_strip_states": 16777216,
+          "width": 2
+        },
+        {
+          "duplicated_row_information_rate_bits_per_site": 2,
+          "duplicated_row_states": 4096,
+          "h": 2,
+          "independent_strip_information_rate_bits_per_site": 6,
+          "independent_strip_states": 68719476736,
+          "width": 3
+        },
+        {
+          "duplicated_row_information_rate_bits_per_site": 2,
+          "duplicated_row_states": 4096,
+          "h": 3,
+          "independent_strip_information_rate_bits_per_site": 8,
+          "independent_strip_states": 281474976710656,
+          "width": 4
+        },
+        {
+          "duplicated_row_information_rate_bits_per_site": 2,
+          "duplicated_row_states": 4096,
+          "h": 4,
+          "independent_strip_information_rate_bits_per_site": 10,
+          "independent_strip_states": 1152921504606846976,
+          "width": 5
+        }
+      ],
+      "cross_completion_recoding_both_directions": true,
+      "n": 6,
+      "source_aliases_under_E": 1,
+      "source_bound_holds": true,
+      "terminal_plateau_start_within_h0_to_h4": 0,
+      "tuple_image_increments": [
+        62,
+        0,
+        0,
+        0,
+        0
+      ],
+      "tuple_image_states_by_depth": [
+        62,
+        62,
+        62,
+        62,
+        62
+      ]
+    },
+    {
+      "B_n_information_rate_bits_per_longitudinal_site": 1.0,
+      "B_n_states": 128,
+      "K_O_recoding_both_directions": true,
+      "O_pointwise_identical_across_completions": true,
+      "all_four_completion_coordinate_partitions_identical": true,
+      "binary_source_states": 128,
+      "closed_form_controls": [
+        {
+          "duplicated_row_information_rate_bits_per_site": 2,
+          "duplicated_row_states": 16384,
+          "h": 0,
+          "independent_strip_information_rate_bits_per_site": 2,
+          "independent_strip_states": 16384,
+          "width": 1
+        },
+        {
+          "duplicated_row_information_rate_bits_per_site": 2,
+          "duplicated_row_states": 16384,
+          "h": 1,
+          "independent_strip_information_rate_bits_per_site": 4,
+          "independent_strip_states": 268435456,
+          "width": 2
+        },
+        {
+          "duplicated_row_information_rate_bits_per_site": 2,
+          "duplicated_row_states": 16384,
+          "h": 2,
+          "independent_strip_information_rate_bits_per_site": 6,
+          "independent_strip_states": 4398046511104,
+          "width": 3
+        },
+        {
+          "duplicated_row_information_rate_bits_per_site": 2,
+          "duplicated_row_states": 16384,
+          "h": 3,
+          "independent_strip_information_rate_bits_per_site": 8,
+          "independent_strip_states": 72057594037927936,
+          "width": 4
+        },
+        {
+          "duplicated_row_information_rate_bits_per_site": 2,
+          "duplicated_row_states": 16384,
+          "h": 4,
+          "independent_strip_information_rate_bits_per_site": 10,
+          "independent_strip_states": 1180591620717411303424,
+          "width": 5
+        }
+      ],
+      "cross_completion_recoding_both_directions": true,
+      "n": 7,
+      "source_aliases_under_E": 0,
+      "source_bound_holds": true,
+      "terminal_plateau_start_within_h0_to_h4": 0,
+      "tuple_image_increments": [
+        128,
+        0,
+        0,
+        0,
+        0
+      ],
+      "tuple_image_states_by_depth": [
+        128,
+        128,
+        128,
+        128,
+        128
+      ]
+    },
+    {
+      "B_n_information_rate_bits_per_longitudinal_site": 0.999294179607,
+      "B_n_states": 255,
+      "K_O_recoding_both_directions": true,
+      "O_pointwise_identical_across_completions": true,
+      "all_four_completion_coordinate_partitions_identical": true,
+      "binary_source_states": 256,
+      "closed_form_controls": [
+        {
+          "duplicated_row_information_rate_bits_per_site": 2,
+          "duplicated_row_states": 65536,
+          "h": 0,
+          "independent_strip_information_rate_bits_per_site": 2,
+          "independent_strip_states": 65536,
+          "width": 1
+        },
+        {
+          "duplicated_row_information_rate_bits_per_site": 2,
+          "duplicated_row_states": 65536,
+          "h": 1,
+          "independent_strip_information_rate_bits_per_site": 4,
+          "independent_strip_states": 4294967296,
+          "width": 2
+        },
+        {
+          "duplicated_row_information_rate_bits_per_site": 2,
+          "duplicated_row_states": 65536,
+          "h": 2,
+          "independent_strip_information_rate_bits_per_site": 6,
+          "independent_strip_states": 281474976710656,
+          "width": 3
+        },
+        {
+          "duplicated_row_information_rate_bits_per_site": 2,
+          "duplicated_row_states": 65536,
+          "h": 3,
+          "independent_strip_information_rate_bits_per_site": 8,
+          "independent_strip_states": 18446744073709551616,
+          "width": 4
+        },
+        {
+          "duplicated_row_information_rate_bits_per_site": 2,
+          "duplicated_row_states": 65536,
+          "h": 4,
+          "independent_strip_information_rate_bits_per_site": 10,
+          "independent_strip_states": 1208925819614629174706176,
+          "width": 5
+        }
+      ],
+      "cross_completion_recoding_both_directions": true,
+      "n": 8,
+      "source_aliases_under_E": 1,
+      "source_bound_holds": true,
+      "terminal_plateau_start_within_h0_to_h4": 0,
+      "tuple_image_increments": [
+        254,
+        0,
+        0,
+        0,
+        0
+      ],
+      "tuple_image_states_by_depth": [
+        254,
+        254,
+        254,
+        254,
+        254
+      ]
+    },
+    {
+      "B_n_information_rate_bits_per_longitudinal_site": 1.0,
+      "B_n_states": 512,
+      "K_O_recoding_both_directions": true,
+      "O_pointwise_identical_across_completions": true,
+      "all_four_completion_coordinate_partitions_identical": true,
+      "binary_source_states": 512,
+      "closed_form_controls": [
+        {
+          "duplicated_row_information_rate_bits_per_site": 2,
+          "duplicated_row_states": 262144,
+          "h": 0,
+          "independent_strip_information_rate_bits_per_site": 2,
+          "independent_strip_states": 262144,
+          "width": 1
+        },
+        {
+          "duplicated_row_information_rate_bits_per_site": 2,
+          "duplicated_row_states": 262144,
+          "h": 1,
+          "independent_strip_information_rate_bits_per_site": 4,
+          "independent_strip_states": 68719476736,
+          "width": 2
+        },
+        {
+          "duplicated_row_information_rate_bits_per_site": 2,
+          "duplicated_row_states": 262144,
+          "h": 2,
+          "independent_strip_information_rate_bits_per_site": 6,
+          "independent_strip_states": 18014398509481984,
+          "width": 3
+        },
+        {
+          "duplicated_row_information_rate_bits_per_site": 2,
+          "duplicated_row_states": 262144,
+          "h": 3,
+          "independent_strip_information_rate_bits_per_site": 8,
+          "independent_strip_states": 4722366482869645213696,
+          "width": 4
+        },
+        {
+          "duplicated_row_information_rate_bits_per_site": 2,
+          "duplicated_row_states": 262144,
+          "h": 4,
+          "independent_strip_information_rate_bits_per_site": 10,
+          "independent_strip_states": 1237940039285380274899124224,
+          "width": 5
+        }
+      ],
+      "cross_completion_recoding_both_directions": true,
+      "n": 9,
+      "source_aliases_under_E": 0,
+      "source_bound_holds": true,
+      "terminal_plateau_start_within_h0_to_h4": 0,
+      "tuple_image_increments": [
+        512,
+        0,
+        0,
+        0,
+        0
+      ],
+      "tuple_image_states_by_depth": [
+        512,
+        512,
+        512,
+        512,
+        512
+      ]
+    },
+    {
+      "B_n_information_rate_bits_per_longitudinal_site": 0.999859042975,
+      "B_n_states": 1023,
+      "K_O_recoding_both_directions": true,
+      "O_pointwise_identical_across_completions": true,
+      "all_four_completion_coordinate_partitions_identical": true,
+      "binary_source_states": 1024,
+      "closed_form_controls": [
+        {
+          "duplicated_row_information_rate_bits_per_site": 2,
+          "duplicated_row_states": 1048576,
+          "h": 0,
+          "independent_strip_information_rate_bits_per_site": 2,
+          "independent_strip_states": 1048576,
+          "width": 1
+        },
+        {
+          "duplicated_row_information_rate_bits_per_site": 2,
+          "duplicated_row_states": 1048576,
+          "h": 1,
+          "independent_strip_information_rate_bits_per_site": 4,
+          "independent_strip_states": 1099511627776,
+          "width": 2
+        },
+        {
+          "duplicated_row_information_rate_bits_per_site": 2,
+          "duplicated_row_states": 1048576,
+          "h": 2,
+          "independent_strip_information_rate_bits_per_site": 6,
+          "independent_strip_states": 1152921504606846976,
+          "width": 3
+        },
+        {
+          "duplicated_row_information_rate_bits_per_site": 2,
+          "duplicated_row_states": 1048576,
+          "h": 3,
+          "independent_strip_information_rate_bits_per_site": 8,
+          "independent_strip_states": 1208925819614629174706176,
+          "width": 4
+        },
+        {
+          "duplicated_row_information_rate_bits_per_site": 2,
+          "duplicated_row_states": 1048576,
+          "h": 4,
+          "independent_strip_information_rate_bits_per_site": 10,
+          "independent_strip_states": 1267650600228229401496703205376,
+          "width": 5
+        }
+      ],
+      "cross_completion_recoding_both_directions": true,
+      "n": 10,
+      "source_aliases_under_E": 1,
+      "source_bound_holds": true,
+      "terminal_plateau_start_within_h0_to_h4": 0,
+      "tuple_image_increments": [
+        1022,
+        0,
+        0,
+        0,
+        0
+      ],
+      "tuple_image_states_by_depth": [
+        1022,
+        1022,
+        1022,
+        1022,
+        1022
+      ]
+    },
+    {
+      "B_n_information_rate_bits_per_longitudinal_site": 1.0,
+      "B_n_states": 2048,
+      "K_O_recoding_both_directions": true,
+      "O_pointwise_identical_across_completions": true,
+      "all_four_completion_coordinate_partitions_identical": true,
+      "binary_source_states": 2048,
+      "closed_form_controls": [
+        {
+          "duplicated_row_information_rate_bits_per_site": 2,
+          "duplicated_row_states": 4194304,
+          "h": 0,
+          "independent_strip_information_rate_bits_per_site": 2,
+          "independent_strip_states": 4194304,
+          "width": 1
+        },
+        {
+          "duplicated_row_information_rate_bits_per_site": 2,
+          "duplicated_row_states": 4194304,
+          "h": 1,
+          "independent_strip_information_rate_bits_per_site": 4,
+          "independent_strip_states": 17592186044416,
+          "width": 2
+        },
+        {
+          "duplicated_row_information_rate_bits_per_site": 2,
+          "duplicated_row_states": 4194304,
+          "h": 2,
+          "independent_strip_information_rate_bits_per_site": 6,
+          "independent_strip_states": 73786976294838206464,
+          "width": 3
+        },
+        {
+          "duplicated_row_information_rate_bits_per_site": 2,
+          "duplicated_row_states": 4194304,
+          "h": 3,
+          "independent_strip_information_rate_bits_per_site": 8,
+          "independent_strip_states": 309485009821345068724781056,
+          "width": 4
+        },
+        {
+          "duplicated_row_information_rate_bits_per_site": 2,
+          "duplicated_row_states": 4194304,
+          "h": 4,
+          "independent_strip_information_rate_bits_per_site": 10,
+          "independent_strip_states": 1298074214633706907132624082305024,
+          "width": 5
+        }
+      ],
+      "cross_completion_recoding_both_directions": true,
+      "n": 11,
+      "source_aliases_under_E": 0,
+      "source_bound_holds": true,
+      "terminal_plateau_start_within_h0_to_h4": 0,
+      "tuple_image_increments": [
+        2048,
+        0,
+        0,
+        0,
+        0
+      ],
+      "tuple_image_states_by_depth": [
+        2048,
+        2048,
+        2048,
+        2048,
+        2048
+      ]
+    },
+    {
+      "B_n_information_rate_bits_per_longitudinal_site": 0.999970644711,
+      "B_n_states": 4095,
+      "K_O_recoding_both_directions": true,
+      "O_pointwise_identical_across_completions": true,
+      "all_four_completion_coordinate_partitions_identical": true,
+      "binary_source_states": 4096,
+      "closed_form_controls": [
+        {
+          "duplicated_row_information_rate_bits_per_site": 2,
+          "duplicated_row_states": 16777216,
+          "h": 0,
+          "independent_strip_information_rate_bits_per_site": 2,
+          "independent_strip_states": 16777216,
+          "width": 1
+        },
+        {
+          "duplicated_row_information_rate_bits_per_site": 2,
+          "duplicated_row_states": 16777216,
+          "h": 1,
+          "independent_strip_information_rate_bits_per_site": 4,
+          "independent_strip_states": 281474976710656,
+          "width": 2
+        },
+        {
+          "duplicated_row_information_rate_bits_per_site": 2,
+          "duplicated_row_states": 16777216,
+          "h": 2,
+          "independent_strip_information_rate_bits_per_site": 6,
+          "independent_strip_states": 4722366482869645213696,
+          "width": 3
+        },
+        {
+          "duplicated_row_information_rate_bits_per_site": 2,
+          "duplicated_row_states": 16777216,
+          "h": 3,
+          "independent_strip_information_rate_bits_per_site": 8,
+          "independent_strip_states": 79228162514264337593543950336,
+          "width": 4
+        },
+        {
+          "duplicated_row_information_rate_bits_per_site": 2,
+          "duplicated_row_states": 16777216,
+          "h": 4,
+          "independent_strip_information_rate_bits_per_site": 10,
+          "independent_strip_states": 1329227995784915872903807060280344576,
+          "width": 5
+        }
+      ],
+      "cross_completion_recoding_both_directions": true,
+      "n": 12,
+      "source_aliases_under_E": 1,
+      "source_bound_holds": true,
+      "terminal_plateau_start_within_h0_to_h4": 0,
+      "tuple_image_increments": [
+        4094,
+        0,
+        0,
+        0,
+        0
+      ],
+      "tuple_image_states_by_depth": [
+        4094,
+        4094,
+        4094,
+        4094,
+        4094
+      ]
+    }
+  ],
+  "source_hashes": {
+    "protocol": "d439b28678f12446fd832e618762c84467ee18f14003503a139a4d30901f68c1",
+    "script": "e3f58ccbcce16e89f36a26afd71fa3e52af3b406d3419562284be038fc556de7"
+  },
+  "summary": {
+    "all_K_O_recoding_controls_hold": true,
+    "all_cross_completion_recoding_controls_hold": true,
+    "all_fixed_depth_fiber_controls_hold": true,
+    "all_primary_reference_rows_agree": true,
+    "all_source_bounds_hold": true,
+    "claim_scope": "bounded n=6..12, h=0..4 inherited Rule32 diagnostic; theorem T3 is analytic for every finite h; no intrinsic-dimension claim",
+    "completions": [
+      128,
+      160
+    ],
+    "coordinate_systems": [
+      "K",
+      "O"
+    ],
+    "depths": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "diagnostic_cells": 140,
+    "recoding_state_checks": 243720,
+    "reference_tuple_row_arrays_compared": 140,
+    "rings": [
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ]
+  }
+}
