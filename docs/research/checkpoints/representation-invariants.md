@@ -7,6 +7,16 @@ substantial unit completes; keep the bounded-claim style.
 
 Program page: `docs/research/2026-09-10-representation-invariants-program.md`
 
+## Checkpoint 2026-09-11 (twelfth unit accepted): factor radius merged
+
+- Accepted after Codex's gate-2 sign-off at `4d44aa8` (one correction round: title scoped to the idempotent case, Program cleanup, per-ring conflict windows, narrowed finite-ring reading), merged in PR #110 as `d77e6f8`.
+- Branch restarted from `main` at `d77e6f8`. Records updated: note
+  header, knowledge test entry, Program section, AGENTS result 12.
+- State of the program: twelve audits accepted; the synthesis section on
+  the Program page still reads the first eleven, with the twelfth as a
+  separate completed section after it.
+- Next: the thirteenth unit, chosen from the candidates below.
+
 ## Checkpoint 2026-09-11 (twelfth unit run): factor radius, gate-2 pending
 
 - Gate 1 met at `46d9a7c` after one witness correction; verifier committed

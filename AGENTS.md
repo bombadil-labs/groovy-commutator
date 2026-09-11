@@ -506,7 +506,8 @@ workflow; research source and result changes now also trigger that workflow.
    whole six-cell configuration (the one failed cell; a warning sign in
    this census, not a characterization of finite-ring closures). Collapse ρ = 0, commuters ρ ≤ 1, radius 0 also covers
    cellwise factors such as the identity's; tables reflection-invariant
-   and complement-covariant to 236 and 223. Gate-2 pending on PR #110.
+   and complement-covariant to 236 and 223. Accepted after Codex's gate-2
+   sign-off at `4d44aa8`, merged in PR #110.
 
 ## Checkpoint logs (read before continuing any workstream)
 
