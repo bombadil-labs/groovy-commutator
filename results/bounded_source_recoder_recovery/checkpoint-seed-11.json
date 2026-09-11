@@ -1,5 +1,5 @@
 {
-  "batches": 1,
+  "batches": 2,
   "certificate": null,
   "current_candidate": {
     "delta": 0,
@@ -331,23 +331,24 @@
   "stats": {
     "direct_leaves": 0,
     "last_solver_error": {},
-    "partition_splits": 56,
+    "partition_splits": 112,
     "solver_decisions": {
-      "cadical195": 155,
-      "minisat22": 2
+      "cadical195": 208,
+      "glucose4": 4,
+      "minisat22": 3
     },
     "solver_errors": {},
     "solver_seconds": {
-      "cadical195": 973.3680978940002,
-      "glucose4": 580.6095583429993,
-      "maplechrono": 580.6001898160016,
-      "minisat22": 573.9914212590002
+      "cadical195": 1939.5957442570018,
+      "glucose4": 1184.7321033409999,
+      "maplechrono": 1151.1734493910017,
+      "minisat22": 1144.0044386300012
     },
     "solver_timeouts": {
-      "cadical195": 58,
-      "glucose4": 58,
-      "maplechrono": 58,
-      "minisat22": 56
+      "cadical195": 119,
+      "glucose4": 115,
+      "maplechrono": 115,
+      "minisat22": 112
     },
     "solver_unavailable": {}
   },
@@ -860,7 +861,10 @@
         -47,
         -48,
         -25,
-        26
+        26,
+        27,
+        49,
+        50
       ],
       [
         -34,
@@ -882,61 +886,10 @@
         -47,
         -48,
         -25,
-        -26,
+        26,
         27,
-        49
-      ],
-      [
-        -34,
-        -35,
-        36,
-        40,
-        41,
-        -42,
-        -31,
-        -32,
-        -33,
-        -43,
-        -44,
-        -45,
-        -28,
-        -29,
-        -30,
-        -46,
-        -47,
-        -48,
-        -25,
-        -26,
-        27,
-        -49,
-        50,
-        51
-      ],
-      [
-        -34,
-        -35,
-        36,
-        40,
-        41,
-        -42,
-        -31,
-        -32,
-        -33,
-        -43,
-        -44,
-        -45,
-        -28,
-        -29,
-        -30,
-        -46,
-        -47,
-        -48,
-        -25,
-        -26,
-        27,
-        -49,
-        50,
-        -51
+        49,
+        -50
       ]
     ]
   },
