@@ -170,6 +170,10 @@ There are two distinct review gates:
    revision, date and review link. Material protocol changes require renewed
    review before the affected run. Previously observed outcomes must remain
    labeled exploratory or post hoc; later review cannot change their history.
+   If the reviewer is unavailable, Myk may explicitly authorize proceeding
+   under the exception in `AGENTS.md`: record the dated authorization on the
+   protocol and state in the results note that evaluation preceded review.
+   Unavailability alone does not authorize a run or waive final review.
 2. **Before merge into main:** the other model reviews the complete unit at
    the gathering PR's current head SHA, including code, evidence, deviations,
    negative findings, proofs and limits, and the updated current account.
@@ -196,9 +200,16 @@ Name agents by their signed identity as used in issues (for example
 "Codex (OpenAI)" or "Claude Code, Fable 5.1") and people by name. For a frozen
 protocol the review happens **before** the implementation commit and before any
 evaluation; record the reviewer and date on the protocol itself, and link the
-issue thread or PR where the review took place. A note with no reviewer says
-`Reviewed by: none` rather than omitting the line. Existing notes are not
-edited retroactively; add the line when a note is next revised.
+issue thread or PR where the review took place. Notes, checkpoints and
+non-experimental work without review say `Reviewed by: none`. An unrun
+protocol may also say `Reviewed by: none`, but that is pending status, not
+permission to evaluate. Before proceeding, its provenance must name the
+reviewer, date, reviewed revision and review link, or record the explicit
+exception: `Protocol review: none at freeze; run authorized by Myk <date>`
+with an authorization reference. Exception runs retain that line and add
+retrospective review separately; never replace it with apparent pre-run
+approval. Existing notes are not edited retroactively; add the line when a
+note is next revised.
 
 ## Formatting, evidence links, and revisions
 

@@ -26,23 +26,37 @@ first, they carry the math. Full interpretive writeup and citations are in
 Agreed with Myk on 2026-09-11. This is the default for research, corrections,
 code, and repository maintenance, including changes to this guidance.
 
-- Use one `gather/<unit>` branch per coherent unit of related work, based on
-  `main`. Open a draft gathering PR into `main` as soon as there is a diff.
+- Use one gathering branch per coherent unit of related work, based on
+  `main`; prefer the name `gather/<unit>`. Open a draft gathering PR into `main` as soon as there is a diff.
   State the question or purpose, scope, owner, completion criteria, related
   issues, and the other-model reviewer. Keep unrelated programs in separate
   gathering branches.
 - Branch chunks from that gathering branch (for example
-  `work/<unit>/<chunk>`). Open sub-PRs back into it and link the gathering PR.
+  `work/<unit>/<chunk>`). Other prefixes, including harness-assigned
+  `claude/...` branches, are fine when tooling constrains names; the PR base
+  and gathering-PR link define the role. Open sub-PRs back into the gathering
+  branch and link its PR.
   Authors may self-review and self-merge sub-PRs after relevant checks pass
   and findings are resolved. A sub-PR merge is integration, not independent
   scientific sign-off. Preserve protocol, implementation, and evaluation
-  commit order; do not squash away provenance needed to establish that order.
+  commit order. Use merge commits for sub-PRs carrying protocol →
+  implementation → evaluation commits, and for gathering PRs whose history
+  carries that provenance; do not squash away the evidence of that order.
 - Before experimental implementation and evaluation, obtain explicit
   other-model review of the frozen protocol, as specified in
   `docs/research/README.md`. A protocol sub-PR is a convenient review point.
   Self-merging that sub-PR does not waive this gate. Record its reviewed
   revision and review link; material changes to predictions, domain, budget,
   or scoring require renewed review before the affected evaluation.
+- If the other model is unavailable at protocol freeze, Myk may explicitly
+  authorize implementation/evaluation to proceed. Record on the protocol:
+  `Protocol review: none at freeze; run authorized by Myk <date>`, with a
+  reference to that authorization. Record any implementation authorization
+  separately if needed. The results note must say evaluation preceded review.
+  Unavailability alone is not authorization. Retrospective review follows the
+  correction path; this exception does not waive other-model review before
+  merge into `main`. Without authorization, keep the protocol unrun and
+  continue useful work outside the gated experiment.
 - When the unit is complete, update its notes, knowledge dependencies,
   Program and checkpoint as applicable. List its sub-PRs, deviations,
   negative findings, verification, and unresolved limits in the gathering PR.
