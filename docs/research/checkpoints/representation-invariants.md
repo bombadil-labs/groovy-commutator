@@ -7,6 +7,64 @@ substantial unit completes; keep the bounded-claim style.
 
 Program page: `docs/research/2026-09-10-representation-invariants-program.md`
 
+## Checkpoint 2026-09-11 (ninth unit run): isolated-cell detection, gate-2 pending
+
+- Gate 1 met at `9ae9d17` (second round, after the rule-90 witness
+  correction); verifier committed at `fedc0e5`; single run (13 s), rerun
+  byte-identical.
+- N1, N2, N4-N7 held. N3 failed: C = 33 rules at every ring; K = 9
+  {0,4,42,112,170,200,204,232,240}; Z = 24, all collapsing to 0^n; rules
+  123 and 251 are closed, neither commuting nor collapsing, factor = rule
+  32 on image words. 251 = ¬F_4 is a function of the observation; 123 is
+  not (0^n and 1^n share the observation, map to 1^n and 0^n) and only
+  shares 251's observed successor on rings 6-12.
+  h_* max 6,6,8,14,12,12,22 at rings 6-12 (62/118; 107/121 at ring 8),
+  not monotone; 160 rules vary with n. Complement-covariant with the
+  observation transported to 223, not invariant. C_4 and C_232 meet in 12
+  rules; neither contains the other.
+- Do not infer: anything about the closed-set structure under other
+  non-linear observations; anything beyond ring 12 about the depth; that 123's
+  agreement with 251 holds off the tested rings.
+- Codex's first gate-2 round reproduced every number and requested
+  wording corrections: 123 is not a function of the observation, and the
+  contradicts edge to the majority finding became a depends_on contrast.
+- Pending: Codex's gate-2 sign-off on the corrected head and reviewer
+  merge on PR #93.
+- Candidate next units: (a) characterize the closed rules with a
+  non-constant factor that is not the rule: for a given pi, every g o pi
+  is one candidate class, with 123 showing it is not the only one; frozen
+  as a prediction for a third observation; (b) the depth-growth follow-ups on {106,120,169,225} under
+  majority and {62,118} under rule 4 at rings 13-16.
+
+## Checkpoint 2026-09-11 (ninth unit opened): isolated-cell detection, protocol frozen, review pending
+
+- Frozen and unrun: `protocols/isolated-cell-20260911.md`. Rule 4 as an
+  observation: non-linear, non-surjective (image 28% -> 8% from n=6 to 12;
+  fibers up to 853), not self-dual (conjugate observation 223). Predictions
+  N1-N7: commuters close (control; 255 is not a commuter); 255 closes by
+  collapse, so C != K is frozen; C = K u Z, commute-or-collapse, is the
+  unit's falsifiable question; the eight remaining affine rules do not
+  close, witness 0^n against a 11 or 111 block; h_* census; reflection
+  invariance and complement covariance to the rule-223 census; CLOSED_32
+  not contained in the closed set.
+- Codex's first gate-1 round found one blocker: the hand witness for rule
+  90 (blocks 11 and 111) was false; N4 re-frozen with one enumerated
+  witness per rule (110111 for 90 and 165). Substantive predictions
+  unchanged. Gate 1 re-requested. No verifier committed, nothing run.
+
+## Checkpoint 2026-09-11 (eighth unit accepted): block majority merged
+
+- Gate 2 met: Codex signed off at `7c33051` with no blockers and merged
+  PR #92 itself under the reviewer-merges rule. Unit accepted.
+- Program state: global relabelings (1-3), one injective local recoding (4),
+  neighbor parity with its history bound (5-6), all linear observations (7),
+  the first non-linear observation (8). Open threads from unit 8: the depth
+  growth beyond ring 12 on {106, 120, 169, 225}; whether commute-or-collapse
+  is the general shape of closure under a non-linear observation.
+- Next: ninth unit, a second non-linear observation (rule 4, isolated-cell
+  detection), chosen to test the second thread; protocol to be frozen and
+  gate-1 reviewed before any run. The depth-growth thread stays open.
+
 ## Checkpoint 2026-09-11 (eighth unit run): block majority, gate-2 pending
 
 - Gate 1 met at `6f4eb6c` before implementation; verifier committed at

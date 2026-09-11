@@ -49,6 +49,10 @@ REGISTRY = {
     'results/block_majority_20260911.json': {
         'script': 'scripts/verify_block_majority.py',
         'parity_coarse_graining_result': 'results/parity_coarse_graining_20260911.json'},
+    'results/isolated_cell_20260911.json': {
+        'script': 'scripts/verify_isolated_cell.py',
+        'parity_coarse_graining_result': 'results/parity_coarse_graining_20260911.json',
+        'block_majority_result': 'results/block_majority_20260911.json'},
 }
 
 def sha(p: pathlib.Path) -> str: return hashlib.sha256(p.read_bytes()).hexdigest()
