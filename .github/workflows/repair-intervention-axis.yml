@@ -1,0 +1,58 @@
+name: Repair intervention-axis review records
+
+on:
+  push:
+    branches: [gather/dimensional-intervention-axis]
+    paths: ['.github/workflows/repair-intervention-axis.yml']
+
+permissions:
+  contents: write
+
+jobs:
+  repair:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Restore knowledge catalog and apply Gate-2 record corrections
+        shell: bash
+        run: |
+          set -euo pipefail
+          git show 9739b3f7cab9cac018922634cf36b57fe219e2d3:site/content/knowledge.json > site/content/knowledge.json
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          p = Path('site/content/knowledge.json')
+          data = json.loads(p.read_text())
+          for node in data.get('nodes', []):
+              if node.get('id') == 'transverse-intervention-independence':
+                  node['research'] = ['intervention-axis']
+          for edge in data.get('edges', []):
+              if edge.get('source') == 'transverse-intervention-independence' and edge.get('target') == 'transverse-freedom-capacity' and edge.get('type') == 'depends_on':
+                  edge['research'] = ['intervention-axis']
+          # Preserve the catalog's compact one-line representation.
+          p.write_text(json.dumps(data, ensure_ascii=False, separators=(',', ':')) + '\n')
+
+          p = Path('docs/research/2026-09-11-intervention-axis.md')
+          s = p.read_text()
+          s = s.replace('That still leaves a stronger operational question:', 'That still leaves a different operational question:')
+          s = s.replace('That is a stronger operational distinction than nominal row count or whole-state entropy alone. It is still representation-relative.', 'That is an operational distinction of a different kind from nominal row count or whole-state entropy: it remains informative even when total target storage is released, because the local endpoint window is the constrained resource. It is still representation-relative.')
+          p.write_text(s)
+
+          p = Path('site/content/research/intervention-axis.json')
+          records = json.loads(p.read_text())
+          records[0]['takeaway'] = 'Independent transverse intervention structure isolates a different resource from nominal width or total state capacity: preserving it in one dimension requires a local addressability resource to grow even when total storage is unconstrained. This is an operational axis witness, not an intrinsic-dimension theorem.'
+          p.write_text(json.dumps(records, ensure_ascii=False, indent=2) + '\n')
+
+          p = Path('site/content/research-program.json')
+          s = p.read_text().replace('project\\\\u2019s current view', 'project’s current view')
+          p.write_text(s)
+          PY
+          rm .github/workflows/repair-intervention-axis.yml
+          git config user.name 'Codex / OpenAI GPT-5.6 Sol'
+          git config user.email 'codex@users.noreply.github.com'
+          git add site/content/knowledge.json docs/research/2026-09-11-intervention-axis.md site/content/research/intervention-axis.json site/content/research-program.json .github/workflows/repair-intervention-axis.yml
+          git commit -m 'Resolve Fable gate-2 record corrections'
+          git push
