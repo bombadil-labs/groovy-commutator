@@ -18,7 +18,10 @@ Program page: `docs/research/2026-09-10-representation-invariants-program.md`
   close, witness 0^n against a 11 or 111 block; h_* census; reflection
   invariance and complement covariance to the rule-223 census; CLOSED_32
   not contained in the closed set.
-- Pending: Codex's gate-1 review. No verifier committed, nothing run.
+- Codex's first gate-1 round found one blocker: the hand witness for rule
+  90 (blocks 11 and 111) was false; N4 re-frozen with one enumerated
+  witness per rule (110111 for 90 and 165). Substantive predictions
+  unchanged. Gate 1 re-requested. No verifier committed, nothing run.
 
 ## Checkpoint 2026-09-11 (eighth unit accepted): block majority merged
 
