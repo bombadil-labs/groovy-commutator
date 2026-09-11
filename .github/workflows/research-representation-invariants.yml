@@ -1,5 +1,10 @@
 name: Representation invariants audit
 
+# Two tiers (2026-09-11). Pull requests run the fast integrity tier: the
+# canonical JSON's recorded SHA-256 hashes of its script and inputs must match
+# the tree. The full byte-for-byte replay runs on pushes to main, weekly, and on
+# manual dispatch, and is the check for nondeterminism.
+
 on:
   pull_request:
     paths:
@@ -7,24 +12,40 @@ on:
       - 'results/representation_invariants_20260910.json'
       - 'results/local_correction_caps_20260910.json'
       - 'results/sweep_full_classified.parquet'
-      - 'src/groovy/ca.py'
+      - 'scripts/check_result_integrity.py'
       - '.github/workflows/research-representation-invariants.yml'
   push:
     branches: [main]
     paths:
       - 'scripts/verify_representation_invariants.py'
       - 'results/representation_invariants_20260910.json'
-      - 'src/groovy/ca.py'
+      - 'results/local_correction_caps_20260910.json'
+      - 'results/sweep_full_classified.parquet'
+      - 'scripts/check_result_integrity.py'
       - '.github/workflows/research-representation-invariants.yml'
+  schedule:
+    - cron: '17 6 * * 1'
   workflow_dispatch:
 
 permissions:
   contents: read
 
 jobs:
-  audit:
+  audit-integrity:
+    if: github.event_name == 'pull_request'
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Recorded source hashes match the tree
+        run: python scripts/check_result_integrity.py results/representation_invariants_20260910.json
+  audit:
+    if: github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -34,5 +55,5 @@ jobs:
       - name: Rerun the frozen audit and compare the canonical JSON byte for byte
         run: |
           cp results/representation_invariants_20260910.json /tmp/expected.json
-          python scripts/verify_representation_invariants.py
+          python scripts/verify_representation_invariants.py > /dev/null
           cmp /tmp/expected.json results/representation_invariants_20260910.json

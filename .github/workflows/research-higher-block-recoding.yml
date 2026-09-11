@@ -1,28 +1,51 @@
 name: Higher-block recoding audit
 
+# Two tiers (2026-09-11). Pull requests run the fast integrity tier: the
+# canonical JSON's recorded SHA-256 hashes of its script and inputs must match
+# the tree. The full byte-for-byte replay runs on pushes to main, weekly, and on
+# manual dispatch, and is the check for nondeterminism.
+
 on:
   pull_request:
     paths:
       - 'scripts/verify_higher_block_recoding.py'
-      - 'scripts/verify_local_correction_caps.py'
       - 'results/higher_block_recoding_20260911.json'
+      - 'scripts/verify_local_correction_caps.py'
       - 'results/cap_shift_census_20260911.json'
+      - 'scripts/check_result_integrity.py'
       - '.github/workflows/research-higher-block-recoding.yml'
   push:
     branches: [main]
     paths:
       - 'scripts/verify_higher_block_recoding.py'
       - 'results/higher_block_recoding_20260911.json'
+      - 'scripts/verify_local_correction_caps.py'
+      - 'results/cap_shift_census_20260911.json'
+      - 'scripts/check_result_integrity.py'
       - '.github/workflows/research-higher-block-recoding.yml'
+  schedule:
+    - cron: '17 6 * * 1'
   workflow_dispatch:
 
 permissions:
   contents: read
 
 jobs:
-  recoding:
+  recoding-integrity:
+    if: github.event_name == 'pull_request'
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Recorded source hashes match the tree
+        run: python scripts/check_result_integrity.py results/higher_block_recoding_20260911.json
+  recoding:
+    if: github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5

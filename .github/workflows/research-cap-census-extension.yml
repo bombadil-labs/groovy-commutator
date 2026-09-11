@@ -1,34 +1,58 @@
 name: Cap census complement extension
 
+# Two tiers (2026-09-11). Pull requests run the fast integrity tier: the
+# canonical JSON's recorded SHA-256 hashes of its script and inputs must match
+# the tree. The full byte-for-byte replay runs on pushes to main, weekly, and on
+# manual dispatch, and is the check for nondeterminism.
+
 on:
   pull_request:
     paths:
       - 'scripts/verify_cap_census_complement_extension.py'
-      - 'scripts/verify_local_correction_caps.py'
       - 'results/cap_census_complement_extension_20260911.json'
+      - 'scripts/verify_local_correction_caps.py'
+      - 'results/representation_invariants_20260910.json'
+      - 'scripts/check_result_integrity.py'
       - '.github/workflows/research-cap-census-extension.yml'
   push:
     branches: [main]
     paths:
       - 'scripts/verify_cap_census_complement_extension.py'
       - 'results/cap_census_complement_extension_20260911.json'
+      - 'scripts/verify_local_correction_caps.py'
+      - 'results/representation_invariants_20260910.json'
+      - 'scripts/check_result_integrity.py'
       - '.github/workflows/research-cap-census-extension.yml'
+  schedule:
+    - cron: '17 6 * * 1'
   workflow_dispatch:
 
 permissions:
   contents: read
 
 jobs:
-  extension:
+  extension-integrity:
+    if: github.event_name == 'pull_request'
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Recorded source hashes match the tree
+        run: python scripts/check_result_integrity.py results/cap_census_complement_extension_20260911.json
+  extension:
+    if: github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
       - run: python -m pip install -e .
-      - name: Rerun the frozen extension and compare the canonical JSON byte for byte
+      - name: Rerun the frozen audit and compare the canonical JSON byte for byte
         run: |
           cp results/cap_census_complement_extension_20260911.json /tmp/expected.json
           python scripts/verify_cap_census_complement_extension.py > /dev/null

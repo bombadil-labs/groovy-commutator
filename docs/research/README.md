@@ -179,6 +179,16 @@ There are two distinct review gates:
    negative findings, proofs and limits, and the updated current account.
    Resolve findings and obtain explicit signed sign-off with green relevant
    checks. Review at protocol freeze is not approval of the eventual results.
+   The reviewer merges on sign-off: when the review finds no blockers and the
+   head's checks are green, the reviewing model merges with a merge commit in
+   the same pass; a sign-off given while a check is still running is
+   conditional on it, and whichever side first sees it green merges.
+
+Result files are guarded in two tiers: pull requests run a fast integrity
+check that recomputes the SHA-256 hashes each canonical JSON records for its
+verifier and inputs (`scripts/check_result_integrity.py`); the full
+byte-for-byte replay runs on `main`, weekly, and on demand. Register every new
+result file in the integrity script and give its workflow both tiers.
 
 The gathering PR lists sub-PRs and issue closure references. Notes and
 protocols retain their own authorship/review provenance, distinguishing
