@@ -12,17 +12,22 @@ Program page: `docs/research/2026-09-10-representation-invariants-program.md`
 - Frozen and unrun: `protocols/ring-closure-certificate-20260911.md`.
   Closure at ring n >= 4 under observation psi is decided by closed walks
   of length n in a 16-vertex pair graph G_psi (vertices two-cell pair
-  blocks, edges psi-agreeing three-cell blocks); a violating four-edge
+  blocks, edges psi-agreeing three-cell blocks); a violating three-edge
   walk for rule r lies on a closed walk of length n iff a return walk of
-  length n-4 exists, read off boolean powers of the adjacency matrix,
+  length n-3 exists, read off boolean powers of the adjacency matrix,
   which are eventually periodic. Observations 232, 4, 32, 200, 22, 102,
   90, 150; exhaustive rings 3-14; certified all rings n >= 4.
 - K1 divisibility C(kn) subset of C(n) (theorem control); K2 criterion
   exact on rings 4-14 and consistent with units 7 and 12 (theorem
   control); K3 certificate (k, p) reported; K4 the six non-linear-or-parity
-  observations constant from ring 7 (bet); K5 90 period 2, 150 period 3
-  (theorem control); K6 complement and reflection covariance; K7
-  all-ring closure equals full-shift closure (bet).
+  observations constant from ring 7 (bet); K5 linear observations: affine
+  closure, 150 injective off multiples of 3, 90 odd rings = the 32 proved;
+  90 even rings and 150 on multiples of 3 = the 16 affine as bets; K6
+  complement and reflection covariance; K7 all-ring closure equals
+  full-shift closure (bet).
+- Codex's first gate-1 round corrected an off-by-one (a five-cell block
+  is a three-edge walk, return length n-3) and required K5's proof
+  boundary; both applied, gate 1 re-requested.
 - Gathering PR #116 opened as draft at `bf0cf2d`; gate-1 review requested
   from Codex there.
 - Pending: Codex's gate-1 review. No verifier committed, nothing run.
