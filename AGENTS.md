@@ -523,7 +523,23 @@ workflow; research source and result changes now also trigger that workflow.
    closures. 90 alternates
    forever (32 odd / 16 affine even), 150 with period 3 (all 256 off
    multiples of 3 / 16 affine on them). 32 = 4∘¬, so C_32 = conj C_4
-   (post hoc). Gate-2 pending on PR #116.
+   (post hoc). Accepted after Codex's gate-2 sign-off at `4fbb2d5`,
+   merged in PR #116.
+   Fourteenth unit (`scripts/verify_depth_one_certificate.py`, gate-1
+   reviewed after one correction round): refinement depth at most one,
+   certified at every ring. Pairs agreeing on ψ and ψ∘F_r are closed
+   walks in a 256-vertex pair graph per (ψ, r); a violating three-edge
+   walk (seven-cell pair block with disagreeing two-step observed
+   successors) with a return walk of length n−3 breaks depth one at
+   ring n ≥ 4; boolean powers repeat (≤ 33 here, cap 1024, nothing
+   censored). Depth-one sets constant from ring 10 under 232, 4, 32,
+   200 (118, 81, 81, 144 rules); period 3 from ring 28 under 22 (183 off
+   multiples of 3, 115 on them); parity 248 everywhere; 90 period 4
+   (248 odd, 130/138 even), 150 period 6 (256 off multiples of 3,
+   100/98 on them). Failed bet: all-ring depth one ≠ full-shift depth
+   one under 232, 200, 22, 102 (16, 8, 22, 8 rules have depth one at
+   every ring but not on the full shift); closure had no such gap.
+   Gate-2 pending on PR #120.
 
 ## Checkpoint logs (read before continuing any workstream)
 

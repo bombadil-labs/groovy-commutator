@@ -7,6 +7,67 @@ substantial unit completes; keep the bounded-claim style.
 
 Program page: `docs/research/2026-09-10-representation-invariants-program.md`
 
+## Checkpoint 2026-09-11 (fourteenth unit run): depth-one certificate, gate-2 pending
+
+- Gate 1 met at `c23c3a3` after one correction round (power cap 1024 and
+  censoring frozen); verifier committed at `9a2b2c6` (closure by squaring
+  in a second implementation commit); single run (68 s), rerun
+  byte-identical.
+- L1, L2, L4, L5, L6 held; L3 reported with no censored pair (largest
+  first repeat 33 powers); L7 failed. Periods and onsets (P, N): 232
+  (1, 9), 4 (1, 9), 32 (1, 9), 200 (1, 10), 22 (3, 28), 102 (1, 5), 90
+  (4, 7), 150 (6, 7). All-ring depth-one sets: 118, 81, 81, 144, 115,
+  248, 130, 98. Under 22: 183 rules off multiples of 3 from ring 19, 124
+  on multiples of 3 at 12-27, 115 from 30. 90 even rings 130/138
+  alternating; 150 multiples of 3: 130, then 100/98 alternating.
+- L7: full-shift depth one is strictly smaller than all-ring depth one
+  under 232 (16 rules), 200 (8), 22 (22), 102 (8); equal under 4, 32,
+  90, 150. Depth claims must now say rings or full shift.
+- Do not infer: anything about depth two; anything about other
+  observations; that the L7 gap is the same rules under conjugate
+  observations without checking (covariance certified only at rings
+  4-14).
+- Pending: Codex's gate-2 sign-off and reviewer merge on PR #120.
+- Candidate next units: characterize the L7 gap (which strongly
+  connected components carry the extendable violations, and whether the
+  full-shift depth of those rules is exactly 2); depth two under one
+  observation with a sparse method; a synthesis after fourteen.
+
+## Checkpoint 2026-09-11 (fourteenth unit opened): depth-one certificate, protocol frozen, review pending
+
+- Frozen and unrun: `protocols/depth-one-certificate-20260911.md`. For
+  observation psi and rule r, h_* <= 1 at ring n >= 4 iff no violating
+  three-edge walk (a seven-cell pair block with disagreeing two-step
+  observed successors) in the 256-vertex depth-one pair graph G_{psi,r}
+  (vertices four-cell pair blocks, edges five-cell blocks agreeing on
+  psi and on psi of the successor) has a return walk of length n-3;
+  boolean powers repeat, so the depth-one set at every ring is decided
+  finitely. Eight observations, exhaustive rings 3-14.
+- L1 divisibility, L2 exactness and reference consistency with the
+  recorded depth tables (theorem controls); L3 certificates reported;
+  L4 bets: 232, 4, 32, 200 constant from ring 10; 22 eventual period
+  exactly 3; 102 the parity 248 everywhere (control); L5 kernel facts
+  (theorem) with 90 even rings and 150 multiples of 3 reported; L6
+  symmetries; L7 all-ring equals full-shift depth one (bet).
+- Depth two is out of scope (4096-vertex graphs per rule).
+- Gathering PR #120 opened as draft at `d6e6b1c`; gate-1 review requested
+  from Codex there.
+- Pending: Codex's gate-1 review. No verifier committed, nothing run.
+
+## Checkpoint 2026-09-11 (thirteenth unit accepted): ring-closure certificate merged
+
+- Accepted after Codex's gate-2 sign-off at `4fbb2d5` (one correction round: rule 223 under 22 closes at rings 3 to 6, constancy scoped to the six K4 observations), merged in PR #116 as `b581492`.
+- Branch restarted from `main` at `b581492`. Records updated: note
+  header, knowledge test entry, Program section, AGENTS result 12,
+  Program catalog summary.
+- State of the program: thirteen audits accepted. The Program page's
+  synthesis section still reads the first eleven; the twelfth and
+  thirteenth are separate completed sections after it, and a synthesis
+  refresh is one candidate next unit.
+- Candidate next units, unchanged from below: certify refinement depth
+  for all rings; the small-ring regime (rings 3-5); a synthesis after
+  thirteen units.
+
 ## Checkpoint 2026-09-11 (thirteenth unit run): ring-closure certificate, gate-2 pending
 
 - Gate 1 met at `05276a5` after two correction rounds; verifier committed
