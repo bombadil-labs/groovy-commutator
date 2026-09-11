@@ -1,0 +1,17 @@
+[
+  {
+    "slug": "ring-closure-certificate",
+    "label": "Ring-closure certificate",
+    "title": "Closure at every ring is decided by a sixteen-vertex graph, and the audited closed sets are constant from ring 7",
+    "date": "2026-09-11",
+    "updated": "2026-09-11",
+    "kind": "Exact certificate of observation closure at every ring size, for eight observations",
+    "evidence": "exact",
+    "topic": "Algebra and closure",
+    "summary": "Pairs of ring configurations with equal observations are closed walks in a sixteen-vertex pair graph, and a rule fails closure at ring n exactly when a violating three-edge walk has a return walk of length n minus 3. Boolean powers of the graph's matrix repeat after at most seven steps here, so the closed set at every ring is decided finitely. For observations 232, 4, 32, 200, 22 and 102 the closed set is the same at every ring from 7 on; rule 223 under 22 closes at ring 6 only; observations 90 and 150 alternate forever with periods 2 and 3. All-ring closure coincides with closure on the full shift for all eight.",
+    "takeaway": "Closure under an observation can be decided once for all ring sizes from a small graph. The ring-by-ring censuses were complete after ring 6, and small rings are a separate regime of closures that fit inside the criterion's window.",
+    "source": "docs/research/2026-09-11-ring-closure-certificate.md",
+    "promotion": { "stage": "research" },
+    "related": ["factor-radius", "complement-observation", "linear-observations", "observation-closure"]
+  }
+]

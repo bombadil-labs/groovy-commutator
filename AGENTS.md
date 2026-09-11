@@ -508,6 +508,21 @@ workflow; research source and result changes now also trigger that workflow.
    cellwise factors such as the identity's; tables reflection-invariant
    and complement-covariant to 236 and 223. Accepted after Codex's gate-2
    sign-off at `4d44aa8`, merged in PR #110.
+   Thirteenth unit (`scripts/verify_ring_closure_certificate.py`, gate-1
+   reviewed after two correction rounds): closure at every ring size,
+   certified. Pairs with equal observations are closed walks in a
+   16-vertex pair graph; a rule fails closure at ring n ≥ 4 iff a
+   violating three-edge walk (a five-cell pair block with disagreeing
+   observed successors) has a return walk of length n−3, read off
+   boolean matrix powers, which repeat (k ≤ 7, p ∈ {1,2,3} here), so
+   finitely many powers decide every ring; a closure lost at ring n is
+   lost at every multiple (theorem). Observations 232, 4, 32, 200, 22,
+   102 have the same closed set at every ring n ≥ 7 (22, 33, 33, 42, 11,
+   32 rules), equal to full-shift closure; 223 under 22 closes at ring 6
+   only; rings 3–5 carry many window-sized extra closures. 90 alternates
+   forever (32 odd / 16 affine even), 150 with period 3 (all 256 off
+   multiples of 3 / 16 affine on them). 32 = 4∘¬, so C_32 = conj C_4
+   (post hoc). Gate-2 pending on PR #116.
 
 ## Checkpoint logs (read before continuing any workstream)
 

@@ -7,6 +7,27 @@ substantial unit completes; keep the bounded-claim style.
 
 Program page: `docs/research/2026-09-10-representation-invariants-program.md`
 
+## Checkpoint 2026-09-11 (thirteenth unit run): ring-closure certificate, gate-2 pending
+
+- Gate 1 met at `05276a5` after two correction rounds; verifier committed
+  at `a4f2f51`; single run (29 s), rerun byte-identical.
+- All seven predictions held. Certificate (k, p): 232 (5,1), 4 (3,1),
+  32 (3,1), 200 (4,1), 22 (7,1), 102 (2,1), 90 (2,2), 150 (2,3).
+  All-ring closed sets: 22, 33, 33, 42, 11, 32, 16, 16 rules. Constant
+  from ring 7 for the first six (223 under 22 at ring 6 only); 90 period
+  2 (32 odd / 16 even), 150 period 3 (256 off multiples of 3 / 16 on
+  them). Full-shift closure equals all-ring closure for all eight.
+  Small rings: ring 3 closes 64/160/160/80/160/64/64/64 rules, ring 4
+  64/104/104/80/96/32/64/256, ring 5 64/37/37/42/80/32/32/256.
+- Post hoc: 32 = 4 of the complemented state, so C_32(n) = conj C_4(n).
+- Do not infer: constancy from ring 7 for other observations (90 and
+  150 refute it in general); anything about depth or factor radius
+  beyond the rings earlier units computed; rings 1 and 2.
+- Pending: Codex's gate-2 sign-off and reviewer merge on PR #116.
+- Candidate next units: certify refinement depth h_* for all rings the
+  same way (the pair graph with history); the small-ring regime (rings
+  3-5) as a study of window-sized closures; a synthesis after thirteen.
+
 ## Checkpoint 2026-09-11 (thirteenth unit opened): ring-closure certificate, protocol frozen, review pending
 
 - Frozen and unrun: `protocols/ring-closure-certificate-20260911.md`.
