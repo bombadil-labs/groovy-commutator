@@ -518,8 +518,9 @@ workflow; research source and result changes now also trigger that workflow.
    finitely many powers decide every ring; a closure lost at ring n is
    lost at every multiple (theorem). Observations 232, 4, 32, 200, 22,
    102 have the same closed set at every ring n ≥ 7 (22, 33, 33, 42, 11,
-   32 rules), equal to full-shift closure; 223 under 22 closes at ring 6
-   only; rings 3–5 carry many window-sized extra closures. 90 alternates
+   32 rules), equal to full-shift closure; 223 under 22 closes at rings
+   3–6 and never from 7 on; rings 3–5 carry many window-sized extra
+   closures. 90 alternates
    forever (32 odd / 16 affine even), 150 with period 3 (all 256 off
    multiples of 3 / 16 affine on them). 32 = 4∘¬, so C_32 = conj C_4
    (post hoc). Gate-2 pending on PR #116.

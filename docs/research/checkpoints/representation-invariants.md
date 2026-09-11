@@ -14,7 +14,8 @@ Program page: `docs/research/2026-09-10-representation-invariants-program.md`
 - All seven predictions held. Certificate (k, p): 232 (5,1), 4 (3,1),
   32 (3,1), 200 (4,1), 22 (7,1), 102 (2,1), 90 (2,2), 150 (2,3).
   All-ring closed sets: 22, 33, 33, 42, 11, 32, 16, 16 rules. Constant
-  from ring 7 for the first six (223 under 22 at ring 6 only); 90 period
+  from ring 7 for the first six (223 under 22 closes at rings 3-6, never
+  from 7 on); 90 period
   2 (32 odd / 16 even), 150 period 3 (256 off multiples of 3 / 16 on
   them). Full-shift closure equals all-ring closure for all eight.
   Small rings: ring 3 closes 64/160/160/80/160/64/64/64 rules, ring 4
