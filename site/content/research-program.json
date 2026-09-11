@@ -83,6 +83,7 @@
     "source": "docs/research/2026-09-10-representation-invariants-program.md",
     "supports": [
       "representation-invariants-audit",
+      "cap-census-complement-extension",
       "rule-field-relabeling",
       "second-lift-completion-protocol",
       "correction-future-coordinates",

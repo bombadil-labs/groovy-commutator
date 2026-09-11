@@ -1,0 +1,243 @@
+{
+ "protocol": "cap-census-complement-extension-20260911",
+ "schema": 1,
+ "R_max": 6,
+ "source_hashes": {
+  "script": "87742209fe6be0d9d3c365c6dec8cffc7f9c66b78e0ee5dd6dc77f9b394e7e05",
+  "local_correction_caps": "9975a0e45e6cde51ca6a7bdb9bf269ab03be21c61eb2973ba27a803c41f5c69a",
+  "representation_invariants_audit": "7150d5a6d6272e98ac22d63de5683e2fa1c73da21b947cf5fa6b2485b0c9b93f"
+ },
+ "cells": [
+  {
+   "rule": 4,
+   "conj": 223,
+   "h": 0,
+   "mpr_rule": 0,
+   "mpr_conj": 1,
+   "bound_from_rule": 1,
+   "bound_from_conj": 1,
+   "shift": 1
+  },
+  {
+   "rule": 38,
+   "conj": 155,
+   "h": 2,
+   "mpr_rule": 2,
+   "mpr_conj": 3,
+   "bound_from_rule": 6,
+   "bound_from_conj": 6,
+   "shift": 1
+  },
+  {
+   "rule": 46,
+   "conj": 139,
+   "h": 2,
+   "mpr_rule": 2,
+   "mpr_conj": 3,
+   "bound_from_rule": 6,
+   "bound_from_conj": 6,
+   "shift": 1
+  },
+  {
+   "rule": 52,
+   "conj": 211,
+   "h": 2,
+   "mpr_rule": 2,
+   "mpr_conj": 3,
+   "bound_from_rule": 6,
+   "bound_from_conj": 6,
+   "shift": 1
+  },
+  {
+   "rule": 106,
+   "conj": 169,
+   "h": 2,
+   "mpr_rule": 2,
+   "mpr_conj": 3,
+   "bound_from_rule": 6,
+   "bound_from_conj": 6,
+   "shift": 1
+  },
+  {
+   "rule": 116,
+   "conj": 209,
+   "h": 2,
+   "mpr_rule": 2,
+   "mpr_conj": 3,
+   "bound_from_rule": 6,
+   "bound_from_conj": 6,
+   "shift": 1
+  },
+  {
+   "rule": 120,
+   "conj": 225,
+   "h": 2,
+   "mpr_rule": 2,
+   "mpr_conj": 3,
+   "bound_from_rule": 6,
+   "bound_from_conj": 6,
+   "shift": 1
+  },
+  {
+   "rule": 132,
+   "conj": 222,
+   "h": 2,
+   "mpr_rule": 1,
+   "mpr_conj": 3,
+   "bound_from_rule": 6,
+   "bound_from_conj": 6,
+   "shift": 2
+  },
+  {
+   "rule": 139,
+   "conj": 46,
+   "h": 2,
+   "mpr_rule": 3,
+   "mpr_conj": 2,
+   "bound_from_rule": 6,
+   "bound_from_conj": 6,
+   "shift": 1
+  },
+  {
+   "rule": 146,
+   "conj": 182,
+   "h": 1,
+   "mpr_rule": 3,
+   "mpr_conj": 2,
+   "bound_from_rule": 4,
+   "bound_from_conj": 3,
+   "shift": 1
+  },
+  {
+   "rule": 155,
+   "conj": 38,
+   "h": 2,
+   "mpr_rule": 3,
+   "mpr_conj": 2,
+   "bound_from_rule": 6,
+   "bound_from_conj": 6,
+   "shift": 1
+  },
+  {
+   "rule": 160,
+   "conj": 250,
+   "h": 2,
+   "mpr_rule": 1,
+   "mpr_conj": 3,
+   "bound_from_rule": 6,
+   "bound_from_conj": 6,
+   "shift": 2
+  },
+  {
+   "rule": 169,
+   "conj": 106,
+   "h": 2,
+   "mpr_rule": 3,
+   "mpr_conj": 2,
+   "bound_from_rule": 6,
+   "bound_from_conj": 6,
+   "shift": 1
+  },
+  {
+   "rule": 182,
+   "conj": 146,
+   "h": 1,
+   "mpr_rule": 2,
+   "mpr_conj": 3,
+   "bound_from_rule": 3,
+   "bound_from_conj": 4,
+   "shift": 1
+  },
+  {
+   "rule": 200,
+   "conj": 236,
+   "h": 0,
+   "mpr_rule": 0,
+   "mpr_conj": 1,
+   "bound_from_rule": 1,
+   "bound_from_conj": 1,
+   "shift": 1
+  },
+  {
+   "rule": 209,
+   "conj": 116,
+   "h": 2,
+   "mpr_rule": 3,
+   "mpr_conj": 2,
+   "bound_from_rule": 6,
+   "bound_from_conj": 6,
+   "shift": 1
+  },
+  {
+   "rule": 211,
+   "conj": 52,
+   "h": 2,
+   "mpr_rule": 3,
+   "mpr_conj": 2,
+   "bound_from_rule": 6,
+   "bound_from_conj": 6,
+   "shift": 1
+  },
+  {
+   "rule": 222,
+   "conj": 132,
+   "h": 2,
+   "mpr_rule": 3,
+   "mpr_conj": 1,
+   "bound_from_rule": 6,
+   "bound_from_conj": 6,
+   "shift": 2
+  },
+  {
+   "rule": 223,
+   "conj": 4,
+   "h": 0,
+   "mpr_rule": 1,
+   "mpr_conj": 0,
+   "bound_from_rule": 1,
+   "bound_from_conj": 1,
+   "shift": 1
+  },
+  {
+   "rule": 225,
+   "conj": 120,
+   "h": 2,
+   "mpr_rule": 3,
+   "mpr_conj": 2,
+   "bound_from_rule": 6,
+   "bound_from_conj": 6,
+   "shift": 1
+  },
+  {
+   "rule": 236,
+   "conj": 200,
+   "h": 0,
+   "mpr_rule": 1,
+   "mpr_conj": 0,
+   "bound_from_rule": 1,
+   "bound_from_conj": 1,
+   "shift": 1
+  },
+  {
+   "rule": 250,
+   "conj": 160,
+   "h": 2,
+   "mpr_rule": 3,
+   "mpr_conj": 1,
+   "bound_from_rule": 6,
+   "bound_from_conj": 6,
+   "shift": 2
+  }
+ ],
+ "cell_count": 22,
+ "X1_reproduction_violations": [],
+ "X2_existence_violations": [],
+ "X3_bound_violations": [],
+ "X4_shift_le_h_plus_1_violations": [],
+ "summary": {
+  "X1": true,
+  "X2": true,
+  "X3": true,
+  "X4": true
+ }
+}
