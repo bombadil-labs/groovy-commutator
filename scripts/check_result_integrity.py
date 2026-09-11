@@ -61,6 +61,11 @@ REGISTRY = {
         'script': 'scripts/verify_wiring_dilation.py',
         'block_majority_result': 'results/block_majority_20260911.json',
         'isolated_cell_result': 'results/isolated_cell_20260911.json'},
+    'results/factor_radius_20260911.json': {
+        'script': 'scripts/verify_factor_radius.py',
+        'block_majority_result': 'results/block_majority_20260911.json',
+        'isolated_cell_result': 'results/isolated_cell_20260911.json',
+        'complement_observation_result': 'results/complement_observation_20260911.json'},
     'results/second_lift_completion_20260911.json': {
         'script': 'scripts/verify_second_lift_completion.py',
         'protocol': 'docs/research/protocols/second-lift-completion-comparison-20260910.md'},

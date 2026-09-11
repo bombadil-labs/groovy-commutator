@@ -7,17 +7,62 @@ substantial unit completes; keep the bounded-claim style.
 
 Program page: `docs/research/2026-09-10-representation-invariants-program.md`
 
-## Checkpoint 2026-09-11 (synthesis): verdict matrix and first promotion, review pending
+## Checkpoint 2026-09-11 (twelfth unit run): factor radius, gate-2 pending
 
-- Non-experimental unit: the Program page gains a synthesis section (a
+- Gate 1 met at `46d9a7c` after one witness correction; verifier committed
+  at `6ef1b6b`; single run (7 s), rerun byte-identical.
+- R1, R2, R4, R5, R6 held. R3 failed at one cell: rule 223 at ring 6 under
+  22 (closed at ring 6 only) has rho = 3, a 7-cell window covering the
+  whole 6-cell configuration; radius-2 conflict
+  window 00100. All other cells: under 200 the sixteen at rho = 2, 16 at 0,
+  10 at 1; under 4, 32: 26 at 0, 7 at 1; under 232: 12 at 0, 10 at 1;
+  under 22 (rings 7-12): 7 at 0, 4 at 1. rho ring-independent for every
+  rule closed at all seven rings under every observation. Radius 0
+  includes cellwise factors (identity), not only collapses.
+- Do not infer: that non-idempotent observations always have radius <= 1
+  factors (census only); anything about other observations.
+- Codex's first gate-2 round (2026-09-11) required four corrections,
+  applied: title scoped to the idempotent case; the Program's stale
+  frozen section removed; the result regenerated so every cell above
+  radius 1 carries its conflict windows at every ring (artifact
+  completeness after evaluation, verdicts and counts unchanged); the
+  finite-ring reading narrowed to a warning sign in this census.
+- Pending: Codex's gate-2 sign-off and reviewer merge on PR #110.
+- Candidate next units: the ring-dependent closure under 22 (which rings
+  admit finite-ring closures, and whether whole-ring factor support
+  accompanies them as it did in the one observed cell);
+  the depth threads.
+
+## Checkpoint 2026-09-11 (twelfth unit opened): factor radius, protocol frozen, review pending
+
+- Frozen and unrun: `protocols/factor-radius-20260911.md`. The locality
+  radius rho of the factor on the image for every closed rule under
+  observations 232, 4, 32, 200, 22, rings 6-12. R1 idempotent observations
+  (200, 4): factor = psi o F_r on the image, rho <= 2 (theorem); R2 the
+  sixteen rule-200 residual rules at rho = 2 exactly, all else <= 1; R3
+  non-idempotent observations rho <= 2 for every closed rule (falsifiable
+  bet); R4 collapse rho = 0, commuters <= 1; R5 ring independence for
+  n >= 7 in the idempotent case (subshift argument), reported otherwise;
+  R6 reflection invariance, complement covariance for 200 and 4.
+- Pending: Codex's gate-1 review. No verifier committed, nothing run.
+
+## Checkpoint 2026-09-11 (synthesis accepted): verdict matrix and first promotion merged
+
+- Non-experimental unit: the Program page carries a synthesis section (a
   verdict matrix of eleven units by property family, four lessons, what
   each other program can use, what remains open); the Program registration
-  is updated; the first audit note is promoted to a new Concepts section
+  is updated; the first audit note is promoted to the Concepts section
   `#contract`, "When is a change of coordinates a discovery?". No evidence
   added; no protocol, verifier or result touched.
-- Pending: Codex's review of the synthesis on its gathering PR (gate 1 not
-  applicable; gate 2 on the wording and on the matrix's fidelity to the
-  cited notes).
+- Codex reviewed in three rounds (nine wording and scope corrections:
+  completion-change rows, dilation phrasing, contract-relative primitive
+  equivalence, unit-6 provenance, reflection scoped to exact properties,
+  the n >= 5 bound, the Concepts opener, the completion open item, one
+  Concepts sentence), signed off at `ddcecb9` and merged PR #100.
+- Program state: eleven experimental units and the synthesis on main.
+  Candidate twelfth units: the non-elementary factors under observation
+  200 (what radius the factor needs on the image, frozen as a bound); the
+  ring-dependent closed set under observation 22 (which rings, and why).
 
 ## Checkpoint 2026-09-11 (eleventh unit accepted): wiring dilation merged
 
