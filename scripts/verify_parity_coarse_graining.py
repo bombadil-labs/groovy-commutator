@@ -47,7 +47,12 @@ def anf(table):                       # algebraic normal form of a 3-input table
             if i & bit: a[i] ^= a[i ^ bit]
     return a                          # a[m] = coefficient of the monomial with mask m (4=l, 2=m, 1=r)
 def degree(table): return max([bin(m).count('1') for m in range(8) if anf(table)[m]] or [0])
-def is_linear(table): a = anf(table); return degree(table) <= 1 and a[0] == 0
+def is_linear(table): a = anf(table); return bool(degree(table) <= 1 and a[0] == 0)
+def jsonable(o):                      # serialization patch 2026-09-11: the first run computed fully, then failed on a numpy bool
+    if isinstance(o, (np.bool_,)): return bool(o)
+    if isinstance(o, np.integer): return int(o)
+    if isinstance(o, np.floating): return float(o)
+    raise TypeError(type(o))
 
 CI = [r for r in range(256) if all(v == 0 for v in response(r))]
 SD = [r for r in range(256) if all(v == 1 for v in response(r))]
@@ -192,7 +197,7 @@ def main():
     P['C5_relation_to_first_audit'] = c5
     report['predictions'] = P
     report['summary'] = {k: v['pass'] for k, v in P.items()}
-    OUT.write_text(json.dumps(report, indent=1, ensure_ascii=False) + '\n')
+    OUT.write_text(json.dumps(report, indent=1, ensure_ascii=False, default=jsonable) + '\n')
     print(json.dumps(report['summary']))
     print('closed per ring:', {n: c1['by_ring'][str(n)]['count'] for n in C1_RINGS_REPORTED + C1_RINGS_PREDICTED})
     print('fixed points:', c2['fixed_points'], 'factor image size:', len(c2['factor_image']))
