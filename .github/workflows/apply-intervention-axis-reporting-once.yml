@@ -1,0 +1,32 @@
+name: One-shot intervention-axis reporting integration
+
+on:
+  push:
+    branches:
+      - work/dimensional-intervention-axis/reporting
+    paths:
+      - 'scripts/apply_intervention_axis_reporting.py'
+      - '.github/workflows/apply-intervention-axis-reporting-once.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  report:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Apply reporting-only catalog/checkpoint updates
+        run: python scripts/apply_intervention_axis_reporting.py
+      - name: Commit generated reporting integration
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add docs/research/2026-09-09-dimensional-closure-program.md docs/research/checkpoints/dimensional-lift.md site/content/research-program.json site/content/knowledge.json
+          git commit -m 'Integrate intervention-axis Program checkpoint and knowledge records'
+          git push origin HEAD:work/dimensional-intervention-axis/reporting
