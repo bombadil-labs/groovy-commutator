@@ -7,6 +7,23 @@ substantial unit completes; keep the bounded-claim style.
 
 Program page: `docs/research/2026-09-10-representation-invariants-program.md`
 
+## Checkpoint 2026-09-11 (fifth unit accepted): parity coarse-graining merged
+
+- Gate 2 met: Codex signed off at `36be4bc` (one record correction first: the
+  ring-12 pair count is 2,046 of 2,048, not 1,022 of 1,024; prose only).
+  Merged to main via PR #88 at `48b6cf3` with a merge commit; five checks
+  green including the parity replay. Unit accepted.
+- State of the program: global relabelings (units 1-3), one local injective
+  recoding (unit 4), one non-injective coarse-graining (unit 5) declared and
+  audited. Undeclared: change of completion (Codex's second-lift protocol).
+- Next unit candidates, in order of preference: (a) freeze h_* <= 2 under
+  neighbor parity as a prediction at n in {14, 16} with a proof attempt on the
+  complement-response structure; (b) a second non-injective map (2-block
+  projection or block majority) to test whether the constant-response
+  criterion is parity-specific. Protocol review by Codex before any run.
+- Open for Myk, unchanged: the editorial default for the commutator under
+  relabeling.
+
 ## Checkpoint 2026-09-11 (fifth unit run): parity coarse-graining, final review pending
 
 - Gate 1 met: Codex reviewed the protocol at `9997462` before implementation;

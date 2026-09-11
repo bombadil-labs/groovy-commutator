@@ -413,7 +413,7 @@ workflow; research source and result changes now also trigger that workflow.
    with an elementary factor (`r` and `r̃` share one; fixed points are the 8
    linear rules); the commutator is covariant by linearity; the 224 other
    rules have refinement depth `h_* ∈ {1, 2}` at `n ≤ 12` (post hoc, not a
-   proven bound). Pending Codex's final sign-off on PR #88.
+   proven bound). Accepted after Codex's gate-2 sign-off, merged in PR #88.
 
 ## Checkpoint logs (read before continuing any workstream)
 
