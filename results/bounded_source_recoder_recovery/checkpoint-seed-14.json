@@ -1,5 +1,5 @@
 {
-  "batches": 5,
+  "batches": 6,
   "certificate": null,
   "current_candidate": {
     "delta": 0,
@@ -401,24 +401,24 @@
   "stats": {
     "direct_leaves": 0,
     "last_solver_error": {},
-    "partition_splits": 279,
+    "partition_splits": 338,
     "solver_decisions": {
-      "cadical195": 495,
-      "glucose4": 6,
-      "minisat22": 21
+      "cadical195": 551,
+      "glucose4": 7,
+      "minisat22": 22
     },
     "solver_errors": {},
     "solver_seconds": {
-      "cadical195": 4541.6743023990075,
-      "glucose4": 3051.0683312409983,
-      "maplechrono": 3003.213827304998,
-      "minisat22": 2967.7676042070025
+      "cadical195": 5435.970147076016,
+      "glucose4": 3659.795625459,
+      "maplechrono": 3603.8627768389965,
+      "minisat22": 3567.7173593850034
     },
     "solver_timeouts": {
-      "cadical195": 306,
-      "glucose4": 300,
-      "maplechrono": 300,
-      "minisat22": 279
+      "cadical195": 367,
+      "glucose4": 360,
+      "maplechrono": 360,
+      "minisat22": 338
     },
     "solver_unavailable": {}
   },
@@ -835,14 +835,28 @@
     "verification_queue": [
       [
         34,
-        35
+        35,
+        36
       ],
       [
         34,
-        -35,
-        36,
-        40,
-        41,
+        35,
+        -36,
+        40
+      ],
+      [
+        34,
+        35,
+        -36,
+        -40,
+        41
+      ],
+      [
+        34,
+        35,
+        -36,
+        -40,
+        -41,
         42,
         31,
         32,
@@ -852,10 +866,10 @@
       ],
       [
         34,
-        -35,
-        36,
-        40,
-        41,
+        35,
+        -36,
+        -40,
+        -41,
         42,
         31,
         32,
@@ -866,35 +880,17 @@
       ],
       [
         34,
-        -35,
-        36,
-        40,
-        41,
+        35,
+        -36,
+        -40,
+        -41,
         42,
         31,
         32,
         33,
         43,
         -44,
-        -45,
-        28,
-        29
-      ],
-      [
-        34,
-        -35,
-        36,
-        40,
-        41,
-        42,
-        31,
-        32,
-        33,
-        43,
-        -44,
-        -45,
-        28,
-        -29
+        -45
       ]
     ]
   },
