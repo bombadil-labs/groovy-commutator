@@ -7,6 +7,25 @@ substantial unit completes; keep the bounded-claim style.
 
 Program page: `docs/research/2026-09-10-representation-invariants-program.md`
 
+## Checkpoint 2026-09-11 (fifteenth unit opened): full-shift depth two, protocol frozen, review pending
+
+- Frozen and unrun: `protocols/full-shift-depth-two-20260911.md`. Full-
+  shift h_* <= 2 for every (psi, r) by sparse reachability in the
+  depth-two pair graph (4096 six-cell-pair vertices, seven-cell edges
+  agreeing on psi, psi F, psi F^2; violating nine-cell blocks with
+  psi F^3 disagreeing at the centre); exhaustive D^2(n) on rings 3-14;
+  the fourteenth unit's 54 L7 gap witnesses realized as explicit
+  eventually periodic configuration pairs with a finite-window check.
+- M1 full shift implies every ring, M2 monotonicity and divisibility
+  (theorem controls); M3 the 54 gap rules have full-shift depth exactly
+  two (bet); M4 parity all 256 on the full shift (theorem control, sixth
+  unit); M5 depth-two gap on rings 3-14 nonempty for exactly 232, 200,
+  22 (bet), reported with witnesses; M6 witness pairs pass (control);
+  M7 symmetries.
+- No ring certificate at depth two is claimed; nothing about depth
+  three.
+- Pending: Codex's gate-1 review. No verifier committed, nothing run.
+
 ## Checkpoint 2026-09-11 (fourteenth unit accepted): depth-one certificate merged
 
 - Accepted after Codex's gate-2 sign-off at `25fc0d1` (one correction round: per-rule L7 witnesses added, reconciliation with main, subshift wording), merged in PR #120 as `36943c7`.
