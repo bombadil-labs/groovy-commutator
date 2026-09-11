@@ -1,0 +1,65 @@
+name: Transverse freedom diagnostic
+
+on:
+  pull_request:
+    paths:
+      - 'scripts/verify_transverse_freedom.py'
+      - 'docs/research/protocols/transverse-freedom-20260911.md'
+      - 'results/transverse_freedom_20260911.json'
+      - 'scripts/check_result_integrity.py'
+      - '.github/workflows/research-transverse-freedom.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/verify_transverse_freedom.py'
+      - 'docs/research/protocols/transverse-freedom-20260911.md'
+      - 'results/transverse_freedom_20260911.json'
+      - 'scripts/check_result_integrity.py'
+      - '.github/workflows/research-transverse-freedom.yml'
+  schedule:
+    - cron: '17 7 * * 2'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  transverse-freedom:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Frozen theorem and indexing controls
+        run: python scripts/verify_transverse_freedom.py --controls-only
+      - name: Recorded source hashes match the tree
+        if: ${{ hashFiles('results/transverse_freedom_20260911.json') != '' }}
+        run: python scripts/check_result_integrity.py results/transverse_freedom_20260911.json
+      - name: Does this revision carry the canonical evaluation?
+        id: result
+        shell: bash
+        run: |
+          if [ ! -f results/transverse_freedom_20260911.json ]; then
+            echo "run=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          if [ "${{ github.event_name }}" != "pull_request" ]; then
+            echo "run=true" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          if git diff --name-only "origin/${{ github.base_ref }}...HEAD" | grep -Eq '^results/transverse_freedom_20260911\.json$'; then
+            echo "run=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "run=false" >> "$GITHUB_OUTPUT"
+          fi
+      - name: Replay canonical diagnostic and compare byte-for-byte
+        if: steps.result.outputs.run == 'true'
+        shell: bash
+        run: |
+          cp results/transverse_freedom_20260911.json /tmp/expected-transverse-freedom.json
+          python scripts/verify_transverse_freedom.py > /tmp/transverse-freedom-replay.log
+          cmp /tmp/expected-transverse-freedom.json results/transverse_freedom_20260911.json
