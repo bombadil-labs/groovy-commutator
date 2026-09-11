@@ -1,0 +1,17 @@
+[
+  {
+    "slug": "parity-coarse-graining",
+    "label": "Parity coarse-graining",
+    "title": "Which rules survive neighbor-parity coarse-graining, and how much history do the others need?",
+    "date": "2026-09-11",
+    "updated": "2026-09-11",
+    "kind": "Exact audit of a declared non-injective coarse-graining, with a refinement census",
+    "evidence": "exact",
+    "topic": "Algebra and closure",
+    "summary": "Neighbor parity (rule 102 as an observation) closes for exactly the 32 rules with constant complement response at every ring size tested; each has an elementary factor given by an explicit formula, rule 90 is fixed, and the commutator is covariant. The 224 other rules need one step of history, or two for eight rules, at every ring up to 12.",
+    "takeaway": "A non-injective coarse-graining splits the rule space along the same local object as complement conjugation. Where it closes, nothing is lost; where it does not, the missing history is at most two steps within the tested rings, a post-hoc observation awaiting proof.",
+    "source": "docs/research/2026-09-11-parity-coarse-graining.md",
+    "promotion": { "stage": "research" },
+    "related": ["representation-invariants-audit", "higher-block-recoding", "observation-closure", "history-lift-closure", "shared-closure-account"]
+  }
+]

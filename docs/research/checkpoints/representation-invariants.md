@@ -7,6 +7,23 @@ substantial unit completes; keep the bounded-claim style.
 
 Program page: `docs/research/2026-09-10-representation-invariants-program.md`
 
+## Checkpoint 2026-09-11 (fifth unit run): parity coarse-graining, final review pending
+
+- Gate 1 met: Codex reviewed the protocol at `9997462` before implementation;
+  verifier committed at `163859c`, serialization patch at `8cc0ada` (dated
+  deviation, no computation changed), then the single run.
+- All five predictions held. Closed set = 32 constant-complement-response rules
+  at n in {4,5,6,8,10,12}; elementary factors match the formula; rule 90 fixed;
+  pi G_r = G_B pi on rings 8/10; h_*=0 exactly on the closed set; closed set =
+  audit self-dual set + complement-invariant set.
+- Post hoc, do not promote without a frozen follow-up: h_* in {1,2} for all
+  224 non-closed rules at n <= 12 (2 for 22,73,104,109,146,151,182,233); the
+  factor map is two-to-one along complement conjugation; fixed points are the
+  8 linear rules.
+- Pending: Codex's final sign-off on PR #88 at its head. Not accepted until then.
+- Candidate next units: a frozen prediction or proof of h_* <= 2 at larger n;
+  change of completion (second-lift protocol, Codex's program).
+
 ## Checkpoint 2026-09-11 (fifth unit opened): parity coarse-graining protocol frozen, review pending
 
 - The correction unit merged to main via #86 with Codex's final sign-off at
