@@ -1,0 +1,85 @@
+name: Temporary dimensional gathering reconciliation
+
+on:
+  push:
+    branches:
+      - gather/dimensional-second-lift
+    paths:
+      - '.github/workflows/temporary-dimensional-gather-reconcile.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  reconcile:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: gather/dimensional-second-lift
+      - name: Merge current main and reconcile shared registries
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          cp scripts/check_result_integrity.py /tmp/branch_integrity.py
+          cp site/content/knowledge.json /tmp/branch_knowledge.json
+
+          git fetch origin main
+          git merge origin/main --no-commit || true
+
+          # AGENTS is canonical guidance; this dimensional branch has no unique
+          # second-lift addition there, so current main wins wholesale.
+          git checkout --theirs AGENTS.md
+
+          # Start from current main's integrity registry and add the completed
+          # second-lift result registration from the dimensional branch.
+          git checkout --theirs scripts/check_result_integrity.py
+          python - <<'PY'
+          from pathlib import Path
+          p = Path('scripts/check_result_integrity.py')
+          s = p.read_text()
+          entry = """    'results/second_lift_completion_20260911.json': {\n        'script': 'scripts/verify_second_lift_completion.py',\n        'protocol': 'docs/research/protocols/second-lift-completion-comparison-20260910.md'},\n"""
+          if "results/second_lift_completion_20260911.json" not in s:
+              marker = "}\n\ndef sha("
+              if marker not in s:
+                  raise SystemExit('integrity registry insertion marker not found')
+              s = s.replace(marker, entry + marker, 1)
+              p.write_text(s)
+          PY
+
+          # Start from current main's knowledge graph so the latest Fable nodes
+          # and edges survive, then replace only the second-lift experiment node
+          # and its dependency edge with the completed dimensional versions.
+          git checkout --theirs site/content/knowledge.json
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          main_p = Path('site/content/knowledge.json')
+          main = json.loads(main_p.read_text())
+          branch = json.loads(Path('/tmp/branch_knowledge.json').read_text())
+          node_id = 'second-lift-completion-comparison'
+          bn = next(n for n in branch['nodes'] if n.get('id') == node_id)
+          main['nodes'] = [bn if n.get('id') == node_id else n for n in main['nodes']]
+          key = (node_id, 'depends_on', 'completion-independent-fibers')
+          be = next(e for e in branch['edges'] if (e.get('source'), e.get('type'), e.get('target')) == key)
+          main['edges'] = [be if (e.get('source'), e.get('type'), e.get('target')) == key else e for e in main['edges']]
+          main_p.write_text(json.dumps(main, separators=(',', ':')) + '\n')
+          PY
+
+          git add AGENTS.md scripts/check_result_integrity.py site/content/knowledge.json
+          git rm -f .github/workflows/temporary-dimensional-gather-reconcile.yml
+
+          # Refuse to commit if any merge conflicts remain outside the three
+          # explicitly reconciled shared files.
+          if git diff --name-only --diff-filter=U | grep -q .; then
+            echo 'Unresolved merge conflicts:'
+            git diff --name-only --diff-filter=U
+            exit 1
+          fi
+
+          git commit -m "Merge current main into dimensional gathering branch and reconcile shared registries"
+          git push origin HEAD:gather/dimensional-second-lift
