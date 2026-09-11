@@ -104,9 +104,9 @@ def bool_powers(A):
     return powers, None, None
 
 def full_shift_ok(A, walks):
-    R = A.copy(); Af = A.astype(np.float32)
+    R = A.copy()                                                          # transitive closure by repeated squaring
     while True:
-        R2 = R | ((R.astype(np.float32) @ Af) > 0).astype(np.uint8)
+        Rf = R.astype(np.float32); R2 = R | ((Rf @ Rf) > 0).astype(np.uint8)
         if np.array_equal(R2, R): break
         R = R2
     on = np.array([R[v, v] for v in range(256)], dtype=bool)
