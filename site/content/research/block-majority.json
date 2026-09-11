@@ -1,0 +1,17 @@
+[
+  {
+    "slug": "block-majority",
+    "label": "Block majority",
+    "title": "Under block majority, 22 rules close, 14 by commuting and 8 by collapse, and the history cost grows with the ring",
+    "date": "2026-09-11",
+    "updated": "2026-09-11",
+    "kind": "Exact audit of the first non-linear observation, with a coset-free refinement census",
+    "evidence": "exact",
+    "topic": "Algebra and closure",
+    "summary": "Three-cell majority as an observation closes exactly 22 rules at every ring 6 to 12: the 14 rules that commute exactly with rule 232 and 8 whose successors always have a constant majority field. The affine rules other than constants, identity, shifts and their complements do not close. The refinement depth reaches 16 at ring 12 and grows with the ring.",
+    "takeaway": "The first non-linear coarse-graining sorts rules by commutation and collapse, not by complement response, breaks the affine rules' safety, and has a memory cost that grows with the ring inside the tested range.",
+    "source": "docs/research/2026-09-11-block-majority.md",
+    "promotion": { "stage": "research" },
+    "related": ["linear-observations", "parity-coarse-graining", "observation-closure", "history-lift-closure"]
+  }
+]

@@ -444,7 +444,14 @@ workflow; research source and result changes now also trigger that workflow.
    32 and the certified depths; rule 90 on even rings and rule 150 on rings
    divisible by 3 close exactly the 16 affine rules; depth under those
    kernels reaches 4 and varies with ring size. Accepted after Codex's gate-2
-   sign-off, merged in PR #91.
+   sign-off, merged in PR #91. Eighth unit (`scripts/verify_block_majority.py`,
+   gate-1 reviewed): rule 232 (majority) as the first non-linear observation
+   on rings 6–12 closes exactly 22 rules, the same at every ring: 14 exact
+   commuters with 232 and 8 rules whose observed successor is a constant
+   field; the affine rules beyond constants, identity, shifts and their
+   complements do not close; depth reaches 16 at ring 12 and grows with the
+   ring; neither the parity 32 nor this set contains the other. Gate-2
+   pending on PR #92.
 
 ## Checkpoint logs (read before continuing any workstream)
 
