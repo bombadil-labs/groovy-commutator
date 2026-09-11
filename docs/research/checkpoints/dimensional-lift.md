@@ -13,6 +13,18 @@ when a substantial unit completes; keep the bounded-claim style. Text moved from
 
 Program page: `docs/research/2026-09-09-dimensional-closure-program.md`
 
+## Checkpoint 2026-09-11: bounded touching-strip interface-factor census completed; gate-2 pending
+
+Read `docs/research/2026-09-11-interface-factor.md`. This unit follows the adjacent-strip/interface-state work by testing a frozen finite symbolic interface representation as a pooled local factor, rather than equating raw fixed-height escape with failure of every symbolic description.
+
+- Protocol sub-PR #124 integrated at `84f5b5de` before implementation/evaluation; implementation sub-PR #126 integrated at `f75a4aa2` with no canonical result; evaluation sub-PR #127 then generated result `aa69196`, registered integrity, removed one-shot runners, passed 20 exact-head checks including permanent byte-for-byte replay, and integrated at `dd6004d`.
+- Frozen J3 is false: full six-bit P15 has no passing radius among `R=0,1,2` on primary `t=0..3`, and none on stress `t=0..6`.
+- Complete J5 census: none of the 16 frozen interface masks passes any tested radius on either horizon; there is no inclusion-minimal passing mask and no P15 dependency audit because J7 was conditional on a passing full factor.
+- J1 passes: coordinate/inverse agreement and zero initial interface corrections. J2 passes: no exterior change after the first coarse update for every declared source, with exterior departure by the second. All independent scalar J8 physical replays agree.
+- The canonical P15 `R=2` primary conflict has equal five-symbol neighborhoods but next symbols `0` and `24`; independent physical replay locates differing cells outside rows `0..3` inside the next-step causal patch. `R=1` likewise has an exterior hidden-cause witness.
+- Scope is exactly the exhaustive declared `n=6,7` adjacent-strip reachable family, frozen six-bit/interface-subset representations, fixed horizons and `R<=2`. Do not infer failure at larger radius, with history, moving/support-tracking state, other coordinates, nonlocal factors, arbitrary-width grids, or recursive 2D-to-3D lifting.
+- No post-hoc rescue representation was introduced. Reporting is integrated on the gathering branch only after this reporting sub-PR merges. Retrospective Claude/Fable review remains owed under Myk's temporary exception before final acceptance under the project correction/review policy.
+
 ## Checkpoint 2026-09-11: uniform local intervention-axis unit completed; gate-2 pending
 
 Read `docs/research/2026-09-11-intervention-axis.md`. This unit follows the accepted finite-width packing/transverse-freedom result by releasing total target storage and freezing only a common local intervention endpoint window.
