@@ -437,7 +437,13 @@ workflow; research source and result changes now also trigger that workflow.
    {22, 73, 104, 109, 146, 151, 182, 233}, realized at n = 5; rings 7, 9,
    11, 14 agree; run authorized by Myk before Codex's retrospective gate-1
    sign-off; accepted after Codex's gate-2 sign-off, merged in PR #89). Fifth unit accepted after Codex's
-   gate-2 sign-off, merged in PR #88.
+   gate-2 sign-off, merged in PR #88. Seventh unit
+   (`scripts/verify_linear_observations.py`, gate-1 reviewed): all eight
+   linear rules as observations on rings 6–12; closure is decided by the
+   kernel: complement-pair kernels (60, 102, 90 on odd rings) reproduce the
+   32 and the certified depths; rule 90 on even rings and rule 150 on rings
+   divisible by 3 close exactly the 16 affine rules; depth under those
+   kernels reaches 4 and varies with ring size. Gate-2 pending on PR #91.
 
 ## Checkpoint logs (read before continuing any workstream)
 

@@ -7,6 +7,36 @@ substantial unit completes; keep the bounded-claim style.
 
 Program page: `docs/research/2026-09-10-representation-invariants-program.md`
 
+## Checkpoint 2026-09-11 (seventh unit run): linear observations, gate-2 pending
+
+- Gate 1 met at `eb7d2f1` before implementation; verifier committed at
+  `e30221c`; single run, rerun byte-identical (25 s).
+- All seven predictions held. Complement-pair kernels (60, 102, 90 odd n)
+  reproduce the 32 and the certified depths for all 256 rules. Rule 90 even n
+  and rule 150 at 3|n: closed set = the 16 affine rules exactly (bounds were
+  frozen; the exact value is post hoc). Depths under those kernels reach 4
+  within n=12 (90: rules 22, 151 at n=10,12; 150: up to 10 rules at n=12)
+  and are ring-dependent (16 and 48 rules respectively).
+- Do not infer: that only affine rules close under every observation whose
+  kernel omits the all-ones vector (Codex's caution); anything beyond n=12.
+- Pending: Codex's gate-2 sign-off and reviewer merge on PR #91.
+- Intended eighth unit: block majority (rule 232 as an observation), the
+  first non-linear fiber structure.
+
+## Checkpoint 2026-09-11 (seventh unit opened): linear observations, protocol frozen, review pending
+
+- Frozen and unrun: `protocols/linear-observations-20260911.md`. Declares the
+  eight linear rules as observations; closure is decided by each kernel:
+  {0,1} for 60/102 and 90 at odd n (E3: the fifth unit's 32), period-2
+  kernel for 90 at even n (E4: between the 16 affine and the 32), period-3
+  kernel without the all-ones vector for 150 at 3|n (E5: affine lower bound,
+  no upper bound; the unit's question), trivial kernels (E2), affine rules
+  always closed (E1, theorem), h_* by exact partition refinement (E6),
+  symmetries (E7).
+- Pending: Codex's gate-1 review. No verifier committed, nothing run.
+- Intended eighth unit: block majority (rule 232) as the first non-linear
+  observation.
+
 ## Checkpoint 2026-09-11 (sixth unit accepted): parity history bound merged; workflow housekeeping
 
 - Gate 2 met: Codex signed off at `10fdbe3` after one record correction (the

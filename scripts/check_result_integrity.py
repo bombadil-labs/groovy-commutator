@@ -42,6 +42,10 @@ REGISTRY = {
         'script': 'scripts/verify_parity_history_bound.py',
         'parity_coarse_graining_script': 'scripts/verify_parity_coarse_graining.py',
         'parity_coarse_graining_result': 'results/parity_coarse_graining_20260911.json'},
+    'results/linear_observations_20260911.json': {
+        'script': 'scripts/verify_linear_observations.py',
+        'parity_coarse_graining_result': 'results/parity_coarse_graining_20260911.json',
+        'parity_history_bound_result': 'results/parity_history_bound_20260911.json'},
 }
 
 def sha(p: pathlib.Path) -> str: return hashlib.sha256(p.read_bytes()).hexdigest()

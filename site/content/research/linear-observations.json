@@ -1,0 +1,17 @@
+[
+  {
+    "slug": "linear-observations",
+    "label": "Linear observations",
+    "title": "Under every linear observation, closure is decided by the kernel, and the richer kernels keep only the affine rules",
+    "date": "2026-09-11",
+    "updated": "2026-09-11",
+    "kind": "Exact audit of all eight linear rules as observations, with a coset refinement census",
+    "evidence": "exact",
+    "topic": "Algebra and closure",
+    "summary": "Observations with the complement-pair kernel (rules 60, 102, and 90 on odd rings) reproduce the parity results exactly; rule 90 on even rings and rule 150 on rings divisible by 3 close only the 16 affine rules; history depth under those richer kernels reaches 4 within ring 12 and varies with ring size.",
+    "takeaway": "The constant-complement-response criterion belongs to one kernel. Larger kernels in the linear family admit only affine rules, and their memory cost is no longer bounded by two steps.",
+    "source": "docs/research/2026-09-11-linear-observations.md",
+    "promotion": { "stage": "research" },
+    "related": ["parity-coarse-graining", "parity-history-bound", "observation-closure", "history-lift-closure"]
+  }
+]

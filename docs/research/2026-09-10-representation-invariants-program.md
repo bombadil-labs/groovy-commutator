@@ -76,6 +76,10 @@ One row per declared transformation, with its declared costs, then the propertie
 | Neighbor parity `π` (rule 102 as an observation) | two-to-one, one global bit, forward radius 1, no local inverse | factor closure | closed for exactly the 32 constant-complement-response rules at every ring `n ≤ 12`; not closed for 224 | [parity coarse-graining](2026-09-11-parity-coarse-graining.md) |
 | Neighbor parity `π` | same | law, derivative, commutator of a closed rule | closed with an elementary factor (explicit formula; `r` and `r̃` share a factor; the 8 linear rules are fixed); commutator covariant by linearity | same |
 | Neighbor parity `π` | same | non-closed rules | not closed; `h_* ≤ 2` certified on every ring by a finite 8-word check and lemma: 1 for 216 rules, 2 for 8 (realized on the 5-cell ring); exhaustive at rings 6–12 and 14 | [parity history bound](2026-09-11-parity-history-bound.md) |
+| Linear observations 60, 102, and 90 on odd rings (complement-pair kernel) | two-to-one, one global bit | factor closure and `h_*` | closed for exactly the 32; depths identical to parity for all 256 rules (rings 6–12) | [linear observations](2026-09-11-linear-observations.md) |
+| Linear observation 90 on even rings (kernel adds the alternating patterns) | four-to-one, two global bits | factor closure and `h_*` | closed for exactly the 16 affine rules; `h_*` up to 4 within ring 12, ring-dependent for 16 rules | same |
+| Linear observation 150 on rings divisible by 3 (period-3 kernel, no all-ones vector) | four-to-one, two global bits | factor closure and `h_*` | closed for exactly the 16 affine rules; `h_*` up to 4, ring-dependent for 48 rules | same |
+| Linear observations 204, 170, 240 (injective), 0 (constant), 150 on other rings | none, or everything | factor closure | closed for all 256 | same |
 
 ## First unit: complete
 
@@ -102,6 +106,10 @@ The protocol It declares two global transformations of elementary CA (complement
 ## Sixth unit: complete
 
 [Parity history bound](protocols/parity-history-bound-20260911.md), frozen 2026-09-11, run under Myk's authorization with Codex's gate-1 sign-off arriving retrospectively and unchanged, reported in the [parity history-bound note](2026-09-11-parity-history-bound.md). All four predictions held, D1 in its literal stronger form: every `L`-admissible 8-word passes for all 224 non-closed rules, so by the frozen lemma `h_* ≤ 2` under neighbor parity on every ring size; the depth-2 set is exactly `{22, 73, 104, 109, 146, 151, 182, 233}`, each realized on the 5-cell ring; rings 7, 9, 11 and 14 reproduce the certified depths; depths are invariant under complement conjugation and reflection. Post hoc: 32 non-closed rules have no state whose complement pair survives two steps. Accepted: Codex's gate-2 sign-off at `10fdbe3`, merged in PR #89.
+
+## Seventh unit: complete, final review pending
+
+[Linear observations](protocols/linear-observations-20260911.md), frozen 2026-09-11, reviewed by Codex before implementation, run once, reported in the [linear observations note](2026-09-11-linear-observations.md). All seven predictions held. Complement-pair kernels (60, 102, 90 on odd rings) reproduce the fifth unit's 32 rules and the sixth unit's depths exactly; rule 90 on even rings and rule 150 on rings divisible by 3 close exactly the 16 affine rules (predicted only as bounds; the exact value is post hoc), so no rule outside the 32 closes under the kernel that omits the all-ones vector; under those richer kernels the depth reaches 4 within ring 12 and varies with ring size, so the two-step parity bound is specific to the complement-pair kernel. Intended eighth unit: block majority, the first non-linear observation. Accepted only after Codex's gate-2 sign-off on the gathering PR.
 
 ## What would count as progress
 
