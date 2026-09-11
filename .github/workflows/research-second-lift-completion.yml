@@ -1,0 +1,69 @@
+name: Second-lift completion comparison
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, ready_for_review]
+    paths:
+      - 'scripts/verify_second_lift_completion.py'
+      - 'docs/research/protocols/second-lift-completion-comparison-20260910.md'
+      - 'results/second_lift_completion_20260911.json'
+      - 'results/second_lift_completion_tables_20260911/**'
+      - '.github/workflows/research-second-lift-completion.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/verify_second_lift_completion.py'
+      - 'docs/research/protocols/second-lift-completion-comparison-20260910.md'
+      - 'results/second_lift_completion_20260911.json'
+      - 'results/second_lift_completion_tables_20260911/**'
+      - '.github/workflows/research-second-lift-completion.yml'
+  schedule:
+    - cron: '47 6 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  second-lift:
+    runs-on: ubuntu-latest
+    timeout-minutes: 240
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -e .
+      - name: Frozen pre-evaluation controls
+        run: python scripts/verify_second_lift_completion.py --controls-only
+      - name: Recorded source hashes match the tree (provenance coherence)
+        if: ${{ hashFiles('results/second_lift_completion_20260911.json') != '' }}
+        run: python scripts/check_result_integrity.py results/second_lift_completion_20260911.json
+      - name: Does this revision carry the canonical evaluation?
+        id: result
+        shell: bash
+        run: |
+          if [ ! -f results/second_lift_completion_20260911.json ]; then
+            echo "run=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          if [ "${{ github.event_name }}" != "pull_request" ]; then
+            echo "run=true" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          if git diff --name-only "origin/${{ github.base_ref }}...HEAD" | grep -Eq '^results/second_lift_completion_(20260911\.json|tables_20260911/)'; then
+            echo "run=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "run=false" >> "$GITHUB_OUTPUT"
+          fi
+      - name: Replay canonical evaluation and compare byte-for-byte
+        if: steps.result.outputs.run == 'true'
+        shell: bash
+        run: |
+          cp results/second_lift_completion_20260911.json /tmp/expected-second-lift.json
+          cp -R results/second_lift_completion_tables_20260911 /tmp/expected-second-lift-tables
+          python scripts/verify_second_lift_completion.py > /tmp/second-lift-replay.log
+          cmp /tmp/expected-second-lift.json results/second_lift_completion_20260911.json
+          diff -qr /tmp/expected-second-lift-tables results/second_lift_completion_tables_20260911

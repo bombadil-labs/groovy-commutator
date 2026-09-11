@@ -1,0 +1,24 @@
+[
+  {
+    "slug": "second-lift-completion",
+    "label": "Second-lift completion",
+    "title": "Rule32's inherited second-lift tuples close at radius one through depth two",
+    "date": "2026-09-11",
+    "updated": "2026-09-11",
+    "kind": "Exact bounded product-alphabet cap comparison",
+    "evidence": "exact",
+    "topic": "Algebra and closure",
+    "summary": "Across H128/H160, K/O and depths 0–2, the inherited Rule32 pair family fails at radius 0 and closes at radius 1; all 36 full-four-symbol ambient controls fail through radius 2. The represented alphabet grows while the inherited minimum cap radius stays one.",
+    "takeaway": "The correction construction can be applied a second time with bounded local closure on its inherited family, but the added resource is product-alphabet correction state on the same 1D lattice, not a new spatial axis.",
+    "source": "docs/research/2026-09-11-second-lift-completion.md",
+    "promotion": {
+      "stage": "research"
+    },
+    "related": [
+      "second-lift-completion-protocol",
+      "local-correction-caps",
+      "correction-future-coordinates",
+      "extension-freedom"
+    ]
+  }
+]

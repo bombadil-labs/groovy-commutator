@@ -7,6 +7,32 @@ substantial unit completes; keep the bounded-claim style.
 
 Program page: `docs/research/2026-09-10-representation-invariants-program.md`
 
+## Checkpoint 2026-09-11 (synthesis): verdict matrix and first promotion, review pending
+
+- Non-experimental unit: the Program page gains a synthesis section (a
+  verdict matrix of eleven units by property family, four lessons, what
+  each other program can use, what remains open); the Program registration
+  is updated; the first audit note is promoted to a new Concepts section
+  `#contract`, "When is a change of coordinates a discovery?". No evidence
+  added; no protocol, verifier or result touched.
+- Pending: Codex's review of the synthesis on its gathering PR (gate 1 not
+  applicable; gate 2 on the wording and on the matrix's fidelity to the
+  cited notes).
+
+## Checkpoint 2026-09-11 (eleventh unit accepted): wiring dilation merged
+
+- Gate 2 met: Codex signed off at `1b1e071` after one knowledge-edge
+  correction (an analogy is not a supports edge) and merged PR #99 itself
+  under the reviewer-merges rule. Unit accepted.
+- Program state: eleven units complete across four transformation types:
+  global relabelings (1-3), one injective local recoding (4), observations
+  linear (5-7) and non-linear (8-10), and wiring (11).
+- Next: the synthesis, a table of every declared transformation against
+  every audited property with the verdict (preserved, covariant with a
+  named transport, changed) on the Program page, plus promotion of
+  selected findings to the main site pages. Open experimental threads:
+  non-elementary factors under rule 200; ring-dependent closure under 22.
+
 ## Checkpoint 2026-09-11 (eleventh unit run): wiring dilation, gate-2 pending
 
 - Gate 1 met at `aa312e6` with two binding clarifications; verifier
