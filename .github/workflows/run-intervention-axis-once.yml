@@ -1,0 +1,38 @@
+name: One-shot intervention-axis canonical evaluation
+
+# One-shot orchestration for the first primary run after the verifier was pinned
+# and integrated on gathering PR #114. The generated result commit remains in
+# history; this workflow is removed in the evaluation/reporting cleanup.
+on:
+  push:
+    branches:
+      - work/dimensional-intervention-axis/evaluation
+    paths:
+      - '.github/workflows/run-intervention-axis-once.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  evaluate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -e .
+      - name: Run the pinned verifier exactly once
+        run: |
+          test ! -e results/intervention_axis_20260911.json
+          python scripts/verify_intervention_axis.py
+      - name: Commit canonical result to this evaluation branch
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add results/intervention_axis_20260911.json
+          git commit -m 'Record first intervention-axis canonical evaluation'
+          git push origin HEAD:work/dimensional-intervention-axis/evaluation
