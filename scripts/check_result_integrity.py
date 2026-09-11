@@ -79,6 +79,9 @@ REGISTRY = {
     'results/intervention_axis_20260911.json': {
         'script': 'scripts/verify_intervention_axis.py',
         'protocol': 'docs/research/protocols/intervention-axis-20260911.md'},
+    'results/interface_factor_20260911.json': {
+        'script': 'scripts/verify_interface_factor.py',
+        'protocol': 'docs/research/protocols/interface-factor-20260911.md'},
 }
 
 def sha(p: pathlib.Path) -> str: return hashlib.sha256(p.read_bytes()).hexdigest()

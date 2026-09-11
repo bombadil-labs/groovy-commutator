@@ -1,0 +1,17 @@
+[
+  {
+    "slug": "interface-factor",
+    "label": "Interface factor",
+    "title": "The frozen six-bit touching-strip interface does not close within longitudinal radius two",
+    "date": "2026-09-11",
+    "updated": "2026-09-11",
+    "kind": "Exact bounded factor-obstruction census",
+    "evidence": "exact",
+    "topic": "Algebra and closure",
+    "summary": "On the exhaustive declared n=6,7 adjacent-strip reachable family, none of the 16 frozen interface-state masks admits an autonomous local factor at longitudinal radius 0, 1, or 2. Full-state radius-1 and radius-2 conflicts replay to causally relevant physical differences outside the retained four-row band.",
+    "takeaway": "The natural six-bit symbolic interface is still too small to make touching-strip dynamics locally autonomous within the tested budget. This closes one finite-interface attempt negatively without ruling out larger, history-bearing, moving, or nonlocal descriptions.",
+    "source": "docs/research/2026-09-11-interface-factor.md",
+    "promotion": { "stage": "research" },
+    "related": ["coupled-strips", "interface-state", "observation-closure", "dimensional-lift"]
+  }
+]
