@@ -4,7 +4,7 @@
 
 ## Question
 
-The preceding transverse-freedom unit established a capacity distinction: every fixed finite width packs into a product alphabet, whereas independently variable unbounded width eventually exceeds any fixed total one-dimensional storage budget. That still leaves a stronger operational question:
+The preceding transverse-freedom unit established a capacity distinction: every fixed finite width packs into a product alphabet, whereas independently variable unbounded width eventually exceeds any fixed total one-dimensional storage budget. That still leaves a different operational question:
 
 > Does transverse extent provide an unbounded family of independently addressable, finite-support interventions that remain inside one dynamically closed representation, even when a one-dimensional target is allowed arbitrarily much total storage?
 
@@ -64,7 +64,7 @@ The first retained invalid witness is the established pair of logical triples `1
 
 The previous unit said that independent unbounded width needs growing total representational capacity. This unit holds total target capacity open and instead fixes the **locality of intervention endpoints**. The separated strip family still forces a resource to grow: either the common one-dimensional action window, the alphabet, or some equivalent routing/addressability resource must scale with the number of independently addressable transverse channels.
 
-That is a stronger operational distinction than nominal row count or whole-state entropy alone. It is still representation-relative.
+That is a **different, complementary operational distinction** from nominal row count or whole-state capacity: I3 adds content specifically when total target length is unconstrained while the common local endpoint window remains fixed. It is still representation-relative.
 
 A useful bounded reading for the dimensional program is:
 
