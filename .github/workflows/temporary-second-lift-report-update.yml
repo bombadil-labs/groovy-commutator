@@ -24,110 +24,38 @@ jobs:
         shell: bash
         run: |
           python - <<'PY'
-          import json
+          import base64, json
           from pathlib import Path
-
-          program_path = Path('docs/research/2026-09-09-dimensional-closure-program.md')
-          program = program_path.read_text()
-          if "21. **Rule32's inherited second-lift tuples close at radius one through depth two.**" not in program:
+          dec = lambda s: base64.b64decode(s).decode()
+          item21 = dec('CjIxLiAqKlJ1bGUzMidzIGluaGVyaXRlZCBzZWNvbmQtbGlmdCB0dXBsZXMgY2xvc2UgYXQgcmFkaXVzIG9uZSB0aHJvdWdoIGRlcHRoIHR3by4qKiBGb3IgYm90aCBkZWNsYXJlZCBIMTI4L0gxNjAgY29tcGxldGlvbnMsIGJvdGggSy9PIGNvb3JkaW5hdGUgc3lzdGVtcyBhbmQgaD0wLDEsMiwgcmFkaXVzIHplcm8gZmFpbHMgd2hpbGUgcmFkaXVzIG9uZSBjbG9zZXMgdGhlIGluaGVyaXRlZCBSdWxlMzIgcGFpciBmYW1pbHk7IHJhZGl1cyB0d28gYWxzbyBwYXNzZXMuIEFsbCAzNiBmdWxsLWZvdXItc3ltYm9sIGFtYmllbnQgY29udHJvbHMgZmFpbCB0aHJvdWdoIHJhZGl1cyB0d28uIFRoZSBpbmhlcml0ZWQgTyB0YWJsZXMgYXJlIGxpdGVyYWxseSBjb21wbGV0aW9uLWluZGVwZW5kZW50LCB3aGlsZSBLIHRhYmxlcyBjYW4gZGlmZmVyIGFuZCByZW1haW4gbG9jYWxseSByZWNvZGVkLiBUaGlzIGlzIHByb2R1Y3QtYWxwaGFiZXQgY29ycmVjdGlvbiBjbG9zdXJlIG9uIHRoZSBzYW1lIG9uZS1kaW1lbnNpb25hbCBsYXR0aWNlLCBub3QgYSBuZXcgc3BhdGlhbCBkaW1lbnNpb24uCg==')
+          old_open = dec('LSBUaGUgcmVsYXRpb25zaGlwIGJldHdlZW4gY29ycmVjdGlvbiBkZXB0aCwgc3BhdGlhbCBkaW1lbnNpb24sIGdyb3dpbmcgc3BhdGlhbCByYWRpdXMgYW5kIG1pbmltdW0gY2F1c2FsIHJlcHJlc2VudGF0aW9uIGRpbWVuc2lvbiBpcyBub3QgeWV0IGNoYXJhY3Rlcml6ZWQuIEEgZml4ZWQgY29kZSdzIGFuY2VzdHJhbCByYW5rIG1heSBwcmltYXJpbHkgcmVmbGVjdCBpdHMgbGF5b3V0Lgo=')
+          new_open = dec('LSBUaGUgcmVsYXRpb25zaGlwIGJldHdlZW4gY29ycmVjdGlvbiBkZXB0aCwgc3BhdGlhbCBkaW1lbnNpb24sIGdyb3dpbmcgc3BhdGlhbCByYWRpdXMgYW5kIG1pbmltdW0gY2F1c2FsIHJlcHJlc2VudGF0aW9uIGRpbWVuc2lvbiBpcyBub3QgeWV0IGNoYXJhY3Rlcml6ZWQuIFRoZSBjb21wbGV0ZWQgc2Vjb25kLWxpZnQgY29tcGFyaXNvbiBrZWVwcyB0aGUgc3BhdGlhbCBsYXR0aWNlIG9uZS1kaW1lbnNpb25hbCB3aGlsZSBncm93aW5nIHRoZSByZXByZXNlbnRlZCBwcm9kdWN0IGFscGhhYmV0OyBpdHMgcmFkaXVzLW9uZSBpbmhlcml0ZWQgY2xvc3VyZSB0aGVyZWZvcmUgZG9lcyBub3Qgc2V0dGxlIGhvdyBhIGdlbnVpbmVseSBuZXcgc3BhdGlhbCBheGlzIHNob3VsZCBhcmlzZS4gQSBmaXhlZCBjb2RlJ3MgYW5jZXN0cmFsIHJhbmsgbWF5IHByaW1hcmlseSByZWZsZWN0IGl0cyBsYXlvdXQuCg==')
+          old_tail = dec('IyMgUGxhbm5lZCBleGVjdXRpb246IGJvdW5kZWQgc2Vjb25kLWxpZnQgY29tcGxldGlvbiBjb21wYXJpc29uCgpUaGUgW2Zyb3plbiBwcm90b2NvbF0ocHJvdG9jb2xzL3NlY29uZC1saWZ0LWNvbXBsZXRpb24tY29tcGFyaXNvbi0yMDI2MDkxMC5tZCkgZm9sbG93cyB0aGUgY29tcGxldGVkIGdyYWRpZW50IGF1ZGl0LiBJdHMgW3JlZ2lzdGVyZWQgZXhwZXJpbWVudF0oLi4va25vd2xlZGdlL3NlY29uZC1saWZ0LWNvbXBsZXRpb24tY29tcGFyaXNvbi5tZCkgcmVtYWlucyBwbGFubmVkOiBpbXBsZW1lbnRhdGlvbiBhbmQgcHJpbWFyeSBldmFsdWF0aW9uIGFyZSB1bnJ1bi4gVGhlIFtub3RlXSgyMDI2LTA5LTEwLXNlY29uZC1saWZ0LWNvbXBsZXRpb24tcHJvdG9jb2wubWQpIGRpc3Rpbmd1aXNoZXMgcHJpb3IgZXhwbG9yYXRvcnkgY2hlY2tzIGZyb20gdGhlIGV4aXN0aW5nIGFuYWx5dGljIGludmFyaWFudC4KCkZvciBIMTI4L0gxNjAgb24gdGhlIHNoYXJlZCBpbnZhcmlhbnQgUnVsZTMyIHBhaXIgZmFtaWx5LCBmaW5pdGUtZGVwdGggY29ycmVjdGlvbiB0dXBsZXMgYXJlIGludmVydGlibHkgbG9jYWxseSByZWNvZGVkIGFuZCByZXRhaW4gaWRlbnRpY2FsIHdob2xlLWZpZWxkIGZpYmVycy4gVGhlIG9wZW4gbWVhc3VyZW1lbnQgaXMgbG9jYWwgY2FwIHJhZGl1cyBhbmQgcmVwcmVzZW50YXRpb24gY29zdCwgd2l0aCBhIHNlcGFyYXRlIGZ1bGwtZm91ci1zeW1ib2wgYW1iaWVudCBjb250cm9sLiBUaGlzIGNvbnN0cnVjdG9yIGluY3JlYXNlcyBhIHByb2R1Y3QgYWxwaGFiZXQgYW5kIGNvcnJlY3Rpb24gZGVwdGggb24gdGhlIHNhbWUgc3BhdGlhbCBsYXR0aWNlLiBQcm9wb3NhbCBjb21wbGV0aW9uIGRvZXMgbm90IGNsYWltIHRoZSBjZW5zdXMgaGFzIHJ1biBvciB0aGF0IGEgbmV3IHNwYXRpYWwgZGltZW5zaW9uIGhhcyBiZWVuIGVzdGFibGlzaGVkLgo=')
+          new_tail = dec('IyMgQ29tcGxldGVkIGV4ZWN1dGlvbjogYm91bmRlZCBzZWNvbmQtbGlmdCBjb21wbGV0aW9uIGNvbXBhcmlzb24KClRoZSBbZnJvemVuIHByb3RvY29sXShwcm90b2NvbHMvc2Vjb25kLWxpZnQtY29tcGxldGlvbi1jb21wYXJpc29uLTIwMjYwOTEwLm1kKSBoYXMgbm93IGJlZW4gZXhlY3V0ZWQ7IHNlZSB0aGUgW3Jlc3VsdCBub3RlXSgyMDI2LTA5LTExLXNlY29uZC1saWZ0LWNvbXBsZXRpb24ubWQpIGFuZCBba25vd2xlZGdlIHJlY29yZF0oLi4va25vd2xlZGdlL3NlY29uZC1saWZ0LWNvbXBsZXRpb24tY29tcGFyaXNvbi5tZCkuIFRoZSBpbXBsZW1lbnRhdGlvbiB3YXMgcGlubmVkIGJlZm9yZSB0aGUgcHJpbWFyeSA3Mi1jYXNlIG1hdHJpeCwgd2l0aCB0aGUgcmVjb3JkZWQgcHJlLXBpbiBjb250cm9sL2RpYWdub3N0aWMgZHJ5LXJ1biBwcmVzZXJ2ZWQgYXMgYSBwcm9jZWR1cmFsIGRldmlhdGlvbi4KCkZvciBIMTI4L0gxNjAgb24gdGhlIHNoYXJlZCBpbnZhcmlhbnQgUnVsZTMyIHBhaXIgZmFtaWx5LCBib3RoIEsgYW5kIE8gY29vcmRpbmF0ZXMgY2xvc2Ugd2l0aCAqKm1pbmltdW0gcmFkaXVzIG9uZSoqIGF0IGV2ZXJ5IHRlc3RlZCBkZXB0aCBoPTAsMSwyOiBSPTAgY29uZmxpY3RzIGFuZCBSPTEsMiBwYXNzIGZvciBib3RoIGNvbXBsZXRpb25zLiBFdmVyeSBvbmUgb2YgdGhlIDM2IGZ1bGwtZm91ci1zeW1ib2wgYW1iaWVudCBjb250cm9scyBjb25mbGljdHMgdGhyb3VnaCBSPTIuIFRoZSBpbmhlcml0ZWQgTyB0YWJsZXMgYXJlIGxpdGVyYWxseSBpZGVudGljYWwgYWNyb3NzIGNvbXBsZXRpb25zLCBhcyByZXF1aXJlZCBieSB0aGUgZnV0dXJlLWNvb3JkaW5hdGUgdGhlb3JlbTsgSyB0YWJsZXMgY2FuIGRpZmZlciB3aGlsZSB0aGUgZXhoYXVzdGl2ZSB0cmlhbmd1bGFyIHJlY29kaW5nIGF1ZGl0cyBwcmVzZXJ2ZSB0aGVpciB3aG9sZS1maWVsZCBmaWJlcnMgYW5kIHRoZSBzYW1lIG1pbmltdW0gY2FwIHJhZGl1cy4KClRoZSByZXN1bHQgaXNvbGF0ZXMgdGhlIHJlc291cmNlIGJlaW5nIHB1cmNoYXNlZDogYXQgZGVwdGhzIDAsMSwyIHRoZSByZXByZXNlbnRlZCBhbHBoYWJldCBjYXJyaWVzIDIsNCw2IGJpdHMgcGVyIHNpdGUgd2hpbGUgdGhlIG1lYXN1cmVkIGluaGVyaXRlZCBjYXAgcmFkaXVzIHJlbWFpbnMgb25lLiBUaGUgc3BhdGlhbCBsYXR0aWNlIHJlbWFpbnMgb25lLWRpbWVuc2lvbmFsIHRocm91Z2hvdXQuIFRoaXMgaXMgdGhlcmVmb3JlIGEgY29tcGxldGVkIHNlY29uZCBhcHBsaWNhdGlvbiBvZiB0aGUgY29ycmVjdGlvbiBjb25zdHJ1Y3Rpb24gaW4gYSBwcm9kdWN0IGFscGhhYmV0LCBub3QgZXZpZGVuY2UgdGhhdCBjb3JyZWN0aW9uIGRlcHRoIGl0c2VsZiBpcyBhIG5ldyBzcGF0aWFsIGRpbWVuc2lvbiBvciB0aGF0IHRoZSB0dXJ0bGUgYmVhbSBoYXMgYmVlbiBwaHlzaWNhbGx5IHNwYXRpYWxpemVkLgo=')
+          cpblock = dec('CiMjIENoZWNrcG9pbnQgMjAyNi0wOS0xMTogYm91bmRlZCBzZWNvbmQtbGlmdCBjb21wbGV0aW9uIGNvbXBhcmlzb24gY29tcGxldGVkCgpSZWFkIGBkb2NzL3Jlc2VhcmNoLzIwMjYtMDktMTEtc2Vjb25kLWxpZnQtY29tcGxldGlvbi5tZGAuIFRoaXMgaXMgdGhlIG5ld2VzdApjb21wbGV0ZWQgZGltZW5zaW9uYWwgdW5pdC4gSXQgZXhlY3V0ZXMgdGhlIGZyb3plbiBwcm9kdWN0LWFscGhhYmV0IHByb3RvY29sCndpdGhvdXQgcmVjbGFzc2lmeWluZyBjb3JyZWN0aW9uIGRlcHRoIGFzIHNwYXRpYWwgZGltZW5zaW9uLgoKLSBGcm96ZW4gcHJvdG9jb2w6IGBzZWNvbmQtbGlmdC1jb21wbGV0aW9uLWNvbXBhcmlzb24tMjAyNjA5MTAubWRgLiBQcmltYXJ5CiAgaW1wbGVtZW50YXRpb24gY29tbWl0IGA1N2U5NjEzYCB3YXMgcGlubmVkIGJlZm9yZSB0aGUgNzItY2FzZSBjYXAgbWF0cml4LgogIFRoZSByZXBvc2l0b3J5LWNhbm9uaWNhbCByZXN1bHQgd2FzIHByb2R1Y2VkIGF0IGBmNjU5MzhhYCBhbmQgdGhlbiByZXBsYXllZAogIGJ5dGUgZm9yIGJ5dGUgYnkgQ0kuIFJlc3VsdCBTSEEyNTY6CiAgYDVlY2M0ZDg2M2I5MzA4ZjdhNzg4Mjk3ZDFlNmQzYTgyZDg2ZDAyMTc5NzAzMmY3MmE4YjI0MTYxZjU0YjJlMjlgLgotIEV4YWN0IG1hdHJpeDogSDEyOC9IMTYwIGNvbXBsZXRpb25zLCBpbmhlcml0ZWQgUnVsZTMyIGZpcnN0LWltYWdlIGZhbWlseQogIHZlcnN1cyB0aGUgZnVsbCBmb3VyLXN5bWJvbCBzaGlmdCwgSy9PIGNvb3JkaW5hdGVzLCBoPTAuLjIsIFI9MC4uMi4KICAyNC83MiBjYXNlcyBwYXNzIGFuZCA0OCBjb25mbGljdC4gUHJpbWFyeS9yZWZlcmVuY2UgZmVhdHVyZS10YXJnZXQgZGlnZXN0cwogIGFncmVlIGZvciBhbGwgNzI7IGV2ZXJ5IGNvbmZsaWN0IHJldGFpbnMgYSBjYW5vbmljYWwgd2l0bmVzczsgZXZlcnkgcGFzc2luZwogIGZ1bGwgdHVwbGUgbGF3IGlzIGluZGVwZW5kZW50bHkgcmVwbGF5ZWQuCi0gT24gdGhlIGluaGVyaXRlZCBmYW1pbHksIGV2ZXJ5IGNvbXBsZXRpb24vY29vcmRpbmF0ZS9kZXB0aCBoYXMgdGhlIHNhbWUKICB0aHJlc2hvbGQ6IFI9MCBjb25mbGljdHMsIFI9MSBwYXNzZXMsIFI9MiBwYXNzZXMuIFRodXMgdGhlIG1pbmltdW0gbG9jYWwgY2FwCiAgcmFkaXVzIGlzIGV4YWN0bHkgb25lIHRocm91Z2hvdXQgdGhlIGZyb3plbiBkZXB0aHMuIEF0IGg9MCwxLDIgdGhlIHN0b3JlZAogIHR1cGxlIGFscGhhYmV0IHVzZXMgMiw0LDYgYml0cyBwZXIgc2l0ZSByZXNwZWN0aXZlbHkuCi0gT24gdGhlIGZ1bGwgYW1iaWVudCBHRigyKV4yIHNoaWZ0LCBhbGwgMzYgY2FzZXMgY29uZmxpY3QgdGhyb3VnaCBSPTIuIFRoaXMgaXMKICBhIGJvdW5kZWQgZmFpbHVyZSBvbmx5OyBubyBhcmJpdHJhcnktcmFkaXVzIGV4Y2x1c2lvbiBmb2xsb3dzLgotIEluaGVyaXRlZCBPIHRhYmxlcyBhcmUgbGl0ZXJhbGx5IGlkZW50aWNhbCBiZXR3ZWVuIGNvbXBsZXRpb25zIGF0IGV2ZXJ5CiAgYnVkZ2V0LiBLIHRhYmxlcyBnZW5lcmFsbHkgZGlmZmVyLCBidXQgZXhoYXVzdGl2ZSBLL08gYW5kIEgxMjgvSDE2MAogIHRyaWFuZ3VsYXIgcmVjb2RpbmdzIHBhc3MgdGhlaXIgY29tcGxldGUgZGVjbGFyZWQgbG9jYWwgZG9tYWlucy4gVGhlIGZpeGVkCiAgZGVwdGggd2hvbGUtZmllbGQgaW5mb3JtYXRpb24gZXF1YWxpdHkgaXMgYSB0aGVvcmVtLWJhY2tlZCBjb250cm9sLCBub3QgYQogIG51bWVyaWNhbCBkaXNjb3ZlcnkuCi0gRmluaXRlIGRpYWdub3N0aWMgb25seTogb24gdGhlIG49OCBpbmhlcml0ZWQgcmluZywgdGhlIDI1NSBkaXN0aW5jdCBmaXJzdAogIGltYWdlIHN0YXRlcyBtYXAgdG8gMjU0IHR1cGxlIHN0YXRlcyBhdCBldmVyeSBoPTAuLjIsIGxlYXZpbmcgb25lIHNpemUtdHdvCiAgZXhjZXB0aW9uYWwgZmliZXIgdW5kZXIgdGhlIHVuaWZvcm0tZGlzdGluY3Qtc3RhdGUgbWVhc3VyZS4gSW5jcmVhc2luZwogIGNvcnJlY3Rpb24gZGVwdGggdGhyb3VnaCBoPTIgZG9lcyBub3QgcmVtb3ZlIHRoYXQgZmluaXRlIGFtYmlndWl0eS4KLSBQcm9jZXNzIHJlY29yZDogYmVmb3JlIHRoZSBpbXBsZW1lbnRhdGlvbiBjb21taXQgd2FzIHBpbm5lZCwgb25seSB0aGUKICB0aGVvcmVtLWJhY2tlZCByZWNvZGluZyBhdWRpdHMgYW5kIHNtYWxsIG49OC9uPTQgZGlhZ25vc3RpY3Mgd2VyZQogIGFjY2lkZW50YWxseSBkcnktcnVuOyBubyBwcmltYXJ5IG1hdHJpeC90YWJsZSByZXN1bHQgd2FzIGluc3BlY3RlZC4gQWZ0ZXIKICBwaW5uaW5nLCBvbmUgbG9jYWwgd3JhcHBlciBydW4gd2FzIGtpbGxlZCBieSBpbmZyYXN0cnVjdHVyZSB0aW1lb3V0IGFuZCBpdHMKICBwYXJ0aWFsIGFydGlmYWN0cyB3ZXJlIGRpc2NhcmRlZCB1bmluc3BlY3RlZDsgdGhlIHVuY2hhbmdlZCByZXJ1biBhbmQgdGhlCiAgY2Fub25pY2FsIEdpdEh1YiBydW4gYWdyZWUgYnl0ZSBmb3IgYnl0ZS4KLSBEbyBub3QgaW5mZXIgYSBuZXcgc3BhdGlhbCBkaW1lbnNpb24sIGFtYmllbnQgaW1wb3NzaWJpbGl0eSBiZXlvbmQgUj0yLAogIHNlbGYtYXNzZW1ibHksIGVuZG9nZW5vdXMgY29udHJvbCwgb3IgYW4gb3JiaXQvZml4ZWQtcG9pbnQgY2xhc3NpZmljYXRpb24uCiAgVGhlIHNwYXRpYWwgbGF0dGljZSBzdGF5cyBaOyB0aGlzIHJlc3VsdCBtZWFzdXJlcyBjb3JyZWN0aW9uLWNvb3JkaW5hdGUKICBsb2NhbGl0eSBhbmQgYWxwaGFiZXQgY29zdC4KCg==')
+          p = Path('docs/research/2026-09-09-dimensional-closure-program.md')
+          t = p.read_text()
+          if "21. **Rule32's inherited second-lift tuples close at radius one through depth two.**" not in t:
               anchor = "20. **Loop revision and inherited control have exact support costs.** Changing a loop vector requires the sum of transverse cross-section sizes over its changed directions. Replication multiplies both edge and site costs by the added period while preserving edited trajectories. The exhaustive known-state flat-mask audit measures additional native higher-dimensional choices; its period-two full-field counts do not establish general nonlinear reversibility or an endogenous controller.\n"
-              addition = "\n21. **Rule32's inherited second-lift tuples close at radius one through depth two.** For both declared H128/H160 completions, both K/O coordinate systems and h=0,1,2, radius zero fails while radius one closes the inherited Rule32 pair family; radius two also passes. All 36 full-four-symbol ambient controls fail through radius two. The inherited O tables are literally completion-independent, while K tables can differ and remain locally recoded. This is product-alphabet correction closure on the same one-dimensional lattice, not a new spatial dimension.\n"
-              assert anchor in program
-              program = program.replace(anchor, anchor + addition, 1)
-
-              old = "- The relationship between correction depth, spatial dimension, growing spatial radius and minimum causal representation dimension is not yet characterized. A fixed code's ancestral rank may primarily reflect its layout.\n"
-              new = "- The relationship between correction depth, spatial dimension, growing spatial radius and minimum causal representation dimension is not yet characterized. The completed second-lift comparison keeps the spatial lattice one-dimensional while growing the represented product alphabet; its radius-one inherited closure therefore does not settle how a genuinely new spatial axis should arise. A fixed code's ancestral rank may primarily reflect its layout.\n"
-              assert old in program
-              program = program.replace(old, new, 1)
-
-              old_tail = """## Planned execution: bounded second-lift completion comparison
-
-The [frozen protocol](protocols/second-lift-completion-comparison-20260910.md) follows the completed gradient audit. Its [registered experiment](../knowledge/second-lift-completion-comparison.md) remains planned: implementation and primary evaluation are unrun. The [note](2026-09-10-second-lift-completion-protocol.md) distinguishes prior exploratory checks from the existing analytic invariant.
-
-For H128/H160 on the shared invariant Rule32 pair family, finite-depth correction tuples are invertibly locally recoded and retain identical whole-field fibers. The open measurement is local cap radius and representation cost, with a separate full-four-symbol ambient control. This constructor increases a product alphabet and correction depth on the same spatial lattice. Proposal completion does not claim the census has run or that a new spatial dimension has been established.
-"""
-              new_tail = """## Completed execution: bounded second-lift completion comparison
-
-The [frozen protocol](protocols/second-lift-completion-comparison-20260910.md) has now been executed; see the [result note](2026-09-11-second-lift-completion.md) and [knowledge record](../knowledge/second-lift-completion-comparison.md). The implementation was pinned before the primary 72-case matrix, with the recorded pre-pin control/diagnostic dry-run preserved as a procedural deviation.
-
-For H128/H160 on the shared invariant Rule32 pair family, both K and O coordinates close with **minimum radius one** at every tested depth h=0,1,2: R=0 conflicts and R=1,2 pass for both completions. Every one of the 36 full-four-symbol ambient controls conflicts through R=2. The inherited O tables are literally identical across completions, as required by the future-coordinate theorem; K tables can differ while the exhaustive triangular recoding audits preserve their whole-field fibers and the same minimum cap radius.
-
-The result isolates the resource being purchased: at depths 0,1,2 the represented alphabet carries 2,4,6 bits per site while the measured inherited cap radius remains one. The spatial lattice remains one-dimensional throughout. This is therefore a completed second application of the correction construction in a product alphabet, not evidence that correction depth itself is a new spatial dimension or that the turtle beam has been physically spatialized.
-"""
-              assert old_tail in program
-              program = program.replace(old_tail, new_tail, 1)
-              program_path.write_text(program)
-
-          cp_path = Path('docs/research/checkpoints/dimensional-lift.md')
-          cp = cp_path.read_text()
+              assert anchor in t and old_open in t and old_tail in t
+              t = t.replace(anchor, anchor + item21, 1).replace(old_open, new_open, 1).replace(old_tail, new_tail, 1)
+              p.write_text(t)
+          p = Path('docs/research/checkpoints/dimensional-lift.md')
+          t = p.read_text()
           heading = '## Checkpoint 2026-09-11: bounded second-lift completion comparison completed'
-          if heading not in cp:
+          if heading not in t:
               anchor = 'Program page: `docs/research/2026-09-09-dimensional-closure-program.md`\n'
-              block = r'''
-
-## Checkpoint 2026-09-11: bounded second-lift completion comparison completed
-
-Read `docs/research/2026-09-11-second-lift-completion.md`. This is the newest
-completed dimensional unit. It executes the frozen product-alphabet protocol
-without reclassifying correction depth as spatial dimension.
-
-- Frozen protocol: `second-lift-completion-comparison-20260910.md`. Primary
-  implementation commit `57e9613` was pinned before the 72-case cap matrix.
-  The repository-canonical result was produced at `f65938a` and then replayed
-  byte for byte by CI. Result SHA256:
-  `5ecc4d863b9308f7a788297d1e6d3a82d86d021797032f72a8b24161f54b2e29`.
-- Exact matrix: H128/H160 completions, inherited Rule32 first-image family
-  versus the full four-symbol shift, K/O coordinates, h=0..2, R=0..2.
-  24/72 cases pass and 48 conflict. Primary/reference feature-target digests
-  agree for all 72; every conflict retains a canonical witness; every passing
-  full tuple law is independently replayed.
-- On the inherited family, every completion/coordinate/depth has the same
-  threshold: R=0 conflicts, R=1 passes, R=2 passes. Thus the minimum local cap
-  radius is exactly one throughout the frozen depths. At h=0,1,2 the stored
-  tuple alphabet uses 2,4,6 bits per site respectively.
-- On the full ambient GF(2)^2 shift, all 36 cases conflict through R=2. This is
-  a bounded failure only; no arbitrary-radius exclusion follows.
-- Inherited O tables are literally identical between completions at every
-  budget. K tables generally differ, but exhaustive K/O and H128/H160
-  triangular recodings pass their complete declared local domains. The fixed
-  depth whole-field information equality is a theorem-backed control, not a
-  numerical discovery.
-- Finite diagnostic only: on the n=8 inherited ring, the 255 distinct first
-  image states map to 254 tuple states at every h=0..2, leaving one size-two
-  exceptional fiber under the uniform-distinct-state measure. Increasing
-  correction depth through h=2 does not remove that finite ambiguity.
-- Process record: before the implementation commit was pinned, only the
-  theorem-backed recoding audits and small n=8/n=4 diagnostics were
-  accidentally dry-run; no primary matrix/table result was inspected. After
-  pinning, one local wrapper run was killed by infrastructure timeout and its
-  partial artifacts were discarded uninspected; the unchanged rerun and the
-  canonical GitHub run agree byte for byte.
-- Do not infer a new spatial dimension, ambient impossibility beyond R=2,
-  self-assembly, endogenous control, or an orbit/fixed-point classification.
-  The spatial lattice stays Z; this result measures correction-coordinate
-  locality and alphabet cost.
-'''
-              assert anchor in cp
-              cp = cp.replace(anchor, anchor + block, 1)
-              cp_path.write_text(cp)
-
-          kpath = Path('site/content/knowledge.json')
-          k = json.loads(kpath.read_text())
+              assert anchor in t
+              p.write_text(t.replace(anchor, anchor + cpblock, 1))
+          p = Path('site/content/knowledge.json')
+          k = json.loads(p.read_text())
           for node in k['nodes']:
               if node.get('id') == 'second-lift-completion-comparison':
-                  node.update({
-                      'title': "Bounded second-lift completion comparison on Rule32's inherited family",
-                      'kind': 'experiment',
-                      'status': 'completed',
-                      'summary': 'For H128/H160, K/O and h=0..2, the inherited Rule32 pair family has exact minimum cap radius 1, while all full-four-symbol ambient controls fail through R<=2; the spatial lattice remains one-dimensional.',
-                      'updated': '2026-09-11',
-                      'source': 'docs/knowledge/second-lift-completion-comparison.md',
-                      'research': ['second-lift-completion'],
-                  })
+                  node.update({'title': "Bounded second-lift completion comparison on Rule32's inherited family", 'kind': 'experiment', 'status': 'completed', 'summary': 'For H128/H160, K/O and h=0..2, the inherited Rule32 pair family has exact minimum cap radius 1, while all full-four-symbol ambient controls fail through R<=2; the spatial lattice remains one-dimensional.', 'updated': '2026-09-11', 'source': 'docs/knowledge/second-lift-completion-comparison.md', 'research': ['second-lift-completion']})
           for edge in k['edges']:
               if edge.get('source') == 'second-lift-completion-comparison':
                   edge['research'] = ['second-lift-completion-protocol', 'second-lift-completion']
-          kpath.write_text(json.dumps(k, separators=(',', ':')) + '\n')
+          p.write_text(json.dumps(k, separators=(',', ':')) + '\n')
           PY
       - name: Commit generated report indexes
         shell: bash
