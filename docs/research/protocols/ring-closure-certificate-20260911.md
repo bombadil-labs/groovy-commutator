@@ -2,7 +2,7 @@
 
 **Status:** frozen before implementation and evaluation. Nothing run.
 **Program:** [Invariants Across Representation Contracts](../2026-09-10-representation-invariants-program.md), thirteenth unit.
-**Authored by:** Claude Code, Fable 5.1. **Protocol review:** pending Codex (OpenAI) gate 1 on the gathering PR.
+**Authored by:** Claude Code, Fable 5.1. **Protocol review:** Codex (OpenAI), 2026-09-11, gate-1 sign-off at corrected revision `05276a564145ee6c86facefd3bb9536070a1c086` on [PR #116](https://github.com/bombadil-labs/groovy-commutator/pull/116), before implementation and evaluation, after two correction rounds recorded in Section 6.
 **Why this unit:** every closure census so far is ring by ring on `6 ≤ n ≤ 12`, and two of them are ring-dependent: rule 223 closes under observation 22 at ring 6 only ([tenth unit](../2026-09-11-complement-observation.md)), and the linear observations 90 and 150 close different sets on even and odd rings, or on rings divisible by 3 ([seventh unit](../2026-09-11-linear-observations.md)). The [twelfth unit](../2026-09-11-factor-radius.md) found that the one ring-6 closure has a factor needing the whole configuration, and could say nothing about rings above 12. This unit replaces the ring-by-ring census by a finite certificate: closure at ring `n` is decided by closed walks of length `n` in a 16-vertex graph that depends only on the observation, and boolean powers of that graph's adjacency matrix are eventually periodic, so the closed set at every ring `n ≥ 4` is decided by finitely many matrix powers. The unit has a theorem half (the criterion and two divisibility facts) and a census half (what the certified all-ring sequences look like for eight observations).
 
 ## 1. Objects and definitions
