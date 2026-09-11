@@ -7,6 +7,19 @@ substantial unit completes; keep the bounded-claim style.
 
 Program page: `docs/research/2026-09-10-representation-invariants-program.md`
 
+## Checkpoint 2026-09-11 (eighth unit accepted): block majority merged
+
+- Gate 2 met: Codex signed off at `7c33051` with no blockers and merged
+  PR #92 itself under the reviewer-merges rule. Unit accepted.
+- Program state: global relabelings (1-3), one injective local recoding (4),
+  neighbor parity with its history bound (5-6), all linear observations (7),
+  the first non-linear observation (8). Open threads from unit 8: the depth
+  growth beyond ring 12 on {106, 120, 169, 225}; whether commute-or-collapse
+  is the general shape of closure under a non-linear observation.
+- Next: ninth unit, a second non-linear observation (rule 4, isolated-cell
+  detection), chosen to test the second thread; protocol to be frozen and
+  gate-1 reviewed before any run. The depth-growth thread stays open.
+
 ## Checkpoint 2026-09-11 (eighth unit run): block majority, gate-2 pending
 
 - Gate 1 met at `6f4eb6c` before implementation; verifier committed at
