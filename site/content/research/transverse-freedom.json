@@ -1,0 +1,23 @@
+[
+  {
+    "slug": "transverse-freedom",
+    "label": "Transverse freedom",
+    "title": "Finite stacks pack; Rule32's correction tower adds no new whole-field distinctions through depth four on the tested rings",
+    "date": "2026-09-11",
+    "updated": "2026-09-11",
+    "kind": "Exact representation theorem and bounded diagnostic",
+    "evidence": "exact",
+    "topic": "Algebra and closure",
+    "summary": "Every fixed finite strip packs into a 1D product alphabet, while unbounded independent width defeats any fixed alphabet/longitudinal-expansion budget. Rule32's inherited correction tuples remain source-bounded, and on rings 6–12 their whole-field partition is already saturated at depth zero through h=4.",
+    "takeaway": "Adding deterministic correction rows is not the same as adding independent transverse freedom. A dimensional criterion needs a resource that cannot be removed by finite packing under a uniform representation contract.",
+    "source": "docs/research/2026-09-11-transverse-freedom.md",
+    "promotion": {
+      "stage": "research"
+    },
+    "related": [
+      "second-lift-completion",
+      "correction-coordinates",
+      "dimensional-lift"
+    ]
+  }
+]
