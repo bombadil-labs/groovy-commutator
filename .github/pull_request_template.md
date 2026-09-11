@@ -28,4 +28,5 @@ Remaining blockers:
 
 <!-- Follow AGENTS.md#gathering-branches-and-cross-model-review.
 Sub-PR integration is not independent scientific approval.
-Gathering PRs wait for explicit other-model sign-off before merging to main. -->
+Gathering PRs wait for explicit other-model sign-off before merging to main;
+the reviewer merges on a clean sign-off with green checks. -->

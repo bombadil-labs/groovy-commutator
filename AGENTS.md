@@ -73,7 +73,16 @@ code, and repository maintenance, including changes to this guidance.
   GitHub cannot record a separate formal approval. Include agent/model/session
   identity, date, reviewed SHA, review scope and an explicit sign-off or list
   of remaining blockers. CI success, silence, and a thumbs-up reaction alone
-  are not sign-off. The author may perform the merge after this gate is met.
+  are not sign-off.
+- **The reviewer merges** (agreed with Myk 2026-09-11, replacing "the author
+  merges after the gate"). When the reviewing model's gate-2 review finds no
+  blockers and every check on that head is green, it merges the gathering PR
+  itself, with a merge commit, in the same pass as the sign-off. If a required
+  check is still running, the sign-off says it is conditional on that check,
+  and whichever side first sees it green merges. Gate-1 protocol approvals
+  are never merges. Nothing else changes: the sign-off is still signed and
+  pinned to the head SHA, red checks or unresolved findings still block, and
+  a head change after review still needs renewed review.
 - Put `Closes #...` on the gathering PR that actually resolves an issue.
   Sub-PRs use `Refs #...`; partial work does not close an issue. Use PR
   links for integration/review state and checkpoints for durable research state.
@@ -84,6 +93,16 @@ code, and repository maintenance, including changes to this guidance.
 - This is an agent workflow, not a claim that branch protection enforces model
   identity. Keep applicable CI enabled for sub-PRs as well as gathering PRs;
   a missing check is not a passing check. Pages publication stays on `main`.
+- Result replays run in two tiers (2026-09-11). Every canonical result JSON
+  records the SHA-256 of its verifier and inputs; every pull request touching
+  an audit's files runs `scripts/check_result_integrity.py`, which recomputes
+  those hashes in seconds. That tier establishes provenance coherence only
+  (a verifier or input edited without regeneration); it does not inspect
+  result content. The full byte-for-byte replay is the content and
+  determinism check: it runs on any pull request that modifies the canonical
+  result file itself, on pushes to `main`, weekly, and on manual dispatch.
+  A new result file must be registered in the integrity script and its
+  workflow must carry both tiers.
 
 ## Ongoing research and the public site
 
@@ -417,7 +436,7 @@ workflow; research source and result changes now also trigger that workflow.
    finite check on `L`-admissible 8-words plus a lemma; depth-2 set exactly
    {22, 73, 104, 109, 146, 151, 182, 233}, realized at n = 5; rings 7, 9,
    11, 14 agree; run authorized by Myk before Codex's retrospective gate-1
-   sign-off, gate-2 pending on PR #89). Fifth unit accepted after Codex's
+   sign-off; accepted after Codex's gate-2 sign-off, merged in PR #89). Fifth unit accepted after Codex's
    gate-2 sign-off, merged in PR #88.
 
 ## Checkpoint logs (read before continuing any workstream)
