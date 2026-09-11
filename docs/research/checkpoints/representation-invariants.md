@@ -7,6 +7,63 @@ substantial unit completes; keep the bounded-claim style.
 
 Program page: `docs/research/2026-09-10-representation-invariants-program.md`
 
+## Checkpoint 2026-09-11 (thirteenth unit run): ring-closure certificate, gate-2 pending
+
+- Gate 1 met at `05276a5` after two correction rounds; verifier committed
+  at `a4f2f51`; single run (29 s), rerun byte-identical.
+- All seven predictions held. Certificate (k, p): 232 (5,1), 4 (3,1),
+  32 (3,1), 200 (4,1), 22 (7,1), 102 (2,1), 90 (2,2), 150 (2,3).
+  All-ring closed sets: 22, 33, 33, 42, 11, 32, 16, 16 rules. Constant
+  from ring 7 for the first six (223 under 22 closes at rings 3-6, never
+  from 7 on); 90 period
+  2 (32 odd / 16 even), 150 period 3 (256 off multiples of 3 / 16 on
+  them). Full-shift closure equals all-ring closure for all eight.
+  Small rings: ring 3 closes 64/160/160/80/160/64/64/64 rules, ring 4
+  64/104/104/80/96/32/64/256, ring 5 64/37/37/42/80/32/32/256.
+- Post hoc: 32 = 4 of the complemented state, so C_32(n) = conj C_4(n).
+- Do not infer: constancy from ring 7 for other observations (90 and
+  150 refute it in general); anything about depth or factor radius
+  beyond the rings earlier units computed; rings 1 and 2.
+- Pending: Codex's gate-2 sign-off and reviewer merge on PR #116.
+- Candidate next units: certify refinement depth h_* for all rings the
+  same way (the pair graph with history); the small-ring regime (rings
+  3-5) as a study of window-sized closures; a synthesis after thirteen.
+
+## Checkpoint 2026-09-11 (thirteenth unit opened): ring-closure certificate, protocol frozen, review pending
+
+- Frozen and unrun: `protocols/ring-closure-certificate-20260911.md`.
+  Closure at ring n >= 4 under observation psi is decided by closed walks
+  of length n in a 16-vertex pair graph G_psi (vertices two-cell pair
+  blocks, edges psi-agreeing three-cell blocks); a violating three-edge
+  walk for rule r lies on a closed walk of length n iff a return walk of
+  length n-3 exists, read off boolean powers of the adjacency matrix,
+  which are eventually periodic. Observations 232, 4, 32, 200, 22, 102,
+  90, 150; exhaustive rings 3-14; certified all rings n >= 4.
+- K1 divisibility C(kn) subset of C(n) (theorem control); K2 criterion
+  exact on rings 4-14 and consistent with units 7 and 12 (theorem
+  control); K3 certificate (k, p) reported; K4 the six non-linear-or-parity
+  observations constant from ring 7 (bet); K5 linear observations: affine
+  closure, 150 injective off multiples of 3, 90 odd rings = the 32 proved;
+  90 even rings and 150 on multiples of 3 = the 16 affine as bets; K6
+  complement and reflection covariance; K7 all-ring closure equals
+  full-shift closure (bet).
+- Codex's first gate-1 round corrected an off-by-one (a five-cell block
+  is a three-edge walk, return length n-3) and required K5's proof
+  boundary; both applied, gate 1 re-requested.
+- Gathering PR #116 opened as draft at `bf0cf2d`; gate-1 review requested
+  from Codex there.
+- Pending: Codex's gate-1 review. No verifier committed, nothing run.
+
+## Checkpoint 2026-09-11 (twelfth unit accepted): factor radius merged
+
+- Accepted after Codex's gate-2 sign-off at `4d44aa8` (one correction round: title scoped to the idempotent case, Program cleanup, per-ring conflict windows, narrowed finite-ring reading), merged in PR #110 as `d77e6f8`.
+- Branch restarted from `main` at `d77e6f8`. Records updated: note
+  header, knowledge test entry, Program section, AGENTS result 12.
+- State of the program: twelve audits accepted; the synthesis section on
+  the Program page still reads the first eleven, with the twelfth as a
+  separate completed section after it.
+- Next: the thirteenth unit, chosen from the candidates below.
+
 ## Checkpoint 2026-09-11 (twelfth unit run): factor radius, gate-2 pending
 
 - Gate 1 met at `46d9a7c` after one witness correction; verifier committed
