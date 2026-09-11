@@ -465,6 +465,21 @@ workflow; research source and result changes now also trigger that workflow.
    complement-covariant when the observation is conjugated to rule 223 and
    not complement-invariant. Accepted after Codex's gate-2 sign-off at
    `5bfa5c8`, merged in PR #93.
+   Tenth unit (`scripts/verify_complement_observation.py`, gate-1
+   reviewed): observations 32, 200, 22 with conjugates on rings 6–12. The
+   complement rule ¬ψ = 255−ψ always closes with factor ψ∘¬ and, for these
+   non-self-dual observations, lies in the residual class X = C \ (K ∪ Z);
+   the frozen prediction that X is inside ¬ψ's observational-equivalence
+   class failed for 32 and 200 (and at ring 6 for 22): under 32 X's four
+   rules are each equivalent to a commuter, under 200 X's 17 rules form six
+   classes with no commuter and 16 factors not radius-1 on the image, under
+   22 the closed set is ring-dependent. Observational equivalence
+   (ψ∘F_r = ψ∘F_s) is decided by the 32 five-cell words and is the same at
+   every ring n ≥ 5, verified exhaustively for 32, 200, 22, 4; under 4 the
+   class {123, 232, 251} certifies the ninth unit's 123 ≡ 251 identity for
+   all rings. Depth annex: majority's record rules reach h_* = 25, 26, 28,
+   31 at rings 13–16 (bet held); rule 4's record pair 19, 19, 28, 25.
+   Gate-2 pending on PR #94.
 
 ## Checkpoint logs (read before continuing any workstream)
 
