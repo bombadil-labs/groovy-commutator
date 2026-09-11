@@ -2,7 +2,7 @@
 
 **Status:** frozen before implementation and evaluation. Nothing run.
 **Program:** [Invariants Across Representation Contracts](../2026-09-10-representation-invariants-program.md), seventh unit.
-**Authored by:** Claude Code, Fable 5.1. **Protocol review:** pending; requested from Codex (OpenAI) on the gathering PR before any implementation or evaluation.
+**Authored by:** Claude Code, Fable 5.1. **Protocol review:** Codex (OpenAI), 2026-09-11, gate-1 sign-off at frozen revision `eb7d2f1b46ddef90df41158e4cf848f36d66f8c9` on [PR #91](https://github.com/bombadil-labs/groovy-commutator/pull/91), before implementation and evaluation; no change to Sections 1–4 required. Record in Section 5.
 **Why this unit:** the [fifth unit](../2026-09-11-parity-coarse-graining.md) found that neighbor parity closes exactly on the 32 constant-complement-response rules, and the [sixth](../2026-09-11-parity-history-bound.md) bounded its history cost. Both hinge on one fact about `π = rule 102`: its kernel on every ring is `{0ⁿ, 1ⁿ}`. This unit asks whether that criterion is specific to parity by declaring the whole family of linear observations, the eight linear elementary rules applied once, whose kernels differ from ring to ring. It is the last unit before a non-linear observation (block majority) is declared.
 
 ## 1. The transformations and their costs
@@ -30,3 +30,9 @@ Refinement chain and `h_*`: Research023's definitions unchanged, now over cosets
 ## 4. Not claimed
 
 Nothing about non-linear observations; block majority (rule 232 as an observation) is the intended eighth unit and is not touched here. Nothing about rings outside `6 ≤ n ≤ 12`, except where a statement is a theorem (E1) or follows from kernel structure (E2, E3). No claim that `h_*` is bounded for `90` on even rings or `150` on rings divisible by 3 beyond what the census shows. No Class IV, novelty, or renormalization claim.
+
+## 5. Protocol review record (2026-09-11, before implementation)
+
+Codex reviewed revision `eb7d2f1` and confirmed the four requested points: E1 is sound because on a periodic `n`-ring the linear part of an affine rule and every linear observation are circulant operators, polynomials in the ring shift, hence commuting, and the affine bias cancels in the response; E3 transfers because rules 60, 102 and 90 on odd rings have the same kernel and therefore the same fiber relation, so the fifth unit's classification applies directly, with the `n ≥ 6` witness embedding intact (reflection is a control, not the reason); the "same set across rings" clauses of E4 and E5 stay frozen as falsifiable predictions, to be reported as failures if they fail rather than weakened; the coset partition-refinement definition of `h_*` matches Research023 (`R_h` is equality of the observed word of length `h + 1`; nothing requires two-element fibers), and observations with the same fibers share the entire refinement chain, not only the closed set. E2 and E7 were found consistent, and the artifact plan matches the two-tier replay policy.
+
+Binding wording caution for the note: if rule 150 admits closed rules outside the 32, that shows constant complement response is not necessary for closure under this kernel-lacking observation; it must not be broadened into a characterization of all observations whose kernels omit `1ⁿ` without a separate theorem. Material changes to observations, ring domain, predictions, scoring or artifacts require renewed review.
