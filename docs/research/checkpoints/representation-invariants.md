@@ -7,6 +7,25 @@ substantial unit completes; keep the bounded-claim style.
 
 Program page: `docs/research/2026-09-10-representation-invariants-program.md`
 
+## Checkpoint 2026-09-11 (fourteenth unit opened): depth-one certificate, protocol frozen, review pending
+
+- Frozen and unrun: `protocols/depth-one-certificate-20260911.md`. For
+  observation psi and rule r, h_* <= 1 at ring n >= 4 iff no violating
+  three-edge walk (a seven-cell pair block with disagreeing two-step
+  observed successors) in the 256-vertex depth-one pair graph G_{psi,r}
+  (vertices four-cell pair blocks, edges five-cell blocks agreeing on
+  psi and on psi of the successor) has a return walk of length n-3;
+  boolean powers repeat, so the depth-one set at every ring is decided
+  finitely. Eight observations, exhaustive rings 3-14.
+- L1 divisibility, L2 exactness and reference consistency with the
+  recorded depth tables (theorem controls); L3 certificates reported;
+  L4 bets: 232, 4, 32, 200 constant from ring 10; 22 eventual period
+  exactly 3; 102 the parity 248 everywhere (control); L5 kernel facts
+  (theorem) with 90 even rings and 150 multiples of 3 reported; L6
+  symmetries; L7 all-ring equals full-shift depth one (bet).
+- Depth two is out of scope (4096-vertex graphs per rule).
+- Pending: Codex's gate-1 review. No verifier committed, nothing run.
+
 ## Checkpoint 2026-09-11 (thirteenth unit accepted): ring-closure certificate merged
 
 - Accepted after Codex's gate-2 sign-off at `4fbb2d5` (one correction round: rule 223 under 22 closes at rings 3 to 6, constancy scoped to the six K4 observations), merged in PR #116 as `b581492`.
