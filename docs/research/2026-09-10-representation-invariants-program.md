@@ -69,7 +69,13 @@ One row per declared transformation, with its declared costs, then the propertie
 | --- | --- | --- | --- | --- |
 | Copy along a new axis | zero added information density | wrapping-loop parity | preserved | [gradient loop invariants](2026-09-10-gradient-loop-invariants.md) |
 
-Not yet declared: non-injective coarse-graining, where "preserved" must be replaced by "closed" and the object is the Erased Distinctions Program's `R_∞`.
+### Non-injective coarse-grainings ("closed" replaces "preserved"; the object is the Erased Distinctions Program's `R_∞`)
+
+| Transformation | Cost | Property | Status | Source |
+| --- | --- | --- | --- | --- |
+| Neighbor parity `π` (rule 102 as an observation) | two-to-one, one global bit, forward radius 1, no local inverse | factor closure | closed for exactly the 32 constant-complement-response rules at every ring `n ≤ 12`; not closed for 224 | [parity coarse-graining](2026-09-11-parity-coarse-graining.md) |
+| Neighbor parity `π` | same | law, derivative, commutator of a closed rule | closed with an elementary factor (explicit formula; `r` and `r̃` share a factor; the 8 linear rules are fixed); commutator covariant by linearity | same |
+| Neighbor parity `π` | same | non-closed rules | not closed; `h_*` reported: 1 for 216 rules, 2 for 8, constant across rings 6–12 (post hoc bound) | same |
 
 ## First unit: complete
 
@@ -88,6 +94,10 @@ The protocol It declares two global transformations of elementary CA (complement
 ## Fourth unit: complete
 
 [Higher-block recoding](protocols/higher-block-recoding-20260911.md), frozen and run 2026-09-11, reported in the [recoding note](2026-09-11-higher-block-recoding.md). The first transformation of a local, alphabet-changing type. The executed total law had ambient radius 2 off the family, a recorded deviation from the declared radius 1; a radius-1 componentwise completion was added after review and both give identical on-family results. B1–B3 are supported on the consistent-pair family: cap radius within `[mpr − 1, mpr]` and unchanged in 665 of 674 cells; derivative, commutator and closure preserved componentwise. B4's closure part is supported: the Research026 observer family is closed under complement and reversal. B4's frozen consequence, literally identical per-rule census summaries, was corrected after review to scalar summaries identical with optimal observers covariant under the permutation; that is a corrected claim, not an original frozen success. Remaining undeclared types: change of completion (runs under the second-lift protocol) and non-injective coarse-graining (the Erased Distinctions object).
+
+## Fifth unit: complete, final review pending
+
+[Parity coarse-graining](protocols/parity-coarse-graining-20260911.md), frozen 2026-09-11, reviewed by Codex before implementation (gate 1), run once, reported in the [parity coarse-graining note](2026-09-11-parity-coarse-graining.md). The first non-injective transformation: `π(S)_i = S_i ⊕ S_{i+1}`, two-to-one, one global bit, no local inverse. All five predictions held: closure exactly on the 32 constant-complement-response rules at every ring tested; an elementary factor per closed rule matching the frozen formula, rule 90 fixed; commutator covariance as a theorem control; `h_* = 0` exactly on the closed set; the closed set equals the first audit's self-dual set plus the complement-invariant rules. Post hoc and unpredicted: the factor map pairs complement-conjugates, the fixed points are the 8 linear rules, and every non-closed rule has `h_* ∈ {1, 2}` at all rings up to 12. Remaining undeclared type: change of completion (runs under the second-lift protocol). Accepted only after Codex's final sign-off on the gathering PR.
 
 ## What would count as progress
 

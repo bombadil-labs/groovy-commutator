@@ -1,0 +1,35 @@
+name: Parity coarse-graining audit
+
+on:
+  pull_request:
+    paths:
+      - 'scripts/verify_parity_coarse_graining.py'
+      - 'results/parity_coarse_graining_20260911.json'
+      - 'results/representation_invariants_20260910.json'
+      - '.github/workflows/research-parity-coarse-graining.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/verify_parity_coarse_graining.py'
+      - 'results/parity_coarse_graining_20260911.json'
+      - '.github/workflows/research-parity-coarse-graining.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  parity:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -e .
+      - name: Rerun the frozen audit and compare the canonical JSON byte for byte
+        run: |
+          cp results/parity_coarse_graining_20260911.json /tmp/expected.json
+          python scripts/verify_parity_coarse_graining.py > /dev/null
+          cmp /tmp/expected.json results/parity_coarse_graining_20260911.json
