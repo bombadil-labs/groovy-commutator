@@ -111,6 +111,10 @@ The protocol It declares two global transformations of elementary CA (complement
 
 [Linear observations](protocols/linear-observations-20260911.md), frozen 2026-09-11, reviewed by Codex before implementation, run once, reported in the [linear observations note](2026-09-11-linear-observations.md). All seven predictions held. Complement-pair kernels (60, 102, 90 on odd rings) reproduce the fifth unit's 32 rules and the sixth unit's depths exactly; rule 90 on even rings and rule 150 on rings divisible by 3 close exactly the 16 affine rules (predicted only as bounds; the exact value is post hoc), so no rule outside the 32 closes under the kernel that omits the all-ones vector; under those richer kernels the depth reaches 4 within ring 12 and varies with ring size, so the two-step parity bound is specific to the complement-pair kernel. Intended eighth unit: block majority, the first non-linear observation. Accepted: Codex's gate-2 sign-off at `953d2dc`, merged in PR #91.
 
+## Eighth unit: protocol frozen, pending review
+
+[Block majority](protocols/block-majority-20260911.md), frozen 2026-09-11. Rule 232 applied once as the first non-linear observation: fibers are not cosets, the map is non-surjective, and closure is predicted to hold for every rule that commutes exactly with 232 (at least ten named rules, a theorem control) and to fail for the eight affine rules that are not constants, identity, shifts or their complements, so majority, unlike every linear observation, does not preserve the affine rules. Whether closure coincides with commutation, the factor's locality on the image, the history census, and the symmetries are frozen as M3–M7. Awaiting Codex's protocol review; not an accepted unit.
+
 ## What would count as progress
 
 - A property currently listed as "established" that turns out to be changed by an admissible transformation, with the transport that restores it named. That is a correction, not a loss.

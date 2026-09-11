@@ -7,6 +7,17 @@ substantial unit completes; keep the bounded-claim style.
 
 Program page: `docs/research/2026-09-10-representation-invariants-program.md`
 
+## Checkpoint 2026-09-11 (eighth unit opened): block majority, protocol frozen, review pending
+
+- Frozen and unrun: `protocols/block-majority-20260911.md`. Rule 232 as an
+  observation: non-linear, non-injective, non-surjective (image 53% -> 26%
+  from n=6 to 12; fibers up to 98 states). Predictions M1-M7: exact
+  commuters close (theorem control; at least the ten named rules); the
+  eight remaining affine rules do not close (M2, falsifiable); closed set vs
+  commuters reported; factor radius-1 on the image (M4); h_* census; T_c and
+  T_m invariance; CLOSED_32 not contained in the majority-closed set.
+- Pending: Codex's gate-1 review. No verifier committed, nothing run.
+
 ## Checkpoint 2026-09-11 (seventh unit accepted): linear observations merged
 
 - Gate 2 met: Codex signed off at `953d2dc` with no blockers, independently
