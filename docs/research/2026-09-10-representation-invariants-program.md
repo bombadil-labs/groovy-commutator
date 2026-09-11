@@ -1,8 +1,8 @@
 # Invariants Across Representation Contracts
 
-This page is the **working synthesis** of a third research program, opened on 2026-09-10 after the review conversation recorded in issues #61–#68. It is not a chronological note and it claims no result of its own yet. It records the question, the objects the question is about, what the existing record already says, and the first frozen protocol.
+This page is the **working synthesis** of a third research program, opened on 2026-09-10 after the review conversation recorded in issues #61–#68. It is not a chronological note and it claims no result of its own; every result it cites has its own note, protocol and canonical result file. It records the question, the objects the question is about, the transformation tables, one section per completed unit, and, after eleven units, the [synthesis](#synthesis-after-eleven-units).
 
-Authored by: Claude Code, Fable 5.1. Reviewed by: none (opened at the user's request while Codex was inactive; the first protocol is the first thing to review).
+Authored by: Claude Code, Fable 5.1. Reviewed by: Codex (OpenAI) unit by unit; units 1–4 retrospectively on 2026-09-11, units 5 and 7–11 at gate 1 before implementation and at gate 2 before merge, and unit 6 run under Myk's explicit authorization with Codex's gate-1 review arriving retrospectively and its gate 2 before merge, as each unit's note records. The synthesis section was reviewed on its own gathering PR.
 
 The thesis is:
 
@@ -61,7 +61,7 @@ One row per declared transformation, with its declared costs, then the propertie
 | Transformation | Cost | Property | Status | Source |
 | --- | --- | --- | --- | --- |
 | Completion `H ↦ H'` agreeing on `B` | local triangular recoding of correction rows | retained information and factor existence at fixed depth | preserved (theorem) | [correction coordinates](2026-09-09-correction-future-coordinates.md), [second-lift protocol](2026-09-10-second-lift-completion-protocol.md) |
-| Completion `H ↦ H'` agreeing on `B` | same | literal correction maps, cap radius, cap cost | changed; bounded by the recoding radius | same; unrun protocol |
+| Completion `H ↦ H'` agreeing on `B` | same | literal correction maps, cap radius, cap cost | literal maps may change; cap-radius difference bounded by the recoding radius; measured equal minimum radius one across H128/H160 on the inherited Rule32 family through `h, R ≤ 2`, with O tables literally identical and K tables differing | same; [second-lift result](2026-09-11-second-lift-completion.md) |
 
 ### Replication to a new axis
 
@@ -127,9 +127,46 @@ The protocol It declares two global transformations of elementary CA (complement
 
 [Complement of the observation](protocols/complement-observation-20260911.md), frozen 2026-09-11, reviewed by Codex before implementation with two binding wording clarifications, run once, reported in the [complement-observation note](2026-09-11-complement-observation.md). Six predictions held; the unit's question, Q3, failed. For observations 32, 200 and 22 the complement rule closes with factor `ψ ∘ ¬` and lies in the residual class of closed rules with a non-constant factor that is not the rule; the closure is general, while residual membership is a census fact for these three observations, since for other elementary observations the complement rule can close by collapse or by commuting. The residual class is not the complement rule's observational-equivalence class: under 32 its four rules are each equivalent to a commuter, under 200 its seventeen rules form six classes with no commuter and sixteen factors that are not elementary on the image, and under 22 the closed set differs between ring 6 and rings 7 to 12. Observational equivalence is exactly local: the exhaustive partition equals the 32-word partition at every ring for all four observations tested, which certifies the ninth unit's rule-123 identity for every ring `n ≥ 5`. The annex bet held: majority's record depth grows from 16 at ring 12 to 31 at ring 16; rule 4's record pair stays non-monotone. Accepted: Codex's gate-2 sign-off at `18e900b` after one scope correction, merged in PR #94.
 
-## Eleventh unit: complete, final review pending
+## Eleventh unit: complete
 
-[Wiring as a transformation](protocols/wiring-dilation-20260911.md), frozen 2026-09-11, reviewed by Codex before implementation with two binding clarifications, run once, reported in the [wiring-dilation note](2026-09-11-wiring-dilation.md). Every prediction held. Neighborhood dilation opens a fourth transformation type, a change of interaction graph with the rule table fixed, and sorts into the program's three verdicts exactly: with the observation dilated alongside the rule and a factor coprime to the ring, every census and the commutator classification are preserved by conjugacy (the wiring-side twin of reflection); with the observation left standard the same rewiring changes the closed set, removes the observation rule from the commuter set and moves the depth table, and equals observing the standard automaton through an inverse-offset observation; when the factor divides the ring the system is interleaved copies of the small ring and every census, depth and classification included, says so. Accepted only after Codex's gate-2 sign-off on the gathering PR.
+[Wiring as a transformation](protocols/wiring-dilation-20260911.md), frozen 2026-09-11, reviewed by Codex before implementation with two binding clarifications, run once, reported in the [wiring-dilation note](2026-09-11-wiring-dilation.md). Every prediction held. Neighborhood dilation opens a fourth transformation type, a change of interaction graph with the rule table fixed, and sorts into the program's three verdicts exactly: with the observation dilated alongside the rule and a factor coprime to the ring, every census and the commutator classification are preserved by conjugacy (the wiring-side twin of reflection); with the observation left standard the same rewiring changes the closed set, removes the observation rule from the commuter set and moves the depth table, and equals observing the standard automaton through an inverse-offset observation; when the factor divides the ring the system is interleaved copies of the small ring and every census, depth and classification included, says so. Accepted: Codex's gate-2 sign-off at `1b1e071` after one knowledge-edge correction, merged in PR #99.
+
+## Synthesis after eleven units
+
+The tables above are organized by transformation. This section reads them the other way, by verdict, and says what the eleven audits establish together. It adds no evidence; every cell cites a note whose protocol was frozen before its run. Verdicts are relative to the declared transformation and the declared domain, usually rings 6 to 12 of elementary CA, and nothing here is a claim about other lattices, alphabets or radii.
+
+### Verdict matrix
+
+Rows are transformations, columns are audited property families. "pres." is preserved outright, "cov." is covariant with the named transport, "chg." is changed, and "closed n" means the non-injective case where preservation is replaced by closure and the count of closed rules is given.
+
+| Transformation (units) | Commutator classification (result 1) | Commutator field `G` | Derivative closure | Cap tables K / O | Closure under a fixed observation `ψ` | Refinement depth `h_*` | Sweep regime labels |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Reflection (1, 3, 8–11) | pres. | cov. with reversal | pres. | pres. at every radius | pres. for every symmetric `ψ` tested | pres. | 95.1% stable, not an invariance |
+| Complement conjugation, rule only (1–3, 9–10) | chg.: bias `c ↦ c ⊕ M𝟙 ⊕ 1`; 4, 200 leave the zero set | cov. iff self-dual (16 rules) | pres. (30 rules) | O pres.; K cov., shift ≤ 2, never lost | chg.: `C_ψ ≠ C_ψ̃` at every ring (9, 10) | chg. | 93.9% stable |
+| Complement conjugation with the companion transported (1, 9–10) | — | cov. for all 256 with `D ↦ ¬D` | — | — | cov. exactly with `ψ ↦ ψ̃` | cov. exactly | — |
+| 2-block recoding (4) | pres. componentwise | pres. componentwise | pres. | cov., cost ≤ 1 unit, 0 in 665 of 674 cells | — | — | — |
+| Change of completion on a shared family (Codex, unit complete) | — | — | retained information and factor existence pres. (theorem) | literal maps may change; the cap-radius difference is bounded by the recoding radius; measured equal minimum radius one across H128/H160 through `h, R ≤ 2` | — | — | — |
+| Replication to a new axis (Codex) | — | — | — | — | wrapping-loop parity pres. | — | — |
+| Linear observations (5–7) | — | cov. by linearity for closed rules | — | — | closed 32 (complement-pair kernels), closed 16 (richer kernels); elementary factor | `≤ 2` certified for all rings (parity); `≤ 4` within ring 12 (richer kernels) | — |
+| Non-linear observations 232, 4, 32, 200, 22 (8–10) | — | — | — | — | closed 22, 33, 33, 42, 11 (12 at ring 6 under 22); split into commuters, collapses and a residual; the complement rule always closes | up to 16, 22, 22, 26, 16 at ring 12; 31 at ring 16 under 232; not monotone under 4 | — |
+| Wiring: dilation, whole contract, `gcd(d, n) = 1` (11) | pres. | — | — | — | pres. (`C`, `K`, `Z`, `X`) | pres. | — |
+| Wiring: dilation, observation left standard (11) | pres. (same realized map) | — | — | — | chg.: 22 → 12 under 232, 33 → 17 under 4; `ψ` leaves `K`; equals the census under the inverse-offset `ψ` | chg. | — |
+| Wiring: dilation, `d` divides `n` (11) | equals the `n/d`-ring; departs from result 1 on components below 5 cells | — | — | — | equals the `n/d`-ring census | equals the `n/d`-ring | — |
+
+### What the audits say together
+
+- **Exactly preserved, hence never a discovery.** Reflection, and dilation by a factor coprime to the ring with the observation dilated too, are site permutations, and every exact algebraic and census property audited survives them without transport; the one non-exact property, the seeded sweep's regime labels, is only stable under reflection (95.1%), as the matrix records. Injective local recoding on its family leaves the derivative, the commutator and derivative closure unchanged componentwise and moves a cap radius by at most one unit. A learner in the planned primitives program that reports one of these as a new phenomenon has rediscovered a coordinate.
+- **Covariant only when the whole contract travels.** Three transformations looked non-invariant until their companion object was transported with the rule, and were then exactly covariant: complement conjugation for the commutator field (transport the derivative as a state), complement conjugation for closure under an observation (conjugate the observation too), and neighborhood dilation for closure and depth (dilate the observation too). In each case leaving the companion behind is a real change with a real cost, not an artifact: the closed set shrinks, the commuter set loses the observation rule, the depth table moves. The program's working rule is therefore: state the transport before calling a property invariant, and count the observation as part of the contract.
+- **Changed, and the change is the content.** Which rules close under a non-injective observation, how they close (commuting, collapsing, or with a factor that is neither constant nor the rule), and how much history the factor needs are properties of the pair (rule, observation), not of the rule. The linear observations sort rules by a kernel; the non-linear ones sort them by commutation, collapse and observational equivalence, and their closed sets need not be ring-independent (rule 22). Two structural facts fell out with proofs rather than censuses: refinement depth under neighbor parity is at most 2 on every ring, and observational equivalence under any elementary observation is decided by the 32 five-cell words on every ring of size at least 5.
+- **Stability is not invariance.** The sampled sweep's regime labels agree at 95% and 94% between a pair and its image under reflection and complement. That is stability of a seeded statistic, and the program does not list it among the invariants.
+
+### What this gives the other programs
+
+The Erased Distinctions program gets a closure vocabulary tested on eleven transformations, with the residual class and observational equivalence as new instruments. The dimensional program gets the completion-change theorem placed in the same table as the relabelings, with cap radius as the one property that moves. The planned learning-and-revising-primitives program gets its equivalence notion: two candidate primitives related by a site permutation, an injective recoding on the family, or a transport-complete conjugation count as the same primitive under the declared representation contract and for the audited properties, a working equivalence rather than a context-free identity, and a difference that survives those is allowed to count.
+
+### What remains open in this program
+
+The non-elementary factors under observation 200; the ring-dependent closed set under observation 22; depth growth beyond ring 16; other offset sets and lattices as wiring transformations; completion families and budgets beyond the completed bounded H128/H160 comparison, which belong to the dimensional program.
 
 ## What would count as progress
 
