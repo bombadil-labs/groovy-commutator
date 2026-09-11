@@ -1,0 +1,35 @@
+name: Cap census complement extension
+
+on:
+  pull_request:
+    paths:
+      - 'scripts/verify_cap_census_complement_extension.py'
+      - 'scripts/verify_local_correction_caps.py'
+      - 'results/cap_census_complement_extension_20260911.json'
+      - '.github/workflows/research-cap-census-extension.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/verify_cap_census_complement_extension.py'
+      - 'results/cap_census_complement_extension_20260911.json'
+      - '.github/workflows/research-cap-census-extension.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  extension:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -e .
+      - name: Rerun the frozen extension and compare the canonical JSON byte for byte
+        run: |
+          cp results/cap_census_complement_extension_20260911.json /tmp/expected.json
+          python scripts/verify_cap_census_complement_extension.py > /dev/null
+          cmp /tmp/expected.json results/cap_census_complement_extension_20260911.json

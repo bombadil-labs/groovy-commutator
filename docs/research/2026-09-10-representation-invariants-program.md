@@ -42,7 +42,7 @@ No single group is assumed, no "intrinsic" invariant is claimed, and invariance 
 | Commutator bias of affine rules | global complement conjugation | changed (`c ↦ c ⊕ M𝟙 ⊕ 1`; Rule 0 ↦ Rule 255) | [audit note](2026-09-11-representation-invariants-audit.md) |
 | Native commutator field | complement conjugation | covariant iff self-dual; covariant for all rules with the derivative transported as a state | same |
 | Commutator class, derivative closure, cap budgets | reflection | preserved | same |
-| Local-cap minimum radius | complement conjugation | changed within the tested budget; bound corrected post hoc | same |
+| Local-cap minimum radius | complement conjugation | covariant with a bounded radius cost: shift 1 or 2 on all 22 differing cells, caps on both sides by radius 3, post-hoc bound confirmed | [extension note](2026-09-11-cap-census-complement-extension.md) |
 | Sweep regime labels | reflection, complement | 95% / 94% stable; not an invariance | same |
 
 Nothing in that table is new. The program's first job is to make the table complete and exact for the transformations the repository already uses implicitly.
@@ -52,6 +52,10 @@ Nothing in that table is new. The program's first job is to make the table compl
 [Representation invariants audit](protocols/representation-invariants-audit-20260910.md), frozen 2026-09-10, run 2026-09-11, reported in the [audit note](2026-09-11-representation-invariants-audit.md). Five of six predictions held. The failed one, a radius bound for the local-cap census under complement conjugation, omitted that the target correction row transforms too; its correction is post hoc and is the next protocol's prediction. Exact findings: the native commutator is complement-covariant iff the rule is self-dual, and transporting the derivative as a state restores covariance for all 256 rules; reflection preserves the commutator classification, derivative closure, and all 4,608 cap budgets; the derivative-closure set is the same 30 rules at rings 6, 8, 10; sweep regime labels are 95% and 94% stable while the raw statistics behind them are under 30% equal. The protocol's original text follows.
 
 The protocol It declares two global transformations of elementary CA (complement conjugation and reflection) and their composite, states what each transports and costs, and audits six existing claims against them with predictions frozen before running: the commutator classification of established result 1, pointwise commutator covariance, derivative-observation closure, the local correction-cap census, and the five-regime pair labels of the full sweep. The last of these is a sampled-seed result and is expected to be only approximately invariant; the protocol says so.
+
+## Second unit: complete
+
+[Cap census complement extension](protocols/cap-census-complement-extension-20260911.md), frozen and run 2026-09-11, reported in the [extension note](2026-09-11-cap-census-complement-extension.md). All four predictions held. The first audit's failure was a budget artifact: every cap the census could not see at `R ≤ 2` exists at radius 3, and complement conjugation costs at most two units of cap radius on these cells. The radius budget is part of the representation contract.
 
 ## What would count as progress
 

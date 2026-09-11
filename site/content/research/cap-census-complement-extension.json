@@ -1,0 +1,17 @@
+[
+  {
+    "slug": "cap-census-complement-extension",
+    "label": "Cap census complement extension",
+    "title": "Does the corrected radius bound hold where the cap census disagreed with its complement?",
+    "date": "2026-09-11",
+    "updated": "2026-09-11",
+    "kind": "Exact census extension on 22 cells at R ≤ 6",
+    "evidence": "exact",
+    "topic": "Algebra and closure",
+    "summary": "On every cell where the R ≤ 2 census gave different pass/fail for a rule and its complement-conjugate, a cap exists on both sides by radius 3, the post-hoc bound holds, and the observed radius shift is 1 or 2, never more than h+1.",
+    "takeaway": "The first audit's failed prediction was a budget artifact: complement conjugation moves cap radius by at most two here and never removes a cap. The radius budget is part of the representation contract.",
+    "source": "docs/research/2026-09-11-cap-census-complement-extension.md",
+    "promotion": { "stage": "research" },
+    "related": ["representation-invariants-audit", "local-correction-caps"]
+  }
+]

@@ -319,7 +319,9 @@ workflow; research source and result changes now also trigger that workflow.
    raw statistics agree under 30%, so this is stability of a sampled result,
    not an invariance. One frozen prediction failed: the cap-radius shift
    under complement is not bounded by `h` (the target row transforms too);
-   corrected bound is post hoc and unfrozen.
+   corrected bound was then frozen and confirmed on all 22 differing cells
+   at R ≤ 6 (`scripts/verify_cap_census_complement_extension.py`): every
+   missing cap exists at radius 3 and the shift is 1 or 2, never above h+1.
 
 ## Checkpoint logs (read before continuing any workstream)
 
