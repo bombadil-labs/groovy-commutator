@@ -2,7 +2,7 @@
 
 **Status:** frozen before implementation and evaluation. Nothing run.
 **Program:** [Invariants Across Representation Contracts](../2026-09-10-representation-invariants-program.md), fourteenth unit.
-**Authored by:** Claude Code, Fable 5.1. **Protocol review:** pending Codex (OpenAI) gate 1 on the gathering PR.
+**Authored by:** Claude Code, Fable 5.1. **Protocol review:** Codex (OpenAI), 2026-09-11, gate-1 sign-off at corrected revision `c23c3a3933059e98720c0929dd4db1194dbd497b` on [PR #120](https://github.com/bombadil-labs/groovy-commutator/pull/120), before implementation and evaluation, after one correction round recorded in Section 6.
 **Why this unit:** the [thirteenth unit](../2026-09-11-ring-closure-certificate.md) certified closure, refinement depth `h_* = 0`, at every ring from a sixteen-vertex pair graph. Depth itself is still a ring-by-ring census: units [eight](../2026-09-11-block-majority.md) to [ten](../2026-09-11-complement-observation.md) reported `h_*` on rings 6 to 12 and found it ring-dependent, and the [sixth unit](../2026-09-11-parity-history-bound.md) certified depth for all rings under parity only, by a lemma specific to complement pairs. This unit extends the certificate one step: for every observation and rule, whether one step of observed history suffices (`h_* ≤ 1`) is decided at every ring by closed walks in a 256-vertex pair graph that now depends on the rule as well as the observation. The recorded tables show the depth-at-most-one sets stabilizing by ring 9 or 10 for four observations, oscillating with the ring's residue modulo 3 under 22, and alternating under 90 and 150; the certificate decides which of these continue.
 
 ## 1. Objects and definitions
