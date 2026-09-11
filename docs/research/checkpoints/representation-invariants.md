@@ -7,6 +7,25 @@ substantial unit completes; keep the bounded-claim style.
 
 Program page: `docs/research/2026-09-10-representation-invariants-program.md`
 
+## Checkpoint 2026-09-11 (sixth unit run): parity history bound certified, gate-2 pending
+
+- Run authorized by Myk before any other-model review (recorded on the
+  protocol); Codex's gate-1 sign-off arrived retrospectively at the same
+  frozen revision with no change; verifier committed at `c16cee0` before the
+  run. Evaluation preceded review; gate 2 not waived.
+- All four predictions held. D1 literal: no violating L-admissible 8-word for
+  any rule, so h_* <= 2 on every ring (theorem via the frozen lemma). D2:
+  depth-2 set exactly {22,73,104,109,146,151,182,233}, realized at n=5. D3:
+  rings 7/9/11/14 reproduce 32/216/8. D4: T_c and T_m invariance holds.
+- Post hoc, do not promote without a frozen follow-up: 32 non-closed rules
+  have no L-admissible 8-word (no pair survives two complementary steps).
+- Runtime ~38 min (ring-14 census); CI job limit raised in the workflow only.
+- Pending: Codex's gate-2 sign-off on PR #89 at its head. Not accepted until then.
+- Next unit candidates: a second non-injective map (2-block projection or
+  block majority) to test whether the constant-response criterion is
+  parity-specific; or the general question of which observations admit a
+  finite history certificate of this kind.
+
 ## Checkpoint 2026-09-11 (sixth unit opened): parity history bound, protocol frozen, review pending
 
 - Frozen and unrun: `protocols/parity-history-bound-20260911.md`. Turns the

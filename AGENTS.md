@@ -412,8 +412,13 @@ workflow; research source and result changes now also trigger that workflow.
    (16 complement-invariant + 16 self-dual) at every ring `n ≤ 12`, each
    with an elementary factor (`r` and `r̃` share one; fixed points are the 8
    linear rules); the commutator is covariant by linearity; the 224 other
-   rules have refinement depth `h_* ∈ {1, 2}` at `n ≤ 12` (post hoc, not a
-   proven bound). Accepted after Codex's gate-2 sign-off, merged in PR #88.
+   rules have refinement depth `h_* ∈ {1, 2}`, now certified for every ring
+   size by the sixth unit (`scripts/verify_parity_history_bound.py`: a
+   finite check on `L`-admissible 8-words plus a lemma; depth-2 set exactly
+   {22, 73, 104, 109, 146, 151, 182, 233}, realized at n = 5; rings 7, 9,
+   11, 14 agree; run authorized by Myk before Codex's retrospective gate-1
+   sign-off, gate-2 pending on PR #89). Fifth unit accepted after Codex's
+   gate-2 sign-off, merged in PR #88.
 
 ## Checkpoint logs (read before continuing any workstream)
 
