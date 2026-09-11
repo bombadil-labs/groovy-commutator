@@ -1,0 +1,47 @@
+name: Temporary transverse-freedom report tidy
+
+on:
+  push:
+    branches:
+      - work/dimensional-spatial-axis/reporting
+    paths:
+      - '.github/workflows/temporary-transverse-freedom-report-tidy.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  tidy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: work/dimensional-spatial-axis/reporting
+      - name: Tidy review and checkpoint wording
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          from pathlib import Path
+          p = Path('docs/research/checkpoints/dimensional-lift.md')
+          s = p.read_text().replace(
+              'Read `docs/research/2026-09-11-second-lift-completion.md`. This is the newest\ncompleted dimensional unit.',
+              'Read `docs/research/2026-09-11-second-lift-completion.md`. This was the immediately preceding\ncompleted dimensional unit.',
+              1,
+          )
+          p.write_text(s)
+
+          p = Path('docs/research/2026-09-11-transverse-freedom.md')
+          s = p.read_text()
+          marker = 'Canonical result: [`results/transverse_freedom_20260911.json`](../../results/transverse_freedom_20260911.json), first committed at `10d1ea7`.'
+          if marker in s and 'Final gathering-PR review: pending.' not in s:
+              s = s.replace(marker, marker + ' Final gathering-PR review: pending.', 1)
+          p.write_text(s)
+          PY
+          git config user.name 'Codex report integrator'
+          git config user.email 'noreply@openai.com'
+          git add docs/research/checkpoints/dimensional-lift.md docs/research/2026-09-11-transverse-freedom.md
+          git rm .github/workflows/temporary-transverse-freedom-report-tidy.yml
+          git commit -m 'Tidy transverse-freedom review provenance and checkpoint order'
+          git push origin HEAD:work/dimensional-spatial-axis/reporting
