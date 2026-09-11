@@ -94,12 +94,15 @@ code, and repository maintenance, including changes to this guidance.
   identity. Keep applicable CI enabled for sub-PRs as well as gathering PRs;
   a missing check is not a passing check. Pages publication stays on `main`.
 - Result replays run in two tiers (2026-09-11). Every canonical result JSON
-  records the SHA-256 of its verifier and inputs; on pull requests the check
-  is `scripts/check_result_integrity.py`, which recomputes those hashes in
-  seconds and fails on any drift. The full byte-for-byte replay runs on
-  pushes to `main`, weekly, and on manual dispatch, and is the check for
-  nondeterminism. A new result file must be registered in the integrity
-  script and given both tiers in its workflow.
+  records the SHA-256 of its verifier and inputs; every pull request touching
+  an audit's files runs `scripts/check_result_integrity.py`, which recomputes
+  those hashes in seconds. That tier establishes provenance coherence only
+  (a verifier or input edited without regeneration); it does not inspect
+  result content. The full byte-for-byte replay is the content and
+  determinism check: it runs on any pull request that modifies the canonical
+  result file itself, on pushes to `main`, weekly, and on manual dispatch.
+  A new result file must be registered in the integrity script and its
+  workflow must carry both tiers.
 
 ## Ongoing research and the public site
 

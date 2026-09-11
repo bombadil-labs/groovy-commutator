@@ -1,9 +1,11 @@
 name: Representation invariants audit
 
-# Two tiers (2026-09-11). Pull requests run the fast integrity tier: the
-# canonical JSON's recorded SHA-256 hashes of its script and inputs must match
-# the tree. The full byte-for-byte replay runs on pushes to main, weekly, and on
-# manual dispatch, and is the check for nondeterminism.
+# Two tiers (2026-09-11). Every pull request that touches this audit's files
+# runs the fast integrity check: the canonical JSON's recorded SHA-256 hashes of
+# its verifier and inputs must match the tree (provenance coherence; it does not
+# inspect result content). The full byte-for-byte replay, which is the content
+# and determinism check, runs on any pull request that modifies the canonical
+# result file itself, on pushes to main, weekly, and on manual dispatch.
 
 on:
   pull_request:
@@ -31,28 +33,27 @@ permissions:
   contents: read
 
 jobs:
-  audit-integrity:
-    if: github.event_name == 'pull_request'
-    runs-on: ubuntu-latest
-    timeout-minutes: 5
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
-        with:
-          python-version: '3.12'
-      - name: Recorded source hashes match the tree
-        run: python scripts/check_result_integrity.py results/representation_invariants_20260910.json
   audit:
-    if: github.event_name != 'pull_request'
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - run: python -m pip install -e . pandas pyarrow
+      - name: Recorded source hashes match the tree (provenance coherence)
+        run: python scripts/check_result_integrity.py results/representation_invariants_20260910.json
+      - name: Does this pull request modify the canonical result file?
+        id: result
+        run: |
+          if [ "${{ github.event_name }}" != "pull_request" ]; then echo "changed=true" >> "$GITHUB_OUTPUT"; exit 0; fi
+          if git diff --name-only "origin/${{ github.base_ref }}...HEAD" | grep -qx 'results/representation_invariants_20260910.json'; then echo "changed=true" >> "$GITHUB_OUTPUT"; else echo "changed=false" >> "$GITHUB_OUTPUT"; fi
+      - if: steps.result.outputs.changed == 'true'
+        run: python -m pip install -e . pandas pyarrow
       - name: Rerun the frozen audit and compare the canonical JSON byte for byte
+        if: steps.result.outputs.changed == 'true'
         run: |
           cp results/representation_invariants_20260910.json /tmp/expected.json
           python scripts/verify_representation_invariants.py > /dev/null

@@ -3,11 +3,13 @@
 
 Each canonical JSON records the SHA-256 of the script that produced it and of
 every input file it read. This check recomputes those hashes from the working
-tree and fails if any differ, so a verifier edited without regenerating its
-result, a hand-edited result, or a drifted input is caught in seconds. It does
-not re-run anything: nondeterminism or environment dependence is caught by the
-full byte-for-byte replay tier, which runs on pushes to main, on a schedule, and
-on manual dispatch.
+tree and fails if any differ. What it establishes is provenance coherence only:
+a verifier or input edited without regenerating the result is caught in
+seconds. It does NOT inspect result content: a result file edited by hand with
+its source_hashes left intact passes this check. Result content is guarded by
+the full byte-for-byte replay, which the workflows run on any pull request that
+modifies the canonical result file, on pushes to main, weekly, and on manual
+dispatch (Codex's review of PR #90 pinned this contract down).
 
 Usage: python scripts/check_result_integrity.py [result.json ...]
 With no arguments every registered result is checked.

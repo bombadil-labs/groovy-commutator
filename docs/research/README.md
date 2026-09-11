@@ -184,11 +184,13 @@ There are two distinct review gates:
    the same pass; a sign-off given while a check is still running is
    conditional on it, and whichever side first sees it green merges.
 
-Result files are guarded in two tiers: pull requests run a fast integrity
-check that recomputes the SHA-256 hashes each canonical JSON records for its
-verifier and inputs (`scripts/check_result_integrity.py`); the full
-byte-for-byte replay runs on `main`, weekly, and on demand. Register every new
-result file in the integrity script and give its workflow both tiers.
+Result files are guarded in two tiers. Every pull request touching an audit
+runs a fast check that recomputes the SHA-256 hashes each canonical JSON
+records for its verifier and inputs (`scripts/check_result_integrity.py`);
+this proves provenance coherence, not result content. The full byte-for-byte
+replay is the content and determinism check and runs on any pull request that
+modifies the canonical result file, on `main`, weekly, and on demand. Register
+every new result file in the integrity script and give its workflow both tiers.
 
 The gathering PR lists sub-PRs and issue closure references. Notes and
 protocols retain their own authorship/review provenance, distinguishing
