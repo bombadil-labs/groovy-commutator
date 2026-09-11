@@ -7,6 +7,27 @@ substantial unit completes; keep the bounded-claim style.
 
 Program page: `docs/research/2026-09-10-representation-invariants-program.md`
 
+## Checkpoint 2026-09-11: first audit run; one frozen prediction failed
+
+- Verifier committed at a2a5fe5 before evaluation; run once, deterministic
+  JSON, no implementation corrections. Note: `2026-09-11-representation-invariants-audit.md`.
+- Held: P1 (reflection preserves commutator class, 256/256), P2 (complement
+  images exactly as predicted; 4↦223 and 200↦236 leave the zero-G set),
+  P3 (native commutator complement-covariant for exactly the 16 self-dual
+  rules at n=6,8,10, no spurious passes; state-transport covariant for all
+  256; reflection covariant for all 256), P4 (derivative closure preserved;
+  same 30 closed rules at all three rings), P5(a) (reflection preserves all
+  4,608 cap budgets), P6 (labels 95.13%/93.94% stable; commute exact).
+- Failed: P5(b). Frozen radius bound `h` omitted the target row's recoding
+  and radius composition. Corrected bound is post hoc; at h=0 it is 1 and
+  every observed h=0 shift is exactly 1. 22 of 768 (rule,h) cells differ
+  within R<=2; the census budget cannot decide the corrected bound for h>=1.
+- Do not infer: that the corrected bound is established; that label
+  stability is an invariance; that three transformations exhaust admissibility.
+- Next: freeze a census extension at R<=4 on the 22 cells with the corrected
+  bound as prediction; decide editorially whether state-transport of the
+  derivative is the default reading of the commutator under relabeling.
+
 ## Checkpoint 2026-09-10: program opened; first audit protocol frozen, unrun
 
 - Program registered as `representation-invariants`. Thesis: properties of a

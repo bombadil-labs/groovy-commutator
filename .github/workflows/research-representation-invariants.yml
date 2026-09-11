@@ -1,0 +1,38 @@
+name: Representation invariants audit
+
+on:
+  pull_request:
+    paths:
+      - 'scripts/verify_representation_invariants.py'
+      - 'results/representation_invariants_20260910.json'
+      - 'results/local_correction_caps_20260910.json'
+      - 'results/sweep_full_classified.parquet'
+      - 'src/groovy/ca.py'
+      - '.github/workflows/research-representation-invariants.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/verify_representation_invariants.py'
+      - 'results/representation_invariants_20260910.json'
+      - 'src/groovy/ca.py'
+      - '.github/workflows/research-representation-invariants.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -e . pandas pyarrow
+      - name: Rerun the frozen audit and compare the canonical JSON byte for byte
+        run: |
+          cp results/representation_invariants_20260910.json /tmp/expected.json
+          python scripts/verify_representation_invariants.py
+          cmp /tmp/expected.json results/representation_invariants_20260910.json

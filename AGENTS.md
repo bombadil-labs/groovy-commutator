@@ -300,6 +300,27 @@ workflow; research source and result changes now also trigger that workflow.
    site-wide: identity map = blackboard 𝟙 (NOT `I`, which stays
    integration); φ = the base's rule, ψ = a gauge's ingredient rule.
 
+12. **Representation invariants, first audit** (2026-09-11,
+   `scripts/verify_representation_invariants.py` →
+   `results/representation_invariants_20260910.json`, program page
+   `docs/research/2026-09-10-representation-invariants-program.md`). Two
+   declared transformations of ECA: complement conjugation `T_c` (`S ↦ ¬S`,
+   `r ↦ r̃`) and reflection `T_m`. Exact: reflection preserves the result-1
+   commutator classification for all 256 rules, derivative-observation
+   closure, and all 4,608 local-cap budgets. Complement conjugation maps the
+   affine bias `c ↦ c ⊕ M𝟙 ⊕ 1` (0↔255, 60↔195, 90↔165, 102↔153) and sends
+   the nonlinear zero-G rules 4, 200 to 223, 236 whose G varies; the native
+   commutator is complement-covariant **iff the rule is self-dual** (16
+   rules), because the defect is the complement response `F(x) ⊕ ¬F(¬x)`
+   at `x = D(S)`; transporting the derivative as a state (`D ↦ ¬D`) makes
+   all 256 covariant. Derivative closure holds for the same 30 rules at
+   n = 6, 8, 10. Sweep regime labels agree 95.1% (reflection) / 93.9%
+   (complement) between a pair and its image, commute pairs exactly; the
+   raw statistics agree under 30%, so this is stability of a sampled result,
+   not an invariance. One frozen prediction failed: the cap-radius shift
+   under complement is not bounded by `h` (the target row transforms too);
+   corrected bound is post hoc and unfrozen.
+
 ## Checkpoint logs (read before continuing any workstream)
 
 A checkpoint is a dated statement of state: what a unit completed, what is

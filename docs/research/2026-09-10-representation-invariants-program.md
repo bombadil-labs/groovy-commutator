@@ -39,13 +39,19 @@ No single group is assumed, no "intrinsic" invariant is claimed, and invariance 
 | Decoded rule-field dynamics | local Z2 relabeling with covariant transport | preserved | [rule-field relabeling](2026-09-10-rule-field-relabeling.md) |
 | Quiescence-selection gradient | local Z2 relabeling | changed (convention-dependent) | same, established result 8 |
 | Wrapping-loop parity | replication to a new axis | preserved | [gradient loop invariants](2026-09-10-gradient-loop-invariants.md) |
-| Commutator bias of affine rules | global complement conjugation | changed (Rule 0 ↦ Rule 255) | this page, first protocol |
+| Commutator bias of affine rules | global complement conjugation | changed (`c ↦ c ⊕ M𝟙 ⊕ 1`; Rule 0 ↦ Rule 255) | [audit note](2026-09-11-representation-invariants-audit.md) |
+| Native commutator field | complement conjugation | covariant iff self-dual; covariant for all rules with the derivative transported as a state | same |
+| Commutator class, derivative closure, cap budgets | reflection | preserved | same |
+| Local-cap minimum radius | complement conjugation | changed within the tested budget; bound corrected post hoc | same |
+| Sweep regime labels | reflection, complement | 95% / 94% stable; not an invariance | same |
 
 Nothing in that table is new. The program's first job is to make the table complete and exact for the transformations the repository already uses implicitly.
 
-## First frozen protocol
+## First unit: complete
 
-[Representation invariants audit](protocols/representation-invariants-audit-20260910.md), frozen 2026-09-10, unrun. It declares two global transformations of elementary CA (complement conjugation and reflection) and their composite, states what each transports and costs, and audits six existing claims against them with predictions frozen before running: the commutator classification of established result 1, pointwise commutator covariance, derivative-observation closure, the local correction-cap census, and the five-regime pair labels of the full sweep. The last of these is a sampled-seed result and is expected to be only approximately invariant; the protocol says so.
+[Representation invariants audit](protocols/representation-invariants-audit-20260910.md), frozen 2026-09-10, run 2026-09-11, reported in the [audit note](2026-09-11-representation-invariants-audit.md). Five of six predictions held. The failed one, a radius bound for the local-cap census under complement conjugation, omitted that the target correction row transforms too; its correction is post hoc and is the next protocol's prediction. Exact findings: the native commutator is complement-covariant iff the rule is self-dual, and transporting the derivative as a state restores covariance for all 256 rules; reflection preserves the commutator classification, derivative closure, and all 4,608 cap budgets; the derivative-closure set is the same 30 rules at rings 6, 8, 10; sweep regime labels are 95% and 94% stable while the raw statistics behind them are under 30% equal. The protocol's original text follows.
+
+The protocol It declares two global transformations of elementary CA (complement conjugation and reflection) and their composite, states what each transports and costs, and audits six existing claims against them with predictions frozen before running: the commutator classification of established result 1, pointwise commutator covariance, derivative-observation closure, the local correction-cap census, and the five-regime pair labels of the full sweep. The last of these is a sampled-seed result and is expected to be only approximately invariant; the protocol says so.
 
 ## What would count as progress
 

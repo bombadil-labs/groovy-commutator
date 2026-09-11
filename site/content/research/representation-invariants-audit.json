@@ -1,0 +1,17 @@
+[
+  {
+    "slug": "representation-invariants-audit",
+    "label": "Representation invariants audit",
+    "title": "Which existing ECA claims survive complement conjugation and reflection?",
+    "date": "2026-09-11",
+    "updated": "2026-09-11",
+    "kind": "Exact audit of six existing claims against two declared transformations",
+    "evidence": "exact",
+    "topic": "Algebra and closure",
+    "summary": "Reflection preserves the commutator classification, derivative-observation closure, and all 4,608 local-cap budgets. Complement conjugation preserves closure, makes the native commutator covariant for exactly the 16 self-dual rules, and shifts cap radii beyond the frozen bound, which was wrong. Regime labels are 95% and 94% stable on the sampled sweep.",
+    "takeaway": "The commutator's dependence on the 0/1 convention is exactly self-duality, and transporting the derivative as a state removes it. A frozen radius bound failed and its correction is post hoc.",
+    "source": "docs/research/2026-09-11-representation-invariants-audit.md",
+    "promotion": { "stage": "research" },
+    "related": ["rule-field-relabeling", "second-lift-completion-protocol", "affine-converse", "observation-closure", "full-gradient-closure", "local-correction-caps"]
+  }
+]
