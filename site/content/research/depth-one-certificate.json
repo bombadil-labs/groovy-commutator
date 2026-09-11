@@ -1,0 +1,17 @@
+[
+  {
+    "slug": "depth-one-certificate",
+    "label": "Depth-one certificate",
+    "title": "One step of observed history is certified at every ring; the periodic census misses full-shift depth under four observations",
+    "date": "2026-09-11",
+    "updated": "2026-09-11",
+    "kind": "Exact certificate of refinement depth at most one at every ring size, for eight observations",
+    "evidence": "exact",
+    "topic": "Algebra and closure",
+    "summary": "Whether one step of observed history makes an observation autonomous is decided at every ring by a 256-vertex pair graph per rule; no rule needed more than 33 boolean powers. Under 232, 4, 32 and 200 the depth-one sets are constant from ring 10; under 22 the sequence has period 3 but settles only at ring 28; parity gives 248 everywhere; rules 90 and 150 alternate forever with periods 4 and 6. The bet that all-ring depth one equals full-shift depth one failed under four observations: some rules have depth one on every ring yet depth at least two on the full shift.",
+    "takeaway": "Closure was decided by periodic configurations; depth is not. From here on, a depth claim must say whether it is about rings or about the full shift.",
+    "source": "docs/research/2026-09-11-depth-one-certificate.md",
+    "promotion": { "stage": "research" },
+    "related": ["ring-closure-certificate", "parity-history-bound", "block-majority", "linear-observations"]
+  }
+]
