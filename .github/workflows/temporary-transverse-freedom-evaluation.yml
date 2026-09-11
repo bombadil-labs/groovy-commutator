@@ -1,0 +1,52 @@
+name: Temporary transverse-freedom evaluation
+
+on:
+  push:
+    branches:
+      - work/dimensional-spatial-axis/evaluation
+    paths:
+      - '.github/workflows/temporary-transverse-freedom-evaluation.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  evaluate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: work/dimensional-spatial-axis/evaluation
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -e .
+      - name: Re-run frozen controls without T4
+        run: python scripts/verify_transverse_freedom.py --controls-only > /tmp/transverse-freedom-controls.log
+      - name: Execute frozen T4 diagnostic once
+        run: python scripts/verify_transverse_freedom.py > /tmp/transverse-freedom-evaluation.log
+      - name: Register result, verify provenance, and commit canonical output
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          from pathlib import Path
+          p = Path('scripts/check_result_integrity.py')
+          s = p.read_text()
+          entry = """    'results/transverse_freedom_20260911.json': {\n        'script': 'scripts/verify_transverse_freedom.py',\n        'protocol': 'docs/research/protocols/transverse-freedom-20260911.md'},\n"""
+          if 'results/transverse_freedom_20260911.json' not in s:
+              marker = '}\n\ndef sha('
+              if marker not in s:
+                  raise SystemExit('integrity registry insertion marker not found')
+              s = s.replace(marker, entry + marker, 1)
+              p.write_text(s)
+          PY
+          python scripts/check_result_integrity.py results/transverse_freedom_20260911.json
+          git config user.name "Codex evaluation runner"
+          git config user.email "noreply@openai.com"
+          git add results/transverse_freedom_20260911.json scripts/check_result_integrity.py
+          git rm .github/workflows/temporary-transverse-freedom-evaluation.yml
+          git commit -m "Evaluate frozen transverse-freedom diagnostic [transverse-freedom-results]"
+          git push origin HEAD:work/dimensional-spatial-axis/evaluation
