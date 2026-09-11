@@ -1,0 +1,3175 @@
+{
+  "cells": [
+    {
+      "B_n_states": 63,
+      "completion": 128,
+      "fiber_histogram_over_distinct_B_states": {
+        "1": 61,
+        "2": 1
+      },
+      "fiber_signature_sha256": "8c5ba5393c46a3a3bb7d9b9736b076dff55d75587e247ce910f5ff3d8145b0a9",
+      "fraction_of_B_log_capacity_exposed": 0.996138107399,
+      "h": 0,
+      "kind": "K",
+      "n": 6,
+      "nominal_represented_bits_per_site": 2,
+      "source_bound_margin_states": 1,
+      "tuple_image_states": 62,
+      "tuple_information_rate_bits_per_longitudinal_site": 0.992366051731,
+      "tuple_symbols_sha256": "a50709a11cd9b459cb597a14f313890381090a7299c68988b4f04c5be235e984"
+    },
+    {
+      "B_n_states": 63,
+      "completion": 128,
+      "fiber_histogram_over_distinct_B_states": {
+        "1": 61,
+        "2": 1
+      },
+      "fiber_signature_sha256": "8c5ba5393c46a3a3bb7d9b9736b076dff55d75587e247ce910f5ff3d8145b0a9",
+      "fraction_of_B_log_capacity_exposed": 0.996138107399,
+      "h": 1,
+      "kind": "K",
+      "n": 6,
+      "nominal_represented_bits_per_site": 4,
+      "source_bound_margin_states": 1,
+      "tuple_image_states": 62,
+      "tuple_information_rate_bits_per_longitudinal_site": 0.992366051731,
+      "tuple_symbols_sha256": "0f9427b92b9bffa0be0a53d07016ea42d42c682649b58fdd412cd7160176826b"
+    },
+    {
+      "B_n_states": 63,
+      "completion": 128,
+      "fiber_histogram_over_distinct_B_states": {
+        "1": 61,
+        "2": 1
+      },
+      "fiber_signature_sha256": "8c5ba5393c46a3a3bb7d9b9736b076dff55d75587e247ce910f5ff3d8145b0a9",
+      "fraction_of_B_log_capacity_exposed": 0.996138107399,
+      "h": 2,
+      "kind": "K",
+      "n": 6,
+      "nominal_represented_bits_per_site": 6,
+      "source_bound_margin_states": 1,
+      "tuple_image_states": 62,
+      "tuple_information_rate_bits_per_longitudinal_site": 0.992366051731,
+      "tuple_symbols_sha256": "227dd1b9410e7e7a5aa7e73543584308d8a6222f7660ccd9c82d1155c8c6bf86"
+    },
+    {
+      "B_n_states": 63,
+      "completion": 128,
+      "fiber_histogram_over_distinct_B_states": {
+        "1": 61,
+        "2": 1
+      },
+      "fiber_signature_sha256": "8c5ba5393c46a3a3bb7d9b9736b076dff55d75587e247ce910f5ff3d8145b0a9",
+      "fraction_of_B_log_capacity_exposed": 0.996138107399,
+      "h": 3,
+      "kind": "K",
+      "n": 6,
+      "nominal_represented_bits_per_site": 8,
+      "source_bound_margin_states": 1,
+      "tuple_image_states": 62,
+      "tuple_information_rate_bits_per_longitudinal_site": 0.992366051731,
+      "tuple_symbols_sha256": "32e00ed92f311e7f011c11ec0f722a8db26830a9d4a4253c779f37db09482b1c"
+    },
+    {
+      "B_n_states": 63,
+      "completion": 128,
+      "fiber_histogram_over_distinct_B_states": {
+        "1": 61,
+        "2": 1
+      },
+      "fiber_signature_sha256": "8c5ba5393c46a3a3bb7d9b9736b076dff55d75587e247ce910f5ff3d8145b0a9",
+      "fraction_of_B_log_capacity_exposed": 0.996138107399,
+      "h": 4,
+      "kind": "K",
+      "n": 6,
+      "nominal_represented_bits_per_site": 10,
+      "source_bound_margin_states": 1,
+      "tuple_image_states": 62,
+      "tuple_information_rate_bits_per_longitudinal_site": 0.992366051731,
+      "tuple_symbols_sha256": "a15bfcca599fb79ef8ba3ac4e3ebe088e2418c83f41489fa16b3f7b653780448"
+    },
+    {
+      "B_n_states": 63,
+      "completion": 128,
+      "fiber_histogram_over_distinct_B_states": {
+        "1": 61,
+        "2": 1
+      },
+      "fiber_signature_sha256": "8c5ba5393c46a3a3bb7d9b9736b076dff55d75587e247ce910f5ff3d8145b0a9",
+      "fraction_of_B_log_capacity_exposed": 0.996138107399,
+      "h": 0,
+      "kind": "O",
+      "n": 6,
+      "nominal_represented_bits_per_site": 2,
+      "source_bound_margin_states": 1,
+      "tuple_image_states": 62,
+      "tuple_information_rate_bits_per_longitudinal_site": 0.992366051731,
+      "tuple_symbols_sha256": "a50709a11cd9b459cb597a14f313890381090a7299c68988b4f04c5be235e984"
+    },
+    {
+      "B_n_states": 63,
+      "completion": 128,
+      "fiber_histogram_over_distinct_B_states": {
+        "1": 61,
+        "2": 1
+      },
+      "fiber_signature_sha256": "8c5ba5393c46a3a3bb7d9b9736b076dff55d75587e247ce910f5ff3d8145b0a9",
+      "fraction_of_B_log_capacity_exposed": 0.996138107399,
+      "h": 1,
+      "kind": "O",
+      "n": 6,
+      "nominal_represented_bits_per_site": 4,
+      "source_bound_margin_states": 1,
+      "tuple_image_states": 62,
+      "tuple_information_rate_bits_per_longitudinal_site": 0.992366051731,
+      "tuple_symbols_sha256": "1d70fdabc789050548dc7c534a563d670647d5fa07ad2b76f8215f8c553a1579"
+    },
+    {
+      "B_n_states": 63,
+      "completion": 128,
+      "fiber_histogram_over_distinct_B_states": {
+        "1": 61,
+        "2": 1
+      },
+      "fiber_signature_sha256": "8c5ba5393c46a3a3bb7d9b9736b076dff55d75587e247ce910f5ff3d8145b0a9",
+      "fraction_of_B_log_capacity_exposed": 0.996138107399,
+      "h": 2,
+      "kind": "O",
+      "n": 6,
+      "nominal_represented_bits_per_site": 6,
+      "source_bound_margin_states": 1,
+      "tuple_image_states": 62,
+      "tuple_information_rate_bits_per_longitudinal_site": 0.992366051731,
+      "tuple_symbols_sha256": "e5c7a97a66425b45ecfc8b6cbefb40c79fce30d29d574a34d59d8fece42557d4"
+    },
+    {
+      "B_n_states": 63,
+      "completion": 128,
+      "fiber_histogram_over_distinct_B_states": {
+        "1": 61,
+        "2": 1
+      },
+      "fiber_signature_sha256": "8c5ba5393c46a3a3bb7d9b9736b076dff55d75587e247ce910f5ff3d8145b0a9",
+      "fraction_of_B_log_capacity_exposed": 0.996138107399,
+      "h": 3,
+      "kind": "O",
+      "n": 6,
+      "nominal_represented_bits_per_site": 8,
+      "source_bound_margin_states": 1,
+      "tuple_image_states": 62,
+      "tuple_information_rate_bits_per_longitudinal_site": 0.992366051731,
+      "tuple_symbols_sha256": "12ea679b558322354871820c51f1233c0d0769a5c11f08483386c2482d09ad34"
+    },
+    {
+      "B_n_states": 63,
+      "completion": 128,
+      "fiber_histogram_over_distinct_B_states": {
+        "1": 61,
+        "2": 1
+      },
+      "fiber_signature_sha256": "8c5ba5393c46a3a3bb7d9b9736b076dff55d75587e247ce910f5ff3d8145b0a9",
+      "fraction_of_B_log_capacity_exposed": 0.996138107399,
+      "h": 4,
+      "kind": "O",
+      "n": 6,
+      "nominal_represented_bits_per_site": 10,
+      "source_bound_margin_states": 1,
+      "tuple_image_states": 62,
+      "tuple_information_rate_bits_per_longitudinal_site": 0.992366051731,
+      "tuple_symbols_sha256": "c6f0f81d7a9cabacba1d459afc6fe1deb1499f710deca0b9aadbf7c0fb9c047c"
+    },
+    {
+      "B_n_states": 63,
+      "completion": 160,
+      "fiber_histogram_over_distinct_B_states": {
+        "1": 61,
+        "2": 1
+      },
+      "fiber_signature_sha256": "8c5ba5393c46a3a3bb7d9b9736b076dff55d75587e247ce910f5ff3d8145b0a9",
+      "fraction_of_B_log_capacity_exposed": 0.996138107399,
+      "h": 0,
+      "kind": "K",
+      "n": 6,
+      "nominal_represented_bits_per_site": 2,
+      "source_bound_margin_states": 1,
+      "tuple_image_states": 62,
+      "tuple_information_rate_bits_per_longitudinal_site": 0.992366051731,
+      "tuple_symbols_sha256": "a50709a11cd9b459cb597a14f313890381090a7299c68988b4f04c5be235e984"
+    },
+    {
+      "B_n_states": 63,
+      "completion": 160,
+      "fiber_histogram_over_distinct_B_states": {
+        "1": 61,
+        "2": 1
+      },
+      "fiber_signature_sha256": "8c5ba5393c46a3a3bb7d9b9736b076dff55d75587e247ce910f5ff3d8145b0a9",
+      "fraction_of_B_log_capacity_exposed": 0.996138107399,
+      "h": 1,
+      "kind": "K",
+      "n": 6,
+      "nominal_represented_bits_per_site": 4,
+      "source_bound_margin_states": 1,
+      "tuple_image_states": 62,
+      "tuple_information_rate_bits_per_longitudinal_site": 0.992366051731,
+      "tuple_symbols_sha256": "681e07977b29507b8d0b0caa02fda6b516a7ba4d4f31393a198d3c42ca7f1da9"
+    },
+    {
+      "B_n_states": 63,
+      "completion": 160,
+      "fiber_histogram_over_distinct_B_states": {
+        "1": 61,
+        "2": 1
+      },
+      "fiber_signature_sha256": "8c5ba5393c46a3a3bb7d9b9736b076dff55d75587e247ce910f5ff3d8145b0a9",
+      "fraction_of_B_log_capacity_exposed": 0.996138107399,
+      "h": 2,
+      "kind": "K",
+      "n": 6,
+      "nominal_represented_bits_per_site": 6,
+      "source_bound_margin_states": 1,
+      "tuple_image_states": 62,
+      "tuple_information_rate_bits_per_longitudinal_site": 0.992366051731,
+      "tuple_symbols_sha256": "d77d5555843d8077dc787c7528f30e811e2656cdbe99c9779b5c5b27af5a2e2e"
+    },
+    {
+      "B_n_states": 63,
+      "completion": 160,
+      "fiber_histogram_over_distinct_B_states": {
+        "1": 61,
+        "2": 1
+      },
+      "fiber_signature_sha256": "8c5ba5393c46a3a3bb7d9b9736b076dff55d75587e247ce910f5ff3d8145b0a9",
+      "fraction_of_B_log_capacity_exposed": 0.996138107399,
+      "h": 3,
+      "kind": "K",
+      "n": 6,
+      "nominal_represented_bits_per_site": 8,
+      "source_bound_margin_states": 1,
+      "tuple_image_states": 62,
+      "tuple_information_rate_bits_per_longitudinal_site": 0.992366051731,
+      "tuple_symbols_sha256": "0e9920a8c52a1ed5a0abdb7eb973ddfba75a2f13d16b53e779dfacc926db24a3"
+    },
+    {
+      "B_n_states": 63,
+      "completion": 160,
+      "fiber_histogram_over_distinct_B_states": {
+        "1": 61,
+        "2": 1
+      },
+      "fiber_signature_sha256": "8c5ba5393c46a3a3bb7d9b9736b076dff55d75587e247ce910f5ff3d8145b0a9",
+      "fraction_of_B_log_capacity_exposed": 0.996138107399,
+      "h": 4,
+      "kind": "K",
+      "n": 6,
+      "nominal_represented_bits_per_site": 10,
+      "source_bound_margin_states": 1,
+      "tuple_image_states": 62,
+      "tuple_information_rate_bits_per_longitudinal_site": 0.992366051731,
+      "tuple_symbols_sha256": "afcdd65a0932c1bdb77201614bf7cd87da2dbd9250c35cae750b4117f31e98ee"
+    },
+    {
+      "B_n_states": 63,
+      "completion": 160,
+      "fiber_histogram_over_distinct_B_states": {
+        "1": 61,
+        "2": 1
+      },
+      "fiber_signature_sha256": "8c5ba5393c46a3a3bb7d9b9736b076dff55d75587e247ce910f5ff3d8145b0a9",
+      "fraction_of_B_log_capacity_exposed": 0.996138107399,
+      "h": 0,
+      "kind": "O",
+      "n": 6,
+      "nominal_represented_bits_per_site": 2,
+      "source_bound_margin_states": 1,
+      "tuple_image_states": 62,
+      "tuple_information_rate_bits_per_longitudinal_site": 0.992366051731,
+      "tuple_symbols_sha256": "a50709a11cd9b459cb597a14f313890381090a7299c68988b4f04c5be235e984"
+    },
+    {
+      "B_n_states": 63,
+      "completion": 160,
+      "fiber_histogram_over_distinct_B_states": {
+        "1": 61,
+        "2": 1
+      },
+      "fiber_signature_sha256": "8c5ba5393c46a3a3bb7d9b9736b076dff55d75587e247ce910f5ff3d8145b0a9",
+      "fraction_of_B_log_capacity_exposed": 0.996138107399,
+      "h": 1,
+      "kind": "O",
+      "n": 6,
+      "nominal_represented_bits_per_site": 4,
+      "source_bound_margin_states": 1,
+      "tuple_image_states": 62,
+      "tuple_information_rate_bits_per_longitudinal_site": 0.992366051731,
+      "tuple_symbols_sha256": "1d70fdabc789050548dc7c534a563d670647d5fa07ad2b76f8215f8c553a1579"
+    },
+    {
+      "B_n_states": 63,
+      "completion": 160,
+      "fiber_histogram_over_distinct_B_states": {
+        "1": 61,
+        "2": 1
+      },
+      "fiber_signature_sha256": "8c5ba5393c46a3a3bb7d9b9736b076dff55d75587e247ce910f5ff3d8145b0a9",
+      "fraction_of_B_log_capacity_exposed": 0.996138107399,
+      "h": 2,
+      "kind": "O",
+      "n": 6,
+      "nominal_represented_bits_per_site": 6,
+      "source_bound_margin_states": 1,
+      "tuple_image_states": 62,
+      "tuple_information_rate_bits_per_longitudinal_site": 0.992366051731,
+      "tuple_symbols_sha256": "e5c7a97a66425b45ecfc8b6cbefb40c79fce30d29d574a34d59d8fece42557d4"
+    },
+    {
+      "B_n_states": 63,
+      "completion": 160,
+      "fiber_histogram_over_distinct_B_states": {
+        "1": 61,
+        "2": 1
+      },
+      "fiber_signature_sha256": "8c5ba5393c46a3a3bb7d9b9736b076dff55d75587e247ce910f5ff3d8145b0a9",
+      "fraction_of_B_log_capacity_exposed": 0.996138107399,
+      "h": 3,
+      "kind": "O",
+      "n": 6,
+      "nominal_represented_bits_per_site": 8,
+      "source_bound_margin_states": 1,
+      "tuple_image_states": 62,
+      "tuple_information_rate_bits_per_longitudinal_site": 0.992366051731,
+      "tuple_symbols_sha256": "12ea679b558322354871820c51f1233c0d0769a5c11f08483386c2482d09ad34"
+    },
+    {
+      "B_n_states": 63,
+      "completion": 160,
+      "fiber_histogram_over_distinct_B_states": {
+        "1": 61,
+        "2": 1
+      },
+      "fiber_signature_sha256": "8c5ba5393c46a3a3bb7d9b9736b076dff55d75587e247ce910f5ff3d8145b0a9",
+      "fraction_of_B_log_capacity_exposed": 0.996138107399,
+      "h": 4,
+      "kind": "O",
+      "n": 6,
+      "nominal_represented_bits_per_site": 10,
+      "source_bound_margin_states": 1,
+      "tuple_image_states": 62,
+      "tuple_information_rate_bits_per_longitudinal_site": 0.992366051731,
+      "tuple_symbols_sha256": "c6f0f81d7a9cabacba1d459afc6fe1deb1499f710deca0b9aadbf7c0fb9c047c"
+    },
+    {
+      "B_n_states": 128,
+      "completion": 128,
+      "fiber_histogram_over_distinct_B_states": {
+        "1": 128
+      },
+      "fiber_signature_sha256": "1abb49eec50723c018c1197161b8cc46c61cab2dbfdd96287a7e3e20bbcdcc99",
+      "fraction_of_B_log_capacity_exposed": 1.0,
+      "h": 0,
+      "kind": "K",
+      "n": 7,
+      "nominal_represented_bits_per_site": 2,
+      "source_bound_margin_states": 0,
+      "tuple_image_states": 128,
+      "tuple_information_rate_bits_per_longitudinal_site": 1.0,
+      "tuple_symbols_sha256": "f0544230304a77f370ef35674c21c417d2c4334f4362590dd8e632a82f83e00a"
+    },
+    {
+      "B_n_states": 128,
+      "completion": 128,
+      "fiber_histogram_over_distinct_B_states": {
+        "1": 128
+      },
+      "fiber_signature_sha256": "1abb49eec50723c018c1197161b8cc46c61cab2dbfdd96287a7e3e20bbcdcc99",
+      "fraction_of_B_log_capacity_exposed": 1.0,
+      "h": 1,
+      "kind": "K",
+      "n": 7,
+      "nominal_represented_bits_per_site": 4,
+      "source_bound_margin_states": 0,
+      "tuple_image_states": 128,
+      "tuple_information_rate_bits_per_longitudinal_site": 1.0,
+      "tuple_symbols_sha256": "5783ac5afb4283413363545a06a20ab5b98bfde1740b0d35acb0aac36d29958c"
+    },
+    {
+      "B_n_states": 128,
+      "completion": 128,
+      "fiber_histogram_over_distinct_B_states": {
+        "1": 128
+      },
+      "fiber_signature_sha256": "1abb49eec50723c018c1197161b8cc46c61cab2dbfdd96287a7e3e20bbcdcc99",
+      "fraction_of_B_log_capacity_exposed": 1.0,
+      "h": 2,
+      "kind": "K",
+      "n": 7,
+      "nominal_represented_bits_per_site": 6,
+      "source_bound_margin_states": 0,
+      "tuple_image_states": 128,
+      "tuple_information_rate_bits_per_longitudinal_site": 1.0,
+      "tuple_symbols_sha256": "37b0c88229512f1d4e4cfd0589842184bc42aa205d6287d5d5a29847f1d34f0e"
+    },
+    {
+      "B_n_states": 128,
+      "completion": 128,
+      "fiber_histogram_over_distinct_B_states": {
+        "1": 128
+      },
+      "fiber_signature_sha256": "1abb49eec50723c018c1197161b8cc46c61cab2dbfdd96287a7e3e20bbcdcc99",
+      "fraction_of_B_log_capacity_exposed": 1.0,
+      "h": 3,
+      "kind": "K",
+      "n": 7,
+      "nominal_represented_bits_per_site": 8,
+      "source_bound_margin_states": 0,
+      "tuple_image_states": 128,
+      "tuple_information_rate_bits_per_longitudinal_site": 1.0,
+      "tuple_symbols_sha256": "579922d4fe255347611251c1f8dabdb34f7a49e8fb75123d02f14629ad440f6f"
+    },
+    {
+      "B_n_states": 128,
+      "completion": 128,
+      "fiber_histogram_over_distinct_B_states": {
+        "1": 128
+      },
+      "fiber_signature_sha256": "1abb49eec50723c018c1197161b8cc46c61cab2dbfdd96287a7e3e20bbcdcc99",
+      "fraction_of_B_log_capacity_exposed": 1.0,
+      "h": 4,
+      "kind": "K",
+      "n": 7,
+      "nominal_represented_bits_per_site": 10,
+      "source_bound_margin_states": 0,
+      "tuple_image_states": 128,
+      "tuple_information_rate_bits_per_longitudinal_site": 1.0,
+      "tuple_symbols_sha256": "bd288dc67b81d13f684ed22a5ee79db41d74b77967eb1936817d1ef6d942e2e7"
+    },
+    {
+      "B_n_states": 128,
+      "completion": 128,
+      "fiber_histogram_over_distinct_B_states": {
+        "1": 128
+      },
+      "fiber_signature_sha256": "1abb49eec50723c018c1197161b8cc46c61cab2dbfdd96287a7e3e20bbcdcc99",
+      "fraction_of_B_log_capacity_exposed": 1.0,
+      "h": 0,
+      "kind": "O",
+      "n": 7,
+      "nominal_represented_bits_per_site": 2,
+      "source_bound_margin_states": 0,
+      "tuple_image_states": 128,
+      "tuple_information_rate_bits_per_longitudinal_site": 1.0,
+      "tuple_symbols_sha256": "f0544230304a77f370ef35674c21c417d2c4334f4362590dd8e632a82f83e00a"
+    },
+    {
+      "B_n_states": 128,
+      "completion": 128,
+      "fiber_histogram_over_distinct_B_states": {
+        "1": 128
+      },
+      "fiber_signature_sha256": "1abb49eec50723c018c1197161b8cc46c61cab2dbfdd96287a7e3e20bbcdcc99",
+      "fraction_of_B_log_capacity_exposed": 1.0,
+      "h": 1,
+      "kind": "O",
+      "n": 7,
+      "nominal_represented_bits_per_site": 4,
+      "source_bound_margin_states": 0,
+      "tuple_image_states": 128,
+      "tuple_information_rate_bits_per_longitudinal_site": 1.0,
+      "tuple_symbols_sha256": "951e783bb29f8fda0e9a61143c61973244e61d1bd44edd1d70c11c6c6ca05215"
+    },
+    {
+      "B_n_states": 128,
+      "completion": 128,
+      "fiber_histogram_over_distinct_B_states": {
+        "1": 128
+      },
+      "fiber_signature_sha256": "1abb49eec50723c018c1197161b8cc46c61cab2dbfdd96287a7e3e20bbcdcc99",
+      "fraction_of_B_log_capacity_exposed": 1.0,
+      "h": 2,
+      "kind": "O",
+      "n": 7,
+      "nominal_represented_bits_per_site": 6,
+      "source_bound_margin_states": 0,
+      "tuple_image_states": 128,
+      "tuple_information_rate_bits_per_longitudinal_site": 1.0,
+      "tuple_symbols_sha256": "894cca173e86d587534bca30ae4efc4e01bb4c35ca41a1bbac65963c4a052792"
+    },
+    {
+      "B_n_states": 128,
+      "completion": 128,
+      "fiber_histogram_over_distinct_B_states": {
+        "1": 128
+      },
+      "fiber_signature_sha256": "1abb49eec50723c018c1197161b8cc46c61cab2dbfdd96287a7e3e20bbcdcc99",
+      "fraction_of_B_log_capacity_exposed": 1.0,
+      "h": 3,
+      "kind": "O",
+      "n": 7,
+      "nominal_represented_bits_per_site": 8,
+      "source_bound_margin_states": 0,
+      "tuple_image_states": 128,
+      "tuple_information_rate_bits_per_longitudinal_site": 1.0,
+      "tuple_symbols_sha256": "6eb6066f9959797843d0a49a962b948ef3692c428878985098c282351ff10248"
+    },
+    {
+      "B_n_states": 128,
+      "completion": 128,
+      "fiber_histogram_over_distinct_B_states": {
+        "1": 128
+      },
+      "fiber_signature_sha256": "1abb49eec50723c018c1197161b8cc46c61cab2dbfdd96287a7e3e20bbcdcc99",
+      "fraction_of_B_log_capacity_exposed": 1.0,
+      "h": 4,
+      "kind": "O",
+      "n": 7,
+      "nominal_represented_bits_per_site": 10,
+      "source_bound_margin_states": 0,
+      "tuple_image_states": 128,
+      "tuple_information_rate_bits_per_longitudinal_site": 1.0,
+      "tuple_symbols_sha256": "73d5d1693bfc3375ec8b2769cbe5cf4fb3d33b5739dc4932a17674207db1373e"
+    },
+    {
+      "B_n_states": 128,
+      "completion": 160,
+      "fiber_histogram_over_distinct_B_states": {
+        "1": 128
+      },
+      "fiber_signature_sha256": "1abb49eec50723c018c1197161b8cc46c61cab2dbfdd96287a7e3e20bbcdcc99",
+      "fraction_of_B_log_capacity_exposed": 1.0,
+      "h": 0,
+      "kind": "K",
+      "n": 7,
+      "nominal_represented_bits_per_site": 2,
+      "source_bound_margin_states": 0,
+      "tuple_image_states": 128,
+      "tuple_information_rate_bits_per_longitudinal_site": 1.0,
+      "tuple_symbols_sha256": "f0544230304a77f370ef35674c21c417d2c4334f4362590dd8e632a82f83e00a"
+    },
+    {
+      "B_n_states": 128,
+      "completion": 160,
+      "fiber_histogram_over_distinct_B_states": {
+        "1": 128
+      },
+      "fiber_signature_sha256": "1abb49eec50723c018c1197161b8cc46c61cab2dbfdd96287a7e3e20bbcdcc99",
+      "fraction_of_B_log_capacity_exposed": 1.0,
+      "h": 1,
+      "kind": "K",
+      "n": 7,
+      "nominal_represented_bits_per_site": 4,
+      "source_bound_margin_states": 0,
+      "tuple_image_states": 128,
+      "tuple_information_rate_bits_per_longitudinal_site": 1.0,
+      "tuple_symbols_sha256": "e12400891b9f82353db2c07d72f34e23d406a11eabc96967de3ba02954f4bddf"
+    },
+    {
+      "B_n_states": 128,
+      "completion": 160,
+      "fiber_histogram_over_distinct_B_states": {
+        "1": 128
+      },
+      "fiber_signature_sha256": "1abb49eec50723c018c1197161b8cc46c61cab2dbfdd96287a7e3e20bbcdcc99",
+      "fraction_of_B_log_capacity_exposed": 1.0,
+      "h": 2,
+      "kind": "K",
+      "n": 7,
+      "nominal_represented_bits_per_site": 6,
+      "source_bound_margin_states": 0,
+      "tuple_image_states": 128,
+      "tuple_information_rate_bits_per_longitudinal_site": 1.0,
+      "tuple_symbols_sha256": "4b41c13067306d73e9713352945db62a235f297f755f821e723dc8c5fa125c26"
+    },
+    {
+      "B_n_states": 128,
+      "completion": 160,
+      "fiber_histogram_over_distinct_B_states": {
+        "1": 128
+      },
+      "fiber_signature_sha256": "1abb49eec50723c018c1197161b8cc46c61cab2dbfdd96287a7e3e20bbcdcc99",
+      "fraction_of_B_log_capacity_exposed": 1.0,
+      "h": 3,
+      "kind": "K",
+      "n": 7,
+      "nominal_represented_bits_per_site": 8,
+      "source_bound_margin_states": 0,
+      "tuple_image_states": 128,
+      "tuple_information_rate_bits_per_longitudinal_site": 1.0,
+      "tuple_symbols_sha256": "e3ae00c91204ce81f071294dc7f59c463d5481b83909500118c7e04546843dd5"
+    },
+    {
+      "B_n_states": 128,
+      "completion": 160,
+      "fiber_histogram_over_distinct_B_states": {
+        "1": 128
+      },
+      "fiber_signature_sha256": "1abb49eec50723c018c1197161b8cc46c61cab2dbfdd96287a7e3e20bbcdcc99",
+      "fraction_of_B_log_capacity_exposed": 1.0,
+      "h": 4,
+      "kind": "K",
+      "n": 7,
+      "nominal_represented_bits_per_site": 10,
+      "source_bound_margin_states": 0,
+      "tuple_image_states": 128,
+      "tuple_information_rate_bits_per_longitudinal_site": 1.0,
+      "tuple_symbols_sha256": "9b2d86e8bacb656ac2e2422fa66b82fac5c9fd65c3fad0b1df786a602675f2a6"
+    },
+    {
+      "B_n_states": 128,
+      "completion": 160,
+      "fiber_histogram_over_distinct_B_states": {
+        "1": 128
+      },
+      "fiber_signature_sha256": "1abb49eec50723c018c1197161b8cc46c61cab2dbfdd96287a7e3e20bbcdcc99",
+      "fraction_of_B_log_capacity_exposed": 1.0,
+      "h": 0,
+      "kind": "O",
+      "n": 7,
+      "nominal_represented_bits_per_site": 2,
+      "source_bound_margin_states": 0,
+      "tuple_image_states": 128,
+      "tuple_information_rate_bits_per_longitudinal_site": 1.0,
+      "tuple_symbols_sha256": "f0544230304a77f370ef35674c21c417d2c4334f4362590dd8e632a82f83e00a"
+    },
+    {
+      "B_n_states": 128,
+      "completion": 160,
+      "fiber_histogram_over_distinct_B_states": {
+        "1": 128
+      },
+      "fiber_signature_sha256": "1abb49eec50723c018c1197161b8cc46c61cab2dbfdd96287a7e3e20bbcdcc99",
+      "fraction_of_B_log_capacity_exposed": 1.0,
+      "h": 1,
+      "kind": "O",
+      "n": 7,
+      "nominal_represented_bits_per_site": 4,
+      "source_bound_margin_states": 0,
+      "tuple_image_states": 128,
+      "tuple_information_rate_bits_per_longitudinal_site": 1.0,
+      "tuple_symbols_sha256": "951e783bb29f8fda0e9a61143c61973244e61d1bd44edd1d70c11c6c6ca05215"
+    },
+    {
+      "B_n_states": 128,
+      "completion": 160,
+      "fiber_histogram_over_distinct_B_states": {
+        "1": 128
+      },
+      "fiber_signature_sha256": "1abb49eec50723c018c1197161b8cc46c61cab2dbfdd96287a7e3e20bbcdcc99",
+      "fraction_of_B_log_capacity_exposed": 1.0,
+      "h": 2,
+      "kind": "O",
+      "n": 7,
+      "nominal_represented_bits_per_site": 6,
+      "source_bound_margin_states": 0,
+      "tuple_image_states": 128,
+      "tuple_information_rate_bits_per_longitudinal_site": 1.0,
+      "tuple_symbols_sha256": "894cca173e86d587534bca30ae4efc4e01bb4c35ca41a1bbac65963c4a052792"
+    },
+    {
+      "B_n_states": 128,
+      "completion": 160,
+      "fiber_histogram_over_distinct_B_states": {
+        "1": 128
+      },
+      "fiber_signature_sha256": "1abb49eec50723c018c1197161b8cc46c61cab2dbfdd96287a7e3e20bbcdcc99",
+      "fraction_of_B_log_capacity_exposed": 1.0,
+      "h": 3,
+      "kind": "O",
+      "n": 7,
+      "nominal_represented_bits_per_site": 8,
+      "source_bound_margin_states": 0,
+      "tuple_image_states": 128,
+      "tuple_information_rate_bits_per_longitudinal_site": 1.0,
+      "tuple_symbols_sha256": "6eb6066f9959797843d0a49a962b948ef3692c428878985098c282351ff10248"
+    },
+    {
+      "B_n_states": 128,
+      "completion": 160,
+      "fiber_histogram_over_distinct_B_states": {
+        "1": 128
+      },
+      "fiber_signature_sha256": "1abb49eec50723c018c1197161b8cc46c61cab2dbfdd96287a7e3e20bbcdcc99",
+      "fraction_of_B_log_capacity_exposed": 1.0,
+      "h": 4,
+      "kind": "O",
+      "n": 7,
+      "nominal_represented_bits_per_site": 10,
+      "source_bound_margin_states": 0,
+      "tuple_image_states": 128,
+      "tuple_information_rate_bits_per_longitudinal_site": 1.0,
+      "tuple_symbols_sha256": "73d5d1693bfc3375ec8b2769cbe5cf4fb3d33b5739dc4932a17674207db1373e"
+    },
+    {
+      "B_n_states": 255,
+      "completion": 128,
+      "fiber_histogram_over_distinct_B_states": {
+        "1": 253,
+        "2": 1
+      },
+      "fiber_signature_sha256": "afa068ccce5c5aac9a404f0a953be31b169f35ccfd1a1f3e440c5e38d2b415c2",
+      "fraction_of_B_log_capacity_exposed": 0.999290905746,
+      "h": 0,
+      "kind": "K",
+      "n": 8,
+      "nominal_represented_bits_per_site": 2,
+      "source_bound_margin_states": 1,
+      "tuple_image_states": 254,
+      "tuple_information_rate_bits_per_longitudinal_site": 0.998585585847,
+      "tuple_symbols_sha256": "70aee868a5ff21fcdb6a94f4e9a740f4cffa75e19cddc17254d89236cdbfc170"
+    },
+    {
+      "B_n_states": 255,
+      "completion": 128,
+      "fiber_histogram_over_distinct_B_states": {
+        "1": 253,
+        "2": 1
+      },
+      "fiber_signature_sha256": "afa068ccce5c5aac9a404f0a953be31b169f35ccfd1a1f3e440c5e38d2b415c2",
+      "fraction_of_B_log_capacity_exposed": 0.999290905746,
+      "h": 1,
+      "kind": "K",
+      "n": 8,
+      "nominal_represented_bits_per_site": 4,
+      "source_bound_margin_states": 1,
+      "tuple_image_states": 254,
+      "tuple_information_rate_bits_per_longitudinal_site": 0.998585585847,
+      "tuple_symbols_sha256": "134e6f9d9c527fb0037e7069a8789879ad0a7bd3f499e5276a4a7ba6c8118fcd"
+    },
+    {
+      "B_n_states": 255,
+      "completion": 128,
+      "fiber_histogram_over_distinct_B_states": {
+        "1": 253,
+        "2": 1
+      },
+      "fiber_signature_sha256": "afa068ccce5c5aac9a404f0a953be31b169f35ccfd1a1f3e440c5e38d2b415c2",
+      "fraction_of_B_log_capacity_exposed": 0.999290905746,
+      "h": 2,
+      "kind": "K",
+      "n": 8,
+      "nominal_represented_bits_per_site": 6,
+      "source_bound_margin_states": 1,
+      "tuple_image_states": 254,
+      "tuple_information_rate_bits_per_longitudinal_site": 0.998585585847,
+      "tuple_symbols_sha256": "b26a6c2174aa51b9bd1c91b9b149dcd252432dc26d80fe570bfa298ed75729b2"
+    },
+    {
+      "B_n_states": 255,
+      "completion": 128,
+      "fiber_histogram_over_distinct_B_states": {
+        "1": 253,
+        "2": 1
+      },
+      "fiber_signature_sha256": "afa068ccce5c5aac9a404f0a953be31b169f35ccfd1a1f3e440c5e38d2b415c2",
+      "fraction_of_B_log_capacity_exposed": 0.999290905746,
+      "h": 3,
+      "kind": "K",
+      "n": 8,
+      "nominal_represented_bits_per_site": 8,
+      "source_bound_margin_states": 1,
+      "tuple_image_states": 254,
+      "tuple_information_rate_bits_per_longitudinal_site": 0.998585585847,
+      "tuple_symbols_sha256": "fe11cc1d718c1ec17c297caacddc0f275a44321141d54216ebf46c4204df2daf"
+    },
+    {
+      "B_n_states": 255,
+      "completion": 128,
+      "fiber_histogram_over_distinct_B_states": {
+        "1": 253,
+        "2": 1
+      },
+      "fiber_signature_sha256": "afa068ccce5c5aac9a404f0a953be31b169f35ccfd1a1f3e440c5e38d2b415c2",
+      "fraction_of_B_log_capacity_exposed": 0.999290905746,
+      "h": 4,
+      "kind": "K",
+      "n": 8,
+      "nominal_represented_bits_per_site": 10,
+      "source_bound_margin_states": 1,
+      "tuple_image_states": 254,
+      "tuple_information_rate_bits_per_longitudinal_site": 0.998585585847,
+      "tuple_symbols_sha256": "982588a229fd2a115d0250f10cc04fa9a266556be24f42bf057591de733b0d40"
+    },
+    {
+      "B_n_states": 255,
+      "completion": 128,
+      "fiber_histogram_over_distinct_B_states": {
+        "1": 253,
+        "2": 1
+      },
+      "fiber_signature_sha256": "afa068ccce5c5aac9a404f0a953be31b169f35ccfd1a1f3e440c5e38d2b415c2",
+      "fraction_of_B_log_capacity_exposed": 0.999290905746,
+      "h": 0,
+      "kind": "O",
+      "n": 8,
+      "nominal_represented_bits_per_site": 2,
+      "source_bound_margin_states": 1,
+      "tuple_image_states": 254,
+      "tuple_information_rate_bits_per_longitudinal_site": 0.998585585847,
+      "tuple_symbols_sha256": "70aee868a5ff21fcdb6a94f4e9a740f4cffa75e19cddc17254d89236cdbfc170"
+    },
+    {
+      "B_n_states": 255,
+      "completion": 128,
+      "fiber_histogram_over_distinct_B_states": {
+        "1": 253,
+        "2": 1
+      },
+      "fiber_signature_sha256": "afa068ccce5c5aac9a404f0a953be31b169f35ccfd1a1f3e440c5e38d2b415c2",
+      "fraction_of_B_log_capacity_exposed": 0.999290905746,
+      "h": 1,
+      "kind": "O",
+      "n": 8,
+      "nominal_represented_bits_per_site": 4,
+      "source_bound_margin_states": 1,
+      "tuple_image_states": 254,
+      "tuple_information_rate_bits_per_longitudinal_site": 0.998585585847,
+      "tuple_symbols_sha256": "4a0a02109d9c6646d6ffa08a1f821195357d3d2e20d35887ed6f5e8c1eef0d03"
+    },
+    {
+      "B_n_states": 255,
+      "completion": 128,
+      "fiber_histogram_over_distinct_B_states": {
+        "1": 253,
+        "2": 1
+      },
+      "fiber_signature_sha256": "afa068ccce5c5aac9a404f0a953be31b169f35ccfd1a1f3e440c5e38d2b415c2",
+      "fraction_of_B_log_capacity_exposed": 0.999290905746,
+      "h": 2,
+      "kind": "O",
+      "n": 8,
+      "nominal_represented_bits_per_site": 6,
+      "source_bound_margin_states": 1,
+      "tuple_image_states": 254,
+      "tuple_information_rate_bits_per_longitudinal_site": 0.998585585847,
+      "tuple_symbols_sha256": "fb601c3250ddcb5e1e1646589f3719a2f283da28fd05420c7ff6f589a50a0f63"
+    },
+    {
+      "B_n_states": 255,
+      "completion": 128,
+      "fiber_histogram_over_distinct_B_states": {
+        "1": 253,
+        "2": 1
+      },
+      "fiber_signature_sha256": "afa068ccce5c5aac9a404f0a953be31b169f35ccfd1a1f3e440c5e38d2b415c2",
+      "fraction_of_B_log_capacity_exposed": 0.999290905746,
+      "h": 3,
+      "kind": "O",
+      "n": 8,
+      "nominal_represented_bits_per_site": 8,
+      "source_bound_margin_states": 1,
+      "tuple_image_states": 254,
+      "tuple_information_rate_bits_per_longitudinal_site": 0.998585585847,
+      "tuple_symbols_sha256": "3818fb7c0bbe4b614f11d0ee2f5f4efa2a675c7f242efcd604c3ddeeb8b9e6b5"
+    },
+    {
+      "B_n_states": 255,
+      "completion": 128,
+      "fiber_histogram_over_distinct_B_states": {
+        "1": 253,
+        "2": 1
+      },
+      "fiber_signature_sha256": "afa068ccce5c5aac9a404f0a953be31b169f35ccfd1a1f3e440c5e38d2b415c2",
+      "fraction_of_B_log_capacity_exposed": 0.999290905746,
+      "h": 4,
+      "kind": "O",
+      "n": 8,
+      "nominal_represented_bits_per_site": 10,
+      "source_bound_margin_states": 1,
+      "tuple_image_states": 254,
+      "tuple_information_rate_bits_per_longitudinal_site": 0.998585585847,
+      "tuple_symbols_sha256": "25dec3f558c5c7900fc05cf0c0cf902055c38ba36eb671462d8672b2f930d17e"
+    },
+    {
+      "B_n_states": 255,
+      "completion": 160,
+      "fiber_histogram_over_distinct_B_states": {
+        "1": 253,
+        "2": 1
+      },
+      "fiber_signature_sha256": "afa068ccce5c5aac9a404f0a953be31b169f35ccfd1a1f3e440c5e38d2b415c2",
+      "fraction_of_B_log_capacity_exposed": 0.999290905746,
+      "h": 0,
+      "kind": "K",
+      "n": 8,
+      "nominal_represented_bits_per_site": 2,
+      "source_bound_margin_states": 1,
+      "tuple_image_states": 254,
+      "tuple_information_rate_bits_per_longitudinal_site": 0.998585585847,
+      "tuple_symbols_sha256": "70aee868a5ff21fcdb6a94f4e9a740f4cffa75e19cddc17254d89236cdbfc170"
+    },
+    {
+      "B_n_states": 255,
+      "completion": 160,
+      "fiber_histogram_over_distinct_B_states": {
+        "1": 253,
+        "2": 1
+      },
+      "fiber_signature_sha256": "afa068ccce5c5aac9a404f0a953be31b169f35ccfd1a1f3e440c5e38d2b415c2",
+      "fraction_of_B_log_capacity_exposed": 0.999290905746,
+      "h": 1,
+      "kind": "K",
+      "n": 8,
+      "nominal_represented_bits_per_site": 4,
+      "source_bound_margin_states": 1,
+      "tuple_image_states": 254,
+      "tuple_information_rate_bits_per_longitudinal_site": 0.998585585847,
+      "tuple_symbols_sha256": "5a7034760603efa1c7fd4b3dc8c70456159eefa03d524360786e3705bd2bca5e"
+    },
+    {
+      "B_n_states": 255,
+      "completion": 160,
+      "fiber_histogram_over_distinct_B_states": {
+        "1": 253,
+        "2": 1
+      },
+      "fiber_signature_sha256": "afa068ccce5c5aac9a404f0a953be31b169f35ccfd1a1f3e440c5e38d2b415c2",
+      "fraction_of_B_log_capacity_exposed": 0.999290905746,
+      "h": 2,
+      "kind": "K",
+      "n": 8,
+      "nominal_represented_bits_per_site": 6,
+      "source_bound_margin_states": 1,
+      "tuple_image_states": 254,
+      "tuple_information_rate_bits_per_longitudinal_site": 0.998585585847,
+      "tuple_symbols_sha256": "cc4315840f938c4c308caaae6ead116e206106e506f4aaa98ef8338447b07dc5"
+    },
+    {
+      "B_n_states": 255,
+      "completion": 160,
+      "fiber_histogram_over_distinct_B_states": {
+        "1": 253,
+        "2": 1
+      },
+      "fiber_signature_sha256": "afa068ccce5c5aac9a404f0a953be31b169f35ccfd1a1f3e440c5e38d2b415c2",
+      "fraction_of_B_log_capacity_exposed": 0.999290905746,
+      "h": 3,
+      "kind": "K",
+      "n": 8,
+      "nominal_represented_bits_per_site": 8,
+      "source_bound_margin_states": 1,
+      "tuple_image_states": 254,
+      "tuple_information_rate_bits_per_longitudinal_site": 0.998585585847,
+      "tuple_symbols_sha256": "ea28b898ac9e7efd711d8eb896a50f3f7e0cffbc6ab1c4cdde2802c63ced72b2"
+    },
+    {
+      "B_n_states": 255,
+      "completion": 160,
+      "fiber_histogram_over_distinct_B_states": {
+        "1": 253,
+        "2": 1
+      },
+      "fiber_signature_sha256": "afa068ccce5c5aac9a404f0a953be31b169f35ccfd1a1f3e440c5e38d2b415c2",
+      "fraction_of_B_log_capacity_exposed": 0.999290905746,
+      "h": 4,
+      "kind": "K",
+      "n": 8,
+      "nominal_represented_bits_per_site": 10,
+      "source_bound_margin_states": 1,
+      "tuple_image_states": 254,
+      "tuple_information_rate_bits_per_longitudinal_site": 0.998585585847,
+      "tuple_symbols_sha256": "ed27dab3707503248c6f6650c4ccfc0dff256add3ee2ac87c092ed8276af1254"
+    },
+    {
+      "B_n_states": 255,
+      "completion": 160,
+      "fiber_histogram_over_distinct_B_states": {
+        "1": 253,
+        "2": 1
+      },
+      "fiber_signature_sha256": "afa068ccce5c5aac9a404f0a953be31b169f35ccfd1a1f3e440c5e38d2b415c2",
+      "fraction_of_B_log_capacity_exposed": 0.999290905746,
+      "h": 0,
+      "kind": "O",
+      "n": 8,
+      "nominal_represented_bits_per_site": 2,
+      "source_bound_margin_states": 1,
+      "tuple_image_states": 254,
+      "tuple_information_rate_bits_per_longitudinal_site": 0.998585585847,
+      "tuple_symbols_sha256": "70aee868a5ff21fcdb6a94f4e9a740f4cffa75e19cddc17254d89236cdbfc170"
+    },
+    {
+      "B_n_states": 255,
+      "completion": 160,
+      "fiber_histogram_over_distinct_B_states": {
+        "1": 253,
+        "2": 1
+      },
+      "fiber_signature_sha256": "afa068ccce5c5aac9a404f0a953be31b169f35ccfd1a1f3e440c5e38d2b415c2",
+      "fraction_of_B_log_capacity_exposed": 0.999290905746,
+      "h": 1,
+      "kind": "O",
+      "n": 8,
+      "nominal_represented_bits_per_site": 4,
+      "source_bound_margin_states": 1,
+      "tuple_image_states": 254,
+      "tuple_information_rate_bits_per_longitudinal_site": 0.998585585847,
+      "tuple_symbols_sha256": "4a0a02109d9c6646d6ffa08a1f821195357d3d2e20d35887ed6f5e8c1eef0d03"
+    },
+    {
+      "B_n_states": 255,
+      "completion": 160,
+      "fiber_histogram_over_distinct_B_states": {
+        "1": 253,
+        "2": 1
+      },
+      "fiber_signature_sha256": "afa068ccce5c5aac9a404f0a953be31b169f35ccfd1a1f3e440c5e38d2b415c2",
+      "fraction_of_B_log_capacity_exposed": 0.999290905746,
+      "h": 2,
+      "kind": "O",
+      "n": 8,
+      "nominal_represented_bits_per_site": 6,
+      "source_bound_margin_states": 1,
+      "tuple_image_states": 254,
+      "tuple_information_rate_bits_per_longitudinal_site": 0.998585585847,
+      "tuple_symbols_sha256": "fb601c3250ddcb5e1e1646589f3719a2f283da28fd05420c7ff6f589a50a0f63"
+    },
+    {
+      "B_n_states": 255,
+      "completion": 160,
+      "fiber_histogram_over_distinct_B_states": {
+        "1": 253,
+        "2": 1
+      },
+      "fiber_signature_sha256": "afa068ccce5c5aac9a404f0a953be31b169f35ccfd1a1f3e440c5e38d2b415c2",
+      "fraction_of_B_log_capacity_exposed": 0.999290905746,
+      "h": 3,
+      "kind": "O",
+      "n": 8,
+      "nominal_represented_bits_per_site": 8,
+      "source_bound_margin_states": 1,
+      "tuple_image_states": 254,
+      "tuple_information_rate_bits_per_longitudinal_site": 0.998585585847,
+      "tuple_symbols_sha256": "3818fb7c0bbe4b614f11d0ee2f5f4efa2a675c7f242efcd604c3ddeeb8b9e6b5"
+    },
+    {
+      "B_n_states": 255,
+      "completion": 160,
+      "fiber_histogram_over_distinct_B_states": {
+        "1": 253,
+        "2": 1
+      },
+      "fiber_signature_sha256": "afa068ccce5c5aac9a404f0a953be31b169f35ccfd1a1f3e440c5e38d2b415c2",
+      "fraction_of_B_log_capacity_exposed": 0.999290905746,
+      "h": 4,
+      "kind": "O",
+      "n": 8,
+      "nominal_represented_bits_per_site": 10,
+      "source_bound_margin_states": 1,
+      "tuple_image_states": 254,
+      "tuple_information_rate_bits_per_longitudinal_site": 0.998585585847,
+      "tuple_symbols_sha256": "25dec3f558c5c7900fc05cf0c0cf902055c38ba36eb671462d8672b2f930d17e"
+    },
+    {
+      "B_n_states": 512,
+      "completion": 128,
+      "fiber_histogram_over_distinct_B_states": {
+        "1": 512
+      },
+      "fiber_signature_sha256": "d1db81dae1e4b4104680a50b8db0a91c7880c6cdc0040917d5a8a168a0e44439",
+      "fraction_of_B_log_capacity_exposed": 1.0,
+      "h": 0,
+      "kind": "K",
+      "n": 9,
+      "nominal_represented_bits_per_site": 2,
+      "source_bound_margin_states": 0,
+      "tuple_image_states": 512,
+      "tuple_information_rate_bits_per_longitudinal_site": 1.0,
+      "tuple_symbols_sha256": "5ac69078127eb653a14991e0d9d99346d8866539b68d45a05f8c9e431a75f6ca"
+    },
+    {
+      "B_n_states": 512,
+      "completion": 128,
+      "fiber_histogram_over_distinct_B_states": {
+        "1": 512
+      },
+      "fiber_signature_sha256": "d1db81dae1e4b4104680a50b8db0a91c7880c6cdc0040917d5a8a168a0e44439",
+      "fraction_of_B_log_capacity_exposed": 1.0,
+      "h": 1,
+      "kind": "K",
+      "n": 9,
+      "nominal_represented_bits_per_site": 4,
+      "source_bound_margin_states": 0,
+      "tuple_image_states": 512,
+      "tuple_information_rate_bits_per_longitudinal_site": 1.0,
+      "tuple_symbols_sha256": "e11d0997115a1c6b84022ab19d24a98fddcff7d3a6a279ab0dd74167348f8cce"
+    },
+    {
+      "B_n_states": 512,
+      "completion": 128,
+      "fiber_histogram_over_distinct_B_states": {
+        "1": 512
+      },
+      "fiber_signature_sha256": "d1db81dae1e4b4104680a50b8db0a91c7880c6cdc0040917d5a8a168a0e44439",
+      "fraction_of_B_log_capacity_exposed": 1.0,
+      "h": 2,
+      "kind": "K",
+      "n": 9,
+      "nominal_represented_bits_per_site": 6,
+      "source_bound_margin_states": 0,
+      "tuple_image_states": 512,
+      "tuple_information_rate_bits_per_longitudinal_site": 1.0,
+      "tuple_symbols_sha256": "b59d0cb0004b170e04e8428358b12fd2f1a211d79d6e5cf895897f3cdc3c1c97"
+    },
+    {
+      "B_n_states": 512,
+      "completion": 128,
+      "fiber_histogram_over_distinct_B_states": {
+        "1": 512
+      },
+      "fiber_signature_sha256": "d1db81dae1e4b4104680a50b8db0a91c7880c6cdc0040917d5a8a168a0e44439",
+      "fraction_of_B_log_capacity_exposed": 1.0,
+      "h": 3,
+      "kind": "K",
+      "n": 9,
+      "nominal_represented_bits_per_site": 8,
+      "source_bound_margin_states": 0,
+      "tuple_image_states": 512,
+      "tuple_information_rate_bits_per_longitudinal_site": 1.0,
+      "tuple_symbols_sha256": "57905dee8a00514dedfd51de5c9b66f1fc82f062adb2301b51d14b032a048762"
+    },
+    {
+      "B_n_states": 512,
+      "completion": 128,
+      "fiber_histogram_over_distinct_B_states": {
+        "1": 512
+      },
+      "fiber_signature_sha256": "d1db81dae1e4b4104680a50b8db0a91c7880c6cdc0040917d5a8a168a0e44439",
+      "fraction_of_B_log_capacity_exposed": 1.0,
+      "h": 4,
+      "kind": "K",
+      "n": 9,
+      "nominal_represented_bits_per_site": 10,
+      "source_bound_margin_states": 0,
+      "tuple_image_states": 512,
+      "tuple_information_rate_bits_per_longitudinal_site": 1.0,
+      "tuple_symbols_sha256": "60b20074b4608086f04b0d88fa47d6a0e4cc3161bba8d63f2a39217e3719bc55"
+    },
+    {
+      "B_n_states": 512,
+      "completion": 128,
+      "fiber_histogram_over_distinct_B_states": {
+        "1": 512
+      },
+      "fiber_signature_sha256": "d1db81dae1e4b4104680a50b8db0a91c7880c6cdc0040917d5a8a168a0e44439",
+      "fraction_of_B_log_capacity_exposed": 1.0,
+      "h": 0,
+      "kind": "O",
+      "n": 9,
+      "nominal_represented_bits_per_site": 2,
+      "source_bound_margin_states": 0,
+      "tuple_image_states": 512,
+      "tuple_information_rate_bits_per_longitudinal_site": 1.0,
+      "tuple_symbols_sha256": "5ac69078127eb653a14991e0d9d99346d8866539b68d45a05f8c9e431a75f6ca"
+    },
+    {
+      "B_n_states": 512,
+      "completion": 128,
+      "fiber_histogram_over_distinct_B_states": {
+        "1": 512
+      },
+      "fiber_signature_sha256": "d1db81dae1e4b4104680a50b8db0a91c7880c6cdc0040917d5a8a168a0e44439",
+      "fraction_of_B_log_capacity_exposed": 1.0,
+      "h": 1,
+      "kind": "O",
+      "n": 9,
+      "nominal_represented_bits_per_site": 4,
+      "source_bound_margin_states": 0,
+      "tuple_image_states": 512,
+      "tuple_information_rate_bits_per_longitudinal_site": 1.0,
+      "tuple_symbols_sha256": "d6cd9ae9d53726a4cc08855faef26730c4753db352e375100990cf94bed4d443"
+    },
+    {
+      "B_n_states": 512,
+      "completion": 128,
+      "fiber_histogram_over_distinct_B_states": {
+        "1": 512
+      },
+      "fiber_signature_sha256": "d1db81dae1e4b4104680a50b8db0a91c7880c6cdc0040917d5a8a168a0e44439",
+      "fraction_of_B_log_capacity_exposed": 1.0,
+      "h": 2,
+      "kind": "O",
+      "n": 9,
+      "nominal_represented_bits_per_site": 6,
+      "source_bound_margin_states": 0,
+      "tuple_image_states": 512,
+      "tuple_information_rate_bits_per_longitudinal_site": 1.0,
+      "tuple_symbols_sha256": "3698073abd71a9a3b3739422cc179d323ac76e0019ff5fd7990e2c5af9715213"
+    },
+    {
+      "B_n_states": 512,
+      "completion": 128,
+      "fiber_histogram_over_distinct_B_states": {
+        "1": 512
+      },
+      "fiber_signature_sha256": "d1db81dae1e4b4104680a50b8db0a91c7880c6cdc0040917d5a8a168a0e44439",
+      "fraction_of_B_log_capacity_exposed": 1.0,
+      "h": 3,
+      "kind": "O",
+      "n": 9,
+      "nominal_represented_bits_per_site": 8,
+      "source_bound_margin_states": 0,
+      "tuple_image_states": 512,
+      "tuple_information_rate_bits_per_longitudinal_site": 1.0,
+      "tuple_symbols_sha256": "a9046192c6b51aaee4cf6ec73da8e52a46fccee9850f1f774602a1e586dfbdc1"
+    },
+    {
+      "B_n_states": 512,
+      "completion": 128,
+      "fiber_histogram_over_distinct_B_states": {
+        "1": 512
+      },
+      "fiber_signature_sha256": "d1db81dae1e4b4104680a50b8db0a91c7880c6cdc0040917d5a8a168a0e44439",
+      "fraction_of_B_log_capacity_exposed": 1.0,
+      "h": 4,
+      "kind": "O",
+      "n": 9,
+      "nominal_represented_bits_per_site": 10,
+      "source_bound_margin_states": 0,
+      "tuple_image_states": 512,
+      "tuple_information_rate_bits_per_longitudinal_site": 1.0,
+      "tuple_symbols_sha256": "8f37493cabe46d1f38998cf820c6e940877ef9ed94a1c0d3bfd5928ec0ed2a88"
+    },
+    {
+      "B_n_states": 512,
+      "completion": 160,
+      "fiber_histogram_over_distinct_B_states": {
+        "1": 512
+      },
+      "fiber_signature_sha256": "d1db81dae1e4b4104680a50b8db0a91c7880c6cdc0040917d5a8a168a0e44439",
+      "fraction_of_B_log_capacity_exposed": 1.0,
+      "h": 0,
+      "kind": "K",
+      "n": 9,
+      "nominal_represented_bits_per_site": 2,
+      "source_bound_margin_states": 0,
+      "tuple_image_states": 512,
+      "tuple_information_rate_bits_per_longitudinal_site": 1.0,
+      "tuple_symbols_sha256": "5ac69078127eb653a14991e0d9d99346d8866539b68d45a05f8c9e431a75f6ca"
+    },
+    {
+      "B_n_states": 512,
+      "completion": 160,
+      "fiber_histogram_over_distinct_B_states": {
+        "1": 512
+      },
+      "fiber_signature_sha256": "d1db81dae1e4b4104680a50b8db0a91c7880c6cdc0040917d5a8a168a0e44439",
+      "fraction_of_B_log_capacity_exposed": 1.0,
+      "h": 1,
+      "kind": "K",
+      "n": 9,
+      "nominal_represented_bits_per_site": 4,
+      "source_bound_margin_states": 0,
+      "tuple_image_states": 512,
+      "tuple_information_rate_bits_per_longitudinal_site": 1.0,
+      "tuple_symbols_sha256": "1fe26e1e904c9cbd3ace72180dafe99783af750fb41991ce15d8e89b8cbffb64"
+    },
+    {
+      "B_n_states": 512,
+      "completion": 160,
+      "fiber_histogram_over_distinct_B_states": {
+        "1": 512
+      },
+      "fiber_signature_sha256": "d1db81dae1e4b4104680a50b8db0a91c7880c6cdc0040917d5a8a168a0e44439",
+      "fraction_of_B_log_capacity_exposed": 1.0,
+      "h": 2,
+      "kind": "K",
+      "n": 9,
+      "nominal_represented_bits_per_site": 6,
+      "source_bound_margin_states": 0,
+      "tuple_image_states": 512,
+      "tuple_information_rate_bits_per_longitudinal_site": 1.0,
+      "tuple_symbols_sha256": "6c3d0bf4db3b2042ba1fff70846b1bba396017b4d4cdeb6beb7eb8d438606442"
+    },
+    {
+      "B_n_states": 512,
+      "completion": 160,
+      "fiber_histogram_over_distinct_B_states": {
+        "1": 512
+      },
+      "fiber_signature_sha256": "d1db81dae1e4b4104680a50b8db0a91c7880c6cdc0040917d5a8a168a0e44439",
+      "fraction_of_B_log_capacity_exposed": 1.0,
+      "h": 3,
+      "kind": "K",
+      "n": 9,
+      "nominal_represented_bits_per_site": 8,
+      "source_bound_margin_states": 0,
+      "tuple_image_states": 512,
+      "tuple_information_rate_bits_per_longitudinal_site": 1.0,
+      "tuple_symbols_sha256": "f395ed0438e68fc4f3118f356aaab72ebdedf0670a311ae7b27bac40386dad16"
+    },
+    {
+      "B_n_states": 512,
+      "completion": 160,
+      "fiber_histogram_over_distinct_B_states": {
+        "1": 512
+      },
+      "fiber_signature_sha256": "d1db81dae1e4b4104680a50b8db0a91c7880c6cdc0040917d5a8a168a0e44439",
+      "fraction_of_B_log_capacity_exposed": 1.0,
+      "h": 4,
+      "kind": "K",
+      "n": 9,
+      "nominal_represented_bits_per_site": 10,
+      "source_bound_margin_states": 0,
+      "tuple_image_states": 512,
+      "tuple_information_rate_bits_per_longitudinal_site": 1.0,
+      "tuple_symbols_sha256": "39b9e507b22df252eac0ea3636223e7c40378aa567bd368ea37eb8466faea3ea"
+    },
+    {
+      "B_n_states": 512,
+      "completion": 160,
+      "fiber_histogram_over_distinct_B_states": {
+        "1": 512
+      },
+      "fiber_signature_sha256": "d1db81dae1e4b4104680a50b8db0a91c7880c6cdc0040917d5a8a168a0e44439",
+      "fraction_of_B_log_capacity_exposed": 1.0,
+      "h": 0,
+      "kind": "O",
+      "n": 9,
+      "nominal_represented_bits_per_site": 2,
+      "source_bound_margin_states": 0,
+      "tuple_image_states": 512,
+      "tuple_information_rate_bits_per_longitudinal_site": 1.0,
+      "tuple_symbols_sha256": "5ac69078127eb653a14991e0d9d99346d8866539b68d45a05f8c9e431a75f6ca"
+    },
+    {
+      "B_n_states": 512,
+      "completion": 160,
+      "fiber_histogram_over_distinct_B_states": {
+        "1": 512
+      },
+      "fiber_signature_sha256": "d1db81dae1e4b4104680a50b8db0a91c7880c6cdc0040917d5a8a168a0e44439",
+      "fraction_of_B_log_capacity_exposed": 1.0,
+      "h": 1,
+      "kind": "O",
+      "n": 9,
+      "nominal_represented_bits_per_site": 4,
+      "source_bound_margin_states": 0,
+      "tuple_image_states": 512,
+      "tuple_information_rate_bits_per_longitudinal_site": 1.0,
+      "tuple_symbols_sha256": "d6cd9ae9d53726a4cc08855faef26730c4753db352e375100990cf94bed4d443"
+    },
+    {
+      "B_n_states": 512,
+      "completion": 160,
+      "fiber_histogram_over_distinct_B_states": {
+        "1": 512
+      },
+      "fiber_signature_sha256": "d1db81dae1e4b4104680a50b8db0a91c7880c6cdc0040917d5a8a168a0e44439",
+      "fraction_of_B_log_capacity_exposed": 1.0,
+      "h": 2,
+      "kind": "O",
+      "n": 9,
+      "nominal_represented_bits_per_site": 6,
+      "source_bound_margin_states": 0,
+      "tuple_image_states": 512,
+      "tuple_information_rate_bits_per_longitudinal_site": 1.0,
+      "tuple_symbols_sha256": "3698073abd71a9a3b3739422cc179d323ac76e0019ff5fd7990e2c5af9715213"
+    },
+    {
+      "B_n_states": 512,
+      "completion": 160,
+      "fiber_histogram_over_distinct_B_states": {
+        "1": 512
+      },
+      "fiber_signature_sha256": "d1db81dae1e4b4104680a50b8db0a91c7880c6cdc0040917d5a8a168a0e44439",
+      "fraction_of_B_log_capacity_exposed": 1.0,
+      "h": 3,
+      "kind": "O",
+      "n": 9,
+      "nominal_represented_bits_per_site": 8,
+      "source_bound_margin_states": 0,
+      "tuple_image_states": 512,
+      "tuple_information_rate_bits_per_longitudinal_site": 1.0,
+      "tuple_symbols_sha256": "a9046192c6b51aaee4cf6ec73da8e52a46fccee9850f1f774602a1e586dfbdc1"
+    },
+    {
+      "B_n_states": 512,
+      "completion": 160,
+      "fiber_histogram_over_distinct_B_states": {
+        "1": 512
+      },
+      "fiber_signature_sha256": "d1db81dae1e4b4104680a50b8db0a91c7880c6cdc0040917d5a8a168a0e44439",
+      "fraction_of_B_log_capacity_exposed": 1.0,
+      "h": 4,
+      "kind": "O",
+      "n": 9,
+      "nominal_represented_bits_per_site": 10,
+      "source_bound_margin_states": 0,
+      "tuple_image_states": 512,
+      "tuple_information_rate_bits_per_longitudinal_site": 1.0,
+      "tuple_symbols_sha256": "8f37493cabe46d1f38998cf820c6e940877ef9ed94a1c0d3bfd5928ec0ed2a88"
+    },
+    {
+      "B_n_states": 1023,
+      "completion": 128,
+      "fiber_histogram_over_distinct_B_states": {
+        "1": 1021,
+        "2": 1
+      },
+      "fiber_signature_sha256": "d9295f70a6ae3a505ed66a819d6d83dc287ae1c9ed47a5156271040cf15baf6d",
+      "fraction_of_B_log_capacity_exposed": 0.999858885228,
+      "h": 0,
+      "kind": "K",
+      "n": 10,
+      "nominal_represented_bits_per_site": 2,
+      "source_bound_margin_states": 1,
+      "tuple_image_states": 1022,
+      "tuple_information_rate_bits_per_longitudinal_site": 0.999717948094,
+      "tuple_symbols_sha256": "9c16b40f93d6dda2664aca6b2db7cf75cfa418341ebb4275333af6230bf919ff"
+    },
+    {
+      "B_n_states": 1023,
+      "completion": 128,
+      "fiber_histogram_over_distinct_B_states": {
+        "1": 1021,
+        "2": 1
+      },
+      "fiber_signature_sha256": "d9295f70a6ae3a505ed66a819d6d83dc287ae1c9ed47a5156271040cf15baf6d",
+      "fraction_of_B_log_capacity_exposed": 0.999858885228,
+      "h": 1,
+      "kind": "K",
+      "n": 10,
+      "nominal_represented_bits_per_site": 4,
+      "source_bound_margin_states": 1,
+      "tuple_image_states": 1022,
+      "tuple_information_rate_bits_per_longitudinal_site": 0.999717948094,
+      "tuple_symbols_sha256": "737345f5e838b6c2d5e8c059a0b68a89fc9f56a46999f9b2e0df8757ee8b701d"
+    },
+    {
+      "B_n_states": 1023,
+      "completion": 128,
+      "fiber_histogram_over_distinct_B_states": {
+        "1": 1021,
+        "2": 1
+      },
+      "fiber_signature_sha256": "d9295f70a6ae3a505ed66a819d6d83dc287ae1c9ed47a5156271040cf15baf6d",
+      "fraction_of_B_log_capacity_exposed": 0.999858885228,
+      "h": 2,
+      "kind": "K",
+      "n": 10,
+      "nominal_represented_bits_per_site": 6,
+      "source_bound_margin_states": 1,
+      "tuple_image_states": 1022,
+      "tuple_information_rate_bits_per_longitudinal_site": 0.999717948094,
+      "tuple_symbols_sha256": "54119dffe62f5fb5fd3a7c4d5316a1f4e19a0378252f89b9ecd1247da59b89cd"
+    },
+    {
+      "B_n_states": 1023,
+      "completion": 128,
+      "fiber_histogram_over_distinct_B_states": {
+        "1": 1021,
+        "2": 1
+      },
+      "fiber_signature_sha256": "d9295f70a6ae3a505ed66a819d6d83dc287ae1c9ed47a5156271040cf15baf6d",
+      "fraction_of_B_log_capacity_exposed": 0.999858885228,
+      "h": 3,
+      "kind": "K",
+      "n": 10,
+      "nominal_represented_bits_per_site": 8,
+      "source_bound_margin_states": 1,
+      "tuple_image_states": 1022,
+      "tuple_information_rate_bits_per_longitudinal_site": 0.999717948094,
+      "tuple_symbols_sha256": "bc1f29ba83c2de386ddf0bf8af4897b3d7e9728dc9dd9e88ce6c846c5d4cbb6e"
+    },
+    {
+      "B_n_states": 1023,
+      "completion": 128,
+      "fiber_histogram_over_distinct_B_states": {
+        "1": 1021,
+        "2": 1
+      },
+      "fiber_signature_sha256": "d9295f70a6ae3a505ed66a819d6d83dc287ae1c9ed47a5156271040cf15baf6d",
+      "fraction_of_B_log_capacity_exposed": 0.999858885228,
+      "h": 4,
+      "kind": "K",
+      "n": 10,
+      "nominal_represented_bits_per_site": 10,
+      "source_bound_margin_states": 1,
+      "tuple_image_states": 1022,
+      "tuple_information_rate_bits_per_longitudinal_site": 0.999717948094,
+      "tuple_symbols_sha256": "323489ad31b43ae093a37031d4fb21399ab2e081aab5ca8699bcbd9a5912109d"
+    },
+    {
+      "B_n_states": 1023,
+      "completion": 128,
+      "fiber_histogram_over_distinct_B_states": {
+        "1": 1021,
+        "2": 1
+      },
+      "fiber_signature_sha256": "d9295f70a6ae3a505ed66a819d6d83dc287ae1c9ed47a5156271040cf15baf6d",
+      "fraction_of_B_log_capacity_exposed": 0.999858885228,
+      "h": 0,
+      "kind": "O",
+      "n": 10,
+      "nominal_represented_bits_per_site": 2,
+      "source_bound_margin_states": 1,
+      "tuple_image_states": 1022,
+      "tuple_information_rate_bits_per_longitudinal_site": 0.999717948094,
+      "tuple_symbols_sha256": "9c16b40f93d6dda2664aca6b2db7cf75cfa418341ebb4275333af6230bf919ff"
+    },
+    {
+      "B_n_states": 1023,
+      "completion": 128,
+      "fiber_histogram_over_distinct_B_states": {
+        "1": 1021,
+        "2": 1
+      },
+      "fiber_signature_sha256": "d9295f70a6ae3a505ed66a819d6d83dc287ae1c9ed47a5156271040cf15baf6d",
+      "fraction_of_B_log_capacity_exposed": 0.999858885228,
+      "h": 1,
+      "kind": "O",
+      "n": 10,
+      "nominal_represented_bits_per_site": 4,
+      "source_bound_margin_states": 1,
+      "tuple_image_states": 1022,
+      "tuple_information_rate_bits_per_longitudinal_site": 0.999717948094,
+      "tuple_symbols_sha256": "a57bd7cfa0d75380d62e2ab9b25228666057956590b9ac88187c14a11d9a4723"
+    },
+    {
+      "B_n_states": 1023,
+      "completion": 128,
+      "fiber_histogram_over_distinct_B_states": {
+        "1": 1021,
+        "2": 1
+      },
+      "fiber_signature_sha256": "d9295f70a6ae3a505ed66a819d6d83dc287ae1c9ed47a5156271040cf15baf6d",
+      "fraction_of_B_log_capacity_exposed": 0.999858885228,
+      "h": 2,
+      "kind": "O",
+      "n": 10,
+      "nominal_represented_bits_per_site": 6,
+      "source_bound_margin_states": 1,
+      "tuple_image_states": 1022,
+      "tuple_information_rate_bits_per_longitudinal_site": 0.999717948094,
+      "tuple_symbols_sha256": "5069d5dc84d5d7a8954847dc47e9d3f8bf41219978046cec3461100a73e9f7a6"
+    },
+    {
+      "B_n_states": 1023,
+      "completion": 128,
+      "fiber_histogram_over_distinct_B_states": {
+        "1": 1021,
+        "2": 1
+      },
+      "fiber_signature_sha256": "d9295f70a6ae3a505ed66a819d6d83dc287ae1c9ed47a5156271040cf15baf6d",
+      "fraction_of_B_log_capacity_exposed": 0.999858885228,
+      "h": 3,
+      "kind": "O",
+      "n": 10,
+      "nominal_represented_bits_per_site": 8,
+      "source_bound_margin_states": 1,
+      "tuple_image_states": 1022,
+      "tuple_information_rate_bits_per_longitudinal_site": 0.999717948094,
+      "tuple_symbols_sha256": "394de74c1d5cc1003f86bee6d254f18079f4fdb778045a9f993d65fe0573f277"
+    },
+    {
+      "B_n_states": 1023,
+      "completion": 128,
+      "fiber_histogram_over_distinct_B_states": {
+        "1": 1021,
+        "2": 1
+      },
+      "fiber_signature_sha256": "d9295f70a6ae3a505ed66a819d6d83dc287ae1c9ed47a5156271040cf15baf6d",
+      "fraction_of_B_log_capacity_exposed": 0.999858885228,
+      "h": 4,
+      "kind": "O",
+      "n": 10,
+      "nominal_represented_bits_per_site": 10,
+      "source_bound_margin_states": 1,
+      "tuple_image_states": 1022,
+      "tuple_information_rate_bits_per_longitudinal_site": 0.999717948094,
+      "tuple_symbols_sha256": "aa3a7dc542b442b0abeed555eed61389b6f3856f35bd23de82fcd92ac35bebdc"
+    },
+    {
+      "B_n_states": 1023,
+      "completion": 160,
+      "fiber_histogram_over_distinct_B_states": {
+        "1": 1021,
+        "2": 1
+      },
+      "fiber_signature_sha256": "d9295f70a6ae3a505ed66a819d6d83dc287ae1c9ed47a5156271040cf15baf6d",
+      "fraction_of_B_log_capacity_exposed": 0.999858885228,
+      "h": 0,
+      "kind": "K",
+      "n": 10,
+      "nominal_represented_bits_per_site": 2,
+      "source_bound_margin_states": 1,
+      "tuple_image_states": 1022,
+      "tuple_information_rate_bits_per_longitudinal_site": 0.999717948094,
+      "tuple_symbols_sha256": "9c16b40f93d6dda2664aca6b2db7cf75cfa418341ebb4275333af6230bf919ff"
+    },
+    {
+      "B_n_states": 1023,
+      "completion": 160,
+      "fiber_histogram_over_distinct_B_states": {
+        "1": 1021,
+        "2": 1
+      },
+      "fiber_signature_sha256": "d9295f70a6ae3a505ed66a819d6d83dc287ae1c9ed47a5156271040cf15baf6d",
+      "fraction_of_B_log_capacity_exposed": 0.999858885228,
+      "h": 1,
+      "kind": "K",
+      "n": 10,
+      "nominal_represented_bits_per_site": 4,
+      "source_bound_margin_states": 1,
+      "tuple_image_states": 1022,
+      "tuple_information_rate_bits_per_longitudinal_site": 0.999717948094,
+      "tuple_symbols_sha256": "49897ff21ad71247078b1751899e42c77ad9823d6138d09b619b48c67355e693"
+    },
+    {
+      "B_n_states": 1023,
+      "completion": 160,
+      "fiber_histogram_over_distinct_B_states": {
+        "1": 1021,
+        "2": 1
+      },
+      "fiber_signature_sha256": "d9295f70a6ae3a505ed66a819d6d83dc287ae1c9ed47a5156271040cf15baf6d",
+      "fraction_of_B_log_capacity_exposed": 0.999858885228,
+      "h": 2,
+      "kind": "K",
+      "n": 10,
+      "nominal_represented_bits_per_site": 6,
+      "source_bound_margin_states": 1,
+      "tuple_image_states": 1022,
+      "tuple_information_rate_bits_per_longitudinal_site": 0.999717948094,
+      "tuple_symbols_sha256": "92d8bf439e8c4efd0029ff30d89ee7079d979c47369879f1ade15fc4095f7edd"
+    },
+    {
+      "B_n_states": 1023,
+      "completion": 160,
+      "fiber_histogram_over_distinct_B_states": {
+        "1": 1021,
+        "2": 1
+      },
+      "fiber_signature_sha256": "d9295f70a6ae3a505ed66a819d6d83dc287ae1c9ed47a5156271040cf15baf6d",
+      "fraction_of_B_log_capacity_exposed": 0.999858885228,
+      "h": 3,
+      "kind": "K",
+      "n": 10,
+      "nominal_represented_bits_per_site": 8,
+      "source_bound_margin_states": 1,
+      "tuple_image_states": 1022,
+      "tuple_information_rate_bits_per_longitudinal_site": 0.999717948094,
+      "tuple_symbols_sha256": "74a1897ffe2be1b9ec53fc41a8385c75645bf2d2378f84f212715e1c516abfbe"
+    },
+    {
+      "B_n_states": 1023,
+      "completion": 160,
+      "fiber_histogram_over_distinct_B_states": {
+        "1": 1021,
+        "2": 1
+      },
+      "fiber_signature_sha256": "d9295f70a6ae3a505ed66a819d6d83dc287ae1c9ed47a5156271040cf15baf6d",
+      "fraction_of_B_log_capacity_exposed": 0.999858885228,
+      "h": 4,
+      "kind": "K",
+      "n": 10,
+      "nominal_represented_bits_per_site": 10,
+      "source_bound_margin_states": 1,
+      "tuple_image_states": 1022,
+      "tuple_information_rate_bits_per_longitudinal_site": 0.999717948094,
+      "tuple_symbols_sha256": "c9e053b010c359b03bd3dffbfbe882e40d387022409770d33d5db4d89c510672"
+    },
+    {
+      "B_n_states": 1023,
+      "completion": 160,
+      "fiber_histogram_over_distinct_B_states": {
+        "1": 1021,
+        "2": 1
+      },
+      "fiber_signature_sha256": "d9295f70a6ae3a505ed66a819d6d83dc287ae1c9ed47a5156271040cf15baf6d",
+      "fraction_of_B_log_capacity_exposed": 0.999858885228,
+      "h": 0,
+      "kind": "O",
+      "n": 10,
+      "nominal_represented_bits_per_site": 2,
+      "source_bound_margin_states": 1,
+      "tuple_image_states": 1022,
+      "tuple_information_rate_bits_per_longitudinal_site": 0.999717948094,
+      "tuple_symbols_sha256": "9c16b40f93d6dda2664aca6b2db7cf75cfa418341ebb4275333af6230bf919ff"
+    },
+    {
+      "B_n_states": 1023,
+      "completion": 160,
+      "fiber_histogram_over_distinct_B_states": {
+        "1": 1021,
+        "2": 1
+      },
+      "fiber_signature_sha256": "d9295f70a6ae3a505ed66a819d6d83dc287ae1c9ed47a5156271040cf15baf6d",
+      "fraction_of_B_log_capacity_exposed": 0.999858885228,
+      "h": 1,
+      "kind": "O",
+      "n": 10,
+      "nominal_represented_bits_per_site": 4,
+      "source_bound_margin_states": 1,
+      "tuple_image_states": 1022,
+      "tuple_information_rate_bits_per_longitudinal_site": 0.999717948094,
+      "tuple_symbols_sha256": "a57bd7cfa0d75380d62e2ab9b25228666057956590b9ac88187c14a11d9a4723"
+    },
+    {
+      "B_n_states": 1023,
+      "completion": 160,
+      "fiber_histogram_over_distinct_B_states": {
+        "1": 1021,
+        "2": 1
+      },
+      "fiber_signature_sha256": "d9295f70a6ae3a505ed66a819d6d83dc287ae1c9ed47a5156271040cf15baf6d",
+      "fraction_of_B_log_capacity_exposed": 0.999858885228,
+      "h": 2,
+      "kind": "O",
+      "n": 10,
+      "nominal_represented_bits_per_site": 6,
+      "source_bound_margin_states": 1,
+      "tuple_image_states": 1022,
+      "tuple_information_rate_bits_per_longitudinal_site": 0.999717948094,
+      "tuple_symbols_sha256": "5069d5dc84d5d7a8954847dc47e9d3f8bf41219978046cec3461100a73e9f7a6"
+    },
+    {
+      "B_n_states": 1023,
+      "completion": 160,
+      "fiber_histogram_over_distinct_B_states": {
+        "1": 1021,
+        "2": 1
+      },
+      "fiber_signature_sha256": "d9295f70a6ae3a505ed66a819d6d83dc287ae1c9ed47a5156271040cf15baf6d",
+      "fraction_of_B_log_capacity_exposed": 0.999858885228,
+      "h": 3,
+      "kind": "O",
+      "n": 10,
+      "nominal_represented_bits_per_site": 8,
+      "source_bound_margin_states": 1,
+      "tuple_image_states": 1022,
+      "tuple_information_rate_bits_per_longitudinal_site": 0.999717948094,
+      "tuple_symbols_sha256": "394de74c1d5cc1003f86bee6d254f18079f4fdb778045a9f993d65fe0573f277"
+    },
+    {
+      "B_n_states": 1023,
+      "completion": 160,
+      "fiber_histogram_over_distinct_B_states": {
+        "1": 1021,
+        "2": 1
+      },
+      "fiber_signature_sha256": "d9295f70a6ae3a505ed66a819d6d83dc287ae1c9ed47a5156271040cf15baf6d",
+      "fraction_of_B_log_capacity_exposed": 0.999858885228,
+      "h": 4,
+      "kind": "O",
+      "n": 10,
+      "nominal_represented_bits_per_site": 10,
+      "source_bound_margin_states": 1,
+      "tuple_image_states": 1022,
+      "tuple_information_rate_bits_per_longitudinal_site": 0.999717948094,
+      "tuple_symbols_sha256": "aa3a7dc542b442b0abeed555eed61389b6f3856f35bd23de82fcd92ac35bebdc"
+    },
+    {
+      "B_n_states": 2048,
+      "completion": 128,
+      "fiber_histogram_over_distinct_B_states": {
+        "1": 2048
+      },
+      "fiber_signature_sha256": "cc76b029564c7257d6c27e130546ac40603f1e3ae5efc1106b2656294f599ec5",
+      "fraction_of_B_log_capacity_exposed": 1.0,
+      "h": 0,
+      "kind": "K",
+      "n": 11,
+      "nominal_represented_bits_per_site": 2,
+      "source_bound_margin_states": 0,
+      "tuple_image_states": 2048,
+      "tuple_information_rate_bits_per_longitudinal_site": 1.0,
+      "tuple_symbols_sha256": "deec1a1e80953f260f3caf6a7f63c10aee1e4795a620289f2bb8f2b13328394a"
+    },
+    {
+      "B_n_states": 2048,
+      "completion": 128,
+      "fiber_histogram_over_distinct_B_states": {
+        "1": 2048
+      },
+      "fiber_signature_sha256": "cc76b029564c7257d6c27e130546ac40603f1e3ae5efc1106b2656294f599ec5",
+      "fraction_of_B_log_capacity_exposed": 1.0,
+      "h": 1,
+      "kind": "K",
+      "n": 11,
+      "nominal_represented_bits_per_site": 4,
+      "source_bound_margin_states": 0,
+      "tuple_image_states": 2048,
+      "tuple_information_rate_bits_per_longitudinal_site": 1.0,
+      "tuple_symbols_sha256": "bfa2e64ba46ad5275ab806e1b1d18813877ab56e74e0e0af8efbfe5fc2c95263"
+    },
+    {
+      "B_n_states": 2048,
+      "completion": 128,
+      "fiber_histogram_over_distinct_B_states": {
+        "1": 2048
+      },
+      "fiber_signature_sha256": "cc76b029564c7257d6c27e130546ac40603f1e3ae5efc1106b2656294f599ec5",
+      "fraction_of_B_log_capacity_exposed": 1.0,
+      "h": 2,
+      "kind": "K",
+      "n": 11,
+      "nominal_represented_bits_per_site": 6,
+      "source_bound_margin_states": 0,
+      "tuple_image_states": 2048,
+      "tuple_information_rate_bits_per_longitudinal_site": 1.0,
+      "tuple_symbols_sha256": "3931d58a482bd5b1deee80992ed252a2eb888ad1f1f9d1eda3b18b0975ae7762"
+    },
+    {
+      "B_n_states": 2048,
+      "completion": 128,
+      "fiber_histogram_over_distinct_B_states": {
+        "1": 2048
+      },
+      "fiber_signature_sha256": "cc76b029564c7257d6c27e130546ac40603f1e3ae5efc1106b2656294f599ec5",
+      "fraction_of_B_log_capacity_exposed": 1.0,
+      "h": 3,
+      "kind": "K",
+      "n": 11,
+      "nominal_represented_bits_per_site": 8,
+      "source_bound_margin_states": 0,
+      "tuple_image_states": 2048,
+      "tuple_information_rate_bits_per_longitudinal_site": 1.0,
+      "tuple_symbols_sha256": "1549f9be901d59d718d8064b914dabde19c508b0e4b67cba6b402d8cd48268ec"
+    },
+    {
+      "B_n_states": 2048,
+      "completion": 128,
+      "fiber_histogram_over_distinct_B_states": {
+        "1": 2048
+      },
+      "fiber_signature_sha256": "cc76b029564c7257d6c27e130546ac40603f1e3ae5efc1106b2656294f599ec5",
+      "fraction_of_B_log_capacity_exposed": 1.0,
+      "h": 4,
+      "kind": "K",
+      "n": 11,
+      "nominal_represented_bits_per_site": 10,
+      "source_bound_margin_states": 0,
+      "tuple_image_states": 2048,
+      "tuple_information_rate_bits_per_longitudinal_site": 1.0,
+      "tuple_symbols_sha256": "bb1f55b1483e9d764347f6463cfc0b0dbe09e4d3ab08aa311e1791f772a4d03a"
+    },
+    {
+      "B_n_states": 2048,
+      "completion": 128,
+      "fiber_histogram_over_distinct_B_states": {
+        "1": 2048
+      },
+      "fiber_signature_sha256": "cc76b029564c7257d6c27e130546ac40603f1e3ae5efc1106b2656294f599ec5",
+      "fraction_of_B_log_capacity_exposed": 1.0,
+      "h": 0,
+      "kind": "O",
+      "n": 11,
+      "nominal_represented_bits_per_site": 2,
+      "source_bound_margin_states": 0,
+      "tuple_image_states": 2048,
+      "tuple_information_rate_bits_per_longitudinal_site": 1.0,
+      "tuple_symbols_sha256": "deec1a1e80953f260f3caf6a7f63c10aee1e4795a620289f2bb8f2b13328394a"
+    },
+    {
+      "B_n_states": 2048,
+      "completion": 128,
+      "fiber_histogram_over_distinct_B_states": {
+        "1": 2048
+      },
+      "fiber_signature_sha256": "cc76b029564c7257d6c27e130546ac40603f1e3ae5efc1106b2656294f599ec5",
+      "fraction_of_B_log_capacity_exposed": 1.0,
+      "h": 1,
+      "kind": "O",
+      "n": 11,
+      "nominal_represented_bits_per_site": 4,
+      "source_bound_margin_states": 0,
+      "tuple_image_states": 2048,
+      "tuple_information_rate_bits_per_longitudinal_site": 1.0,
+      "tuple_symbols_sha256": "590c05f8d27e54a59182e0294f8dacbcd18030d1c6745f0eea02f87308d18c69"
+    },
+    {
+      "B_n_states": 2048,
+      "completion": 128,
+      "fiber_histogram_over_distinct_B_states": {
+        "1": 2048
+      },
+      "fiber_signature_sha256": "cc76b029564c7257d6c27e130546ac40603f1e3ae5efc1106b2656294f599ec5",
+      "fraction_of_B_log_capacity_exposed": 1.0,
+      "h": 2,
+      "kind": "O",
+      "n": 11,
+      "nominal_represented_bits_per_site": 6,
+      "source_bound_margin_states": 0,
+      "tuple_image_states": 2048,
+      "tuple_information_rate_bits_per_longitudinal_site": 1.0,
+      "tuple_symbols_sha256": "eb2e7367a08dc850f43feb03ce96cfef94a9c90169a22646566615296e36a062"
+    },
+    {
+      "B_n_states": 2048,
+      "completion": 128,
+      "fiber_histogram_over_distinct_B_states": {
+        "1": 2048
+      },
+      "fiber_signature_sha256": "cc76b029564c7257d6c27e130546ac40603f1e3ae5efc1106b2656294f599ec5",
+      "fraction_of_B_log_capacity_exposed": 1.0,
+      "h": 3,
+      "kind": "O",
+      "n": 11,
+      "nominal_represented_bits_per_site": 8,
+      "source_bound_margin_states": 0,
+      "tuple_image_states": 2048,
+      "tuple_information_rate_bits_per_longitudinal_site": 1.0,
+      "tuple_symbols_sha256": "aa5ba10f366b3f4a964019014cd4e4d2dba617e0a5d2f2afa89c14771f2f73c1"
+    },
+    {
+      "B_n_states": 2048,
+      "completion": 128,
+      "fiber_histogram_over_distinct_B_states": {
+        "1": 2048
+      },
+      "fiber_signature_sha256": "cc76b029564c7257d6c27e130546ac40603f1e3ae5efc1106b2656294f599ec5",
+      "fraction_of_B_log_capacity_exposed": 1.0,
+      "h": 4,
+      "kind": "O",
+      "n": 11,
+      "nominal_represented_bits_per_site": 10,
+      "source_bound_margin_states": 0,
+      "tuple_image_states": 2048,
+      "tuple_information_rate_bits_per_longitudinal_site": 1.0,
+      "tuple_symbols_sha256": "e4eb2f2b324285beb54fb8f79acd322a62560fce247a31aa7a9e4fd8ef93d587"
+    },
+    {
+      "B_n_states": 2048,
+      "completion": 160,
+      "fiber_histogram_over_distinct_B_states": {
+        "1": 2048
+      },
+      "fiber_signature_sha256": "cc76b029564c7257d6c27e130546ac40603f1e3ae5efc1106b2656294f599ec5",
+      "fraction_of_B_log_capacity_exposed": 1.0,
+      "h": 0,
+      "kind": "K",
+      "n": 11,
+      "nominal_represented_bits_per_site": 2,
+      "source_bound_margin_states": 0,
+      "tuple_image_states": 2048,
+      "tuple_information_rate_bits_per_longitudinal_site": 1.0,
+      "tuple_symbols_sha256": "deec1a1e80953f260f3caf6a7f63c10aee1e4795a620289f2bb8f2b13328394a"
+    },
+    {
+      "B_n_states": 2048,
+      "completion": 160,
+      "fiber_histogram_over_distinct_B_states": {
+        "1": 2048
+      },
+      "fiber_signature_sha256": "cc76b029564c7257d6c27e130546ac40603f1e3ae5efc1106b2656294f599ec5",
+      "fraction_of_B_log_capacity_exposed": 1.0,
+      "h": 1,
+      "kind": "K",
+      "n": 11,
+      "nominal_represented_bits_per_site": 4,
+      "source_bound_margin_states": 0,
+      "tuple_image_states": 2048,
+      "tuple_information_rate_bits_per_longitudinal_site": 1.0,
+      "tuple_symbols_sha256": "19dbe9dfc4fb4fac419866f21a092d0c5a258c0c10bf6270db1af92224d797eb"
+    },
+    {
+      "B_n_states": 2048,
+      "completion": 160,
+      "fiber_histogram_over_distinct_B_states": {
+        "1": 2048
+      },
+      "fiber_signature_sha256": "cc76b029564c7257d6c27e130546ac40603f1e3ae5efc1106b2656294f599ec5",
+      "fraction_of_B_log_capacity_exposed": 1.0,
+      "h": 2,
+      "kind": "K",
+      "n": 11,
+      "nominal_represented_bits_per_site": 6,
+      "source_bound_margin_states": 0,
+      "tuple_image_states": 2048,
+      "tuple_information_rate_bits_per_longitudinal_site": 1.0,
+      "tuple_symbols_sha256": "516246649e4cce055fbe423bc2a3e5d14ed78685787de151959b2d5cf18474f6"
+    },
+    {
+      "B_n_states": 2048,
+      "completion": 160,
+      "fiber_histogram_over_distinct_B_states": {
+        "1": 2048
+      },
+      "fiber_signature_sha256": "cc76b029564c7257d6c27e130546ac40603f1e3ae5efc1106b2656294f599ec5",
+      "fraction_of_B_log_capacity_exposed": 1.0,
+      "h": 3,
+      "kind": "K",
+      "n": 11,
+      "nominal_represented_bits_per_site": 8,
+      "source_bound_margin_states": 0,
+      "tuple_image_states": 2048,
+      "tuple_information_rate_bits_per_longitudinal_site": 1.0,
+      "tuple_symbols_sha256": "ce196a05ea3a53838058364be328a839f30e98b326bb779dcb8901af7a13c119"
+    },
+    {
+      "B_n_states": 2048,
+      "completion": 160,
+      "fiber_histogram_over_distinct_B_states": {
+        "1": 2048
+      },
+      "fiber_signature_sha256": "cc76b029564c7257d6c27e130546ac40603f1e3ae5efc1106b2656294f599ec5",
+      "fraction_of_B_log_capacity_exposed": 1.0,
+      "h": 4,
+      "kind": "K",
+      "n": 11,
+      "nominal_represented_bits_per_site": 10,
+      "source_bound_margin_states": 0,
+      "tuple_image_states": 2048,
+      "tuple_information_rate_bits_per_longitudinal_site": 1.0,
+      "tuple_symbols_sha256": "ef63c3856c4424a300acdd69c774a7a15d0d4b9226fc6f9bdb79cf7b6f52e935"
+    },
+    {
+      "B_n_states": 2048,
+      "completion": 160,
+      "fiber_histogram_over_distinct_B_states": {
+        "1": 2048
+      },
+      "fiber_signature_sha256": "cc76b029564c7257d6c27e130546ac40603f1e3ae5efc1106b2656294f599ec5",
+      "fraction_of_B_log_capacity_exposed": 1.0,
+      "h": 0,
+      "kind": "O",
+      "n": 11,
+      "nominal_represented_bits_per_site": 2,
+      "source_bound_margin_states": 0,
+      "tuple_image_states": 2048,
+      "tuple_information_rate_bits_per_longitudinal_site": 1.0,
+      "tuple_symbols_sha256": "deec1a1e80953f260f3caf6a7f63c10aee1e4795a620289f2bb8f2b13328394a"
+    },
+    {
+      "B_n_states": 2048,
+      "completion": 160,
+      "fiber_histogram_over_distinct_B_states": {
+        "1": 2048
+      },
+      "fiber_signature_sha256": "cc76b029564c7257d6c27e130546ac40603f1e3ae5efc1106b2656294f599ec5",
+      "fraction_of_B_log_capacity_exposed": 1.0,
+      "h": 1,
+      "kind": "O",
+      "n": 11,
+      "nominal_represented_bits_per_site": 4,
+      "source_bound_margin_states": 0,
+      "tuple_image_states": 2048,
+      "tuple_information_rate_bits_per_longitudinal_site": 1.0,
+      "tuple_symbols_sha256": "590c05f8d27e54a59182e0294f8dacbcd18030d1c6745f0eea02f87308d18c69"
+    },
+    {
+      "B_n_states": 2048,
+      "completion": 160,
+      "fiber_histogram_over_distinct_B_states": {
+        "1": 2048
+      },
+      "fiber_signature_sha256": "cc76b029564c7257d6c27e130546ac40603f1e3ae5efc1106b2656294f599ec5",
+      "fraction_of_B_log_capacity_exposed": 1.0,
+      "h": 2,
+      "kind": "O",
+      "n": 11,
+      "nominal_represented_bits_per_site": 6,
+      "source_bound_margin_states": 0,
+      "tuple_image_states": 2048,
+      "tuple_information_rate_bits_per_longitudinal_site": 1.0,
+      "tuple_symbols_sha256": "eb2e7367a08dc850f43feb03ce96cfef94a9c90169a22646566615296e36a062"
+    },
+    {
+      "B_n_states": 2048,
+      "completion": 160,
+      "fiber_histogram_over_distinct_B_states": {
+        "1": 2048
+      },
+      "fiber_signature_sha256": "cc76b029564c7257d6c27e130546ac40603f1e3ae5efc1106b2656294f599ec5",
+      "fraction_of_B_log_capacity_exposed": 1.0,
+      "h": 3,
+      "kind": "O",
+      "n": 11,
+      "nominal_represented_bits_per_site": 8,
+      "source_bound_margin_states": 0,
+      "tuple_image_states": 2048,
+      "tuple_information_rate_bits_per_longitudinal_site": 1.0,
+      "tuple_symbols_sha256": "aa5ba10f366b3f4a964019014cd4e4d2dba617e0a5d2f2afa89c14771f2f73c1"
+    },
+    {
+      "B_n_states": 2048,
+      "completion": 160,
+      "fiber_histogram_over_distinct_B_states": {
+        "1": 2048
+      },
+      "fiber_signature_sha256": "cc76b029564c7257d6c27e130546ac40603f1e3ae5efc1106b2656294f599ec5",
+      "fraction_of_B_log_capacity_exposed": 1.0,
+      "h": 4,
+      "kind": "O",
+      "n": 11,
+      "nominal_represented_bits_per_site": 10,
+      "source_bound_margin_states": 0,
+      "tuple_image_states": 2048,
+      "tuple_information_rate_bits_per_longitudinal_site": 1.0,
+      "tuple_symbols_sha256": "e4eb2f2b324285beb54fb8f79acd322a62560fce247a31aa7a9e4fd8ef93d587"
+    },
+    {
+      "B_n_states": 4095,
+      "completion": 128,
+      "fiber_histogram_over_distinct_B_states": {
+        "1": 4093,
+        "2": 1
+      },
+      "fiber_signature_sha256": "92c02b67861a5a6a4a23d4a2cc38ebb6ba5b8052693e84a27f41d795d4704836",
+      "fraction_of_B_log_capacity_exposed": 0.999970636679,
+      "h": 0,
+      "kind": "K",
+      "n": 12,
+      "nominal_represented_bits_per_site": 2,
+      "source_bound_margin_states": 1,
+      "tuple_image_states": 4094,
+      "tuple_information_rate_bits_per_longitudinal_site": 0.999941282252,
+      "tuple_symbols_sha256": "d7363568b4a42fe83bf2c523fbcf7e5409bb454176bac9d81455b8f0fd1ee3fb"
+    },
+    {
+      "B_n_states": 4095,
+      "completion": 128,
+      "fiber_histogram_over_distinct_B_states": {
+        "1": 4093,
+        "2": 1
+      },
+      "fiber_signature_sha256": "92c02b67861a5a6a4a23d4a2cc38ebb6ba5b8052693e84a27f41d795d4704836",
+      "fraction_of_B_log_capacity_exposed": 0.999970636679,
+      "h": 1,
+      "kind": "K",
+      "n": 12,
+      "nominal_represented_bits_per_site": 4,
+      "source_bound_margin_states": 1,
+      "tuple_image_states": 4094,
+      "tuple_information_rate_bits_per_longitudinal_site": 0.999941282252,
+      "tuple_symbols_sha256": "9cc950d2c72edb4f25f592d3c10a979f910c640a677cd4e28401c6527614b77f"
+    },
+    {
+      "B_n_states": 4095,
+      "completion": 128,
+      "fiber_histogram_over_distinct_B_states": {
+        "1": 4093,
+        "2": 1
+      },
+      "fiber_signature_sha256": "92c02b67861a5a6a4a23d4a2cc38ebb6ba5b8052693e84a27f41d795d4704836",
+      "fraction_of_B_log_capacity_exposed": 0.999970636679,
+      "h": 2,
+      "kind": "K",
+      "n": 12,
+      "nominal_represented_bits_per_site": 6,
+      "source_bound_margin_states": 1,
+      "tuple_image_states": 4094,
+      "tuple_information_rate_bits_per_longitudinal_site": 0.999941282252,
+      "tuple_symbols_sha256": "a2cbfa20250fa2e5b30156c0ab7182fc8552c6177b7cd4b68fec86aa8f1739ba"
+    },
+    {
+      "B_n_states": 4095,
+      "completion": 128,
+      "fiber_histogram_over_distinct_B_states": {
+        "1": 4093,
+        "2": 1
+      },
+      "fiber_signature_sha256": "92c02b67861a5a6a4a23d4a2cc38ebb6ba5b8052693e84a27f41d795d4704836",
+      "fraction_of_B_log_capacity_exposed": 0.999970636679,
+      "h": 3,
+      "kind": "K",
+      "n": 12,
+      "nominal_represented_bits_per_site": 8,
+      "source_bound_margin_states": 1,
+      "tuple_image_states": 4094,
+      "tuple_information_rate_bits_per_longitudinal_site": 0.999941282252,
+      "tuple_symbols_sha256": "2a4c19d3cab14c6bb0f2c75e7ad07a4cf7e05c1a1ac83e8fc5f00ff187fa467e"
+    },
+    {
+      "B_n_states": 4095,
+      "completion": 128,
+      "fiber_histogram_over_distinct_B_states": {
+        "1": 4093,
+        "2": 1
+      },
+      "fiber_signature_sha256": "92c02b67861a5a6a4a23d4a2cc38ebb6ba5b8052693e84a27f41d795d4704836",
+      "fraction_of_B_log_capacity_exposed": 0.999970636679,
+      "h": 4,
+      "kind": "K",
+      "n": 12,
+      "nominal_represented_bits_per_site": 10,
+      "source_bound_margin_states": 1,
+      "tuple_image_states": 4094,
+      "tuple_information_rate_bits_per_longitudinal_site": 0.999941282252,
+      "tuple_symbols_sha256": "478a22f4542c069e3872acbf085084e2df5655b60f0fef36acf54880dc02ad9d"
+    },
+    {
+      "B_n_states": 4095,
+      "completion": 128,
+      "fiber_histogram_over_distinct_B_states": {
+        "1": 4093,
+        "2": 1
+      },
+      "fiber_signature_sha256": "92c02b67861a5a6a4a23d4a2cc38ebb6ba5b8052693e84a27f41d795d4704836",
+      "fraction_of_B_log_capacity_exposed": 0.999970636679,
+      "h": 0,
+      "kind": "O",
+      "n": 12,
+      "nominal_represented_bits_per_site": 2,
+      "source_bound_margin_states": 1,
+      "tuple_image_states": 4094,
+      "tuple_information_rate_bits_per_longitudinal_site": 0.999941282252,
+      "tuple_symbols_sha256": "d7363568b4a42fe83bf2c523fbcf7e5409bb454176bac9d81455b8f0fd1ee3fb"
+    },
+    {
+      "B_n_states": 4095,
+      "completion": 128,
+      "fiber_histogram_over_distinct_B_states": {
+        "1": 4093,
+        "2": 1
+      },
+      "fiber_signature_sha256": "92c02b67861a5a6a4a23d4a2cc38ebb6ba5b8052693e84a27f41d795d4704836",
+      "fraction_of_B_log_capacity_exposed": 0.999970636679,
+      "h": 1,
+      "kind": "O",
+      "n": 12,
+      "nominal_represented_bits_per_site": 4,
+      "source_bound_margin_states": 1,
+      "tuple_image_states": 4094,
+      "tuple_information_rate_bits_per_longitudinal_site": 0.999941282252,
+      "tuple_symbols_sha256": "479bfd6e6b92bc35c302f796336301559ca2a0b8e2399e3c470fb3268280af77"
+    },
+    {
+      "B_n_states": 4095,
+      "completion": 128,
+      "fiber_histogram_over_distinct_B_states": {
+        "1": 4093,
+        "2": 1
+      },
+      "fiber_signature_sha256": "92c02b67861a5a6a4a23d4a2cc38ebb6ba5b8052693e84a27f41d795d4704836",
+      "fraction_of_B_log_capacity_exposed": 0.999970636679,
+      "h": 2,
+      "kind": "O",
+      "n": 12,
+      "nominal_represented_bits_per_site": 6,
+      "source_bound_margin_states": 1,
+      "tuple_image_states": 4094,
+      "tuple_information_rate_bits_per_longitudinal_site": 0.999941282252,
+      "tuple_symbols_sha256": "9c0048c0449654b5ec12ee908d245389f67c0210a663ddce18ae4ec7d3bceb7e"
+    },
+    {
+      "B_n_states": 4095,
+      "completion": 128,
+      "fiber_histogram_over_distinct_B_states": {
+        "1": 4093,
+        "2": 1
+      },
+      "fiber_signature_sha256": "92c02b67861a5a6a4a23d4a2cc38ebb6ba5b8052693e84a27f41d795d4704836",
+      "fraction_of_B_log_capacity_exposed": 0.999970636679,
+      "h": 3,
+      "kind": "O",
+      "n": 12,
+      "nominal_represented_bits_per_site": 8,
+      "source_bound_margin_states": 1,
+      "tuple_image_states": 4094,
+      "tuple_information_rate_bits_per_longitudinal_site": 0.999941282252,
+      "tuple_symbols_sha256": "d5406712b2eed15f2c504b5ae1a8bb1c8582944bf753b697ba3124f99a8a0e06"
+    },
+    {
+      "B_n_states": 4095,
+      "completion": 128,
+      "fiber_histogram_over_distinct_B_states": {
+        "1": 4093,
+        "2": 1
+      },
+      "fiber_signature_sha256": "92c02b67861a5a6a4a23d4a2cc38ebb6ba5b8052693e84a27f41d795d4704836",
+      "fraction_of_B_log_capacity_exposed": 0.999970636679,
+      "h": 4,
+      "kind": "O",
+      "n": 12,
+      "nominal_represented_bits_per_site": 10,
+      "source_bound_margin_states": 1,
+      "tuple_image_states": 4094,
+      "tuple_information_rate_bits_per_longitudinal_site": 0.999941282252,
+      "tuple_symbols_sha256": "8bc0030524b6709456cf021471f7fa9ea1a7184f4b75186e7d8acf9c1027baab"
+    },
+    {
+      "B_n_states": 4095,
+      "completion": 160,
+      "fiber_histogram_over_distinct_B_states": {
+        "1": 4093,
+        "2": 1
+      },
+      "fiber_signature_sha256": "92c02b67861a5a6a4a23d4a2cc38ebb6ba5b8052693e84a27f41d795d4704836",
+      "fraction_of_B_log_capacity_exposed": 0.999970636679,
+      "h": 0,
+      "kind": "K",
+      "n": 12,
+      "nominal_represented_bits_per_site": 2,
+      "source_bound_margin_states": 1,
+      "tuple_image_states": 4094,
+      "tuple_information_rate_bits_per_longitudinal_site": 0.999941282252,
+      "tuple_symbols_sha256": "d7363568b4a42fe83bf2c523fbcf7e5409bb454176bac9d81455b8f0fd1ee3fb"
+    },
+    {
+      "B_n_states": 4095,
+      "completion": 160,
+      "fiber_histogram_over_distinct_B_states": {
+        "1": 4093,
+        "2": 1
+      },
+      "fiber_signature_sha256": "92c02b67861a5a6a4a23d4a2cc38ebb6ba5b8052693e84a27f41d795d4704836",
+      "fraction_of_B_log_capacity_exposed": 0.999970636679,
+      "h": 1,
+      "kind": "K",
+      "n": 12,
+      "nominal_represented_bits_per_site": 4,
+      "source_bound_margin_states": 1,
+      "tuple_image_states": 4094,
+      "tuple_information_rate_bits_per_longitudinal_site": 0.999941282252,
+      "tuple_symbols_sha256": "d647aac223fb93fe4f9ca120ea74c719c9a965aed2ea923913f1eb4e53f5056e"
+    },
+    {
+      "B_n_states": 4095,
+      "completion": 160,
+      "fiber_histogram_over_distinct_B_states": {
+        "1": 4093,
+        "2": 1
+      },
+      "fiber_signature_sha256": "92c02b67861a5a6a4a23d4a2cc38ebb6ba5b8052693e84a27f41d795d4704836",
+      "fraction_of_B_log_capacity_exposed": 0.999970636679,
+      "h": 2,
+      "kind": "K",
+      "n": 12,
+      "nominal_represented_bits_per_site": 6,
+      "source_bound_margin_states": 1,
+      "tuple_image_states": 4094,
+      "tuple_information_rate_bits_per_longitudinal_site": 0.999941282252,
+      "tuple_symbols_sha256": "0bde71a39de77715db141f9ba8910dad6557b29f82ca0a565fd7c465d7cd6731"
+    },
+    {
+      "B_n_states": 4095,
+      "completion": 160,
+      "fiber_histogram_over_distinct_B_states": {
+        "1": 4093,
+        "2": 1
+      },
+      "fiber_signature_sha256": "92c02b67861a5a6a4a23d4a2cc38ebb6ba5b8052693e84a27f41d795d4704836",
+      "fraction_of_B_log_capacity_exposed": 0.999970636679,
+      "h": 3,
+      "kind": "K",
+      "n": 12,
+      "nominal_represented_bits_per_site": 8,
+      "source_bound_margin_states": 1,
+      "tuple_image_states": 4094,
+      "tuple_information_rate_bits_per_longitudinal_site": 0.999941282252,
+      "tuple_symbols_sha256": "bc5f7724d6ef152685eb0c020e7efc97d9ce5d72dd49843681b7bd62bdc938cb"
+    },
+    {
+      "B_n_states": 4095,
+      "completion": 160,
+      "fiber_histogram_over_distinct_B_states": {
+        "1": 4093,
+        "2": 1
+      },
+      "fiber_signature_sha256": "92c02b67861a5a6a4a23d4a2cc38ebb6ba5b8052693e84a27f41d795d4704836",
+      "fraction_of_B_log_capacity_exposed": 0.999970636679,
+      "h": 4,
+      "kind": "K",
+      "n": 12,
+      "nominal_represented_bits_per_site": 10,
+      "source_bound_margin_states": 1,
+      "tuple_image_states": 4094,
+      "tuple_information_rate_bits_per_longitudinal_site": 0.999941282252,
+      "tuple_symbols_sha256": "6603327347025f0c43678ba12d4f656f79cf4ac39ca09852ca6b327010206c8b"
+    },
+    {
+      "B_n_states": 4095,
+      "completion": 160,
+      "fiber_histogram_over_distinct_B_states": {
+        "1": 4093,
+        "2": 1
+      },
+      "fiber_signature_sha256": "92c02b67861a5a6a4a23d4a2cc38ebb6ba5b8052693e84a27f41d795d4704836",
+      "fraction_of_B_log_capacity_exposed": 0.999970636679,
+      "h": 0,
+      "kind": "O",
+      "n": 12,
+      "nominal_represented_bits_per_site": 2,
+      "source_bound_margin_states": 1,
+      "tuple_image_states": 4094,
+      "tuple_information_rate_bits_per_longitudinal_site": 0.999941282252,
+      "tuple_symbols_sha256": "d7363568b4a42fe83bf2c523fbcf7e5409bb454176bac9d81455b8f0fd1ee3fb"
+    },
+    {
+      "B_n_states": 4095,
+      "completion": 160,
+      "fiber_histogram_over_distinct_B_states": {
+        "1": 4093,
+        "2": 1
+      },
+      "fiber_signature_sha256": "92c02b67861a5a6a4a23d4a2cc38ebb6ba5b8052693e84a27f41d795d4704836",
+      "fraction_of_B_log_capacity_exposed": 0.999970636679,
+      "h": 1,
+      "kind": "O",
+      "n": 12,
+      "nominal_represented_bits_per_site": 4,
+      "source_bound_margin_states": 1,
+      "tuple_image_states": 4094,
+      "tuple_information_rate_bits_per_longitudinal_site": 0.999941282252,
+      "tuple_symbols_sha256": "479bfd6e6b92bc35c302f796336301559ca2a0b8e2399e3c470fb3268280af77"
+    },
+    {
+      "B_n_states": 4095,
+      "completion": 160,
+      "fiber_histogram_over_distinct_B_states": {
+        "1": 4093,
+        "2": 1
+      },
+      "fiber_signature_sha256": "92c02b67861a5a6a4a23d4a2cc38ebb6ba5b8052693e84a27f41d795d4704836",
+      "fraction_of_B_log_capacity_exposed": 0.999970636679,
+      "h": 2,
+      "kind": "O",
+      "n": 12,
+      "nominal_represented_bits_per_site": 6,
+      "source_bound_margin_states": 1,
+      "tuple_image_states": 4094,
+      "tuple_information_rate_bits_per_longitudinal_site": 0.999941282252,
+      "tuple_symbols_sha256": "9c0048c0449654b5ec12ee908d245389f67c0210a663ddce18ae4ec7d3bceb7e"
+    },
+    {
+      "B_n_states": 4095,
+      "completion": 160,
+      "fiber_histogram_over_distinct_B_states": {
+        "1": 4093,
+        "2": 1
+      },
+      "fiber_signature_sha256": "92c02b67861a5a6a4a23d4a2cc38ebb6ba5b8052693e84a27f41d795d4704836",
+      "fraction_of_B_log_capacity_exposed": 0.999970636679,
+      "h": 3,
+      "kind": "O",
+      "n": 12,
+      "nominal_represented_bits_per_site": 8,
+      "source_bound_margin_states": 1,
+      "tuple_image_states": 4094,
+      "tuple_information_rate_bits_per_longitudinal_site": 0.999941282252,
+      "tuple_symbols_sha256": "d5406712b2eed15f2c504b5ae1a8bb1c8582944bf753b697ba3124f99a8a0e06"
+    },
+    {
+      "B_n_states": 4095,
+      "completion": 160,
+      "fiber_histogram_over_distinct_B_states": {
+        "1": 4093,
+        "2": 1
+      },
+      "fiber_signature_sha256": "92c02b67861a5a6a4a23d4a2cc38ebb6ba5b8052693e84a27f41d795d4704836",
+      "fraction_of_B_log_capacity_exposed": 0.999970636679,
+      "h": 4,
+      "kind": "O",
+      "n": 12,
+      "nominal_represented_bits_per_site": 10,
+      "source_bound_margin_states": 1,
+      "tuple_image_states": 4094,
+      "tuple_information_rate_bits_per_longitudinal_site": 0.999941282252,
+      "tuple_symbols_sha256": "8bc0030524b6709456cf021471f7fa9ea1a7184f4b75186e7d8acf9c1027baab"
+    }
+  ],
+  "implementation_commit": "26ddc63938ab129c3488003e31997b20160238c9",
+  "interpretation_limit": "Finite-width packing and fixed-budget capacity are representation/resource statements. The bounded Rule32 diagnostic does not define intrinsic spatial dimension, establish a new spatial axis, or extrapolate the measured h<=4 pattern to h->infinity.",
+  "protocol": "transverse-freedom-20260911",
+  "protocol_commit": "359044de89a6e1c4b06e1105866faa53ef1220c9",
+  "ring_summaries": [
+    {
+      "B_n_information_rate_bits_per_longitudinal_site": 0.996213320583,
+      "B_n_states": 63,
+      "K_O_recoding_both_directions": true,
+      "O_pointwise_identical_across_completions": true,
+      "all_four_completion_coordinate_partitions_identical": true,
+      "binary_source_states": 64,
+      "closed_form_controls": [
+        {
+          "duplicated_row_information_rate_bits_per_site": 2,
+          "duplicated_row_states": 4096,
+          "h": 0,
+          "independent_strip_information_rate_bits_per_site": 2,
+          "independent_strip_states": 4096,
+          "width": 1
+        },
+        {
+          "duplicated_row_information_rate_bits_per_site": 2,
+          "duplicated_row_states": 4096,
+          "h": 1,
+          "independent_strip_information_rate_bits_per_site": 4,
+          "independent_strip_states": 16777216,
+          "width": 2
+        },
+        {
+          "duplicated_row_information_rate_bits_per_site": 2,
+          "duplicated_row_states": 4096,
+          "h": 2,
+          "independent_strip_information_rate_bits_per_site": 6,
+          "independent_strip_states": 68719476736,
+          "width": 3
+        },
+        {
+          "duplicated_row_information_rate_bits_per_site": 2,
+          "duplicated_row_states": 4096,
+          "h": 3,
+          "independent_strip_information_rate_bits_per_site": 8,
+          "independent_strip_states": 281474976710656,
+          "width": 4
+        },
+        {
+          "duplicated_row_information_rate_bits_per_site": 2,
+          "duplicated_row_states": 4096,
+          "h": 4,
+          "independent_strip_information_rate_bits_per_site": 10,
+          "independent_strip_states": 1152921504606846976,
+          "width": 5
+        }
+      ],
+      "cross_completion_recoding_both_directions": true,
+      "n": 6,
+      "source_aliases_under_E": 1,
+      "source_bound_holds": true,
+      "terminal_plateau_start_within_h0_to_h4": 0,
+      "tuple_image_increments": [
+        62,
+        0,
+        0,
+        0,
+        0
+      ],
+      "tuple_image_states_by_depth": [
+        62,
+        62,
+        62,
+        62,
+        62
+      ]
+    },
+    {
+      "B_n_information_rate_bits_per_longitudinal_site": 1.0,
+      "B_n_states": 128,
+      "K_O_recoding_both_directions": true,
+      "O_pointwise_identical_across_completions": true,
+      "all_four_completion_coordinate_partitions_identical": true,
+      "binary_source_states": 128,
+      "closed_form_controls": [
+        {
+          "duplicated_row_information_rate_bits_per_site": 2,
+          "duplicated_row_states": 16384,
+          "h": 0,
+          "independent_strip_information_rate_bits_per_site": 2,
+          "independent_strip_states": 16384,
+          "width": 1
+        },
+        {
+          "duplicated_row_information_rate_bits_per_site": 2,
+          "duplicated_row_states": 16384,
+          "h": 1,
+          "independent_strip_information_rate_bits_per_site": 4,
+          "independent_strip_states": 268435456,
+          "width": 2
+        },
+        {
+          "duplicated_row_information_rate_bits_per_site": 2,
+          "duplicated_row_states": 16384,
+          "h": 2,
+          "independent_strip_information_rate_bits_per_site": 6,
+          "independent_strip_states": 4398046511104,
+          "width": 3
+        },
+        {
+          "duplicated_row_information_rate_bits_per_site": 2,
+          "duplicated_row_states": 16384,
+          "h": 3,
+          "independent_strip_information_rate_bits_per_site": 8,
+          "independent_strip_states": 72057594037927936,
+          "width": 4
+        },
+        {
+          "duplicated_row_information_rate_bits_per_site": 2,
+          "duplicated_row_states": 16384,
+          "h": 4,
+          "independent_strip_information_rate_bits_per_site": 10,
+          "independent_strip_states": 1180591620717411303424,
+          "width": 5
+        }
+      ],
+      "cross_completion_recoding_both_directions": true,
+      "n": 7,
+      "source_aliases_under_E": 0,
+      "source_bound_holds": true,
+      "terminal_plateau_start_within_h0_to_h4": 0,
+      "tuple_image_increments": [
+        128,
+        0,
+        0,
+        0,
+        0
+      ],
+      "tuple_image_states_by_depth": [
+        128,
+        128,
+        128,
+        128,
+        128
+      ]
+    },
+    {
+      "B_n_information_rate_bits_per_longitudinal_site": 0.999294179607,
+      "B_n_states": 255,
+      "K_O_recoding_both_directions": true,
+      "O_pointwise_identical_across_completions": true,
+      "all_four_completion_coordinate_partitions_identical": true,
+      "binary_source_states": 256,
+      "closed_form_controls": [
+        {
+          "duplicated_row_information_rate_bits_per_site": 2,
+          "duplicated_row_states": 65536,
+          "h": 0,
+          "independent_strip_information_rate_bits_per_site": 2,
+          "independent_strip_states": 65536,
+          "width": 1
+        },
+        {
+          "duplicated_row_information_rate_bits_per_site": 2,
+          "duplicated_row_states": 65536,
+          "h": 1,
+          "independent_strip_information_rate_bits_per_site": 4,
+          "independent_strip_states": 4294967296,
+          "width": 2
+        },
+        {
+          "duplicated_row_information_rate_bits_per_site": 2,
+          "duplicated_row_states": 65536,
+          "h": 2,
+          "independent_strip_information_rate_bits_per_site": 6,
+          "independent_strip_states": 281474976710656,
+          "width": 3
+        },
+        {
+          "duplicated_row_information_rate_bits_per_site": 2,
+          "duplicated_row_states": 65536,
+          "h": 3,
+          "independent_strip_information_rate_bits_per_site": 8,
+          "independent_strip_states": 18446744073709551616,
+          "width": 4
+        },
+        {
+          "duplicated_row_information_rate_bits_per_site": 2,
+          "duplicated_row_states": 65536,
+          "h": 4,
+          "independent_strip_information_rate_bits_per_site": 10,
+          "independent_strip_states": 1208925819614629174706176,
+          "width": 5
+        }
+      ],
+      "cross_completion_recoding_both_directions": true,
+      "n": 8,
+      "source_aliases_under_E": 1,
+      "source_bound_holds": true,
+      "terminal_plateau_start_within_h0_to_h4": 0,
+      "tuple_image_increments": [
+        254,
+        0,
+        0,
+        0,
+        0
+      ],
+      "tuple_image_states_by_depth": [
+        254,
+        254,
+        254,
+        254,
+        254
+      ]
+    },
+    {
+      "B_n_information_rate_bits_per_longitudinal_site": 1.0,
+      "B_n_states": 512,
+      "K_O_recoding_both_directions": true,
+      "O_pointwise_identical_across_completions": true,
+      "all_four_completion_coordinate_partitions_identical": true,
+      "binary_source_states": 512,
+      "closed_form_controls": [
+        {
+          "duplicated_row_information_rate_bits_per_site": 2,
+          "duplicated_row_states": 262144,
+          "h": 0,
+          "independent_strip_information_rate_bits_per_site": 2,
+          "independent_strip_states": 262144,
+          "width": 1
+        },
+        {
+          "duplicated_row_information_rate_bits_per_site": 2,
+          "duplicated_row_states": 262144,
+          "h": 1,
+          "independent_strip_information_rate_bits_per_site": 4,
+          "independent_strip_states": 68719476736,
+          "width": 2
+        },
+        {
+          "duplicated_row_information_rate_bits_per_site": 2,
+          "duplicated_row_states": 262144,
+          "h": 2,
+          "independent_strip_information_rate_bits_per_site": 6,
+          "independent_strip_states": 18014398509481984,
+          "width": 3
+        },
+        {
+          "duplicated_row_information_rate_bits_per_site": 2,
+          "duplicated_row_states": 262144,
+          "h": 3,
+          "independent_strip_information_rate_bits_per_site": 8,
+          "independent_strip_states": 4722366482869645213696,
+          "width": 4
+        },
+        {
+          "duplicated_row_information_rate_bits_per_site": 2,
+          "duplicated_row_states": 262144,
+          "h": 4,
+          "independent_strip_information_rate_bits_per_site": 10,
+          "independent_strip_states": 1237940039285380274899124224,
+          "width": 5
+        }
+      ],
+      "cross_completion_recoding_both_directions": true,
+      "n": 9,
+      "source_aliases_under_E": 0,
+      "source_bound_holds": true,
+      "terminal_plateau_start_within_h0_to_h4": 0,
+      "tuple_image_increments": [
+        512,
+        0,
+        0,
+        0,
+        0
+      ],
+      "tuple_image_states_by_depth": [
+        512,
+        512,
+        512,
+        512,
+        512
+      ]
+    },
+    {
+      "B_n_information_rate_bits_per_longitudinal_site": 0.999859042975,
+      "B_n_states": 1023,
+      "K_O_recoding_both_directions": true,
+      "O_pointwise_identical_across_completions": true,
+      "all_four_completion_coordinate_partitions_identical": true,
+      "binary_source_states": 1024,
+      "closed_form_controls": [
+        {
+          "duplicated_row_information_rate_bits_per_site": 2,
+          "duplicated_row_states": 1048576,
+          "h": 0,
+          "independent_strip_information_rate_bits_per_site": 2,
+          "independent_strip_states": 1048576,
+          "width": 1
+        },
+        {
+          "duplicated_row_information_rate_bits_per_site": 2,
+          "duplicated_row_states": 1048576,
+          "h": 1,
+          "independent_strip_information_rate_bits_per_site": 4,
+          "independent_strip_states": 1099511627776,
+          "width": 2
+        },
+        {
+          "duplicated_row_information_rate_bits_per_site": 2,
+          "duplicated_row_states": 1048576,
+          "h": 2,
+          "independent_strip_information_rate_bits_per_site": 6,
+          "independent_strip_states": 1152921504606846976,
+          "width": 3
+        },
+        {
+          "duplicated_row_information_rate_bits_per_site": 2,
+          "duplicated_row_states": 1048576,
+          "h": 3,
+          "independent_strip_information_rate_bits_per_site": 8,
+          "independent_strip_states": 1208925819614629174706176,
+          "width": 4
+        },
+        {
+          "duplicated_row_information_rate_bits_per_site": 2,
+          "duplicated_row_states": 1048576,
+          "h": 4,
+          "independent_strip_information_rate_bits_per_site": 10,
+          "independent_strip_states": 1267650600228229401496703205376,
+          "width": 5
+        }
+      ],
+      "cross_completion_recoding_both_directions": true,
+      "n": 10,
+      "source_aliases_under_E": 1,
+      "source_bound_holds": true,
+      "terminal_plateau_start_within_h0_to_h4": 0,
+      "tuple_image_increments": [
+        1022,
+        0,
+        0,
+        0,
+        0
+      ],
+      "tuple_image_states_by_depth": [
+        1022,
+        1022,
+        1022,
+        1022,
+        1022
+      ]
+    },
+    {
+      "B_n_information_rate_bits_per_longitudinal_site": 1.0,
+      "B_n_states": 2048,
+      "K_O_recoding_both_directions": true,
+      "O_pointwise_identical_across_completions": true,
+      "all_four_completion_coordinate_partitions_identical": true,
+      "binary_source_states": 2048,
+      "closed_form_controls": [
+        {
+          "duplicated_row_information_rate_bits_per_site": 2,
+          "duplicated_row_states": 4194304,
+          "h": 0,
+          "independent_strip_information_rate_bits_per_site": 2,
+          "independent_strip_states": 4194304,
+          "width": 1
+        },
+        {
+          "duplicated_row_information_rate_bits_per_site": 2,
+          "duplicated_row_states": 4194304,
+          "h": 1,
+          "independent_strip_information_rate_bits_per_site": 4,
+          "independent_strip_states": 17592186044416,
+          "width": 2
+        },
+        {
+          "duplicated_row_information_rate_bits_per_site": 2,
+          "duplicated_row_states": 4194304,
+          "h": 2,
+          "independent_strip_information_rate_bits_per_site": 6,
+          "independent_strip_states": 73786976294838206464,
+          "width": 3
+        },
+        {
+          "duplicated_row_information_rate_bits_per_site": 2,
+          "duplicated_row_states": 4194304,
+          "h": 3,
+          "independent_strip_information_rate_bits_per_site": 8,
+          "independent_strip_states": 309485009821345068724781056,
+          "width": 4
+        },
+        {
+          "duplicated_row_information_rate_bits_per_site": 2,
+          "duplicated_row_states": 4194304,
+          "h": 4,
+          "independent_strip_information_rate_bits_per_site": 10,
+          "independent_strip_states": 1298074214633706907132624082305024,
+          "width": 5
+        }
+      ],
+      "cross_completion_recoding_both_directions": true,
+      "n": 11,
+      "source_aliases_under_E": 0,
+      "source_bound_holds": true,
+      "terminal_plateau_start_within_h0_to_h4": 0,
+      "tuple_image_increments": [
+        2048,
+        0,
+        0,
+        0,
+        0
+      ],
+      "tuple_image_states_by_depth": [
+        2048,
+        2048,
+        2048,
+        2048,
+        2048
+      ]
+    },
+    {
+      "B_n_information_rate_bits_per_longitudinal_site": 0.999970644711,
+      "B_n_states": 4095,
+      "K_O_recoding_both_directions": true,
+      "O_pointwise_identical_across_completions": true,
+      "all_four_completion_coordinate_partitions_identical": true,
+      "binary_source_states": 4096,
+      "closed_form_controls": [
+        {
+          "duplicated_row_information_rate_bits_per_site": 2,
+          "duplicated_row_states": 16777216,
+          "h": 0,
+          "independent_strip_information_rate_bits_per_site": 2,
+          "independent_strip_states": 16777216,
+          "width": 1
+        },
+        {
+          "duplicated_row_information_rate_bits_per_site": 2,
+          "duplicated_row_states": 16777216,
+          "h": 1,
+          "independent_strip_information_rate_bits_per_site": 4,
+          "independent_strip_states": 281474976710656,
+          "width": 2
+        },
+        {
+          "duplicated_row_information_rate_bits_per_site": 2,
+          "duplicated_row_states": 16777216,
+          "h": 2,
+          "independent_strip_information_rate_bits_per_site": 6,
+          "independent_strip_states": 4722366482869645213696,
+          "width": 3
+        },
+        {
+          "duplicated_row_information_rate_bits_per_site": 2,
+          "duplicated_row_states": 16777216,
+          "h": 3,
+          "independent_strip_information_rate_bits_per_site": 8,
+          "independent_strip_states": 79228162514264337593543950336,
+          "width": 4
+        },
+        {
+          "duplicated_row_information_rate_bits_per_site": 2,
+          "duplicated_row_states": 16777216,
+          "h": 4,
+          "independent_strip_information_rate_bits_per_site": 10,
+          "independent_strip_states": 1329227995784915872903807060280344576,
+          "width": 5
+        }
+      ],
+      "cross_completion_recoding_both_directions": true,
+      "n": 12,
+      "source_aliases_under_E": 1,
+      "source_bound_holds": true,
+      "terminal_plateau_start_within_h0_to_h4": 0,
+      "tuple_image_increments": [
+        4094,
+        0,
+        0,
+        0,
+        0
+      ],
+      "tuple_image_states_by_depth": [
+        4094,
+        4094,
+        4094,
+        4094,
+        4094
+      ]
+    }
+  ],
+  "scope": {
+    "completions": [
+      128,
+      160
+    ],
+    "coordinates": [
+      "K",
+      "O"
+    ],
+    "depths": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "domain": "distinct Rule32 first-image pair states B_n on periodic rings",
+    "primary_question": "independent transverse state capacity under a fixed representation budget",
+    "ring_sizes": [
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ]
+  },
+  "source_hashes": {
+    "protocol": "d439b28678f12446fd832e618762c84467ee18f14003503a139a4d30901f68c1",
+    "script": "e3f58ccbcce16e89f36a26afd71fa3e52af3b406d3419562284be038fc556de7"
+  },
+  "summary": {
+    "all_K_O_recoding_controls_hold": true,
+    "all_cross_completion_recoding_controls_hold": true,
+    "all_fixed_depth_fiber_controls_hold": true,
+    "all_primary_reference_rows_agree": true,
+    "all_source_bounds_hold": true,
+    "claim_scope": "bounded n=6..12, h=0..4 inherited Rule32 diagnostic; theorem T3 is analytic for every finite h; no intrinsic-dimension claim",
+    "completions": [
+      128,
+      160
+    ],
+    "coordinate_systems": [
+      "K",
+      "O"
+    ],
+    "depths": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "diagnostic_cells": 140,
+    "recoding_state_checks": 243720,
+    "reference_tuple_row_arrays_compared": 140,
+    "rings": [
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ]
+  },
+  "theorem_and_indexing_controls": {
+    "T1_column_packing": {
+      "alphabet_size": 2,
+      "horizontal_shift_commutes": true,
+      "injective": true,
+      "n": 3,
+      "roundtrip": true,
+      "states_checked": 512,
+      "width": 3
+    },
+    "T2_capacity_samples": [
+      {
+        "K": 2,
+        "cases": [
+          {
+            "capacity_allows_injection": true,
+            "source_count": 64,
+            "target_count": 64,
+            "width": 1
+          },
+          {
+            "capacity_allows_injection": false,
+            "source_count": 4096,
+            "target_count": 64,
+            "width": 2
+          },
+          {
+            "capacity_allows_injection": false,
+            "source_count": 262144,
+            "target_count": 64,
+            "width": 3
+          }
+        ],
+        "n": 3,
+        "q": 2,
+        "source_alphabet": 4
+      },
+      {
+        "K": 2,
+        "cases": [
+          {
+            "capacity_allows_injection": true,
+            "source_count": 1024,
+            "target_count": 1048576,
+            "width": 1
+          },
+          {
+            "capacity_allows_injection": true,
+            "source_count": 1048576,
+            "target_count": 1048576,
+            "width": 2
+          },
+          {
+            "capacity_allows_injection": false,
+            "source_count": 1073741824,
+            "target_count": 1048576,
+            "width": 3
+          }
+        ],
+        "n": 5,
+        "q": 4,
+        "source_alphabet": 4
+      },
+      {
+        "K": 2,
+        "cases": [
+          {
+            "capacity_allows_injection": true,
+            "source_count": 65536,
+            "target_count": 16777216,
+            "width": 2
+          },
+          {
+            "capacity_allows_injection": true,
+            "source_count": 16777216,
+            "target_count": 16777216,
+            "width": 3
+          },
+          {
+            "capacity_allows_injection": false,
+            "source_count": 4294967296,
+            "target_count": 16777216,
+            "width": 4
+          }
+        ],
+        "n": 4,
+        "q": 8,
+        "source_alphabet": 4
+      },
+      {
+        "K": 3,
+        "cases": [
+          {
+            "capacity_allows_injection": true,
+            "source_count": 16384,
+            "target_count": 2097152,
+            "width": 2
+          },
+          {
+            "capacity_allows_injection": true,
+            "source_count": 2097152,
+            "target_count": 2097152,
+            "width": 3
+          },
+          {
+            "capacity_allows_injection": false,
+            "source_count": 268435456,
+            "target_count": 2097152,
+            "width": 4
+          }
+        ],
+        "n": 7,
+        "q": 2,
+        "source_alphabet": 2
+      }
+    ],
+    "note": "Analytic theorem controls and indexing checks only; no n=6..12 Rule32 tuple image count is computed here.",
+    "strip_closed_forms": {
+      "small_exhaustive": [
+        {
+          "duplicated_closed_form": 16,
+          "duplicated_enumerated": 16,
+          "independent_closed_form": 16,
+          "independent_enumerated": 16,
+          "n": 2,
+          "width": 1
+        },
+        {
+          "duplicated_closed_form": 16,
+          "duplicated_enumerated": 16,
+          "independent_closed_form": 256,
+          "independent_enumerated": 256,
+          "n": 2,
+          "width": 2
+        },
+        {
+          "duplicated_closed_form": 16,
+          "duplicated_enumerated": 16,
+          "independent_closed_form": 4096,
+          "independent_enumerated": 4096,
+          "n": 2,
+          "width": 3
+        }
+      ]
+    },
+    "truth_formula": {
+      "agreement": true,
+      "neighborhoods_per_rule": 8,
+      "rules": [
+        32,
+        128,
+        160
+      ]
+    }
+  }
+}

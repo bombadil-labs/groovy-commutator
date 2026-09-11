@@ -64,6 +64,9 @@ REGISTRY = {
     'results/second_lift_completion_20260911.json': {
         'script': 'scripts/verify_second_lift_completion.py',
         'protocol': 'docs/research/protocols/second-lift-completion-comparison-20260910.md'},
+    'results/transverse_freedom_20260911.json': {
+        'script': 'scripts/verify_transverse_freedom.py',
+        'protocol': 'docs/research/protocols/transverse-freedom-20260911.md'},
 }
 
 def sha(p: pathlib.Path) -> str: return hashlib.sha256(p.read_bytes()).hexdigest()
