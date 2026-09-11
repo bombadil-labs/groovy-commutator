@@ -1,0 +1,58 @@
+name: Block majority audit
+
+# Two tiers (2026-09-11). Every pull request that touches this audit's files
+# runs the fast integrity check: the canonical JSON's recorded SHA-256 hashes of
+# its verifier and inputs must match the tree (provenance coherence; it does not
+# inspect result content). The full byte-for-byte replay, which is the content
+# and determinism check, runs on any pull request that modifies the canonical
+# result file itself, on pushes to main, weekly, and on manual dispatch.
+
+on:
+  pull_request:
+    paths:
+      - 'scripts/verify_block_majority.py'
+      - 'results/block_majority_20260911.json'
+      - 'results/parity_coarse_graining_20260911.json'
+      - 'scripts/check_result_integrity.py'
+      - '.github/workflows/research-block-majority.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/verify_block_majority.py'
+      - 'results/block_majority_20260911.json'
+      - 'results/parity_coarse_graining_20260911.json'
+      - 'scripts/check_result_integrity.py'
+      - '.github/workflows/research-block-majority.yml'
+  schedule:
+    - cron: '17 6 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  block-majority:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Recorded source hashes match the tree (provenance coherence)
+        run: python scripts/check_result_integrity.py results/block_majority_20260911.json
+      - name: Does this pull request modify the canonical result file?
+        id: result
+        run: |
+          if [ "${{ github.event_name }}" != "pull_request" ]; then echo "changed=true" >> "$GITHUB_OUTPUT"; exit 0; fi
+          if git diff --name-only "origin/${{ github.base_ref }}...HEAD" | grep -qx 'results/block_majority_20260911.json'; then echo "changed=true" >> "$GITHUB_OUTPUT"; else echo "changed=false" >> "$GITHUB_OUTPUT"; fi
+      - if: steps.result.outputs.changed == 'true'
+        run: python -m pip install -e .
+      - name: Rerun the frozen audit and compare the canonical JSON byte for byte
+        if: steps.result.outputs.changed == 'true'
+        run: |
+          cp results/block_majority_20260911.json /tmp/expected.json
+          python scripts/verify_block_majority.py > /dev/null
+          cmp /tmp/expected.json results/block_majority_20260911.json
