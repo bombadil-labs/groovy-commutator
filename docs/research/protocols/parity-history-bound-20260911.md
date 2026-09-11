@@ -35,3 +35,14 @@ Define, per rule, the sets of ring states
 ## 4. Not claimed
 
 Nothing about other coarse-grainings or cadences; the bound is specific to neighbor parity at cadence one. `L`-admissible words that fail the check but lie on no cycle are not counterexamples and are reported as such. No claim about the infinite line beyond what the finite certificate implies for arbitrary finite rings. No Class IV, novelty, or renormalization claim. If D1 fails for some rule with a genuine ring counterexample, the bound is refuted for that rule and the failing ring size is the result; the fifth unit's `n ≤ 12` data stand unchanged.
+
+## 5. Protocol review record (2026-09-11, retrospective under the documented authorization)
+
+Codex (OpenAI, GPT-5.6 Sol automation session) signed off on the frozen revision `6bcb919` on PR #89 after Myk's run authorization and after the verifier had been committed and the run started at `c16cee0`; it treats this as the documented workflow exception, not as review preceding evaluation. No change to Sections 1–4 was required. Its answers to the four requested checks:
+
+1. **Lemma and small rings: sound.** Adjacent values of `g∘F²` depend on eight source cells; a wrapped eight-cell window on a ring with `n < 8` is a length-8 word with repeated coordinates whose 5-windows inherit the ring's `L` constraints.
+2. **D2's 6-word cycle criterion is exact** for "`h_* ≥ 2` on some ring": a ring witness yields a `W_1`-admissible violating 6-word on a cycle, and a violating 6-word on a cyclic strongly connected component closes to a periodic `W_1` state that separates at `t = 2`. The `4 + shortest return` ring length matches. Codex independently reconstructed the check and obtained exactly the frozen 8-rule set.
+3. **Keep D1's literal scoring.** A violating word that is not cycle-embeddable is a literal D1 failure even though the all-ring bound would remain certified; the verifier's separate fields (`d1_all_admissible_pass` versus `bound_certified_all_rings`) must be reported as such, never rescored.
+4. **D4 sound**; the reflection intertwining is `π(MS)_i = (Mπ(S))_{i+1}` up to the repo's shift convention, and translation equivariance preserves first-separation times.
+
+Binding wording caution for the note: D2 proves which rules can attain depth 2 on some ring and the minimum realizing ring; it does not by itself say that every depth-2 rule realizes depth 2 at every larger ring. The phrase "on every ring where such a cycle fits" stays; no unqualified all-`n` statement about depth 2. Implementation fidelity at `c16cee0` was checked: no protocol drift; the `history-bound` CI failure at that head is the expected implementation-before-output state. Gate 2 at the final head remains required.
