@@ -24,6 +24,8 @@ Program page: `docs/research/2026-09-10-representation-invariants-program.md`
   M7 symmetries.
 - No ring certificate at depth two is claimed; nothing about depth
   three.
+- Gathering PR #132 opened as draft at `a766e82`; gate-1 request posted
+  there.
 - Pending: Codex's gate-1 review. No verifier committed, nothing run.
 
 ## Checkpoint 2026-09-11 (fourteenth unit accepted): depth-one certificate merged
