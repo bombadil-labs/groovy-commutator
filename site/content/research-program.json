@@ -70,5 +70,28 @@
       "successor-set-archive",
       "second-lift-completion-protocol"
     ]
+  },
+  {
+    "slug": "representation-invariants",
+    "title": "Invariants Across Representation Contracts",
+    "eyebrow": "Working research program",
+    "date": "2026-09-10",
+    "updated": "2026-09-11",
+    "status": "living",
+    "summary": "First audit complete: reflection preserves the commutator classification, derivative closure, and all local-cap budgets; complement conjugation makes the native commutator covariant exactly for self-dual rules and shifts cap radii beyond a frozen bound that was wrong. The program declares admissible changes of interpreter, what each transports, and what each costs.",
+    "thesis": "Which properties of a represented dynamics survive a declared change of representation contract, after transporting what must be transported, and at what cost?",
+    "source": "docs/research/2026-09-10-representation-invariants-program.md",
+    "supports": [
+      "representation-invariants-audit",
+      "rule-field-relabeling",
+      "second-lift-completion-protocol",
+      "correction-future-coordinates",
+      "extension-freedom",
+      "affine-converse",
+      "observation-closure",
+      "shared-closure-account",
+      "full-gradient-closure",
+      "gradient-loop-invariants"
+    ]
   }
 ]

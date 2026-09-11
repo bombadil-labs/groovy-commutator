@@ -1,0 +1,3 @@
+# Audit six ECA claims against complement conjugation and reflection
+
+Completed 2026-09-11. Frozen protocol, verifier committed before evaluation, single deterministic run, canonical JSON with source hashes, CI replay. Exercises the program's first two declared transformations on the commutator classification, pointwise commutator covariance, derivative-observation closure, the saved local-cap census, and the saved sweep regime labels. Five of six frozen predictions held; the cap-radius bound under complement conjugation failed and its correction is post hoc. See the [audit note](../research/2026-09-11-representation-invariants-audit.md) and [protocol](../research/protocols/representation-invariants-audit-20260910.md).

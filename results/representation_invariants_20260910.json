@@ -1,0 +1,586 @@
+{
+ "protocol": "representation-invariants-audit-20260910",
+ "schema": 1,
+ "source_hashes": {
+  "script": "614553b66fcebe184912b9bb32d2bd37e366d9aa912c7e22459c66c29dd6d092",
+  "local_correction_caps": "9975a0e45e6cde51ca6a7bdb9bf269ab03be21c61eb2973ba27a803c41f5c69a",
+  "sweep_full_classified": "c157e0ca77afa494c678c1fc419a2bd898673698eeab6e14ff485bf33e007504"
+ },
+ "transformations": {
+  "T_c": "S -> NOT S, r -> conj(r)",
+  "T_m": "S -> reverse(S), r -> mirror(r)",
+  "T_cm": "both"
+ },
+ "costs": {
+  "T_c": {
+   "touched_sites": "n",
+   "information": 0,
+   "locality": 0
+  },
+  "T_m": {
+   "touched_sites": 0,
+   "information": 0,
+   "locality": 0
+  }
+ },
+ "predictions": {
+  "P1_class_reflection_preserved": {
+   "predicted": "all 256 preserved",
+   "violations": [],
+   "pass": true
+  },
+  "P2_class_complement_not_preserved": {
+   "predicted_images_hold": true,
+   "T_c(Z)": [
+    150,
+    153,
+    165,
+    170,
+    195,
+    204,
+    223,
+    236,
+    240,
+    255
+   ],
+   "T_c(U)": [
+    0,
+    15,
+    51,
+    60,
+    85,
+    90,
+    102,
+    105
+   ],
+   "T_c(Z) ∩ Z": [
+    150,
+    170,
+    204,
+    240
+   ],
+   "predicted_intersection": [
+    150,
+    170,
+    204,
+    240
+   ],
+   "rules_leaving_Z∪U": [
+    223,
+    236
+   ],
+   "predicted_leaving": [
+    223,
+    236
+   ],
+   "class_of_223_236": {
+    "223": "varying",
+    "236": "varying"
+   },
+   "pass": true
+  },
+  "P3_pointwise_covariance": {
+   "self_dual_rules": [
+    15,
+    23,
+    43,
+    51,
+    77,
+    85,
+    105,
+    113,
+    142,
+    150,
+    170,
+    178,
+    204,
+    212,
+    232,
+    240
+   ],
+   "self_dual_count": 16,
+   "by_ring": {
+    "6": {
+     "mirror_violations": [],
+     "complement_native_pass": [
+      15,
+      23,
+      43,
+      51,
+      77,
+      85,
+      105,
+      113,
+      142,
+      150,
+      170,
+      178,
+      204,
+      212,
+      232,
+      240
+     ],
+     "complement_native_pass_equals_self_dual": true,
+     "spurious_passes_non_self_dual": [],
+     "complement_state_transport_violations": []
+    },
+    "8": {
+     "mirror_violations": [],
+     "complement_native_pass": [
+      15,
+      23,
+      43,
+      51,
+      77,
+      85,
+      105,
+      113,
+      142,
+      150,
+      170,
+      178,
+      204,
+      212,
+      232,
+      240
+     ],
+     "complement_native_pass_equals_self_dual": true,
+     "spurious_passes_non_self_dual": [],
+     "complement_state_transport_violations": []
+    },
+    "10": {
+     "mirror_violations": [],
+     "complement_native_pass": [
+      15,
+      23,
+      43,
+      51,
+      77,
+      85,
+      105,
+      113,
+      142,
+      150,
+      170,
+      178,
+      204,
+      212,
+      232,
+      240
+     ],
+     "complement_native_pass_equals_self_dual": true,
+     "spurious_passes_non_self_dual": [],
+     "complement_state_transport_violations": []
+    }
+   },
+   "pass": true,
+   "predicted": "mirror: all; complement native: exactly self-dual (16); complement state-transport: all"
+  },
+  "P4_derivative_closure_preserved": {
+   "by_ring": {
+    "6": {
+     "closed_rules": [
+      0,
+      4,
+      12,
+      15,
+      23,
+      51,
+      60,
+      68,
+      76,
+      77,
+      85,
+      90,
+      102,
+      105,
+      150,
+      153,
+      165,
+      170,
+      178,
+      195,
+      200,
+      204,
+      205,
+      207,
+      221,
+      223,
+      232,
+      236,
+      240,
+      255
+     ],
+     "violations": {
+      "T_c": [],
+      "T_m": [],
+      "T_cm": []
+     }
+    },
+    "8": {
+     "closed_rules": [
+      0,
+      4,
+      12,
+      15,
+      23,
+      51,
+      60,
+      68,
+      76,
+      77,
+      85,
+      90,
+      102,
+      105,
+      150,
+      153,
+      165,
+      170,
+      178,
+      195,
+      200,
+      204,
+      205,
+      207,
+      221,
+      223,
+      232,
+      236,
+      240,
+      255
+     ],
+     "violations": {
+      "T_c": [],
+      "T_m": [],
+      "T_cm": []
+     }
+    },
+    "10": {
+     "closed_rules": [
+      0,
+      4,
+      12,
+      15,
+      23,
+      51,
+      60,
+      68,
+      76,
+      77,
+      85,
+      90,
+      102,
+      105,
+      150,
+      153,
+      165,
+      170,
+      178,
+      195,
+      200,
+      204,
+      205,
+      207,
+      221,
+      223,
+      232,
+      236,
+      240,
+      255
+     ],
+     "violations": {
+      "T_c": [],
+      "T_m": [],
+      "T_cm": []
+     }
+    }
+   },
+   "pass": true,
+   "predicted": "preserved under all three at every ring"
+  },
+  "P5_local_cap_census": {
+   "budgets": 4608,
+   "mirror_violations": [],
+   "mirror_pass": true,
+   "complement_K_radius_bound_violations": [
+    {
+     "rule": 4,
+     "conj": 223,
+     "h": 0,
+     "mpr_r": 0,
+     "mpr_conj": 1
+    },
+    {
+     "rule": 38,
+     "conj": 155,
+     "h": 2,
+     "mpr_r": 2,
+     "mpr_conj": null
+    },
+    {
+     "rule": 46,
+     "conj": 139,
+     "h": 2,
+     "mpr_r": 2,
+     "mpr_conj": null
+    },
+    {
+     "rule": 52,
+     "conj": 211,
+     "h": 2,
+     "mpr_r": 2,
+     "mpr_conj": null
+    },
+    {
+     "rule": 106,
+     "conj": 169,
+     "h": 2,
+     "mpr_r": 2,
+     "mpr_conj": null
+    },
+    {
+     "rule": 116,
+     "conj": 209,
+     "h": 2,
+     "mpr_r": 2,
+     "mpr_conj": null
+    },
+    {
+     "rule": 120,
+     "conj": 225,
+     "h": 2,
+     "mpr_r": 2,
+     "mpr_conj": null
+    },
+    {
+     "rule": 132,
+     "conj": 222,
+     "h": 2,
+     "mpr_r": 1,
+     "mpr_conj": null
+    },
+    {
+     "rule": 139,
+     "conj": 46,
+     "h": 2,
+     "mpr_r": null,
+     "mpr_conj": 2
+    },
+    {
+     "rule": 146,
+     "conj": 182,
+     "h": 1,
+     "mpr_r": null,
+     "mpr_conj": 2
+    },
+    {
+     "rule": 155,
+     "conj": 38,
+     "h": 2,
+     "mpr_r": null,
+     "mpr_conj": 2
+    },
+    {
+     "rule": 160,
+     "conj": 250,
+     "h": 2,
+     "mpr_r": 1,
+     "mpr_conj": null
+    },
+    {
+     "rule": 169,
+     "conj": 106,
+     "h": 2,
+     "mpr_r": null,
+     "mpr_conj": 2
+    },
+    {
+     "rule": 182,
+     "conj": 146,
+     "h": 1,
+     "mpr_r": 2,
+     "mpr_conj": null
+    },
+    {
+     "rule": 200,
+     "conj": 236,
+     "h": 0,
+     "mpr_r": 0,
+     "mpr_conj": 1
+    },
+    {
+     "rule": 209,
+     "conj": 116,
+     "h": 2,
+     "mpr_r": null,
+     "mpr_conj": 2
+    },
+    {
+     "rule": 211,
+     "conj": 52,
+     "h": 2,
+     "mpr_r": null,
+     "mpr_conj": 2
+    },
+    {
+     "rule": 222,
+     "conj": 132,
+     "h": 2,
+     "mpr_r": null,
+     "mpr_conj": 1
+    },
+    {
+     "rule": 223,
+     "conj": 4,
+     "h": 0,
+     "mpr_r": 1,
+     "mpr_conj": 0
+    },
+    {
+     "rule": 225,
+     "conj": 120,
+     "h": 2,
+     "mpr_r": null,
+     "mpr_conj": 2
+    },
+    {
+     "rule": 236,
+     "conj": 200,
+     "h": 0,
+     "mpr_r": 1,
+     "mpr_conj": 0
+    },
+    {
+     "rule": 250,
+     "conj": 160,
+     "h": 2,
+     "mpr_r": null,
+     "mpr_conj": 1
+    }
+   ],
+   "complement_K_pass": false,
+   "complement_K_min_radius_exactly_equal": 696,
+   "of": 768,
+   "predicted": "mirror: all 4,608 equal; complement K: |mpr(r)-mpr(conj r)| <= h and same pass/fail existence",
+   "pass": false
+  },
+  "P6_sweep_regime_labels": {
+   "pairs": 32640,
+   "by_transformation": {
+    "T_m": {
+     "label_agreement": 0.9513480392156862,
+     "final_exact_equal": 0.2818627450980392,
+     "peak_exact_equal": 0.27395833333333336,
+     "confusion": {
+      "commute": {
+       "commute": 1164,
+       "crystalline": 0,
+       "drain": 0,
+       "noisy": 0,
+       "structured": 0
+      },
+      "crystalline": {
+       "commute": 0,
+       "crystalline": 7191,
+       "drain": 57,
+       "noisy": 0,
+       "structured": 54
+      },
+      "drain": {
+       "commute": 0,
+       "crystalline": 57,
+       "drain": 3438,
+       "noisy": 149,
+       "structured": 365
+      },
+      "noisy": {
+       "commute": 0,
+       "crystalline": 0,
+       "drain": 149,
+       "noisy": 5096,
+       "structured": 169
+      },
+      "structured": {
+       "commute": 0,
+       "crystalline": 54,
+       "drain": 365,
+       "noisy": 169,
+       "structured": 14163
+      }
+     },
+     "commute_agreement": 1.0,
+     "commute_pairs_involved": 1164
+    },
+    "T_c": {
+     "label_agreement": 0.9393995098039216,
+     "final_exact_equal": 0.2221813725490196,
+     "peak_exact_equal": 0.16611519607843137,
+     "confusion": {
+      "commute": {
+       "commute": 1164,
+       "crystalline": 0,
+       "drain": 0,
+       "noisy": 0,
+       "structured": 0
+      },
+      "crystalline": {
+       "commute": 0,
+       "crystalline": 7107,
+       "drain": 105,
+       "noisy": 0,
+       "structured": 90
+      },
+      "drain": {
+       "commute": 0,
+       "crystalline": 105,
+       "drain": 3264,
+       "noisy": 243,
+       "structured": 397
+      },
+      "noisy": {
+       "commute": 0,
+       "crystalline": 0,
+       "drain": 243,
+       "noisy": 5017,
+       "structured": 154
+      },
+      "structured": {
+       "commute": 0,
+       "crystalline": 90,
+       "drain": 397,
+       "noisy": 154,
+       "structured": 14110
+      }
+     },
+     "commute_agreement": 1.0,
+     "commute_pairs_involved": 1164
+    }
+   },
+   "pass_agreement_above_0.90": true,
+   "pass_commute_exact": true,
+   "predicted": "agreement > 0.90; commute labels agree exactly; disagreements on soft boundaries"
+  }
+ },
+ "engine_control": {
+  "6": true,
+  "8": true,
+  "10": true,
+  "intertwining_n8_all_rules": true
+ },
+ "result1_control": {
+  "zero_matches": true,
+  "one_matches": true
+ },
+ "summary": {
+  "P1_class_reflection_preserved": true,
+  "P2_class_complement_not_preserved": true,
+  "P3_pointwise_covariance": true,
+  "P4_derivative_closure_preserved": true,
+  "P5_local_cap_census": false,
+  "P6_sweep_regime_labels": {
+   "agreement": true,
+   "commute_exact": true
+  }
+ }
+}
