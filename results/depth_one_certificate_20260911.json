@@ -1,6 +1,6 @@
 {
  "protocol": "depth-one-certificate-20260911",
- "schema": 1,
+ "schema": 2,
  "observations": [
   232,
   4,
@@ -33,7 +33,7 @@
   ]
  },
  "source_hashes": {
-  "script": "3640b0c0e55076df01ab1fe3839db945113ed045eb42d57eb1f455f5ec767171",
+  "script": "30a625330c2eca0c1dbff8c9a8f86c5cf9de8e465a086cf90956f510bc24c8d4",
   "block_majority_result": "a629e7d48efa4aa5bcb2cf52d6528c87f97a6ff69ffe61e9cc250f23048c1851",
   "isolated_cell_result": "b615f94e58f1744ed7649a60d0b3b77ce19bbcd4c119c7d5cab0051af7cac12b",
   "complement_observation_result": "c09d0987eb40d3177e31d600dd9e702acb078460b02af8742f1a515b97304ec7",
@@ -44852,15 +44852,1147 @@
      209,
      212
     ],
-    "full_shift_not_all_ring": []
+    "full_shift_not_all_ring": [],
+    "witnesses": {
+     "43": {
+      "v0": 1,
+      "v3": 109,
+      "v0_on_cycle": false,
+      "v0_reachable_from_cycle": true,
+      "v3_on_cycle": true,
+      "v3_reaches_cycle": true,
+      "v3_reaches_v0": false,
+      "v0_strong_component": [
+       1
+      ],
+      "v3_strong_component": [
+       24,
+       27,
+       97,
+       109,
+       134,
+       182,
+       216,
+       219
+      ],
+      "extendable_violating_walks": [
+       [
+        1,
+        109
+       ],
+       [
+        2,
+        158
+       ],
+       [
+        6,
+        182
+       ],
+       [
+        9,
+        121
+       ],
+       [
+        63,
+        216
+       ],
+       [
+        63,
+        228
+       ],
+       [
+        192,
+        27
+       ],
+       [
+        192,
+        39
+       ],
+       [
+        246,
+        134
+       ],
+       [
+        249,
+        73
+       ],
+       [
+        253,
+        97
+       ],
+       [
+        254,
+        146
+       ]
+      ],
+      "violating_walks_total": 72
+     },
+     "46": {
+      "v0": 27,
+      "v3": 219,
+      "v0_on_cycle": false,
+      "v0_reachable_from_cycle": true,
+      "v3_on_cycle": true,
+      "v3_reaches_cycle": true,
+      "v3_reaches_v0": false,
+      "v0_strong_component": [
+       27
+      ],
+      "v3_strong_component": [
+       109,
+       182,
+       219
+      ],
+      "extendable_violating_walks": [
+       [
+        27,
+        219
+       ],
+       [
+        39,
+        231
+       ],
+       [
+        73,
+        121
+       ],
+       [
+        97,
+        109
+       ],
+       [
+        134,
+        182
+       ],
+       [
+        146,
+        158
+       ]
+      ],
+      "violating_walks_total": 48
+     },
+     "58": {
+      "v0": 15,
+      "v3": 246,
+      "v0_on_cycle": true,
+      "v0_reachable_from_cycle": true,
+      "v3_on_cycle": false,
+      "v3_reaches_cycle": true,
+      "v3_reaches_v0": false,
+      "v0_strong_component": [
+       0,
+       3,
+       12,
+       15,
+       48,
+       51,
+       60,
+       63,
+       192,
+       195,
+       204,
+       207,
+       240,
+       243,
+       252,
+       255
+      ],
+      "v3_strong_component": [
+       246
+      ],
+      "extendable_violating_walks": [
+       [
+        15,
+        246
+       ],
+       [
+        15,
+        249
+       ],
+       [
+        48,
+        1
+       ],
+       [
+        48,
+        2
+       ],
+       [
+        63,
+        246
+       ],
+       [
+        63,
+        249
+       ],
+       [
+        73,
+        121
+       ],
+       [
+        97,
+        109
+       ],
+       [
+        134,
+        182
+       ],
+       [
+        146,
+        158
+       ],
+       [
+        192,
+        1
+       ],
+       [
+        192,
+        2
+       ],
+       [
+        207,
+        246
+       ],
+       [
+        207,
+        249
+       ],
+       [
+        240,
+        1
+       ],
+       [
+        240,
+        2
+       ]
+      ],
+      "violating_walks_total": 196
+     },
+     "78": {
+      "v0": 27,
+      "v3": 216,
+      "v0_on_cycle": false,
+      "v0_reachable_from_cycle": true,
+      "v3_on_cycle": false,
+      "v3_reaches_cycle": true,
+      "v3_reaches_v0": false,
+      "v0_strong_component": [
+       27
+      ],
+      "v3_strong_component": [
+       216
+      ],
+      "extendable_violating_walks": [
+       [
+        27,
+        216
+       ],
+       [
+        27,
+        219
+       ],
+       [
+        39,
+        228
+       ],
+       [
+        39,
+        231
+       ],
+       [
+        97,
+        109
+       ],
+       [
+        111,
+        252
+       ],
+       [
+        146,
+        158
+       ],
+       [
+        159,
+        252
+       ],
+       [
+        216,
+        3
+       ],
+       [
+        228,
+        3
+       ]
+      ],
+      "violating_walks_total": 144
+     },
+     "92": {
+      "v0": 27,
+      "v3": 216,
+      "v0_on_cycle": false,
+      "v0_reachable_from_cycle": true,
+      "v3_on_cycle": false,
+      "v3_reaches_cycle": true,
+      "v3_reaches_v0": false,
+      "v0_strong_component": [
+       27
+      ],
+      "v3_strong_component": [
+       216
+      ],
+      "extendable_violating_walks": [
+       [
+        27,
+        216
+       ],
+       [
+        39,
+        228
+       ],
+       [
+        63,
+        246
+       ],
+       [
+        63,
+        249
+       ],
+       [
+        121,
+        73
+       ],
+       [
+        182,
+        134
+       ],
+       [
+        192,
+        27
+       ],
+       [
+        192,
+        39
+       ],
+       [
+        219,
+        216
+       ],
+       [
+        231,
+        228
+       ]
+      ],
+      "violating_walks_total": 144
+     },
+     "113": {
+      "v0": 27,
+      "v3": 252,
+      "v0_on_cycle": true,
+      "v0_reachable_from_cycle": true,
+      "v3_on_cycle": true,
+      "v3_reaches_cycle": true,
+      "v3_reaches_v0": false,
+      "v0_strong_component": [
+       24,
+       27,
+       97,
+       109,
+       134,
+       182,
+       216,
+       219
+      ],
+      "v3_strong_component": [
+       0,
+       3,
+       12,
+       15,
+       48,
+       51,
+       60,
+       63,
+       192,
+       195,
+       204,
+       207,
+       240,
+       243,
+       252,
+       255
+      ],
+      "extendable_violating_walks": [
+       [
+        27,
+        252
+       ],
+       [
+        39,
+        252
+       ],
+       [
+        73,
+        127
+       ],
+       [
+        97,
+        111
+       ],
+       [
+        109,
+        96
+       ],
+       [
+        121,
+        64
+       ],
+       [
+        134,
+        191
+       ],
+       [
+        146,
+        159
+       ],
+       [
+        158,
+        144
+       ],
+       [
+        182,
+        128
+       ],
+       [
+        216,
+        3
+       ],
+       [
+        228,
+        3
+       ]
+      ],
+      "violating_walks_total": 72
+     },
+     "114": {
+      "v0": 64,
+      "v3": 3,
+      "v0_on_cycle": false,
+      "v0_reachable_from_cycle": true,
+      "v3_on_cycle": true,
+      "v3_reaches_cycle": true,
+      "v3_reaches_v0": false,
+      "v0_strong_component": [
+       64
+      ],
+      "v3_strong_component": [
+       0,
+       3,
+       12,
+       15,
+       48,
+       51,
+       60,
+       63,
+       192,
+       195,
+       204,
+       207,
+       240,
+       243,
+       252,
+       255
+      ],
+      "extendable_violating_walks": [
+       [
+        64,
+        3
+       ],
+       [
+        64,
+        12
+       ],
+       [
+        64,
+        15
+       ],
+       [
+        109,
+        97
+       ],
+       [
+        111,
+        240
+       ],
+       [
+        111,
+        243
+       ],
+       [
+        111,
+        252
+       ],
+       [
+        121,
+        73
+       ],
+       [
+        128,
+        3
+       ],
+       [
+        128,
+        12
+       ],
+       [
+        128,
+        15
+       ],
+       [
+        158,
+        146
+       ],
+       [
+        159,
+        240
+       ],
+       [
+        159,
+        243
+       ],
+       [
+        159,
+        252
+       ],
+       [
+        182,
+        134
+       ]
+      ],
+      "violating_walks_total": 196
+     },
+     "116": {
+      "v0": 109,
+      "v3": 97,
+      "v0_on_cycle": true,
+      "v0_reachable_from_cycle": true,
+      "v3_on_cycle": true,
+      "v3_reaches_cycle": true,
+      "v3_reaches_v0": false,
+      "v0_strong_component": [
+       109,
+       182,
+       219
+      ],
+      "v3_strong_component": [
+       24,
+       97,
+       134
+      ],
+      "extendable_violating_walks": [
+       [
+        109,
+        97
+       ],
+       [
+        121,
+        73
+       ],
+       [
+        158,
+        146
+       ],
+       [
+        182,
+        134
+       ],
+       [
+        219,
+        216
+       ],
+       [
+        231,
+        228
+       ]
+      ],
+      "violating_walks_total": 48
+     },
+     "139": {
+      "v0": 109,
+      "v3": 97,
+      "v0_on_cycle": true,
+      "v0_reachable_from_cycle": true,
+      "v3_on_cycle": true,
+      "v3_reaches_cycle": true,
+      "v3_reaches_v0": false,
+      "v0_strong_component": [
+       109,
+       182,
+       219
+      ],
+      "v3_strong_component": [
+       24,
+       97,
+       134
+      ],
+      "extendable_violating_walks": [
+       [
+        109,
+        97
+       ],
+       [
+        121,
+        73
+       ],
+       [
+        158,
+        146
+       ],
+       [
+        182,
+        134
+       ],
+       [
+        216,
+        24
+       ],
+       [
+        228,
+        36
+       ]
+      ],
+      "violating_walks_total": 48
+     },
+     "141": {
+      "v0": 27,
+      "v3": 252,
+      "v0_on_cycle": false,
+      "v0_reachable_from_cycle": true,
+      "v3_on_cycle": true,
+      "v3_reaches_cycle": true,
+      "v3_reaches_v0": false,
+      "v0_strong_component": [
+       27
+      ],
+      "v3_strong_component": [
+       0,
+       3,
+       12,
+       15,
+       48,
+       51,
+       60,
+       63,
+       192,
+       195,
+       204,
+       207,
+       240,
+       243,
+       252,
+       255
+      ],
+      "extendable_violating_walks": [
+       [
+        27,
+        252
+       ],
+       [
+        39,
+        252
+       ],
+       [
+        96,
+        3
+       ],
+       [
+        109,
+        97
+       ],
+       [
+        144,
+        3
+       ],
+       [
+        158,
+        146
+       ],
+       [
+        216,
+        24
+       ],
+       [
+        216,
+        27
+       ],
+       [
+        228,
+        36
+       ],
+       [
+        228,
+        39
+       ]
+      ],
+      "violating_walks_total": 144
+     },
+     "142": {
+      "v0": 27,
+      "v3": 252,
+      "v0_on_cycle": true,
+      "v0_reachable_from_cycle": true,
+      "v3_on_cycle": true,
+      "v3_reaches_cycle": true,
+      "v3_reaches_v0": false,
+      "v0_strong_component": [
+       24,
+       27,
+       97,
+       109,
+       134,
+       182,
+       216,
+       219
+      ],
+      "v3_strong_component": [
+       0,
+       3,
+       12,
+       15,
+       48,
+       51,
+       60,
+       63,
+       192,
+       195,
+       204,
+       207,
+       240,
+       243,
+       252,
+       255
+      ],
+      "extendable_violating_walks": [
+       [
+        27,
+        252
+       ],
+       [
+        39,
+        252
+       ],
+       [
+        73,
+        127
+       ],
+       [
+        97,
+        111
+       ],
+       [
+        109,
+        96
+       ],
+       [
+        121,
+        64
+       ],
+       [
+        134,
+        191
+       ],
+       [
+        146,
+        159
+       ],
+       [
+        158,
+        144
+       ],
+       [
+        182,
+        128
+       ],
+       [
+        216,
+        3
+       ],
+       [
+        228,
+        3
+       ]
+      ],
+      "violating_walks_total": 72
+     },
+     "163": {
+      "v0": 15,
+      "v3": 253,
+      "v0_on_cycle": true,
+      "v0_reachable_from_cycle": true,
+      "v3_on_cycle": false,
+      "v3_reaches_cycle": true,
+      "v3_reaches_v0": false,
+      "v0_strong_component": [
+       0,
+       3,
+       12,
+       15,
+       48,
+       51,
+       60,
+       63,
+       192,
+       195,
+       204,
+       207,
+       240,
+       243,
+       252,
+       255
+      ],
+      "v3_strong_component": [
+       253
+      ],
+      "extendable_violating_walks": [
+       [
+        15,
+        253
+       ],
+       [
+        15,
+        254
+       ],
+       [
+        48,
+        6
+       ],
+       [
+        48,
+        9
+       ],
+       [
+        63,
+        253
+       ],
+       [
+        63,
+        254
+       ],
+       [
+        109,
+        97
+       ],
+       [
+        121,
+        73
+       ],
+       [
+        158,
+        146
+       ],
+       [
+        182,
+        134
+       ],
+       [
+        192,
+        6
+       ],
+       [
+        192,
+        9
+       ],
+       [
+        207,
+        253
+       ],
+       [
+        207,
+        254
+       ],
+       [
+        240,
+        6
+       ],
+       [
+        240,
+        9
+       ]
+      ],
+      "violating_walks_total": 196
+     },
+     "177": {
+      "v0": 73,
+      "v3": 121,
+      "v0_on_cycle": true,
+      "v0_reachable_from_cycle": true,
+      "v3_on_cycle": true,
+      "v3_reaches_cycle": true,
+      "v3_reaches_v0": false,
+      "v0_strong_component": [
+       36,
+       73,
+       146
+      ],
+      "v3_strong_component": [
+       121,
+       158,
+       231
+      ],
+      "extendable_violating_walks": [
+       [
+        73,
+        121
+       ],
+       [
+        96,
+        3
+       ],
+       [
+        96,
+        12
+       ],
+       [
+        96,
+        15
+       ],
+       [
+        97,
+        109
+       ],
+       [
+        127,
+        240
+       ],
+       [
+        127,
+        243
+       ],
+       [
+        127,
+        252
+       ],
+       [
+        134,
+        182
+       ],
+       [
+        144,
+        3
+       ],
+       [
+        144,
+        12
+       ],
+       [
+        144,
+        15
+       ],
+       [
+        146,
+        158
+       ],
+       [
+        191,
+        240
+       ],
+       [
+        191,
+        243
+       ],
+       [
+        191,
+        252
+       ]
+      ],
+      "violating_walks_total": 196
+     },
+     "197": {
+      "v0": 24,
+      "v3": 27,
+      "v0_on_cycle": true,
+      "v0_reachable_from_cycle": true,
+      "v3_on_cycle": false,
+      "v3_reaches_cycle": true,
+      "v3_reaches_v0": false,
+      "v0_strong_component": [
+       24,
+       97,
+       134
+      ],
+      "v3_strong_component": [
+       27
+      ],
+      "extendable_violating_walks": [
+       [
+        24,
+        27
+       ],
+       [
+        36,
+        39
+       ],
+       [
+        63,
+        216
+       ],
+       [
+        63,
+        228
+       ],
+       [
+        73,
+        121
+       ],
+       [
+        134,
+        182
+       ],
+       [
+        192,
+        6
+       ],
+       [
+        192,
+        9
+       ],
+       [
+        216,
+        27
+       ],
+       [
+        228,
+        39
+       ]
+      ],
+      "violating_walks_total": 144
+     },
+     "209": {
+      "v0": 24,
+      "v3": 27,
+      "v0_on_cycle": true,
+      "v0_reachable_from_cycle": true,
+      "v3_on_cycle": false,
+      "v3_reaches_cycle": true,
+      "v3_reaches_v0": false,
+      "v0_strong_component": [
+       24,
+       97,
+       134
+      ],
+      "v3_strong_component": [
+       27
+      ],
+      "extendable_violating_walks": [
+       [
+        24,
+        27
+       ],
+       [
+        36,
+        39
+       ],
+       [
+        73,
+        121
+       ],
+       [
+        97,
+        109
+       ],
+       [
+        134,
+        182
+       ],
+       [
+        146,
+        158
+       ]
+      ],
+      "violating_walks_total": 48
+     },
+     "212": {
+      "v0": 1,
+      "v3": 109,
+      "v0_on_cycle": false,
+      "v0_reachable_from_cycle": true,
+      "v3_on_cycle": true,
+      "v3_reaches_cycle": true,
+      "v3_reaches_v0": false,
+      "v0_strong_component": [
+       1
+      ],
+      "v3_strong_component": [
+       24,
+       27,
+       97,
+       109,
+       134,
+       182,
+       216,
+       219
+      ],
+      "extendable_violating_walks": [
+       [
+        1,
+        109
+       ],
+       [
+        2,
+        158
+       ],
+       [
+        6,
+        182
+       ],
+       [
+        9,
+        121
+       ],
+       [
+        63,
+        216
+       ],
+       [
+        63,
+        228
+       ],
+       [
+        192,
+        27
+       ],
+       [
+        192,
+        39
+       ],
+       [
+        246,
+        134
+       ],
+       [
+        249,
+        73
+       ],
+       [
+        253,
+        97
+       ],
+       [
+        254,
+        146
+       ]
+      ],
+      "violating_walks_total": 72
+     }
+    }
    },
    "4": {
     "all_ring_not_full_shift": [],
-    "full_shift_not_all_ring": []
+    "full_shift_not_all_ring": [],
+    "witnesses": {}
    },
    "32": {
     "all_ring_not_full_shift": [],
-    "full_shift_not_all_ring": []
+    "full_shift_not_all_ring": [],
+    "witnesses": {}
    },
    "200": {
     "all_ring_not_full_shift": [
@@ -44873,7 +46005,641 @@
      157,
      199
     ],
-    "full_shift_not_all_ring": []
+    "full_shift_not_all_ring": [],
+    "witnesses": {
+     "7": {
+      "v0": 99,
+      "v3": 240,
+      "v0_on_cycle": false,
+      "v0_reachable_from_cycle": true,
+      "v3_on_cycle": true,
+      "v3_reaches_cycle": true,
+      "v3_reaches_v0": false,
+      "v0_strong_component": [
+       99
+      ],
+      "v3_strong_component": [
+       0,
+       3,
+       12,
+       15,
+       48,
+       51,
+       60,
+       63,
+       192,
+       195,
+       204,
+       207,
+       240,
+       243,
+       252,
+       255
+      ],
+      "extendable_violating_walks": [
+       [
+        99,
+        240
+       ],
+       [
+        99,
+        243
+       ],
+       [
+        99,
+        252
+       ],
+       [
+        99,
+        255
+       ],
+       [
+        147,
+        240
+       ],
+       [
+        147,
+        243
+       ],
+       [
+        147,
+        252
+       ],
+       [
+        147,
+        255
+       ]
+      ],
+      "violating_walks_total": 136
+     },
+     "21": {
+      "v0": 15,
+      "v3": 198,
+      "v0_on_cycle": true,
+      "v0_reachable_from_cycle": true,
+      "v3_on_cycle": false,
+      "v3_reaches_cycle": true,
+      "v3_reaches_v0": false,
+      "v0_strong_component": [
+       0,
+       3,
+       12,
+       15,
+       48,
+       51,
+       60,
+       63,
+       192,
+       195,
+       204,
+       207,
+       240,
+       243,
+       252,
+       255
+      ],
+      "v3_strong_component": [
+       198
+      ],
+      "extendable_violating_walks": [
+       [
+        15,
+        198
+       ],
+       [
+        15,
+        201
+       ],
+       [
+        63,
+        198
+       ],
+       [
+        63,
+        201
+       ],
+       [
+        207,
+        198
+       ],
+       [
+        207,
+        201
+       ],
+       [
+        255,
+        198
+       ],
+       [
+        255,
+        201
+       ]
+      ],
+      "violating_walks_total": 136
+     },
+     "29": {
+      "v0": 3,
+      "v3": 241,
+      "v0_on_cycle": true,
+      "v0_reachable_from_cycle": true,
+      "v3_on_cycle": false,
+      "v3_reaches_cycle": true,
+      "v3_reaches_v0": false,
+      "v0_strong_component": [
+       0,
+       3,
+       12,
+       15,
+       48,
+       51,
+       60,
+       63,
+       192,
+       195,
+       204,
+       207,
+       240,
+       243,
+       252,
+       255
+      ],
+      "v3_strong_component": [
+       241
+      ],
+      "extendable_violating_walks": [
+       [
+        3,
+        241
+       ],
+       [
+        3,
+        242
+       ],
+       [
+        15,
+        198
+       ],
+       [
+        15,
+        201
+       ],
+       [
+        51,
+        241
+       ],
+       [
+        51,
+        242
+       ],
+       [
+        63,
+        198
+       ],
+       [
+        63,
+        201
+       ],
+       [
+        195,
+        241
+       ],
+       [
+        195,
+        242
+       ],
+       [
+        207,
+        198
+       ],
+       [
+        207,
+        201
+       ],
+       [
+        243,
+        241
+       ],
+       [
+        243,
+        242
+       ],
+       [
+        255,
+        198
+       ],
+       [
+        255,
+        201
+       ]
+      ],
+      "violating_walks_total": 160
+     },
+     "71": {
+      "v0": 79,
+      "v3": 192,
+      "v0_on_cycle": false,
+      "v0_reachable_from_cycle": true,
+      "v3_on_cycle": true,
+      "v3_reaches_cycle": true,
+      "v3_reaches_v0": false,
+      "v0_strong_component": [
+       79
+      ],
+      "v3_strong_component": [
+       0,
+       3,
+       12,
+       15,
+       48,
+       51,
+       60,
+       63,
+       192,
+       195,
+       204,
+       207,
+       240,
+       243,
+       252,
+       255
+      ],
+      "extendable_violating_walks": [
+       [
+        79,
+        192
+       ],
+       [
+        79,
+        195
+       ],
+       [
+        79,
+        204
+       ],
+       [
+        79,
+        207
+       ],
+       [
+        99,
+        240
+       ],
+       [
+        99,
+        243
+       ],
+       [
+        99,
+        252
+       ],
+       [
+        99,
+        255
+       ],
+       [
+        143,
+        192
+       ],
+       [
+        143,
+        195
+       ],
+       [
+        143,
+        204
+       ],
+       [
+        143,
+        207
+       ],
+       [
+        147,
+        240
+       ],
+       [
+        147,
+        243
+       ],
+       [
+        147,
+        252
+       ],
+       [
+        147,
+        255
+       ]
+      ],
+      "violating_walks_total": 160
+     },
+     "135": {
+      "v0": 79,
+      "v3": 240,
+      "v0_on_cycle": false,
+      "v0_reachable_from_cycle": true,
+      "v3_on_cycle": true,
+      "v3_reaches_cycle": true,
+      "v3_reaches_v0": false,
+      "v0_strong_component": [
+       79
+      ],
+      "v3_strong_component": [
+       0,
+       3,
+       12,
+       15,
+       48,
+       51,
+       60,
+       63,
+       192,
+       195,
+       204,
+       207,
+       240,
+       243,
+       252,
+       255
+      ],
+      "extendable_violating_walks": [
+       [
+        79,
+        240
+       ],
+       [
+        79,
+        243
+       ],
+       [
+        99,
+        240
+       ],
+       [
+        99,
+        243
+       ],
+       [
+        99,
+        252
+       ],
+       [
+        143,
+        240
+       ],
+       [
+        143,
+        243
+       ],
+       [
+        147,
+        240
+       ],
+       [
+        147,
+        243
+       ],
+       [
+        147,
+        252
+       ]
+      ],
+      "violating_walks_total": 262
+     },
+     "149": {
+      "v0": 15,
+      "v3": 198,
+      "v0_on_cycle": true,
+      "v0_reachable_from_cycle": true,
+      "v3_on_cycle": false,
+      "v3_reaches_cycle": true,
+      "v3_reaches_v0": false,
+      "v0_strong_component": [
+       0,
+       3,
+       12,
+       15,
+       48,
+       51,
+       60,
+       63,
+       192,
+       195,
+       204,
+       207,
+       240,
+       243,
+       252,
+       255
+      ],
+      "v3_strong_component": [
+       198
+      ],
+      "extendable_violating_walks": [
+       [
+        15,
+        198
+       ],
+       [
+        15,
+        201
+       ],
+       [
+        15,
+        241
+       ],
+       [
+        15,
+        242
+       ],
+       [
+        63,
+        198
+       ],
+       [
+        63,
+        201
+       ],
+       [
+        207,
+        198
+       ],
+       [
+        207,
+        201
+       ],
+       [
+        207,
+        241
+       ],
+       [
+        207,
+        242
+       ]
+      ],
+      "violating_walks_total": 262
+     },
+     "157": {
+      "v0": 3,
+      "v3": 241,
+      "v0_on_cycle": true,
+      "v0_reachable_from_cycle": true,
+      "v3_on_cycle": false,
+      "v3_reaches_cycle": true,
+      "v3_reaches_v0": false,
+      "v0_strong_component": [
+       0,
+       3,
+       12,
+       15,
+       48,
+       51,
+       60,
+       63,
+       192,
+       195,
+       204,
+       207,
+       240,
+       243,
+       252,
+       255
+      ],
+      "v3_strong_component": [
+       241
+      ],
+      "extendable_violating_walks": [
+       [
+        3,
+        241
+       ],
+       [
+        3,
+        242
+       ],
+       [
+        15,
+        198
+       ],
+       [
+        15,
+        201
+       ],
+       [
+        51,
+        241
+       ],
+       [
+        51,
+        242
+       ],
+       [
+        195,
+        241
+       ],
+       [
+        195,
+        242
+       ],
+       [
+        207,
+        198
+       ],
+       [
+        207,
+        201
+       ],
+       [
+        243,
+        241
+       ],
+       [
+        243,
+        242
+       ]
+      ],
+      "violating_walks_total": 120
+     },
+     "199": {
+      "v0": 79,
+      "v3": 192,
+      "v0_on_cycle": false,
+      "v0_reachable_from_cycle": true,
+      "v3_on_cycle": true,
+      "v3_reaches_cycle": true,
+      "v3_reaches_v0": false,
+      "v0_strong_component": [
+       79
+      ],
+      "v3_strong_component": [
+       0,
+       3,
+       12,
+       15,
+       48,
+       51,
+       60,
+       63,
+       192,
+       195,
+       204,
+       207,
+       240,
+       243,
+       252,
+       255
+      ],
+      "extendable_violating_walks": [
+       [
+        79,
+        192
+       ],
+       [
+        79,
+        195
+       ],
+       [
+        79,
+        204
+       ],
+       [
+        79,
+        207
+       ],
+       [
+        99,
+        240
+       ],
+       [
+        99,
+        243
+       ],
+       [
+        143,
+        192
+       ],
+       [
+        143,
+        195
+       ],
+       [
+        143,
+        204
+       ],
+       [
+        143,
+        207
+       ],
+       [
+        147,
+        240
+       ],
+       [
+        147,
+        243
+       ]
+      ],
+      "violating_walks_total": 120
+     }
+    }
    },
    "22": {
     "all_ring_not_full_shift": [
@@ -44900,7 +46666,1180 @@
      213,
      214
     ],
-    "full_shift_not_all_ring": []
+    "full_shift_not_all_ring": [],
+    "witnesses": {
+     "9": {
+      "v0": 70,
+      "v3": 182,
+      "v0_on_cycle": false,
+      "v0_reachable_from_cycle": true,
+      "v3_on_cycle": true,
+      "v3_reaches_cycle": true,
+      "v3_reaches_v0": false,
+      "v0_strong_component": [
+       70
+      ],
+      "v3_strong_component": [
+       109,
+       182,
+       219
+      ],
+      "extendable_violating_walks": [
+       [
+        70,
+        182
+       ],
+       [
+        137,
+        121
+       ]
+      ],
+      "violating_walks_total": 72
+     },
+     "13": {
+      "v0": 82,
+      "v3": 146,
+      "v0_on_cycle": false,
+      "v0_reachable_from_cycle": true,
+      "v3_on_cycle": true,
+      "v3_reaches_cycle": true,
+      "v3_reaches_v0": false,
+      "v0_strong_component": [
+       82
+      ],
+      "v3_strong_component": [
+       36,
+       73,
+       146
+      ],
+      "extendable_violating_walks": [
+       [
+        82,
+        146
+       ],
+       [
+        84,
+        36
+       ],
+       [
+        161,
+        97
+       ],
+       [
+        168,
+        24
+       ]
+      ],
+      "violating_walks_total": 76
+     },
+     "46": {
+      "v0": 27,
+      "v3": 219,
+      "v0_on_cycle": false,
+      "v0_reachable_from_cycle": true,
+      "v3_on_cycle": true,
+      "v3_reaches_cycle": true,
+      "v3_reaches_v0": false,
+      "v0_strong_component": [
+       27
+      ],
+      "v3_strong_component": [
+       109,
+       182,
+       219
+      ],
+      "extendable_violating_walks": [
+       [
+        27,
+        219
+       ],
+       [
+        39,
+        231
+       ],
+       [
+        97,
+        109
+       ],
+       [
+        98,
+        161
+       ],
+       [
+        98,
+        162
+       ],
+       [
+        145,
+        81
+       ],
+       [
+        145,
+        82
+       ],
+       [
+        146,
+        158
+       ],
+       [
+        246,
+        138
+       ],
+       [
+        249,
+        69
+       ]
+      ],
+      "violating_walks_total": 92
+     },
+     "65": {
+      "v0": 109,
+      "v3": 98,
+      "v0_on_cycle": true,
+      "v0_reachable_from_cycle": true,
+      "v3_on_cycle": false,
+      "v3_reaches_cycle": true,
+      "v3_reaches_v0": false,
+      "v0_strong_component": [
+       109,
+       182,
+       219
+      ],
+      "v3_strong_component": [
+       98
+      ],
+      "extendable_violating_walks": [
+       [
+        109,
+        98
+       ],
+       [
+        158,
+        145
+       ]
+      ],
+      "violating_walks_total": 72
+     },
+     "69": {
+      "v0": 24,
+      "v3": 21,
+      "v0_on_cycle": true,
+      "v0_reachable_from_cycle": true,
+      "v3_on_cycle": false,
+      "v3_reaches_cycle": true,
+      "v3_reaches_v0": false,
+      "v0_strong_component": [
+       24,
+       97,
+       134
+      ],
+      "v3_strong_component": [
+       21
+      ],
+      "extendable_violating_walks": [
+       [
+        24,
+        21
+       ],
+       [
+        36,
+        42
+       ],
+       [
+        73,
+        74
+       ],
+       [
+        134,
+        133
+       ]
+      ],
+      "violating_walks_total": 76
+     },
+     "116": {
+      "v0": 69,
+      "v3": 70,
+      "v0_on_cycle": true,
+      "v0_reachable_from_cycle": true,
+      "v3_on_cycle": false,
+      "v3_reaches_cycle": true,
+      "v3_reaches_v0": false,
+      "v0_strong_component": [
+       20,
+       40,
+       69,
+       74,
+       81,
+       82,
+       133,
+       138,
+       161,
+       162
+      ],
+      "v3_strong_component": [
+       70
+      ],
+      "extendable_violating_walks": [
+       [
+        69,
+        70
+       ],
+       [
+        74,
+        137
+       ],
+       [
+        81,
+        111
+       ],
+       [
+        121,
+        73
+       ],
+       [
+        133,
+        70
+       ],
+       [
+        138,
+        137
+       ],
+       [
+        162,
+        159
+       ],
+       [
+        182,
+        134
+       ],
+       [
+        219,
+        216
+       ],
+       [
+        231,
+        228
+       ]
+      ],
+      "violating_walks_total": 92
+     },
+     "140": {
+      "v0": 27,
+      "v3": 252,
+      "v0_on_cycle": false,
+      "v0_reachable_from_cycle": true,
+      "v3_on_cycle": true,
+      "v3_reaches_cycle": true,
+      "v3_reaches_v0": false,
+      "v0_strong_component": [
+       27
+      ],
+      "v3_strong_component": [
+       0,
+       3,
+       12,
+       15,
+       48,
+       51,
+       60,
+       63,
+       192,
+       195,
+       204,
+       207,
+       240,
+       243,
+       252,
+       255
+      ],
+      "extendable_violating_walks": [
+       [
+        27,
+        252
+       ],
+       [
+        39,
+        252
+       ]
+      ],
+      "violating_walks_total": 68
+     },
+     "141": {
+      "v0": 27,
+      "v3": 252,
+      "v0_on_cycle": false,
+      "v0_reachable_from_cycle": true,
+      "v3_on_cycle": true,
+      "v3_reaches_cycle": true,
+      "v3_reaches_v0": false,
+      "v0_strong_component": [
+       27
+      ],
+      "v3_strong_component": [
+       0,
+       3,
+       12,
+       15,
+       48,
+       51,
+       60,
+       63,
+       192,
+       195,
+       204,
+       207,
+       240,
+       243,
+       252,
+       255
+      ],
+      "extendable_violating_walks": [
+       [
+        27,
+        252
+       ],
+       [
+        39,
+        252
+       ]
+      ],
+      "violating_walks_total": 92
+     },
+     "142": {
+      "v0": 27,
+      "v3": 252,
+      "v0_on_cycle": true,
+      "v0_reachable_from_cycle": true,
+      "v3_on_cycle": true,
+      "v3_reaches_cycle": true,
+      "v3_reaches_v0": false,
+      "v0_strong_component": [
+       24,
+       27,
+       97,
+       109,
+       134,
+       182,
+       216,
+       219
+      ],
+      "v3_strong_component": [
+       0,
+       3,
+       12,
+       15,
+       48,
+       51,
+       60,
+       63,
+       192,
+       195,
+       204,
+       207,
+       240,
+       243,
+       252,
+       255
+      ],
+      "extendable_violating_walks": [
+       [
+        27,
+        252
+       ],
+       [
+        39,
+        252
+       ],
+       [
+        73,
+        127
+       ],
+       [
+        97,
+        111
+       ],
+       [
+        134,
+        191
+       ],
+       [
+        146,
+        159
+       ]
+      ],
+      "violating_walks_total": 44
+     },
+     "143": {
+      "v0": 24,
+      "v3": 21,
+      "v0_on_cycle": true,
+      "v0_reachable_from_cycle": true,
+      "v3_on_cycle": false,
+      "v3_reaches_cycle": true,
+      "v3_reaches_v0": false,
+      "v0_strong_component": [
+       24,
+       27,
+       97,
+       109,
+       134,
+       182,
+       216,
+       219
+      ],
+      "v3_strong_component": [
+       21
+      ],
+      "extendable_violating_walks": [
+       [
+        24,
+        21
+       ],
+       [
+        24,
+        42
+       ],
+       [
+        27,
+        252
+       ],
+       [
+        36,
+        21
+       ],
+       [
+        36,
+        42
+       ],
+       [
+        39,
+        252
+       ],
+       [
+        73,
+        127
+       ],
+       [
+        97,
+        111
+       ],
+       [
+        134,
+        191
+       ],
+       [
+        146,
+        159
+       ]
+      ],
+      "violating_walks_total": 52
+     },
+     "158": {
+      "v0": 27,
+      "v3": 252,
+      "v0_on_cycle": false,
+      "v0_reachable_from_cycle": true,
+      "v3_on_cycle": true,
+      "v3_reaches_cycle": true,
+      "v3_reaches_v0": false,
+      "v0_strong_component": [
+       27
+      ],
+      "v3_strong_component": [
+       0,
+       3,
+       12,
+       15,
+       48,
+       51,
+       60,
+       63,
+       192,
+       195,
+       204,
+       207,
+       240,
+       243,
+       252,
+       255
+      ],
+      "extendable_violating_walks": [
+       [
+        27,
+        252
+       ],
+       [
+        39,
+        252
+       ],
+       [
+        73,
+        121
+       ],
+       [
+        73,
+        127
+       ],
+       [
+        97,
+        109
+       ],
+       [
+        97,
+        111
+       ],
+       [
+        134,
+        182
+       ],
+       [
+        134,
+        191
+       ],
+       [
+        146,
+        158
+       ],
+       [
+        146,
+        159
+       ]
+      ],
+      "violating_walks_total": 214
+     },
+     "162": {
+      "v0": 15,
+      "v3": 253,
+      "v0_on_cycle": true,
+      "v0_reachable_from_cycle": true,
+      "v3_on_cycle": false,
+      "v3_reaches_cycle": true,
+      "v3_reaches_v0": false,
+      "v0_strong_component": [
+       0,
+       3,
+       12,
+       15,
+       48,
+       51,
+       60,
+       63,
+       192,
+       195,
+       204,
+       207,
+       240,
+       243,
+       252,
+       255
+      ],
+      "v3_strong_component": [
+       253
+      ],
+      "extendable_violating_walks": [
+       [
+        15,
+        253
+       ],
+       [
+        15,
+        254
+       ],
+       [
+        63,
+        253
+       ],
+       [
+        63,
+        254
+       ],
+       [
+        207,
+        253
+       ],
+       [
+        207,
+        254
+       ]
+      ],
+      "violating_walks_total": 74
+     },
+     "163": {
+      "v0": 15,
+      "v3": 253,
+      "v0_on_cycle": true,
+      "v0_reachable_from_cycle": true,
+      "v3_on_cycle": false,
+      "v3_reaches_cycle": true,
+      "v3_reaches_v0": false,
+      "v0_strong_component": [
+       0,
+       3,
+       12,
+       15,
+       48,
+       51,
+       60,
+       63,
+       192,
+       195,
+       204,
+       207,
+       240,
+       243,
+       252,
+       255
+      ],
+      "v3_strong_component": [
+       253
+      ],
+      "extendable_violating_walks": [
+       [
+        15,
+        253
+       ],
+       [
+        15,
+        254
+       ],
+       [
+        24,
+        21
+       ],
+       [
+        36,
+        42
+       ],
+       [
+        63,
+        253
+       ],
+       [
+        63,
+        254
+       ],
+       [
+        97,
+        85
+       ],
+       [
+        146,
+        170
+       ],
+       [
+        207,
+        253
+       ],
+       [
+        207,
+        254
+       ],
+       [
+        216,
+        21
+       ],
+       [
+        228,
+        42
+       ]
+      ],
+      "violating_walks_total": 134
+     },
+     "166": {
+      "v0": 98,
+      "v3": 170,
+      "v0_on_cycle": false,
+      "v0_reachable_from_cycle": true,
+      "v3_on_cycle": true,
+      "v3_reaches_cycle": true,
+      "v3_reaches_v0": false,
+      "v0_strong_component": [
+       98
+      ],
+      "v3_strong_component": [
+       170
+      ],
+      "extendable_violating_walks": [
+       [
+        98,
+        170
+       ],
+       [
+        121,
+        69
+       ],
+       [
+        145,
+        85
+       ],
+       [
+        182,
+        138
+       ]
+      ],
+      "violating_walks_total": 190
+     },
+     "176": {
+      "v0": 127,
+      "v3": 240,
+      "v0_on_cycle": false,
+      "v0_reachable_from_cycle": true,
+      "v3_on_cycle": true,
+      "v3_reaches_cycle": true,
+      "v3_reaches_v0": false,
+      "v0_strong_component": [
+       127
+      ],
+      "v3_strong_component": [
+       0,
+       3,
+       12,
+       15,
+       48,
+       51,
+       60,
+       63,
+       192,
+       195,
+       204,
+       207,
+       240,
+       243,
+       252,
+       255
+      ],
+      "extendable_violating_walks": [
+       [
+        127,
+        240
+       ],
+       [
+        127,
+        243
+       ],
+       [
+        127,
+        252
+       ],
+       [
+        191,
+        240
+       ],
+       [
+        191,
+        243
+       ],
+       [
+        191,
+        252
+       ]
+      ],
+      "violating_walks_total": 74
+     },
+     "177": {
+      "v0": 84,
+      "v3": 36,
+      "v0_on_cycle": false,
+      "v0_reachable_from_cycle": true,
+      "v3_on_cycle": true,
+      "v3_reaches_cycle": true,
+      "v3_reaches_v0": false,
+      "v0_strong_component": [
+       84
+      ],
+      "v3_strong_component": [
+       36,
+       73,
+       146
+      ],
+      "extendable_violating_walks": [
+       [
+        84,
+        36
+       ],
+       [
+        84,
+        39
+       ],
+       [
+        85,
+        73
+       ],
+       [
+        127,
+        240
+       ],
+       [
+        127,
+        243
+       ],
+       [
+        127,
+        252
+       ],
+       [
+        168,
+        24
+       ],
+       [
+        168,
+        27
+       ],
+       [
+        170,
+        134
+       ],
+       [
+        191,
+        240
+       ],
+       [
+        191,
+        243
+       ],
+       [
+        191,
+        252
+       ]
+      ],
+      "violating_walks_total": 134
+     },
+     "180": {
+      "v0": 81,
+      "v3": 109,
+      "v0_on_cycle": false,
+      "v0_reachable_from_cycle": true,
+      "v3_on_cycle": true,
+      "v3_reaches_cycle": true,
+      "v3_reaches_v0": false,
+      "v0_strong_component": [
+       81
+      ],
+      "v3_strong_component": [
+       109,
+       182,
+       219
+      ],
+      "extendable_violating_walks": [
+       [
+        81,
+        109
+       ],
+       [
+        85,
+        70
+       ],
+       [
+        162,
+        158
+       ],
+       [
+        170,
+        137
+       ]
+      ],
+      "violating_walks_total": 190
+     },
+     "196": {
+      "v0": 63,
+      "v3": 216,
+      "v0_on_cycle": true,
+      "v0_reachable_from_cycle": true,
+      "v3_on_cycle": false,
+      "v3_reaches_cycle": true,
+      "v3_reaches_v0": false,
+      "v0_strong_component": [
+       0,
+       3,
+       12,
+       15,
+       48,
+       51,
+       60,
+       63,
+       192,
+       195,
+       204,
+       207,
+       240,
+       243,
+       252,
+       255
+      ],
+      "v3_strong_component": [
+       216
+      ],
+      "extendable_violating_walks": [
+       [
+        63,
+        216
+       ],
+       [
+        63,
+        228
+       ]
+      ],
+      "violating_walks_total": 68
+     },
+     "197": {
+      "v0": 63,
+      "v3": 216,
+      "v0_on_cycle": true,
+      "v0_reachable_from_cycle": true,
+      "v3_on_cycle": false,
+      "v3_reaches_cycle": true,
+      "v3_reaches_v0": false,
+      "v0_strong_component": [
+       0,
+       3,
+       12,
+       15,
+       48,
+       51,
+       60,
+       63,
+       192,
+       195,
+       204,
+       207,
+       240,
+       243,
+       252,
+       255
+      ],
+      "v3_strong_component": [
+       216
+      ],
+      "extendable_violating_walks": [
+       [
+        63,
+        216
+       ],
+       [
+        63,
+        228
+       ]
+      ],
+      "violating_walks_total": 92
+     },
+     "212": {
+      "v0": 63,
+      "v3": 216,
+      "v0_on_cycle": true,
+      "v0_reachable_from_cycle": true,
+      "v3_on_cycle": true,
+      "v3_reaches_cycle": true,
+      "v3_reaches_v0": false,
+      "v0_strong_component": [
+       0,
+       3,
+       12,
+       15,
+       48,
+       51,
+       60,
+       63,
+       192,
+       195,
+       204,
+       207,
+       240,
+       243,
+       252,
+       255
+      ],
+      "v3_strong_component": [
+       24,
+       27,
+       97,
+       109,
+       134,
+       182,
+       216,
+       219
+      ],
+      "extendable_violating_walks": [
+       [
+        63,
+        216
+       ],
+       [
+        63,
+        228
+       ],
+       [
+        246,
+        134
+       ],
+       [
+        249,
+        73
+       ],
+       [
+        253,
+        97
+       ],
+       [
+        254,
+        146
+       ]
+      ],
+      "violating_walks_total": 44
+     },
+     "213": {
+      "v0": 63,
+      "v3": 216,
+      "v0_on_cycle": true,
+      "v0_reachable_from_cycle": true,
+      "v3_on_cycle": true,
+      "v3_reaches_cycle": true,
+      "v3_reaches_v0": false,
+      "v0_strong_component": [
+       0,
+       3,
+       12,
+       15,
+       48,
+       51,
+       60,
+       63,
+       192,
+       195,
+       204,
+       207,
+       240,
+       243,
+       252,
+       255
+      ],
+      "v3_strong_component": [
+       24,
+       27,
+       97,
+       109,
+       134,
+       182,
+       216,
+       219
+      ],
+      "extendable_violating_walks": [
+       [
+        63,
+        216
+       ],
+       [
+        63,
+        228
+       ],
+       [
+        84,
+        24
+       ],
+       [
+        84,
+        36
+       ],
+       [
+        168,
+        24
+       ],
+       [
+        168,
+        36
+       ],
+       [
+        246,
+        134
+       ],
+       [
+        249,
+        73
+       ],
+       [
+        253,
+        97
+       ],
+       [
+        254,
+        146
+       ]
+      ],
+      "violating_walks_total": 52
+     },
+     "214": {
+      "v0": 63,
+      "v3": 216,
+      "v0_on_cycle": true,
+      "v0_reachable_from_cycle": true,
+      "v3_on_cycle": false,
+      "v3_reaches_cycle": true,
+      "v3_reaches_v0": false,
+      "v0_strong_component": [
+       0,
+       3,
+       12,
+       15,
+       48,
+       51,
+       60,
+       63,
+       192,
+       195,
+       204,
+       207,
+       240,
+       243,
+       252,
+       255
+      ],
+      "v3_strong_component": [
+       216
+      ],
+      "extendable_violating_walks": [
+       [
+        63,
+        216
+       ],
+       [
+        63,
+        228
+       ],
+       [
+        109,
+        97
+       ],
+       [
+        121,
+        73
+       ],
+       [
+        158,
+        146
+       ],
+       [
+        182,
+        134
+       ],
+       [
+        246,
+        134
+       ],
+       [
+        249,
+        73
+       ],
+       [
+        253,
+        97
+       ],
+       [
+        254,
+        146
+       ]
+      ],
+      "violating_walks_total": 214
+     }
+    }
    },
    "102": {
     "all_ring_not_full_shift": [
@@ -44913,15 +47852,295 @@
      158,
      214
     ],
-    "full_shift_not_all_ring": []
+    "full_shift_not_all_ring": [],
+    "witnesses": {
+     "41": {
+      "v0": 102,
+      "v3": 149,
+      "v0_on_cycle": true,
+      "v0_reachable_from_cycle": true,
+      "v3_on_cycle": false,
+      "v3_reaches_cycle": true,
+      "v3_reaches_v0": false,
+      "v0_strong_component": [
+       102,
+       153
+      ],
+      "v3_strong_component": [
+       149
+      ],
+      "extendable_violating_walks": [
+       [
+        102,
+        149
+       ],
+       [
+        102,
+        170
+       ],
+       [
+        153,
+        85
+       ],
+       [
+        153,
+        106
+       ]
+      ],
+      "violating_walks_total": 64
+     },
+     "97": {
+      "v0": 85,
+      "v3": 89,
+      "v0_on_cycle": true,
+      "v0_reachable_from_cycle": true,
+      "v3_on_cycle": false,
+      "v3_reaches_cycle": true,
+      "v3_reaches_v0": false,
+      "v0_strong_component": [
+       85
+      ],
+      "v3_strong_component": [
+       89
+      ],
+      "extendable_violating_walks": [
+       [
+        85,
+        89
+       ],
+       [
+        85,
+        102
+       ],
+       [
+        170,
+        153
+       ],
+       [
+        170,
+        166
+       ]
+      ],
+      "violating_walks_total": 64
+     },
+     "107": {
+      "v0": 102,
+      "v3": 149,
+      "v0_on_cycle": true,
+      "v0_reachable_from_cycle": true,
+      "v3_on_cycle": false,
+      "v3_reaches_cycle": true,
+      "v3_reaches_v0": false,
+      "v0_strong_component": [
+       102,
+       153
+      ],
+      "v3_strong_component": [
+       149
+      ],
+      "extendable_violating_walks": [
+       [
+        102,
+        149
+       ],
+       [
+        102,
+        170
+       ],
+       [
+        153,
+        85
+       ],
+       [
+        153,
+        106
+       ]
+      ],
+      "violating_walks_total": 64
+     },
+     "121": {
+      "v0": 85,
+      "v3": 89,
+      "v0_on_cycle": true,
+      "v0_reachable_from_cycle": true,
+      "v3_on_cycle": false,
+      "v3_reaches_cycle": true,
+      "v3_reaches_v0": false,
+      "v0_strong_component": [
+       85
+      ],
+      "v3_strong_component": [
+       89
+      ],
+      "extendable_violating_walks": [
+       [
+        85,
+        89
+       ],
+       [
+        85,
+        102
+       ],
+       [
+        170,
+        153
+       ],
+       [
+        170,
+        166
+       ]
+      ],
+      "violating_walks_total": 64
+     },
+     "134": {
+      "v0": 85,
+      "v3": 89,
+      "v0_on_cycle": true,
+      "v0_reachable_from_cycle": true,
+      "v3_on_cycle": false,
+      "v3_reaches_cycle": true,
+      "v3_reaches_v0": false,
+      "v0_strong_component": [
+       85
+      ],
+      "v3_strong_component": [
+       89
+      ],
+      "extendable_violating_walks": [
+       [
+        85,
+        89
+       ],
+       [
+        85,
+        102
+       ],
+       [
+        170,
+        153
+       ],
+       [
+        170,
+        166
+       ]
+      ],
+      "violating_walks_total": 64
+     },
+     "148": {
+      "v0": 102,
+      "v3": 149,
+      "v0_on_cycle": true,
+      "v0_reachable_from_cycle": true,
+      "v3_on_cycle": false,
+      "v3_reaches_cycle": true,
+      "v3_reaches_v0": false,
+      "v0_strong_component": [
+       102,
+       153
+      ],
+      "v3_strong_component": [
+       149
+      ],
+      "extendable_violating_walks": [
+       [
+        102,
+        149
+       ],
+       [
+        102,
+        170
+       ],
+       [
+        153,
+        85
+       ],
+       [
+        153,
+        106
+       ]
+      ],
+      "violating_walks_total": 64
+     },
+     "158": {
+      "v0": 85,
+      "v3": 89,
+      "v0_on_cycle": true,
+      "v0_reachable_from_cycle": true,
+      "v3_on_cycle": false,
+      "v3_reaches_cycle": true,
+      "v3_reaches_v0": false,
+      "v0_strong_component": [
+       85
+      ],
+      "v3_strong_component": [
+       89
+      ],
+      "extendable_violating_walks": [
+       [
+        85,
+        89
+       ],
+       [
+        85,
+        102
+       ],
+       [
+        170,
+        153
+       ],
+       [
+        170,
+        166
+       ]
+      ],
+      "violating_walks_total": 64
+     },
+     "214": {
+      "v0": 102,
+      "v3": 149,
+      "v0_on_cycle": true,
+      "v0_reachable_from_cycle": true,
+      "v3_on_cycle": false,
+      "v3_reaches_cycle": true,
+      "v3_reaches_v0": false,
+      "v0_strong_component": [
+       102,
+       153
+      ],
+      "v3_strong_component": [
+       149
+      ],
+      "extendable_violating_walks": [
+       [
+        102,
+        149
+       ],
+       [
+        102,
+        170
+       ],
+       [
+        153,
+        85
+       ],
+       [
+        153,
+        106
+       ]
+      ],
+      "violating_walks_total": 64
+     }
+    }
    },
    "90": {
     "all_ring_not_full_shift": [],
-    "full_shift_not_all_ring": []
+    "full_shift_not_all_ring": [],
+    "witnesses": {}
    },
    "150": {
     "all_ring_not_full_shift": [],
-    "full_shift_not_all_ring": []
+    "full_shift_not_all_ring": [],
+    "witnesses": {}
    },
    "pass": false
   }

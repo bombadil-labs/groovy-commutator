@@ -112,13 +112,24 @@ def full_shift_ok(A, walks):
     on = np.array([R[v, v] for v in range(256)], dtype=bool)
     frm = on | (R[on].any(axis=0) if on.any() else np.zeros(256, dtype=bool))
     to = on | (R[:, on].any(axis=1) if on.any() else np.zeros(256, dtype=bool))
-    return not any(frm[v0] and to[v3] for v0, v3 in walks)
+    ext = [(v0, v3) for v0, v3 in walks if frm[v0] and to[v3]]                # bi-infinitely extendable violating walks
+    if not ext: return True, None
+    # Gate-2 artifact-completeness addition (Codex, 2026-09-11): a deterministic witness for a
+    # full-shift failure, with the reachability facts needed to audit it. `walks` is sorted, so
+    # the first extendable walk is canonical. SCC of a vertex = vertices mutually reachable.
+    v0, v3 = ext[0]
+    def scc(v): return sorted(int(u) for u in range(256) if u == v or (R[u, v] and R[v, u]))
+    witness = {'v0': int(v0), 'v3': int(v3), 'v0_on_cycle': bool(on[v0]), 'v0_reachable_from_cycle': bool(frm[v0]),
+               'v3_on_cycle': bool(on[v3]), 'v3_reaches_cycle': bool(to[v3]), 'v3_reaches_v0': bool(R[v3, v0]),
+               'v0_strong_component': scc(int(v0)), 'v3_strong_component': scc(int(v3)),
+               'extendable_violating_walks': [[int(a), int(b)] for a, b in ext], 'violating_walks_total': len(walks)}
+    return False, witness
 
 class Cert:
-    __slots__ = ('powers', 'k', 'p', 'walks', 'nwalks', 'full_shift')
+    __slots__ = ('powers', 'k', 'p', 'walks', 'nwalks', 'full_shift', 'fs_witness')
 def certificate(psi, r):
     A, walks = depth_one_graph(psi, r); powers, k, p = bool_powers(A)
-    c = Cert(); c.powers, c.k, c.p, c.walks, c.nwalks = powers, k, p, walks, len(walks); c.full_shift = full_shift_ok(A, walks)
+    c = Cert(); c.powers, c.k, c.p, c.walks, c.nwalks = powers, k, p, walks, len(walks); c.full_shift, c.fs_witness = full_shift_ok(A, walks)
     return c
 def member(c, n):
     """r in D(n) by the ring criterion; None when the exponent n-3 is beyond the computed powers of a censored pair."""
@@ -199,9 +210,10 @@ def main():
           'reflection': {str(psi): {str(n): (Gm[psi]['D'][n] if psi in Gm else G[psi]['D'][n]) == sorted(mirror(r) for r in G[psi]['D'][n]) for n in GRAPH_RINGS} for psi in OBS}}
     l6['pass'] = all(v for k in l6 for d in l6[k].values() for v in d.values()); P['L6_symmetries'] = l6
     l7 = {str(psi): ('censored' if censored(psi) else {'all_ring_not_full_shift': [r for r in G[psi]['all_ring'] if r not in G[psi]['full_shift']],
-                                                       'full_shift_not_all_ring': [r for r in G[psi]['full_shift'] if r not in G[psi]['all_ring']]}) for psi in OBS}
+                                                       'full_shift_not_all_ring': [r for r in G[psi]['full_shift'] if r not in G[psi]['all_ring']],
+                                                       'witnesses': {str(r): G[psi]['certs'][r].fs_witness for r in G[psi]['all_ring'] if r not in G[psi]['full_shift']}}) for psi in OBS}
     l7['pass'] = all(v != 'censored' and not v['all_ring_not_full_shift'] and not v['full_shift_not_all_ring'] for v in (l7[str(p)] for p in OBS)); P['L7_all_ring_equals_full_shift'] = l7
-    report = {'protocol': 'depth-one-certificate-20260911', 'schema': 1, 'observations': list(OBS), 'rings_exhaustive': list(RINGS),
+    report = {'protocol': 'depth-one-certificate-20260911', 'schema': 2, 'observations': list(OBS), 'rings_exhaustive': list(RINGS),
               'parameters': {'power_cap': POWER_CAP, 'decided_rings_when_censored': [4, POWER_CAP + 3]},
               'source_hashes': {'script': sha(pathlib.Path(__file__)), 'block_majority_result': sha(MAJORITY), 'isolated_cell_result': sha(ISOLATED),
                                 'complement_observation_result': sha(COMPLEMENT), 'linear_observations_result': sha(LINEAR)},
