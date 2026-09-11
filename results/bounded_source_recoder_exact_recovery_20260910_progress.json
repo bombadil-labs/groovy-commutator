@@ -10,10 +10,10 @@
       "solver_decisions": {},
       "solver_errors": {},
       "solver_seconds": {
-        "cadical195": 0.002165496000003486,
-        "glucose4": 0.002225506000002042,
-        "maplechrono": 0.0021528970000019854,
-        "minisat22": 0.0022351690000022018
+        "cadical195": 0.002119138000004739,
+        "glucose4": 0.0019986439999968297,
+        "maplechrono": 0.001985685000008175,
+        "minisat22": 0.0019703210000088234
       },
       "solver_timeouts": {
         "cadical195": 3,
@@ -33,7 +33,7 @@
       },
       "solver_errors": {},
       "solver_seconds": {
-        "cadical195": 0.7490120900000008
+        "cadical195": 0.8006199340000251
       },
       "solver_timeouts": {},
       "solver_unavailable": {}
@@ -84,7 +84,7 @@
   "recovery_seed_languages": 8,
   "seeds": [
     {
-      "batches": 4,
+      "batches": 5,
       "certificate": null,
       "current_ordinal": 84,
       "pair": "1-5",
@@ -96,29 +96,29 @@
       "stats": {
         "direct_leaves": 0,
         "last_solver_error": {},
-        "partition_splits": 239,
+        "partition_splits": 298,
         "solver_decisions": {
-          "cadical195": 222
+          "cadical195": 281
         },
         "solver_errors": {},
         "solver_seconds": {
-          "cadical195": 3709.475659419998,
-          "glucose4": 2392.548500378999,
-          "maplechrono": 2392.549026108998,
-          "minisat22": 2392.4733027849993
+          "cadical195": 4646.781548788996,
+          "glucose4": 2983.1667949570005,
+          "maplechrono": 2983.1697763649977,
+          "minisat22": 2983.102904188003
         },
         "solver_timeouts": {
-          "cadical195": 239,
-          "glucose4": 239,
-          "maplechrono": 239,
-          "minisat22": 239
+          "cadical195": 298,
+          "glucose4": 298,
+          "maplechrono": 298,
+          "minisat22": 298
         },
         "solver_unavailable": {}
       },
       "status": "pending"
     },
     {
-      "batches": 4,
+      "batches": 5,
       "certificate": null,
       "current_ordinal": 253,
       "pair": "6-7",
@@ -130,29 +130,29 @@
       "stats": {
         "direct_leaves": 0,
         "last_solver_error": {},
-        "partition_splits": 234,
+        "partition_splits": 292,
         "solver_decisions": {
-          "cadical195": 238
+          "cadical195": 296
         },
         "solver_errors": {},
         "solver_seconds": {
-          "cadical195": 3831.9935896619986,
-          "glucose4": 2342.5160569550003,
-          "maplechrono": 2342.4852404330004,
-          "minisat22": 2342.5076710949993
+          "cadical195": 4805.586416195994,
+          "glucose4": 2923.1409910620036,
+          "maplechrono": 2923.095335468001,
+          "minisat22": 2923.138421786002
         },
         "solver_timeouts": {
-          "cadical195": 234,
-          "glucose4": 234,
-          "maplechrono": 234,
-          "minisat22": 234
+          "cadical195": 292,
+          "glucose4": 292,
+          "maplechrono": 292,
+          "minisat22": 292
         },
         "solver_unavailable": {}
       },
       "status": "pending"
     },
     {
-      "batches": 4,
+      "batches": 5,
       "certificate": null,
       "current_ordinal": 155,
       "pair": "2-6",
@@ -164,31 +164,31 @@
       "stats": {
         "direct_leaves": 0,
         "last_solver_error": {},
-        "partition_splits": 228,
+        "partition_splits": 285,
         "solver_decisions": {
-          "cadical195": 319,
-          "glucose4": 7,
+          "cadical195": 369,
+          "glucose4": 13,
           "minisat22": 5
         },
         "solver_errors": {},
         "solver_seconds": {
-          "cadical195": 3774.5257830240025,
-          "glucose4": 2394.051719713002,
-          "maplechrono": 2332.4556817859993,
-          "minisat22": 2322.900394458
+          "cadical195": 4711.242658090001,
+          "glucose4": 3017.4851176360016,
+          "maplechrono": 2903.0754602379993,
+          "minisat22": 2893.502556927
         },
         "solver_timeouts": {
-          "cadical195": 240,
-          "glucose4": 233,
-          "maplechrono": 233,
-          "minisat22": 228
+          "cadical195": 303,
+          "glucose4": 290,
+          "maplechrono": 290,
+          "minisat22": 285
         },
         "solver_unavailable": {}
       },
       "status": "pending"
     },
     {
-      "batches": 4,
+      "batches": 5,
       "certificate": null,
       "current_ordinal": 252,
       "pair": "0-4",
@@ -200,31 +200,31 @@
       "stats": {
         "direct_leaves": 0,
         "last_solver_error": {},
-        "partition_splits": 219,
+        "partition_splits": 279,
         "solver_decisions": {
-          "cadical195": 437,
+          "cadical195": 495,
           "glucose4": 6,
-          "minisat22": 19
+          "minisat22": 21
         },
         "solver_errors": {},
         "solver_seconds": {
-          "cadical195": 3675.3857609620018,
-          "glucose4": 2430.406776193998,
-          "maplechrono": 2382.5686457609986,
-          "minisat22": 2351.0957015820013
+          "cadical195": 4541.6743023990075,
+          "glucose4": 3051.0683312409983,
+          "maplechrono": 3003.213827304998,
+          "minisat22": 2967.7676042070025
         },
         "solver_timeouts": {
-          "cadical195": 244,
-          "glucose4": 238,
-          "maplechrono": 238,
-          "minisat22": 219
+          "cadical195": 306,
+          "glucose4": 300,
+          "maplechrono": 300,
+          "minisat22": 279
         },
         "solver_unavailable": {}
       },
       "status": "pending"
     },
     {
-      "batches": 4,
+      "batches": 5,
       "certificate": null,
       "current_ordinal": 338,
       "pair": "0-1",
@@ -236,29 +236,29 @@
       "stats": {
         "direct_leaves": 0,
         "last_solver_error": {},
-        "partition_splits": 239,
+        "partition_splits": 299,
         "solver_decisions": {
-          "cadical195": 267
+          "cadical195": 324
         },
         "solver_errors": {},
         "solver_seconds": {
-          "cadical195": 3706.2443333520027,
-          "glucose4": 2392.5132380650007,
-          "maplechrono": 2392.518239514001,
-          "minisat22": 2392.510353706004
+          "cadical195": 4633.82716865,
+          "glucose4": 2993.1447310089975,
+          "maplechrono": 2993.1528940910002,
+          "minisat22": 2993.150817439007
         },
         "solver_timeouts": {
-          "cadical195": 239,
-          "glucose4": 239,
-          "maplechrono": 239,
-          "minisat22": 239
+          "cadical195": 299,
+          "glucose4": 299,
+          "maplechrono": 299,
+          "minisat22": 299
         },
         "solver_unavailable": {}
       },
       "status": "pending"
     },
     {
-      "batches": 4,
+      "batches": 5,
       "certificate": null,
       "current_ordinal": 82,
       "pair": "0-4",
@@ -270,29 +270,29 @@
       "stats": {
         "direct_leaves": 0,
         "last_solver_error": {},
-        "partition_splits": 230,
+        "partition_splits": 288,
         "solver_decisions": {
-          "cadical195": 305
+          "cadical195": 362
         },
         "solver_errors": {},
         "solver_seconds": {
-          "cadical195": 3936.561081603998,
-          "glucose4": 2302.3575736610023,
-          "maplechrono": 2302.4279656369968,
-          "minisat22": 2302.374823171
+          "cadical195": 4905.611989803001,
+          "glucose4": 2882.945699704003,
+          "maplechrono": 2883.066878946996,
+          "minisat22": 2882.9977917409988
         },
         "solver_timeouts": {
-          "cadical195": 230,
-          "glucose4": 230,
-          "maplechrono": 230,
-          "minisat22": 230
+          "cadical195": 288,
+          "glucose4": 288,
+          "maplechrono": 288,
+          "minisat22": 288
         },
         "solver_unavailable": {}
       },
       "status": "pending"
     },
     {
-      "batches": 4,
+      "batches": 5,
       "certificate": null,
       "current_ordinal": 82,
       "pair": "3-7",
@@ -304,30 +304,30 @@
       "stats": {
         "direct_leaves": 0,
         "last_solver_error": {},
-        "partition_splits": 231,
+        "partition_splits": 289,
         "solver_decisions": {
-          "cadical195": 306,
+          "cadical195": 364,
           "glucose4": 1
         },
         "solver_errors": {},
         "solver_seconds": {
-          "cadical195": 3893.577094142001,
-          "glucose4": 2321.665729089998,
-          "maplechrono": 2312.393503790998,
-          "minisat22": 2312.404609668001
+          "cadical195": 4872.205762052003,
+          "glucose4": 2902.288879862998,
+          "maplechrono": 2893.027643678998,
+          "minisat22": 2893.030012364002
         },
         "solver_timeouts": {
-          "cadical195": 232,
-          "glucose4": 231,
-          "maplechrono": 231,
-          "minisat22": 231
+          "cadical195": 290,
+          "glucose4": 289,
+          "maplechrono": 289,
+          "minisat22": 289
         },
         "solver_unavailable": {}
       },
       "status": "pending"
     },
     {
-      "batches": 4,
+      "batches": 5,
       "certificate": null,
       "current_ordinal": 252,
       "pair": "3-7",
@@ -339,24 +339,24 @@
       "stats": {
         "direct_leaves": 0,
         "last_solver_error": {},
-        "partition_splits": 228,
+        "partition_splits": 287,
         "solver_decisions": {
-          "cadical195": 241,
-          "glucose4": 7,
-          "minisat22": 15
+          "cadical195": 301,
+          "glucose4": 8,
+          "minisat22": 16
         },
         "solver_errors": {},
         "solver_seconds": {
-          "cadical195": 3519.8802439870005,
-          "glucose4": 2497.5509207719974,
-          "maplechrono": 2432.5994531540023,
-          "minisat22": 2413.3775918210044
+          "cadical195": 4410.201296324998,
+          "glucose4": 3106.8830618849984,
+          "maplechrono": 3033.2305724270027,
+          "minisat22": 3012.6359172750044
         },
         "solver_timeouts": {
-          "cadical195": 250,
-          "glucose4": 243,
-          "maplechrono": 243,
-          "minisat22": 228
+          "cadical195": 311,
+          "glucose4": 303,
+          "maplechrono": 303,
+          "minisat22": 287
         },
         "solver_unavailable": {}
       },
