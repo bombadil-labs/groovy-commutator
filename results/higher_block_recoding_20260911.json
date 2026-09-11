@@ -3,7 +3,7 @@
  "schema": 1,
  "R_max": 4,
  "source_hashes": {
-  "script": "2748d20285cdde1515419f9c53dfe4935fd3f209645c6c2c09979831749eca32",
+  "script": "fde004622627566b62bf077c3a8fc5d73f4458bffa367750b9c21ea4fe0f32c1",
   "local_correction_caps": "9975a0e45e6cde51ca6a7bdb9bf269ab03be21c61eb2973ba27a803c41f5c69a",
   "cap_shift_census": "c7cf6e9efc7ba2cc710b1a82a19707b25e487beee3218231aa6ff33d8236383c"
  },
@@ -3406,6 +3406,7 @@
  },
  "B4_family_closure": {
   "2": {
+   "transport_domain": "keys are all nonconstant tables on the full domain (two-to-one onto canonical representatives, since h and its output complement share an image); restricted to canonical representatives each map is a permutation",
    "input_complement_transport": {
     "1": 7,
     "2": 4,
@@ -3449,6 +3450,7 @@
    "ring12_block_alignment_preserved_by_reflection": true
   },
   "3": {
+   "transport_domain": "keys are all nonconstant tables on the full domain (two-to-one onto canonical representatives, since h and its output complement share an image); restricted to canonical representatives each map is a permutation",
    "input_complement_transport": {
     "1": 127,
     "2": 64,
@@ -3968,6 +3970,7 @@
    "ring12_block_alignment_preserved_by_reflection": true
   }
  },
+ "B4_scope": "closure and transport are checked here; the frozen consequence that per-rule census summaries are literally identical was corrected after review to scalar summaries identical and optimal observers corresponding under the permutation",
  "summary": {
   "B1": true,
   "B2": true,

@@ -204,7 +204,10 @@ def main():
     p6['pass_agreement_above_0.90'] = all(v['label_agreement'] > 0.90 for v in p6['by_transformation'].values())
     p6['pass_commute_exact'] = all(v['commute_agreement'] == 1.0 for v in p6['by_transformation'].values())
     p6['boundary_concentration_clause'] = {'scored': True, 'supported': False,
-        'note': 'the frozen clause had no threshold; the two named boundaries carry under 30% of disagreements and two unnamed boundaries (crystalline/structured, noisy/structured) are populated; scored 2026-09-11 after review'}
+        'note': 'fraction computed retrospectively 2026-09-11; clause unsupported; the frozen clause named drain/crystalline and structured/noisy without a threshold, so there is no prespecified binary score. All five populated boundaries are listed in by_unordered_pair; the largest is drain/structured, which the frozen clause did not name.',
+        'frozen_named_boundaries': ['drain/crystalline', 'structured/noisy'],
+        'boundaries_listed_by_original_note_in_error': ['drain/structured', 'drain/noisy', 'crystalline/drain'],
+        'boundaries_omitted_by_original_note': ['crystalline/structured', 'noisy/structured']}
     p6['predicted'] = 'agreement > 0.90; commute labels agree exactly; disagreements on soft boundaries'
     P['P6_sweep_regime_labels'] = p6
 

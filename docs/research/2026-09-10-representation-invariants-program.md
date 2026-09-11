@@ -45,7 +45,7 @@ One row per declared transformation, with its declared costs, then the propertie
 | Complement conjugation `T_c` | `n` | O-coordinate cap table | preserved at every radius (`B_j = D∘F^j` is a difference) | [shift census](2026-09-11-cap-shift-census.md) |
 | Complement conjugation `T_c` | `n` | K-coordinate cap radius | covariant with bounded cost: shift 0, 1 or 2; never a loss of existence at `R ≤ 4`; the frozen `≤ h` bound fails on four `h = 0` cells | [extension](2026-09-11-cap-census-complement-extension.md), [shift census](2026-09-11-cap-shift-census.md) |
 | Complement conjugation `T_c` | `n` | sweep regime labels | 93.9% stable; not an invariance | [audit](2026-09-11-representation-invariants-audit.md) |
-| `T_c`, `T_m` | — | possibility-frontier census summaries | preserved, by closure of the observer family (deduction; tables not in repo) | [recoding note](2026-09-11-higher-block-recoding.md) |
+| `T_c`, `T_m` | — | possibility-frontier census, scalar summaries (optima, counts, overlap flags) | preserved, by closure of the observer family (deduction; tables not in repo); optimal observer identities are covariant under the explicit table permutation, not literally equal | [recoding note](2026-09-11-higher-block-recoding.md) |
 
 ### Local recodings (injective, alphabet-changing, declared locality)
 
@@ -87,7 +87,7 @@ The protocol It declares two global transformations of elementary CA (complement
 
 ## Fourth unit: complete
 
-[Higher-block recoding](protocols/higher-block-recoding-20260911.md), frozen and run 2026-09-11, reported in the [recoding note](2026-09-11-higher-block-recoding.md). The first transformation of a local, alphabet-changing type. The executed total law had ambient radius 2 off the family, a recorded deviation from the declared radius 1; a radius-1 componentwise completion was added after review and both give identical on-family results. All four predictions held: cap radius within `[mpr − 1, mpr]` and unchanged in 665 of 674 cells; derivative, commutator and closure preserved componentwise; the Research026 observer family closed under complement and reversal, so that census is covariant by deduction. Remaining undeclared types: change of completion (runs under the second-lift protocol) and non-injective coarse-graining (the Erased Distinctions object).
+[Higher-block recoding](protocols/higher-block-recoding-20260911.md), frozen and run 2026-09-11, reported in the [recoding note](2026-09-11-higher-block-recoding.md). The first transformation of a local, alphabet-changing type. The executed total law had ambient radius 2 off the family, a recorded deviation from the declared radius 1; a radius-1 componentwise completion was added after review and both give identical on-family results. B1–B3 are supported on the consistent-pair family: cap radius within `[mpr − 1, mpr]` and unchanged in 665 of 674 cells; derivative, commutator and closure preserved componentwise. B4's closure part is supported: the Research026 observer family is closed under complement and reversal. B4's frozen consequence, literally identical per-rule census summaries, was corrected after review to scalar summaries identical with optimal observers covariant under the permutation; that is a corrected claim, not an original frozen success. Remaining undeclared types: change of completion (runs under the second-lift protocol) and non-injective coarse-graining (the Erased Distinctions object).
 
 ## What would count as progress
 

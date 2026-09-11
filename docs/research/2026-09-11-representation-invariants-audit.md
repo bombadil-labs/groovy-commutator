@@ -35,7 +35,7 @@ Three transformations only; no claim that they exhaust admissible re-interpretat
 
 ## Next
 
-Freeze a small extension of the local-cap census at `R ≤ 4` for the 22 differing `(rule, h)` cells and their conjugates, with the corrected compositional radius bound stated as the prediction. Separately, decide whether "derivative transported as a state" should be the repository's default reading of the commutator under relabeling; that is an editorial decision about the representation contract, not a computation.
+(Historical, written before the second unit.) Freeze a small extension of the local-cap census at `R ≤ 4` for the 22 flagged `(rule, h)` cells and their conjugates, with the corrected compositional radius bound stated as the prediction; the [extension](2026-09-11-cap-census-complement-extension.md) has since run at `R ≤ 6` and the 22 flagged cells are 4 genuine violations plus 18 right-censored cells, not 22 differing minima. Separately, decide whether "derivative transported as a state" should be the repository's default reading of the commutator under relabeling; that is an editorial decision about the representation contract, not a computation.
 
 ## Correction 2026-09-11, after retrospective review by Codex
 

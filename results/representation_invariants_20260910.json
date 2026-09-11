@@ -2,7 +2,7 @@
  "protocol": "representation-invariants-audit-20260910",
  "schema": 1,
  "source_hashes": {
-  "script": "a55ad28752d8d7e9be3a47556edeaa204181c833cc6e39e16eec6c1f4e45c7e6",
+  "script": "a3efa635626dd83f0b792f08605e00e395c9608d2e3041c8fe78809bbf0393c7",
   "local_correction_caps": "9975a0e45e6cde51ca6a7bdb9bf269ab03be21c61eb2973ba27a803c41f5c69a",
   "sweep_full_classified": "c157e0ca77afa494c678c1fc419a2bd898673698eeab6e14ff485bf33e007504"
  },
@@ -773,7 +773,20 @@
    "boundary_concentration_clause": {
     "scored": true,
     "supported": false,
-    "note": "the frozen clause had no threshold; the two named boundaries carry under 30% of disagreements and two unnamed boundaries (crystalline/structured, noisy/structured) are populated; scored 2026-09-11 after review"
+    "note": "fraction computed retrospectively 2026-09-11; clause unsupported; the frozen clause named drain/crystalline and structured/noisy without a threshold, so there is no prespecified binary score. All five populated boundaries are listed in by_unordered_pair; the largest is drain/structured, which the frozen clause did not name.",
+    "frozen_named_boundaries": [
+     "drain/crystalline",
+     "structured/noisy"
+    ],
+    "boundaries_listed_by_original_note_in_error": [
+     "drain/structured",
+     "drain/noisy",
+     "crystalline/drain"
+    ],
+    "boundaries_omitted_by_original_note": [
+     "crystalline/structured",
+     "noisy/structured"
+    ]
    },
    "predicted": "agreement > 0.90; commute labels agree exactly; disagreements on soft boundaries"
   }

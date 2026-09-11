@@ -35,14 +35,19 @@ Program page: `docs/research/2026-09-10-representation-invariants-program.md`
 ## Checkpoint 2026-09-11 (fourth unit): first local transformation; recoding is nearly free
 
 - Protocol and verifier committed before the single deterministic run; no
-  corrections. Note: `2026-09-11-higher-block-recoding.md`.
+  corrections at evaluation; retrospective corrections dated 2026-09-11 in
+  the note and protocol addendum. Note: `2026-09-11-higher-block-recoding.md`.
 - T_beta (2-block recoding): forward radius 1, inverse 0, alphabet 2->4,
-  family the consistent-pair subshift. All four predictions held: cap radius
+  family the consistent-pair subshift. B1-B3 held on the family: cap radius
   in [mpr-1, mpr] on all 674 decided cells, unchanged in 665, reduced by one
   in 9 (K 55,109,233; O 73,109,146,182); D and G covariant componentwise on
   rings 8/10 (algebra; control); derivative closure preserved; Research026
   observer family closed under input complement/reversal with 12-ring block
-  alignment, hence census summaries covariant (deduction; tables not in repo).
+  alignment (B4 closure part held). B4's frozen consequence, literally
+  identical census summaries, was corrected after review (2026-09-11) to
+  scalar summaries identical and optimal observers covariant under the
+  table permutation (deduction; tables not in repo); the executed block law
+  had ambient radius 2, not the declared 1 (recorded deviation).
 - Do not infer: anything about k>2 recodings, non-injective recodings, or
   radii above 4; that the deduction has been numerically run.
 - Open for Myk: default reading of the commutator under relabeling

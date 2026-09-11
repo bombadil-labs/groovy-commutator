@@ -77,7 +77,8 @@ def family_closure():
             def r(code): return int(''.join(reversed(format(code, f'0{b}b'))), 2)
             return sum(((h >> r(code)) & 1) << code for code in range(m))
         canon = lambda h: min(h, (1 << m) - 1 - h)
-        out[b] = {'input_complement_transport': {str(h): canon(compl(h)) for h in sorted(funcs)},
+        out[b] = {'transport_domain': 'keys are all nonconstant tables on the full domain (two-to-one onto canonical representatives, since h and its output complement share an image); restricted to canonical representatives each map is a permutation',
+                  'input_complement_transport': {str(h): canon(compl(h)) for h in sorted(funcs)},
                   'input_reversal_transport': {str(h): canon(rev(h)) for h in sorted(funcs)},
                   'example': {'table': 1, 'input_complement': compl(1), 'canonical': canon(compl(1))} if b == 2 else None,
                   'closed_under_input_complement': all(compl(h) in funcs for h in funcs),
@@ -133,7 +134,7 @@ def main():
               'ambient_laws': {'first_component_radius2': 'executed law of the original run; ambient radius 2 off the family', 'componentwise_radius1': 'apply the binary rule to each component field; ambient radius 1; agrees with the first on the family'},
               'ambient_radius_witness_rule170': witness, 'laws_agree_on_family_n8_all_rules': laws_agree_on_family,
               'mpr_block': rows, 'shift_distribution_mpr_minus_block': {k: {h: dict(sorted(c.items())) for h, c in v.items()} for k, v in dist.items()},
-              'B1_violations': b1, 'B2_covariance_violations_by_ring': b2, 'B3_closure_violations_by_ring': b3, 'B4_family_closure': b4,
+              'B1_violations': b1, 'B2_covariance_violations_by_ring': b2, 'B3_closure_violations_by_ring': b3, 'B4_family_closure': b4, 'B4_scope': 'closure and transport are checked here; the frozen consequence that per-rule census summaries are literally identical was corrected after review to scalar summaries identical and optimal observers corresponding under the permutation',
               'summary': {'B1': not b1, 'B2': all(not v for law in b2.values() for v in law.values()), 'B3': all(not v for law in b3.values() for v in law.values()),
                           'B4': all(v[k] for v in b4.values() for k in ('closed_under_input_complement', 'closed_under_input_reversal', 'output_complement_pairs_preserved', 'ring12_block_alignment_preserved_by_reflection'))}}
     OUT.write_text(json.dumps(report, indent=1, ensure_ascii=False) + '\n')
