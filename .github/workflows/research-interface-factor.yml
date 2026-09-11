@@ -1,0 +1,77 @@
+name: Interface-factor audit
+
+# Permanent two-tier workflow. At the implementation-only stage the canonical
+# result is absent, so PR CI installs the package, syntax-checks the verifier,
+# and runs only the out-of-domain implementation self-test. Once the result is
+# committed, source integrity is checked on every touching PR and the full
+# frozen census is replayed when the result changes, on main, weekly, or by
+# manual dispatch.
+
+on:
+  pull_request:
+    paths:
+      - 'scripts/verify_interface_factor.py'
+      - 'results/interface_factor_20260911.json'
+      - 'docs/research/protocols/interface-factor-20260911.md'
+      - 'scripts/check_result_integrity.py'
+      - '.github/workflows/research-interface-factor.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/verify_interface_factor.py'
+      - 'results/interface_factor_20260911.json'
+      - 'docs/research/protocols/interface-factor-20260911.md'
+      - 'scripts/check_result_integrity.py'
+      - '.github/workflows/research-interface-factor.yml'
+  schedule:
+    - cron: '43 6 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  interface-factor:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -e .
+      - name: Syntax-check the pinned verifier
+        run: python -m py_compile scripts/verify_interface_factor.py
+      - name: Run implementation-only self-test outside the frozen source domain
+        run: python scripts/verify_interface_factor.py --self-test
+      - name: Recorded source hashes match the tree when the canonical result exists
+        run: |
+          if [ -f results/interface_factor_20260911.json ]; then
+            python scripts/check_result_integrity.py results/interface_factor_20260911.json
+          else
+            echo 'Implementation-only stage: canonical result not committed yet.'
+          fi
+      - name: Does this run require the full canonical replay?
+        id: result
+        run: |
+          if [ ! -f results/interface_factor_20260911.json ]; then
+            echo 'changed=false' >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          if [ "${{ github.event_name }}" != "pull_request" ]; then
+            echo 'changed=true' >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          if git diff --name-only "origin/${{ github.base_ref }}...HEAD" | grep -qx 'results/interface_factor_20260911.json'; then
+            echo 'changed=true' >> "$GITHUB_OUTPUT"
+          else
+            echo 'changed=false' >> "$GITHUB_OUTPUT"
+          fi
+      - name: Replay the frozen verifier and compare the canonical JSON byte for byte
+        if: steps.result.outputs.changed == 'true'
+        run: |
+          cp results/interface_factor_20260911.json /tmp/expected.json
+          python scripts/verify_interface_factor.py > /dev/null
+          cmp /tmp/expected.json results/interface_factor_20260911.json

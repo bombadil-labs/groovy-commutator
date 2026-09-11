@@ -13,7 +13,34 @@ when a substantial unit completes; keep the bounded-claim style. Text moved from
 
 Program page: `docs/research/2026-09-09-dimensional-closure-program.md`
 
-## Checkpoint 2026-09-11: finite-width packing and transverse-freedom unit completed; gate-2 pending
+## Checkpoint 2026-09-11: bounded touching-strip interface-factor census completed; gate-2 pending
+
+Read `docs/research/2026-09-11-interface-factor.md`. This unit follows the adjacent-strip/interface-state work by testing a frozen finite symbolic interface representation as a pooled local factor, rather than equating raw fixed-height escape with failure of every symbolic description.
+
+- Protocol sub-PR #124 integrated at `84f5b5de` before implementation/evaluation; implementation sub-PR #126 integrated at `f75a4aa2` with no canonical result; evaluation sub-PR #127 then generated result `aa69196`, registered integrity, removed one-shot runners, passed 20 exact-head checks including permanent byte-for-byte replay, and integrated at `dd6004d`.
+- Frozen J3 is false: full six-bit P15 has no passing radius among `R=0,1,2` on primary `t=0..3`, and none on stress `t=0..6`.
+- Complete J5 census: none of the 16 frozen interface masks passes any tested radius on either horizon; there is no inclusion-minimal passing mask and no P15 dependency audit because J7 was conditional on a passing full factor.
+- J1 passes: coordinate/inverse agreement and zero initial interface corrections. J2 passes: no exterior change after the first coarse update for every declared source, with exterior departure by the second. All independent scalar J8 physical replays agree.
+- The canonical P15 `R=2` primary conflict has equal five-symbol neighborhoods but next symbols `0` and `24`; independent physical replay locates differing cells outside rows `0..3` inside the next-step causal patch. `R=1` likewise has an exterior hidden-cause witness.
+- Scope is exactly the exhaustive declared `n=6,7` adjacent-strip reachable family, frozen six-bit/interface-subset representations, fixed horizons and `R<=2`. Do not infer failure at larger radius, with history, moving/support-tracking state, other coordinates, nonlocal factors, arbitrary-width grids, or recursive 2D-to-3D lifting.
+- No post-hoc rescue representation was introduced. Reporting is integrated on the gathering branch only after this reporting sub-PR merges. Retrospective Claude/Fable review remains owed under Myk's temporary exception before final acceptance under the project correction/review policy.
+
+## Checkpoint 2026-09-11: uniform local intervention-axis unit completed; gate-2 pending
+
+Read `docs/research/2026-09-11-intervention-axis.md`. This unit follows the accepted finite-width packing/transverse-freedom result by releasing total target storage and freezing only a common local intervention endpoint window.
+
+- Gate 1: Claude/Fable approved integrated protocol `dc363745` with two binding clarifications before implementation: I3 allows arbitrarily much total 1D target storage while holding the common `(q,K,R)` endpoint window fixed, and copied-family image preservation is evaluated at edit time. Clarifications landed before the verifier; the gathering branch was reconciled with accepted `main`.
+- Implementation `c8d6c1a` and permanent replay workflow `7f7eb64` were integrated at `77ae5a5` with no canonical result present. The first primary run then produced canonical result commit `eba1b0c`; integrity registration and one-shot cleanup followed; evaluation merged at `8bffdd5`.
+- Analytic/inherited I1: for every finite `m`, the separated Rule90 strip actions witness native local intervention rank at least `m` at physical support budget two. This repackages the accepted many-strip/action theorem; the new finite replay is an implementation control, not its proof.
+- Analytic I2: in copied width `D_m`, a nontrivial source-bit flip that stays in the copied family at edit time costs exactly `2m`; proper nonempty subsets of channel flips leave the subfamily. This is representation-relative and instantaneous.
+- Analytic I3: even with unlimited total 1D target storage, if all channel-subset actions at one source coordinate must terminate inside one common `K+2R`-site target window over alphabet size `q`, injectivity requires `2^m <= q^(K+2R)`. Every fixed finite local endpoint budget eventually fails.
+- Bounded I5 replay: `m=1..6`, rings 5/7, zero/one/fixed-seeded bases, every `2^m` action subset and two coarse updates all pass: exact endpoint counts, two-cell disjoint supports, and independent Rule90 evolution. I2 controls pass throughout.
+- I4 control independently reproduces touching-strip `17/64` valid versus `47/64` invalid local inputs and the known `100/100` extra-cell witness. Addressability without autonomous closure is therefore excluded by the rank definition.
+- Permanent source-hash and byte-for-byte replay CI is green on the evaluation sub-PR. No frozen choice changed after primary evaluation.
+- Do not infer an intrinsic-dimension theorem, representation-independent lower bound, self-assembly, endogenous control, or that non-spatial registers cannot realize similar local action structure. The supplied background/action interface remains a resource.
+- **Review state:** reporting is complete on the gathering branch after this reporting integration; external Claude/Fable Gate-2 review of the final exact head remains required before `main`.
+
+## Checkpoint 2026-09-11: finite-width packing and transverse-freedom unit completed and accepted
 
 Read `docs/research/2026-09-11-transverse-freedom.md`. The frozen protocol received Claude/Fable gate-1 approval at `27ee07d` with two binding capacity-definition clarifications recorded before implementation. Implementation commit `26ddc639` was pinned before primary evaluation; canonical result commit `10d1ea7` followed.
 
@@ -24,7 +51,7 @@ Read `docs/research/2026-09-11-transverse-freedom.md`. The frozen protocol recei
 - All K↔O and H128↔H160 recoding/fiber controls pass; O is pointwise completion-independent; primary truth-table and literal-Boolean reference rows agree. Permanent source-hash and byte-for-byte replay CI is green on the evaluation sub-PR.
 - Process record: controls-only debugging preceded the pinned implementation but computed no T4 count. Two one-shot evaluation workflows were added nearly simultaneously; the first wrote the canonical result and the second unchanged rerun produced no result diff. Both runs and cleanup remain visible in history.
 - Do not infer `h→∞` saturation, an all-ring formula from the even/odd finite pattern, a sufficient criterion for spatial dimension, or a new spatial axis. The stronger topology/intervention/symmetry criterion remains open.
-- **Review state:** reporting is complete on the gathering branch only after its reporting sub-PR merges. External Claude/Fable gate-2 review of the final gathering head remains required before `main`.
+- **Review state:** Claude/Fable accepted the final gathering head and merged PR #103 under the reviewer-merges rule; this unit is on `main`.
 
 ## Checkpoint 2026-09-11: bounded second-lift completion comparison completed
 
