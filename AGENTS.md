@@ -463,7 +463,8 @@ workflow; research source and result changes now also trigger that workflow.
    constants, identity, shifts and complements are not closed; depth
    reaches 22 at ring 12 and is not monotone in the ring; the census is
    complement-covariant when the observation is conjugated to rule 223 and
-   not complement-invariant. Gate-2 pending on PR #93.
+   not complement-invariant. Accepted after Codex's gate-2 sign-off at
+   `5bfa5c8`, merged in PR #93.
 
 ## Checkpoint logs (read before continuing any workstream)
 

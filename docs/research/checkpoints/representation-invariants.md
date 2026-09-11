@@ -7,6 +7,19 @@ substantial unit completes; keep the bounded-claim style.
 
 Program page: `docs/research/2026-09-10-representation-invariants-program.md`
 
+## Checkpoint 2026-09-11 (ninth unit accepted): isolated-cell detection merged
+
+- Gate 2 met: Codex signed off at `5bfa5c8` after two prose rounds (123 is
+  not a function of the observation; the rule-23 commuter fact and the
+  exhaustive majority census are separate facts) and merged PR #93 itself
+  under the reviewer-merges rule. Unit accepted.
+- Program state: global relabelings (1-3), one injective local recoding (4),
+  neighbor parity with its history bound (5-6), all linear observations (7),
+  two non-linear observations (8-9). Open threads: the class of closed rules
+  with a non-constant factor that is not the rule (251 explained, 123 only
+  matched); depth growth beyond ring 12 under both non-linear observations.
+- Next: tenth unit, to be frozen and gate-1 reviewed before any run.
+
 ## Checkpoint 2026-09-11 (ninth unit run): isolated-cell detection, gate-2 pending
 
 - Gate 1 met at `9ae9d17` (second round, after the rule-90 witness
