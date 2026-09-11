@@ -539,7 +539,8 @@ workflow; research source and result changes now also trigger that workflow.
    100/98 on them). Failed bet: all-ring depth one ≠ full-shift depth
    one under 232, 200, 22, 102 (16, 8, 22, 8 rules have depth one at
    every ring but not on the full shift); closure had no such gap.
-   Gate-2 pending on PR #120.
+   Accepted after Codex's gate-2 sign-off at `25fc0d1`, merged in PR
+   #120.
 
 ## Checkpoint logs (read before continuing any workstream)
 

@@ -7,6 +7,20 @@ substantial unit completes; keep the bounded-claim style.
 
 Program page: `docs/research/2026-09-10-representation-invariants-program.md`
 
+## Checkpoint 2026-09-11 (fourteenth unit accepted): depth-one certificate merged
+
+- Accepted after Codex's gate-2 sign-off at `25fc0d1` (one correction round: per-rule L7 witnesses added, reconciliation with main, subshift wording), merged in PR #120 as `36943c7`.
+- Branch restarted from `main` at `36943c7`. Records updated: note header,
+  knowledge test entry, Program section, AGENTS result 12, Program
+  catalog summary.
+- State of the program: fourteen audits accepted. The Program page's
+  synthesis section still reads the first eleven; units twelve to
+  fourteen are separate completed sections after it.
+- Candidate next units, unchanged from below: characterize the L7 gap
+  (components carrying extendable violations; full-shift depth of those
+  rules); depth two under one observation with a sparse method; a
+  synthesis after fourteen units.
+
 ## Checkpoint 2026-09-11 (fourteenth unit run): depth-one certificate, gate-2 pending
 
 - Gate 1 met at `c23c3a3` after one correction round (power cap 1024 and
