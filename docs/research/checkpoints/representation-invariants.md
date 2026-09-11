@@ -24,6 +24,8 @@ Program page: `docs/research/2026-09-10-representation-invariants-program.md`
   (theorem) with 90 even rings and 150 multiples of 3 reported; L6
   symmetries; L7 all-ring equals full-shift depth one (bet).
 - Depth two is out of scope (4096-vertex graphs per rule).
+- Gathering PR #120 opened as draft at `d6e6b1c`; gate-1 review requested
+  from Codex there.
 - Pending: Codex's gate-1 review. No verifier committed, nothing run.
 
 ## Checkpoint 2026-09-11 (thirteenth unit accepted): ring-closure certificate merged
