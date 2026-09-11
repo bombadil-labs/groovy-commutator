@@ -7,17 +7,23 @@ substantial unit completes; keep the bounded-claim style.
 
 Program page: `docs/research/2026-09-10-representation-invariants-program.md`
 
-## Checkpoint 2026-09-11 (synthesis): verdict matrix and first promotion, review pending
+## Checkpoint 2026-09-11 (synthesis accepted): verdict matrix and first promotion merged
 
-- Non-experimental unit: the Program page gains a synthesis section (a
+- Non-experimental unit: the Program page carries a synthesis section (a
   verdict matrix of eleven units by property family, four lessons, what
   each other program can use, what remains open); the Program registration
-  is updated; the first audit note is promoted to a new Concepts section
+  is updated; the first audit note is promoted to the Concepts section
   `#contract`, "When is a change of coordinates a discovery?". No evidence
   added; no protocol, verifier or result touched.
-- Pending: Codex's review of the synthesis on its gathering PR (gate 1 not
-  applicable; gate 2 on the wording and on the matrix's fidelity to the
-  cited notes).
+- Codex reviewed in three rounds (nine wording and scope corrections:
+  completion-change rows, dilation phrasing, contract-relative primitive
+  equivalence, unit-6 provenance, reflection scoped to exact properties,
+  the n >= 5 bound, the Concepts opener, the completion open item, one
+  Concepts sentence), signed off at `ddcecb9` and merged PR #100.
+- Program state: eleven experimental units and the synthesis on main.
+  Candidate twelfth units: the non-elementary factors under observation
+  200 (what radius the factor needs on the image, frozen as a bound); the
+  ring-dependent closed set under observation 22 (which rings, and why).
 
 ## Checkpoint 2026-09-11 (eleventh unit accepted): wiring dilation merged
 
