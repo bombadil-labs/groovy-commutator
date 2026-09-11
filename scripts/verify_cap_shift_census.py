@@ -1,6 +1,13 @@
 #!/usr/bin/env python3
 """Complement-conjugation shift census over all local caps (protocol frozen 2026-09-11).
 
+Correction 2026-09-11 after retrospective review (PR #82): X5 now implements the
+declared predicate (a half-decided cell must have existing radius 4 or h = 2); a
+half-decided cell with existing radius a implies shift >= 5-a and refutes shift <= h+1
+when 5-a > h+1, and is reported as such. Source windows have width
+2*max(h+1+R, h+2)+1. The saved census has no half-decided cells, so these are
+prospective scoring fixes.
+
 All 256 rules, kinds K and O, depths h<=2, radii R<=4: minimum passing cap radius for
 each rule and its complement-conjugate, the shift on decided cells, reflection control,
 reproduction of the saved R<=2 census, and the predictions X1-X5 of the protocol.
@@ -60,8 +67,10 @@ def main():
         if a is None or b is None:
             existing = a if a is not None else b
             cell = {'rule': r, 'conj': conj(r), 'kind': kind, 'h': h, 'existing_radius': existing}
+            cell['shift_lower_bound'] = R_MAX + 1 - existing
+            cell['refutes_shift_le_h_plus_1'] = (R_MAX + 1 - existing) > h + 1
             half.append(cell)
-            if existing <= 2 and h <= 1: x5.append(cell)
+            if not (existing == R_MAX or h == 2): x5.append(cell)   # declared predicate
             continue
         s = abs(a - b); shifts[kind][h][s] += 1
         cell = {'rule': r, 'conj': conj(r), 'kind': kind, 'h': h, 'mpr_rule': a, 'mpr_conj': b, 'shift': s}
@@ -74,7 +83,9 @@ def main():
               'source_hashes': {'script': sha(pathlib.Path(__file__)), 'local_correction_caps': sha(CENSUS)},
               'mpr': [{'rule': r, 'K': [mpr[(r, 'K', h)] for h in range(3)], 'O': [mpr[(r, 'O', h)] for h in range(3)]} for r in range(256)],
               'shift_histograms': {kind: {h: dict(sorted(c.items())) for h, c in hs.items()} for kind, hs in shifts.items()},
+              'source_window_width': '2*max(h+1+R, h+2)+1',
               'half_decided': half, 'undecided': undecided,
+              'half_decided_refuting_shift_bound': [c for c in half if c['refutes_shift_le_h_plus_1']],
               'X1_reproduction_violations': x1, 'X2_reflection_violations': [list(k) for k in x2],
               'X3_K_shift_violations': x3, 'X4_O_shift_violations': x4, 'X4prime_O_nonzero_shift': x4p,
               'X4prime_O_pass_table_complement_invariant': o_table_invariant, 'X5_half_decided_violations': x5,

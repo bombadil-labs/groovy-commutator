@@ -38,20 +38,20 @@ One row per declared transformation, with its declared costs, then the propertie
 | Transformation | Touched sites | Property | Status | Source |
 | --- | --- | --- | --- | --- |
 | Reflection `T_m` | 0 (addresses reindexed) | commutator class; pointwise commutator; derivative closure; all 4,608 cap budgets at `R ≤ 2`, both kinds at `R ≤ 4` | preserved / covariant with reversal | [audit](2026-09-11-representation-invariants-audit.md), [shift census](2026-09-11-cap-shift-census.md) |
-| Reflection `T_m` | 0 | sweep regime labels | 95.1% stable; not an invariance (fixed seeds) | [audit](2026-09-11-representation-invariants-audit.md) |
+| Reflection `T_m` | 0 | sweep regime labels | 95.1% stable; not an invariance (fixed seeds); disagreements not concentrated on the boundaries the protocol named | [audit](2026-09-11-representation-invariants-audit.md) |
 | Complement conjugation `T_c` | `n` | closure of `(P, F)`; derivative-observation closure | preserved | [audit](2026-09-11-representation-invariants-audit.md) |
-| Complement conjugation `T_c` | `n` | native commutator field | covariant iff self-dual (16 rules); covariant for all 256 with the derivative transported as a state | same |
+| Complement conjugation `T_c` | `n` | native commutator field | covariant iff self-dual (16 rules, proved by the five-cell local check); covariant for all 256 with the derivative transported as a state | same |
 | Complement conjugation `T_c` | `n` | commutator class; affine bias | changed: `c ↦ c ⊕ M𝟙 ⊕ 1`; 4, 200 ↦ 223, 236 leave the zero-G set | same |
 | Complement conjugation `T_c` | `n` | O-coordinate cap table | preserved at every radius (`B_j = D∘F^j` is a difference) | [shift census](2026-09-11-cap-shift-census.md) |
-| Complement conjugation `T_c` | `n` | K-coordinate cap radius | covariant with bounded cost: shift 0, 1 or 2; never a loss of existence at `R ≤ 4` | [extension](2026-09-11-cap-census-complement-extension.md), [shift census](2026-09-11-cap-shift-census.md) |
+| Complement conjugation `T_c` | `n` | K-coordinate cap radius | covariant with bounded cost: shift 0, 1 or 2; never a loss of existence at `R ≤ 4`; the frozen `≤ h` bound fails on four `h = 0` cells | [extension](2026-09-11-cap-census-complement-extension.md), [shift census](2026-09-11-cap-shift-census.md) |
 | Complement conjugation `T_c` | `n` | sweep regime labels | 93.9% stable; not an invariance | [audit](2026-09-11-representation-invariants-audit.md) |
-| `T_c`, `T_m` | — | possibility-frontier census summaries | preserved, by closure of the observer family (deduction; tables not in repo) | [recoding note](2026-09-11-higher-block-recoding.md) |
+| `T_c`, `T_m` | — | possibility-frontier census, scalar summaries (optima, counts, overlap flags) | preserved, by closure of the observer family (deduction; tables not in repo); optimal observer identities are covariant under the explicit table permutation, not literally equal | [recoding note](2026-09-11-higher-block-recoding.md) |
 
 ### Local recodings (injective, alphabet-changing, declared locality)
 
 | Transformation | Forward / inverse radius | Property | Status | Source |
 | --- | --- | --- | --- | --- |
-| 2-block recoding `T_β` | 1 / 0, alphabet 2 → 4, family a subshift | derivative, commutator, derivative closure | preserved componentwise (algebra; control) | [recoding note](2026-09-11-higher-block-recoding.md) |
+| 2-block recoding `T_β` | 1 / 0, alphabet 2 → 4, two stored bits per site, family a subshift | derivative, commutator, derivative closure | preserved componentwise under both tested completions (ambient radius 2 executed, radius 1 componentwise) | [recoding note](2026-09-11-higher-block-recoding.md) |
 | 2-block recoding `T_β` | 1 / 0 | cap radius, K and O | covariant, cost at most one unit, zero in 665 of 674 cells | same |
 | Local Z2 relabeling of rule fields | 0 / 0 on state; tables conjugated by neighbors | decoded rule-field dynamics, with covariant transport | preserved | [rule-field relabeling](2026-09-10-rule-field-relabeling.md) |
 | Local Z2 relabeling of rule fields | — | quiescence-selection statistic | changed (convention-dependent) | same; established result 8 |
@@ -73,13 +73,13 @@ Not yet declared: non-injective coarse-graining, where "preserved" must be repla
 
 ## First unit: complete
 
-[Representation invariants audit](protocols/representation-invariants-audit-20260910.md), frozen 2026-09-10, run 2026-09-11, reported in the [audit note](2026-09-11-representation-invariants-audit.md). Five of six predictions held. The failed one, a radius bound for the local-cap census under complement conjugation, omitted that the target correction row transforms too; its correction is post hoc and is the next protocol's prediction. Exact findings: the native commutator is complement-covariant iff the rule is self-dual, and transporting the derivative as a state restores covariance for all 256 rules; reflection preserves the commutator classification, derivative closure, and all 4,608 cap budgets; the derivative-closure set is the same 30 rules at rings 6, 8, 10; sweep regime labels are 95% and 94% stable while the raw statistics behind them are under 30% equal. The protocol's original text follows.
+[Representation invariants audit](protocols/representation-invariants-audit-20260910.md), frozen 2026-09-10, run 2026-09-11, reported in the [audit note](2026-09-11-representation-invariants-audit.md). Five of six predictions held in their scored parts; P6's unscored boundary clause is unsupported. The failed one, a radius bound for the local-cap census under complement conjugation, omitted that the target correction row transforms too and fails on four `h = 0` cells; 18 further flagged cells were right-censored, not violations. Its correction is post hoc and is the next protocol's prediction. Codex's retrospective review of 2026-09-11 is recorded in the protocol addendum. Exact findings: the native commutator is complement-covariant iff the rule is self-dual, and transporting the derivative as a state restores covariance for all 256 rules; reflection preserves the commutator classification, derivative closure, and all 4,608 cap budgets; the derivative-closure set is the same 30 rules at rings 6, 8, 10; sweep regime labels are 95% and 94% stable while the raw statistics behind them are under 30% equal. The protocol's original text follows.
 
 The protocol It declares two global transformations of elementary CA (complement conjugation and reflection) and their composite, states what each transports and costs, and audits six existing claims against them with predictions frozen before running: the commutator classification of established result 1, pointwise commutator covariance, derivative-observation closure, the local correction-cap census, and the five-regime pair labels of the full sweep. The last of these is a sampled-seed result and is expected to be only approximately invariant; the protocol says so.
 
 ## Second unit: complete
 
-[Cap census complement extension](protocols/cap-census-complement-extension-20260911.md), frozen and run 2026-09-11, reported in the [extension note](2026-09-11-cap-census-complement-extension.md). All four predictions held. The first audit's failure was a budget artifact: every cap the census could not see at `R ≤ 2` exists at radius 3, and complement conjugation costs at most two units of cap radius on these cells. The radius budget is part of the representation contract.
+[Cap census complement extension](protocols/cap-census-complement-extension-20260911.md), frozen and run 2026-09-11, reported in the [extension note](2026-09-11-cap-census-complement-extension.md). All four predictions held. The availability mismatches in the first audit were budget artifacts: every cap the census could not see at `R ≤ 2` exists at radius 3 and satisfies the original `≤ h` bound; the four `h = 0` counterexamples survive. Complement conjugation costs at most two units of cap radius on these cells. The radius budget is part of the representation contract.
 
 ## Third unit: complete
 
@@ -87,7 +87,7 @@ The protocol It declares two global transformations of elementary CA (complement
 
 ## Fourth unit: complete
 
-[Higher-block recoding](protocols/higher-block-recoding-20260911.md), frozen and run 2026-09-11, reported in the [recoding note](2026-09-11-higher-block-recoding.md). The first transformation of a local, alphabet-changing type. All four predictions held: cap radius within `[mpr − 1, mpr]` and unchanged in 665 of 674 cells; derivative, commutator and closure preserved componentwise; the Research026 observer family closed under complement and reversal, so that census is covariant by deduction. Remaining undeclared types: change of completion (runs under the second-lift protocol) and non-injective coarse-graining (the Erased Distinctions object).
+[Higher-block recoding](protocols/higher-block-recoding-20260911.md), frozen and run 2026-09-11, reported in the [recoding note](2026-09-11-higher-block-recoding.md). The first transformation of a local, alphabet-changing type. The executed total law had ambient radius 2 off the family, a recorded deviation from the declared radius 1; a radius-1 componentwise completion was added after review and both give identical on-family results. B1–B3 are supported on the consistent-pair family: cap radius within `[mpr − 1, mpr]` and unchanged in 665 of 674 cells; derivative, commutator and closure preserved componentwise. B4's closure part is supported: the Research026 observer family is closed under complement and reversal. B4's frozen consequence, literally identical per-rule census summaries, was corrected after review to scalar summaries identical with optimal observers covariant under the permutation; that is a corrected claim, not an original frozen success. Remaining undeclared types: change of completion (runs under the second-lift protocol) and non-injective coarse-graining (the Erased Distinctions object).
 
 ## What would count as progress
 
