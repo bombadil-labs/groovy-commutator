@@ -28,7 +28,7 @@ Read `docs/research/2026-09-11-transverse-freedom.md`. The frozen protocol recei
 
 ## Checkpoint 2026-09-11: bounded second-lift completion comparison completed
 
-Read `docs/research/2026-09-11-second-lift-completion.md`. This is the newest
+Read `docs/research/2026-09-11-second-lift-completion.md`. This was the immediately preceding
 completed dimensional unit. It executes the frozen product-alphabet protocol
 without reclassifying correction depth as spatial dimension.
 
