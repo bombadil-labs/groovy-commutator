@@ -7,6 +7,20 @@ substantial unit completes; keep the bounded-claim style.
 
 Program page: `docs/research/2026-09-10-representation-invariants-program.md`
 
+## Checkpoint 2026-09-11 (sixth unit accepted): parity history bound merged; workflow housekeeping
+
+- Gate 2 met: Codex signed off at `10fdbe3` after one record correction (the
+  per-ring census covers rings 6-12 and 14, not 6-14). Merged via PR #89 at
+  `2a58ca2` with a merge commit; five checks green including the 24-minute
+  byte-for-byte replay; local rerun byte-identical. Unit accepted.
+- Workflow change (Myk, 2026-09-11), in the next gathering PR: the reviewer
+  merges on a clean gate-2 sign-off with green checks; result replays split
+  into a fast integrity tier on pull requests and the full replay on main.
+- Next unit candidates unchanged: a second non-injective map (2-block
+  projection or block majority) to test whether the constant-response
+  criterion is parity-specific; or which observations admit a finite
+  history certificate of this kind.
+
 ## Checkpoint 2026-09-11 (sixth unit run): parity history bound certified, gate-2 pending
 
 - Run authorized by Myk before any other-model review (recorded on the

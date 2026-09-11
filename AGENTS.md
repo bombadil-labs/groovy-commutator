@@ -417,7 +417,7 @@ workflow; research source and result changes now also trigger that workflow.
    finite check on `L`-admissible 8-words plus a lemma; depth-2 set exactly
    {22, 73, 104, 109, 146, 151, 182, 233}, realized at n = 5; rings 7, 9,
    11, 14 agree; run authorized by Myk before Codex's retrospective gate-1
-   sign-off, gate-2 pending on PR #89). Fifth unit accepted after Codex's
+   sign-off; accepted after Codex's gate-2 sign-off, merged in PR #89). Fifth unit accepted after Codex's
    gate-2 sign-off, merged in PR #88.
 
 ## Checkpoint logs (read before continuing any workstream)
