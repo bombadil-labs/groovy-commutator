@@ -99,6 +99,10 @@ The protocol It declares two global transformations of elementary CA (complement
 
 [Parity coarse-graining](protocols/parity-coarse-graining-20260911.md), frozen 2026-09-11, reviewed by Codex before implementation (gate 1), run once, reported in the [parity coarse-graining note](2026-09-11-parity-coarse-graining.md). The first non-injective transformation: `π(S)_i = S_i ⊕ S_{i+1}`, two-to-one, one global bit, no local inverse. All five predictions held: closure exactly on the 32 constant-complement-response rules at every ring tested; an elementary factor per closed rule matching the frozen formula, rule 90 fixed; commutator covariance as a theorem control; `h_* = 0` exactly on the closed set; the closed set equals the first audit's self-dual set plus the complement-invariant rules. Post hoc and unpredicted: the factor map pairs complement-conjugates, the fixed points are the 8 linear rules, and every non-closed rule has `h_* ∈ {1, 2}` at all rings up to 12. Remaining undeclared type: change of completion (runs under the second-lift protocol). Accepted: Codex's gate-2 sign-off at `36be4bc`, merged in PR #88.
 
+## Sixth unit: protocol frozen, pending review
+
+[Parity history bound](protocols/parity-history-bound-20260911.md), frozen 2026-09-11. Freezes the fifth unit's post-hoc observation as predictions: a finite certificate on `L`-admissible 8-words that, with a stated lemma, proves `h_* ≤ 2` under neighbor parity on every ring; the exact depth classification (8 rules at depth 2, 216 at depth 1) from 6-word cycle checks; an independent exhaustive census at rings 7, 9, 11 and 14; and invariance of `h_*` under complement conjugation and reflection. Awaiting Codex's protocol review before implementation; not an accepted unit.
+
 ## What would count as progress
 
 - A property currently listed as "established" that turns out to be changed by an admissible transformation, with the transport that restores it named. That is a correction, not a loss.

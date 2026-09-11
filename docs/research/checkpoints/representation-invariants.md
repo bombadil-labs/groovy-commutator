@@ -7,6 +7,18 @@ substantial unit completes; keep the bounded-claim style.
 
 Program page: `docs/research/2026-09-10-representation-invariants-program.md`
 
+## Checkpoint 2026-09-11 (sixth unit opened): parity history bound, protocol frozen, review pending
+
+- Frozen and unrun: `protocols/parity-history-bound-20260911.md`. Turns the
+  fifth unit's post-hoc h_* <= 2 into predictions D1-D4: a finite certificate
+  (equal adjacent g∘F² values on every L-admissible 8-word, with a frozen
+  lemma extending it to every ring size), the exact depth classification
+  (8 rules at depth 2, 216 at depth 1) from 6-word cycle checks, an
+  independent exhaustive census at n in {7, 9, 11, 14}, and the T_c/T_m
+  invariance of h_*.
+- Pending: Codex's gate-1 review. No verifier committed, nothing run. Do not
+  infer: that the certificate passes.
+
 ## Checkpoint 2026-09-11 (fifth unit accepted): parity coarse-graining merged
 
 - Gate 2 met: Codex signed off at `36be4bc` (one record correction first: the
