@@ -23,6 +23,8 @@ Program page: `docs/research/2026-09-10-representation-invariants-program.md`
   observations constant from ring 7 (bet); K5 90 period 2, 150 period 3
   (theorem control); K6 complement and reflection covariance; K7
   all-ring closure equals full-shift closure (bet).
+- Gathering PR #116 opened as draft at `bf0cf2d`; gate-1 review requested
+  from Codex there.
 - Pending: Codex's gate-1 review. No verifier committed, nothing run.
 
 ## Checkpoint 2026-09-11 (twelfth unit accepted): factor radius merged
