@@ -567,11 +567,13 @@ recursive spatial-program closure.
 
 20. **Loop revision and inherited control have exact support costs.** Changing a loop vector requires the sum of transverse cross-section sizes over its changed directions. Replication multiplies both edge and site costs by the added period while preserving edited trajectories. The exhaustive known-state flat-mask audit measures additional native higher-dimensional choices; its period-two full-field counts do not establish general nonlinear reversibility or an endogenous controller.
 
+21. **Rule32's inherited second-lift tuples close at radius one through depth two.** For both declared H128/H160 completions, both K/O coordinate systems and h=0,1,2, radius zero fails while radius one closes the inherited Rule32 pair family; radius two also passes. All 36 full-four-symbol ambient controls fail through radius two. The inherited O tables are literally completion-independent, while K tables can differ and remain locally recoded. This is product-alphabet correction closure on the same one-dimensional lattice, not a new spatial dimension.
+
 ## What remains open
 
 - Rule32's finite-height physical cap and matched-edit contract are established. Broader cap compilation and intentional semantic program revision remain open; the current law does not generally restore the undamaged represented trajectory.
 - Finite-thickness routing boundaries are constructive under fixed occupancy and missing-input retention. Occupancy edits, mutable stage topology, smaller alphabets and self-maintained roles remain open.
-- The relationship between correction depth, spatial dimension, growing spatial radius and minimum causal representation dimension is not yet characterized. A fixed code's ancestral rank may primarily reflect its layout.
+- The relationship between correction depth, spatial dimension, growing spatial radius and minimum causal representation dimension is not yet characterized. The completed second-lift comparison keeps the spatial lattice one-dimensional while growing the represented product alphabet; its radius-one inherited closure therefore does not settle how a genuinely new spatial axis should arise. A fixed code's ancestral rank may primarily reflect its layout.
 - Transverse-only closure, full-gradient closure, native execution, loop conservation, and costed external flat-mask control are established in their declared domains. Larger-period nonlinear frontiers, different observations, correction state, endogenous control, and the natural establishment of interpretations remain separate open questions.
 - Class-IV correspondence is background motivation only and does not direct the current search.
 
@@ -600,8 +602,10 @@ and commit its implementation before evaluation.
 
 The [archived Rule110 example](2026-09-10-successor-set-archive.md) compares exact whole-field successor sets with sound local Cartesian products on the eight-cell ring. The general question remains open: which ordered representation domains preserve useful precision at a declared resource cost? Whole-field correlations, cell-frequency metrics and prior-weighted entropy bounds are distinct. This is a reproduced exploratory example; new substrates and infinite-lattice claims require a separate frozen protocol.
 
-## Planned execution: bounded second-lift completion comparison
+## Completed execution: bounded second-lift completion comparison
 
-The [frozen protocol](protocols/second-lift-completion-comparison-20260910.md) follows the completed gradient audit. Its [registered experiment](../knowledge/second-lift-completion-comparison.md) remains planned: implementation and primary evaluation are unrun. The [note](2026-09-10-second-lift-completion-protocol.md) distinguishes prior exploratory checks from the existing analytic invariant.
+The [frozen protocol](protocols/second-lift-completion-comparison-20260910.md) has now been executed; see the [result note](2026-09-11-second-lift-completion.md) and [knowledge record](../knowledge/second-lift-completion-comparison.md). The implementation was pinned before the primary 72-case matrix, with the recorded pre-pin control/diagnostic dry-run preserved as a procedural deviation.
 
-For H128/H160 on the shared invariant Rule32 pair family, finite-depth correction tuples are invertibly locally recoded and retain identical whole-field fibers. The open measurement is local cap radius and representation cost, with a separate full-four-symbol ambient control. This constructor increases a product alphabet and correction depth on the same spatial lattice. Proposal completion does not claim the census has run or that a new spatial dimension has been established.
+For H128/H160 on the shared invariant Rule32 pair family, both K and O coordinates close with **minimum radius one** at every tested depth h=0,1,2: R=0 conflicts and R=1,2 pass for both completions. Every one of the 36 full-four-symbol ambient controls conflicts through R=2. The inherited O tables are literally identical across completions, as required by the future-coordinate theorem; K tables can differ while the exhaustive triangular recoding audits preserve their whole-field fibers and the same minimum cap radius.
+
+The result isolates the resource being purchased: at depths 0,1,2 the represented alphabet carries 2,4,6 bits per site while the measured inherited cap radius remains one. The spatial lattice remains one-dimensional throughout. This is therefore a completed second application of the correction construction in a product alphabet, not evidence that correction depth itself is a new spatial dimension or that the turtle beam has been physically spatialized.
