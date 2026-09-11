@@ -1764,14 +1764,15 @@ export default function Concepts() {
           <div style={sectionKicker}>Representation</div>
           <h2 style={h2Style}>When is a change of coordinates a discovery?</h2>
           <p style={pBody}>
-            The same automaton can be described in more than one convention: swap the names of 0 and 1,
-            mirror left and right, read every second cell, or watch it through a coarse lens. A finding
-            about the automaton should not depend on which convention we happened to use. Eleven audits
-            sorted the site&apos;s claims into three kinds.
+            The same automaton can be described in more than one convention. Some are exact coordinate
+            changes: swap the names of 0 and 1, mirror left and right, or renumber an odd ring by stepping
+            two sites at a time. Others are lossy: watch it through a coarse lens. A finding about the
+            automaton, rather than about our convention, should survive the exact changes and be stated
+            relative to the lens. Eleven audits sorted the site&apos;s claims into three kinds.
           </p>
           <p style={pBody}>
             Some survive any of these changes outright. Mirroring, or dilating the neighborhood and the lens
-            together by two on a ring of odd size, is only a renumbering of positions, and nothing changes. Some survive only if a companion
+            together by two on a ring of odd size, is only a renumbering of positions, and none of the audited properties changes. Some survive only if a companion
             object is translated too. Swapping 0 and 1 turns Rule 0 into Rule 255 and its commutator from
             all-zeros into all-ones; the commutator becomes convention-free once the derivative is
             translated as a state, and closure under a lens becomes convention-free once the lens is

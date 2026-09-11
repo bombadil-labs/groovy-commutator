@@ -2,7 +2,7 @@
 
 This page is the **working synthesis** of a third research program, opened on 2026-09-10 after the review conversation recorded in issues #61–#68. It is not a chronological note and it claims no result of its own; every result it cites has its own note, protocol and canonical result file. It records the question, the objects the question is about, the transformation tables, one section per completed unit, and, after eleven units, the [synthesis](#synthesis-after-eleven-units).
 
-Authored by: Claude Code, Fable 5.1. Reviewed by: Codex (OpenAI) unit by unit; units 1–4 retrospectively on 2026-09-11, units 5–11 at gate 1 before implementation and at gate 2 before merge, as each unit's note records. The synthesis section was reviewed on its own gathering PR.
+Authored by: Claude Code, Fable 5.1. Reviewed by: Codex (OpenAI) unit by unit; units 1–4 retrospectively on 2026-09-11, units 5 and 7–11 at gate 1 before implementation and at gate 2 before merge, and unit 6 run under Myk's explicit authorization with Codex's gate-1 review arriving retrospectively and its gate 2 before merge, as each unit's note records. The synthesis section was reviewed on its own gathering PR.
 
 The thesis is:
 
@@ -155,9 +155,9 @@ Rows are transformations, columns are audited property families. "pres." is pres
 
 ### What the audits say together
 
-- **Exactly preserved, hence never a discovery.** Reflection, and dilation by a factor coprime to the ring with the observation dilated too, are site permutations, and every audited property survives them without transport. Injective local recoding on its family leaves the derivative, the commutator and derivative closure unchanged componentwise and moves a cap radius by at most one unit. A learner in the planned primitives program that reports one of these as a new phenomenon has rediscovered a coordinate.
+- **Exactly preserved, hence never a discovery.** Reflection, and dilation by a factor coprime to the ring with the observation dilated too, are site permutations, and every exact algebraic and census property audited survives them without transport; the one non-exact property, the seeded sweep's regime labels, is only stable under reflection (95.1%), as the matrix records. Injective local recoding on its family leaves the derivative, the commutator and derivative closure unchanged componentwise and moves a cap radius by at most one unit. A learner in the planned primitives program that reports one of these as a new phenomenon has rediscovered a coordinate.
 - **Covariant only when the whole contract travels.** Three transformations looked non-invariant until their companion object was transported with the rule, and were then exactly covariant: complement conjugation for the commutator field (transport the derivative as a state), complement conjugation for closure under an observation (conjugate the observation too), and neighborhood dilation for closure and depth (dilate the observation too). In each case leaving the companion behind is a real change with a real cost, not an artifact: the closed set shrinks, the commuter set loses the observation rule, the depth table moves. The program's working rule is therefore: state the transport before calling a property invariant, and count the observation as part of the contract.
-- **Changed, and the change is the content.** Which rules close under a non-injective observation, how they close (commuting, collapsing, or with a factor that is neither constant nor the rule), and how much history the factor needs are properties of the pair (rule, observation), not of the rule. The linear observations sort rules by a kernel; the non-linear ones sort them by commutation, collapse and observational equivalence, and their closed sets need not be ring-independent (rule 22). Two structural facts fell out that hold for every ring: refinement depth under neighbor parity is at most 2, and observational equivalence under any elementary observation is decided by the 32 five-cell words.
+- **Changed, and the change is the content.** Which rules close under a non-injective observation, how they close (commuting, collapsing, or with a factor that is neither constant nor the rule), and how much history the factor needs are properties of the pair (rule, observation), not of the rule. The linear observations sort rules by a kernel; the non-linear ones sort them by commutation, collapse and observational equivalence, and their closed sets need not be ring-independent (rule 22). Two structural facts fell out with proofs rather than censuses: refinement depth under neighbor parity is at most 2 on every ring, and observational equivalence under any elementary observation is decided by the 32 five-cell words on every ring of size at least 5.
 - **Stability is not invariance.** The sampled sweep's regime labels agree at 95% and 94% between a pair and its image under reflection and complement. That is stability of a seeded statistic, and the program does not list it among the invariants.
 
 ### What this gives the other programs
@@ -166,7 +166,7 @@ The Erased Distinctions program gets a closure vocabulary tested on eleven trans
 
 ### What remains open in this program
 
-The non-elementary factors under observation 200; the ring-dependent closed set under observation 22; depth growth beyond ring 16; other offset sets and lattices as wiring transformations; the completion type, whose experiment belongs to the dimensional program.
+The non-elementary factors under observation 200; the ring-dependent closed set under observation 22; depth growth beyond ring 16; other offset sets and lattices as wiring transformations; completion families and budgets beyond the completed bounded H128/H160 comparison, which belong to the dimensional program.
 
 ## What would count as progress
 

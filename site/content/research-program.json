@@ -78,7 +78,7 @@
     "date": "2026-09-10",
     "updated": "2026-09-11",
     "status": "living",
-    "summary": "Eleven audits complete across four transformation types: global relabelings, an injective local recoding, linear and non-linear observations, and a change of wiring. Reflection and coprime whole-contract dilation preserve everything; complement conjugation and dilation are exactly covariant only when the companion object, the derivative or the observation, is transported with the rule; closure under an observation and its history cost are properties of the pair and are genuinely changed. The Program page carries the verdict matrix and what each other program can use.",
+    "summary": "Eleven audits complete across four transformation types: global relabelings, an injective local recoding, linear and non-linear observations, and a change of wiring. Reflection and coprime whole-contract dilation preserve every exact property audited, with the seeded sweep labels only stable; complement conjugation and dilation are exactly covariant only when the companion object, the derivative or the observation, is transported with the rule; closure under an observation and its history cost are properties of the pair and are genuinely changed. The Program page carries the verdict matrix and what each other program can use.",
     "thesis": "Which properties of a represented dynamics survive a declared change of representation contract, after transporting what must be transported, and at what cost?",
     "source": "docs/research/2026-09-10-representation-invariants-program.md",
     "supports": [
