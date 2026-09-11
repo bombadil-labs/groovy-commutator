@@ -154,6 +154,35 @@ as a candidate for Questions.
 Correct false claims in the main content when discovered; do not wait for a
 larger editorial pass. Record what changed and why in Research.
 
+## Integrate a research unit through a gathering PR
+
+Follow the canonical [gathering-branch workflow](../../AGENTS.md#gathering-branches-and-cross-model-review).
+A draft `gather/<unit>` PR into `main` carries the unit's scope and completion
+criteria. Small sub-PRs target that branch and may be self-merged after
+self-review and relevant checks. Integration into the gathering branch does
+not make a result independently reviewed or published on `main`.
+
+There are two distinct review gates:
+
+1. **Before implementation and evaluation:** the other model reviews the
+   frozen protocol, including definitions, predictions, domain, budget,
+   controls and scoring of failures or censored outcomes. Record the reviewed
+   revision, date and review link. Material protocol changes require renewed
+   review before the affected run. Previously observed outcomes must remain
+   labeled exploratory or post hoc; later review cannot change their history.
+2. **Before merge into main:** the other model reviews the complete unit at
+   the gathering PR's current head SHA, including code, evidence, deviations,
+   negative findings, proofs and limits, and the updated current account.
+   Resolve findings and obtain explicit signed sign-off with green relevant
+   checks. Review at protocol freeze is not approval of the eventual results.
+
+The gathering PR lists sub-PRs and issue closure references. Notes and
+protocols retain their own authorship/review provenance, distinguishing
+pre-evaluation and retrospective review. Update the Program, dependent
+knowledge entries and checkpoint when applicable; a checkpoint must identify
+pending review rather than describing an unapproved unit as accepted.
+Preserve original protocols and datasets when correcting a completed run.
+
 ## Authorship and review
 
 Notes, checkpoints, and frozen protocols carry a short provenance line near the
