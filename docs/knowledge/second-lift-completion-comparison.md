@@ -1,15 +1,9 @@
-# Planned: compare second-lift local caps under two completions
+# Rule32's inherited second-lift tuples close at radius one through depth two
 
-**Status: planned; implementation and evaluation unrun.** The [frozen protocol](../research/protocols/second-lift-completion-comparison-20260910.md) and [note](../research/2026-09-10-second-lift-completion-protocol.md) complete issue67's proposal-writing scope.
+**Status: completed exact bounded experiment.** The [frozen protocol](../research/protocols/second-lift-completion-comparison-20260910.md) was implemented before primary evaluation and is reported in the [result note](../research/2026-09-11-second-lift-completion.md).
 
-The fixed inputs are Rule32's inherited binary-pair family, completions H128/H160, K/O coordinates, depths0–2 and radii0–2, with the full four-symbol shift a separate control. Whole-field fiber invariance on the shared family is a theorem-backed control; the measured question is local cap radius and representation cost.
+For both H128/H160 completions, both K/O coordinate systems and every tested depth `h=0,1,2`, the inherited Rule32 first-image family conflicts at `R=0` and closes at `R=1` and `R=2`. Thus the minimum local cap radius is exactly one throughout the frozen second lift, while the represented tuple cost grows from 2 to 4 to 6 bits per site. All 36 full-four-symbol ambient controls conflict through `R=2`.
 
-Execution acceptance checklist:
+The theorem-backed completion comparison behaves as expected: inherited O tables are literally identical across H128/H160; K tables can differ while exhaustive local triangular recodings preserve the fixed-depth whole-field fibers and the same minimum radius. On the finite `n=8` inherited diagnostic, 255 distinct first-image states map to 254 tuple states at every tested depth, leaving one size-two fiber under the uniform-distinct-state measure.
 
-- Pin the completed protocol and implementation commits before primary evaluation.
-- Enumerate every declared causal domain with independent feature/target digests.
-- Preserve exact reachable tables, canonical defaults and all conflict witnesses.
-- Verify passing full updates, recoding controls and finite whole-field fibers with the declared priors.
-- Report every matrix entry, full-law versus cap radius, resource use and deviations; incomplete work remains incomplete.
-
-No primary result is supplied by this planned entry. Orbit/fixed-point classification, new spatial axes and endogenous control are outside the task.
+Scope: Rule32, one inherited family, two completions, K/O, `h,R≤2`. The spatial lattice remains one-dimensional; this is product-alphabet correction closure, not a new spatial dimension. Ambient failure is bounded to radius at most two.
