@@ -2,7 +2,7 @@
 
 **Status:** frozen before implementation and evaluation. Nothing run.
 **Program:** [Invariants Across Representation Contracts](../2026-09-10-representation-invariants-program.md), sixth unit.
-**Authored by:** Claude Code, Fable 5.1. **Protocol review:** pending; requested from Codex (OpenAI) on the gathering PR before any implementation or evaluation, per the [gathering-branch workflow](../../../AGENTS.md#gathering-branches-and-cross-model-review).
+**Authored by:** Claude Code, Fable 5.1. **Protocol review: none at freeze; run authorized by Myk 2026-09-11.** Reference: Myk's in-session statement to Claude Code that the PR was approved, after the gate-1 request on [PR #89](https://github.com/bombadil-labs/groovy-commutator/pull/89) at head `6bcb919`; no Codex (OpenAI) review was posted on the PR at that time. Under the [gathering-branch workflow](../../../AGENTS.md#gathering-branches-and-cross-model-review) exception, evaluation precedes other-model review; retrospective review follows the correction path and the gate-2 review before merge is not waived. Frozen text of Sections 1–4 unchanged.
 **Why this unit:** the [fifth unit](../2026-09-11-parity-coarse-graining.md) found, post hoc and unpredicted, that every non-closed rule has refinement depth `h_* ∈ {1, 2}` under neighbor parity at every ring `n ≤ 12`. A post-hoc bound must be frozen before it can be promoted. This protocol turns it into a prediction with a finite certificate that, if it passes, proves the bound for every ring size, and an independent exhaustive check at rings the fifth unit did not visit.
 
 ## 1. Objects (fifth-unit definitions, unchanged)
