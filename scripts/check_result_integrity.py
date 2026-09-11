@@ -61,6 +61,9 @@ REGISTRY = {
         'script': 'scripts/verify_wiring_dilation.py',
         'block_majority_result': 'results/block_majority_20260911.json',
         'isolated_cell_result': 'results/isolated_cell_20260911.json'},
+    'results/second_lift_completion_20260911.json': {
+        'script': 'scripts/verify_second_lift_completion.py',
+        'protocol': 'docs/research/protocols/second-lift-completion-comparison-20260910.md'},
 }
 
 def sha(p: pathlib.Path) -> str: return hashlib.sha256(p.read_bytes()).hexdigest()
