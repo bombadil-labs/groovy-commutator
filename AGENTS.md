@@ -452,6 +452,17 @@ workflow; research source and result changes now also trigger that workflow.
    complements do not close; depth reaches 16 at ring 12 and grows with the
    ring; neither the parity 32 nor this set contains the other. Accepted
    after Codex's gate-2 sign-off at `7c33051`, merged in PR #92.
+   Ninth unit (`scripts/verify_isolated_cell.py`, gate-1 reviewed after one
+   witness correction): rule 4 (isolated-cell detection, not self-dual) as
+   an observation on rings 6–12 closes exactly 33 rules at every ring: 9
+   exact commuters {0,4,42,112,170,200,204,232,240}, 24 rules collapsing to
+   the all-zeros field, and rules 123 and 251, which close by a third route
+   because 251 = ¬F_4 is a function of the observation (frozen
+   commute-or-collapse prediction failed); the affine rules beyond
+   constants, identity, shifts and complements are not closed; depth
+   reaches 22 at ring 12 and is not monotone in the ring; the census is
+   complement-covariant when the observation is conjugated to rule 223 and
+   not complement-invariant. Gate-2 pending on PR #93.
 
 ## Checkpoint logs (read before continuing any workstream)
 

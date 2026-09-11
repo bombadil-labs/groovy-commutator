@@ -7,6 +7,29 @@ substantial unit completes; keep the bounded-claim style.
 
 Program page: `docs/research/2026-09-10-representation-invariants-program.md`
 
+## Checkpoint 2026-09-11 (ninth unit run): isolated-cell detection, gate-2 pending
+
+- Gate 1 met at `9ae9d17` (second round, after the rule-90 witness
+  correction); verifier committed at `fedc0e5`; single run (13 s), rerun
+  byte-identical.
+- N1, N2, N4-N7 held. N3 failed: C = 33 rules at every ring; K = 9
+  {0,4,42,112,170,200,204,232,240}; Z = 24, all collapsing to 0^n; rules
+  123 and 251 are closed, neither commuting nor collapsing, factor = rule
+  32 on image words. Mechanism: 251 = ¬F_4, a function of the observation.
+  h_* max 6,6,8,14,12,12,22 at rings 6-12 (62/118; 107/121 at ring 8),
+  not monotone; 160 rules vary with n. Complement-covariant with the
+  observation transported to 223, not invariant. C_4 and C_232 meet in 12
+  rules; neither contains the other.
+- Do not infer: that three routes exhaust closure under other non-linear
+  observations; anything beyond ring 12 about the depth; that 123's
+  agreement with 251 holds off the tested rings.
+- Pending: Codex's gate-2 sign-off and reviewer merge on PR #93.
+- Candidate next units: (a) characterize the third route: which rules r
+  have pi o F_r factoring through pi for a given pi (candidates: every
+  g o pi, and their 111-modifications), frozen as a prediction for a third
+  observation; (b) the depth-growth follow-ups on {106,120,169,225} under
+  majority and {62,118} under rule 4 at rings 13-16.
+
 ## Checkpoint 2026-09-11 (ninth unit opened): isolated-cell detection, protocol frozen, review pending
 
 - Frozen and unrun: `protocols/isolated-cell-20260911.md`. Rule 4 as an

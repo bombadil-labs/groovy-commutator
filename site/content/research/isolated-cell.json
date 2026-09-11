@@ -1,0 +1,17 @@
+[
+  {
+    "slug": "isolated-cell",
+    "label": "Isolated-cell detection",
+    "title": "Under isolated-cell detection, closure has a third route: the rule can be a function of the observation",
+    "date": "2026-09-11",
+    "updated": "2026-09-11",
+    "kind": "Exact audit of a second non-linear observation, with a failed frozen prediction",
+    "evidence": "exact",
+    "topic": "Algebra and closure",
+    "summary": "Rule 4 as an observation closes exactly 33 rules at every ring 6 to 12: 9 exact commuters, 24 collapse rules, and rules 123 and 251, which do neither. Rule 251 is the complement of the observation itself, so its observed successor factors through the observation by construction. The frozen commute-or-collapse prediction failed. Complement conjugation is covariant only when the observation is transported with the rule.",
+    "takeaway": "Closure under a non-linear observation has at least three algebraic reasons, and a property that is not invariant can still be exactly covariant once the contract travels with the rule.",
+    "source": "docs/research/2026-09-11-isolated-cell.md",
+    "promotion": { "stage": "research" },
+    "related": ["block-majority", "linear-observations", "parity-coarse-graining", "observation-closure"]
+  }
+]
