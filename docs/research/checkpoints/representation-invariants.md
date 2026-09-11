@@ -7,6 +7,19 @@ substantial unit completes; keep the bounded-claim style.
 
 Program page: `docs/research/2026-09-10-representation-invariants-program.md`
 
+## Checkpoint 2026-09-11 (fifth unit opened): parity coarse-graining protocol frozen, review pending
+
+- The correction unit merged to main via #86 with Codex's final sign-off at
+  `cec7422`; the review workflow of #85 is now canon in `AGENTS.md`.
+- Frozen and unrun: `protocols/parity-coarse-graining-20260911.md`, the first
+  non-injective transformation (`π` = rule 102 as an observation). Predictions
+  C1–C5 are stated there; the verifier is not yet committed, by design: the
+  workflow now requires other-model protocol review before implementation.
+- Pending: Codex's protocol review on the gathering PR. Do not infer: any
+  result of C1–C5; that the 32-rule closure set has been checked at any `n`.
+- Open for Myk, unchanged: the editorial default for the commutator under
+  relabeling.
+
 ## Checkpoint 2026-09-11 (corrections): Codex retrospective review of units 1–4 applied
 
 - Review arrived after merge, not at freeze; all four protocols carry dated

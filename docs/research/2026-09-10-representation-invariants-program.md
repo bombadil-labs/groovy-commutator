@@ -69,7 +69,7 @@ One row per declared transformation, with its declared costs, then the propertie
 | --- | --- | --- | --- | --- |
 | Copy along a new axis | zero added information density | wrapping-loop parity | preserved | [gradient loop invariants](2026-09-10-gradient-loop-invariants.md) |
 
-Not yet declared: non-injective coarse-graining, where "preserved" must be replaced by "closed" and the object is the Erased Distinctions Program's `R_∞`.
+Non-injective coarse-graining, where "preserved" must be replaced by "closed" and the object is the Erased Distinctions Program's `R_∞`: declared in the [parity coarse-graining protocol](protocols/parity-coarse-graining-20260911.md), frozen 2026-09-11 and **pending protocol review**; nothing run. The table gains its section when that unit completes.
 
 ## First unit: complete
 
@@ -88,6 +88,10 @@ The protocol It declares two global transformations of elementary CA (complement
 ## Fourth unit: complete
 
 [Higher-block recoding](protocols/higher-block-recoding-20260911.md), frozen and run 2026-09-11, reported in the [recoding note](2026-09-11-higher-block-recoding.md). The first transformation of a local, alphabet-changing type. The executed total law had ambient radius 2 off the family, a recorded deviation from the declared radius 1; a radius-1 componentwise completion was added after review and both give identical on-family results. B1–B3 are supported on the consistent-pair family: cap radius within `[mpr − 1, mpr]` and unchanged in 665 of 674 cells; derivative, commutator and closure preserved componentwise. B4's closure part is supported: the Research026 observer family is closed under complement and reversal. B4's frozen consequence, literally identical per-rule census summaries, was corrected after review to scalar summaries identical with optimal observers covariant under the permutation; that is a corrected claim, not an original frozen success. Remaining undeclared types: change of completion (runs under the second-lift protocol) and non-injective coarse-graining (the Erased Distinctions object).
+
+## Fifth unit: protocol frozen, pending review
+
+[Parity coarse-graining](protocols/parity-coarse-graining-20260911.md), frozen 2026-09-11. Declares `π(S)_i = S_i ⊕ S_{i+1}` (rule 102 as an observation; two-to-one, one global bit, no local inverse) and predicts: closure exactly on the 32 constant-complement-response rules for `n ≥ 6`; an elementary factor for each, given by an explicit formula, with rule 90 a fixed point; commutator covariance as a theorem control; `h_*` and split counts for the 224 non-closed rules, reported without magnitude predictions; and the identity of the closed set with the first audit's self-dual set plus the complement-invariant rules. Awaiting Codex's protocol review before implementation; not an accepted unit.
 
 ## What would count as progress
 
