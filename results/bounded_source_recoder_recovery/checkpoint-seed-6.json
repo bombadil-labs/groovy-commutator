@@ -1,5 +1,5 @@
 {
-  "batches": 2,
+  "batches": 3,
   "certificate": null,
   "current_candidate": {
     "delta": -1,
@@ -51,22 +51,22 @@
   "stats": {
     "direct_leaves": 0,
     "last_solver_error": {},
-    "partition_splits": 117,
+    "partition_splits": 176,
     "solver_decisions": {
-      "cadical195": 122
+      "cadical195": 179
     },
     "solver_errors": {},
     "solver_seconds": {
-      "cadical195": 1914.007044952,
-      "glucose4": 1171.2624169890012,
-      "maplechrono": 1171.246653798,
-      "minisat22": 1171.2487965199985
+      "cadical195": 2871.6514017619998,
+      "glucose4": 1761.888957918,
+      "maplechrono": 1761.8662798219993,
+      "minisat22": 1761.8703597479982
     },
     "solver_timeouts": {
-      "cadical195": 117,
-      "glucose4": 117,
-      "maplechrono": 117,
-      "minisat22": 117
+      "cadical195": 176,
+      "glucose4": 176,
+      "maplechrono": 176,
+      "minisat22": 176
     },
     "solver_unavailable": {}
   },
@@ -521,7 +521,8 @@
         -10,
         -11,
         -12,
-        1
+        1,
+        2
       ],
       [
         -4,
@@ -530,8 +531,8 @@
         -10,
         -11,
         -12,
-        -1,
-        2,
+        1,
+        -2,
         3
       ],
       [
@@ -541,10 +542,22 @@
         -10,
         -11,
         -12,
-        -1,
-        2,
+        1,
+        -2,
         -3,
-        13,
+        13
+      ],
+      [
+        -4,
+        -5,
+        -6,
+        -10,
+        -11,
+        -12,
+        1,
+        -2,
+        -3,
+        -13,
         14,
         15,
         16,
@@ -557,14 +570,32 @@
         -10,
         -11,
         -12,
-        -1,
-        2,
+        1,
+        -2,
         -3,
-        13,
+        -13,
         14,
         15,
         16,
-        -17
+        -17,
+        18
+      ],
+      [
+        -4,
+        -5,
+        -6,
+        -10,
+        -11,
+        -12,
+        1,
+        -2,
+        -3,
+        -13,
+        14,
+        15,
+        16,
+        -17,
+        -18
       ]
     ]
   },
