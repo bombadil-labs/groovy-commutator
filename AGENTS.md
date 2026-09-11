@@ -443,7 +443,8 @@ workflow; research source and result changes now also trigger that workflow.
    kernel: complement-pair kernels (60, 102, 90 on odd rings) reproduce the
    32 and the certified depths; rule 90 on even rings and rule 150 on rings
    divisible by 3 close exactly the 16 affine rules; depth under those
-   kernels reaches 4 and varies with ring size. Gate-2 pending on PR #91.
+   kernels reaches 4 and varies with ring size. Accepted after Codex's gate-2
+   sign-off, merged in PR #91.
 
 ## Checkpoint logs (read before continuing any workstream)
 

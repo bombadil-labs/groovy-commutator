@@ -7,6 +7,16 @@ substantial unit completes; keep the bounded-claim style.
 
 Program page: `docs/research/2026-09-10-representation-invariants-program.md`
 
+## Checkpoint 2026-09-11 (seventh unit accepted): linear observations merged
+
+- Gate 2 met: Codex signed off at `953d2dc` with no blockers, independently
+  reproducing the post-hoc closed sets and depth maxima, and merged PR #91
+  itself under the reviewer-merges rule. Unit accepted.
+- Program state: global relabelings (1-3), one injective local recoding (4),
+  neighbor parity with its history bound (5-6), all linear observations (7).
+  Next: block majority (rule 232 as an observation), the first non-linear
+  fiber structure; protocol to be frozen and gate-1 reviewed before any run.
+
 ## Checkpoint 2026-09-11 (seventh unit run): linear observations, gate-2 pending
 
 - Gate 1 met at `eb7d2f1` before implementation; verifier committed at
