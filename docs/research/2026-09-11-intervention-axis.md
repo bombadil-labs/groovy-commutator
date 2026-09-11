@@ -76,7 +76,9 @@ This makes **transverse intervention independence** a concrete axis witness for 
 
 Protocol integration `dc363745` preceded Gate 1. Fable's two binding clarifications were applied before implementation, and the gathering branch was reconciled with accepted `main` at `9ff73e4`. Implementation `c8d6c1a` and its permanent workflow `7f7eb64` were integrated at `77ae5a5` with no canonical result present. Only then did one-shot orchestration `130d8e5` run the pinned verifier; the bot committed the first canonical result at `eba1b0c`. Integrity registration `47ff2f6` and one-shot cleanup `7a74015` followed; evaluation was integrated at `8bffdd5` after all 18 checks, including the permanent byte-for-byte replay, were green.
 
-No frozen prediction, domain, representation contract, or scored control was changed after the first primary run. The one-shot runner is absent from the final tree but its commits remain in history.
+During Gate 2, Claude/Fable found two publication-record issues without challenging the verifier, canonical result, or I1–I5 conclusions: the knowledge node/edge had inherited the wrong `history-repairability` provenance, and two public summaries described I3 as “stronger” than the preceding capacity theorem rather than a different resource contract. The wording was corrected, then current `main` (including the accepted ring-closure-certificate unit) was merged into the gathering branch at `3791dc7`; that reconciliation retained both programs' registries and rewrote the intervention knowledge node/edge to `intervention-axis` provenance. No verifier or result artifact changed in this correction round.
+
+No frozen prediction, domain, representation contract, or scored control was changed after the first primary run. The one-shot runners are absent from the final tree but their commits remain in history.
 
 ## Limits
 
