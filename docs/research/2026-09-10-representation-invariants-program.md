@@ -168,6 +168,10 @@ The Erased Distinctions program gets a closure vocabulary tested on eleven trans
 
 The non-elementary factors under observation 200; the ring-dependent closed set under observation 22; depth growth beyond ring 16; other offset sets and lattices as wiring transformations; completion families and budgets beyond the completed bounded H128/H160 comparison, which belong to the dimensional program.
 
+## Twelfth unit: frozen, unrun
+
+[Factor radius](protocols/factor-radius-20260911.md), frozen 2026-09-11, awaiting Codex's gate-1 review. Asks what locality radius the factor of a closed rule needs on the image, under the five non-linear observations audited so far, and organizes the answer by idempotence of the observation. Frozen: for the idempotent observations 200 and 4 the factor is `ψ ∘ F_r` on the image and has radius at most 2 (theorem control), with the tenth unit's sixteen rule-200 residual rules at exactly radius 2 and everything else at radius at most 1; for the non-idempotent observations 232, 32 and 22 the factor is still local with radius at most 2 (a falsifiable bet on the census); collapse rules radius 0, commuters at most 1; ring independence for `n ≥ 7` in the idempotent case by a subshift argument; reflection invariance and complement covariance. Nothing run.
+
 ## What would count as progress
 
 - A property currently listed as "established" that turns out to be changed by an admissible transformation, with the transport that restores it named. That is a correction, not a loss.

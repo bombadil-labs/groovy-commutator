@@ -7,6 +7,19 @@ substantial unit completes; keep the bounded-claim style.
 
 Program page: `docs/research/2026-09-10-representation-invariants-program.md`
 
+## Checkpoint 2026-09-11 (twelfth unit opened): factor radius, protocol frozen, review pending
+
+- Frozen and unrun: `protocols/factor-radius-20260911.md`. The locality
+  radius rho of the factor on the image for every closed rule under
+  observations 232, 4, 32, 200, 22, rings 6-12. R1 idempotent observations
+  (200, 4): factor = psi o F_r on the image, rho <= 2 (theorem); R2 the
+  sixteen rule-200 residual rules at rho = 2 exactly, all else <= 1; R3
+  non-idempotent observations rho <= 2 for every closed rule (falsifiable
+  bet); R4 collapse rho = 0, commuters <= 1; R5 ring independence for
+  n >= 7 in the idempotent case (subshift argument), reported otherwise;
+  R6 reflection invariance, complement covariance for 200 and 4.
+- Pending: Codex's gate-1 review. No verifier committed, nothing run.
+
 ## Checkpoint 2026-09-11 (synthesis accepted): verdict matrix and first promotion merged
 
 - Non-experimental unit: the Program page carries a synthesis section (a
