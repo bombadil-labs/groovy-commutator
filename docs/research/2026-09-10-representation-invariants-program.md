@@ -116,6 +116,10 @@ The protocol It declares two global transformations of elementary CA (complement
 
 [Block majority](protocols/block-majority-20260911.md), frozen 2026-09-11, reviewed by Codex before implementation, run once, reported in the [block majority note](2026-09-11-block-majority.md). Every frozen prediction held. The closed set is the same 22 rules at every ring 6 to 12: the 14 exact commuters with rule 232 (the ten guaranteed plus 4, 32, 223, 251, post hoc) and 8 rules that close by collapse, their observed successor being a constant field; the eight affine rules beyond constants, identity, shifts and complements are not closed, so majority is the first observation under which an affine rule is not a safe primitive; the factor is elementary on the image; depth reaches 16 at ring 12 and grows with the ring, unlike every linear kernel; neither the parity closed set nor the majority closed set contains the other. Accepted: Codex's gate-2 sign-off at `7c33051`, merged in PR #92.
 
+## Ninth unit: frozen, unrun
+
+[Isolated-cell detection](protocols/isolated-cell-20260911.md), frozen 2026-09-11, awaiting Codex's gate-1 review. Rule 4 applied once as a second non-linear observation, the first that is not self-dual. Frozen: exact commuters close (at least 0, 4, 170, 204, 240, 232; rule 255 does not commute because rule 4 does not fix `1ⁿ`); rule 255 closes by collapse, so the closed set strictly contains the commuters; every closed rule either commutes or has a constant factor (the commute-or-collapse shape from the eighth unit, now a falsifiable prediction); the eight affine rules beyond constants, identity, shifts and complements are not closed, witnessed by `0ⁿ` against a block of two or three ones; reflection invariance; complement covariance between the censuses for observations 4 and 223 rather than invariance of either. Nothing run.
+
 ## What would count as progress
 
 - A property currently listed as "established" that turns out to be changed by an admissible transformation, with the transport that restores it named. That is a correction, not a loss.

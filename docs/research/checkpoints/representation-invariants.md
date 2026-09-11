@@ -7,6 +7,19 @@ substantial unit completes; keep the bounded-claim style.
 
 Program page: `docs/research/2026-09-10-representation-invariants-program.md`
 
+## Checkpoint 2026-09-11 (ninth unit opened): isolated-cell detection, protocol frozen, review pending
+
+- Frozen and unrun: `protocols/isolated-cell-20260911.md`. Rule 4 as an
+  observation: non-linear, non-surjective (image 28% -> 8% from n=6 to 12;
+  fibers up to 853), not self-dual (conjugate observation 223). Predictions
+  N1-N7: commuters close (control; 255 is not a commuter); 255 closes by
+  collapse, so C != K is frozen; C = K u Z, commute-or-collapse, is the
+  unit's falsifiable question; the eight remaining affine rules do not
+  close, witness 0^n against a 11 or 111 block; h_* census; reflection
+  invariance and complement covariance to the rule-223 census; CLOSED_32
+  not contained in the closed set.
+- Pending: Codex's gate-1 review. No verifier committed, nothing run.
+
 ## Checkpoint 2026-09-11 (eighth unit accepted): block majority merged
 
 - Gate 2 met: Codex signed off at `7c33051` with no blockers and merged
