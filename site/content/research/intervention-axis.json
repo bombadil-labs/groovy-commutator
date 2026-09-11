@@ -1,0 +1,24 @@
+[
+  {
+    "slug": "intervention-axis",
+    "label": "Intervention axis",
+    "title": "Transverse extent supports unbounded constant-support intervention rank under the separated-strip representation",
+    "date": "2026-09-11",
+    "updated": "2026-09-11",
+    "kind": "Exact representation/resource theorem and bounded replay",
+    "evidence": "exact",
+    "topic": "Algebra and closure",
+    "summary": "Separated Rule90 strips provide arbitrarily many independently addressable two-cell interventions under one fixed 2D law. Even if a 1D target is allowed unlimited total storage, a fixed alphabet and fixed common local endpoint window can represent only finitely many independent channel actions.",
+    "takeaway": "Independent transverse intervention structure isolates a different resource from nominal width or total state capacity: preserving it in one dimension requires a local addressability resource to grow even when total storage is unconstrained. This is an operational axis witness, not an intrinsic-dimension theorem.",
+    "source": "docs/research/2026-09-11-intervention-axis.md",
+    "promotion": {
+      "stage": "research"
+    },
+    "related": [
+      "coupled-strips",
+      "transverse-freedom",
+      "gradient-intervention-costs",
+      "dimensional-lift"
+    ]
+  }
+]

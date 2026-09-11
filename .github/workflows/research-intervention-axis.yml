@@ -1,0 +1,75 @@
+name: Intervention-axis audit
+
+# Two-tier canonical-result contract. During the implementation-only stage the
+# canonical JSON does not exist yet, so this workflow syntax-checks the frozen
+# verifier without executing the primary experiment. Once the result is added,
+# every touching PR checks recorded source hashes; result-changing PRs, pushes to
+# main, weekly runs and manual dispatches replay byte-for-byte.
+
+on:
+  pull_request:
+    paths:
+      - 'scripts/verify_intervention_axis.py'
+      - 'results/intervention_axis_20260911.json'
+      - 'docs/research/protocols/intervention-axis-20260911.md'
+      - 'scripts/check_result_integrity.py'
+      - '.github/workflows/research-intervention-axis.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/verify_intervention_axis.py'
+      - 'results/intervention_axis_20260911.json'
+      - 'docs/research/protocols/intervention-axis-20260911.md'
+      - 'scripts/check_result_integrity.py'
+      - '.github/workflows/research-intervention-axis.yml'
+  schedule:
+    - cron: '29 6 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  intervention-axis:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Syntax-check the pinned verifier without running the experiment
+        run: python -m py_compile scripts/verify_intervention_axis.py
+      - name: Recorded source hashes match the tree when the canonical result exists
+        run: |
+          if [ -f results/intervention_axis_20260911.json ]; then
+            python scripts/check_result_integrity.py results/intervention_axis_20260911.json
+          else
+            echo 'Implementation-only stage: canonical result not committed yet.'
+          fi
+      - name: Does this run require the full canonical replay?
+        id: result
+        run: |
+          if [ ! -f results/intervention_axis_20260911.json ]; then
+            echo 'changed=false' >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          if [ "${{ github.event_name }}" != "pull_request" ]; then
+            echo 'changed=true' >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          if git diff --name-only "origin/${{ github.base_ref }}...HEAD" | grep -qx 'results/intervention_axis_20260911.json'; then
+            echo 'changed=true' >> "$GITHUB_OUTPUT"
+          else
+            echo 'changed=false' >> "$GITHUB_OUTPUT"
+          fi
+      - if: steps.result.outputs.changed == 'true'
+        run: python -m pip install -e .
+      - name: Replay the frozen verifier and compare the canonical JSON byte for byte
+        if: steps.result.outputs.changed == 'true'
+        run: |
+          cp results/intervention_axis_20260911.json /tmp/expected.json
+          python scripts/verify_intervention_axis.py > /dev/null
+          cmp /tmp/expected.json results/intervention_axis_20260911.json
