@@ -7,6 +7,20 @@ substantial unit completes; keep the bounded-claim style.
 
 Program page: `docs/research/2026-09-10-representation-invariants-program.md`
 
+## Checkpoint 2026-09-11 (tenth unit opened): complement of the observation, protocol frozen, review pending
+
+- Frozen and unrun: `protocols/complement-observation-20260911.md`.
+  Observations 32, 200, 22 (and conjugates 251, 236, 151). Q1 the complement
+  rule closes (theorem); Q2 it is in the residual class X = C \ (K u Z) for
+  these observations (deduced from observation-only facts); Q3 X is the
+  observational-equivalence class of the complement rule (falsifiable); Q4
+  equivalence is decided by 32 five-cell words, ring-independent for n >= 5,
+  certifying 123 ~ 251 under rule 4 for all rings; Q5 named commuters and
+  collapses; Q6 depth census plus annex at rings 13-16 with the bet that
+  majority's record depth exceeds 16 at ring 16; Q7 reflection invariance and
+  complement covariance.
+- Pending: Codex's gate-1 review. No verifier committed, nothing run.
+
 ## Checkpoint 2026-09-11 (ninth unit accepted): isolated-cell detection merged
 
 - Gate 2 met: Codex signed off at `5bfa5c8` after two prose rounds (123 is
