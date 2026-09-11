@@ -1,6 +1,12 @@
 #!/usr/bin/env python3
 """Representation invariants audit (protocol frozen 2026-09-10, unrun at commit).
 
+Correction 2026-09-11 after retrospective review (PR #80): adds the exhaustive
+five-cell local check that supplies the proof route for the self-duality iff (P3),
+separates P5 K-cell counts into identical / differing-both-finite / censored /
+exceeding-h (the original 22-entry flagged list is retained verbatim), and scores
+P6's boundary-concentration clause numerically instead of leaving it unscored.
+
 Audits six existing ECA claims against complement conjugation T_c, reflection
 T_m, and their composite, as declared in
 docs/research/protocols/representation-invariants-audit-20260910.md.
@@ -107,7 +113,20 @@ def main():
                             'complement_native_pass_equals_self_dual': c_pass == self_dual,
                             'spurious_passes_non_self_dual': sorted(set(c_pass) - set(self_dual)),
                             'complement_state_transport_violations': st_fail}
-    p3['pass'] = all(not v['mirror_violations'] and v['complement_native_pass_equals_self_dual'] and not v['complement_state_transport_violations'] for v in p3['by_ring'].values())
+    # exhaustive local route: the defect F(x) XOR NOT F(NOT x) at x = D(S) has radius 2, so
+    # five-cell source words decide the iff for every rule (added 2026-09-11 after review).
+    local_pass = []
+    for r in range(256):
+        t = lut(r); ok = True
+        for w in itertools.product((0, 1), repeat=5):
+            fw = [int(t[4 * a + 2 * b + c]) for a, b, c in zip(w, w[1:], w[2:])]
+            x = [a ^ b for a, b in zip(w[1:-1], fw)]
+            fx = int(t[4 * x[0] + 2 * x[1] + x[2]]); fnx = int(t[4 * (1 - x[0]) + 2 * (1 - x[1]) + (1 - x[2])])
+            if fx ^ (1 - fnx): ok = False; break
+        if ok: local_pass.append(r)
+    p3['local_five_cell_check'] = {'passing_rules': local_pass, 'equals_self_dual': local_pass == self_dual,
+                                   'note': 'proof route for the iff: defect radius 2, all 32 five-cell words, all 256 rules'}
+    p3['pass'] = all(not v['mirror_violations'] and v['complement_native_pass_equals_self_dual'] and not v['complement_state_transport_violations'] for v in p3['by_ring'].values()) and p3['local_five_cell_check']['equals_self_dual']
     p3['predicted'] = 'mirror: all; complement native: exactly self-dual (16); complement state-transport: all'
     P['P3_pointwise_covariance'] = p3
 
@@ -138,9 +157,24 @@ def main():
             a, b = mpr[r]['K'][h], mpr[conj(r)]['K'][h]
             if (a is None) != (b is None) or (a is not None and abs(a - b) > h): c_viol.append({'rule': r, 'conj': conj(r), 'h': h, 'mpr_r': a, 'mpr_conj': b})
     c_exact = sum(1 for r in range(256) for h in range(3) if mpr[r]['K'][h] == mpr[conj(r)]['K'][h])
+    # 2026-09-11 correction: classify every K cell; the flagged list above mixes genuine
+    # violations with right-censored minima (one side outside the R<=2 budget).
+    cells = {'identical': 0, 'differ_both_finite': 0, 'censored_one_side': 0, 'differ_both_finite_exceeding_h': 0}
+    genuine, censored = [], []
+    for r in range(256):
+        for h in range(3):
+            a, b = mpr[r]['K'][h], mpr[conj(r)]['K'][h]
+            if a == b: cells['identical'] += 1
+            elif a is None or b is None: cells['censored_one_side'] += 1; censored.append({'rule': r, 'conj': conj(r), 'h': h, 'mpr_r': a, 'mpr_conj': b})
+            else:
+                cells['differ_both_finite'] += 1
+                if abs(a - b) > h: cells['differ_both_finite_exceeding_h'] += 1; genuine.append({'rule': r, 'conj': conj(r), 'h': h, 'mpr_r': a, 'mpr_conj': b})
     P['P5_local_cap_census'] = {'budgets': len(passes), 'mirror_violations': m_viol, 'mirror_pass': not m_viol,
                                 'complement_K_radius_bound_violations': c_viol, 'complement_K_pass': not c_viol,
                                 'complement_K_min_radius_exactly_equal': c_exact, 'of': 768,
+                                'complement_K_cell_classification': cells, 'complement_K_genuine_violations': genuine,
+                                'complement_K_censored_cells': censored,
+                                'flagged_list_note': 'complement_K_radius_bound_violations is the original 22-entry flagged list (4 genuine + 18 censored), retained as the selected domain of the extension',
                                 'predicted': 'mirror: all 4,608 equal; complement K: |mpr(r)-mpr(conj r)| <= h and same pass/fail existence',
                                 'pass': not m_viol and not c_viol}
 
@@ -159,15 +193,23 @@ def main():
             reg2, fi2, pk2 = rows[(ia, ib)]
             agree += reg == reg2; final_eq += fi == fi2; peak_eq += pk == pk2; conf[reg][reg2] += 1
             if reg == 'commute' or reg2 == 'commute': commute_n += 1; commute_agree += reg == reg2
-        p6['by_transformation'][T] = {'label_agreement': agree / len(rows), 'final_exact_equal': final_eq / len(rows), 'peak_exact_equal': peak_eq / len(rows),
+        labs = labels
+        disagreements = sum(conf[x][y] for x in labs for y in labs if x != y)
+        named = sum(conf[x][y] + conf[y][x] for x, y in (('drain', 'crystalline'), ('structured', 'noisy')))
+        by_pair = {f'{x}/{y}': conf[x][y] + conf[y][x] for x in labs for y in labs if x < y and conf[x][y] + conf[y][x]}
+        p6['by_transformation'][T] = {'label_agreement': agree / len(rows),
+                                     'boundary_clause': {'disagreements': disagreements, 'on_drain_crystalline_or_structured_noisy': named,
+                                                         'fraction': named / disagreements if disagreements else None, 'by_unordered_pair': by_pair}, 'final_exact_equal': final_eq / len(rows), 'peak_exact_equal': peak_eq / len(rows),
                                      'confusion': conf, 'commute_agreement': commute_agree / max(1, commute_n), 'commute_pairs_involved': commute_n}
     p6['pass_agreement_above_0.90'] = all(v['label_agreement'] > 0.90 for v in p6['by_transformation'].values())
     p6['pass_commute_exact'] = all(v['commute_agreement'] == 1.0 for v in p6['by_transformation'].values())
+    p6['boundary_concentration_clause'] = {'scored': True, 'supported': False,
+        'note': 'the frozen clause had no threshold; the two named boundaries carry under 30% of disagreements and two unnamed boundaries (crystalline/structured, noisy/structured) are populated; scored 2026-09-11 after review'}
     p6['predicted'] = 'agreement > 0.90; commute labels agree exactly; disagreements on soft boundaries'
     P['P6_sweep_regime_labels'] = p6
 
     report['summary'] = {k: v.get('pass', None) for k, v in P.items()}
-    report['summary']['P6_sweep_regime_labels'] = {'agreement': p6['pass_agreement_above_0.90'], 'commute_exact': p6['pass_commute_exact']}
+    report['summary']['P6_sweep_regime_labels'] = {'agreement': p6['pass_agreement_above_0.90'], 'commute_exact': p6['pass_commute_exact'], 'boundary_concentration': False}
     OUT.write_text(json.dumps(report, indent=1, ensure_ascii=False, default=int) + '\n')
     print(json.dumps(report['summary'], indent=1)); print('written', OUT.relative_to(ROOT))
 

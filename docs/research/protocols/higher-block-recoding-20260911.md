@@ -35,3 +35,11 @@
 ## 4. Not claimed
 
 Nothing about `k`-block recodings with `k > 2`, about non-injective recodings, or about observers other than the census family. B1 is an inequality; the exact shift is reported, not predicted.
+
+## Dated deviation and clarifications after retrospective review (2026-09-11)
+
+Frozen text unchanged. Codex reviewed the merged run (PR #83).
+
+1. **Deviation: the executed total block law has ambient radius 2, not the declared 1.** The implementation reads first components, computes `f = F(s)`, and returns `(f_i, f_{i+1})`; the second entry reads the first component at `i + 2`. Witness (Rule 170, all-zero arrays of shape `(1,7,2)`, one differing in `B[0,2,0]`): radius-1 patches at site 0 agree, outputs differ. The verifier now asserts this witness. A radius-1 completion exists: apply the binary rule to each component field separately; it agrees with the executed law on the consistent-pair family (checked for all 256 rules on the 8-ring) and differs off it. The corrected run reports B2 and B3 under **both** laws; every on-family result is unchanged, as expected, since the laws coincide there. The original run is attributed to the first-component law with ambient radius 2, not silently to the componentwise one.
+2. **B4 transports maximizers; it does not make literal per-rule summaries identical.** Closure of the family under input complement and reversal gives explicit permutations of observer tables (for 2-cell blocks, table 1 maps under input complement to table 8, whose canonical output-complement representative is 7); the verifier now records both permutations for both block sizes. The claim is preservation of scalar optima, counts and overlap statistics under the declared prior, cadence and alignment, with optimal observer identities compared after transport. Still a deduction from a finite check; no numerical replay.
+3. **Costs.** The recoding doubles stored bits per site (recorded), and nine measured cap radii decrease. "No new decoded dynamics" is the defensible statement; whether the recoded system is a useful new implementation depends on the resource contract.

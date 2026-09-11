@@ -1,6 +1,6 @@
 # How far does complement conjugation move a local cap, over all 256 rules?
 
-**Research note, 2026-09-11.** Third unit of the [Invariants Across Representation Contracts](2026-09-10-representation-invariants-program.md) program. Authored by: Claude Code, Fable 5.1. Reviewed by: none at evaluation (Codex inactive; Myk driving). [Protocol](protocols/cap-shift-census-20260911.md) frozen and [verifier](../../scripts/verify_cap_shift_census.py) committed before this single deterministic run; canonical output [`results/cap_shift_census_20260911.json`](../../results/cap_shift_census_20260911.json). All six frozen predictions held.
+**Research note, 2026-09-11.** Third unit of the [Invariants Across Representation Contracts](2026-09-10-representation-invariants-program.md) program. Authored by: Claude Code, Fable 5.1. Reviewed by: none at evaluation (Codex inactive; Myk driving). Retrospective review: Codex (OpenAI), 2026-09-11, after merge; corrections applied in the follow-up PR and dated below. [Protocol](protocols/cap-shift-census-20260911.md) frozen and [verifier](../../scripts/verify_cap_shift_census.py) committed before this single deterministic run; canonical output [`results/cap_shift_census_20260911.json`](../../results/cap_shift_census_20260911.json). All six frozen predictions held.
 
 ## Answer
 
@@ -17,7 +17,7 @@ Over all 256 rules, both coordinate kinds, depths `h ≤ 2`, radii `R ≤ 4`:
 
 The four shift-2 cells are the pairs 132↔222 and 160↔250 at `h = 2`, the same ones the [extension](2026-09-11-cap-census-complement-extension.md) found.
 
-- **No half-decided cells.** At `R ≤ 4`, every cell either has a cap on both sides or on neither. 862 cells are undecided on both sides (K: 226 / 128 / 76 at `h = 0, 1, 2`; O: 226 / 128 / 78). So within this budget, complement conjugation never creates or destroys a cap; it only moves K radii.
+- **No half-decided cells.** At `R ≤ 4`, every cell either has a cap on both sides or on neither. A half-decided cell with existing radius `a` would imply a shift of at least `5 − a` and would refute `shift ≤ h + 1` whenever `5 − a > h + 1`; the protocol's claim that such cells could not be counterexamples was wrong and the verifier now reports the lower bound (corrected 2026-09-11; none occurred). 862 cells are undecided on both sides (K: 226 / 128 / 76 at `h = 0, 1, 2`; O: 226 / 128 / 78). So within this budget, complement conjugation never creates or destroys a cap; it only moves K radii.
 - **Controls.** Recomputed pass/fail at `R ≤ 2` matches the saved census in all 4,608 budgets. Reflection leaves `mpr` identical in every cell for both kinds, now up to `R ≤ 4`.
 
 ## A post-hoc observation, not a prediction
@@ -31,3 +31,7 @@ For the O coordinates, complement conjugation is a transformation the representa
 ## Next
 
 The transformation family has been exhausted for the global relabelings. The next unit should declare a transformation of a different type, either a local recoding with a locality budget or a change of completion on a shared family, and audit an observer-side result from the Erased Distinctions Program against it.
+
+## Correction 2026-09-11, after retrospective review by Codex
+
+Three prospective scoring corrections, recorded in the [protocol addendum](protocols/cap-shift-census-20260911.md): half-decided cells can refute the shift bound and are now reported with a lower bound; X5 now implements its declared predicate (existing radius 4 or `h = 2`); the source-window width is `2·max(h+1+R, h+2)+1`. The saved census has no half-decided cells, so no reported number changes. Existence invariance beyond `R ≤ 4` rests on the transfer argument, not on this census.

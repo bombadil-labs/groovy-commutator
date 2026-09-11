@@ -2,10 +2,19 @@
  "protocol": "cap-census-complement-extension-20260911",
  "schema": 1,
  "R_max": 6,
+ "source_window_width": "2*max(h+1+R, h+2)+1 (census convention; the frozen text wrote 2(h+1+R)+1, which differs only at R=0)",
+ "selected_domain_composition": {
+  "genuine_h0_violation": 4,
+  "censored": 18
+ },
+ "original_le_h_bound_after_resolution": {
+  "holds": 18,
+  "fails": 4
+ },
  "source_hashes": {
-  "script": "87742209fe6be0d9d3c365c6dec8cffc7f9c66b78e0ee5dd6dc77f9b394e7e05",
+  "script": "a230ebc50bba70ced49bad7677eeeed5853cf49ab8711f5e63460bb46a343709",
   "local_correction_caps": "9975a0e45e6cde51ca6a7bdb9bf269ab03be21c61eb2973ba27a803c41f5c69a",
-  "representation_invariants_audit": "7150d5a6d6272e98ac22d63de5683e2fa1c73da21b947cf5fa6b2485b0c9b93f"
+  "representation_invariants_audit": "3d31632cd203b52c48534d9856fc4baacd21c10b6f1824cf575dbf0824bc0f56"
  },
  "cells": [
   {
@@ -16,7 +25,9 @@
    "mpr_conj": 1,
    "bound_from_rule": 1,
    "bound_from_conj": 1,
-   "shift": 1
+   "shift": 1,
+   "flag_kind": "genuine_h0_violation",
+   "original_le_h_bound_holds_after_resolution": false
   },
   {
    "rule": 38,
@@ -26,7 +37,9 @@
    "mpr_conj": 3,
    "bound_from_rule": 6,
    "bound_from_conj": 6,
-   "shift": 1
+   "shift": 1,
+   "flag_kind": "censored",
+   "original_le_h_bound_holds_after_resolution": true
   },
   {
    "rule": 46,
@@ -36,7 +49,9 @@
    "mpr_conj": 3,
    "bound_from_rule": 6,
    "bound_from_conj": 6,
-   "shift": 1
+   "shift": 1,
+   "flag_kind": "censored",
+   "original_le_h_bound_holds_after_resolution": true
   },
   {
    "rule": 52,
@@ -46,7 +61,9 @@
    "mpr_conj": 3,
    "bound_from_rule": 6,
    "bound_from_conj": 6,
-   "shift": 1
+   "shift": 1,
+   "flag_kind": "censored",
+   "original_le_h_bound_holds_after_resolution": true
   },
   {
    "rule": 106,
@@ -56,7 +73,9 @@
    "mpr_conj": 3,
    "bound_from_rule": 6,
    "bound_from_conj": 6,
-   "shift": 1
+   "shift": 1,
+   "flag_kind": "censored",
+   "original_le_h_bound_holds_after_resolution": true
   },
   {
    "rule": 116,
@@ -66,7 +85,9 @@
    "mpr_conj": 3,
    "bound_from_rule": 6,
    "bound_from_conj": 6,
-   "shift": 1
+   "shift": 1,
+   "flag_kind": "censored",
+   "original_le_h_bound_holds_after_resolution": true
   },
   {
    "rule": 120,
@@ -76,7 +97,9 @@
    "mpr_conj": 3,
    "bound_from_rule": 6,
    "bound_from_conj": 6,
-   "shift": 1
+   "shift": 1,
+   "flag_kind": "censored",
+   "original_le_h_bound_holds_after_resolution": true
   },
   {
    "rule": 132,
@@ -86,7 +109,9 @@
    "mpr_conj": 3,
    "bound_from_rule": 6,
    "bound_from_conj": 6,
-   "shift": 2
+   "shift": 2,
+   "flag_kind": "censored",
+   "original_le_h_bound_holds_after_resolution": true
   },
   {
    "rule": 139,
@@ -96,7 +121,9 @@
    "mpr_conj": 2,
    "bound_from_rule": 6,
    "bound_from_conj": 6,
-   "shift": 1
+   "shift": 1,
+   "flag_kind": "censored",
+   "original_le_h_bound_holds_after_resolution": true
   },
   {
    "rule": 146,
@@ -106,7 +133,9 @@
    "mpr_conj": 2,
    "bound_from_rule": 4,
    "bound_from_conj": 3,
-   "shift": 1
+   "shift": 1,
+   "flag_kind": "censored",
+   "original_le_h_bound_holds_after_resolution": true
   },
   {
    "rule": 155,
@@ -116,7 +145,9 @@
    "mpr_conj": 2,
    "bound_from_rule": 6,
    "bound_from_conj": 6,
-   "shift": 1
+   "shift": 1,
+   "flag_kind": "censored",
+   "original_le_h_bound_holds_after_resolution": true
   },
   {
    "rule": 160,
@@ -126,7 +157,9 @@
    "mpr_conj": 3,
    "bound_from_rule": 6,
    "bound_from_conj": 6,
-   "shift": 2
+   "shift": 2,
+   "flag_kind": "censored",
+   "original_le_h_bound_holds_after_resolution": true
   },
   {
    "rule": 169,
@@ -136,7 +169,9 @@
    "mpr_conj": 2,
    "bound_from_rule": 6,
    "bound_from_conj": 6,
-   "shift": 1
+   "shift": 1,
+   "flag_kind": "censored",
+   "original_le_h_bound_holds_after_resolution": true
   },
   {
    "rule": 182,
@@ -146,7 +181,9 @@
    "mpr_conj": 3,
    "bound_from_rule": 3,
    "bound_from_conj": 4,
-   "shift": 1
+   "shift": 1,
+   "flag_kind": "censored",
+   "original_le_h_bound_holds_after_resolution": true
   },
   {
    "rule": 200,
@@ -156,7 +193,9 @@
    "mpr_conj": 1,
    "bound_from_rule": 1,
    "bound_from_conj": 1,
-   "shift": 1
+   "shift": 1,
+   "flag_kind": "genuine_h0_violation",
+   "original_le_h_bound_holds_after_resolution": false
   },
   {
    "rule": 209,
@@ -166,7 +205,9 @@
    "mpr_conj": 2,
    "bound_from_rule": 6,
    "bound_from_conj": 6,
-   "shift": 1
+   "shift": 1,
+   "flag_kind": "censored",
+   "original_le_h_bound_holds_after_resolution": true
   },
   {
    "rule": 211,
@@ -176,7 +217,9 @@
    "mpr_conj": 2,
    "bound_from_rule": 6,
    "bound_from_conj": 6,
-   "shift": 1
+   "shift": 1,
+   "flag_kind": "censored",
+   "original_le_h_bound_holds_after_resolution": true
   },
   {
    "rule": 222,
@@ -186,7 +229,9 @@
    "mpr_conj": 1,
    "bound_from_rule": 6,
    "bound_from_conj": 6,
-   "shift": 2
+   "shift": 2,
+   "flag_kind": "censored",
+   "original_le_h_bound_holds_after_resolution": true
   },
   {
    "rule": 223,
@@ -196,7 +241,9 @@
    "mpr_conj": 0,
    "bound_from_rule": 1,
    "bound_from_conj": 1,
-   "shift": 1
+   "shift": 1,
+   "flag_kind": "genuine_h0_violation",
+   "original_le_h_bound_holds_after_resolution": false
   },
   {
    "rule": 225,
@@ -206,7 +253,9 @@
    "mpr_conj": 2,
    "bound_from_rule": 6,
    "bound_from_conj": 6,
-   "shift": 1
+   "shift": 1,
+   "flag_kind": "censored",
+   "original_le_h_bound_holds_after_resolution": true
   },
   {
    "rule": 236,
@@ -216,7 +265,9 @@
    "mpr_conj": 0,
    "bound_from_rule": 1,
    "bound_from_conj": 1,
-   "shift": 1
+   "shift": 1,
+   "flag_kind": "genuine_h0_violation",
+   "original_le_h_bound_holds_after_resolution": false
   },
   {
    "rule": 250,
@@ -226,7 +277,9 @@
    "mpr_conj": 1,
    "bound_from_rule": 6,
    "bound_from_conj": 6,
-   "shift": 2
+   "shift": 2,
+   "flag_kind": "censored",
+   "original_le_h_bound_holds_after_resolution": true
   }
  ],
  "cell_count": 22,

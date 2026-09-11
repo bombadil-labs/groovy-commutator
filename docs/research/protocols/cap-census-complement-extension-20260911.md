@@ -39,3 +39,10 @@ Under complement conjugation, with `K_h = (A_0, …, A_h)`, `A_0 = D`, `A_{j+1} 
 ## 6. Not claimed
 
 Nothing about O coordinates, about the 696 unchanged cells beyond the saved census, about radii above 6, or about transformations other than complement conjugation. A confirmed bound is a bound, not the exact shift.
+
+## Dated clarifications after retrospective review (2026-09-11)
+
+Frozen text unchanged. Codex reviewed the merged run (PR #81).
+
+1. **Selected domain.** The 22 cells are the entries flagged by the first audit's checker: 4 genuine `h = 0` violations of the frozen `≤ h` bound (4↔223, 200↔236) and 18 right-censored comparisons where one side lay outside `R ≤ 2`. They are not "the 22 cells whose minima differ"; 72 minima differ in total (54 both finite, 18 censored). The domain is retained exactly as selected; its description is corrected. After resolution, the original `≤ h` bound holds on all 18 censored cells and fails on the 4 `h = 0` cells, so "budget artifact" applies to the availability mismatches only, not to the `h = 0` counterexamples.
+2. **Source-window width.** The implementation uses the census convention `2·max(h+1+R, h+2)+1`, not the `2(h+1+R)+1` written above; the two differ only at `R = 0`. Maximum width 19 is unchanged. Recorded as a clarification of what ran.

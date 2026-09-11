@@ -7,6 +7,31 @@ substantial unit completes; keep the bounded-claim style.
 
 Program page: `docs/research/2026-09-10-representation-invariants-program.md`
 
+## Checkpoint 2026-09-11 (corrections): Codex retrospective review of units 1–4 applied
+
+- Review arrived after merge, not at freeze; all four protocols carry dated
+  addenda and the frozen text is unchanged. Verifiers were corrected and the
+  four canonical JSONs regenerated in dependency order; every previously
+  reported number is unchanged.
+- Unit 1: P6's boundary clause was unscored; now scored, unsupported
+  (28.46%/26.19% on the named boundaries). P5's 22 = 4 genuine h=0
+  violations + 18 right-censored cells; 696 identical, 54 differ finite.
+  Self-duality iff proved by the five-cell local check; full-gradient
+  criterion qualified (constant complement response, admits 0 and 255).
+- Unit 2: domain described as flagged entries; "budget artifact" restricted
+  to the 18 censored cells; window width 2·max(h+1+R,h+2)+1 clarified.
+- Unit 3: half-decided cells can refute the shift bound (lower bound 5−a)
+  and are now reported; X5 implements its declared predicate; no data change.
+- Unit 4: executed block law has ambient radius 2 off the family (deviation,
+  witness asserted); componentwise radius-1 completion added, both run,
+  identical on-family results; B4 restated as transport of maximizers with
+  explicit permutations; costs record two stored bits per site.
+- Process change from Myk: both sides now PR into a gather branch and the
+  gather is PR'd for review by the other side; meaty sub-PRs may request
+  review before joining the gather. This program's next unit follows that.
+- Open: the tight cap-shift value; the editorial default for the commutator
+  under relabeling; non-injective coarse-graining as the next transformation type.
+
 ## Checkpoint 2026-09-11 (fourth unit): first local transformation; recoding is nearly free
 
 - Protocol and verifier committed before the single deterministic run; no

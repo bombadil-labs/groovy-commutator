@@ -2,7 +2,7 @@
  "protocol": "representation-invariants-audit-20260910",
  "schema": 1,
  "source_hashes": {
-  "script": "614553b66fcebe184912b9bb32d2bd37e366d9aa912c7e22459c66c29dd6d092",
+  "script": "a55ad28752d8d7e9be3a47556edeaa204181c833cc6e39e16eec6c1f4e45c7e6",
   "local_correction_caps": "9975a0e45e6cde51ca6a7bdb9bf269ab03be21c61eb2973ba27a803c41f5c69a",
   "sweep_full_classified": "c157e0ca77afa494c678c1fc419a2bd898673698eeab6e14ff485bf33e007504"
  },
@@ -172,6 +172,28 @@
      "spurious_passes_non_self_dual": [],
      "complement_state_transport_violations": []
     }
+   },
+   "local_five_cell_check": {
+    "passing_rules": [
+     15,
+     23,
+     43,
+     51,
+     77,
+     85,
+     105,
+     113,
+     142,
+     150,
+     170,
+     178,
+     204,
+     212,
+     232,
+     240
+    ],
+    "equals_self_dual": true,
+    "note": "proof route for the iff: defect radius 2, all 32 five-cell words, all 256 rules"
    },
    "pass": true,
    "predicted": "mirror: all; complement native: exactly self-dual (16); complement state-transport: all"
@@ -462,6 +484,171 @@
    "complement_K_pass": false,
    "complement_K_min_radius_exactly_equal": 696,
    "of": 768,
+   "complement_K_cell_classification": {
+    "identical": 696,
+    "differ_both_finite": 54,
+    "censored_one_side": 18,
+    "differ_both_finite_exceeding_h": 4
+   },
+   "complement_K_genuine_violations": [
+    {
+     "rule": 4,
+     "conj": 223,
+     "h": 0,
+     "mpr_r": 0,
+     "mpr_conj": 1
+    },
+    {
+     "rule": 200,
+     "conj": 236,
+     "h": 0,
+     "mpr_r": 0,
+     "mpr_conj": 1
+    },
+    {
+     "rule": 223,
+     "conj": 4,
+     "h": 0,
+     "mpr_r": 1,
+     "mpr_conj": 0
+    },
+    {
+     "rule": 236,
+     "conj": 200,
+     "h": 0,
+     "mpr_r": 1,
+     "mpr_conj": 0
+    }
+   ],
+   "complement_K_censored_cells": [
+    {
+     "rule": 38,
+     "conj": 155,
+     "h": 2,
+     "mpr_r": 2,
+     "mpr_conj": null
+    },
+    {
+     "rule": 46,
+     "conj": 139,
+     "h": 2,
+     "mpr_r": 2,
+     "mpr_conj": null
+    },
+    {
+     "rule": 52,
+     "conj": 211,
+     "h": 2,
+     "mpr_r": 2,
+     "mpr_conj": null
+    },
+    {
+     "rule": 106,
+     "conj": 169,
+     "h": 2,
+     "mpr_r": 2,
+     "mpr_conj": null
+    },
+    {
+     "rule": 116,
+     "conj": 209,
+     "h": 2,
+     "mpr_r": 2,
+     "mpr_conj": null
+    },
+    {
+     "rule": 120,
+     "conj": 225,
+     "h": 2,
+     "mpr_r": 2,
+     "mpr_conj": null
+    },
+    {
+     "rule": 132,
+     "conj": 222,
+     "h": 2,
+     "mpr_r": 1,
+     "mpr_conj": null
+    },
+    {
+     "rule": 139,
+     "conj": 46,
+     "h": 2,
+     "mpr_r": null,
+     "mpr_conj": 2
+    },
+    {
+     "rule": 146,
+     "conj": 182,
+     "h": 1,
+     "mpr_r": null,
+     "mpr_conj": 2
+    },
+    {
+     "rule": 155,
+     "conj": 38,
+     "h": 2,
+     "mpr_r": null,
+     "mpr_conj": 2
+    },
+    {
+     "rule": 160,
+     "conj": 250,
+     "h": 2,
+     "mpr_r": 1,
+     "mpr_conj": null
+    },
+    {
+     "rule": 169,
+     "conj": 106,
+     "h": 2,
+     "mpr_r": null,
+     "mpr_conj": 2
+    },
+    {
+     "rule": 182,
+     "conj": 146,
+     "h": 1,
+     "mpr_r": 2,
+     "mpr_conj": null
+    },
+    {
+     "rule": 209,
+     "conj": 116,
+     "h": 2,
+     "mpr_r": null,
+     "mpr_conj": 2
+    },
+    {
+     "rule": 211,
+     "conj": 52,
+     "h": 2,
+     "mpr_r": null,
+     "mpr_conj": 2
+    },
+    {
+     "rule": 222,
+     "conj": 132,
+     "h": 2,
+     "mpr_r": null,
+     "mpr_conj": 1
+    },
+    {
+     "rule": 225,
+     "conj": 120,
+     "h": 2,
+     "mpr_r": null,
+     "mpr_conj": 2
+    },
+    {
+     "rule": 250,
+     "conj": 160,
+     "h": 2,
+     "mpr_r": null,
+     "mpr_conj": 1
+    }
+   ],
+   "flagged_list_note": "complement_K_radius_bound_violations is the original 22-entry flagged list (4 genuine + 18 censored), retained as the selected domain of the extension",
    "predicted": "mirror: all 4,608 equal; complement K: |mpr(r)-mpr(conj r)| <= h and same pass/fail existence",
    "pass": false
   },
@@ -470,6 +657,18 @@
    "by_transformation": {
     "T_m": {
      "label_agreement": 0.9513480392156862,
+     "boundary_clause": {
+      "disagreements": 1588,
+      "on_drain_crystalline_or_structured_noisy": 452,
+      "fraction": 0.28463476070528965,
+      "by_unordered_pair": {
+       "crystalline/drain": 114,
+       "crystalline/structured": 108,
+       "drain/noisy": 298,
+       "drain/structured": 730,
+       "noisy/structured": 338
+      }
+     },
      "final_exact_equal": 0.2818627450980392,
      "peak_exact_equal": 0.27395833333333336,
      "confusion": {
@@ -514,6 +713,18 @@
     },
     "T_c": {
      "label_agreement": 0.9393995098039216,
+     "boundary_clause": {
+      "disagreements": 1978,
+      "on_drain_crystalline_or_structured_noisy": 518,
+      "fraction": 0.26188068756319516,
+      "by_unordered_pair": {
+       "crystalline/drain": 210,
+       "crystalline/structured": 180,
+       "drain/noisy": 486,
+       "drain/structured": 794,
+       "noisy/structured": 308
+      }
+     },
      "final_exact_equal": 0.2221813725490196,
      "peak_exact_equal": 0.16611519607843137,
      "confusion": {
@@ -559,6 +770,11 @@
    },
    "pass_agreement_above_0.90": true,
    "pass_commute_exact": true,
+   "boundary_concentration_clause": {
+    "scored": true,
+    "supported": false,
+    "note": "the frozen clause had no threshold; the two named boundaries carry under 30% of disagreements and two unnamed boundaries (crystalline/structured, noisy/structured) are populated; scored 2026-09-11 after review"
+   },
    "predicted": "agreement > 0.90; commute labels agree exactly; disagreements on soft boundaries"
   }
  },
@@ -580,7 +796,8 @@
   "P5_local_cap_census": false,
   "P6_sweep_regime_labels": {
    "agreement": true,
-   "commute_exact": true
+   "commute_exact": true,
+   "boundary_concentration": false
   }
  }
 }

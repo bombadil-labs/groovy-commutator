@@ -29,3 +29,13 @@ Over all 256 rules, both coordinate kinds K and O, and depths `h ≤ 2`, how far
 ## 5. Not claimed
 
 Nothing above radius 4; nothing about transformations other than complement conjugation and reflection; a confirmed `h + 1` is an observed bound on this domain, not a theorem.
+
+## Dated clarifications after retrospective review (2026-09-11)
+
+Frozen text unchanged. Codex reviewed the merged run (PR #82). The saved census has no half-decided cells, so these are prospective scoring corrections; the shift histograms are unaffected.
+
+1. **Half-decided cells can refute the shift bound.** Section 2 said they cannot be counterexamples to X3. That is wrong: if one minimum is `a` and the other exceeds the radius-4 budget, the shift is at least `5 − a`, which refutes `shift ≤ h + 1` whenever `5 − a > h + 1`. The verifier now reports `shift_lower_bound` and a refutation flag for every half-decided cell, kept separate from X3's both-decided scope.
+2. **X5's implemented predicate was weaker than declared.** The declared sentence requires existing radius 4 or `h = 2`; the checker flagged only existing radius `≤ 2` at `h ≤ 1`, missing radius 3 at `h ≤ 1`. The verifier now implements the declared predicate.
+3. **Source-window width** is `2·max(h+1+R, h+2)+1`, as in the census; maximum width 15 unchanged.
+
+Matching availability within `R ≤ 4` bounds existence within the budget; existence invariance beyond it rests on the transfer argument, not on this census.

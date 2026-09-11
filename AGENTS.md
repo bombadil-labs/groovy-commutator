@@ -311,15 +311,19 @@ workflow; research source and result changes now also trigger that workflow.
    affine bias `c ↦ c ⊕ M𝟙 ⊕ 1` (0↔255, 60↔195, 90↔165, 102↔153) and sends
    the nonlinear zero-G rules 4, 200 to 223, 236 whose G varies; the native
    commutator is complement-covariant **iff the rule is self-dual** (16
-   rules), because the defect is the complement response `F(x) ⊕ ¬F(¬x)`
-   at `x = D(S)`; transporting the derivative as a state (`D ↦ ¬D`) makes
+   rules); the defect is the complement response `F(x) ⊕ ¬F(¬x)` at
+   `x = D(S)`, and the iff is proved by the exhaustive five-cell local check
+   (defect radius 2), not by the identity alone; transporting the derivative as a state (`D ↦ ¬D`) makes
    all 256 covariant. Derivative closure holds for the same 30 rules at
    n = 6, 8, 10. Sweep regime labels agree 95.1% (reflection) / 93.9%
    (complement) between a pair and its image, commute pairs exactly; the
    raw statistics agree under 30%, so this is stability of a sampled result,
-   not an invariance. One frozen prediction failed: the cap-radius shift
-   under complement is not bounded by `h` (the target row transforms too);
-   corrected bound was then frozen and confirmed on all 22 differing cells
+   not an invariance; the frozen clause that disagreements concentrate on
+   two named boundaries is unsupported (they carry 28%/26%). One frozen
+   prediction failed: the cap-radius shift under complement is not bounded
+   by `h` (the target row transforms too), failing on four h=0 cells; 18
+   further flagged cells were right-censored at R ≤ 2, not violations. The
+   corrected bound was then frozen and confirmed on all 22 flagged cells
    at R ≤ 6 (`scripts/verify_cap_census_complement_extension.py`): every
    missing cap exists at radius 3 and the shift is 1 or 2, never above h+1.
    Whole-census shift census at R ≤ 4 (`scripts/verify_cap_shift_census.py`):
@@ -328,10 +332,16 @@ workflow; research source and result changes now also trigger that workflow.
    or destroyed; the depth-0 cap set of either kind equals the 30-rule
    derivative-closure set (post hoc, exact within budgets). The 2-block
    recoding (`scripts/verify_higher_block_recoding.py`, forward radius 1,
-   inverse 0) leaves cap radius unchanged in 665 of 674 decided cells and
+   inverse 0, two stored bits per site; the executed ambient law has
+   radius 2 off the family, a recorded deviation, and a radius-1
+   componentwise completion gives the same on-family results) leaves cap
+   radius unchanged in 665 of 674 decided cells and
    reduces it by one in 9, never more; D, G and derivative closure transport
    componentwise. The Research026 observer family is closed under complement
-   and reversal, so that census is covariant by deduction.
+   and reversal, so that census's scalar summaries are covariant by
+   deduction, with optimal observers corresponding under an explicit
+   permutation. Codex's retrospective review (2026-09-11) is recorded in
+   each protocol's dated addendum.
 
 ## Checkpoint logs (read before continuing any workstream)
 

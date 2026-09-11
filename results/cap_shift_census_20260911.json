@@ -3,7 +3,7 @@
  "schema": 1,
  "R_max": 4,
  "source_hashes": {
-  "script": "51bb727472cd7b20c865e82a5507703c286c46885c7e6cc329c239bd207c5eed",
+  "script": "2633fa76081b82fc4a68341aa35b37ae43a821e950db66ce954faea94e103d1b",
   "local_correction_caps": "9975a0e45e6cde51ca6a7bdb9bf269ab03be21c61eb2973ba27a803c41f5c69a"
  },
  "mpr": [
@@ -3364,6 +3364,7 @@
    }
   }
  },
+ "source_window_width": "2*max(h+1+R, h+2)+1",
  "half_decided": [],
  "undecided": [
   {
@@ -7677,6 +7678,7 @@
    "h": 0
   }
  ],
+ "half_decided_refuting_shift_bound": [],
  "X1_reproduction_violations": [],
  "X2_reflection_violations": [],
  "X3_K_shift_violations": [],
