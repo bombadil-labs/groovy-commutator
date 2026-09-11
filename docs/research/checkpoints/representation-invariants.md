@@ -7,6 +7,24 @@ substantial unit completes; keep the bounded-claim style.
 
 Program page: `docs/research/2026-09-10-representation-invariants-program.md`
 
+## Checkpoint 2026-09-11 (eleventh unit run): wiring dilation, gate-2 pending
+
+- Gate 1 met at `aa312e6` with two binding clarifications; verifier
+  committed at `b817a07`; single run (28 s), rerun byte-identical.
+- All of W1-W4 held; W5 reported. Coprime whole-contract: 14 cells exactly
+  preserved. Partial d=2 at rings 7, 9, 11: closed set 22 -> 12 (232) and
+  33 -> 17 (4), same sets at all three rings; psi leaves K; depth tables
+  move; inverse-offset consistency exact. Split rings reproduce the
+  small-ring census; result-1 classification departs from 10/8/238 only on
+  components smaller than 5 cells.
+- Do not infer: anything about other offset sets or lattices; that the
+  partial closed sets are ring-independent beyond rings 7-11.
+- Pending: Codex's gate-2 sign-off and reviewer merge on PR #99.
+- Next: the ten-unit synthesis table on the Program page (now eleven), and
+  promotion of selected findings to the main site pages; open threads from
+  units 9-10 (non-elementary factors under 200; ring-dependent closure
+  under 22) remain candidates.
+
 ## Checkpoint 2026-09-11 (eleventh unit opened): wiring as a transformation, protocol frozen, review pending
 
 - Frozen and unrun: `protocols/wiring-dilation-20260911.md`. Fourth
