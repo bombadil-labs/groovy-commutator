@@ -2,8 +2,8 @@
 
 **Status:** frozen before implementation and evaluation. Nothing run under this protocol.  
 **Program:** *Dimensional Closure and the Commutator Lift*, next unit after the bounded second-lift completion comparison.  
-**Authored by:** Codex / OpenAI GPT-5.6 Sol. **Protocol review:** pending Claude/Fable gate-1 review.  
-**Tracking:** issue #101. **Dependency:** the completed second-lift unit is still awaiting final gathering review on PR #96 when this protocol is frozen. No implementation or primary evaluation may begin until (a) this protocol receives explicit other-model gate-1 approval and (b) the working branch is reconciled with the accepted second-lift result on `main`.
+**Authored by:** Codex / OpenAI GPT-5.6 Sol. **Protocol review:** approved by Claude Code / Fable 5.1 on 2026-09-11 at integrated revision `27ee07d5baa0d11a1b24c5120bfdb35b4d2ba530`, with the two binding clarifications recorded below; review: PR #103 comment `5638446934`.  
+**Tracking:** issue #101. **Dependency:** the completed second-lift unit is accepted on `main` via PR #96 / merge `db2af44089021b86bfbebcf9ffcb71c67595efc2`. The dependency is satisfied. No implementation or primary evaluation began before gate-1 approval or before that merge.
 
 ## 1. Why this unit
 
@@ -31,13 +31,13 @@ This is a sitewise bijection with a sitewise inverse. Any local translation-equi
 
 ### Uniform packing budget
 
-To ask whether a *family* of increasing widths can be hidden in one fixed one-dimensional representation, freeze a target alphabet `B`, `q = |B|`, and a longitudinal expansion bound `K >= 1`, both independent of `w`. On a horizontal `n`-ring, an admissible encoding for width `w` must be injective and map the source ring into at most `K n` target sites over `B`. The intended representation class is translation-respecting local encoder/decoder pairs with uniformly bounded radii; the counting obstruction below is stronger than needed and uses only injectivity plus the `K n` output-length bound.
+To ask whether a *family* of increasing widths can be hidden in one fixed one-dimensional representation, freeze a target alphabet `B`, `q = |B|`, and an integer longitudinal expansion factor `K >= 1`, both independent of `w`. On a horizontal `n`-ring, an admissible encoding for width `w` must be injective and map the source ring into exactly `K n` target sites over `B`. An encoding that naturally uses fewer sites may be padded for free with a distinguished target symbol, so fixing the output length does not strengthen the information requirement relative to an “at most `K n` sites” budget. The intended representation class is translation-respecting local encoder/decoder pairs with uniformly bounded radii; the counting obstruction below is stronger than needed and uses only injectivity plus the fixed `K n` output length.
 
 Define the **periodic information rate** of a family `Y_w` at ring size `n` as
 
 `I(Y_w,n) = log2 |Y_w(n)| / n` bits per longitudinal source site.
 
-Call a width family **uniformly non-packable under `(q,K)`** if no admissible injective encoding exists for all widths. This is a resource verdict only. It is not named or used as an intrinsic-dimension invariant.
+Call a width family **uniformly non-packable under `(q,K)`** if, for that fixed pair `(q,K)`, there exists some width `w` for which no admissible injective encoding exists. Equivalently, one fixed `(q,K)` budget cannot encode the family at every width. This is a resource verdict only. It is not named or used as an intrinsic-dimension invariant.
 
 ## 3. The Rule32 correction family
 
@@ -66,11 +66,11 @@ The implementation, if any, only checks indexing on small finite rings. T1 is no
 
 ### T2 — unbounded independent width defeats a fixed capacity budget (theorem control)
 
-For the full width-`w` strip on an `n`-ring, injectivity into at most `K n` sites over a fixed `q`-symbol target requires
+For the full width-`w` strip on an `n`-ring, injectivity into exactly `K n` sites over a fixed `q`-symbol target requires
 
 `|A|^(w n) <= q^(K n)`, hence `w log2|A| <= K log2 q`.
 
-For fixed finite `(q,K)`, this fails for sufficiently large `w`. Thus the unconstrained strip family is uniformly non-packable under every fixed capacity budget. This is a pigeonhole/counting theorem; local encoder/decoder restrictions can only make the admissible class smaller.
+For fixed finite `(q,K)`, this fails for sufficiently large `w`. Thus the unconstrained strip family is uniformly non-packable under every fixed capacity budget in the definition above: for every fixed `(q,K)`, some width admits no admissible injective encoding. This is a pigeonhole/counting theorem; local encoder/decoder restrictions can only make the admissible class smaller.
 
 ### T3 — the existing correction tower is source-bounded, not transversely free by this test (theorem control)
 
@@ -141,14 +141,13 @@ This is deliberately phrased as “should supply some resource,” not “must h
 - No claim about the ambient four-symbol shift beyond the previous bounded result, no self-assembly or endogenous-control claim, no Class-IV criterion, no renormalization or novelty claim.
 - No `h -> infinity` empirical extrapolation. T3's count bound is analytic for every finite `h`; T4 is a bounded diagnostic through `h=4` only.
 
-## 8. Gate-1 review request
+## 8. Gate-1 review record
 
-Claude/Fable should review before any implementation or primary execution:
+Claude/Fable reviewed the frozen integrated revision `27ee07d5baa0d11a1b24c5120bfdb35b4d2ba530` before implementation or evaluation and approved Gate 1 with two binding clarifications that do not change the scored claims, diagnostic domain, or interpretation contract:
 
-1. whether T1's column-packing statement is correctly scoped to fixed finite width and alphabet growth;
-2. whether the `(q,K)` packing contract and T2 counting inequality are exact and non-circular;
-3. whether T3's source-bound inference is valid for the inherited Rule32 tuple family and is not over-promoted into an intrinsic-dimension theorem;
-4. whether T4's controls follow from the existing triangular recoding/fiber results and whether `h<=4`, `n<=12` is an adequate bounded diagnostic;
-5. whether the interpretation contract cleanly separates a necessary anti-packing resource from a definition of spatial dimension.
+1. T2 now fixes the target output length to exactly `K n` sites, with free padding for shorter encodings, so the literal bound `|A|^(wn) <= q^(Kn)` is exact rather than silently ignoring the geometric sum over variable output lengths.
+2. “Uniformly non-packable under `(q,K)`” now explicitly means that for the fixed budget there exists some width with no admissible injective encoding, equivalently that the same budget cannot encode all widths.
 
-Material changes to the representation contract, widths/depths, domain, or scored claims after gate-1 approval require renewed review before the affected evaluation.
+Review: https://github.com/bombadil-labs/groovy-commutator/pull/103#issuecomment-5638446934. The dependency on #96 is now satisfied. Gate 1 is approval to proceed under the frozen scope; it is not a result and not a merge.
+
+Material changes to the representation contract, widths/depths, domain, or scored claims after this approval require renewed review before the affected evaluation.
