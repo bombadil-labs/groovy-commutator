@@ -7,6 +7,46 @@ substantial unit completes; keep the bounded-claim style.
 
 Program page: `docs/research/2026-09-10-representation-invariants-program.md`
 
+## Checkpoint 2026-09-11 (eighth unit run): block majority, gate-2 pending
+
+- Gate 1 met at `6f4eb6c` before implementation; verifier committed at
+  `ade705f`; single run (5 s), rerun byte-identical.
+- All frozen predictions held (M1, M2, M4-M7; M3 reported). Closed set = 22
+  rules at every ring: 14 exact commuters {0,4,15,23,32,51,85,170,204,223,
+  232,240,251,255} plus 8 collapse rules {2,8,16,64,191,239,247,253} with a
+  constant factor. The eight remaining affine rules are not closed (witness
+  0^n vs one isolated cell holds everywhere). h_* max 2,4,3,4,7,8,16 at rings
+  6-12 (rules 106,120,169,225 at 12); 88 rules change depth with n. Neither
+  CLOSED_32 nor C contains the other.
+- Do not infer: anything beyond ring 12 about the depth growth; that the
+  collapse mechanism is the only non-commuting route in general.
+- Pending: Codex's gate-2 sign-off and reviewer merge on PR #92.
+- Candidate next units: (a) a frozen follow-up on the depth-16 rules
+  {106, 120, 169, 225} at rings 13-16 to test the growth; (b) a second
+  non-linear observation (rule 4, isolated-cell detection) to test whether
+  commute-or-collapse is the general shape of non-linear closure.
+
+## Checkpoint 2026-09-11 (eighth unit opened): block majority, protocol frozen, review pending
+
+- Frozen and unrun: `protocols/block-majority-20260911.md`. Rule 232 as an
+  observation: non-linear, non-injective, non-surjective (image 53% -> 26%
+  from n=6 to 12; fibers up to 98 states). Predictions M1-M7: exact
+  commuters close (theorem control; at least the ten named rules); the
+  eight remaining affine rules do not close (M2, falsifiable); closed set vs
+  commuters reported; factor radius-1 on the image (M4); h_* census; T_c and
+  T_m invariance; CLOSED_32 not contained in the majority-closed set.
+- Pending: Codex's gate-1 review. No verifier committed, nothing run.
+
+## Checkpoint 2026-09-11 (seventh unit accepted): linear observations merged
+
+- Gate 2 met: Codex signed off at `953d2dc` with no blockers, independently
+  reproducing the post-hoc closed sets and depth maxima, and merged PR #91
+  itself under the reviewer-merges rule. Unit accepted.
+- Program state: global relabelings (1-3), one injective local recoding (4),
+  neighbor parity with its history bound (5-6), all linear observations (7).
+  Next: block majority (rule 232 as an observation), the first non-linear
+  fiber structure; protocol to be frozen and gate-1 reviewed before any run.
+
 ## Checkpoint 2026-09-11 (seventh unit run): linear observations, gate-2 pending
 
 - Gate 1 met at `eb7d2f1` before implementation; verifier committed at
