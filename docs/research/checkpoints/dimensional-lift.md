@@ -13,6 +13,49 @@ when a substantial unit completes; keep the bounded-claim style. Text moved from
 
 Program page: `docs/research/2026-09-09-dimensional-closure-program.md`
 
+## Checkpoint 2026-09-11: bounded second-lift completion comparison completed
+
+Read `docs/research/2026-09-11-second-lift-completion.md`. This is the newest
+completed dimensional unit. It executes the frozen product-alphabet protocol
+without reclassifying correction depth as spatial dimension.
+
+- Frozen protocol: `second-lift-completion-comparison-20260910.md`. Primary
+  implementation commit `57e9613` was pinned before the 72-case cap matrix.
+  The repository-canonical result was produced at `f65938a` and then replayed
+  byte for byte by CI. Result SHA256:
+  `5ecc4d863b9308f7a788297d1e6d3a82d86d021797032f72a8b24161f54b2e29`.
+- Exact matrix: H128/H160 completions, inherited Rule32 first-image family
+  versus the full four-symbol shift, K/O coordinates, h=0..2, R=0..2.
+  24/72 cases pass and 48 conflict. Primary/reference feature-target digests
+  agree for all 72; every conflict retains a canonical witness; every passing
+  full tuple law is independently replayed.
+- On the inherited family, every completion/coordinate/depth has the same
+  threshold: R=0 conflicts, R=1 passes, R=2 passes. Thus the minimum local cap
+  radius is exactly one throughout the frozen depths. At h=0,1,2 the stored
+  tuple alphabet uses 2,4,6 bits per site respectively.
+- On the full ambient GF(2)^2 shift, all 36 cases conflict through R=2. This is
+  a bounded failure only; no arbitrary-radius exclusion follows.
+- Inherited O tables are literally identical between completions at every
+  budget. K tables generally differ, but exhaustive K/O and H128/H160
+  triangular recodings pass their complete declared local domains. The fixed
+  depth whole-field information equality is a theorem-backed control, not a
+  numerical discovery.
+- Finite diagnostic only: on the n=8 inherited ring, the 255 distinct first
+  image states map to 254 tuple states at every h=0..2, leaving one size-two
+  exceptional fiber under the uniform-distinct-state measure. Increasing
+  correction depth through h=2 does not remove that finite ambiguity.
+- Process record: before the implementation commit was pinned, only the
+  theorem-backed recoding audits and small n=8/n=4 diagnostics were
+  accidentally dry-run; no primary matrix/table result was inspected. After
+  pinning, one local wrapper run was killed by infrastructure timeout and its
+  partial artifacts were discarded uninspected; the unchanged rerun and the
+  canonical GitHub run agree byte for byte.
+- Do not infer a new spatial dimension, ambient impossibility beyond R=2,
+  self-assembly, endogenous control, or an orbit/fixed-point classification.
+  The spatial lattice stays Z; this result measures correction-coordinate
+  locality and alphabet cost.
+
+
 ## Checkpoint 2026-09-08: shared state and rule space
 
 Completed `docs/research/2026-09-08-shared-state-rule.md`, with protocol and
