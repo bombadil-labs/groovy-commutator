@@ -7,6 +7,26 @@ substantial unit completes; keep the bounded-claim style.
 
 Program page: `docs/research/2026-09-10-representation-invariants-program.md`
 
+## Checkpoint 2026-09-11 (third unit): shift census over all rules; global relabelings exhausted
+
+- Protocol and verifier committed before the single deterministic run; no
+  corrections. Note: `2026-09-11-cap-shift-census.md`.
+- All six predictions held at R<=4: census reproduced (4,608); reflection
+  exact for K and O; K shift <= h+1 (observed max 2, at 132/222, 160/250,
+  h=2); O shift 0 and O pass table complement-invariant at every radius;
+  zero half-decided cells (862 undecided on both sides).
+- Post hoc, exact within budgets: the 30 rules with a depth-0 cap of either
+  kind are exactly the 30 rules whose derivative observation closes on
+  rings n<=10 (both say D∘F is a local function of D).
+- Do not infer: anything above radius 4; that h+1 is tight (observed max at
+  h=2 is 2); that these two global transformations exhaust admissibility.
+- Open for Myk: default reading of the commutator under relabeling (state-
+  transport of the derivative), an editorial decision.
+- Next: declare a transformation of a different type (local recoding with a
+  locality budget, or change of completion on a shared family) and audit an
+  Erased Distinctions observer result against it. Review of the three
+  protocols by Codex is still outstanding.
+
 ## Checkpoint 2026-09-11 (second unit): cap-census extension confirms the corrected bound
 
 - Protocol and verifier committed before the single deterministic run; no

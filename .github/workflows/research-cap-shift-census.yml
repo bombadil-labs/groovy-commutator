@@ -1,0 +1,35 @@
+name: Cap shift census
+
+on:
+  pull_request:
+    paths:
+      - 'scripts/verify_cap_shift_census.py'
+      - 'scripts/verify_local_correction_caps.py'
+      - 'results/cap_shift_census_20260911.json'
+      - '.github/workflows/research-cap-shift-census.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/verify_cap_shift_census.py'
+      - 'results/cap_shift_census_20260911.json'
+      - '.github/workflows/research-cap-shift-census.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  shift-census:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -e .
+      - name: Rerun the frozen census and compare the canonical JSON byte for byte
+        run: |
+          cp results/cap_shift_census_20260911.json /tmp/expected.json
+          python scripts/verify_cap_shift_census.py > /dev/null
+          cmp /tmp/expected.json results/cap_shift_census_20260911.json

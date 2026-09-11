@@ -42,7 +42,8 @@ No single group is assumed, no "intrinsic" invariant is claimed, and invariance 
 | Commutator bias of affine rules | global complement conjugation | changed (`c ↦ c ⊕ M𝟙 ⊕ 1`; Rule 0 ↦ Rule 255) | [audit note](2026-09-11-representation-invariants-audit.md) |
 | Native commutator field | complement conjugation | covariant iff self-dual; covariant for all rules with the derivative transported as a state | same |
 | Commutator class, derivative closure, cap budgets | reflection | preserved | same |
-| Local-cap minimum radius | complement conjugation | covariant with a bounded radius cost: shift 1 or 2 on all 22 differing cells, caps on both sides by radius 3, post-hoc bound confirmed | [extension note](2026-09-11-cap-census-complement-extension.md) |
+| Local-cap minimum radius, K | complement conjugation | covariant with a bounded radius cost: shift 0, 1 or 2 over the whole census at `R ≤ 4`, never a loss of existence | [extension](2026-09-11-cap-census-complement-extension.md), [shift census](2026-09-11-cap-shift-census.md) |
+| Local-cap pass table, O | complement conjugation | preserved at every radius (`B_j = D∘F^j` is a difference) | [shift census](2026-09-11-cap-shift-census.md) |
 | Sweep regime labels | reflection, complement | 95% / 94% stable; not an invariance | same |
 
 Nothing in that table is new. The program's first job is to make the table complete and exact for the transformations the repository already uses implicitly.
@@ -56,6 +57,10 @@ The protocol It declares two global transformations of elementary CA (complement
 ## Second unit: complete
 
 [Cap census complement extension](protocols/cap-census-complement-extension-20260911.md), frozen and run 2026-09-11, reported in the [extension note](2026-09-11-cap-census-complement-extension.md). All four predictions held. The first audit's failure was a budget artifact: every cap the census could not see at `R ≤ 2` exists at radius 3, and complement conjugation costs at most two units of cap radius on these cells. The radius budget is part of the representation contract.
+
+## Third unit: complete
+
+[Cap shift census](protocols/cap-shift-census-20260911.md), frozen and run 2026-09-11, reported in the [shift census note](2026-09-11-cap-shift-census.md). All six predictions held over all 256 rules at `R ≤ 4`: O caps are exactly complement-invariant, K caps shift by at most two, no cap is created or destroyed, reflection is exact. A post-hoc observation: the depth-0 cap set of either kind is exactly the derivative-closure set from the first audit. The global relabelings are now exhausted; the next transformation type is a local recoding with a locality budget or a change of completion.
 
 ## What would count as progress
 

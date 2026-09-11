@@ -322,6 +322,11 @@ workflow; research source and result changes now also trigger that workflow.
    corrected bound was then frozen and confirmed on all 22 differing cells
    at R ≤ 6 (`scripts/verify_cap_census_complement_extension.py`): every
    missing cap exists at radius 3 and the shift is 1 or 2, never above h+1.
+   Whole-census shift census at R ≤ 4 (`scripts/verify_cap_shift_census.py`):
+   O-coordinate caps are exactly complement-invariant at every radius; K
+   shifts are 0/1/2 with max 2 (132↔222, 160↔250 at h=2); no cap is created
+   or destroyed; the depth-0 cap set of either kind equals the 30-rule
+   derivative-closure set (post hoc, exact within budgets).
 
 ## Checkpoint logs (read before continuing any workstream)
 

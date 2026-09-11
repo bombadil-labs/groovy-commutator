@@ -1,0 +1,17 @@
+[
+  {
+    "slug": "cap-shift-census",
+    "label": "Cap shift census",
+    "title": "How far does complement conjugation move a local cap, over all 256 rules?",
+    "date": "2026-09-11",
+    "updated": "2026-09-11",
+    "kind": "Exact census of cap-radius shifts under complement conjugation, R ≤ 4",
+    "evidence": "exact",
+    "topic": "Algebra and closure",
+    "summary": "O-coordinate caps are exactly complement-invariant at every radius. K caps shift by 0, 1 or 2, never above h+1, with the only shift-2 cells at 132↔222 and 160↔250. No cell is half-decided at R ≤ 4; the transformation moves radii but never creates or destroys a cap.",
+    "takeaway": "Complement conjugation is invisible to the O tuple and costs at most two units of radius for the K tuple. The h=0 cap set coincides with the derivative-closure set, an exact post-hoc observation.",
+    "source": "docs/research/2026-09-11-cap-shift-census.md",
+    "promotion": { "stage": "research" },
+    "related": ["cap-census-complement-extension", "representation-invariants-audit", "local-correction-caps"]
+  }
+]
