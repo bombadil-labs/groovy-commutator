@@ -9,9 +9,16 @@
     "evidence": "exact",
     "topic": "Algebra and closure",
     "summary": "Separated Rule90 strips provide arbitrarily many independently addressable two-cell interventions under one fixed 2D law. Even if a 1D target is allowed unlimited total storage, a fixed alphabet and fixed common local endpoint window can represent only finitely many independent channel actions.",
-    "takeaway": "Independent transverse intervention structure is a complementary resource to nominal width or total state capacity: when total target length is unconstrained but one common local endpoint window is fixed, preserving it in one dimension requires local addressability resources to grow. This is an operational axis witness, not an intrinsic-dimension theorem.",
+    "takeaway": "Independent transverse intervention structure isolates a different resource from nominal width or total state capacity: preserving it in one dimension requires a local addressability resource to grow even when total storage is unconstrained. This is an operational axis witness, not an intrinsic-dimension theorem.",
     "source": "docs/research/2026-09-11-intervention-axis.md",
-    "promotion": { "stage": "research" },
-    "related": ["coupled-strips", "transverse-freedom", "gradient-intervention-costs", "dimensional-lift"]
+    "promotion": {
+      "stage": "research"
+    },
+    "related": [
+      "coupled-strips",
+      "transverse-freedom",
+      "gradient-intervention-costs",
+      "dimensional-lift"
+    ]
   }
 ]
