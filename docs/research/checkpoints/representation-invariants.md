@@ -7,6 +7,21 @@ substantial unit completes; keep the bounded-claim style.
 
 Program page: `docs/research/2026-09-10-representation-invariants-program.md`
 
+## Checkpoint 2026-09-11 (eleventh unit opened): wiring as a transformation, protocol frozen, review pending
+
+- Frozen and unrun: `protocols/wiring-dilation-20260911.md`. Fourth
+  transformation type: neighborhood dilation d in {2,3} on rings 6-12,
+  observations 232 and 4, two transports (whole-contract, partial). W1
+  conjugacy when gcd(d,n)=1, every census and the commutator
+  classification preserved (theorem control; the d=2 odd-ring conjugacy
+  was checked numerically before freezing while reviewing the Rose
+  preprint, disclosed); W2 partial dilation changes the closed set at every
+  odd ring, the observation rule leaves K, consistency with the
+  inverse-offset observation; W3 even rings split, census and depth equal
+  the n/2-ring; W4 d=3 analogues; W5 the commutator classification is
+  reported under partial dilation.
+- Pending: Codex's gate-1 review. No verifier committed, nothing run.
+
 ## Checkpoint 2026-09-11 (tenth unit accepted): complement of the observation merged
 
 - Gate 2 met: Codex signed off at `18e900b` after one scope correction
