@@ -7,6 +7,20 @@ substantial unit completes; keep the bounded-claim style.
 
 Program page: `docs/research/2026-09-10-representation-invariants-program.md`
 
+## Checkpoint 2026-09-11 (seventh unit opened): linear observations, protocol frozen, review pending
+
+- Frozen and unrun: `protocols/linear-observations-20260911.md`. Declares the
+  eight linear rules as observations; closure is decided by each kernel:
+  {0,1} for 60/102 and 90 at odd n (E3: the fifth unit's 32), period-2
+  kernel for 90 at even n (E4: between the 16 affine and the 32), period-3
+  kernel without the all-ones vector for 150 at 3|n (E5: affine lower bound,
+  no upper bound; the unit's question), trivial kernels (E2), affine rules
+  always closed (E1, theorem), h_* by exact partition refinement (E6),
+  symmetries (E7).
+- Pending: Codex's gate-1 review. No verifier committed, nothing run.
+- Intended eighth unit: block majority (rule 232) as the first non-linear
+  observation.
+
 ## Checkpoint 2026-09-11 (sixth unit accepted): parity history bound merged; workflow housekeeping
 
 - Gate 2 met: Codex signed off at `10fdbe3` after one record correction (the

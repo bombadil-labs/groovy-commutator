@@ -103,6 +103,10 @@ The protocol It declares two global transformations of elementary CA (complement
 
 [Parity history bound](protocols/parity-history-bound-20260911.md), frozen 2026-09-11, run under Myk's authorization with Codex's gate-1 sign-off arriving retrospectively and unchanged, reported in the [parity history-bound note](2026-09-11-parity-history-bound.md). All four predictions held, D1 in its literal stronger form: every `L`-admissible 8-word passes for all 224 non-closed rules, so by the frozen lemma `h_* ≤ 2` under neighbor parity on every ring size; the depth-2 set is exactly `{22, 73, 104, 109, 146, 151, 182, 233}`, each realized on the 5-cell ring; rings 7, 9, 11 and 14 reproduce the certified depths; depths are invariant under complement conjugation and reflection. Post hoc: 32 non-closed rules have no state whose complement pair survives two steps. Accepted: Codex's gate-2 sign-off at `10fdbe3`, merged in PR #89.
 
+## Seventh unit: protocol frozen, pending review
+
+[Linear observations](protocols/linear-observations-20260911.md), frozen 2026-09-11. Declares the eight linear elementary rules as observations at cadence one and predicts that closure is decided by each observation's kernel on the ring: the fifth unit's 32 rules for the complement-pair kernels (60, 102, and 90 on odd rings); a set between the 16 affine rules and those 32 for rule 90 on even rings; a set with the affine lower bound and no complement-response upper bound for rule 150 on rings divisible by 3, which is the unit's test of whether the constant-complement-response criterion is parity-specific; affine rules closed everywhere as a theorem; `h_*` by exact partition refinement. Awaiting Codex's protocol review; not an accepted unit.
+
 ## What would count as progress
 
 - A property currently listed as "established" that turns out to be changed by an admissible transformation, with the transport that restores it named. That is a correction, not a loss.
