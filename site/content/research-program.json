@@ -78,7 +78,7 @@
     "date": "2026-09-10",
     "updated": "2026-09-11",
     "status": "living",
-    "summary": "Four audits complete. Global relabelings: reflection preserves the commutator classification, derivative closure and all cap budgets; complement conjugation makes the native commutator covariant exactly for self-dual rules, leaves O caps untouched and moves K-cap radii by at most two. The 2-block recoding, the first local alphabet-changing transformation, costs at most one unit of cap radius and usually none. The program declares admissible changes of interpreter, what each transports, and what each costs.",
+    "summary": "Eleven audits complete across four transformation types: global relabelings, an injective local recoding, linear and non-linear observations, and a change of wiring. Reflection and coprime whole-contract dilation preserve everything; complement conjugation and dilation are exactly covariant only when the companion object, the derivative or the observation, is transported with the rule; closure under an observation and its history cost are properties of the pair and are genuinely changed. The Program page carries the verdict matrix and what each other program can use.",
     "thesis": "Which properties of a represented dynamics survive a declared change of representation contract, after transporting what must be transported, and at what cost?",
     "source": "docs/research/2026-09-10-representation-invariants-program.md",
     "supports": [
@@ -94,7 +94,14 @@
       "observation-closure",
       "shared-closure-account",
       "full-gradient-closure",
-      "gradient-loop-invariants"
+      "gradient-loop-invariants",
+      "parity-coarse-graining",
+      "parity-history-bound",
+      "linear-observations",
+      "block-majority",
+      "isolated-cell",
+      "complement-observation",
+      "wiring-dilation"
     ]
   }
 ]

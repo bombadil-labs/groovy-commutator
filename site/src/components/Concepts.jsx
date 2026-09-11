@@ -1760,6 +1760,35 @@ export default function Concepts() {
           </p>
         </section>
 
+        <section id="contract" style={{ padding: '1.6rem 0', borderTop: '1px solid var(--rule)' }}>
+          <div style={sectionKicker}>Representation</div>
+          <h2 style={h2Style}>When is a change of coordinates a discovery?</h2>
+          <p style={pBody}>
+            The same automaton can be described in more than one convention: swap the names of 0 and 1,
+            mirror left and right, read every second cell, or watch it through a coarse lens. A finding
+            about the automaton should not depend on which convention we happened to use. Eleven audits
+            sorted the site&apos;s claims into three kinds.
+          </p>
+          <p style={pBody}>
+            Some survive any of these changes outright. Mirroring, or reading every second cell on a ring
+            of odd size, is a relabeling of positions, and nothing changes. Some survive only if a companion
+            object is translated too. Swapping 0 and 1 turns Rule 0 into Rule 255 and its commutator from
+            all-zeros into all-ones; the commutator becomes convention-free once the derivative is
+            translated as a state, and closure under a lens becomes convention-free once the lens is
+            translated with the rule. And some genuinely change: which rules stay predictable through a
+            given lens, and how much history the lens needs, are facts about the rule and the lens
+            together, not about the rule alone.
+          </p>
+          <p style={pBody}>
+            The rule of thumb the program arrived at is to name the translation before calling anything
+            invariant, and to count the observation as part of the contract. Read the{' '}
+            <a href="research/representation-invariants-audit.html" style={{ color: 'var(--accent)' }}>first audit</a>{' '}
+            for the 0/1 example and the{' '}
+            <a href="research/program-representation-invariants.html" style={{ color: 'var(--accent)' }}>program page</a>{' '}
+            for the full verdict matrix.
+          </p>
+        </section>
+
         {/* CLOSING POINTER -- questions (incl. rules birthing rules, and everything still open) live on their own page now */}
         <section style={{ padding: '1.6rem 0 2rem', borderTop: '1px solid var(--rule)' }}>
           <p style={pBody}>

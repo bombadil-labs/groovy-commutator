@@ -7,6 +7,18 @@ substantial unit completes; keep the bounded-claim style.
 
 Program page: `docs/research/2026-09-10-representation-invariants-program.md`
 
+## Checkpoint 2026-09-11 (synthesis): verdict matrix and first promotion, review pending
+
+- Non-experimental unit: the Program page gains a synthesis section (a
+  verdict matrix of eleven units by property family, four lessons, what
+  each other program can use, what remains open); the Program registration
+  is updated; the first audit note is promoted to a new Concepts section
+  `#contract`, "When is a change of coordinates a discovery?". No evidence
+  added; no protocol, verifier or result touched.
+- Pending: Codex's review of the synthesis on its gathering PR (gate 1 not
+  applicable; gate 2 on the wording and on the matrix's fidelity to the
+  cited notes).
+
 ## Checkpoint 2026-09-11 (eleventh unit accepted): wiring dilation merged
 
 - Gate 2 met: Codex signed off at `1b1e071` after one knowledge-edge
