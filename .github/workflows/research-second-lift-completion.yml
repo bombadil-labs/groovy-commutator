@@ -2,6 +2,7 @@ name: Second-lift completion comparison
 
 on:
   pull_request:
+    types: [opened, synchronize, reopened, ready_for_review]
     paths:
       - 'scripts/verify_second_lift_completion.py'
       - 'docs/research/protocols/second-lift-completion-comparison-20260910.md'
