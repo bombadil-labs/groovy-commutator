@@ -61,7 +61,7 @@ One row per declared transformation, with its declared costs, then the propertie
 | Transformation | Cost | Property | Status | Source |
 | --- | --- | --- | --- | --- |
 | Completion `H ↦ H'` agreeing on `B` | local triangular recoding of correction rows | retained information and factor existence at fixed depth | preserved (theorem) | [correction coordinates](2026-09-09-correction-future-coordinates.md), [second-lift protocol](2026-09-10-second-lift-completion-protocol.md) |
-| Completion `H ↦ H'` agreeing on `B` | same | literal correction maps, cap radius, cap cost | changed; bounded by the recoding radius | same; unrun protocol |
+| Completion `H ↦ H'` agreeing on `B` | same | literal correction maps, cap radius, cap cost | literal maps may change; cap-radius difference bounded by the recoding radius; measured equal minimum radius one across H128/H160 on the inherited Rule32 family through `h, R ≤ 2`, with O tables literally identical and K tables differing | same; [second-lift result](2026-09-11-second-lift-completion.md) |
 
 ### Replication to a new axis
 
@@ -145,7 +145,7 @@ Rows are transformations, columns are audited property families. "pres." is pres
 | Complement conjugation, rule only (1–3, 9–10) | chg.: bias `c ↦ c ⊕ M𝟙 ⊕ 1`; 4, 200 leave the zero set | cov. iff self-dual (16 rules) | pres. (30 rules) | O pres.; K cov., shift ≤ 2, never lost | chg.: `C_ψ ≠ C_ψ̃` at every ring (9, 10) | chg. | 93.9% stable |
 | Complement conjugation with the companion transported (1, 9–10) | — | cov. for all 256 with `D ↦ ¬D` | — | — | cov. exactly with `ψ ↦ ψ̃` | cov. exactly | — |
 | 2-block recoding (4) | pres. componentwise | pres. componentwise | pres. | cov., cost ≤ 1 unit, 0 in 665 of 674 cells | — | — | — |
-| Change of completion on a shared family (Codex, protocol frozen) | — | — | retained information and factor existence pres. (theorem) | literal maps and cap radius chg., bounded by the recoding radius | — | — | — |
+| Change of completion on a shared family (Codex, unit complete) | — | — | retained information and factor existence pres. (theorem) | literal maps may change; the cap-radius difference is bounded by the recoding radius; measured equal minimum radius one across H128/H160 through `h, R ≤ 2` | — | — | — |
 | Replication to a new axis (Codex) | — | — | — | — | wrapping-loop parity pres. | — | — |
 | Linear observations (5–7) | — | cov. by linearity for closed rules | — | — | closed 32 (complement-pair kernels), closed 16 (richer kernels); elementary factor | `≤ 2` certified for all rings (parity); `≤ 4` within ring 12 (richer kernels) | — |
 | Non-linear observations 232, 4, 32, 200, 22 (8–10) | — | — | — | — | closed 22, 33, 33, 42, 11 (12 at ring 6 under 22); split into commuters, collapses and a residual; the complement rule always closes | up to 16, 22, 22, 26, 16 at ring 12; 31 at ring 16 under 232; not monotone under 4 | — |
@@ -162,7 +162,7 @@ Rows are transformations, columns are audited property families. "pres." is pres
 
 ### What this gives the other programs
 
-The Erased Distinctions program gets a closure vocabulary tested on eleven transformations, with the residual class and observational equivalence as new instruments. The dimensional program gets the completion-change theorem placed in the same table as the relabelings, with cap radius as the one property that moves. The planned learning-and-revising-primitives program gets its equivalence notion: two candidate primitives related by a site permutation, an injective recoding on the family, or a transport-complete conjugation are the same primitive, and a difference that survives those is allowed to count.
+The Erased Distinctions program gets a closure vocabulary tested on eleven transformations, with the residual class and observational equivalence as new instruments. The dimensional program gets the completion-change theorem placed in the same table as the relabelings, with cap radius as the one property that moves. The planned learning-and-revising-primitives program gets its equivalence notion: two candidate primitives related by a site permutation, an injective recoding on the family, or a transport-complete conjugation count as the same primitive under the declared representation contract and for the audited properties, a working equivalence rather than a context-free identity, and a difference that survives those is allowed to count.
 
 ### What remains open in this program
 

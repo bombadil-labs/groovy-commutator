@@ -1770,8 +1770,8 @@ export default function Concepts() {
             sorted the site&apos;s claims into three kinds.
           </p>
           <p style={pBody}>
-            Some survive any of these changes outright. Mirroring, or reading every second cell on a ring
-            of odd size, is a relabeling of positions, and nothing changes. Some survive only if a companion
+            Some survive any of these changes outright. Mirroring, or dilating the neighborhood and the lens
+            together by two on a ring of odd size, is only a renumbering of positions, and nothing changes. Some survive only if a companion
             object is translated too. Swapping 0 and 1 turns Rule 0 into Rule 255 and its commutator from
             all-zeros into all-ones; the commutator becomes convention-free once the derivative is
             translated as a state, and closure under a lens becomes convention-free once the lens is
