@@ -327,9 +327,10 @@ def current_physical_difference(
         "current_physical_row_domains_equal": not domain_difference,
         "common_coordinate_physical_difference_exists": common_difference,
         # Equal complete retained current symbols account for every retained
-        # coordinate. A different row domain or a common-coordinate raw-cell
-        # difference is therefore information outside that retained field.
-        "unretained_current_difference_exists": bool(domain_difference or common_difference),
+        # coordinate. Only an actual differing raw cell on the shared physical
+        # coordinate domain counts as the required hidden-current witness; a
+        # different finite replay-window shape is never accepted as evidence.
+        "unretained_current_difference_exists": common_difference,
     }
 
 
@@ -354,8 +355,12 @@ def replay_global_conflict(orbit, records: GlobalRecords, mask: int, conflict: d
     if next1 == next2 or [next1, next2] != conflict["next_complete_retained_fields"]:
         raise AssertionError("G7 scalar/reference next-field replay mismatch")
     diff = current_physical_difference(states1, ys1, rec1["t"], states2, ys2, rec2["t"])
-    if diff["current_complete_physical_fields_identical"] or not diff["unretained_current_difference_exists"]:
-        raise AssertionError("G7 conflict lacks an unretained current physical distinction")
+    if (
+        diff["current_complete_physical_fields_identical"]
+        or not diff["common_coordinate_physical_difference_exists"]
+        or not diff["unretained_current_difference_exists"]
+    ):
+        raise AssertionError("G7 conflict lacks an unretained shared-coordinate physical distinction")
     return {
         "scalar_vector_complete_field_agreement_through_t_plus_1": True,
         "retained_histories_equal": True,
