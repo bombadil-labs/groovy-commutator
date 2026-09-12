@@ -46,7 +46,7 @@ REFERENCE_GRAY = (0, 1, 3, 2, 6, 7, 5, 4)
 ADDRESS_VARIABLES = (PATCH_INDEX["W"], PATCH_INDEX["C"], PATCH_INDEX["E"])
 
 Z0_ORIENTATIONS = {
-    "Z0-A": (0, 2),  # address 0 -> L, address 1 -> R in (L,C,R)
+    "Z0-A": (0, 2),
     "Z0-B": (2, 0),
 }
 
@@ -79,9 +79,6 @@ def assert_accepted_inputs() -> dict[str, dict[str, str]]:
             raise AssertionError(f"accepted input drift for {key}: {actual} != {expected}")
         out[key] = {"path": str(path.relative_to(ROOT)), "git_blob_sha": actual, "sha256": sha256(path)}
     return out
-
-
-# ---------- Generic Boolean / ANF helpers ----------
 
 
 def bits_of(value: int, n: int) -> tuple[int, ...]:
@@ -130,7 +127,7 @@ def poly_mul(a: set[int], b: set[int]) -> set[int]:
     out: set[int] = set()
     for ma in a:
         for mb in b:
-            term = ma | mb  # Boolean ANF: x*x=x
+            term = ma | mb
             if term in out:
                 out.remove(term)
             else:
@@ -174,9 +171,6 @@ def anf_summary(poly: frozenset[int], names: tuple[str, ...]) -> dict:
     }
 
 
-# ---------- Selector implementations ----------
-
-
 def z0_scalar(bits: tuple[int, ...], program_vars: tuple[int, int]) -> int:
     l, c, r = bits
     values = (l, r)
@@ -184,7 +178,7 @@ def z0_scalar(bits: tuple[int, ...], program_vars: tuple[int, int]) -> int:
 
 
 def z0_packed(assignment: int, program_vars: tuple[int, int]) -> int:
-    address = (assignment >> 1) & 1  # C
+    address = (assignment >> 1) & 1
     var = program_vars[address]
     return (assignment >> var) & 1
 
@@ -219,11 +213,7 @@ def z1_packed(assignment: int, layout: tuple[int, ...]) -> int:
     return (assignment >> var) & 1
 
 
-# ---------- D4 / address transformations ----------
-
-
 def compose_perm(p: tuple[int, ...], q: tuple[int, ...]) -> tuple[int, ...]:
-    """p after q."""
     return tuple(p[q[i]] for i in range(len(p)))
 
 
@@ -235,7 +225,7 @@ R0 = tuple(range(8))
 R90 = shell_perm_rotation(2)
 R180 = shell_perm_rotation(4)
 R270 = shell_perm_rotation(6)
-SV = tuple((-i) % 8 for i in range(8))  # reflection through N/S axis
+SV = tuple((-i) % 8 for i in range(8))
 D4 = {
     "id": R0,
     "r90": R90,
@@ -310,9 +300,6 @@ def cycle_type(perm: tuple[int, ...]) -> list[int]:
     return sorted((len(c) for c in cycles(perm)))
 
 
-# ---------- ECA / Groovy / axial controls ----------
-
-
 def eca_bit(rule: int, left: int, center: int, right: int) -> int:
     return (rule >> (4 * left + 2 * center + right)) & 1
 
@@ -322,11 +309,11 @@ def eca_shrink(bits: tuple[int, ...], rule: int) -> tuple[int, ...]:
 
 
 def groovy_center_from_five(bits: tuple[int, ...], rule: int) -> int:
-    e1 = eca_shrink(bits, rule)              # three cells of E(S)
-    ee = eca_shrink(e1, rule)[0]             # E(E(S)) center
-    d_e = e1[1] ^ ee                         # D(E(S)) center
+    e1 = eca_shrink(bits, rule)
+    ee = eca_shrink(e1, rule)[0]
+    d_e = e1[1] ^ ee
     d1 = tuple(bits[i + 1] ^ e1[i] for i in range(3))
-    e_d = eca_shrink(d1, rule)[0]            # E(D(S)) center
+    e_d = eca_shrink(d1, rule)[0]
     return d_e ^ e_d
 
 
@@ -341,12 +328,10 @@ def unary_power(rule: int, b: int, d: int) -> int:
     return x
 
 
-# ---------- Frozen evaluation ----------
-
-
 def evaluate_z0() -> dict:
     rows = {}
     all_agree = True
+    failures = []
     for name, program_vars in Z0_ORIENTATIONS.items():
         scalar = truth_table(3, lambda b, pv=program_vars: z0_scalar(b, pv))
         packed = [z0_packed(a, program_vars) for a in range(8)]
@@ -356,19 +341,33 @@ def evaluate_z0() -> dict:
         anf_agree = poly_truth == poly_symbolic and truth_from_anf(poly_symbolic, 3) == scalar
         essential_direct = essential_from_truth(scalar, 3)
         summary = anf_summary(poly_truth, ("L", "C", "R"))
+        passed = agree and anf_agree and summary["degree"] == 2 and len(essential_direct) == 3
+        first_mismatch = next((a for a, (x, y) in enumerate(zip(scalar, packed)) if x != y), None)
         rows[name] = {
             "truth_table": scalar,
             "scalar_packed_agree": agree,
             "anf_paths_agree": anf_agree,
             "anf": summary,
             "direct_essential_inputs": [("L", "C", "R")[i] for i in essential_direct],
+            "pass": passed,
         }
-        all_agree &= agree and anf_agree and summary["degree"] == 2 and len(essential_direct) == 3
-    return {"orientations": rows, "pass": all_agree}
+        if not passed:
+            failures.append({
+                "orientation": name,
+                "first_physical_patch_assignment": first_mismatch,
+                "first_physical_patch_bits_LCR": (list(bits_of(first_mismatch, 3)) if first_mismatch is not None else None),
+                "scalar_value": (scalar[first_mismatch] if first_mismatch is not None else None),
+                "packed_value": (packed[first_mismatch] if first_mismatch is not None else None),
+                "anf_paths_agree": anf_agree,
+                "anf": summary,
+            })
+        all_agree &= passed
+    return {"orientations": rows, "failures": failures, "canonical_failure": (failures[0] if failures else None), "pass": all_agree}
 
 
 def evaluate_z1(layouts: list[dict]) -> dict:
     rows = []
+    failures = []
     all_agree = True
     signatures = set()
     for item in layouts:
@@ -384,7 +383,19 @@ def evaluate_z1(layouts: list[dict]) -> dict:
         quartic = summary["monomial_count_by_degree"].get("4", 0)
         signatures.add((summary["degree"], tuple(summary["essential_inputs"]), quartic))
         passed = agree and anf_agree and summary["degree"] == 4 and len(essential_direct) == 9 and quartic == 6
+        first_mismatch = next((a for a, (x, y) in enumerate(zip(scalar, packed)) if x != y), None)
         all_agree &= passed
+        if not passed:
+            failures.append({
+                "layout": list(layout),
+                "first_physical_patch_assignment": first_mismatch,
+                "first_physical_patch_bits": (list(bits_of(first_mismatch, 9)) if first_mismatch is not None else None),
+                "scalar_value": (scalar[first_mismatch] if first_mismatch is not None else None),
+                "packed_value": (packed[first_mismatch] if first_mismatch is not None else None),
+                "anf_paths_agree": anf_agree,
+                "anf": summary,
+                "direct_essential_inputs": [PATCH_NAMES[i] for i in essential_direct],
+            })
         rows.append({
             "layout": list(layout),
             "provenance": item["provenance"],
@@ -398,6 +409,8 @@ def evaluate_z1(layouts: list[dict]) -> dict:
     return {
         "layouts": rows,
         "layout_count": len(rows),
+        "failures": failures,
+        "canonical_failure": (failures[0] if failures else None),
         "structure_signatures": [
             {"degree": d, "essential_inputs": list(e), "quartic_terms": q}
             for d, e, q in sorted(signatures)
@@ -428,10 +441,20 @@ def evaluate_geometry(layouts: list[dict]) -> dict:
                 "induced_cycles": cycles(induced),
                 "matches_eca_transforms": matches,
             })
-        nontrivial = sorted(set(intersections) - {"id"})
-        if nontrivial:
-            failures.append({"layout": list(layout), "nontrivial": nontrivial})
+            for target in matches:
+                if target != "id":
+                    failures.append({
+                        "layout": list(layout),
+                        "shell_action": shell_name,
+                        "shell_cycle_type": cycle_type(shell_perm),
+                        "induced_address_permutation": list(induced),
+                        "induced_cycles": cycles(induced),
+                        "candidate_eca_transform": target,
+                        "candidate_eca_permutation": list(ECA_TRANSFORMS[target]),
+                        "candidate_eca_cycles": cycles(ECA_TRANSFORMS[target]),
+                    })
         rows.append({"layout": list(layout), "actions": action_rows, "eca_intersection": sorted(set(intersections))})
+    failures.sort(key=lambda w: (tuple(w["layout"]), w["shell_action"], w["candidate_eca_transform"]))
     theorem_controls = {
         name: {"permutation": list(p), "cycle_type": cycle_type(p), "fixed_points": sum(p[i] == i for i in range(8))}
         for name, p in ECA_TRANSFORMS.items()
@@ -445,6 +468,7 @@ def evaluate_geometry(layouts: list[dict]) -> dict:
         "shell_action_controls": shell_controls,
         "layouts": rows,
         "failures": failures,
+        "canonical_failure": (failures[0] if failures else None),
         "pass_identity_only": not failures,
     }
 
@@ -508,8 +532,9 @@ def main_evaluation() -> dict:
     routing = {"d": 2, "program_bits_8d": 16, "outer_shell_cells_3d_radius1": 26, "below_shell_count": 16 < 26,
                "scope": "accepted factorized routing family only; not compression of an arbitrary 512-bit 2D truth table"}
 
+    complete_0d_floor = sorted(2 * f0 + f1 for f0 in (0, 1) for f1 in (0, 1)) == [0, 1, 2, 3]
     summary = {
-        "P1_complete_0D_floor": True,
+        "P1_complete_0D_floor": complete_0d_floor,
         "P2_commutator_floor": commutator["pass"],
         "P3_minimum_role_overlap": p3,
         "P4_common_selector_local_structure": z0["pass"] and z1["pass"],
@@ -540,7 +565,12 @@ def main_evaluation() -> dict:
             "shell_actions": list(D4),
             "eca_transforms": list(ECA_TRANSFORMS),
         },
-        "P1_0D_floor": {"rules": [0, 204, 51, 255], "all_affine": True},
+        "P1_0D_floor": {
+            "unary_truth_words_00_01_10_11": [0, 1, 2, 3],
+            "center_only_ECA_rules": [0, 204, 51, 255],
+            "complete_binary_unary_rulespace": complete_0d_floor,
+            "all_affine": True,
+        },
         "P2_commutator_floor": commutator,
         "P3_role_overlap": overlap,
         "P4_selector_structure": {"Z0": z0, "Z1": z1},
@@ -562,12 +592,7 @@ def main_evaluation() -> dict:
     }
 
 
-# ---------- Out-of-domain implementation self-test ----------
-
-
 def self_test() -> None:
-    # Toy two-address-bit multiplexer with four disjoint program variables.
-    # Six variables: A0,A1,P00,P01,P10,P11. This is outside both frozen rungs.
     address_vars = (0, 1)
     program_vars = (2, 3, 4, 5)
 
@@ -583,7 +608,6 @@ def self_test() -> None:
     assert essential_from_truth(table, 6) == tuple(range(6))
     assert max(m.bit_count() for m in anf_a) == 3
 
-    # Pure permutation helper sanity checks on a four-cycle, unrelated to the shell.
     p = (1, 2, 3, 0)
     assert cycle_type(p) == [4]
     assert compose_perm(p, p) == (2, 3, 0, 1)
