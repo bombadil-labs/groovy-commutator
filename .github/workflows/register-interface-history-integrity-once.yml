@@ -1,0 +1,45 @@
+name: Register interface-history integrity once
+
+on:
+  push:
+    branches: [work/dimensional-interface-history/draft-run]
+    paths:
+      - '.github/workflows/register-interface-history-integrity-once.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  register:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Add the frozen interface-history integrity mapping and remove this runner
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          python - <<'PY'
+          import pathlib
+          path = pathlib.Path('scripts/check_result_integrity.py')
+          text = path.read_text()
+          key = "results/interface_history_20260911.json"
+          if key not in text:
+              block = (
+                  "    'results/interface_history_20260911.json': {\n"
+                  "        'script': 'scripts/verify_interface_history.py',\n"
+                  "        'protocol': 'docs/research/protocols/interface-history-20260911.md',\n"
+                  "        'interface_factor_result': 'results/interface_factor_20260911.json',\n"
+                  "        'interface_factor_script': 'scripts/verify_interface_factor.py'},\n"
+              )
+              marker = "\n}\n\ndef sha"
+              if marker not in text:
+                  raise SystemExit('integrity registry insertion marker not found')
+              text = text.replace(marker, "\n" + block + "}\n\ndef sha", 1)
+              path.write_text(text)
+          PY
+          git rm .github/workflows/register-interface-history-integrity-once.yml
+          git add scripts/check_result_integrity.py
+          git commit -m "Register interface-history canonical result integrity"
+          git push origin HEAD:work/dimensional-interface-history/draft-run
