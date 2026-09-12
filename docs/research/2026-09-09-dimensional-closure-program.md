@@ -51,6 +51,14 @@ The [zero-dimensional base audit](2026-09-12-zero-dimensional-base.md) makes the
 
 This is an exact local architecture result, not repeated stateful execution or an intrinsic-dimension theorem. The negative geometry classification rules out the earlier idea that the Gray placement itself supplies a nontrivial familiar ECA symmetry. Repeated execution was split into later work before implementation, and the separate relational-rank protocol is motivated by these distinctions but is not evidence supplied by this result.
 
+## Short history does not repair the touching-strip interface state within the frozen budget
+
+The [finite interface-history audit](2026-09-12-interface-history.md) follows the accepted memoryless interface-factor obstruction without changing its physical law, source family or six-bit `(A,B,E0,E1,E2,E3)` coordinate. It retains up to two lags of those same symbols and scores shallower/deeper histories on the same transition domains so dropping warm-up transitions cannot masquerade as an information gain.
+
+The result is a complete bounded negative. On rings `n=6,7`, every one of the 288 scientific budgets through history depth two and longitudinal radius two conflicts. The frozen one-lag constructive bet fails, the independently predeclared two-lag extension also fails, and there is no Pareto-minimal passing budget because the passing set is empty. Independent physical causal-patch replay shows that canonical symbolic conflicts still differ in unretained current cells capable of affecting the next interface symbol.
+
+This narrows one natural rescue of the memoryless obstruction: short temporal stacking of the *same* interface coordinate does not retrieve the missing distinctions in this family. It does not exclude deeper history, larger radius, moving/support-tracking state, a different finite coordinate, nonlocal factors or growing-support descriptions. History depth, spatial radius and retained-coordinate choice remain distinct resources; changing one after this failure requires a separately frozen experiment.
+
 ## Relational rank separates available directions from law-used directions
 
 The [relational-rank audit](2026-09-12-relational-rank.md) introduces two deliberately representation-relative quantities. `rho_T` is the free rank of lattice translations that act nontrivially on a declared state family after quotienting translations that fix the family pointwise; `rho_C` is the integer rank spanned by a local rule's essential displacement offsets. The controls make the distinction concrete: literal 1D replication into 2D leaves the copied image at translation rank one inside a rank-two full target, finite product alphabets and anchored finite track families need not increase translation rank, and taking the translation closure of the same track family raises `rho_T` from one to two. The last comparison is intentional evidence that `rho_T` depends on the declared family/presentation.
