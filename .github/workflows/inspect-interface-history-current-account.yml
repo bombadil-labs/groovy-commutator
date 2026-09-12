@@ -1,12 +1,8 @@
-name: One-shot test current-account workflow
+name: One-shot apply dimensional current account
 
 on:
   push:
     branches: [research/interface-history-global-current-account]
-    paths:
-      - '.github/workflows/inspect-interface-history-current-account.yml'
-  pull_request:
-    types: [synchronize]
     paths:
       - '.github/workflows/inspect-interface-history-current-account.yml'
 
@@ -14,10 +10,21 @@ permissions:
   contents: write
 
 jobs:
-  test-trigger:
+  apply:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
         with:
           ref: research/interface-history-global-current-account
-      - run: echo workflow-trigger-ok
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python tmp_apply_interface_history_global_current_account.py
+      - name: Commit current-account updates
+        run: |
+          git config user.name 'Codex dimensional current-account update'
+          git config user.email 'noreply@openai.com'
+          git add docs/research/2026-09-09-dimensional-closure-program.md docs/research/checkpoints/dimensional-lift.md site/content/knowledge.json site/content/research-program.json
+          git commit -m 'research: integrate global interface-history current account'
+          git push origin HEAD:research/interface-history-global-current-account
