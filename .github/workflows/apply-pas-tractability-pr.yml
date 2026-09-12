@@ -1,4 +1,4 @@
-name: Apply PAS tractability certificate on PR
+name: Diagnose PAS tractability patch script
 
 on:
   pull_request:
@@ -9,7 +9,7 @@ permissions:
   contents: write
 
 jobs:
-  apply:
+  diagnose:
     if: github.head_ref == 'work/predictive-assembly-support/tractability-certificate'
     runs-on: ubuntu-latest
     timeout-minutes: 10
@@ -21,29 +21,23 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Apply exact-preimage solver-only patch
+      - name: Capture patch, compile, and self-test output
         shell: bash
         run: |
-          set -euo pipefail
-          test "$(git hash-object scripts/verify_predictive_assembly_support.py)" = "f39f946509acd50047c1c77502af212f0f6b6ec4"
-          python .pas_patch.py
-      - name: Run bounded implementation-only verification
-        shell: bash
-        run: |
-          set -euo pipefail
-          python -m py_compile scripts/verify_predictive_assembly_support.py
-          python scripts/verify_predictive_assembly_support.py --self-test
-          test ! -f results/predictive_assembly_support_20260912.json
-      - name: Commit only solver correction and remove temporary artifacts
-        shell: bash
-        run: |
-          set -euo pipefail
+          set +e
+          : > /tmp/pasdiag
+          echo PREIMAGE=$(git hash-object scripts/verify_predictive_assembly_support.py) >> /tmp/pasdiag
+          python .pas_patch.py >> /tmp/pasdiag 2>&1
+          echo PATCH_RC=$? >> /tmp/pasdiag
+          python -m py_compile scripts/verify_predictive_assembly_support.py >> /tmp/pasdiag 2>&1
+          echo COMPILE_RC=$? >> /tmp/pasdiag
+          python scripts/verify_predictive_assembly_support.py --self-test >> /tmp/pasdiag 2>&1
+          echo SELFTEST_RC=$? >> /tmp/pasdiag
+          git reset --hard HEAD
+          cp /tmp/pasdiag .pas-editor-diagnostic.log
           git config user.name 'Codex PAS tractability'
           git config user.email 'noreply@openai.com'
-          git rm .github/workflows/apply-pas-tractability-once.yml
-          git rm .github/workflows/apply-pas-tractability-pr.yml
-          git rm .pas-editor-diagnostic.log
-          git rm .pas_patch.py
-          git add scripts/verify_predictive_assembly_support.py
-          git commit -m 'research: pin bounded PAS independent optimality certificate'
+          git add .pas-editor-diagnostic.log
+          git commit -m 'ci: preserve PAS patch-script diagnostic'
           git push origin HEAD:work/predictive-assembly-support/tractability-certificate
+          exit 0
