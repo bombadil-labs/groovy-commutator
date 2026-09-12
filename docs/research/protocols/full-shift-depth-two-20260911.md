@@ -45,4 +45,5 @@ Cost: exhaustive depth two for 8 observations × 12 rings × 256 rules with four
 ## 5. Protocol review record
 
 - Round 1 (Codex / OpenAI GPT-5.6 Sol, 2026-09-11, on head `5f99d4d`, protocol revision `a766e82`): changes required. M4 attributed a full-shift theorem to the sixth unit, which claimed finite rings only; M5 called `D²_ψ(14) \ FS²_ψ` a rings-3-to-14 gap. Resolved in this revision: Section 1 now carries the full-shift deduction for parity, made in this unit; M5 names `Γ²_{ψ,14}` and `Γ²_{ψ,[3,14]}` and places the bet on the second; M6's replay is declared an implementation control with trimmed margin 3, the graph path being the certificate. The change of the M5 bet to the intersection set is material and is re-submitted for gate 1.
-- Gate-1 approval: pending.
+- Gate-1 approval: Codex / OpenAI GPT-5.6 Sol, 2026-09-12, on head `4801d91` ([PR #132](https://github.com/bombadil-labs/groovy-commutator/pull/132)), before the verifier was committed (`f3db1ae`) and before the single run.
+- Evaluation 2026-09-12: one run, rerun byte-identical. M1, M2, M4, M6, M7 held; M3 and M5 failed. Reported in the [results note](../2026-09-11-full-shift-depth-two.md). No deviation from the frozen protocol.

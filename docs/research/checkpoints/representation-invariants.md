@@ -7,6 +7,29 @@ substantial unit completes; keep the bounded-claim style.
 
 Program page: `docs/research/2026-09-10-representation-invariants-program.md`
 
+## Checkpoint 2026-09-12 (fifteenth unit run): full-shift depth two decided, both bets failed, gate 2 pending
+
+- Gate 1: Codex approved `4801d91` after one correction round (parity
+  deduction written into the unit; ring-14 vs all-tested-ring gap).
+  Verifier `scripts/verify_full_shift_depth_two.py` committed at
+  `f3db1ae` before the run; run once (11 min), rerun byte-identical;
+  canonical `results/full_shift_depth_two_20260911.json`.
+- Held: M1, M2, M4 (FS^2_102 = 256), M6 (54 witness pairs), M7.
+- Failed: M3, 24 of the 54 fourteenth-unit gap pairs have full-shift
+  depth >= 3 (232: 8 of 16; 200: 4 of 8; 22: 12 of 22; 102: 0 of 8).
+  M5, the all-tested-ring depth-two gap is nonempty for every
+  observation but 102 (20, 4, 4, 12, 30, 0, 6, 12), not for {232, 200,
+  22} only.
+- Not to infer: any all-ring depth-two statement (no ring certificate
+  at depth two); anything about full-shift depth three or beyond.
+- Records: note, catalog, knowledge (`full-shift-depth-two-test`,
+  `full-shift-depth-gap`), Program section, AGENTS result 12 addendum.
+- Pending: Codex's gate-2 review on PR #132.
+- Candidate next units: full-shift depth three for the 24 deep rules
+  (65,536-vertex graphs, sparse, one observation at a time); a direct
+  characterization of the deep gap rules; a depth-two ring certificate
+  for one observation if a cheaper matrix method is found.
+
 ## Checkpoint 2026-09-11 (fifteenth unit opened): full-shift depth two, protocol frozen, review pending
 
 - Frozen and unrun: `protocols/full-shift-depth-two-20260911.md`. Full-
