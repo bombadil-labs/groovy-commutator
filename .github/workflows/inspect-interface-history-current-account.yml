@@ -1,0 +1,68 @@
+name: One-shot inspect dimensional current account
+
+on:
+  push:
+    branches: [research/interface-history-global-current-account]
+    paths:
+      - '.github/workflows/inspect-interface-history-current-account.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: research/interface-history-global-current-account
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Extract preservation-safe edit context
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import json
+          out=[]
+          for path in ['docs/research/2026-09-09-dimensional-closure-program.md','docs/research/checkpoints/dimensional-lift.md']:
+              lines=Path(path).read_text().splitlines()
+              out.append(f'===== {path} HEAD =====')
+              out.extend(f'{i+1}: {line}' for i,line in enumerate(lines[:80]))
+              hits=[]
+              for i,line in enumerate(lines):
+                  lo=line.lower()
+                  if any(k in lo for k in ['interface-history','interface history','touching-strip','interface factor','interface-factor']): hits.append(i)
+              out.append(f'===== {path} MATCH CONTEXT =====')
+              seen=set()
+              for i in hits:
+                  a=max(0,i-5); b=min(len(lines),i+8)
+                  key=(a,b)
+                  if key in seen: continue
+                  seen.add(key)
+                  out.extend(f'{j+1}: {lines[j]}' for j in range(a,b))
+                  out.append('---')
+          p=Path('site/content/knowledge.json')
+          data=json.loads(p.read_text())
+          out.append('===== site/content/knowledge.json SHAPE =====')
+          out.append(type(data).__name__)
+          if isinstance(data,list):
+              out.append(f'length={len(data)}')
+              for i,item in enumerate(data):
+                  s=json.dumps(item,ensure_ascii=False)
+                  if 'interface' in s.lower() or 'touching' in s.lower(): out.append(f'[{i}] '+json.dumps(item,indent=2,ensure_ascii=False))
+          elif isinstance(data,dict):
+              out.append('keys='+repr(list(data.keys())))
+              for k,v in data.items():
+                  s=json.dumps(v,ensure_ascii=False)
+                  if 'interface' in k.lower() or 'interface' in s.lower() or 'touching' in s.lower(): out.append(f'{k}: '+json.dumps(v,indent=2,ensure_ascii=False))
+          Path('tmp-interface-history-current-account-context.txt').write_text('\n'.join(out)+'\n')
+          PY
+      - name: Commit temporary inspection context
+        run: |
+          git config user.name 'Codex current-account inspection'
+          git config user.email 'noreply@openai.com'
+          git add tmp-interface-history-current-account-context.txt
+          git commit -m 'chore: expose current-account edit context'
+          git push origin HEAD:research/interface-history-global-current-account
