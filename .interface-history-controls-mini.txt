@@ -1,5 +1,0 @@
-controls.K10_scalar_vector_replay.comparison_strength="replay_source asserts complete physical-field scalar/vector equality at every coarse state, stronger than the requested observation/causal-patch subset"
-controls.K10_scalar_vector_replay.pass=true
-controls.K1_memoryless_regression=true
-controls.K2_history_shift=true
-controls.K3_refinement_monotonicity=true
