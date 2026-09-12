@@ -1,8 +1,8 @@
 name: Relational-rank dimensional audit
 
 # Implementation-only heads run only the synthetic self-test while the canonical
-# result is absent. Once the canonical result exists, every invocation of this
-# workflow replays the frozen audit byte for byte. This is intentionally
+# result is absent. Once the registered canonical result exists, every invocation
+# of this workflow replays the frozen audit byte for byte. This is intentionally
 # stronger than trying to infer whether a PR diff touched the result file.
 
 on:
