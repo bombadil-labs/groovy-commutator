@@ -1,0 +1,35 @@
+name: Temporary cross-width current account
+
+on:
+  push:
+    branches:
+      - work/interface-history-cross-width/current-account
+
+permissions:
+  contents: write
+
+jobs:
+  patch:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: work/interface-history-cross-width/current-account
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python scripts/tmp_patch_cross_width_current_account.py
+      - name: Commit current account
+        shell: bash
+        run: |
+          git config user.name 'Codex dimensional current-account integration'
+          git config user.email 'noreply@openai.com'
+          git add docs/research/2026-09-09-dimensional-closure-program.md docs/research/checkpoints/dimensional-lift.md
+          if git diff --cached --quiet; then
+            echo 'No current-account changes needed.'
+            exit 0
+          fi
+          git commit -m 'report: integrate cross-width interface-history current account'
+          git push origin HEAD:work/interface-history-cross-width/current-account
