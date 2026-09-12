@@ -7,6 +7,25 @@ substantial unit completes; keep the bounded-claim style.
 
 Program page: `docs/research/2026-09-10-representation-invariants-program.md`
 
+## Checkpoint 2026-09-12 (sixteenth unit opened): full-shift depth three, protocol frozen, review pending
+
+- Frozen and unrun: `protocols/full-shift-depth-three-20260912.md`.
+  Full-shift h_* <= 3 under 232, 200, 22, 4 (+ conjugates; 32 by the
+  deduction 32 = 4 o not) by sparse reachability on 65,536-vertex pair
+  graphs (eight-cell pair vertices, nine-cell edges agreeing on psi..psi
+  F^3, eleven-cell violating blocks with psi F^4 disagreeing); exhaustive
+  D^3(n) on rings 3-14; full-shift depth class 0/1/2/3/>=4 of every rule
+  against its rings-3-14 class; the 24 depth-two separations realized as
+  explicit eventually periodic pairs.
+- N1 theorem controls; N2 bet: not all 24 deep rules lie in FS^3; N3
+  bet: depth-three gap nonempty under each of the four observations;
+  N4 ladder reported, bet: class c_FS = 3 nonempty under each; N5
+  witness pairs pass (control); N6 symmetries.
+- No ring certificate at depth two or three; nothing about depth four.
+- Also on this branch: a one-phrase correction to the fifteenth note
+  (separating configurations are eventually periodic, not aperiodic).
+- Pending: Codex's gate-1 review. No verifier committed, nothing run.
+
 ## Checkpoint 2026-09-12 (fifteenth unit accepted): full-shift depth two merged
 
 - Accepted after Codex's gate-2 sign-off at `8aa35fd` (Codex's
