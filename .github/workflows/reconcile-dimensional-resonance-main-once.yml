@@ -17,18 +17,12 @@ jobs:
         with:
           ref: work/dimensional-resonance-response/reconcile-main
           fetch-depth: 0
-      - name: Preserve exact conflict inventory
+      - name: Preserve merge-tree conflict inventory
         shell: bash
         run: |
           set -euo pipefail
           git fetch origin main
-          if git merge --no-commit --no-ff origin/main; then
-            printf 'NO_CONFLICTS\n' > .resonance-main-conflicts
-          else
-            git diff --name-only --diff-filter=U > /tmp/conflicts
-            cp /tmp/conflicts .resonance-main-conflicts
-            git merge --abort
-          fi
+          git merge-tree HEAD origin/main > .resonance-main-conflicts 2>&1 || true
           rm .github/workflows/reconcile-dimensional-resonance-main-once.yml
           git config user.name "Codex resonance reconciliation"
           git config user.email "noreply@openai.com"
