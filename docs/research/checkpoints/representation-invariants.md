@@ -24,6 +24,8 @@ Program page: `docs/research/2026-09-10-representation-invariants-program.md`
 - No ring certificate at depth two or three; nothing about depth four.
 - Also on this branch: a one-phrase correction to the fifteenth note
   (separating configurations are eventually periodic, not aperiodic).
+- Gathering PR #144 opened as draft at `8c4b962`; gate-1 request posted
+  there.
 - Pending: Codex's gate-1 review. No verifier committed, nothing run.
 
 ## Checkpoint 2026-09-12 (fifteenth unit accepted): full-shift depth two merged
