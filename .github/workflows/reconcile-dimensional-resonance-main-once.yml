@@ -1,0 +1,53 @@
+name: Reconcile dimensional resonance gathering with main once
+
+on:
+  push:
+    branches:
+      - work/dimensional-resonance-response/reconcile-main
+
+permissions:
+  contents: write
+
+jobs:
+  reconcile:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: work/dimensional-resonance-response/reconcile-main
+          fetch-depth: 0
+      - name: Merge latest main and resolve only the known integrity-registry conflict
+        shell: bash
+        run: |
+          set -euo pipefail
+          git fetch origin main
+          if git merge --no-commit --no-ff origin/main; then
+            echo "main merged without conflicts"
+          else
+            mapfile -t conflicts < <(git diff --name-only --diff-filter=U)
+            printf 'conflicts: %s\n' "${conflicts[*]}"
+            if [ "${#conflicts[@]}" -ne 1 ] || [ "${conflicts[0]}" != "scripts/check_result_integrity.py" ]; then
+              echo "unexpected reconciliation conflicts; preserving failed state"
+              exit 1
+            fi
+            git checkout --theirs scripts/check_result_integrity.py
+            python - <<'PY'
+          from pathlib import Path
+          p = Path('scripts/check_result_integrity.py')
+          text = p.read_text()
+          key = "'results/dimensional_resonance_response_20260912.json'"
+          if key not in text:
+              block = """    'results/dimensional_resonance_response_20260912.json': {\n        'script': 'scripts/verify_dimensional_resonance_response.py',\n        'protocol': 'docs/research/protocols/dimensional-resonance-response-20260912.md',\n        'gate1_refreeze': 'docs/research/protocols/dimensional-resonance-response-gate1-refreeze-20260912.md',\n        'gate1_null_clarification': 'docs/research/protocols/dimensional-resonance-response-gate1-null-clarification-20260912.md',\n        'gate1_approval': 'docs/research/protocols/dimensional-resonance-response-gate1-approval-20260912.md',\n        'source_census_script': 'scripts/verify_dimensional_resonance_source_census.py',\n        'physical_predecessor_script': 'scripts/verify_interface_factor.py'},\n\n"""
+              anchor = "\n}\n\ndef sha("
+              if anchor not in text:
+                  raise SystemExit('integrity registry anchor not found')
+              text = text.replace(anchor, "\n" + block + "}\n\ndef sha(", 1)
+              p.write_text(text)
+          PY
+            git add scripts/check_result_integrity.py
+          fi
+          rm .github/workflows/reconcile-dimensional-resonance-main-once.yml
+          git add -A
+          git commit -m "chore: reconcile resonance gathering with accepted main"
+          git push origin HEAD:work/dimensional-resonance-response/reconcile-main
