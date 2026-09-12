@@ -1,4 +1,4 @@
-name: Apply dimensional resonance main reconciliation once
+name: Diagnose dimensional resonance reconciliation commands once
 
 on:
   push:
@@ -9,7 +9,7 @@ permissions:
   contents: write
 
 jobs:
-  reconcile:
+  diagnose:
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
@@ -17,23 +17,38 @@ jobs:
         with:
           ref: work/dimensional-resonance-response/reconcile-main
           fetch-depth: 0
-      - name: Merge current main preserving both result registries
+      - name: Capture merge-resolution command statuses
         shell: bash
         run: |
-          set -euo pipefail
+          set +e
           git fetch origin main
-          git merge --no-commit --no-ff origin/main || true
-          mapfile -t conflicts < <(git diff --name-only --diff-filter=U)
-          if [ "${#conflicts[@]}" -ne 1 ] || [ "${conflicts[0]}" != "scripts/check_result_integrity.py" ]; then
-            printf 'unexpected conflicts: %s\n' "${conflicts[*]}"
-            exit 1
-          fi
-          git checkout --theirs scripts/check_result_integrity.py
-          python .reconcile_resonance_integrity.py
-          git add scripts/check_result_integrity.py
-          rm -f .resonance-main-conflicts .reconcile_resonance_integrity.py .github/workflows/reconcile-dimensional-resonance-main-once.yml
           git config user.name "Codex resonance reconciliation"
           git config user.email "noreply@openai.com"
-          git add -A
-          git commit -m "chore: reconcile resonance gathering with accepted main"
+          git merge --no-commit --no-ff origin/main >/tmp/merge.out 2>&1
+          merge_rc=$?
+          git diff --name-only --diff-filter=U >/tmp/conflicts
+          conflict_rc=$?
+          git checkout --theirs scripts/check_result_integrity.py >/tmp/checkout.out 2>&1
+          checkout_rc=$?
+          python .reconcile_resonance_integrity.py >/tmp/helper.out 2>&1
+          helper_rc=$?
+          git add scripts/check_result_integrity.py >/tmp/add.out 2>&1
+          add_rc=$?
+          git status --porcelain=v2 >/tmp/status.out 2>&1
+          status_rc=$?
+          git merge --abort >/tmp/abort.out 2>&1
+          abort_rc=$?
+          {
+            echo "merge_rc=$merge_rc conflict_rc=$conflict_rc checkout_rc=$checkout_rc helper_rc=$helper_rc add_rc=$add_rc status_rc=$status_rc abort_rc=$abort_rc"
+            echo "--- conflicts"; cat /tmp/conflicts
+            echo "--- merge"; cat /tmp/merge.out
+            echo "--- checkout"; cat /tmp/checkout.out
+            echo "--- helper"; cat /tmp/helper.out
+            echo "--- add"; cat /tmp/add.out
+            echo "--- status-before-abort"; cat /tmp/status.out
+            echo "--- abort"; cat /tmp/abort.out
+          } > .resonance-reconcile-debug
+          rm .github/workflows/reconcile-dimensional-resonance-main-once.yml
+          git add .resonance-reconcile-debug .github/workflows/reconcile-dimensional-resonance-main-once.yml
+          git commit -m "chore: capture resonance reconciliation command diagnostics"
           git push origin HEAD:work/dimensional-resonance-response/reconcile-main
