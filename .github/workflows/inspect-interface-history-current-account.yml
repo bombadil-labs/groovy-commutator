@@ -20,50 +20,20 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Extract compact preservation-safe edit context
+      - name: Extract knowledge schema examples
         run: |
           python - <<'PY'
           from pathlib import Path
           import json
-          out=[]
-          program='docs/research/2026-09-09-dimensional-closure-program.md'
-          lines=Path(program).read_text().splitlines()
-          out.append(f'===== {program} headings =====')
-          out.extend(f'{i+1}: {x}' for i,x in enumerate(lines) if x.startswith('#'))
-          out.append(f'===== {program} relevant contexts =====')
-          hits=[i for i,x in enumerate(lines) if any(k in x.lower() for k in ['interface-history','interface history','touching-strip','interface factor','interface-factor'])]
-          for i in hits[:20]:
-              a=max(0,i-2); b=min(len(lines),i+4)
-              out.extend(f'{j+1}: {lines[j]}' for j in range(a,b)); out.append('---')
-          checkpoint='docs/research/checkpoints/dimensional-lift.md'
-          lines=Path(checkpoint).read_text().splitlines()
-          out.append(f'===== {checkpoint} top 100 =====')
-          out.extend(f'{i+1}: {x}' for i,x in enumerate(lines[:100]))
-          p=Path('site/content/knowledge.json'); data=json.loads(p.read_text())
-          out.append('===== knowledge registry compact =====')
-          out.append('type='+type(data).__name__)
-          if isinstance(data,list):
-              out.append('length='+str(len(data)))
-              for i,item in enumerate(data):
-                  s=json.dumps(item,ensure_ascii=False).lower()
-                  if 'interface' in s or 'touching' in s:
-                      if isinstance(item,dict): out.append(f'[{i}] '+json.dumps({k:v for k,v in item.items() if k in {"slug","id","title","source","status","kind","relationships","related"}},ensure_ascii=False))
-          elif isinstance(data,dict):
-              out.append('top_keys='+repr(list(data.keys())))
-              for k,v in data.items():
-                  if isinstance(v,list):
-                      out.append(f'{k}: list length={len(v)}')
-                      for i,item in enumerate(v):
-                          s=json.dumps(item,ensure_ascii=False).lower()
-                          if 'interface' in s or 'touching' in s:
-                              if isinstance(item,dict): out.append(f'{k}[{i}] '+json.dumps({kk:vv for kk,vv in item.items() if kk in {"slug","id","title","source","status","kind","relationships","related"}},ensure_ascii=False))
-                  elif isinstance(v,dict): out.append(f'{k}: dict keys sample={list(v)[:20]}')
-          Path('tmp-interface-history-current-account-compact.txt').write_text('\n'.join(out)+'\n')
+          data=json.loads(Path('site/content/knowledge.json').read_text())
+          selected_nodes=[x for x in data['nodes'] if x.get('id') in {'touching-strip-local-factor-obstruction','interface-history-bounded-failure'}]
+          selected_edges=[x for x in data['edges'] if x.get('source') in {'touching-strip-local-factor-obstruction','interface-history-bounded-failure'} or x.get('target') in {'touching-strip-local-factor-obstruction','interface-history-bounded-failure'}]
+          Path('tmp-interface-history-knowledge-schema.json').write_text(json.dumps({'nodes':selected_nodes,'edges':selected_edges},indent=2,ensure_ascii=False)+'\n')
           PY
-      - name: Commit compact inspection context
+      - name: Commit knowledge schema examples
         run: |
           git config user.name 'Codex current-account inspection'
           git config user.email 'noreply@openai.com'
-          git add tmp-interface-history-current-account-compact.txt
-          git commit -m 'chore: expose compact current-account context'
+          git add tmp-interface-history-knowledge-schema.json
+          git commit -m 'chore: expose interface knowledge edge schema'
           git push origin HEAD:research/interface-history-global-current-account
