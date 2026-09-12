@@ -1,0 +1,40 @@
+name: One-shot cross-width interface-history evaluation
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+    paths:
+      - '.github/workflows/tmp-evaluate-interface-history-cross-width.yml'
+      - 'scripts/verify_interface_history_cross_width.py'
+      - 'results/interface_history_cross_width_20260912.json'
+
+permissions:
+  contents: write
+
+jobs:
+  evaluate:
+    if: github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref }}
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -e .
+      - name: Generate canonical result exactly once
+        run: |
+          if [ -f results/interface_history_cross_width_20260912.json ]; then
+            echo 'Canonical result already exists; one-shot evaluation is complete.'
+            exit 0
+          fi
+          python scripts/verify_interface_history_cross_width.py
+          test -f results/interface_history_cross_width_20260912.json
+          git config user.name 'Codex cross-width evaluation'
+          git config user.email 'noreply@openai.com'
+          git add results/interface_history_cross_width_20260912.json
+          git commit -m 'research: evaluate cross-width interface-history locality'
+          git push origin "HEAD:${{ github.head_ref }}"
