@@ -22,24 +22,15 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Merge latest main with the one known registry resolution
+      - name: Merge latest main and restore the pre-existing interface-history registry entry
         run: |
           git config user.name 'Codex interface-history reconciliation'
           git config user.email 'noreply@openai.com'
           git fetch origin main
-          set +e
-          git merge --no-ff --no-commit origin/main
-          rc=$?
-          set -e
-          conflicts="$(git diff --name-only --diff-filter=U)"
-          if [ "$rc" -ne 0 ] && [ "$conflicts" != 'scripts/check_result_integrity.py' ]; then
-            echo 'Unexpected merge conflicts:'
-            printf '%s\n' "$conflicts"
-            exit 1
-          fi
-          if [ -n "$conflicts" ]; then
-            git checkout --theirs scripts/check_result_integrity.py
-            python - <<'PY'
+          # Conflict diagnosis established that scripts/check_result_integrity.py is
+          # the sole conflict. Resolve that one path in favor of current main.
+          git merge --no-ff -X theirs origin/main -m 'Merge current main into finite interface history'
+          python - <<'PY'
           from pathlib import Path
           p = Path('scripts/check_result_integrity.py')
           s = p.read_text()
@@ -51,12 +42,9 @@ jobs:
               s = s.replace(marker, entry + marker, 1)
               p.write_text(s)
           PY
-            git add scripts/check_result_integrity.py
-          fi
-          test -z "$(git diff --name-only --diff-filter=U)"
           git rm -f .github/workflows/_temporary-interface-history-reconcile.yml
           git rm -f .interface-history-merge-conflicts.txt
-          git add -A
+          git add scripts/check_result_integrity.py
           git diff --cached --check
-          git commit -m 'Merge current main into finite interface history'
+          git commit -m 'Restore interface-history integrity registration after main reconciliation'
           git push origin HEAD:gather/dimensional-interface-history
