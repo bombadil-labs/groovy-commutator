@@ -1,12 +1,14 @@
-diagnostic_rc=1
-blocks=3
-PATCH_RC 1
-PATCH_STDOUT
-
-PATCH_STDERR
-bash: line 9: warning: here-document at line 3 delimited by end-of-file (wanted `PY')
-  File "<stdin>", line 6
-    old = '''def independent_raw_certificate(classes: Sequence[TupleClass], optimum: int, n_atoms: int) -> dict:
-          ^
-SyntaxError: unterminated triple-quoted string literal (detected at line 6)
-
+PREIMAGE=f39f946509acd50047c1c77502af212f0f6b6ec4
+PATCH_RC=0
+scripts/verify_predictive_assembly_support.py:381: SyntaxWarning: invalid escape sequence '\{'
+  exact tuple-table collisions under S\{i}; every resulting difference meets
+COMPILE_RC=0
+/home/runner/work/groovy-commutator/groovy-commutator/scripts/verify_predictive_assembly_support.py:381: SyntaxWarning: invalid escape sequence '\{'
+  exact tuple-table collisions under S\{i}; every resulting difference meets
+Traceback (most recent call last):
+  File "/home/runner/work/groovy-commutator/groovy-commutator/scripts/verify_predictive_assembly_support.py", line 24, in <module>
+    from verify_interface_factor import COORDINATES, build_ring_orbit, field_mask
+  File "/home/runner/work/groovy-commutator/groovy-commutator/scripts/verify_interface_factor.py", line 22, in <module>
+    import numpy as np
+ModuleNotFoundError: No module named 'numpy'
+SELFTEST_RC=1
