@@ -1,0 +1,17 @@
+[
+  {
+    "slug": "zero-dimensional-base",
+    "label": "Zero-dimensional base",
+    "title": "Does one law-to-state selector recur across the first two dimensional rungs?",
+    "date": "2026-09-12",
+    "updated": "2026-09-12",
+    "kind": "Experiment",
+    "evidence": "exact",
+    "topic": "Dimensional closure",
+    "summary": "An exact local audit compares 0D→1D and 1D→2D shell selectors after exposing unavoidable address/program role overlap. The same multiplexer semantics survives, while the Z1 patch requires exactly two dual-role cells and the frozen Gray geometry realizes no nontrivial familiar ECA symmetry.",
+    "takeaway": "The bottom two shell constructions share one local selector semantics, but their physical role accounting changes from disjoint to necessarily overlapping; this is a local architecture result, not a dynamical or intrinsic-dimension theorem.",
+    "source": "docs/research/2026-09-12-zero-dimensional-base.md",
+    "promotion": { "stage": "research" },
+    "related": ["shared-state-rule", "guard-free-axial-lift", "editable-routing-tables", "dimensional-vision-and-interpretation"]
+  }
+]
