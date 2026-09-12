@@ -187,10 +187,20 @@ There are two distinct review gates:
 Result files are guarded in two tiers. Every pull request touching an audit
 runs a fast check that recomputes the SHA-256 hashes each canonical JSON
 records for its verifier and inputs (`scripts/check_result_integrity.py`);
-this proves provenance coherence, not result content. The full byte-for-byte
-replay is the content and determinism check and runs on any pull request that
-modifies the canonical result file, on `main`, weekly, and on demand. Register
-every new result file in the integrity script and give its workflow both tiers.
+this proves provenance coherence, not result content.
+
+Keep automatic CI cost-bounded. A scientific evaluation or full replay expected
+or observed to exceed about ten minutes does **not** run automatically on pull
+requests, pushes to `main`, or schedules. Generate the canonical result once
+outside GitHub Actions from the pinned implementation and record that execution;
+perform required independent full replays outside Actions during author/reviewer
+verification. Expensive `workflow_dispatch` jobs are emergency/manual escape
+hatches only and require Myk's explicit authorization to spend Actions time.
+Short byte-for-byte replays that fit comfortably inside the ten-minute CI budget
+may remain automatic. Existing expensive workflows must be converted before
+their next execution; already-running jobs from before this policy may finish
+but are not automatically rerun. Register every new result file in the integrity
+script and document both the fast automatic tier and the off-CI full-replay path.
 
 The gathering PR lists sub-PRs and issue closure references. Notes and
 protocols retain their own authorship/review provenance, distinguishing
