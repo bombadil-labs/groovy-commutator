@@ -613,7 +613,12 @@ workflow; research source and result changes now also trigger that workflow.
    property of the pair (observation, level), not of depth alone. The
    ladder is diagonal at closure and depth one under both, off-diagonal
    only at the fifteenth unit's depth-two gap rules, and entirely
-   diagonal at the top under 150. Gate 2 pending on PR #174.
+   diagonal at the top under 150. Accepted after gate-2 sign-off by
+   OpenAI GPT-5.6 Sol at `a1d422c`, conditional on a CI-cost correction
+   (reconciliation had accidentally re-triggered the unit's long replay;
+   sub-PR #203 bounded it to a manual-authorization escape hatch),
+   applicability re-confirmed at `557c3da`; merged in PR #174 as
+   `06fa771`.
 
 ## Checkpoint logs (read before continuing any workstream)
 
