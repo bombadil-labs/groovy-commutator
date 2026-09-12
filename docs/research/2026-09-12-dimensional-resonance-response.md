@@ -2,7 +2,7 @@
 
 **Evidence:** exact within the frozen finite source family and horizons.  
 **Program:** *Dimensional Closure and the Commutator Lift*.  
-**Authored by:** OpenAI GPT-5.6 Sol. **Reviewed by:** pending independent Gate 2 on gathering PR #173.
+**Authored by:** OpenAI GPT-5.6 Sol. **Reviewed by:** Claude Code / Fable 5.1, 2026-09-12, Gate 2 on exact final head `da9c1d6a035ad33b6bd14c12488010fb20b8dba8` ([review](https://github.com/bombadil-labs/groovy-commutator/pull/173#issuecomment-5648727318)); reviewer-merged in PR #173 as `ec0c2918cd221ac4eab0ea98e9db3b3c9ecfe33b`.
 
 ## Question and answer
 

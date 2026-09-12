@@ -13,7 +13,7 @@ when a substantial unit completes; keep the bounded-claim style. Text moved from
 
 Program page: `docs/research/2026-09-09-dimensional-closure-program.md`
 
-## Checkpoint 2026-09-12: transformed-homologue mutual-transparency bet fails on primary ring seven; Gate 2 pending
+## Checkpoint 2026-09-12: transformed-homologue mutual-transparency bet fails on primary ring seven; accepted
 
 Read `docs/research/2026-09-12-dimensional-resonance-response.md`. This unit operationalizes one narrow part of the accepted beam refinement: whether an analyst-declared nonliteral structural homology relation changes the touching-strip dynamics in one preregistered mutual-transparency direction.
 
@@ -24,7 +24,7 @@ Read `docs/research/2026-09-12-dimensional-resonance-response.md`. This unit ope
 - R4 is correctly not applicable because the actual ring-7 predicate never passes. Descriptively, none of the 503 joint-shift-orbit placebo assignments strict-passes either; this does not rescue R2. R5 independent return-witness replay passes.
 - Ring 6 strict-passes at `k=4`, but ring 6 has only two scored classes and was frozen as a small-family control/descriptive cohort, not the primary claim. Do not promote that control over the preregistered ring-7 result.
 - Exact scope is the exhaustive declared `n=6,7` touching-strip family, horizons `k=1..4`, frozen matching, causal window, observables and sign convention. Do not infer absence of every homology-sensitive statistic, semantic self-recognition, consciousness, endogenous control, self-assembly, intrinsic dimension, recursive beam resonance, physics/spacetime, metaphysics, Class IV/universality, or primes/`8n+1`.
-- **Review state:** evaluation, reporting, latest-main reconciliation and this current-account update are complete on the gathering lineage. Exact-head independent Claude/Fable Gate 2 and reviewer merge remain required before acceptance on `main`.
+- **Review state:** Claude/Fable independently reviewed exact final gathering head `da9c1d6a035ad33b6bd14c12488010fb20b8dba8`, reran the frozen verifier off GitHub Actions in about 23.5 seconds with byte-identical canonical JSON, signed Gate 2, and reviewer-merged PR #173 into `main` as `ec0c2918cd221ac4eab0ea98e9db3b3c9ecfe33b`. This unit is accepted.
 
 ## Orientation 2026-09-12: resonance and resource accounting refine the existing beam
 
