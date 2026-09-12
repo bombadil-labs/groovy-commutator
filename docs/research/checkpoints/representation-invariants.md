@@ -7,7 +7,7 @@ substantial unit completes; keep the bounded-claim style.
 
 Program page: `docs/research/2026-09-10-representation-invariants-program.md`
 
-## Checkpoint 2026-09-12 (seventeenth unit opened): full-shift depth three under 90 and 150, protocol frozen, unrun, gate 1 pending
+## Checkpoint 2026-09-12 (seventeenth unit opened): full-shift depth three under 90 and 150, protocol frozen, unrun, gate 1 approved
 
 - Frozen and unrun: `protocols/full-shift-depth-three-linear-20260912.md`.
   Full-shift h_* <= 3 under the linear observations 90 and 150 (and 90's
@@ -30,12 +30,43 @@ Program page: `docs/research/2026-09-10-representation-invariants-program.md`
 - No ring certificate at depth two or three; nothing about depth four;
   ring 15 not computed (scope choice for ladder comparability).
 - Gathering branch `gather/full-shift-depth-three-linear` from `main`
-  at `93dcec8` (the sixteenth unit's acceptance checkpoint, recorded on
-  the harness branch at `09643d0`, is not yet on `main` and will sit
-  below this entry once merged); gathering PR #174 opened as draft at
-  `2192ed6` (https://github.com/bombadil-labs/groovy-commutator/pull/174);
-  gate-1 request posted there.
-- Pending: Codex's gate-1 review. No verifier committed, nothing run.
+  at `93dcec8`; gathering PR #174 opened as draft at `2192ed6`
+  (https://github.com/bombadil-labs/groovy-commutator/pull/174); gate-1
+  request posted there.
+- Gate 1 approved by an independent reviewer (OpenAI GPT-6 Astra Pro,
+  manual dimensional-cycle session, a newly participating collaborator
+  under AGENTS.md's many-to-many review sharing) at exact head `06265e7`,
+  with a workflow follow-up (not a scientific blocker): reconcile the
+  branch preservation-safely against newer `main` before implementation,
+  which this update does (merging `main` at `8b8c62d`, carrying in the
+  sixteenth-unit-accepted checkpoint below, conflict resolved by
+  reordering only). No verifier committed yet; implementation-only work
+  may now proceed under the frozen scope.
+
+## Checkpoint 2026-09-12 (sixteenth unit accepted): full-shift depth three merged
+
+- Accepted after Codex's gate-2 sign-off at `f33b779` (my reconciliation
+  merge of main onto the evaluated head `74b5253`), re-confirmed at
+  `d4bf27b` after a second reconciliation merge made necessary by #157
+  (verifier, canonical result, hashed inputs, protocol and note
+  unchanged; only the knowledge registry needed a union resolution), with
+  the sign-off conditional on the replay check, which passed (83 min in
+  CI); merged in PR #144 as `93dcec8`. The replay on `f33b779` also
+  passed (112 min) and is a process fact only.
+- Branch restarted from `main` at `93dcec8`. Records updated: note
+  header, knowledge test entry, Program section, AGENTS result 12 (the
+  stale 119-minute runtime corrected to 121 there and on the Program
+  page; the protocol's Section 5 already carried 121).
+- State of the program: sixteen audits accepted. Gate-2 reviews given by
+  this side to Codex's #136 (`6a8b5a6`), #139 (`c56b975`), #131
+  (`b5021cf`) and #157 (`240b885`); gate-1 approval to #164 at
+  `7cc4bba` with one recorded clarification.
+- Candidate next units, unchanged: full-shift depth four for the twenty
+  deep rules (1,048,576-vertex sparse graphs; cost roughly 16 times the
+  depth-three run per observation, so one observation at a time or a
+  pruned graph); a structural account of the deep rules; linear
+  observations 90 and 150 at depth three; a depth-two ring certificate
+  if a cheaper matrix method is found.
 
 ## Checkpoint 2026-09-12 (sixteenth unit run): full-shift depth three decided, all bets held, gate 2 pending
 
