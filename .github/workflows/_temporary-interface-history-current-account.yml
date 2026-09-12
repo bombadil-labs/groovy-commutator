@@ -1,0 +1,141 @@
+name: Temporary interface-history current-account integration
+
+on:
+  push:
+    branches:
+      - work/dimensional-interface-history/current-account
+    paths:
+      - '.github/workflows/_temporary-interface-history-current-account.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  integrate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: work/dimensional-interface-history/current-account
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Apply bounded current-account edits
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import copy, json
+
+          checkpoint_path = Path('docs/research/checkpoints/dimensional-lift.md')
+          program_path = Path('docs/research/2026-09-09-dimensional-closure-program.md')
+          registry_path = Path('site/content/research-program.json')
+          knowledge_path = Path('site/content/knowledge.json')
+
+          checkpoint_block = '''## Checkpoint 2026-09-12: short interface history fails throughout the frozen family; gate-2 pending
+
+          Read `docs/research/2026-09-12-interface-history.md`. This unit asks whether one or two temporal lags of the already-frozen six-bit touching-strip interface symbol recover enough erased information to restore bounded local autonomy.
+
+          - Protocol #130 received Claude/Fable Gate 1 on exact protocol-only head `36f20aa89889bb884af4ec07785d1611158d6b28`; the binding K8 physical causal-patch geometry was recorded before the verifier commit.
+          - Implementation-only #134 pinned the verifier, complete K8/K10 replay coverage, imported executable provenance, permanent replay workflow, and future-result integrity registration before canonical evaluation.
+          - A temporary no-merge draft run had existed as provisional branch evidence while review tooling was unavailable. It did not alter the frozen domains or implementation corrections and was not the canonical result.
+          - Canonical evaluation #149 used the unchanged integrated verifier. K1/K2/K3 controls pass. K4 fails: `H_{15,1}` conflicts at `R=0,1,2` on `D1`. K5 is `both conflict`: one- and two-lag full-state histories conflict at every frozen radius on `D2`.
+          - All 288 scientific `D0/D1/D2 × h × mask × R` budgets conflict; the 48 `P0` cells remain accepted-result regression controls. Therefore no K6 Pareto-minimal passing budget exists.
+          - K8 independently replays every canonical full-state conflict on the frozen current physical causal patch; retained symbolic neighborhoods agree while causally relevant unretained current cells differ. K9 is empty because no passing factor exists. K10 complete-field scalar/vector replay passes.
+          - Interpretation is bounded to rings `n=6,7`, coarse transitions through `t=6`, `h<=2`, `R<=2`, frozen masks and the existing six-bit coordinate. This does not exclude deeper history, wider radius, moving/support-tracking state, alternative coordinates, nonlocal factors, arbitrary-width descriptions or all-time closure.
+          - No recursive dimensional-lift, intrinsic-dimension, self-assembly, endogenous-control, Class-IV, universality, physics, metaphysical, spacetime or prime claim follows.
+          - **Review state:** canonical result and reporting are integrated; exact-head independent Gate 2 and reviewer merge remain required before acceptance on `main`.
+          '''
+          checkpoint_block = '\n'.join(line[10:] if line.startswith('          ') else line for line in checkpoint_block.splitlines()).strip() + '\n'
+          checkpoint = checkpoint_path.read_text()
+          marker = '## Checkpoint 2026-09-12: short interface history fails throughout the frozen family; gate-2 pending'
+          anchor = 'Program page: `docs/research/2026-09-09-dimensional-closure-program.md`\n'
+          if marker not in checkpoint:
+              assert checkpoint.count(anchor) == 1
+              updated = checkpoint.replace(anchor, anchor + '\n' + checkpoint_block, 1)
+              assert updated.replace('\n' + checkpoint_block, '', 1) == checkpoint
+              checkpoint_path.write_text(updated)
+
+          program_section = '''## Short history does not repair the touching-strip interface state within the frozen budget
+
+          The [finite interface-history audit](2026-09-12-interface-history.md) follows the accepted memoryless interface-factor obstruction without changing its physical law, source family or six-bit `(A,B,E0,E1,E2,E3)` coordinate. It retains up to two lags of those same symbols and scores shallower/deeper histories on the same transition domains so dropping warm-up transitions cannot masquerade as an information gain.
+
+          The result is a complete bounded negative. On rings `n=6,7`, every one of the 288 scientific budgets through history depth two and longitudinal radius two conflicts. The frozen one-lag constructive bet fails, the independently predeclared two-lag extension also fails, and there is no Pareto-minimal passing budget because the passing set is empty. Independent physical causal-patch replay shows that canonical symbolic conflicts still differ in unretained current cells capable of affecting the next interface symbol.
+
+          This narrows one natural rescue of the memoryless obstruction: short temporal stacking of the *same* interface coordinate does not retrieve the missing distinctions in this family. It does not exclude deeper history, larger radius, moving/support-tracking state, a different finite coordinate, nonlocal factors or growing-support descriptions. History depth, spatial radius and retained-coordinate choice remain distinct resources; changing one after this failure requires a separately frozen experiment.
+          '''
+          program_section = '\n'.join(line[10:] if line.startswith('          ') else line for line in program_section.splitlines()).strip() + '\n\n'
+          program = program_path.read_text()
+          pg_marker = '## Short history does not repair the touching-strip interface state within the frozen budget'
+          pg_anchor = '## Relational rank separates available directions from law-used directions\n'
+          if pg_marker not in program:
+              assert program.count(pg_anchor) == 1
+              updated = program.replace(pg_anchor, program_section + pg_anchor, 1)
+              assert updated.replace(program_section, '', 1) == program
+              program_path.write_text(updated)
+
+          registry = json.loads(registry_path.read_text())
+          before = copy.deepcopy(registry)
+          target = next(x for x in registry if x.get('slug') == 'dimensional-lift')
+          if 'interface-history' not in target['supports']:
+              target['supports'].append('interface-history')
+          target['updated'] = '2026-09-12'
+          target['summary'] = ('The dimensional program now separates several representation-relative resources rather than treating added coordinates as dimension by fiat. '
+                               'The zero-dimensional selector audit exposes mandatory role overlap; relational rank distinguishes available translation directions from law-used causal directions but adds no classifier for the accepted axial constructor; and the finite interface-history audit shows that one or two lags of the existing touching-strip interface coordinate still fail every frozen local-closure budget. '
+                               'These exact bounded results leave intrinsic dimension, alternative coordinates, deeper history and stronger autonomous organization open.')
+          check = copy.deepcopy(registry)
+          target_check = next(x for x in check if x.get('slug') == 'dimensional-lift')
+          target_before = next(x for x in before if x.get('slug') == 'dimensional-lift')
+          target_check['supports'] = [x for x in target_check['supports'] if x != 'interface-history']
+          target_check['updated'] = target_before['updated']
+          target_check['summary'] = target_before['summary']
+          assert check == before
+          registry_path.write_text(json.dumps(registry, indent=2, ensure_ascii=False) + '\n')
+
+          knowledge = knowledge_path.read_text()
+          node_id = 'interface-history-bounded-failure'
+          node = {
+            'id': node_id,
+            'kind': 'finding',
+            'status': 'exact',
+            'title': 'Two lags of the frozen touching-strip interface state still do not close locally',
+            'summary': 'Every frozen interface-history budget through two lags and radius two conflicts on the declared n=6,7 reachable family. Independent causal-patch replay retains hidden current physical distinctions outside the symbolic neighborhood. The result excludes this short-history rescue only, not deeper history, wider radius or alternative representations.',
+            'updated': '2026-09-12',
+            'source': 'docs/knowledge/interface-history-bounded-failure.md',
+            'research': ['interface-history']
+          }
+          edge = {
+            'source': node_id,
+            'type': 'depends_on',
+            'target': 'representation-contract',
+            'reason': 'The negative result is defined relative to one frozen six-bit interface coordinate, finite history/radius budget and reachable family; a different representation remains a separate question.',
+            'research': ['interface-history', 'dimensional-vision-and-interpretation']
+          }
+          if f'"id":"{node_id}"' not in knowledge:
+              edge_marker = '],"nodes":['
+              node_marker = '],"schemaVersion":1}'
+              assert knowledge.count(edge_marker) == 1
+              assert knowledge.count(node_marker) == 1
+              edge_text = ',' + json.dumps(edge, separators=(',', ':'), ensure_ascii=False)
+              node_text = ',' + json.dumps(node, separators=(',', ':'), ensure_ascii=False)
+              updated = knowledge.replace(edge_marker, edge_text + edge_marker, 1)
+              updated = updated.replace(node_marker, node_text + node_marker, 1)
+              assert updated.replace(edge_text, '', 1).replace(node_text, '', 1) == knowledge
+              json.loads(updated)
+              knowledge_path.write_text(updated)
+
+          print('interface-history current account prepared')
+          PY
+      - name: Commit bounded current-account integration and remove temporary workflow
+        run: |
+          git config user.name 'Codex interface-history current account'
+          git config user.email 'noreply@openai.com'
+          git add docs/research/checkpoints/dimensional-lift.md \
+                  docs/research/2026-09-09-dimensional-closure-program.md \
+                  site/content/research-program.json \
+                  site/content/knowledge.json
+          git rm .github/workflows/_temporary-interface-history-current-account.yml
+          git diff --cached --check
+          git commit -m 'report: integrate finite interface-history current account'
+          git push origin HEAD:work/dimensional-interface-history/current-account
