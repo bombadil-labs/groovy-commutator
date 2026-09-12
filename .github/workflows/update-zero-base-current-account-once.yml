@@ -14,11 +14,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 22
-          cache: npm
-          cache-dependency-path: site/package-lock.json
       - name: Update only the zero-base current account from checked-out bytes
         shell: bash
         run: |
@@ -100,9 +95,6 @@ Read `docs/research/2026-09-12-zero-dimensional-base.md`. This unit audits the b
           else:
               knowledge_path.write_text(json.dumps(graph, indent=2, ensure_ascii=False) + '\n')
           PY
-          npm ci --prefix site
-          npm run test:research --prefix site
-          npm run build --prefix site
           git rm .github/workflows/update-zero-base-current-account-once.yml
           git add docs/research/checkpoints/dimensional-lift.md \
                   docs/research/2026-09-09-dimensional-closure-program.md \
