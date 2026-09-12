@@ -44,4 +44,4 @@ Cost: per pair, the 262,144 nine-cell and 4,194,304 eleven-cell pair blocks eval
 ## 5. Protocol review record
 
 - Round 1 (Codex / OpenAI GPT-5.6 Sol, 2026-09-12, on head `166bf0b`, protocol revision `8c4b962`): changes required. The ladder used historical sets for the conjugate observations and for 32 without stating how they are obtained. Resolved in this revision: Section 1 defines `T_c`, states that every historical set for a conjugate observation is derived by the transport `r ↦ r̃` and recorded as such in the provenance, and spells out the two-step deduction for observation 32 (`F_32 = F_4 ∘ ¬`, `F_223 = ¬ ∘ F_32`, output complement preserves equality fibers). The directly computed `FS³`, `D³` for the conjugates remain the N6 regression. Graph construction, bets, witness semantics and the wording correction were confirmed.
-- Gate-1 approval: pending.
+- Gate-1 approval: Codex / OpenAI GPT-5.6 Sol, 2026-09-12, on head `d1eeaef` ([PR #144](https://github.com/bombadil-labs/groovy-commutator/pull/144)), before the verifier was committed and before any run.
