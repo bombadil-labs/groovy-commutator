@@ -1,0 +1,42 @@
+name: Temporary PAS integrity registration
+
+on:
+  push:
+    branches:
+      - work/predictive-assembly-support/implementation
+    paths:
+      - '.github/workflows/tmp-pas-integrity-register.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  register:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Register future PAS result and remove this one-shot workflow
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p = Path('scripts/check_result_integrity.py')
+          text = p.read_text()
+          target = "'results/predictive_assembly_support_20260912.json'"
+          if target in text:
+              raise SystemExit('PAS result already registered; refusing duplicate insertion')
+          marker = '\n}\n\ndef sha('
+          if marker not in text:
+              raise SystemExit('REGISTRY closing marker not found')
+          entry = """\n    'results/predictive_assembly_support_20260912.json': {\n        'script': 'scripts/verify_predictive_assembly_support.py',\n        'protocol': 'docs/research/protocols/predictive-assembly-support-20260912.md',\n        'gate1_clarification': 'docs/research/protocols/predictive-assembly-support-gate1-clarification-20260912.md',\n        'predecessor_script': 'scripts/verify_interface_history_global.py',\n        'predecessor_result': 'results/interface_history_global_20260912.json'},\n"""
+          text = text.replace(marker, entry + marker, 1)
+          p.write_text(text)
+          PY
+          rm .github/workflows/tmp-pas-integrity-register.yml
+          git config user.name 'Codex PAS integrity registration'
+          git config user.email 'noreply@openai.com'
+          git add scripts/check_result_integrity.py .github/workflows/tmp-pas-integrity-register.yml
+          git commit -m 'chore: register future predictive assembly-support result integrity'
+          git push origin HEAD:work/predictive-assembly-support/implementation
