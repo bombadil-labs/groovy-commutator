@@ -21,11 +21,12 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - name: Apply preservation-safe current-account update
+      - name: Apply additions with exact preimage and preservation checks
         run: |
           python - <<'PY'
           import hashlib
           import json
+          import textwrap
           from pathlib import Path
 
           def load(path, expected_blob):
@@ -39,15 +40,13 @@ jobs:
               'docs/research/2026-09-09-dimensional-closure-program.md',
               'd0d77237fc948f1e6cb79989af8c6ee77dbb49d0')
           program_anchor = '## Relational rank separates available directions from law-used directions\n'
-          program_section = '''## Product-form linear slice observations are a dimension-blind history control
+          program_section = textwrap.dedent('''## Product-form linear slice observations are a dimension-blind history control
 
           The [dimensional history-scaling control](2026-09-12-dimensional-history-scaling-control.md) preserves a rejected first attempt to test whether retained history depth tracks dimensional level. Independent Gate 1 showed before implementation that the chosen pair—product-form ordered-axis Rule90 and a complete coordinate-slice observation—is algebraically blind to the number of axes: if `D(n)` is the minimal-polynomial degree of `g=x+x^-1` in the cyclic one-dimensional quotient, then `h_min(d,n)=D(n)-1` for the declared history criterion.
 
           The frozen theorem controls verify this independently in dimensions 1, 2 and 3: `h_min=2` for `n=5` and `h_min=3` for `n=7`, with the packed full-state matrix path agreeing with a separate one-dimensional polynomial reference in every cell. These values were known at Gate 1 and are regression results, not a rediscovered dimensional law. The useful conclusion is methodological: this product-law/slice-observer design cannot discriminate a history-versus-dimension hypothesis. It neither confirms nor refutes such scaling for nonlinear sources, non-product lifts, or different observations; any discriminating replacement requires its own frozen protocol.
 
-          '''
-          import textwrap
-          program_section = textwrap.dedent(program_section)
+          ''')
           assert old_program.count(program_anchor) == 1
           new_program = old_program.replace(program_anchor, program_section + program_anchor, 1)
           assert new_program.replace(program_section, '', 1) == old_program
@@ -57,7 +56,7 @@ jobs:
               'docs/research/checkpoints/dimensional-lift.md',
               'd4334897c673cbb70a553ec0afd1f3d326a9e8f3')
           checkpoint_anchor = '## Checkpoint 2026-09-12: cross-width two-lag closure persists through width eight and fails at width nine; accepted\n'
-          checkpoint_entry = '''## Checkpoint 2026-09-12: product-form Rule90 plus a coordinate slice is dimension-blind for the frozen history criterion; Gate 2 pending
+          checkpoint_entry = textwrap.dedent('''## Checkpoint 2026-09-12: product-form Rule90 plus a coordinate slice is dimension-blind for the frozen history criterion; Gate 2 pending
 
           Read `docs/research/2026-09-12-dimensional-history-scaling-control.md`. The original cross-dimensional `h_min(d)=d` protocol was not run as proposed: independent Gate 1 derived a theorem showing the selected product-form linear law and coordinate-slice observer cannot make this `h_min` depend on dimension. The unit was refrozen before implementation as a negative design theorem/control.
 
@@ -70,8 +69,7 @@ jobs:
           - Do not infer intrinsic dimension, a general space/time equivalence, self-assembly, endogenous control, resonance/self-recognition, physics/metaphysics, spacetime, Class IV, universality, renormalization, or any prime/`8n+1` connection.
           - **Review state:** canonical theorem-control result and reporting are integrated on gathering #171. This current-account integration updates Program/checkpoint/catalog only. Independent exact-head Gate 2 and reviewer merge are still required before acceptance on `main`.
 
-          '''
-          checkpoint_entry = textwrap.dedent(checkpoint_entry)
+          ''')
           assert old_checkpoint.count(checkpoint_anchor) == 1
           new_checkpoint = old_checkpoint.replace(checkpoint_anchor, checkpoint_entry + checkpoint_anchor, 1)
           assert new_checkpoint.replace(checkpoint_entry, '', 1) == old_checkpoint
@@ -92,20 +90,20 @@ jobs:
               'takeaway': 'For this declared law/observer pair, h_min(d,n)=D(n)-1 and is dimension-blind. This is a reusable experimental-design null, not evidence against history/dimension scaling under other representations.',
               'source': 'docs/research/2026-09-12-dimensional-history-scaling-control.md',
               'promotion': {'stage': 'research'},
-              'related': ['interface-history-global', 'interface-history-cross-width', 'guard-free-axial-lift']
+              'related': ['interface-history-global', 'guard-free-axial-lift']
           }], indent=2, ensure_ascii=False) + '\n', encoding='utf-8')
           PY
-      - name: Validate current account
+      - name: Commit current-account files and remove this one-shot runner
         run: |
           git diff --check
-          npm ci --prefix site
-          npm run test:research --prefix site
-          npm run build --prefix site
-      - name: Commit only current-account files and remove this runner
-        run: |
           git config user.name 'OpenAI GPT-5.6 Sol - dimensional history current account'
           git config user.email 'noreply@openai.com'
           git rm .github/workflows/apply-dimensional-history-scaling-current-account-once.yml
           git add docs/research/2026-09-09-dimensional-closure-program.md docs/research/checkpoints/dimensional-lift.md site/content/research/dimensional-history-scaling-control.json
           git commit -m 'report: integrate dimensional history-scaling current account'
           git push origin HEAD:work/dimensional-history-scaling/current-account
+      - name: Validate committed current account
+        run: |
+          npm ci --prefix site
+          npm run test:research --prefix site
+          npm run build --prefix site
