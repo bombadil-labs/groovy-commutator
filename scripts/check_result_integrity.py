@@ -12,9 +12,17 @@ modifies the canonical result file, on pushes to main, weekly, and on manual
 dispatch (Codex's review of PR #90 pinned this contract down).
 
 Usage: python scripts/check_result_integrity.py [result.json ...]
-With no arguments every registered result is checked; a result registered by a
-unit's implementation-only commit but not yet generated is reported as PEND and
-does not fail the sweep, while naming a missing result explicitly still fails.
+With no arguments every registered result is checked, and a missing result
+fails the sweep the same as naming it explicitly would. (2026-09-12: an
+earlier version of this sweep reported a missing registered result as PEND,
+for a unit's implementation-only commit registering a result before it was
+generated. Codex's Gate-2 review on PR #206 noted that once a unit's
+canonical result exists, keeping that allowance lets a future accidental
+deletion or rename of an accepted result evade this tier silently. Every
+currently registered result exists, so the allowance was removed outright
+rather than narrowed; an implementation-only stage that needs to register a
+result before generating it should register it only once the canonical run
+has actually produced the file.)
 """
 from __future__ import annotations
 import hashlib, json, pathlib, sys
@@ -175,17 +183,10 @@ def check(result: str) -> list[str]:
 
 def main(argv: list[str]) -> int:
     targets = argv or list(REGISTRY)
-    sweeping = not argv                   # the no-argument sweep used by research-checks.yml
     bad = []
     for t in targets:
         t = str(pathlib.Path(t)); t = t if t in REGISTRY else str(pathlib.Path(t).relative_to(ROOT)) if pathlib.Path(t).is_absolute() else t
         if t not in REGISTRY: print(f'not registered: {t}'); bad.append(t); continue
-        if sweeping and not (ROOT / t).exists():
-            # A unit registers its result file in its implementation-only commit, before the
-            # canonical run exists (2026-09-12). The sweep reports that as pending rather than
-            # failing; naming the file explicitly still fails hard, so a deleted or renamed
-            # canonical result is never passed over silently by a workflow that asks for it.
-            print(f'PEND {t}  registered, result not generated yet'); continue
         p = check(t)
         summary = json.loads((ROOT / t).read_text()).get('summary') if (ROOT / t).exists() else None
         print(('OK  ' if not p else 'FAIL') + f' {t}  summary={json.dumps(summary)}')

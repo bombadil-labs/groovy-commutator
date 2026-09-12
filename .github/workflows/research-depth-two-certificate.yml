@@ -5,9 +5,11 @@ name: Depth-two ring certificate
 # verifier is expected at 30-60 minutes and bounded by about six hours at the
 # power cap, so it is never triggered automatically. Automatic pull-request and
 # push runs do only what is seconds-to-minutes scale: compile, the verifier's
-# sub-two-minute --self-test, and (once the canonical result exists) the fast
-# scripts/check_result_integrity.py tier. The full byte-for-byte replay is a
-# manual escape hatch requiring Myk's explicit authorization.
+# sub-two-minute --self-test, and the fast scripts/check_result_integrity.py
+# tier, which strictly requires the canonical result to exist now that this
+# unit has been evaluated (Codex's Gate-2 B1, 2026-09-12). The full
+# byte-for-byte replay is a manual escape hatch requiring Myk's explicit
+# authorization.
 
 on:
   pull_request:
@@ -50,13 +52,8 @@ jobs:
         run: python -m compileall -q scripts
       - name: Verifier self test (writes nothing)
         run: python scripts/verify_depth_two_certificate.py --self-test
-      - name: Recorded source hashes match the tree (once the canonical result exists)
-        run: |
-          if [ -f results/depth_two_certificate_20260912.json ]; then
-            python scripts/check_result_integrity.py results/depth_two_certificate_20260912.json
-          else
-            echo "No canonical result yet (implementation-only stage); integrity tier skipped."
-          fi
+      - name: Recorded source hashes match the tree
+        run: python scripts/check_result_integrity.py results/depth_two_certificate_20260912.json
 
   full-replay:
     # Manual only, and only when an authorization reference is supplied.
