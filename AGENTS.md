@@ -563,7 +563,25 @@ workflow; research source and result changes now also trigger that workflow.
    100/98 on them). Failed bet: all-ring depth one ≠ full-shift depth
    one under 232, 200, 22, 102 (16, 8, 22, 8 rules have depth one at
    every ring but not on the full shift); closure had no such gap.
-   Gate-2 pending on PR #120.
+   Accepted after Codex's gate-2 sign-off at `25fc0d1`, merged in PR
+   #120.
+   Fifteenth unit (`scripts/verify_full_shift_depth_two.py`, gate-1
+   reviewed after one correction round): full-shift refinement depth at
+   most two for all eight observations and all 256 rules, decided by
+   reachability in a sparse 4096-vertex pair graph per (ψ, r) (six-cell
+   pair vertices, seven-cell edges agreeing on ψ, ψF, ψF², nine-cell
+   violating blocks), no matrix powers, no ring certificate at depth
+   two. FS² sizes 178, 97, 97, 172, 186, 256, 236, 222 under 232, 4, 32,
+   200, 22, 102, 90, 150; parity's 256 by a full-shift deduction from
+   the sixth unit's finite certificate, made in this unit. Both bets
+   failed: 24 of the fourteenth unit's 54 gap pairs have full-shift
+   depth ≥ 3 (232: 58, 78, 92, 114, 141, 163, 177, 197; 200: 135, 149,
+   157, 199; 22: twelve rules), so a rule can have depth ≤ 1 on every
+   ring and ≥ 3 on the line; and the rings-3-to-14 depth-two gap
+   (intersection of D²(n) minus FS²) is nonempty for every observation
+   but parity (20, 4, 4, 12, 30, 0, 6, 12 rules), including 4, 32, 90,
+   150, which had no depth-one gap. All 54 earlier witnesses realized
+   as explicit eventually periodic pairs. Gate-2 pending on PR #132.
 
 ## Checkpoint logs (read before continuing any workstream)
 
