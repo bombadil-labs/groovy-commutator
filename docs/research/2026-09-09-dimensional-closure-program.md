@@ -15,6 +15,12 @@ faithful representation, restoration, and endogenous organization; and explains
 why a rule's binary truth table does not supply a unique spatial arrangement.
 This is a visible orientation record, not a new experimental conclusion.
 
+## Beam refinement: structural correspondence must become consequential
+
+The [2026-09-12 beam refinement](2026-09-12-dimensional-beam-resonance.md) sharpens the objective inside this Program: eventual beam success should transport an endogenous dynamical response to structural self-correspondence, not only an externally verified inherited trajectory. This is an orientation and proposed criterion, not a result or a new Program. The user's ananda/resonance language remains personal motivation rather than evidence of experience.
+
+Keep predictive history/support, constructive assembly cost, homology-sensitive response, and costed reusable leverage distinct. The width-nine failure below prevents treating the earlier two-lag passes as a universal dimensional threshold. Future comparisons require explicit law/observer/family/cadence/resource contracts and separate frozen protocols; this refinement does not re-score any completed unit or alter ongoing experiments.
+
 ## Shared representation contract
 
 The [shared account](2026-09-10-shared-closure-account.md), agreed in issue61,
@@ -74,6 +80,12 @@ The [cross-width interface-history audit](2026-09-12-interface-history-cross-wid
 The result is a sharp finite-width split. On width 8, all three masks remain globally deterministic and all three admit the frozen `R=3` local factor. On width 9, all three masks fail complete-field determinism itself, so no increase of spatial radius alone can repair those exact retained representations on the frozen `D2,h=2` domain. Consequently every pooled W3 test fails. For P15, the canonical pooled conflict is genuinely cross-width (`n=7` versus `n=9`); masks 11 and 13 already have pooled conflicts between the predecessor widths 6 and 7 even though each width separately admits a width-specific `R=3` factor there.
 
 All three predeclared constructive bets fail. The finding does not establish a monotone threshold at width nine, arbitrary-width failure, full-shift or infinite-lattice obstruction, or intrinsic dimension. `R=3` is whole-ring on widths 6/7 and near-whole-ring on widths 8/9, so the width-8 passes are near-global finite-ring facts rather than evidence of small-radius locality. The width-nine W1 conflicts are stronger only on those exact finite reachable domains: complete retained two-lag history has become insufficient there.
+
+## Product-form linear slice observations are a dimension-blind history control
+
+The [dimensional history-scaling control](2026-09-12-dimensional-history-scaling-control.md) preserves a rejected first attempt to test whether retained history depth tracks dimensional level. Independent Gate 1 showed before implementation that the chosen pair—product-form ordered-axis Rule90 and a complete coordinate-slice observation—is algebraically blind to the number of axes: if `D(n)` is the minimal-polynomial degree of `g=x+x^-1` in the cyclic one-dimensional quotient, then `h_min(d,n)=D(n)-1` for the declared history criterion.
+
+The frozen theorem controls verify this independently in dimensions 1, 2 and 3: `h_min=2` for `n=5` and `h_min=3` for `n=7`, with the packed full-state matrix path agreeing with a separate one-dimensional polynomial reference in every cell. These values were known at Gate 1 and are regression results, not a rediscovered dimensional law. The useful conclusion is methodological: this product-law/slice-observer design cannot discriminate a history-versus-dimension hypothesis. It neither confirms nor refutes such scaling for nonlinear sources, non-product lifts, or different observations; any discriminating replacement requires its own frozen protocol.
 
 ## Relational rank separates available directions from law-used directions
 

@@ -140,6 +140,11 @@ REGISTRY = {
         'interface_history_global_script': 'scripts/verify_interface_history_global.py',
         'interface_history_global_result': 'results/interface_history_global_20260912.json',
         'interface_factor_script': 'scripts/verify_interface_factor.py'},
+    'results/dimensional_history_scaling_control_20260912.json': {
+        'script': 'scripts/verify_dimensional_history_scaling_control.py',
+        'parent_protocol': 'docs/research/protocols/dimensional-history-scaling-20260912.md',
+        'gate1_refreeze': 'docs/research/protocols/dimensional-history-scaling-gate1-refreeze-20260912.md'},
+
 }
 
 def sha(p: pathlib.Path) -> str: return hashlib.sha256(p.read_bytes()).hexdigest()
