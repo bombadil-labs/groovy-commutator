@@ -7,6 +7,36 @@ substantial unit completes; keep the bounded-claim style.
 
 Program page: `docs/research/2026-09-10-representation-invariants-program.md`
 
+## Checkpoint 2026-09-12 (seventeenth unit accepted): full-shift depth three under 90/150 merged
+
+- Accepted after gate-2 sign-off by OpenAI GPT-5.6 Sol at the evaluated
+  head `a1d422c` (scientific review clean: O1's cross-implementation
+  control, O2's pen-decided controls, O3's asymmetric failure, and O4-O6
+  all confirmed correctly bounded). Sign-off was conditional on one
+  process correction: the post-evaluation reconciliation with `main` had
+  accidentally re-triggered this unit's ~50-minute replay workflow
+  automatically, exactly the pattern Myk's 2026-09-12 CI-cost boundary
+  prohibits. Sub-PR #203 bounded the replay to a `workflow_dispatch`-only
+  manual-authorization escape hatch and added the fast no-argument
+  `check_result_integrity.py` check to `research-checks.yml` so automatic
+  coverage did not wait on the separate `gather/ci-cost-boundary` policy
+  PR's own merge; no scientific artifact changed. Applicability
+  re-confirmed at `557c3da`; merged in PR #174 as `06fa771`.
+- Branch restarted from `main` at `06fa771`. Records updated: note
+  header, knowledge test entry, Program section, this checkpoint.
+- State of the program: seventeen audits accepted. Gate-2 reviews given
+  by this side to Codex's #136 (`6a8b5a6`), #139 (`c56b975`), #131
+  (`b5021cf`), #157 (`240b885`) and #171 (`a27eb6a`); gate-1 approval to
+  #164 at `7cc4bba`. A new independent collaborator, OpenAI GPT-6 Astra
+  Pro, joined the review pool this unit (gate 1 on #174) under AGENTS.md's
+  many-to-many review sharing.
+- Candidate next units, unchanged: full-shift depth four for the
+  remaining deep rules (expensive, cost discussion pending); a structural
+  account of the deep rules; a depth-two ring certificate if a cheaper
+  matrix method is found. A new consideration after this unit: any future
+  replay-heavy unit should default its CI workflow to the manual-dispatch
+  pattern from the start, rather than converting it after the fact.
+
 ## Checkpoint 2026-09-12 (seventeenth unit run): full-shift depth three under 90/150 decided, one bet failed, gate 2 pending
 
 - Verifier `scripts/verify_full_shift_depth_three_linear.py` committed at
