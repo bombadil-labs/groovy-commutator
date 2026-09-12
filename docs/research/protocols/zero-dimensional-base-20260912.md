@@ -1,263 +1,320 @@
 # Protocol: zero-dimensional base and shared law-to-state selector — 2026-09-12
 
-**Status:** proposed and frozen before implementation/evaluation. Nothing in this protocol has been run.  
+**Status:** frozen before implementation/evaluation; revised after independent Gate-1 review. Nothing in this protocol has been run.  
 **Program:** *Dimensional Closure and the Commutator Lift*.  
 **Authored by:** Codex / OpenAI GPT-5.6 Sol.  
-**Protocol review:** pending independent Gate 1 on the exact integrated gathering head. **No implementation or source-domain evaluation is authorized before Gate 1.**  
+**Protocol review:** Claude Code, Fable 5.1 reviewed gathering head `ca5a34addafebbc1feba91f1a1a35edbcc24a615` on 2026-09-12 and required binding corrections B1–B3 plus clarifications C1–C2. This revision incorporates them and requires renewed independent Gate 1 on the exact integrated gathering head before implementation or evaluation.  
 **Base:** `main` at `06b6732423d5ed01a2d996bc9d7fe25cef7af50d`.
 
 ## 1. Why this unit
 
-The dimensional program already has two distinct achievements that should not be conflated:
+The dimensional program already has two distinct achievements that must not be conflated:
 
 1. low-dimensional rule/state cardinality coincidences: a binary radius-one 0D rule has two truth-table bits, matching the two outer cells of a 1D radius-one neighborhood; a binary ECA has eight truth-table bits, matching the eight outer cells of a 2D Moore neighborhood;
 2. an explicit all-finite-dimensional stored-program/routing construction whose higher-dimensional laws are compositionally represented rather than stored as unrestricted flat truth tables.
 
-The cardinality coincidence breaks at the next raw-table step: a general binary 2D radius-one Moore rule has 512 truth-table bits whereas the outer shell of a 3D 3x3x3 neighborhood has 26 cells. That mismatch by itself does not decide the structured tower, because the accepted routing construction uses a factorized program family rather than arbitrary 512-bit laws.
+The raw cardinality match breaks at the next rung: a general binary 2D radius-one Moore rule has 512 truth-table bits whereas the outer shell of a 3D `3x3x3` neighborhood has 26 cells. That does not decide the structured tower, because the accepted routing construction uses a factorized program family rather than arbitrary 512-bit laws.
 
-The smallest missing question is therefore at the bottom of the tower:
+This unit asks a smaller bottom-of-tower question:
 
-> **Can one common, fixed law-to-state addressing mechanism realize both 0D→1D and 1D→2D, rather than merely exploiting the separate cardinality equalities 2=2 and 8=8?**
+> **Are the 0D→1D and 1D→2D shell constructions genuinely instances of one local selector semantics, once role overlap, geometric symmetry, and the distinction between static lookup and repeated dynamics are made explicit?**
 
-This unit installs 0D as an explicit base case and tests structural reuse before asking the 2D→3D compression question. It does not replace, reinterpret, or retroactively score prior dimensional units.
+The unit is deliberately an **exact local base-case audit**. Stateful repeated execution is removed from this unit and reserved for a separately frozen follow-up after this structural audit is accepted. A positive result here is therefore not a dynamical dimensional lift.
 
-## 2. Canonical 0D objects
+## 2. Canonical 0D floor
 
-Take the 0D binary configuration space to be the one-point lattice with one bit `x ∈ {0,1}`. A deterministic local law is a map `f:{0,1}->{0,1}`. The complete 0D rulespace is therefore the four unary Boolean maps:
+Take the 0D binary configuration space to be the one-point lattice with one bit `x in {0,1}`. A deterministic local law is a map `f:{0,1}->{0,1}`. The complete 0D rulespace is the four unary Boolean maps:
 
 - `00`: constant 0;
 - `01`: identity;
 - `10`: negation;
 - `11`: constant 1.
 
-Under the canonical center-only ECA embedding, these are rules `0`, `204`, `51`, and `255` respectively: the left and right ECA inputs are ignored.
+Under the canonical center-only ECA embedding, these are rules `0`, `204`, `51`, and `255`: left and right ECA inputs are ignored.
 
-Every 0D rule is affine over GF(2), `f(x)=a x xor b`. The implementation must import the repository's existing affine-commutator convention exactly rather than introduce a new 0D derivative convention. P2 below is therefore a theorem/regression control on the four center-only ECA embeddings, not a new definition of the Groovy commutator.
+Every 0D rule is affine over GF(2), `f(x)=a x xor b`. The existing repository affine-commutator theorem therefore applies to the four center-only embeddings without defining a new 0D derivative. Under that accepted convention the expected constant Groovy responses are frozen as:
 
-## 3. Common selector schema
+- rule `0`: `G=0`;
+- rule `204`: `G=0`;
+- rule `51`: `G=1`;
+- rule `255`: `G=1`.
+
+This is a theorem/regression control. It establishes that the complete 0D law space has no nonlinear commutator structure under the existing convention; it does not establish that spatial dimension causes nonlinearity.
+
+## 3. One selector semantics, with role overlap explicit
 
 For a binary local rule with `k` address bits, let its truth-table word be
 
 `T : {0,1}^k -> {0,1}`.
 
-A **selector realization** consists of:
+A **local selector realization** is a tuple `(P,A,S,lambda)` where:
 
-- a fixed set `S` of `2^k` physical program sites;
-- a fixed bijection `lambda:{0,1}^k -> S` assigning configuration addresses to program sites;
-- a fixed local interpreter that, given address bits `a ∈ {0,1}^k` in declared data sites and program bits `T(a')` at all sites `lambda(a')`, outputs the bit stored at `lambda(a)`.
+- `P` is a fixed physical neighborhood;
+- `A=(a_0,...,a_{k-1})` is an ordered list of `k` physical address sites in `P`;
+- `S` is a set of `2^k` physical program sites in `P`;
+- **address sites and program sites are allowed to overlap**; that overlap is a declared physical resource and is reported, not hidden;
+- `lambda:{0,1}^k -> S` is a fixed bijection from configuration addresses to program sites;
+- the fixed interpreter reads the address word from `A` and returns the current physical bit at `lambda(address)`.
 
-The same schema must be instantiated without changing its semantic rule between the two rungs:
+Equivalently, for a physical patch `X`,
+
+`Select_lambda(X) = X[lambda(a(X))]`.
+
+The semantic rule is identical at both rungs. What changes with geometry is the neighborhood `P`, the number of address bits `k`, and the unavoidable overlap between address and program roles.
 
 ### Rung Z0: 0D→1D
 
+Use the 1D radius-one patch `(L,C,R)`:
+
 - `k=1`;
-- the one data/address bit is the center site of a radius-one 1D neighborhood;
-- the two program sites are the two outer sites;
-- the program bits are `(f(0), f(1))` in an orientation fixed before evaluation.
+- `A=(C)`;
+- `S={L,R}`;
+- `A intersect S` is empty;
+- both bijections are frozen: `Z0-A` maps `0->L,1->R`; `Z0-B` maps `0->R,1->L`.
+
+For a prepared unary law, `(L,R)=(f(0),f(1))`; the center remains an independently choosable unary input.
 
 ### Rung Z1: 1D→2D
 
+Use the radius-one `3x3` Moore patch with surrounding positions numbered clockwise from north as in the accepted shared-state/rule construction:
+
 - `k=3`;
-- the address bits are the declared ordered ECA inputs `(L,C,R)`;
-- the eight program sites are the outer cells of a 3x3 Moore neighborhood;
-- the program bits are the eight ECA truth-table outputs in a layout fixed before evaluation.
+- `A=(W,C,E)` so the address is `q=4W+2C+E`;
+- `S` is the eight-cell outer Moore shell;
+- `A intersect S={W,E}` has size two;
+- `lambda` assigns the eight ECA addresses to the eight shell sites.
 
-The interpreter may depend on the declared spatial geometry and the fixed rung-independent selector recipe, but it may not contain the selected rule as hidden external data. Replacing a rule word must require changing only the program-state bits, not interpreter code.
+Thus `W` and `E` are deliberately **dual-role cells**: they are both stored truth-table bits and two of the three current address bits. This is not an implementation accident; it is the accepted selector construction's defining self-reference.
 
-## 4. Frozen candidate layouts
+Consequently, unlike Z0, an arbitrary fixed ECA rule word and an arbitrary three-bit address are not independent physical degrees of freedom in one `3x3` patch. The local claim is therefore evaluated over **physical patches**, not over an impossible Cartesian product of 256 rule words and eight independently supplied addresses.
 
-Because truth-table addresses and spatial addresses are different objects, this unit does not pretend that cardinality supplies a canonical layout. It freezes a small hypothesis family and scores all members, rather than choosing a successful layout after inspection.
+### Exact role-overlap lower bound
 
-### Z0 layouts
+A single-layer binary patch with `|P|` sites cannot hold `k` declared address roles and `2^k` program roles disjointly unless `k+2^k <= |P|`. Therefore any such selector must have role overlap at least
 
-Both 1D orientations are frozen:
+`max(0, k + 2^k - |P|)`.
 
-- `Z0-A`: address 0 on the left outer site, address 1 on the right;
-- `Z0-B`: address 0 on the right outer site, address 1 on the left.
+For the two frozen rungs:
 
-These are reflection partners and serve as a conjugacy control.
+- Z0: `1+2-3=0`, and the construction attains zero overlap;
+- Z1: `3+8-9=2`, and the accepted `(W,C,E)` selector attains exactly two overlapping roles.
 
-### Z1 layouts
+This is a capacity theorem about this single-layer shell architecture, not an intrinsic-dimensional lower bound.
 
-Freeze the complete dihedral orbit of one reference assignment of the eight addresses `000..111` around the Moore ring, together with global address complement. The reference ordering is clockwise from north:
+## 4. Frozen layout family
+
+Truth-table addresses and spatial positions are different objects. Cardinality alone does not supply a canonical placement.
+
+### Z0
+
+Both orientations `Z0-A` and `Z0-B` are retained. Physical reflection swaps them. This is only an encoding-conjugacy control; 0D logical data has no spatial reflection, and the induced layout address swap must not be described as a nontrivial covariance of the unary law.
+
+### Z1
+
+Freeze the complete dihedral orbit of one reference assignment of addresses `000..111` around the Moore shell, together with optional global address complement. The reference ordering clockwise from north is
 
 `000,001,011,010,110,111,101,100`.
 
-This is the 3-bit binary-reflected Gray cycle. The frozen family consists of every distinct layout generated by the eight square symmetries and optional bitwise address complement. Duplicate layouts are deduplicated before evaluation and their generating symmetries retained as provenance.
+This is the 3-bit binary-reflected Gray cycle. Duplicate layouts are deduplicated and their generating transformations retained as provenance.
 
-This family is chosen before evaluation because it preserves nearest-neighbor adjacency of successive Gray addresses on the ring and exposes rotation/reflection/complement covariance. It is **not** claimed to be uniquely natural. Arbitrary 8! layouts are deliberately excluded from the primary claim because successful arbitrary permutation plus a compensating decoder would establish only storage capacity.
+The Gray family is a predeclared geometric hypothesis family because successive ring positions differ in one address bit. It is not claimed to be unique or natural. An arbitrary bijection plus a compensating decoder is the permutation null, not geometric evidence.
 
-A separately reported null control samples no layouts. Instead it records the algebraic fact that any bijective placement is executable if the decoder is compensated by the inverse placement. That null is not evidence for geometry.
+## 5. Frozen exact questions
 
-## 5. Three levels of success
+This unit separates five questions that earlier drafts conflated.
 
-Do not collapse these criteria.
+### S1 — physical selector identity
 
-### S1 — static addressability
+For every frozen layout and every binary physical patch, decode the program word from the declared program sites, decode the address from the declared address sites, and verify that the local output equals the bit at the addressed program site.
 
-For every frozen layout and every rule word, the local interpreter returns exactly the truth-table bit indexed by the declared data address.
+- Z0: all `2^3=8` physical three-cell patches under both orientations;
+- Z1: all `2^9=512` physical Moore patches under every frozen Gray-family layout.
 
-- Z0 domain: all 4 unary rules × both input values × both orientations.
-- Z1 domain: all 256 ECA rules × all 8 address triples × every frozen geometric layout.
+S1 is an implementation/theorem control. It does **not** mean every Z1 program word can be independently applied to every ECA address in one physical patch.
 
-S1 is a lookup theorem/check. It is necessary but cheap.
+### S2 — selector meta-rule structure
 
-### S2 — symmetry covariance
+Treat the fixed selector itself as a Boolean local rule on the physical patch.
 
-The selector construction must intertwine declared transformations rather than merely survive a rule-specific recompiled decoder.
+Frozen predictions:
 
-Freeze the following actions:
+- each Z0 orientation has all three physical inputs essential and algebraic degree exactly two;
+- its polynomial can be independently derived from the multiplexer formula, e.g. for `Z0-A`, `L xor (L C) xor (R C)` over GF(2);
+- every frozen Z1 layout has all nine physical inputs essential and algebraic degree exactly four;
+- the accepted shared-state/rule theorem gives exactly six quartic terms for every Z1 layout because six shell/program cells are not address variables while `W,E` are dual-role address/program cells.
 
-- **Z0 reflection:** physical reflection exchanges the two program sites. On configuration addresses this induces `x -> 1-x` only for the reflected *layout coordinates*; the transported rule word is reindexed by that address permutation. This is a covariance of the encoding contract, not a claim that unary logical input itself physically complements under reflection.
-- **Z1 left/right reflection:** ECA address `(L,C,R)` maps to `(R,C,L)` and the Moore ring is reflected across the corresponding axis; the rule word is reindexed by the induced address permutation.
-- **Z1 global data complement:** address `a` maps to bitwise complement `~a`; address-complement transport of the truth-table word and optional output complement are scored as distinct operations and must not be conflated.
-- **Square rotations:** scored only when accompanied by an explicitly declared permutation of the three address roles. A rotation is not called a law symmetry when it changes ECA input semantics without transport.
+The comparison `degree = k+1` at `k=1` and `k=3`, together with essentiality of every physical site, is reported as a property of this selector semantics. It is not evidence that arbitrary future rungs obey the same formula.
 
-For each declared transformation, verify the appropriate commuting square: encode/transport then select equals select under the transported address/rule contract.
+### S3 — geometric symmetry obstruction and classification
 
-The primary geometric claim requires at least one frozen Z1 layout whose covariance is compatible with the same general principle used at Z0: spatial action induces an address permutation, and the stored truth table transforms by reindexing under that permutation. A success based only on arbitrary per-rule decoder recompilation is classified as S1-only.
+Do **not** score a vacuous transform-then-reindex covariance. Any spatial permutation can be compensated by reindexing the decoder, which is the permutation null.
 
-### S3 — stateful dynamical realization
+Instead compare independently defined transformations of ECA address space with independently defined square-shell symmetries.
 
-Static lookup is not yet a dimensional lift. This criterion asks whether the stored program can participate in repeated execution while the interpreter stays fixed.
+Let:
 
-**Gate-1 boundary:** the exact physical macrocell/clock realization is itself part of the scientific architecture and must not be left to post-review implementation choice. Gate 1 must either (a) approve one exact repeated-execution architecture already present in accepted repository machinery for each rung, or (b) require this criterion to move to a separately frozen follow-up protocol. No source-domain execution may occur while S3's physical architecture is unresolved.
+- `M(L,C,R)=(R,C,L)` be ECA left/right mirror;
+- `C(L,C,R)=(1-L,1-C,1-R)` be address complement;
+- `MC` be their composition.
 
-For Z0, the preferred minimal target is a periodic 1D representation carrying one data bit and the two unary program bits per logical site, with program retention/restoration and update cadence specified entirely before execution. For all four unary rules and every binary data word on rings `n=3..8`, one macro tick should update every represented data bit by the selected unary law while preserving the representation required for another tick.
+Frozen analytic controls before enumeration:
 
-For Z1, the preferred target is to reuse accepted repository machinery rather than invent a new machine. Candidate bridges for Gate 1 to choose between are:
+1. `M` has four fixed addresses (`000,010,101,111`). Every nonidentity reflection of the eight-site Moore shell fixes exactly two shell sites. Since conjugacy preserves cycle type, **no layout whatsoever** can make an ECA mirror equal a shell reflection.
+2. `C` and `MC` are fixed-point-free involutions with cycle type `2^4`. Among nonidentity `D4` shell actions only the 180-degree rotation has cycle type `2^4`; quarter-turns have two 4-cycles and reflections have two fixed sites.
+3. For the reference Gray layout, the 180-degree antipodal pairs are
+   `000<->110`, `001<->111`, `011<->101`, `010<->100`.
+   These are neither the complement pairs nor the mirror-complement pairs. Dihedral images and global address complement preserve that mismatch.
 
-- `S3-direct`: the accepted shared-state/rule eight-neighbor selector, if it can be shown to satisfy the same stored-program contract under a frozen layout; or
-- `S3-rail-bridge`: an explicit conjugacy/translation from the selector program word into the accepted spatial-rail / editable-routing representation.
+**Frozen prediction:** for every layout in the declared Gray family, the intersection between induced `D4` address permutations and the four-element ECA transformation group generated by `M` and `C` is the identity only.
 
-Gate 1 must reject architecture shopping: either select one exact route and freeze all semantic resources before implementation, or split S3 out of this unit. The unchosen route cannot become a post-result rescue.
+The verifier enumerates this as an independent regression of the hand proof and retains complete permutation/cycle-type tables. A pass is a **negative geometric result**: the Gray shell placement does not make the familiar ECA mirror/complement group into literal square symmetries.
+
+### S4 — 0D algebra inside the accepted axial constructor
+
+For the accepted guard-free axial constructor
+
+`G_{r,d}=F_{r,d} o ... o F_{r,1}`,
+
+a center-only rule acts pointwise on every axial pass. Therefore a center-only unary map `f` induces exactly `f^d` on the `d`-dimensional field.
+
+For the four 0D embeddings:
+
+- rule `204`: `f=id`, so `G_{204,d}=id`;
+- rule `51`: `f=NOT`, so `G_{51,d}` alternates with dimension parity;
+- rule `0`: every positive power is constant 0;
+- rule `255`: every positive power is constant 1.
+
+This parity fact does **not** explain why rule 51 is absent from the accepted exact-replication family. The interface condition uses `u_r(b)=f_r(b,b,b)`; for a center-only law, `u_r=f`. Exact replication requires the appended-axis action to fix every attainable inherited output. Identity and the two constants satisfy that condition on their attainable outputs; negation fixes no bit, so rule 51 fails every interface uniformly.
+
+Replay of the accepted axial verifier is only a regression check of this deduction. No uniqueness or naturalness is inferred.
+
+### S5 — structured next-rung storage fact
+
+The accepted editable-routing construction stores `d` editable eight-bit tables, i.e. `8d` native program bits, plus separately accounted data/interpreter/physical-layout costs. Therefore its native 2D program tuple contains 16 routing bits, below the 26 cells of a 3D radius-one Moore shell.
+
+This is a fact about the accepted factorized routing family. It is **not compression of an arbitrary 512-bit 2D truth table**, does not show those 16 bits already have a valid 3D shell interpreter, and does not establish a recursive shell law.
 
 ## 6. Frozen predictions and controls
 
-### P1 — complete 0D floor (theorem/control)
+### P1 — complete 0D floor
 
-The four unary maps are exactly the complete binary 0D deterministic rulespace and map to center-only ECA rules `0,204,51,255`. All four are affine.
+The four unary Boolean maps are the complete binary deterministic 0D rulespace and embed as ECA `0,204,51,255`. All four are affine.
 
-Failure indicates a definition/implementation error.
+### P2 — commutator floor
 
-### P2 — commutator floor (theorem/regression control)
+The imported affine theorem returns constants `(0,0,1,1)` for ECA `(0,204,51,255)` respectively. Any mismatch is an implementation/provenance failure.
 
-Replay the repository's accepted affine-commutator theorem/check on the four center-only ECA embeddings `0,204,51,255` under the **existing repository convention**. Record the exact imported theorem/result source and its expected constant response for each rule before implementation execution. Do not infer or redefine those constants from a new 0D-specific derivative.
+### P3 — minimum role overlap
 
-The intended scientific statement is only that the complete 0D law space lies in the affine sector, so the accepted affine theorem leaves no nonlinear commutator structure at the floor. It does **not** prove that spatial dimension causes nonlinearity.
+The disjoint-role lower bound is zero at Z0 and two at Z1, and the frozen constructions attain those minima. This explicitly replaces the rejected disjoint-role Z1 schema.
 
-### P3 — common selector addressability (theorem-like implementation control)
+### P4 — common selector local structure
 
-S1 passes for every 0D rule and all 256 ECA rules under every frozen layout. A failure blocks all interpretation.
+S1 and S2 hold on the complete frozen physical domains. In particular the Z0 selector has degree two/all three inputs essential and the Z1 selector has degree four/all nine inputs essential under every frozen layout.
 
-### P4 — nontrivial shared covariance (primary structural bet)
+A failure blocks the claim that the two rungs instantiate the same local selector semantics.
 
-At least one frozen Gray-ring Z1 layout, together with one Z0 orientation, satisfies the full declared covariance family using the same spatial-action→address-permutation→rule-reindexing principle, without rule-specific decoder changes.
+### P5 — no nontrivial Gray/ECA symmetry identification
 
-If only S1 passes while every Z1 geometric layout fails the covariance contract, report the cardinality match as storage-only under this hypothesis family.
+S3's hand-derived obstruction and Gray-family prediction hold exactly: no nonidentity element of the ECA group `<M,C>` is induced by a `D4` shell symmetry on any frozen Gray-family layout.
 
-### P5 — repeated stateful execution (conditional constructive bet)
+This is intentionally a negative prediction. It replaces the rejected prior bet that a nontrivial covariance should exist.
 
-P5 is active only if Gate 1 freezes an exact S3 physical architecture on both rungs. Under that frozen architecture, repeated stateful execution passes on both rungs for the declared finite domains. A pass means that rule bits can serve as persistent/reusable physical program state at both 0D→1D and 1D→2D under one documented interpretation family. A failure is scoped to the frozen architecture and finite domains.
+### P6 — corrected axial deduction
 
-If Gate 1 instead requires S3 to become a separate follow-up, this unit makes **no P5 claim** and cannot report static S1/S2 success as a dynamical lift.
+The accepted ordered-axis constructor gives `f^d` for center-only laws; rule 51's dimension-parity dynamics are a corollary, while its exact-replication failure is explained separately by `u_51=NOT` having no fixed bit.
 
-### P6 — 0D algebra and the axial negation mismatch (deductive comparison, frozen before evaluation)
+### P7 — scoped routing-storage comparison
 
-The accepted guard-free axial constructor applies the same ECA along each added axis in sequence. For the four center-only embeddings, accepted results place rules `0`, `204`, and `255` in the exact-replication family, while rule `51` is outside it.
+The accepted editable-routing family uses `8d` native routing bits, hence 16 at `d=2`; this statement remains strictly separate from total physical storage and from arbitrary 512-bit 2D laws.
 
-Before consulting any new run output, derive the induced action of sequentially composing the center-only unary map under the constructor's exact dimensional convention, including the base-source pass count and every added-axis pass. The tempting shorthand `f^d` is **not frozen as correct** until that convention is reconciled with the accepted constructor. For affine unary maps `f(x)=a x xor b`, ordinary functional composition is elementary; however, whether the relevant exponent is `d`, `d+1`, or another count is a repository-definition question that Gate 1 must check against the accepted axial protocol.
+### P8 — stateful execution is deferred
 
-Replay the accepted axial verifier only as a regression check of the resulting deduction. The comparison may explain rule 51's mismatch in that constructor; it is not evidence that the constructor is unique or natural.
+This unit makes **no repeated-execution claim** for a prepared law/state representation. Any Z0/Z1 repeated-execution bridge must be a new frozen protocol with one exact architecture selected before its Gate 1. Static selector success in this unit cannot be reported as a dynamical dimensional lift.
 
-### P7 — compression target for the next rung (analytic consequence, not evaluated as success)
+## 7. Nulls and claim boundaries
 
-If P4 and, when active, P5 pass, state the 2D→3D question in description-length terms. The accepted editable-routing construction stores one eight-bit table per declared axis in its native program tuple; its checkpoint describes `d` editable eight-bit tables (`8d` program bits) and the associated physical macrocell costs. Under that convention, the 2D native tuple has 16 program bits, which is below the 26-cell outer shell of a 3D radius-one Moore neighborhood.
+Mandatory reporting distinctions:
 
-This is **not** compression of an arbitrary 512-bit 2D rule table. The implementation must cite the accepted routing note/checkpoint and preserve all interpreter, role, locality, and physical-storage costs. This unit does not test 2D→3D shell storage.
+1. **Cardinality null:** `2=2` and `8=8` alone establish no common mechanism.
+2. **Generic multiplexer null:** `Select_lambda` is an abstract lookup recipe; shared algebra alone does not establish a spatially natural construction.
+3. **Permutation null:** arbitrary placement plus compensated decoder reindexing is storage capacity, not geometric covariance.
+4. **Role-overlap cost:** the Z1 shell fit works only because two cells are simultaneously program and address state. This resource must remain visible.
+5. **Prepared-state boundary:** program bits are deliberately present; nothing here self-assembles or selects a program.
+6. **Local-only boundary:** this unit does not establish repeated global execution, all-time preservation, or an intertwining of represented trajectories.
+7. **Structured-family boundary:** `8d` concerns accepted routing syntax, not the unrestricted `2^(3^d)`-bit rule table or total physical implementation cost.
+8. **Prime-motif boundary:** no connection to the separate `8n+1` observation is claimed without a later explicit mathematical map.
 
-## 7. Nulls and falsification boundaries
-
-The following distinctions are mandatory in reporting:
-
-1. **Cardinality null:** `2=2` and `8=8` alone are not evidence of a common mechanism.
-2. **Permutation null:** any bijection between truth-table addresses and equal-sized program sites can be made executable by compensating the decoder; that is storage capacity, not geometric structure.
-3. **Prepared-program null:** a fixed interpreter plus deliberately placed program bits is an existence construction, not endogenous organization.
-4. **Finite-domain null:** repeated execution on finite rings establishes only the declared domains unless an analytic proof extends it.
-5. **Structured-family boundary:** `8d` routing-table syntax concerns the accepted factorized family, not the unrestricted `2^(3^d)`-bit rule table; physical storage and interpreter costs remain explicit.
-
-A scientifically useful negative result is allowed. In particular, P4 or active P5 may fail while P1-P3 hold. Do not introduce a new layout, larger shell, wider radius, added role species, or alternate repeated-execution architecture after seeing those failures. Any rescue is a new frozen unit.
+A failed P4 or P5 remains useful. Do not add layouts, extra layers, wider neighborhoods, new role species, or a dynamical rescue after seeing the result. Any such change is a separately frozen unit.
 
 ## 8. Implementation and independent checks
 
-No implementation is authorized before exact-head Gate 1.
+No implementation or source-domain execution is authorized before renewed exact-head Gate 1.
 
-After approval, the implementation-only sub-PR must contain no canonical result and must freeze or record, as required by Gate 1:
+After approval, an implementation-only sub-PR must contain no canonical result and must freeze:
 
-- exact Z1 layout enumeration and deduplication;
-- exact imported theorem/result hashes used for P2, P6, and P7;
-- whether S3/P5 remains in this unit and, if so, its exact approved physical architecture;
-- canonical ordering for rules, addresses, layouts, rings, states, and witnesses;
-- a scalar reference selector independent of the optimized/table evaluator;
-- permanent CI and integrity-registration scaffolding.
+- exact Gray-family layout enumeration and deduplication;
+- canonical ordering for physical patches, layouts, transformations, and witnesses;
+- exact imported theorem/result hashes used for P2, P4's accepted Z1 comparison, P6, and P7;
+- a scalar tuple/Boolean selector and an independently implemented packed/table evaluator;
+- ANF/essential-input computation by two independent paths for P4;
+- direct cycle-type/permutation comparison plus exhaustive layout enumeration for P5;
+- permanent CI and result-integrity scaffolding.
 
-At least two independently implemented checks are required for every scientific claim that uses enumeration:
+Every enumerated scientific claim requires agreement between the independent implementations. Any mismatch stops evaluation.
 
-- tuple/Boolean scalar evaluation;
-- packed/vector or existing-engine evaluation.
+Canonical failures retain the lexicographically first complete witness under the frozen ordering. For P5 the canonical record includes layout, shell action, induced address permutation, candidate ECA transformation, and cycle decomposition.
 
-Covariance failures retain the lexicographically first complete witness `(r, layout, transform, address/state)` under the frozen ordering. Repeated-execution failures, if P5 is active, retain the first full represented physical state and expected/actual next state.
+Proposed artifacts:
 
-Canonical result path proposed: `results/zero_dimensional_base_20260912.json`.  
-Verifier path proposed: `scripts/verify_zero_dimensional_base.py`.  
-Workflow path proposed: `.github/workflows/research-zero-dimensional-base.yml`.
+- verifier: `scripts/verify_zero_dimensional_base.py`;
+- result: `results/zero_dimensional_base_20260912.json`;
+- workflow: `.github/workflows/research-zero-dimensional-base.yml`.
 
-## 9. Required workflow
+## 9. Workflow
 
 Use the repository gathering/sub-PR protocol:
 
-1. protocol-only sub-PR into `gather/dimensional-zero-base`;
-2. author self-review and merge of that sub-PR when exact-head checks are green;
-3. independent **Gate 1** review of the exact integrated gathering head;
+1. protocol correction sub-PR into `gather/dimensional-zero-base`;
+2. author self-review and merge after exact-head checks are green;
+3. renewed independent **Gate 1** on the exact integrated gathering head;
 4. only after Gate 1: implementation-only/no-result sub-PR;
 5. self-review and merge implementation sub-PR when green;
 6. evaluation sub-PR for the first canonical run;
-7. reporting sub-PR for the dated result note, dimensional Program page/checkpoint, knowledge/catalog updates, and any AGENTS result summary warranted by the evidence;
-8. independent **Gate 2** on the exact final gathering head;
+7. reporting sub-PR for dated result note, dimensional Program/checkpoint, knowledge/catalog updates, and any warranted AGENTS summary;
+8. independent exact-head **Gate 2**;
 9. reviewer merge of the gathering PR to `main` only after Gate 2 and exact-head checks are green.
 
-Any binding change after Gate 1 to the layout family, covariance actions, finite domains, active S3 architecture, predictions, witness ordering, or interpretation contract requires renewed Gate 1. Implementation bug fixes that do not change those scientific choices remain implementation corrections and must be recorded before evaluation.
+Any post-Gate-1 change to selector semantics, role contract, layout family, P1–P8, domain, scoring, witness ordering, or interpretation ceiling requires renewed Gate 1.
 
 ## 10. Interpretation contract
 
-A positive S1/S2 result can establish, at most:
+A positive unit can establish, at most:
 
-> The complete binary 0D law space and the complete ECA law space admit a shared prepared law-to-state selector schema across 0D→1D and 1D→2D, with specified geometric covariance under a fixed interpretation family.
+> The complete binary 0D floor and the accepted 1D/ECA shared-shell construction instantiate one overlap-permitted local multiplexer semantics at the first two law/state cardinality matches; the exact overlap cost, local Boolean structure, and failure of the frozen Gray geometry to realize nontrivial ECA mirror/complement symmetries are characterized.
 
-Only if P5 is active and passes may the result additionally claim finite repeated stateful execution of that represented program under the exact frozen physical architectures.
+It cannot establish:
 
-It would not establish:
+- a stateful or repeated dynamical dimensional lift;
+- a unique, natural, or physically selected law/state layout;
+- arbitrary `2D->3D` shell encoding;
+- compression of arbitrary 512-bit 2D rules;
+- intrinsic dimension, self-assembly, endogenous control, spacetime emergence, a physical theory, or metaphysical conclusions;
+- a connection to `8n+1` or primes.
 
-- that the Gray-ring layout is unique, natural, or physically selected;
-- that arbitrary 2D rule tables fit a 3D shell;
-- that the factorized routing family is universal among higher-dimensional laws;
-- intrinsic spatial dimension, self-assembly, endogenous control, emergence of spacetime, a physical theory, or metaphysical conclusions;
-- any connection to the separate `8n+1` prime observation beyond a shared numerical motif unless a later protocol specifies an actual mathematical map.
+A negative result is bounded to the declared selector/layout architecture and does not disprove other law-as-state lifts.
 
-A negative result is also bounded to the frozen selector/layout/architecture family. It does not disprove all law-as-state dimensional lifts.
+## 11. Gate-1 review questions after the first correction round
 
-## 11. Gate-1 review questions
+The independent reviewer should verify the exact corrected head, especially:
 
-The independent reviewer should attack the following points before implementation:
+1. Does the overlap-permitted `(P,A,S,lambda)` schema genuinely cover both rungs without hiding the Z1 `W/E` dual role?
+2. Is the role-overlap lower bound stated and scoped correctly, and does the accepted Z1 construction attain the minimum two-cell overlap?
+3. Is P4 now a meaningful shared-selector structural comparison rather than an impossible Cartesian product of rule words and independent addresses?
+4. Is P5's fixed-point/cycle-type obstruction correct, including the claim that the frozen Gray family has identity-only intersection with `<M,C>`?
+5. Is S4/P6 now correctly split between the true `f^d` parity statement and the actual `u_51=NOT` interface-failure mechanism?
+6. Is deferring all S3/P5-style repeated execution to a separate future protocol sufficient to eliminate architecture shopping from this unit?
+7. Are P2 and P7 correctly grounded in accepted repository results and scoped to their actual conventions/costs?
+8. Are the interpretation ceiling and nulls strong enough that a positive local-selector audit cannot be reported as a dynamical or intrinsic-dimensional result?
 
-1. Is the 0D definition and center-only ECA embedding canonical enough for a base-case control?
-2. Does the selector schema genuinely state one semantic mechanism at `k=1` and `k=3`, or have rung-specific details smuggled in two different constructions?
-3. Is the frozen Gray-ring symmetry family principled enough to test geometry while avoiding an arbitrary 8! search? Are the reflection/complement/rotation actions stated as genuine encoding covariances rather than accidental logical symmetries?
-4. Are S1/S2/S3 cleanly separated so static lookup cannot be reported as a dynamical lift?
-5. Should S3/P5 be frozen now to one exact accepted architecture, or split into a follow-up rather than leaving physical design freedom after Gate 1?
-6. Does P2 correctly defer to the existing affine-commutator convention rather than inventing a 0D derivative?
-7. What is the exact pass count in P6 under the accepted ordered-axis constructor, and does it actually explain rule 51's exclusion from the exact-replication family?
-8. Is P7 scoped correctly to the accepted factorized routing family, with syntax bits distinguished from total physical storage/interpreter cost?
-9. Are the nulls and interpretation boundary strong enough that a positive result cannot be mistaken for natural selection, intrinsic dimension, or a physics claim?
-
-Gate 1 should be strong. Binding changes must land before any verifier or source-domain execution.
+Binding corrections must land before any verifier or evaluation. Renewed approval must name the exact integrated gathering-head SHA.
