@@ -12,7 +12,17 @@ modifies the canonical result file, on pushes to main, weekly, and on manual
 dispatch (Codex's review of PR #90 pinned this contract down).
 
 Usage: python scripts/check_result_integrity.py [result.json ...]
-With no arguments every registered result is checked.
+With no arguments every registered result is checked, and a missing result
+fails the sweep the same as naming it explicitly would. (2026-09-12: an
+earlier version of this sweep reported a missing registered result as PEND,
+for a unit's implementation-only commit registering a result before it was
+generated. Codex's Gate-2 review on PR #206 noted that once a unit's
+canonical result exists, keeping that allowance lets a future accidental
+deletion or rename of an accepted result evade this tier silently. Every
+currently registered result exists, so the allowance was removed outright
+rather than narrowed; an implementation-only stage that needs to register a
+result before generating it should register it only once the canonical run
+has actually produced the file.)
 """
 from __future__ import annotations
 import hashlib, json, pathlib, sys
@@ -144,6 +154,11 @@ REGISTRY = {
         'script': 'scripts/verify_dimensional_history_scaling_control.py',
         'parent_protocol': 'docs/research/protocols/dimensional-history-scaling-20260912.md',
         'gate1_refreeze': 'docs/research/protocols/dimensional-history-scaling-gate1-refreeze-20260912.md'},
+    'results/depth_two_certificate_20260912.json': {
+        'script': 'scripts/verify_depth_two_certificate.py',
+        'full_shift_depth_two_script': 'scripts/verify_full_shift_depth_two.py',
+        'full_shift_depth_two_result': 'results/full_shift_depth_two_20260911.json',
+        'depth_one_certificate_result': 'results/depth_one_certificate_20260911.json'},
 
     'results/dimensional_resonance_response_20260912.json': {
         'script': 'scripts/verify_dimensional_resonance_response.py',
@@ -160,6 +175,7 @@ def sha(p: pathlib.Path) -> str: return hashlib.sha256(p.read_bytes()).hexdigest
 
 def check(result: str) -> list[str]:
     problems = []
+    if not (ROOT / result).exists(): return [f'{result}: result file missing']
     data = json.loads((ROOT / result).read_text())
     recorded = data.get('source_hashes')
     if not isinstance(recorded, dict): return [f'{result}: no source_hashes block']
@@ -181,7 +197,7 @@ def main(argv: list[str]) -> int:
         t = str(pathlib.Path(t)); t = t if t in REGISTRY else str(pathlib.Path(t).relative_to(ROOT)) if pathlib.Path(t).is_absolute() else t
         if t not in REGISTRY: print(f'not registered: {t}'); bad.append(t); continue
         p = check(t)
-        summary = json.loads((ROOT / t).read_text()).get('summary')
+        summary = json.loads((ROOT / t).read_text()).get('summary') if (ROOT / t).exists() else None
         print(('OK  ' if not p else 'FAIL') + f' {t}  summary={json.dumps(summary)}')
         for line in p: print('   ', line)
         bad += p
