@@ -7,7 +7,7 @@ Gate 1 for PR #173:
 
 * exhaustive ordered nonliteral pairs on logical rings 6 and 7;
 * the six-component matched-control descriptor;
-* nonliteral dihedral homology and shift/reflection/both tags;
+* nonliteral dihedral homology and mutually exclusive shift/reflection/both tags;
 * exact joint-shift-orbit partitions in every scored class;
 * the orbit-preserving deterministic placebo assignments from clarification B1.
 
@@ -38,7 +38,7 @@ from typing import Iterable
 RINGS = (6, 7)
 
 # Exact frozen ring-7 source-only census from the Gate-1 refreeze.
-# descriptor -> (H, C, shift_capable, reflection_only, both)
+# descriptor -> (H, C, shift_only, reflection_only, both)
 EXPECTED_RING7 = {
     (2, 2, 4, 4, 2, 2): (14, 28, 0, 0, 14),
     (2, 2, 4, 4, 2, 4): (14, 28, 0, 0, 14),
@@ -132,13 +132,17 @@ def pair_info(a: int, b: int, n: int) -> PairInfo:
         raise ValueError("primary source census excludes literal pairs")
     shift = shift_related(a, b, n)
     refl = reflection_related(a, b, n)
+    both = shift and refl
     return PairInfo(
         pair=Pair(a, b),
         descriptor=descriptor(a, b, n),
         homologous=shift or refl,
-        shift_capable=shift,
+        # The frozen table reports three mutually exclusive cohorts even though
+        # the prose calls this first one "shift-capable".  Pairs satisfying
+        # both relations belong in `both`, not in both columns.
+        shift_capable=shift and not refl,
         reflection_only=refl and not shift,
-        both=shift and refl,
+        both=both,
     )
 
 
@@ -202,7 +206,7 @@ def rotate_tuple(values: tuple[int, ...], steps: int) -> tuple[int, ...]:
     return values[steps:] + values[:steps]
 
 
-def orbit_label_vector(rows: Iterable[PairInfo], n: int) -> tuple[tuple[Pair, ...], tuple[int, ...]]:
+def orbit_label_vector(rows: Iterable[PairInfo], n: int) -> tuple[tuple[tuple[Pair, ...], ...], tuple[int, ...]]:
     row_map = {row.pair: row for row in rows}
     orbits = class_orbits(row_map.values(), n)
     labels = tuple(int(row_map[orbit[0]].homologous) for orbit in orbits)
@@ -279,7 +283,7 @@ def census_record(n: int) -> dict[str, object]:
     }
 
 
-def assert_frozen_census() -> dict[str, object]:
+def assert_frozen_census() -> dict[int, dict[str, object]]:
     out = {n: census_record(n) for n in RINGS}
 
     ring6 = {
@@ -291,7 +295,7 @@ def assert_frozen_census() -> dict[str, object]:
     assert out[6]["homologous_pairs"] == 24
     assert out[6]["control_pairs"] == 24
     for row in out[6]["classes"]:
-        assert row["shift_capable"] == 12
+        assert row["shift_capable"] == 0
         assert row["reflection_only"] == 0
         assert row["both"] == 12
 
@@ -314,7 +318,7 @@ def assert_frozen_census() -> dict[str, object]:
         assert row["homologous_orbits"] * 7 == row["homologous_pairs"]
         assert row["control_orbits"] * 7 == row["control_pairs"]
 
-    # Reviewer-side Gate-1 analysis bounded the common rotation period by 504.
+    # Reviewer-side Gate-1 analysis established a common rotation LCM of 504.
     assert out[7]["placebo"]["common_rotation_lcm"] == 504
     assert out[7]["placebo"]["candidate_nonzero_rotations"] == 503
     assert 0 < out[7]["placebo"]["distinct_nonidentity_assignments"] <= 503
