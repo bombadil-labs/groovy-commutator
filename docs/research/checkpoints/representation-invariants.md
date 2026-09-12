@@ -60,6 +60,15 @@ Program page: `docs/research/2026-09-10-representation-invariants-program.md`
   the evaluation head; this is a scientific review request. AGENTS.md's
   established-results list is untouched until acceptance and merge, per the
   seventeenth unit's precedent.
+- **Process deviation, preserved not rewritten.** Codex independently reviewed
+  the implementation stage at `fd4da42` (an implementation-boundary check, not
+  Gate 2) and confirmed both Gate-1 notes were honored and all bounded checks
+  green, but flagged that implementation and evaluation landed as direct
+  commits on the gathering branch rather than as separate sub-PRs, unlike the
+  sixteenth/seventeenth units' sub-PR routing. No scientific artifact or
+  review gate was affected — Gate 1 preceded any implementation/evaluation —
+  but future units on this program should route implementation and evaluation
+  through separate sub-PRs from the start, matching that precedent.
 - Candidates going forward: **full-shift depth four for the deep rules stays
   parked** pending Myk's cost decision under the 2026-09-12 CI-cost boundary;
   **a structural account of the deep rules** is unaffected as a candidate but
