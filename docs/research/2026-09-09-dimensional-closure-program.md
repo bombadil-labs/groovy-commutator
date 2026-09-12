@@ -45,6 +45,12 @@ Two early constructions made lower-dimensional rules literal spatial data one di
 
 Those results established **rule as geometry**, not recursive dimensional closure.
 
+## Zero-dimensional base exposes selector overlap before geometry
+
+The [zero-dimensional base audit](2026-09-12-zero-dimensional-base.md) makes the 0D floor explicit and rechecks the shared-shell selector without treating raw bit-count matches as geometry. The 0D→1D and 1D→2D constructions instantiate the same overlap-permitted local multiplexer semantics, but their physical role accounting differs: Z0 attains zero address/program overlap while a single-layer Z1 Moore patch necessarily requires two overlapping roles and attains that minimum with `W` and `E` dual-role. Across the frozen 16-layout Gray family, every selector has nine essential inputs, degree four and six quartic terms, while the familiar ECA mirror/complement group meets the induced shell `D4` actions only at the identity.
+
+This is an exact local architecture result, not repeated stateful execution or an intrinsic-dimension theorem. The negative geometry classification rules out the earlier idea that the Gray placement itself supplies a nontrivial familiar ECA symmetry. Repeated execution was split into later work before implementation, and the separate relational-rank protocol is motivated by these distinctions but is not evidence supplied by this result.
+
 ## Exact intertwining supplies a baseline
 
 The [dimensional-intertwining note](2026-09-09-dimensional-intertwining.md)
