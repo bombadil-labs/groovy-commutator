@@ -25,24 +25,35 @@ jobs:
           import re
 
           p = Path('.github/workflows/research-checks.yml')
-          s = p.read_text()
-          anchor = """      - name: Compile Python sources\n        run: python -m compileall -q src scripts\n"""
-          addition = anchor + """      - name: Fast canonical-result integrity\n        run: python scripts/check_result_integrity.py\n"""
-          assert s.count(anchor) == 1, 'research-checks compile anchor changed'
-          if 'Fast canonical-result integrity' not in s:
-            s = s.replace(anchor, addition, 1)
-          p.write_text(s)
+          lines = p.read_text().splitlines(True)
+          if not any('Fast canonical-result integrity' in line for line in lines):
+            hits = [i for i,line in enumerate(lines) if 'run: python -m compileall -q src scripts' in line]
+            assert len(hits) == 1, hits
+            i = hits[0]
+            indent = re.match(r'^(\s*)', lines[i]).group(1)
+            lines[i+1:i+1] = [
+              indent[:-2] + '- name: Fast canonical-result integrity\n',
+              indent + 'run: python scripts/check_result_integrity.py\n',
+            ]
+          p.write_text(''.join(lines))
 
           p = Path('.github/workflows/research-full-shift-depth-three.yml')
           lines = p.read_text().splitlines(True)
           job_starts = [i for i,line in enumerate(lines) if re.match(r'^  [A-Za-z0-9_-]+:\s*$', line)]
-          blocks = []
+          assert job_starts, 'no jobs found'
+          candidates = []
           for j,start in enumerate(job_starts):
             end = job_starts[j+1] if j+1 < len(job_starts) else len(lines)
-            blocks.append((start,end,''.join(lines[start:end])))
-          expensive = [(start,end,block) for start,end,block in blocks if 'timeout-minutes: 300' in block]
-          assert len(expensive) == 1, [(lines[s].strip(), 'timeout-minutes: 300' in b) for s,e,b in blocks]
-          job_i,end,_ = expensive[0]
+            block = ''.join(lines[start:end])
+            vals = [int(x) for x in re.findall(r'timeout-minutes:\s*(\d+)', block)]
+            if vals:
+              candidates.append((max(vals), start, end, block))
+          assert candidates, 'no timeout-bearing jobs found'
+          max_timeout = max(x[0] for x in candidates)
+          expensive = [x for x in candidates if x[0] == max_timeout]
+          assert max_timeout > 10 and len(expensive) == 1, [(x[0], lines[x[1]].strip()) for x in candidates]
+          _, job_i, end, block = expensive[0]
+          assert 'verify_full_shift_depth_three.py' in block, (max_timeout, lines[job_i].strip())
           existing_if = [i for i in range(job_i + 1, end) if re.match(r'^    if:', lines[i])]
           if existing_if:
             assert len(existing_if) == 1
