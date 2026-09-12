@@ -1,0 +1,8 @@
+diagnostic_rc=0
+blocks=3
+block1_rc=0
+STDOUT:
+
+STDERR:
+bash: line 4: warning: here-document at line 3 delimited by end-of-file (wanted `PY')
+
