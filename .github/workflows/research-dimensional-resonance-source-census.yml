@@ -4,12 +4,16 @@ on:
     paths:
       - 'scripts/verify_dimensional_resonance_source_census.py'
       - 'docs/research/protocols/dimensional-resonance-response-*.md'
+      - 'results/dimensional_resonance_response_20260912.json'
+      - 'scripts/check_result_integrity.py'
       - '.github/workflows/research-dimensional-resonance-source-census.yml'
   push:
     branches: [main]
     paths:
       - 'scripts/verify_dimensional_resonance_source_census.py'
       - 'docs/research/protocols/dimensional-resonance-response-*.md'
+      - 'results/dimensional_resonance_response_20260912.json'
+      - 'scripts/check_result_integrity.py'
       - '.github/workflows/research-dimensional-resonance-source-census.yml'
 permissions:
   contents: read
@@ -29,9 +33,8 @@ jobs:
           python scripts/verify_dimensional_resonance_source_census.py
           --self-test
           --output /tmp/dimensional-resonance-source-census.json
-      - name: Confirm no physical-response artifact was produced
+      - name: Confirm source-only diagnostic remains no-result
         run: |
-          test ! -e results/dimensional_resonance_response_20260912.json
           python - <<'PY'
           import json
           p = '/tmp/dimensional-resonance-source-census.json'
@@ -42,3 +45,10 @@ jobs:
           assert data['census']['7']['homologous_pairs'] == 532
           assert data['census']['7']['control_pairs'] == 588
           PY
+      - name: Fast canonical-result integrity when evaluation exists
+        run: |
+          if [ -f results/dimensional_resonance_response_20260912.json ]; then
+            python scripts/check_result_integrity.py results/dimensional_resonance_response_20260912.json
+          else
+            echo 'Pre-evaluation implementation stage: canonical response result absent.'
+          fi
