@@ -1,0 +1,23 @@
+[
+  {
+    "slug": "full-shift-depth-three-linear",
+    "label": "Full-shift depth three, linear observations",
+    "title": "Under the self-dual linear observation 150 the rings decide full-shift depth three exactly; under 90 four rules separate",
+    "date": "2026-09-12",
+    "updated": "2026-09-12",
+    "kind": "Exact full-shift certificate of refinement depth at most three under the two linear observations 90 and 150",
+    "evidence": "exact",
+    "topic": "Algebra and closure",
+    "summary": "Full-shift depth at most three is decided for every rule under 90, 150 and 90's conjugate 165 by the same sparse pair-graph method as the sixteenth unit. Twelve rules are excluded by pen as controls; of the rest, 14 of 18 under 90 and all 24 under 150 have full-shift depth exactly three, and only four rules are deeper. The rings-3-to-14 depth-three gap is nonempty under 90 but empty under 150: the first time in the program a gap closes rather than widens.",
+    "takeaway": "Whether periodic configurations decide a given depth level is a property of the pair (observation, level), not a uniform fact about depth: under one linear observation the ring-3-to-14 gap widens at depth three, under the other it closes.",
+    "source": "docs/research/2026-09-12-full-shift-depth-three-linear.md",
+    "promotion": {
+      "stage": "research"
+    },
+    "related": [
+      "full-shift-depth-three",
+      "full-shift-depth-two",
+      "linear-observations"
+    ]
+  }
+]

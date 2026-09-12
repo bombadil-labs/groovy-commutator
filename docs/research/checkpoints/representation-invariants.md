@@ -7,6 +7,42 @@ substantial unit completes; keep the bounded-claim style.
 
 Program page: `docs/research/2026-09-10-representation-invariants-program.md`
 
+## Checkpoint 2026-09-12 (seventeenth unit run): full-shift depth three under 90/150 decided, one bet failed, gate 2 pending
+
+- Verifier `scripts/verify_full_shift_depth_three_linear.py` committed at
+  `364694d` on the gathering branch directly (a process deviation both
+  Codex and the gate-1 reviewer flagged; preserved, not rewritten, and
+  recorded in the protocol). Provenance corrections (stale "pending gate
+  1" header, stale 300-minute timeout text) landed in sub-PR #190. Single
+  canonical run (about 50 min) from the corrected head; CI replay budget
+  180 min; canonical `results/full_shift_depth_three_linear_20260912.json`.
+- Held: O1 (theorem/consistency controls, including the cross-check
+  against the seventh unit's `h_star` table), O2 (all twelve pen-decided
+  rules confirmed outside `FS^3`; of the rest, 14/18 under 90 and 24/24
+  under 150 have depth exactly three), O4 (ladder reported; class
+  `c_FS = 3` nonempty under both: 14 under 90, 24 under 150), O5 (18
+  witness pairs replay), O6 (165's sets are the direct conjugate
+  transport of 90's; 150 complement-invariant; reflection invariance).
+- **Failed: O3.** The rings-3-to-14 depth-three gap is nonempty under 90
+  (exactly 4 rules: 41, 97, 107, 121) but **empty under 150** —
+  `FS^3_150` equals the rings-3-to-14 intersection exactly. First time in
+  the program a gap closes between depth levels rather than widening.
+  Whether periodic configurations decide a depth level is a property of
+  (observation, level), not depth alone.
+- Not to infer: anything about all rings (no ring certificate at depth
+  two or three); anything about depth four, the other six linear
+  observations, or rings 1, 2 or 15.
+- Records: note `2026-09-12-full-shift-depth-three-linear.md`, catalog
+  entry, knowledge entries (`full-shift-depth-three-linear-test`,
+  `full-shift-depth-three-linear-gap-closes`), Program section, AGENTS
+  result 12 addendum.
+- Pending: gate-2 sign-off by an independent collaborating agent on PR
+  #174's final head.
+- Candidate next units, unchanged from the sixteenth's checkpoint: depth
+  four for the deep rules (expensive, cost discussion pending); a
+  structural account of the deep rules; a depth-two ring certificate if a
+  cheaper matrix method is found.
+
 ## Checkpoint 2026-09-12 (seventeenth unit opened): full-shift depth three under 90 and 150, protocol frozen, unrun, gate 1 approved
 
 - Frozen and unrun: `protocols/full-shift-depth-three-linear-20260912.md`.

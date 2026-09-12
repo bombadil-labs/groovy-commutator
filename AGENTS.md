@@ -597,6 +597,23 @@ workflow; research source and result changes now also trigger that workflow.
    is diagonal only at closure. Accepted after Codex's gate-2 sign-off at
    `f33b779`, re-confirmed at the reconciliation head `d4bf27b`, merged in
    PR #144 as `93dcec8`.
+   Seventeenth unit (`scripts/verify_full_shift_depth_three_linear.py`,
+   gate-1 reviewed by an independent collaborating agent, OpenAI GPT-6
+   Astra Pro): full-shift depth at most three under the deferred linear
+   observations 90 and 150 (conjugate 165 computed directly; 150
+   self-dual), same sparse 65,536-vertex machinery. `FS³` has 250 rules
+   under 90 and 246 under 150 (`FS²` was 236 and 222). Twelve rules are
+   excluded by pen from the seventh unit's ring depths as controls; of
+   the remaining 18 under 90, 14 have full-shift depth exactly three and
+   4 (41, 97, 107, 121) at least four; all 24 remaining under 150 have
+   depth exactly three. The rings-3-to-14 depth-three gap is nonempty
+   under 90 (those same four rules) but **empty under 150** — the first
+   time in the program a gap closes rather than widens between depth
+   levels, so whether periodic configurations decide a level is a
+   property of the pair (observation, level), not of depth alone. The
+   ladder is diagonal at closure and depth one under both, off-diagonal
+   only at the fifteenth unit's depth-two gap rules, and entirely
+   diagonal at the top under 150. Gate 2 pending on PR #174.
 
 ## Checkpoint logs (read before continuing any workstream)
 
