@@ -1,0 +1,82 @@
+name: Depth-two ring certificate
+
+# Cost-bounded from the start, per Myk's 2026-09-12 CI-cost boundary (PR #201)
+# and the eighteenth unit's protocol Section 3: the canonical run of this
+# verifier is expected at 30-60 minutes and bounded by about six hours at the
+# power cap, so it is never triggered automatically. Automatic pull-request and
+# push runs do only what is seconds-to-minutes scale: compile, the verifier's
+# sub-two-minute --self-test, and (once the canonical result exists) the fast
+# scripts/check_result_integrity.py tier. The full byte-for-byte replay is a
+# manual escape hatch requiring Myk's explicit authorization.
+
+on:
+  pull_request:
+    paths:
+      - 'scripts/verify_depth_two_certificate.py'
+      - 'scripts/verify_full_shift_depth_two.py'
+      - 'scripts/check_result_integrity.py'
+      - 'results/depth_two_certificate_20260912.json'
+      - '.github/workflows/research-depth-two-certificate.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/verify_depth_two_certificate.py'
+      - 'scripts/verify_full_shift_depth_two.py'
+      - 'scripts/check_result_integrity.py'
+      - 'results/depth_two_certificate_20260912.json'
+      - '.github/workflows/research-depth-two-certificate.yml'
+  workflow_dispatch:
+    inputs:
+      authorization:
+        description: 'Myk authorization reference for the expensive full replay (leave empty for the cheap tier only)'
+        required: false
+        type: string
+
+permissions:
+  contents: read
+
+jobs:
+  cheap-tier:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install research package
+        run: python -m pip install -e .
+      - name: Compile Python sources
+        run: python -m compileall -q scripts
+      - name: Verifier self test (writes nothing)
+        run: python scripts/verify_depth_two_certificate.py --self-test
+      - name: Recorded source hashes match the tree (once the canonical result exists)
+        run: |
+          if [ -f results/depth_two_certificate_20260912.json ]; then
+            python scripts/check_result_integrity.py results/depth_two_certificate_20260912.json
+          else
+            echo "No canonical result yet (implementation-only stage); integrity tier skipped."
+          fi
+
+  full-replay:
+    # Manual only, and only when an authorization reference is supplied.
+    if: github.event_name == 'workflow_dispatch' && inputs.authorization != ''
+    runs-on: ubuntu-latest
+    timeout-minutes: 420
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Recorded source hashes match the tree
+        run: python scripts/check_result_integrity.py results/depth_two_certificate_20260912.json
+      - name: Install research package
+        run: python -m pip install -e .
+      - name: Rerun the frozen audit and compare the canonical JSON byte for byte
+        run: |
+          echo "Authorized expensive replay: ${{ inputs.authorization }}"
+          cp results/depth_two_certificate_20260912.json /tmp/expected.json
+          python scripts/verify_depth_two_certificate.py > /dev/null
+          cmp /tmp/expected.json results/depth_two_certificate_20260912.json
