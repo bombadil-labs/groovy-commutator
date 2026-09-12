@@ -1,0 +1,56 @@
+name: Reconcile dimensional-history gathering with current main
+
+on:
+  push:
+    branches:
+      - work/dimensional-history-scaling/reconcile-main
+    paths:
+      - '.github/workflows/tmp-dhs-main-reconcile.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  reconcile:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Merge current main preserving both integrity registrations
+        shell: bash
+        run: |
+          git config user.name 'Codex dimensional-history reconciliation'
+          git config user.email 'noreply@openai.com'
+          git fetch origin main
+          set +e
+          git merge --no-commit --no-ff origin/main
+          status=$?
+          set -e
+          if [ "$status" -ne 0 ]; then
+            conflicts="$(git diff --name-only --diff-filter=U | sort)"
+            if [ "$conflicts" != 'scripts/check_result_integrity.py' ]; then
+              echo "Unexpected merge conflicts:" >&2
+              printf '%s\n' "$conflicts" >&2
+              exit 1
+            fi
+            git checkout --theirs scripts/check_result_integrity.py
+            python - <<'PY'
+          from pathlib import Path
+          p = Path('scripts/check_result_integrity.py')
+          text = p.read_text()
+          target = "'results/dimensional_history_scaling_control_20260912.json'"
+          if target not in text:
+              marker = '\n}\n\ndef sha('
+              if marker not in text:
+                  raise SystemExit('REGISTRY closing marker not found')
+              entry = """\n    'results/dimensional_history_scaling_control_20260912.json': {\n        'script': 'scripts/verify_dimensional_history_scaling_control.py',\n        'parent_protocol': 'docs/research/protocols/dimensional-history-scaling-20260912.md',\n        'gate1_refreeze': 'docs/research/protocols/dimensional-history-scaling-gate1-refreeze-20260912.md'},\n"""
+              text = text.replace(marker, entry + marker, 1)
+              p.write_text(text)
+          PY
+            git add scripts/check_result_integrity.py
+          fi
+          rm -f .dhs-main-conflicts .github/workflows/tmp-dhs-main-reconcile.yml
+          git add -A
+          git commit -m 'Merge current main into dimensional history scaling'
+          git push origin HEAD:work/dimensional-history-scaling/reconcile-main
