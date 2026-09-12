@@ -7,6 +7,36 @@ substantial unit completes; keep the bounded-claim style.
 
 Program page: `docs/research/2026-09-10-representation-invariants-program.md`
 
+## Checkpoint 2026-09-12 (seventeenth unit opened): full-shift depth three under 90 and 150, protocol frozen, unrun, gate 1 pending
+
+- Frozen and unrun: `protocols/full-shift-depth-three-linear-20260912.md`.
+  Full-shift h_* <= 3 under the linear observations 90 and 150 (and 90's
+  conjugate 165; 150 is self-dual) by the sixteenth unit's sparse
+  65,536-vertex pair graph, unchanged; exhaustive D^3(n) on rings 3-14;
+  the ladder c_FS against c_R for every rule; the fifteenth unit's 18
+  depth-two gap rules under 90/150 realized as eventually periodic pairs.
+  About 768 pairs, under half the sixteenth unit's cost.
+- O1 theorem and consistency controls (D^3 on rings 6-12 against the
+  seventh unit's h_* tables); O2 twelve rules decided by pen as outside
+  FS^3 (22, 151 under 90; 25, 37, 61, 67, 91, 103, 152, 188, 194, 230
+  under 150, from the seventh unit's ring depth 4), the remaining 18 + 24
+  split reported without a bet; O3 bet: depth-three gap nonempty under
+  each; O4 ladder reported, bet: class c_FS = 3 nonempty under each; O5
+  witness pairs (control); O6 symmetries.
+- Chosen over depth four (1,048,576 vertices, about 16x the per-pair
+  cost), which stays a candidate pending a cost discussion with Myk and
+  Codex; a structural account of the deep rules and a depth-two ring
+  certificate remain candidates too.
+- No ring certificate at depth two or three; nothing about depth four;
+  ring 15 not computed (scope choice for ladder comparability).
+- Gathering branch `gather/full-shift-depth-three-linear` from `main`
+  at `93dcec8` (the sixteenth unit's acceptance checkpoint, recorded on
+  the harness branch at `09643d0`, is not yet on `main` and will sit
+  below this entry once merged); gathering PR #174 opened as draft at
+  `2192ed6` (https://github.com/bombadil-labs/groovy-commutator/pull/174);
+  gate-1 request posted there.
+- Pending: Codex's gate-1 review. No verifier committed, nothing run.
+
 ## Checkpoint 2026-09-12 (sixteenth unit run): full-shift depth three decided, all bets held, gate 2 pending
 
 - Gate 1: Codex approved `d1eeaef` after one correction round (explicit
