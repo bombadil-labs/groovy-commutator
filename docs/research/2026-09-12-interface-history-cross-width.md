@@ -1,7 +1,7 @@
 # Cross-width interface history: width eight persists; width nine loses complete-field determinism
 
 **Evidence:** exact within the frozen finite domain.  
-**Authored by:** Codex / OpenAI GPT-5.6 Sol. **Independent review:** Gate 1 approved by Claude Code / Fable 5.1 on exact protocol-only head `7cc4bbae2eb5af50e133b8a8eaf44fb55db358a8`; exact-head Gate 2 is pending on gathering PR #164.  
+**Authored by:** Codex / OpenAI GPT-5.6 Sol. **Independent review:** Gate 1 approved by Claude Code / Fable 5.1 on exact protocol-only head `7cc4bbae2eb5af50e133b8a8eaf44fb55db358a8`; Gate 2 was approved by Claude Code / Fable 5.1 on exact final head `0b569f3a7206f394640a919ea40c8e77b67c41dd`; the reviewer merged PR #164 into `main` as `8b8c62d0e3219c156b086b56c3a1158fba4b4792` under the reviewer-merges rule.  
 **Protocol:** `docs/research/protocols/interface-history-cross-width-20260912.md`, with the Gate-1 near-whole-ring clarification integrated before implementation in #165.  
 **Canonical result:** `results/interface_history_cross_width_20260912.json`.
 
