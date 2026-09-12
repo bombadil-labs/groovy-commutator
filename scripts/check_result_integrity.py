@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Fast integrity tier for canonical result files (added 2026-09-11).
+"""Fast integrity tier for canonical research results.
 
 Each canonical JSON records the SHA-256 of the script that produced it and of
 every input file it read. This check recomputes those hashes from the working
@@ -88,6 +88,14 @@ REGISTRY = {
     'results/interface_factor_20260911.json': {
         'script': 'scripts/verify_interface_factor.py',
         'protocol': 'docs/research/protocols/interface-factor-20260911.md'},
+    'results/zero_dimensional_base_20260912.json': {
+        'script': 'scripts/verify_zero_dimensional_base.py',
+        'protocol': 'docs/research/protocols/zero-dimensional-base-20260912.md',
+        'history_algebra_result': 'results/history_algebra_checks.json',
+        'shared_state_audit': 'results/shared_state_rule_20260907_audit.json',
+        'shared_state_local': 'results/shared_state_rule_20260907_local.json',
+        'guard_free_axial_result': 'results/guard_free_axial_lift_20260910.json',
+        'editable_routing_result': 'results/editable_routing_tables_20260909.json'},
 }
 
 def sha(p: pathlib.Path) -> str: return hashlib.sha256(p.read_bytes()).hexdigest()
