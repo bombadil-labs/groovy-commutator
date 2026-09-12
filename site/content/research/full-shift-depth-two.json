@@ -1,0 +1,17 @@
+[
+  {
+    "slug": "full-shift-depth-two",
+    "label": "Full-shift depth two",
+    "title": "Full-shift depth at most two is decided by sparse reachability; the periodic gap recurs one level up, and some all-ring depth-one rules have full-shift depth at least three",
+    "date": "2026-09-12",
+    "updated": "2026-09-12",
+    "kind": "Exact full-shift certificate of refinement depth at most two for eight observations, with the rings-3-to-14 depth gap",
+    "evidence": "exact",
+    "topic": "Algebra and closure",
+    "summary": "Whether two steps of observed history make an observation autonomous on the full shift is decided for every rule by reachability in a sparse 4096-vertex pair graph, with no matrix powers. Both bets failed: 24 of the fourteenth unit's 54 gap rules have full-shift depth at least three, not two, and the rings-3-to-14 depth-two gap is nonempty for seven of the eight observations, including 4, 32, 90 and 150, which had no depth-one gap. All 54 earlier gap witnesses became explicit eventually periodic configuration pairs.",
+    "takeaway": "The gap between periodic configurations and the full shift recurs at depth two and can be deep: a rule can need one step of history on every ring and at least three on the line.",
+    "source": "docs/research/2026-09-11-full-shift-depth-two.md",
+    "promotion": { "stage": "research" },
+    "related": ["depth-one-certificate", "ring-closure-certificate", "parity-history-bound"]
+  }
+]

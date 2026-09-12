@@ -76,6 +76,9 @@ REGISTRY = {
         'isolated_cell_result': 'results/isolated_cell_20260911.json',
         'complement_observation_result': 'results/complement_observation_20260911.json',
         'linear_observations_result': 'results/linear_observations_20260911.json'},
+    'results/full_shift_depth_two_20260911.json': {
+        'script': 'scripts/verify_full_shift_depth_two.py',
+        'depth_one_certificate_result': 'results/depth_one_certificate_20260911.json'},
     'results/second_lift_completion_20260911.json': {
         'script': 'scripts/verify_second_lift_completion.py',
         'protocol': 'docs/research/protocols/second-lift-completion-comparison-20260910.md'},
