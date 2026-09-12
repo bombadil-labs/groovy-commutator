@@ -1,4 +1,4 @@
-name: Diagnose PAS tractability editor
+name: Apply PAS tractability certificate on PR
 
 on:
   pull_request:
@@ -9,10 +9,10 @@ permissions:
   contents: write
 
 jobs:
-  diagnose:
+  apply:
     if: github.head_ref == 'work/predictive-assembly-support/tractability-certificate'
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
         with:
@@ -21,33 +21,49 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Capture first staged editor block output
+      - name: Execute the staged solver patch exactly
         shell: bash
         run: |
-          set +e
-          python - <<'PY' > /tmp/pas-editor.log 2>&1
+          set -euo pipefail
+          python - <<'PY'
           from pathlib import Path
-          import re, subprocess, textwrap
-          text = Path('.github/workflows/apply-pas-tractability-once.yml').read_text()
-          blocks = [textwrap.dedent(m.group(1)) for m in re.finditer(r'(?m)^        run: \|\n((?:^          .*\n)+)', text)]
-          print(f'blocks={len(blocks)}')
-          if len(blocks) != 3:
-              raise SystemExit(f'expected 3 staged run blocks, found {len(blocks)}')
-          cp = subprocess.run(['bash', '-lc', blocks[0]], text=True, capture_output=True)
-          print(f'block1_rc={cp.returncode}')
-          print('STDOUT:')
-          print(cp.stdout)
-          print('STDERR:')
-          print(cp.stderr)
+          import subprocess
+          lines = Path('.github/workflows/apply-pas-tractability-once.yml').read_text().splitlines()
+          starts = [i for i, line in enumerate(lines) if line == '        run: |']
+          if len(starts) != 3:
+              raise SystemExit(f'expected 3 staged run blocks, found {len(starts)}')
+          i = starts[0] + 1
+          block = []
+          while i < len(lines):
+              line = lines[i]
+              if line.strip() == '':
+                  block.append('')
+                  i += 1
+                  continue
+              indent = len(line) - len(line.lstrip(' '))
+              if indent < 10:
+                  break
+              block.append(line[10:])
+              i += 1
+          cp = subprocess.run(['bash', '-lc', '\n'.join(block) + '\n'])
           raise SystemExit(cp.returncode)
           PY
-          rc=$?
-          git reset --hard HEAD
-          printf 'diagnostic_rc=%s\n' "$rc" > .pas-editor-diagnostic.log
-          cat /tmp/pas-editor.log >> .pas-editor-diagnostic.log
+      - name: Run bounded implementation-only verification
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m py_compile scripts/verify_predictive_assembly_support.py
+          python scripts/verify_predictive_assembly_support.py --self-test
+          test ! -f results/predictive_assembly_support_20260912.json
+      - name: Commit only the solver correction; remove all temporary editor artifacts
+        shell: bash
+        run: |
+          set -euo pipefail
           git config user.name 'Codex PAS tractability'
           git config user.email 'noreply@openai.com'
-          git add .pas-editor-diagnostic.log
-          git commit -m 'ci: preserve PAS tractability editor diagnostic'
+          git rm .github/workflows/apply-pas-tractability-once.yml
+          git rm .github/workflows/apply-pas-tractability-pr.yml
+          git rm .pas-editor-diagnostic.log
+          git add scripts/verify_predictive_assembly_support.py
+          git commit -m 'research: pin bounded PAS independent optimality certificate'
           git push origin HEAD:work/predictive-assembly-support/tractability-certificate
-          exit 0
