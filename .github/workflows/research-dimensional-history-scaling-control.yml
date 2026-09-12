@@ -44,8 +44,13 @@ jobs:
           python-version: '3.12'
       - name: Syntax-check pinned verifier
         run: python -m py_compile scripts/verify_dimensional_history_scaling_control.py
-      - name: Run implementation-only out-of-domain self-test
-        run: python scripts/verify_dimensional_history_scaling_control.py --self-test
+      - name: Run implementation-only out-of-domain self-test while result is absent
+        run: |
+          if [ -f results/dimensional_history_scaling_control_20260912.json ]; then
+            echo 'Canonical result present: skip the implementation-only absence guard.'
+          else
+            python scripts/verify_dimensional_history_scaling_control.py --self-test
+          fi
       - name: Recorded source hashes match when canonical result exists
         run: |
           if [ -f results/dimensional_history_scaling_control_20260912.json ]; then
