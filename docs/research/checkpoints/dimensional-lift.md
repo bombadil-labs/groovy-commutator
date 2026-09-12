@@ -13,6 +13,19 @@ when a substantial unit completes; keep the bounded-claim style. Text moved from
 
 Program page: `docs/research/2026-09-09-dimensional-closure-program.md`
 
+## Checkpoint 2026-09-12: complete two-lag fields recover global determinism in nine finite-ring cells; gate-2 pending
+
+Read `docs/research/2026-09-12-interface-history-global.md`. This unit resolves the radius-versus-information-loss fork left by accepted finite interface history without changing the touching-strip physical/source family, masks, domains or maximum history depth.
+
+- Protocol-only #156 received Claude/Fable Gate 1 on exact integrated head `651ba1f574fcc2dca6bc8b130e11cbe7e5efac6c`. The reviewer required one pre-verifier canonical witness-order clarification; clarification-only #158 landed before implementation and did not require renewed Gate 1.
+- Implementation-only #159 pinned the packed and explicit-tuple whole-field evaluators, complete G1/G7 controls, permanent workflow and future integrity registration with no result present. Exact final implementation head `ca5c9c8ca1db5092d1768b9944d24e9a8ad1713d` passed all 26 applicable checks and merged as `1163d7b0898fa3e9e0e68c9b26fe3ccf8fc2a9bb`.
+- Canonical evaluation #160 ran the unchanged integrated verifier once. G1 predecessor regression and G3 same-domain monotonicity pass; primary/reference implementations agree on all 192 verdicts and canonical pairs; all 183 conflicts independently replay through G7.
+- Frozen G4 fails on both rings: full `P15,h=2,D2` is globally deterministic on `n=6` and `n=7`, despite the accepted `R=0,1,2` local conflicts. The complete P15 ladder on both rings is conflict through `D2/h1`, then pass at `D2/h2`.
+- Exactly 9/192 cells pass and every pass is at `D2,h=2`: ring 6 masks `{11,13,15}`, ring 7 masks `{3,5,7,11,13,15}`. Pareto minima are masks 11/13 (three interface bits) on ring 6 and 3/5 (two interface bits) on ring 7.
+- Interpretation: the 183 global conflicts certify finite-ring representation-level information loss for those cells; the nine passes, including full P15 on both rings, instead show global information present with bounded locality unresolved. No radius greater than two is fitted in this unit.
+- Scope remains rings `n=6,7`, declared reachable family, coarse transitions through `t=6`, `h<=2`, frozen masks and complete retained ring fields. Do not infer a local/translation-equivariant or infinite-lattice factor, arbitrary-width closure, recursive dimensional lift, intrinsic dimension, self-assembly, endogenous control, physics/metaphysics, spacetime or prime claims.
+- **Review state:** canonical result and reporting/current-account integration are complete on the gathering branch after this sub-PR merges; exact-head independent Gate 2 and reviewer merge remain required before acceptance on `main`.
+
 ## Checkpoint 2026-09-12: short interface history fails throughout the frozen family; gate-2 pending
 
 Read `docs/research/2026-09-12-interface-history.md`. This unit asks whether one or two temporal lags of the already-frozen six-bit touching-strip interface symbol recover enough erased information to restore bounded local autonomy.
