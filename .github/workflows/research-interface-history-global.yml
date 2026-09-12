@@ -8,6 +8,7 @@ name: Interface-history global determinism audit
 
 on:
   pull_request:
+    types: [opened, synchronize, reopened, ready_for_review]
     paths:
       - 'scripts/verify_interface_history_global.py'
       - 'scripts/verify_interface_history.py'
