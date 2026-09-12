@@ -1,0 +1,79 @@
+name: Capture dimensional resonance implementation diagnostics once
+
+on:
+  push:
+    branches: ['work/dimensional-resonance-response/physical-verifier']
+    paths: ['.github/workflows/debug-dimensional-resonance-physical-once.yml']
+
+permissions:
+  contents: write
+
+jobs:
+  debug:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: work/dimensional-resonance-response/physical-verifier
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Recover materialized files from the staged one-shot editor
+        run: |
+          python - <<'PY'
+          import base64, gzip, pathlib, re
+          src=pathlib.Path('.github/workflows/apply-dimensional-resonance-physical-once.yml').read_text()
+          for env_name, dest in [
+              ('VERIFIER_B64','scripts/verify_dimensional_resonance_response.py'),
+              ('WORKFLOW_B64','.github/workflows/research-dimensional-resonance-response.yml')]:
+              m=re.search(rf"{env_name}: '([^']+)'", src)
+              if not m: raise SystemExit(f'{env_name} not found in staged editor')
+              pathlib.Path(dest).write_bytes(gzip.decompress(base64.b64decode(m.group(1))))
+          p=pathlib.Path('scripts/check_result_integrity.py')
+          s=p.read_text()
+          key="'results/dimensional_resonance_response_20260912.json'"
+          if key not in s:
+              marker='}\n\ndef sha('
+              if marker not in s: raise SystemExit('integrity registry terminator not found')
+              entry=(
+                  "    'results/dimensional_resonance_response_20260912.json': {\n"
+                  "        'script': 'scripts/verify_dimensional_resonance_response.py',\n"
+                  "        'protocol': 'docs/research/protocols/dimensional-resonance-response-20260912.md',\n"
+                  "        'gate1_refreeze': 'docs/research/protocols/dimensional-resonance-response-gate1-refreeze-20260912.md',\n"
+                  "        'gate1_null_clarification': 'docs/research/protocols/dimensional-resonance-response-gate1-null-clarification-20260912.md',\n"
+                  "        'gate1_approval': 'docs/research/protocols/dimensional-resonance-response-gate1-approval-20260912.md',\n"
+                  "        'source_census_script': 'scripts/verify_dimensional_resonance_source_census.py',\n"
+                  "        'physical_predecessor_script': 'scripts/verify_interface_factor.py'},\n\n")
+              p.write_text(s.replace(marker,entry+marker,1))
+          PY
+      - run: python -m pip install -e .
+      - name: Capture cheap no-result checks
+        shell: bash
+        run: |
+          set +e
+          {
+            echo '== compile =='
+            python -m py_compile scripts/verify_dimensional_resonance_response.py
+            echo "compile=$?"
+            echo '== source census =='
+            python scripts/verify_dimensional_resonance_source_census.py --self-test --output /tmp/source.json
+            echo "source_census=$?"
+            echo '== physical self-test =='
+            python scripts/verify_dimensional_resonance_response.py --self-test
+            echo "physical_self_test=$?"
+            echo '== canonical absence =='
+            test ! -e results/dimensional_resonance_response_20260912.json
+            echo "canonical_absent=$?"
+          } > .resonance-implementation-check.log 2>&1
+          cat .resonance-implementation-check.log
+      - name: Commit diagnostic implementation state and remove one-shot workflows
+        run: |
+          rm .github/workflows/apply-dimensional-resonance-physical-once.yml
+          rm .github/workflows/debug-dimensional-resonance-physical-once.yml
+          git config user.name 'OpenAI GPT-5.6 Sol'
+          git config user.email 'noreply@openai.com'
+          git add scripts/verify_dimensional_resonance_response.py .github/workflows/research-dimensional-resonance-response.yml scripts/check_result_integrity.py .resonance-implementation-check.log .github/workflows/apply-dimensional-resonance-physical-once.yml .github/workflows/debug-dimensional-resonance-physical-once.yml
+          git commit -m 'research: stage dimensional resonance physical verifier diagnostics'
+          git push origin HEAD:work/dimensional-resonance-response/physical-verifier
