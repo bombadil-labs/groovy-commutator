@@ -1,0 +1,52 @@
+name: Reconcile history scaling with main once
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+    paths:
+      - '.github/workflows/reconcile-dhs-main-once.yml'
+permissions:
+  contents: write
+jobs:
+  apply:
+    if: >-
+      github.event.pull_request.head.repo.full_name == github.repository &&
+      github.event.pull_request.head.ref == 'work/dimensional-history-scaling/reconcile-fb902' &&
+      github.event.pull_request.base.ref == 'gather/dimensional-history-scaling'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          fetch-depth: 0
+      - name: Merge current main preservation-safely
+        run: |
+          set -euo pipefail
+          git config user.name 'OpenAI GPT-5.6 Sol - reconciliation'
+          git config user.email 'noreply@openai.com'
+          git fetch origin main
+          set +e
+          git merge --no-ff --no-commit origin/main
+          rc=$?
+          set -e
+          if [ "$rc" -ne 0 ]; then
+            conflicts="$(git diff --name-only --diff-filter=U)"
+            test "$conflicts" = 'docs/research/checkpoints/dimensional-lift.md'
+            # Our checkpoint already contains both the accepted #168 orientation
+            # and #171 theorem-control checkpoint; preserve that combined account.
+            git checkout --ours docs/research/checkpoints/dimensional-lift.md
+            git add docs/research/checkpoints/dimensional-lift.md
+          fi
+          test -z "$(git diff --name-only --diff-filter=U)"
+          # The true merge must not alter #171 scientific artifacts.
+          for f in \
+            docs/research/protocols/dimensional-history-scaling-20260912.md \
+            docs/research/protocols/dimensional-history-scaling-gate1-refreeze-20260912.md \
+            scripts/verify_dimensional_history_scaling_control.py \
+            results/dimensional_history_scaling_control_20260912.json \
+            docs/research/2026-09-12-dimensional-history-scaling-control.md; do
+            git diff --quiet HEAD -- "$f"
+          done
+          git rm .github/workflows/reconcile-dhs-main-once.yml
+          git commit -m 'Merge current main into dimensional history scaling after Gate 2 review'
+          git push origin HEAD:work/dimensional-history-scaling/reconcile-fb902
