@@ -1,0 +1,48 @@
+name: Apply PAS tractability certificate on PR
+
+on:
+  pull_request:
+    paths:
+      - '.github/workflows/apply-pas-tractability-pr.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  apply:
+    if: github.head_ref == 'work/predictive-assembly-support/tractability-certificate'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: work/predictive-assembly-support/tractability-certificate
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Execute the staged bounded editor exactly
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          from pathlib import Path
+          import re, subprocess, textwrap
+          p = Path('.github/workflows/apply-pas-tractability-once.yml')
+          text = p.read_text()
+          blocks = [textwrap.dedent(m.group(1)) for m in re.finditer(r'(?m)^        run: \|\n((?:^          .*\n)+)', text)]
+          if len(blocks) != 3:
+              raise SystemExit(f'expected 3 staged run blocks, found {len(blocks)}')
+          for i, block in enumerate(blocks, 1):
+              print(f'--- staged block {i} ---')
+              subprocess.run(['bash', '-lc', block], check=True)
+          PY
+      - name: Remove this retrigger workflow from the final implementation branch
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'Codex PAS tractability'
+          git config user.email 'noreply@openai.com'
+          git rm .github/workflows/apply-pas-tractability-pr.yml
+          git commit -m 'ci: remove PAS tractability retrigger after bounded edit'
+          git push origin HEAD:work/predictive-assembly-support/tractability-certificate
