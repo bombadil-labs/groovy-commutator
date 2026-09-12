@@ -1,0 +1,7594 @@
+{
+  "P1_0D_floor": {
+    "all_affine": true,
+    "center_only_ECA_rules": [
+      0,
+      204,
+      51,
+      255
+    ],
+    "complete_binary_unary_rulespace": true,
+    "unary_truth_words_00_01_10_11": [
+      0,
+      1,
+      2,
+      3
+    ]
+  },
+  "P2_commutator_floor": {
+    "pass": true,
+    "rules": {
+      "0": {
+        "expected": 0,
+        "pass": true,
+        "unique_outputs_over_32_five_cell_windows": [
+          0
+        ]
+      },
+      "204": {
+        "expected": 0,
+        "pass": true,
+        "unique_outputs_over_32_five_cell_windows": [
+          0
+        ]
+      },
+      "255": {
+        "expected": 1,
+        "pass": true,
+        "unique_outputs_over_32_five_cell_windows": [
+          1
+        ]
+      },
+      "51": {
+        "expected": 1,
+        "pass": true,
+        "unique_outputs_over_32_five_cell_windows": [
+          1
+        ]
+      }
+    }
+  },
+  "P3_role_overlap": {
+    "Z0": {
+      "attained_overlap": 0,
+      "k": 1,
+      "minimum_overlap": 0,
+      "patch_sites": 3
+    },
+    "Z1": {
+      "attained_overlap": 2,
+      "dual_role_sites": [
+        "W",
+        "E"
+      ],
+      "k": 3,
+      "minimum_overlap": 2,
+      "patch_sites": 9
+    },
+    "formula": "max(0, k + 2^k - |P|)"
+  },
+  "P4_selector_structure": {
+    "Z0": {
+      "canonical_failure": null,
+      "failures": [],
+      "orientations": {
+        "Z0-A": {
+          "anf": {
+            "degree": 2,
+            "essential_inputs": [
+              "L",
+              "C",
+              "R"
+            ],
+            "highest_degree_monomials": [
+              [
+                "L",
+                "C"
+              ],
+              [
+                "C",
+                "R"
+              ]
+            ],
+            "monomial_count_by_degree": {
+              "1": 1,
+              "2": 2
+            }
+          },
+          "anf_paths_agree": true,
+          "direct_essential_inputs": [
+            "L",
+            "C",
+            "R"
+          ],
+          "pass": true,
+          "scalar_packed_agree": true,
+          "truth_table": [
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1
+          ]
+        },
+        "Z0-B": {
+          "anf": {
+            "degree": 2,
+            "essential_inputs": [
+              "L",
+              "C",
+              "R"
+            ],
+            "highest_degree_monomials": [
+              [
+                "L",
+                "C"
+              ],
+              [
+                "C",
+                "R"
+              ]
+            ],
+            "monomial_count_by_degree": {
+              "1": 1,
+              "2": 2
+            }
+          },
+          "anf_paths_agree": true,
+          "direct_essential_inputs": [
+            "L",
+            "C",
+            "R"
+          ],
+          "pass": true,
+          "scalar_packed_agree": true,
+          "truth_table": [
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            0,
+            1
+          ]
+        }
+      },
+      "pass": true
+    },
+    "Z1": {
+      "canonical_failure": null,
+      "failures": [],
+      "interpretation": "degree k+1 and full essentiality are generic multiplexer properties; the six quartic terms fingerprint the two address/program overlaps and are layout-independent",
+      "layout_count": 16,
+      "layouts": [
+        {
+          "anf": {
+            "degree": 4,
+            "essential_inputs": [
+              "NW",
+              "N",
+              "NE",
+              "W",
+              "C",
+              "E",
+              "SW",
+              "S",
+              "SE"
+            ],
+            "highest_degree_monomials": [
+              [
+                "NW",
+                "W",
+                "C",
+                "E"
+              ],
+              [
+                "N",
+                "W",
+                "C",
+                "E"
+              ],
+              [
+                "NE",
+                "W",
+                "C",
+                "E"
+              ],
+              [
+                "W",
+                "C",
+                "E",
+                "SW"
+              ],
+              [
+                "W",
+                "C",
+                "E",
+                "S"
+              ],
+              [
+                "W",
+                "C",
+                "E",
+                "SE"
+              ]
+            ],
+            "monomial_count_by_degree": {
+              "1": 1,
+              "2": 8,
+              "3": 10,
+              "4": 6
+            }
+          },
+          "anf_paths_agree": true,
+          "direct_essential_inputs": [
+            "NW",
+            "N",
+            "NE",
+            "W",
+            "C",
+            "E",
+            "SW",
+            "S",
+            "SE"
+          ],
+          "layout": [
+            0,
+            1,
+            3,
+            2,
+            6,
+            7,
+            5,
+            4
+          ],
+          "pass": true,
+          "program_var_by_address": [
+            "N",
+            "NE",
+            "SE",
+            "E",
+            "NW",
+            "W",
+            "S",
+            "SW"
+          ],
+          "provenance": [
+            "id"
+          ],
+          "scalar_packed_agree": true
+        },
+        {
+          "anf": {
+            "degree": 4,
+            "essential_inputs": [
+              "NW",
+              "N",
+              "NE",
+              "W",
+              "C",
+              "E",
+              "SW",
+              "S",
+              "SE"
+            ],
+            "highest_degree_monomials": [
+              [
+                "NW",
+                "W",
+                "C",
+                "E"
+              ],
+              [
+                "N",
+                "W",
+                "C",
+                "E"
+              ],
+              [
+                "NE",
+                "W",
+                "C",
+                "E"
+              ],
+              [
+                "W",
+                "C",
+                "E",
+                "SW"
+              ],
+              [
+                "W",
+                "C",
+                "E",
+                "S"
+              ],
+              [
+                "W",
+                "C",
+                "E",
+                "SE"
+              ]
+            ],
+            "monomial_count_by_degree": {
+              "1": 1,
+              "2": 7,
+              "3": 11,
+              "4": 6
+            }
+          },
+          "anf_paths_agree": true,
+          "direct_essential_inputs": [
+            "NW",
+            "N",
+            "NE",
+            "W",
+            "C",
+            "E",
+            "SW",
+            "S",
+            "SE"
+          ],
+          "layout": [
+            0,
+            4,
+            5,
+            7,
+            6,
+            2,
+            3,
+            1
+          ],
+          "pass": true,
+          "program_var_by_address": [
+            "N",
+            "NW",
+            "SW",
+            "W",
+            "NE",
+            "E",
+            "S",
+            "SE"
+          ],
+          "provenance": [
+            "reflect_NS"
+          ],
+          "scalar_packed_agree": true
+        },
+        {
+          "anf": {
+            "degree": 4,
+            "essential_inputs": [
+              "NW",
+              "N",
+              "NE",
+              "W",
+              "C",
+              "E",
+              "SW",
+              "S",
+              "SE"
+            ],
+            "highest_degree_monomials": [
+              [
+                "NW",
+                "W",
+                "C",
+                "E"
+              ],
+              [
+                "N",
+                "W",
+                "C",
+                "E"
+              ],
+              [
+                "NE",
+                "W",
+                "C",
+                "E"
+              ],
+              [
+                "W",
+                "C",
+                "E",
+                "SW"
+              ],
+              [
+                "W",
+                "C",
+                "E",
+                "S"
+              ],
+              [
+                "W",
+                "C",
+                "E",
+                "SE"
+              ]
+            ],
+            "monomial_count_by_degree": {
+              "1": 2,
+              "2": 6,
+              "3": 9,
+              "4": 6
+            }
+          },
+          "anf_paths_agree": true,
+          "direct_essential_inputs": [
+            "NW",
+            "N",
+            "NE",
+            "W",
+            "C",
+            "E",
+            "SW",
+            "S",
+            "SE"
+          ],
+          "layout": [
+            1,
+            0,
+            2,
+            3,
+            7,
+            6,
+            4,
+            5
+          ],
+          "pass": true,
+          "program_var_by_address": [
+            "NE",
+            "N",
+            "E",
+            "SE",
+            "W",
+            "NW",
+            "SW",
+            "S"
+          ],
+          "provenance": [
+            "r180+address_complement"
+          ],
+          "scalar_packed_agree": true
+        },
+        {
+          "anf": {
+            "degree": 4,
+            "essential_inputs": [
+              "NW",
+              "N",
+              "NE",
+              "W",
+              "C",
+              "E",
+              "SW",
+              "S",
+              "SE"
+            ],
+            "highest_degree_monomials": [
+              [
+                "NW",
+                "W",
+                "C",
+                "E"
+              ],
+              [
+                "N",
+                "W",
+                "C",
+                "E"
+              ],
+              [
+                "NE",
+                "W",
+                "C",
+                "E"
+              ],
+              [
+                "W",
+                "C",
+                "E",
+                "SW"
+              ],
+              [
+                "W",
+                "C",
+                "E",
+                "S"
+              ],
+              [
+                "W",
+                "C",
+                "E",
+                "SE"
+              ]
+            ],
+            "monomial_count_by_degree": {
+              "1": 1,
+              "2": 4,
+              "3": 8,
+              "4": 6
+            }
+          },
+          "anf_paths_agree": true,
+          "direct_essential_inputs": [
+            "NW",
+            "N",
+            "NE",
+            "W",
+            "C",
+            "E",
+            "SW",
+            "S",
+            "SE"
+          ],
+          "layout": [
+            1,
+            5,
+            4,
+            6,
+            7,
+            3,
+            2,
+            0
+          ],
+          "pass": true,
+          "program_var_by_address": [
+            "NW",
+            "N",
+            "W",
+            "SW",
+            "E",
+            "NE",
+            "SE",
+            "S"
+          ],
+          "provenance": [
+            "reflect_EW+address_complement"
+          ],
+          "scalar_packed_agree": true
+        },
+        {
+          "anf": {
+            "degree": 4,
+            "essential_inputs": [
+              "NW",
+              "N",
+              "NE",
+              "W",
+              "C",
+              "E",
+              "SW",
+              "S",
+              "SE"
+            ],
+            "highest_degree_monomials": [
+              [
+                "NW",
+                "W",
+                "C",
+                "E"
+              ],
+              [
+                "N",
+                "W",
+                "C",
+                "E"
+              ],
+              [
+                "NE",
+                "W",
+                "C",
+                "E"
+              ],
+              [
+                "W",
+                "C",
+                "E",
+                "SW"
+              ],
+              [
+                "W",
+                "C",
+                "E",
+                "S"
+              ],
+              [
+                "W",
+                "C",
+                "E",
+                "SE"
+              ]
+            ],
+            "monomial_count_by_degree": {
+              "1": 2,
+              "2": 7,
+              "3": 10,
+              "4": 6
+            }
+          },
+          "anf_paths_agree": true,
+          "direct_essential_inputs": [
+            "NW",
+            "N",
+            "NE",
+            "W",
+            "C",
+            "E",
+            "SW",
+            "S",
+            "SE"
+          ],
+          "layout": [
+            2,
+            0,
+            1,
+            5,
+            4,
+            6,
+            7,
+            3
+          ],
+          "pass": true,
+          "program_var_by_address": [
+            "NE",
+            "E",
+            "N",
+            "NW",
+            "S",
+            "SE",
+            "SW",
+            "W"
+          ],
+          "provenance": [
+            "reflect_NW_SE+address_complement"
+          ],
+          "scalar_packed_agree": true
+        },
+        {
+          "anf": {
+            "degree": 4,
+            "essential_inputs": [
+              "NW",
+              "N",
+              "NE",
+              "W",
+              "C",
+              "E",
+              "SW",
+              "S",
+              "SE"
+            ],
+            "highest_degree_monomials": [
+              [
+                "NW",
+                "W",
+                "C",
+                "E"
+              ],
+              [
+                "N",
+                "W",
+                "C",
+                "E"
+              ],
+              [
+                "NE",
+                "W",
+                "C",
+                "E"
+              ],
+              [
+                "W",
+                "C",
+                "E",
+                "SW"
+              ],
+              [
+                "W",
+                "C",
+                "E",
+                "S"
+              ],
+              [
+                "W",
+                "C",
+                "E",
+                "SE"
+              ]
+            ],
+            "monomial_count_by_degree": {
+              "1": 1,
+              "2": 5,
+              "3": 11,
+              "4": 6
+            }
+          },
+          "anf_paths_agree": true,
+          "direct_essential_inputs": [
+            "NW",
+            "N",
+            "NE",
+            "W",
+            "C",
+            "E",
+            "SW",
+            "S",
+            "SE"
+          ],
+          "layout": [
+            2,
+            3,
+            7,
+            6,
+            4,
+            5,
+            1,
+            0
+          ],
+          "pass": true,
+          "program_var_by_address": [
+            "NW",
+            "W",
+            "N",
+            "NE",
+            "S",
+            "SW",
+            "SE",
+            "E"
+          ],
+          "provenance": [
+            "r90+address_complement"
+          ],
+          "scalar_packed_agree": true
+        },
+        {
+          "anf": {
+            "degree": 4,
+            "essential_inputs": [
+              "NW",
+              "N",
+              "NE",
+              "W",
+              "C",
+              "E",
+              "SW",
+              "S",
+              "SE"
+            ],
+            "highest_degree_monomials": [
+              [
+                "NW",
+                "W",
+                "C",
+                "E"
+              ],
+              [
+                "N",
+                "W",
+                "C",
+                "E"
+              ],
+              [
+                "NE",
+                "W",
+                "C",
+                "E"
+              ],
+              [
+                "W",
+                "C",
+                "E",
+                "SW"
+              ],
+              [
+                "W",
+                "C",
+                "E",
+                "S"
+              ],
+              [
+                "W",
+                "C",
+                "E",
+                "SE"
+              ]
+            ],
+            "monomial_count_by_degree": {
+              "2": 4,
+              "3": 9,
+              "4": 6
+            }
+          },
+          "anf_paths_agree": true,
+          "direct_essential_inputs": [
+            "NW",
+            "N",
+            "NE",
+            "W",
+            "C",
+            "E",
+            "SW",
+            "S",
+            "SE"
+          ],
+          "layout": [
+            3,
+            1,
+            0,
+            4,
+            5,
+            7,
+            6,
+            2
+          ],
+          "pass": true,
+          "program_var_by_address": [
+            "E",
+            "NE",
+            "NW",
+            "N",
+            "SE",
+            "S",
+            "W",
+            "SW"
+          ],
+          "provenance": [
+            "reflect_NE_SW"
+          ],
+          "scalar_packed_agree": true
+        },
+        {
+          "anf": {
+            "degree": 4,
+            "essential_inputs": [
+              "NW",
+              "N",
+              "NE",
+              "W",
+              "C",
+              "E",
+              "SW",
+              "S",
+              "SE"
+            ],
+            "highest_degree_monomials": [
+              [
+                "NW",
+                "W",
+                "C",
+                "E"
+              ],
+              [
+                "N",
+                "W",
+                "C",
+                "E"
+              ],
+              [
+                "NE",
+                "W",
+                "C",
+                "E"
+              ],
+              [
+                "W",
+                "C",
+                "E",
+                "SW"
+              ],
+              [
+                "W",
+                "C",
+                "E",
+                "S"
+              ],
+              [
+                "W",
+                "C",
+                "E",
+                "SE"
+              ]
+            ],
+            "monomial_count_by_degree": {
+              "2": 3,
+              "3": 8,
+              "4": 6
+            }
+          },
+          "anf_paths_agree": true,
+          "direct_essential_inputs": [
+            "NW",
+            "N",
+            "NE",
+            "W",
+            "C",
+            "E",
+            "SW",
+            "S",
+            "SE"
+          ],
+          "layout": [
+            3,
+            2,
+            6,
+            7,
+            5,
+            4,
+            0,
+            1
+          ],
+          "pass": true,
+          "program_var_by_address": [
+            "W",
+            "NW",
+            "NE",
+            "N",
+            "SW",
+            "S",
+            "E",
+            "SE"
+          ],
+          "provenance": [
+            "r270"
+          ],
+          "scalar_packed_agree": true
+        },
+        {
+          "anf": {
+            "degree": 4,
+            "essential_inputs": [
+              "NW",
+              "N",
+              "NE",
+              "W",
+              "C",
+              "E",
+              "SW",
+              "S",
+              "SE"
+            ],
+            "highest_degree_monomials": [
+              [
+                "NW",
+                "W",
+                "C",
+                "E"
+              ],
+              [
+                "N",
+                "W",
+                "C",
+                "E"
+              ],
+              [
+                "NE",
+                "W",
+                "C",
+                "E"
+              ],
+              [
+                "W",
+                "C",
+                "E",
+                "SW"
+              ],
+              [
+                "W",
+                "C",
+                "E",
+                "S"
+              ],
+              [
+                "W",
+                "C",
+                "E",
+                "SE"
+              ]
+            ],
+            "monomial_count_by_degree": {
+              "1": 2,
+              "2": 7,
+              "3": 10,
+              "4": 6
+            }
+          },
+          "anf_paths_agree": true,
+          "direct_essential_inputs": [
+            "NW",
+            "N",
+            "NE",
+            "W",
+            "C",
+            "E",
+            "SW",
+            "S",
+            "SE"
+          ],
+          "layout": [
+            4,
+            5,
+            1,
+            0,
+            2,
+            3,
+            7,
+            6
+          ],
+          "pass": true,
+          "program_var_by_address": [
+            "SE",
+            "E",
+            "S",
+            "SW",
+            "N",
+            "NE",
+            "NW",
+            "W"
+          ],
+          "provenance": [
+            "r270+address_complement"
+          ],
+          "scalar_packed_agree": true
+        },
+        {
+          "anf": {
+            "degree": 4,
+            "essential_inputs": [
+              "NW",
+              "N",
+              "NE",
+              "W",
+              "C",
+              "E",
+              "SW",
+              "S",
+              "SE"
+            ],
+            "highest_degree_monomials": [
+              [
+                "NW",
+                "W",
+                "C",
+                "E"
+              ],
+              [
+                "N",
+                "W",
+                "C",
+                "E"
+              ],
+              [
+                "NE",
+                "W",
+                "C",
+                "E"
+              ],
+              [
+                "W",
+                "C",
+                "E",
+                "SW"
+              ],
+              [
+                "W",
+                "C",
+                "E",
+                "S"
+              ],
+              [
+                "W",
+                "C",
+                "E",
+                "SE"
+              ]
+            ],
+            "monomial_count_by_degree": {
+              "1": 1,
+              "2": 5,
+              "3": 11,
+              "4": 6
+            }
+          },
+          "anf_paths_agree": true,
+          "direct_essential_inputs": [
+            "NW",
+            "N",
+            "NE",
+            "W",
+            "C",
+            "E",
+            "SW",
+            "S",
+            "SE"
+          ],
+          "layout": [
+            4,
+            6,
+            7,
+            3,
+            2,
+            0,
+            1,
+            5
+          ],
+          "pass": true,
+          "program_var_by_address": [
+            "SW",
+            "W",
+            "S",
+            "SE",
+            "N",
+            "NW",
+            "NE",
+            "E"
+          ],
+          "provenance": [
+            "reflect_NE_SW+address_complement"
+          ],
+          "scalar_packed_agree": true
+        },
+        {
+          "anf": {
+            "degree": 4,
+            "essential_inputs": [
+              "NW",
+              "N",
+              "NE",
+              "W",
+              "C",
+              "E",
+              "SW",
+              "S",
+              "SE"
+            ],
+            "highest_degree_monomials": [
+              [
+                "NW",
+                "W",
+                "C",
+                "E"
+              ],
+              [
+                "N",
+                "W",
+                "C",
+                "E"
+              ],
+              [
+                "NE",
+                "W",
+                "C",
+                "E"
+              ],
+              [
+                "W",
+                "C",
+                "E",
+                "SW"
+              ],
+              [
+                "W",
+                "C",
+                "E",
+                "S"
+              ],
+              [
+                "W",
+                "C",
+                "E",
+                "SE"
+              ]
+            ],
+            "monomial_count_by_degree": {
+              "2": 4,
+              "3": 9,
+              "4": 6
+            }
+          },
+          "anf_paths_agree": true,
+          "direct_essential_inputs": [
+            "NW",
+            "N",
+            "NE",
+            "W",
+            "C",
+            "E",
+            "SW",
+            "S",
+            "SE"
+          ],
+          "layout": [
+            5,
+            4,
+            0,
+            1,
+            3,
+            2,
+            6,
+            7
+          ],
+          "pass": true,
+          "program_var_by_address": [
+            "E",
+            "SE",
+            "SW",
+            "S",
+            "NE",
+            "N",
+            "W",
+            "NW"
+          ],
+          "provenance": [
+            "r90"
+          ],
+          "scalar_packed_agree": true
+        },
+        {
+          "anf": {
+            "degree": 4,
+            "essential_inputs": [
+              "NW",
+              "N",
+              "NE",
+              "W",
+              "C",
+              "E",
+              "SW",
+              "S",
+              "SE"
+            ],
+            "highest_degree_monomials": [
+              [
+                "NW",
+                "W",
+                "C",
+                "E"
+              ],
+              [
+                "N",
+                "W",
+                "C",
+                "E"
+              ],
+              [
+                "NE",
+                "W",
+                "C",
+                "E"
+              ],
+              [
+                "W",
+                "C",
+                "E",
+                "SW"
+              ],
+              [
+                "W",
+                "C",
+                "E",
+                "S"
+              ],
+              [
+                "W",
+                "C",
+                "E",
+                "SE"
+              ]
+            ],
+            "monomial_count_by_degree": {
+              "2": 3,
+              "3": 8,
+              "4": 6
+            }
+          },
+          "anf_paths_agree": true,
+          "direct_essential_inputs": [
+            "NW",
+            "N",
+            "NE",
+            "W",
+            "C",
+            "E",
+            "SW",
+            "S",
+            "SE"
+          ],
+          "layout": [
+            5,
+            7,
+            6,
+            2,
+            3,
+            1,
+            0,
+            4
+          ],
+          "pass": true,
+          "program_var_by_address": [
+            "W",
+            "SW",
+            "SE",
+            "S",
+            "NW",
+            "N",
+            "E",
+            "NE"
+          ],
+          "provenance": [
+            "reflect_NW_SE"
+          ],
+          "scalar_packed_agree": true
+        },
+        {
+          "anf": {
+            "degree": 4,
+            "essential_inputs": [
+              "NW",
+              "N",
+              "NE",
+              "W",
+              "C",
+              "E",
+              "SW",
+              "S",
+              "SE"
+            ],
+            "highest_degree_monomials": [
+              [
+                "NW",
+                "W",
+                "C",
+                "E"
+              ],
+              [
+                "N",
+                "W",
+                "C",
+                "E"
+              ],
+              [
+                "NE",
+                "W",
+                "C",
+                "E"
+              ],
+              [
+                "W",
+                "C",
+                "E",
+                "SW"
+              ],
+              [
+                "W",
+                "C",
+                "E",
+                "S"
+              ],
+              [
+                "W",
+                "C",
+                "E",
+                "SE"
+              ]
+            ],
+            "monomial_count_by_degree": {
+              "1": 1,
+              "2": 8,
+              "3": 10,
+              "4": 6
+            }
+          },
+          "anf_paths_agree": true,
+          "direct_essential_inputs": [
+            "NW",
+            "N",
+            "NE",
+            "W",
+            "C",
+            "E",
+            "SW",
+            "S",
+            "SE"
+          ],
+          "layout": [
+            6,
+            2,
+            3,
+            1,
+            0,
+            4,
+            5,
+            7
+          ],
+          "pass": true,
+          "program_var_by_address": [
+            "S",
+            "SE",
+            "NE",
+            "E",
+            "SW",
+            "W",
+            "N",
+            "NW"
+          ],
+          "provenance": [
+            "reflect_EW"
+          ],
+          "scalar_packed_agree": true
+        },
+        {
+          "anf": {
+            "degree": 4,
+            "essential_inputs": [
+              "NW",
+              "N",
+              "NE",
+              "W",
+              "C",
+              "E",
+              "SW",
+              "S",
+              "SE"
+            ],
+            "highest_degree_monomials": [
+              [
+                "NW",
+                "W",
+                "C",
+                "E"
+              ],
+              [
+                "N",
+                "W",
+                "C",
+                "E"
+              ],
+              [
+                "NE",
+                "W",
+                "C",
+                "E"
+              ],
+              [
+                "W",
+                "C",
+                "E",
+                "SW"
+              ],
+              [
+                "W",
+                "C",
+                "E",
+                "S"
+              ],
+              [
+                "W",
+                "C",
+                "E",
+                "SE"
+              ]
+            ],
+            "monomial_count_by_degree": {
+              "1": 1,
+              "2": 7,
+              "3": 11,
+              "4": 6
+            }
+          },
+          "anf_paths_agree": true,
+          "direct_essential_inputs": [
+            "NW",
+            "N",
+            "NE",
+            "W",
+            "C",
+            "E",
+            "SW",
+            "S",
+            "SE"
+          ],
+          "layout": [
+            6,
+            7,
+            5,
+            4,
+            0,
+            1,
+            3,
+            2
+          ],
+          "pass": true,
+          "program_var_by_address": [
+            "S",
+            "SW",
+            "NW",
+            "W",
+            "SE",
+            "E",
+            "N",
+            "NE"
+          ],
+          "provenance": [
+            "r180"
+          ],
+          "scalar_packed_agree": true
+        },
+        {
+          "anf": {
+            "degree": 4,
+            "essential_inputs": [
+              "NW",
+              "N",
+              "NE",
+              "W",
+              "C",
+              "E",
+              "SW",
+              "S",
+              "SE"
+            ],
+            "highest_degree_monomials": [
+              [
+                "NW",
+                "W",
+                "C",
+                "E"
+              ],
+              [
+                "N",
+                "W",
+                "C",
+                "E"
+              ],
+              [
+                "NE",
+                "W",
+                "C",
+                "E"
+              ],
+              [
+                "W",
+                "C",
+                "E",
+                "SW"
+              ],
+              [
+                "W",
+                "C",
+                "E",
+                "S"
+              ],
+              [
+                "W",
+                "C",
+                "E",
+                "SE"
+              ]
+            ],
+            "monomial_count_by_degree": {
+              "1": 2,
+              "2": 6,
+              "3": 9,
+              "4": 6
+            }
+          },
+          "anf_paths_agree": true,
+          "direct_essential_inputs": [
+            "NW",
+            "N",
+            "NE",
+            "W",
+            "C",
+            "E",
+            "SW",
+            "S",
+            "SE"
+          ],
+          "layout": [
+            7,
+            3,
+            2,
+            0,
+            1,
+            5,
+            4,
+            6
+          ],
+          "pass": true,
+          "program_var_by_address": [
+            "SE",
+            "S",
+            "E",
+            "NE",
+            "W",
+            "SW",
+            "NW",
+            "N"
+          ],
+          "provenance": [
+            "reflect_NS+address_complement"
+          ],
+          "scalar_packed_agree": true
+        },
+        {
+          "anf": {
+            "degree": 4,
+            "essential_inputs": [
+              "NW",
+              "N",
+              "NE",
+              "W",
+              "C",
+              "E",
+              "SW",
+              "S",
+              "SE"
+            ],
+            "highest_degree_monomials": [
+              [
+                "NW",
+                "W",
+                "C",
+                "E"
+              ],
+              [
+                "N",
+                "W",
+                "C",
+                "E"
+              ],
+              [
+                "NE",
+                "W",
+                "C",
+                "E"
+              ],
+              [
+                "W",
+                "C",
+                "E",
+                "SW"
+              ],
+              [
+                "W",
+                "C",
+                "E",
+                "S"
+              ],
+              [
+                "W",
+                "C",
+                "E",
+                "SE"
+              ]
+            ],
+            "monomial_count_by_degree": {
+              "1": 1,
+              "2": 4,
+              "3": 8,
+              "4": 6
+            }
+          },
+          "anf_paths_agree": true,
+          "direct_essential_inputs": [
+            "NW",
+            "N",
+            "NE",
+            "W",
+            "C",
+            "E",
+            "SW",
+            "S",
+            "SE"
+          ],
+          "layout": [
+            7,
+            6,
+            4,
+            5,
+            1,
+            0,
+            2,
+            3
+          ],
+          "pass": true,
+          "program_var_by_address": [
+            "SW",
+            "S",
+            "W",
+            "NW",
+            "E",
+            "SE",
+            "NE",
+            "N"
+          ],
+          "provenance": [
+            "id+address_complement"
+          ],
+          "scalar_packed_agree": true
+        }
+      ],
+      "pass": true,
+      "structure_signatures": [
+        {
+          "degree": 4,
+          "essential_inputs": [
+            "NW",
+            "N",
+            "NE",
+            "W",
+            "C",
+            "E",
+            "SW",
+            "S",
+            "SE"
+          ],
+          "quartic_terms": 6
+        }
+      ]
+    }
+  },
+  "P5_geometry": {
+    "canonical_failure": null,
+    "eca_transform_controls": {
+      "C": {
+        "cycle_type": [
+          2,
+          2,
+          2,
+          2
+        ],
+        "fixed_points": 0,
+        "permutation": [
+          7,
+          6,
+          5,
+          4,
+          3,
+          2,
+          1,
+          0
+        ]
+      },
+      "M": {
+        "cycle_type": [
+          1,
+          1,
+          1,
+          1,
+          2,
+          2
+        ],
+        "fixed_points": 4,
+        "permutation": [
+          0,
+          4,
+          2,
+          6,
+          1,
+          5,
+          3,
+          7
+        ]
+      },
+      "MC": {
+        "cycle_type": [
+          2,
+          2,
+          2,
+          2
+        ],
+        "fixed_points": 0,
+        "permutation": [
+          7,
+          3,
+          5,
+          1,
+          6,
+          2,
+          4,
+          0
+        ]
+      },
+      "id": {
+        "cycle_type": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "fixed_points": 8,
+        "permutation": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ]
+      }
+    },
+    "failures": [],
+    "layouts": [
+      {
+        "actions": [
+          {
+            "induced_address_permutation": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "induced_cycles": [
+              [
+                0
+              ],
+              [
+                1
+              ],
+              [
+                2
+              ],
+              [
+                3
+              ],
+              [
+                4
+              ],
+              [
+                5
+              ],
+              [
+                6
+              ],
+              [
+                7
+              ]
+            ],
+            "matches_eca_transforms": [
+              "id"
+            ],
+            "shell_action": "id",
+            "shell_cycle_type": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "induced_address_permutation": [
+              3,
+              2,
+              7,
+              6,
+              1,
+              0,
+              5,
+              4
+            ],
+            "induced_cycles": [
+              [
+                0,
+                3,
+                6,
+                5
+              ],
+              [
+                1,
+                2,
+                7,
+                4
+              ]
+            ],
+            "matches_eca_transforms": [],
+            "shell_action": "r90",
+            "shell_cycle_type": [
+              4,
+              4
+            ]
+          },
+          {
+            "induced_address_permutation": [
+              6,
+              7,
+              4,
+              5,
+              2,
+              3,
+              0,
+              1
+            ],
+            "induced_cycles": [
+              [
+                0,
+                6
+              ],
+              [
+                1,
+                7
+              ],
+              [
+                2,
+                4
+              ],
+              [
+                3,
+                5
+              ]
+            ],
+            "matches_eca_transforms": [],
+            "shell_action": "r180",
+            "shell_cycle_type": [
+              2,
+              2,
+              2,
+              2
+            ]
+          },
+          {
+            "induced_address_permutation": [
+              5,
+              4,
+              1,
+              0,
+              7,
+              6,
+              3,
+              2
+            ],
+            "induced_cycles": [
+              [
+                0,
+                5,
+                6,
+                3
+              ],
+              [
+                1,
+                4,
+                7,
+                2
+              ]
+            ],
+            "matches_eca_transforms": [],
+            "shell_action": "r270",
+            "shell_cycle_type": [
+              4,
+              4
+            ]
+          },
+          {
+            "induced_address_permutation": [
+              0,
+              4,
+              7,
+              5,
+              1,
+              3,
+              6,
+              2
+            ],
+            "induced_cycles": [
+              [
+                0
+              ],
+              [
+                1,
+                4
+              ],
+              [
+                2,
+                7
+              ],
+              [
+                3,
+                5
+              ],
+              [
+                6
+              ]
+            ],
+            "matches_eca_transforms": [],
+            "shell_action": "reflect_NS",
+            "shell_cycle_type": [
+              1,
+              1,
+              2,
+              2,
+              2
+            ]
+          },
+          {
+            "induced_address_permutation": [
+              3,
+              1,
+              4,
+              0,
+              2,
+              6,
+              5,
+              7
+            ],
+            "induced_cycles": [
+              [
+                0,
+                3
+              ],
+              [
+                1
+              ],
+              [
+                2,
+                4
+              ],
+              [
+                5,
+                6
+              ],
+              [
+                7
+              ]
+            ],
+            "matches_eca_transforms": [],
+            "shell_action": "reflect_NE_SW",
+            "shell_cycle_type": [
+              1,
+              1,
+              2,
+              2,
+              2
+            ]
+          },
+          {
+            "induced_address_permutation": [
+              6,
+              2,
+              1,
+              3,
+              7,
+              5,
+              0,
+              4
+            ],
+            "induced_cycles": [
+              [
+                0,
+                6
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                3
+              ],
+              [
+                4,
+                7
+              ],
+              [
+                5
+              ]
+            ],
+            "matches_eca_transforms": [],
+            "shell_action": "reflect_EW",
+            "shell_cycle_type": [
+              1,
+              1,
+              2,
+              2,
+              2
+            ]
+          },
+          {
+            "induced_address_permutation": [
+              5,
+              7,
+              2,
+              6,
+              4,
+              0,
+              3,
+              1
+            ],
+            "induced_cycles": [
+              [
+                0,
+                5
+              ],
+              [
+                1,
+                7
+              ],
+              [
+                2
+              ],
+              [
+                3,
+                6
+              ],
+              [
+                4
+              ]
+            ],
+            "matches_eca_transforms": [],
+            "shell_action": "reflect_NW_SE",
+            "shell_cycle_type": [
+              1,
+              1,
+              2,
+              2,
+              2
+            ]
+          }
+        ],
+        "eca_intersection": [
+          "id"
+        ],
+        "layout": [
+          0,
+          1,
+          3,
+          2,
+          6,
+          7,
+          5,
+          4
+        ]
+      },
+      {
+        "actions": [
+          {
+            "induced_address_permutation": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "induced_cycles": [
+              [
+                0
+              ],
+              [
+                1
+              ],
+              [
+                2
+              ],
+              [
+                3
+              ],
+              [
+                4
+              ],
+              [
+                5
+              ],
+              [
+                6
+              ],
+              [
+                7
+              ]
+            ],
+            "matches_eca_transforms": [
+              "id"
+            ],
+            "shell_action": "id",
+            "shell_cycle_type": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "induced_address_permutation": [
+              5,
+              4,
+              1,
+              0,
+              7,
+              6,
+              3,
+              2
+            ],
+            "induced_cycles": [
+              [
+                0,
+                5,
+                6,
+                3
+              ],
+              [
+                1,
+                4,
+                7,
+                2
+              ]
+            ],
+            "matches_eca_transforms": [],
+            "shell_action": "r90",
+            "shell_cycle_type": [
+              4,
+              4
+            ]
+          },
+          {
+            "induced_address_permutation": [
+              6,
+              7,
+              4,
+              5,
+              2,
+              3,
+              0,
+              1
+            ],
+            "induced_cycles": [
+              [
+                0,
+                6
+              ],
+              [
+                1,
+                7
+              ],
+              [
+                2,
+                4
+              ],
+              [
+                3,
+                5
+              ]
+            ],
+            "matches_eca_transforms": [],
+            "shell_action": "r180",
+            "shell_cycle_type": [
+              2,
+              2,
+              2,
+              2
+            ]
+          },
+          {
+            "induced_address_permutation": [
+              3,
+              2,
+              7,
+              6,
+              1,
+              0,
+              5,
+              4
+            ],
+            "induced_cycles": [
+              [
+                0,
+                3,
+                6,
+                5
+              ],
+              [
+                1,
+                2,
+                7,
+                4
+              ]
+            ],
+            "matches_eca_transforms": [],
+            "shell_action": "r270",
+            "shell_cycle_type": [
+              4,
+              4
+            ]
+          },
+          {
+            "induced_address_permutation": [
+              0,
+              4,
+              7,
+              5,
+              1,
+              3,
+              6,
+              2
+            ],
+            "induced_cycles": [
+              [
+                0
+              ],
+              [
+                1,
+                4
+              ],
+              [
+                2,
+                7
+              ],
+              [
+                3,
+                5
+              ],
+              [
+                6
+              ]
+            ],
+            "matches_eca_transforms": [],
+            "shell_action": "reflect_NS",
+            "shell_cycle_type": [
+              1,
+              1,
+              2,
+              2,
+              2
+            ]
+          },
+          {
+            "induced_address_permutation": [
+              5,
+              7,
+              2,
+              6,
+              4,
+              0,
+              3,
+              1
+            ],
+            "induced_cycles": [
+              [
+                0,
+                5
+              ],
+              [
+                1,
+                7
+              ],
+              [
+                2
+              ],
+              [
+                3,
+                6
+              ],
+              [
+                4
+              ]
+            ],
+            "matches_eca_transforms": [],
+            "shell_action": "reflect_NE_SW",
+            "shell_cycle_type": [
+              1,
+              1,
+              2,
+              2,
+              2
+            ]
+          },
+          {
+            "induced_address_permutation": [
+              6,
+              2,
+              1,
+              3,
+              7,
+              5,
+              0,
+              4
+            ],
+            "induced_cycles": [
+              [
+                0,
+                6
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                3
+              ],
+              [
+                4,
+                7
+              ],
+              [
+                5
+              ]
+            ],
+            "matches_eca_transforms": [],
+            "shell_action": "reflect_EW",
+            "shell_cycle_type": [
+              1,
+              1,
+              2,
+              2,
+              2
+            ]
+          },
+          {
+            "induced_address_permutation": [
+              3,
+              1,
+              4,
+              0,
+              2,
+              6,
+              5,
+              7
+            ],
+            "induced_cycles": [
+              [
+                0,
+                3
+              ],
+              [
+                1
+              ],
+              [
+                2,
+                4
+              ],
+              [
+                5,
+                6
+              ],
+              [
+                7
+              ]
+            ],
+            "matches_eca_transforms": [],
+            "shell_action": "reflect_NW_SE",
+            "shell_cycle_type": [
+              1,
+              1,
+              2,
+              2,
+              2
+            ]
+          }
+        ],
+        "eca_intersection": [
+          "id"
+        ],
+        "layout": [
+          0,
+          4,
+          5,
+          7,
+          6,
+          2,
+          3,
+          1
+        ]
+      },
+      {
+        "actions": [
+          {
+            "induced_address_permutation": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "induced_cycles": [
+              [
+                0
+              ],
+              [
+                1
+              ],
+              [
+                2
+              ],
+              [
+                3
+              ],
+              [
+                4
+              ],
+              [
+                5
+              ],
+              [
+                6
+              ],
+              [
+                7
+              ]
+            ],
+            "matches_eca_transforms": [
+              "id"
+            ],
+            "shell_action": "id",
+            "shell_cycle_type": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "induced_address_permutation": [
+              3,
+              2,
+              7,
+              6,
+              1,
+              0,
+              5,
+              4
+            ],
+            "induced_cycles": [
+              [
+                0,
+                3,
+                6,
+                5
+              ],
+              [
+                1,
+                2,
+                7,
+                4
+              ]
+            ],
+            "matches_eca_transforms": [],
+            "shell_action": "r90",
+            "shell_cycle_type": [
+              4,
+              4
+            ]
+          },
+          {
+            "induced_address_permutation": [
+              6,
+              7,
+              4,
+              5,
+              2,
+              3,
+              0,
+              1
+            ],
+            "induced_cycles": [
+              [
+                0,
+                6
+              ],
+              [
+                1,
+                7
+              ],
+              [
+                2,
+                4
+              ],
+              [
+                3,
+                5
+              ]
+            ],
+            "matches_eca_transforms": [],
+            "shell_action": "r180",
+            "shell_cycle_type": [
+              2,
+              2,
+              2,
+              2
+            ]
+          },
+          {
+            "induced_address_permutation": [
+              5,
+              4,
+              1,
+              0,
+              7,
+              6,
+              3,
+              2
+            ],
+            "induced_cycles": [
+              [
+                0,
+                5,
+                6,
+                3
+              ],
+              [
+                1,
+                4,
+                7,
+                2
+              ]
+            ],
+            "matches_eca_transforms": [],
+            "shell_action": "r270",
+            "shell_cycle_type": [
+              4,
+              4
+            ]
+          },
+          {
+            "induced_address_permutation": [
+              5,
+              1,
+              4,
+              6,
+              2,
+              0,
+              3,
+              7
+            ],
+            "induced_cycles": [
+              [
+                0,
+                5
+              ],
+              [
+                1
+              ],
+              [
+                2,
+                4
+              ],
+              [
+                3,
+                6
+              ],
+              [
+                7
+              ]
+            ],
+            "matches_eca_transforms": [],
+            "shell_action": "reflect_NS",
+            "shell_cycle_type": [
+              1,
+              1,
+              2,
+              2,
+              2
+            ]
+          },
+          {
+            "induced_address_permutation": [
+              0,
+              2,
+              1,
+              5,
+              7,
+              3,
+              6,
+              4
+            ],
+            "induced_cycles": [
+              [
+                0
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                3,
+                5
+              ],
+              [
+                4,
+                7
+              ],
+              [
+                6
+              ]
+            ],
+            "matches_eca_transforms": [],
+            "shell_action": "reflect_NE_SW",
+            "shell_cycle_type": [
+              1,
+              1,
+              2,
+              2,
+              2
+            ]
+          },
+          {
+            "induced_address_permutation": [
+              3,
+              7,
+              2,
+              0,
+              4,
+              6,
+              5,
+              1
+            ],
+            "induced_cycles": [
+              [
+                0,
+                3
+              ],
+              [
+                1,
+                7
+              ],
+              [
+                2
+              ],
+              [
+                4
+              ],
+              [
+                5,
+                6
+              ]
+            ],
+            "matches_eca_transforms": [],
+            "shell_action": "reflect_EW",
+            "shell_cycle_type": [
+              1,
+              1,
+              2,
+              2,
+              2
+            ]
+          },
+          {
+            "induced_address_permutation": [
+              6,
+              4,
+              7,
+              3,
+              1,
+              5,
+              0,
+              2
+            ],
+            "induced_cycles": [
+              [
+                0,
+                6
+              ],
+              [
+                1,
+                4
+              ],
+              [
+                2,
+                7
+              ],
+              [
+                3
+              ],
+              [
+                5
+              ]
+            ],
+            "matches_eca_transforms": [],
+            "shell_action": "reflect_NW_SE",
+            "shell_cycle_type": [
+              1,
+              1,
+              2,
+              2,
+              2
+            ]
+          }
+        ],
+        "eca_intersection": [
+          "id"
+        ],
+        "layout": [
+          1,
+          0,
+          2,
+          3,
+          7,
+          6,
+          4,
+          5
+        ]
+      },
+      {
+        "actions": [
+          {
+            "induced_address_permutation": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "induced_cycles": [
+              [
+                0
+              ],
+              [
+                1
+              ],
+              [
+                2
+              ],
+              [
+                3
+              ],
+              [
+                4
+              ],
+              [
+                5
+              ],
+              [
+                6
+              ],
+              [
+                7
+              ]
+            ],
+            "matches_eca_transforms": [
+              "id"
+            ],
+            "shell_action": "id",
+            "shell_cycle_type": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "induced_address_permutation": [
+              5,
+              4,
+              1,
+              0,
+              7,
+              6,
+              3,
+              2
+            ],
+            "induced_cycles": [
+              [
+                0,
+                5,
+                6,
+                3
+              ],
+              [
+                1,
+                4,
+                7,
+                2
+              ]
+            ],
+            "matches_eca_transforms": [],
+            "shell_action": "r90",
+            "shell_cycle_type": [
+              4,
+              4
+            ]
+          },
+          {
+            "induced_address_permutation": [
+              6,
+              7,
+              4,
+              5,
+              2,
+              3,
+              0,
+              1
+            ],
+            "induced_cycles": [
+              [
+                0,
+                6
+              ],
+              [
+                1,
+                7
+              ],
+              [
+                2,
+                4
+              ],
+              [
+                3,
+                5
+              ]
+            ],
+            "matches_eca_transforms": [],
+            "shell_action": "r180",
+            "shell_cycle_type": [
+              2,
+              2,
+              2,
+              2
+            ]
+          },
+          {
+            "induced_address_permutation": [
+              3,
+              2,
+              7,
+              6,
+              1,
+              0,
+              5,
+              4
+            ],
+            "induced_cycles": [
+              [
+                0,
+                3,
+                6,
+                5
+              ],
+              [
+                1,
+                2,
+                7,
+                4
+              ]
+            ],
+            "matches_eca_transforms": [],
+            "shell_action": "r270",
+            "shell_cycle_type": [
+              4,
+              4
+            ]
+          },
+          {
+            "induced_address_permutation": [
+              5,
+              1,
+              4,
+              6,
+              2,
+              0,
+              3,
+              7
+            ],
+            "induced_cycles": [
+              [
+                0,
+                5
+              ],
+              [
+                1
+              ],
+              [
+                2,
+                4
+              ],
+              [
+                3,
+                6
+              ],
+              [
+                7
+              ]
+            ],
+            "matches_eca_transforms": [],
+            "shell_action": "reflect_NS",
+            "shell_cycle_type": [
+              1,
+              1,
+              2,
+              2,
+              2
+            ]
+          },
+          {
+            "induced_address_permutation": [
+              6,
+              4,
+              7,
+              3,
+              1,
+              5,
+              0,
+              2
+            ],
+            "induced_cycles": [
+              [
+                0,
+                6
+              ],
+              [
+                1,
+                4
+              ],
+              [
+                2,
+                7
+              ],
+              [
+                3
+              ],
+              [
+                5
+              ]
+            ],
+            "matches_eca_transforms": [],
+            "shell_action": "reflect_NE_SW",
+            "shell_cycle_type": [
+              1,
+              1,
+              2,
+              2,
+              2
+            ]
+          },
+          {
+            "induced_address_permutation": [
+              3,
+              7,
+              2,
+              0,
+              4,
+              6,
+              5,
+              1
+            ],
+            "induced_cycles": [
+              [
+                0,
+                3
+              ],
+              [
+                1,
+                7
+              ],
+              [
+                2
+              ],
+              [
+                4
+              ],
+              [
+                5,
+                6
+              ]
+            ],
+            "matches_eca_transforms": [],
+            "shell_action": "reflect_EW",
+            "shell_cycle_type": [
+              1,
+              1,
+              2,
+              2,
+              2
+            ]
+          },
+          {
+            "induced_address_permutation": [
+              0,
+              2,
+              1,
+              5,
+              7,
+              3,
+              6,
+              4
+            ],
+            "induced_cycles": [
+              [
+                0
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                3,
+                5
+              ],
+              [
+                4,
+                7
+              ],
+              [
+                6
+              ]
+            ],
+            "matches_eca_transforms": [],
+            "shell_action": "reflect_NW_SE",
+            "shell_cycle_type": [
+              1,
+              1,
+              2,
+              2,
+              2
+            ]
+          }
+        ],
+        "eca_intersection": [
+          "id"
+        ],
+        "layout": [
+          1,
+          5,
+          4,
+          6,
+          7,
+          3,
+          2,
+          0
+        ]
+      },
+      {
+        "actions": [
+          {
+            "induced_address_permutation": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "induced_cycles": [
+              [
+                0
+              ],
+              [
+                1
+              ],
+              [
+                2
+              ],
+              [
+                3
+              ],
+              [
+                4
+              ],
+              [
+                5
+              ],
+              [
+                6
+              ],
+              [
+                7
+              ]
+            ],
+            "matches_eca_transforms": [
+              "id"
+            ],
+            "shell_action": "id",
+            "shell_cycle_type": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "induced_address_permutation": [
+              5,
+              4,
+              1,
+              0,
+              7,
+              6,
+              3,
+              2
+            ],
+            "induced_cycles": [
+              [
+                0,
+                5,
+                6,
+                3
+              ],
+              [
+                1,
+                4,
+                7,
+                2
+              ]
+            ],
+            "matches_eca_transforms": [],
+            "shell_action": "r90",
+            "shell_cycle_type": [
+              4,
+              4
+            ]
+          },
+          {
+            "induced_address_permutation": [
+              6,
+              7,
+              4,
+              5,
+              2,
+              3,
+              0,
+              1
+            ],
+            "induced_cycles": [
+              [
+                0,
+                6
+              ],
+              [
+                1,
+                7
+              ],
+              [
+                2,
+                4
+              ],
+              [
+                3,
+                5
+              ]
+            ],
+            "matches_eca_transforms": [],
+            "shell_action": "r180",
+            "shell_cycle_type": [
+              2,
+              2,
+              2,
+              2
+            ]
+          },
+          {
+            "induced_address_permutation": [
+              3,
+              2,
+              7,
+              6,
+              1,
+              0,
+              5,
+              4
+            ],
+            "induced_cycles": [
+              [
+                0,
+                3,
+                6,
+                5
+              ],
+              [
+                1,
+                2,
+                7,
+                4
+              ]
+            ],
+            "matches_eca_transforms": [],
+            "shell_action": "r270",
+            "shell_cycle_type": [
+              4,
+              4
+            ]
+          },
+          {
+            "induced_address_permutation": [
+              3,
+              7,
+              2,
+              0,
+              4,
+              6,
+              5,
+              1
+            ],
+            "induced_cycles": [
+              [
+                0,
+                3
+              ],
+              [
+                1,
+                7
+              ],
+              [
+                2
+              ],
+              [
+                4
+              ],
+              [
+                5,
+                6
+              ]
+            ],
+            "matches_eca_transforms": [],
+            "shell_action": "reflect_NS",
+            "shell_cycle_type": [
+              1,
+              1,
+              2,
+              2,
+              2
+            ]
+          },
+          {
+            "induced_address_permutation": [
+              0,
+              2,
+              1,
+              5,
+              7,
+              3,
+              6,
+              4
+            ],
+            "induced_cycles": [
+              [
+                0
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                3,
+                5
+              ],
+              [
+                4,
+                7
+              ],
+              [
+                6
+              ]
+            ],
+            "matches_eca_transforms": [],
+            "shell_action": "reflect_NE_SW",
+            "shell_cycle_type": [
+              1,
+              1,
+              2,
+              2,
+              2
+            ]
+          },
+          {
+            "induced_address_permutation": [
+              5,
+              1,
+              4,
+              6,
+              2,
+              0,
+              3,
+              7
+            ],
+            "induced_cycles": [
+              [
+                0,
+                5
+              ],
+              [
+                1
+              ],
+              [
+                2,
+                4
+              ],
+              [
+                3,
+                6
+              ],
+              [
+                7
+              ]
+            ],
+            "matches_eca_transforms": [],
+            "shell_action": "reflect_EW",
+            "shell_cycle_type": [
+              1,
+              1,
+              2,
+              2,
+              2
+            ]
+          },
+          {
+            "induced_address_permutation": [
+              6,
+              4,
+              7,
+              3,
+              1,
+              5,
+              0,
+              2
+            ],
+            "induced_cycles": [
+              [
+                0,
+                6
+              ],
+              [
+                1,
+                4
+              ],
+              [
+                2,
+                7
+              ],
+              [
+                3
+              ],
+              [
+                5
+              ]
+            ],
+            "matches_eca_transforms": [],
+            "shell_action": "reflect_NW_SE",
+            "shell_cycle_type": [
+              1,
+              1,
+              2,
+              2,
+              2
+            ]
+          }
+        ],
+        "eca_intersection": [
+          "id"
+        ],
+        "layout": [
+          2,
+          0,
+          1,
+          5,
+          4,
+          6,
+          7,
+          3
+        ]
+      },
+      {
+        "actions": [
+          {
+            "induced_address_permutation": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "induced_cycles": [
+              [
+                0
+              ],
+              [
+                1
+              ],
+              [
+                2
+              ],
+              [
+                3
+              ],
+              [
+                4
+              ],
+              [
+                5
+              ],
+              [
+                6
+              ],
+              [
+                7
+              ]
+            ],
+            "matches_eca_transforms": [
+              "id"
+            ],
+            "shell_action": "id",
+            "shell_cycle_type": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "induced_address_permutation": [
+              3,
+              2,
+              7,
+              6,
+              1,
+              0,
+              5,
+              4
+            ],
+            "induced_cycles": [
+              [
+                0,
+                3,
+                6,
+                5
+              ],
+              [
+                1,
+                2,
+                7,
+                4
+              ]
+            ],
+            "matches_eca_transforms": [],
+            "shell_action": "r90",
+            "shell_cycle_type": [
+              4,
+              4
+            ]
+          },
+          {
+            "induced_address_permutation": [
+              6,
+              7,
+              4,
+              5,
+              2,
+              3,
+              0,
+              1
+            ],
+            "induced_cycles": [
+              [
+                0,
+                6
+              ],
+              [
+                1,
+                7
+              ],
+              [
+                2,
+                4
+              ],
+              [
+                3,
+                5
+              ]
+            ],
+            "matches_eca_transforms": [],
+            "shell_action": "r180",
+            "shell_cycle_type": [
+              2,
+              2,
+              2,
+              2
+            ]
+          },
+          {
+            "induced_address_permutation": [
+              5,
+              4,
+              1,
+              0,
+              7,
+              6,
+              3,
+              2
+            ],
+            "induced_cycles": [
+              [
+                0,
+                5,
+                6,
+                3
+              ],
+              [
+                1,
+                4,
+                7,
+                2
+              ]
+            ],
+            "matches_eca_transforms": [],
+            "shell_action": "r270",
+            "shell_cycle_type": [
+              4,
+              4
+            ]
+          },
+          {
+            "induced_address_permutation": [
+              3,
+              7,
+              2,
+              0,
+              4,
+              6,
+              5,
+              1
+            ],
+            "induced_cycles": [
+              [
+                0,
+                3
+              ],
+              [
+                1,
+                7
+              ],
+              [
+                2
+              ],
+              [
+                4
+              ],
+              [
+                5,
+                6
+              ]
+            ],
+            "matches_eca_transforms": [],
+            "shell_action": "reflect_NS",
+            "shell_cycle_type": [
+              1,
+              1,
+              2,
+              2,
+              2
+            ]
+          },
+          {
+            "induced_address_permutation": [
+              6,
+              4,
+              7,
+              3,
+              1,
+              5,
+              0,
+              2
+            ],
+            "induced_cycles": [
+              [
+                0,
+                6
+              ],
+              [
+                1,
+                4
+              ],
+              [
+                2,
+                7
+              ],
+              [
+                3
+              ],
+              [
+                5
+              ]
+            ],
+            "matches_eca_transforms": [],
+            "shell_action": "reflect_NE_SW",
+            "shell_cycle_type": [
+              1,
+              1,
+              2,
+              2,
+              2
+            ]
+          },
+          {
+            "induced_address_permutation": [
+              5,
+              1,
+              4,
+              6,
+              2,
+              0,
+              3,
+              7
+            ],
+            "induced_cycles": [
+              [
+                0,
+                5
+              ],
+              [
+                1
+              ],
+              [
+                2,
+                4
+              ],
+              [
+                3,
+                6
+              ],
+              [
+                7
+              ]
+            ],
+            "matches_eca_transforms": [],
+            "shell_action": "reflect_EW",
+            "shell_cycle_type": [
+              1,
+              1,
+              2,
+              2,
+              2
+            ]
+          },
+          {
+            "induced_address_permutation": [
+              0,
+              2,
+              1,
+              5,
+              7,
+              3,
+              6,
+              4
+            ],
+            "induced_cycles": [
+              [
+                0
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                3,
+                5
+              ],
+              [
+                4,
+                7
+              ],
+              [
+                6
+              ]
+            ],
+            "matches_eca_transforms": [],
+            "shell_action": "reflect_NW_SE",
+            "shell_cycle_type": [
+              1,
+              1,
+              2,
+              2,
+              2
+            ]
+          }
+        ],
+        "eca_intersection": [
+          "id"
+        ],
+        "layout": [
+          2,
+          3,
+          7,
+          6,
+          4,
+          5,
+          1,
+          0
+        ]
+      },
+      {
+        "actions": [
+          {
+            "induced_address_permutation": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "induced_cycles": [
+              [
+                0
+              ],
+              [
+                1
+              ],
+              [
+                2
+              ],
+              [
+                3
+              ],
+              [
+                4
+              ],
+              [
+                5
+              ],
+              [
+                6
+              ],
+              [
+                7
+              ]
+            ],
+            "matches_eca_transforms": [
+              "id"
+            ],
+            "shell_action": "id",
+            "shell_cycle_type": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "induced_address_permutation": [
+              5,
+              4,
+              1,
+              0,
+              7,
+              6,
+              3,
+              2
+            ],
+            "induced_cycles": [
+              [
+                0,
+                5,
+                6,
+                3
+              ],
+              [
+                1,
+                4,
+                7,
+                2
+              ]
+            ],
+            "matches_eca_transforms": [],
+            "shell_action": "r90",
+            "shell_cycle_type": [
+              4,
+              4
+            ]
+          },
+          {
+            "induced_address_permutation": [
+              6,
+              7,
+              4,
+              5,
+              2,
+              3,
+              0,
+              1
+            ],
+            "induced_cycles": [
+              [
+                0,
+                6
+              ],
+              [
+                1,
+                7
+              ],
+              [
+                2,
+                4
+              ],
+              [
+                3,
+                5
+              ]
+            ],
+            "matches_eca_transforms": [],
+            "shell_action": "r180",
+            "shell_cycle_type": [
+              2,
+              2,
+              2,
+              2
+            ]
+          },
+          {
+            "induced_address_permutation": [
+              3,
+              2,
+              7,
+              6,
+              1,
+              0,
+              5,
+              4
+            ],
+            "induced_cycles": [
+              [
+                0,
+                3,
+                6,
+                5
+              ],
+              [
+                1,
+                2,
+                7,
+                4
+              ]
+            ],
+            "matches_eca_transforms": [],
+            "shell_action": "r270",
+            "shell_cycle_type": [
+              4,
+              4
+            ]
+          },
+          {
+            "induced_address_permutation": [
+              6,
+              2,
+              1,
+              3,
+              7,
+              5,
+              0,
+              4
+            ],
+            "induced_cycles": [
+              [
+                0,
+                6
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                3
+              ],
+              [
+                4,
+                7
+              ],
+              [
+                5
+              ]
+            ],
+            "matches_eca_transforms": [],
+            "shell_action": "reflect_NS",
+            "shell_cycle_type": [
+              1,
+              1,
+              2,
+              2,
+              2
+            ]
+          },
+          {
+            "induced_address_permutation": [
+              3,
+              1,
+              4,
+              0,
+              2,
+              6,
+              5,
+              7
+            ],
+            "induced_cycles": [
+              [
+                0,
+                3
+              ],
+              [
+                1
+              ],
+              [
+                2,
+                4
+              ],
+              [
+                5,
+                6
+              ],
+              [
+                7
+              ]
+            ],
+            "matches_eca_transforms": [],
+            "shell_action": "reflect_NE_SW",
+            "shell_cycle_type": [
+              1,
+              1,
+              2,
+              2,
+              2
+            ]
+          },
+          {
+            "induced_address_permutation": [
+              0,
+              4,
+              7,
+              5,
+              1,
+              3,
+              6,
+              2
+            ],
+            "induced_cycles": [
+              [
+                0
+              ],
+              [
+                1,
+                4
+              ],
+              [
+                2,
+                7
+              ],
+              [
+                3,
+                5
+              ],
+              [
+                6
+              ]
+            ],
+            "matches_eca_transforms": [],
+            "shell_action": "reflect_EW",
+            "shell_cycle_type": [
+              1,
+              1,
+              2,
+              2,
+              2
+            ]
+          },
+          {
+            "induced_address_permutation": [
+              5,
+              7,
+              2,
+              6,
+              4,
+              0,
+              3,
+              1
+            ],
+            "induced_cycles": [
+              [
+                0,
+                5
+              ],
+              [
+                1,
+                7
+              ],
+              [
+                2
+              ],
+              [
+                3,
+                6
+              ],
+              [
+                4
+              ]
+            ],
+            "matches_eca_transforms": [],
+            "shell_action": "reflect_NW_SE",
+            "shell_cycle_type": [
+              1,
+              1,
+              2,
+              2,
+              2
+            ]
+          }
+        ],
+        "eca_intersection": [
+          "id"
+        ],
+        "layout": [
+          3,
+          1,
+          0,
+          4,
+          5,
+          7,
+          6,
+          2
+        ]
+      },
+      {
+        "actions": [
+          {
+            "induced_address_permutation": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "induced_cycles": [
+              [
+                0
+              ],
+              [
+                1
+              ],
+              [
+                2
+              ],
+              [
+                3
+              ],
+              [
+                4
+              ],
+              [
+                5
+              ],
+              [
+                6
+              ],
+              [
+                7
+              ]
+            ],
+            "matches_eca_transforms": [
+              "id"
+            ],
+            "shell_action": "id",
+            "shell_cycle_type": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "induced_address_permutation": [
+              3,
+              2,
+              7,
+              6,
+              1,
+              0,
+              5,
+              4
+            ],
+            "induced_cycles": [
+              [
+                0,
+                3,
+                6,
+                5
+              ],
+              [
+                1,
+                2,
+                7,
+                4
+              ]
+            ],
+            "matches_eca_transforms": [],
+            "shell_action": "r90",
+            "shell_cycle_type": [
+              4,
+              4
+            ]
+          },
+          {
+            "induced_address_permutation": [
+              6,
+              7,
+              4,
+              5,
+              2,
+              3,
+              0,
+              1
+            ],
+            "induced_cycles": [
+              [
+                0,
+                6
+              ],
+              [
+                1,
+                7
+              ],
+              [
+                2,
+                4
+              ],
+              [
+                3,
+                5
+              ]
+            ],
+            "matches_eca_transforms": [],
+            "shell_action": "r180",
+            "shell_cycle_type": [
+              2,
+              2,
+              2,
+              2
+            ]
+          },
+          {
+            "induced_address_permutation": [
+              5,
+              4,
+              1,
+              0,
+              7,
+              6,
+              3,
+              2
+            ],
+            "induced_cycles": [
+              [
+                0,
+                5,
+                6,
+                3
+              ],
+              [
+                1,
+                4,
+                7,
+                2
+              ]
+            ],
+            "matches_eca_transforms": [],
+            "shell_action": "r270",
+            "shell_cycle_type": [
+              4,
+              4
+            ]
+          },
+          {
+            "induced_address_permutation": [
+              6,
+              2,
+              1,
+              3,
+              7,
+              5,
+              0,
+              4
+            ],
+            "induced_cycles": [
+              [
+                0,
+                6
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                3
+              ],
+              [
+                4,
+                7
+              ],
+              [
+                5
+              ]
+            ],
+            "matches_eca_transforms": [],
+            "shell_action": "reflect_NS",
+            "shell_cycle_type": [
+              1,
+              1,
+              2,
+              2,
+              2
+            ]
+          },
+          {
+            "induced_address_permutation": [
+              5,
+              7,
+              2,
+              6,
+              4,
+              0,
+              3,
+              1
+            ],
+            "induced_cycles": [
+              [
+                0,
+                5
+              ],
+              [
+                1,
+                7
+              ],
+              [
+                2
+              ],
+              [
+                3,
+                6
+              ],
+              [
+                4
+              ]
+            ],
+            "matches_eca_transforms": [],
+            "shell_action": "reflect_NE_SW",
+            "shell_cycle_type": [
+              1,
+              1,
+              2,
+              2,
+              2
+            ]
+          },
+          {
+            "induced_address_permutation": [
+              0,
+              4,
+              7,
+              5,
+              1,
+              3,
+              6,
+              2
+            ],
+            "induced_cycles": [
+              [
+                0
+              ],
+              [
+                1,
+                4
+              ],
+              [
+                2,
+                7
+              ],
+              [
+                3,
+                5
+              ],
+              [
+                6
+              ]
+            ],
+            "matches_eca_transforms": [],
+            "shell_action": "reflect_EW",
+            "shell_cycle_type": [
+              1,
+              1,
+              2,
+              2,
+              2
+            ]
+          },
+          {
+            "induced_address_permutation": [
+              3,
+              1,
+              4,
+              0,
+              2,
+              6,
+              5,
+              7
+            ],
+            "induced_cycles": [
+              [
+                0,
+                3
+              ],
+              [
+                1
+              ],
+              [
+                2,
+                4
+              ],
+              [
+                5,
+                6
+              ],
+              [
+                7
+              ]
+            ],
+            "matches_eca_transforms": [],
+            "shell_action": "reflect_NW_SE",
+            "shell_cycle_type": [
+              1,
+              1,
+              2,
+              2,
+              2
+            ]
+          }
+        ],
+        "eca_intersection": [
+          "id"
+        ],
+        "layout": [
+          3,
+          2,
+          6,
+          7,
+          5,
+          4,
+          0,
+          1
+        ]
+      },
+      {
+        "actions": [
+          {
+            "induced_address_permutation": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "induced_cycles": [
+              [
+                0
+              ],
+              [
+                1
+              ],
+              [
+                2
+              ],
+              [
+                3
+              ],
+              [
+                4
+              ],
+              [
+                5
+              ],
+              [
+                6
+              ],
+              [
+                7
+              ]
+            ],
+            "matches_eca_transforms": [
+              "id"
+            ],
+            "shell_action": "id",
+            "shell_cycle_type": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "induced_address_permutation": [
+              3,
+              2,
+              7,
+              6,
+              1,
+              0,
+              5,
+              4
+            ],
+            "induced_cycles": [
+              [
+                0,
+                3,
+                6,
+                5
+              ],
+              [
+                1,
+                2,
+                7,
+                4
+              ]
+            ],
+            "matches_eca_transforms": [],
+            "shell_action": "r90",
+            "shell_cycle_type": [
+              4,
+              4
+            ]
+          },
+          {
+            "induced_address_permutation": [
+              6,
+              7,
+              4,
+              5,
+              2,
+              3,
+              0,
+              1
+            ],
+            "induced_cycles": [
+              [
+                0,
+                6
+              ],
+              [
+                1,
+                7
+              ],
+              [
+                2,
+                4
+              ],
+              [
+                3,
+                5
+              ]
+            ],
+            "matches_eca_transforms": [],
+            "shell_action": "r180",
+            "shell_cycle_type": [
+              2,
+              2,
+              2,
+              2
+            ]
+          },
+          {
+            "induced_address_permutation": [
+              5,
+              4,
+              1,
+              0,
+              7,
+              6,
+              3,
+              2
+            ],
+            "induced_cycles": [
+              [
+                0,
+                5,
+                6,
+                3
+              ],
+              [
+                1,
+                4,
+                7,
+                2
+              ]
+            ],
+            "matches_eca_transforms": [],
+            "shell_action": "r270",
+            "shell_cycle_type": [
+              4,
+              4
+            ]
+          },
+          {
+            "induced_address_permutation": [
+              3,
+              7,
+              2,
+              0,
+              4,
+              6,
+              5,
+              1
+            ],
+            "induced_cycles": [
+              [
+                0,
+                3
+              ],
+              [
+                1,
+                7
+              ],
+              [
+                2
+              ],
+              [
+                4
+              ],
+              [
+                5,
+                6
+              ]
+            ],
+            "matches_eca_transforms": [],
+            "shell_action": "reflect_NS",
+            "shell_cycle_type": [
+              1,
+              1,
+              2,
+              2,
+              2
+            ]
+          },
+          {
+            "induced_address_permutation": [
+              6,
+              4,
+              7,
+              3,
+              1,
+              5,
+              0,
+              2
+            ],
+            "induced_cycles": [
+              [
+                0,
+                6
+              ],
+              [
+                1,
+                4
+              ],
+              [
+                2,
+                7
+              ],
+              [
+                3
+              ],
+              [
+                5
+              ]
+            ],
+            "matches_eca_transforms": [],
+            "shell_action": "reflect_NE_SW",
+            "shell_cycle_type": [
+              1,
+              1,
+              2,
+              2,
+              2
+            ]
+          },
+          {
+            "induced_address_permutation": [
+              5,
+              1,
+              4,
+              6,
+              2,
+              0,
+              3,
+              7
+            ],
+            "induced_cycles": [
+              [
+                0,
+                5
+              ],
+              [
+                1
+              ],
+              [
+                2,
+                4
+              ],
+              [
+                3,
+                6
+              ],
+              [
+                7
+              ]
+            ],
+            "matches_eca_transforms": [],
+            "shell_action": "reflect_EW",
+            "shell_cycle_type": [
+              1,
+              1,
+              2,
+              2,
+              2
+            ]
+          },
+          {
+            "induced_address_permutation": [
+              0,
+              2,
+              1,
+              5,
+              7,
+              3,
+              6,
+              4
+            ],
+            "induced_cycles": [
+              [
+                0
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                3,
+                5
+              ],
+              [
+                4,
+                7
+              ],
+              [
+                6
+              ]
+            ],
+            "matches_eca_transforms": [],
+            "shell_action": "reflect_NW_SE",
+            "shell_cycle_type": [
+              1,
+              1,
+              2,
+              2,
+              2
+            ]
+          }
+        ],
+        "eca_intersection": [
+          "id"
+        ],
+        "layout": [
+          4,
+          5,
+          1,
+          0,
+          2,
+          3,
+          7,
+          6
+        ]
+      },
+      {
+        "actions": [
+          {
+            "induced_address_permutation": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "induced_cycles": [
+              [
+                0
+              ],
+              [
+                1
+              ],
+              [
+                2
+              ],
+              [
+                3
+              ],
+              [
+                4
+              ],
+              [
+                5
+              ],
+              [
+                6
+              ],
+              [
+                7
+              ]
+            ],
+            "matches_eca_transforms": [
+              "id"
+            ],
+            "shell_action": "id",
+            "shell_cycle_type": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "induced_address_permutation": [
+              5,
+              4,
+              1,
+              0,
+              7,
+              6,
+              3,
+              2
+            ],
+            "induced_cycles": [
+              [
+                0,
+                5,
+                6,
+                3
+              ],
+              [
+                1,
+                4,
+                7,
+                2
+              ]
+            ],
+            "matches_eca_transforms": [],
+            "shell_action": "r90",
+            "shell_cycle_type": [
+              4,
+              4
+            ]
+          },
+          {
+            "induced_address_permutation": [
+              6,
+              7,
+              4,
+              5,
+              2,
+              3,
+              0,
+              1
+            ],
+            "induced_cycles": [
+              [
+                0,
+                6
+              ],
+              [
+                1,
+                7
+              ],
+              [
+                2,
+                4
+              ],
+              [
+                3,
+                5
+              ]
+            ],
+            "matches_eca_transforms": [],
+            "shell_action": "r180",
+            "shell_cycle_type": [
+              2,
+              2,
+              2,
+              2
+            ]
+          },
+          {
+            "induced_address_permutation": [
+              3,
+              2,
+              7,
+              6,
+              1,
+              0,
+              5,
+              4
+            ],
+            "induced_cycles": [
+              [
+                0,
+                3,
+                6,
+                5
+              ],
+              [
+                1,
+                2,
+                7,
+                4
+              ]
+            ],
+            "matches_eca_transforms": [],
+            "shell_action": "r270",
+            "shell_cycle_type": [
+              4,
+              4
+            ]
+          },
+          {
+            "induced_address_permutation": [
+              3,
+              7,
+              2,
+              0,
+              4,
+              6,
+              5,
+              1
+            ],
+            "induced_cycles": [
+              [
+                0,
+                3
+              ],
+              [
+                1,
+                7
+              ],
+              [
+                2
+              ],
+              [
+                4
+              ],
+              [
+                5,
+                6
+              ]
+            ],
+            "matches_eca_transforms": [],
+            "shell_action": "reflect_NS",
+            "shell_cycle_type": [
+              1,
+              1,
+              2,
+              2,
+              2
+            ]
+          },
+          {
+            "induced_address_permutation": [
+              0,
+              2,
+              1,
+              5,
+              7,
+              3,
+              6,
+              4
+            ],
+            "induced_cycles": [
+              [
+                0
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                3,
+                5
+              ],
+              [
+                4,
+                7
+              ],
+              [
+                6
+              ]
+            ],
+            "matches_eca_transforms": [],
+            "shell_action": "reflect_NE_SW",
+            "shell_cycle_type": [
+              1,
+              1,
+              2,
+              2,
+              2
+            ]
+          },
+          {
+            "induced_address_permutation": [
+              5,
+              1,
+              4,
+              6,
+              2,
+              0,
+              3,
+              7
+            ],
+            "induced_cycles": [
+              [
+                0,
+                5
+              ],
+              [
+                1
+              ],
+              [
+                2,
+                4
+              ],
+              [
+                3,
+                6
+              ],
+              [
+                7
+              ]
+            ],
+            "matches_eca_transforms": [],
+            "shell_action": "reflect_EW",
+            "shell_cycle_type": [
+              1,
+              1,
+              2,
+              2,
+              2
+            ]
+          },
+          {
+            "induced_address_permutation": [
+              6,
+              4,
+              7,
+              3,
+              1,
+              5,
+              0,
+              2
+            ],
+            "induced_cycles": [
+              [
+                0,
+                6
+              ],
+              [
+                1,
+                4
+              ],
+              [
+                2,
+                7
+              ],
+              [
+                3
+              ],
+              [
+                5
+              ]
+            ],
+            "matches_eca_transforms": [],
+            "shell_action": "reflect_NW_SE",
+            "shell_cycle_type": [
+              1,
+              1,
+              2,
+              2,
+              2
+            ]
+          }
+        ],
+        "eca_intersection": [
+          "id"
+        ],
+        "layout": [
+          4,
+          6,
+          7,
+          3,
+          2,
+          0,
+          1,
+          5
+        ]
+      },
+      {
+        "actions": [
+          {
+            "induced_address_permutation": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "induced_cycles": [
+              [
+                0
+              ],
+              [
+                1
+              ],
+              [
+                2
+              ],
+              [
+                3
+              ],
+              [
+                4
+              ],
+              [
+                5
+              ],
+              [
+                6
+              ],
+              [
+                7
+              ]
+            ],
+            "matches_eca_transforms": [
+              "id"
+            ],
+            "shell_action": "id",
+            "shell_cycle_type": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "induced_address_permutation": [
+              3,
+              2,
+              7,
+              6,
+              1,
+              0,
+              5,
+              4
+            ],
+            "induced_cycles": [
+              [
+                0,
+                3,
+                6,
+                5
+              ],
+              [
+                1,
+                2,
+                7,
+                4
+              ]
+            ],
+            "matches_eca_transforms": [],
+            "shell_action": "r90",
+            "shell_cycle_type": [
+              4,
+              4
+            ]
+          },
+          {
+            "induced_address_permutation": [
+              6,
+              7,
+              4,
+              5,
+              2,
+              3,
+              0,
+              1
+            ],
+            "induced_cycles": [
+              [
+                0,
+                6
+              ],
+              [
+                1,
+                7
+              ],
+              [
+                2,
+                4
+              ],
+              [
+                3,
+                5
+              ]
+            ],
+            "matches_eca_transforms": [],
+            "shell_action": "r180",
+            "shell_cycle_type": [
+              2,
+              2,
+              2,
+              2
+            ]
+          },
+          {
+            "induced_address_permutation": [
+              5,
+              4,
+              1,
+              0,
+              7,
+              6,
+              3,
+              2
+            ],
+            "induced_cycles": [
+              [
+                0,
+                5,
+                6,
+                3
+              ],
+              [
+                1,
+                4,
+                7,
+                2
+              ]
+            ],
+            "matches_eca_transforms": [],
+            "shell_action": "r270",
+            "shell_cycle_type": [
+              4,
+              4
+            ]
+          },
+          {
+            "induced_address_permutation": [
+              6,
+              2,
+              1,
+              3,
+              7,
+              5,
+              0,
+              4
+            ],
+            "induced_cycles": [
+              [
+                0,
+                6
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                3
+              ],
+              [
+                4,
+                7
+              ],
+              [
+                5
+              ]
+            ],
+            "matches_eca_transforms": [],
+            "shell_action": "reflect_NS",
+            "shell_cycle_type": [
+              1,
+              1,
+              2,
+              2,
+              2
+            ]
+          },
+          {
+            "induced_address_permutation": [
+              5,
+              7,
+              2,
+              6,
+              4,
+              0,
+              3,
+              1
+            ],
+            "induced_cycles": [
+              [
+                0,
+                5
+              ],
+              [
+                1,
+                7
+              ],
+              [
+                2
+              ],
+              [
+                3,
+                6
+              ],
+              [
+                4
+              ]
+            ],
+            "matches_eca_transforms": [],
+            "shell_action": "reflect_NE_SW",
+            "shell_cycle_type": [
+              1,
+              1,
+              2,
+              2,
+              2
+            ]
+          },
+          {
+            "induced_address_permutation": [
+              0,
+              4,
+              7,
+              5,
+              1,
+              3,
+              6,
+              2
+            ],
+            "induced_cycles": [
+              [
+                0
+              ],
+              [
+                1,
+                4
+              ],
+              [
+                2,
+                7
+              ],
+              [
+                3,
+                5
+              ],
+              [
+                6
+              ]
+            ],
+            "matches_eca_transforms": [],
+            "shell_action": "reflect_EW",
+            "shell_cycle_type": [
+              1,
+              1,
+              2,
+              2,
+              2
+            ]
+          },
+          {
+            "induced_address_permutation": [
+              3,
+              1,
+              4,
+              0,
+              2,
+              6,
+              5,
+              7
+            ],
+            "induced_cycles": [
+              [
+                0,
+                3
+              ],
+              [
+                1
+              ],
+              [
+                2,
+                4
+              ],
+              [
+                5,
+                6
+              ],
+              [
+                7
+              ]
+            ],
+            "matches_eca_transforms": [],
+            "shell_action": "reflect_NW_SE",
+            "shell_cycle_type": [
+              1,
+              1,
+              2,
+              2,
+              2
+            ]
+          }
+        ],
+        "eca_intersection": [
+          "id"
+        ],
+        "layout": [
+          5,
+          4,
+          0,
+          1,
+          3,
+          2,
+          6,
+          7
+        ]
+      },
+      {
+        "actions": [
+          {
+            "induced_address_permutation": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "induced_cycles": [
+              [
+                0
+              ],
+              [
+                1
+              ],
+              [
+                2
+              ],
+              [
+                3
+              ],
+              [
+                4
+              ],
+              [
+                5
+              ],
+              [
+                6
+              ],
+              [
+                7
+              ]
+            ],
+            "matches_eca_transforms": [
+              "id"
+            ],
+            "shell_action": "id",
+            "shell_cycle_type": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "induced_address_permutation": [
+              5,
+              4,
+              1,
+              0,
+              7,
+              6,
+              3,
+              2
+            ],
+            "induced_cycles": [
+              [
+                0,
+                5,
+                6,
+                3
+              ],
+              [
+                1,
+                4,
+                7,
+                2
+              ]
+            ],
+            "matches_eca_transforms": [],
+            "shell_action": "r90",
+            "shell_cycle_type": [
+              4,
+              4
+            ]
+          },
+          {
+            "induced_address_permutation": [
+              6,
+              7,
+              4,
+              5,
+              2,
+              3,
+              0,
+              1
+            ],
+            "induced_cycles": [
+              [
+                0,
+                6
+              ],
+              [
+                1,
+                7
+              ],
+              [
+                2,
+                4
+              ],
+              [
+                3,
+                5
+              ]
+            ],
+            "matches_eca_transforms": [],
+            "shell_action": "r180",
+            "shell_cycle_type": [
+              2,
+              2,
+              2,
+              2
+            ]
+          },
+          {
+            "induced_address_permutation": [
+              3,
+              2,
+              7,
+              6,
+              1,
+              0,
+              5,
+              4
+            ],
+            "induced_cycles": [
+              [
+                0,
+                3,
+                6,
+                5
+              ],
+              [
+                1,
+                2,
+                7,
+                4
+              ]
+            ],
+            "matches_eca_transforms": [],
+            "shell_action": "r270",
+            "shell_cycle_type": [
+              4,
+              4
+            ]
+          },
+          {
+            "induced_address_permutation": [
+              6,
+              2,
+              1,
+              3,
+              7,
+              5,
+              0,
+              4
+            ],
+            "induced_cycles": [
+              [
+                0,
+                6
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                3
+              ],
+              [
+                4,
+                7
+              ],
+              [
+                5
+              ]
+            ],
+            "matches_eca_transforms": [],
+            "shell_action": "reflect_NS",
+            "shell_cycle_type": [
+              1,
+              1,
+              2,
+              2,
+              2
+            ]
+          },
+          {
+            "induced_address_permutation": [
+              3,
+              1,
+              4,
+              0,
+              2,
+              6,
+              5,
+              7
+            ],
+            "induced_cycles": [
+              [
+                0,
+                3
+              ],
+              [
+                1
+              ],
+              [
+                2,
+                4
+              ],
+              [
+                5,
+                6
+              ],
+              [
+                7
+              ]
+            ],
+            "matches_eca_transforms": [],
+            "shell_action": "reflect_NE_SW",
+            "shell_cycle_type": [
+              1,
+              1,
+              2,
+              2,
+              2
+            ]
+          },
+          {
+            "induced_address_permutation": [
+              0,
+              4,
+              7,
+              5,
+              1,
+              3,
+              6,
+              2
+            ],
+            "induced_cycles": [
+              [
+                0
+              ],
+              [
+                1,
+                4
+              ],
+              [
+                2,
+                7
+              ],
+              [
+                3,
+                5
+              ],
+              [
+                6
+              ]
+            ],
+            "matches_eca_transforms": [],
+            "shell_action": "reflect_EW",
+            "shell_cycle_type": [
+              1,
+              1,
+              2,
+              2,
+              2
+            ]
+          },
+          {
+            "induced_address_permutation": [
+              5,
+              7,
+              2,
+              6,
+              4,
+              0,
+              3,
+              1
+            ],
+            "induced_cycles": [
+              [
+                0,
+                5
+              ],
+              [
+                1,
+                7
+              ],
+              [
+                2
+              ],
+              [
+                3,
+                6
+              ],
+              [
+                4
+              ]
+            ],
+            "matches_eca_transforms": [],
+            "shell_action": "reflect_NW_SE",
+            "shell_cycle_type": [
+              1,
+              1,
+              2,
+              2,
+              2
+            ]
+          }
+        ],
+        "eca_intersection": [
+          "id"
+        ],
+        "layout": [
+          5,
+          7,
+          6,
+          2,
+          3,
+          1,
+          0,
+          4
+        ]
+      },
+      {
+        "actions": [
+          {
+            "induced_address_permutation": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "induced_cycles": [
+              [
+                0
+              ],
+              [
+                1
+              ],
+              [
+                2
+              ],
+              [
+                3
+              ],
+              [
+                4
+              ],
+              [
+                5
+              ],
+              [
+                6
+              ],
+              [
+                7
+              ]
+            ],
+            "matches_eca_transforms": [
+              "id"
+            ],
+            "shell_action": "id",
+            "shell_cycle_type": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "induced_address_permutation": [
+              5,
+              4,
+              1,
+              0,
+              7,
+              6,
+              3,
+              2
+            ],
+            "induced_cycles": [
+              [
+                0,
+                5,
+                6,
+                3
+              ],
+              [
+                1,
+                4,
+                7,
+                2
+              ]
+            ],
+            "matches_eca_transforms": [],
+            "shell_action": "r90",
+            "shell_cycle_type": [
+              4,
+              4
+            ]
+          },
+          {
+            "induced_address_permutation": [
+              6,
+              7,
+              4,
+              5,
+              2,
+              3,
+              0,
+              1
+            ],
+            "induced_cycles": [
+              [
+                0,
+                6
+              ],
+              [
+                1,
+                7
+              ],
+              [
+                2,
+                4
+              ],
+              [
+                3,
+                5
+              ]
+            ],
+            "matches_eca_transforms": [],
+            "shell_action": "r180",
+            "shell_cycle_type": [
+              2,
+              2,
+              2,
+              2
+            ]
+          },
+          {
+            "induced_address_permutation": [
+              3,
+              2,
+              7,
+              6,
+              1,
+              0,
+              5,
+              4
+            ],
+            "induced_cycles": [
+              [
+                0,
+                3,
+                6,
+                5
+              ],
+              [
+                1,
+                2,
+                7,
+                4
+              ]
+            ],
+            "matches_eca_transforms": [],
+            "shell_action": "r270",
+            "shell_cycle_type": [
+              4,
+              4
+            ]
+          },
+          {
+            "induced_address_permutation": [
+              0,
+              4,
+              7,
+              5,
+              1,
+              3,
+              6,
+              2
+            ],
+            "induced_cycles": [
+              [
+                0
+              ],
+              [
+                1,
+                4
+              ],
+              [
+                2,
+                7
+              ],
+              [
+                3,
+                5
+              ],
+              [
+                6
+              ]
+            ],
+            "matches_eca_transforms": [],
+            "shell_action": "reflect_NS",
+            "shell_cycle_type": [
+              1,
+              1,
+              2,
+              2,
+              2
+            ]
+          },
+          {
+            "induced_address_permutation": [
+              5,
+              7,
+              2,
+              6,
+              4,
+              0,
+              3,
+              1
+            ],
+            "induced_cycles": [
+              [
+                0,
+                5
+              ],
+              [
+                1,
+                7
+              ],
+              [
+                2
+              ],
+              [
+                3,
+                6
+              ],
+              [
+                4
+              ]
+            ],
+            "matches_eca_transforms": [],
+            "shell_action": "reflect_NE_SW",
+            "shell_cycle_type": [
+              1,
+              1,
+              2,
+              2,
+              2
+            ]
+          },
+          {
+            "induced_address_permutation": [
+              6,
+              2,
+              1,
+              3,
+              7,
+              5,
+              0,
+              4
+            ],
+            "induced_cycles": [
+              [
+                0,
+                6
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                3
+              ],
+              [
+                4,
+                7
+              ],
+              [
+                5
+              ]
+            ],
+            "matches_eca_transforms": [],
+            "shell_action": "reflect_EW",
+            "shell_cycle_type": [
+              1,
+              1,
+              2,
+              2,
+              2
+            ]
+          },
+          {
+            "induced_address_permutation": [
+              3,
+              1,
+              4,
+              0,
+              2,
+              6,
+              5,
+              7
+            ],
+            "induced_cycles": [
+              [
+                0,
+                3
+              ],
+              [
+                1
+              ],
+              [
+                2,
+                4
+              ],
+              [
+                5,
+                6
+              ],
+              [
+                7
+              ]
+            ],
+            "matches_eca_transforms": [],
+            "shell_action": "reflect_NW_SE",
+            "shell_cycle_type": [
+              1,
+              1,
+              2,
+              2,
+              2
+            ]
+          }
+        ],
+        "eca_intersection": [
+          "id"
+        ],
+        "layout": [
+          6,
+          2,
+          3,
+          1,
+          0,
+          4,
+          5,
+          7
+        ]
+      },
+      {
+        "actions": [
+          {
+            "induced_address_permutation": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "induced_cycles": [
+              [
+                0
+              ],
+              [
+                1
+              ],
+              [
+                2
+              ],
+              [
+                3
+              ],
+              [
+                4
+              ],
+              [
+                5
+              ],
+              [
+                6
+              ],
+              [
+                7
+              ]
+            ],
+            "matches_eca_transforms": [
+              "id"
+            ],
+            "shell_action": "id",
+            "shell_cycle_type": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "induced_address_permutation": [
+              3,
+              2,
+              7,
+              6,
+              1,
+              0,
+              5,
+              4
+            ],
+            "induced_cycles": [
+              [
+                0,
+                3,
+                6,
+                5
+              ],
+              [
+                1,
+                2,
+                7,
+                4
+              ]
+            ],
+            "matches_eca_transforms": [],
+            "shell_action": "r90",
+            "shell_cycle_type": [
+              4,
+              4
+            ]
+          },
+          {
+            "induced_address_permutation": [
+              6,
+              7,
+              4,
+              5,
+              2,
+              3,
+              0,
+              1
+            ],
+            "induced_cycles": [
+              [
+                0,
+                6
+              ],
+              [
+                1,
+                7
+              ],
+              [
+                2,
+                4
+              ],
+              [
+                3,
+                5
+              ]
+            ],
+            "matches_eca_transforms": [],
+            "shell_action": "r180",
+            "shell_cycle_type": [
+              2,
+              2,
+              2,
+              2
+            ]
+          },
+          {
+            "induced_address_permutation": [
+              5,
+              4,
+              1,
+              0,
+              7,
+              6,
+              3,
+              2
+            ],
+            "induced_cycles": [
+              [
+                0,
+                5,
+                6,
+                3
+              ],
+              [
+                1,
+                4,
+                7,
+                2
+              ]
+            ],
+            "matches_eca_transforms": [],
+            "shell_action": "r270",
+            "shell_cycle_type": [
+              4,
+              4
+            ]
+          },
+          {
+            "induced_address_permutation": [
+              0,
+              4,
+              7,
+              5,
+              1,
+              3,
+              6,
+              2
+            ],
+            "induced_cycles": [
+              [
+                0
+              ],
+              [
+                1,
+                4
+              ],
+              [
+                2,
+                7
+              ],
+              [
+                3,
+                5
+              ],
+              [
+                6
+              ]
+            ],
+            "matches_eca_transforms": [],
+            "shell_action": "reflect_NS",
+            "shell_cycle_type": [
+              1,
+              1,
+              2,
+              2,
+              2
+            ]
+          },
+          {
+            "induced_address_permutation": [
+              3,
+              1,
+              4,
+              0,
+              2,
+              6,
+              5,
+              7
+            ],
+            "induced_cycles": [
+              [
+                0,
+                3
+              ],
+              [
+                1
+              ],
+              [
+                2,
+                4
+              ],
+              [
+                5,
+                6
+              ],
+              [
+                7
+              ]
+            ],
+            "matches_eca_transforms": [],
+            "shell_action": "reflect_NE_SW",
+            "shell_cycle_type": [
+              1,
+              1,
+              2,
+              2,
+              2
+            ]
+          },
+          {
+            "induced_address_permutation": [
+              6,
+              2,
+              1,
+              3,
+              7,
+              5,
+              0,
+              4
+            ],
+            "induced_cycles": [
+              [
+                0,
+                6
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                3
+              ],
+              [
+                4,
+                7
+              ],
+              [
+                5
+              ]
+            ],
+            "matches_eca_transforms": [],
+            "shell_action": "reflect_EW",
+            "shell_cycle_type": [
+              1,
+              1,
+              2,
+              2,
+              2
+            ]
+          },
+          {
+            "induced_address_permutation": [
+              5,
+              7,
+              2,
+              6,
+              4,
+              0,
+              3,
+              1
+            ],
+            "induced_cycles": [
+              [
+                0,
+                5
+              ],
+              [
+                1,
+                7
+              ],
+              [
+                2
+              ],
+              [
+                3,
+                6
+              ],
+              [
+                4
+              ]
+            ],
+            "matches_eca_transforms": [],
+            "shell_action": "reflect_NW_SE",
+            "shell_cycle_type": [
+              1,
+              1,
+              2,
+              2,
+              2
+            ]
+          }
+        ],
+        "eca_intersection": [
+          "id"
+        ],
+        "layout": [
+          6,
+          7,
+          5,
+          4,
+          0,
+          1,
+          3,
+          2
+        ]
+      },
+      {
+        "actions": [
+          {
+            "induced_address_permutation": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "induced_cycles": [
+              [
+                0
+              ],
+              [
+                1
+              ],
+              [
+                2
+              ],
+              [
+                3
+              ],
+              [
+                4
+              ],
+              [
+                5
+              ],
+              [
+                6
+              ],
+              [
+                7
+              ]
+            ],
+            "matches_eca_transforms": [
+              "id"
+            ],
+            "shell_action": "id",
+            "shell_cycle_type": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "induced_address_permutation": [
+              5,
+              4,
+              1,
+              0,
+              7,
+              6,
+              3,
+              2
+            ],
+            "induced_cycles": [
+              [
+                0,
+                5,
+                6,
+                3
+              ],
+              [
+                1,
+                4,
+                7,
+                2
+              ]
+            ],
+            "matches_eca_transforms": [],
+            "shell_action": "r90",
+            "shell_cycle_type": [
+              4,
+              4
+            ]
+          },
+          {
+            "induced_address_permutation": [
+              6,
+              7,
+              4,
+              5,
+              2,
+              3,
+              0,
+              1
+            ],
+            "induced_cycles": [
+              [
+                0,
+                6
+              ],
+              [
+                1,
+                7
+              ],
+              [
+                2,
+                4
+              ],
+              [
+                3,
+                5
+              ]
+            ],
+            "matches_eca_transforms": [],
+            "shell_action": "r180",
+            "shell_cycle_type": [
+              2,
+              2,
+              2,
+              2
+            ]
+          },
+          {
+            "induced_address_permutation": [
+              3,
+              2,
+              7,
+              6,
+              1,
+              0,
+              5,
+              4
+            ],
+            "induced_cycles": [
+              [
+                0,
+                3,
+                6,
+                5
+              ],
+              [
+                1,
+                2,
+                7,
+                4
+              ]
+            ],
+            "matches_eca_transforms": [],
+            "shell_action": "r270",
+            "shell_cycle_type": [
+              4,
+              4
+            ]
+          },
+          {
+            "induced_address_permutation": [
+              5,
+              1,
+              4,
+              6,
+              2,
+              0,
+              3,
+              7
+            ],
+            "induced_cycles": [
+              [
+                0,
+                5
+              ],
+              [
+                1
+              ],
+              [
+                2,
+                4
+              ],
+              [
+                3,
+                6
+              ],
+              [
+                7
+              ]
+            ],
+            "matches_eca_transforms": [],
+            "shell_action": "reflect_NS",
+            "shell_cycle_type": [
+              1,
+              1,
+              2,
+              2,
+              2
+            ]
+          },
+          {
+            "induced_address_permutation": [
+              6,
+              4,
+              7,
+              3,
+              1,
+              5,
+              0,
+              2
+            ],
+            "induced_cycles": [
+              [
+                0,
+                6
+              ],
+              [
+                1,
+                4
+              ],
+              [
+                2,
+                7
+              ],
+              [
+                3
+              ],
+              [
+                5
+              ]
+            ],
+            "matches_eca_transforms": [],
+            "shell_action": "reflect_NE_SW",
+            "shell_cycle_type": [
+              1,
+              1,
+              2,
+              2,
+              2
+            ]
+          },
+          {
+            "induced_address_permutation": [
+              3,
+              7,
+              2,
+              0,
+              4,
+              6,
+              5,
+              1
+            ],
+            "induced_cycles": [
+              [
+                0,
+                3
+              ],
+              [
+                1,
+                7
+              ],
+              [
+                2
+              ],
+              [
+                4
+              ],
+              [
+                5,
+                6
+              ]
+            ],
+            "matches_eca_transforms": [],
+            "shell_action": "reflect_EW",
+            "shell_cycle_type": [
+              1,
+              1,
+              2,
+              2,
+              2
+            ]
+          },
+          {
+            "induced_address_permutation": [
+              0,
+              2,
+              1,
+              5,
+              7,
+              3,
+              6,
+              4
+            ],
+            "induced_cycles": [
+              [
+                0
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                3,
+                5
+              ],
+              [
+                4,
+                7
+              ],
+              [
+                6
+              ]
+            ],
+            "matches_eca_transforms": [],
+            "shell_action": "reflect_NW_SE",
+            "shell_cycle_type": [
+              1,
+              1,
+              2,
+              2,
+              2
+            ]
+          }
+        ],
+        "eca_intersection": [
+          "id"
+        ],
+        "layout": [
+          7,
+          3,
+          2,
+          0,
+          1,
+          5,
+          4,
+          6
+        ]
+      },
+      {
+        "actions": [
+          {
+            "induced_address_permutation": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "induced_cycles": [
+              [
+                0
+              ],
+              [
+                1
+              ],
+              [
+                2
+              ],
+              [
+                3
+              ],
+              [
+                4
+              ],
+              [
+                5
+              ],
+              [
+                6
+              ],
+              [
+                7
+              ]
+            ],
+            "matches_eca_transforms": [
+              "id"
+            ],
+            "shell_action": "id",
+            "shell_cycle_type": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "induced_address_permutation": [
+              3,
+              2,
+              7,
+              6,
+              1,
+              0,
+              5,
+              4
+            ],
+            "induced_cycles": [
+              [
+                0,
+                3,
+                6,
+                5
+              ],
+              [
+                1,
+                2,
+                7,
+                4
+              ]
+            ],
+            "matches_eca_transforms": [],
+            "shell_action": "r90",
+            "shell_cycle_type": [
+              4,
+              4
+            ]
+          },
+          {
+            "induced_address_permutation": [
+              6,
+              7,
+              4,
+              5,
+              2,
+              3,
+              0,
+              1
+            ],
+            "induced_cycles": [
+              [
+                0,
+                6
+              ],
+              [
+                1,
+                7
+              ],
+              [
+                2,
+                4
+              ],
+              [
+                3,
+                5
+              ]
+            ],
+            "matches_eca_transforms": [],
+            "shell_action": "r180",
+            "shell_cycle_type": [
+              2,
+              2,
+              2,
+              2
+            ]
+          },
+          {
+            "induced_address_permutation": [
+              5,
+              4,
+              1,
+              0,
+              7,
+              6,
+              3,
+              2
+            ],
+            "induced_cycles": [
+              [
+                0,
+                5,
+                6,
+                3
+              ],
+              [
+                1,
+                4,
+                7,
+                2
+              ]
+            ],
+            "matches_eca_transforms": [],
+            "shell_action": "r270",
+            "shell_cycle_type": [
+              4,
+              4
+            ]
+          },
+          {
+            "induced_address_permutation": [
+              5,
+              1,
+              4,
+              6,
+              2,
+              0,
+              3,
+              7
+            ],
+            "induced_cycles": [
+              [
+                0,
+                5
+              ],
+              [
+                1
+              ],
+              [
+                2,
+                4
+              ],
+              [
+                3,
+                6
+              ],
+              [
+                7
+              ]
+            ],
+            "matches_eca_transforms": [],
+            "shell_action": "reflect_NS",
+            "shell_cycle_type": [
+              1,
+              1,
+              2,
+              2,
+              2
+            ]
+          },
+          {
+            "induced_address_permutation": [
+              0,
+              2,
+              1,
+              5,
+              7,
+              3,
+              6,
+              4
+            ],
+            "induced_cycles": [
+              [
+                0
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                3,
+                5
+              ],
+              [
+                4,
+                7
+              ],
+              [
+                6
+              ]
+            ],
+            "matches_eca_transforms": [],
+            "shell_action": "reflect_NE_SW",
+            "shell_cycle_type": [
+              1,
+              1,
+              2,
+              2,
+              2
+            ]
+          },
+          {
+            "induced_address_permutation": [
+              3,
+              7,
+              2,
+              0,
+              4,
+              6,
+              5,
+              1
+            ],
+            "induced_cycles": [
+              [
+                0,
+                3
+              ],
+              [
+                1,
+                7
+              ],
+              [
+                2
+              ],
+              [
+                4
+              ],
+              [
+                5,
+                6
+              ]
+            ],
+            "matches_eca_transforms": [],
+            "shell_action": "reflect_EW",
+            "shell_cycle_type": [
+              1,
+              1,
+              2,
+              2,
+              2
+            ]
+          },
+          {
+            "induced_address_permutation": [
+              6,
+              4,
+              7,
+              3,
+              1,
+              5,
+              0,
+              2
+            ],
+            "induced_cycles": [
+              [
+                0,
+                6
+              ],
+              [
+                1,
+                4
+              ],
+              [
+                2,
+                7
+              ],
+              [
+                3
+              ],
+              [
+                5
+              ]
+            ],
+            "matches_eca_transforms": [],
+            "shell_action": "reflect_NW_SE",
+            "shell_cycle_type": [
+              1,
+              1,
+              2,
+              2,
+              2
+            ]
+          }
+        ],
+        "eca_intersection": [
+          "id"
+        ],
+        "layout": [
+          7,
+          6,
+          4,
+          5,
+          1,
+          0,
+          2,
+          3
+        ]
+      }
+    ],
+    "pass_identity_only": true,
+    "shell_action_controls": {
+      "id": {
+        "cycle_type": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "fixed_points": 8,
+        "permutation": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ]
+      },
+      "r180": {
+        "cycle_type": [
+          2,
+          2,
+          2,
+          2
+        ],
+        "fixed_points": 0,
+        "permutation": [
+          4,
+          5,
+          6,
+          7,
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "r270": {
+        "cycle_type": [
+          4,
+          4
+        ],
+        "fixed_points": 0,
+        "permutation": [
+          6,
+          7,
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      },
+      "r90": {
+        "cycle_type": [
+          4,
+          4
+        ],
+        "fixed_points": 0,
+        "permutation": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          0,
+          1
+        ]
+      },
+      "reflect_EW": {
+        "cycle_type": [
+          1,
+          1,
+          2,
+          2,
+          2
+        ],
+        "fixed_points": 2,
+        "permutation": [
+          4,
+          3,
+          2,
+          1,
+          0,
+          7,
+          6,
+          5
+        ]
+      },
+      "reflect_NE_SW": {
+        "cycle_type": [
+          1,
+          1,
+          2,
+          2,
+          2
+        ],
+        "fixed_points": 2,
+        "permutation": [
+          2,
+          1,
+          0,
+          7,
+          6,
+          5,
+          4,
+          3
+        ]
+      },
+      "reflect_NS": {
+        "cycle_type": [
+          1,
+          1,
+          2,
+          2,
+          2
+        ],
+        "fixed_points": 2,
+        "permutation": [
+          0,
+          7,
+          6,
+          5,
+          4,
+          3,
+          2,
+          1
+        ]
+      },
+      "reflect_NW_SE": {
+        "cycle_type": [
+          1,
+          1,
+          2,
+          2,
+          2
+        ],
+        "fixed_points": 2,
+        "permutation": [
+          6,
+          5,
+          4,
+          3,
+          2,
+          1,
+          0,
+          7
+        ]
+      }
+    }
+  },
+  "P6_axial": {
+    "pass": true,
+    "rule51_note": "dimension parity is a dynamical corollary; exclusion is the u=NOT fixed-point failure",
+    "rules": {
+      "0": {
+        "attainable_after_one_pass": [
+          0
+        ],
+        "f_power_by_dimension_1_to_4_on_inputs_0_1": {
+          "1": [
+            0,
+            0
+          ],
+          "2": [
+            0,
+            0
+          ],
+          "3": [
+            0,
+            0
+          ],
+          "4": [
+            0,
+            0
+          ]
+        },
+        "interface_fixed_output_criterion": true,
+        "pass": true,
+        "u_on_0_1": [
+          0,
+          0
+        ]
+      },
+      "204": {
+        "attainable_after_one_pass": [
+          0,
+          1
+        ],
+        "f_power_by_dimension_1_to_4_on_inputs_0_1": {
+          "1": [
+            0,
+            1
+          ],
+          "2": [
+            0,
+            1
+          ],
+          "3": [
+            0,
+            1
+          ],
+          "4": [
+            0,
+            1
+          ]
+        },
+        "interface_fixed_output_criterion": true,
+        "pass": true,
+        "u_on_0_1": [
+          0,
+          1
+        ]
+      },
+      "255": {
+        "attainable_after_one_pass": [
+          1
+        ],
+        "f_power_by_dimension_1_to_4_on_inputs_0_1": {
+          "1": [
+            1,
+            1
+          ],
+          "2": [
+            1,
+            1
+          ],
+          "3": [
+            1,
+            1
+          ],
+          "4": [
+            1,
+            1
+          ]
+        },
+        "interface_fixed_output_criterion": true,
+        "pass": true,
+        "u_on_0_1": [
+          1,
+          1
+        ]
+      },
+      "51": {
+        "attainable_after_one_pass": [
+          0,
+          1
+        ],
+        "f_power_by_dimension_1_to_4_on_inputs_0_1": {
+          "1": [
+            1,
+            0
+          ],
+          "2": [
+            0,
+            1
+          ],
+          "3": [
+            1,
+            0
+          ],
+          "4": [
+            0,
+            1
+          ]
+        },
+        "interface_fixed_output_criterion": false,
+        "pass": true,
+        "u_on_0_1": [
+          1,
+          0
+        ]
+      }
+    }
+  },
+  "P7_routing_storage": {
+    "below_shell_count": true,
+    "d": 2,
+    "outer_shell_cells_3d_radius1": 26,
+    "program_bits_8d": 16,
+    "scope": "accepted factorized routing family only; not compression of an arbitrary 512-bit 2D truth table"
+  },
+  "P8_stateful_execution": {
+    "claim": "no repeated-execution claim in this unit",
+    "status": "deferred"
+  },
+  "accepted_input_provenance": {
+    "editable_routing_result": {
+      "git_blob_sha": "8fd5ce533a142c4b7847e535e3c57cefaa985ba8",
+      "path": "results/editable_routing_tables_20260909.json",
+      "sha256": "e441d8876b802a8dc3ec2f609b6cfebcdcf34fb339cbc15b8872da40590c034a"
+    },
+    "guard_free_axial_result": {
+      "git_blob_sha": "872ada3cdbfb581a3edae536bfe3be4363084ec2",
+      "path": "results/guard_free_axial_lift_20260910.json",
+      "sha256": "46871e2a280c8f08d177deb2e9b85ad8a60b25438ab9e350a46027603fe9079d"
+    },
+    "history_algebra_result": {
+      "git_blob_sha": "a63d4ac3ad5176c4e95bc1076107a83086e061e4",
+      "path": "results/history_algebra_checks.json",
+      "sha256": "0c0551655a0072a3a0534532e9ad7c0a2e9fd05cf78efcbc37ac7afc3b2f7925"
+    },
+    "shared_state_audit": {
+      "git_blob_sha": "4c514a21d843c0a09330f71f02bd9886bdda0327",
+      "path": "results/shared_state_rule_20260907_audit.json",
+      "sha256": "d960d42275565815e72b260f5a77c0eb17893a34ccccc3098016647c69a1bd1e"
+    },
+    "shared_state_local": {
+      "git_blob_sha": "fd639a3a3137016911dfbaf12e16b85207601995",
+      "path": "results/shared_state_rule_20260907_local.json",
+      "sha256": "9c610e5b29e658b7d9bef9a8856eb378b5c979d27cdc11056f8b10dddf1d86c4"
+    }
+  },
+  "canonical_ordering": {
+    "eca_transforms": [
+      "id",
+      "M",
+      "C",
+      "MC"
+    ],
+    "layouts": "lexicographic by eight-address tuple after D4/complement deduplication",
+    "reference_gray_addresses": [
+      "000",
+      "001",
+      "011",
+      "010",
+      "110",
+      "111",
+      "101",
+      "100"
+    ],
+    "shell_actions": [
+      "id",
+      "r90",
+      "r180",
+      "r270",
+      "reflect_NS",
+      "reflect_NE_SW",
+      "reflect_EW",
+      "reflect_NW_SE"
+    ],
+    "shell_clockwise_from_north": [
+      "N",
+      "NE",
+      "E",
+      "SE",
+      "S",
+      "SW",
+      "W",
+      "NW"
+    ],
+    "z0_patch_variables": [
+      "L",
+      "C",
+      "R"
+    ],
+    "z1_patch_variables": [
+      "NW",
+      "N",
+      "NE",
+      "W",
+      "C",
+      "E",
+      "SW",
+      "S",
+      "SE"
+    ]
+  },
+  "interpretation_scope": {
+    "nonclaims": [
+      "no stateful or repeated dynamical dimensional lift",
+      "no unique or naturally selected layout",
+      "no arbitrary 2D-to-3D shell encoding",
+      "no compression of arbitrary 512-bit 2D rules",
+      "no intrinsic dimension, self-assembly, endogenous control, spacetime emergence, physics, metaphysics, or prime connection"
+    ],
+    "positive_ceiling": "local overlap-permitted selector audit across the first two law/state cardinality matches"
+  },
+  "protocol": "zero-dimensional-base-20260912",
+  "schema": 1,
+  "source_hashes": {
+    "editable_routing_result": "e441d8876b802a8dc3ec2f609b6cfebcdcf34fb339cbc15b8872da40590c034a",
+    "guard_free_axial_result": "46871e2a280c8f08d177deb2e9b85ad8a60b25438ab9e350a46027603fe9079d",
+    "history_algebra_result": "0c0551655a0072a3a0534532e9ad7c0a2e9fd05cf78efcbc37ac7afc3b2f7925",
+    "protocol": "4e41c3d13928a95691116665f9420eb965c2409ccae9b6fe3ddaa7ec6757bf0e",
+    "script": "bbe8eac0a1aa989a999284ac3afe9212a9598f1674d9687a04a03ef331f53367",
+    "shared_state_audit": "d960d42275565815e72b260f5a77c0eb17893a34ccccc3098016647c69a1bd1e",
+    "shared_state_local": "9c610e5b29e658b7d9bef9a8856eb378b5c979d27cdc11056f8b10dddf1d86c4"
+  },
+  "summary": {
+    "P1_complete_0D_floor": true,
+    "P2_commutator_floor": true,
+    "P3_minimum_role_overlap": true,
+    "P4_common_selector_local_structure": true,
+    "P5_no_nontrivial_Gray_ECA_symmetry_identification": true,
+    "P6_corrected_axial_deduction": true,
+    "P7_scoped_routing_storage_comparison": true,
+    "P8_stateful_execution_deferred": true
+  }
+}
