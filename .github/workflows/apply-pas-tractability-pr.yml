@@ -1,4 +1,4 @@
-name: Diagnose PAS tractability patch and self-test
+name: Apply PAS tractability certificate on PR
 
 on:
   pull_request:
@@ -9,7 +9,7 @@ permissions:
   contents: write
 
 jobs:
-  diagnose:
+  apply:
     if: github.head_ref == 'work/predictive-assembly-support/tractability-certificate'
     runs-on: ubuntu-latest
     timeout-minutes: 10
@@ -21,49 +21,29 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Capture patch and bounded self-test output
+      - name: Apply exact-preimage solver-only patch
         shell: bash
         run: |
-          set +e
-          python - <<'PY' > /tmp/pas-full-diagnostic.log 2>&1
-          from pathlib import Path
-          import subprocess
-          lines = Path('.github/workflows/apply-pas-tractability-once.yml').read_text().splitlines()
-          starts = [i for i, line in enumerate(lines) if line == '        run: |']
-          print(f'blocks={len(starts)}')
-          if len(starts) != 3:
-              raise SystemExit(90)
-          i = starts[0] + 1
-          block = []
-          while i < len(lines):
-              line = lines[i]
-              if line.strip() == '':
-                  block.append(''); i += 1; continue
-              indent = len(line) - len(line.lstrip(' '))
-              if indent < 10: break
-              block.append(line[10:]); i += 1
-          patch = subprocess.run(['bash','-lc','\n'.join(block)+'\n'], text=True, capture_output=True)
-          print('PATCH_RC', patch.returncode)
-          print('PATCH_STDOUT'); print(patch.stdout)
-          print('PATCH_STDERR'); print(patch.stderr)
-          if patch.returncode:
-              raise SystemExit(patch.returncode)
-          comp = subprocess.run(['python','-m','py_compile','scripts/verify_predictive_assembly_support.py'], text=True, capture_output=True)
-          print('COMPILE_RC', comp.returncode); print(comp.stdout); print(comp.stderr)
-          if comp.returncode: raise SystemExit(comp.returncode)
-          st = subprocess.run(['python','scripts/verify_predictive_assembly_support.py','--self-test'], text=True, capture_output=True)
-          print('SELFTEST_RC', st.returncode)
-          print('SELFTEST_STDOUT'); print(st.stdout)
-          print('SELFTEST_STDERR'); print(st.stderr)
-          raise SystemExit(st.returncode)
-          PY
-          rc=$?
-          git reset --hard HEAD
-          printf 'diagnostic_rc=%s\n' "$rc" > .pas-editor-diagnostic.log
-          cat /tmp/pas-full-diagnostic.log >> .pas-editor-diagnostic.log
+          set -euo pipefail
+          test "$(git hash-object scripts/verify_predictive_assembly_support.py)" = "f39f946509acd50047c1c77502af212f0f6b6ec4"
+          python .pas_patch.py
+      - name: Run bounded implementation-only verification
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m py_compile scripts/verify_predictive_assembly_support.py
+          python scripts/verify_predictive_assembly_support.py --self-test
+          test ! -f results/predictive_assembly_support_20260912.json
+      - name: Commit only solver correction and remove temporary artifacts
+        shell: bash
+        run: |
+          set -euo pipefail
           git config user.name 'Codex PAS tractability'
           git config user.email 'noreply@openai.com'
-          git add .pas-editor-diagnostic.log
-          git commit -m 'ci: update PAS tractability diagnostic'
+          git rm .github/workflows/apply-pas-tractability-once.yml
+          git rm .github/workflows/apply-pas-tractability-pr.yml
+          git rm .pas-editor-diagnostic.log
+          git rm .pas_patch.py
+          git add scripts/verify_predictive_assembly_support.py
+          git commit -m 'research: pin bounded PAS independent optimality certificate'
           git push origin HEAD:work/predictive-assembly-support/tractability-certificate
-          exit 0
