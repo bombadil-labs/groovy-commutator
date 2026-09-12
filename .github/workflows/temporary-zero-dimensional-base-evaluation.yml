@@ -1,0 +1,49 @@
+name: Temporary zero-dimensional-base evaluation
+
+on:
+  push:
+    branches:
+      - work/dimensional-zero-base/evaluation
+    paths:
+      - '.github/workflows/temporary-zero-dimensional-base-evaluation.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  evaluate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: work/dimensional-zero-base/evaluation
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Execute the frozen Z0/Z1 audit once
+        run: python scripts/verify_zero_dimensional_base.py > /tmp/zero-base-evaluation.log
+      - name: Register result, verify provenance, and commit canonical output
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          from pathlib import Path
+          p = Path('scripts/check_result_integrity.py')
+          s = p.read_text()
+          entry = """    'results/zero_dimensional_base_20260912.json': {\n        'script': 'scripts/verify_zero_dimensional_base.py',\n        'protocol': 'docs/research/protocols/zero-dimensional-base-20260912.md',\n        'history_algebra_result': 'results/history_algebra_checks.json',\n        'shared_state_audit': 'results/shared_state_rule_20260907_audit.json',\n        'shared_state_local': 'results/shared_state_rule_20260907_local.json',\n        'guard_free_axial_result': 'results/guard_free_axial_lift_20260910.json',\n        'editable_routing_result': 'results/editable_routing_tables_20260909.json'},\n"""
+          if 'results/zero_dimensional_base_20260912.json' not in s:
+              marker = '}\n\ndef sha('
+              if marker not in s:
+                  raise SystemExit('integrity registry insertion marker not found')
+              s = s.replace(marker, entry + marker, 1)
+              p.write_text(s)
+          PY
+          python scripts/check_result_integrity.py results/zero_dimensional_base_20260912.json
+          git config user.name "Codex evaluation runner"
+          git config user.email "noreply@openai.com"
+          git add results/zero_dimensional_base_20260912.json scripts/check_result_integrity.py
+          git rm .github/workflows/temporary-zero-dimensional-base-evaluation.yml
+          git commit -m "Evaluate frozen zero-dimensional base audit [zero-base-results]"
+          git push origin HEAD:work/dimensional-zero-base/evaluation
