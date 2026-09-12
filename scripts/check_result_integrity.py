@@ -110,6 +110,15 @@ REGISTRY = {
         'protocol': 'docs/research/protocols/interface-history-20260911.md',
         'interface_factor_result': 'results/interface_factor_20260911.json',
         'interface_factor_script': 'scripts/verify_interface_factor.py'},
+    'results/interface_history_global_20260912.json': {
+        'script': 'scripts/verify_interface_history_global.py',
+        'protocol': 'docs/research/protocols/interface-history-global-20260912.md',
+        'gate1_clarification': 'docs/research/protocols/interface-history-global-gate1-clarification-20260912.md',
+        'predecessor_protocol': 'docs/research/protocols/interface-history-20260911.md',
+        'predecessor_script': 'scripts/verify_interface_history.py',
+        'predecessor_result': 'results/interface_history_20260911.json',
+        'interface_factor_script': 'scripts/verify_interface_factor.py',
+        'interface_factor_result': 'results/interface_factor_20260911.json'},
 }
 
 def sha(p: pathlib.Path) -> str: return hashlib.sha256(p.read_bytes()).hexdigest()

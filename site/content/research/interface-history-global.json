@@ -1,0 +1,17 @@
+[
+  {
+    "slug": "interface-history-global",
+    "label": "Global interface history",
+    "title": "Do two lags recover enough information globally when radius two still fails?",
+    "date": "2026-09-12",
+    "updated": "2026-09-12",
+    "kind": "Experiment",
+    "evidence": "exact",
+    "topic": "Dimensional closure",
+    "summary": "The frozen touching-strip representation remains globally conflicting in 183 of 192 tested finite-ring cells, but full P15 with two lags on D2 is globally deterministic on both rings 6 and 7 even though every accepted local radius through two conflicts. All nine global passes occur at D2,h=2.",
+    "takeaway": "For the full two-lag interface state on the tested rings, the missing predictive information is present somewhere in the complete ring field; the unresolved resource is locality radius, not representation-level information loss. This is a finite-ring result only.",
+    "source": "docs/research/2026-09-12-interface-history-global.md",
+    "promotion": { "stage": "research" },
+    "related": ["interface-history", "interface-factor", "coupled-strips", "interface-state", "dimensional-vision-and-interpretation"]
+  }
+]
