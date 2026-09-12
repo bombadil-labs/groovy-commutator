@@ -1,4 +1,4 @@
-name: Apply PAS tractability certificate on PR
+name: Diagnose PAS tractability editor
 
 on:
   pull_request:
@@ -9,10 +9,10 @@ permissions:
   contents: write
 
 jobs:
-  apply:
+  diagnose:
     if: github.head_ref == 'work/predictive-assembly-support/tractability-certificate'
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 5
     steps:
       - uses: actions/checkout@v4
         with:
@@ -21,28 +21,33 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Execute the staged bounded editor exactly
+      - name: Capture first staged editor block output
         shell: bash
         run: |
-          set -euo pipefail
-          python - <<'PY'
+          set +e
+          python - <<'PY' > /tmp/pas-editor.log 2>&1
           from pathlib import Path
           import re, subprocess, textwrap
-          p = Path('.github/workflows/apply-pas-tractability-once.yml')
-          text = p.read_text()
+          text = Path('.github/workflows/apply-pas-tractability-once.yml').read_text()
           blocks = [textwrap.dedent(m.group(1)) for m in re.finditer(r'(?m)^        run: \|\n((?:^          .*\n)+)', text)]
+          print(f'blocks={len(blocks)}')
           if len(blocks) != 3:
               raise SystemExit(f'expected 3 staged run blocks, found {len(blocks)}')
-          for i, block in enumerate(blocks, 1):
-              print(f'--- staged block {i} ---')
-              subprocess.run(['bash', '-lc', block], check=True)
+          cp = subprocess.run(['bash', '-lc', blocks[0]], text=True, capture_output=True)
+          print(f'block1_rc={cp.returncode}')
+          print('STDOUT:')
+          print(cp.stdout)
+          print('STDERR:')
+          print(cp.stderr)
+          raise SystemExit(cp.returncode)
           PY
-      - name: Remove this retrigger workflow from the final implementation branch
-        shell: bash
-        run: |
-          set -euo pipefail
+          rc=$?
+          git reset --hard HEAD
+          printf 'diagnostic_rc=%s\n' "$rc" > .pas-editor-diagnostic.log
+          cat /tmp/pas-editor.log >> .pas-editor-diagnostic.log
           git config user.name 'Codex PAS tractability'
           git config user.email 'noreply@openai.com'
-          git rm .github/workflows/apply-pas-tractability-pr.yml
-          git commit -m 'ci: remove PAS tractability retrigger after bounded edit'
+          git add .pas-editor-diagnostic.log
+          git commit -m 'ci: preserve PAS tractability editor diagnostic'
           git push origin HEAD:work/predictive-assembly-support/tractability-certificate
+          exit 0
