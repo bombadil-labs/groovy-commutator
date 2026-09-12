@@ -7,6 +7,43 @@ substantial unit completes; keep the bounded-claim style.
 
 Program page: `docs/research/2026-09-10-representation-invariants-program.md`
 
+## Checkpoint 2026-09-12 (eighteenth unit accepted): depth-two ring certificate merged
+
+- Accepted after gate-2 sign-off by OpenAI GPT-5.6 Sol at evaluated head
+  `ba7596e` (scientific review on `0e470ab8...` found the argument,
+  controls and failure reporting clean, conditional on two process-only
+  fixes): **B1**, removing a `PEND` allowance in
+  `scripts/check_result_integrity.py` (and the matching "skip if absent"
+  step in this unit's workflow) that would have let a future accidental
+  deletion or rename of this now-evaluated canonical result evade the
+  fast integrity tier — removed outright, verified both directions
+  locally (present passes, missing fails); **B2**, updating the gathering
+  PR's own body, which had gone stale, still describing the opening
+  protocol-only state. Both resolved on head `ba7596e`; Codex's
+  applicability re-read confirmed the scientific review carried over
+  unchanged; merged in PR #206 as `bec0ef3`.
+- Branch restarted from `main` at `bec0ef3`. Records updated: AGENTS.md's
+  established-results list (eighteenth-unit addendum), the research
+  note's and the Program page's "Final review" lines, the
+  `depth-two-certificate-test` knowledge entry's final line, this
+  checkpoint.
+- State of the program: eighteen units accepted. This unit's dispatcher
+  (Sonnet 5) handled two Gate-2 process-only fixes directly rather than
+  re-dispatching subagents, since each was small, well-specified, and
+  verified both before and after the change — consistent with the
+  standing dispatcher-model guidance to reserve subagent dispatch for
+  substantive review/implementation work.
+- Candidates going forward, unchanged from the prior checkpoint: full-shift
+  depth four for the deep rules stays parked pending Myk's cost decision;
+  a structural account of the deep rules now has one concrete object to
+  bet on (the `V²_cl` identity, post hoc at depth two); recertifying the
+  earlier ring censuses whose windows stop before their own certified
+  onsets is now cheap at closure and depth one and two. New from this
+  unit: future units on this program should route implementation and
+  evaluation through separate sub-PRs from the start (the sixteenth/
+  seventeenth units' pattern), per Codex's independent implementation-
+  boundary review of this unit's direct-to-gathering routing.
+
 ## Checkpoint 2026-09-12 (eighteenth unit evaluated): depth two certified at every ring; two period bets and the main gap bet failed; gate 2 requested
 
 - Canonical evaluation run once off GitHub Actions from the pinned verifier
