@@ -1,0 +1,91 @@
+name: Interface-history cross-width locality audit
+
+# Permanent two-tier workflow. During implementation the canonical result is
+# absent: syntax-check and run only out-of-domain widths 3/4. Once evaluation
+# commits the canonical JSON, check source hashes on every touching PR and
+# replay the frozen widths 6-9 census byte for byte when the result changes,
+# on main, weekly, and on manual dispatch.
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, ready_for_review]
+    paths:
+      - 'scripts/verify_interface_history_cross_width.py'
+      - 'scripts/verify_interface_history_global.py'
+      - 'scripts/verify_interface_history.py'
+      - 'scripts/verify_interface_factor.py'
+      - 'results/interface_history_cross_width_20260912.json'
+      - 'results/interface_history_global_20260912.json'
+      - 'results/interface_history_20260911.json'
+      - 'docs/research/protocols/interface-history-cross-width-20260912.md'
+      - 'docs/research/protocols/interface-history-global-20260912.md'
+      - 'docs/research/protocols/interface-history-20260911.md'
+      - 'scripts/check_result_integrity.py'
+      - '.github/workflows/research-interface-history-cross-width.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/verify_interface_history_cross_width.py'
+      - 'scripts/verify_interface_history_global.py'
+      - 'scripts/verify_interface_history.py'
+      - 'scripts/verify_interface_factor.py'
+      - 'results/interface_history_cross_width_20260912.json'
+      - 'results/interface_history_global_20260912.json'
+      - 'results/interface_history_20260911.json'
+      - 'docs/research/protocols/interface-history-cross-width-20260912.md'
+      - 'docs/research/protocols/interface-history-global-20260912.md'
+      - 'docs/research/protocols/interface-history-20260911.md'
+      - 'scripts/check_result_integrity.py'
+      - '.github/workflows/research-interface-history-cross-width.yml'
+  schedule:
+    - cron: '41 8 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  interface-history-cross-width:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -e .
+      - name: Syntax-check the pinned verifier
+        run: python -m py_compile scripts/verify_interface_history_cross_width.py
+      - name: Run implementation-only self-test outside the frozen source domain
+        run: python scripts/verify_interface_history_cross_width.py --self-test
+      - name: Recorded source hashes match the tree when the canonical result exists
+        run: |
+          if [ -f results/interface_history_cross_width_20260912.json ]; then
+            python scripts/check_result_integrity.py results/interface_history_cross_width_20260912.json
+          else
+            echo 'Implementation-only stage: canonical result not committed yet.'
+          fi
+      - name: Does this run require the full canonical replay?
+        id: result
+        run: |
+          if [ ! -f results/interface_history_cross_width_20260912.json ]; then
+            echo 'changed=false' >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          if [ "${{ github.event_name }}" != "pull_request" ]; then
+            echo 'changed=true' >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          if git diff --name-only "origin/${{ github.base_ref }}...HEAD" | grep -qx 'results/interface_history_cross_width_20260912.json'; then
+            echo 'changed=true' >> "$GITHUB_OUTPUT"
+          else
+            echo 'changed=false' >> "$GITHUB_OUTPUT"
+          fi
+      - name: Replay the frozen verifier and compare canonical JSON byte for byte
+        if: steps.result.outputs.changed == 'true'
+        run: |
+          cp results/interface_history_cross_width_20260912.json /tmp/expected.json
+          python scripts/verify_interface_history_cross_width.py > /dev/null
+          cmp /tmp/expected.json results/interface_history_cross_width_20260912.json
