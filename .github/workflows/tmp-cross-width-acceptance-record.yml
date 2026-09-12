@@ -1,0 +1,48 @@
+name: Temporary cross-width acceptance record
+
+on:
+  push:
+    branches:
+      - maintenance/accept-cross-width-interface-history
+    paths:
+      - '.github/workflows/tmp-cross-width-acceptance-record.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  record:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Record accepted review state and remove this workflow
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+
+          note = Path('docs/research/2026-09-12-interface-history-cross-width.md')
+          text = note.read_text()
+          old = 'exact-head Gate 2 is pending on gathering PR #164.'
+          new = 'Gate 2 was approved by Claude Code / Fable 5.1 on exact final head `0b569f3a7206f394640a919ea40c8e77b67c41dd`; the reviewer merged PR #164 into `main` as `8b8c62d0e3219c156b086b56c3a1158fba4b4792` under the reviewer-merges rule.'
+          if text.count(old) != 1:
+              raise SystemExit(f'note pending-review marker count={text.count(old)}')
+          note.write_text(text.replace(old, new, 1))
+
+          checkpoint = Path('docs/research/checkpoints/dimensional-lift.md')
+          text = checkpoint.read_text()
+          heading_old = '## Checkpoint 2026-09-12: cross-width two-lag closure persists through width eight and fails at width nine; gate-2 pending'
+          heading_new = '## Checkpoint 2026-09-12: cross-width two-lag closure persists through width eight and fails at width nine; accepted'
+          review_old = '- **Review state:** canonical evaluation and result reporting are integrated on the gathering branch; this current-account sub-PR updates the living Program/checkpoint. Exact-head independent Gate 2 and reviewer merge remain required before acceptance on `main`.'
+          review_new = '- **Review state:** accepted on `main`. Claude Code / Fable 5.1 approved exact-head Gate 2 on `0b569f3a7206f394640a919ea40c8e77b67c41dd` and merged PR #164 under the reviewer-merges rule as `8b8c62d0e3219c156b086b56c3a1158fba4b4792`.'
+          if text.count(heading_old) != 1 or text.count(review_old) != 1:
+              raise SystemExit(f'checkpoint markers heading={text.count(heading_old)} review={text.count(review_old)}')
+          text = text.replace(heading_old, heading_new, 1).replace(review_old, review_new, 1)
+          checkpoint.write_text(text)
+          PY
+          rm .github/workflows/tmp-cross-width-acceptance-record.yml
+          git config user.name 'Codex acceptance bookkeeping'
+          git config user.email 'noreply@openai.com'
+          git add docs/research/2026-09-12-interface-history-cross-width.md docs/research/checkpoints/dimensional-lift.md .github/workflows/tmp-cross-width-acceptance-record.yml
+          git commit -m 'docs: record acceptance of cross-width interface history'
+          git push origin HEAD:maintenance/accept-cross-width-interface-history
