@@ -1,0 +1,5 @@
+K4_one_lag_constructive_bet=false
+K5_depth_two_outcome="both conflict"
+K6_pareto_minimal={"D0": [], "D1": [], "D2": []}
+K9_dependency_audits={}
+P15_COMPACT={"D0": {"0": {"passing_radii": []}}, "D1": {"0": {"passing_radii": []}, "1": {"passing_radii": []}}, "D2": {"0": {"passing_radii": []}, "1": {"passing_radii": []}, "2": {"passing_radii": []}}, "P0": {"0": {"passing_radii": []}}}
