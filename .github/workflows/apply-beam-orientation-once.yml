@@ -74,10 +74,9 @@ jobs:
 
           The workstreams can proceed in parallel under their own gates. Documentation integration does not grant Gate 1 to any experiment and does not reopen a completed protocol. Keep the original failures, later scope corrections, and the distinction between observer-supplied structure and endogenous organization visible.
           '''
-          # Dedent the embedded prose without reflowing any existing content.
           import textwrap
           addendum = textwrap.dedent(addendum)
-          new_note = new_note.rstrip() + addendum + '\n'
+          new_note = (new_note.rstrip() + addendum).rstrip() + '\n'
           assert new_note.split('\n\n## Dated integration:')[0].replace('\n' + provenance, '', 1).rstrip() == old_note.rstrip()
           note.write_text(new_note, encoding='utf-8')
 
