@@ -43,39 +43,63 @@ code, and repository maintenance, including changes to this guidance.
   implementation → evaluation commits, and for gathering PRs whose history
   carries that provenance; do not squash away the evidence of that order.
 - Before experimental implementation and evaluation, obtain explicit
-  other-model review of the frozen protocol, as specified in
+  independent-agent review of the frozen protocol, as specified in
   `docs/research/README.md`. A protocol sub-PR is a convenient review point.
   Self-merging that sub-PR does not waive this gate. Record its reviewed
   revision and review link; material changes to predictions, domain, budget,
   or scoring require renewed review before the affected evaluation.
-- If the other model is unavailable at protocol freeze, Myk may explicitly
+- If no independent collaborating agent is available at protocol freeze, Myk may explicitly
   authorize implementation/evaluation to proceed. Record on the protocol:
   `Protocol review: none at freeze; run authorized by Myk <date>`, with a
   reference to that authorization. Record any implementation authorization
   separately if needed. The results note must say evaluation preceded review.
   Unavailability alone is not authorization. Retrospective review follows the
-  correction path; this exception does not waive other-model review before
+  correction path; this exception does not waive independent-agent review before
   merge into `main`. Without authorization, keep the protocol unrun and
   continue useful work outside the gated experiment.
 - When the unit is complete, update its notes, knowledge dependencies,
   Program and checkpoint as applicable. List its sub-PRs, deviations,
   negative findings, verification, and unresolved limits in the gathering PR.
-  Mark it ready and obtain explicit review from the other model: Claude/Fable
-  reviews Codex-led work, and Codex reviews Claude/Fable-led work. Review the
-  combined argument, implementation, results, and interpretation.
+  Mark it ready and obtain explicit review from an **independent collaborating
+  agent**. Codex and Claude/Fable remain the default reciprocal reviewers, but
+  additional collaborators may join the same review pool. The reviewer must not
+  have authored the work being independently gated. Review the combined
+  argument, implementation, results, and interpretation.
 - Do not merge a gathering PR into `main` until relevant checks are green,
-  review findings are resolved, and the other model explicitly signs off on
-  the current head SHA. Material changes after review require renewed review;
-  after any head change, the reviewer must confirm applicability to the new
-  head. If both models authored the unit, state their contributions and
-  cross-review each other's work; self-review alone is insufficient.
+  review findings are resolved, and an independent collaborating agent
+  explicitly signs off on the current head SHA. Material changes after review
+  require renewed review; after any head change, the reviewer must confirm
+  applicability to the new head. If multiple agents authored the unit, state
+  their contributions and arrange cross-review so that each independently gated
+  contribution is reviewed by an agent who did not author it; self-review alone
+  is insufficient.
 - A signed PR comment is acceptable when agents share a GitHub account and
   GitHub cannot record a separate formal approval. Include agent/model/session
   identity, date, reviewed SHA, review scope and an explicit sign-off or list
   of remaining blockers. CI success, silence, and a thumbs-up reaction alone
   are not sign-off.
+- **Additional collaborators are first-class participants.** A collaborator
+  may propose a new research Program in its own gathering PR, contribute
+  protocol/implementation/evaluation sub-PRs, and review work from other
+  agents. A new Program proposal should state its thesis/question, relationship
+  to existing Programs, scope and non-claims, initial research agenda, owner(s),
+  and intended review pool; when accepted it gets the normal Program registry
+  entry and checkpoint log. Do not force a genuinely distinct proposal into an
+  existing Program merely because its vocabulary overlaps.
+- Identify agent work by the **signed agent/model/session provenance and PR
+  context**, not GitHub username alone. Different agents may legitimately share
+  the same GitHub account. Branch names, PR bodies, signed comments, commit
+  authorship and session/model signatures are coordination evidence. A newly
+  participating agent should use the same signed-review format from its first
+  contribution so automated/manual review cycles can recognize its work.
+- Review sharing is many-to-many, not a fixed Codex↔Fable pairing. Any
+  participating agent may perform Gate 1 or Gate 2 for another agent's work if
+  it is independent of that work and has read the current protocol/context.
+  Prefer diversity of reviewers across successive units when practical, but do
+  not require a particular vendor/model family. The scientific requirement is
+  independent review, not brand identity.
 - **The reviewer merges** (agreed with Myk 2026-09-11, replacing "the author
-  merges after the gate"). When the reviewing model's gate-2 review finds no
+  merges after the gate"). When the reviewing agent's gate-2 review finds no
   blockers and every check on that head is green, it merges the gathering PR
   itself, with a merge commit, in the same pass as the sign-off. If a required
   check is still running, the sign-off says it is conditional on that check,
