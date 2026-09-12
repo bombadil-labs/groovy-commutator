@@ -117,16 +117,27 @@ code, and repository maintenance, including changes to this guidance.
 - This is an agent workflow, not a claim that branch protection enforces model
   identity. Keep applicable CI enabled for sub-PRs as well as gathering PRs;
   a missing check is not a passing check. Pages publication stays on `main`.
-- Result replays run in two tiers (2026-09-11). Every canonical result JSON
-  records the SHA-256 of its verifier and inputs; every pull request touching
-  an audit's files runs `scripts/check_result_integrity.py`, which recomputes
-  those hashes in seconds. That tier establishes provenance coherence only
-  (a verifier or input edited without regeneration); it does not inspect
-  result content. The full byte-for-byte replay is the content and
-  determinism check: it runs on any pull request that modifies the canonical
-  result file itself, on pushes to `main`, weekly, and on manual dispatch.
-  A new result file must be registered in the integrity script and its
-  workflow must carry both tiers.
+- Result verification has two tiers (updated with Myk on 2026-09-12 to bound
+  GitHub Actions cost). Every canonical result JSON records the SHA-256 of its
+  verifier and inputs; every pull request touching an audit's files runs
+  `scripts/check_result_integrity.py`, which recomputes those hashes in seconds.
+  That fast tier establishes provenance coherence only (a verifier or input
+  edited without regeneration); it does not inspect result content.
+- **Do not put long research evaluations or replays in automatic CI.** A job
+  expected or observed to take more than about 10 minutes must not run from
+  `pull_request`, `push`, or `schedule` triggers. Generate the canonical result
+  once outside GitHub Actions from the pinned, reviewed implementation, record
+  the execution provenance, and verify the committed bytes with the fast
+  integrity tier. Perform any required independent byte-for-byte replay outside
+  Actions as part of author/reviewer verification. A manual `workflow_dispatch`
+  for an expensive replay may remain only as an exceptional escape hatch and
+  must not be used without Myk's explicit authorization to spend Actions time.
+  Short replays that remain comfortably inside the 10-minute CI budget may stay
+  automatic. In-flight expensive Actions runs that predate this rule may finish,
+  but do not automatically rerun them. Convert existing expensive workflows
+  before their next execution. A new result file must still be registered in
+  the integrity script and its workflow/verification record must identify its
+  fast automatic tier and, when applicable, its off-CI full-replay procedure.
 
 ## Ongoing research and the public site
 
