@@ -58,7 +58,7 @@ def sha(path: pathlib.Path) -> str:
 
 
 def pack_field(symbols: np.ndarray) -> np.ndarray:
-    """Pack a complete retained ring field; n<=7 so 42 bits fit in uint64."""
+    """Pack one complete retained ring field; n<=7 so 42 bits fit in uint64."""
     if symbols.ndim != 2:
         raise AssertionError("field must have shape (sources, ring_sites)")
     out = np.zeros(symbols.shape[0], dtype=np.uint64)
@@ -101,21 +101,22 @@ class GlobalRecords:
 
 
 def build_global_records(orbit, domain: str, h: int) -> GlobalRecords:
-    """Canonical record order: (t, source_pair_lex), no site component."""
+    """Canonical record order: (t, source_pair_lex), with no site component."""
     if orbit.n not in RINGS or domain not in DOMAINS_GLOBAL or h not in DEPTHS[domain]:
         raise AssertionError((orbit.n, domain, h))
-    los = []
-    his = []
-    outs = []
-    ts = []
-    sources = []
+    los: list[np.ndarray] = []
+    his: list[np.ndarray] = []
+    outs: list[np.ndarray] = []
+    ts: list[np.ndarray] = []
+    sources: list[np.ndarray] = []
     for t in DOMAINS[domain]:
         if t < h:
             raise AssertionError((domain, h, t))
-        chunks = []
-        for tt in range(t - h, t + 1):
-            for site in range(orbit.n):
-                chunks.append(orbit.symbols[tt][:, site])
+        chunks = [
+            orbit.symbols[tt][:, site]
+            for tt in range(t - h, t + 1)
+            for site in range(orbit.n)
+        ]
         lo, hi = pack_chunks(chunks)
         nxt = pack_field(orbit.symbols[t + 1])
         count = lo.shape[0]
@@ -140,12 +141,10 @@ def build_global_records(orbit, domain: str, h: int) -> GlobalRecords:
 class GlobalVerdict:
     passed: bool
     pair: tuple[int, int] | None
-    key: tuple[int, int] | None
-    outputs: tuple[int, int] | None
 
 
 def primary_verdict(records: GlobalRecords, mask: int) -> GlobalVerdict:
-    """Hash complete packed history fields and keep the frozen canonical pair."""
+    """Packed-key census with the frozen lexicographic conflicting-record pair."""
     selected = field_mask(mask)
     mlo, mhi = repeat_mask(selected, records.n * (records.h + 1))
     omask = output_mask(selected, records.n)
@@ -154,8 +153,6 @@ def primary_verdict(records: GlobalRecords, mask: int) -> GlobalVerdict:
     out = records.out & omask
     first: dict[tuple[int, int], tuple[int, int]] = {}
     best: tuple[int, int] | None = None
-    best_key: tuple[int, int] | None = None
-    best_outputs: tuple[int, int] | None = None
     for i in range(len(out)):
         key = (int(lo[i]), int(hi[i]))
         value = int(out[i])
@@ -169,9 +166,7 @@ def primary_verdict(records: GlobalRecords, mask: int) -> GlobalVerdict:
         candidate = (j, i)
         if best is None or candidate < best:
             best = candidate
-            best_key = key
-            best_outputs = (old_value, value)
-    return GlobalVerdict(best is None, best, best_key, best_outputs)
+    return GlobalVerdict(best is None, best)
 
 
 def explicit_history_key(orbit, source: int, t: int, h: int, selected: int) -> tuple:
@@ -190,8 +185,6 @@ def reference_verdict(orbit, records: GlobalRecords, mask: int) -> GlobalVerdict
     selected = field_mask(mask)
     first: dict[tuple, tuple[int, tuple[int, ...]]] = {}
     best: tuple[int, int] | None = None
-    best_key: tuple | None = None
-    best_outputs: tuple[tuple[int, ...], tuple[int, ...]] | None = None
     for i in range(len(records.t)):
         t = int(records.t[i])
         source = int(records.source[i])
@@ -207,12 +200,7 @@ def reference_verdict(orbit, records: GlobalRecords, mask: int) -> GlobalVerdict
         candidate = (j, i)
         if best is None or candidate < best:
             best = candidate
-            best_key = key
-            best_outputs = (old_value, value)
-    if best is None:
-        return GlobalVerdict(True, None, None, None)
-    # Normalize tuple data only for verdict/pair agreement; entry() reconstructs it.
-    return GlobalVerdict(False, best, None, None)
+    return GlobalVerdict(best is None, best)
 
 
 def source_pair_lex(n: int, source: int) -> list[str]:
@@ -241,21 +229,19 @@ def history_json(orbit, source: int, t: int, h: int, mask: int) -> list[list[int
 
 def first_differing_output(a: Iterable[int], b: Iterable[int], h: int, mask: int) -> dict | None:
     selected = field_mask(mask)
-    aa = list(a)
-    bb = list(b)
-    for site, (x, y) in enumerate(zip(aa, bb)):
+    for site, (x, y) in enumerate(zip(a, b)):
         if x == y:
             continue
         for c, name in enumerate(COORDINATES):
             if ((selected >> c) & 1) and ((x >> c) & 1) != ((y >> c) & 1):
-                # Equal histories imply all copied lag coordinates of the next
-                # history agree; the first difference is at its newest field.
+                # Equal input histories make all copied lag coordinates of the
+                # next history equal; the first possible difference is newest.
                 return {
                     "site": site,
                     "history_index_oldest_first": h,
                     "coordinate": name,
                 }
-        raise AssertionError("masked fields differ but no retained coordinate differs")
+        raise AssertionError("masked next fields differ but no retained coordinate differs")
     return None
 
 
@@ -296,19 +282,17 @@ def check_predecessor_provenance(old: dict) -> None:
         "interface_factor_script": FACTOR_SCRIPT,
     }
     for key, path in expected.items():
-        recorded = old["source_hashes"].get(key)
-        actual = sha(path)
-        if recorded != actual:
+        if old["source_hashes"].get(key) != sha(path):
             raise AssertionError(f"G1 predecessor provenance mismatch: {key}")
 
 
 def check_local_regression(orbits, old: dict) -> None:
-    """Replay every accepted full-state D0/D1/D2 local verdict/witness."""
+    """Replay every accepted full-state P15 D0/D1/D2 local verdict/witness."""
     for domain in DOMAINS_GLOBAL:
         for h in DEPTHS[domain]:
             for radius in (0, 1, 2):
-                rr = build_local_records(orbits, domain, h, radius)
-                now = local_entry(rr, 15, local_verdict(rr, 15))
+                records = build_local_records(orbits, domain, h, radius)
+                now = local_entry(records, 15, local_verdict(records, 15))
                 accepted = old["census"][domain][str(h)][str(radius)]["15"]
                 if now != accepted:
                     raise AssertionError(("G1 local regression mismatch", domain, h, radius))
@@ -316,6 +300,37 @@ def check_local_regression(orbits, old: dict) -> None:
 
 def observe_replayed(states: list[np.ndarray], ys: list[np.ndarray], t: int) -> np.ndarray:
     return observe_symbols(states[t][None, ...], ys[t], assert_roundtrip=True)[0]
+
+
+def current_physical_difference(
+    states1: list[np.ndarray], ys1: list[np.ndarray], t1: int,
+    states2: list[np.ndarray], ys2: list[np.ndarray], t2: int,
+) -> dict:
+    """Compare current physical states by explicit coordinates, not array shape."""
+    field1 = states1[t1]
+    field2 = states2[t2]
+    rows1 = [int(y) for y in ys1[t1]]
+    rows2 = [int(y) for y in ys2[t2]]
+    yset1 = set(rows1)
+    yset2 = set(rows2)
+    domain_difference = yset1 != yset2
+    index1 = {y: i for i, y in enumerate(rows1)}
+    index2 = {y: i for i, y in enumerate(rows2)}
+    common_difference = False
+    for y in sorted(yset1 & yset2):
+        if not np.array_equal(field1[index1[y]], field2[index2[y]]):
+            common_difference = True
+            break
+    identical = not domain_difference and not common_difference
+    return {
+        "current_complete_physical_fields_identical": identical,
+        "current_physical_row_domains_equal": not domain_difference,
+        "common_coordinate_physical_difference_exists": common_difference,
+        # Equal complete retained current symbols account for every retained
+        # coordinate. A different row domain or a common-coordinate raw-cell
+        # difference is therefore information outside that retained field.
+        "unretained_current_difference_exists": bool(domain_difference or common_difference),
+    }
 
 
 def replay_global_conflict(orbit, records: GlobalRecords, mask: int, conflict: dict) -> dict:
@@ -338,39 +353,32 @@ def replay_global_conflict(orbit, records: GlobalRecords, mask: int, conflict: d
     next2 = [int(x) & selected for x in observe_replayed(states2, ys2, rec2["t"] + 1)]
     if next1 == next2 or [next1, next2] != conflict["next_complete_retained_fields"]:
         raise AssertionError("G7 scalar/reference next-field replay mismatch")
-    current1 = states1[rec1["t"]]
-    current2 = states2[rec2["t"]]
-    physical_diff = bool(np.any(current1 != current2))
-    if not physical_diff:
-        raise AssertionError("G7 conflict has identical complete current physical fields")
-    full1 = observe_replayed(states1, ys1, rec1["t"])
-    full2 = observe_replayed(states2, ys2, rec2["t"])
-    masked_out_symbol_difference = bool(np.any((full1 ^ full2) & np.uint8(~selected & 63)))
-    exterior_or_other_physical_difference = physical_diff and not np.array_equal(current1, current2)
+    diff = current_physical_difference(states1, ys1, rec1["t"], states2, ys2, rec2["t"])
+    if diff["current_complete_physical_fields_identical"] or not diff["unretained_current_difference_exists"]:
+        raise AssertionError("G7 conflict lacks an unretained current physical distinction")
     return {
         "scalar_vector_complete_field_agreement_through_t_plus_1": True,
         "retained_histories_equal": True,
         "next_retained_fields_differ": True,
-        "current_complete_physical_fields_identical": False,
-        "unretained_current_difference_exists": bool(masked_out_symbol_difference or exterior_or_other_physical_difference),
-        "masked_out_symbol_difference_exists": masked_out_symbol_difference,
+        **diff,
     }
 
 
 def pareto_rows(census_ring: dict, domain: str) -> list[dict]:
-    points = []
-    for h in DEPTHS[domain]:
-        for mask in MASKS:
-            if census_ring[domain][str(h)][str(mask)]["pass"]:
-                points.append((mask.bit_count(), h, mask))
-    minimal = []
-    for p in points:
-        if any(
-            q != p and q[0] <= p[0] and q[1] <= p[1] and (q[0] < p[0] or q[1] < p[1])
+    points = [
+        (mask.bit_count(), h, mask)
+        for h in DEPTHS[domain]
+        for mask in MASKS
+        if census_ring[domain][str(h)][str(mask)]["pass"]
+    ]
+    minimal = [
+        p for p in points
+        if not any(
+            q != p and q[0] <= p[0] and q[1] <= p[1]
+            and (q[0] < p[0] or q[1] < p[1])
             for q in points
-        ):
-            continue
-        minimal.append(p)
+        )
+    ]
     return [
         {"interface_bit_count": bits, "history_depth": h, "mask": mask}
         for bits, h, mask in sorted(minimal)
@@ -384,7 +392,6 @@ def evaluate() -> dict:
     check_local_regression(orbits, old)
 
     census: dict[str, dict] = {}
-    records_by_cell: dict[tuple[int, str, int], GlobalRecords] = {}
     reference_agreement = 0
     conflict_replays = []
     monotonicity_violations = []
@@ -396,36 +403,35 @@ def evaluate() -> dict:
         for domain in DOMAINS_GLOBAL:
             census[ring_key][domain] = {}
             for h in DEPTHS[domain]:
-                rr = build_global_records(orbit, domain, h)
-                records_by_cell[(n, domain, h)] = rr
+                records = build_global_records(orbit, domain, h)
                 census[ring_key][domain][str(h)] = {}
                 for mask in MASKS:
-                    primary = primary_verdict(rr, mask)
-                    reference = reference_verdict(orbit, rr, mask)
-                    if primary.passed != reference.passed or primary.pair != reference.pair:
+                    primary = primary_verdict(records, mask)
+                    reference = reference_verdict(orbit, records, mask)
+                    if primary != reference:
                         raise AssertionError(("primary/reference verdict mismatch", n, domain, h, mask, primary, reference))
                     reference_agreement += 1
-                    item = entry(orbit, rr, mask, primary)
+                    item = entry(orbit, records, mask, primary)
                     census[ring_key][domain][str(h)][str(mask)] = item
                     if not item["pass"]:
-                        conflict_replays.append(
-                            {
-                                "ring": n,
-                                "domain": domain,
-                                "history_depth": h,
-                                "mask": mask,
-                                **replay_global_conflict(orbit, rr, mask, item["canonical_conflict"]),
-                            }
-                        )
+                        conflict_replays.append({
+                            "ring": n,
+                            "domain": domain,
+                            "history_depth": h,
+                            "mask": mask,
+                            **replay_global_conflict(orbit, records, mask, item["canonical_conflict"]),
+                        })
 
         for domain in ("D1", "D2"):
-            depths = DEPTHS[domain]
             for mask in MASKS:
-                for low in depths:
-                    for high in depths:
+                for low in DEPTHS[domain]:
+                    for high in DEPTHS[domain]:
                         if high <= low:
                             continue
-                        if census[ring_key][domain][str(low)][str(mask)]["pass"] and not census[ring_key][domain][str(high)][str(mask)]["pass"]:
+                        if (
+                            census[ring_key][domain][str(low)][str(mask)]["pass"]
+                            and not census[ring_key][domain][str(high)][str(mask)]["pass"]
+                        ):
                             monotonicity_violations.append([n, domain, mask, low, high])
     if monotonicity_violations:
         raise AssertionError(f"G3 violations: {monotonicity_violations[:3]}")
@@ -457,7 +463,10 @@ def evaluate() -> dict:
                         else "information-loss certified on this finite ring/domain"
                     )
 
-    g4_by_ring = {str(n): not census[str(n)]["D2"]["2"]["15"]["pass"] for n in RINGS}
+    g4_by_ring = {
+        str(n): not census[str(n)]["D2"]["2"]["15"]["pass"]
+        for n in RINGS
+    }
     return {
         "protocol": "interface-history-global-20260912",
         "schema": 1,
@@ -499,12 +508,10 @@ def evaluate() -> dict:
 
 def self_test() -> None:
     """Out-of-domain implementation checks only; no frozen n=6,7 census."""
-    # Pure packing/masking check on synthetic data.
     x = np.array([[0, 1, 2], [3, 4, 5]], dtype=np.uint8)
     lo, hi = pack_chunks([x[:, 0], x[:, 1], x[:, 2]])
     assert lo.shape == (2,) and hi.shape == (2,)
     assert int(output_mask(63, 3)) != 0
-    # Independent scalar/vector replay control on n=3, outside the scientific domain.
     replay_source(3, 0, 1)
     assert PROTOCOL.exists() and CLARIFICATION.exists() and PREV_RESULT.exists()
     print("interface-history-global implementation self-test passed (out-of-domain n=3; no canonical result written)")
