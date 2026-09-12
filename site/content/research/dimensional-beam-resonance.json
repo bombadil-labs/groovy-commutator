@@ -1,0 +1,25 @@
+[
+  {
+    "recordType": "checkpoint",
+    "scope": "dimensional-lift",
+    "slug": "dimensional-beam-resonance",
+    "label": "Beam refinement",
+    "title": "The beam: correspondence, predictive support, and reusable leverage",
+    "date": "2026-09-12",
+    "updated": "2026-09-12",
+    "kind": "Checkpoint: research direction and interpretation contract",
+    "evidence": "state",
+    "topic": "Algebra and closure",
+    "summary": "A user-requested refinement inside Dimensional Closure: seek causally consequential structural correspondence while separating predictive support, assembly cost, and reusable leverage. No new experiment or evidence.",
+    "takeaway": "Treat resonance as an operational research target, not a finding; history, geometry, and constructive reuse require separate resource contracts and independently reviewed protocols.",
+    "source": "docs/research/2026-09-12-dimensional-beam-resonance.md",
+    "promotion": {
+      "stage": "research"
+    },
+    "related": [
+      "dimensional-vision-and-interpretation",
+      "interface-history-global",
+      "relational-rank"
+    ]
+  }
+]
