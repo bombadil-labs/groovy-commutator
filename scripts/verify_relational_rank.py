@@ -189,8 +189,9 @@ def target_formula_control(rule: int) -> dict:
         expected = [bits9(w)[PATCH_INDEX[(0, 0)]] for w in range(512)]
         label = "center"
     elif rule == 51:
-        expected = [1 ^ bits9(w)[PATCH_INDEX[(0, 0)]] for w in range(512)]
-        label = "not-center"
+        # NOT is applied once per axis; at d=2 the two complements cancel.
+        expected = [bits9(w)[PATCH_INDEX[(0, 0)]] for w in range(512)]
+        label = "center-after-two-negations"
     elif rule in (170, 85):
         # R then R => southeast diagonal; 85 complements at both passes,
         # so the complements cancel.
