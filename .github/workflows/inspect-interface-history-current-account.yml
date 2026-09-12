@@ -20,49 +20,50 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Extract preservation-safe edit context
+      - name: Extract compact preservation-safe edit context
         run: |
           python - <<'PY'
           from pathlib import Path
           import json
           out=[]
-          for path in ['docs/research/2026-09-09-dimensional-closure-program.md','docs/research/checkpoints/dimensional-lift.md']:
-              lines=Path(path).read_text().splitlines()
-              out.append(f'===== {path} HEAD =====')
-              out.extend(f'{i+1}: {line}' for i,line in enumerate(lines[:80]))
-              hits=[]
-              for i,line in enumerate(lines):
-                  lo=line.lower()
-                  if any(k in lo for k in ['interface-history','interface history','touching-strip','interface factor','interface-factor']): hits.append(i)
-              out.append(f'===== {path} MATCH CONTEXT =====')
-              seen=set()
-              for i in hits:
-                  a=max(0,i-5); b=min(len(lines),i+8)
-                  key=(a,b)
-                  if key in seen: continue
-                  seen.add(key)
-                  out.extend(f'{j+1}: {lines[j]}' for j in range(a,b))
-                  out.append('---')
-          p=Path('site/content/knowledge.json')
-          data=json.loads(p.read_text())
-          out.append('===== site/content/knowledge.json SHAPE =====')
-          out.append(type(data).__name__)
+          program='docs/research/2026-09-09-dimensional-closure-program.md'
+          lines=Path(program).read_text().splitlines()
+          out.append(f'===== {program} headings =====')
+          out.extend(f'{i+1}: {x}' for i,x in enumerate(lines) if x.startswith('#'))
+          out.append(f'===== {program} relevant contexts =====')
+          hits=[i for i,x in enumerate(lines) if any(k in x.lower() for k in ['interface-history','interface history','touching-strip','interface factor','interface-factor'])]
+          for i in hits[:20]:
+              a=max(0,i-2); b=min(len(lines),i+4)
+              out.extend(f'{j+1}: {lines[j]}' for j in range(a,b)); out.append('---')
+          checkpoint='docs/research/checkpoints/dimensional-lift.md'
+          lines=Path(checkpoint).read_text().splitlines()
+          out.append(f'===== {checkpoint} top 100 =====')
+          out.extend(f'{i+1}: {x}' for i,x in enumerate(lines[:100]))
+          p=Path('site/content/knowledge.json'); data=json.loads(p.read_text())
+          out.append('===== knowledge registry compact =====')
+          out.append('type='+type(data).__name__)
           if isinstance(data,list):
-              out.append(f'length={len(data)}')
+              out.append('length='+str(len(data)))
               for i,item in enumerate(data):
-                  s=json.dumps(item,ensure_ascii=False)
-                  if 'interface' in s.lower() or 'touching' in s.lower(): out.append(f'[{i}] '+json.dumps(item,indent=2,ensure_ascii=False))
+                  s=json.dumps(item,ensure_ascii=False).lower()
+                  if 'interface' in s or 'touching' in s:
+                      if isinstance(item,dict): out.append(f'[{i}] '+json.dumps({k:v for k,v in item.items() if k in {"slug","id","title","source","status","kind","relationships","related"}},ensure_ascii=False))
           elif isinstance(data,dict):
-              out.append('keys='+repr(list(data.keys())))
+              out.append('top_keys='+repr(list(data.keys())))
               for k,v in data.items():
-                  s=json.dumps(v,ensure_ascii=False)
-                  if 'interface' in k.lower() or 'interface' in s.lower() or 'touching' in s.lower(): out.append(f'{k}: '+json.dumps(v,indent=2,ensure_ascii=False))
+                  if isinstance(v,list):
+                      out.append(f'{k}: list length={len(v)}')
+                      for i,item in enumerate(v):
+                          s=json.dumps(item,ensure_ascii=False).lower()
+                          if 'interface' in s or 'touching' in s:
+                              if isinstance(item,dict): out.append(f'{k}[{i}] '+json.dumps({kk:vv for kk,vv in item.items() if kk in {"slug","id","title","source","status","kind","relationships","related"}},ensure_ascii=False))
+                  elif isinstance(v,dict): out.append(f'{k}: dict keys sample={list(v)[:20]}')
           Path('tmp-interface-history-current-account-context.txt').write_text('\n'.join(out)+'\n')
           PY
-      - name: Commit temporary inspection context
+      - name: Commit compact inspection context
         run: |
           git config user.name 'Codex current-account inspection'
           git config user.email 'noreply@openai.com'
           git add tmp-interface-history-current-account-context.txt
-          git commit -m 'chore: expose current-account edit context'
+          git commit -m 'chore: narrow current-account edit context'
           git push origin HEAD:research/interface-history-global-current-account
