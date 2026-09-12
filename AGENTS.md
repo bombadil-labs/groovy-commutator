@@ -581,7 +581,20 @@ workflow; research source and result changes now also trigger that workflow.
    (intersection of D²(n) minus FS²) is nonempty for every observation
    but parity (20, 4, 4, 12, 30, 0, 6, 12 rules), including 4, 32, 90,
    150, which had no depth-one gap. All 54 earlier witnesses realized
-   as explicit eventually periodic pairs. Gate-2 pending on PR #132.
+   as explicit eventually periodic pairs. Accepted after Codex's gate-2
+   sign-off at `8aa35fd`, merged in PR #132 as `3636598`.
+   Sixteenth unit (`scripts/verify_full_shift_depth_three.py`, gate-1
+   reviewed after one correction round): full-shift depth at most three
+   under 232, 200, 22, 4 (conjugates computed; 32 by the deduction
+   F_32 = F_4∘¬, F_223 = ¬∘F_32) by sparse reachability on 65,536-vertex
+   pair graphs (eight-cell pair vertices, nine-cell edges, eleven-cell
+   violating blocks), 119 min. FS³ sizes 198, 181, 234, 106. All three
+   bets held: of the 24 deep rules only 4 (under 22: 143, 166, 180, 213)
+   have full-shift depth exactly three and 20 have depth ≥ 4; the
+   rings-3-to-14 depth-three gap is nonempty under all four (8, 11, 8,
+   10 rules); the full-shift class "exactly three" is nonempty under all
+   four (20, 9, 48, 9). The ladder of full-shift class against ring class
+   is diagonal only at closure. Gate-2 pending on PR #144.
 
 ## Checkpoint logs (read before continuing any workstream)
 

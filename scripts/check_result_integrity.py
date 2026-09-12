@@ -79,6 +79,11 @@ REGISTRY = {
     'results/full_shift_depth_two_20260911.json': {
         'script': 'scripts/verify_full_shift_depth_two.py',
         'depth_one_certificate_result': 'results/depth_one_certificate_20260911.json'},
+    'results/full_shift_depth_three_20260912.json': {
+        'script': 'scripts/verify_full_shift_depth_three.py',
+        'ring_closure_certificate_result': 'results/ring_closure_certificate_20260911.json',
+        'depth_one_certificate_result': 'results/depth_one_certificate_20260911.json',
+        'full_shift_depth_two_result': 'results/full_shift_depth_two_20260911.json'},
     'results/second_lift_completion_20260911.json': {
         'script': 'scripts/verify_second_lift_completion.py',
         'protocol': 'docs/research/protocols/second-lift-completion-comparison-20260910.md'},
