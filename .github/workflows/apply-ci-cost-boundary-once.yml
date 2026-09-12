@@ -1,0 +1,103 @@
+name: Apply CI cost boundary once
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+    paths:
+      - '.github/workflows/apply-ci-cost-boundary-once.yml'
+permissions:
+  contents: write
+jobs:
+  apply:
+    if: >-
+      github.event.pull_request.head.repo.full_name == github.repository &&
+      github.event.pull_request.head.ref == 'work/ci-cost-boundary/policy-v2' &&
+      github.event.pull_request.base.ref == 'gather/ci-cost-boundary'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+      - name: Apply policy text
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+
+          p = Path('AGENTS.md')
+          s = p.read_text()
+          old = '''- Result replays run in two tiers (2026-09-11). Every canonical result JSON
+            records the SHA-256 of its verifier and inputs; every pull request touching
+            an audit's files runs `scripts/check_result_integrity.py`, which recomputes
+            those hashes in seconds. That tier establishes provenance coherence only
+            (a verifier or input edited without regeneration); it does not inspect
+            result content. The full byte-for-byte replay is the content and
+            determinism check: it runs on any pull request that modifies the canonical
+            result file itself, on pushes to `main`, weekly, and on manual dispatch.
+            A new result file must be registered in the integrity script and its
+            workflow must carry both tiers.
+          '''
+          new = '''- Result verification has two tiers (updated with Myk on 2026-09-12 to bound
+            GitHub Actions cost). Every canonical result JSON records the SHA-256 of its
+            verifier and inputs; every pull request touching an audit's files runs
+            `scripts/check_result_integrity.py`, which recomputes those hashes in seconds.
+            That fast tier establishes provenance coherence only (a verifier or input
+            edited without regeneration); it does not inspect result content.
+          - **Do not put long research evaluations or replays in automatic CI.** A job
+            expected or observed to take more than about 10 minutes must not run from
+            `pull_request`, `push`, or `schedule` triggers. Generate the canonical result
+            once outside GitHub Actions from the pinned, reviewed implementation, record
+            the execution provenance, and verify the committed bytes with the fast
+            integrity tier. Perform any required independent byte-for-byte replay outside
+            Actions as part of author/reviewer verification. A manual `workflow_dispatch`
+            for an expensive replay may remain only as an exceptional escape hatch and
+            must not be used without Myk's explicit authorization to spend Actions time.
+            Short replays that remain comfortably inside the 10-minute CI budget may stay
+            automatic. In-flight expensive Actions runs that predate this rule may finish,
+            but do not automatically rerun them. Convert existing expensive workflows
+            before their next execution. A new result file must still be registered in
+            the integrity script and its workflow/verification record must identify its
+            fast automatic tier and, when applicable, its off-CI full-replay procedure.
+          '''
+          assert s.count(old) == 1, 'AGENTS policy block changed'
+          p.write_text(s.replace(old, new, 1))
+
+          p = Path('docs/research/README.md')
+          s = p.read_text()
+          old = '''Result files are guarded in two tiers. Every pull request touching an audit
+          runs a fast check that recomputes the SHA-256 hashes each canonical JSON
+          records for its verifier and inputs (`scripts/check_result_integrity.py`);
+          this proves provenance coherence, not result content. The full byte-for-byte
+          replay is the content and determinism check and runs on any pull request that
+          modifies the canonical result file, on `main`, weekly, and on demand. Register
+          every new result file in the integrity script and give its workflow both tiers.
+          '''
+          new = '''Result files are guarded in two tiers. Every pull request touching an audit
+          runs a fast check that recomputes the SHA-256 hashes each canonical JSON
+          records for its verifier and inputs (`scripts/check_result_integrity.py`);
+          this proves provenance coherence, not result content.
+
+          Keep automatic CI cost-bounded. A scientific evaluation or full replay expected
+          or observed to exceed about ten minutes does **not** run automatically on pull
+          requests, pushes to `main`, or schedules. Generate the canonical result once
+          outside GitHub Actions from the pinned implementation and record that execution;
+          perform required independent full replays outside Actions during author/reviewer
+          verification. Expensive `workflow_dispatch` jobs are emergency/manual escape
+          hatches only and require Myk's explicit authorization to spend Actions time.
+          Short byte-for-byte replays that fit comfortably inside the ten-minute CI budget
+          may remain automatic. Existing expensive workflows must be converted before
+          their next execution; already-running jobs from before this policy may finish
+          but are not automatically rerun. Register every new result file in the integrity
+          script and document both the fast automatic tier and the off-CI full-replay path.
+          '''
+          assert s.count(old) == 1, 'README policy block changed'
+          p.write_text(s.replace(old, new, 1))
+          PY
+          git diff --check
+      - name: Commit policy and remove one-shot workflow
+        run: |
+          git config user.name 'OpenAI GPT-5.6 Sol - CI cost policy'
+          git config user.email 'noreply@openai.com'
+          git rm .github/workflows/apply-ci-cost-boundary-once.yml
+          git add AGENTS.md docs/research/README.md
+          git commit -m 'policy: keep expensive research runs out of automatic CI'
+          git push origin HEAD:work/ci-cost-boundary/policy-v2
