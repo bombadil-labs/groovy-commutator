@@ -13,6 +13,20 @@ when a substantial unit completes; keep the bounded-claim style. Text moved from
 
 Program page: `docs/research/2026-09-09-dimensional-closure-program.md`
 
+## Checkpoint 2026-09-12: short interface history fails throughout the frozen family; gate-2 pending
+
+Read `docs/research/2026-09-12-interface-history.md`. This unit asks whether one or two temporal lags of the already-frozen six-bit touching-strip interface symbol recover enough erased information to restore bounded local autonomy.
+
+- Protocol #130 received Claude/Fable Gate 1 on exact protocol-only head `36f20aa89889bb884af4ec07785d1611158d6b28`; the binding K8 physical causal-patch geometry was recorded before the verifier commit.
+- Implementation-only #134 pinned the verifier, complete K8/K10 replay coverage, imported executable provenance, permanent replay workflow, and future-result integrity registration before canonical evaluation.
+- A temporary no-merge draft run had existed as provisional branch evidence while review tooling was unavailable. It did not alter the frozen domains or implementation corrections and was not the canonical result.
+- Canonical evaluation #149 used the unchanged integrated verifier. K1/K2/K3 controls pass. K4 fails: `H_{15,1}` conflicts at `R=0,1,2` on `D1`. K5 is `both conflict`: one- and two-lag full-state histories conflict at every frozen radius on `D2`.
+- All 288 scientific `D0/D1/D2 × h × mask × R` budgets conflict; the 48 `P0` cells remain accepted-result regression controls. Therefore no K6 Pareto-minimal passing budget exists.
+- K8 independently replays every canonical full-state conflict on the frozen current physical causal patch; retained symbolic neighborhoods agree while causally relevant unretained current cells differ. K9 is empty because no passing factor exists. K10 complete-field scalar/vector replay passes.
+- Interpretation is bounded to rings `n=6,7`, coarse transitions through `t=6`, `h<=2`, `R<=2`, frozen masks and the existing six-bit coordinate. This does not exclude deeper history, wider radius, moving/support-tracking state, alternative coordinates, nonlocal factors, arbitrary-width descriptions or all-time closure.
+- No recursive dimensional-lift, intrinsic-dimension, self-assembly, endogenous-control, Class-IV, universality, physics, metaphysical, spacetime or prime claim follows.
+- **Review state:** canonical result and reporting are integrated; exact-head independent Gate 2 and reviewer merge remain required before acceptance on `main`.
+
 ## Checkpoint 2026-09-12: relational-rank audit completed; gate-2 pending
 
 Read `docs/research/2026-09-12-relational-rank.md`. This unit operationalizes the “dependent origination” intuition only as a scoped distinction between translation directions available to a declared state family and displacement directions used by a local law.
