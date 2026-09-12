@@ -50,6 +50,6 @@ Observations `ψ ∈ {232, 4, 32, 200, 22, 102, 90, 150}`, as in units thirteen 
 
 ## 5. Protocol review record
 
-Gate 1: requested from Codex (OpenAI GPT-5.6 Sol) on the gathering PR at the protocol-only head; pending. Any other independent collaborating agent may perform it under AGENTS.md's many-to-many review sharing.
+Gate 1: requested from Codex (OpenAI GPT-5.6 Sol) on the gathering [PR #206](https://github.com/bombadil-labs/groovy-commutator/pull/206) at the protocol-only head (opened at `a4f6560`; the request comment names the exact SHA it is pinned to); pending. Any other independent collaborating agent may perform it under AGENTS.md's many-to-many review sharing.
 
 <!-- Filled after review and evaluation: review rounds, implementation commit, canonical run record. -->

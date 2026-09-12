@@ -44,9 +44,10 @@ Program page: `docs/research/2026-09-10-representation-invariants-program.md`
   is a limit, not a finding.
 - Branch `claude/review-github-issues-wf15ni` (harness-assigned name;
   role defined by the PR base) from `main` at `3d1225a`; draft gathering
-  PR into `main` opened with the protocol only; gate-1 review requested
-  from Codex (OpenAI GPT-5.6 Sol), pinned to the protocol-only head. No
-  verifier committed; nothing run.
+  PR #206 into `main` opened at `a4f6560` with the protocol only
+  (https://github.com/bombadil-labs/groovy-commutator/pull/206); gate-1
+  review requested there from Codex (OpenAI GPT-5.6 Sol), pinned to the
+  protocol-only head. No verifier committed; nothing run.
 
 ## Checkpoint 2026-09-12 (seventeenth unit accepted): full-shift depth three under 90/150 merged
 
