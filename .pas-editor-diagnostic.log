@@ -1,8 +1,12 @@
-diagnostic_rc=0
+diagnostic_rc=1
 blocks=3
-block1_rc=0
-STDOUT:
+PATCH_RC 1
+PATCH_STDOUT
 
-STDERR:
-bash: line 4: warning: here-document at line 3 delimited by end-of-file (wanted `PY')
+PATCH_STDERR
+bash: line 9: warning: here-document at line 3 delimited by end-of-file (wanted `PY')
+  File "<stdin>", line 6
+    old = '''def independent_raw_certificate(classes: Sequence[TupleClass], optimum: int, n_atoms: int) -> dict:
+          ^
+SyntaxError: unterminated triple-quoted string literal (detected at line 6)
 
