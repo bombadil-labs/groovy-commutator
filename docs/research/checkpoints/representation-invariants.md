@@ -7,6 +7,78 @@ substantial unit completes; keep the bounded-claim style.
 
 Program page: `docs/research/2026-09-10-representation-invariants-program.md`
 
+## Checkpoint 2026-09-12 (seventeenth unit run): full-shift depth three under 90/150 decided, one bet failed, gate 2 pending
+
+- Verifier `scripts/verify_full_shift_depth_three_linear.py` committed at
+  `364694d` on the gathering branch directly (a process deviation both
+  Codex and the gate-1 reviewer flagged; preserved, not rewritten, and
+  recorded in the protocol). Provenance corrections (stale "pending gate
+  1" header, stale 300-minute timeout text) landed in sub-PR #190. Single
+  canonical run (about 50 min) from the corrected head; CI replay budget
+  180 min; canonical `results/full_shift_depth_three_linear_20260912.json`.
+- Held: O1 (theorem/consistency controls, including the cross-check
+  against the seventh unit's `h_star` table), O2 (all twelve pen-decided
+  rules confirmed outside `FS^3`; of the rest, 14/18 under 90 and 24/24
+  under 150 have depth exactly three), O4 (ladder reported; class
+  `c_FS = 3` nonempty under both: 14 under 90, 24 under 150), O5 (18
+  witness pairs replay), O6 (165's sets are the direct conjugate
+  transport of 90's; 150 complement-invariant; reflection invariance).
+- **Failed: O3.** The rings-3-to-14 depth-three gap is nonempty under 90
+  (exactly 4 rules: 41, 97, 107, 121) but **empty under 150** —
+  `FS^3_150` equals the rings-3-to-14 intersection exactly. First time in
+  the program a gap closes between depth levels rather than widening.
+  Whether periodic configurations decide a depth level is a property of
+  (observation, level), not depth alone.
+- Not to infer: anything about all rings (no ring certificate at depth
+  two or three); anything about depth four, the other six linear
+  observations, or rings 1, 2 or 15.
+- Records: note `2026-09-12-full-shift-depth-three-linear.md`, catalog
+  entry, knowledge entries (`full-shift-depth-three-linear-test`,
+  `full-shift-depth-three-linear-gap-closes`), Program section, AGENTS
+  result 12 addendum.
+- Pending: gate-2 sign-off by an independent collaborating agent on PR
+  #174's final head.
+- Candidate next units, unchanged from the sixteenth's checkpoint: depth
+  four for the deep rules (expensive, cost discussion pending); a
+  structural account of the deep rules; a depth-two ring certificate if a
+  cheaper matrix method is found.
+
+## Checkpoint 2026-09-12 (seventeenth unit opened): full-shift depth three under 90 and 150, protocol frozen, unrun, gate 1 approved
+
+- Frozen and unrun: `protocols/full-shift-depth-three-linear-20260912.md`.
+  Full-shift h_* <= 3 under the linear observations 90 and 150 (and 90's
+  conjugate 165; 150 is self-dual) by the sixteenth unit's sparse
+  65,536-vertex pair graph, unchanged; exhaustive D^3(n) on rings 3-14;
+  the ladder c_FS against c_R for every rule; the fifteenth unit's 18
+  depth-two gap rules under 90/150 realized as eventually periodic pairs.
+  About 768 pairs, under half the sixteenth unit's cost.
+- O1 theorem and consistency controls (D^3 on rings 6-12 against the
+  seventh unit's h_* tables); O2 twelve rules decided by pen as outside
+  FS^3 (22, 151 under 90; 25, 37, 61, 67, 91, 103, 152, 188, 194, 230
+  under 150, from the seventh unit's ring depth 4), the remaining 18 + 24
+  split reported without a bet; O3 bet: depth-three gap nonempty under
+  each; O4 ladder reported, bet: class c_FS = 3 nonempty under each; O5
+  witness pairs (control); O6 symmetries.
+- Chosen over depth four (1,048,576 vertices, about 16x the per-pair
+  cost), which stays a candidate pending a cost discussion with Myk and
+  Codex; a structural account of the deep rules and a depth-two ring
+  certificate remain candidates too.
+- No ring certificate at depth two or three; nothing about depth four;
+  ring 15 not computed (scope choice for ladder comparability).
+- Gathering branch `gather/full-shift-depth-three-linear` from `main`
+  at `93dcec8`; gathering PR #174 opened as draft at `2192ed6`
+  (https://github.com/bombadil-labs/groovy-commutator/pull/174); gate-1
+  request posted there.
+- Gate 1 approved by an independent reviewer (OpenAI GPT-6 Astra Pro,
+  manual dimensional-cycle session, a newly participating collaborator
+  under AGENTS.md's many-to-many review sharing) at exact head `06265e7`,
+  with a workflow follow-up (not a scientific blocker): reconcile the
+  branch preservation-safely against newer `main` before implementation,
+  which this update does (merging `main` at `8b8c62d`, carrying in the
+  sixteenth-unit-accepted checkpoint below, conflict resolved by
+  reordering only). No verifier committed yet; implementation-only work
+  may now proceed under the frozen scope.
+
 ## Checkpoint 2026-09-12 (sixteenth unit accepted): full-shift depth three merged
 
 - Accepted after Codex's gate-2 sign-off at `f33b779` (my reconciliation

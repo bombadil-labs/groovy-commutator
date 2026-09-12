@@ -84,6 +84,12 @@ REGISTRY = {
         'ring_closure_certificate_result': 'results/ring_closure_certificate_20260911.json',
         'depth_one_certificate_result': 'results/depth_one_certificate_20260911.json',
         'full_shift_depth_two_result': 'results/full_shift_depth_two_20260911.json'},
+    'results/full_shift_depth_three_linear_20260912.json': {
+        'script': 'scripts/verify_full_shift_depth_three_linear.py',
+        'ring_closure_certificate_result': 'results/ring_closure_certificate_20260911.json',
+        'depth_one_certificate_result': 'results/depth_one_certificate_20260911.json',
+        'full_shift_depth_two_result': 'results/full_shift_depth_two_20260911.json',
+        'linear_observations_result': 'results/linear_observations_20260911.json'},
     'results/second_lift_completion_20260911.json': {
         'script': 'scripts/verify_second_lift_completion.py',
         'protocol': 'docs/research/protocols/second-lift-completion-comparison-20260910.md'},
