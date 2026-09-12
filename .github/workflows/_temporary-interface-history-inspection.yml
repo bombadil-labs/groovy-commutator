@@ -18,41 +18,39 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Write bounded structural/result summary
+      - name: Write minimal result summary
         run: |
           python - <<'PY'
-          import json, re
+          import json
           from pathlib import Path
-          p = Path('results/interface_history_20260911.json')
-          d = json.loads(p.read_text())
+          d=json.loads(Path('results/interface_history_20260911.json').read_text())
           out=[]
           out.append('TOP_LEVEL_KEYS=' + ', '.join(d.keys()))
-          for name in ['summary','verdicts','predictions','checks','controls','protocol','provenance']:
-              if name in d:
-                  s=json.dumps(d[name], sort_keys=True)
-                  out.append(f'\n[{name}]\n{s[:12000]}')
-          pat=re.compile(r'(^|_)(k[1-9]|k10)($|_)|verdict|prediction|primary|passed|pass$|failure|conflict|history', re.I)
+          out.append('SUMMARY=' + json.dumps(d.get('summary'), sort_keys=True))
+          for key in ('predictions','verdicts','controls'):
+              if key in d:
+                  out.append(key.upper()+'=' + json.dumps(d[key], sort_keys=True)[:8000])
+          wanted={'K1','K2','K3','K4','K5','K6','K7','K8','K9','K10'}
           hits=[]
           def walk(x,path=''):
-              if len(hits)>=800: return
               if isinstance(x,dict):
                   for k,v in x.items():
                       np=f'{path}.{k}' if path else k
-                      if pat.search(k) and (v is None or isinstance(v,(str,int,float,bool)) or (isinstance(v,list) and len(v)<=30) or (isinstance(v,dict) and len(v)<=30)):
+                      if k.upper() in wanted:
                           s=json.dumps(v, sort_keys=True)
-                          if len(s)<=2000: hits.append(f'{np} = {s}')
+                          hits.append(np+'='+s[:4000])
                       walk(v,np)
               elif isinstance(x,list):
-                  for i,v in enumerate(x[:1000]): walk(v,f'{path}[{i}]')
+                  for i,v in enumerate(x[:100]): walk(v,f'{path}[{i}]')
           walk(d)
-          out.append('\n[MATCHED_RESULT_FIELDS]\n'+'\n'.join(hits))
-          Path('.interface-history-result-inspection.txt').write_text('\n'.join(out)+'\n')
+          out.extend(hits[:30])
+          Path('.interface-history-result-mini.txt').write_text('\n'.join(out)+'\n')
           PY
-      - name: Commit inspection file only
+      - name: Commit mini inspection file only
         run: |
           git config user.name 'Codex interface-history inspection'
           git config user.email 'actions@users.noreply.github.com'
-          git add .interface-history-result-inspection.txt
-          test "$(git diff --cached --name-only)" = '.interface-history-result-inspection.txt'
-          git commit -m 'chore: inspect interface-history canonical result'
+          git add .interface-history-result-mini.txt
+          test "$(git diff --cached --name-only)" = '.interface-history-result-mini.txt'
+          git commit -m 'chore: inspect interface-history summary'
           git push
