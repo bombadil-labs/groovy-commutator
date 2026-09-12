@@ -216,6 +216,7 @@ Mandatory boundaries:
 
 - **Finite-width null:** a table that works on four finite widths may still fail at width 10 or on the full shift.
 - **Whole-ring null:** on widths 6 and 7, `R=3` already sees the complete ring; those individual passes are controls, not locality discoveries.
+- **Near-whole-ring null:** at `R=3`, the ordered seven-site window omits only one site on width 8 and two sites on width 9. A fresh-width W2 pass is therefore a near-global finite-ring statement, not evidence of small-radius locality. Likewise, a pooled W3 pass concerns the non-aliased part of the declared four-width families; periodic aliases are consistent by periodic lifting and cannot by themselves create a pooled conflict.
 - **Reachable-family boundary:** all claims concern the frozen adjacent-strip reachable family, not arbitrary six-bit history fields.
 - **History boundary:** only two lags are retained; deeper history is not tested.
 - **Radius boundary:** the only new radius is `R=3`; a failure does not exclude `R>3`.
