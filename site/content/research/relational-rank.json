@@ -1,0 +1,17 @@
+[
+  {
+    "slug": "relational-rank",
+    "label": "Relational rank",
+    "title": "Can available spatial directions be separated from directions a law actually uses?",
+    "date": "2026-09-12",
+    "updated": "2026-09-12",
+    "kind": "Experiment",
+    "evidence": "exact",
+    "topic": "Dimensional closure",
+    "summary": "Two representation-relative ranks separate nontrivial translation directions of a state family from essential displacement directions of a local law. Exact replay of the ordered-axis ECA constructor confirms a product theorem and shows that target causal rank adds no classification beyond source essentiality.",
+    "takeaway": "Available translation rank and law-used causal rank are distinct resources, but neither is promoted to intrinsic dimension; for the accepted axial constructor the causal-rank census is fully determined by the source dependency pattern.",
+    "source": "docs/research/2026-09-12-relational-rank.md",
+    "promotion": { "stage": "research" },
+    "related": ["zero-dimensional-base", "guard-free-axial-lift", "transverse-freedom", "intervention-axis", "dimensional-vision-and-interpretation"]
+  }
+]
