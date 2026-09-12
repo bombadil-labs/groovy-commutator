@@ -99,6 +99,12 @@ REGISTRY = {
         'shared_state_local': 'results/shared_state_rule_20260907_local.json',
         'guard_free_axial_result': 'results/guard_free_axial_lift_20260910.json',
         'editable_routing_result': 'results/editable_routing_tables_20260909.json'},
+    'results/relational_rank_20260912.json': {
+        'script': 'scripts/verify_relational_rank.py',
+        'protocol': 'docs/research/protocols/relational-rank-20260912.md',
+        'guard_free_axial': 'results/guard_free_axial_lift_20260910.json',
+        'transverse_freedom': 'results/transverse_freedom_20260911.json',
+        'intervention_axis': 'results/intervention_axis_20260911.json'},
 }
 
 def sha(p: pathlib.Path) -> str: return hashlib.sha256(p.read_bytes()).hexdigest()
