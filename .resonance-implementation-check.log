@@ -1,0 +1,9 @@
+== compile ==
+compile=0
+== source census ==
+source_census=0
+== physical self-test ==
+dimensional-resonance physical verifier self-test passed (out-of-domain n=3; no canonical result written)
+physical_self_test=0
+== canonical absence ==
+canonical_absent=0
