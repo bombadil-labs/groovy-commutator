@@ -7,6 +7,70 @@ substantial unit completes; keep the bounded-claim style.
 
 Program page: `docs/research/2026-09-10-representation-invariants-program.md`
 
+## Checkpoint 2026-09-12 (eighteenth unit evaluated): depth two certified at every ring; two period bets and the main gap bet failed; gate 2 requested
+
+- Canonical evaluation run once off GitHub Actions from the pinned verifier
+  (`fd4da42`), about 35 minutes, inside the protocol's 30-to-60-minute
+  expectation; `results/depth_two_certificate_20260912.json`. Determinism
+  checked by a **full second execution** of the same script on the same tree,
+  byte-identical to the committed file, not by source hashes alone. Reported
+  in `2026-09-12-depth-two-certificate.md`. Three of five predictions held.
+- **Certified, nothing censored.** Refinement depth at most two is decided at
+  every ring `n ≥ 4` for all 256 rules under all eight observations, and under
+  the seven conjugate and mirror images as well: every pair is either trivially
+  certified (no closed violating walk) or carries a byte-confirmed `(k, p)`.
+  15,852 powers over the eight, zero hash collisions, largest preperiod
+  `k = 40` (rule 123 under 22), the cap of 1024 never approached. Status counts
+  trivial/certified: 198/58, 101/155, 101/155, 184/72, 204/52, 256/0, 242/14,
+  234/22 under 232, 4, 32, 200, 22, 102, 90, 150.
+- **P1 held in every part** (criterion equals the fifteenth unit's recorded
+  rings-4-to-14 sets in all 88 cells; no `FS¹` rule has a closed violating
+  walk; `FS²` contained; divisibility clean; 21 dense cross-checks
+  byte-identical over 40 powers against an independent dense reference).
+  **P5 held exactly**, certificates and graph correspondence included, for all
+  2,048 pairs.
+- **P3: (c) and (d) held, (a) and (b) failed.** Periods `P_ψ` = 1, 2, 2, 1, 12,
+  1, 4, 6; onsets `N_ψ` = 14, 13, 13, 13, 31, 4, 9, 7. `P_232 = P_200 = 1` as
+  bet, but `P_4 = P_32 = 2`, each on a single oscillating rule (50 under 4, its
+  conjugate 179 under 32); `P_22 = 12`, not the bet 3 — period 3 divides the
+  true period, so the earlier pattern was a sub-pattern. `P_90 = 4` and
+  `P_150 = 6`, exactly the depth-one periods; the kernel controls had zero
+  exceptions.
+- **P4, the main bet, failed under 22 alone.** `Γ²_{ψ,∞} = Γ²_{ψ,[3,14]}` holds
+  under 232, 4, 32, 200, 102, 90, 150. Under 22 twelve rules (104–111, 120,
+  121, 124, 125) have depth at most two on every ring 3 to 14 and leave
+  `D²_22(n)` first at **ring 24**, each with an explicit closed violating walk
+  and period 12: the all-ring gap is 18 rules, not 30. The all-ring gap is
+  nonempty for exactly the seven observations other than parity — 20, 4, 4, 12,
+  18, 6, 12 — so periodic configurations do not decide depth two at any ring,
+  with one of the eight ring-14 numbers 40% too large.
+- Not predicted, exact on what was computed, post hoc: `D²_ψ^∞` equals
+  precisely the set of rules with `V²_{cl} = ∅`, so the pruning lemma's
+  sufficient condition is also necessary under these eight observations.
+- Not to infer: nothing about depth three or full-shift depth (the fifteenth
+  unit's `FS¹`, `FS²` read with their hash, not recomputed, so the twelve
+  rules' full-shift depth at least three rests on that unit); no ring
+  certificate at depth three; the censoring contract is untested in this run
+  rather than vindicated; the `V²_{cl}` identity is not proved and not claimed
+  outside the eight. Preceding units' ring censuses are not revised — each was
+  certified at the ring sizes it claims — but several stop well before
+  `N_22 = 31`.
+- **Gate 2 requested** from an independent collaborating agent (Codex / OpenAI
+  GPT-5.6 Sol, or any other independent agent) on gathering PR #206, pinned to
+  the evaluation head; this is a scientific review request. AGENTS.md's
+  established-results list is untouched until acceptance and merge, per the
+  seventeenth unit's precedent.
+- Candidates going forward: **full-shift depth four for the deep rules stays
+  parked** pending Myk's cost decision under the 2026-09-12 CI-cost boundary;
+  **a structural account of the deep rules** is unaffected as a candidate but
+  now has one concrete object to bet on, modestly — the `V²_{cl}` identity
+  points at the strong-component structure of the pair graph rather than at
+  the rule tables, and a protocol could freeze whether it persists at depth
+  three or under a ninth observation; and, new from this unit, **recertifying
+  the earlier ring censuses whose windows stop before their own certified
+  onsets**, which this unit's method now makes cheap at closure and depth one
+  and two.
+
 ## Checkpoint 2026-09-12 (eighteenth unit opened): depth-two ring certificate, protocol frozen, unrun, gate 1 requested
 
 - Frozen and unrun: `protocols/depth-two-certificate-20260912.md`. Refinement
