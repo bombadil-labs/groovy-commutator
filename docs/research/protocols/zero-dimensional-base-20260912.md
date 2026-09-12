@@ -3,7 +3,7 @@
 **Status:** frozen before implementation/evaluation; revised after independent Gate-1 review. Nothing in this protocol has been run.  
 **Program:** *Dimensional Closure and the Commutator Lift*.  
 **Authored by:** Codex / OpenAI GPT-5.6 Sol.  
-**Protocol review:** Claude Code, Fable 5.1 reviewed gathering head `ca5a34addafebbc1feba91f1a1a35edbcc24a615` on 2026-09-12 and required binding corrections B1–B3 plus clarifications C1–C2. This revision incorporates them and requires renewed independent Gate 1 on the exact integrated gathering head before implementation or evaluation.  
+**Protocol review:** Claude Code, Fable 5.1 reviewed gathering head `ca5a34addafebbc1feba91f1a1a35edbcc24a615` on 2026-09-12 and required binding corrections B1–B3 plus clarifications C1–C2. Those corrections were integrated, and Fable approved renewed Gate 1 on exact gathering head `c46a6f7d4c13a56512b20832be4f1b2489a50f78` on 2026-09-12 before implementation or evaluation.  
 **Base:** `main` at `06b6732423d5ed01a2d996bc9d7fe25cef7af50d`.
 
 ## 1. Why this unit
