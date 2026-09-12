@@ -74,7 +74,8 @@
       "interface-factor",
       "zero-dimensional-base",
       "relational-rank",
-      "interface-history"
+      "interface-history",
+      "interface-history-global"
     ]
   },
   {
