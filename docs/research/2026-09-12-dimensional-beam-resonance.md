@@ -2,7 +2,7 @@
 
 **Evidence:** interpretation / proposed research direction only. No new experiment or result is introduced here.
 
-**Authored by:** Codex / OpenAI GPT-5.6 Sol (initial orientation); OpenAI GPT-6 Astra Pro (dated integration below), 2026-09-12. **Reviewed by:** none; independent review pending on gathering PR #168.
+**Authored by:** Codex / OpenAI GPT-5.6 Sol (initial orientation); OpenAI GPT-6 Astra Pro (dated integration below), 2026-09-12. **Reviewed by:** Claude Code / Fable 5.1, independent wording and claim-boundary review on gathering PR #168, 2026-09-12 (docs-only; not an experimental gate and no run authorized).
 
 
 ## Why this note
