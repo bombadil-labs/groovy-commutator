@@ -1,0 +1,70 @@
+name: Full-shift depth three
+
+# Two tiers (2026-09-11). Every pull request that touches this audit's files
+# runs the fast integrity check: the canonical JSON's recorded SHA-256 hashes of
+# its verifier and inputs must match the tree (provenance coherence; it does not
+# inspect result content). The full byte-for-byte replay, which is the content
+# and determinism check, runs on any pull request that modifies the canonical
+# result file itself, on pushes to main, weekly, and on manual dispatch.
+
+on:
+  pull_request:
+    paths:
+      - 'scripts/verify_full_shift_depth_three.py'
+      - 'results/full_shift_depth_three_20260912.json'
+      - 'results/ring_closure_certificate_20260911.json'
+      - 'results/depth_one_certificate_20260911.json'
+      - 'results/full_shift_depth_two_20260911.json'
+      - 'scripts/check_result_integrity.py'
+      - '.github/workflows/research-full-shift-depth-three.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/verify_full_shift_depth_three.py'
+      - 'results/full_shift_depth_three_20260912.json'
+      - 'results/ring_closure_certificate_20260911.json'
+      - 'results/depth_one_certificate_20260911.json'
+      - 'results/full_shift_depth_two_20260911.json'
+      - 'scripts/check_result_integrity.py'
+      - '.github/workflows/research-full-shift-depth-three.yml'
+  schedule:
+    - cron: '33 6 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  full-shift-depth-three:
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Verifier compiles (always; the implementation-only stage has no canonical result yet)
+        run: python -m py_compile scripts/verify_full_shift_depth_three.py
+      - name: Does the canonical result exist on this head?
+        id: exists
+        run: |
+          if [ -f results/full_shift_depth_three_20260912.json ]; then echo "exists=true" >> "$GITHUB_OUTPUT"; else echo "exists=false" >> "$GITHUB_OUTPUT"; echo "No canonical result on this head: implementation-only stage, integrity and replay tiers skipped."; fi
+      - name: Recorded source hashes match the tree (provenance coherence)
+        if: steps.exists.outputs.exists == 'true'
+        run: python scripts/check_result_integrity.py results/full_shift_depth_three_20260912.json
+      - name: Does this pull request modify the canonical result file?
+        id: result
+        if: steps.exists.outputs.exists == 'true'
+        run: |
+          if [ "${{ github.event_name }}" != "pull_request" ]; then echo "changed=true" >> "$GITHUB_OUTPUT"; exit 0; fi
+          if git diff --name-only "origin/${{ github.base_ref }}...HEAD" | grep -qx 'results/full_shift_depth_three_20260912.json'; then echo "changed=true" >> "$GITHUB_OUTPUT"; else echo "changed=false" >> "$GITHUB_OUTPUT"; fi
+      - if: steps.exists.outputs.exists == 'true' && steps.result.outputs.changed == 'true'
+        run: python -m pip install -e .
+      - name: Rerun the frozen audit and compare the canonical JSON byte for byte
+        if: steps.exists.outputs.exists == 'true' && steps.result.outputs.changed == 'true'
+        run: |
+          cp results/full_shift_depth_three_20260912.json /tmp/expected.json
+          python scripts/verify_full_shift_depth_three.py > /dev/null
+          cmp /tmp/expected.json results/full_shift_depth_three_20260912.json

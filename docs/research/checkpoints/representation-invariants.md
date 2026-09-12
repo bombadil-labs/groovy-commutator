@@ -7,6 +7,96 @@ substantial unit completes; keep the bounded-claim style.
 
 Program page: `docs/research/2026-09-10-representation-invariants-program.md`
 
+## Checkpoint 2026-09-12 (sixteenth unit accepted): full-shift depth three merged
+
+- Accepted after Codex's gate-2 sign-off at `f33b779` (my reconciliation
+  merge of main onto the evaluated head `74b5253`), re-confirmed at
+  `d4bf27b` after a second reconciliation merge made necessary by #157
+  (verifier, canonical result, hashed inputs, protocol and note
+  unchanged; only the knowledge registry needed a union resolution), with
+  the sign-off conditional on the replay check, which passed (83 min in
+  CI); merged in PR #144 as `93dcec8`. The replay on `f33b779` also
+  passed (112 min) and is a process fact only.
+- Branch restarted from `main` at `93dcec8`. Records updated: note
+  header, knowledge test entry, Program section, AGENTS result 12 (the
+  stale 119-minute runtime corrected to 121 there and on the Program
+  page; the protocol's Section 5 already carried 121).
+- State of the program: sixteen audits accepted. Gate-2 reviews given by
+  this side to Codex's #136 (`6a8b5a6`), #139 (`c56b975`), #131
+  (`b5021cf`) and #157 (`240b885`); gate-1 approval to #164 at
+  `7cc4bba` with one recorded clarification.
+- Candidate next units, unchanged: full-shift depth four for the twenty
+  deep rules (1,048,576-vertex sparse graphs; cost roughly 16 times the
+  depth-three run per observation, so one observation at a time or a
+  pruned graph); a structural account of the deep rules; linear
+  observations 90 and 150 at depth three; a depth-two ring certificate
+  if a cheaper matrix method is found.
+
+## Checkpoint 2026-09-12 (sixteenth unit run): full-shift depth three decided, all bets held, gate 2 pending
+
+- Gate 1: Codex approved `d1eeaef` after one correction round (explicit
+  transport of historical sets to conjugate observations; the 32
+  deduction). Verifier `scripts/verify_full_shift_depth_three.py`
+  committed at `d62e87d`; implementation stage made green at `676bb19`
+  (CI-only) at Codex's request, then the canonical run executed from
+  that head (121 min); two earlier provisional executions from
+  `d62e87d` agree byte for byte and are process history only; canonical
+  `results/full_shift_depth_three_20260912.json`.
+- Held: N1-N6. FS^3 sizes 198, 181, 234, 106 under 232, 200, 22, 4.
+  N2: 20 of the 24 deep rules have full-shift depth >= 4 (all under
+  232 and 200; 8 of 12 under 22), 4 have exactly three (22: 143, 166,
+  180, 213). N3: depth-three gap on rings 3-14 nonempty under all four
+  (8, 11, 8, 10). N4: class c_FS = 3 nonempty under all four (20, 9,
+  48, 9); the ladder is diagonal only at closure.
+- Not to infer: any all-ring depth-two or depth-three statement;
+  anything about depth four or beyond.
+- Records: note, catalog, knowledge (`full-shift-depth-three-test`,
+  `full-shift-depth-ladder`), Program section, AGENTS result 12
+  addendum. CI replay timeout raised to 300 min (engineering).
+- Pending: Codex's gate-2 review on PR #144.
+- Candidate next units: depth four for the twenty deep rules (2^20
+  vertices, 4^13 blocks per pair: about 16x this unit's cost per pair,
+  feasible only for the deep pairs, not a census); a structural account
+  of the deep rules (what the extendable walks have in common); the
+  linear observations 90 and 150 at depth three.
+
+## Checkpoint 2026-09-12 (sixteenth unit opened): full-shift depth three, protocol frozen, review pending
+
+- Frozen and unrun: `protocols/full-shift-depth-three-20260912.md`.
+  Full-shift h_* <= 3 under 232, 200, 22, 4 (+ conjugates; 32 by the
+  deduction 32 = 4 o not) by sparse reachability on 65,536-vertex pair
+  graphs (eight-cell pair vertices, nine-cell edges agreeing on psi..psi
+  F^3, eleven-cell violating blocks with psi F^4 disagreeing); exhaustive
+  D^3(n) on rings 3-14; full-shift depth class 0/1/2/3/>=4 of every rule
+  against its rings-3-14 class; the 24 depth-two separations realized as
+  explicit eventually periodic pairs.
+- N1 theorem controls; N2 bet: not all 24 deep rules lie in FS^3; N3
+  bet: depth-three gap nonempty under each of the four observations;
+  N4 ladder reported, bet: class c_FS = 3 nonempty under each; N5
+  witness pairs pass (control); N6 symmetries.
+- No ring certificate at depth two or three; nothing about depth four.
+- Also on this branch: a one-phrase correction to the fifteenth note
+  (separating configurations are eventually periodic, not aperiodic).
+- Gathering PR #144 opened as draft at `8c4b962`; gate-1 request posted
+  there.
+- Pending: Codex's gate-1 review. No verifier committed, nothing run.
+
+## Checkpoint 2026-09-12 (fifteenth unit accepted): full-shift depth two merged
+
+- Accepted after Codex's gate-2 sign-off at `8aa35fd` (Codex's
+  reconciliation merge of main onto the evaluated head `9cda45a`;
+  sign-off conditional on the replay check, which passed), merged in
+  PR #132 as `3636598`.
+- Branch restarted from `main` at `3636598`. Records updated: note
+  header, knowledge test entry, Program section, AGENTS result 12.
+- State of the program: fifteen audits accepted. Gate-1 approvals given
+  by this side to Codex's #136 (0D base, `c46a6f7`) and #139
+  (relational rank, `803a775`); their gate 2 is ahead.
+- Candidate next units, unchanged: full-shift depth three for the 24
+  deep rules (65,536-vertex sparse graphs, one observation at a time);
+  a characterization of the deep gap rules; a depth-two ring
+  certificate for one observation if a cheaper matrix method is found.
+
 ## Checkpoint 2026-09-12 (fifteenth unit run): full-shift depth two decided, both bets failed, gate 2 pending
 
 - Gate 1: Codex approved `4801d91` after one correction round (parity
