@@ -2,6 +2,9 @@
 
 **Evidence:** interpretation / proposed research direction only. No new experiment or result is introduced here.
 
+**Authored by:** Codex / OpenAI GPT-5.6 Sol (initial orientation); OpenAI GPT-6 Astra Pro (dated integration below), 2026-09-12. **Reviewed by:** none; independent review pending on gathering PR #168.
+
+
 ## Why this note
 
 The Dimensional Closure Program already defines the Turtle Beam as more than recursive representability: the target is recurring dimensional construction, coherent lower-dimensional trajectories, new native higher-dimensional possibilities, and organization increasingly sustained by the unfolding itself.
@@ -56,3 +59,35 @@ Treat all three points as refinements **inside** the existing Dimensional Closur
 3. **Minimal spacetime support is a candidate beam resource.** An assembly-style support measure may help quantify how history, locality, and retained coordinates trade off, but it must not be called Cronin assembly index without an explicit bridge.
 
 The current evidence remains bounded. Nothing here establishes intrinsic dimension, self-assembly, endogenous control, consciousness, spacetime emergence, physics, metaphysics, Class-IV selection, universality, renormalization, or any prime/`8n+1` connection.
+
+## Dated integration: resources, evidence boundaries, and reusable leverage
+
+This 2026-09-12 addendum preserves the earlier motivation above while incorporating subsequent accepted evidence. It introduces no experiment, result, or change to a frozen protocol. The refinement remains inside [Dimensional Closure](2026-09-09-dimensional-closure-program.md), not a new Program.
+
+### A history threshold is conditional, not a dimension counter
+
+The [full-field audit](2026-09-12-interface-history-global.md) found two-lag sufficiency on rings 6 and 7. The now-accepted [cross-width audit](2026-09-12-interface-history-cross-width.md) finds that masks 11, 13, and 15 remain globally deterministic on width 8 but fail globally on width 9, under the same D2/two-lag observation. Thus two lags are not a width-uniform threshold for that representation. Width-9 full-field conflicts cannot be repaired by increasing spatial radius alone there; they do not imply monotone failure at larger widths.
+
+Any proposed minimum history must name the law, observation, admissible family, cadence, prediction target, and locality contract as well as dimension. Complete-state observation of deterministic Markov dynamics needs no retained past. A selected lossy observation can need memory; that fact alone supplies no universal h_min(d)=d law. History depth counts previous samples, so two lags mean three observed time slices. Prediction of the next observed field is weaker than reconstruction of the full physical state.
+
+A joint resource profile should generally be a Pareto frontier rather than one preferred tuple: history depth, spatial radius, retained coordinates, and construction/intervention cost need not have the same minimizer. A tradeoff requires a declared budget or partial ordering, not an unpriced claim that one resource has become another.
+
+### Predictive support is not constructive assembly
+
+The follow-up [PAS unit #172](https://github.com/bombadil-labs/groovy-commutator/pull/172) concerns a minimum decision-table reduct: choose a fixed subset of lag/site/channel coordinates separating every pair of allowed records with different next fields. It is a family-level predictive sufficiency cost under fixed atoms and target, not the complexity of one individual state, not an entropy, and not a construction history. Its reuse-grammar diagnostic was removed at Gate 1; no result here reinstates it.
+
+In contrast, Sharma et al., [Assembly theory explains and quantifies selection and evolution](https://doi.org/10.1038/s41586-023-06600-9), define assembly index through shortest recursive construction paths from basic parts with intermediate objects available for reuse. Their ensemble assembly quantity also uses copy number. This motivates asking a future construction question but does not identify PAS with assembly index. A genuine construction-cost experiment would need explicit elementary objects, legal joins, reusable intermediates, output equivalence, and charged preparation resources.
+
+### The free-lunch analogy needs a costed task
+
+Levin's [research overview](https://drmichaellevin.org/research/) describes exploiting physical and computational affordances for adaptive solutions without separately evolving every solution. That is broader than merely storing a previously learned program. The connection to this Program is a proposed question about reusable leverage, not a finding that our beam already supplies it.
+
+For a future cost experiment, compare the same task under homologous inherited organization and matched alternatives while charging preparation, storage, locality, latency, and interventions consistently. Adding free primitives can only weakly lower a minimum by definition; that monotonicity is a null, not an observed benefit. A scientifically informative gain must survive that accounting and matched controls. Neither a small PAS value nor a response difference alone establishes such a gain.
+
+### Resonance remains a stronger target, not a renamed success score
+
+The user defines ananda personally as the somatic resonance of self-recognition through self-similarity. The mechanical research target inspired by this is a response to structural correspondence that can itself be transported through the dimensional lift. An analyst-labelled homologous pair producing a different response is only an initial operational test: it does not establish that the system recognizes homology, experiences anything, or autonomously discovers the correspondence.
+
+Homology-sensitive response and a beneficial cost reduction are separate claims. Preservation, stronger interaction, synchronization, and repair cannot be interchanged after seeing a result. The [response unit #173](https://github.com/bombadil-labs/groovy-commutator/pull/173) must follow its own frozen matching, response signs, symmetry-aware null, and horizon; this note neither authorizes a run nor changes those choices.
+
+The workstreams can proceed in parallel under their own gates. Documentation integration does not grant Gate 1 to any experiment and does not reopen a completed protocol. Keep the original failures, later scope corrections, and the distinction between observer-supplied structure and endogenous organization visible.
