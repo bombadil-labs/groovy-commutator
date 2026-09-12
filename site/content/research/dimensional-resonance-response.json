@@ -1,0 +1,22 @@
+[
+  {
+    "slug": "dimensional-resonance-response",
+    "label": "Resonance response",
+    "title": "Do transformed homologues receive a uniform physical response?",
+    "date": "2026-09-12",
+    "updated": "2026-09-12",
+    "kind": "Experiment",
+    "evidence": "exact",
+    "topic": "Algebra and closure",
+    "summary": "In the frozen finite touching-Rule90 census, the primary ring-7 transformed-homologue mutual-transparency predicate fails at every dynamical horizon k=2..4. Residual mass/span effects exist but have mixed class signs; validity and return contrasts are tied.",
+    "takeaway": "Structural homology alone does not produce the preregistered uniform mutual-transparency response in this substrate. The negative result is specific to the frozen finite matching, observables and sign convention.",
+    "source": "docs/research/2026-09-12-dimensional-resonance-response.md",
+    "promotion": {
+      "stage": "research"
+    },
+    "related": [
+      "interface-factor",
+      "interface-history-global"
+    ]
+  }
+]

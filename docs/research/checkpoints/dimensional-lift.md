@@ -13,6 +13,19 @@ when a substantial unit completes; keep the bounded-claim style. Text moved from
 
 Program page: `docs/research/2026-09-09-dimensional-closure-program.md`
 
+## Checkpoint 2026-09-12: transformed-homologue mutual-transparency bet fails on primary ring seven; Gate 2 pending
+
+Read `docs/research/2026-09-12-dimensional-resonance-response.md`. This unit operationalizes one narrow part of the accepted beam refinement: whether an analyst-declared nonliteral structural homology relation changes the touching-strip dynamics in one preregistered mutual-transparency direction.
+
+- Protocol history stayed ahead of evidence. The original Gate 1 was blocked on a matching defect; the refreeze made nonliteral transformed homologues primary, froze the source-only matched census and exact V/M/S/R response semantics, and a final protocol-only clarification replaced the anti-conservative pair-level placebo with joint-shift-orbit label rotation and pinned inclusive span. Claude/Fable approved exact protocol head `15787fa8a2671f899e1d974aff8753386e423cfc` before implementation.
+- Source-only implementation #196 and physical-verifier implementation #204 were integrated with no frozen physical-response result. The verifier independently agrees between packed and scalar paths, reproduces the exact `17/64` predecessor table at `k=1`, preserves the frozen ring-6/ring-7 matched census, and keeps the orbit-preserving placebo and complement/literal descriptive controls separate.
+- Canonical evaluation #207 produced `results/dimensional_resonance_response_20260912.json` from the unchanged verifier; all bounded exact-head checks were green. Reporting #209 then recorded the result without a post-hoc rescue, and preservation-only #210 reconciled the gathering branch with current accepted `main` while preserving both result-integrity registries.
+- **Primary R2 fails.** On ring 7 the strict transformed-homologue mutual-transparency predicate passes at none of `k=2,3,4` (nor at `k=1`). Residual mass/span contrasts exist but class signs are mixed; validity and return contrasts are zero for every scored class at every horizon.
+- R4 is correctly not applicable because the actual ring-7 predicate never passes. Descriptively, none of the 503 joint-shift-orbit placebo assignments strict-passes either; this does not rescue R2. R5 independent return-witness replay passes.
+- Ring 6 strict-passes at `k=4`, but ring 6 has only two scored classes and was frozen as a small-family control/descriptive cohort, not the primary claim. Do not promote that control over the preregistered ring-7 result.
+- Exact scope is the exhaustive declared `n=6,7` touching-strip family, horizons `k=1..4`, frozen matching, causal window, observables and sign convention. Do not infer absence of every homology-sensitive statistic, semantic self-recognition, consciousness, endogenous control, self-assembly, intrinsic dimension, recursive beam resonance, physics/spacetime, metaphysics, Class IV/universality, or primes/`8n+1`.
+- **Review state:** evaluation, reporting, latest-main reconciliation and this current-account update are complete on the gathering lineage. Exact-head independent Claude/Fable Gate 2 and reviewer merge remain required before acceptance on `main`.
+
 ## Orientation 2026-09-12: resonance and resource accounting refine the existing beam
 
 Read `docs/research/2026-09-12-dimensional-beam-resonance.md`, including its dated integration. This is a user-requested direction record, not new evidence and not authorization to evaluate.

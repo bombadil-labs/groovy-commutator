@@ -145,6 +145,15 @@ REGISTRY = {
         'parent_protocol': 'docs/research/protocols/dimensional-history-scaling-20260912.md',
         'gate1_refreeze': 'docs/research/protocols/dimensional-history-scaling-gate1-refreeze-20260912.md'},
 
+    'results/dimensional_resonance_response_20260912.json': {
+        'script': 'scripts/verify_dimensional_resonance_response.py',
+        'protocol': 'docs/research/protocols/dimensional-resonance-response-20260912.md',
+        'gate1_refreeze': 'docs/research/protocols/dimensional-resonance-response-gate1-refreeze-20260912.md',
+        'gate1_null_clarification': 'docs/research/protocols/dimensional-resonance-response-gate1-null-clarification-20260912.md',
+        'gate1_approval': 'docs/research/protocols/dimensional-resonance-response-gate1-approval-20260912.md',
+        'source_census_script': 'scripts/verify_dimensional_resonance_source_census.py',
+        'physical_predecessor_script': 'scripts/verify_interface_factor.py'},
+
 }
 
 def sha(p: pathlib.Path) -> str: return hashlib.sha256(p.read_bytes()).hexdigest()
