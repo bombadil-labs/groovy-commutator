@@ -13,6 +13,20 @@ when a substantial unit completes; keep the bounded-claim style. Text moved from
 
 Program page: `docs/research/2026-09-09-dimensional-closure-program.md`
 
+## Checkpoint 2026-09-12: cross-width two-lag closure persists through width eight and fails at width nine; accepted
+
+Read `docs/research/2026-09-12-interface-history-cross-width.md`. This unit keeps the accepted #131/#157 touching-strip representation fixed at `D2,h=2`, restricts to masks `{11,13,15}` that passed globally on both predecessor rings, adds fresh exhaustive widths 8 and 9, and tests only the predeclared new radius `R=3` plus one pooled width-blind local table.
+
+- Protocol-only #163 integrated at `7cc4bbae2eb5af50e133b8a8eaf44fb55db358a8` and received independent Claude/Fable Gate 1 there. Clarification-only #165 recorded the required near-whole-ring null before implementation without renewed Gate 1.
+- Implementation-only/no-result #166 merged as `ac7ffbb9440a68b8e8956daeee7c07581e75be52` after all 27 exact-head checks were green. It pins independent physical/reference retained-field generation, packed versus tuple grouping for W1/W2/W3, width-blind W3 keys, translation covariance, predecessor controls, canonical conflict replay, permanent workflow and future integrity registration.
+- First evaluation #167 executed the unchanged verifier and produced provisional branch evidence, but the permanent replay workflow was necessarily red because an implementation-stage `--self-test` still asserted that the canonical result must be absent. The run was preserved and closed unmerged. Implementation-only #169 changed only that workflow plumbing and merged as `62b3849d2e206c76b84104a695d8079e5f1581cd`; no scientific code, result logic or protocol changed.
+- Corrected evaluation #170 regenerated the result independently from the corrected pinned stage. Its cleaned exact head `6ed7a0a00dea00efc770e55d1a215e949c2d3194` contains only `results/interface_history_cross_width_20260912.json`; all five checks, including permanent integrity and byte-for-byte replay, are green. It integrated as `ea247435705349ad936653d05e617187929c3928`.
+- Exact result: widths 6/7 pass W1 and theorem/regression W2@R3 for masks 11/13/15; fresh width 8 also passes W1 and W2 for all three masks. Fresh width 9 fails W1 and W2 for all three masks. Therefore P2 and P3 are false.
+- Pooled W3 fails for masks 11/13/15, so P4 is false. P15's canonical pooled conflict is cross-width (`n=7` versus `n=9`); masks 11/13 have earlier pooled conflicts between `n=6` and `n=7`. All nine stored W1/W2/W3 conflicts independently replay; primary/reference retained fields and all 27 verdicts agree; translation covariance and predecessor controls pass.
+- Interpretation: on the frozen reachable family, two-lag complete-field determinism persists through width 8 but is already lost at width 9 for all three common masks. A width-9 W1 conflict rules out every spatial-radius-only rescue for that exact retained representation/domain. It does **not** establish monotone failure for widths above 9, an arbitrary-width/full-shift/infinite-lattice obstruction, or intrinsic dimension.
+- `R=3` is whole-ring on widths 6/7 and near-whole-ring on widths 8/9, omitting only one and two sites respectively. Width-8 W2 success is therefore near-global finite-ring evidence, not small-radius locality.
+- **Review state:** accepted on `main`. Claude Code / Fable 5.1 approved exact-head Gate 2 on `0b569f3a7206f394640a919ea40c8e77b67c41dd` and merged PR #164 under the reviewer-merges rule as `8b8c62d0e3219c156b086b56c3a1158fba4b4792`.
+
 ## Checkpoint 2026-09-12: complete two-lag fields recover global determinism in nine finite-ring cells; gate-2 pending
 
 Read `docs/research/2026-09-12-interface-history-global.md`. This unit resolves the radius-versus-information-loss fork left by accepted finite interface history without changing the touching-strip physical/source family, masks, domains or maximum history depth.
