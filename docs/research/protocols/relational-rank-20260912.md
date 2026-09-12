@@ -1,11 +1,11 @@
 # Protocol: relational rank and the first used spatial direction — 2026-09-12
 
-**Status:** frozen before implementation/evaluation. Nothing in this protocol has been run.  
+**Status:** frozen before implementation/evaluation; revised after independent Gate-1 review. Nothing in this protocol has been run.  
 **Program:** *Dimensional Closure and the Commutator Lift*.  
 **Authored by:** Codex / OpenAI GPT-5.6 Sol.  
-**Protocol review:** pending independent Gate 1 on the exact integrated gathering head. **No implementation or source-domain evaluation is authorized before Gate 1.**  
+**Protocol review:** Claude Code, Fable 5.1 reviewed exact gathering head `ad304465e053a04e41ee7af76ceb68339cce7ac0` on 2026-09-12 and required three binding corrections. This revision incorporates them and requires renewed exact-head Gate 1 before implementation or evaluation.  
 **Base:** `main` at `06b6732423d5ed01a2d996bc9d7fe25cef7af50d`.  
-**Predecessor:** zero-dimensional base-case gathering PR #136. Its protocol has independent Gate-1 approval at `c46a6f7d4c13a56512b20832be4f1b2489a50f78`, but no canonical #136 result exists when this protocol is frozen.
+**Predecessor:** zero-dimensional base-case gathering PR #136. Its protocol has independent Gate-1 approval and its first canonical evaluation has been produced on its gathering branch, but #136 is not yet accepted on `main` when this revision is frozen.
 
 ## 1. Why this unit
 
@@ -16,18 +16,20 @@ The dimensional program has repeatedly learned that **more named coordinates do 
 - fixed-width or multi-channel systems can carry arbitrarily many local bits/actions while remaining longitudinally one-dimensional under a declared representation budget;
 - native higher-dimensional target states can support possibilities and interventions absent from the inherited image.
 
-The user's phrase **"dependent origination"** motivates the question but is not a mathematical or Buddhist-doctrinal claim of this protocol. The operational translation is narrower:
+The user's phrase **"dependent origination"** motivates the question but is not a mathematical result, Buddhist-doctrinal claim, or physics claim of this protocol. The operational translation is narrower:
 
-> **Can we distinguish the number of spatial relation directions available to a represented state family from the number of relation directions actually used by its local law?**
+> **Can we distinguish the number of spatial translation directions that act nontrivially on a declared state family from the number of displacement directions actually used by a declared local law?**
 
-This protocol introduces two deliberately separate ranks:
+This protocol introduces two deliberately separate, representation-relative quantities:
 
-1. **translation rank** `rho_T`: how many independent lattice-translation directions act nontrivially on a declared state family;
-2. **causal displacement rank** `rho_C`: how many independent displacement directions are spanned by essential inputs of a declared local update law.
+1. **translation rank** `rho_T`: the free rank of lattice translations acting nontrivially on a declared state family;
+2. **causal displacement rank** `rho_C`: the integer rank spanned by essential input offsets of a declared local update law.
 
-The aim is not to define intrinsic dimension once and for all. It is to test whether these ranks cleanly reject known false positives—extra bits, copied axes, and parallel channels—and to census what the accepted guard-free 1D→2D axial constructor actually does with its second ambient direction.
+The first Gate-1 review exposed an important simplification: for the accepted ordered-axis constructor, the target essential-offset set is not an empirical mystery. It is exactly the Cartesian product of the source essential-offset set with itself. Consequently the proposed 256-rule rank classification is a **theorem control**, not a falsifiable discovery. This correction is part of the scientific content of the unit.
 
-## 2. Translation rank of a state family
+The aim is not to define intrinsic dimension once and for all. It is to make these two ranks precise, expose their dependence on the declared family/presentation, prove the ordered-axis product theorem, replay it exhaustively, and compare the resulting exact bookkeeping with already accepted dimensional families.
+
+## 2. Translation rank of a declared state family
 
 Let a declared state family `B` lie in configurations over the infinite lattice `Z^D`. Let `tau_v` denote translation by `v in Z^D`.
 
@@ -41,291 +43,294 @@ Define the **pointwise translation kernel**
 
 Both are abelian subgroups of `Z^D`. Define
 
-`rho_T(B) = rank_Q( (H_B / K_B) tensor Q )`.
+`rho_T(B) = rank_Q((H_B / K_B) tensor Q)`.
 
-Thus torsion, if present in some periodic presentation, contributes no free translation direction. The primary statements below use infinite families, not a fixed finite torus.
-
-Interpretation inside this protocol only:
-
-- `rho_T=0`: no nontrivial translation direction acts on distinguishable states in the family;
-- `rho_T=1`: one independent translation direction acts nontrivially;
-- and so on.
-
-This is a **presentation-relative symmetry/action rank**. It is not asserted to be intrinsic topological dimension under arbitrary encodings.
+The primary statements below use infinite families, not a fixed finite torus. `rho_T` is explicitly **family- and presentation-relative**: changing which translated copies count as members of the declared family can change the rank even when the underlying configurations are closely related.
 
 ### T0 — zero-dimensional floor
 
-For the binary 0D state set `{0,1}` on the one-point lattice, the translation group is trivial, so
+For the binary 0D state set `{0,1}` on the one-point lattice, the translation group is trivial:
 
 `rho_T = 0`.
 
 ### T1 — full shifts
 
-For the full binary shift on `Z^d`, `H_B = Z^d` and `K_B = {0}`, so
+For the full binary shift on `Z^d`,
 
-`rho_T = d`.
+`H_B = Z^d`, `K_B = {0}`, and `rho_T = d`.
 
-This is a theorem control for `d=1,2` and the general formula is recorded analytically.
+The verifier records the `d=1,2` instances as theorem controls; the general formula is analytic.
 
 ### T2 — literal replication image
 
-Let `P_d` be literal replication of a `d`-dimensional configuration along one new axis into `Z^(d+1)`, as in the accepted guard-free axial control. On the copied image:
+Let `P_d` literally replicate a `d`-dimensional configuration along one new axis into `Z^(d+1)`, as in the accepted guard-free axial control. On the copied image:
 
-- every old-axis translation acts as before;
+- every inherited-axis translation acts as before;
 - translation by the new basis vector fixes **every** copied configuration.
 
 Therefore the new-axis generator lies in `K_B` and
 
 `rho_T(P_d(B_d)) = rho_T(B_d)`
 
-for the full inherited source family. In particular the 1D→2D copied beam has `rho_T=1`, while the full 2D target shift has `rho_T=2`.
+for the full inherited source family. In particular the copied 1D beam inside `Z^2` has rank 1 while the full 2D target shift has rank 2.
 
-This is the first central control: **ambient coordinate count rises while inherited translation rank does not.**
+This is deliberately a simple control: ambient coordinate count rises while inherited translation rank does not.
 
 ### T3 — product alphabets and correction coordinates
 
 Changing the per-site alphabet or stacking finitely many represented coordinates over the same `Z` lattice does not, by itself, add a translation generator. The full product shift `(A^m)^Z` has `rho_T=1` for every finite `m`.
 
-The accepted Rule32 correction-stack results are imported only as a comparison: represented bits/site grow with correction depth while the whole-field image remains source-bounded and lives on the same longitudinal lattice. This protocol does not reclassify correction depth as spatial dimension.
+The accepted Rule32 correction-stack findings are imported only as comparison evidence: represented bits/site can grow while the representation remains longitudinally one-dimensional. This unit does not reclassify correction depth as spatial dimension.
 
-### T4 — many anchored parallel channels
+### T4a — anchored many-channel control
 
-For each finite `m>=1`, define a clean control family `S_m` on `Z^2`: arbitrary binary values live on the `m` horizontal tracks
+For each finite `m>=1`, define `S_m` on `Z^2`: arbitrary binary values live on the horizontal tracks
 
-`y = 0, 2, 4, ..., 2(m-1)`
+`y = 0,2,4,...,2(m-1)`
 
-and every other site is fixed to a declared background symbol. The track positions are anchored as part of the family.
+and every other site is fixed to a declared background symbol. The track positions are part of the declared family.
 
-Then horizontal translations preserve `S_m`; nonzero vertical translations do not preserve the anchored track set. Hence
+Then horizontal translations preserve `S_m`, no nonzero vertical translation preserves the anchored finite track set, and no nonzero horizontal translation fixes every arbitrary track configuration. Hence
 
-`H_{S_m} = Z e_x`, `K_{S_m}={0}`, and `rho_T(S_m)=1`
+`H_{S_m} = Z e_x`, `K_{S_m}={0}`, `rho_T(S_m)=1`.
 
-for every finite `m`.
+This is paired with, but not identified with, the accepted intervention-axis result: arbitrarily many independently addressable channels/actions can coexist with rank-one anchored translation structure.
 
-This control is paired, but not identified, with the accepted intervention-axis result: separated Rule90 channels can support intervention rank at least `m` under the declared support budget. Thus **arbitrarily many independently addressable channels/actions need not imply translation rank greater than one.**
+### T4b — translation-closed contrast
+
+The first Gate-1 review correctly noted that T4a builds the anchoring choice into the family. Freeze the contrast
+
+`S'_m = union_{v in Z^2} tau_v(S_m)`.
+
+Now every lattice translation maps `S'_m` to itself, while no nonzero translation fixes every member:
+
+`H_{S'_m}=Z^2`, `K_{S'_m}={0}`, `rho_T(S'_m)=2`.
+
+T4a/T4b are reported together. They are not competing measurements of an intrinsic object; they demonstrate that `rho_T` is sensitive to the declared family/presentation. A report that quotes one without the other fails the protocol.
 
 ## 3. Causal displacement rank of a local law
 
 Let a translation-equivariant binary CA on `Z^D` have finite neighborhood offsets `N subset Z^D` and local Boolean rule `g`.
 
-An offset `v in N` is **essential** when there exist two local patches that differ only at `v` and for which `g` gives different outputs.
+An offset `v in N` is **essential** when there exist two local patches differing only at `v` on which `g` gives different outputs. Let `E(g)` be the set of essential offsets.
 
-Let `E(g)` be the set of essential offsets. Define the **causal displacement rank**
+Define
 
 `rho_C(g) = rank_Z < E(g) >`,
 
-the rank of the subgroup of `Z^D` generated by the essential displacement vectors, measured from the output site at the origin. The center offset `0` contributes no rank.
+the rank of the subgroup of `Z^D` generated by the essential displacement vectors measured **from the output site at the origin**. The center offset `0` contributes no rank.
+
+Use the offsets themselves, not pairwise differences between essential offsets. Pairwise differences would incorrectly assign rank zero to a pure shift, whose one nonzero displacement is exactly the causal direction this quantity is intended to retain.
 
 Examples:
 
 - a constant, identity, or center-negation rule has `rho_C=0`;
 - a pure one-cell shift has `rho_C=1` even though only one input is essential;
-- a rule with essential offsets spanning two non-collinear directions has `rho_C=2`.
+- essential offsets spanning two non-collinear directions give `rho_C=2`.
 
-`rho_C` is invariant under invertible integer changes of lattice basis because such maps preserve subgroup rank. It is **not** claimed invariant under arbitrary block encodings, alphabet changes, or nonlocal interpreters.
+`rho_C` is invariant under invertible integer changes of lattice basis because those preserve subgroup rank. It is not claimed invariant under arbitrary block encodings, alphabet changes, or nonlocal interpreters.
 
-This rank is about directions the **law uses on the full ambient shift**. It is deliberately not identified with `rho_T` for arbitrary constrained subfamilies.
+## 4. Ordered-axis product theorem
 
-## 4. Frozen causal-rank census
+Let an ECA source rule `r` have source essential-offset set
 
-### C0 — the 0D / center-only controls
+`E_r subset {-1,0,+1}`.
 
-Under the center-only ECA embeddings of the four 0D laws `{0,51,204,255}`, only the center site can be essential. Therefore all four have
-
-`rho_C = 0`.
-
-This means the canonical 0D→1D embedding opens an available 1D translation direction in the target full shift (`rho_T: 0→1`) while these inherited laws themselves still use no nonzero displacement (`rho_C=0`). That distinction is an interpretation of the declared ranks, not a claim that spacetime emerges.
-
-### C1 — complete ECA source census
-
-For all 256 ECA rules on `Z`, compute the essential offsets in `{-1,0,+1}`.
-
-**Theorem/control prediction:** exactly the four center-only rules `{0,51,204,255}` have `rho_C=0`; every other ECA has `rho_C=1`.
-
-A mismatch is an implementation error.
-
-### C2 — complete 1D→2D axial target census
-
-For every ECA source rule `r`, form the accepted guard-free ordered-axis 2D local composite
+The accepted ordered-axis 2D local composite is
 
 `G_{r,2} = F_{r,2} o F_{r,1}`,
 
-using the repository's exact axis convention. Its output at one site is a Boolean function of the `3x3` Moore patch, so the complete local domain has only `2^9=512` patches.
+with the first pass acting along one axis and the second pass along the other.
+
+### Theorem: exact essential-offset product
+
+For every ECA rule,
+
+`E(G_{r,2}) = E_r x E_r subset Z^2`.
+
+**Proof frozen before implementation.**
+
+1. If either coordinate of `(i,j)` is not essential for `r`, changing the corresponding source cell cannot affect the relevant first-pass value or cannot affect the second-pass output. Thus no offset outside `E_r x E_r` is essential.
+2. Take `(i,j) in E_r x E_r`. Because input `i` is essential, there is a one-dimensional neighborhood in row `j` where toggling its `i`-th input toggles that row's first-pass output. Because input `j` is essential, there is an outer neighborhood of first-pass values where toggling the `j`-th intermediate input toggles the final output.
+3. Any nonconstant Boolean local rule is surjective onto `{0,1}`. The other rows are disjoint source variables, so choose each independently to realize the other outer intermediate values required by the second sensitivity witness. Use the first sensitivity witness on row `j`.
+4. The resulting two `3x3` source patches differ only at `(i,j)` and have different final outputs. Therefore every `(i,j) in E_r x E_r` is essential.
+
+So equality holds; there is no hidden cancellation class to discover in the census.
+
+### Rank consequence
+
+The theorem immediately gives the complete target-rank classification.
+
+- If `E_r` is empty or `{0}`, `rho_C(G_{r,2})=0`. These are exactly ECA `{0,51,204,255}`.
+- If `E_r` is a singleton nonzero offset, `E_r x E_r` is one nonzero diagonal displacement and target rank is 1. These are exactly `{15,85,170,240}` under the repository bit convention (`15=not L`, `85=not R`, `170=R`, `240=L`).
+- If `|E_r|>=2`, the product spans rank 2:
+  - if `0` and a nonzero `a` lie in `E_r`, then `(a,0)` and `(0,a)` are independent;
+  - if `E_r={-1,+1}`, then `(-1,-1)` and `(-1,+1)` are independent.
+  Thus every remaining 248 ECA has target rank 2.
+
+A `1->0` causal-rank transition is therefore impossible in this constructor.
+
+This theorem replaces the original protocol's proposed "minimal-collapse bet." The exhaustive census below is a regression/audit of this deduction, not evidence discovered after looking at the result.
+
+## 5. Frozen exact census and controls
+
+### C0 — 0D / center-only controls
+
+Under the canonical center-only ECA embeddings `{0,51,204,255}`, there is no essential nonzero displacement, so `rho_C=0`.
+
+### C1 — complete ECA source census
+
+For all 256 ECA rules on `Z`, compute essential offsets in `{-1,0,+1}`.
+
+**Theorem/control:** exactly `{0,51,204,255}` have source `rho_C=0`; every other rule has source `rho_C=1`.
+
+### C2 — complete 1D→2D axial target replay
 
 For every `r in 0..255`:
 
-1. evaluate `G_{r,2}` on all 512 patches;
+1. evaluate the accepted ordered-axis `G_{r,2}` on all `2^9=512` Moore patches;
 2. determine all nine essential offsets by exact single-variable influence checks;
-3. compute `rho_C(G_{r,2}) in {0,1,2}` from those offsets;
-4. retain the complete essential-offset set and rank.
+3. compute `rho_C` by exact integer rank;
+4. compare the essential-offset set with the theorem prediction `E_r x E_r`;
+5. retain complete discrepancies if any.
 
-This census is the primary new evidence of the unit.
+Any discrepancy between the independently implemented evaluators or between the enumerated essential set and `E_r x E_r` is an implementation/theorem failure and blocks interpretation. It is not scored as an interesting failed scientific bet.
 
-### C3 — minimal-collapse bet
+### C3 — analytic named controls
 
-Freeze the following falsifiable classification before evaluation:
+- `{0,51,204,255}`: target rank 0.
+- `{15,85,170,240}`: explicit one-input diagonal formulas, target rank 1.
+- rule `90`: its two-pass composite is parity of the four diagonal corners, target rank 2.
+- rule `150`: its two-pass composite is parity of all `3x3` cells, target rank 2.
 
-- `rho_C=0` exactly for `{0,51,204,255}`;
-- `rho_C=1` exactly for the four off-center unary projections/complements `{15,85,170,240}`;
-- every other ECA source has `rho_C(G_{r,2})=2`.
+These formulas are checked independently before relying on aggregate counts.
 
-Rationale frozen before execution:
+## 6. Cross-comparisons to accepted dimensional families
 
-- constants and center-only maps remain center-only after the two axial passes;
-- rules 170/240 are right/left projections and 85/15 their complements; two ordered axial passes collapse them to a single diagonal dependency, so rank one is expected;
-- nonlinear or multi-input sources are expected to leave essential displacements spanning both axes, but this last step is the actual bet and may fail through cancellation or composition identities.
-
-If C3 fails, report every counterexample and its complete essential-offset set. **Do not repair the classification after inspection.** A failed C3 is a useful result.
-
-### C4 — fixed controls inside the 2D census
-
-Regardless of C3:
-
-- rules `0,51,204,255` must replay as rank-zero controls;
-- rules `15,85,170,240` must be checked against the explicit diagonal one-input formulas before relying on the rank-one expectation;
-- rule `150` (three-input parity) must have `rho_C=2`; its axial composite is the parity of the `3x3` patch;
-- rule `90` must have `rho_C=2`; its axial composite has the four diagonal corners as essential parity inputs.
-
-Any failure of these analytic controls blocks interpretation.
-
-## 5. Frozen cross-comparisons to accepted dimensional families
-
-After the C2 census, report exact set intersections and contingency counts against the already accepted guard-free axial classifications:
+After the exact replay, report set intersections and contingency counts against accepted guard-free axial classifications:
 
 - the 66 exact literal-replication-compatible sources;
 - the 24 axis-commuting sources;
 - the 14 satisfying both;
 - the 16 affine ECA sources.
 
-The implementation must import the accepted result artifact or an exact repository source for these sets and hash it. Do not silently reconstruct a remembered list if the canonical artifact is available.
+Import the accepted canonical result/source and hash it. These are exact descriptive cross-tabs, not independent samples and not statistical enrichment tests. No p-values, natural-selection language, or post-hoc selectivity claim is allowed.
 
-These are **descriptive exact cross-tabs**, not independent samples and not statistical enrichment tests. No p-values or claims of natural selection are allowed.
+Also report each rule's causal-rank transition. By theorem the only possible labels here are:
 
-Also report each rule's transition
+- `0->0` for the four center-only rules;
+- `1->1` for the four noncentral unary projection/complement rules;
+- `1->2` for the remaining 248.
 
-`rho_C(r in 1D) -> rho_C(G_{r,2} in 2D)`.
+The earlier allowed `1->0` label is removed because the product theorem excludes it.
 
-The allowed labels are only:
+## 7. Relational-lift profile: bookkeeping, not a new classification
 
-- `0->0`;
-- `1->0`;
-- `1->1`;
-- `1->2`.
-
-No monotonicity theorem is assumed. A `1->0` rule, if any, is a genuine composition collapse and must be retained.
-
-## 6. Relational-lift profile
-
-For this protocol define, purely as bookkeeping, the **relational-lift profile** of a declared adjacent lift as
+Define for a declared adjacent lift
 
 `(rho_T(source family), rho_T(inherited image), rho_T(target family), rho_C(target local law))`.
 
-For the two base cases:
-
 ### R0 — 0D→1D center-only embedding
 
-For each of the four 0D laws:
+For each 0D center-only law:
 
-`(0, 0, 1, 0)`
+`(0,0,1,0)`.
 
-where the inherited 0D state itself has no translation action, the full 1D target makes one direction available, and the center-only law uses no nonzero displacement.
+The target full shift makes one translation direction available; the inherited unary law uses no nonzero displacement.
 
-### R1 — 1D→2D literal-replication/axial setting
+### R1 — accepted 1D→2D axial setting
 
-For the full 1D source family and its copied image inside the full 2D target:
+For the full 1D source family, copied image, and full 2D target:
 
-`(1, 1, 2, rho_C(G_{r,2}))`.
+`(1,1,2,rho_C(G_{r,2}))`.
 
-Thus every rule opens an **available** second target translation direction at the family level, while only rules with `rho_C=2` are labeled, inside this protocol, as **using full causal rank two**.
+The first Gate-1 review correctly observed that, for this constructor, the last component contains **no information beyond the source essential-offset set** because `E(G_{r,2})=E_r x E_r`. The unit must state this negative result explicitly. The profile is useful only as bookkeeping that keeps available translation rank separate from law-used displacement rank; it is not a newly selective dimensional invariant.
 
-These labels are deliberately weaker than "is genuinely two-dimensional." A 2D lattice remains 2D even for identity dynamics; `rho_C` measures use of displacement directions by the local law, not the ontology of the lattice.
+A 2D lattice remains 2D even for identity dynamics. `rho_C` measures dependency directions used by a local law, not the ontology or intrinsic dimension of the lattice.
 
-## 7. What this does and does not test
+## 8. What this does and does not test
 
-The protocol is designed to separate several quantities that earlier discussion risked conflating:
+The unit separates quantities that earlier discussion risked conflating:
 
-| Quantity | Example that can increase it while `rho_T` stays 1 |
+| Quantity | Control showing it is distinct |
 | --- | --- |
-| stored bits / alphabet size | product alphabet, correction stack |
-| independent channel count | `m` anchored tracks |
-| intervention rank | separated Rule90 strip actions |
-| ambient coordinate count | literal replication into an added axis |
-| causal displacement rank | may increase under the 2D axial composite; this is censused |
+| stored bits / alphabet size | finite product alphabets and correction stacks need not raise `rho_T` |
+| independent channel/action count | anchored `S_m` can have arbitrarily many channels while `rho_T=1` |
+| declared-family translation rank | `S_m` has rank 1 but its translation closure `S'_m` has rank 2 |
+| ambient coordinate count | literal replication adds an ambient coordinate while copied-image `rho_T` is unchanged |
+| causal displacement rank | ordered-axis target rank is determined exactly by `E_r x E_r` |
 
-A positive separation among these quantities supports only the usefulness of the definitions.
-
-The unit does **not** establish:
+A successful replay supports the correctness and usefulness of these definitions and the product theorem in the declared constructor. It does **not** establish:
 
 - intrinsic or representation-independent spatial dimension;
-- that `rho_T` or `rho_C` is the unique correct definition of dimension;
+- that `rho_T` or `rho_C` is a unique or sufficient definition of dimension;
 - that causal rank must equal ambient lattice dimension;
 - that every higher-dimensional law uses every available direction;
-- self-assembly, endogenous control, renormalization, spacetime emergence, a physical ontology, or a metaphysical interpretation;
+- that the ordered-axis product theorem generalizes to other lift architectures;
+- self-assembly, endogenous control, renormalization, spacetime emergence, a physical ontology, or metaphysical conclusions;
 - a mathematical equivalence to Buddhist dependent origination;
 - any connection to the separate `8n+1` prime motif.
 
-## 8. Dependency on the zero-dimensional base-case unit
+## 9. Dependency on the zero-dimensional base-case unit
 
-This protocol is intentionally drafted before #136 has a canonical result so the next research cycle can be reviewed in advance.
+This protocol is intentionally queued while #136 completes.
 
-- Its definitions of `rho_T` and `rho_C`, the C1/C2 census, and the imported older controls do **not** depend on a positive #136 result.
-- The shared historical motivation from #136—0D floor, center-only embedding, and local selector roles—may be cited only after #136 is accepted on `main`.
-- Implementation may proceed after this protocol's own Gate 1 because the verifier can be written without #136 output.
-- **Primary evaluation may not begin until #136 is either accepted on `main` or explicitly reconciled.** If #136 produces a material correction to the 0D floor/embedding assumptions used here, amend this protocol before evaluation and obtain renewed Gate 1.
+- `rho_T`, `rho_C`, T4a/T4b, and the ordered-axis product theorem do not depend on a positive #136 result.
+- Historical motivation involving the 0D floor and center-only embedding may be treated as accepted program context only after #136 is accepted on `main`.
+- Implementation may proceed after this protocol's own renewed Gate 1 because it requires no #136 output.
+- **Primary evaluation may not begin until #136 is accepted on `main` or explicitly reconciled.** If #136 materially changes an assumption used here, amend this protocol and obtain renewed Gate 1 before evaluation.
 
-This dependency prevents a surprising predecessor result from being silently papered over while allowing protocol and implementation work to queue ahead.
+## 10. Implementation and independent checks
 
-## 9. Implementation and independent checks
+No implementation or source-domain execution is authorized before renewed exact-head Gate 1.
 
-No implementation is authorized before exact-head Gate 1.
+After approval, the implementation-only/no-result sub-PR must freeze:
 
-After Gate 1, the implementation-only/no-result sub-PR must freeze:
-
-- exact imported result/source hashes for guard-free axial, transverse-freedom/correction-stack comparison, and intervention-axis comparison;
+- exact imported source/result hashes for guard-free axial, transverse-freedom/correction-stack comparison, and intervention-axis comparison;
 - the exact ordered-axis convention used for `G_{r,2}`;
-- canonical rule ordering `0..255`, Moore-offset ordering, and witness ordering;
-- a scalar tuple/Boolean evaluator for ECA and axial composition;
-- an independently implemented packed/table evaluator over all 512 2D patches;
-- exact essential-variable tests in both implementations;
-- exact integer rank computation for essential offsets without floating-point tolerance;
+- canonical rule ordering `0..255`, Moore-offset ordering, and discrepancy ordering;
+- a scalar tuple/Boolean ECA + axial evaluator;
+- an independently implemented packed/table evaluator over all 512 target patches;
+- essential-variable tests in both implementations;
+- exact integer rank computation with no floating-point tolerance;
 - permanent CI and result-integrity scaffolding.
 
-For the 2D rank calculation, with essential nonzero offsets `E subset Z^2`:
+For essential nonzero offsets `E subset Z^2`:
 
 - rank 0 iff `E` is empty;
-- rank 1 iff `E` is nonempty and every pair of vectors in `E` has zero 2x2 determinant;
+- rank 1 iff `E` is nonempty and every pair has zero `2x2` determinant;
 - rank 2 otherwise.
 
-The two independent local evaluators must agree on all `256 * 512` target outputs, every essential-offset verdict, and every rank. Any disagreement blocks evaluation.
+The independent evaluators must agree on all `256*512` target outputs, every essential-offset verdict, every rank, and every comparison to `E_r x E_r`.
 
-Translation-rank controls are theorem-backed. The verifier records their group generators/kernels and checks explicit witness configurations where useful; finite tori are regression checks only and are not used to define `rho_T`.
+Translation-rank statements are theorem-backed. Finite tori, if used at all, are regression illustrations and never definitions of `rho_T`.
 
-Canonical paths proposed:
+Proposed canonical paths:
 
 - verifier: `scripts/verify_relational_rank.py`;
 - result: `results/relational_rank_20260912.json`;
 - workflow: `.github/workflows/research-relational-rank.yml`.
 
-## 10. Frozen predictions and scoring
+## 11. Frozen predictions and scoring
 
-- **P1:** T0/T1 full-shift translation-rank controls hold (`rho_T=0,1,2` at 0D/1D/2D).
-- **P2:** literal replication preserves inherited translation rank: 1D source/image both rank 1 inside a rank-2 full target.
-- **P3:** finite product-alphabet depth and anchored channel multiplicity do not raise `rho_T` above 1 under the declared families.
-- **P4:** ECA causal-rank control: exactly `{0,51,204,255}` have source `rho_C=0`, all other ECA have source `rho_C=1`.
-- **P5:** C3 minimal-collapse bet for the 2D axial composite: rank-zero exactly four center-only rules, rank-one exactly `{15,85,170,240}`, all remaining rules rank two.
-- **P6:** analytic 2D controls for rules 90 and 150 have rank two and the eight unary/projection controls match their frozen ranks/formulas.
-- **P7:** report exact cross-tabs of target `rho_C` against the accepted 66/24/14/16 source families, with no sampling/enrichment interpretation.
-- **P8:** relational-lift profiles are reported exactly as bookkeeping; no profile is promoted to an intrinsic-dimension theorem.
+- **P1:** T0/T1 controls give `rho_T=0,1,2` at the 0D, 1D-full-shift and 2D-full-shift examples.
+- **P2:** literal 1D→2D replication preserves inherited-image `rho_T=1` inside a rank-2 full target.
+- **P3:** finite product alphabets remain rank 1 on `Z`; anchored `S_m` is rank 1 while translation-closed `S'_m` is rank 2. This paired control explicitly demonstrates presentation dependence.
+- **P4:** source ECA census: exactly `{0,51,204,255}` have source `rho_C=0`; all other ECA have source `rho_C=1`.
+- **P5:** ordered-axis product theorem: for every source, enumerated target essential offsets equal `E_r x E_r`; target ranks are 0 for four center-only rules, 1 for `{15,85,170,240}`, and 2 for the other 248.
+- **P6:** rules 90 and 150 and all eight unary controls match their explicit formulas/ranks.
+- **P7:** exact cross-tabs against the accepted 66/24/14/16 source families are reported descriptively only.
+- **P8:** relational-lift profiles are reported as bookkeeping, together with the explicit negative statement that their target `rho_C` component is determined by source essential offsets in this constructor.
 
-A P5 failure is scientific evidence, not an implementation failure, unless one of P4/P6 or the independent-evaluator checks also fails.
+P1–P6 are theorem/regression controls. A mismatch blocks interpretation and triggers implementation/proof debugging; it is not a post-hoc opportunity to substitute a new dimensional criterion. P7 contains exact descriptive counts but no predeclared enrichment bet.
 
-## 11. Required workflow
+## 12. Required workflow
 
 Use the repository gathering/sub-PR protocol:
 
-1. protocol-only sub-PR into `gather/dimensional-relational-rank`;
+1. protocol-correction sub-PR into `gather/dimensional-relational-rank`;
 2. author self-review and merge after exact-head checks are green;
-3. independent **Gate 1** on the exact integrated gathering head;
+3. renewed independent **Gate 1** on the exact integrated gathering head;
 4. only after Gate 1: implementation-only/no-result sub-PR;
 5. implementation self-review and merge when green;
 6. wait for #136 acceptance/reconciliation before primary evaluation;
@@ -334,21 +339,21 @@ Use the repository gathering/sub-PR protocol:
 9. independent exact-head **Gate 2**;
 10. reviewer merge to `main` only after Gate 2 and exact-head checks are green.
 
-Any material change after Gate 1 to the rank definitions, declared families, axial domain, C3 bet, imported cross-comparisons, witness ordering, or interpretation ceiling requires renewed Gate 1.
+Any material change after Gate 1 to the rank definitions, declared families, product theorem, axial domain, imported cross-comparisons, discrepancy ordering, or interpretation ceiling requires renewed Gate 1.
 
-## 12. Gate-1 review questions
+## 13. Renewed Gate-1 review questions
 
-The independent reviewer should attack this protocol before implementation:
+The independent reviewer should verify the corrected exact head, especially:
 
-1. Is `rho_T = rank((H_B/K_B) tensor Q)` well-defined and appropriately scoped for the infinite families used here? Is `H_B` setwise symmetry the right group, or does it accidentally reward/penalize anchored encodings?
-2. Does T2 correctly give copied images the old rank rather than the ambient target rank, and is that distinction useful rather than tautological?
-3. Is the anchored-track T4 control fair, or should a different many-channel family be frozen to avoid building rank one into the anchoring convention?
-4. Is `rho_C` as the rank of essential displacement vectors the right local notion? Should it use offsets themselves, differences of offsets, or another declared subgroup before we run anything?
-5. Is the C3 minimal-collapse classification mathematically plausible and genuinely falsifiable? Are the expected rank-one rules `{15,85,170,240}` correct under the repository's ECA bit convention?
-6. Do the rule-90 and rule-150 analytic controls follow from the exact ordered-axis convention?
-7. Are the 66/24/14/16 cross-tabs scientifically useful without inviting post-hoc enrichment claims?
-8. Does the relational-lift profile cleanly separate available translation rank from used causal rank, or is it merely renaming ambient dimension and dependency span?
-9. Is the #136 dependency strong enough to prevent contradictory predecessor evidence from being ignored while still allowing useful implementation work to proceed?
-10. Are the non-claims strong enough that the interpretive phrase "dependent origination" cannot be mistaken for evidence, doctrine, or a physics claim?
+1. Is `rho_T = rank((H_B/K_B) tensor Q)` well-defined and correctly scoped for the infinite families used here?
+2. Do T4a/T4b fairly expose, rather than hide, the dependence of `rho_T` on the declared family/presentation?
+3. Is `rho_C` correctly based on essential offsets from the output origin, with the pure-shift control ruling out pairwise-difference definitions?
+4. Is the proof `E(G_{r,2})=E_r x E_r` complete for every nonconstant Boolean ECA, including the independent realizability of the outer sensitivity context? Are constants and center-only maps handled correctly?
+5. Does the stated rank consequence exhaust all subsets of `{-1,0,+1}` without a missed rank-one or cancellation case?
+6. Are the repository rule IDs/formulas for `{15,85,170,240}`, 90 and 150 correct under the accepted bit convention?
+7. Does the corrected relational-lift profile now state strongly enough that, for this constructor, target `rho_C` adds no information beyond the source essential-offset set?
+8. Are the 66/24/14/16 cross-tabs worth retaining as descriptive bookkeeping without implying enrichment or selectivity?
+9. Is the #136 dependency strong enough to prevent contradictory predecessor evidence from being ignored while allowing implementation to queue after Gate 1?
+10. Are the non-claims strong enough that "dependent origination" cannot be mistaken for evidence, doctrine, intrinsic dimension, or a physics claim?
 
-Gate 1 should be strong. Binding corrections must land before implementation or any source-domain execution, and renewed approval must name the exact integrated gathering-head SHA.
+Binding corrections must land before implementation or source-domain execution. Renewed approval must name the exact integrated gathering-head SHA.
