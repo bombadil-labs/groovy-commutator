@@ -7,6 +7,47 @@ substantial unit completes; keep the bounded-claim style.
 
 Program page: `docs/research/2026-09-10-representation-invariants-program.md`
 
+## Checkpoint 2026-09-12 (eighteenth unit opened): depth-two ring certificate, protocol frozen, unrun, gate 1 requested
+
+- Frozen and unrun: `protocols/depth-two-certificate-20260912.md`. Refinement
+  depth at most two certified at every ring `n ≥ 4` for all eight
+  observations and all 256 rules, by the fourteenth unit's ring criterion
+  and `(k, p)` certificate applied to the fifteenth unit's 4096-vertex pair
+  graph `G²_{ψ,r}`, unchanged. The cheaper matrix method the seventeenth
+  unit's checkpoint asked for: the pair graph has out-degree at most four,
+  so a boolean power is four row-gathers and three ORs on packed 64-bit
+  rows (about 7.5 ms per power in a scratch benchmark), not a dense
+  `4096³` product; repeats detected by a hash table and confirmed byte for
+  byte by recomputation; only pairs with a violating walk closed inside a
+  strong component take powers; cap 1024 with the fourteenth unit's
+  censoring contract. Ring sets 3 to 14 and `FS¹`, `FS²` are read from the
+  fifteenth unit's result, not recomputed.
+- P1 criterion equals the recorded rings-4-to-14 sets, `FS¹` rules have no
+  closed violation (theorem), dense cross-check on a frozen sample; P2
+  certificates reported with censoring; P3 bets: `P_ψ = 1` for 232, 4, 32,
+  200, `P_22 = 3`, `P_90` a multiple of 4, `P_150` a multiple of 6, with
+  the kernel theorems as controls; **P4 main bet:** the all-ring
+  depth-two gap equals the fifteenth unit's rings-3-to-14 gap under every
+  observation (nonempty for the seven other than parity); P5 symmetries
+  including equality of `(k, p)` under conjugation and reflection.
+- Chosen over the structural account of the deep rules, which has no
+  frozen object to bet on yet and stays a candidate; full-shift depth four
+  is not planned pending Myk's cost decision under the 2026-09-12 CI-cost
+  boundary.
+- Cost: expected 30 to 60 minutes, bounded above by about six hours at the
+  cap; **does not fit automatic CI.** Canonical run once off-Actions from
+  the pinned implementation; automatic tier is the integrity check plus a
+  sub-two-minute `--self-test`; full replay `workflow_dispatch`-only with
+  an authorization input from the start.
+- Not to infer: anything about depth three or full-shift depth (not
+  recomputed); nothing about why the gap rules are deep; a censored pair
+  is a limit, not a finding.
+- Branch `claude/review-github-issues-wf15ni` (harness-assigned name;
+  role defined by the PR base) from `main` at `3d1225a`; draft gathering
+  PR into `main` opened with the protocol only; gate-1 review requested
+  from Codex (OpenAI GPT-5.6 Sol), pinned to the protocol-only head. No
+  verifier committed; nothing run.
+
 ## Checkpoint 2026-09-12 (seventeenth unit accepted): full-shift depth three under 90/150 merged
 
 - Accepted after gate-2 sign-off by OpenAI GPT-5.6 Sol at the evaluated
