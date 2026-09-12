@@ -18,7 +18,7 @@ import hashlib
 import itertools
 import json
 import pathlib
-from collections import Counter, defaultdict
+from collections import Counter
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 PROTOCOL = ROOT / "docs/research/protocols/relational-rank-20260912.md"
@@ -160,7 +160,9 @@ def essential_offsets_from_table(table: list[int]) -> tuple[tuple[int, int], ...
 
 
 def product_expected(source_essential: tuple[int, ...]) -> tuple[tuple[int, int], ...]:
-    return tuple(sorted((x, y) for y in source_essential for x in source_essential))
+    # Preserve the same y-major canonical order used by PATCH_OFFSETS.
+    source = set(source_essential)
+    return tuple(offset for offset in PATCH_OFFSETS if offset[0] in source and offset[1] in source)
 
 
 def rank1d(essential: tuple[int, ...]) -> int:
@@ -190,18 +192,17 @@ def target_formula_control(rule: int) -> dict:
         expected = [1 ^ bits9(w)[PATCH_INDEX[(0, 0)]] for w in range(512)]
         label = "not-center"
     elif rule in (170, 85):
-        # R then R => southeast diagonal; 85 is complemented projection twice,
-        # so the two complements cancel and the target is also the southeast bit.
+        # R then R => southeast diagonal; 85 complements at both passes,
+        # so the complements cancel.
         expected = [bits9(w)[PATCH_INDEX[(1, 1)]] for w in range(512)]
         label = "southeast-diagonal"
     elif rule in (240, 15):
+        # L then L => northwest diagonal; 15 complements at both passes.
         expected = [bits9(w)[PATCH_INDEX[(-1, -1)]] for w in range(512)]
         label = "northwest-diagonal"
     elif rule == 90:
         corners = ((-1, -1), (1, -1), (-1, 1), (1, 1))
-        expected = [
-            sum(bits9(w)[PATCH_INDEX[p]] for p in corners) & 1 for w in range(512)
-        ]
+        expected = [sum(bits9(w)[PATCH_INDEX[p]] for p in corners) & 1 for w in range(512)]
         label = "four-corner-parity"
     elif rule == 150:
         expected = [sum(bits9(w)) & 1 for w in range(512)]
@@ -219,13 +220,13 @@ def load_axial_sets() -> dict[str, set[int]]:
         "both_14": "compatible_and_axis_permutation_equivariant_rules",
         "affine_16": "affine_commutation_controls",
     }
-    out = {}
     expected_sizes = {
         "replication_compatible_66": 66,
         "axis_commuting_24": 24,
         "both_14": 14,
         "affine_16": 16,
     }
+    out = {}
     for label, key in keys.items():
         values = set(map(int, data[key]))
         if len(values) != expected_sizes[label]:
@@ -250,8 +251,8 @@ def cross_tabs(records: list[dict], axial_sets: dict[str, set[int]]) -> dict:
 
 
 def translation_controls() -> dict:
-    # These are theorem-backed bookkeeping controls over the declared infinite families;
-    # no finite torus is used to define rho_T.
+    # Theorem-backed bookkeeping over declared infinite families; finite tori do
+    # not define rho_T.
     return {
         "T0_binary_0D": {
             "ambient_lattice": "one-point",
@@ -386,7 +387,7 @@ def evaluate() -> dict:
             "target_patch_offsets": [list(v) for v in PATCH_OFFSETS],
             "patch_words": "ascending 0..511; bit i is target_patch_offsets[i]",
             "axis_order": "x/axis0 first, y/axis1 second",
-            "discrepancies": "lexicographic by rule then offset ordering",
+            "discrepancies": "ascending rule and target_patch_offsets order",
         },
         "translation_rank_controls": translation_controls(),
         "causal_rank": {
@@ -442,7 +443,7 @@ def self_test() -> None:
     # A four-variable toy function a XOR (b AND c) with a dummy d.
     table = []
     for word in range(16):
-        a, b, c, d = ((word >> i) & 1 for i in range(4))
+        a, b, c, _d = ((word >> i) & 1 for i in range(4))
         table.append(a ^ (b & c))
     essential = []
     for i in range(4):
