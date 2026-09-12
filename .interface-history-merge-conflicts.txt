@@ -1,7 +1,0 @@
-merge_exit=1
-conflicts:
-U	scripts/check_result_integrity.py
-stages:
-100644 1d720931059efb0025911c72915b4bb37d7b466c 1	scripts/check_result_integrity.py
-100644 b2ab01a15841dd1c0a1e95d86270218e19173a5e 2	scripts/check_result_integrity.py
-100644 fdbcb6d7a9159626781c11a38b2f17d4e5257e5f 3	scripts/check_result_integrity.py

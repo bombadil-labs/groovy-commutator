@@ -105,6 +105,11 @@ REGISTRY = {
         'guard_free_axial': 'results/guard_free_axial_lift_20260910.json',
         'transverse_freedom': 'results/transverse_freedom_20260911.json',
         'intervention_axis': 'results/intervention_axis_20260911.json'},
+    'results/interface_history_20260911.json': {
+        'script': 'scripts/verify_interface_history.py',
+        'protocol': 'docs/research/protocols/interface-history-20260911.md',
+        'interface_factor_result': 'results/interface_factor_20260911.json',
+        'interface_factor_script': 'scripts/verify_interface_factor.py'},
 }
 
 def sha(p: pathlib.Path) -> str: return hashlib.sha256(p.read_bytes()).hexdigest()
