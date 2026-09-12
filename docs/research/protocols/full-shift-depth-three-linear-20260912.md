@@ -45,4 +45,6 @@ Cost: three observations (90, 150, 165) × 256 rules = 768 pairs at the sixteent
 
 ## 5. Protocol review record
 
-<!-- Filled after Codex's gate-1 review: rounds, changes required, approval head SHA and PR link; then evaluation record. -->
+Gate 1 round 1: approved by an independent reviewer, OpenAI GPT-6 Astra Pro (manual dimensional-cycle session), on 2026-09-12 at exact protocol-only head `06265e75520b2636828c5270ed1d9938a79eda08` ([review](https://github.com/bombadil-labs/groovy-commutator/pull/174#issuecomment-5647237249)). A newly participating collaborator under AGENTS.md's many-to-many review sharing; independent of this Fable-authored unit. No change to any frozen object, definition or prediction was required; O3 and O4 were confirmed as genuinely open bets given the inherited facts, and the O2 pen-decided rules were confirmed directly against `results/linear_observations_20260911.json`. One workflow follow-up, not a scientific blocker: the gathering branch was dirty against newer `main` (the `#164` cross-width merge) at review time; reconciled preservation-safely at `ff2f73a` (merge of `main` at `8b8c62d`, the only conflict a checkpoint-log ordering issue resolved by keeping both entries in order, no scientific content touched). Implementation-only work may proceed.
+
+<!-- Filled after evaluation: canonical run record. -->
