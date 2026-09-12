@@ -7,6 +7,34 @@ substantial unit completes; keep the bounded-claim style.
 
 Program page: `docs/research/2026-09-10-representation-invariants-program.md`
 
+## Checkpoint 2026-09-12 (sixteenth unit run): full-shift depth three decided, all bets held, gate 2 pending
+
+- Gate 1: Codex approved `d1eeaef` after one correction round (explicit
+  transport of historical sets to conjugate observations; the 32
+  deduction). Verifier `scripts/verify_full_shift_depth_three.py`
+  committed at `d62e87d`; implementation stage made green at `676bb19`
+  (CI-only) at Codex's request, then the canonical run executed from
+  that head (121 min); two earlier provisional executions from
+  `d62e87d` agree byte for byte and are process history only; canonical
+  `results/full_shift_depth_three_20260912.json`.
+- Held: N1-N6. FS^3 sizes 198, 181, 234, 106 under 232, 200, 22, 4.
+  N2: 20 of the 24 deep rules have full-shift depth >= 4 (all under
+  232 and 200; 8 of 12 under 22), 4 have exactly three (22: 143, 166,
+  180, 213). N3: depth-three gap on rings 3-14 nonempty under all four
+  (8, 11, 8, 10). N4: class c_FS = 3 nonempty under all four (20, 9,
+  48, 9); the ladder is diagonal only at closure.
+- Not to infer: any all-ring depth-two or depth-three statement;
+  anything about depth four or beyond.
+- Records: note, catalog, knowledge (`full-shift-depth-three-test`,
+  `full-shift-depth-ladder`), Program section, AGENTS result 12
+  addendum. CI replay timeout raised to 300 min (engineering).
+- Pending: Codex's gate-2 review on PR #144.
+- Candidate next units: depth four for the twenty deep rules (2^20
+  vertices, 4^13 blocks per pair: about 16x this unit's cost per pair,
+  feasible only for the deep pairs, not a census); a structural account
+  of the deep rules (what the extendable walks have in common); the
+  linear observations 90 and 150 at depth three.
+
 ## Checkpoint 2026-09-12 (sixteenth unit opened): full-shift depth three, protocol frozen, review pending
 
 - Frozen and unrun: `protocols/full-shift-depth-three-20260912.md`.
