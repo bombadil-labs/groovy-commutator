@@ -19,8 +19,11 @@ Program page: `docs/research/2026-09-10-representation-invariants-program.md`
 - M1 full shift implies every ring, M2 monotonicity and divisibility
   (theorem controls); M3 the 54 gap rules have full-shift depth exactly
   two (bet); M4 parity all 256 on the full shift (theorem control, sixth
-  unit); M5 depth-two gap on rings 3-14 nonempty for exactly 232, 200,
-  22 (bet), reported with witnesses; M6 witness pairs pass (control);
+  unit, promoted to the full shift by a deduction made in this unit
+  after Codex's round-1 finding); M5 all-tested-ring gap
+  (intersection of D^2(n) over rings 3-14, minus FS^2) nonempty for
+  exactly 232, 200, 22 (bet), ring-14 gap reported without a bet, both
+  with witnesses; M6 witness pairs pass (control);
   M7 symmetries.
 - No ring certificate at depth two is claimed; nothing about depth
   three.
