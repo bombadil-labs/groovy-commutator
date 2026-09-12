@@ -15,6 +15,12 @@ faithful representation, restoration, and endogenous organization; and explains
 why a rule's binary truth table does not supply a unique spatial arrangement.
 This is a visible orientation record, not a new experimental conclusion.
 
+## Beam refinement: structural correspondence must become consequential
+
+The [2026-09-12 beam refinement](2026-09-12-dimensional-beam-resonance.md) sharpens the objective inside this Program: eventual beam success should transport an endogenous dynamical response to structural self-correspondence, not only an externally verified inherited trajectory. This is an orientation and proposed criterion, not a result or a new Program. The user's ananda/resonance language remains personal motivation rather than evidence of experience.
+
+Keep predictive history/support, constructive assembly cost, homology-sensitive response, and costed reusable leverage distinct. The width-nine failure below prevents treating the earlier two-lag passes as a universal dimensional threshold. Future comparisons require explicit law/observer/family/cadence/resource contracts and separate frozen protocols; this refinement does not re-score any completed unit or alter ongoing experiments.
+
 ## Shared representation contract
 
 The [shared account](2026-09-10-shared-closure-account.md), agreed in issue61,

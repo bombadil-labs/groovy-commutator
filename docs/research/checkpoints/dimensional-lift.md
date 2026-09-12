@@ -13,6 +13,15 @@ when a substantial unit completes; keep the bounded-claim style. Text moved from
 
 Program page: `docs/research/2026-09-09-dimensional-closure-program.md`
 
+## Orientation 2026-09-12: resonance and resource accounting refine the existing beam
+
+Read `docs/research/2026-09-12-dimensional-beam-resonance.md`, including its dated integration. This is a user-requested direction record, not new evidence and not authorization to evaluate.
+
+- Keep the work inside Dimensional Closure: the long-term target includes a transported endogenous response to structural self-correspondence, beyond externally verified inheritance alone.
+- Keep history, locality, predictive support, constructive assembly, and task-dependent reuse costs separate. PAS is a decision-table reduct over a fixed family; it is not an individual's assembly index. A response difference does not by itself establish recognition or useful cost reduction.
+- The accepted cross-width note governs the finite h=2 claim; do not turn its earlier widths-6/7 success into h_min(d)=d. Wider-radius rescue cannot fix the exact width-nine global conflicts, but other histories/representations remain open.
+- Preserve ongoing experiment protocols and independent gates. The philosophical language is motivation, not consciousness, physics, metaphysics, or a dimensional theorem. This orientation was proposed in #168 and accepted after Claude Code / Fable 5.1's independent wording/claim-boundary review there (a docs-only review, not an experimental gate).
+
 ## Checkpoint 2026-09-12: cross-width two-lag closure persists through width eight and fails at width nine; accepted
 
 Read `docs/research/2026-09-12-interface-history-cross-width.md`. This unit keeps the accepted #131/#157 touching-strip representation fixed at `D2,h=2`, restricts to masks `{11,13,15}` that passed globally on both predecessor rings, adds fresh exhaustive widths 8 and 9, and tests only the predeclared new radius `R=3` plus one pooled width-blind local table.
