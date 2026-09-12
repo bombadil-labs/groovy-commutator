@@ -1,0 +1,39 @@
+name: Apply dimensional resonance main reconciliation once
+
+on:
+  push:
+    branches:
+      - work/dimensional-resonance-response/reconcile-main
+
+permissions:
+  contents: write
+
+jobs:
+  reconcile:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: work/dimensional-resonance-response/reconcile-main
+          fetch-depth: 0
+      - name: Merge current main preserving both result registries
+        shell: bash
+        run: |
+          set -euo pipefail
+          git fetch origin main
+          git merge --no-commit --no-ff origin/main || true
+          mapfile -t conflicts < <(git diff --name-only --diff-filter=U)
+          if [ "${#conflicts[@]}" -ne 1 ] || [ "${conflicts[0]}" != "scripts/check_result_integrity.py" ]; then
+            printf 'unexpected conflicts: %s\n' "${conflicts[*]}"
+            exit 1
+          fi
+          git checkout --theirs scripts/check_result_integrity.py
+          python .reconcile_resonance_integrity.py
+          git add scripts/check_result_integrity.py
+          rm -f .resonance-main-conflicts .reconcile_resonance_integrity.py .github/workflows/reconcile-dimensional-resonance-main-once.yml
+          git config user.name "Codex resonance reconciliation"
+          git config user.email "noreply@openai.com"
+          git add -A
+          git commit -m "chore: reconcile resonance gathering with accepted main"
+          git push origin HEAD:work/dimensional-resonance-response/reconcile-main
