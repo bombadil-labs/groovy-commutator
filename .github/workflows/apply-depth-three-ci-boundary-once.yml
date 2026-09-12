@@ -1,0 +1,74 @@
+name: Apply depth-three CI cost boundary once
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+    paths:
+      - '.github/workflows/apply-depth-three-ci-boundary-once.yml'
+permissions:
+  contents: write
+jobs:
+  apply:
+    if: >-
+      github.event.pull_request.head.repo.full_name == github.repository &&
+      github.event.pull_request.head.ref == 'work/ci-cost-boundary/depth-three-replay' &&
+      github.event.pull_request.base.ref == 'gather/ci-cost-boundary'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+      - name: Move expensive replay out of automatic CI
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import re
+
+          # Common CI always performs the seconds-scale provenance check.
+          p = Path('.github/workflows/research-checks.yml')
+          s = p.read_text()
+          anchor = """      - name: Compile Python sources\n        run: python -m compileall -q src scripts\n"""
+          addition = anchor + """      - name: Fast canonical-result integrity\n        run: python scripts/check_result_integrity.py\n"""
+          assert s.count(anchor) == 1, 'research-checks compile anchor changed'
+          assert 'Fast canonical-result integrity' not in s
+          p.write_text(s.replace(anchor, addition, 1))
+
+          # The historical depth-three full replay is ~80-120 minutes. Keep the
+          # workflow available for explicitly authorized manual dispatch, but
+          # make its replay job ineligible on PR/push/schedule events.
+          p = Path('.github/workflows/research-full-shift-depth-three.yml')
+          lines = p.read_text().splitlines(True)
+          assert any('workflow_dispatch' in line for line in lines), 'manual dispatch missing'
+          hits = [i for i,line in enumerate(lines) if 'verify_full_shift_depth_three.py' in line]
+          assert len(hits) == 1, hits
+          cmd_i = hits[0]
+          job_i = None
+          for i in range(cmd_i, -1, -1):
+            if re.match(r'^  [A-Za-z0-9_-]+:\s*$', lines[i]):
+              job_i = i
+              break
+          assert job_i is not None
+          end = len(lines)
+          for i in range(job_i + 1, len(lines)):
+            if re.match(r'^  [A-Za-z0-9_-]+:\s*$', lines[i]):
+              end = i
+              break
+          existing_if = [i for i in range(job_i + 1, end) if re.match(r'^    if:', lines[i])]
+          if existing_if:
+            assert len(existing_if) == 1
+            lines[existing_if[0]] = "    if: github.event_name == 'workflow_dispatch'\n"
+          else:
+            lines.insert(job_i + 1, "    if: github.event_name == 'workflow_dispatch'\n")
+          text = ''.join(lines)
+          assert "if: github.event_name == 'workflow_dispatch'" in text
+          p.write_text(text)
+          PY
+          git diff --check
+      - name: Commit bounded workflow and remove one-shot editor
+        run: |
+          git config user.name 'OpenAI GPT-5.6 Sol - CI cost policy'
+          git config user.email 'noreply@openai.com'
+          git rm .github/workflows/apply-depth-three-ci-boundary-once.yml
+          git add .github/workflows/research-checks.yml .github/workflows/research-full-shift-depth-three.yml
+          git commit -m 'ci: make expensive depth-three replay manual-only'
+          git push origin HEAD:work/ci-cost-boundary/depth-three-replay
