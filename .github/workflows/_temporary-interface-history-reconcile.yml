@@ -1,4 +1,4 @@
-name: Temporary interface-history main reconciliation
+name: Temporary interface-history merge diagnosis
 
 on:
   push:
@@ -11,7 +11,7 @@ permissions:
   contents: write
 
 jobs:
-  reconcile:
+  diagnose:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
@@ -19,10 +19,7 @@ jobs:
         with:
           ref: gather/dimensional-interface-history
           fetch-depth: 0
-      - uses: actions/setup-python@v5
-        with:
-          python-version: '3.12'
-      - name: Merge latest main and resolve only the integrity registry
+      - name: Record exact merge-conflict surface
         run: |
           git config user.name 'Codex interface-history reconciliation'
           git config user.email 'noreply@openai.com'
@@ -31,32 +28,15 @@ jobs:
           git merge --no-ff --no-commit origin/main
           rc=$?
           set -e
-          conflicts="$(git diff --name-only --diff-filter=U)"
-          if [ "$rc" -ne 0 ]; then
-            if [ "$conflicts" != 'scripts/check_result_integrity.py' ]; then
-              echo 'Unexpected merge conflicts:'
-              printf '%s\n' "$conflicts"
-              exit 1
-            fi
-            git checkout --theirs scripts/check_result_integrity.py
-            python - <<'PY'
-          from pathlib import Path
-          p = Path('scripts/check_result_integrity.py')
-          s = p.read_text()
-          if 'results/interface_history_20260911.json' not in s:
-              entry = """    'results/interface_history_20260911.json': {\n        'script': 'scripts/verify_interface_history.py',\n        'protocol': 'docs/research/protocols/interface-history-20260911.md',\n        'interface_factor_result': 'results/interface_factor_20260911.json',\n        'interface_factor_script': 'scripts/verify_interface_factor.py'},\n"""
-              marker = '}\n\ndef sha('
-              if marker not in s:
-                  raise SystemExit('integrity insertion marker not found')
-              s = s.replace(marker, entry + marker, 1)
-              p.write_text(s)
-          PY
-            git add scripts/check_result_integrity.py
-          fi
-          test -z "$(git diff --name-only --diff-filter=U)"
-          python scripts/check_result_integrity.py results/interface_history_20260911.json
-          git rm .github/workflows/_temporary-interface-history-reconcile.yml
-          git add -A
-          git diff --cached --check
-          git commit -m 'Merge current main into finite interface history'
+          {
+            echo "merge_exit=$rc"
+            echo 'conflicts:'
+            git diff --name-status --diff-filter=U
+            echo 'stages:'
+            git ls-files -u
+          } > /tmp/conflicts.txt
+          if [ -f .git/MERGE_HEAD ]; then git merge --abort; fi
+          cp /tmp/conflicts.txt .interface-history-merge-conflicts.txt
+          git add .interface-history-merge-conflicts.txt
+          git commit -m 'chore: record interface-history merge conflicts'
           git push origin HEAD:gather/dimensional-interface-history
