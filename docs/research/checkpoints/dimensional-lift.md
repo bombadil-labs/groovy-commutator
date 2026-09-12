@@ -13,6 +13,20 @@ when a substantial unit completes; keep the bounded-claim style. Text moved from
 
 Program page: `docs/research/2026-09-09-dimensional-closure-program.md`
 
+## Checkpoint 2026-09-12: relational-rank audit completed; gate-2 pending
+
+Read `docs/research/2026-09-12-relational-rank.md`. This unit operationalizes the “dependent origination” intuition only as a scoped distinction between translation directions available to a declared state family and displacement directions used by a local law.
+
+- Gate 1: Claude/Fable first rejected protocol head `ad304465` because the anchored-track control hid presentation dependence, the proposed causal-rank census was already decided by a product theorem, and pairwise-difference rank would misclassify pure shifts. Correction #142 froze `rho_T=rank((H_B/K_B) tensor Q)`, added the anchored/translation-closure pair, defined `rho_C` from essential offsets themselves, proved `E(G_{r,2})=E_r×E_r`, and received renewed approval on exact head `803a775715a2a8bfe4a3214a43186f81c6aab431` before implementation/evaluation.
+- Implementation-only #146 integrated the independent evaluators and permanent workflow with no canonical result. The first evaluation #150 was preserved and closed after its Rule-51 analytic control incorrectly expected one NOT rather than the frozen two-pass cancellation. Correction #151 changed only that control before the regenerated run.
+- Corrected evaluation #152 generated `results/relational_rank_20260912.json`. The final evaluation head has zero product-theorem discrepancies, identical primary/reference target hashes, and all frozen P1–P8 verdicts true. A post-run CI repair registered the result and strengthened replay without changing scientific code or output.
+- Translation controls: 0D/full-1D/full-2D ranks are `0/1/2`; a literal copied 1D family inside 2D remains rank 1; finite product alphabets and anchored finite track families need not add translation rank; taking the translation closure of the anchored-track family raises `rho_T` from 1 to 2. `rho_T` is therefore explicitly family/presentation-relative.
+- Ordered-axis causal result: source rank zero is exactly `{0,51,204,255}`; target ranks are 0 for those four, 1 for `{15,85,170,240}`, and 2 for the remaining 248, with transitions `0→0:4`, `1→1:4`, `1→2:248` and no `1→0` collapse.
+- The central result is negative information: for this accepted constructor, target essential offsets are exactly `E_r×E_r`, so target `rho_C` supplies no rule classification beyond source essentiality. The relational-lift profile remains bookkeeping only.
+- Cross-tabs against the accepted 66/24/14/16 source families are deterministic descriptive intersections, not enrichment or natural-selection evidence.
+- Do not infer intrinsic/representation-independent dimension, a unique spatial theory, self-assembly, endogenous control, spacetime emergence, physics, metaphysics, Buddhist-doctrinal equivalence, or any `8n+1`/prime connection.
+- **Review state:** result reporting and current-account integration are complete on the gathering branch after this reporting sub-PR merges; exact-head Gate 2 and reviewer merge remain required before acceptance on `main`.
+
 ## Checkpoint 2026-09-12: zero-dimensional base selector audit completed; gate-2 pending
 
 Read `docs/research/2026-09-12-zero-dimensional-base.md`. This unit audits the bottom two law/state cardinality matches after the first Gate-1 review exposed two important confounds: the accepted 1D→2D selector requires address/program role overlap, and compensated decoder reindexing is not geometric covariance.
