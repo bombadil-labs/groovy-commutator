@@ -3,7 +3,7 @@
 **Status:** frozen before implementation and evaluation. Nothing has been run under this protocol.  
 **Program:** *Dimensional Closure and the Commutator Lift*, constructive follow-up to the accepted touching-strip interface-factor unit.  
 **Authored by:** Codex / OpenAI GPT-5.6 Sol.  
-**Protocol review:** pending exact-head Claude/Fable Gate 1. **No implementation or primary evaluation is authorized before Gate 1.**  
+**Protocol review:** Claude/Fable Gate 1 approved exact integrated head `36f20aa89889bb884af4ec07785d1611158d6b28` on 2026-09-11 with one binding K8 geometry clarification; that clarification is recorded below before any verifier commit.  
 **Tracking:** issue #129.  
 **Base dependency:** interface-factor gathering PR #125 is accepted on `main` at merge `067cec562a08a0eef67f65da56c6654071142699` after Claude/Fable exact-head Gate 2.
 
@@ -177,7 +177,7 @@ The accepted canonical full-state memoryless conflict uses records at coarse tim
 
 **Frozen prediction:** on `D1`, the full observation with one lag, `H_{15,1}`, has an autonomous local factor at some `R <= 2`, while the memoryless `H_{15,0}` remains conflicting at all `R <= 2`.
 
-This conjunction is the main constructive bet. If `H_{15,1}` passes but `H_{15,0}` also passes on `D1`, the result is a bounded closure fact but **not evidence that one-step history was needed**. If `H_{15,1}` conflicts at all radii, K4 fails.
+This conjunction is the main constructive bet. The accepted canonical memoryless `R=2` witness lies inside `D1`, and equality at radius 2 implies equality at smaller radii, so after K1 the memoryless half of this conjunction is inherited rather than a new empirical bet. The live constructive question is whether `H_{15,1}` passes at any frozen radius. If `H_{15,1}` conflicts at all radii, K4 fails.
 
 No new radius, coordinate, or horizon is introduced after seeing K4.
 
@@ -218,13 +218,13 @@ The witness records:
 - complete selected history neighborhoods for both records;
 - next-center selected symbols;
 - complete next history symbols;
-- which output coordinate first differs under canonical coordinate order.
+- which output coordinate first differs under canonical coordinate order: history lags from oldest to newest, then `A,B,E0,E1,E2,E3` within each retained symbol (skipping masked-out `E` coordinates).
 
 ### K8 — independent physical replay and hidden-cause localization
 
 The complete census may use the established vectorized physical implementation, but every canonical **full-state `m=15`** conflict is independently replayed from its original source pair by a scalar coordinate implementation.
 
-For each replayed conflict, inspect the exact current physical causal patch sufficient to determine the next six-bit center observation under two fine steps. Record all coordinates at which the two current physical patches differ, partitioned into:
+For each replayed conflict, inspect the exact current physical causal patch sufficient to determine the next six-bit center observation under two fine steps. The frozen patch is rows `-2..5` relative to the observation band and columns `2i-2..2i+3` relative to logical block `i`, matching the accepted interface-factor verifier. Record all coordinates at which the two current physical patches differ, partitioned into:
 
 1. retained `W` cells inside the symbolic neighborhood;
 2. other cells in rows `0..3`;
@@ -281,6 +281,8 @@ Required order:
 9. reviewer merge of gathering PR to `main` only after exact-head checks and Gate 2 are green.
 
 No implementation, dry run over the primary source domain, exploratory evaluation, or result inspection is permitted between steps 1 and 3. Implementation design may be reasoned about from the frozen protocol, but no source-domain execution may occur before Gate 1.
+
+**Draft-only workflow exception, 2026-09-11:** after Gate 1 had already been approved, Claude/Fable became temporarily unavailable. Myk explicitly authorized Codex to draft implementation/evaluation work while forbidding any merges. Under that instruction, commit-level scientific order remains protocol clarification -> pinned implementation -> evaluation, but the normal sub-PR integration steps may remain unmerged while exploratory/canonical draft work proceeds on `work/dimensional-interface-history/draft-run`. Any generated result is provisional branch evidence only until the normal gathering-branch integration, exact-head review, and Gate-2 reviewer-merge path resumes. This exception changes no source domain, history family, radius, scoring, witness order, or interpretation contract.
 
 Proposed implementation paths, frozen only as paths and responsibilities:
 
@@ -352,3 +354,10 @@ Claude/Fable should review this exact frozen head before implementation, with pa
 6. **Scope:** Are any claims stronger than the finite `n=6,7`, `t<=7`, `h<=2`, `R<=2` evidence can support?
 
 Binding clarifications must be committed before any implementation/evaluation. Any change to source domain, history family, comparison domains, radii, claims, witness ordering, or interpretation contract after Gate 1 requires renewed protocol review.
+
+
+## 12. Gate-1 clarification and temporary draft authorization record
+
+- Claude/Fable Gate-1 review on 2026-09-11 approved frozen integrated head `36f20aa89889bb884af4ec07785d1611158d6b28` with one binding clarification: freeze K8's current physical causal patch to rows `-2..5` relative to the observation band and columns `2i-2..2i+3` relative to logical block `i`, applying the three-way differing-cell partition to that exact patch. The same review suggested the deterministic K7 coordinate ordering now written above.
+- Codex accepted that clarification before implementation; this commit records it without changing any scientific budget or claim.
+- Myk later authorized draft work while Claude/Fable is unavailable, with the explicit instruction **do not merge anything**. Draft implementation/evaluation may therefore proceed on the named work branch only; no gathering/main merge is authorized by this record, and normal exact-head Gate-2 review remains required before acceptance.
