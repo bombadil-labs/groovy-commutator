@@ -1,0 +1,38 @@
+name: Diagnose dimensional-history main reconciliation
+
+on:
+  push:
+    branches:
+      - work/dimensional-history-scaling/reconcile-main
+    paths:
+      - '.github/workflows/tmp-dhs-main-conflicts.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  diagnose:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Diagnose merge conflicts without resolving
+        shell: bash
+        run: |
+          git fetch origin main
+          set +e
+          git merge --no-commit --no-ff origin/main
+          status=$?
+          if [ "$status" -eq 0 ]; then
+            echo 'NO_CONFLICTS' > .dhs-main-conflicts
+          else
+            git diff --name-only --diff-filter=U | sort > .dhs-main-conflicts
+          fi
+          git merge --abort || true
+          rm .github/workflows/tmp-dhs-main-conflicts.yml
+          git config user.name 'Codex reconciliation diagnosis'
+          git config user.email 'noreply@openai.com'
+          git add .dhs-main-conflicts .github/workflows/tmp-dhs-main-conflicts.yml
+          git commit -m 'chore: diagnose dimensional-history main conflicts'
+          git push origin HEAD:work/dimensional-history-scaling/reconcile-main
