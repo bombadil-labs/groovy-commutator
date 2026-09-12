@@ -18,32 +18,28 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Write focused result summary
+      - name: Write scalar control summary
         run: |
           python - <<'PY'
           import json
           from pathlib import Path
           d=json.loads(Path('results/interface_history_20260911.json').read_text())
-          keys=['K4_one_lag_constructive_bet','K5_depth_two_outcome','K6_pareto_minimal','K9_dependency_audits']
-          lines=[]
-          for k in keys:
-              lines.append(k+'='+json.dumps(d.get(k), sort_keys=True)[:12000])
-          p15=d.get('P15',{})
-          if isinstance(p15,dict):
-              compact={}
-              for k,v in p15.items():
-                  if isinstance(v,(str,int,float,bool)) or v is None:
-                      compact[k]=v
-                  elif isinstance(v,dict) and len(v)<=20:
-                      compact[k]=v
-              lines.append('P15_COMPACT='+json.dumps(compact, sort_keys=True)[:12000])
-          Path('.interface-history-focused.txt').write_text('\n'.join(lines)+'\n')
+          leaves=[]
+          def walk(x,path=''):
+              if len(leaves)>=300: return
+              if isinstance(x,dict):
+                  for k,v in x.items(): walk(v,f'{path}.{k}' if path else k)
+              elif isinstance(x,(str,int,float,bool)) or x is None:
+                  if any(tag in path.lower() for tag in ('pass','agreement','discrep','mismatch','k1','k2','k3','k7','k8','k10')):
+                      leaves.append(f'{path}={json.dumps(x)}')
+          walk(d.get('controls',{}),'controls')
+          Path('.interface-history-controls-mini.txt').write_text('\n'.join(leaves)+'\n')
           PY
-      - name: Commit focused inspection file only
+      - name: Commit scalar inspection file only
         run: |
           git config user.name 'Codex interface-history inspection'
           git config user.email 'actions@users.noreply.github.com'
-          git add .interface-history-focused.txt
-          test "$(git diff --cached --name-only)" = '.interface-history-focused.txt'
-          git commit -m 'chore: inspect interface-history verdicts'
+          git add .interface-history-controls-mini.txt
+          test "$(git diff --cached --name-only)" = '.interface-history-controls-mini.txt'
+          git commit -m 'chore: inspect interface-history controls'
           git push
