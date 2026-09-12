@@ -1,0 +1,37 @@
+name: Temporary relational-rank Rule-51 control fix
+
+on:
+  push:
+    branches:
+      - work/dimensional-relational-rank/rule51-control-fix
+    paths:
+      - '.github/workflows/_temporary-relational-rank-rule51-fix.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Patch the isolated Rule-51 analytic control
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p=Path('scripts/verify_relational_rank.py')
+          s=p.read_text()
+          old='''    elif rule == 51:\n        expected = [1 ^ bits9(w)[PATCH_INDEX[(0, 0)]] for w in range(512)]\n        label = "not-center"\n'''
+          new='''    elif rule == 51:\n        # NOT is applied once per axis; at d=2 the two complements cancel.\n        expected = [bits9(w)[PATCH_INDEX[(0, 0)]] for w in range(512)]\n        label = "center-after-two-negations"\n'''
+          if s.count(old) != 1:
+              raise SystemExit(f'expected exactly one Rule-51 control block, found {s.count(old)}')
+          p.write_text(s.replace(old,new))
+          PY
+      - name: Commit only the verifier correction
+        run: |
+          git config user.name 'Codex relational-rank correction'
+          git config user.email 'actions@users.noreply.github.com'
+          git add scripts/verify_relational_rank.py
+          test "$(git diff --cached --name-only)" = 'scripts/verify_relational_rank.py'
+          git commit -m 'fix: compose Rule 51 across both axial passes'
+          git push
