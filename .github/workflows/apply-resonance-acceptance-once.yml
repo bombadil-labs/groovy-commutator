@@ -1,0 +1,39 @@
+name: Apply resonance acceptance bookkeeping once
+
+on:
+  push:
+    branches:
+      - maintenance/accept-resonance-response
+
+permissions:
+  contents: write
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: maintenance/accept-resonance-response
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Apply exact prose-only acceptance edits
+        run: python .apply_resonance_acceptance.py
+      - name: Validate research publisher
+        run: |
+          npm ci --prefix site
+          npm run test:research --prefix site
+          npm run build --prefix site
+      - name: Remove temporary editor and commit
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm .apply_resonance_acceptance.py .github/workflows/apply-resonance-acceptance-once.yml
+          git config user.name "Codex acceptance bookkeeping"
+          git config user.email "noreply@openai.com"
+          git add -A
+          git commit -m "docs: record acceptance of dimensional resonance response"
+          git push origin HEAD:maintenance/accept-resonance-response
