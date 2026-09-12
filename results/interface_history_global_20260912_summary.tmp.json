@@ -1,0 +1,212 @@
+{
+  "G1_local_regression": true,
+  "G3_monotonicity": true,
+  "G4_by_ring": {
+    "6": false,
+    "7": false
+  },
+  "G4_primary_bet_holds_both_rings": false,
+  "G5_P15_ladders": {
+    "6": [
+      {
+        "domain": "D0",
+        "history_depth": 0,
+        "pass": false
+      },
+      {
+        "domain": "D1",
+        "history_depth": 0,
+        "pass": false
+      },
+      {
+        "domain": "D1",
+        "history_depth": 1,
+        "pass": false
+      },
+      {
+        "domain": "D2",
+        "history_depth": 0,
+        "pass": false
+      },
+      {
+        "domain": "D2",
+        "history_depth": 1,
+        "pass": false
+      },
+      {
+        "domain": "D2",
+        "history_depth": 2,
+        "pass": true
+      }
+    ],
+    "7": [
+      {
+        "domain": "D0",
+        "history_depth": 0,
+        "pass": false
+      },
+      {
+        "domain": "D1",
+        "history_depth": 0,
+        "pass": false
+      },
+      {
+        "domain": "D1",
+        "history_depth": 1,
+        "pass": false
+      },
+      {
+        "domain": "D2",
+        "history_depth": 0,
+        "pass": false
+      },
+      {
+        "domain": "D2",
+        "history_depth": 1,
+        "pass": false
+      },
+      {
+        "domain": "D2",
+        "history_depth": 2,
+        "pass": true
+      }
+    ]
+  },
+  "G6_pareto_minimal": {
+    "6": {
+      "D0": [],
+      "D1": [],
+      "D2": [
+        {
+          "history_depth": 2,
+          "interface_bit_count": 3,
+          "mask": 11
+        },
+        {
+          "history_depth": 2,
+          "interface_bit_count": 3,
+          "mask": 13
+        }
+      ]
+    },
+    "7": {
+      "D0": [],
+      "D1": [],
+      "D2": [
+        {
+          "history_depth": 2,
+          "interface_bit_count": 2,
+          "mask": 3
+        },
+        {
+          "history_depth": 2,
+          "interface_bit_count": 2,
+          "mask": 5
+        }
+      ]
+    }
+  },
+  "G7_conflict_replay_count": 183,
+  "G7_reference_agreement_cells": 192,
+  "P15_h2_D2": {
+    "6": {
+      "canonical_conflict": null,
+      "pass": true
+    },
+    "7": {
+      "canonical_conflict": null,
+      "pass": true
+    }
+  },
+  "conflicting_cells": 183,
+  "counts": {
+    "6": {
+      "D0": {
+        "0": {
+          "pass_count": 0,
+          "passing_masks": []
+        }
+      },
+      "D1": {
+        "0": {
+          "pass_count": 0,
+          "passing_masks": []
+        },
+        "1": {
+          "pass_count": 0,
+          "passing_masks": []
+        }
+      },
+      "D2": {
+        "0": {
+          "pass_count": 0,
+          "passing_masks": []
+        },
+        "1": {
+          "pass_count": 0,
+          "passing_masks": []
+        },
+        "2": {
+          "pass_count": 3,
+          "passing_masks": [
+            11,
+            13,
+            15
+          ]
+        }
+      }
+    },
+    "7": {
+      "D0": {
+        "0": {
+          "pass_count": 0,
+          "passing_masks": []
+        }
+      },
+      "D1": {
+        "0": {
+          "pass_count": 0,
+          "passing_masks": []
+        },
+        "1": {
+          "pass_count": 0,
+          "passing_masks": []
+        }
+      },
+      "D2": {
+        "0": {
+          "pass_count": 0,
+          "passing_masks": []
+        },
+        "1": {
+          "pass_count": 0,
+          "passing_masks": []
+        },
+        "2": {
+          "pass_count": 6,
+          "passing_masks": [
+            11,
+            13,
+            15,
+            3,
+            5,
+            7
+          ]
+        }
+      }
+    }
+  },
+  "passing_cells": 9,
+  "scope": "finite rings n=6,7; frozen source family; coarse transitions through t=6; h<=2; frozen masks; complete retained ring fields; no infinite-lattice/local-factor claim",
+  "source_hashes": {
+    "gate1_clarification": "7624bbac261544dc8768c09f08d4ccd501845355598d06224525d0c72a92c8d8",
+    "interface_factor_result": "324879f2244308c3df1366a91738e1c5345aa8a7339876fd4655cb9a510af934",
+    "interface_factor_script": "198f691e2548dfd12570718f022463c6ba9f8773b318d547372ec3460e322646",
+    "predecessor_protocol": "8625c2a112b2a277d5986db617fe75ed0027497025e26e21c74c90859830a901",
+    "predecessor_result": "0af466c50856523cf1739cdb136830b97f85a9f32116899790d3482b987cf8c2",
+    "predecessor_script": "38d4a48aeb24290d69c20c8c71f0c007d06c8f238bea8df6e066e7b93ce2d820",
+    "protocol": "9b882f31ba0ff8ebb9b4f077eeb9f992c5d808b081b7049466217194b950b266",
+    "script": "f5ac216c3506e781d9f4e94429520c9302acbe3687ff70e03ac02b0414d13e8a"
+  },
+  "total_cells": 192
+}
