@@ -1,0 +1,17 @@
+[
+  {
+    "slug": "interface-history",
+    "label": "Finite interface history",
+    "title": "Does short temporal history close the touching-strip interface state?",
+    "date": "2026-09-12",
+    "updated": "2026-09-12",
+    "kind": "Experiment",
+    "evidence": "exact",
+    "topic": "Dimensional closure",
+    "summary": "The accepted touching-strip interface coordinate remains non-autonomous throughout every frozen budget with up to two temporal lags and radius two on rings 6 and 7. All 288 scientific budgets conflict, with independent physical replays retaining hidden current causes.",
+    "takeaway": "Adding one or two lags of the same six-bit interface coordinate does not recover the erased distinctions needed for bounded local closure in the frozen family; deeper history or a different representation remains a separate question.",
+    "source": "docs/research/2026-09-12-interface-history.md",
+    "promotion": { "stage": "research" },
+    "related": ["interface-factor", "coupled-strips", "interface-state", "dimensional-vision-and-interpretation"]
+  }
+]
