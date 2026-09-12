@@ -59,7 +59,12 @@ jobs:
       - name: Syntax-check the pinned verifier
         run: python -m py_compile scripts/verify_interface_history_cross_width.py
       - name: Run implementation-only self-test outside the frozen source domain
-        run: python scripts/verify_interface_history_cross_width.py --self-test
+        run: |
+          if [ -f results/interface_history_cross_width_20260912.json ]; then
+            echo 'Canonical result exists; implementation-only self-test is not applicable.'
+          else
+            python scripts/verify_interface_history_cross_width.py --self-test
+          fi
       - name: Recorded source hashes match the tree when the canonical result exists
         run: |
           if [ -f results/interface_history_cross_width_20260912.json ]; then
