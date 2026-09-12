@@ -164,23 +164,23 @@ not make a result independently reviewed or published on `main`.
 
 There are two distinct review gates:
 
-1. **Before implementation and evaluation:** the other model reviews the
-   frozen protocol, including definitions, predictions, domain, budget,
+1. **Before implementation and evaluation:** an independent collaborating
+   agent reviews the frozen protocol, including definitions, predictions, domain, budget,
    controls and scoring of failures or censored outcomes. Record the reviewed
    revision, date and review link. Material protocol changes require renewed
    review before the affected run. Previously observed outcomes must remain
    labeled exploratory or post hoc; later review cannot change their history.
-   If the reviewer is unavailable, Myk may explicitly authorize proceeding
+   If no independent reviewer is available, Myk may explicitly authorize proceeding
    under the exception in `AGENTS.md`: record the dated authorization on the
    protocol and state in the results note that evaluation preceded review.
    Unavailability alone does not authorize a run or waive final review.
-2. **Before merge into main:** the other model reviews the complete unit at
+2. **Before merge into main:** an independent collaborating agent reviews the complete unit at
    the gathering PR's current head SHA, including code, evidence, deviations,
    negative findings, proofs and limits, and the updated current account.
    Resolve findings and obtain explicit signed sign-off with green relevant
    checks. Review at protocol freeze is not approval of the eventual results.
    The reviewer merges on sign-off: when the review finds no blockers and the
-   head's checks are green, the reviewing model merges with a merge commit in
+   head's checks are green, the reviewing agent merges with a merge commit in
    the same pass; a sign-off given while a check is still running is
    conditional on it, and whichever side first sees it green merges.
 
@@ -198,6 +198,33 @@ pre-evaluation and retrospective review. Update the Program, dependent
 knowledge entries and checkpoint when applicable; a checkpoint must identify
 pending review rather than describing an unapproved unit as accepted.
 Preserve original protocols and datasets when correcting a completed run.
+
+### Multiple collaborating agents
+
+The review protocol is intentionally not limited to one fixed pair of models.
+Codex and Claude/Fable are the current default reciprocal reviewers, and new
+collaborating agents may join the same authorship/review pool. The invariant is
+**independence**: an agent may not supply the independent gate for work it
+authored. For jointly authored work, record contribution boundaries and arrange
+cross-review so each independently gated contribution is reviewed by someone
+who did not author it.
+
+A collaborator may introduce a new research Program through a normal gathering
+PR. The proposal should make the research question or thesis legible, situate
+it relative to the existing Programs without assuming it belongs to one of
+them, state scope and non-claims, sketch the initial research agenda, name its
+owner(s) and intended reviewer pool, and add the Program/checkpoint registration
+when the proposal is accepted. A distinct outside perspective is allowed to
+remain a distinct Program; conceptual overlap alone is not grounds to collapse
+it into an existing line.
+
+Agents may share a GitHub account, so provenance is semantic rather than tied to
+GitHub username. Sign substantive PR comments/reviews with agent/model/session
+identity and date, and pin reviews to the exact head SHA and scope. Branch names,
+PR context, commit authorship and signed comments together identify who authored
+and who reviewed a unit. This also lets automated review cycles recognize work
+from newly participating collaborators without hard-coding one username or one
+model family.
 
 ## Authorship and review
 

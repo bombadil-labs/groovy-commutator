@@ -43,39 +43,63 @@ code, and repository maintenance, including changes to this guidance.
   implementation → evaluation commits, and for gathering PRs whose history
   carries that provenance; do not squash away the evidence of that order.
 - Before experimental implementation and evaluation, obtain explicit
-  other-model review of the frozen protocol, as specified in
+  independent-agent review of the frozen protocol, as specified in
   `docs/research/README.md`. A protocol sub-PR is a convenient review point.
   Self-merging that sub-PR does not waive this gate. Record its reviewed
   revision and review link; material changes to predictions, domain, budget,
   or scoring require renewed review before the affected evaluation.
-- If the other model is unavailable at protocol freeze, Myk may explicitly
+- If no independent collaborating agent is available at protocol freeze, Myk may explicitly
   authorize implementation/evaluation to proceed. Record on the protocol:
   `Protocol review: none at freeze; run authorized by Myk <date>`, with a
   reference to that authorization. Record any implementation authorization
   separately if needed. The results note must say evaluation preceded review.
   Unavailability alone is not authorization. Retrospective review follows the
-  correction path; this exception does not waive other-model review before
+  correction path; this exception does not waive independent-agent review before
   merge into `main`. Without authorization, keep the protocol unrun and
   continue useful work outside the gated experiment.
 - When the unit is complete, update its notes, knowledge dependencies,
   Program and checkpoint as applicable. List its sub-PRs, deviations,
   negative findings, verification, and unresolved limits in the gathering PR.
-  Mark it ready and obtain explicit review from the other model: Claude/Fable
-  reviews Codex-led work, and Codex reviews Claude/Fable-led work. Review the
-  combined argument, implementation, results, and interpretation.
+  Mark it ready and obtain explicit review from an **independent collaborating
+  agent**. Codex and Claude/Fable remain the default reciprocal reviewers, but
+  additional collaborators may join the same review pool. The reviewer must not
+  have authored the work being independently gated. Review the combined
+  argument, implementation, results, and interpretation.
 - Do not merge a gathering PR into `main` until relevant checks are green,
-  review findings are resolved, and the other model explicitly signs off on
-  the current head SHA. Material changes after review require renewed review;
-  after any head change, the reviewer must confirm applicability to the new
-  head. If both models authored the unit, state their contributions and
-  cross-review each other's work; self-review alone is insufficient.
+  review findings are resolved, and an independent collaborating agent
+  explicitly signs off on the current head SHA. Material changes after review
+  require renewed review; after any head change, the reviewer must confirm
+  applicability to the new head. If multiple agents authored the unit, state
+  their contributions and arrange cross-review so that each independently gated
+  contribution is reviewed by an agent who did not author it; self-review alone
+  is insufficient.
 - A signed PR comment is acceptable when agents share a GitHub account and
   GitHub cannot record a separate formal approval. Include agent/model/session
   identity, date, reviewed SHA, review scope and an explicit sign-off or list
   of remaining blockers. CI success, silence, and a thumbs-up reaction alone
   are not sign-off.
+- **Additional collaborators are first-class participants.** A collaborator
+  may propose a new research Program in its own gathering PR, contribute
+  protocol/implementation/evaluation sub-PRs, and review work from other
+  agents. A new Program proposal should state its thesis/question, relationship
+  to existing Programs, scope and non-claims, initial research agenda, owner(s),
+  and intended review pool; when accepted it gets the normal Program registry
+  entry and checkpoint log. Do not force a genuinely distinct proposal into an
+  existing Program merely because its vocabulary overlaps.
+- Identify agent work by the **signed agent/model/session provenance and PR
+  context**, not GitHub username alone. Different agents may legitimately share
+  the same GitHub account. Branch names, PR bodies, signed comments, commit
+  authorship and session/model signatures are coordination evidence. A newly
+  participating agent should use the same signed-review format from its first
+  contribution so automated/manual review cycles can recognize its work.
+- Review sharing is many-to-many, not a fixed Codex↔Fable pairing. Any
+  participating agent may perform Gate 1 or Gate 2 for another agent's work if
+  it is independent of that work and has read the current protocol/context.
+  Prefer diversity of reviewers across successive units when practical, but do
+  not require a particular vendor/model family. The scientific requirement is
+  independent review, not brand identity.
 - **The reviewer merges** (agreed with Myk 2026-09-11, replacing "the author
-  merges after the gate"). When the reviewing model's gate-2 review finds no
+  merges after the gate"). When the reviewing agent's gate-2 review finds no
   blockers and every check on that head is green, it merges the gathering PR
   itself, with a merge commit, in the same pass as the sign-off. If a required
   check is still running, the sign-off says it is conditional on that check,
@@ -523,7 +547,41 @@ workflow; research source and result changes now also trigger that workflow.
    closures. 90 alternates
    forever (32 odd / 16 affine even), 150 with period 3 (all 256 off
    multiples of 3 / 16 affine on them). 32 = 4∘¬, so C_32 = conj C_4
-   (post hoc). Gate-2 pending on PR #116.
+   (post hoc). Accepted after Codex's gate-2 sign-off at `4fbb2d5`,
+   merged in PR #116.
+   Fourteenth unit (`scripts/verify_depth_one_certificate.py`, gate-1
+   reviewed after one correction round): refinement depth at most one,
+   certified at every ring. Pairs agreeing on ψ and ψ∘F_r are closed
+   walks in a 256-vertex pair graph per (ψ, r); a violating three-edge
+   walk (seven-cell pair block with disagreeing two-step observed
+   successors) with a return walk of length n−3 breaks depth one at
+   ring n ≥ 4; boolean powers repeat (≤ 33 here, cap 1024, nothing
+   censored). Depth-one sets constant from ring 10 under 232, 4, 32,
+   200 (118, 81, 81, 144 rules); period 3 from ring 28 under 22 (183 off
+   multiples of 3, 115 on them); parity 248 everywhere; 90 period 4
+   (248 odd, 130/138 even), 150 period 6 (256 off multiples of 3,
+   100/98 on them). Failed bet: all-ring depth one ≠ full-shift depth
+   one under 232, 200, 22, 102 (16, 8, 22, 8 rules have depth one at
+   every ring but not on the full shift); closure had no such gap.
+   Accepted after Codex's gate-2 sign-off at `25fc0d1`, merged in PR
+   #120.
+   Fifteenth unit (`scripts/verify_full_shift_depth_two.py`, gate-1
+   reviewed after one correction round): full-shift refinement depth at
+   most two for all eight observations and all 256 rules, decided by
+   reachability in a sparse 4096-vertex pair graph per (ψ, r) (six-cell
+   pair vertices, seven-cell edges agreeing on ψ, ψF, ψF², nine-cell
+   violating blocks), no matrix powers, no ring certificate at depth
+   two. FS² sizes 178, 97, 97, 172, 186, 256, 236, 222 under 232, 4, 32,
+   200, 22, 102, 90, 150; parity's 256 by a full-shift deduction from
+   the sixth unit's finite certificate, made in this unit. Both bets
+   failed: 24 of the fourteenth unit's 54 gap pairs have full-shift
+   depth ≥ 3 (232: 58, 78, 92, 114, 141, 163, 177, 197; 200: 135, 149,
+   157, 199; 22: twelve rules), so a rule can have depth ≤ 1 on every
+   ring and ≥ 3 on the line; and the rings-3-to-14 depth-two gap
+   (intersection of D²(n) minus FS²) is nonempty for every observation
+   but parity (20, 4, 4, 12, 30, 0, 6, 12 rules), including 4, 32, 90,
+   150, which had no depth-one gap. All 54 earlier witnesses realized
+   as explicit eventually periodic pairs. Gate-2 pending on PR #132.
 
 ## Checkpoint logs (read before continuing any workstream)
 
