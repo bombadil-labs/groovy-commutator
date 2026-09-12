@@ -13,6 +13,19 @@ when a substantial unit completes; keep the bounded-claim style. Text moved from
 
 Program page: `docs/research/2026-09-09-dimensional-closure-program.md`
 
+## Checkpoint 2026-09-12: product-form Rule90 plus a coordinate slice is dimension-blind for the frozen history criterion; Gate 2 pending
+
+Read `docs/research/2026-09-12-dimensional-history-scaling-control.md`. The original cross-dimensional `h_min(d)=d` protocol was not run as proposed: independent Gate 1 derived a theorem showing the selected product-form linear law and coordinate-slice observer cannot make this `h_min` depend on dimension. The unit was refrozen before implementation as a negative design theorem/control.
+
+- Original protocol head `eb992ce8d29a864b4ecf3ba94ced6adda0a22e74` was blocked at Gate 1. The theorem-control refreeze at `74393d18a33c51cfff133c88e09a40a2a3018cf6` received renewed Claude/Fable Gate 1 before implementation. The refreeze was accidentally committed directly to the gathering branch; the protocol-only routing deviation is preserved and disclosed, with no pre-gate scientific execution.
+- Frozen theorem: for product-form ordered-axis Rule90 under the complete coordinate-zero slice and odd `n`, `h_min(d,n)=D(n)-1`, where `D(n)` is the minimal-polynomial degree of `g=x+x^-1` in `GF(2)[x]/(x^n-1)`. The declared controls are `D(5)=3 -> h_min=2` and `D(7)=4 -> h_min=3` for `d=1,2,3`. These were pre-run predictions, not bets.
+- Implementation-only #181 pinned two materially independent paths, permanent integrity/replay CI, and future result registration with no canonical result. First evaluation #183 produced theorem-matching bytes but was preserved unmerged because the permanent workflow's implementation-stage absence self-test remained red after the result appeared. Workflow-only #184 corrected only that plumbing before rerun.
+- Corrected evaluation #185 regenerated the unchanged canonical result from the corrected integrated stage. The result is byte-identical to the preserved first run; all six matrix cells match the independent polynomial theorem and the fixed-`n` closing depth is identical across `d=1,2,3`. Reporting-only #188 added the exact result note.
+- Preservation reconciliation #189 then merged accepted current `main` into the gathering lineage without changing the theorem, verifier, canonical result or interpretation; all 29 exact-head checks passed, including the inherited full-shift-depth-three replay.
+- Interpretation: this is a reusable **design null**. It says the pair (product-form linear law, coordinate-slice observer) factors dimension out of this history-sufficiency measure. It does not refute a broader history-to-geometry conjecture. A discriminating follow-up must separately break the product factorization and/or slice-module observer structure.
+- Do not infer intrinsic dimension, a general space/time equivalence, self-assembly, endogenous control, resonance/self-recognition, physics/metaphysics, spacetime, Class IV, universality, renormalization, or any prime/`8n+1` connection.
+- **Review state:** canonical theorem-control result and reporting are integrated on gathering #171. This current-account integration updates Program/checkpoint/catalog only. Independent exact-head Gate 2 and reviewer merge are still required before acceptance on `main`.
+
 ## Checkpoint 2026-09-12: cross-width two-lag closure persists through width eight and fails at width nine; accepted
 
 Read `docs/research/2026-09-12-interface-history-cross-width.md`. This unit keeps the accepted #131/#157 touching-strip representation fixed at `D2,h=2`, restricts to masks `{11,13,15}` that passed globally on both predecessor rings, adds fresh exhaustive widths 8 and 9, and tests only the predeclared new radius `R=3` plus one pooled width-blind local table.
