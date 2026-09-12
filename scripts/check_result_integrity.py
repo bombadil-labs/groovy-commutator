@@ -82,6 +82,11 @@ REGISTRY = {
     'results/interface_factor_20260911.json': {
         'script': 'scripts/verify_interface_factor.py',
         'protocol': 'docs/research/protocols/interface-factor-20260911.md'},
+    'results/interface_history_20260911.json': {
+        'script': 'scripts/verify_interface_history.py',
+        'protocol': 'docs/research/protocols/interface-history-20260911.md',
+        'interface_factor_result': 'results/interface_factor_20260911.json',
+        'interface_factor_script': 'scripts/verify_interface_factor.py'},
 }
 
 def sha(p: pathlib.Path) -> str: return hashlib.sha256(p.read_bytes()).hexdigest()
