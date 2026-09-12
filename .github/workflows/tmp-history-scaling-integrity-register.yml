@@ -1,0 +1,41 @@
+name: Temporary history-scaling integrity registration
+
+on:
+  push:
+    branches:
+      - work/dimensional-history-scaling/implementation
+    paths:
+      - '.github/workflows/tmp-history-scaling-integrity-register.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  register:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Register future theorem-control result and remove this workflow
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p = Path('scripts/check_result_integrity.py')
+          text = p.read_text()
+          target = "'results/dimensional_history_scaling_control_20260912.json'"
+          if target in text:
+              raise SystemExit('history-scaling result already registered')
+          marker = '\n}\n\ndef sha('
+          if marker not in text:
+              raise SystemExit('REGISTRY closing marker not found')
+          entry = """\n    'results/dimensional_history_scaling_control_20260912.json': {\n        'script': 'scripts/verify_dimensional_history_scaling_control.py',\n        'parent_protocol': 'docs/research/protocols/dimensional-history-scaling-20260912.md',\n        'gate1_refreeze': 'docs/research/protocols/dimensional-history-scaling-gate1-refreeze-20260912.md'},\n"""
+          p.write_text(text.replace(marker, entry + marker, 1))
+          PY
+          rm .github/workflows/tmp-history-scaling-integrity-register.yml
+          git config user.name 'Codex history-scaling integrity registration'
+          git config user.email 'noreply@openai.com'
+          git add scripts/check_result_integrity.py .github/workflows/tmp-history-scaling-integrity-register.yml
+          git commit -m 'chore: register future dimensional history-scaling result integrity'
+          git push origin HEAD:work/dimensional-history-scaling/implementation
