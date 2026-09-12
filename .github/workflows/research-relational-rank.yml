@@ -1,0 +1,72 @@
+name: Relational-rank dimensional audit
+
+# Implementation-only heads run only the synthetic self-test while the canonical
+# result is absent. Once the registered canonical result exists, every invocation
+# of this workflow replays the frozen audit byte for byte. This is intentionally
+# stronger than trying to infer whether a PR diff touched the result file.
+
+on:
+  pull_request:
+    paths:
+      - 'scripts/verify_relational_rank.py'
+      - 'results/relational_rank_20260912.json'
+      - 'docs/research/protocols/relational-rank-20260912.md'
+      - 'results/guard_free_axial_lift_20260910.json'
+      - 'results/transverse_freedom_20260911.json'
+      - 'results/intervention_axis_20260911.json'
+      - 'scripts/check_result_integrity.py'
+      - '.github/workflows/research-relational-rank.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/verify_relational_rank.py'
+      - 'results/relational_rank_20260912.json'
+      - 'docs/research/protocols/relational-rank-20260912.md'
+      - 'results/guard_free_axial_lift_20260910.json'
+      - 'results/transverse_freedom_20260911.json'
+      - 'results/intervention_axis_20260911.json'
+      - 'scripts/check_result_integrity.py'
+      - '.github/workflows/research-relational-rank.yml'
+  schedule:
+    - cron: '41 6 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  relational-rank:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Syntax-check the frozen verifier
+        run: python -m py_compile scripts/verify_relational_rank.py
+      - name: Run synthetic implementation self-test only
+        run: python scripts/verify_relational_rank.py --self-test
+      - name: Check recorded source hashes when a canonical result exists
+        run: |
+          if [ -f results/relational_rank_20260912.json ]; then
+            python scripts/check_result_integrity.py results/relational_rank_20260912.json
+          else
+            echo 'implementation-only head: canonical result intentionally absent'
+          fi
+      - name: Decide whether full replay is required
+        id: replay
+        run: |
+          if [ -f results/relational_rank_20260912.json ]; then
+            echo 'run=true' >> "$GITHUB_OUTPUT"
+          else
+            echo 'run=false' >> "$GITHUB_OUTPUT"
+          fi
+      - name: Rerun the frozen audit and compare canonical JSON byte for byte
+        if: steps.replay.outputs.run == 'true'
+        run: |
+          cp results/relational_rank_20260912.json /tmp/expected.json
+          python scripts/verify_relational_rank.py > /dev/null
+          cmp /tmp/expected.json results/relational_rank_20260912.json
