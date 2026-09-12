@@ -58,12 +58,12 @@ jobs:
                           if 'interface' in s or 'touching' in s:
                               if isinstance(item,dict): out.append(f'{k}[{i}] '+json.dumps({kk:vv for kk,vv in item.items() if kk in {"slug","id","title","source","status","kind","relationships","related"}},ensure_ascii=False))
                   elif isinstance(v,dict): out.append(f'{k}: dict keys sample={list(v)[:20]}')
-          Path('tmp-interface-history-current-account-context.txt').write_text('\n'.join(out)+'\n')
+          Path('tmp-interface-history-current-account-compact.txt').write_text('\n'.join(out)+'\n')
           PY
       - name: Commit compact inspection context
         run: |
           git config user.name 'Codex current-account inspection'
           git config user.email 'noreply@openai.com'
-          git add tmp-interface-history-current-account-context.txt
-          git commit -m 'chore: narrow current-account edit context'
+          git add tmp-interface-history-current-account-compact.txt
+          git commit -m 'chore: expose compact current-account context'
           git push origin HEAD:research/interface-history-global-current-account
