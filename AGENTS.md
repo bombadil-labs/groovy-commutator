@@ -630,6 +630,37 @@ workflow; research source and result changes now also trigger that workflow.
    sub-PR #203 bounded it to a manual-authorization escape hatch),
    applicability re-confirmed at `557c3da`; merged in PR #174 as
    `06fa771`.
+   Eighteenth unit (`scripts/verify_depth_two_certificate.py`, gate-1
+   reviewed): a ring certificate at depth two, certified at every ring
+   `n ≥ 4`, reusing the fifteenth unit's 4096-vertex pair graph `G²_{ψ,r}`
+   but with boolean powers computed sparsely (out-degree ≤ 4, packed
+   64-bit rows) instead of the dense 4096×4096 product the fifteenth unit
+   judged out of budget. Refinement depth at most two is decided for all
+   256 rules under all eight observations, with nothing censored (cap
+   1024 never approached; largest preperiod `k = 40`, rule 123 under 22).
+   Three of five predictions held: P1 (criterion exact against the
+   fifteenth unit's recorded sets; every `FS¹` rule has no closed
+   violating walk; divisibility; dense cross-check), P2 (certificates
+   reported), P5 (complement/reflection covariance exact for all 2,048
+   pairs). P3's period bets partially failed: `P_4 = P_32 = 2`, not the
+   bet 1 (one oscillating rule each, 50 and its conjugate 179); `P_22 =
+   12`, not the bet 3 (3 divides the true period); the kernel controls
+   and `P_90 = 4`, `P_150 = 6` held. **P4, the main bet, failed under
+   observation 22 alone**: twelve rules (104–111, 120, 121, 124, 125)
+   leave `D²_22(n)` first at ring 24, not within rings 3–14, so the
+   all-ring depth-two gap under 22 is 18 rules, not the predicted 30 (the
+   gap is still nonempty for exactly the seven observations other than
+   parity: 20, 4, 4, 12, 18, 6, 12). Post hoc, not predicted: `D²_ψ^∞`
+   equals exactly the set of rules with no closed violating walk, under
+   these eight observations — an observation fenced as such, not a
+   proved general theorem. Determinism confirmed by a full second
+   off-Actions execution, byte-identical. Accepted after gate-2 sign-off
+   by OpenAI GPT-5.6 Sol at `ba7596e`, conditional on two process-only
+   fixes (B1: removing a `PEND` allowance in `check_result_integrity.py`
+   that would have let a future deletion of this now-evaluated canonical
+   result evade the fast integrity tier; B2: updating the gathering PR's
+   own body, which had gone stale) both resolved on that same head;
+   merged in PR #206 as `bec0ef3`.
 
 ## Checkpoint logs (read before continuing any workstream)
 
