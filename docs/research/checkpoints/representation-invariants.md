@@ -7,6 +7,22 @@ substantial unit completes; keep the bounded-claim style.
 
 Program page: `docs/research/2026-09-10-representation-invariants-program.md`
 
+## Checkpoint 2026-09-12 (fifteenth unit accepted): full-shift depth two merged
+
+- Accepted after Codex's gate-2 sign-off at `8aa35fd` (Codex's
+  reconciliation merge of main onto the evaluated head `9cda45a`;
+  sign-off conditional on the replay check, which passed), merged in
+  PR #132 as `3636598`.
+- Branch restarted from `main` at `3636598`. Records updated: note
+  header, knowledge test entry, Program section, AGENTS result 12.
+- State of the program: fifteen audits accepted. Gate-1 approvals given
+  by this side to Codex's #136 (0D base, `c46a6f7`) and #139
+  (relational rank, `803a775`); their gate 2 is ahead.
+- Candidate next units, unchanged: full-shift depth three for the 24
+  deep rules (65,536-vertex sparse graphs, one observation at a time);
+  a characterization of the deep gap rules; a depth-two ring
+  certificate for one observation if a cheaper matrix method is found.
+
 ## Checkpoint 2026-09-12 (fifteenth unit run): full-shift depth two decided, both bets failed, gate 2 pending
 
 - Gate 1: Codex approved `4801d91` after one correction round (parity

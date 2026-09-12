@@ -581,7 +581,8 @@ workflow; research source and result changes now also trigger that workflow.
    (intersection of D²(n) minus FS²) is nonempty for every observation
    but parity (20, 4, 4, 12, 30, 0, 6, 12 rules), including 4, 32, 90,
    150, which had no depth-one gap. All 54 earlier witnesses realized
-   as explicit eventually periodic pairs. Gate-2 pending on PR #132.
+   as explicit eventually periodic pairs. Accepted after Codex's gate-2
+   sign-off at `8aa35fd`, merged in PR #132 as `3636598`.
 
 ## Checkpoint logs (read before continuing any workstream)
 
