@@ -117,16 +117,27 @@ code, and repository maintenance, including changes to this guidance.
 - This is an agent workflow, not a claim that branch protection enforces model
   identity. Keep applicable CI enabled for sub-PRs as well as gathering PRs;
   a missing check is not a passing check. Pages publication stays on `main`.
-- Result replays run in two tiers (2026-09-11). Every canonical result JSON
-  records the SHA-256 of its verifier and inputs; every pull request touching
-  an audit's files runs `scripts/check_result_integrity.py`, which recomputes
-  those hashes in seconds. That tier establishes provenance coherence only
-  (a verifier or input edited without regeneration); it does not inspect
-  result content. The full byte-for-byte replay is the content and
-  determinism check: it runs on any pull request that modifies the canonical
-  result file itself, on pushes to `main`, weekly, and on manual dispatch.
-  A new result file must be registered in the integrity script and its
-  workflow must carry both tiers.
+- Result verification has two tiers (updated with Myk on 2026-09-12 to bound
+  GitHub Actions cost). Every canonical result JSON records the SHA-256 of its
+  verifier and inputs; every pull request touching an audit's files runs
+  `scripts/check_result_integrity.py`, which recomputes those hashes in seconds.
+  That fast tier establishes provenance coherence only (a verifier or input
+  edited without regeneration); it does not inspect result content.
+- **Do not put long research evaluations or replays in automatic CI.** A job
+  expected or observed to take more than about 10 minutes must not run from
+  `pull_request`, `push`, or `schedule` triggers. Generate the canonical result
+  once outside GitHub Actions from the pinned, reviewed implementation, record
+  the execution provenance, and verify the committed bytes with the fast
+  integrity tier. Perform any required independent byte-for-byte replay outside
+  Actions as part of author/reviewer verification. A manual `workflow_dispatch`
+  for an expensive replay may remain only as an exceptional escape hatch and
+  must not be used without Myk's explicit authorization to spend Actions time.
+  Short replays that remain comfortably inside the 10-minute CI budget may stay
+  automatic. In-flight expensive Actions runs that predate this rule may finish,
+  but do not automatically rerun them. Convert existing expensive workflows
+  before their next execution. A new result file must still be registered in
+  the integrity script and its workflow/verification record must identify its
+  fast automatic tier and, when applicable, its off-CI full-replay procedure.
 
 ## Ongoing research and the public site
 
@@ -581,7 +592,44 @@ workflow; research source and result changes now also trigger that workflow.
    (intersection of D²(n) minus FS²) is nonempty for every observation
    but parity (20, 4, 4, 12, 30, 0, 6, 12 rules), including 4, 32, 90,
    150, which had no depth-one gap. All 54 earlier witnesses realized
-   as explicit eventually periodic pairs. Gate-2 pending on PR #132.
+   as explicit eventually periodic pairs. Accepted after Codex's gate-2
+   sign-off at `8aa35fd`, merged in PR #132 as `3636598`.
+   Sixteenth unit (`scripts/verify_full_shift_depth_three.py`, gate-1
+   reviewed after one correction round): full-shift depth at most three
+   under 232, 200, 22, 4 (conjugates computed; 32 by the deduction
+   F_32 = F_4∘¬, F_223 = ¬∘F_32) by sparse reachability on 65,536-vertex
+   pair graphs (eight-cell pair vertices, nine-cell edges, eleven-cell
+   violating blocks), 121 min. FS³ sizes 198, 181, 234, 106. All three
+   bets held: of the 24 deep rules only 4 (under 22: 143, 166, 180, 213)
+   have full-shift depth exactly three and 20 have depth ≥ 4; the
+   rings-3-to-14 depth-three gap is nonempty under all four (8, 11, 8,
+   10 rules); the full-shift class "exactly three" is nonempty under all
+   four (20, 9, 48, 9). The ladder of full-shift class against ring class
+   is diagonal only at closure. Accepted after Codex's gate-2 sign-off at
+   `f33b779`, re-confirmed at the reconciliation head `d4bf27b`, merged in
+   PR #144 as `93dcec8`.
+   Seventeenth unit (`scripts/verify_full_shift_depth_three_linear.py`,
+   gate-1 reviewed by an independent collaborating agent, OpenAI GPT-6
+   Astra Pro): full-shift depth at most three under the deferred linear
+   observations 90 and 150 (conjugate 165 computed directly; 150
+   self-dual), same sparse 65,536-vertex machinery. `FS³` has 250 rules
+   under 90 and 246 under 150 (`FS²` was 236 and 222). Twelve rules are
+   excluded by pen from the seventh unit's ring depths as controls; of
+   the remaining 18 under 90, 14 have full-shift depth exactly three and
+   4 (41, 97, 107, 121) at least four; all 24 remaining under 150 have
+   depth exactly three. The rings-3-to-14 depth-three gap is nonempty
+   under 90 (those same four rules) but **empty under 150** — the first
+   time in the program a gap closes rather than widens between depth
+   levels, so whether periodic configurations decide a level is a
+   property of the pair (observation, level), not of depth alone. The
+   ladder is diagonal at closure and depth one under both, off-diagonal
+   only at the fifteenth unit's depth-two gap rules, and entirely
+   diagonal at the top under 150. Accepted after gate-2 sign-off by
+   OpenAI GPT-5.6 Sol at `a1d422c`, conditional on a CI-cost correction
+   (reconciliation had accidentally re-triggered the unit's long replay;
+   sub-PR #203 bounded it to a manual-authorization escape hatch),
+   applicability re-confirmed at `557c3da`; merged in PR #174 as
+   `06fa771`.
 
 ## Checkpoint logs (read before continuing any workstream)
 

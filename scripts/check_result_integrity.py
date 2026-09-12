@@ -79,6 +79,17 @@ REGISTRY = {
     'results/full_shift_depth_two_20260911.json': {
         'script': 'scripts/verify_full_shift_depth_two.py',
         'depth_one_certificate_result': 'results/depth_one_certificate_20260911.json'},
+    'results/full_shift_depth_three_20260912.json': {
+        'script': 'scripts/verify_full_shift_depth_three.py',
+        'ring_closure_certificate_result': 'results/ring_closure_certificate_20260911.json',
+        'depth_one_certificate_result': 'results/depth_one_certificate_20260911.json',
+        'full_shift_depth_two_result': 'results/full_shift_depth_two_20260911.json'},
+    'results/full_shift_depth_three_linear_20260912.json': {
+        'script': 'scripts/verify_full_shift_depth_three_linear.py',
+        'ring_closure_certificate_result': 'results/ring_closure_certificate_20260911.json',
+        'depth_one_certificate_result': 'results/depth_one_certificate_20260911.json',
+        'full_shift_depth_two_result': 'results/full_shift_depth_two_20260911.json',
+        'linear_observations_result': 'results/linear_observations_20260911.json'},
     'results/second_lift_completion_20260911.json': {
         'script': 'scripts/verify_second_lift_completion.py',
         'protocol': 'docs/research/protocols/second-lift-completion-comparison-20260910.md'},
@@ -119,6 +130,21 @@ REGISTRY = {
         'predecessor_result': 'results/interface_history_20260911.json',
         'interface_factor_script': 'scripts/verify_interface_factor.py',
         'interface_factor_result': 'results/interface_factor_20260911.json'},
+    'results/interface_history_cross_width_20260912.json': {
+        'script': 'scripts/verify_interface_history_cross_width.py',
+        'protocol': 'docs/research/protocols/interface-history-cross-width-20260912.md',
+        'interface_history_protocol': 'docs/research/protocols/interface-history-20260911.md',
+        'interface_history_script': 'scripts/verify_interface_history.py',
+        'interface_history_result': 'results/interface_history_20260911.json',
+        'interface_history_global_protocol': 'docs/research/protocols/interface-history-global-20260912.md',
+        'interface_history_global_script': 'scripts/verify_interface_history_global.py',
+        'interface_history_global_result': 'results/interface_history_global_20260912.json',
+        'interface_factor_script': 'scripts/verify_interface_factor.py'},
+    'results/dimensional_history_scaling_control_20260912.json': {
+        'script': 'scripts/verify_dimensional_history_scaling_control.py',
+        'parent_protocol': 'docs/research/protocols/dimensional-history-scaling-20260912.md',
+        'gate1_refreeze': 'docs/research/protocols/dimensional-history-scaling-gate1-refreeze-20260912.md'},
+
     'results/dimensional_resonance_response_20260912.json': {
         'script': 'scripts/verify_dimensional_resonance_response.py',
         'protocol': 'docs/research/protocols/dimensional-resonance-response-20260912.md',
