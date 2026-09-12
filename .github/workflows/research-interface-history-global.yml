@@ -1,0 +1,88 @@
+name: Interface-history global determinism audit
+
+# Permanent two-tier workflow. During implementation the canonical result is
+# absent: CI syntax-checks the verifier and runs only its out-of-domain n=3
+# self-test. Once evaluation commits the canonical JSON, every touching PR
+# checks recorded source hashes and result-changing PRs/main/weekly/manual runs
+# replay the frozen census byte for byte.
+
+on:
+  pull_request:
+    paths:
+      - 'scripts/verify_interface_history_global.py'
+      - 'scripts/verify_interface_history.py'
+      - 'scripts/verify_interface_factor.py'
+      - 'results/interface_history_global_20260912.json'
+      - 'results/interface_history_20260911.json'
+      - 'results/interface_factor_20260911.json'
+      - 'docs/research/protocols/interface-history-global-20260912.md'
+      - 'docs/research/protocols/interface-history-global-gate1-clarification-20260912.md'
+      - 'docs/research/protocols/interface-history-20260911.md'
+      - 'scripts/check_result_integrity.py'
+      - '.github/workflows/research-interface-history-global.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/verify_interface_history_global.py'
+      - 'scripts/verify_interface_history.py'
+      - 'scripts/verify_interface_factor.py'
+      - 'results/interface_history_global_20260912.json'
+      - 'results/interface_history_20260911.json'
+      - 'results/interface_factor_20260911.json'
+      - 'docs/research/protocols/interface-history-global-20260912.md'
+      - 'docs/research/protocols/interface-history-global-gate1-clarification-20260912.md'
+      - 'docs/research/protocols/interface-history-20260911.md'
+      - 'scripts/check_result_integrity.py'
+      - '.github/workflows/research-interface-history-global.yml'
+  schedule:
+    - cron: '29 8 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  interface-history-global:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -e .
+      - name: Syntax-check the pinned verifier
+        run: python -m py_compile scripts/verify_interface_history_global.py
+      - name: Run implementation-only self-test outside the frozen source domain
+        run: python scripts/verify_interface_history_global.py --self-test
+      - name: Recorded source hashes match the tree when the canonical result exists
+        run: |
+          if [ -f results/interface_history_global_20260912.json ]; then
+            python scripts/check_result_integrity.py results/interface_history_global_20260912.json
+          else
+            echo 'Implementation-only stage: canonical result not committed yet.'
+          fi
+      - name: Does this run require the full canonical replay?
+        id: result
+        run: |
+          if [ ! -f results/interface_history_global_20260912.json ]; then
+            echo 'changed=false' >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          if [ "${{ github.event_name }}" != "pull_request" ]; then
+            echo 'changed=true' >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          if git diff --name-only "origin/${{ github.base_ref }}...HEAD" | grep -qx 'results/interface_history_global_20260912.json'; then
+            echo 'changed=true' >> "$GITHUB_OUTPUT"
+          else
+            echo 'changed=false' >> "$GITHUB_OUTPUT"
+          fi
+      - name: Replay the frozen verifier and compare canonical JSON byte for byte
+        if: steps.result.outputs.changed == 'true'
+        run: |
+          cp results/interface_history_global_20260912.json /tmp/expected.json
+          python scripts/verify_interface_history_global.py > /dev/null
+          cmp /tmp/expected.json results/interface_history_global_20260912.json
