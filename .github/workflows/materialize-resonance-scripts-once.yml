@@ -1,0 +1,63 @@
+name: Materialize resonance scripts once
+on:
+  push:
+    branches: ['work/dimensional-resonance-response/physical-verifier']
+    paths: ['.github/workflows/materialize-resonance-scripts-once.yml']
+permissions:
+  contents: write
+jobs:
+  materialize-scripts:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: work/dimensional-resonance-response/physical-verifier
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Recover verifier and patch registry
+        shell: bash
+        run: |
+          python - <<'PY'
+          import base64, gzip, pathlib, re
+          src=pathlib.Path('.github/workflows/apply-dimensional-resonance-physical-once.yml').read_text()
+          m=re.search(r"VERIFIER_B64: '([^']+)'", src)
+          if not m: raise SystemExit('VERIFIER_B64 not found')
+          pathlib.Path('scripts/verify_dimensional_resonance_response.py').write_bytes(gzip.decompress(base64.b64decode(m.group(1))))
+          p=pathlib.Path('scripts/check_result_integrity.py')
+          s=p.read_text()
+          key="'results/dimensional_resonance_response_20260912.json'"
+          if key not in s:
+              marker='}\n\ndef sha('
+              if marker not in s: raise SystemExit('integrity registry terminator not found')
+              entry=("    'results/dimensional_resonance_response_20260912.json': {\n"
+                     "        'script': 'scripts/verify_dimensional_resonance_response.py',\n"
+                     "        'protocol': 'docs/research/protocols/dimensional-resonance-response-20260912.md',\n"
+                     "        'gate1_refreeze': 'docs/research/protocols/dimensional-resonance-response-gate1-refreeze-20260912.md',\n"
+                     "        'gate1_null_clarification': 'docs/research/protocols/dimensional-resonance-response-gate1-null-clarification-20260912.md',\n"
+                     "        'gate1_approval': 'docs/research/protocols/dimensional-resonance-response-gate1-approval-20260912.md',\n"
+                     "        'source_census_script': 'scripts/verify_dimensional_resonance_source_census.py',\n"
+                     "        'physical_predecessor_script': 'scripts/verify_interface_factor.py'},\n\n")
+              p.write_text(s.replace(marker,entry+marker,1))
+          PY
+      - run: python -m pip install -e .
+      - name: Capture cheap no-result checks without blocking commit
+        shell: bash
+        run: |
+          set +e
+          {
+            echo '== compile =='; python -m py_compile scripts/verify_dimensional_resonance_response.py; echo "compile=$?"
+            echo '== source census =='; python scripts/verify_dimensional_resonance_source_census.py --self-test --output /tmp/source.json; echo "source_census=$?"
+            echo '== physical self-test =='; python scripts/verify_dimensional_resonance_response.py --self-test; echo "physical_self_test=$?"
+            echo '== canonical absence =='; test ! -e results/dimensional_resonance_response_20260912.json; echo "canonical_absent=$?"
+          } > .resonance-implementation-check.log 2>&1
+          cat .resonance-implementation-check.log
+      - name: Commit only non-workflow implementation files
+        run: |
+          git config user.name 'OpenAI GPT-5.6 Sol'
+          git config user.email 'noreply@openai.com'
+          git add scripts/verify_dimensional_resonance_response.py scripts/check_result_integrity.py .resonance-implementation-check.log
+          git commit -m 'research: materialize dimensional resonance physical verifier'
+          git push origin HEAD:work/dimensional-resonance-response/physical-verifier
