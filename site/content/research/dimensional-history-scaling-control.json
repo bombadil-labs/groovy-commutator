@@ -1,0 +1,22 @@
+[
+  {
+    "slug": "dimensional-history-scaling-control",
+    "label": "History-scaling control",
+    "title": "When a history-scaling test is blind to dimension",
+    "date": "2026-09-12",
+    "updated": "2026-09-12",
+    "kind": "Exact theorem control",
+    "evidence": "exact",
+    "topic": "Algebra and closure",
+    "summary": "Gate 1 proved before execution that product-form ordered-axis Rule90 viewed through a coordinate slice has a history threshold set by one-dimensional ring algebra, not by the number of axes; independent implementations verify the frozen n=5/7 controls.",
+    "takeaway": "For this declared law/observer pair, h_min(d,n)=D(n)-1 and is dimension-blind. This is a reusable experimental-design null, not evidence against history/dimension scaling under other representations.",
+    "source": "docs/research/2026-09-12-dimensional-history-scaling-control.md",
+    "promotion": {
+      "stage": "research"
+    },
+    "related": [
+      "interface-history-global",
+      "guard-free-axial-lift"
+    ]
+  }
+]

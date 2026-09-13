@@ -1,0 +1,803 @@
+{
+  "W3_pooled": {
+    "11": {
+      "canonical_conflict": {
+        "equal_radius_three_history_oldest_to_newest": [
+          [
+            8,
+            8,
+            0,
+            40,
+            8,
+            5,
+            8
+          ],
+          [
+            8,
+            8,
+            8,
+            12,
+            8,
+            42,
+            8
+          ],
+          [
+            8,
+            8,
+            8,
+            8,
+            8,
+            8,
+            8
+          ]
+        ],
+        "first_differing_target_coordinate": "B",
+        "next_center_retained_symbols": [
+          42,
+          8
+        ],
+        "records": [
+          {
+            "n": 6,
+            "site": 2,
+            "source_index": 1501,
+            "source_pair_lex": [
+              "010111",
+              "011101"
+            ],
+            "t": 6
+          },
+          {
+            "n": 7,
+            "site": 0,
+            "source_index": 8175,
+            "source_pair_lex": [
+              "0111111",
+              "1101111"
+            ],
+            "t": 6
+          }
+        ]
+      },
+      "pass": false
+    },
+    "13": {
+      "canonical_conflict": {
+        "equal_radius_three_history_oldest_to_newest": [
+          [
+            16,
+            32,
+            16,
+            21,
+            0,
+            16,
+            16
+          ],
+          [
+            16,
+            20,
+            16,
+            50,
+            16,
+            16,
+            16
+          ],
+          [
+            16,
+            16,
+            16,
+            16,
+            16,
+            16,
+            16
+          ]
+        ],
+        "first_differing_target_coordinate": "E0",
+        "next_center_retained_symbols": [
+          20,
+          16
+        ],
+        "records": [
+          {
+            "n": 6,
+            "site": 4,
+            "source_index": 1501,
+            "source_pair_lex": [
+              "010111",
+              "011101"
+            ],
+            "t": 6
+          },
+          {
+            "n": 7,
+            "site": 2,
+            "source_index": 8175,
+            "source_pair_lex": [
+              "0111111",
+              "1101111"
+            ],
+            "t": 6
+          }
+        ]
+      },
+      "pass": false
+    },
+    "15": {
+      "canonical_conflict": {
+        "equal_radius_three_history_oldest_to_newest": [
+          [
+            24,
+            28,
+            24,
+            24,
+            24,
+            58,
+            24
+          ],
+          [
+            24,
+            24,
+            60,
+            0,
+            29,
+            24,
+            24
+          ],
+          [
+            24,
+            20,
+            4,
+            44,
+            16,
+            24,
+            58
+          ]
+        ],
+        "first_differing_target_coordinate": "B",
+        "next_center_retained_symbols": [
+          42,
+          8
+        ],
+        "records": [
+          {
+            "n": 7,
+            "site": 0,
+            "source_index": 6141,
+            "source_pair_lex": [
+              "0101111",
+              "1111101"
+            ],
+            "t": 6
+          },
+          {
+            "n": 9,
+            "site": 0,
+            "source_index": 90101,
+            "source_pair_lex": [
+              "010101111",
+              "111110101"
+            ],
+            "t": 6
+          }
+        ]
+      },
+      "pass": false
+    }
+  },
+  "census": {
+    "6": {
+      "11": {
+        "W1": {
+          "canonical_conflict": null,
+          "pass": true
+        },
+        "W2_R3": {
+          "canonical_conflict": null,
+          "pass": true
+        }
+      },
+      "13": {
+        "W1": {
+          "canonical_conflict": null,
+          "pass": true
+        },
+        "W2_R3": {
+          "canonical_conflict": null,
+          "pass": true
+        }
+      },
+      "15": {
+        "W1": {
+          "canonical_conflict": null,
+          "pass": true
+        },
+        "W2_R3": {
+          "canonical_conflict": null,
+          "pass": true
+        }
+      }
+    },
+    "7": {
+      "11": {
+        "W1": {
+          "canonical_conflict": null,
+          "pass": true
+        },
+        "W2_R3": {
+          "canonical_conflict": null,
+          "pass": true
+        }
+      },
+      "13": {
+        "W1": {
+          "canonical_conflict": null,
+          "pass": true
+        },
+        "W2_R3": {
+          "canonical_conflict": null,
+          "pass": true
+        }
+      },
+      "15": {
+        "W1": {
+          "canonical_conflict": null,
+          "pass": true
+        },
+        "W2_R3": {
+          "canonical_conflict": null,
+          "pass": true
+        }
+      }
+    },
+    "8": {
+      "11": {
+        "W1": {
+          "canonical_conflict": null,
+          "pass": true
+        },
+        "W2_R3": {
+          "canonical_conflict": null,
+          "pass": true
+        }
+      },
+      "13": {
+        "W1": {
+          "canonical_conflict": null,
+          "pass": true
+        },
+        "W2_R3": {
+          "canonical_conflict": null,
+          "pass": true
+        }
+      },
+      "15": {
+        "W1": {
+          "canonical_conflict": null,
+          "pass": true
+        },
+        "W2_R3": {
+          "canonical_conflict": null,
+          "pass": true
+        }
+      }
+    },
+    "9": {
+      "11": {
+        "W1": {
+          "canonical_conflict": {
+            "equal_complete_history_oldest_to_newest": [
+              [
+                8,
+                8,
+                42,
+                8,
+                8,
+                12,
+                8,
+                8,
+                8
+              ],
+              [
+                0,
+                13,
+                8,
+                8,
+                8,
+                8,
+                40,
+                8,
+                8
+              ],
+              [
+                8,
+                0,
+                8,
+                42,
+                12,
+                8,
+                8,
+                8,
+                8
+              ]
+            ],
+            "first_differing_output": {
+              "coordinate": "B",
+              "site": 8
+            },
+            "next_complete_retained_fields": [
+              [
+                8,
+                8,
+                13,
+                8,
+                8,
+                40,
+                8,
+                8,
+                46
+              ],
+              [
+                8,
+                8,
+                13,
+                8,
+                8,
+                40,
+                8,
+                8,
+                8
+              ]
+            ],
+            "records": [
+              {
+                "n": 9,
+                "source_index": 98293,
+                "source_pair_lex": [
+                  "010111111",
+                  "111110101"
+                ],
+                "t": 6
+              },
+              {
+                "n": 9,
+                "source_index": 228087,
+                "source_pair_lex": [
+                  "110111101",
+                  "011110111"
+                ],
+                "t": 6
+              }
+            ]
+          },
+          "pass": false
+        },
+        "W2_R3": {
+          "canonical_conflict": {
+            "equal_radius_three_history_oldest_to_newest": [
+              [
+                35,
+                1,
+                0,
+                0,
+                2,
+                44,
+                38
+              ],
+              [
+                1,
+                35,
+                1,
+                2,
+                44,
+                44,
+                3
+              ],
+              [
+                39,
+                5,
+                9,
+                40,
+                14,
+                40,
+                45
+              ]
+            ],
+            "first_differing_target_coordinate": "A",
+            "next_center_retained_symbols": [
+              40,
+              45
+            ],
+            "records": [
+              {
+                "n": 9,
+                "site": 2,
+                "source_index": 7698,
+                "source_pair_lex": [
+                  "000001111",
+                  "000010010"
+                ],
+                "t": 3
+              },
+              {
+                "n": 9,
+                "site": 3,
+                "source_index": 1872,
+                "source_pair_lex": [
+                  "000000011",
+                  "101010000"
+                ],
+                "t": 4
+              }
+            ]
+          },
+          "pass": false
+        }
+      },
+      "13": {
+        "W1": {
+          "canonical_conflict": {
+            "equal_complete_history_oldest_to_newest": [
+              [
+                16,
+                16,
+                50,
+                16,
+                16,
+                20,
+                16,
+                16,
+                16
+              ],
+              [
+                16,
+                21,
+                16,
+                16,
+                16,
+                16,
+                48,
+                0,
+                16
+              ],
+              [
+                16,
+                16,
+                16,
+                50,
+                20,
+                16,
+                0,
+                16,
+                16
+              ]
+            ],
+            "first_differing_output": {
+              "coordinate": "B",
+              "site": 8
+            },
+            "next_complete_retained_fields": [
+              [
+                16,
+                16,
+                21,
+                16,
+                16,
+                48,
+                16,
+                16,
+                54
+              ],
+              [
+                16,
+                16,
+                21,
+                16,
+                16,
+                48,
+                16,
+                16,
+                16
+              ]
+            ],
+            "records": [
+              {
+                "n": 9,
+                "source_index": 98293,
+                "source_pair_lex": [
+                  "010111111",
+                  "111110101"
+                ],
+                "t": 6
+              },
+              {
+                "n": 9,
+                "source_index": 228087,
+                "source_pair_lex": [
+                  "110111101",
+                  "011110111"
+                ],
+                "t": 6
+              }
+            ]
+          },
+          "pass": false
+        },
+        "W2_R3": {
+          "canonical_conflict": {
+            "equal_radius_three_history_oldest_to_newest": [
+              [
+                38,
+                55,
+                1,
+                0,
+                0,
+                2,
+                6
+              ],
+              [
+                3,
+                55,
+                55,
+                1,
+                2,
+                6,
+                2
+              ],
+              [
+                53,
+                21,
+                51,
+                21,
+                18,
+                32,
+                36
+              ]
+            ],
+            "first_differing_target_coordinate": "E3",
+            "next_center_retained_symbols": [
+              21,
+              53
+            ],
+            "records": [
+              {
+                "n": 9,
+                "site": 1,
+                "source_index": 4638,
+                "source_pair_lex": [
+                  "000001001",
+                  "000011110"
+                ],
+                "t": 3
+              },
+              {
+                "n": 9,
+                "site": 5,
+                "source_index": 11136,
+                "source_pair_lex": [
+                  "000010101",
+                  "110000000"
+                ],
+                "t": 4
+              }
+            ]
+          },
+          "pass": false
+        }
+      },
+      "15": {
+        "W1": {
+          "canonical_conflict": {
+            "equal_complete_history_oldest_to_newest": [
+              [
+                24,
+                24,
+                58,
+                24,
+                24,
+                28,
+                24,
+                24,
+                24
+              ],
+              [
+                16,
+                29,
+                24,
+                24,
+                24,
+                24,
+                56,
+                8,
+                24
+              ],
+              [
+                24,
+                16,
+                24,
+                58,
+                28,
+                24,
+                8,
+                24,
+                24
+              ]
+            ],
+            "first_differing_output": {
+              "coordinate": "B",
+              "site": 8
+            },
+            "next_complete_retained_fields": [
+              [
+                24,
+                24,
+                29,
+                24,
+                24,
+                56,
+                24,
+                24,
+                62
+              ],
+              [
+                24,
+                24,
+                29,
+                24,
+                24,
+                56,
+                24,
+                24,
+                24
+              ]
+            ],
+            "records": [
+              {
+                "n": 9,
+                "source_index": 98293,
+                "source_pair_lex": [
+                  "010111111",
+                  "111110101"
+                ],
+                "t": 6
+              },
+              {
+                "n": 9,
+                "source_index": 228087,
+                "source_pair_lex": [
+                  "110111101",
+                  "011110111"
+                ],
+                "t": 6
+              }
+            ]
+          },
+          "pass": false
+        },
+        "W2_R3": {
+          "canonical_conflict": {
+            "equal_radius_three_history_oldest_to_newest": [
+              [
+                28,
+                24,
+                24,
+                24,
+                24,
+                24,
+                58
+              ],
+              [
+                24,
+                56,
+                8,
+                24,
+                16,
+                29,
+                24
+              ],
+              [
+                24,
+                8,
+                24,
+                24,
+                24,
+                16,
+                24
+              ]
+            ],
+            "first_differing_target_coordinate": "B",
+            "next_center_retained_symbols": [
+              62,
+              24
+            ],
+            "records": [
+              {
+                "n": 9,
+                "site": 8,
+                "source_index": 98293,
+                "source_pair_lex": [
+                  "010111111",
+                  "111110101"
+                ],
+                "t": 6
+              },
+              {
+                "n": 9,
+                "site": 1,
+                "source_index": 122813,
+                "source_pair_lex": [
+                  "011101111",
+                  "110111101"
+                ],
+                "t": 6
+              }
+            ]
+          },
+          "pass": false
+        }
+      }
+    }
+  },
+  "controls": {
+    "P1_predecessor_regression": true,
+    "P6_primary_reference_agreement_verdicts": 27,
+    "P6_primary_reference_retained_fields": true,
+    "P6_translation_covariance": true,
+    "canonical_conflicts_independently_replayed": 9
+  },
+  "parameters": {
+    "W3_key_includes_width": false,
+    "domain": "D2",
+    "fresh_widths": [
+      8,
+      9
+    ],
+    "history_depth": 2,
+    "masks": [
+      11,
+      13,
+      15
+    ],
+    "offsets": [
+      -3,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      3
+    ],
+    "radius": 3,
+    "times": [
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "widths": [
+      6,
+      7,
+      8,
+      9
+    ]
+  },
+  "predictions": {
+    "P2_common_masks_W1_fresh_widths": false,
+    "P3_P15_W2_R3_fresh_widths": false,
+    "P4_P15_W3_pooled_widths": false
+  },
+  "protocol": "interface-history-cross-width-20260912",
+  "schema": 1,
+  "scope": "finite widths 6-9; fresh exhaustive widths 8,9; frozen touching-strip reachable family; D2,h=2; masks 11,13,15; R=3 only; near-whole-ring finite-family test; no arbitrary-width/full-shift/infinite-lattice or intrinsic-dimension claim",
+  "source_hashes": {
+    "interface_factor_script": "198f691e2548dfd12570718f022463c6ba9f8773b318d547372ec3460e322646",
+    "interface_history_global_protocol": "9b882f31ba0ff8ebb9b4f077eeb9f992c5d808b081b7049466217194b950b266",
+    "interface_history_global_result": "c8e4d0b7a44ad81dd81ebf0f5751ae3206a6b8f19bd199f6cb62244ebbab469c",
+    "interface_history_global_script": "f5ac216c3506e781d9f4e94429520c9302acbe3687ff70e03ac02b0414d13e8a",
+    "interface_history_protocol": "8625c2a112b2a277d5986db617fe75ed0027497025e26e21c74c90859830a901",
+    "interface_history_result": "0af466c50856523cf1739cdb136830b97f85a9f32116899790d3482b987cf8c2",
+    "interface_history_script": "38d4a48aeb24290d69c20c8c71f0c007d06c8f238bea8df6e066e7b93ce2d820",
+    "protocol": "6bbdaecd202fe4a50cf70d4fde690ca07cbb82ebca65b235d6a6f60a5718e03a",
+    "script": "b564db1d438b494a30986a262eb15b09e7287247c5f5668f2dec38e8b1bbb443"
+  }
+}

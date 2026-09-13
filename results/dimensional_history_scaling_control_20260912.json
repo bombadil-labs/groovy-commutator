@@ -1,0 +1,263 @@
+{
+  "cells": [
+    {
+      "D_n": 3,
+      "d": 1,
+      "matrix": {
+        "closure_by_h": [
+          false,
+          false,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "h_min": 2,
+        "rank_H_0_through_H_max": [
+          1,
+          2,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3
+        ],
+        "slice_bits": 1,
+        "state_bits": 5
+      },
+      "matrix_matches_theorem": true,
+      "n": 5,
+      "theorem_h_min": 2
+    },
+    {
+      "D_n": 3,
+      "d": 2,
+      "matrix": {
+        "closure_by_h": [
+          false,
+          false,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "h_min": 2,
+        "rank_H_0_through_H_max": [
+          5,
+          9,
+          13,
+          13,
+          13,
+          13,
+          13,
+          13,
+          13
+        ],
+        "slice_bits": 5,
+        "state_bits": 25
+      },
+      "matrix_matches_theorem": true,
+      "n": 5,
+      "theorem_h_min": 2
+    },
+    {
+      "D_n": 3,
+      "d": 3,
+      "matrix": {
+        "closure_by_h": [
+          false,
+          false,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "h_min": 2,
+        "rank_H_0_through_H_max": [
+          25,
+          41,
+          57,
+          57,
+          57,
+          57,
+          57,
+          57,
+          57
+        ],
+        "slice_bits": 25,
+        "state_bits": 125
+      },
+      "matrix_matches_theorem": true,
+      "n": 5,
+      "theorem_h_min": 2
+    },
+    {
+      "D_n": 4,
+      "d": 1,
+      "matrix": {
+        "closure_by_h": [
+          false,
+          false,
+          false,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "h_min": 3,
+        "rank_H_0_through_H_max": [
+          1,
+          2,
+          3,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4
+        ],
+        "slice_bits": 1,
+        "state_bits": 7
+      },
+      "matrix_matches_theorem": true,
+      "n": 7,
+      "theorem_h_min": 3
+    },
+    {
+      "D_n": 4,
+      "d": 2,
+      "matrix": {
+        "closure_by_h": [
+          false,
+          false,
+          false,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "h_min": 3,
+        "rank_H_0_through_H_max": [
+          7,
+          13,
+          19,
+          25,
+          25,
+          25,
+          25,
+          25,
+          25
+        ],
+        "slice_bits": 7,
+        "state_bits": 49
+      },
+      "matrix_matches_theorem": true,
+      "n": 7,
+      "theorem_h_min": 3
+    },
+    {
+      "D_n": 4,
+      "d": 3,
+      "matrix": {
+        "closure_by_h": [
+          false,
+          false,
+          false,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "h_min": 3,
+        "rank_H_0_through_H_max": [
+          49,
+          85,
+          121,
+          157,
+          157,
+          157,
+          157,
+          157,
+          157
+        ],
+        "slice_bits": 49,
+        "state_bits": 343
+      },
+      "matrix_matches_theorem": true,
+      "n": 7,
+      "theorem_h_min": 3
+    }
+  ],
+  "controls": {
+    "h_min_dimension_independent_at_fixed_n": {
+      "5": true,
+      "7": true
+    },
+    "matrix_matches_polynomial_theorem_all_cells": true
+  },
+  "expected_frozen_values": {
+    "D_5": 3,
+    "D_7": 4,
+    "h_min_n5": 2,
+    "h_min_n7": 3
+  },
+  "parameters": {
+    "H_max": 8,
+    "criterion": "ker(H_h) subseteq ker(O F^(h+1))",
+    "dimensions": [
+      1,
+      2,
+      3
+    ],
+    "observation": "newest-axis coordinate-zero complete slice",
+    "side_lengths": [
+      5,
+      7
+    ],
+    "source_rule": 90
+  },
+  "protocol": "dimensional-history-scaling-product-law-control-20260912",
+  "schema": 1,
+  "scope": "negative design theorem/control for product-form linear ordered-axis Rule90 under coordinate-slice observation; not a test or refutation of general history/dimension scaling",
+  "source_hashes": {
+    "gate1_refreeze": "57c31a2d188383dd38ed98be9f24737cb875e457fb386df489b3d570fa795e00",
+    "parent_protocol": "dab5e284a953a4dcab104f63038e15f20bf37b3543a4310af2114e98344dba5f",
+    "script": "f16ec60605ed6677c94422e186a46e724d91b1a6cf1ac8d4a67f048871c195e6"
+  },
+  "transverse_reference": {
+    "5": {
+      "D": 3,
+      "independent_power_words": [
+        "00001",
+        "10010",
+        "01100"
+      ]
+    },
+    "7": {
+      "D": 4,
+      "independent_power_words": [
+        "0000001",
+        "1000010",
+        "0100100",
+        "1011010"
+      ]
+    }
+  }
+}

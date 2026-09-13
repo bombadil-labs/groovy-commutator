@@ -1,0 +1,54 @@
+name: Research dimensional resonance source census
+on:
+  pull_request:
+    paths:
+      - 'scripts/verify_dimensional_resonance_source_census.py'
+      - 'docs/research/protocols/dimensional-resonance-response-*.md'
+      - 'results/dimensional_resonance_response_20260912.json'
+      - 'scripts/check_result_integrity.py'
+      - '.github/workflows/research-dimensional-resonance-source-census.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/verify_dimensional_resonance_source_census.py'
+      - 'docs/research/protocols/dimensional-resonance-response-*.md'
+      - 'results/dimensional_resonance_response_20260912.json'
+      - 'scripts/check_result_integrity.py'
+      - '.github/workflows/research-dimensional-resonance-source-census.yml'
+permissions:
+  contents: read
+jobs:
+  source-census:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Compile source-only implementation
+        run: python -m py_compile scripts/verify_dimensional_resonance_source_census.py
+      - name: Replay frozen source census and orbit placebo construction
+        run: >-
+          python scripts/verify_dimensional_resonance_source_census.py
+          --self-test
+          --output /tmp/dimensional-resonance-source-census.json
+      - name: Confirm source-only diagnostic remains no-result
+        run: |
+          python - <<'PY'
+          import json
+          p = '/tmp/dimensional-resonance-source-census.json'
+          data = json.load(open(p, encoding='utf-8'))
+          assert data['stage'] == 'implementation_source_only_no_result'
+          assert data['physical_response_evaluated'] is False
+          assert data['census']['7']['scored_class_count'] == 18
+          assert data['census']['7']['homologous_pairs'] == 532
+          assert data['census']['7']['control_pairs'] == 588
+          PY
+      - name: Fast canonical-result integrity when evaluation exists
+        run: |
+          if [ -f results/dimensional_resonance_response_20260912.json ]; then
+            python scripts/check_result_integrity.py results/dimensional_resonance_response_20260912.json
+          else
+            echo 'Pre-evaluation implementation stage: canonical response result absent.'
+          fi

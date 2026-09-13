@@ -117,16 +117,27 @@ code, and repository maintenance, including changes to this guidance.
 - This is an agent workflow, not a claim that branch protection enforces model
   identity. Keep applicable CI enabled for sub-PRs as well as gathering PRs;
   a missing check is not a passing check. Pages publication stays on `main`.
-- Result replays run in two tiers (2026-09-11). Every canonical result JSON
-  records the SHA-256 of its verifier and inputs; every pull request touching
-  an audit's files runs `scripts/check_result_integrity.py`, which recomputes
-  those hashes in seconds. That tier establishes provenance coherence only
-  (a verifier or input edited without regeneration); it does not inspect
-  result content. The full byte-for-byte replay is the content and
-  determinism check: it runs on any pull request that modifies the canonical
-  result file itself, on pushes to `main`, weekly, and on manual dispatch.
-  A new result file must be registered in the integrity script and its
-  workflow must carry both tiers.
+- Result verification has two tiers (updated with Myk on 2026-09-12 to bound
+  GitHub Actions cost). Every canonical result JSON records the SHA-256 of its
+  verifier and inputs; every pull request touching an audit's files runs
+  `scripts/check_result_integrity.py`, which recomputes those hashes in seconds.
+  That fast tier establishes provenance coherence only (a verifier or input
+  edited without regeneration); it does not inspect result content.
+- **Do not put long research evaluations or replays in automatic CI.** A job
+  expected or observed to take more than about 10 minutes must not run from
+  `pull_request`, `push`, or `schedule` triggers. Generate the canonical result
+  once outside GitHub Actions from the pinned, reviewed implementation, record
+  the execution provenance, and verify the committed bytes with the fast
+  integrity tier. Perform any required independent byte-for-byte replay outside
+  Actions as part of author/reviewer verification. A manual `workflow_dispatch`
+  for an expensive replay may remain only as an exceptional escape hatch and
+  must not be used without Myk's explicit authorization to spend Actions time.
+  Short replays that remain comfortably inside the 10-minute CI budget may stay
+  automatic. In-flight expensive Actions runs that predate this rule may finish,
+  but do not automatically rerun them. Convert existing expensive workflows
+  before their next execution. A new result file must still be registered in
+  the integrity script and its workflow/verification record must identify its
+  fast automatic tier and, when applicable, its off-CI full-replay procedure.
 
 ## Ongoing research and the public site
 
@@ -581,7 +592,120 @@ workflow; research source and result changes now also trigger that workflow.
    (intersection of D²(n) minus FS²) is nonempty for every observation
    but parity (20, 4, 4, 12, 30, 0, 6, 12 rules), including 4, 32, 90,
    150, which had no depth-one gap. All 54 earlier witnesses realized
-   as explicit eventually periodic pairs. Gate-2 pending on PR #132.
+   as explicit eventually periodic pairs. Accepted after Codex's gate-2
+   sign-off at `8aa35fd`, merged in PR #132 as `3636598`.
+   Sixteenth unit (`scripts/verify_full_shift_depth_three.py`, gate-1
+   reviewed after one correction round): full-shift depth at most three
+   under 232, 200, 22, 4 (conjugates computed; 32 by the deduction
+   F_32 = F_4∘¬, F_223 = ¬∘F_32) by sparse reachability on 65,536-vertex
+   pair graphs (eight-cell pair vertices, nine-cell edges, eleven-cell
+   violating blocks), 121 min. FS³ sizes 198, 181, 234, 106. All three
+   bets held: of the 24 deep rules only 4 (under 22: 143, 166, 180, 213)
+   have full-shift depth exactly three and 20 have depth ≥ 4; the
+   rings-3-to-14 depth-three gap is nonempty under all four (8, 11, 8,
+   10 rules); the full-shift class "exactly three" is nonempty under all
+   four (20, 9, 48, 9). The ladder of full-shift class against ring class
+   is diagonal only at closure. Accepted after Codex's gate-2 sign-off at
+   `f33b779`, re-confirmed at the reconciliation head `d4bf27b`, merged in
+   PR #144 as `93dcec8`.
+   Seventeenth unit (`scripts/verify_full_shift_depth_three_linear.py`,
+   gate-1 reviewed by an independent collaborating agent, OpenAI GPT-6
+   Astra Pro): full-shift depth at most three under the deferred linear
+   observations 90 and 150 (conjugate 165 computed directly; 150
+   self-dual), same sparse 65,536-vertex machinery. `FS³` has 250 rules
+   under 90 and 246 under 150 (`FS²` was 236 and 222). Twelve rules are
+   excluded by pen from the seventh unit's ring depths as controls; of
+   the remaining 18 under 90, 14 have full-shift depth exactly three and
+   4 (41, 97, 107, 121) at least four; all 24 remaining under 150 have
+   depth exactly three. The rings-3-to-14 depth-three gap is nonempty
+   under 90 (those same four rules) but **empty under 150** — the first
+   time in the program a gap closes rather than widens between depth
+   levels, so whether periodic configurations decide a level is a
+   property of the pair (observation, level), not of depth alone. The
+   ladder is diagonal at closure and depth one under both, off-diagonal
+   only at the fifteenth unit's depth-two gap rules, and entirely
+   diagonal at the top under 150. Accepted after gate-2 sign-off by
+   OpenAI GPT-5.6 Sol at `a1d422c`, conditional on a CI-cost correction
+   (reconciliation had accidentally re-triggered the unit's long replay;
+   sub-PR #203 bounded it to a manual-authorization escape hatch),
+   applicability re-confirmed at `557c3da`; merged in PR #174 as
+   `06fa771`.
+   Eighteenth unit (`scripts/verify_depth_two_certificate.py`, gate-1
+   reviewed): a ring certificate at depth two, certified at every ring
+   `n ≥ 4`, reusing the fifteenth unit's 4096-vertex pair graph `G²_{ψ,r}`
+   but with boolean powers computed sparsely (out-degree ≤ 4, packed
+   64-bit rows) instead of the dense 4096×4096 product the fifteenth unit
+   judged out of budget. Refinement depth at most two is decided for all
+   256 rules under all eight observations, with nothing censored (cap
+   1024 never approached; largest preperiod `k = 40`, rule 123 under 22).
+   Three of five predictions held: P1 (criterion exact against the
+   fifteenth unit's recorded sets; every `FS¹` rule has no closed
+   violating walk; divisibility; dense cross-check), P2 (certificates
+   reported), P5 (complement/reflection covariance exact for all 2,048
+   pairs). P3's period bets partially failed: `P_4 = P_32 = 2`, not the
+   bet 1 (one oscillating rule each, 50 and its conjugate 179); `P_22 =
+   12`, not the bet 3 (3 divides the true period); the kernel controls
+   and `P_90 = 4`, `P_150 = 6` held. **P4, the main bet, failed under
+   observation 22 alone**: twelve rules (104–111, 120, 121, 124, 125)
+   leave `D²_22(n)` first at ring 24, not within rings 3–14, so the
+   all-ring depth-two gap under 22 is 18 rules, not the predicted 30 (the
+   gap is still nonempty for exactly the seven observations other than
+   parity: 20, 4, 4, 12, 18, 6, 12). Post hoc, not predicted: `D²_ψ^∞`
+   equals exactly the set of rules with no closed violating walk, under
+   these eight observations — an observation fenced as such, not a
+   proved general theorem. Determinism confirmed by a full second
+   off-Actions execution, byte-identical. Accepted after gate-2 sign-off
+   by OpenAI GPT-5.6 Sol at `ba7596e`, conditional on two process-only
+   fixes (B1: removing a `PEND` allowance in `check_result_integrity.py`
+   that would have let a future deletion of this now-evaluated canonical
+   result evade the fast integrity tier; B2: updating the gathering PR's
+   own body, which had gone stale) both resolved on that same head;
+   merged in PR #206 as `bec0ef3`.
+   Nineteenth unit (`scripts/verify_closed_violation_depth_three.py`,
+   gate-1 reviewed after two correction rounds): the eighteenth unit's
+   post hoc identity `D²_ψ^∞ = {r : V²_cl = ∅}` is a theorem at every
+   refinement depth, not a coincidence of eight graphs — **Lemma A**: a
+   closed violating walk whose endpoints share a strong component
+   supplies a return walk of length `m ≥ 1` (the violating walk itself
+   when the ends coincide), so the ring criterion fails at `n = m + 3`;
+   hence `D^h_ψ^∞ = {r : V^h_cl = ∅}` at every depth `h`. Applied to the
+   sixteenth unit's 65,536-vertex depth-three pair graph with **zero
+   matrix powers at any depth**, this decides the all-ring depth-three
+   set, first failing ring and eventual period the eighteenth unit had
+   declared out of reach on cost grounds. All-ring depth-three set sizes
+   206, 116, 116, 187, 242, 254, 246 and gaps against the full shift 8,
+   10, 10, 6, 8, 4, 0 rules under 232, 4, 32, 200, 22, 90, 150 (gap
+   nonempty under exactly six, as bet). The rings-3-to-14 window
+   overstates the all-ring gap under **200** alone (five rules — 41, 97,
+   169, 225, 233 — leave at ring 16), not under 22 as at depth two, whose
+   window is exact at depth three; the eventual periods `P³_ψ = 1, 2, 2,
+   1, 1, 2, 6` do not carry up uniformly from the certified depth-two 1,
+   2, 2, 1, 12, 4, 6 (collapsing under 22, halving under 90, persisting
+   at 2 under 4/32 on an entirely different rule population) — **ring
+   windows and eventual periods are properties of the pair (observation,
+   depth level), not of depth alone**, extending the seventeenth unit's
+   qualitative finding to these quantitative invariants. Corollary B
+   (no eventually oscillating rule is constant-diagonal-anchored) held
+   with zero exceptions; the general diagonal-anchoring bet held under 22
+   and failed under 232 and 200, where a post hoc, one-observation
+   association (not a proven cause) connects the late/non-anchored rules
+   under 200 to component count. No ring certificate at depth three: the
+   onset beyond which the eventual pattern holds is undetermined. One
+   bounded artifact-completeness deviation: the canonical JSON omits
+   observation 102 from the serialized per-observation dictionaries
+   (theorem-trivial, `FS³_102` is all 256 rules, no verdict change).
+   Determinism confirmed by full rerun across two independent
+   environments (not a same-machine self-rerun): Myk's canonical local
+   run and an independent execution in this session, from the identical
+   pinned implementation head, byte-identical (SHA-256
+   `e2c961a9...d85a6e`), the session's run taking 70.9 minutes. Accepted
+   after Codex's (OpenAI GPT-5.6 Sol) gate-2 sign-off at `a12b95c`,
+   conditional on five records/scope corrections (G2-B1–B5: an
+   all-ring-vs-per-ring wording fix, softened post-hoc causal language,
+   corrected run-provenance attribution, completed gathering-PR
+   metadata, and the Program-table row plus the observation-102
+   deviation record) resolved records-only in sub-PR #226 with no
+   scientific or verifier change; merged in PR #218 as `33ddae7`.
 
 ## Checkpoint logs (read before continuing any workstream)
 

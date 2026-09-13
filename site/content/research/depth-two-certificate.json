@@ -1,0 +1,23 @@
+[
+  {
+    "slug": "depth-two-certificate",
+    "label": "Depth-two ring certificate",
+    "title": "Depth two is certified at every ring, no pair is censored, and under 22 twelve rules leave at ring 24",
+    "date": "2026-09-12",
+    "updated": "2026-09-12",
+    "kind": "Exact all-ring certificate of refinement depth at most two by sparse boolean powers",
+    "evidence": "exact",
+    "topic": "Algebra and closure",
+    "summary": "Sparse packed boolean powers of the fifteenth unit's 4096-vertex pair graph decide refinement depth at most two at every ring size for all 256 rules under eight observations, with no pair censored and no hash collision. The eventual periods are 1, 2, 2, 1, 12, 1, 4, 6 with onsets 14, 13, 13, 13, 31, 4, 9, 7. The all-ring depth-two gap equals the rings-3-to-14 gap under seven observations but not under 22, where twelve rules leave at ring 24, so the gap is 18 rules rather than 30.",
+    "takeaway": "A census taken over an arbitrary finite range of ring sizes should be labelled with the certified onset and period of what it measures: under one of eight observations the rings-3-to-14 window overstated the depth-two gap by 40%.",
+    "source": "docs/research/2026-09-12-depth-two-certificate.md",
+    "promotion": {
+      "stage": "research"
+    },
+    "related": [
+      "full-shift-depth-two",
+      "depth-one-certificate",
+      "ring-closure-certificate"
+    ]
+  }
+]

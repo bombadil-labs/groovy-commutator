@@ -1,0 +1,23 @@
+[
+  {
+    "slug": "full-shift-depth-three",
+    "label": "Full-shift depth three",
+    "title": "Twenty of the twenty-four deep rules have full-shift depth at least four; the full-shift depth ladder is separated from the ring ladder at every level",
+    "date": "2026-09-12",
+    "updated": "2026-09-12",
+    "kind": "Exact full-shift certificate of refinement depth at most three under four observations, with the full-shift versus rings-3-to-14 depth ladder",
+    "evidence": "exact",
+    "topic": "Algebra and closure",
+    "summary": "Full-shift depth at most three is decided for every rule under 232, 200, 22 and 4 by reachability in a 65,536-vertex pair graph per rule. All three bets held: of the 24 rules with depth at most one on every ring but at least three on the full shift, 20 have full-shift depth at least four; the rings-3-to-14 depth-three gap is nonempty under each observation; and the class of full-shift depth exactly three is nonempty under each. Every rule's full-shift depth class is tabulated against its ring class.",
+    "takeaway": "Closure is the only level at which periodic configurations and the full shift agree; at every depth level some rules sit strictly higher on the line, and the discrepancy widens rather than closes.",
+    "source": "docs/research/2026-09-12-full-shift-depth-three.md",
+    "promotion": {
+      "stage": "research"
+    },
+    "related": [
+      "full-shift-depth-two",
+      "depth-one-certificate",
+      "ring-closure-certificate"
+    ]
+  }
+]
