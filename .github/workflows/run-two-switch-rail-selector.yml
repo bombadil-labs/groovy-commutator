@@ -1,0 +1,206 @@
+name: One-shot two-switch rail-selector census
+
+on:
+  push:
+    branches:
+      - 'research/relational-source-recoder-20260909'
+    paths:
+      - '.github/workflows/run-two-switch-rail-selector.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  controls:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+      - name: Install research runtime
+        run: python -m pip install -e . pandas python-sat
+      - name: Compile exact SAT instrument
+        run: python -m py_compile scripts/experiment_two_switch_rail_selector_sat.py
+      - name: Run frozen controls
+        run: >-
+          python scripts/experiment_two_switch_rail_selector_sat.py
+          --controls-only
+          --output artifacts/controls.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: two-switch-controls
+          path: artifacts/controls.json
+          if-no-files-found: error
+          retention-days: 90
+
+  primary-seeds:
+    needs: controls
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    strategy:
+      fail-fast: false
+      matrix:
+        seed_index: [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+      - name: Install research runtime
+        run: python -m pip install -e . pandas python-sat
+      - name: Run frozen seed language
+        env:
+          SEED_INDEX: ${{ matrix.seed_index }}
+        run: |
+          mkdir -p artifacts
+          python scripts/experiment_two_switch_rail_selector_sat.py \
+            --seed-index "$SEED_INDEX" \
+            --output "artifacts/two-switch-seed-${SEED_INDEX}.json"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: two-switch-seed-${{ matrix.seed_index }}
+          path: artifacts/*.json
+          if-no-files-found: error
+          retention-days: 90
+
+  aggregate:
+    needs: [controls, primary-seeds]
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/download-artifact@v4
+        with:
+          name: two-switch-controls
+          path: artifacts/controls
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: two-switch-seed-*
+          path: artifacts/seeds
+          merge-multiple: true
+      - name: Build durable full audit and compact reports
+        run: |
+          python - <<'PY'
+          import hashlib, json
+          from collections import Counter
+          from pathlib import Path
+
+          controls = json.loads(Path('artifacts/controls/controls.json').read_text())
+          assert controls['controls']['ok'] is True
+          assert controls['controls']['rule204']['status'] == 'pass'
+          assert controls['controls']['rule35']['all_fail'] is True
+          assert controls['controls']['rule35']['fresh_candidates_t_le_3'] == 62
+          seeds = [json.loads(p.read_text()) for p in sorted(Path('artifacts/seeds').glob('*.json'))]
+          assert len(seeds) == 22
+          rows = [x['result'] for x in seeds]
+          rows.sort(key=lambda r: r['seed_index'])
+          assert [r['seed_index'] for r in rows] == list(range(22))
+          assert sum(len(r['incoming_target_ids']) for r in rows) == 170
+          assert {x['family_size'] for x in seeds} == {2788}
+          hashes = {json.dumps(x['source_hashes'], sort_keys=True) for x in seeds}
+          assert len(hashes) == 1
+          assert json.loads(next(iter(hashes))) == controls['source_hashes']
+
+          status = Counter(r['status'] for r in rows)
+          certified = [r for r in rows if r['status'] == 'two-switch-certified']
+          negative = [r for r in rows if r['status'] == 'no-two-switch-through-6']
+          censored = [r for r in rows if r['status'] == 'censored']
+          resolved_q = sum(len(r['incoming_target_ids']) for r in certified)
+          negative_q = sum(len(r['incoming_target_ids']) for r in negative)
+          censored_q = sum(len(r['incoming_target_ids']) for r in censored)
+          assert resolved_q + negative_q + censored_q == 170
+          outcome = 'positive-needs-z3-audit' if certified else ('inconclusive-due-to-censoring' if censored else 'complete-exact-negative')
+          first = min(certified, key=lambda r: r['seed_index']) if certified else None
+          first_cert = None if first is None else {
+              'seed_index': first['seed_index'], 'rule': first['rule'], 'pair': first['pair'],
+              **{k: first['first_certificate'][k] for k in ('t','k','j','delta','u','v','orientation')},
+          }
+          max_vars = max(r['max_cnf_variables'] for r in rows)
+          max_clauses = max(r['max_cnf_clauses'] for r in rows)
+          full = {
+              'ok': True,
+              'experiment': 'two-switch-rail-selector',
+              'working_identity': 'two-switch-rail-selector',
+              'public_note_number': None,
+              'solver': 'Minisat22 via python-sat',
+              'family_candidates_per_seed': 2788,
+              'seed_languages': 22,
+              'target_questions': 170,
+              'seed_status_counts': dict(sorted(status.items())),
+              'certified_seed_languages': len(certified),
+              'exact_negative_seed_languages': len(negative),
+              'censored_seed_languages': len(censored),
+              'exact_permanence_resolutions': resolved_q,
+              'negative_target_questions': negative_q,
+              'censored_target_questions': censored_q,
+              'primary_outcome': outcome,
+              'first_canonical_certificate': first_cert,
+              'maximum_cnf_variables': max_vars,
+              'maximum_cnf_clauses': max_clauses,
+              'resource_limits': {'seed_wall_seconds': 1200, 'tmax': 6, 'max_cnf_variables': 1314, 'max_cnf_clauses': 9943},
+              'controls': controls['controls'],
+              'source_hashes': controls['source_hashes'],
+              'seed_results': rows,
+          }
+          out_full = Path('results/two_switch_rail_selector_20260910.json')
+          out_full.write_text(json.dumps(full, separators=(',',':')) + '\n')
+          raw = out_full.read_bytes()
+          summary = {k: full[k] for k in (
+              'ok','experiment','working_identity','public_note_number','solver','family_candidates_per_seed',
+              'seed_languages','target_questions','seed_status_counts','certified_seed_languages',
+              'exact_negative_seed_languages','censored_seed_languages','exact_permanence_resolutions',
+              'negative_target_questions','censored_target_questions','primary_outcome',
+              'first_canonical_certificate','maximum_cnf_variables','maximum_cnf_clauses','resource_limits','controls','source_hashes')}
+          summary['full_result'] = str(out_full)
+          summary['full_result_sha256'] = hashlib.sha256(raw).hexdigest()
+          Path('results/two_switch_rail_selector_20260910_summary.json').write_text(json.dumps(summary, indent=2) + '\n')
+          md = f'''# Two-switch rail-selector census — compact report
+
+          ## Primary outcome
+
+          - Outcome: **{outcome}**
+          - Fresh selector family: **2,788 LRL/RLR island candidates per seed** through `t<=6`
+          - Seed languages: **22**
+          - Target questions: **170**
+          - Seed status counts: `{dict(sorted(status.items()))}`
+          - Exact permanence resolutions: **{resolved_q}**
+          - Exact-negative target questions: **{negative_q}**
+          - Censored target questions: **{censored_q}**
+          - First canonical certificate: `{first_cert}`
+
+          ## Symbolic cost
+
+          - Maximum CNF variables: **{max_vars}** / 1,314 structural maximum
+          - Maximum CNF clauses: **{max_clauses}** / 9,943 structural maximum
+          - Per-seed wall: **1,200 seconds**
+
+          ## Controls
+
+          - Rule 204 two-switch positive control: **pass**
+          - Rule 35 fresh two-switch candidates through t=3: **62/62 fail with scalar replay**
+
+          ## Provenance
+
+          - Full durable audit: `{out_full}`
+          - Full result SHA-256: `{summary['full_result_sha256']}`
+          - Protocol: `docs/research/protocols/two-switch-rail-selector-20260910.md`
+          '''
+          Path('docs/research/two-switch-rail-selector-20260910-summary.md').write_text('\n'.join(line[10:] if line.startswith('          ') else line for line in md.splitlines()) + '\n')
+          print(json.dumps(summary, indent=2))
+          PY
+      - name: Commit durable result and retire one-shot runner
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git rm .github/workflows/run-two-switch-rail-selector.yml
+          git add results/two_switch_rail_selector_20260910.json \
+                  results/two_switch_rail_selector_20260910_summary.json \
+                  docs/research/two-switch-rail-selector-20260910-summary.md
+          git commit -m 'research: record two-switch rail-selector census'
+          git push origin HEAD:${GITHUB_REF_NAME}
