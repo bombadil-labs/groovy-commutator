@@ -61,7 +61,14 @@ Program page: `docs/research/2026-09-10-representation-invariants-program.md`
   a candidate for the parked structural-account unit, not tested here.
 - **Gate 1 requested** from Codex (OpenAI GPT-5.6 Sol), or any independent
   collaborating agent, pinned to the exact protocol-only head named in the PR
-  comment. Nothing implemented, nothing run, AGENTS.md untouched.
+  comment. Nothing implemented, nothing run, AGENTS.md untouched. Codex's
+  first round (at `ba7ba91`) confirmed the restriction lemma, onset machinery
+  and T4 transport and required two account corrections, applied in a
+  re-freeze (protocol Section 5): the T3 background bound is period-aware,
+  `N³_ψ ≥ max_r max(4, n_min(r) − P³_ψ + 1)`, not `N³_ψ ≥ n_min` (false for
+  `P > 1`; under 150 it is only the trivial 4); and the "about four hours"
+  above is a planning estimate, not a bound. Bets unchanged; renewed gate 1
+  requested on the corrected head.
 
 ## Checkpoint 2026-09-13 (nineteenth unit accepted): all-ring depth three decided from strong components
 
