@@ -1,5 +1,5 @@
 {
-  "batches": 6,
+  "batches": 9,
   "certificate": null,
   "current_candidate": {
     "delta": 0,
@@ -401,24 +401,24 @@
   "stats": {
     "direct_leaves": 0,
     "last_solver_error": {},
-    "partition_splits": 338,
+    "partition_splits": 397,
     "solver_decisions": {
-      "cadical195": 551,
+      "cadical195": 609,
       "glucose4": 7,
-      "minisat22": 22
+      "minisat22": 23
     },
     "solver_errors": {},
     "solver_seconds": {
-      "cadical195": 5435.970147076016,
-      "glucose4": 3659.795625459,
-      "maplechrono": 3603.8627768389965,
-      "minisat22": 3567.7173593850034
+      "cadical195": 6369.865625306017,
+      "glucose4": 4260.681133907999,
+      "maplechrono": 4204.668548321995,
+      "minisat22": 4167.983396958008
     },
     "solver_timeouts": {
-      "cadical195": 367,
-      "glucose4": 360,
-      "maplechrono": 360,
-      "minisat22": 338
+      "cadical195": 427,
+      "glucose4": 420,
+      "maplechrono": 420,
+      "minisat22": 397
     },
     "solver_unavailable": {}
   },
@@ -849,19 +849,24 @@
         35,
         -36,
         -40,
-        41
+        41,
+        42,
+        31,
+        32,
+        33,
+        43
       ],
       [
         34,
         35,
         -36,
         -40,
-        -41,
+        41,
         42,
         31,
         32,
         33,
-        43,
+        -43,
         44
       ],
       [
@@ -869,28 +874,30 @@
         35,
         -36,
         -40,
-        -41,
+        41,
         42,
         31,
         32,
         33,
-        43,
+        -43,
         -44,
-        45
+        45,
+        28
       ],
       [
         34,
         35,
         -36,
         -40,
-        -41,
+        41,
         42,
         31,
         32,
         33,
-        43,
+        -43,
         -44,
-        -45
+        45,
+        -28
       ]
     ]
   },
