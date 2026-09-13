@@ -11,5 +11,15 @@ dependencies = [
     "numpy",
 ]
 
+[project.optional-dependencies]
+# SAT-backed research scripts (bounded source-recoder synthesis and its exact
+# recovery, the phase-splice SAT recovery). These import `pysat` and need the
+# cadical195 / glucose4 / maplechrono / minisat22 backends the frozen recovery
+# protocol names as its solver portfolio. Declared here because the original
+# 2026-09-10 work never declared it.
+research-sat = [
+    "python-sat",
+]
+
 [tool.setuptools.packages.find]
 where = ["src"]
