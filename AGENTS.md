@@ -661,6 +661,51 @@ workflow; research source and result changes now also trigger that workflow.
    result evade the fast integrity tier; B2: updating the gathering PR's
    own body, which had gone stale) both resolved on that same head;
    merged in PR #206 as `bec0ef3`.
+   Nineteenth unit (`scripts/verify_closed_violation_depth_three.py`,
+   gate-1 reviewed after two correction rounds): the eighteenth unit's
+   post hoc identity `D²_ψ^∞ = {r : V²_cl = ∅}` is a theorem at every
+   refinement depth, not a coincidence of eight graphs — **Lemma A**: a
+   closed violating walk whose endpoints share a strong component
+   supplies a return walk of length `m ≥ 1` (the violating walk itself
+   when the ends coincide), so the ring criterion fails at `n = m + 3`;
+   hence `D^h_ψ^∞ = {r : V^h_cl = ∅}` at every depth `h`. Applied to the
+   sixteenth unit's 65,536-vertex depth-three pair graph with **zero
+   matrix powers at any depth**, this decides the all-ring depth-three
+   set, first failing ring and eventual period the eighteenth unit had
+   declared out of reach on cost grounds. All-ring depth-three set sizes
+   206, 116, 116, 187, 242, 254, 246 and gaps against the full shift 8,
+   10, 10, 6, 8, 4, 0 rules under 232, 4, 32, 200, 22, 90, 150 (gap
+   nonempty under exactly six, as bet). The rings-3-to-14 window
+   overstates the all-ring gap under **200** alone (five rules — 41, 97,
+   169, 225, 233 — leave at ring 16), not under 22 as at depth two, whose
+   window is exact at depth three; the eventual periods `P³_ψ = 1, 2, 2,
+   1, 1, 2, 6` do not carry up uniformly from the certified depth-two 1,
+   2, 2, 1, 12, 4, 6 (collapsing under 22, halving under 90, persisting
+   at 2 under 4/32 on an entirely different rule population) — **ring
+   windows and eventual periods are properties of the pair (observation,
+   depth level), not of depth alone**, extending the seventeenth unit's
+   qualitative finding to these quantitative invariants. Corollary B
+   (no eventually oscillating rule is constant-diagonal-anchored) held
+   with zero exceptions; the general diagonal-anchoring bet held under 22
+   and failed under 232 and 200, where a post hoc, one-observation
+   association (not a proven cause) connects the late/non-anchored rules
+   under 200 to component count. No ring certificate at depth three: the
+   onset beyond which the eventual pattern holds is undetermined. One
+   bounded artifact-completeness deviation: the canonical JSON omits
+   observation 102 from the serialized per-observation dictionaries
+   (theorem-trivial, `FS³_102` is all 256 rules, no verdict change).
+   Determinism confirmed by full rerun across two independent
+   environments (not a same-machine self-rerun): Myk's canonical local
+   run and an independent execution in this session, from the identical
+   pinned implementation head, byte-identical (SHA-256
+   `e2c961a9...d85a6e`), the session's run taking 70.9 minutes. Accepted
+   after Codex's (OpenAI GPT-5.6 Sol) gate-2 sign-off at `a12b95c`,
+   conditional on five records/scope corrections (G2-B1–B5: an
+   all-ring-vs-per-ring wording fix, softened post-hoc causal language,
+   corrected run-provenance attribution, completed gathering-PR
+   metadata, and the Program-table row plus the observation-102
+   deviation record) resolved records-only in sub-PR #226 with no
+   scientific or verifier change; merged in PR #218 as `33ddae7`.
 
 ## Checkpoint logs (read before continuing any workstream)
 
