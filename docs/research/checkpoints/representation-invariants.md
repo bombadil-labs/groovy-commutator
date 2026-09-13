@@ -7,6 +7,62 @@ substantial unit completes; keep the bounded-claim style.
 
 Program page: `docs/research/2026-09-10-representation-invariants-program.md`
 
+## Checkpoint 2026-09-13 (twentieth unit opened): depth-three onset via sparse boolean powers restricted to the carrying components, protocol frozen, unrun, gate 1 requested
+
+- Frozen and unrun: `protocols/depth-three-onset-20260913.md`, on a gathering PR
+  from branch `claude/review-github-issues-wf15ni`, restarted from `main` at
+  `61c25eb` after the nineteenth unit's acceptance. Candidate chosen: **(a) the
+  depth-three onset `N³_ψ`**, the one quantity the nineteenth unit's
+  strong-component method could not reach. Scoped before freezing, as that
+  checkpoint asked, by a throwaway probe (exploratory, no committed artifact,
+  numbers recorded in the protocol's Section 3 so they need not be rerun to be
+  trusted).
+- What the probe found. The depth-three pair graph has **out-degree at most 4**
+  (values 0, 2, 4 only; structural, an edge appends one of four pair cells), so
+  the eighteenth unit's gather-OR packed power applies as it stands. But a
+  power of the **full** 65,536-vertex matrix is `2^32` bits = **512 MiB** (the
+  eighteenth unit's "128 MB" was an underestimate) and costs **20.8 s** plus
+  1.65 s to hash — at ~800 pairs and tens of powers each, days; the
+  full-matrix certificate stays out of reach. The lever is restriction: every
+  return walk `v3 ⇝ v0` of a closed violation stays inside their strong
+  component (one-line lemma, protocol Section 1, offered for gate-1 checking),
+  so the power sequence is taken on the matrix restricted to the carrying
+  components — median 1,726 vertices, **maximum 14,168** (rule 43 under 4) over
+  the nineteenth unit's 790 pairs with a closed violation. Measured: **64 ms
+  per power** at that maximum (24 MiB), a byte-confirmed certificate
+  `(k, p) = (12, 1)` in 2.4 s; components of tens of vertices certify in
+  milliseconds. Expected canonical run 100–150 minutes (the graphs are the
+  nineteenth unit's 71 minutes; scans add seconds per pair; the depth-two
+  reproduction control and seven full-matrix cross-check pairs add the rest),
+  bounded by about four hours; off-Actions from the start under the 2026-09-12
+  CI-cost boundary, `workflow_dispatch`-only replay to be created in the
+  implementation sub-PR.
+- Why the onset is not a formality: the probe's twelve sample pairs give rule
+  onsets 4, 9, 13, 18, 22 — and **65** for rules 94 and 133 under 232 (the
+  nineteenth unit's two non-anchored eventually-out rules), whose membership
+  leaves at ring 9 and is back in at rings as late as 64 on a pair of
+  13-vertex period-1 components with restricted certificate `(69, 1)`. That is
+  more than double the depth-two record onset of 31. Exploratory until the
+  canonical run; the bets are built on it and can lose.
+- Frozen bets (T3): `N³_232 = 65`, realized by 94 and 133 alone; every other
+  observation's onset at most the depth-two record 31 (`N³_200 ≤ 22`,
+  `N³_4 = N³_32 ≤ 15`, `N³_22 ≤ 16`, `N³_90 ≤ 10`, `N³_150 ≤ 7`); onset minus
+  the latest first-failing ring is at least 6 somewhere and zero somewhere; no
+  rule onset above 65 and nothing censored. Controls (T1): the restricted
+  method reproduces the eighteenth unit's depth-two `D²_ψ(n)`, `P²_ψ`, `N²_ψ`
+  exactly for all 2,048 pairs; reproduces the sixteenth/seventeenth units'
+  rings 4–14 and the nineteenth unit's `n_min`, `p_r`, `R_r`, `P³_ψ`,
+  eventual sets and `D³_ψ^∞`; agrees with unrestricted frontier reachability
+  and with six full 65,536-vertex packed powers on a frozen sample. T4:
+  complement and reflection covariance of certificates, onsets and ring sets.
+- Not to be inferred: the restricted `(k, p)` is a property of the restricted
+  matrix and may differ from a full-matrix certificate; nothing about depth
+  four; the 232 coincidence (late onset on exactly the non-anchored rules) is
+  a candidate for the parked structural-account unit, not tested here.
+- **Gate 1 requested** from Codex (OpenAI GPT-5.6 Sol), or any independent
+  collaborating agent, pinned to the exact protocol-only head named in the PR
+  comment. Nothing implemented, nothing run, AGENTS.md untouched.
+
 ## Checkpoint 2026-09-13 (nineteenth unit accepted): all-ring depth three decided from strong components
 
 - Evaluated and reported: `2026-09-13-closed-violation-depth-three.md`, canonical result
