@@ -12,7 +12,17 @@ modifies the canonical result file, on pushes to main, weekly, and on manual
 dispatch (Codex's review of PR #90 pinned this contract down).
 
 Usage: python scripts/check_result_integrity.py [result.json ...]
-With no arguments every registered result is checked.
+With no arguments every registered result is checked, and a missing result
+fails the sweep the same as naming it explicitly would. (2026-09-12: an
+earlier version of this sweep reported a missing registered result as PEND,
+for a unit's implementation-only commit registering a result before it was
+generated. Codex's Gate-2 review on PR #206 noted that once a unit's
+canonical result exists, keeping that allowance lets a future accidental
+deletion or rename of an accepted result evade this tier silently. Every
+currently registered result exists, so the allowance was removed outright
+rather than narrowed; an implementation-only stage that needs to register a
+result before generating it should register it only once the canonical run
+has actually produced the file.)
 """
 from __future__ import annotations
 import hashlib, json, pathlib, sys
@@ -79,6 +89,17 @@ REGISTRY = {
     'results/full_shift_depth_two_20260911.json': {
         'script': 'scripts/verify_full_shift_depth_two.py',
         'depth_one_certificate_result': 'results/depth_one_certificate_20260911.json'},
+    'results/full_shift_depth_three_20260912.json': {
+        'script': 'scripts/verify_full_shift_depth_three.py',
+        'ring_closure_certificate_result': 'results/ring_closure_certificate_20260911.json',
+        'depth_one_certificate_result': 'results/depth_one_certificate_20260911.json',
+        'full_shift_depth_two_result': 'results/full_shift_depth_two_20260911.json'},
+    'results/full_shift_depth_three_linear_20260912.json': {
+        'script': 'scripts/verify_full_shift_depth_three_linear.py',
+        'ring_closure_certificate_result': 'results/ring_closure_certificate_20260911.json',
+        'depth_one_certificate_result': 'results/depth_one_certificate_20260911.json',
+        'full_shift_depth_two_result': 'results/full_shift_depth_two_20260911.json',
+        'linear_observations_result': 'results/linear_observations_20260911.json'},
     'results/second_lift_completion_20260911.json': {
         'script': 'scripts/verify_second_lift_completion.py',
         'protocol': 'docs/research/protocols/second-lift-completion-comparison-20260910.md'},
@@ -119,6 +140,16 @@ REGISTRY = {
         'predecessor_result': 'results/interface_history_20260911.json',
         'interface_factor_script': 'scripts/verify_interface_factor.py',
         'interface_factor_result': 'results/interface_factor_20260911.json'},
+    'results/interface_history_cross_width_20260912.json': {
+        'script': 'scripts/verify_interface_history_cross_width.py',
+        'protocol': 'docs/research/protocols/interface-history-cross-width-20260912.md',
+        'interface_history_protocol': 'docs/research/protocols/interface-history-20260911.md',
+        'interface_history_script': 'scripts/verify_interface_history.py',
+        'interface_history_result': 'results/interface_history_20260911.json',
+        'interface_history_global_protocol': 'docs/research/protocols/interface-history-global-20260912.md',
+        'interface_history_global_script': 'scripts/verify_interface_history_global.py',
+        'interface_history_global_result': 'results/interface_history_global_20260912.json',
+        'interface_factor_script': 'scripts/verify_interface_factor.py'},
     'results/predictive_assembly_support_20260912.json': {
         'script': 'scripts/verify_predictive_assembly_support.py',
         'protocol': 'docs/research/protocols/predictive-assembly-support-20260912.md',
@@ -126,12 +157,42 @@ REGISTRY = {
         'predecessor_script': 'scripts/verify_interface_history_global.py',
         'predecessor_result': 'results/interface_history_global_20260912.json'},
 
+    'results/dimensional_history_scaling_control_20260912.json': {
+        'script': 'scripts/verify_dimensional_history_scaling_control.py',
+        'parent_protocol': 'docs/research/protocols/dimensional-history-scaling-20260912.md',
+        'gate1_refreeze': 'docs/research/protocols/dimensional-history-scaling-gate1-refreeze-20260912.md'},
+    'results/depth_two_certificate_20260912.json': {
+        'script': 'scripts/verify_depth_two_certificate.py',
+        'full_shift_depth_two_script': 'scripts/verify_full_shift_depth_two.py',
+        'full_shift_depth_two_result': 'results/full_shift_depth_two_20260911.json',
+        'depth_one_certificate_result': 'results/depth_one_certificate_20260911.json'},
+
+    'results/closed_violation_depth_three_20260913.json': {
+        'script': 'scripts/verify_closed_violation_depth_three.py',
+        'full_shift_depth_three_script': 'scripts/verify_full_shift_depth_three.py',
+        'depth_one_certificate_script': 'scripts/verify_depth_one_certificate.py',
+        'depth_one_certificate_result': 'results/depth_one_certificate_20260911.json',
+        'depth_two_certificate_result': 'results/depth_two_certificate_20260912.json',
+        'full_shift_depth_two_result': 'results/full_shift_depth_two_20260911.json',
+        'full_shift_depth_three_result': 'results/full_shift_depth_three_20260912.json',
+        'full_shift_depth_three_linear_result': 'results/full_shift_depth_three_linear_20260912.json'},
+
+    'results/dimensional_resonance_response_20260912.json': {
+        'script': 'scripts/verify_dimensional_resonance_response.py',
+        'protocol': 'docs/research/protocols/dimensional-resonance-response-20260912.md',
+        'gate1_refreeze': 'docs/research/protocols/dimensional-resonance-response-gate1-refreeze-20260912.md',
+        'gate1_null_clarification': 'docs/research/protocols/dimensional-resonance-response-gate1-null-clarification-20260912.md',
+        'gate1_approval': 'docs/research/protocols/dimensional-resonance-response-gate1-approval-20260912.md',
+        'source_census_script': 'scripts/verify_dimensional_resonance_source_census.py',
+        'physical_predecessor_script': 'scripts/verify_interface_factor.py'},
+
 }
 
 def sha(p: pathlib.Path) -> str: return hashlib.sha256(p.read_bytes()).hexdigest()
 
 def check(result: str) -> list[str]:
     problems = []
+    if not (ROOT / result).exists(): return [f'{result}: result file missing']
     data = json.loads((ROOT / result).read_text())
     recorded = data.get('source_hashes')
     if not isinstance(recorded, dict): return [f'{result}: no source_hashes block']
@@ -153,7 +214,7 @@ def main(argv: list[str]) -> int:
         t = str(pathlib.Path(t)); t = t if t in REGISTRY else str(pathlib.Path(t).relative_to(ROOT)) if pathlib.Path(t).is_absolute() else t
         if t not in REGISTRY: print(f'not registered: {t}'); bad.append(t); continue
         p = check(t)
-        summary = json.loads((ROOT / t).read_text()).get('summary')
+        summary = json.loads((ROOT / t).read_text()).get('summary') if (ROOT / t).exists() else None
         print(('OK  ' if not p else 'FAIL') + f' {t}  summary={json.dumps(summary)}')
         for line in p: print('   ', line)
         bad += p
