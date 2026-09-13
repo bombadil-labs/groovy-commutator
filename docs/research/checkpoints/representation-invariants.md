@@ -34,9 +34,9 @@ Program page: `docs/research/2026-09-10-representation-invariants-program.md`
   milliseconds. Expected canonical run 100–150 minutes (the graphs are the
   nineteenth unit's 71 minutes; scans add seconds per pair; the depth-two
   reproduction control and seven full-matrix cross-check pairs add the rest),
-  bounded by about four hours; off-Actions from the start under the 2026-09-12
-  CI-cost boundary, `workflow_dispatch`-only replay to be created in the
-  implementation sub-PR.
+  with about four hours as an operational planning estimate, not a proven
+  bound; off-Actions from the start under the 2026-09-12 CI-cost boundary,
+  `workflow_dispatch`-only replay to be created in the implementation sub-PR.
 - Why the onset is not a formality: the probe's twelve sample pairs give rule
   onsets 4, 9, 13, 18, 22 — and **65** for rules 94 and 133 under 232 (the
   nineteenth unit's two non-anchored eventually-out rules), whose membership
