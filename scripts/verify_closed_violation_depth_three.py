@@ -280,7 +280,7 @@ def pair_facts(psi, r, h, keep_classes=False):
                       'residue_modulus': 1, 'residues': [], 'component_periods': [],
                       'eventual_period': 1, 'eventually_out': False,
                       'diagonal_anchored': False, 'constant_diagonal_anchored': False,
-                      'seconds': round(time.time() - t0, 2)})
+                      '_seconds': round(time.time() - t0, 2)})
         return facts
     rev = reverse_adjacency(adj)
     m_min, witness = m_min_facts(adj, rev, closed)
@@ -297,7 +297,7 @@ def pair_facts(psi, r, h, keep_classes=False):
                   'constant_diagonal_anchored': any(c['constant_diagonal_anchored'] for c in comps),
                   'witness_component': {'size': cf[comp[witness[0]]]['size'],
                                         'period': cf[comp[witness[0]]]['period']},
-                  'seconds': round(time.time() - t0, 2)})
+                  '_seconds': round(time.time() - t0, 2)})
     facts.update({k: v for k, v in res.items()})
     if keep_classes: facts['_classes'] = {i: cf[i]['classes'] for i in cf}
     return facts
@@ -525,7 +525,7 @@ def probe(psi, h, rules):
               f'n_min={f["n_min"]} p_r={f["eventual_period"]} out={f["eventually_out"]} '
               f'L={f["residue_modulus"]} R={f["residues"][:6]} diag={f["diagonal_anchored"]} '
               f'const_diag={f["constant_diagonal_anchored"]} comps={[(c["size"], c["period"]) for c in f["components"]][:4]} '
-              f'{f["seconds"]}s', flush=True)
+              f'{f["_seconds"]}s', flush=True)
     return 0
 
 # ---------------------------------------------------------------- canonical run
@@ -770,14 +770,14 @@ def main(argv):
               'closed_violation_counts_depth_two': {str(psi): {str(r): F2[psi][r]['closed_violating_walks'] for r in range(256)}
                                                     for psi in OBS},
               'all_ring_depth_three': {str(psi): D3_inf(psi) for psi in sorted(dom)},
-              'elapsed_seconds': round(time.time() - t_start, 1),
               'predictions': P, 'summary': {k: v.get('pass', 'reported') for k, v in P.items()}}
     OUT.write_text(json.dumps(report, indent=1, ensure_ascii=False, default=jsonable) + '\n')
+    elapsed_seconds = round(time.time() - t_start, 1)  # stdout only; not serialized, for determinism
     print(json.dumps(report['summary']))
     print('all-ring gaps', {psi: gap(psi) for psi in DEPTH_THREE_OBS})
     print('periods', q4['bets'])
     print('max n_min', {psi: q3[str(psi)]['max_n_min'] for psi in DEPTH_THREE_OBS})
-    print('written', OUT.relative_to(ROOT), f'in {report["elapsed_seconds"]}s')
+    print('written', OUT.relative_to(ROOT), f'in {elapsed_seconds}s')
     return 0
 
 if __name__ == '__main__': sys.exit(main(sys.argv[1:]))
