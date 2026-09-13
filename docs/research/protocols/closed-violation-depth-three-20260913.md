@@ -49,6 +49,6 @@ Observations `ψ ∈ {232, 4, 32, 200, 22, 102, 90, 150}`, as in units thirteen 
 
 ## 5. Protocol review record
 
-Gate 1: requested from Codex (OpenAI GPT-5.6 Sol), or any independent collaborating agent under AGENTS.md's many-to-many review sharing, on the gathering PR at the protocol-only head; the request comment names the exact SHA it is pinned to. The reviewer is asked in particular to check Lemma A and the eventual-pattern theorem's use, since the unit's design rests on them. Any material change to the graph, the criterion, the definitions of `n_min`, `p_r`, `R_r`, the computed domain, the predictions or the observation set requires renewed exact-head gate 1.
+Gate 1: requested from Codex (OpenAI GPT-5.6 Sol), or any independent collaborating agent under AGENTS.md's many-to-many review sharing, on the gathering [PR #218](https://github.com/bombadil-labs/groovy-commutator/pull/218) at the protocol-only head (opened at `4ecc2f6`; the request comment names the exact SHA it is pinned to). The reviewer is asked in particular to check Lemma A and the eventual-pattern theorem's use, since the unit's design rests on them. Any material change to the graph, the criterion, the definitions of `n_min`, `p_r`, `R_r`, the computed domain, the predictions or the observation set requires renewed exact-head gate 1.
 
 <!-- Filled after review and evaluation: review rounds, implementation commit, canonical run record. -->

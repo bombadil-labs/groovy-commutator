@@ -7,6 +7,47 @@ substantial unit completes; keep the bounded-claim style.
 
 Program page: `docs/research/2026-09-10-representation-invariants-program.md`
 
+## Checkpoint 2026-09-13 (nineteenth unit opened): closed violating walks at depth three, protocol frozen, unrun, gate 1 requested
+
+- Frozen and unrun: `protocols/closed-violation-depth-three-20260913.md`, on
+  gathering [PR #218](https://github.com/bombadil-labs/groovy-commutator/pull/218),
+  branch restarted fresh from `main` at `6831749` after the eighteenth unit's
+  merge. Candidate chosen: **the structural account of the deep rules**, on
+  the object the eighteenth unit left post hoc — `D²_ψ^∞ = {r : V²_{cl} = ∅}`.
+  Why: on inspection that identity is a three-line theorem at every depth (a
+  closed violating walk whose ends share a strong component has a return
+  walk of some length `m ≥ 1`, so ring `m + 3` realizes it; the protocol's
+  Lemma A, offered for gate-1 checking), so it is not a conjecture to test at
+  depth three but a tool: the all-ring depth-three set, each deep rule's first
+  failing ring `n_min`, and the eventual period `P³_ψ` and eventual sets of
+  `D³_ψ(n)` are decided from strong components, cyclic classes and
+  breadth-first search on the sixteenth unit's 65,536-vertex pair graph, with
+  no matrix power — the part of a depth-three ring certificate the eighteenth
+  unit declared out of reach. The onset is explicitly not determined.
+- Why not the others: full-shift depth four stays parked pending Myk's cost
+  decision; the recertification candidate was checked against the three
+  certificate verifiers and is vacuous for them (closure reports every ring
+  from its `(k, p)`; depth one and two scan each pair to its first confirmed
+  repeat under the cap 1024, nothing censored), and the exhaustive depth
+  tables that do stop early cannot be extended cheaply.
+- Frozen bets: the all-ring depth-three gap is nonempty under exactly 232,
+  4, 32, 200, 22, 90; the rings-3-to-14 window overstates it for at least one
+  observation, 22 among them; `P³_232 = P³_200 = P³_4 = P³_32 = 1`, `3 | P³_22`,
+  `P³_90 = 4`, `P³_150 = 6`; every eventually-out rule under 232, 200, 22 has
+  a diagonal-anchored closed violation. Controls: Corollary A and the
+  first-failing-ring and eventual-period accounts reproduce the fourteenth
+  and eighteenth units' recorded data exactly; kernel facts; complement and
+  reflection correspondence, with `D³_32^∞` computed directly against the
+  transport of `D³_4^∞`.
+- Cost: about 1,000 depth-three pairs plus all 2,048 pairs at depths one and
+  two, expected 60–100 minutes, bounded by about three hours; off-Actions from
+  the start under the 2026-09-12 CI-cost boundary, with a
+  `workflow_dispatch`-only replay to be created in the implementation sub-PR.
+  Implementation and evaluation will route through separate sub-PRs.
+- **Gate 1 requested** from Codex (OpenAI GPT-5.6 Sol), or any independent
+  collaborating agent, pinned to the exact protocol-only head named in the PR
+  comment. Nothing implemented, nothing run, AGENTS.md untouched.
+
 ## Checkpoint 2026-09-12 (eighteenth unit accepted): depth-two ring certificate merged
 
 - Accepted after gate-2 sign-off by OpenAI GPT-5.6 Sol at evaluated head
