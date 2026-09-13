@@ -9,14 +9,15 @@ name: Closed-violation depth-three certificate
 # and the verifier's sub-two-minute --self-test (measured at about 3 seconds),
 # which writes nothing.
 #
-# This workflow lands in the implementation-only sub-PR, before any canonical
-# result exists. Following the convention scripts/check_result_integrity.py's
-# docstring states after the eighteenth unit's Gate-2 B1 correction — a result
-# is registered only once the canonical run has actually produced the file — the
-# fast integrity tier is NOT wired in here. The sub-PR that commits
-# results/closed_violation_depth_three_20260913.json registers it in that script
-# and adds the integrity step to both jobs below, so a registered result can
-# never go missing silently.
+# This workflow first landed in the implementation-only sub-PR, before any
+# canonical result existed, so the fast integrity tier was deliberately left
+# out: scripts/check_result_integrity.py's docstring, after the eighteenth
+# unit's Gate-2 B1 correction, registers a result only once the canonical run
+# has actually produced the file, and a registered-but-absent result now fails
+# that sweep outright. The canonical result exists as of the evaluation stage,
+# so it is registered in that script and the seconds-scale integrity step is
+# wired into both jobs below (and into the result file's own path triggers),
+# and a registered result can no longer go missing silently.
 
 on:
   pull_request:
@@ -24,18 +25,18 @@ on:
       - 'scripts/verify_closed_violation_depth_three.py'
       - 'scripts/verify_full_shift_depth_three.py'
       - 'scripts/verify_depth_one_certificate.py'
-      - '.github/workflows/research-closed-violation-depth-three.yml'
-      - 'results/closed_violation_depth_three_20260913.json'
       - 'scripts/check_result_integrity.py'
+      - 'results/closed_violation_depth_three_20260913.json'
+      - '.github/workflows/research-closed-violation-depth-three.yml'
   push:
     branches: [main]
     paths:
       - 'scripts/verify_closed_violation_depth_three.py'
       - 'scripts/verify_full_shift_depth_three.py'
       - 'scripts/verify_depth_one_certificate.py'
-      - '.github/workflows/research-closed-violation-depth-three.yml'
-      - 'results/closed_violation_depth_three_20260913.json'
       - 'scripts/check_result_integrity.py'
+      - 'results/closed_violation_depth_three_20260913.json'
+      - '.github/workflows/research-closed-violation-depth-three.yml'
   workflow_dispatch:
     inputs:
       authorization:
@@ -61,13 +62,13 @@ jobs:
         run: python -m compileall -q scripts
       - name: Verifier self test (writes nothing)
         run: python scripts/verify_closed_violation_depth_three.py --self-test
-      - name: Check canonical result provenance
+      - name: Recorded source hashes match the tree
         run: python scripts/check_result_integrity.py results/closed_violation_depth_three_20260913.json
 
   full-replay:
-    # Manual only, and only when an authorization reference is supplied. Fails
-    # loudly until the canonical result exists, which is the intended behaviour:
-    # there is nothing to replay before the off-Actions canonical run.
+    # Manual only, and only when an authorization reference is supplied: this is
+    # the 60-to-100-minute replay, never automatic. The canonical result now
+    # exists, so there is something to replay.
     if: github.event_name == 'workflow_dispatch' && inputs.authorization != ''
     runs-on: ubuntu-latest
     timeout-minutes: 420
@@ -78,10 +79,10 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+      - name: Recorded source hashes match the tree
+        run: python scripts/check_result_integrity.py results/closed_violation_depth_three_20260913.json
       - name: Install research package
         run: python -m pip install -e .
-      - name: Check canonical result provenance
-        run: python scripts/check_result_integrity.py results/closed_violation_depth_three_20260913.json
       - name: Rerun the frozen audit and compare the canonical JSON byte for byte
         run: |
           echo "Authorized expensive replay: ${{ inputs.authorization }}"
