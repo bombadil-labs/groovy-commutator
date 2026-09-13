@@ -179,6 +179,13 @@ REGISTRY = {
         'source_census_script': 'scripts/verify_dimensional_resonance_source_census.py',
         'physical_predecessor_script': 'scripts/verify_interface_factor.py'},
 
+    'results/predictive_assembly_support_20260912.json': {
+        'script': 'scripts/verify_predictive_assembly_support.py',
+        'protocol': 'docs/research/protocols/predictive-assembly-support-20260912.md',
+        'gate1_clarification': 'docs/research/protocols/predictive-assembly-support-gate1-clarification-20260912.md',
+        'predecessor_script': 'scripts/verify_interface_history_global.py',
+        'predecessor_result': 'results/interface_history_global_20260912.json'},
+
 }
 
 def sha(p: pathlib.Path) -> str: return hashlib.sha256(p.read_bytes()).hexdigest()
