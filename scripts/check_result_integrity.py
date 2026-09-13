@@ -150,6 +150,13 @@ REGISTRY = {
         'interface_history_global_script': 'scripts/verify_interface_history_global.py',
         'interface_history_global_result': 'results/interface_history_global_20260912.json',
         'interface_factor_script': 'scripts/verify_interface_factor.py'},
+    'results/predictive_assembly_support_20260912.json': {
+        'script': 'scripts/verify_predictive_assembly_support.py',
+        'protocol': 'docs/research/protocols/predictive-assembly-support-20260912.md',
+        'gate1_clarification': 'docs/research/protocols/predictive-assembly-support-gate1-clarification-20260912.md',
+        'predecessor_script': 'scripts/verify_interface_history_global.py',
+        'predecessor_result': 'results/interface_history_global_20260912.json'},
+
     'results/dimensional_history_scaling_control_20260912.json': {
         'script': 'scripts/verify_dimensional_history_scaling_control.py',
         'parent_protocol': 'docs/research/protocols/dimensional-history-scaling-20260912.md',
@@ -178,13 +185,6 @@ REGISTRY = {
         'gate1_approval': 'docs/research/protocols/dimensional-resonance-response-gate1-approval-20260912.md',
         'source_census_script': 'scripts/verify_dimensional_resonance_source_census.py',
         'physical_predecessor_script': 'scripts/verify_interface_factor.py'},
-
-    'results/predictive_assembly_support_20260912.json': {
-        'script': 'scripts/verify_predictive_assembly_support.py',
-        'protocol': 'docs/research/protocols/predictive-assembly-support-20260912.md',
-        'gate1_clarification': 'docs/research/protocols/predictive-assembly-support-gate1-clarification-20260912.md',
-        'predecessor_script': 'scripts/verify_interface_history_global.py',
-        'predecessor_result': 'results/interface_history_global_20260912.json'},
 
 }
 
