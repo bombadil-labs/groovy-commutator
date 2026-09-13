@@ -1,0 +1,24 @@
+[
+  {
+    "slug": "closed-violation-depth-three",
+    "label": "All-ring depth three from closed violations",
+    "title": "Closed violating walks decide the all-ring depth-three set: six nonempty gaps, one window that overstates at ring 16, and depth-two periods that do not survive",
+    "date": "2026-09-13",
+    "updated": "2026-09-13",
+    "kind": "Exact all-ring depth-three decision by strong components, with no matrix powers",
+    "evidence": "exact",
+    "topic": "Algebra and closure",
+    "summary": "The eighteenth unit's post hoc identity is a theorem at every depth: a rule has depth at most h on every ring iff its pair graph has no violating three-edge walk closed inside a strong component. Applied to the 65,536-vertex depth-three graph, with no matrix power taken, it gives all-ring depth-three gaps of 8, 10, 10, 6, 8, 4, 0 rules under 232, 4, 32, 200, 22, 90, 150, first failing rings up to 16, and eventual periods 1, 2, 2, 1, 1, 2, 6.",
+    "takeaway": "Depth levels do not inherit each other's arithmetic: the ring window that lies belongs to 200, not to 22 as at depth two, and the period under 22 collapses from 12 to 1 while other observations keep a period on an entirely different set of rules.",
+    "source": "docs/research/2026-09-13-closed-violation-depth-three.md",
+    "promotion": {
+      "stage": "research"
+    },
+    "related": [
+      "depth-two-certificate",
+      "full-shift-depth-three",
+      "full-shift-depth-three-linear",
+      "depth-one-certificate"
+    ]
+  }
+]
