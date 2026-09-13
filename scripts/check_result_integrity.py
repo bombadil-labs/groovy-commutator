@@ -139,7 +139,7 @@ REGISTRY = {
         'predecessor_script': 'scripts/verify_interface_history.py',
         'predecessor_result': 'results/interface_history_20260911.json',
         'interface_factor_script': 'scripts/verify_interface_factor.py',
-        'interface_factor_result': 'results/interface_history_global_20260912.json'},
+        'interface_factor_result': 'results/interface_factor_20260911.json'},
     'results/interface_history_cross_width_20260912.json': {
         'script': 'scripts/verify_interface_history_cross_width.py',
         'protocol': 'docs/research/protocols/interface-history-cross-width-20260912.md',
