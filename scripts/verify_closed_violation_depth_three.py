@@ -76,7 +76,10 @@ Q2  D3_psi^inf, the all-ring gap Gamma3_{psi,inf} = D3^inf \ FS3, its inclusion
     overstates the all-ring gap somewhere, (c) 22 is among the failures.
 Q3  n_min at depth three for every rule outside D3^inf, with the consistency
     control against the recorded rings 4..14, the distribution and the maximum.
-Q4  p_r, P3_psi and the eventual sets at depth three; theorem controls for 90 on
+Q4  p_r, P3_psi and the eventual sets at depth three -- serialized as the FULL
+    sets D3_{psi,ev}(j) over all 256 rules (FS3_psi union the computed
+    deep-domain set; every FS3 rule is in D3_psi(n) at every ring by theorem),
+    with the deep-domain projection kept alongside for diagnostics; theorem controls for 90 on
     odd residues and 150 off multiples of three; bets P3_232 = P3_200 = 1,
     P3_4 = P3_32 = 1, 3 | P3_22, P3_90 = 4, P3_150 = 6.
 Q5  per pair: the carrying components, their sizes and periods, general diagonal
@@ -86,8 +89,11 @@ Q5  per pair: the carrying components, their sizes and periods, general diagonal
     eventually oscillating rule; a general diagonal anchor in an oscillating rule
     is reported, NOT treated as an error (protocol Section 5, correction B1).
     Bet: every eventually-out rule under 232, 200, 22 is diagonal-anchored.
-Q6  complement and reflection transport of |V3_cl|, n_min, p_r, R_r (residues
-    negated under reflection), component sizes and periods and anchoring, under
+Q6  complement and reflection transport of |V3_cl|, n_min, p_r, R_r (an EQUAL
+    residue set under both transformations: under reflection the violating ends
+    swap, (v_0, v_3) -> (M(v_3), M(v_0)), and the cyclic-class sign flip cancels
+    against that swap -- protocol Section 1 as corrected in the I1 re-freeze),
+    component sizes and periods and anchoring, under
     the explicit vertex maps; the set-level transport of D3^inf, Gamma3 and P3;
     and the explicit graph correspondence on a frozen sample.
 
@@ -398,10 +404,18 @@ def graph_correspondence(psi, r, h):
             'reflection_violating_walks': mir_walks,
             'pass': comp_edges and comp_walks and mir_edges and mir_walks}
 
-def stat_key(f, negate_residues=False):
-    """The transported statistics of a pair: |V_cl|, n_min, p_r, R_r, component sizes/periods, anchoring."""
+def stat_key(f):
+    """The transported statistics of a pair: |V_cl|, n_min, p_r, R_r, component sizes/periods, anchoring.
+
+    R_r is compared as an EQUAL residue set under complement conjugation and under reflection alike
+    (protocol Section 1, "Conjugates and mirrors", as corrected in the I1 re-freeze): reflection
+    transposes A and reverses the violating walk, so the violating pair's ends swap,
+    (v_0, v_3) -> (M(v_3), M(v_0)), and (A'^m)[M(v_0), M(v_3)] = (A^m)[v_3, v_0] for every m.  The
+    cyclic-class sign flip under transposition and the end swap cancel, so no negation is applied
+    here for either transformation.
+    """
     L = f['residue_modulus']
-    res = sorted((-x) % L for x in f['residues']) if negate_residues else sorted(f['residues'])
+    res = sorted(f['residues'])
     return {'closed_violating_walks': f['closed_violating_walks'], 'n_min': f['n_min'],
             'eventual_period': f['eventual_period'], 'residue_modulus': L, 'residues': res,
             'components': sorted((c['size'], c['period'], c['diagonal_anchored'],
@@ -485,19 +499,46 @@ def self_test():
 
     # (d) Q1(a) under one observation: V1_cl empty iff r in D1_psi^inf (256-vertex graphs).
     psi = 232
-    got = sorted(r for r in range(256) if pair_facts(psi, r, 1)['all_ring'])
+    facts1 = {r: pair_facts(psi, r, 1) for r in range(256)}
+    got = sorted(r for r in range(256) if facts1[r]['all_ring'])
     print(f'Q1(a) psi=232 depth one: |{{V1_cl empty}}|={len(got)} recorded |D1^inf|={len(H["D1_inf"][psi])} '
           f'equal={got == H["D1_inf"][psi]}')
     if got != H['D1_inf'][psi]:
         problems.append(f'Q1(a) under 232 failed: {sorted(set(got) ^ set(H["D1_inf"][psi]))[:8]}')
 
+    del facts1
+
     # (e) the ring-24 numeric control: the twelve rules under 22 must give m_min = 21 at depth two.
-    wrong = []
+    wrong = []; f22 = {}
     for r in RING_24_RULES_UNDER_22:
-        f = pair_facts(22, r, 2)
+        f = f22[r] = pair_facts(22, r, 2)
         if f['m_min'] != RING_24_M_MIN: wrong.append([r, f['m_min']])
     print(f'Q1(c) ring-24 control under 22: m_min == {RING_24_M_MIN} for all twelve: {not wrong}')
     if wrong: problems.append(f'ring-24 control failed (rule, m_min): {wrong}')
+
+    # (e2) the Q6 reflection transport in the corrected direction (I1), on exactly the pairs where it
+    #      is SHARP: observation 22 is mirror-symmetric and these twelve depth-two rules have
+    #      residue sets that are not equal to their own negation (R_r = {9} mod 12, negated {3}), so
+    #      a mirror pair among them distinguishes the corrected equal-set comparison from the
+    #      superseded negated one.  Free: it reuses the facts computed in (e).  The four mirror pairs
+    #      must match statistic for statistic including R_r as an equal set; the negated comparison
+    #      is also evaluated and must FAIL, which is what makes this a test of the correction and not
+    #      merely of symmetry.
+    assert mirror(22) == 22, 'observation 22 must be mirror-symmetric for this check'
+    def negated_key(f):
+        L = f['residue_modulus']
+        k = dict(stat_key(f)); k['residues'] = sorted((-x) % L for x in f['residues']); return k
+    mir_pairs = [(r, mirror(r)) for r in f22 if mirror(r) != r and mirror(r) in f22]
+    mir_bad = [[r, m] for r, m in mir_pairs if stat_key(f22[r]) != stat_key(f22[m])]
+    sharp = [[r, m] for r, m in mir_pairs if negated_key(f22[r]) != stat_key(f22[m])]
+    print(f'Q6 reflection transport at depth two under 22 on {len(mir_pairs)} mirror pairs: '
+          f'equal-residue mismatches={mir_bad}; the superseded negated comparison fails on '
+          f'{len(sharp)} of them (sharpness)')
+    if mir_bad:
+        problems.append(f'reflection transport with equal residue sets failed under 22: {mir_bad[:8]}')
+    if len(sharp) != len(mir_pairs) or not mir_pairs:
+        problems.append('the reflection check is not sharp: the negated convention does not fail here, '
+                        'so it would not catch a regression of the I1 correction')
 
     # (f) Corollary B on a recorded oscillating rule: rule 50 under 4 has p_r >= 2 and, with period
     #     >= 2 in every carrying component, no constant-diagonal anchor. A general diagonal anchor
@@ -658,11 +699,20 @@ def main(argv):
     q4 = {}
     for psi in sorted(dom):
         P_psi, ev = observation_eventual(F3[psi])
+        # The frozen artifact contract asks for the FULL eventual sets D3_{psi,ev}(j) over all 256
+        # rules.  observation_eventual runs over the computed (non-FS3) domain only; every FS3 rule
+        # has V3_cl = empty by theorem, hence lies in D3_psi(n) at every finite ring and so in every
+        # eventual set, and contributes eventual period 1, leaving P_psi unchanged.  So the full set
+        # is FS3_psi union the deep-domain set.  The deep-domain projection is kept alongside it for
+        # diagnostics and for the kernel controls below, which are statements about the deep rules.
+        fs3_psi = set(H['FS3'][psi])
+        ev_full = {j: sorted(fs3_psi | set(ev[j])) for j in range(P_psi)}
         q4[str(psi)] = {'eventual_period_P': P_psi,
                         'rule_periods': {str(r): F3[psi][r]['eventual_period'] for r in dom[psi]['deep']},
                         'oscillating_rules': [r for r in dom[psi]['deep']
                                               if not F3[psi][r]['all_ring'] and not F3[psi][r]['eventually_out']],
                         'eventually_out_rules': [r for r in dom[psi]['deep'] if F3[psi][r]['eventually_out']],
+                        'eventual_sets': {str(j): ev_full[j] for j in range(P_psi)},
                         'eventual_sets_over_the_deep_domain': {str(j): ev[j] for j in range(P_psi)},
                         'residue_sets': {str(r): {'modulus': F3[psi][r]['residue_modulus'],
                                                   'residues': F3[psi][r]['residues']}
@@ -718,7 +768,7 @@ def main(argv):
                                                           'compared': sum(1 for r in dom[psi]['deep'] if conj(r) in F3.get(q, {}))}
         if mirror(psi) == psi:
             mm = [r for r in dom[psi]['deep']
-                  if mirror(r) in F3[psi] and stat_key(F3[psi][r], negate_residues=True) != stat_key(F3[psi][mirror(r)])]
+                  if mirror(r) in F3[psi] and stat_key(F3[psi][r]) != stat_key(F3[psi][mirror(r)])]
             q6['statistic_transport_reflection'][str(psi)] = {'within_observation': True, 'mismatches': mm,
                                                               'compared': sum(1 for r in dom[psi]['deep'] if mirror(r) in F3[psi])}
         else:
