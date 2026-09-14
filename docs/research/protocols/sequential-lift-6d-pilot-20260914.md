@@ -1,8 +1,10 @@
 # Sequential binary lift pilot through 6D
 
-Status: frozen proposal; no implementation or evaluation yet.
+Status: frozen protocol; Myk explicitly overrode Gate 1 before implementation/evaluation.
 Authored by: Codex (OpenAI), Myk's dimensional-lift working session, 2026-09-14.
-Reviewed by: none; independent Gate 1 required before implementation.
+Reviewed by: none.
+Protocol review: none at freeze; run authorized by Myk 2026-09-14.
+Authorization: in this session, Myk said: "Don't worry about gate 1, I am overriding that requirement and granting approval." This overrides the prospective Gate 1 requirement; independent Gate 2 remains required before merge.
 
 ## Question and scope
 
@@ -57,7 +59,7 @@ The native law observes only binary physical values. Period-four/five transverse
 
 For each path and floor, a separately implemented direct binary neighborhood extractor checks the central position for source state indices 0,1,42,85,127 and transverse coordinate tuples all-zero, all-one, and all-(period-1). Compare complete direct neighborhood patterns with their compressed representations. Independently compute reference encoding using the original ECA only in the verifier, and compare the complete encoded states and two native time steps. The production lift must never call that reference.
 
-Controls before the canonical run: compare compressed key equivalence against explicit full 5^d-bit keys on a finite synthetic binary 3D tensor; include patches deliberately equal and deliberately different; confirm a known conflicting forced-output pair is rejected; confirm unset native derivative outputs evaluate to zero. No scientific outcomes are inspected before Gate 1.
+Controls before the canonical run: compare compressed key equivalence against explicit full 5^d-bit keys on a finite synthetic binary 3D tensor; include patches deliberately equal and deliberately different; confirm a known conflicting forced-output pair is rejected; confirm unset native derivative outputs evaluate to zero. No scientific outcomes were inspected before the recorded user authorization.
 
 ## Budget and records
 
