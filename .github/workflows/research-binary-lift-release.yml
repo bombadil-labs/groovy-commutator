@@ -1,0 +1,44 @@
+name: Binary lift evidence integrity
+
+# Retrospective unit: no scientific evaluation/replay in automatic CI.
+# Unit-scoped registration calls the existing integrity engine without editing
+# its legacy registry or triggering unrelated historical replay workflows.
+on:
+  pull_request:
+    paths:
+      - 'experiments/binary_lift_20260914/**'
+      - 'results/binary_lift_20260914*'
+      - 'results/binary_lift_20260914/**'
+      - 'scripts/verify_binary_lift_release.py'
+      - 'scripts/check_result_integrity.py'
+      - 'docs/research/protocols/binary-lift-retrospective-record-20260914.md'
+      - '.github/workflows/research-binary-lift-release.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'experiments/binary_lift_20260914/**'
+      - 'results/binary_lift_20260914*'
+      - 'results/binary_lift_20260914/**'
+      - 'scripts/verify_binary_lift_release.py'
+      - 'scripts/check_result_integrity.py'
+      - 'docs/research/protocols/binary-lift-retrospective-record-20260914.md'
+      - '.github/workflows/research-binary-lift-release.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  preserved-evidence:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Compile release wrapper
+        run: python -m compileall -q scripts/verify_binary_lift_release.py experiments/binary_lift_20260914/ca_lift_lab
+      - name: Verify all registered source and evidence hashes
+        run: python scripts/verify_binary_lift_release.py --integrity
+      - name: Recompute coverage account from preserved records
+        run: python scripts/verify_binary_lift_release.py --check

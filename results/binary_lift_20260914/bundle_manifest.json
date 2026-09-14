@@ -1,0 +1,544 @@
+{
+  "schema_version": 1,
+  "source_base_commit": "61c25eb50f9403a9d6a5bc0c993a8ef084dd6966",
+  "format": "Concatenated RFC4648 base64 of a deterministic tar.xz; source bytes unchanged",
+  "archive_sha256": "2a5ff45220e654cfd0e2a68231c6352d1429e34b40e56273099db0c760708746",
+  "archive_parts": [
+    {
+      "path": "results/binary_lift_20260914/evidence-00.tar.xz.b64",
+      "bytes": 524288,
+      "sha256": "4e7264a240b10c7ca193a9df4042ac035d3987c2433a1536b8e7ccf798bf96bc"
+    },
+    {
+      "path": "results/binary_lift_20260914/evidence-01.tar.xz.b64",
+      "bytes": 524288,
+      "sha256": "5ce2febc170c9af32e27f65000bfad1625e57d8cf1f5920c8ee1d95b0f8a4ab2"
+    },
+    {
+      "path": "results/binary_lift_20260914/evidence-02.tar.xz.b64",
+      "bytes": 524288,
+      "sha256": "a56db1d39f3d26d2e418bd260dd4bac9f95d5b4420a97537038cc54291166033"
+    },
+    {
+      "path": "results/binary_lift_20260914/evidence-03.tar.xz.b64",
+      "bytes": 524288,
+      "sha256": "890b642fa4157199a23a2f514b381213a63f14691e38a3173a464a7c4e8913df"
+    },
+    {
+      "path": "results/binary_lift_20260914/evidence-04.tar.xz.b64",
+      "bytes": 524288,
+      "sha256": "c4b71badc6c230f4f847d768a681e61a37a86afa210bda5cff695b1493825d56"
+    },
+    {
+      "path": "results/binary_lift_20260914/evidence-05.tar.xz.b64",
+      "bytes": 524288,
+      "sha256": "dd98432c75360757f8e10e987b636e1c66344dd37aa230f427f79fd81dbf1625"
+    },
+    {
+      "path": "results/binary_lift_20260914/evidence-06.tar.xz.b64",
+      "bytes": 524288,
+      "sha256": "5368b2a6e0886ccc0a63e4ed4689cd57b7bfb5f635fe9b411991675ed7f020cf"
+    },
+    {
+      "path": "results/binary_lift_20260914/evidence-07.tar.xz.b64",
+      "bytes": 524288,
+      "sha256": "c71e151665db466c48512f9afe9d9b8859151f113649ea49802ddbe640a6aa17"
+    },
+    {
+      "path": "results/binary_lift_20260914/evidence-08.tar.xz.b64",
+      "bytes": 524288,
+      "sha256": "0be59d14f52985cb95c3c345d5efaa1f6a5abcc85b4ff7713fc2423720d98a59"
+    },
+    {
+      "path": "results/binary_lift_20260914/evidence-09.tar.xz.b64",
+      "bytes": 524288,
+      "sha256": "a08caa3f41d773920ba68e7e1bf31e30d33dd4070ddabf4501d9c48a9360a3dd"
+    },
+    {
+      "path": "results/binary_lift_20260914/evidence-10.tar.xz.b64",
+      "bytes": 524288,
+      "sha256": "703844fee275bac690e54612a07aaa82d3436a0ac153f7b7e2e4ebb0dd7e78e9"
+    },
+    {
+      "path": "results/binary_lift_20260914/evidence-11.tar.xz.b64",
+      "bytes": 524288,
+      "sha256": "2fb830dfef695423edd4d4870c495e110c890773fd35de96ee600999655dd18b"
+    },
+    {
+      "path": "results/binary_lift_20260914/evidence-12.tar.xz.b64",
+      "bytes": 524288,
+      "sha256": "e3cb5e5a7e7f658bc111c5584f522786c84240bc77830bc30555a1d5b9cdf6a0"
+    },
+    {
+      "path": "results/binary_lift_20260914/evidence-13.tar.xz.b64",
+      "bytes": 524288,
+      "sha256": "95715502438ad8323667f92d14b80523794ed2cae4d6b30bb968c0aea8a7393a"
+    },
+    {
+      "path": "results/binary_lift_20260914/evidence-14.tar.xz.b64",
+      "bytes": 524288,
+      "sha256": "18fc9e16669cda9d2d1f92759e3eded156345bd9b761e916d5721935eb12916c"
+    },
+    {
+      "path": "results/binary_lift_20260914/evidence-15.tar.xz.b64",
+      "bytes": 524288,
+      "sha256": "73e142f606e1254384f12dfd1a9ed6913749a2f727e68588892e7f9feb726a70"
+    },
+    {
+      "path": "results/binary_lift_20260914/evidence-16.tar.xz.b64",
+      "bytes": 524288,
+      "sha256": "5947a29a95435bb53b445059d7ca6bbdc78f9fca241f9a7db8e09e59cf96b43f"
+    },
+    {
+      "path": "results/binary_lift_20260914/evidence-17.tar.xz.b64",
+      "bytes": 157768,
+      "sha256": "1ea001ad57c4a3d4623581c7b81e2eb467b8aee1bba400d40f20a994a30765ad"
+    }
+  ],
+  "members": [
+    {
+      "path": "ca_lift_lab/baseline/transition_first_lift.json",
+      "bytes": 2990983,
+      "sha256": "05b581d02818a749cb8673276c47d83fa26cdb3e8468528028cb45b41e5230ac"
+    },
+    {
+      "path": "ca_lift_lab/runs/binary_4d/candidates.jsonl",
+      "bytes": 156833,
+      "sha256": "8fc23ddd0be42dd767f6abdc4b9a99933163479e035d2b100b6663bbeee29f9a"
+    },
+    {
+      "path": "ca_lift_lab/runs/binary_4d/manifest.json",
+      "bytes": 358,
+      "sha256": "4dd350fc1e5c6b39d6c80e1025bcb176777e1dc09b009bbb1df42a605a4261a5"
+    },
+    {
+      "path": "ca_lift_lab/runs/binary_4d/source_audit.py",
+      "bytes": 12699,
+      "sha256": "028ef033b0431ba66dc5be0846c8701333db05ce18a0b9ef2fceb2b2e9915b59"
+    },
+    {
+      "path": "ca_lift_lab/runs/binary_4d/summary.json",
+      "bytes": 2849,
+      "sha256": "081bea2c9e234181a91423be7ec15ecd2c35cc999ef232963aa84ae81a7ac5d7"
+    },
+    {
+      "path": "ca_lift_lab/runs/binary_4d/verification_first.json",
+      "bytes": 1244,
+      "sha256": "5939813ae4d17a24a2307e1a4044797d759583caa3acd9e348436b7cf46d09a8"
+    },
+    {
+      "path": "ca_lift_lab/runs/binary_fresh_all256/candidates.jsonl",
+      "bytes": 20187553,
+      "sha256": "151f2c1d5728485390017d5f73bcd6de8185742303c158bcda5185cbda161232"
+    },
+    {
+      "path": "ca_lift_lab/runs/binary_fresh_all256/independent_selected/candidates.jsonl",
+      "bytes": 341118,
+      "sha256": "ee592a9f423d6d3deb736af041f4e3056aa94e661403bf29f0cf4c27d4b18f8e"
+    },
+    {
+      "path": "ca_lift_lab/runs/binary_fresh_all256/independent_selected/verification.json",
+      "bytes": 168,
+      "sha256": "61ce39cf9250fe45fc26f9be8ee7d942f9ef172ad4f1d5e41cf73dd0114ae06e"
+    },
+    {
+      "path": "ca_lift_lab/runs/binary_fresh_all256/manifest.json",
+      "bytes": 559,
+      "sha256": "f9ec27aec029d815d1c2a10adff4fef04f3c086031a599f88ffe2af6b989986e"
+    },
+    {
+      "path": "ca_lift_lab/runs/binary_fresh_all256/summary.json",
+      "bytes": 18296,
+      "sha256": "dd386ee167e97c821b5df014a0a0573ebe7ddd9d09fe89fa7059084510ad96e0"
+    },
+    {
+      "path": "ca_lift_lab/runs/binary_reference_4rows/candidates.jsonl",
+      "bytes": 11522575,
+      "sha256": "72f49113b72114618d6c096a3617e068a3a72a3bd73d84005fc6cd6466788467"
+    },
+    {
+      "path": "ca_lift_lab/runs/binary_reference_4rows/manifest.json",
+      "bytes": 707,
+      "sha256": "415241fb8fcc834619d72ad4397abb24a1384168945900322eaba521752ac67e"
+    },
+    {
+      "path": "ca_lift_lab/runs/binary_reference_4rows/per_rule_status.json",
+      "bytes": 204317,
+      "sha256": "853fa0fa0e618e6e44b0d49b347d539893e3e5b7ffc4d6918ce5dc5f5e8d8192"
+    },
+    {
+      "path": "ca_lift_lab/runs/binary_reference_4rows/rule110_native_tables.json",
+      "bytes": 762,
+      "sha256": "ee39ce2775d8d0e2165b6da05b1a70eacd34af6932a4f30ff70f1e7af8e7b1c9"
+    },
+    {
+      "path": "ca_lift_lab/runs/binary_reference_4rows/rule110_native_tables.npz",
+      "bytes": 6572,
+      "sha256": "fca176740bd2ba650c0a77455a646c77853dbb5d92ae6fe3b6dd10f208b99a18"
+    },
+    {
+      "path": "ca_lift_lab/runs/binary_reference_4rows/source_audit.py",
+      "bytes": 4446,
+      "sha256": "395a53b44b2a4eb221238190eeb94e27179d0829aabd2e2f93be81360dc06235"
+    },
+    {
+      "path": "ca_lift_lab/runs/binary_reference_4rows/summary.json",
+      "bytes": 4720,
+      "sha256": "75de1f93e324e5f47f88e4a19496ff87e0e170f993610b80ef0c1c5e159b8caf"
+    },
+    {
+      "path": "ca_lift_lab/runs/binary_reference_4rows/verification.json",
+      "bytes": 172,
+      "sha256": "2df01cae3c6468df8774e03b7be7207c71d36570ec5db8a149de7766b22cfd8b"
+    },
+    {
+      "path": "ca_lift_lab/runs/decoder_obstruction_23_232/collisions.jsonl",
+      "bytes": 174928,
+      "sha256": "334571417809297af5c44d29cb7a2347599515217a9f5a917838063b2b269911"
+    },
+    {
+      "path": "ca_lift_lab/runs/decoder_obstruction_23_232/manifest.json",
+      "bytes": 307,
+      "sha256": "5e121533aadb1d12e7e6ac39dceb2d1729ac70dc4b336eefa1e23ca90132457b"
+    },
+    {
+      "path": "ca_lift_lab/runs/decoder_obstruction_23_232/summary.json",
+      "bytes": 704,
+      "sha256": "238150ecb3d8f4a949ccb307645a3f4f47d67febbb84ab6beb7f8a1971aa3304"
+    },
+    {
+      "path": "ca_lift_lab/runs/decoder_obstruction_23_232/verification.json",
+      "bytes": 173,
+      "sha256": "30fa5e1644e9af3f43bb1ebb1ba60e4440765e099ab620c0d1e827aabe6b2f49"
+    },
+    {
+      "path": "ca_lift_lab/runs/directed_full256/candidates.jsonl",
+      "bytes": 26365368,
+      "sha256": "390dd483e31c21c133a1442e5a22fbe7819d82b41b123c814cb45ebbe13ec74b"
+    },
+    {
+      "path": "ca_lift_lab/runs/directed_full256/independent_selected/candidates.jsonl",
+      "bytes": 379160,
+      "sha256": "9e0f379d13718f1d4f8986261711f58fc99488eb1bfcffc0c7b28b448e689a42"
+    },
+    {
+      "path": "ca_lift_lab/runs/directed_full256/independent_selected/verification.json",
+      "bytes": 168,
+      "sha256": "e3d5bb6c2c0800125cf45db2070612ca6c3f5a1469a074544076adfd41e0709d"
+    },
+    {
+      "path": "ca_lift_lab/runs/directed_full256/manifest.json",
+      "bytes": 250,
+      "sha256": "66627036e279095091f3657f925c75d1eecef3586fb00342359367b07d4922f9"
+    },
+    {
+      "path": "ca_lift_lab/runs/directed_full256/summary.json",
+      "bytes": 14079,
+      "sha256": "5869504162f5b816b544ae4aa58f07bc6d931c63612e5d0fe4a4c4f3b9f406a0"
+    },
+    {
+      "path": "ca_lift_lab/runs/directed_full256/verification.json",
+      "bytes": 301,
+      "sha256": "f13dec94535f2ef326b5e79908579a0939bc21031e66526f19007571d1038380"
+    },
+    {
+      "path": "ca_lift_lab/runs/directed_reference_23_232/candidates.jsonl",
+      "bytes": 412618,
+      "sha256": "ffb15dcdabfc1a024bcc7d454e879b56e42e9194ad2d61cfac8b1f2fb4b6f4e5"
+    },
+    {
+      "path": "ca_lift_lab/runs/directed_reference_23_232/manifest.json",
+      "bytes": 264,
+      "sha256": "049d96fcf80238010fe6f204721f5f0442517399e41ef647972242fe0403e2fb"
+    },
+    {
+      "path": "ca_lift_lab/runs/directed_reference_23_232/summary.json",
+      "bytes": 1659,
+      "sha256": "9bab9dd2a3cbb59262e0e64113e25059781f97642f8cf763ab5f694ef9898d7b"
+    },
+    {
+      "path": "ca_lift_lab/runs/directed_reference_23_232/verification.json",
+      "bytes": 168,
+      "sha256": "622cdd50efc9157d672c5bec475530efe5571e45441356f028e1ee59b6bfda74"
+    },
+    {
+      "path": "ca_lift_lab/runs/first_floor_g_obstructions/completion.json",
+      "bytes": 1521,
+      "sha256": "1e6f154e8b71b438483d5942d0a08e8d499594cee8596e8e54a31211fd83723b"
+    },
+    {
+      "path": "ca_lift_lab/runs/first_floor_g_obstructions/diagnoses.jsonl",
+      "bytes": 4992613,
+      "sha256": "5850e2524f4d623a512b2ca8a0562ed8bf457840aff7cec259f30221a3fcf8d6"
+    },
+    {
+      "path": "ca_lift_lab/runs/first_floor_g_obstructions/phase_oracle.jsonl",
+      "bytes": 1324764,
+      "sha256": "083aafb14a39309367baa85602086a6f73c367b864f45cc959e02f75eb9f0ddd"
+    },
+    {
+      "path": "ca_lift_lab/runs/first_floor_g_obstructions/phase_oracle_summary.json",
+      "bytes": 1489,
+      "sha256": "c24326513decabcee6729e970338f5323968f3794db0a4d9c33d8e96914198f8"
+    },
+    {
+      "path": "ca_lift_lab/runs/first_floor_g_obstructions/source_diagnosis.py",
+      "bytes": 13803,
+      "sha256": "a1702697524d7539b21ccc2543cb3beaf6fb437742dca2834779d503e8cbfedb"
+    },
+    {
+      "path": "ca_lift_lab/runs/first_floor_g_obstructions/source_primary.py",
+      "bytes": 10382,
+      "sha256": "f82f4ecbf73c6de645b33acdfcd8d7f4b7e071b57f8dea27f4fb0eef4c59d2ae"
+    },
+    {
+      "path": "ca_lift_lab/runs/first_floor_g_obstructions/summary.json",
+      "bytes": 5650,
+      "sha256": "c77fbed49ef2239c7b863f240cd8cfe91e0d2fd12df1a0c9d1b5d06fe3cad68b"
+    },
+    {
+      "path": "ca_lift_lab/runs/probe_radius_2/candidates.jsonl",
+      "bytes": 6692652,
+      "sha256": "70931256ae0962b9be085f79abfe2fbc9c762b135caadc86eb6f87d411338aac"
+    },
+    {
+      "path": "ca_lift_lab/runs/probe_radius_2/global_obstruction_summary.json",
+      "bytes": 7363,
+      "sha256": "ced88b1fb270dfd4ee48c30ec7f9395683532565fe6cb34c5ada1f27dfa291f8"
+    },
+    {
+      "path": "ca_lift_lab/runs/probe_radius_2/global_obstructions.jsonl",
+      "bytes": 920884,
+      "sha256": "69d23c93898e085173bbad4872c71c76243ac60a65309b21fb0694e6eda8857c"
+    },
+    {
+      "path": "ca_lift_lab/runs/probe_radius_2/manifest.json",
+      "bytes": 363,
+      "sha256": "d62ed1df96ee6d7388cdb1e6eea15b45b0328c2fa7c5d243794ee555496281bd"
+    },
+    {
+      "path": "ca_lift_lab/runs/probe_radius_2/per_rule_status.json",
+      "bytes": 133923,
+      "sha256": "e51f71f2e5b20c32776027ba436173518ea6191bde9af0645d966c4345bb29a5"
+    },
+    {
+      "path": "ca_lift_lab/runs/probe_radius_2/source_G_radius.json",
+      "bytes": 21361,
+      "sha256": "e2510d832c840f9cdc59096fd82d0e3970041afe3edc245aa7b0f6fe39901727"
+    },
+    {
+      "path": "ca_lift_lab/runs/probe_radius_2/source_audit.py",
+      "bytes": 8950,
+      "sha256": "e790c4921ddcf79129cecab2285008fc81cd68d13242978df2c05c02d3698d07"
+    },
+    {
+      "path": "ca_lift_lab/runs/probe_radius_2/summary.json",
+      "bytes": 16292,
+      "sha256": "b49de7a9c564be3d36a8a8b2bde10300c04d19223af9d76a722cfa3d5510419b"
+    },
+    {
+      "path": "ca_lift_lab/runs/probe_radius_2/verification.json",
+      "bytes": 209,
+      "sha256": "e132ce63b83236dadc146ff15a3e4102805169ac6f2e80b77978c49b5903cf29"
+    },
+    {
+      "path": "ca_lift_lab/runs/recursive_binary_3d_v2/candidates.jsonl",
+      "bytes": 1225324,
+      "sha256": "f7dba73539b614ea8019ef7ea79c800ade578e6a1a94f51440814d4060f88867"
+    },
+    {
+      "path": "ca_lift_lab/runs/recursive_binary_3d_v2/manifest.json",
+      "bytes": 555,
+      "sha256": "c71bd8c9b5005985b33c88673ba77c0aa7e9ed4eefbfc53910c6df9ebb2ff659"
+    },
+    {
+      "path": "ca_lift_lab/runs/recursive_binary_3d_v2/rule110_witnesses.json",
+      "bytes": 9456,
+      "sha256": "e092dcd521303ac1998176a7f51572e2a618204de81fe467abf62b684fe26192"
+    },
+    {
+      "path": "ca_lift_lab/runs/recursive_binary_3d_v2/source_audit.py",
+      "bytes": 10416,
+      "sha256": "c158835735545f01c0a3f3cda319252a97381b19beb0d89364f57435eaf57fa8"
+    },
+    {
+      "path": "ca_lift_lab/runs/recursive_binary_3d_v2/summary.json",
+      "bytes": 3041,
+      "sha256": "2e50ce01878fa9f29e4558d76a98032a7dd7d5990aa1cc9dcf40db976c8f33b0"
+    },
+    {
+      "path": "ca_lift_lab/runs/recursive_binary_3d_v2/verification.json",
+      "bytes": 205,
+      "sha256": "2124b572e89640db2c0497603070c5277e8b62d6a9ebe48092fa401ae320088f"
+    },
+    {
+      "path": "ca_lift_lab/runs/recursive_binary_centering_alternatives/candidates.jsonl",
+      "bytes": 3131,
+      "sha256": "066a5c28adda29c8dc744309c5fa610b7e0093e78b8d839d5d95fb736bae9fda"
+    },
+    {
+      "path": "ca_lift_lab/runs/recursive_binary_centering_alternatives/manifest.json",
+      "bytes": 50,
+      "sha256": "781fd0b7a3678539ffa6c06581d9e86809ff4c09e7cdd361a81ab68bfdf48d78"
+    },
+    {
+      "path": "ca_lift_lab/runs/recursive_binary_centering_alternatives/rule110_witnesses.json",
+      "bytes": 3,
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    {
+      "path": "ca_lift_lab/runs/recursive_binary_centering_alternatives/verification.json",
+      "bytes": 193,
+      "sha256": "1806aeeeca69da345a6220a102c69b29d75122927e42ed45622bc31826ff77ca"
+    },
+    {
+      "path": "ca_lift_lab/runs/recursive_binary_reflections/candidates.jsonl",
+      "bytes": 22573,
+      "sha256": "f1b752c8c06acbd0d81969ca578a6d2c5e819da88ca70fbe47b6edc77eea5f71"
+    },
+    {
+      "path": "ca_lift_lab/runs/recursive_binary_reflections/combined_per_rule_status.json",
+      "bytes": 73086,
+      "sha256": "1f496705efadb313c988dbc97e66a4710754f122985950acd0e31a8c6dafe22f"
+    },
+    {
+      "path": "ca_lift_lab/runs/recursive_binary_reflections/combined_summary.json",
+      "bytes": 377,
+      "sha256": "e10d2811f515554add6c341c071104c88b973e3b9562d74202e5357d20659ff6"
+    },
+    {
+      "path": "ca_lift_lab/runs/recursive_binary_reflections/manifest.json",
+      "bytes": 132,
+      "sha256": "392243ec33174f7caad11ebe59d9704ab18240965945e1911edd6a2c52abc49e"
+    },
+    {
+      "path": "ca_lift_lab/runs/recursive_binary_reflections/rule110_witnesses.json",
+      "bytes": 3,
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    {
+      "path": "ca_lift_lab/runs/recursive_binary_reflections/verification.json",
+      "bytes": 197,
+      "sha256": "5308a46337582b7dd2a54a7899da4f438041e0d7fc4ebb5c04c9f78459103d64"
+    },
+    {
+      "path": "ca_lift_lab/runs/universal_3d/best_known_G_paths.jsonl",
+      "bytes": 4587653,
+      "sha256": "346943d17741b9208237287cc1b1352bfeaa34c6515c0269b255cc96fe36d12a"
+    },
+    {
+      "path": "ca_lift_lab/runs/universal_3d/candidates.jsonl",
+      "bytes": 4631348,
+      "sha256": "00d08b0287f5534d04c27ede03df20813f4981484f63f6223a020ec6c9b320d7"
+    },
+    {
+      "path": "ca_lift_lab/runs/universal_3d/manifest.json",
+      "bytes": 947,
+      "sha256": "6659edbe58a5d0f421cc60de21d133008f56b05912615161a5f10b5e0b617319"
+    },
+    {
+      "path": "ca_lift_lab/runs/universal_3d/parent_relation_verification/candidates.jsonl",
+      "bytes": 61263,
+      "sha256": "b9b9c97142a84f3d5645291082415c7754f0f48496c73c38d762fd3f8197ecea"
+    },
+    {
+      "path": "ca_lift_lab/runs/universal_3d/parent_relation_verification/rule110_witnesses.json",
+      "bytes": 3,
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    {
+      "path": "ca_lift_lab/runs/universal_3d/parent_relation_verification/verification.json",
+      "bytes": 198,
+      "sha256": "f4ff988f179fbd1e533520e59cab0b891be4f074634221b533f639bc3eb1237a"
+    },
+    {
+      "path": "ca_lift_lab/runs/universal_3d/selected.jsonl",
+      "bytes": 245152,
+      "sha256": "a9bf0891c78d7c96336ad3386f267bd9afd69f7d6c7028e3cda7e4f9380b841d"
+    },
+    {
+      "path": "ca_lift_lab/runs/universal_3d/summary.json",
+      "bytes": 18071,
+      "sha256": "15b7fab2a212fdab0a890516a7a6c90f92d557076e23f6de828aa1ab4d6e1b97"
+    },
+    {
+      "path": "ca_lift_lab/runs/universal_3d/targeted_verification/candidates.jsonl",
+      "bytes": 1648349,
+      "sha256": "a70748e143deef08684e4aad5259a02db8a8ee82c112fee421236d7397b609e1"
+    },
+    {
+      "path": "ca_lift_lab/runs/universal_3d/targeted_verification/rule110_witnesses.json",
+      "bytes": 9693,
+      "sha256": "4a522166b635104b19cd41fe199f4c21e353e1b75b94dde2b0745c37306f8d34"
+    },
+    {
+      "path": "ca_lift_lab/runs/universal_3d/targeted_verification/verification.json",
+      "bytes": 204,
+      "sha256": "58ca92f69de9965830c8e728b309ee55ce5dcc7c571098d8825e207e81e2713a"
+    },
+    {
+      "path": "ca_lift_lab/runs/universal_3d/verification.json",
+      "bytes": 897,
+      "sha256": "3653448124aacc2a5bd4c4f76db9edec0be6bb61eed6fa2c2b7538bf07ba1a6d"
+    }
+  ],
+  "code_files": [
+    "experiments/binary_lift_20260914/ca_lift_lab/audit_binary_4d.py",
+    "experiments/binary_lift_20260914/ca_lift_lab/audit_binary_fresh.py",
+    "experiments/binary_lift_20260914/ca_lift_lab/audit_binary_reference.py",
+    "experiments/binary_lift_20260914/ca_lift_lab/audit_directed_full256.py",
+    "experiments/binary_lift_20260914/ca_lift_lab/audit_directed_reference_23_232.py",
+    "experiments/binary_lift_20260914/ca_lift_lab/audit_local_support.py",
+    "experiments/binary_lift_20260914/ca_lift_lab/audit_polarization_proposal.py",
+    "experiments/binary_lift_20260914/ca_lift_lab/audit_probe_global_obstructions.py",
+    "experiments/binary_lift_20260914/ca_lift_lab/audit_probe_radius.py",
+    "experiments/binary_lift_20260914/ca_lift_lab/audit_recursive_binary.py",
+    "experiments/binary_lift_20260914/ca_lift_lab/audit_reference_covariance.py",
+    "experiments/binary_lift_20260914/ca_lift_lab/audit_temporal_reach.py",
+    "experiments/binary_lift_20260914/ca_lift_lab/audit_universal_3d.py",
+    "experiments/binary_lift_20260914/ca_lift_lab/audit_whole_rows.py",
+    "experiments/binary_lift_20260914/ca_lift_lab/check_recursive_centering_alternatives.py",
+    "experiments/binary_lift_20260914/ca_lift_lab/check_recursive_reflections.py",
+    "experiments/binary_lift_20260914/ca_lift_lab/diagnose_decoder_23_232.py",
+    "experiments/binary_lift_20260914/ca_lift_lab/diagnose_first_floor_g.py",
+    "experiments/binary_lift_20260914/ca_lift_lab/harness.py",
+    "experiments/binary_lift_20260914/ca_lift_lab/inspect_run.py",
+    "experiments/binary_lift_20260914/ca_lift_lab/lifts/copy_complement_control.py",
+    "experiments/binary_lift_20260914/ca_lift_lab/lifts/fixed_transverse.py",
+    "experiments/binary_lift_20260914/ca_lift_lab/lifts/transition_reference.py",
+    "experiments/binary_lift_20260914/ca_lift_lab/prove_110_temporal_obstruction.py",
+    "experiments/binary_lift_20260914/ca_lift_lab/prove_reference_witness.py",
+    "experiments/binary_lift_20260914/ca_lift_lab/record_universal_3d.py",
+    "experiments/binary_lift_20260914/ca_lift_lab/requirements.txt",
+    "experiments/binary_lift_20260914/ca_lift_lab/verify_binary_4d.py",
+    "experiments/binary_lift_20260914/ca_lift_lab/verify_binary_fresh.py",
+    "experiments/binary_lift_20260914/ca_lift_lab/verify_binary_reference.py",
+    "experiments/binary_lift_20260914/ca_lift_lab/verify_copy_control.py",
+    "experiments/binary_lift_20260914/ca_lift_lab/verify_decoder_obstruction.py",
+    "experiments/binary_lift_20260914/ca_lift_lab/verify_directed_full256.py",
+    "experiments/binary_lift_20260914/ca_lift_lab/verify_directed_reference_23_232.py",
+    "experiments/binary_lift_20260914/ca_lift_lab/verify_fixed_run.py",
+    "experiments/binary_lift_20260914/ca_lift_lab/verify_polarization_proposal.py",
+    "experiments/binary_lift_20260914/ca_lift_lab/verify_probe_radius.py",
+    "experiments/binary_lift_20260914/ca_lift_lab/verify_recursive_binary.py",
+    "experiments/binary_lift_20260914/ca_lift_lab/verify_reference_covariance.py",
+    "experiments/binary_lift_20260914/ca_lift_lab/verify_support_audit.py",
+    "experiments/binary_lift_20260914/ca_lift_lab/verify_temporal_reach.py",
+    "experiments/binary_lift_20260914/ca_lift_lab/verify_transition_run.py",
+    "experiments/binary_lift_20260914/ca_lift_lab/verify_universal_3d.py"
+  ],
+  "runs": [
+    "binary_reference_4rows",
+    "binary_fresh_all256",
+    "directed_reference_23_232",
+    "directed_full256",
+    "recursive_binary_3d_v2",
+    "recursive_binary_reflections",
+    "recursive_binary_centering_alternatives",
+    "universal_3d",
+    "binary_4d",
+    "decoder_obstruction_23_232",
+    "first_floor_g_obstructions",
+    "probe_radius_2"
+  ]
+}

@@ -1,0 +1,68 @@
+[
+  {
+    "slug": "binary-lift-family-20260914",
+    "label": "Binary lift I",
+    "title": "A four-reference binary lift family covers all 256 ECAs",
+    "date": "2026-09-14",
+    "updated": "2026-09-14",
+    "kind": "Experiment",
+    "evidence": "exploratory",
+    "topic": "Dimensional closure",
+    "summary": "All 256 ECAs admit a faithful binary first floor in the completed four-reference census, at native radius 2. G remains incomplete.",
+    "takeaway": "Four reference formulas cover every source rule; native faithfulness and commutator preservation remain separate gates.",
+    "source": "docs/research/2026-09-14-binary-lift-family.md",
+    "promotion": {
+      "stage": "research"
+    },
+    "related": [
+      "binary-lift-recursion-20260914",
+      "binary-lift-g-obstructions-20260914",
+      "dimensional-intertwining",
+      "dimensional-vision-and-interpretation"
+    ]
+  },
+  {
+    "slug": "binary-lift-recursion-20260914",
+    "label": "Binary lift II",
+    "title": "Every ECA has a faithful binary path through 3D; recursive G remains incomplete",
+    "date": "2026-09-14",
+    "updated": "2026-09-14",
+    "kind": "Experiment",
+    "evidence": "exploratory",
+    "topic": "Dimensional closure",
+    "summary": "One reflection-aligned path per rule retains native evolution and source/parent recovery through 3D. Selected G passes 200/220; best-known alternatives cover 206.",
+    "takeaway": "Finite-dimensional native closure is universal across the ECA sources tested; recursive G and induction remain open.",
+    "source": "docs/research/2026-09-14-binary-lift-recursion.md",
+    "promotion": {
+      "stage": "research"
+    },
+    "related": [
+      "binary-lift-family-20260914",
+      "binary-lift-g-obstructions-20260914",
+      "dimensional-intertwining",
+      "dimensional-vision-and-interpretation"
+    ]
+  },
+  {
+    "slug": "binary-lift-g-obstructions-20260914",
+    "label": "Binary lift III",
+    "title": "A faithful encoding can lose G information in its field of changes",
+    "date": "2026-09-14",
+    "updated": "2026-09-14",
+    "kind": "Experiment",
+    "evidence": "exploratory",
+    "topic": "Dimensional closure",
+    "summary": "All 36 first-floor G holdouts are diagnosed. Same-field probe ambiguity affects 2,432 faithful recipes; 29 rules remain blocked with phase labels among the originally faithful recipes tested.",
+    "takeaway": "The field of changes must retain the distinction needed by G, and its demands must agree with native evolution.",
+    "source": "docs/research/2026-09-14-binary-lift-g-obstructions.md",
+    "promotion": {
+      "stage": "research"
+    },
+    "related": [
+      "binary-lift-family-20260914",
+      "binary-lift-recursion-20260914",
+      "dimensional-intertwining",
+      "dimensional-vision-and-interpretation"
+    ]
+  }
+]

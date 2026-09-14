@@ -6,6 +6,16 @@ This page is the **working synthesis** of the dimensional-lift research program.
 
 The program is parallel to [Dynamics of Erased Distinctions](2026-09-08-dynamics-of-erased-distinctions.md). That program asks when information can be forgotten safely and how a lossy representation repairs itself. This one asks what additional structure must be represented when evolution and transformation refuse to agree.
 
+## 2026-09-14: universal ECA source coverage in a prepared binary family; Gate 2 pending
+
+The new retrospective unit records [a four-reference first-floor family](2026-09-14-binary-lift-family.md), [its selected repeat into 3D](2026-09-14-binary-lift-recursion.md), and [exact G-obstruction diagnoses](2026-09-14-binary-lift-g-obstructions.md). Myk approved the Gate 1 exception; evaluation preceded independent review. See the [authorization and deviations record](protocols/binary-lift-retrospective-record-20260914.md). This section reports pending work, not an accepted Gate 2result.
+
+Across all 256 ECA sources, the P/D/M/Q grammar has faithful binary first floors and selected 3D continuations with local source/parent recovery and native radius 2. Original-G and centered-G first-floor coverage is133 and 220 respectively. The selected 3D paths preserve their Gmode for200 of 220 eligible sources; retaining earlier alternatives gives206 best-known paths. The older113-path 4D baseline is a separate population, with105 G passes.
+
+The main new obstruction is a loss of distinctions in the field of changes:2,432 faithful recipes have same-D-field opposite-demand probe collisions. Across the36 first-floor G holdouts,29 rules remain blocked in every faithful recipe even with row identity supplied. A recursive invariant must preserve derivative-neighborhood sufficiency and compatibility with native evolution, alongside recovery. The next Boolean-Q witness-filter experiment is unrun.
+
+All guarantees concern prepared period-four transverse families carrying only source-line information. G is prescribed only on nested P/D layers; unspecified native outputs remain free subject to explicit constraints. This advances finite-depth source-rule coverage without establishing arbitrary 2D input lifting, dimension-induction, independent area information or the nontrivial endogenous organization sought by the beam program. Earlier stripe/copy controls remain valid.
+
 ## Read the research direction
 
 The [dimensional vision and interpretation note](2026-09-10-dimensional-vision-and-interpretation.md)
@@ -706,3 +716,4 @@ The census exhausts every source pair on rings `n=6` and `n=7`, pools primary tr
 The negative result survives the fixed controls. The coordinate bijection and zero-interface initial condition pass. Every source remains exterior-background-clean after the first coarse update, while exterior departure appears by the second. Independent scalar physical replays agree with the vectorized selector evolution. For P15 at `R=2`, two records with identical five-symbol local neighborhoods have next center symbols `0` and `24`; their independently replayed next-step causal patches differ outside rows `0..3`. The canonical `R=1` conflict has the same exterior hidden-cause property.
 
 This is a bounded factor obstruction for one representation family, not a fixed-height or intrinsic-dimension impossibility theorem. Larger longitudinal radii, histories, moving/support-tracking state, other coordinates, nonlocal factors and restricted source families remain logically open and were not introduced post hoc. The result sharpens the earlier interface-state failure by showing that re-coordinating the natural six retained bits and supplying longitudinal context through radius two still does not produce an autonomous factor on the declared reachable family.
+
