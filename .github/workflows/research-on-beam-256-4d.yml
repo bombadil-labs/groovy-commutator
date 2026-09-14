@@ -1,0 +1,41 @@
+name: On-beam 256-rule preservation
+on:
+  pull_request:
+    paths:
+      - 'scripts/on_beam_256_4d.py'
+      - 'scripts/on_beam_rule_analysis.py'
+      - 'scripts/sequential_lift_6d_pilot.py'
+      - 'scripts/verify_on_beam_256_4d.py'
+      - 'scripts/check_result_integrity.py'
+      - 'docs/research/protocols/on-beam-256-4d-classes-20260914.md'
+      - 'experiments/on_beam_256_4d_20260914/**'
+      - 'results/on_beam_256_4d_20260914.json'
+      - 'results/binary_lift_20260914/rule_coverage.csv'
+      - '.github/workflows/research-on-beam-256-4d.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/on_beam_256_4d.py'
+      - 'scripts/on_beam_rule_analysis.py'
+      - 'scripts/sequential_lift_6d_pilot.py'
+      - 'scripts/verify_on_beam_256_4d.py'
+      - 'scripts/check_result_integrity.py'
+      - 'docs/research/protocols/on-beam-256-4d-classes-20260914.md'
+      - 'experiments/on_beam_256_4d_20260914/**'
+      - 'results/on_beam_256_4d_20260914.json'
+      - 'results/binary_lift_20260914/rule_coverage.csv'
+      - '.github/workflows/research-on-beam-256-4d.yml'
+permissions:
+  contents: read
+jobs:
+  on-beam-preserved-evidence:
+    runs-on: ubuntu-latest
+    timeout-minutes: 4
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install numpy==2.3.5
+      - run: python scripts/verify_on_beam_256_4d.py
+# Deliberately no CA synthesis, archive download, or scientific replay in Actions.

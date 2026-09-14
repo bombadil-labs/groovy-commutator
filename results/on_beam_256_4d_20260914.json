@@ -1,0 +1,102 @@
+{
+  "schema_version": 1,
+  "date": "2026-09-14",
+  "implementation_commit": "4e7bd6d01956600552a6d5c08aba7d441eaedd19",
+  "baseline_commit": "a2dfba2801ac6f53d7cea4306927c5b6f246f140",
+  "source_paths": {
+    "script": "scripts/on_beam_256_4d.py",
+    "analysis_script": "scripts/on_beam_rule_analysis.py",
+    "native_core": "scripts/sequential_lift_6d_pilot.py",
+    "accounting": "scripts/verify_on_beam_256_4d.py",
+    "protocol": "docs/research/protocols/on-beam-256-4d-classes-20260914.md",
+    "recipes": "results/binary_lift_20260914/rule_coverage.csv",
+    "labels": "experiments/on_beam_256_4d_20260914/labels.json",
+    "execution": "experiments/on_beam_256_4d_20260914/run/execution.json",
+    "summary": "experiments/on_beam_256_4d_20260914/run/summary.json",
+    "analysis": "experiments/on_beam_256_4d_20260914/run/analysis.json",
+    "archive_manifest": "experiments/on_beam_256_4d_20260914/run/archive_manifest.json",
+    "floors": "experiments/on_beam_256_4d_20260914/run/floors.jsonl",
+    "paths": "experiments/on_beam_256_4d_20260914/run/paths.jsonl"
+  },
+  "source_hashes": {
+    "script": "3df8fcc4ccd2aa65e00a37d880951a3b90a8b49fb8de0a2da03d38a18b5ec9aa",
+    "analysis_script": "0d6a5f40a6306df674492e82c32ec39af8c7c90c60d05580b6a55f2a520f5b24",
+    "native_core": "88541d3f1cb5cb0a6e713dc51aab3f3f7be158b67878df5d9121ac0c668784a8",
+    "accounting": "989782b8f5547ce167a91a8dff95b4518ae0d26d26eb9a9dcd6a179f220d94c7",
+    "protocol": "6824c2d38e31b90478f282e9b9af66bb0b0c2398a6e3d54359c4abbb2226da2a",
+    "recipes": "b5e9461bfc63b62119a994f71e45a0f4be058a06b2e27d69181a3a6de719763f",
+    "labels": "65e811a6ef5575bb697da4fc9e8dfe3c0de131b8c27702aa7990ad4b2d754250",
+    "execution": "0063dcf34f4f6cc6aa7dc0d2be84e1986a8fcd552f09e8a8cf7995718434ec1e",
+    "summary": "c386c9cc01d79f7c99bd67d9f197976231da204c566e1dcfcabd23eb3119e0c8",
+    "analysis": "782acad7b10269a59c31aacf7059479fe8633a659cb1ecc08a08f95eeb57acf6",
+    "archive_manifest": "89b3592bbbc64cf9656765c9eae0fabd6640178f40beab0b5733ee3c1f15058c",
+    "floors": "3a11c5dbc48e5b15e374d42097bb539e045400390522e95f155c28292171606a",
+    "paths": "21e86ab121e11f95c647931b21188f2450b708e9dc17d4c307f22c928bca2238"
+  },
+  "scope": "All 256 ECA sources; all width-seven/eight words; fixed four-field recipes; newly synthesized immutable native radius-two laws through 4D; no G or full-shift claim.",
+  "summary": {
+    "archive_bytes": 132520034,
+    "archive_members": 1536,
+    "censored_paths": 0,
+    "direct_patch_checks": 23040,
+    "failed_paths": 0,
+    "floors": 1536,
+    "native_constraint_cells": 63307776,
+    "passed_floors": 1536,
+    "passed_paths": 512,
+    "paths": 512,
+    "peak_rss_bytes": 197550080,
+    "wall_seconds": 232.9179514890002
+  },
+  "orbit_class_counts": {
+    "1": 8,
+    "2": 65,
+    "3": 11,
+    "4": 4
+  },
+  "rule_class_counts": {
+    "1": 24,
+    "2": 192,
+    "3": 26,
+    "4": 14
+  },
+  "predictions": {
+    "P1_all_paths_pass": true,
+    "P3_usefulness_criterion": false
+  },
+  "classification": {
+    "7": {
+      "balanced_accuracy": {
+        "lift2": 0.4606206293706294,
+        "lift3": 0.5266171328671329,
+        "lift4": 0.48500874125874127,
+        "lift_all": 0.5535402097902098,
+        "recipe": 0.345979020979021,
+        "source": 0.40196678321678325,
+        "source_recipe": 0.4273601398601399,
+        "source_recipe_lift_all": 0.4058129370629371
+      },
+      "incremental_balanced_accuracy": -0.02154720279720279
+    },
+    "8": {
+      "balanced_accuracy": {
+        "lift2": 0.4833479020979021,
+        "lift3": 0.564729020979021,
+        "lift4": 0.507736013986014,
+        "lift_all": 0.5685751748251748,
+        "recipe": 0.345979020979021,
+        "source": 0.3291083916083916,
+        "source_recipe": 0.42351398601398604,
+        "source_recipe_lift_all": 0.40196678321678325
+      },
+      "incremental_balanced_accuracy": -0.02154720279720279
+    }
+  },
+  "global_exchangeability_p": 0.595,
+  "archive": {
+    "sha256": "a64ea2e7ecd7b54bf3f3bf68e9fb0fa3cf49eecdc8a997768be5c664d76f8fce",
+    "bytes": 132520034,
+    "preservation": "Exact gzip delivered as a private user-scoped downloadable artifact. Repository contains public reproduction code and hashes, not the large archive bytes.",
+    "ci": "Source hashes, complete raw accounting and saved-analysis recomputation only. External archive bytes require --archive locally."
+  }
+}
