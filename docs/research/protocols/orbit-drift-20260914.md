@@ -2,7 +2,7 @@
 
 Status: frozen before implementation and evaluation, 2026-09-14.
 
-Authored by: Codex (OpenAI), Myk's dimensional-lift session. Protocol review: pending independent review; Myk's explicit earlier session override of Gate 1 remains authorized. No evaluation has run at this revision.
+Authored by: Codex (OpenAI), Myk's dimensional-lift session. Protocol review: prospectively approved by independent Codex agent `orbit_drift_review` at frozen revision `bffe131ff1ef3cbb59f07cc00aa738fa1bd29271`; [signed Gate 1 review](https://github.com/bombadil-labs/groovy-commutator/pull/245#issuecomment-5672111663). This provenance-only update precedes implementation and evaluation; the reviewed scope is unchanged. Myk's earlier Gate 1 override remains authorized but was not needed for this run.
 
 ## Question and fixed scope
 
