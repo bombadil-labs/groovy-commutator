@@ -30,6 +30,7 @@ ROOT = pathlib.Path(__file__).resolve().parents[1]
 
 # result file -> {hash key recorded in its source_hashes: path the hash was taken of}
 REGISTRY = {
+    'results/on_beam_256_4d_20260914.json': {'script': 'scripts/on_beam_256_4d.py', 'analysis_script': 'scripts/on_beam_rule_analysis.py', 'native_core': 'scripts/sequential_lift_6d_pilot.py', 'accounting': 'scripts/verify_on_beam_256_4d.py', 'protocol': 'docs/research/protocols/on-beam-256-4d-classes-20260914.md', 'recipes': 'results/binary_lift_20260914/rule_coverage.csv', 'labels': 'experiments/on_beam_256_4d_20260914/labels.json', 'execution': 'experiments/on_beam_256_4d_20260914/run/execution.json', 'summary': 'experiments/on_beam_256_4d_20260914/run/summary.json', 'analysis': 'experiments/on_beam_256_4d_20260914/run/analysis.json', 'archive_manifest': 'experiments/on_beam_256_4d_20260914/run/archive_manifest.json', 'floors': 'experiments/on_beam_256_4d_20260914/run/floors.jsonl', 'paths': 'experiments/on_beam_256_4d_20260914/run/paths.jsonl'},
     'results/sequential_lift_6d_20260914.json': {'script': 'scripts/sequential_lift_6d_pilot.py', 'protocol': 'docs/research/protocols/sequential-lift-6d-pilot-20260914.md', 'accounting': 'scripts/verify_sequential_lift_pilot.py', 'raw_floors': 'experiments/sequential_lift_6d_20260914/run/floors.jsonl', 'raw_summary': 'experiments/sequential_lift_6d_20260914/run/summary.json', 'execution': 'experiments/sequential_lift_6d_20260914/run/execution.json'},
     'results/representation_invariants_20260910.json': {
         'script': 'scripts/verify_representation_invariants.py',
@@ -216,4 +217,3 @@ def main(argv: list[str]) -> int:
 
 if __name__ == '__main__':
     sys.exit(main(sys.argv[1:]))
-

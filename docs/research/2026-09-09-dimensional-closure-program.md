@@ -6,6 +6,14 @@ This page is the **working synthesis** of the dimensional-lift research program.
 
 The program is parallel to [Dynamics of Erased Distinctions](2026-09-08-dynamics-of-erased-distinctions.md). That program asks when information can be forgotten safely and how a lossy representation repairs itself. This one asks what additional structure must be represented when evolution and transformation refuse to agree.
 
+## 2026-09-14 census: all 256 sources through 4D; class signatures are descriptive
+
+The [two-width on-beam census](2026-09-14-on-beam-256-4d-classes.md) extends the sequential native/recovery result to every ECA source through 4D on complete width-seven/eight families. Each recipe is fixed from the archived four-field coverage table and every native parent completion is immutable before the next lift. The note supplies exact results, costs and review provenance.
+
+Lifted source-coordinate algebraic degree and phase rank show different relationships to published Wolfram classes: Class III has high rank without consistently high degree, while Class IV has both at these bounds. Table cardinality can coincide across classes. A frozen incremental prediction test fails, so these measurements are descriptive leads, not an established classification method.
+
+Together with the preceding 6D pilot this strengthens finite-family evidence at complementary breadth and depth. It does not enlarge the proved infinite-input domain, restore recursive G, or make the generator a pure function of arbitrary bare C. Exact partial rules are preserved in a private downloadable archive, with public reproduction code and complete hashes; the post-evaluation storage deviation is explicit in the note. Independent final integration is tracked in gathering #238.
+
 ## 2026-09-14 pilot: fixed native parents support six finite-family paths through 6D
 
 The [sequential pilot](2026-09-14-sequential-lift-6d-pilot.md) extends six published recipe paths through 6D on all width-seven source states. Every floor retains native evolution and immediate-parent/composed source recovery, with each completed parent rule fixed before its child is built. The note supplies the exact counts and measured costs.
@@ -732,4 +740,3 @@ The census exhausts every source pair on rings `n=6` and `n=7`, pools primary tr
 The negative result survives the fixed controls. The coordinate bijection and zero-interface initial condition pass. Every source remains exterior-background-clean after the first coarse update, while exterior departure appears by the second. Independent scalar physical replays agree with the vectorized selector evolution. For P15 at `R=2`, two records with identical five-symbol local neighborhoods have next center symbols `0` and `24`; their independently replayed next-step causal patches differ outside rows `0..3`. The canonical `R=1` conflict has the same exterior hidden-cause property.
 
 This is a bounded factor obstruction for one representation family, not a fixed-height or intrinsic-dimension impossibility theorem. Larger longitudinal radii, histories, moving/support-tracking state, other coordinates, nonlocal factors and restricted source families remain logically open and were not introduced post hoc. The result sharpens the earlier interface-state failure by showing that re-coordinating the natural six retained bits and supplying longitudinal context through radius two still does not produce an autonomous factor on the declared reachable family.
-
