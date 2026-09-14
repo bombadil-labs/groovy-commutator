@@ -1,8 +1,8 @@
 # Uniform six-field on-beam cache and timing comparison
 
-Status: frozen design before implementation and primary evaluation.
+Status: frozen; independent Gate 1 approved before implementation and primary evaluation.
 
-Authored by: Codex (OpenAI), Myk's dimensional-lift session, 2026-09-14. Reviewed by: pending independent Gate 1. Myk has explicitly waived Gate 1 in this session and now authorizes recomputing the cache with the new operator, computing only needed work and comparing timings; that authorization persists. Prospective independent review is requested and its actual chronology will be recorded.
+Authored by: Codex (OpenAI), Myk's dimensional-lift session, 2026-09-14. Reviewed by: Codex (OpenAI), independent agent /root/independent_pilot_review, 2026-09-14, exact design SHA ba12237a108ccbe89d6b28e37812d71e84cebf38; [signed Gate 1](https://github.com/bombadil-labs/groovy-commutator/pull/241#issuecomment-5670437763). Myk's standing Gate 1 waiver was available but not needed: this unit received prospective independent review. The review confirms that caches are scoped to immutable law/shape/radius, old controls keep their original radius/recipe, a stronger-decoder failure leaves later native floors untested rather than refuted, and class comparisons use a common surviving orbit cohort. Construction of L(H(X)) needs H^3(X) for its T field, obtained through the same temporal cache.
 
 ## Question and scope
 
