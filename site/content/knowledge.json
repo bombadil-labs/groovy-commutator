@@ -19,7 +19,7 @@
       "type": "depends_on"
     },
     {
-      "reason": "Rule 30’s strong derivative-history repair defeats the repair-only distinction from Rule 110.",
+      "reason": "Rule 30\u2019s strong derivative-history repair defeats the repair-only distinction from Rule 110.",
       "research": [
         "history-repairability"
       ],
@@ -1303,7 +1303,7 @@
       "source": "commutator-complement-covariance",
       "type": "depends_on",
       "target": "affine-implication",
-      "reason": "The bias transformation c ↦ c ⊕ M1 ⊕ 1 is the affine implication read through complement conjugation.",
+      "reason": "The bias transformation c \u21a6 c \u2295 M1 \u2295 1 is the affine implication read through complement conjugation.",
       "research": [
         "representation-invariants-audit"
       ]
@@ -1330,7 +1330,7 @@
       "source": "cap-census-complement-shift",
       "type": "depends_on",
       "target": "local-cap-census",
-      "reason": "The audit reads the census results and its R ≤ 2 budget without recomputation.",
+      "reason": "The audit reads the census results and its R \u2264 2 budget without recomputation.",
       "research": [
         "representation-invariants-audit"
       ]
@@ -1402,7 +1402,7 @@
       "source": "cap-census-complement-extension-test",
       "type": "tests",
       "target": "cap-census-complement-shift",
-      "reason": "Tests the post-hoc bound as a frozen prediction on the 22 differing cells at R ≤ 6.",
+      "reason": "Tests the post-hoc bound as a frozen prediction on the 22 differing cells at R \u2264 6.",
       "research": [
         "cap-census-complement-extension"
       ]
@@ -1420,7 +1420,7 @@
       "source": "cap-census-complement-extension-test",
       "type": "depends_on",
       "target": "local-cap-census",
-      "reason": "Reuses the census evaluator's tables and reproduces its R ≤ 2 values as a control.",
+      "reason": "Reuses the census evaluator's tables and reproduces its R \u2264 2 values as a control.",
       "research": [
         "cap-census-complement-extension"
       ]
@@ -1429,7 +1429,7 @@
       "source": "o-caps-complement-invariant",
       "type": "depends_on",
       "target": "local-cap-census",
-      "reason": "Same evaluator and coordinate definitions, extended to R ≤ 4.",
+      "reason": "Same evaluator and coordinate definitions, extended to R \u2264 4.",
       "research": [
         "cap-shift-census"
       ]
@@ -1528,7 +1528,7 @@
       "source": "parity-closure-constant-response",
       "type": "depends_on",
       "target": "observation-factor",
-      "reason": "Uses factor existence with π F = B π as the closure notion, unchanged.",
+      "reason": "Uses factor existence with \u03c0 F = B \u03c0 as the closure notion, unchanged.",
       "research": [
         "parity-coarse-graining"
       ]
@@ -1984,7 +1984,7 @@
       "type": "tests"
     },
     {
-      "reason": "The depth-three graph is the fifteenth unit's construction with eight-cell vertices; the 24 deep pairs, their depth-two witnesses and the FS² sets are read from its result.",
+      "reason": "The depth-three graph is the fifteenth unit's construction with eight-cell vertices; the 24 deep pairs, their depth-two witnesses and the FS\u00b2 sets are read from its result.",
       "research": [
         "full-shift-depth-three"
       ],
@@ -2090,7 +2090,7 @@
       "type": "depends_on"
     },
     {
-      "reason": "The fifteenth unit's depth-two gap rules under 90/150 and the FS² sets are the imported inputs whose depth-two witnesses are realized as explicit pairs in O5.",
+      "reason": "The fifteenth unit's depth-two gap rules under 90/150 and the FS\u00b2 sets are the imported inputs whose depth-two witnesses are realized as explicit pairs in O5.",
       "research": [
         "full-shift-depth-three-linear"
       ],
@@ -2744,7 +2744,7 @@
       "source": "docs/knowledge/neighborhood-selector.md",
       "status": "exact",
       "summary": "For either declared address axis, all 40,320 assignments give nine-essential-input, degree-four rules; 36,000 functions are distinct.",
-      "title": "Eight neighbors can supply their center’s rule",
+      "title": "Eight neighbors can supply their center\u2019s rule",
       "updated": "2026-09-08"
     },
     {
@@ -2779,7 +2779,7 @@
       ],
       "source": "docs/knowledge/outer-totalistic-lift.md",
       "status": "defined",
-      "summary": "A rule with 2·3^d bits fits in the two adjacent layers of a (d+1)-dimensional neighborhood.",
+      "summary": "A rule with 2\u00b73^d bits fits in the two adjacent layers of a (d+1)-dimensional neighborhood.",
       "title": "Outer-totalistic dimensional encoding",
       "updated": "2026-09-08"
     },
@@ -3804,7 +3804,7 @@
       "title": "Complement conjugation shifts local-cap radii by a bounded amount",
       "kind": "finding",
       "status": "exact",
-      "summary": "Reflection preserves all 4,608 cap budgets. Under complement conjugation 696 K cells keep their minimum radius, 54 differ with both finite (4 exceed the frozen ≤h bound, all at h=0), 18 are censored at R ≤ 2; every censored cell has a cap at radius 3 and the shift is at most 2.",
+      "summary": "Reflection preserves all 4,608 cap budgets. Under complement conjugation 696 K cells keep their minimum radius, 54 differ with both finite (4 exceed the frozen \u2264h bound, all at h=0), 18 are censored at R \u2264 2; every censored cell has a cap at radius 3 and the shift is at most 2.",
       "updated": "2026-09-11",
       "source": "docs/knowledge/cap-census-complement-shift.md",
       "research": [
@@ -3838,7 +3838,7 @@
     },
     {
       "id": "cap-census-complement-extension-test",
-      "title": "Extend the cap census to R ≤ 6 on the cells that disagreed with their complements",
+      "title": "Extend the cap census to R \u2264 6 on the cells that disagreed with their complements",
       "kind": "experiment",
       "status": "completed",
       "summary": "All four frozen predictions held: caps exist on both sides, the bound holds, shifts are 1 or 2.",
@@ -3853,7 +3853,7 @@
       "title": "O-coordinate caps are complement-invariant; K caps shift by at most two",
       "kind": "finding",
       "status": "exact",
-      "summary": "At R ≤ 4 over all rules the O cap table is identical under complement conjugation and K radii shift by 0, 1 or 2; no cap is created or destroyed.",
+      "summary": "At R \u2264 4 over all rules the O cap table is identical under complement conjugation and K radii shift by 0, 1 or 2; no cap is created or destroyed.",
       "updated": "2026-09-11",
       "source": "docs/knowledge/o-caps-complement-invariant.md",
       "research": [
@@ -3865,7 +3865,7 @@
       "title": "Census of cap-radius shifts under complement conjugation",
       "kind": "experiment",
       "status": "completed",
-      "summary": "All six frozen predictions held over 256 rules, K and O, h ≤ 2, R ≤ 4.",
+      "summary": "All six frozen predictions held over 256 rules, K and O, h \u2264 2, R \u2264 4.",
       "updated": "2026-09-11",
       "source": "docs/knowledge/cap-shift-census-test.md",
       "research": [
@@ -3901,7 +3901,7 @@
       "title": "Audit the 2-block recoding against caps, derivative, commutator, closure, and the observer family",
       "kind": "experiment",
       "status": "completed",
-      "summary": "B1–B3 held on the consistent-pair family and the observer-family closure part of B4 held; B4's literal-summary consequence and the declared ambient radius were corrected after review.",
+      "summary": "B1\u2013B3 held on the consistent-pair family and the observer-family closure part of B4 held; B4's literal-summary consequence and the declared ambient radius were corrected after review.",
       "updated": "2026-09-11",
       "source": "docs/knowledge/higher-block-recoding-test.md",
       "research": [
@@ -3938,7 +3938,7 @@
       "title": "Certify the history bound under neighbor-parity coarse-graining",
       "kind": "experiment",
       "status": "completed",
-      "summary": "Finite 8-word certificate plus lemma proves h_* ≤ 2 on every ring for all rules; depth-2 set is exactly eight rules; exhaustive rings 7, 9, 11, 14 agree; run authorized before other-model review, which arrived retrospectively.",
+      "summary": "Finite 8-word certificate plus lemma proves h_* \u2264 2 on every ring for all rules; depth-2 set is exactly eight rules; exhaustive rings 7, 9, 11, 14 agree; run authorized before other-model review, which arrived retrospectively.",
       "updated": "2026-09-11",
       "source": "docs/knowledge/parity-history-bound-test.md",
       "research": [
@@ -4238,7 +4238,7 @@
       "kind": "finding",
       "status": "exact",
       "title": "Available translation directions and law-used causal directions are distinct but representation-relative",
-      "summary": "rho_T separates nontrivial translation action on a declared state family from rho_C, the rank of a local law's essential displacement offsets. Copied or anchored families can remain translation-rank one inside 2D, but translation closure changes rho_T; for the accepted ordered-axis ECA constructor, E(G_r,2)=E_r×E_r makes target rho_C entirely determined by source essentiality, so the new rank adds no independent rule classification.",
+      "summary": "rho_T separates nontrivial translation action on a declared state family from rho_C, the rank of a local law's essential displacement offsets. Copied or anchored families can remain translation-rank one inside 2D, but translation closure changes rho_T; for the accepted ordered-axis ECA constructor, E(G_r,2)=E_r\u00d7E_r makes target rho_C entirely determined by source essentiality, so the new rank adds no independent rule classification.",
       "updated": "2026-09-12",
       "source": "docs/knowledge/relational-rank.md",
       "research": [
@@ -4274,7 +4274,7 @@
       "kind": "experiment",
       "status": "completed",
       "title": "Decide full-shift refinement depth at most three under the two linear observations 90 and 150",
-      "summary": "Five of six frozen predictions held; O3's bet failed. The sixteenth unit's sparse pair-graph method applied to 90, 150 and 165: FS³ has 250 rules under 90 and 246 under 150. Of the remaining non-pen-decided rules, 14 of 18 under 90 and all 24 under 150 have full-shift depth exactly three.",
+      "summary": "Five of six frozen predictions held; O3's bet failed. The sixteenth unit's sparse pair-graph method applied to 90, 150 and 165: FS\u00b3 has 250 rules under 90 and 246 under 150. Of the remaining non-pen-decided rules, 14 of 18 under 90 and all 24 under 150 have full-shift depth exactly three.",
       "updated": "2026-09-12",
       "source": "docs/knowledge/full-shift-depth-three-linear-test.md",
       "research": [
@@ -4452,6 +4452,18 @@
       "source": "docs/knowledge/uniform-six-field-lift-cache.md",
       "research": [
         "uniform-jet6-cache-20260914"
+      ]
+    },
+    {
+      "id": "orbit-period-drift",
+      "title": "Temporal periods contain shape recurrence and spatial drift",
+      "kind": "finding",
+      "status": "exact",
+      "summary": "Translation-equivariant periodic dynamics obey p=q*d/gcd(d,a). At N=14, Rule 110 retains shape period 13 and Rule 54 retains 16; the six long cycles form three rotation families.",
+      "updated": "2026-09-14",
+      "source": "docs/knowledge/orbit-period-drift.md",
+      "research": [
+        "orbit-drift-14-20260914"
       ]
     }
   ],

@@ -1,0 +1,135 @@
+{
+  "annotations": [
+    {
+      "a": 12,
+      "a_signed": -2,
+      "d": 14,
+      "family_cycle_count": 2,
+      "family_representative": 125,
+      "m": 7,
+      "n": 14,
+      "p": 91,
+      "q": 13,
+      "representative": 125,
+      "rule": 110,
+      "word_cell_0_first": "10111110000000"
+    },
+    {
+      "a": 12,
+      "a_signed": -2,
+      "d": 14,
+      "family_cycle_count": 2,
+      "family_representative": 125,
+      "m": 7,
+      "n": 14,
+      "p": 91,
+      "q": 13,
+      "representative": 143,
+      "rule": 110,
+      "word_cell_0_first": "11110001000000"
+    },
+    {
+      "a": 10,
+      "a_signed": -4,
+      "d": 14,
+      "family_cycle_count": 2,
+      "family_representative": 39,
+      "m": 7,
+      "n": 14,
+      "p": 112,
+      "q": 16,
+      "representative": 39,
+      "rule": 54,
+      "word_cell_0_first": "11100100000000"
+    },
+    {
+      "a": 4,
+      "a_signed": 4,
+      "d": 14,
+      "family_cycle_count": 2,
+      "family_representative": 57,
+      "m": 7,
+      "n": 14,
+      "p": 112,
+      "q": 16,
+      "representative": 57,
+      "rule": 54,
+      "word_cell_0_first": "10011100000000"
+    },
+    {
+      "a": 10,
+      "a_signed": -4,
+      "d": 14,
+      "family_cycle_count": 2,
+      "family_representative": 39,
+      "m": 7,
+      "n": 14,
+      "p": 112,
+      "q": 16,
+      "representative": 78,
+      "rule": 54,
+      "word_cell_0_first": "01110010000000"
+    },
+    {
+      "a": 4,
+      "a_signed": 4,
+      "d": 14,
+      "family_cycle_count": 2,
+      "family_representative": 57,
+      "m": 7,
+      "n": 14,
+      "p": 112,
+      "q": 16,
+      "representative": 114,
+      "rule": 54,
+      "word_cell_0_first": "01001110000000"
+    }
+  ],
+  "implementation_commit": "3d8a5eae255ef8da1a1f1a679889d5891244d037",
+  "schema": 1,
+  "source_hashes": {
+    "docs/research/protocols/orbit-drift-20260914.md": "2f7f8b26494312cab13b40629b715add3840adce17b92f4b8fa1720bd1e3923d",
+    "experiments/orbit_drift_14_20260914/run/annotations.csv": "100bb35b09a2e7f688174cd91f7a035670f41ebf3290778fae28d8bbd7eb8d41",
+    "experiments/orbit_drift_14_20260914/run/cycles.json": "a080165a494e8143a6d3fad63d31ce0ced013b2f02a657e1072dd1fc730593b3",
+    "experiments/orbit_drift_14_20260914/run/execution.json": "5e3794236442090e6c47d3f9fb587b1e19de7e77abd32a807631dd38607cfb9a",
+    "review/orbit_drift_independent_review.json": "2dc5df4780ec3a83c8a7d95236fd7a175c87633ddcc8fc01567575b5126cd386",
+    "review/orbit_drift_independent_review.py": "069165aa94a7f9ce8d87b1a4d471cd5af695ecf76959a89a2d0cdbe3f9e91164",
+    "scripts/orbit_drift_14.py": "db1572c74812ac4a70f705dd9252853749cc922027c99a6990bedbf9b8457016",
+    "scripts/verify_orbit_drift_14.py": "a9d1b7b04a61ba59ee1366aedfeb5e3a76585058439062be3ea5718883e0c518",
+    "src/groovy/ca.py": "6969d6f0699b48602c8a2f55aecd61d58862e6472fea56f6d1ed9ebb2656d77e"
+  },
+  "summary": {
+    "all_cycle_count": 69,
+    "all_periodic_states": 982,
+    "n": 14,
+    "reported_spectra_match": true,
+    "rotation_families": 3,
+    "rules": [
+      110,
+      54
+    ],
+    "scalar_successors_checked": 32768,
+    "spectra": {
+      "110": {
+        "1": 1,
+        "12": 7,
+        "14": 1,
+        "21": 2,
+        "7": 2,
+        "91": 2
+      },
+      "54": {
+        "1": 1,
+        "112": 4,
+        "4": 49
+      }
+    },
+    "target_cycles": 6,
+    "target_periodic_states": 630
+  },
+  "timing": {
+    "elapsed_seconds": 0.13365113599866163,
+    "peak_rss_mib": 25.96875
+  },
+  "verification": "Automatic tier hashes inputs and checks saved sequences/rotations. It does not execute the CA or establish graph completeness; local author/reviewer enumeration supplies that evidence."
+}

@@ -1,0 +1,136 @@
+{
+  "author_scientific_imports": false,
+  "elapsed_seconds": 0.2309611800010316,
+  "graphs_cross_checked": 2,
+  "independent_method": "Explicit bit-list ECA and translation; path-visitation cycle extraction; every target temporal phase and every spacetime return checked.",
+  "inputs_sha256": {
+    "experiments/orbit_drift_14_20260914/run/annotations.csv": "100bb35b09a2e7f688174cd91f7a035670f41ebf3290778fae28d8bbd7eb8d41",
+    "experiments/orbit_drift_14_20260914/run/cycles.json": "a080165a494e8143a6d3fad63d31ce0ced013b2f02a657e1072dd1fc730593b3",
+    "experiments/orbit_drift_14_20260914/run/execution.json": "5e3794236442090e6c47d3f9fb587b1e19de7e77abd32a807631dd38607cfb9a",
+    "review/orbit_drift_independent_review.py": "069165aa94a7f9ce8d87b1a4d471cd5af695ecf76959a89a2d0cdbe3f9e91164"
+  },
+  "known_answer_controls": 3,
+  "reviewed_implementation_commit": "3d8a5eae255ef8da1a1f1a679889d5891244d037",
+  "reviewed_utc": "2026-09-14T23:24:54.703698+00:00",
+  "reviewer": "Codex (OpenAI), /root/orbit_drift_review",
+  "rules": [
+    {
+      "annotations": [
+        {
+          "a": 12,
+          "a_signed": -2,
+          "d": 14,
+          "family_members": [
+            125,
+            143
+          ],
+          "family_representative": 125,
+          "m": 7,
+          "p": 91,
+          "q": 13,
+          "representative": 125
+        },
+        {
+          "a": 12,
+          "a_signed": -2,
+          "d": 14,
+          "family_members": [
+            125,
+            143
+          ],
+          "family_representative": 125,
+          "m": 7,
+          "p": 91,
+          "q": 13,
+          "representative": 143
+        }
+      ],
+      "graph_states": 16384,
+      "periodic_states": 337,
+      "rule": 110,
+      "spectrum": {
+        "1": 1,
+        "12": 7,
+        "14": 1,
+        "21": 2,
+        "7": 2,
+        "91": 2
+      },
+      "successor_sha256": "c366edc65ee353a49c20e7fd334d024f7f9595cae0f0eb011a4390ec9404aeb6",
+      "total_cycles": 15
+    },
+    {
+      "annotations": [
+        {
+          "a": 10,
+          "a_signed": -4,
+          "d": 14,
+          "family_members": [
+            39,
+            78
+          ],
+          "family_representative": 39,
+          "m": 7,
+          "p": 112,
+          "q": 16,
+          "representative": 39
+        },
+        {
+          "a": 4,
+          "a_signed": 4,
+          "d": 14,
+          "family_members": [
+            57,
+            114
+          ],
+          "family_representative": 57,
+          "m": 7,
+          "p": 112,
+          "q": 16,
+          "representative": 57
+        },
+        {
+          "a": 10,
+          "a_signed": -4,
+          "d": 14,
+          "family_members": [
+            39,
+            78
+          ],
+          "family_representative": 39,
+          "m": 7,
+          "p": 112,
+          "q": 16,
+          "representative": 78
+        },
+        {
+          "a": 4,
+          "a_signed": 4,
+          "d": 14,
+          "family_members": [
+            57,
+            114
+          ],
+          "family_representative": 57,
+          "m": 7,
+          "p": 112,
+          "q": 16,
+          "representative": 114
+        }
+      ],
+      "graph_states": 16384,
+      "periodic_states": 645,
+      "rule": 54,
+      "spectrum": {
+        "1": 1,
+        "112": 4,
+        "4": 49
+      },
+      "successor_sha256": "d0a2917061ca2c9688f2df62847383f433a8b33c700db96ea2c1a6e217927cf0",
+      "total_cycles": 54
+    }
+  ],
+  "status": "passed",
+  "successor_states_cross_checked": 32768,
+  "target_temporal_phases_cross_checked": 630
+}

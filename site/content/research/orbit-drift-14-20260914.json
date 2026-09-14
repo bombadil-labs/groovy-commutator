@@ -1,0 +1,21 @@
+[
+  {
+    "slug": "orbit-drift-14-20260914",
+    "label": "Orbit arithmetic I",
+    "title": "Long cycles separate into shape recurrence and spatial drift",
+    "date": "2026-09-14",
+    "updated": "2026-09-14",
+    "kind": "Experiment",
+    "evidence": "exact",
+    "topic": "Dimensional closure",
+    "summary": "At ring size 14, Rule 110's period 91 becomes a 13-step shape recurrence with seven positional repetitions; Rule 54's period 112 becomes 16 times seven. Six cycles form three translation families.",
+    "takeaway": "Remove spatial drift before interpreting arithmetic in temporal periods; the residual shape periods still depend on ring size.",
+    "source": "docs/research/2026-09-14-orbit-drift.md",
+    "promotion": {
+      "stage": "research"
+    },
+    "related": [
+      "uniform-jet6-cache-20260914"
+    ]
+  }
+]
