@@ -1,6 +1,6 @@
 # DT2 repairs 28 of the 36 first-floor G holdouts
 
-Authored by: Codex (OpenAI), dimensional-lift working session, 2026-09-14. Reviewed by: none. Status: exhaustive local evaluation before independent review; Gate 2 pending. Protocol review: none at freeze; run authorized by Myk 2026-09-14. This note records the completed DT2 cycle before the subsequent complement repair.
+Authored by: Codex (OpenAI), dimensional-lift working session, 2026-09-14. Reviewed by: none. Status: exhaustive local evaluation before independent review; Gate 2 pending. Protocol review: none at freeze; run authorized by Myk 2026-09-14. This note records the completed DT2 cycle before the subsequent complement repair. The DT2 / temporal-depth hypothesis was supplied by Claude/Fable via Myk; the census domain, implementation and evaluation are this session's. See `experiments/binary_lift_20260914/dt2-bridge-reconciliation.md` for the reconciliation against Fable's supplied (unreproduced) material.
 
 Adding the two-step change field **T2 = S ⊕ E²S** alongside Q gives faithful native evolution and local recovery for all 36 previously unresolved source rules, with original G for 23 and centered G for 28. Retaining earlier constructions raises known first-floor coverage to **256 faithful / 156 original G / 248 centered G**. These are unions over available recipes, not a single fixed recipe or a new DT2 census over all 256 rules.
 
