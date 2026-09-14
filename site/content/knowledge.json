@@ -2276,6 +2276,36 @@
         "binary-lift-recursion-20260914",
         "binary-lift-g-obstructions-20260914"
       ]
+    },
+    {
+      "source": "binary-lift-census",
+      "type": "supports",
+      "target": "centered-binary-g-first-floor",
+      "reason": "The preserved DT2 and polarity censuses complete first-floor centered-G coverage without changing native radius; this adds no recursive guarantee.",
+      "research": [
+        "binary-lift-dt2-20260914",
+        "binary-lift-complements-20260914"
+      ]
+    },
+    {
+      "source": "centered-binary-g-first-floor",
+      "type": "depends_on",
+      "target": "binary-native-lift-family",
+      "reason": "Cumulative centered-G coverage retains previously faithful source recipes and their native/recovery evidence.",
+      "research": [
+        "binary-lift-dt2-20260914",
+        "binary-lift-complements-20260914"
+      ]
+    },
+    {
+      "source": "recursive-binary-g-lift",
+      "type": "depends_on",
+      "target": "centered-binary-g-first-floor",
+      "reason": "A recursively reusable centered-G lift needs a faithful centered-G first floor; this census establishes that prerequisite only.",
+      "research": [
+        "binary-lift-dt2-20260914",
+        "binary-lift-complements-20260914"
+      ]
     }
   ],
   "nodes": [
@@ -4295,7 +4325,9 @@
       "research": [
         "binary-lift-family-20260914",
         "binary-lift-recursion-20260914",
-        "binary-lift-g-obstructions-20260914"
+        "binary-lift-g-obstructions-20260914",
+        "binary-lift-dt2-20260914",
+        "binary-lift-complements-20260914"
       ]
     },
     {
@@ -4309,7 +4341,9 @@
       "research": [
         "binary-lift-family-20260914",
         "binary-lift-recursion-20260914",
-        "binary-lift-g-obstructions-20260914"
+        "binary-lift-g-obstructions-20260914",
+        "binary-lift-dt2-20260914",
+        "binary-lift-complements-20260914"
       ]
     },
     {
@@ -4317,27 +4351,44 @@
       "kind": "experiment",
       "status": "completed",
       "title": "Binary lift census and collision diagnosis",
-      "summary": "Completed local all 256 source coverage and 36 holdout diagnosis under Myk's Gate 1 exception; Gate 2 review pending.",
+      "summary": "Completed first-floor extension supplies 256 faithful and 256 centered-G sources, with original G at 156 and recursive guarantees separately bounded; Gate 2 pending.",
       "updated": "2026-09-14",
       "source": "docs/knowledge/binary-lift-census.md",
       "research": [
         "binary-lift-family-20260914",
         "binary-lift-recursion-20260914",
-        "binary-lift-g-obstructions-20260914"
+        "binary-lift-g-obstructions-20260914",
+        "binary-lift-dt2-20260914",
+        "binary-lift-complements-20260914"
       ]
     },
     {
       "id": "recursive-binary-g-lift",
       "kind": "question",
       "status": "open",
-      "title": "Can one binary lift grammar preserve G indefinitely for every ECA?",
-      "summary": "Probe sufficiency and native compatibility must survive recursion; universal G and dimension-induction remain unproved.",
+      "title": "Can one binary lift grammar preserve centered G indefinitely for every ECA?",
+      "summary": "Centered G is now universal at the first floor; recursive compatibility, parent recovery and preparation costs remain open.",
       "updated": "2026-09-14",
       "source": "docs/knowledge/recursive-binary-g-lift.md",
       "research": [
         "binary-lift-family-20260914",
         "binary-lift-recursion-20260914",
-        "binary-lift-g-obstructions-20260914"
+        "binary-lift-g-obstructions-20260914",
+        "binary-lift-dt2-20260914",
+        "binary-lift-complements-20260914"
+      ]
+    },
+    {
+      "id": "centered-binary-g-first-floor",
+      "kind": "finding",
+      "status": "exploratory",
+      "title": "Every ECA has a faithful centered-G binary first floor in the extended family",
+      "summary": "DT2 plus a complemented temporal-agreement row closes all 256 centered-G first floors at native radius two, on prepared images with P/D carriers. Independent Gate 2 review remains pending.",
+      "updated": "2026-09-14",
+      "source": "docs/knowledge/centered-binary-g-first-floor.md",
+      "research": [
+        "binary-lift-dt2-20260914",
+        "binary-lift-complements-20260914"
       ]
     }
   ],

@@ -51,3 +51,7 @@ The extraction destination must be empty. The historical 4D check is optional an
 5. Do the exception, retrospective status and remaining proof boundaries remain visible in every current-account surface?
 
 The next Boolean-Q witness-filter experiment is unrun. This import is a record of completed work, not authorization to resume an unbounded search.
+
+## Post-PR extension
+
+The [DT2 and row-complement extension](EXTENSION.md) supplies universal first-floor centered-G coverage. Its original datasets and additional verifier are separate; the archive and canonical baseline described above remain unchanged. The earlier suggested Q-screen was superseded by the completed DT2/complement tests.

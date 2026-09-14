@@ -6,6 +6,16 @@ This page is the **working synthesis** of the dimensional-lift research program.
 
 The program is parallel to [Dynamics of Erased Distinctions](2026-09-08-dynamics-of-erased-distinctions.md). That program asks when information can be forgotten safely and how a lossy representation repairs itself. This one asks what additional structure must be represented when evolution and transformation refuse to agree.
 
+## 2026-09-14 extension: universal centered G at the first floor; Gate 2 pending
+
+The [DT2 comparison](2026-09-14-binary-lift-dt2.md) repairs28 of 36 centered-G holdouts; the [row-complement census](2026-09-14-binary-lift-complements.md) repairs the final eight. The cumulative family now has **256 faithful / 156 original-G / 256 centered-G** first floors at native radius two. One shared final-eight recipe repeats P,D,1 XOR T2,M,Q with birth mask and a directed Q. Its native and probe key sets are disjoint. These are source-dependent recipe-union claims on prepared period-four/five configurations, with source-radius-two preparation and P/D carriers only.
+
+The remaining original-G failure has a precise obstruction: if the source has a fixed state and E_r(0)=1, faithful lifting makes an encoded fixed state whose native G is uniform H(0), while c(1) requires zero on P and one on D. Centering removes that contradiction explicitly. A universal original-G theorem under the unchanged carrier is therefore excluded, not merely unfinished search.
+
+No new recursive result was computed. Earlier best-known3D Gcoverage remains 206; the historical4D sample remains113 faithful/105 G. The next scientific question is whether a selection from the now-complete centered first-floor family repeats under the full symbolic-parent contract for all 256. The bridge's three-lineage repeat is a separately scoped claim. Preparation costs, parent completions and native/probe compatibility must remain explicit.
+
+Myk authorized these local evaluations and their integration into the existing gathering PR; [extension provenance](protocols/binary-lift-extension-record-20260914.md) records the locally frozen protocols, post hoc shared-recipe selection and independent-review exception. The earlier account below is retained as the original PR baseline, not current first-floor coverage.
+
 ## 2026-09-14: universal ECA source coverage in a prepared binary family; Gate 2 pending
 
 The new retrospective unit records [a four-reference first-floor family](2026-09-14-binary-lift-family.md), [its selected repeat into 3D](2026-09-14-binary-lift-recursion.md), and [exact G-obstruction diagnoses](2026-09-14-binary-lift-g-obstructions.md). Myk approved the Gate 1 exception; evaluation preceded independent review. See the [authorization and deviations record](protocols/binary-lift-retrospective-record-20260914.md). This section reports pending work, not an accepted Gate 2result.

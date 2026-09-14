@@ -10,6 +10,9 @@ on:
       - 'results/binary_lift_20260914*'
       - 'results/binary_lift_20260914/**'
       - 'scripts/verify_binary_lift_release.py'
+      - 'scripts/verify_binary_lift_extension.py'
+      - 'results/binary_lift_20260914_extension/**'
+      - 'docs/research/protocols/*20260914.md'
       - 'scripts/check_result_integrity.py'
       - 'docs/research/protocols/binary-lift-retrospective-record-20260914.md'
       - '.github/workflows/research-binary-lift-release.yml'
@@ -20,6 +23,9 @@ on:
       - 'results/binary_lift_20260914*'
       - 'results/binary_lift_20260914/**'
       - 'scripts/verify_binary_lift_release.py'
+      - 'scripts/verify_binary_lift_extension.py'
+      - 'results/binary_lift_20260914_extension/**'
+      - 'docs/research/protocols/*20260914.md'
       - 'scripts/check_result_integrity.py'
       - 'docs/research/protocols/binary-lift-retrospective-record-20260914.md'
       - '.github/workflows/research-binary-lift-release.yml'
@@ -42,3 +48,7 @@ jobs:
         run: python scripts/verify_binary_lift_release.py --integrity
       - name: Recompute coverage account from preserved records
         run: python scripts/verify_binary_lift_release.py --check
+      - name: Verify extension source and evidence hashes
+        run: python scripts/verify_binary_lift_extension.py --integrity
+      - name: Recompute extension coverage from preserved records
+        run: python scripts/verify_binary_lift_extension.py --check

@@ -1,5 +1,7 @@
 # A four-reference binary lift family covers all 256 ECAs
 
+**Later same-day extension:** the [DT2](2026-09-14-binary-lift-dt2.md) and [row-complement](2026-09-14-binary-lift-complements.md) notes close first-floor centered G across the cumulative family. The original datasets and scoped counts below are retained; recursive closure remains open.
+
 Status: retrospective exhaustive first-floor census; independent Gate 2 review pending. Catalog status remains exploratory because the family was selected adaptively and evaluated before independent review.
 
 Authored by: Codex (OpenAI), dimensional-lift local working session, 2026-09-14. Reviewed by: none.

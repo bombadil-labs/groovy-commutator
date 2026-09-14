@@ -64,5 +64,49 @@
       "dimensional-intertwining",
       "dimensional-vision-and-interpretation"
     ]
+  },
+  {
+    "slug": "binary-lift-dt2-20260914",
+    "label": "Binary lift IV",
+    "title": "Two-step change information repairs 28 first-floor G holdouts",
+    "date": "2026-09-14",
+    "updated": "2026-09-14",
+    "kind": "Experiment",
+    "evidence": "exploratory",
+    "topic": "Dimensional closure",
+    "summary": "A complete DT2 comparison repairs 28 of 36 centered-G holdouts, retaining radius-two binary native dynamics and recovery.",
+    "takeaway": "DT2 and Q supply complementary distinctions; storing DT2 alone is not sufficient.",
+    "source": "docs/research/2026-09-14-binary-lift-dt2.md",
+    "promotion": {
+      "stage": "research"
+    },
+    "related": [
+      "binary-lift-family-20260914",
+      "binary-lift-recursion-20260914",
+      "binary-lift-g-obstructions-20260914",
+      "binary-lift-complements-20260914"
+    ]
+  },
+  {
+    "slug": "binary-lift-complements-20260914",
+    "label": "Binary lift V",
+    "title": "One complemented temporal row closes first-floor centered G for all 256 ECAs",
+    "date": "2026-09-14",
+    "updated": "2026-09-14",
+    "kind": "Experiment",
+    "evidence": "exploratory",
+    "topic": "Dimensional closure",
+    "summary": "A shared complemented-T2 recipe repairs the final eight; the cumulative first-floor family covers 256 faithful and 256 centered-G sources.",
+    "takeaway": "Native/probe separation closes centered G at the first floor; original G has a fixed-point obstruction under the same carrier.",
+    "source": "docs/research/2026-09-14-binary-lift-complements.md",
+    "promotion": {
+      "stage": "research"
+    },
+    "related": [
+      "binary-lift-family-20260914",
+      "binary-lift-recursion-20260914",
+      "binary-lift-g-obstructions-20260914",
+      "binary-lift-dt2-20260914"
+    ]
   }
 ]
