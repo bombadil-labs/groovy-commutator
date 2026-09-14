@@ -4453,6 +4453,18 @@
       "research": [
         "uniform-jet6-cache-20260914"
       ]
+    },
+    {
+      "id": "orbit-period-drift",
+      "title": "Temporal periods contain shape recurrence and spatial drift",
+      "kind": "finding",
+      "status": "exact",
+      "summary": "Translation-equivariant periodic dynamics obey p=q*d/gcd(d,a). At N=14, Rule 110 retains shape period 13 and Rule 54 retains 16; the six long cycles form three rotation families.",
+      "updated": "2026-09-14",
+      "source": "docs/knowledge/orbit-period-drift.md",
+      "research": [
+        "orbit-drift-14-20260914"
+      ]
     }
   ],
   "schemaVersion": 1

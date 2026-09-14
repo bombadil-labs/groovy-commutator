@@ -1,0 +1,81 @@
+{
+  "artifact_sha256": {
+    "annotations.csv": "100bb35b09a2e7f688174cd91f7a035670f41ebf3290778fae28d8bbd7eb8d41",
+    "cycles.json": "a080165a494e8143a6d3fad63d31ce0ced013b2f02a657e1072dd1fc730593b3"
+  },
+  "budget_rss_mib": 512,
+  "budget_seconds": 60,
+  "controls": [
+    {
+      "expected": [
+        14,
+        14,
+        1,
+        1
+      ],
+      "passed": true,
+      "quantities": {
+        "a": 1,
+        "a_signed": 1,
+        "d": 14,
+        "m": 14,
+        "p": 14,
+        "q": 1
+      },
+      "rule": 170,
+      "seed": 1
+    },
+    {
+      "expected": [
+        1,
+        14,
+        1,
+        0
+      ],
+      "passed": true,
+      "quantities": {
+        "a": 0,
+        "a_signed": 0,
+        "d": 14,
+        "m": 1,
+        "p": 1,
+        "q": 1
+      },
+      "rule": 204,
+      "seed": 1
+    },
+    {
+      "expected": [
+        2,
+        2,
+        1,
+        1
+      ],
+      "passed": true,
+      "quantities": {
+        "a": 1,
+        "a_signed": 1,
+        "d": 2,
+        "m": 2,
+        "p": 2,
+        "q": 1
+      },
+      "rule": 170,
+      "seed": 5461
+    }
+  ],
+  "elapsed_seconds": 0.13365113599866163,
+  "finished_utc": "2026-09-14T23:23:12.294621+00:00",
+  "implementation_commit": "3d8a5eae255ef8da1a1f1a679889d5891244d037",
+  "numpy": "2.3.5",
+  "peak_rss_mib": 25.96875,
+  "platform": "Linux-6.18.44-x86_64-with-glibc2.39",
+  "python": "3.12.14",
+  "source_sha256": {
+    "docs/research/protocols/orbit-drift-20260914.md": "2f7f8b26494312cab13b40629b715add3840adce17b92f4b8fa1720bd1e3923d",
+    "scripts/orbit_drift_14.py": "db1572c74812ac4a70f705dd9252853749cc922027c99a6990bedbf9b8457016",
+    "src/groovy/ca.py": "6969d6f0699b48602c8a2f55aecd61d58862e6472fea56f6d1ed9ebb2656d77e"
+  },
+  "started_utc": "2026-09-14T23:23:12.160991+00:00",
+  "status": "completed"
+}

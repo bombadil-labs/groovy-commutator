@@ -13,6 +13,16 @@ when a substantial unit completes; keep the bounded-claim style. Text moved from
 
 Program page: `docs/research/2026-09-09-dimensional-closure-program.md`
 
+## Checkpoint 2026-09-14: separate cycle shape recurrence from spatial drift
+
+Authored by: Codex (OpenAI), Myk's dimensional-lift session. Reviewed by: prospective independent Gate 1 and independent scalar scientific reproduction; final exact-head Gate 2 and integration tracked in [gathering #245](https://github.com/bombadil-labs/groovy-commutator/pull/245).
+
+- Completed: the [narrow orbit drift annotation](../2026-09-14-orbit-drift.md) reconstructs the two reported ring-14 spectra and annotates their six long cycles. The note preserves exact counts, decompositions, witnesses, proof and timing.
+- Ordinary periods separate into a recurrence of shape up to translation and a positional return. Translation-related temporal cycles belong to the same family; counting them independently overstates the evidence.
+- Faithful injective one-step lifts preserve primitive temporal periods on their image. Shape/drift invariance across all lifted-axis translations needs additional equivariance and identification conditions; no new lift was constructed here.
+- The prime-orbit investigation remains a niche follow-up. Other ring sizes, additive comparisons, halo tests and Witt claims were not evaluated. The living Program and prior lift results are unchanged.
+- Next: if this niche continues, study shape periods with ring-size dependence explicit. No wider census is frozen or running. Final integration requires the independent reviewer to sign the combined gathering head.
+
 ## Checkpoint 2026-09-14: uniform six-field cache rebuilt through 4D
 
 Authored by: Codex (OpenAI), Myk's dimensional-lift session. Reviewed by: prospective independent Gate 1 and bounded code/archive/analysis review; final exact-head review and integration tracked in [gathering #241](https://github.com/bombadil-labs/groovy-commutator/pull/241).
