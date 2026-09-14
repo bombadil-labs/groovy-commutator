@@ -1,0 +1,39 @@
+name: Ring-14 orbit record preservation
+on:
+  pull_request:
+    paths:
+      - 'scripts/orbit_drift_14.py'
+      - 'scripts/verify_orbit_drift_14.py'
+      - 'scripts/check_result_integrity.py'
+      - 'src/groovy/ca.py'
+      - 'docs/research/protocols/orbit-drift-20260914.md'
+      - 'experiments/orbit_drift_14_20260914/**'
+      - 'review/orbit_drift_independent_review.*'
+      - 'results/orbit_drift_14_20260914.json'
+      - '.github/workflows/research-orbit-drift-14.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/orbit_drift_14.py'
+      - 'scripts/verify_orbit_drift_14.py'
+      - 'scripts/check_result_integrity.py'
+      - 'src/groovy/ca.py'
+      - 'docs/research/protocols/orbit-drift-20260914.md'
+      - 'experiments/orbit_drift_14_20260914/**'
+      - 'review/orbit_drift_independent_review.*'
+      - 'results/orbit_drift_14_20260914.json'
+      - '.github/workflows/research-orbit-drift-14.yml'
+permissions:
+  contents: read
+jobs:
+  orbit-drift-preserved-evidence:
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python scripts/check_result_integrity.py results/orbit_drift_14_20260914.json
+      - run: python scripts/verify_orbit_drift_14.py
+# Hashes, saved sequences, rotations and accounting only. No CA execution.
