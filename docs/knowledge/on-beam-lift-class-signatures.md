@@ -9,3 +9,5 @@ Class IV has the highest all-recipe mean source-coordinate algebraic degree and 
 A frozen orbit-held-out classifier reaches 55.35%/56.86% balanced accuracy from 2D–4D features alone. Adding those features to source and recipe baselines reduces accuracy by 2.155 points at both widths; the preregistered improvement criterion fails. Four published Class IV symmetry orbits, overlapping class distributions and recipe dependence limit interpretation.
 
 This supports studying degree and rank jointly as descriptive signatures. It does not establish a class boundary, new information beyond C, arbitrary-input lifting, recursive G, or dimension induction. A new compact-rule invariant would need a separate test.
+
+Revision 2026-09-14: the [uniform six-field comparison](../research/2026-09-14-uniform-jet6-cache.md) retains the broad degree/rank tendency under one recipe, while the fixed all-lift classifier weakens. Its source-only incremental baseline differs from the source-plus-recipe prediction above. The earlier result and its negative prediction are unchanged; no dependent claim is superseded.

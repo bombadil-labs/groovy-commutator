@@ -1,0 +1,22 @@
+[
+  {
+    "slug": "uniform-jet6-cache-20260914",
+    "label": "Binary lift VIII",
+    "title": "One six-field operator rebuilds the cache through 4D",
+    "date": "2026-09-14",
+    "updated": "2026-09-14",
+    "kind": "Experiment",
+    "evidence": "exploratory",
+    "topic": "Dimensional closure",
+    "summary": "Every ECA source passes native evolution and recovery through 4D on two complete finite rings. The larger six-field cache takes longer to build despite better throughput and smaller storage; the fixed class classifier weakens.",
+    "takeaway": "A uniform lift recipe and cached execution help reuse, while native table construction still grows with the represented family.",
+    "source": "docs/research/2026-09-14-uniform-jet6-cache.md",
+    "promotion": {
+      "stage": "research"
+    },
+    "related": [
+      "on-beam-256-4d-classes-20260914",
+      "sequential-lift-6d-pilot-20260914"
+    ]
+  }
+]

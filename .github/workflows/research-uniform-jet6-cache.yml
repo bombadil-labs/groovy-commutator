@@ -1,0 +1,49 @@
+name: Uniform six-field cache preservation
+on:
+  pull_request:
+    paths:
+      - 'scripts/uniform_jet6_cache.py'
+      - 'scripts/uniform_jet6_analysis.py'
+      - 'scripts/read_uniform_jet6_cache.py'
+      - 'scripts/verify_uniform_jet6_cache.py'
+      - 'scripts/on_beam_256_4d.py'
+      - 'scripts/on_beam_rule_analysis.py'
+      - 'scripts/sequential_lift_6d_pilot.py'
+      - 'scripts/check_result_integrity.py'
+      - 'docs/research/protocols/uniform-jet6-cache-20260914.md'
+      - 'experiments/uniform_jet6_cache_20260914/**'
+      - 'experiments/on_beam_256_4d_20260914/**'
+      - 'results/binary_lift_20260914/rule_coverage.csv'
+      - 'results/uniform_jet6_cache_20260914.json'
+      - '.github/workflows/research-uniform-jet6-cache.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/uniform_jet6_cache.py'
+      - 'scripts/uniform_jet6_analysis.py'
+      - 'scripts/read_uniform_jet6_cache.py'
+      - 'scripts/verify_uniform_jet6_cache.py'
+      - 'scripts/on_beam_256_4d.py'
+      - 'scripts/on_beam_rule_analysis.py'
+      - 'scripts/sequential_lift_6d_pilot.py'
+      - 'scripts/check_result_integrity.py'
+      - 'docs/research/protocols/uniform-jet6-cache-20260914.md'
+      - 'experiments/uniform_jet6_cache_20260914/**'
+      - 'experiments/on_beam_256_4d_20260914/**'
+      - 'results/binary_lift_20260914/rule_coverage.csv'
+      - 'results/uniform_jet6_cache_20260914.json'
+      - '.github/workflows/research-uniform-jet6-cache.yml'
+permissions:
+  contents: read
+jobs:
+  uniform-jet6-preserved-evidence:
+    runs-on: ubuntu-latest
+    timeout-minutes: 4
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install numpy==2.3.5
+      - run: python scripts/verify_uniform_jet6_cache.py
+# Accounting, provenance and fixed analysis only. No CA synthesis, archive download or scientific replay.
