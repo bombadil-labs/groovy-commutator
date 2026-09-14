@@ -2,7 +2,8 @@
 
 **Date:** 2026-09-10  
 **Program:** Dynamics of Erased Distinctions  
-**Status:** provisional program synthesis; exact recovery of the eight bounded-recoder verification censorings is active  
+**Status:** provisional program synthesis; exact recovery of the eight bounded-recoder verification censorings is active and, as of 2026-09-14, still unfinished at 0/8 (see the revision note at the end)  
+**Authored by:** Claude Code, Fable (2026-09-10 body); revision of 2026-09-14 by Claude Code, Opus 5, session `session_01SobHxxYcFURkku6CFKrhSZ`. **Reviewed by:** none. The parent synthesis experiment and the recovery protocol were frozen and evaluated before any review gate existed in this project; retrospective review is requested on the gathering PR that integrates this note, and no earlier review is implied.  
 **Scope:** the matched block-3/cadence-3 ECA observer and one-defect frontier developed in Research022 onward. Claims below inherit the domains and caveats of their cited checkpoints; they are not statements about arbitrary cellular automata or arbitrary coarse-grainings.
 
 ## The question that survived the program
@@ -182,3 +183,37 @@ The durable result is therefore not a single positive recurrence formula. It is 
 Within the declared frontier, the program has pushed each distinction to an exact theorem or exact negative except for the eight bounded-recorder verification cases now under exact backend recovery. Those cases must be classified before this note becomes the program's final closure record.
 
 **Recommendation after recovery:** publish this synthesis with the completed source-recoder classification, mark *Dynamics of Erased Distinctions* **complete / dormant**, preserve the frozen empowerment and online-observer continuations as separate planned work, and do not silently resume the selector-state ladder.
+
+## Revision, 2026-09-14: the recovery is still unfinished, and the closure recommendation is not triggered
+
+This note's recommendation is conditional on the recovery completing. **It has not completed.** The frontier stands at
+
+```
+14 / 22 frontier seed languages exactly classified
+0 / 8  recovery seed languages recovered
+0      certificates
+```
+
+exactly as it stood on 2026-09-10. A further campaign on 2026-09-14, run from
+this repository's pinned copy of the frozen recovery implementation, added
+about 9.3 recorded solver-hours across the eight seeds — 721 new exact
+partition splits and 715 newly closed cylinders against 2,896 new portfolio
+timeouts — and decided **no** structural tuple. Cumulative recorded portfolio
+time across the 2026-09-10 and 2026-09-14 campaigns is about 45.5 solver-hours,
+3,501 splits and 4,041 closed cylinders. All five of the protocol's controls
+were reproduced before interpretation, including the forced split-to-direct-leaf
+path.
+
+Therefore **the Program is not marked complete/dormant by this revision.** The
+recommendation above stands as written, still conditional, and the frontier
+remains open. Marking it dormant now would convert an unfinished computation
+into a conclusion, which is precisely the substitution this note argues against.
+
+The quantified account of where the recovery is stuck, and what that does and
+does not license, is the
+[recovery-status note](2026-09-14-bounded-source-recoder-recovery-status.md).
+In short: every one of the eight seeds is parked at output position 0 of its
+first uncompleted structural tuple, on a universal fine-ECA query with 39 to 54
+free source-background bits, and no run has yet reached a single fully assigned
+direct-evaluation leaf. `pending` remains scheduling state, not a scientific
+`censored`, and not a negative.
