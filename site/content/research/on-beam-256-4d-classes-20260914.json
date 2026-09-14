@@ -1,0 +1,22 @@
+[
+  {
+    "slug": "on-beam-256-4d-classes-20260914",
+    "label": "Binary lift VII",
+    "title": "All ECA sources lift through 4D, but class prediction remains incomplete",
+    "date": "2026-09-14",
+    "updated": "2026-09-14",
+    "kind": "Experiment",
+    "evidence": "exploratory",
+    "topic": "Dimensional closure",
+    "summary": "All 256 sources pass native evolution and recovery through 4D on two complete finite rings. Source-coordinate degree and phase rank relate to published classes, but the frozen incremental classification criterion fails.",
+    "takeaway": "Lifted measurements reveal structure, not a clean Wolfram-class boundary or an all-input lift theorem.",
+    "source": "docs/research/2026-09-14-on-beam-256-4d-classes.md",
+    "promotion": {
+      "stage": "research"
+    },
+    "related": [
+      "sequential-lift-6d-pilot-20260914",
+      "binary-lift-recursion-20260914"
+    ]
+  }
+]

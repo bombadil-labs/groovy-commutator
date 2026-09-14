@@ -13,6 +13,16 @@ when a substantial unit completes; keep the bounded-claim style. Text moved from
 
 Program page: `docs/research/2026-09-09-dimensional-closure-program.md`
 
+## Checkpoint 2026-09-14: all-256 native census through 4D; class improvement prediction fails
+
+Authored by: Codex (OpenAI), Myk's dimensional-lift session. Reviewed by: prospective independent Gate 1; final exact-head review and integration tracked in [gathering #238](https://github.com/bombadil-labs/groovy-commutator/pull/238).
+
+- Completed: the [all-256 two-width census and class comparison](../2026-09-14-on-beam-256-4d-classes.md). The note and canonical account contain the complete native/recovery outcomes, class associations and negative prediction.
+- Current scope: complete width-seven/eight source families, fixed four-field recipe paths, native radius two through 4D, immutable parent completions. These are newly synthesized finite-family laws; recursive G, arbitrary native C and infinite-input coverage remain open.
+- The joint source-degree/phase-rank pattern merits study, but no clean class boundary emerged. The frozen source-plus-recipe classifier did not improve when lift features were added.
+- Exact partial rules were delivered privately as one unchanged archive; public reproduction code, raw metrics and complete hashes remain in the repository. The note records this post-evaluation storage deviation and the limits of automatic CI.
+- Next: compact on-beam native rules or a stronger input-domain argument. No new feature search or all-input induction has been run. Gate 2 must be signed on the current gathering head before merge.
+
 ## Checkpoint 2026-09-14: sequential native lift pilot reaches 6D; Gate 2 pending
 
 Authored by: Codex (OpenAI), Myk's dimensional-lift session. Reviewed by: none at this records revision. Myk explicitly overrode Gate 1 before implementation and evaluation.

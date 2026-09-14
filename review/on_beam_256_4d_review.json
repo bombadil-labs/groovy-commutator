@@ -1,0 +1,33 @@
+{
+  "reviewer": "Codex (OpenAI), independent reviewing agent /root/independent_pilot_review",
+  "scope": "Complete archive and metric verification; independent source baselines and literal held-orbit analysis; bounded fresh native execution from exports, not a complete scientific rerun",
+  "status": "passed",
+  "implementation_commit": "4e7bd6d01956600552a6d5c08aba7d441eaedd19",
+  "archive_sha256": "a64ea2e7ecd7b54bf3f3bf68e9fb0fa3cf49eecdc8a997768be5c664d76f8fce",
+  "archive_bytes": 132520034,
+  "members_verified": 1536,
+  "transport_parts_verified": 253,
+  "ordered_nodes_verified": 18692186,
+  "forced_roots_verified": 8115812,
+  "source_truth_bits_verified": 8257536,
+  "source_baselines_verified": 512,
+  "literal_model_fits": 32,
+  "permutation_draws_verified": 199,
+  "bounded_fresh_rules": [
+    3,
+    77,
+    179,
+    232
+  ],
+  "bounded_fresh_widths": [
+    7,
+    8
+  ],
+  "bounded_fresh_floors": 24,
+  "fresh_native_cell_updates": 10080,
+  "fresh_parent_decoder_cells": 5040,
+  "observed_incremental_balanced_accuracy": -0.02154720279720279,
+  "permutation_reference_p": 0.595,
+  "review_script_sha256": "f6af3405db42a0eb5d1c4744cc35ba123e058201c7b8fb766fec80f2c10a01a1",
+  "wall_seconds": 19.855423942000925
+}

@@ -2315,6 +2315,15 @@
       "research": [
         "sequential-lift-6d-pilot-20260914"
       ]
+    },
+    {
+      "source": "on-beam-lift-class-signatures",
+      "type": "depends_on",
+      "target": "binary-native-lift-family",
+      "reason": "The census fixes each published four-field recipe and studies newly synthesized native laws on finite families, without retaining the predecessor's full-shift or G constraints.",
+      "research": [
+        "on-beam-256-4d-classes-20260914"
+      ]
     }
   ],
   "nodes": [
@@ -4410,6 +4419,18 @@
       "source": "docs/knowledge/sequential-binary-lift-6d.md",
       "research": [
         "sequential-lift-6d-pilot-20260914"
+      ]
+    },
+    {
+      "id": "on-beam-lift-class-signatures",
+      "title": "Lifted rule measurements relate to classes without a clean classifier",
+      "kind": "finding",
+      "status": "exploratory",
+      "summary": "All 256 sources pass finite-family native lifting through 4D. Degree and phase rank show class-related structure, while the frozen incremental classification criterion fails.",
+      "updated": "2026-09-14",
+      "source": "docs/knowledge/on-beam-lift-class-signatures.md",
+      "research": [
+        "on-beam-256-4d-classes-20260914"
       ]
     }
   ],
