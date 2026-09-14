@@ -13,6 +13,17 @@ when a substantial unit completes; keep the bounded-claim style. Text moved from
 
 Program page: `docs/research/2026-09-09-dimensional-closure-program.md`
 
+## Checkpoint 2026-09-14: uniform six-field cache rebuilt through 4D
+
+Authored by: Codex (OpenAI), Myk's dimensional-lift session. Reviewed by: prospective independent Gate 1 and bounded code/archive/analysis review; final exact-head review and integration tracked in [gathering #241](https://github.com/bombadil-labs/groovy-commutator/pull/241).
+
+- Completed: the [uniform six-field cache and timing comparison](../2026-09-14-uniform-jet6-cache.md), including all ECA sources on complete width-seven/eight families through 4D. The note contains all counts, timings, comparison outcomes and archive availability.
+- One constant recipe replaces source-dependent choices. Immutable native-family and physical-key caching avoid repeated work; the lossless archive reader builds an index only when its member is used. Larger transverse period and radius still increase first-construction work.
+- No absolute speedup was observed. Historical throughput and storage improve under the combined operator/backend change, while matched-backend controls take longer. The fixed all-lift class classifier weakens; source-degree/phase-rank ordering remains descriptive.
+- Scope remains finite invariant families with specified completions. No new all-input, arbitrary-parent, recursive-G or induction claim follows. Width eight constructs separate laws. The prior four-field cache and evidence are preserved.
+- Post-run analytic clarification: the note proves that a parent shift by r has minimum child horizontal radius r. Parent neighborhood geometry is an essential input already contained in a fully specified C; fixed radius-two generality does not extend to arbitrary roots.
+- Next: investigate a compact phase-free evaluator and its general input-domain/radius argument. These are unrun; the current native rule construction still enumerates the requested forced domain. Final Gate 2 must be signed at the current gathering head before merge.
+
 ## Checkpoint 2026-09-14: all-256 native census through 4D; class improvement prediction fails
 
 Authored by: Codex (OpenAI), Myk's dimensional-lift session. Reviewed by: prospective independent Gate 1; final exact-head review and integration tracked in [gathering #238](https://github.com/bombadil-labs/groovy-commutator/pull/238).

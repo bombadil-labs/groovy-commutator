@@ -1,0 +1,24 @@
+{
+  "reviewer": "Codex (OpenAI), independent reviewing agent /root/independent_pilot_review",
+  "status": "passed",
+  "implementation_commit": "47f0f658bb1162253753d4a12554c375329cb0b4",
+  "scope": "Full archive bytes/arrays, independent finite-family oracle and representative outputs/metrics; bounded physical native replay; no complete independent forced-key census",
+  "archive_sha256": "766e4db7083fbdb551bc4aee66abc554079c5d118905f6d65aa5e5372c9418d1",
+  "archive_bytes": 101773778,
+  "archive_members": 1536,
+  "representative_outputs_checked": 25203648,
+  "source_truth_bits_checked": 25362432,
+  "source_baselines_checked": 512,
+  "literal_model_fits": 48,
+  "bounded_native_floors": 6,
+  "fresh_native_cell_updates": 36120,
+  "fresh_uniform_decoder_cells": 36120,
+  "cache_controls": {
+    "independent_field_cases": 15,
+    "independent_physical_patches": 90,
+    "native_cache_ticks_checked": 5,
+    "law_scope_and_caller_mutation": true
+  },
+  "review_script_sha256": "c28c48e70eebcf30e04d4c66ad739bc5cad2260c8ef1bd121b392919b6b05054",
+  "wall_seconds": 12.897013352001522
+}

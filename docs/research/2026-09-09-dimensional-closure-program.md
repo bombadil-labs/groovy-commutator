@@ -6,6 +6,14 @@ This page is the **working synthesis** of the dimensional-lift research program.
 
 The program is parallel to [Dynamics of Erased Distinctions](2026-09-08-dynamics-of-erased-distinctions.md). That program asks when information can be forgotten safely and how a lossy representation repairs itself. This one asks what additional structure must be represented when evolution and transformation refuse to agree.
 
+## 2026-09-14 uniform operator: finite-family breadth persists; construction cost remains
+
+The [uniform six-field cache](2026-09-14-uniform-jet6-cache.md) uses one period-six recipe for every ECA source and tested level, supporting native evolution and recovery through 4D on complete source rings seven and eight. This removes source-dependent recipe selection from that finite-family construction. Independent prospective review precedes the frozen implementation and evaluation; final integration is tracked in gathering #241.
+
+Caching makes repeated native-family and neighborhood requests cheap, and a compact lossless archive reduces storage. Nevertheless, rebuilding the larger six-field family takes longer in absolute time, including when selected old and new paths use the same backend. The mathematical uniformity of the lift does not yet supply an inexpensive phase-free native evaluator. The fixed class classifier also weakens under the common recipe, despite retaining the broad degree/rank ordering.
+
+These comparisons preserve the earlier census and six-path 6D pilot as separate evidence with their own recipes, radii and domains. Native finite-family closure, centered-G first-floor coverage, arbitrary-input local realizability and dimension induction remain distinct claims. The note's post-run shift argument shows why neighborhood dependence matters: a parent shift by r requires child horizontal radius at least r, with the same shift attaining it. A pure generator can derive that neighborhood from C; the fixed radius-two ECA contract cannot cover arbitrary root radii.
+
 ## 2026-09-14 census: all 256 sources through 4D; class signatures are descriptive
 
 The [two-width on-beam census](2026-09-14-on-beam-256-4d-classes.md) extends the sequential native/recovery result to every ECA source through 4D on complete width-seven/eight families. Each recipe is fixed from the archived four-field coverage table and every native parent completion is immutable before the next lift. The note supplies exact results, costs and review provenance.

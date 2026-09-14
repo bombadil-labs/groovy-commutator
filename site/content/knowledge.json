@@ -2324,6 +2324,15 @@
       "research": [
         "on-beam-256-4d-classes-20260914"
       ]
+    },
+    {
+      "source": "uniform-six-field-lift-cache",
+      "type": "depends_on",
+      "target": "on-beam-lift-class-signatures",
+      "reason": "The comparison reuses the preceding complete finite-family census, frozen class convention, orbit cohort, features and scoring while replacing the lift operator. It does not import the old operator's outcomes as new evidence.",
+      "research": [
+        "uniform-jet6-cache-20260914"
+      ]
     }
   ],
   "nodes": [
@@ -4431,6 +4440,18 @@
       "source": "docs/knowledge/on-beam-lift-class-signatures.md",
       "research": [
         "on-beam-256-4d-classes-20260914"
+      ]
+    },
+    {
+      "id": "uniform-six-field-lift-cache",
+      "title": "A uniform six-field lift works through 4D on the finite families",
+      "kind": "finding",
+      "status": "exploratory",
+      "summary": "One period-six recipe passes all 256 ECA sources through 4D on two finite rings. Caching improves reuse, but the larger rebuild takes longer and fixed class prediction weakens.",
+      "updated": "2026-09-14",
+      "source": "docs/knowledge/uniform-six-field-lift-cache.md",
+      "research": [
+        "uniform-jet6-cache-20260914"
       ]
     }
   ],
