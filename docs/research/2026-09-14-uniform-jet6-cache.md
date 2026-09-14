@@ -164,7 +164,7 @@ $$
 (D\oplus\tau_{v_+}D,\ D\oplus\tau_{v_-}D,\ T,\ D\oplus Z\oplus W,\ D\oplus K,\ K).
 $$
 
-The pinned implementation already uses these cancellations. A compiled implementation can further specialize identities or reuse subexpressions wherever equality is established on its declared domain. Such optimizations preserve the formula; an optimization valid only on the encoded image must not silently change a promised off-image completion.
+The pinned implementation checks these simplified formulas against the explicitly constructed child and target fields; it does not use the cancellations to avoid constructing those fields. That remains an optimization opportunity. A compiled implementation can specialize identities or reuse subexpressions wherever equality is established on its declared domain. Such optimizations preserve the formula; an optimization valid only on the encoded image must not silently change a promised off-image completion.
 
 The six-field definition accepts any binary local parent $H$. Its neighborhood is nevertheless part of the automaton's specification. For a root of radius $r$, directly computing $H(X)$, $H^2(X)$ and $H^3(X)$ from raw source bits has dependency bounds $r$, $2r$ and $3r$. These bounds do not by themselves give the child's necessary radius: the lift already stores enough information to recover $X=F_4\oplus F_5$, $Y=X\oplus F_2$ and $Z=X\oplus F_3$. With row phase supplied, the next six fields need only those values, their comparison translations, and one local evaluation $H(Z)$. Establishing a phase-free local realization is a separate obligation.
 
