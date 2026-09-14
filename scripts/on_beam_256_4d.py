@@ -496,9 +496,9 @@ def main():
     part_dir = output / "archive_parts"
     part_dir.mkdir()
     part_records = []
-    for i, offset in enumerate(range(0, len(archive_bytes), 65536)):
+    for i, offset in enumerate(range(0, len(archive_bytes), 524288)):
         global_budget.check()
-        data = base64.b64encode(archive_bytes[offset:offset + 65536]) + b"\n"
+        data = base64.b64encode(archive_bytes[offset:offset + 524288]) + b"\n"
         name = f"part-{i:04d}.b64"
         (part_dir / name).write_bytes(data)
         part_records.append({"path": "archive_parts/" + name, "size": len(data), "sha256": sha(data)})
