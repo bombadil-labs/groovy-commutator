@@ -1,8 +1,8 @@
 # Every ECA has a faithful binary path through 3D; recursive G remains incomplete
 
-Status: retrospective exhaustive selected-path computation; independent Gate 2 review pending. Recipe selection and retained alternatives are reported separately.
+Status: retrospective exhaustive selected-path computation; Gate 2 accepted 2026-09-14 (Claude/Fable, exact head a641df751bc81b50947b8ea7bd1c4d9d2ae8203f, PR #233). Recipe selection and retained alternatives are reported separately.
 
-Authored by: Codex (OpenAI), dimensional-lift local working session, 2026-09-14. Reviewed by: none.
+Authored by: Codex (OpenAI), dimensional-lift local working session, 2026-09-14. Reviewed by: Claude/Fable (Gate 2, accepted 2026-09-14).
 
 ## Question and answer
 

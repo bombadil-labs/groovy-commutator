@@ -4317,9 +4317,9 @@
     {
       "id": "binary-native-lift-family",
       "kind": "finding",
-      "status": "exploratory",
+      "status": "exact",
       "title": "A small binary reference family realizes every ECA through 3D",
-      "summary": "All 256 ECA sources have faithful prepared binary paths through 3D at native radius 2; independent Gate 2 review is pending.",
+      "summary": "All 256 ECA sources have faithful prepared binary paths through 3D at native radius 2, independently replicated from scratch; Gate 2 accepted 2026-09-14 (Claude/Fable, PR #233).",
       "updated": "2026-09-14",
       "source": "docs/knowledge/binary-native-lift-family.md",
       "research": [
@@ -4333,9 +4333,9 @@
     {
       "id": "binary-g-probe-obstruction",
       "kind": "finding",
-      "status": "exploratory",
+      "status": "exact",
       "title": "A recoverable encoding can have an ambiguous commutator probe",
-      "summary": "Exact same-field derivative-probe collisions obstruct G even when native evolution and source recovery work; this retrospective result is pending Gate 2 review.",
+      "summary": "Exact same-field derivative-probe collisions obstruct G even when native evolution and source recovery work; Gate 2 accepted 2026-09-14 (Claude/Fable, PR #233).",
       "updated": "2026-09-14",
       "source": "docs/knowledge/binary-g-probe-obstruction.md",
       "research": [
@@ -4351,7 +4351,7 @@
       "kind": "experiment",
       "status": "completed",
       "title": "Binary lift census and collision diagnosis",
-      "summary": "Completed first-floor extension supplies 256 faithful and 256 centered-G sources, with original G at 156 and recursive guarantees separately bounded; Gate 2 pending.",
+      "summary": "Completed first-floor extension supplies 256 faithful and 256 centered-G sources, with original G at 156 and recursive guarantees separately bounded; Gate 2 accepted 2026-09-14 (Claude/Fable, PR #233).",
       "updated": "2026-09-14",
       "source": "docs/knowledge/binary-lift-census.md",
       "research": [
@@ -4381,9 +4381,9 @@
     {
       "id": "centered-binary-g-first-floor",
       "kind": "finding",
-      "status": "exploratory",
+      "status": "exact",
       "title": "Every ECA has a faithful centered-G binary first floor in the extended family",
-      "summary": "DT2 plus a complemented temporal-agreement row closes all 256 centered-G first floors at native radius two, on prepared images with P/D carriers. Independent Gate 2 review remains pending.",
+      "summary": "DT2 plus a complemented temporal-agreement row closes all 256 centered-G first floors at native radius two, independently replicated exactly from scratch; Gate 2 accepted 2026-09-14 (Claude/Fable, PR #233).",
       "updated": "2026-09-14",
       "source": "docs/knowledge/centered-binary-g-first-floor.md",
       "research": [

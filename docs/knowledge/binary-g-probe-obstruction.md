@@ -1,6 +1,6 @@
 # A recoverable encoding can have an ambiguous commutator probe
 
-Status: retrospective author-verified finding; independent Gate 2 review pending.
+Status: retrospective finding, independently replicated. Gate 2 accepted 2026-09-14 (Claude/Fable, exact head a641df751bc81b50947b8ea7bd1c4d9d2ae8203f, PR #233).
 
 For a physical commutator-preserving lift, the native derivative rule must be consistent both on encoded-state neighborhoods and on neighborhoods of their changes. Recovery from the encoded state does not imply sufficiency of the latter input.
 

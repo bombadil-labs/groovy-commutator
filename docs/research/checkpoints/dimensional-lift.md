@@ -952,3 +952,68 @@ remain unresolved. Use the extreme-row identity where applicable; finite runs
 do not prove indefinite confinement. No fold-in or logical gate established.
 The 3D and separate boundary/individuation threads remain parked.
 
+
+## Checkpoint 2026-09-14: the binary lift, off-protocol origin, Gate 2 accepted
+
+A retrospective unit, `docs/research/2026-09-14-binary-lift-family.md` +
+`-recursion.md` + `-g-obstructions.md`, then a same-day extension
+`-dt2.md` + `-complements.md`, landed outside the normal protocol-first
+workflow: Myk ran it as an exploratory chat-driven thread with Codex
+(authoring/implementing) and Fable (supplying the DT2/temporal-depth
+hypothesis and bridge), explicitly authorized the Gate-1 skip, and asked
+for it to be brought back into the fold as a gathering PR (#233) carrying
+nine, then a further set of, disclosed deviations. This does not violate
+the "3D hypothesis parked" instruction above: what is parked there is the
+three-dimensional-*exception* theory (structure special to exactly 3D,
+absent above and below), not lifting through 3D, which the program's own
+vision document already sought.
+
+**Result, cumulative**: all 256 ECAs admit a binary-encoded first floor
+(P/D carrier, native radius 2) with faithful native evolution and local
+source recovery; centered G on P/D is now closed for all 256 (via a
+four-reference family for 220, DT2 for 28 more, and one shared five-row
+complemented recipe for the final eight); original G is capped at 156
+with a proved fixed-point obstruction (rules with `f(000)=f(111)=1`
+under the unchanged carrier are provably excluded, not merely unfinished
+search). Selected recursive G through 3D remains at 200/220 (206
+best-known), unchanged by this extension; the separate 4D sample stays
+113/105. No new recursive census was run.
+
+**Gate 2**: Claude/Fable independently reimplemented the derivative,
+masks, references, row permutation and neighborhood packing from the
+notes' mathematics alone (zero code reuse from the author's
+implementation) and reached exact set-level agreement at every stage,
+including the full cumulative 256/156/256 census, the exact miss-sets on
+every sub-family, the DT2 residual and its repairs, the shared five-row
+recipe (with a control run confirming the claimed native/probe-collision
+mechanism, not just the headline count), the published Rule 30
+obstruction witness, and the original-G obstruction theorem (verified
+against all 64 independently predicted-excluded rules). Both evidence
+archives (89MB original + 82MB extension) were extracted and audited
+clean: no executables, no pickles, no network/eval calls, path-traversal
+protections confirmed. One records-only correction (C1: the DT2 and
+complements notes referenced "the bridge" without naming Fable as its
+source in the note body itself) was requested and resolved before
+merge. Accepted 2026-09-14 at exact head
+`a641df751bc81b50947b8ea7bd1c4d9d2ae8203f`, merged as `8c3f408` in PR
+#233.
+
+**What is NOT established by this unit**: a single universal recipe (all
+counts are existence claims over a source-dependent recipe union); any
+new recursive/3D/4D result (unchanged from the pre-extension baseline,
+and not independently re-derived at Gate 2 — taken on the author's word,
+partially corroborated by the author's own deterministic replay); full
+symbolic-parent recursive compatibility of the new first-floor recipes;
+any claim that faithful evolution and G preservation alone establish the
+nontriviality the broader program seeks (the notes explicitly say
+copy/stripe constructions remain meaningful controls against that
+reading). The Fable-supplied bridge material (a reported 245-rule
+census, named scripts) was never provided in reproducible form; the
+extension's reconciliation note actively falsifies parts of what was
+reported rather than merely disclaiming it, and none of it entered the
+verified headline numbers.
+
+**Next question, unrun**: selection and reuse of the complete
+centered-G first-floor family under the full symbolic-parent recursive
+contract, with preparation locality accounted separately. The 3D and
+boundary/individuation threads remain otherwise parked as above.

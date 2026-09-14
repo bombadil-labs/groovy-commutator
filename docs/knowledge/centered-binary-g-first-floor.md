@@ -1,6 +1,6 @@
 # Every ECA has a faithful centered-G binary first floor in the extended family
 
-Status: author-verified exhaustive finite-domain finding; independent Gate 2review pending. Updated 2026-09-14.
+Status: exhaustive finite-domain finding, independently replicated from scratch (exact match). Gate 2 accepted 2026-09-14 (Claude/Fable, exact head a641df751bc81b50947b8ea7bd1c4d9d2ae8203f, PR #233). Updated 2026-09-14.
 
 The [DT2 census](../research/2026-09-14-binary-lift-dt2.md) repairs28 of 36 old centered-G holdouts, and the [complement census](../research/2026-09-14-binary-lift-complements.md) repairs the final eight. Retaining previous recipes gives256 faithful,156 original-G and256 centered-G first floors at native radius two.
 
