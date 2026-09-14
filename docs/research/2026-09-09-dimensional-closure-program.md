@@ -6,7 +6,7 @@ This page is the **working synthesis** of the dimensional-lift research program.
 
 The program is parallel to [Dynamics of Erased Distinctions](2026-09-08-dynamics-of-erased-distinctions.md). That program asks when information can be forgotten safely and how a lossy representation repairs itself. This one asks what additional structure must be represented when evolution and transformation refuse to agree.
 
-## 2026-09-14 extension: universal centered G at the first floor; Gate 2 pending
+## 2026-09-14 extension: universal centered G at the first floor; Gate 2 accepted
 
 The [DT2 comparison](2026-09-14-binary-lift-dt2.md) repairs28 of 36 centered-G holdouts; the [row-complement census](2026-09-14-binary-lift-complements.md) repairs the final eight. The cumulative family now has **256 faithful / 156 original-G / 256 centered-G** first floors at native radius two. One shared final-eight recipe repeats P,D,1 XOR T2,M,Q with birth mask and a directed Q. Its native and probe key sets are disjoint. These are source-dependent recipe-union claims on prepared period-four/five configurations, with source-radius-two preparation and P/D carriers only.
 
@@ -14,11 +14,11 @@ The remaining original-G failure has a precise obstruction: if the source has a 
 
 No new recursive result was computed. Earlier best-known3D Gcoverage remains 206; the historical4D sample remains113 faithful/105 G. The next scientific question is whether a selection from the now-complete centered first-floor family repeats under the full symbolic-parent contract for all 256. The bridge's three-lineage repeat is a separately scoped claim. Preparation costs, parent completions and native/probe compatibility must remain explicit.
 
-Myk authorized these local evaluations and their integration into the existing gathering PR; [extension provenance](protocols/binary-lift-extension-record-20260914.md) records the locally frozen protocols, post hoc shared-recipe selection and independent-review exception. The earlier account below is retained as the original PR baseline, not current first-floor coverage.
+Myk authorized these local evaluations and their integration into the existing gathering PR; [extension provenance](protocols/binary-lift-extension-record-20260914.md) records the locally frozen protocols, post hoc shared-recipe selection and independent-review exception. Gate 2 review by Claude/Fable independently reimplemented the whole construction from the notes' mathematics alone (zero code reuse) and reached exact set-level agreement at every stage, including the 256/156/256 cumulative total, the shared final-eight recipe, and the published Rule 30 witness; accepted 2026-09-14 at exact head `a641df751bc81b50947b8ea7bd1c4d9d2ae8203f`, merged in PR #233. The earlier account below is retained as the original PR baseline, not current first-floor coverage.
 
-## 2026-09-14: universal ECA source coverage in a prepared binary family; Gate 2 pending
+## 2026-09-14: universal ECA source coverage in a prepared binary family; Gate 2 accepted
 
-The new retrospective unit records [a four-reference first-floor family](2026-09-14-binary-lift-family.md), [its selected repeat into 3D](2026-09-14-binary-lift-recursion.md), and [exact G-obstruction diagnoses](2026-09-14-binary-lift-g-obstructions.md). Myk approved the Gate 1 exception; evaluation preceded independent review. See the [authorization and deviations record](protocols/binary-lift-retrospective-record-20260914.md). This section reports pending work, not an accepted Gate 2result.
+The new retrospective unit records [a four-reference first-floor family](2026-09-14-binary-lift-family.md), [its selected repeat into 3D](2026-09-14-binary-lift-recursion.md), and [exact G-obstruction diagnoses](2026-09-14-binary-lift-g-obstructions.md). Myk approved the Gate 1 exception; evaluation preceded independent review. See the [authorization and deviations record](protocols/binary-lift-retrospective-record-20260914.md). Gate 2 accepted 2026-09-14 (Claude/Fable, PR #233); the 3D/4D recursive figures below were taken on the author's word at review time, not independently re-derived — see the extension section above for what was independently replicated.
 
 Across all 256 ECA sources, the P/D/M/Q grammar has faithful binary first floors and selected 3D continuations with local source/parent recovery and native radius 2. Original-G and centered-G first-floor coverage is133 and 220 respectively. The selected 3D paths preserve their Gmode for200 of 220 eligible sources; retaining earlier alternatives gives206 best-known paths. The older113-path 4D baseline is a separate population, with105 G passes.
 

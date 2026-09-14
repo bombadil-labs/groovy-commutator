@@ -2,7 +2,7 @@
 
 **Later same-day extension:** the [DT2](2026-09-14-binary-lift-dt2.md) and [row-complement](2026-09-14-binary-lift-complements.md) notes close first-floor centered G across the cumulative family. The original datasets and scoped counts below are retained; recursive closure remains open.
 
-Status: retrospective finite-domain diagnosis and explicit obstruction certificates; independent Gate 2 review pending.
+Status: retrospective finite-domain diagnosis and explicit obstruction certificates; Gate 2 accepted 2026-09-14 (Claude/Fable, exact head a641df751bc81b50947b8ea7bd1c4d9d2ae8203f, PR #233).
 
 Authored by: Codex (OpenAI), dimensional-lift local working session, 2026-09-14. Reviewed by: none.
 

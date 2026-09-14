@@ -1,6 +1,6 @@
 # Can one binary lift grammar preserve centered G indefinitely for every ECA?
 
-Status: open. Updated 2026-09-14 after the DT2/complement extension; independent Gate 2review is pending.
+Status: open. Updated 2026-09-14 after the DT2/complement extension; the DT2/complement extension carries Gate 2 acceptance (2026-09-14, Claude/Fable, PR #233); the recursive question itself remains open, unrun.
 
 The [extended family](../research/2026-09-14-binary-lift-complements.md) now supplies native evolution, source recovery and centered G at the first floor for all 256 ECA sources. The earlier [3D repeat](../research/2026-09-14-binary-lift-recursion.md) remains256 faithful and206 best-known G paths; the new first floors have not been recursively tested. The original36 first-floor prerequisites are now repaired, but the14 old eligible3D gaps and36 new carriers require separate recursive accounting.
 

@@ -1,6 +1,6 @@
 # One complemented temporal row closes first-floor centered G for all 256 ECAs
 
-14 September 2026. Authored by Codex (OpenAI), continuing Myk's authorized local working session. Independent Gate 2 review is pending. Protocol review: none at freeze; run authorized by Myk 2026-09-14. Evaluation preceded independent review. This construction continues the DT2 cycle, whose temporal-depth hypothesis was supplied by Claude/Fable via Myk; the census domain, implementation and evaluation here are this session's.
+14 September 2026. Authored by Codex (OpenAI), continuing Myk's authorized local working session. Gate 2 accepted 2026-09-14 (Claude/Fable, exact head a641df751bc81b50947b8ea7bd1c4d9d2ae8203f, PR #233). Protocol review: none at freeze; run authorized by Myk 2026-09-14. Evaluation preceded independent review. This construction continues the DT2 cycle, whose temporal-depth hypothesis was supplied by Claude/Fable via Myk; the census domain, implementation and evaluation here are this session's.
 
 **All eight remaining first-floor holdouts have faithful binary centered-G carriers after complementing the two-step change row.** One shared recipe works for all eight. Retaining the previous verified recipes gives cumulative coverage of **256 faithful / 156 original G / 256 centered G** at native radius two. This closes the first-floor centered-G existence question across the ECA sources; recursive closure remains open.
 
