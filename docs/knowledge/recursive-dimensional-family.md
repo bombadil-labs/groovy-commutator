@@ -30,3 +30,8 @@ The recursive question remains partly answered: we have 1D dynamics inside
 the 2D interpreter, not yet a compatible encoding of a genuinely 2D input
 field into its 3D counterpart. The newly reported three-dimensional-exception
 hypothesis is separate and needs its precise formulation before testing.
+
+
+## Update, 2026-09-14: prepared binary source coverage; review pending
+
+The [retrospective binary family](../research/2026-09-14-binary-lift-family.md) covers every ECA source and its [selected repeat](../research/2026-09-14-binary-lift-recursion.md) preserves native evolution and source/parent recovery through 3D. This concerns source-generated period-four prepared families, not independently specified higher-dimensional data. The [G diagnosis](../research/2026-09-14-binary-lift-g-obstructions.md) leaves universal commutator preservation and dimension-induction open. Myk approved the Gate 1 exception; independent Gate 2 review is pending. Faithfulness alone does not establish the broader nontrivial beam objective.

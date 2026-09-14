@@ -13,6 +13,27 @@ when a substantial unit completes; keep the bounded-claim style. Text moved from
 
 Program page: `docs/research/2026-09-09-dimensional-closure-program.md`
 
+## Checkpoint 2026-09-14: DT2 and row complements close first-floor centered G; Gate 2 pending
+
+Authored by: Codex (OpenAI), continuing Myk's local working session. Reviewed by: none. Evaluation preceded independent review under the recorded authorization; see [extension provenance](../protocols/binary-lift-extension-record-20260914.md).
+
+- Completed: the [all 36DT2 comparison](../2026-09-14-binary-lift-dt2.md) and [all-eight row-complement census](../2026-09-14-binary-lift-complements.md), including original/centered separation, full saved-certificate checks and concrete shared-recipe exports. The notes contain the evidence and numbers.
+- Current scope: universal first-floor centered-G existence across the cumulative source-dependent binary family; prepared period-four/five configurations, native radius two, P/D carrier only. The original-G fixed-point obstruction is an explicit limit.
+- Next unrun question: does the complete centered family repeat under the full symbolic-parent contract for all 256 sources? No new 3D/4D claim or induction follows.
+- Retired: unchanged completed censuses and unchanged original-G fixed-point contradictions. Complementing a row remains incapable of resolving same-field probe ambiguity, but can resolve native/probe overlap; the new result preserves that distinction.
+- Review: integrated as an extension of PR 233, with current-head independent Gate 2review still required before main. No collaborator message or author sign-off is implied.
+
+## Checkpoint 2026-09-14: binary ECA family and G obstructions; Gate 2 pending
+
+Authored by: Codex (OpenAI), dimensional-lift local session. Reviewed by: none. Myk requested a Gate 2PR for Fable and explicitly confirmed the skipped Gate 1 exception on 2026-09-14. The [retrospective record](../protocols/binary-lift-retrospective-record-20260914.md) preserves authorization, methods and deviations; no pre-run review or staged commit history is implied.
+
+- Completed: [the full four-reference census](../2026-09-14-binary-lift-family.md), [all 256 selected paths into 3D](../2026-09-14-binary-lift-recursion.md), and [every faithful recipe for the 36 first-floor G holdouts](../2026-09-14-binary-lift-g-obstructions.md). The notes carry the numbers and evidence; this checkpoint adds none.
+- Current scope: faithful binary native evolution and source/parent recovery through 3D for all 256 ECA sources; G remains incomplete and restricted to nested P/D. Prepared axes repeat every four cells and contain only source-line independent information.
+- Review pending: the gathering unit imports original code/results and author verification under the user exception. It requires independent current-head Gate 2 review before acceptance on main.
+- Next unrun question: which untried two-input Q functions at the same offsets split the stored opposite-demand pairs through their temporal derivatives? Retest changed constructions from the full mask/sign/order pool; do not inherit old rejection.
+- Retired in their stated scopes: the obsolete three-row admission filter, unchanged failed recipes, row identity alone as a universal Grepair, and Q complementation as a repair of same-field derivative-probe ambiguity.
+- Do not infer universal G, induction over dimension, unique off-image completion, independent higher-dimensional input information, Class IV selection or intrinsic dimension.
+
 ## Checkpoint 2026-09-12: transformed-homologue mutual-transparency bet fails on primary ring seven; accepted
 
 Read `docs/research/2026-09-12-dimensional-resonance-response.md`. This unit operationalizes one narrow part of the accepted beam refinement: whether an analyst-declared nonliteral structural homology relation changes the touching-strip dynamics in one preregistered mutual-transparency direction.
@@ -930,3 +951,4 @@ position, classifying which encounters launch outward fronts versus cancel or
 remain unresolved. Use the extreme-row identity where applicable; finite runs
 do not prove indefinite confinement. No fold-in or logical gate established.
 The 3D and separate boundary/individuation threads remain parked.
+
