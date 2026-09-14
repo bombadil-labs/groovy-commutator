@@ -179,6 +179,32 @@ REGISTRY = {
         'source_census_script': 'scripts/verify_dimensional_resonance_source_census.py',
         'physical_predecessor_script': 'scripts/verify_interface_factor.py'},
 
+    # Dynamics of Erased Distinctions, phase-splice / bounded source-recoder
+    # frontier. These three results predate this registry: they were produced
+    # 2026-09-09/10 on the orphaned branch research/relational-source-recoder-
+    # 20260909 and are registered here when that thread was brought onto main.
+    # Their hash keys are the literal repository paths the producing scripts
+    # recorded, except 'parent_instrument'. The recovery progress result is a
+    # resumable campaign artifact: it is regenerated from the eight per-seed
+    # checkpoints by scripts/aggregate_bounded_source_recoder_exact_recovery.py
+    # and is expected to change while the campaign is unfinished. There is no
+    # automatic full replay for it; the recovery runs off GitHub Actions.
+    'results/phase_splice_source_recoder_20260909.json': {
+        'scripts/experiment_phase_splice_source_recoder.py': 'scripts/experiment_phase_splice_source_recoder.py',
+        'docs/research/protocols/phase-splice-source-recoder-20260909.md': 'docs/research/protocols/phase-splice-source-recoder-20260909.md',
+        'docs/research/protocols/phase-splice-source-recoder-resource-addendum-20260909.md': 'docs/research/protocols/phase-splice-source-recoder-resource-addendum-20260909.md'},
+
+    'results/bounded_source_recoder_synthesis_20260910.json': {
+        'scripts/experiment_bounded_source_recoder_synthesis.py': 'scripts/experiment_bounded_source_recoder_synthesis.py',
+        'docs/research/protocols/bounded-source-recoder-synthesis-20260910.md': 'docs/research/protocols/bounded-source-recoder-synthesis-20260910.md',
+        'results/phase_splice_source_recoder_20260909.json': 'results/phase_splice_source_recoder_20260909.json'},
+
+    'results/bounded_source_recoder_exact_recovery_20260910_progress.json': {
+        'scripts/recover_bounded_source_recoder_exact.py': 'scripts/recover_bounded_source_recoder_exact.py',
+        'docs/research/protocols/bounded-source-recoder-exact-recovery-20260910.md': 'docs/research/protocols/bounded-source-recoder-exact-recovery-20260910.md',
+        'results/bounded_source_recoder_synthesis_20260910.json': 'results/bounded_source_recoder_synthesis_20260910.json',
+        'parent_instrument': 'scripts/experiment_bounded_source_recoder_synthesis.py'},
+
 }
 
 def sha(p: pathlib.Path) -> str: return hashlib.sha256(p.read_bytes()).hexdigest()
