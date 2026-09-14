@@ -30,6 +30,7 @@ ROOT = pathlib.Path(__file__).resolve().parents[1]
 
 # result file -> {hash key recorded in its source_hashes: path the hash was taken of}
 REGISTRY = {
+    'results/sequential_lift_6d_20260914.json': {'script': 'scripts/sequential_lift_6d_pilot.py', 'protocol': 'docs/research/protocols/sequential-lift-6d-pilot-20260914.md', 'accounting': 'scripts/verify_sequential_lift_pilot.py', 'raw_floors': 'experiments/sequential_lift_6d_20260914/run/floors.jsonl', 'raw_summary': 'experiments/sequential_lift_6d_20260914/run/summary.json', 'execution': 'experiments/sequential_lift_6d_20260914/run/execution.json'},
     'results/representation_invariants_20260910.json': {
         'script': 'scripts/verify_representation_invariants.py',
         'local_correction_caps': 'results/local_correction_caps_20260910.json',
@@ -215,3 +216,4 @@ def main(argv: list[str]) -> int:
 
 if __name__ == '__main__':
     sys.exit(main(sys.argv[1:]))
+

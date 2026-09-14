@@ -2306,6 +2306,15 @@
         "binary-lift-dt2-20260914",
         "binary-lift-complements-20260914"
       ]
+    },
+    {
+      "source": "sequential-binary-lift-6d",
+      "type": "depends_on",
+      "target": "binary-native-lift-family",
+      "reason": "The pilot reuses the published four-field and complemented temporal recipe grammar, while synthesizing new native tables on a smaller finite domain.",
+      "research": [
+        "sequential-lift-6d-pilot-20260914"
+      ]
     }
   ],
   "nodes": [
@@ -4389,6 +4398,18 @@
       "research": [
         "binary-lift-dt2-20260914",
         "binary-lift-complements-20260914"
+      ]
+    },
+    {
+      "id": "sequential-binary-lift-6d",
+      "title": "Sequential native binary lifts through 6D on a finite family",
+      "kind": "finding",
+      "status": "exploratory",
+      "summary": "Six fixed recipes retain autonomous native evolution and recovery through 6D on all width-seven source states; parent rules are completed once and never revised.",
+      "updated": "2026-09-14",
+      "source": "docs/knowledge/sequential-binary-lift-6d.md",
+      "research": [
+        "sequential-lift-6d-pilot-20260914"
       ]
     }
   ],
