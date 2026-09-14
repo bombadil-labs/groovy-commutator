@@ -1,0 +1,129 @@
+{
+  "schema_version": 1,
+  "date": "2026-09-14",
+  "implementation_commit": "47f0f658bb1162253753d4a12554c375329cb0b4",
+  "baseline_commit": "bbe6d8b677544d7521fee572e8fcd04328971967",
+  "source_paths": {
+    "scripts/uniform_jet6_cache.py": "scripts/uniform_jet6_cache.py",
+    "scripts/uniform_jet6_analysis.py": "scripts/uniform_jet6_analysis.py",
+    "scripts/on_beam_256_4d.py": "scripts/on_beam_256_4d.py",
+    "scripts/on_beam_rule_analysis.py": "scripts/on_beam_rule_analysis.py",
+    "scripts/sequential_lift_6d_pilot.py": "scripts/sequential_lift_6d_pilot.py",
+    "docs/research/protocols/uniform-jet6-cache-20260914.md": "docs/research/protocols/uniform-jet6-cache-20260914.md",
+    "experiments/on_beam_256_4d_20260914/labels.json": "experiments/on_beam_256_4d_20260914/labels.json",
+    "results/binary_lift_20260914/rule_coverage.csv": "results/binary_lift_20260914/rule_coverage.csv",
+    "experiments/on_beam_256_4d_20260914/run/floors.jsonl": "experiments/on_beam_256_4d_20260914/run/floors.jsonl",
+    "experiments/on_beam_256_4d_20260914/run/paths.jsonl": "experiments/on_beam_256_4d_20260914/run/paths.jsonl",
+    "experiments/on_beam_256_4d_20260914/run/summary.json": "experiments/on_beam_256_4d_20260914/run/summary.json",
+    "accounting": "scripts/verify_uniform_jet6_cache.py",
+    "reader": "scripts/read_uniform_jet6_cache.py",
+    "execution": "experiments/uniform_jet6_cache_20260914/run/execution.json",
+    "summary": "experiments/uniform_jet6_cache_20260914/run/summary.json",
+    "analysis": "experiments/uniform_jet6_cache_20260914/run/analysis.json",
+    "archive_manifest": "experiments/uniform_jet6_cache_20260914/run/archive_manifest.json",
+    "benchmark": "experiments/uniform_jet6_cache_20260914/run/benchmark.json",
+    "floors": "experiments/uniform_jet6_cache_20260914/run/floors.jsonl",
+    "paths": "experiments/uniform_jet6_cache_20260914/run/paths.jsonl"
+  },
+  "source_hashes": {
+    "scripts/uniform_jet6_cache.py": "4b0ff2226271a9823bebaec411c74474d7d759988ded3a9a01e15d2a50b17124",
+    "scripts/uniform_jet6_analysis.py": "b1f2f1e91e128953551dce2862cb1113f1607d264f34db4628f5f4036280d86d",
+    "scripts/on_beam_256_4d.py": "3df8fcc4ccd2aa65e00a37d880951a3b90a8b49fb8de0a2da03d38a18b5ec9aa",
+    "scripts/on_beam_rule_analysis.py": "0d6a5f40a6306df674492e82c32ec39af8c7c90c60d05580b6a55f2a520f5b24",
+    "scripts/sequential_lift_6d_pilot.py": "88541d3f1cb5cb0a6e713dc51aab3f3f7be158b67878df5d9121ac0c668784a8",
+    "docs/research/protocols/uniform-jet6-cache-20260914.md": "0efbf89b05fbad382607d33e09de7d38936d5edf5ba65121153aed00acf3a377",
+    "experiments/on_beam_256_4d_20260914/labels.json": "65e811a6ef5575bb697da4fc9e8dfe3c0de131b8c27702aa7990ad4b2d754250",
+    "results/binary_lift_20260914/rule_coverage.csv": "b5e9461bfc63b62119a994f71e45a0f4be058a06b2e27d69181a3a6de719763f",
+    "experiments/on_beam_256_4d_20260914/run/floors.jsonl": "3a11c5dbc48e5b15e374d42097bb539e045400390522e95f155c28292171606a",
+    "experiments/on_beam_256_4d_20260914/run/paths.jsonl": "21e86ab121e11f95c647931b21188f2450b708e9dc17d4c307f22c928bca2238",
+    "experiments/on_beam_256_4d_20260914/run/summary.json": "c386c9cc01d79f7c99bd67d9f197976231da204c566e1dcfcabd23eb3119e0c8",
+    "accounting": "253272bf089a7fca6e0ca3eca0f9c162571d80484b6ea6ab9be8ef65b87f0c92",
+    "reader": "2cc828f993f46e3329e138edbd4da2907892a1ff85138b245cafb45a8cd99482",
+    "execution": "34caa671fe1423565a3e85a0fb90b09bf8b58db7625b381f6a0b3008cbf7fb32",
+    "summary": "9a90155a9459a95e31f6dfb80eda49e0a9a6fdf1707140eea618b3b454c4b2eb",
+    "analysis": "3e19b5b7018d4d2ce755cb3a05aad5f9625d238d01659fe8157bbb726ab09f23",
+    "archive_manifest": "bd71c858da6bbcfd401fc0a8be6f60121ec0bc78770ea2e54664359fb06c6bbf",
+    "benchmark": "904fa78f9ef9f39d6cd624debaa5f91d4d251965e635074cd752fbf97e6c41a9",
+    "floors": "7a31e473b311c48ccc19af3b3b580b587566935e88fbb37ca908df7ea12c24bc",
+    "paths": "4ff0f714a1600de21eedab525fa98c12d8ee3614922cb54a93ba306c1bc6bc13"
+  },
+  "summary": {
+    "archive_bytes": 101773778,
+    "archive_members": 1536,
+    "constraint_cells": 194445312,
+    "direct_patch_checks": 23040,
+    "finalization_censor": null,
+    "floors_recorded": 1536,
+    "native_failure_floors": 0,
+    "passed_floors": 1536,
+    "path_status": {
+      "passed": 512
+    },
+    "paths": 512,
+    "peak_rss_bytes": 177426432,
+    "stage_seconds": {
+      "build_seconds": 287.581272627016,
+      "export_seconds": 36.89361439902859,
+      "metric_seconds": 0.8191674439549388,
+      "verification_seconds": 27.41048157792102
+    },
+    "uniform_decoder_failure_floors": 0,
+    "wall_seconds": 361.81888651600093
+  },
+  "historical_comparison": {
+    "old_wall_seconds": 232.9179514890002,
+    "new_wall_seconds": 361.81888651600093,
+    "time_ratio": 1.5534177773888254,
+    "cell_constraint_ratio": 3.0714285714285716,
+    "throughput_ratio": 1.9772070438072393,
+    "archive_size_ratio": 0.7679878651404511,
+    "peak_rss_ratio": 0.8981339415301679,
+    "scope": "Different operator, period, radius, cache and export representation; engineering comparison, not causal attribution"
+  },
+  "matched_backend_comparison": {
+    "jet6": {
+      "per_rule_median_seconds": {
+        "0": 0.3478821489989059,
+        "110": 0.4523832230006519,
+        "30": 0.4465216730004613,
+        "90": 0.44096415500098374
+      },
+      "pooled_median_seconds": 0.4437429140007225
+    },
+    "old4": {
+      "per_rule_median_seconds": {
+        "0": 0.10949745800280652,
+        "110": 0.1267352300001221,
+        "30": 0.13279286000033608,
+        "90": 0.13705637400198611
+      },
+      "pooled_median_seconds": 0.1297640450002291
+    }
+  },
+  "key_microbenchmark": {
+    "old4": {
+      "floor_cases": 36,
+      "median_cached_seconds": 1.1482000445539597e-05,
+      "median_uncached_seconds": 0.005708898999728262,
+      "median_paired_speed_ratio": 417.80289070230435
+    },
+    "jet6": {
+      "floor_cases": 36,
+      "median_cached_seconds": 2.1541499336308334e-05,
+      "median_uncached_seconds": 0.01389588950041798,
+      "median_paired_speed_ratio": 606.4718545135122
+    }
+  },
+  "predictions": {
+    "P1_native_through4D": true,
+    "P1_stronger_uniform_recovery": true,
+    "P2_cached_keys_faster": true,
+    "P3_lower_time_per_cell": true
+  },
+  "archive": {
+    "sha256": "766e4db7083fbdb551bc4aee66abc554079c5d118905f6d65aa5e5372c9418d1",
+    "bytes": 101773778,
+    "preservation": "Exact bytes delivered privately to Myk; public reproduction code, raw metrics and full member/archive hashes in repository",
+    "ci": "No archive download or CA construction; provenance, accounting and fixed-analysis recomputation only"
+  }
+}
