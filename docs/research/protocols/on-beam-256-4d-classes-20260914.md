@@ -1,8 +1,9 @@
 # All-256 on-beam rule census through 4D and Wolfram-class associations
 
-Status: frozen before implementation and evaluation; prospective independent review requested.
+Status: frozen and prospectively reviewed before implementation and evaluation.
 Authored by: Codex (OpenAI), Myk's dimensional-lift session, 2026-09-14.
-Reviewed by: pending; the signed review and exact revision are recorded on the gathering PR.
+Reviewed by: Codex (OpenAI), independent agent /root/independent_pilot_review, 2026-09-14.
+Gate 1: [signed approval](https://github.com/bombadil-labs/groovy-commutator/pull/238#issuecomment-5669803413) at reviewed revision 07d8d61c2dd7e71ce7d4eafb01b58cbdd168d935, before implementation/evaluation. The review records that any cohort with fewer than two orbits in a class has unavailable/censored four-class leave-one-orbit-out scores and P3, rather than an empty centroid or fewer-class average.
 
 ## Question, provenance and scope
 
