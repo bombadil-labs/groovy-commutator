@@ -1,0 +1,33 @@
+name: Sequential lift pilot preservation
+on:
+  pull_request:
+    paths:
+      - 'scripts/sequential_lift_6d_pilot.py'
+      - 'scripts/verify_sequential_lift_pilot.py'
+      - 'scripts/check_result_integrity.py'
+      - 'docs/research/protocols/sequential-lift-6d-pilot-20260914.md'
+      - 'experiments/sequential_lift_6d_20260914/**'
+      - 'results/sequential_lift_6d_20260914.json'
+      - '.github/workflows/research-sequential-lift-pilot.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/sequential_lift_6d_pilot.py'
+      - 'scripts/verify_sequential_lift_pilot.py'
+      - 'scripts/check_result_integrity.py'
+      - 'docs/research/protocols/sequential-lift-6d-pilot-20260914.md'
+      - 'experiments/sequential_lift_6d_20260914/**'
+      - 'results/sequential_lift_6d_20260914.json'
+      - '.github/workflows/research-sequential-lift-pilot.yml'
+permissions:
+  contents: read
+jobs:
+  preserved-evidence:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python scripts/verify_sequential_lift_pilot.py

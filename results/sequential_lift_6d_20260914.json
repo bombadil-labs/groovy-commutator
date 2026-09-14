@@ -1,0 +1,128 @@
+{
+  "schema_version": 1,
+  "date": "2026-09-14",
+  "scope": "Six fixed recipes, every width-seven source state, all physical phases and positions; sequential native and recovery only",
+  "baseline_commit": "8c3f4081c03cc73a960287494c143f5674aea7df",
+  "implementation_commit": "3b9aef11f78b7a23760c52de20cc43b83ce3fe02",
+  "source_paths": {
+    "script": "scripts/sequential_lift_6d_pilot.py",
+    "protocol": "docs/research/protocols/sequential-lift-6d-pilot-20260914.md",
+    "accounting": "scripts/verify_sequential_lift_pilot.py",
+    "raw_floors": "experiments/sequential_lift_6d_20260914/run/floors.jsonl",
+    "raw_summary": "experiments/sequential_lift_6d_20260914/run/summary.json",
+    "execution": "experiments/sequential_lift_6d_20260914/run/execution.json"
+  },
+  "source_hashes": {
+    "script": "88541d3f1cb5cb0a6e713dc51aab3f3f7be158b67878df5d9121ac0c668784a8",
+    "protocol": "d9f40d9ef88b2969937bca2b7daebf339929cfd38fbc1312b90ce6873a0325bc",
+    "accounting": "49ef0bd90acd4f5ea7078af265618974a14a3975608f22a3a733ebf0f6b8319f",
+    "raw_floors": "51c0fe932f6883f84c98fc524d9bda04b035c69dd171a24e9fb668e48529b822",
+    "raw_summary": "bd01fa979264adb0b6504825f28613601fdc6dd337a7a6f1119c9ad10259b4dc",
+    "execution": "57eb5c859bd830a7e05353a9bab94214cc1b012f4cb314d4f94d9c7f8cb0e1fa"
+  },
+  "summary": {
+    "rules": [
+      90,
+      54,
+      110,
+      157,
+      171,
+      233
+    ],
+    "passed_through_6d": [
+      90,
+      54,
+      110,
+      157,
+      171,
+      233
+    ],
+    "completed_floors": 30,
+    "width": 7,
+    "states_per_rule": 128,
+    "native_constraint_cells": 11886336,
+    "direct_patch_checks": 450,
+    "failures": [],
+    "censored": [],
+    "recursive_G": "not tested",
+    "all_infinite_inputs": "not tested",
+    "arbitrary_native_CA_generator": "not established"
+  },
+  "measurements": {
+    "wall_seconds": 92.1123652010001,
+    "peak_rss_bytes": 1197015040,
+    "build_times": [
+      {
+        "from_dimension": 1,
+        "to_dimension": 2,
+        "period": 4,
+        "build_seconds_min": 0.001976835000277788,
+        "build_seconds_max": 0.0025610539996705484
+      },
+      {
+        "from_dimension": 1,
+        "to_dimension": 2,
+        "period": 5,
+        "build_seconds_min": 0.0025843779994829674,
+        "build_seconds_max": 0.002800645000206714
+      },
+      {
+        "from_dimension": 2,
+        "to_dimension": 3,
+        "period": 4,
+        "build_seconds_min": 0.014816895999501867,
+        "build_seconds_max": 0.016927458999816736
+      },
+      {
+        "from_dimension": 2,
+        "to_dimension": 3,
+        "period": 5,
+        "build_seconds_min": 0.023566742000184604,
+        "build_seconds_max": 0.02412134899986995
+      },
+      {
+        "from_dimension": 3,
+        "to_dimension": 4,
+        "period": 4,
+        "build_seconds_min": 0.08771086400065542,
+        "build_seconds_max": 0.11213094899994758
+      },
+      {
+        "from_dimension": 3,
+        "to_dimension": 4,
+        "period": 5,
+        "build_seconds_min": 0.18434988599983626,
+        "build_seconds_max": 0.188613997000175
+      },
+      {
+        "from_dimension": 4,
+        "to_dimension": 5,
+        "period": 4,
+        "build_seconds_min": 0.5077746010001647,
+        "build_seconds_max": 0.6252878690002035
+      },
+      {
+        "from_dimension": 4,
+        "to_dimension": 5,
+        "period": 5,
+        "build_seconds_min": 1.4633796050002275,
+        "build_seconds_max": 1.5978585330003625
+      },
+      {
+        "from_dimension": 5,
+        "to_dimension": 6,
+        "period": 4,
+        "build_seconds_min": 3.3205722669999886,
+        "build_seconds_max": 3.7581530630004636
+      },
+      {
+        "from_dimension": 5,
+        "to_dimension": 6,
+        "period": 5,
+        "build_seconds_min": 12.152389378999942,
+        "build_seconds_max": 13.855190317000051
+      }
+    ]
+  },
+  "completion_scope": "New native tables synthesized on the finite width-seven family; archived full-shift/G constraints are not retained. Immutable zero completion at every level."
+}
