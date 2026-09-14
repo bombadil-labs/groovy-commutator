@@ -13,6 +13,16 @@ when a substantial unit completes; keep the bounded-claim style. Text moved from
 
 Program page: `docs/research/2026-09-09-dimensional-closure-program.md`
 
+## Checkpoint 2026-09-14: sequential native lift pilot reaches 6D; Gate 2 pending
+
+Authored by: Codex (OpenAI), Myk's dimensional-lift session. Reviewed by: none at this records revision. Myk explicitly overrode Gate 1 before implementation and evaluation.
+
+- Completed: the [six-path width-seven pilot](../2026-09-14-sequential-lift-6d-pilot.md). The note and canonical account carry the outcomes, exact domain and timings.
+- The construction fixes each native parent law before the next lift and verifies physical evolution and recovery. It synthesizes new finite-family tables; archived full-shift/G constraints are not retained.
+- Current scope: six chosen decorated recipe paths, every width-seven source state, all transverse phases and positions, through 6D. Binary alphabet and native radius two persist; composed source recovery can have larger radius.
+- Next: strengthen or enlarge the input-domain argument. Arbitrary higher-dimensional C, full recursive centered G and dimensional-floor recognition remain unrun.
+- Integration: gathering #235, implementation sub-PR #236. No failure was repaired or recipe reselected after evaluation. Gate 2 remains required before main.
+
 ## Checkpoint 2026-09-14: DT2 and row complements close first-floor centered G; Gate 2 pending
 
 Authored by: Codex (OpenAI), continuing Myk's local working session. Reviewed by: none. Evaluation preceded independent review under the recorded authorization; see [extension provenance](../protocols/binary-lift-extension-record-20260914.md).

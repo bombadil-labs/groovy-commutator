@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "scope": "Six fixed recipes, every width-seven source state, all physical phases and positions; sequential native and recovery only",
+  "baseline_commit": "8c3f4081c03cc73a960287494c143f5674aea7df",
+  "implementation_commit": "3b9aef11f78b7a23760c52de20cc43b83ce3fe02",
+  "source_hashes": {
+    "docs/research/protocols/sequential-lift-6d-pilot-20260914.md": "d9f40d9ef88b2969937bca2b7daebf339929cfd38fbc1312b90ce6873a0325bc",
+    "scripts/sequential_lift_6d_pilot.py": "88541d3f1cb5cb0a6e713dc51aab3f3f7be158b67878df5d9121ac0c668784a8"
+  },
+  "rules": [
+    90,
+    54,
+    110,
+    157,
+    171,
+    233
+  ],
+  "width": 7,
+  "max_dimension": 6,
+  "source_states_per_rule": 128,
+  "passed_6d": [
+    90,
+    54,
+    110,
+    157,
+    171,
+    233
+  ],
+  "failures": [],
+  "censored": [],
+  "completed_floors": 30,
+  "wall_seconds": 92.1123652010001,
+  "peak_rss_bytes": 1197015040
+}

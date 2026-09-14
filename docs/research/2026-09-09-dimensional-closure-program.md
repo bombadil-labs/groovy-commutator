@@ -6,6 +6,12 @@ This page is the **working synthesis** of the dimensional-lift research program.
 
 The program is parallel to [Dynamics of Erased Distinctions](2026-09-08-dynamics-of-erased-distinctions.md). That program asks when information can be forgotten safely and how a lossy representation repairs itself. This one asks what additional structure must be represented when evolution and transformation refuse to agree.
 
+## 2026-09-14 pilot: fixed native parents support six finite-family paths through 6D
+
+The [sequential pilot](2026-09-14-sequential-lift-6d-pilot.md) extends six published recipe paths through 6D on all width-seven source states. Every floor retains native evolution and immediate-parent/composed source recovery, with each completed parent rule fixed before its child is built. The note supplies the exact counts and measured costs.
+
+This is a small invariant-family test with newly synthesized native tables. It does not retain archived full-shift or G constraints, establish arbitrary higher-dimensional input lifting, or prove dimension induction. The current object explicitly carries its finite family and recipe policy; a pure generator for arbitrary bare native-rule tables remains open. Myk explicitly overrode Gate 1; independent Gate 2 is pending.
+
 ## 2026-09-14 extension: universal centered G at the first floor; Gate 2 accepted
 
 The [DT2 comparison](2026-09-14-binary-lift-dt2.md) repairs28 of 36 centered-G holdouts; the [row-complement census](2026-09-14-binary-lift-complements.md) repairs the final eight. The cumulative family now has **256 faithful / 156 original-G / 256 centered-G** first floors at native radius two. One shared final-eight recipe repeats P,D,1 XOR T2,M,Q with birth mask and a directed Q. Its native and probe key sets are disjoint. These are source-dependent recipe-union claims on prepared period-four/five configurations, with source-radius-two preparation and P/D carriers only.
