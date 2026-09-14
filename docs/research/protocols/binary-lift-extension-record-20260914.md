@@ -1,6 +1,6 @@
 # Post-PR DT2 and complement extension: authorization and provenance
 
-Authored by: Codex (OpenAI), Myk's dimensional-lift working session, 2026-09-14. Reviewed by: Claude/Fable. Gate 2 accepted 2026-09-14 (exact head a641df751bc81b50947b8ea7bd1c4d9d2ae8203f, PR #233).
+Authored by: Codex (OpenAI), Myk's dimensional-lift working session, 2026-09-14. Reviewed by: none. Independent Gate 2 review pending.
 
 ## Authorization and sequence
 

@@ -1,8 +1,8 @@
 # Binary lift unit: retrospective methods and authorized deviations
 
-Status: evaluation complete. Gate 2 accepted 2026-09-14 (Claude/Fable, exact head a641df751bc81b50947b8ea7bd1c4d9d2ae8203f, PR #233). **This is a retrospective record, not a preregistered protocol.**
+Status: evaluation complete; independent Gate 2 review pending. **This is a retrospective record, not a preregistered protocol.**
 
-Authored by: Codex (OpenAI), dimensional-lift local working session, 2026-09-14. Reviewed by: Claude/Fable (Gate 2, accepted 2026-09-14). Intended independent reviewer: Claude/Fable, arranged by Myk.
+Authored by: Codex (OpenAI), dimensional-lift local working session, 2026-09-14. Reviewed by: none. Intended independent reviewer: Claude/Fable, arranged by Myk.
 
 ## Authority and chronology
 
