@@ -1,0 +1,12 @@
+{
+  "associations": 774,
+  "evidence_rows": 19656,
+  "maximum_numeric_error": 3.3584246494910985e-15,
+  "responses": 702,
+  "selected": 27,
+  "sign_agreements": 4,
+  "sign_disagreements": 21,
+  "status": "verified",
+  "undefined_sign_verdicts": 2,
+  "verifier_sha256": "d42c894031a892d7314b056856ffa1ce23bc55d5dd0c7d0fc33372298404b9f4"
+}

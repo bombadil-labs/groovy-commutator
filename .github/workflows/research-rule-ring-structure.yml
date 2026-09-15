@@ -1,0 +1,44 @@
+name: Whole-state ring study provenance
+on:
+  pull_request:
+    paths:
+      - 'scripts/rule_ring_structure.py'
+      - 'scripts/rule_ring_selectors.py'
+      - 'scripts/summarize_rule_ring_structure.py'
+      - 'scripts/package_rule_ring_structure.py'
+      - 'scripts/check_result_integrity.py'
+      - 'src/groovy/ca.py'
+      - 'docs/research/protocols/rule-ring-structure-20260915.md'
+      - 'experiments/rule_ring_structure_20260915/**'
+      - 'review/rule_ring_structure/**'
+      - 'results/rule_ring_structure_20260915.json'
+      - '.github/workflows/research-rule-ring-structure.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/rule_ring_structure.py'
+      - 'scripts/rule_ring_selectors.py'
+      - 'scripts/summarize_rule_ring_structure.py'
+      - 'scripts/package_rule_ring_structure.py'
+      - 'scripts/check_result_integrity.py'
+      - 'src/groovy/ca.py'
+      - 'docs/research/protocols/rule-ring-structure-20260915.md'
+      - 'experiments/rule_ring_structure_20260915/**'
+      - 'review/rule_ring_structure/**'
+      - 'results/rule_ring_structure_20260915.json'
+      - '.github/workflows/research-rule-ring-structure.yml'
+permissions:
+  contents: read
+jobs:
+  rule-ring-structure-integrity:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Compile sources and verify pinned bytes only
+        run: |
+          python -m py_compile scripts/rule_ring_structure.py scripts/summarize_rule_ring_structure.py scripts/package_rule_ring_structure.py review/rule_ring_structure/oracle.py review/rule_ring_structure/verify.py review/rule_ring_structure/check_readouts.py
+          python scripts/check_result_integrity.py results/rule_ring_structure_20260915.json

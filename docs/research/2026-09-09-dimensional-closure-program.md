@@ -6,6 +6,18 @@ This page is the **working synthesis** of the dimensional-lift research program.
 
 The program is parallel to [Dynamics of Erased Distinctions](2026-09-08-dynamics-of-erased-distinctions.md). That program asks when information can be forgotten safely and how a lossy representation repairs itself. This one asks what additional structure must be represented when evolution and transformation refuse to agree.
 
+## 2026-09-15: ring arithmetic becomes an explicit comparison coordinate
+
+The [whole-state partition study](2026-09-15-rule-ring-structure.md) uses a
+new extensible instrument to compare relations between rules against relations
+between rings, including prime factors and their multiplicities. It retains
+full partitions and contracts while treating correlations as summaries. Most
+selected first-order discovery associations reverse on a small held-out size
+range; the known additive control still exhibits exact arithmetic dependence.
+This is a bounded negative for the chosen association search, not rejection of
+conditional size families or a new Class-IV criterion. The prior lifted
+completion relations were not recomputed.
+
 ## 2026-09-15: an observation catalog separates representation and ensemble questions
 
 The [first observation catalog](2026-09-15-observation-catalog.md) enumerates
