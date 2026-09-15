@@ -39,3 +39,5 @@ lose ambiguous parity relations at D3/D4 on width seven; width-eight survivors
 share higher-floor signatures with controls, and color complements differ.
 This rules out treating the tested signature as an intrinsic Class-IV marker,
 while leaving the beam construction and its scoped transport results intact.
+
+Revision 2026-09-15: the [observation catalog](../research/2026-09-15-observation-catalog.md) supplies a common comparison framework for 24 primitives and their pairs. Its seven frozen scalar signatures survive width nine but fail to retain both core rules on developed trajectories. Full partitions and transitions remain available; future comparisons must separate width, source ensemble and sampling.

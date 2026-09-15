@@ -45,6 +45,7 @@
     "thesis": "When two dynamical paths fail to commute, represent the disagreement as a new coordinate and ask whether the enlarged representation closes.",
     "source": "docs/research/2026-09-09-dimensional-closure-program.md",
     "supports": [
+      "observation-catalog-20260915",
       "shared-state-rule",
       "dimensional-lift",
       "column-compatibility",

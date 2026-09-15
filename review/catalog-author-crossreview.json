@@ -1,0 +1,33 @@
+{
+  "author": "Codex (OpenAI), /root",
+  "scope": "Independent vectorized check of post-hoc endpoint claim; source review of oracle and comparison code completed separately.",
+  "cases": [
+    {
+      "rule": 54,
+      "dimension": 3,
+      "pairs": 216,
+      "all_repeated_block_endpoints_have_minimal_period_four": true
+    },
+    {
+      "rule": 54,
+      "dimension": 4,
+      "pairs": 1296,
+      "all_repeated_block_endpoints_have_minimal_period_four": true
+    },
+    {
+      "rule": 110,
+      "dimension": 3,
+      "pairs": 72,
+      "all_repeated_block_endpoints_have_minimal_period_four": true
+    },
+    {
+      "rule": 110,
+      "dimension": 4,
+      "pairs": 432,
+      "all_repeated_block_endpoints_have_minimal_period_four": true
+    }
+  ],
+  "agree": true,
+  "script_sha256": "7a1120b79b26dce7a1fdbc32e6632a8517fdbb697b309b359390dc0d058a86e7",
+  "independent_period_output_sha256": "d54edf630220cb3909347022b05061a50494b658790f88ee49210c3d6c90cc2b"
+}

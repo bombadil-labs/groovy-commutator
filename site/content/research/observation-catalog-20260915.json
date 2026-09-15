@@ -1,0 +1,17 @@
+[
+  {
+    "slug": "observation-catalog-20260915",
+    "label": "Observation catalog",
+    "title": "A catalog of observations exposes the limits of frozen scalar signatures",
+    "date": "2026-09-15",
+    "updated": "2026-09-15",
+    "kind": "Comparative observation atlas",
+    "evidence": "exploratory",
+    "topic": "Dimensional closure",
+    "summary": "A fixed family of 24 observations and 276 pairs yields seven signatures that survive width nine but fail to retain both core rules across developed trajectories. Exact endpoint inspection locates prior higher-floor relations on period-four sources.",
+    "takeaway": "Preserve the observation catalog and its partitions while making ensemble and scale explicit parts of the comparison contract.",
+    "source": "docs/research/2026-09-15-observation-catalog.md",
+    "promotion": {"stage": "research"},
+    "related": ["commutator-relations-20260915", "beam-discriminator-loop-20260915", "commutator-history-20260915"]
+  }
+]
