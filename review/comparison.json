@@ -1,0 +1,12 @@
+{
+  "agree": true,
+  "census_contracts": 2048,
+  "comparison_source_sha256": "3af3ae623bd1abcf70855d1722cbc30abc4571f13a37f58aca8693ee833ca954",
+  "physical_records": 78,
+  "pointed_events_compared": 1317888,
+  "primary_result_sha256": "5101ad951144527fad7f32bc3819da3b540fe3320fde34478ca99fe136fa71b3",
+  "readout_transfer_records": 546,
+  "replay_result_sha256": "7b55f1cef44ac3f1b5a4f943a33a38d352e35acd154f917113939eb7ed1d9fa7",
+  "reviewer": "Codex (OpenAI), /root/relations_review",
+  "symbolic_contracts": 104
+}

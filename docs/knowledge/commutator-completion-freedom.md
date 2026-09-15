@@ -9,3 +9,8 @@ Individual ambiguous cells can still have fixed parity relations when they share
 The two-step carrier T remains fixed. It is not itself identical to native G. Transporting the entire XOR operation through a fixed injective encoding defines a different, completion-independent conjugate of root G; this must be distinguished from ambient cellwise XOR.
 
 Source: [completion-independence audit](../research/2026-09-15-commutator-completion.md). Status: exact algebra for the declared completion contract, with exact finite source counts and complete first-lift membership at D2. Universal higher-input membership and a class discriminator remain open.
+
+Update 2026-09-15: the [translation and transport audit](../research/2026-09-15-commutator-relations.md)
+removes spatial copies and tests seven fixed child readouts. The surviving
+relations depend on width and bit convention and overlap controls. The affine
+family remains valid; these signatures do not isolate Class IV.
