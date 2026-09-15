@@ -6,7 +6,7 @@ ROOT=Path(__file__).resolve().parents[1]
 UNIT=ROOT/'experiments/factor_balanced_interactions_20260915'
 def digest(p):return hashlib.sha256(p.read_bytes()).hexdigest()
 def main():
- paths={p for p in UNIT.rglob('*') if p.is_file() and p.name not in ('raw-archive.json','raw-manifest.json')}
+ paths={p for p in UNIT.rglob('*') if p.is_file() and p.name not in ('raw-archive.json','raw-manifest.json') and not p.name.endswith('.tmp.npz')}
  paths.update(p for p in (ROOT/'review/factor_balanced').glob('*') if p.is_file())
  paths.update(ROOT/p for p in ['scripts/factor_balanced_interactions.py','scripts/rule_ring_structure.py','scripts/rule_ring_selectors.py','scripts/summarize_factor_balanced.py','scripts/package_factor_balanced.py','scripts/plot_factor_balanced.py','results/factor_balanced_interactions_20260915.svg','results/factor_balanced_interactions_20260915.png','src/groovy/ca.py','experiments/rule_ring_structure_20260915/compact-relations.json','experiments/rule_ring_structure_20260915/raw-manifest.json','experiments/rule_ring_structure_20260915/raw-archive.json','docs/research/protocols/factor-balanced-interactions-20260915.md','docs/research/2026-09-15-factor-balanced-interactions.md'])
  files={str(p.relative_to(ROOT)):digest(p) for p in sorted(paths)}

@@ -1,10 +1,10 @@
 {
-  "bytes": 200049600,
+  "bytes": 160976727,
   "file": "factor-balanced-interactions-20260915.zip",
-  "file_id": "file_000000006558823098698639e4f59db8",
+  "file_id": "file_00000000dda881fd98e83efa2136166a",
   "library_file_id": "libfile_ae3feb0023948191a9713d616160d8b1",
-  "library_version": 0,
-  "manifest_sha256": "d4785e0bb525d53f08d3606f9cb3ccfcd80010b7535fde6bf9b9901257ae3a48",
-  "members": 79,
-  "sha256": "8dbdd2e83b85bba12a0d5b0857b99434fd3c8cdbd1c7372f29863d53406e611b"
+  "library_version": 1,
+  "manifest_sha256": "ffa6da16c0729e72f347e8f0d54e4cb1adba18e04d10ccb193c8698b036d8ea6",
+  "members": 73,
+  "sha256": "2440b32257438995be7a7cba8762ca99831548057409c32c98f52e9680edc934"
 }
