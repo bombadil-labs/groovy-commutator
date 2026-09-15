@@ -1,0 +1,12 @@
+{
+  "confirmation_sha256": "f3885c3925a843cc6cfef2a4e7fc1c9e5f26df63f01b0746353704af464ddb4b",
+  "evidence_rows": 1512,
+  "maximum_numeric_error": 1.2434497875801753e-14,
+  "oracle_sha256": "a3eb181812f99d0fe5cf558f266a2e3c0d654ca18d5bc4b6deea2bc751137721",
+  "relations": 1008,
+  "status": "verified",
+  "strict_joint_improvements": 88,
+  "tasks": 252,
+  "verifier_sha256": "191089103ba1106a191b85549e363e39530c18135ecc77da4f4e431997889188",
+  "wall_seconds": 0.22213321999879554
+}

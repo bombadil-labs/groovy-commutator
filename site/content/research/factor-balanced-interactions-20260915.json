@@ -1,0 +1,22 @@
+[
+  {
+    "slug": "factor-balanced-interactions-20260915",
+    "label": "Factor-balanced predictions",
+    "title": "Arithmetic interactions help some ring predictions, without isolating Class IV",
+    "date": "2026-09-15",
+    "updated": "2026-09-15",
+    "kind": "Prospective model comparison",
+    "evidence": "exploratory",
+    "topic": "Dimensional closure",
+    "summary": "Frozen arithmetic interactions beat both simpler models in 88 of 252 rule-pair tasks on fresh factor-balanced rings; basin relations benefit most, while 54/110 wins only one observation.",
+    "takeaway": "Retain individual rule relations and distinguish predictive gains from arithmetic mechanisms and class criteria.",
+    "source": "docs/research/2026-09-15-factor-balanced-interactions.md",
+    "promotion": {
+      "stage": "research"
+    },
+    "related": [
+      "rule-ring-structure-20260915",
+      "observation-catalog-20260915"
+    ]
+  }
+]

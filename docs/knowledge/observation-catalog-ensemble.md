@@ -36,3 +36,14 @@ reverse sign in the small held-out range. This narrows that selected correlation
 claim; it does not reject conditional arithmetic structure or establish class
 specificity. Raw source width, arithmetic support and whole-state observations
 remain separate coordinates of the comparison.
+
+## Factor-balanced interactions, 2026-09-15
+
+The [factor-balanced follow-up](../research/2026-09-15-factor-balanced-interactions.md)
+retains individual rule pairs and compares frozen size-only, arithmetic main-effect,
+and quadratic-interaction models on fresh rings. It balances divisibility-by 2/3
+families across bands, while leaving size and valuation confounds explicit.
+Interactions beat both baselines in 88 of 252 tasks; gains are uneven and 54/110
+wins only for basin relations. Zero-clipped extrapolations account for several
+future-state ties. This supports bounded predictive comparisons, not class
+specificity or a uniquely identified arithmetic mechanism.
