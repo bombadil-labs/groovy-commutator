@@ -1,0 +1,9 @@
+# Class-IV pilot: pre-evaluation review clarifications
+
+Recorded by Codex / OpenAI GPT-6 Astra on 2026-09-15, before implementation and evaluation. The independent reviewer `/root/discriminator_review` approved the frozen protocol at commit `2302fa9ad03ccfeae2020adbfcbb62e32f0255e6`, SHA-256 `30e0a41409fa5f5a49e0fd644eada2f0cfbf00bd8f1ff6bf9fc2df68dc2bb441`, with no blockers. Its bytes remain unchanged. Review discussion is on gathering PR #247.
+
+1. The fixed split is seeds 0..2 versus seeds 3..5 in each configuration's listed order. Visited retention uses actual joint counts of `(external bits, block)`. External bits are not resampled independently or averaged uniformly when scoring trajectories. P4 requires both directional predictive gains positive for each positive family at every h and configuration, and positive retention for each positive family at every W and configuration. Candidate B scores must also be positive in those cases; Candidate A scores must be positive at every W and configuration. Zero is a failed positivity condition, not a pass.
+2. Only the reference mean for loss is conditioned on endpoint bits Q. The preimage count p_e still permits predecessor blocks with different endpoints. The quantity is not ambiguity under a decoder that additionally knows Q.
+3. Preserve raw count arrays, sample totals, and occupied history contexts for every seed and h. Plug-in entropy remains subject to finite occupancy and dependent-sampling bias. Do not report cell/time IID confidence intervals or claim that cross-validated candidate B is guaranteed to lie in [0,1]. Report both directional values, without selecting a preferred fold.
+
+These clarifications do not change either candidate, its domain, normalization, or thresholds. Gate 1 is complete. No new scientific results existed when this record was written.
