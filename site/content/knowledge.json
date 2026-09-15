@@ -2423,6 +2423,15 @@
       "research": [
         "commutator-history-20260915"
       ]
+    },
+    {
+      "source": "commutator-completion-freedom",
+      "type": "depends_on",
+      "target": "partial-rule-cohabitation",
+      "reason": "The completion family uses the distinction between forced assignments and unspecified local cases; no default policy is imposed.",
+      "research": [
+        "commutator-completion-20260915"
+      ]
     }
   ],
   "nodes": [
@@ -3493,7 +3502,8 @@
         "binary-lift-recursion-20260914",
         "binary-lift-g-obstructions-20260914",
         "beam-discriminator-loop-20260915",
-        "commutator-history-20260915"
+        "commutator-history-20260915",
+        "commutator-completion-20260915"
       ],
       "source": "docs/knowledge/dimensional-beam.md",
       "status": "open",
@@ -4539,13 +4549,14 @@
       "id": "uniform-six-field-lift-cache",
       "kind": "finding",
       "research": [
-        "uniform-jet6-cache-20260914"
+        "uniform-jet6-cache-20260914",
+        "commutator-completion-20260915"
       ],
       "source": "docs/knowledge/uniform-six-field-lift-cache.md",
       "status": "exploratory",
       "summary": "One period-six recipe passes all 256 ECA sources through 4D on two finite rings. Caching improves reuse, but the larger rebuild takes longer and fixed class prediction weakens.",
       "title": "A uniform six-field lift works through 4D on the finite families",
-      "updated": "2026-09-14"
+      "updated": "2026-09-15"
     },
     {
       "id": "orbit-period-drift",
@@ -4588,7 +4599,8 @@
       "kind": "finding",
       "research": [
         "partial-cohabitation-20260915",
-        "beam-discriminator-loop-20260915"
+        "beam-discriminator-loop-20260915",
+        "commutator-completion-20260915"
       ],
       "source": "docs/knowledge/partial-rule-cohabitation.md",
       "status": "exact",
@@ -4630,7 +4642,20 @@
       "updated": "2026-09-15",
       "source": "docs/knowledge/commutator-predictive-history.md",
       "research": [
-        "commutator-history-20260915"
+        "commutator-history-20260915",
+        "commutator-completion-20260915"
+      ]
+    },
+    {
+      "id": "commutator-completion-freedom",
+      "title": "A partial beam determines a family of commutators",
+      "kind": "finding",
+      "status": "exact",
+      "summary": "Native higher-dimensional G can change across compatible completions while beam evolution stays fixed. Its exact affine family retains forced values and shared-variable parity relations. D2 witnesses survive complete first-lift constraints; higher-floor counts remain finite.",
+      "updated": "2026-09-15",
+      "source": "docs/knowledge/commutator-completion-freedom.md",
+      "research": [
+        "commutator-completion-20260915"
       ]
     }
   ],

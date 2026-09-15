@@ -11,3 +11,11 @@ The broad source-degree/phase-rank class pattern persists, but the fixed all-lif
 This result concerns complete finite invariant families and explicit completion choices. An arbitrary-input, phase-free local evaluator derived solely from bare C remains open, as do recursive G and induction over dimension. A compact evaluator with an adequate domain proof would change the computational account; further finite tables alone would not prove it.
 
 Post-run analytic clarification, 2026-09-14: for a parent that shifts by r cells, the child's minimum horizontal radius is exactly r. Two sources differing only at position 3r have identical lifted radius-R patches whenever R < r but different next temporal-row outputs; the same horizontal shift supplies a matching child. Thus the fixed child radius two cannot cover arbitrary root radii. Neighborhood geometry is part of C, so deriving a radius from it remains compatible with a pure-function generator. The research note gives the argument and explains how algebraic cancellations can accelerate the same uniform definition.
+
+
+
+## Completion boundary, 2026-09-15
+
+The D2–D4 completion audit preserves every free native flip entry symbolically. The six-field ingredients and T stay fixed on the invariant family, but native G generally does not. This does not undo the cache consistency checks or establish full-input native locality above D2; it separates the carrier from an ambient rule evaluation on difference fields.
+
+Source: [completion-independence audit](../research/2026-09-15-commutator-completion.md).

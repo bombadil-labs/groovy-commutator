@@ -1,0 +1,23 @@
+[
+  {
+    "slug": "commutator-completion-20260915",
+    "label": "Commutator completion",
+    "title": "The beam fixes its evolution but generally does not fix its commutator",
+    "date": "2026-09-15",
+    "updated": "2026-09-15",
+    "kind": "Exact completion audit",
+    "evidence": "exact",
+    "topic": "Dimensional closure",
+    "summary": "A symbolic D2–D4 audit preserves every unspecified local rule value. Complete first-lift constraints still admit different G fields on the same beam; shared unknowns retain exact parity relations.",
+    "takeaway": "The two-step carrier is fixed, but native G can require off-beam choices. Study its completion family or explicitly transport the difference operation.",
+    "source": "docs/research/2026-09-15-commutator-completion.md",
+    "promotion": {
+      "stage": "research"
+    },
+    "related": [
+      "commutator-history-20260915",
+      "partial-cohabitation-20260915",
+      "beam-discriminator-loop-20260915"
+    ]
+  }
+]

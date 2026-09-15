@@ -1098,3 +1098,10 @@ boundary/individuation threads remain otherwise parked as above.
 ## 2026-09-15: commutator history and repeated perturbation
 
 The [direct commutator-history test](../2026-09-15-commutator-history.md) finds finite predictive gain but does not sharpen the frozen recurrence/spreading baseline. A four-arm follow-up finds that earlier pulses can modify later responses in 224 of 256 ECAs in the exact short-delay census; delayed chaotic controls also show the effect. These results preserve useful memory measurements while ruling out the specificity of the tested weak criteria. Raw G-history gains change under complement conjugation. No Class IV label, adaptation theorem or G-driven causal feedback claim is promoted.
+
+
+## Completion boundary, 2026-09-15
+
+The symbolic completion audit covers all 256 roots, widths seven/eight, and D2–D4, retaining the exact free-key incidence. Complete first-lift D2 constraints still allow different native G fields on the same beam. T and ancestral lift values remain fixed; D3/D4 statements retain their finite-family scope. The next proposed unit concerns completion-independent residual relations with translation repetitions removed, not another default-filled G score.
+
+Source: [completion-independence audit](../2026-09-15-commutator-completion.md).

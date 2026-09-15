@@ -13,3 +13,10 @@ Source: [partial-rule cohabitation audit](../research/2026-09-15-partial-cohabit
 ## Update, 2026-09-15: full-input D2 and higher-floor comparison
 
 The [adaptive beam investigation](../research/2026-09-15-beam-discriminator-loop.md) extends the first-lift native/decoder context check to every infinite-line ECA input and counts20,533 full-input D2 compatible pairs. Near-complete finite D3 compatibility and width-sensitive residual D4 obstructions defeat the tested simple static discriminator. The earlier pooled-ring counts remain correct in their declared smaller domain.
+
+
+## Completion boundary, 2026-09-15
+
+The same distinction now controls the native commutator: each queried unforced flip entry supplies one shared Boolean variable in G. Compatible completions can disagree on G while preserving all beam evolution. The partial relation remains meaningful; a default completion adds choices that the beam did not determine.
+
+Source: [completion-independence audit](../research/2026-09-15-commutator-completion.md).

@@ -41,7 +41,7 @@
     "date": "2026-09-09",
     "updated": "2026-09-15",
     "status": "living",
-    "summary": "The uniform six-field recipe has finite-family native/recovery checks through4D and a full-input first-lift ECA consistency check. Ancestral support and conditional interval-tail rates have exact transport statements. A fresh-tested finite ECA class predictor remains distinct from a universal beam-level definition; arbitrary-parent and dimension-induction questions remain open.",
+    "summary": "The uniform six-field recipe has finite-family native/recovery checks through 4D and a full-input first-lift ECA consistency check. Ancestral support has exact transport statements, while native G generally depends on off-beam completion choices, already at D2. A finite ECA predictor remains distinct from a beam-level class definition; arbitrary-parent and dimension-induction questions stay open.",
     "thesis": "When two dynamical paths fail to commute, represent the disagreement as a new coordinate and ask whether the enlarged representation closes.",
     "source": "docs/research/2026-09-09-dimensional-closure-program.md",
     "supports": [
@@ -87,7 +87,8 @@
       "response-quotient-20260915",
       "partial-cohabitation-20260915",
       "beam-discriminator-loop-20260915",
-      "commutator-history-20260915"
+      "commutator-history-20260915",
+      "commutator-completion-20260915"
     ]
   },
   {

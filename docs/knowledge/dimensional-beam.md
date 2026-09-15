@@ -23,3 +23,10 @@ The user now explicitly treats the beam as the underlying dynamical object and i
 ## Commutator-history boundary, 2026-09-15
 
 The [direct history test](../research/2026-09-15-commutator-history.md) finds finite predictive information in G(S[t]), but a frozen memory requirement does not sharpen the recurrence/spreading baseline. Complement conjugation changes raw gains. Treating that predictor as a beam invariant would require additional arguments about observation and representation; the dimensional question remains open.
+
+
+## Completion boundary, 2026-09-15
+
+The completion audit makes a new boundary explicit: native ambient-XOR G is generally not determined by the partial-rule beam, already at D2 with complete first-lift constraints. T and ancestral evolution remain fixed. The exact affine family of G fields, or a separately transported XOR operation, supplies a well-defined object to investigate; no class discriminator or native-G transport theorem follows.
+
+Source: [completion-independence audit](../research/2026-09-15-commutator-completion.md).
