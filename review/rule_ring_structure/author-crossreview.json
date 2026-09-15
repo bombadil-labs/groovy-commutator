@@ -1,0 +1,1 @@
+{"graphs": 200, "oracle_sha256": "7927a1fb0dcd9a134cd518df4e9d98202a6a696e89f8c9ed86db97d16f5e5abb", "reviewer": "Codex (OpenAI), /root", "scope": "Cross-review of independent oracle; 200 synthetic functional graphs against direct orbit walks; entropy label-renaming invariance. No additional scientific search.", "status": "passed"}

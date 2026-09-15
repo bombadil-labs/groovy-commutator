@@ -1,0 +1,12 @@
+{
+  "cases": 32,
+  "input_result_sha256": "29ccb0662eb61d2cbe3fe29cc6ceaa6afc5a7e41f55e7fb139a72fb8ad67d3f1",
+  "maximum_entropy_relation_error": 8.881784197001252e-15,
+  "oracle_sha256": "7927a1fb0dcd9a134cd518df4e9d98202a6a696e89f8c9ed86db97d16f5e5abb",
+  "partition_label_entries": 8847360,
+  "relations": 1008,
+  "stage": "confirmation",
+  "status": "verified",
+  "verifier_sha256": "29f49eb3698e676eabc3512b591f88c8a7b3c9fb51a004dc1b69e076683f55e7",
+  "wall_seconds": 15.689375911999377
+}

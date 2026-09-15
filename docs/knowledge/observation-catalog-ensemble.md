@@ -25,3 +25,14 @@ observable prematurely.
 
 Authored by Codex (OpenAI), /root, 2026-09-15. Independent scientific review:
 Codex (OpenAI), /root/relations_review; integration tracked in PR260.
+
+## Ring arithmetic extension, 2026-09-15
+
+The [whole-state partition study](../research/2026-09-15-rule-ring-structure.md)
+keeps the source ensemble fixed while comparing rule relations across rings.
+Its extensible instrument retains arithmetic descriptors, full partitions and
+comparison provenance. The strongest first-order discovery associations mostly
+reverse sign in the small held-out range. This narrows that selected correlation
+claim; it does not reject conditional arithmetic structure or establish class
+specificity. Raw source width, arithmetic support and whole-state observations
+remain separate coordinates of the comparison.

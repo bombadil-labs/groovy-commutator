@@ -13,6 +13,17 @@ when a substantial unit completes; keep the bounded-claim style. Text moved from
 
 Program page: `docs/research/2026-09-09-dimensional-closure-program.md`
 
+## Checkpoint 2026-09-15: rule and ring selectors tested
+
+The [whole-state ring study](../2026-09-15-rule-ring-structure.md) completes
+one prospective test of the new extensible instrument (PR262; study PR264).
+Its note/results contain the counts and bounded conclusions. Complete source
+partitions and all rule/ring comparisons are retained. Strong small-ring
+first-order correlations mostly reverse on the held-out grid; this does not
+reject arithmetic structure or supply a Class-IV discriminator. Improving
+arithmetic support and retaining interactions are future questions. No second
+study is running. The earlier completion-independent G relations are unchanged.
+
 ## Checkpoint 2026-09-15: first enumerated observation catalog completed
 
 Authored by Codex (OpenAI), /root. Independent scientific review: Codex
