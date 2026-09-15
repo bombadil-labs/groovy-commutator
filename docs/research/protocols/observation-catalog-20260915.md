@@ -1,7 +1,12 @@
 # Observation catalog: a bounded structural search
 
-Status: frozen proposal, not implemented or evaluated. Authored by Codex
-(OpenAI), /root, 2026-09-15. Independent protocol review: pending.
+Status at freeze: not implemented or evaluated. Authored by Codex
+(OpenAI), /root, 2026-09-15. Independent protocol review: Codex (OpenAI),
+/root/relations_review, 2026-09-15, approved revision
+aaa0c3fcef7d500ec0a1bd5fd342658e8056019b before implementation;
+[signed review](https://github.com/bombadil-labs/groovy-commutator/pull/261#issuecomment-5684744583).
+The numerical-convention clarification below was requested prospectively by
+the reviewer before the first evaluation; its approval is recorded separately.
 
 ## Question and intent
 
@@ -103,13 +108,18 @@ For each candidate and each of the seven measurements separately, form the
 closed interval spanning all core-positive values at both discovery widths.
 Count a negative orbit as overlapping if ANY member at EITHER width lies in
 that interval. Rank by this overlap count, then interval width divided by the
-full discovery range of that measurement (zero range -> width zero), then
-candidate index. Comparisons use tolerance 1e-10; rounding the normalized width
+candidate-specific range of that measurement over all 256 rules at both
+discovery widths, including disputed orbits (range <=1e-10 -> width zero), then
+candidate index. Floating roundoff in theoretically nonnegative conditional
+entropies/information/gains is clipped at zero; otherwise retain unrounded
+measurements. Metric 7 admits pairs only; null single values are excluded
+from its ranking. Comparisons use tolerance 1e-10; rounding the normalized width
 to 12 decimals fixes tie behavior. For each measurement retain its best
 candidate: seven fixed measurement/observation slots, possibly fewer than seven
 distinct observations. Print the full search table, attempted multiplicity,
 aliases and disputed-orbit outcomes. There are no significance claims.
 
+Incomplete or censored discovery produces no shortlist and no confirmation.
 Commit the generated shortlist and its discovery hashes BEFORE confirmation.
 Confirm those exact slots on width 9, all states, all 256 ECAs. Keep discovery
 intervals fixed and report core retention, negative-orbit overlap and disputed
@@ -119,8 +129,11 @@ Also test the fixed slots on longer ring trajectories for rules
 0,4,18,30,41,54,73,90,106,110,124,126,137,147,193,204 and the unclassified
 radius-two challenge F(S)(x)=S(x+2) XOR product(S(x-2)..S(x+1)). For the latter,
 left/center/right sensitivities perturb offsets -1,0,+1; extreme offsets are
-not added. Seeds 2026091501 and 2026091502, numpy PCG64, independent iid fair-bit
-initial states, width 1021, burn 1024, then 1024 scored rows plus four lookahead
+not added. Seeds 2026091501 and 2026091502, numpy PCG64. Construct a fresh
+generator from the same seed for each rule, using Generator.integers(0,2,
+size=1021,dtype=uint8). Thus comparisons across rules use paired initial states;
+the two seeds are independent iid fair-bit draws. Width 1021, burn 1024,
+then 1024 scored rows plus four lookahead
 rows. Sample eight equally spaced sites floor(k*1021/8), k=0..7, on every
 scored row. Use the same event rows/sites for every candidate and all lags.
 Trajectories are periodic rings and samples are dependent. No binomial confidence
@@ -148,8 +161,10 @@ root partitions, not full transverse coverage, an intrinsic recognition
 theorem, or a guarantee that transitions match merely because partitions do.
 Also record a common partition's transition relation using the shared source
 successor; matching partitions then transport the observed transition graph.
-Do not call a decoded-root copy independent discovery. Mark omitted native
-sensitivities/G as completion-dependent, rather than evaluate a zero completion.
+Do not call a decoded-root copy independent discovery. Native sensitivities/G
+are not guaranteed determined by on-family constraints and are therefore
+omitted here; some individual queries can be forced. Do not evaluate an
+arbitrary zero completion as an intrinsic observation.
 
 For the latter G, use the existing symbolic partition and constants instead.
 On each contract's fully spatially quotiented free-event blocks, annotate

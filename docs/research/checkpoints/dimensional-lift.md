@@ -13,6 +13,24 @@ when a substantial unit completes; keep the bounded-claim style. Text moved from
 
 Program page: `docs/research/2026-09-09-dimensional-closure-program.md`
 
+## Checkpoint 2026-09-15: first enumerated observation catalog completed
+
+Authored by Codex (OpenAI), /root. Independent scientific review: Codex
+(OpenAI), /root/relations_review. Final integration is tracked in gathering PR260.
+
+- Completed: [the observation catalog](../2026-09-15-observation-catalog.md),
+  with frozen discovery and confirmation, exact native views, and symbolic
+  completion provenance. The note/results hold the numerical claims.
+- Preserve the catalog, event partitions and transition maps. The tested scalar
+  intervals fail the developed-trajectory comparison; this is not equivalence
+  of full structures or rejection of every representation.
+- The post hoc period-four endpoint inspection explains the population hosting
+  the prior higher-floor width-eight relations for 54/110. It is not a general
+  dynamical-class mechanism.
+- Next open question: separate source ensemble, width and sampling while using
+  the same observation family; examine structural relationships alongside the
+  summaries. No replacement shortlist or second experiment was run.
+
 ## Checkpoint 2026-09-15: recovered relation-transport test completed
 
 Authored by: Codex (OpenAI), /root. Independent scientific review: Codex
