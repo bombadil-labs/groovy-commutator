@@ -2333,6 +2333,24 @@
       "research": [
         "uniform-jet6-cache-20260914"
       ]
+    },
+    {
+      "source": "class4-independent-discriminator",
+      "type": "depends_on",
+      "target": "representation-contract",
+      "reason": "The ambiguity comparison fixes the same input/output sites and distinguishes observer uncertainty from the response capacity of the automaton.",
+      "research": [
+        "class4-independent-20260915"
+      ]
+    },
+    {
+      "source": "class4-independent-discriminator",
+      "type": "depends_on",
+      "target": "orbit-period-drift",
+      "reason": "The finite recurrence component uses exact rotation-quotient periods to remove rigid drift, while retaining the limits of a small-ring growth fit.",
+      "research": [
+        "class4-independent-20260915"
+      ]
     }
   ],
   "nodes": [
@@ -4464,6 +4482,18 @@
       "source": "docs/knowledge/orbit-period-drift.md",
       "research": [
         "orbit-drift-14-20260914"
+      ]
+    },
+    {
+      "id": "class4-independent-discriminator",
+      "title": "A retention–history discriminator fails fresh Class-IV separation",
+      "kind": "finding",
+      "status": "exploratory",
+      "summary": "A composite selected on discovery samples ranks 9 and 73 above 110 on fresh runs. History becomes more predictive while a residual-uncertainty product falls; the finite score does not count available futures.",
+      "updated": "2026-09-15",
+      "source": "docs/knowledge/class4-independent-discriminator.md",
+      "research": [
+        "class4-independent-20260915"
       ]
     }
   ],

@@ -1,0 +1,43 @@
+name: Independent Class-IV pilot controls
+
+on:
+  pull_request:
+    paths:
+      - 'scripts/class4_independent_20260915.py'
+      - 'scripts/class4_composite_20260915.py'
+      - 'docs/research/protocols/class4-composite-validation-20260915.md'
+      - 'docs/research/protocols/class4-independent-20260915*'
+      - 'results/class4_independent_20260915.json'
+      - 'results/class4_composite_20260915.json'
+      - 'src/groovy/ca.py'
+      - '.github/workflows/research-class4-independent.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/class4_independent_20260915.py'
+      - 'scripts/class4_composite_20260915.py'
+      - 'docs/research/protocols/class4-composite-validation-20260915.md'
+      - 'docs/research/protocols/class4-independent-20260915*'
+      - 'results/class4_independent_20260915.json'
+      - 'results/class4_composite_20260915.json'
+      - 'src/groovy/ca.py'
+      - '.github/workflows/research-class4-independent.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  class4-controls:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install numpy==2.3.5
+      - run: python scripts/class4_independent_20260915.py --self-test
+      - run: python scripts/class4_composite_20260915.py --self-test
+      - run: python scripts/check_result_integrity.py
+
+# The pilot itself is deliberately absent from all CI and dispatch triggers.
