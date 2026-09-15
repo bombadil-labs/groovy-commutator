@@ -66,7 +66,9 @@ entirely within 13..16; mixed pairs are retained but excluded from selection
 and confirmation summaries. For each observation, compute Pearson correlation
 of every descriptor with the primary ring response. Undefined/constant columns
 are retained with reasons. Select at most three defined discovery associations
-by descending absolute correlation, ties by feature name. Freeze this selection
+by descending absolute correlation rounded to 12 decimals, ties by feature name.
+For sign reporting, absolute correlations at most 1e-12 count as zero; zero or
+undefined correlations do not receive a sign-agreement verdict. Freeze this selection
 before computing any data for rings 13..16. Report every candidate and every
 selected confirmation coefficient, with sign agreement/disagreement; no new
 selection on confirmation and no pass/fail threshold. Six confirmation ring
