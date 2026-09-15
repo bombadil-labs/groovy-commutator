@@ -145,9 +145,14 @@ def measurements(z0,z1,z2,zright,target):
     refinement = h_joint(z1,z2)-h1-h_joint(z0,z1,z2)+h01
     pairs = np.unique(np.asarray(z0,np.int64)*64+z1)
     branches = np.bincount(pairs//64,minlength=64)>1
-    return [h0,max(0.,h01-h0),max(0.,refinement),
-            max(0.,h0+entropy(zright)-h_joint(z0,zright)),
-            max(0.,h_joint(z0,target)-h0),float(np.mean(branches[z0])),None]
+    return [h0,nonnegative(h01-h0),nonnegative(refinement),
+            nonnegative(h0+entropy(zright)-h_joint(z0,zright)),
+            nonnegative(h_joint(z0,target)-h0),float(np.mean(branches[z0])),None]
+
+
+def nonnegative(value):
+    assert value>=-EPS, ('unexpected negative information',value)
+    return max(0.,value)
 
 
 def table(w0,w1,w2,wr,target,which=None):
@@ -159,7 +164,7 @@ def table(w0,w1,w2,wr,target,which=None):
         vals=measurements(*(joint(w,c).ravel() for w in (w0,w1,w2,wr)),target.ravel())
         out[k,:6]=vals[:6]
         if len(c)==2:
-            out[k,6]=max(0.,min(out[c[0],4],out[c[1],4])-out[k,4])
+            out[k,6]=nonnegative(min(out[c[0],4],out[c[1],4])-out[k,4])
     return out
 
 
@@ -327,15 +332,22 @@ def pair_groups(labels,attribute=None):
 
 def lift_and_provenance(unit,start,archive,relation_dir):
     assert sha(archive)=='766e4db7083fbdb551bc4aee66abc554079c5d118905f6d65aa5e5372c9418d1'
+    prior_path=relation_dir.parent/'previous_result.json'
+    assert sha(prior_path)=='5101ad951144527fad7f32bc3819da3b540fe3320fde34478ca99fe136fa71b3'
+    prior={r['id']:r for r in json.loads(prior_path.read_text())['records']}
+    input_hashes={'previous_result.json':sha(prior_path)}
     records=[]; provenance=[]
     with tarfile.open(archive,'r:gz') as tar:
         for member in tar:
             if not member.isfile() or not member.name.endswith('.json'): continue
             pieces=member.name.split('/')
             if len(pieces)!=3 or int(pieces[1][4:]) not in PANEL: continue
-            d=json.load(tar.extractfile(member)); width,rule,dim=d['width'],d['rule'],d['dimension']
+            raw=tar.extractfile(member).read();d=json.loads(raw)
+            width,rule,dim=d['width'],d['rule'],d['dimension']
             if width not in (7,8) or dim not in (2,3,4): continue
             budget(start)
+            identity=f'w{width}_r{rule:03d}_d{dim}'
+            assert hashlib.sha256(raw).hexdigest()==prior[identity]['archive_member_sha256']
             grid=unpack(d['grid_bits_big'],d['grid_shape']); root=grid
             for _ in range(dim-1): root=root[:,4]^root[:,5]
             assert root.shape==(1<<width,width) and len(np.unique(codes(root)))==1<<width
@@ -359,8 +371,10 @@ def lift_and_provenance(unit,start,archive,relation_dir):
                             rz=joint(rootw,CANDIDATES[targets[0]])
                             pairs=np.unique(np.stack([z,rz],axis=1),axis=0)
                             assert len(pairs)==len(np.unique(z))==len(np.unique(rz))
+                            edge,count=np.unique(z*64+z[nxt],return_counts=True)
                             witnesses.append({'phase':phase,'native_candidate':CANDIDATES.index(c),
-                                              'root_candidate':targets[0],'relabeling':pairs.tolist()})
+                                              'root_candidate':targets[0],'relabeling':pairs.tolist(),
+                                              'transition_edges':np.stack([edge//64,edge%64,count],axis=1).tolist()})
                     else: unmatched+=1
             rr={'width':width,'rule':rule,'dimension':dim,'attempted_views':6*len(NATIVE_CANDIDATES),
                 'matched_views':len(matched),'unmatched_views':unmatched,'matches':matched,
@@ -368,6 +382,8 @@ def lift_and_provenance(unit,start,archive,relation_dir):
                 'transition_witnesses':witnesses}
             records.append(rr)
             path=relation_dir/f'w{width}_r{rule:03d}_d{dim}.npz'
+            actual=sha(path);assert actual==prior[identity]['arrays_sha256']
+            input_hashes['relations/'+path.name]=actual
             with np.load(path) as q:
                 reps=q['orbit_representatives']; source=reps//(6**(dim-1))
                 for contract in ('finite','full_input_d2') if dim==2 else ('finite',):
@@ -387,7 +403,9 @@ def lift_and_provenance(unit,start,archive,relation_dir):
             dump(unit/'lift'/f'w{width}_r{rule:03d}_d{dim}.json',rr)
             print('lift',width,rule,dim,round(time.monotonic()-start,2),flush=True)
     assert len(records)==78 and len(provenance)==104
-    return {'records':records,'provenance':provenance,'archive_sha256':sha(archive)}
+    dump(unit/'lift-input-hashes.json',input_hashes)
+    return {'records':records,'provenance':provenance,'archive_sha256':sha(archive),
+            'input_hashes':input_hashes,'input_manifest_sha256':sha(unit/'lift-input-hashes.json')}
 
 
 def main():
@@ -395,6 +413,9 @@ def main():
     p.add_argument('--unit',type=Path,default=UNIT);p.add_argument('--archive',type=Path)
     p.add_argument('--relation-dir',type=Path)
     a=p.parse_args();start=time.monotonic();a.unit.mkdir(parents=True,exist_ok=True)
+    result_path=a.unit/(a.stage+'-result.json')
+    if result_path.exists():
+        raise SystemExit('Refusing to overwrite an existing stage result; use a fresh --unit for replay.')
     try:
         if a.stage=='discovery': result=discovery(a.unit,start)
         elif a.stage=='confirmation': result=confirmation(a.unit,start)
@@ -402,6 +423,9 @@ def main():
         budget(start);status='complete'
     except TimeoutError as e:
         result={'reason':str(e)};status='censored'
+        if a.stage=='discovery':
+            (a.unit/'shortlist.json').unlink(missing_ok=True)
+            (a.unit/'confirmation-seal.json').unlink(missing_ok=True)
     result['status']=status
     result['source_hashes']={p:sha(ROOT/p) for p in
         ['scripts/observation_catalog.py','docs/research/protocols/observation-catalog-20260915.md',
