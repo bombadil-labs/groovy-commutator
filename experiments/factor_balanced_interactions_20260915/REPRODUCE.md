@@ -26,3 +26,15 @@ All raw partitions and comparison evidence are in the accompanying archive; the
 repository retains predictions, scored results, provenance, and independent review.
 The historical relation input is a byte-identical copy of the previous study's
 compact-relations.json, with its original archive provenance recorded separately.
+
+For the independent audit after the seal and fresh output are present:
+
+```sh
+OPENBLAS_NUM_THREADS=1 python review/factor_balanced/verify.py fit
+OPENBLAS_NUM_THREADS=1 python review/factor_balanced/verify.py cases
+OPENBLAS_NUM_THREADS=1 python review/factor_balanced/verify.py score
+```
+
+Check the verifier CLI and independent-review.md for exact audit commands.
+For publication-only rendering, run scripts/plot_factor_balanced.py (Matplotlib)
+and scripts/summarize_factor_balanced.py; neither generates CA data or refits models.

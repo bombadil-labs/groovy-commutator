@@ -1,0 +1,7 @@
+{
+  "status": "pass",
+  "synthetic_functional_graphs": 200,
+  "method": "independent direct walk from each start; checks basin canonical labels, period, and depth",
+  "seed": 130921,
+  "oracle_sha256": "a3eb181812f99d0fe5cf558f266a2e3c0d654ca18d5bc4b6deea2bc751137721"
+}

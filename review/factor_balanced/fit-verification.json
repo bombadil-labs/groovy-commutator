@@ -1,0 +1,11 @@
+{
+  "fits": 756,
+  "maximum_numeric_error": 1.2656542480726785e-14,
+  "oracle_sha256": "a3eb181812f99d0fe5cf558f266a2e3c0d654ca18d5bc4b6deea2bc751137721",
+  "predictions": 4536,
+  "predictions_sha256": "f6128222e50eaac64dc2d60df38154ffb2988b127c35f5dd6d454f59f364b24e",
+  "status": "verified",
+  "tasks": 252,
+  "verifier_sha256": "191089103ba1106a191b85549e363e39530c18135ecc77da4f4e431997889188",
+  "wall_seconds": 0.2952222249987244
+}

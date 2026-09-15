@@ -6,6 +6,17 @@ This page is the **working synthesis** of the dimensional-lift research program.
 
 The program is parallel to [Dynamics of Erased Distinctions](2026-09-08-dynamics-of-erased-distinctions.md). That program asks when information can be forgotten safely and how a lossy representation repairs itself. This one asks what additional structure must be represented when evolution and transformation refuse to agree.
 
+## 2026-09-15: balanced arithmetic interactions have uneven predictive value
+
+The [factor-balanced study](2026-09-15-factor-balanced-interactions.md) keeps
+individual rule pairs and balances the six pairs of divisibility-by 2/3 families
+across historical and fresh size bands. Its frozen interaction model beats both
+simpler models in 88 of 252 tasks, including 18 of 28 basin comparisons, but only
+one of nine observations for 54/110. Clipping produces several future-state ties.
+The note records full scores and limits: predictive gains do not isolate an
+arithmetic mechanism or a Class-IV criterion. The bounded study is complete;
+no replacement selection or third experiment has run.
+
 ## 2026-09-15: ring arithmetic becomes an explicit comparison coordinate
 
 The [whole-state partition study](2026-09-15-rule-ring-structure.md) uses a
