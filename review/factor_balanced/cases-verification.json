@@ -1,0 +1,971 @@
+{
+  "cases": [
+    {
+      "blocks": {
+        "basin": 1,
+        "cycle_length": 1,
+        "future_1": 1,
+        "future_16": 1,
+        "future_2": 1,
+        "future_32": 1,
+        "future_4": 1,
+        "future_8": 1,
+        "transient_depth": 2
+      },
+      "entropies": {
+        "basin": 0.0,
+        "cycle_length": 0.0,
+        "future_1": 0.0,
+        "future_16": 0.0,
+        "future_2": 0.0,
+        "future_32": 0.0,
+        "future_4": 0.0,
+        "future_8": 0.0,
+        "transient_depth": 0.0001407065546984111
+      },
+      "independent_scalar_replay": true,
+      "max_cycle_length": 1,
+      "max_transient": 1,
+      "ring": 17,
+      "rule": 0,
+      "sha256": "4a36db2934dfa3a4b98aafccfb46d6e6429166c358a0e3436ae2b9d89ad37563"
+    },
+    {
+      "blocks": {
+        "basin": 120,
+        "cycle_length": 4,
+        "future_1": 12411,
+        "future_16": 1361,
+        "future_2": 7804,
+        "future_32": 1123,
+        "future_4": 4251,
+        "future_8": 1939,
+        "transient_depth": 24
+      },
+      "entropies": {
+        "basin": 6.161095866673821,
+        "cycle_length": 0.3960333433945734,
+        "future_1": 11.79024294216487,
+        "future_16": 9.664386046604125,
+        "future_2": 11.281753546226392,
+        "future_32": 9.571053547269026,
+        "future_4": 10.532370164499465,
+        "future_8": 9.974150453254255,
+        "transient_depth": 3.444983504027433
+      },
+      "independent_scalar_replay": true,
+      "max_cycle_length": 14,
+      "max_transient": 23,
+      "ring": 17,
+      "rule": 18,
+      "sha256": "943530d88fb38a88c3edf4e89afcadc5d660479c5431b3020dce9664e3859157"
+    },
+    {
+      "blocks": {
+        "basin": 7,
+        "cycle_length": 7,
+        "future_1": 127110,
+        "future_16": 86786,
+        "future_2": 123217,
+        "future_32": 64431,
+        "future_4": 116128,
+        "future_8": 104483,
+        "transient_depth": 363
+      },
+      "entropies": {
+        "basin": 0.3166249119013528,
+        "cycle_length": 0.3166249119013528,
+        "future_1": 16.939544677734375,
+        "future_16": 16.209423378346337,
+        "future_2": 16.879848485850445,
+        "future_32": 15.668780750243476,
+        "future_4": 16.766563494289056,
+        "future_8": 16.563829459123166,
+        "transient_depth": 7.625019850785531
+      },
+      "independent_scalar_replay": true,
+      "max_cycle_length": 10846,
+      "max_transient": 362,
+      "ring": 17,
+      "rule": 30,
+      "sha256": "7d76cf8f5c0fc6fb585c723edc8fd894e5e64b6bbf242a8dd56d7b3207758f10"
+    },
+    {
+      "blocks": {
+        "basin": 124,
+        "cycle_length": 4,
+        "future_1": 40598,
+        "future_16": 2925,
+        "future_2": 27491,
+        "future_32": 1276,
+        "future_4": 16118,
+        "future_8": 8178,
+        "transient_depth": 40
+      },
+      "entropies": {
+        "basin": 5.58977465023568,
+        "cycle_length": 0.657487443519567,
+        "future_1": 14.811372291303654,
+        "future_16": 10.324179659201327,
+        "future_2": 14.238702089118087,
+        "future_32": 8.562763690154213,
+        "future_4": 13.27637374068654,
+        "future_8": 11.972853581352771,
+        "transient_depth": 4.9087234197079965
+      },
+      "independent_scalar_replay": true,
+      "max_cycle_length": 289,
+      "max_transient": 39,
+      "ring": 17,
+      "rule": 54,
+      "sha256": "c45d4a97979df5af40b764084d6e768fcf595c7550da4c9b3eaa197c2f89aca7"
+    },
+    {
+      "blocks": {
+        "basin": 4404,
+        "cycle_length": 3,
+        "future_1": 65536,
+        "future_16": 65536,
+        "future_2": 65536,
+        "future_32": 65536,
+        "future_4": 65536,
+        "future_8": 65536,
+        "transient_depth": 2
+      },
+      "entropies": {
+        "basin": 12.099336093970944,
+        "cycle_length": 0.03701854729392616,
+        "future_1": 16.0,
+        "future_16": 16.0,
+        "future_2": 16.0,
+        "future_32": 16.0,
+        "future_4": 16.0,
+        "future_8": 16.0,
+        "transient_depth": 1.0
+      },
+      "independent_scalar_replay": true,
+      "max_cycle_length": 15,
+      "max_transient": 1,
+      "ring": 17,
+      "rule": 90,
+      "sha256": "92ded3cc23088cb94d985a045b3b434c11528657f0f0c6646cdcecada6b28539"
+    },
+    {
+      "blocks": {
+        "basin": 20,
+        "cycle_length": 4,
+        "future_1": 53195,
+        "future_16": 6529,
+        "future_2": 35311,
+        "future_32": 2857,
+        "future_4": 22662,
+        "future_8": 12955,
+        "transient_depth": 71
+      },
+      "entropies": {
+        "basin": 4.068508341853402,
+        "cycle_length": 1.1580247376214212,
+        "future_1": 15.16576879741448,
+        "future_16": 11.863289794681881,
+        "future_2": 14.648429012571803,
+        "future_32": 9.871825082025373,
+        "future_4": 13.997357883411604,
+        "future_8": 13.095603586698267,
+        "transient_depth": 5.782470179046881
+      },
+      "independent_scalar_replay": true,
+      "max_cycle_length": 578,
+      "max_transient": 70,
+      "ring": 17,
+      "rule": 110,
+      "sha256": "666f64ae2ba9a049547f4156d66699e56a80c832e40f1b36eb49d2bb647abec1"
+    },
+    {
+      "blocks": {
+        "basin": 120,
+        "cycle_length": 4,
+        "future_1": 12412,
+        "future_16": 1327,
+        "future_2": 8229,
+        "future_32": 1123,
+        "future_4": 4234,
+        "future_8": 1939,
+        "transient_depth": 23
+      },
+      "entropies": {
+        "basin": 6.161881870919168,
+        "cycle_length": 0.39535434791173396,
+        "future_1": 11.85488784313784,
+        "future_16": 9.668599063336593,
+        "future_2": 11.542824709537067,
+        "future_32": 9.576796387577925,
+        "future_4": 10.619143338106161,
+        "future_8": 9.988316473534384,
+        "transient_depth": 3.7182549823445337
+      },
+      "independent_scalar_replay": true,
+      "max_cycle_length": 14,
+      "max_transient": 22,
+      "ring": 17,
+      "rule": 126,
+      "sha256": "7c25035e4c8542246f319c750ed39447afc08c9599171e075fdb24163e035652"
+    },
+    {
+      "blocks": {
+        "basin": 131072,
+        "cycle_length": 1,
+        "future_1": 131072,
+        "future_16": 131072,
+        "future_2": 131072,
+        "future_32": 131072,
+        "future_4": 131072,
+        "future_8": 131072,
+        "transient_depth": 1
+      },
+      "entropies": {
+        "basin": 17.0,
+        "cycle_length": 0.0,
+        "future_1": 17.0,
+        "future_16": 17.0,
+        "future_2": 17.0,
+        "future_32": 17.0,
+        "future_4": 17.0,
+        "future_8": 17.0,
+        "transient_depth": 0.0
+      },
+      "independent_scalar_replay": true,
+      "max_cycle_length": 1,
+      "max_transient": 0,
+      "ring": 17,
+      "rule": 204,
+      "sha256": "99ff697a5b934fc22b05fbb1b3140ec283c007f3ff12eaf3badb13044935e608"
+    },
+    {
+      "blocks": {
+        "basin": 1,
+        "cycle_length": 1,
+        "future_1": 1,
+        "future_16": 1,
+        "future_2": 1,
+        "future_32": 1,
+        "future_4": 1,
+        "future_8": 1,
+        "transient_depth": 2
+      },
+      "entropies": {
+        "basin": 0.0,
+        "cycle_length": 0.0,
+        "future_1": 0.0,
+        "future_16": 0.0,
+        "future_2": 0.0,
+        "future_32": 0.0,
+        "future_4": 0.0,
+        "future_8": 0.0,
+        "transient_depth": 7.416798511185857e-05
+      },
+      "independent_scalar_replay": false,
+      "max_cycle_length": 1,
+      "max_transient": 1,
+      "ring": 18,
+      "rule": 0,
+      "sha256": "7968f6673a21a460aaa5117f71388e84a91e863c6fcd48fede6974020ec87666"
+    },
+    {
+      "blocks": {
+        "basin": 166,
+        "cycle_length": 5,
+        "future_1": 22024,
+        "future_16": 1375,
+        "future_2": 13693,
+        "future_32": 1231,
+        "future_4": 7576,
+        "future_8": 2959,
+        "transient_depth": 19
+      },
+      "entropies": {
+        "basin": 6.273861534485223,
+        "cycle_length": 1.3284936559082454,
+        "future_1": 12.501537764521974,
+        "future_16": 9.710770842569861,
+        "future_2": 11.998509917578263,
+        "future_32": 9.654753161504486,
+        "future_4": 11.154996954584085,
+        "future_8": 10.28394158516537,
+        "transient_depth": 3.5991951052154003
+      },
+      "independent_scalar_replay": false,
+      "max_cycle_length": 14,
+      "max_transient": 18,
+      "ring": 18,
+      "rule": 18,
+      "sha256": "609852c787e35579b939fee64a9116c11f6bc64018956c2d004fd3d878bf9f9a"
+    },
+    {
+      "blocks": {
+        "basin": 18,
+        "cycle_length": 6,
+        "future_1": 255436,
+        "future_16": 185682,
+        "future_2": 248836,
+        "future_32": 143202,
+        "future_4": 236728,
+        "future_8": 216385,
+        "transient_depth": 1138
+      },
+      "entropies": {
+        "basin": 0.9484686187812613,
+        "cycle_length": 0.8688941199006026,
+        "future_1": 17.948819141817086,
+        "future_16": 17.33831126725018,
+        "future_2": 17.898321783197122,
+        "future_32": 16.86715685572649,
+        "future_4": 17.803063433280588,
+        "future_8": 17.63079510079974,
+        "transient_depth": 9.872571729887367
+      },
+      "independent_scalar_replay": false,
+      "max_cycle_length": 2844,
+      "max_transient": 1137,
+      "ring": 18,
+      "rule": 30,
+      "sha256": "ac0e711899c8ac67682c9311e40a6907ca841265a73c757f9ba678c3081a340f"
+    },
+    {
+      "blocks": {
+        "basin": 171,
+        "cycle_length": 7,
+        "future_1": 75785,
+        "future_16": 7540,
+        "future_2": 50462,
+        "future_32": 4291,
+        "future_4": 28997,
+        "future_8": 14596,
+        "transient_depth": 54
+      },
+      "entropies": {
+        "basin": 5.688434538354999,
+        "cycle_length": 1.4041176916144618,
+        "future_1": 15.68274629340359,
+        "future_16": 11.021676221893774,
+        "future_2": 15.08624086563073,
+        "future_32": 9.934675386931131,
+        "future_4": 14.111719710835017,
+        "future_8": 12.773254399448902,
+        "transient_depth": 5.170424463865037
+      },
+      "independent_scalar_replay": false,
+      "max_cycle_length": 306,
+      "max_transient": 53,
+      "ring": 18,
+      "rule": 54,
+      "sha256": "889d7b3c553397bfc15d7e230aec182bb1ab59deb342af17027380ec0b49ab4c"
+    },
+    {
+      "blocks": {
+        "basin": 4708,
+        "cycle_length": 4,
+        "future_1": 65536,
+        "future_16": 65536,
+        "future_2": 65536,
+        "future_32": 65536,
+        "future_4": 65536,
+        "future_8": 65536,
+        "transient_depth": 2
+      },
+      "entropies": {
+        "basin": 12.197236717327664,
+        "cycle_length": 0.03986444918137848,
+        "future_1": 16.0,
+        "future_16": 16.0,
+        "future_2": 16.0,
+        "future_32": 16.0,
+        "future_4": 16.0,
+        "future_8": 16.0,
+        "transient_depth": 0.8112781244591328
+      },
+      "independent_scalar_replay": false,
+      "max_cycle_length": 14,
+      "max_transient": 1,
+      "ring": 18,
+      "rule": 90,
+      "sha256": "14b0494d3144270a33f500de3cfb5ddfe5ffa5413d559c622d6a909d71677150"
+    },
+    {
+      "blocks": {
+        "basin": 27,
+        "cycle_length": 6,
+        "future_1": 101048,
+        "future_16": 11116,
+        "future_2": 66365,
+        "future_32": 5689,
+        "future_4": 42139,
+        "future_8": 22663,
+        "transient_depth": 121
+      },
+      "entropies": {
+        "basin": 2.2487223294484076,
+        "cycle_length": 0.9434956553451335,
+        "future_1": 16.059208083828008,
+        "future_16": 12.680020744460396,
+        "future_2": 15.527024754829448,
+        "future_32": 11.121576561011516,
+        "future_4": 14.850860950254503,
+        "future_8": 13.877331699255596,
+        "transient_depth": 6.640138707376595
+      },
+      "independent_scalar_replay": false,
+      "max_cycle_length": 81,
+      "max_transient": 120,
+      "ring": 18,
+      "rule": 110,
+      "sha256": "c67862d358ee0b5a167e9225c7b91d4cb86b0f6eb8d4ba8d1bd389132c50608e"
+    },
+    {
+      "blocks": {
+        "basin": 166,
+        "cycle_length": 5,
+        "future_1": 22028,
+        "future_16": 1375,
+        "future_2": 14507,
+        "future_32": 1231,
+        "future_4": 7739,
+        "future_8": 2977,
+        "transient_depth": 20
+      },
+      "entropies": {
+        "basin": 6.275458083747879,
+        "cycle_length": 1.3292518487231373,
+        "future_1": 12.560021617902375,
+        "future_16": 9.740746786579885,
+        "future_2": 12.253118225979295,
+        "future_32": 9.65634890928596,
+        "future_4": 11.281854451192737,
+        "future_8": 10.400236176756337,
+        "transient_depth": 3.780648364410335
+      },
+      "independent_scalar_replay": false,
+      "max_cycle_length": 14,
+      "max_transient": 19,
+      "ring": 18,
+      "rule": 126,
+      "sha256": "0d42e65e7c25d98989845bf282b0130c4bfd692fbec30bfe5e8fb379c0ed7263"
+    },
+    {
+      "blocks": {
+        "basin": 262144,
+        "cycle_length": 1,
+        "future_1": 262144,
+        "future_16": 262144,
+        "future_2": 262144,
+        "future_32": 262144,
+        "future_4": 262144,
+        "future_8": 262144,
+        "transient_depth": 1
+      },
+      "entropies": {
+        "basin": 18.0,
+        "cycle_length": 0.0,
+        "future_1": 18.0,
+        "future_16": 18.0,
+        "future_2": 18.0,
+        "future_32": 18.0,
+        "future_4": 18.0,
+        "future_8": 18.0,
+        "transient_depth": 0.0
+      },
+      "independent_scalar_replay": false,
+      "max_cycle_length": 1,
+      "max_transient": 0,
+      "ring": 18,
+      "rule": 204,
+      "sha256": "3b60b2a99dc2051a133f76f5cce4b2e2d03113339bdd432141b49282e9212a06"
+    },
+    {
+      "blocks": {
+        "basin": 1,
+        "cycle_length": 1,
+        "future_1": 1,
+        "future_16": 1,
+        "future_2": 1,
+        "future_32": 1,
+        "future_4": 1,
+        "future_8": 1,
+        "transient_depth": 2
+      },
+      "entropies": {
+        "basin": 0.0,
+        "cycle_length": 0.0,
+        "future_1": 0.0,
+        "future_16": 0.0,
+        "future_2": 0.0,
+        "future_32": 0.0,
+        "future_4": 0.0,
+        "future_8": 0.0,
+        "transient_depth": 2.0449346878965513e-05
+      },
+      "independent_scalar_replay": false,
+      "max_cycle_length": 1,
+      "max_transient": 1,
+      "ring": 20,
+      "rule": 0,
+      "sha256": "c9ac69206e33f0461fff6492c05d483eb962a42866b3bd75fee6775dd95919f3"
+    },
+    {
+      "blocks": {
+        "basin": 288,
+        "cycle_length": 7,
+        "future_1": 69162,
+        "future_16": 5285,
+        "future_2": 43330,
+        "future_32": 3425,
+        "future_4": 22560,
+        "future_8": 10165,
+        "transient_depth": 39
+      },
+      "entropies": {
+        "basin": 6.364124300665707,
+        "cycle_length": 1.5127464486260127,
+        "future_1": 13.919763564660098,
+        "future_16": 10.892494148511528,
+        "future_2": 13.463205016172976,
+        "future_32": 10.56814313574882,
+        "future_4": 12.423209622583192,
+        "future_8": 11.55566253867462,
+        "transient_depth": 4.181203757641548
+      },
+      "independent_scalar_replay": false,
+      "max_cycle_length": 62,
+      "max_transient": 38,
+      "ring": 20,
+      "rule": 18,
+      "sha256": "d033c2a02cd55a05ac42ff72a44764359cc226e6b215c8e9f834183f38360bd3"
+    },
+    {
+      "blocks": {
+        "basin": 27,
+        "cycle_length": 10,
+        "future_1": 1029271,
+        "future_16": 806851,
+        "future_2": 1010171,
+        "future_32": 657331,
+        "future_4": 974111,
+        "future_8": 910591,
+        "transient_depth": 1737
+      },
+      "entropies": {
+        "basin": 2.7740891723762733,
+        "cycle_length": 1.7142899818013002,
+        "future_1": 19.963178634643555,
+        "future_16": 19.490200948469784,
+        "future_2": 19.926694281995143,
+        "future_32": 19.100260011434756,
+        "future_4": 19.85615956525172,
+        "future_8": 19.724850863020077,
+        "transient_depth": 10.264686521681597
+      },
+      "independent_scalar_replay": false,
+      "max_cycle_length": 6150,
+      "max_transient": 1736,
+      "ring": 20,
+      "rule": 30,
+      "sha256": "d72cf99dbbfd05ae66402c0a5f734f1bd83e675193594b49e21dae2f12fbd9ee"
+    },
+    {
+      "blocks": {
+        "basin": 428,
+        "cycle_length": 11,
+        "future_1": 264104,
+        "future_16": 16153,
+        "future_2": 169624,
+        "future_32": 8033,
+        "future_4": 93224,
+        "future_8": 42669,
+        "transient_depth": 72
+      },
+      "entropies": {
+        "basin": 7.180836743855683,
+        "cycle_length": 2.4926965687290554,
+        "future_1": 17.42538579963691,
+        "future_16": 12.39428754375906,
+        "future_2": 16.776520550924886,
+        "future_32": 11.589806518079032,
+        "future_4": 15.736192181985661,
+        "future_8": 14.246796102530919,
+        "transient_depth": 5.0804155314673265
+      },
+      "independent_scalar_replay": false,
+      "max_cycle_length": 86,
+      "max_transient": 71,
+      "ring": 20,
+      "rule": 54,
+      "sha256": "23fac2befd1dd4b5a172ac3f31d9e7a5b1c2a1d4a6d2df381d600a6a4d6705f3"
+    },
+    {
+      "blocks": {
+        "basin": 5486,
+        "cycle_length": 4,
+        "future_1": 262144,
+        "future_16": 65536,
+        "future_2": 65536,
+        "future_32": 65536,
+        "future_4": 65536,
+        "future_8": 65536,
+        "transient_depth": 3
+      },
+      "entropies": {
+        "basin": 12.419212074512314,
+        "cycle_length": 0.03827439178426486,
+        "future_1": 18.0,
+        "future_16": 16.0,
+        "future_2": 16.0,
+        "future_32": 16.0,
+        "future_4": 16.0,
+        "future_8": 16.0,
+        "transient_depth": 1.014097655573916
+      },
+      "independent_scalar_replay": false,
+      "max_cycle_length": 12,
+      "max_transient": 2,
+      "ring": 20,
+      "rule": 90,
+      "sha256": "1f87712b75070059d6e04472fc9c94f5769513d37d83471e901a657f882f791a"
+    },
+    {
+      "blocks": {
+        "basin": 114,
+        "cycle_length": 10,
+        "future_1": 364270,
+        "future_16": 35295,
+        "future_2": 233171,
+        "future_32": 13655,
+        "future_4": 145171,
+        "future_8": 76456,
+        "transient_depth": 122
+      },
+      "entropies": {
+        "basin": 3.0203161541527757,
+        "cycle_length": 1.4302100753447045,
+        "future_1": 17.84517598380503,
+        "future_16": 14.195023080513545,
+        "future_2": 17.27695072426173,
+        "future_32": 12.213007764959016,
+        "future_4": 16.601000113134035,
+        "future_8": 15.567492458812389,
+        "transient_depth": 6.407261108589421
+      },
+      "independent_scalar_replay": false,
+      "max_cycle_length": 240,
+      "max_transient": 121,
+      "ring": 20,
+      "rule": 110,
+      "sha256": "94eec6d20ee313a222c03a59356ef06ac944c44234daaa7e78ae85d9f058b835"
+    },
+    {
+      "blocks": {
+        "basin": 288,
+        "cycle_length": 7,
+        "future_1": 69161,
+        "future_16": 5385,
+        "future_2": 44751,
+        "future_32": 3465,
+        "future_4": 23311,
+        "future_8": 10365,
+        "transient_depth": 40
+      },
+      "entropies": {
+        "basin": 6.364943591438306,
+        "cycle_length": 1.5151565485148504,
+        "future_1": 13.967252113900244,
+        "future_16": 10.943082740865062,
+        "future_2": 13.66074278961794,
+        "future_32": 10.580610471074145,
+        "future_4": 12.625625991948505,
+        "future_8": 11.666956489869063,
+        "transient_depth": 4.347937208920526
+      },
+      "independent_scalar_replay": false,
+      "max_cycle_length": 62,
+      "max_transient": 39,
+      "ring": 20,
+      "rule": 126,
+      "sha256": "f77da333896014cf936af153e46ea359a09aeff0181a577da05712b5de1a3207"
+    },
+    {
+      "blocks": {
+        "basin": 1048576,
+        "cycle_length": 1,
+        "future_1": 1048576,
+        "future_16": 1048576,
+        "future_2": 1048576,
+        "future_32": 1048576,
+        "future_4": 1048576,
+        "future_8": 1048576,
+        "transient_depth": 1
+      },
+      "entropies": {
+        "basin": 20.0,
+        "cycle_length": 0.0,
+        "future_1": 20.0,
+        "future_16": 20.0,
+        "future_2": 20.0,
+        "future_32": 20.0,
+        "future_4": 20.0,
+        "future_8": 20.0,
+        "transient_depth": 0.0
+      },
+      "independent_scalar_replay": false,
+      "max_cycle_length": 1,
+      "max_transient": 0,
+      "ring": 20,
+      "rule": 204,
+      "sha256": "87cdf18b184a6326f1ef9b3a935eb703aa025c605a29f8a87cbac4bc246d69dd"
+    },
+    {
+      "blocks": {
+        "basin": 1,
+        "cycle_length": 1,
+        "future_1": 1,
+        "future_16": 1,
+        "future_2": 1,
+        "future_32": 1,
+        "future_4": 1,
+        "future_8": 1,
+        "transient_depth": 2
+      },
+      "entropies": {
+        "basin": 0.0,
+        "cycle_length": 0.0,
+        "future_1": 0.0,
+        "future_16": 0.0,
+        "future_2": 0.0,
+        "future_32": 0.0,
+        "future_4": 0.0,
+        "future_8": 0.0,
+        "transient_depth": 1.0701510761701396e-05
+      },
+      "independent_scalar_replay": false,
+      "max_cycle_length": 1,
+      "max_transient": 1,
+      "ring": 21,
+      "rule": 0,
+      "sha256": "a70a01c043679ac6e557876d1949ce7d07938f8f8bb7eb93bf8299daedded2cd"
+    },
+    {
+      "blocks": {
+        "basin": 379,
+        "cycle_length": 5,
+        "future_1": 122406,
+        "future_16": 6910,
+        "future_2": 75475,
+        "future_32": 5545,
+        "future_4": 38018,
+        "future_8": 13756,
+        "transient_depth": 38
+      },
+      "entropies": {
+        "basin": 6.776639069850896,
+        "cycle_length": 1.0233178377374632,
+        "future_1": 14.627059112863705,
+        "future_16": 11.328330424245685,
+        "future_2": 14.15007473434927,
+        "future_32": 11.24502795784001,
+        "future_4": 12.883218828770364,
+        "future_8": 11.823457586925198,
+        "transient_depth": 3.702132454331659
+      },
+      "independent_scalar_replay": false,
+      "max_cycle_length": 62,
+      "max_transient": 37,
+      "ring": 21,
+      "rule": 18,
+      "sha256": "005bcc3f734a81f36315af774c300ce07225af2d2ccd837333b8032029f8a977"
+    },
+    {
+      "blocks": {
+        "basin": 60,
+        "cycle_length": 8,
+        "future_1": 2064431,
+        "future_16": 1675304,
+        "future_2": 2031885,
+        "future_32": 1395605,
+        "future_4": 1969703,
+        "future_8": 1859411,
+        "transient_depth": 4309
+      },
+      "entropies": {
+        "basin": 3.1356439845637403,
+        "cycle_length": 0.5741144651071393,
+        "future_1": 20.96879446273446,
+        "future_16": 20.563788019545065,
+        "future_2": 20.937686425082262,
+        "future_32": 20.22067256421764,
+        "future_4": 20.87724888407261,
+        "future_8": 20.76506249723994,
+        "transient_depth": 11.826619682290367
+      },
+      "independent_scalar_replay": false,
+      "max_cycle_length": 2793,
+      "max_transient": 4308,
+      "ring": 21,
+      "rule": 30,
+      "sha256": "1e8eb5e1e3eb2e0a3f133923ab12665dc487bb64623dce035de9772f0fa48ddc"
+    },
+    {
+      "blocks": {
+        "basin": 455,
+        "cycle_length": 6,
+        "future_1": 493015,
+        "future_16": 28652,
+        "future_2": 310984,
+        "future_32": 11495,
+        "future_4": 167519,
+        "future_8": 76931,
+        "transient_depth": 96
+      },
+      "entropies": {
+        "basin": 6.9416400291523015,
+        "cycle_length": 0.30910045269041475,
+        "future_1": 18.2966890109986,
+        "future_16": 13.027258308024393,
+        "future_2": 17.620550245102773,
+        "future_32": 10.83991942816008,
+        "future_4": 16.547019475238944,
+        "future_8": 15.019643715600692,
+        "transient_depth": 5.768375798196685
+      },
+      "independent_scalar_replay": true,
+      "max_cycle_length": 399,
+      "max_transient": 95,
+      "ring": 21,
+      "rule": 54,
+      "sha256": "3c8e824bc94b771c2c24e180375bdab55d674548924861dc6bcf05c3eefce036"
+    },
+    {
+      "blocks": {
+        "basin": 16680,
+        "cycle_length": 3,
+        "future_1": 1048576,
+        "future_16": 1048576,
+        "future_2": 1048576,
+        "future_32": 1048576,
+        "future_4": 1048576,
+        "future_8": 1048576,
+        "transient_depth": 2
+      },
+      "entropies": {
+        "basin": 14.023504693180286,
+        "cycle_length": 0.003310213376861722,
+        "future_1": 20.0,
+        "future_16": 20.0,
+        "future_2": 20.0,
+        "future_32": 20.0,
+        "future_4": 20.0,
+        "future_8": 20.0,
+        "transient_depth": 1.0
+      },
+      "independent_scalar_replay": true,
+      "max_cycle_length": 63,
+      "max_transient": 1,
+      "ring": 21,
+      "rule": 90,
+      "sha256": "940d6e19088e0ed3d22ef9b4a058ef90683111299b85e0477e2da12dceb0807b"
+    },
+    {
+      "blocks": {
+        "basin": 6,
+        "cycle_length": 6,
+        "future_1": 691402,
+        "future_16": 65955,
+        "future_2": 436179,
+        "future_32": 25278,
+        "future_4": 268332,
+        "future_8": 141387,
+        "transient_depth": 114
+      },
+      "entropies": {
+        "basin": 0.6706395797054148,
+        "cycle_length": 0.6706395797054148,
+        "future_1": 18.737874403322113,
+        "future_16": 15.025090627399903,
+        "future_2": 18.149194161368975,
+        "future_32": 12.973371775476126,
+        "future_4": 17.46027786665234,
+        "future_8": 16.422933062544136,
+        "transient_depth": 6.2874972956472
+      },
+      "independent_scalar_replay": true,
+      "max_cycle_length": 630,
+      "max_transient": 113,
+      "ring": 21,
+      "rule": 110,
+      "sha256": "18bcf0d1e455032fd3b0ca4fb6d4662a98c122b73a4b4d84a39b5655cad4ddc7"
+    },
+    {
+      "blocks": {
+        "basin": 379,
+        "cycle_length": 5,
+        "future_1": 122404,
+        "future_16": 6847,
+        "future_2": 78647,
+        "future_32": 5545,
+        "future_4": 39251,
+        "future_8": 13903,
+        "transient_depth": 38
+      },
+      "entropies": {
+        "basin": 6.776009291649443,
+        "cycle_length": 1.0241945403629649,
+        "future_1": 14.669711613754536,
+        "future_16": 11.330130873090662,
+        "future_2": 14.364305349179503,
+        "future_32": 11.24411659180694,
+        "future_4": 13.199314701804166,
+        "future_8": 11.857484502615296,
+        "transient_depth": 3.880989641575695
+      },
+      "independent_scalar_replay": false,
+      "max_cycle_length": 62,
+      "max_transient": 37,
+      "ring": 21,
+      "rule": 126,
+      "sha256": "f49303726b8ff48a9f02783fa14f4d85317448028e51ff1463d26b0ef88db660"
+    },
+    {
+      "blocks": {
+        "basin": 2097152,
+        "cycle_length": 1,
+        "future_1": 2097152,
+        "future_16": 2097152,
+        "future_2": 2097152,
+        "future_32": 2097152,
+        "future_4": 2097152,
+        "future_8": 2097152,
+        "transient_depth": 1
+      },
+      "entropies": {
+        "basin": 21.0,
+        "cycle_length": 0.0,
+        "future_1": 21.0,
+        "future_16": 21.0,
+        "future_2": 21.0,
+        "future_32": 21.0,
+        "future_4": 21.0,
+        "future_8": 21.0,
+        "transient_depth": 0.0
+      },
+      "independent_scalar_replay": false,
+      "max_cycle_length": 1,
+      "max_transient": 0,
+      "ring": 21,
+      "rule": 204,
+      "sha256": "5f92832821192d3922f1df33d19aa57d4cd2c8c21d6304e0734d54210fae8ed9"
+    }
+  ],
+  "max_rss_kib": 533100,
+  "maximum_numeric_error": 0.0,
+  "oracle_sha256": "a3eb181812f99d0fe5cf558f266a2e3c0d654ca18d5bc4b6deea2bc751137721",
+  "relation_count": 1008,
+  "status": "verified",
+  "verifier_sha256": "191089103ba1106a191b85549e363e39530c18135ecc77da4f4e431997889188",
+  "wall_seconds": 301.9458708790007
+}

@@ -1,0 +1,17 @@
+{
+  "all_local_bytes_match": true,
+  "all_member_hashes_match": true,
+  "all_nested_archives_valid": true,
+  "archive": "/workspace/scratch/cacd30e23920/factor-balanced-interactions-20260915.zip",
+  "bytes": 160976727,
+  "canonical_fresh_arrays": 32,
+  "manifest_entries": 72,
+  "manifest_sha256": "ffa6da16c0729e72f347e8f0d54e4cb1adba18e04d10ccb193c8698b036d8ea6",
+  "members": 73,
+  "review_members": 11,
+  "sha256": "2440b32257438995be7a7cba8762ca99831548057409c32c98f52e9680edc934",
+  "status": "verified",
+  "temporary_members": 0,
+  "verifier_sha256": "c482cf2c4c06311053c02fd59410119bb2129be2ed8c4652fe39a1ce29b1c0ec",
+  "wall_seconds": 9.826102537001134
+}

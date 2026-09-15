@@ -13,6 +13,16 @@ when a substantial unit completes; keep the bounded-claim style. Text moved from
 
 Program page: `docs/research/2026-09-09-dimensional-closure-program.md`
 
+## Checkpoint 2026-09-15: factor-balanced interactions tested
+
+The [factor-balanced study](../2026-09-15-factor-balanced-interactions.md)
+completes the next authorized round (gathering PR266, sub-PR267). Frozen models
+retain all 252 rule-pair/observation tasks; fresh sizes 17,18,20,21 balance the
+declared divisibility families. The note/results retain uneven predictive gains,
+clipping, individual outcomes and independent verification. This does not supply
+a Class-IV discriminator or alter earlier completion-independent G findings.
+No third experiment is running.
+
 ## Checkpoint 2026-09-15: rule and ring selectors tested
 
 The [whole-state ring study](../2026-09-15-rule-ring-structure.md) completes

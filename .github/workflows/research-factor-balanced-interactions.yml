@@ -1,0 +1,48 @@
+name: Factor-balanced interaction study provenance
+on:
+  pull_request:
+    paths:
+      - 'scripts/rule_ring_structure.py'
+      - 'scripts/factor_balanced_interactions.py'
+      - 'scripts/rule_ring_selectors.py'
+      - 'scripts/summarize_factor_balanced.py'
+      - 'scripts/package_factor_balanced.py'
+      - 'scripts/plot_factor_balanced.py'
+      - 'scripts/check_result_integrity.py'
+      - 'src/groovy/ca.py'
+      - 'docs/research/protocols/factor-balanced-interactions-20260915.md'
+      - 'experiments/factor_balanced_interactions_20260915/**'
+      - 'review/factor_balanced/**'
+      - 'results/factor_balanced_interactions_20260915.json'
+      - '.github/workflows/research-factor-balanced-interactions.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/rule_ring_structure.py'
+      - 'scripts/factor_balanced_interactions.py'
+      - 'scripts/rule_ring_selectors.py'
+      - 'scripts/summarize_factor_balanced.py'
+      - 'scripts/package_factor_balanced.py'
+      - 'scripts/plot_factor_balanced.py'
+      - 'scripts/check_result_integrity.py'
+      - 'src/groovy/ca.py'
+      - 'docs/research/protocols/factor-balanced-interactions-20260915.md'
+      - 'experiments/factor_balanced_interactions_20260915/**'
+      - 'review/factor_balanced/**'
+      - 'results/factor_balanced_interactions_20260915.json'
+      - '.github/workflows/research-factor-balanced-interactions.yml'
+permissions:
+  contents: read
+jobs:
+  factor-balanced-interactions-integrity:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Compile sources and verify pinned bytes only
+        run: |
+          python -m py_compile scripts/factor_balanced_interactions.py scripts/summarize_factor_balanced.py scripts/package_factor_balanced.py scripts/plot_factor_balanced.py review/factor_balanced/*.py
+          python scripts/check_result_integrity.py results/factor_balanced_interactions_20260915.json
