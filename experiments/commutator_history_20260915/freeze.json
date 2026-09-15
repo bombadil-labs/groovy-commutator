@@ -1,0 +1,14 @@
+{
+  "raw_input_hashes": {
+    "experiments/beam_discriminator_loop_20260915/round06/trajectories.npz": "e84b2f23ca8aa12b99f551dfcb5b6971034718db2554034b9cd0f876cb4d9372",
+    "experiments/beam_discriminator_loop_20260915/round10/trajectories.npz": "b54759344c81a160d6651de22edf66063b2c8cef41f8c8f3f4603a3c8ec1c143"
+  },
+  "source_hashes": {
+    "experiments/beam_discriminator_loop_20260915/round06/result.json": "1e6340352b8a16c99c98d1be0039643970a40a3c8afec9871e83b441b5eda5d6",
+    "experiments/beam_discriminator_loop_20260915/round10/result.json": "ae55152db188acbe92e32fad130102f93677eca11b25cb1c49ff32e70fd8b147",
+    "experiments/commutator_history_20260915/protocol-freeze.json": "d9b8ac975746c1e2cf2e8e03e598307839a11bd22d48def102a8bbe4721cc259",
+    "experiments/commutator_history_20260915/protocol.md": "ec9c742858fdef3db07879a84f16bcfacb9821e84a2655f3729f2d00fb8b0755",
+    "experiments/on_beam_256_4d_20260914/labels.json": "65e811a6ef5575bb697da4fc9e8dfe3c0de131b8c27702aa7990ad4b2d754250",
+    "scripts/commutator_history.py": "95f91208738bbd20803bd7ccd6f54842a90182951eaa09e409b5efa970755513"
+  }
+}

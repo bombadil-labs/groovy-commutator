@@ -1,0 +1,2520 @@
+{
+  "G_histories_exactly_reproduced": 380,
+  "all_families_replayed": true,
+  "all_requested_losses_coverage_gains_and_decisions_match": true,
+  "auditor_sha256": "2d7cc529b57fe12611cd357ce5529d5c2d952b3b98769d2c53dc2674317b04f4",
+  "families": [
+    {
+      "chosen_velocity": 0.0,
+      "id": "eca0",
+      "tests": [
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.0,
+          "seed": 6041512
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.0,
+          "seed": 6041513
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.0,
+          "seed": 6041514
+        }
+      ]
+    },
+    {
+      "chosen_velocity": -1.0,
+      "id": "eca1",
+      "tests": [
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": -0.04674209751220948,
+          "seed": 6041512
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": -0.09505922961344127,
+          "seed": 6041513
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": -0.06147222124572549,
+          "seed": 6041514
+        }
+      ]
+    },
+    {
+      "chosen_velocity": 0.5,
+      "id": "eca2",
+      "tests": [
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": -0.03930515546522095,
+          "seed": 6041512
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": -0.03262761267561065,
+          "seed": 6041513
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": -0.049966079492601456,
+          "seed": 6041514
+        }
+      ]
+    },
+    {
+      "chosen_velocity": -0.5,
+      "id": "eca3",
+      "tests": [
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": -0.018194237251107692,
+          "seed": 6041512
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": -0.019358782660115592,
+          "seed": 6041513
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": -0.016347909352545487,
+          "seed": 6041514
+        }
+      ]
+    },
+    {
+      "chosen_velocity": 0.0,
+      "id": "eca4",
+      "tests": [
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.0,
+          "seed": 6041512
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.0,
+          "seed": 6041513
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.0,
+          "seed": 6041514
+        }
+      ]
+    },
+    {
+      "chosen_velocity": 0.5,
+      "id": "eca5",
+      "tests": [
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.015314807535272923,
+          "seed": 6041512
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.017661772612620807,
+          "seed": 6041513
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.013162910457677368,
+          "seed": 6041514
+        }
+      ]
+    },
+    {
+      "chosen_velocity": -0.5,
+      "id": "eca6",
+      "tests": [
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.03686060753365705,
+          "seed": 6041512
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.025270204888279302,
+          "seed": 6041513
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.04292649680973021,
+          "seed": 6041514
+        }
+      ]
+    },
+    {
+      "chosen_velocity": 0.0,
+      "id": "eca7",
+      "tests": [
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.007950054051059308,
+          "seed": 6041512
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.007255882614195741,
+          "seed": 6041513
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.0070411505750417325,
+          "seed": 6041514
+        }
+      ]
+    },
+    {
+      "chosen_velocity": 0.0,
+      "id": "eca8",
+      "tests": [
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.0,
+          "seed": 6041512
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.0,
+          "seed": 6041513
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.0,
+          "seed": 6041514
+        }
+      ]
+    },
+    {
+      "chosen_velocity": 0.5,
+      "id": "eca9",
+      "tests": [
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.1013723138697386,
+          "seed": 6041512
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.13828701656863052,
+          "seed": 6041513
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.14148456138339782,
+          "seed": 6041514
+        }
+      ]
+    },
+    {
+      "chosen_velocity": -0.5,
+      "id": "eca10",
+      "tests": [
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.014099611616509966,
+          "seed": 6041512
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.006628879908570973,
+          "seed": 6041513
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": -0.003589019611079658,
+          "seed": 6041514
+        }
+      ]
+    },
+    {
+      "chosen_velocity": 0.5,
+      "id": "eca11",
+      "tests": [
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.022032763136662303,
+          "seed": 6041512
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.0279365284693604,
+          "seed": 6041513
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.025792403279010112,
+          "seed": 6041514
+        }
+      ]
+    },
+    {
+      "chosen_velocity": 0.0,
+      "id": "eca12",
+      "tests": [
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.0,
+          "seed": 6041512
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.0,
+          "seed": 6041513
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.0,
+          "seed": 6041514
+        }
+      ]
+    },
+    {
+      "chosen_velocity": 0.0,
+      "id": "eca13",
+      "tests": [
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.0,
+          "seed": 6041512
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.0,
+          "seed": 6041513
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.0,
+          "seed": 6041514
+        }
+      ]
+    },
+    {
+      "chosen_velocity": -0.5,
+      "id": "eca14",
+      "tests": [
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.0036382158646443286,
+          "seed": 6041512
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.061307212987292914,
+          "seed": 6041513
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": -0.025533933631315203,
+          "seed": 6041514
+        }
+      ]
+    },
+    {
+      "chosen_velocity": 0.0,
+      "id": "eca15",
+      "tests": [
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.0,
+          "seed": 6041512
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.0,
+          "seed": 6041513
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.0,
+          "seed": 6041514
+        }
+      ]
+    },
+    {
+      "chosen_velocity": 0.0,
+      "id": "eca18",
+      "tests": [
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.0059974757659323474,
+          "seed": 6041512
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.006279532911279362,
+          "seed": 6041513
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.005891311942627708,
+          "seed": 6041514
+        }
+      ]
+    },
+    {
+      "chosen_velocity": 0.0,
+      "id": "eca19",
+      "tests": [
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.0,
+          "seed": 6041512
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.0,
+          "seed": 6041513
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.0,
+          "seed": 6041514
+        }
+      ]
+    },
+    {
+      "chosen_velocity": -0.5,
+      "id": "eca22",
+      "tests": [
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.0005200436915846485,
+          "seed": 6041512
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.0004341576845293682,
+          "seed": 6041513
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.0004516033185295587,
+          "seed": 6041514
+        }
+      ]
+    },
+    {
+      "chosen_velocity": 0.0,
+      "id": "eca23",
+      "tests": [
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.0,
+          "seed": 6041512
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.0,
+          "seed": 6041513
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.0,
+          "seed": 6041514
+        }
+      ]
+    },
+    {
+      "chosen_velocity": 0.5,
+      "id": "eca24",
+      "tests": [
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.013732271375858196,
+          "seed": 6041512
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.009047205387228807,
+          "seed": 6041513
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.012426590315171016,
+          "seed": 6041514
+        }
+      ]
+    },
+    {
+      "chosen_velocity": -1.0,
+      "id": "eca25",
+      "tests": [
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.08634813423450116,
+          "seed": 6041512
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.04116388130371362,
+          "seed": 6041513
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.13787208293571812,
+          "seed": 6041514
+        }
+      ]
+    },
+    {
+      "chosen_velocity": -1.0,
+      "id": "eca26",
+      "tests": [
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.29119263210212043,
+          "seed": 6041512
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.30416503651532545,
+          "seed": 6041513
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.34776606031974966,
+          "seed": 6041514
+        }
+      ]
+    },
+    {
+      "chosen_velocity": 0.0,
+      "id": "eca27",
+      "tests": [
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.003004951172201231,
+          "seed": 6041512
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": -0.005315553662934347,
+          "seed": 6041513
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": -0.005383011118351266,
+          "seed": 6041514
+        }
+      ]
+    },
+    {
+      "chosen_velocity": -0.5,
+      "id": "eca28",
+      "tests": [
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.040883250844947094,
+          "seed": 6041512
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.03922619149214024,
+          "seed": 6041513
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.03145753911298793,
+          "seed": 6041514
+        }
+      ]
+    },
+    {
+      "chosen_velocity": 1.0,
+      "id": "eca29",
+      "tests": [
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": -0.06981676374351697,
+          "seed": 6041512
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": -0.05081901608426098,
+          "seed": 6041513
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": -0.03144081556802236,
+          "seed": 6041514
+        }
+      ]
+    },
+    {
+      "chosen_velocity": 1.0,
+      "id": "eca30",
+      "tests": [
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.002760499374673042,
+          "seed": 6041512
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.002514206868112545,
+          "seed": 6041513
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.0027269246222464405,
+          "seed": 6041514
+        }
+      ]
+    },
+    {
+      "chosen_velocity": 1.0,
+      "id": "eca30_shuffle",
+      "tests": [
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": -4.714861469279352e-05,
+          "seed": 6041512
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": -4.0327507199733326e-05,
+          "seed": 6041513
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": -3.9711432872624464e-05,
+          "seed": 6041514
+        }
+      ]
+    },
+    {
+      "chosen_velocity": 0.0,
+      "id": "eca32",
+      "tests": [
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.0,
+          "seed": 6041512
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.0,
+          "seed": 6041513
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.0,
+          "seed": 6041514
+        }
+      ]
+    },
+    {
+      "chosen_velocity": 0.0,
+      "id": "eca33",
+      "tests": [
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.0,
+          "seed": 6041512
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.0,
+          "seed": 6041513
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.0,
+          "seed": 6041514
+        }
+      ]
+    },
+    {
+      "chosen_velocity": 1.0,
+      "id": "eca34",
+      "tests": [
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": -0.04336556901942079,
+          "seed": 6041512
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": -0.014438687484661594,
+          "seed": 6041513
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": -0.04771233171956224,
+          "seed": 6041514
+        }
+      ]
+    },
+    {
+      "chosen_velocity": 1.0,
+      "id": "eca35",
+      "tests": [
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.03786911706636553,
+          "seed": 6041512
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.03508132788041873,
+          "seed": 6041513
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.05344051362259972,
+          "seed": 6041514
+        }
+      ]
+    },
+    {
+      "chosen_velocity": 0.0,
+      "id": "eca36",
+      "tests": [
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.0,
+          "seed": 6041512
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.0,
+          "seed": 6041513
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.0,
+          "seed": 6041514
+        }
+      ]
+    },
+    {
+      "chosen_velocity": 0.0,
+      "id": "eca37",
+      "tests": [
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.0,
+          "seed": 6041512
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.0,
+          "seed": 6041513
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.0,
+          "seed": 6041514
+        }
+      ]
+    },
+    {
+      "chosen_velocity": 0.5,
+      "id": "eca38",
+      "tests": [
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": -0.014830126074391492,
+          "seed": 6041512
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": -0.010608055331561395,
+          "seed": 6041513
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": -0.017757756222351095,
+          "seed": 6041514
+        }
+      ]
+    },
+    {
+      "chosen_velocity": 0.0,
+      "id": "eca40",
+      "tests": [
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.0,
+          "seed": 6041512
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.0,
+          "seed": 6041513
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.0,
+          "seed": 6041514
+        }
+      ]
+    },
+    {
+      "chosen_velocity": 1.0,
+      "id": "eca41",
+      "tests": [
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.17281855969373555,
+          "seed": 6041512
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.17594951238281578,
+          "seed": 6041513
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.17336564388252415,
+          "seed": 6041514
+        }
+      ]
+    },
+    {
+      "chosen_velocity": 1.0,
+      "id": "eca42",
+      "tests": [
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": -0.057427735864055585,
+          "seed": 6041512
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": -0.05134473260170158,
+          "seed": 6041513
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": -0.04683826223838805,
+          "seed": 6041514
+        }
+      ]
+    },
+    {
+      "chosen_velocity": 0.0,
+      "id": "eca43",
+      "tests": [
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.006767828369801016,
+          "seed": 6041512
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.0021530644905971286,
+          "seed": 6041513
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": -0.018925049951059675,
+          "seed": 6041514
+        }
+      ]
+    },
+    {
+      "chosen_velocity": 0.0,
+      "id": "eca44",
+      "tests": [
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.0,
+          "seed": 6041512
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.0,
+          "seed": 6041513
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.0,
+          "seed": 6041514
+        }
+      ]
+    },
+    {
+      "chosen_velocity": 1.0,
+      "id": "eca45",
+      "tests": [
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.016272117937577213,
+          "seed": 6041512
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.016982757149370142,
+          "seed": 6041513
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.01587871799657059,
+          "seed": 6041514
+        }
+      ]
+    },
+    {
+      "chosen_velocity": -0.5,
+      "id": "eca46",
+      "tests": [
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.03278134365045149,
+          "seed": 6041512
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.029065736196999703,
+          "seed": 6041513
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.023620496296189564,
+          "seed": 6041514
+        }
+      ]
+    },
+    {
+      "chosen_velocity": 0.0,
+      "id": "eca50",
+      "tests": [
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.0,
+          "seed": 6041512
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.0,
+          "seed": 6041513
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.0,
+          "seed": 6041514
+        }
+      ]
+    },
+    {
+      "chosen_velocity": 0.0,
+      "id": "eca51",
+      "tests": [
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.0,
+          "seed": 6041512
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.0,
+          "seed": 6041513
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.0,
+          "seed": 6041514
+        }
+      ]
+    },
+    {
+      "chosen_velocity": 0.0,
+      "id": "eca54",
+      "tests": [
+        {
+          "augmented_selected": true,
+          "baseline_selected": true,
+          "gain_bits": 0.03784495014361844,
+          "seed": 6041512
+        },
+        {
+          "augmented_selected": true,
+          "baseline_selected": true,
+          "gain_bits": 0.03913214563240841,
+          "seed": 6041513
+        },
+        {
+          "augmented_selected": true,
+          "baseline_selected": true,
+          "gain_bits": 0.039267193555076574,
+          "seed": 6041514
+        }
+      ]
+    },
+    {
+      "chosen_velocity": 0.0,
+      "id": "eca54_shuffle",
+      "tests": [
+        {
+          "augmented_selected": false,
+          "baseline_selected": true,
+          "gain_bits": 0.00020037049467203083,
+          "seed": 6041512
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": true,
+          "gain_bits": 8.010760916254966e-05,
+          "seed": 6041513
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": true,
+          "gain_bits": 0.0003012186477905354,
+          "seed": 6041514
+        }
+      ]
+    },
+    {
+      "chosen_velocity": 1.0,
+      "id": "eca147",
+      "tests": [
+        {
+          "augmented_selected": true,
+          "baseline_selected": true,
+          "gain_bits": 0.04169315287540376,
+          "seed": 6041512
+        },
+        {
+          "augmented_selected": true,
+          "baseline_selected": true,
+          "gain_bits": 0.04918251405152185,
+          "seed": 6041513
+        },
+        {
+          "augmented_selected": true,
+          "baseline_selected": true,
+          "gain_bits": 0.0460061941362615,
+          "seed": 6041514
+        }
+      ]
+    },
+    {
+      "chosen_velocity": 0.5,
+      "id": "eca56",
+      "tests": [
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": -0.010199811184079977,
+          "seed": 6041512
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.0006060640352765212,
+          "seed": 6041513
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": -0.010353147503068372,
+          "seed": 6041514
+        }
+      ]
+    },
+    {
+      "chosen_velocity": -0.5,
+      "id": "eca57",
+      "tests": [
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.0008856920976578961,
+          "seed": 6041512
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": -0.0038292982718643037,
+          "seed": 6041513
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 7.888487826591961e-05,
+          "seed": 6041514
+        }
+      ]
+    },
+    {
+      "chosen_velocity": -0.5,
+      "id": "eca58",
+      "tests": [
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.05609708505639377,
+          "seed": 6041512
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.053481497472893824,
+          "seed": 6041513
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.05303116422009779,
+          "seed": 6041514
+        }
+      ]
+    },
+    {
+      "chosen_velocity": 0.0,
+      "id": "eca60",
+      "tests": [
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.0,
+          "seed": 6041512
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.0,
+          "seed": 6041513
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.0,
+          "seed": 6041514
+        }
+      ]
+    },
+    {
+      "chosen_velocity": 0.0,
+      "id": "eca62",
+      "tests": [
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.13603634797181716,
+          "seed": 6041512
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.07225557502389275,
+          "seed": 6041513
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.07329917153220161,
+          "seed": 6041514
+        }
+      ]
+    },
+    {
+      "chosen_velocity": 0.0,
+      "id": "eca72",
+      "tests": [
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.0,
+          "seed": 6041512
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.0,
+          "seed": 6041513
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.0,
+          "seed": 6041514
+        }
+      ]
+    },
+    {
+      "chosen_velocity": 0.0,
+      "id": "eca73",
+      "tests": [
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.21177148499819975,
+          "seed": 6041512
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.20220453680416217,
+          "seed": 6041513
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.21329568722987458,
+          "seed": 6041514
+        }
+      ]
+    },
+    {
+      "chosen_velocity": 0.0,
+      "id": "eca73_shuffle",
+      "tests": [
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.11201595071189407,
+          "seed": 6041512
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.11347870729314768,
+          "seed": 6041513
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.11740604378731068,
+          "seed": 6041514
+        }
+      ]
+    },
+    {
+      "chosen_velocity": 0.0,
+      "id": "eca74",
+      "tests": [
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": -0.02740112987194243,
+          "seed": 6041512
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": -0.029338028927749393,
+          "seed": 6041513
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": -0.039041290636465886,
+          "seed": 6041514
+        }
+      ]
+    },
+    {
+      "chosen_velocity": 0.0,
+      "id": "eca76",
+      "tests": [
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.0,
+          "seed": 6041512
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.0,
+          "seed": 6041513
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.0,
+          "seed": 6041514
+        }
+      ]
+    },
+    {
+      "chosen_velocity": 0.0,
+      "id": "eca77",
+      "tests": [
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.0,
+          "seed": 6041512
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.0,
+          "seed": 6041513
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.0,
+          "seed": 6041514
+        }
+      ]
+    },
+    {
+      "chosen_velocity": 0.0,
+      "id": "eca78",
+      "tests": [
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.0,
+          "seed": 6041512
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.0,
+          "seed": 6041513
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.0,
+          "seed": 6041514
+        }
+      ]
+    },
+    {
+      "chosen_velocity": 0.0,
+      "id": "eca90",
+      "tests": [
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.0,
+          "seed": 6041512
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.0,
+          "seed": 6041513
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.0,
+          "seed": 6041514
+        }
+      ]
+    },
+    {
+      "chosen_velocity": 0.0,
+      "id": "eca94",
+      "tests": [
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.11635788344987216,
+          "seed": 6041512
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.10321360574056745,
+          "seed": 6041513
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.08736325410717459,
+          "seed": 6041514
+        }
+      ]
+    },
+    {
+      "chosen_velocity": 0.0,
+      "id": "eca104",
+      "tests": [
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.0,
+          "seed": 6041512
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.0,
+          "seed": 6041513
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.0,
+          "seed": 6041514
+        }
+      ]
+    },
+    {
+      "chosen_velocity": 0.0,
+      "id": "eca105",
+      "tests": [
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.0,
+          "seed": 6041512
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.0,
+          "seed": 6041513
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.0,
+          "seed": 6041514
+        }
+      ]
+    },
+    {
+      "chosen_velocity": -1.0,
+      "id": "eca106",
+      "tests": [
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.04079023812389415,
+          "seed": 6041512
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.03977882226231644,
+          "seed": 6041513
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.04088074458794266,
+          "seed": 6041514
+        }
+      ]
+    },
+    {
+      "chosen_velocity": -0.5,
+      "id": "eca106_shuffle",
+      "tests": [
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": -4.319283476439395e-05,
+          "seed": 6041512
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": -5.165761384917644e-05,
+          "seed": 6041513
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": -3.749011769516031e-05,
+          "seed": 6041514
+        }
+      ]
+    },
+    {
+      "chosen_velocity": 1.0,
+      "id": "eca108",
+      "tests": [
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": -0.004343036420006038,
+          "seed": 6041512
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": -0.0007958162976459404,
+          "seed": 6041513
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": -0.002089248309447067,
+          "seed": 6041514
+        }
+      ]
+    },
+    {
+      "chosen_velocity": 0.5,
+      "id": "eca110",
+      "tests": [
+        {
+          "augmented_selected": true,
+          "baseline_selected": true,
+          "gain_bits": 0.4859435561617075,
+          "seed": 6041512
+        },
+        {
+          "augmented_selected": true,
+          "baseline_selected": true,
+          "gain_bits": 0.508670887320812,
+          "seed": 6041513
+        },
+        {
+          "augmented_selected": true,
+          "baseline_selected": true,
+          "gain_bits": 0.4583305611268774,
+          "seed": 6041514
+        }
+      ]
+    },
+    {
+      "chosen_velocity": 0.0,
+      "id": "eca110_shuffle",
+      "tests": [
+        {
+          "augmented_selected": false,
+          "baseline_selected": true,
+          "gain_bits": -0.0006930010824619526,
+          "seed": 6041512
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": true,
+          "gain_bits": -0.0004305784053758588,
+          "seed": 6041513
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": true,
+          "gain_bits": -0.0005815660575237969,
+          "seed": 6041514
+        }
+      ]
+    },
+    {
+      "chosen_velocity": -0.5,
+      "id": "eca124",
+      "tests": [
+        {
+          "augmented_selected": true,
+          "baseline_selected": true,
+          "gain_bits": 0.4859435561617075,
+          "seed": 6041512
+        },
+        {
+          "augmented_selected": true,
+          "baseline_selected": true,
+          "gain_bits": 0.508670887320812,
+          "seed": 6041513
+        },
+        {
+          "augmented_selected": true,
+          "baseline_selected": true,
+          "gain_bits": 0.4583305611268774,
+          "seed": 6041514
+        }
+      ]
+    },
+    {
+      "chosen_velocity": 0.0,
+      "id": "eca137",
+      "tests": [
+        {
+          "augmented_selected": true,
+          "baseline_selected": true,
+          "gain_bits": 0.35633881325550343,
+          "seed": 6041512
+        },
+        {
+          "augmented_selected": true,
+          "baseline_selected": true,
+          "gain_bits": 0.3687508353710216,
+          "seed": 6041513
+        },
+        {
+          "augmented_selected": true,
+          "baseline_selected": true,
+          "gain_bits": 0.34663068161218147,
+          "seed": 6041514
+        }
+      ]
+    },
+    {
+      "chosen_velocity": 0.0,
+      "id": "eca193",
+      "tests": [
+        {
+          "augmented_selected": true,
+          "baseline_selected": true,
+          "gain_bits": 0.35633881325550343,
+          "seed": 6041512
+        },
+        {
+          "augmented_selected": true,
+          "baseline_selected": true,
+          "gain_bits": 0.3687508353710216,
+          "seed": 6041513
+        },
+        {
+          "augmented_selected": true,
+          "baseline_selected": true,
+          "gain_bits": 0.34663068161218147,
+          "seed": 6041514
+        }
+      ]
+    },
+    {
+      "chosen_velocity": -1.0,
+      "id": "eca122",
+      "tests": [
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.00030381658995887184,
+          "seed": 6041512
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": -5.0834032924607087e-05,
+          "seed": 6041513
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": -4.7260999592513286e-05,
+          "seed": 6041514
+        }
+      ]
+    },
+    {
+      "chosen_velocity": 0.0,
+      "id": "eca126",
+      "tests": [
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": -2.181768006503937e-05,
+          "seed": 6041512
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": -1.7619606619501127e-05,
+          "seed": 6041513
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": -1.5417554427576974e-05,
+          "seed": 6041514
+        }
+      ]
+    },
+    {
+      "chosen_velocity": -0.5,
+      "id": "eca126_shuffle",
+      "tests": [
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": -2.0133243961995007e-05,
+          "seed": 6041512
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": -2.642546037989746e-05,
+          "seed": 6041513
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": -3.725892372585804e-05,
+          "seed": 6041514
+        }
+      ]
+    },
+    {
+      "chosen_velocity": 0.0,
+      "id": "eca128",
+      "tests": [
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.0,
+          "seed": 6041512
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.0,
+          "seed": 6041513
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.0,
+          "seed": 6041514
+        }
+      ]
+    },
+    {
+      "chosen_velocity": 0.5,
+      "id": "eca130",
+      "tests": [
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": -0.04266337216494842,
+          "seed": 6041512
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": -0.039576221891653995,
+          "seed": 6041513
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": -0.021775920101068214,
+          "seed": 6041514
+        }
+      ]
+    },
+    {
+      "chosen_velocity": 0.0,
+      "id": "eca132",
+      "tests": [
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.0,
+          "seed": 6041512
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.0,
+          "seed": 6041513
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.0,
+          "seed": 6041514
+        }
+      ]
+    },
+    {
+      "chosen_velocity": -0.5,
+      "id": "eca134",
+      "tests": [
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.09267450729830906,
+          "seed": 6041512
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.0765491881397602,
+          "seed": 6041513
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.08098827331093006,
+          "seed": 6041514
+        }
+      ]
+    },
+    {
+      "chosen_velocity": 0.0,
+      "id": "eca136",
+      "tests": [
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.0,
+          "seed": 6041512
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.0,
+          "seed": 6041513
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.0,
+          "seed": 6041514
+        }
+      ]
+    },
+    {
+      "chosen_velocity": -0.5,
+      "id": "eca138",
+      "tests": [
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.004687189714791651,
+          "seed": 6041512
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.008213373878290353,
+          "seed": 6041513
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": -0.006629201877176527,
+          "seed": 6041514
+        }
+      ]
+    },
+    {
+      "chosen_velocity": 0.0,
+      "id": "eca140",
+      "tests": [
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.0,
+          "seed": 6041512
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.0,
+          "seed": 6041513
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.0,
+          "seed": 6041514
+        }
+      ]
+    },
+    {
+      "chosen_velocity": -0.5,
+      "id": "eca142",
+      "tests": [
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.0036382158646443286,
+          "seed": 6041512
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.04234273999070487,
+          "seed": 6041513
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": -0.025533933631315203,
+          "seed": 6041514
+        }
+      ]
+    },
+    {
+      "chosen_velocity": 0.5,
+      "id": "eca146",
+      "tests": [
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.00027053711427427185,
+          "seed": 6041512
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.0003725252515864863,
+          "seed": 6041513
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.00029486549753321434,
+          "seed": 6041514
+        }
+      ]
+    },
+    {
+      "chosen_velocity": 0.0,
+      "id": "eca150",
+      "tests": [
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.0,
+          "seed": 6041512
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.0,
+          "seed": 6041513
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.0,
+          "seed": 6041514
+        }
+      ]
+    },
+    {
+      "chosen_velocity": 0.5,
+      "id": "eca152",
+      "tests": [
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.001008769560543854,
+          "seed": 6041512
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.00910533664878721,
+          "seed": 6041513
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.006918186016842576,
+          "seed": 6041514
+        }
+      ]
+    },
+    {
+      "chosen_velocity": -1.0,
+      "id": "eca154",
+      "tests": [
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.2349312500220897,
+          "seed": 6041512
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.24992152030527293,
+          "seed": 6041513
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.30954310945893043,
+          "seed": 6041514
+        }
+      ]
+    },
+    {
+      "chosen_velocity": 0.5,
+      "id": "eca156",
+      "tests": [
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.03689472793343235,
+          "seed": 6041512
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.03917194223663689,
+          "seed": 6041513
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.03235298863964364,
+          "seed": 6041514
+        }
+      ]
+    },
+    {
+      "chosen_velocity": 0.0,
+      "id": "eca160",
+      "tests": [
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.0,
+          "seed": 6041512
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.0,
+          "seed": 6041513
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.0,
+          "seed": 6041514
+        }
+      ]
+    },
+    {
+      "chosen_velocity": 0.5,
+      "id": "eca162",
+      "tests": [
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": -0.02327405458364784,
+          "seed": 6041512
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": -0.02303142976811412,
+          "seed": 6041513
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": -0.05102448139932936,
+          "seed": 6041514
+        }
+      ]
+    },
+    {
+      "chosen_velocity": 0.0,
+      "id": "eca164",
+      "tests": [
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.0,
+          "seed": 6041512
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.0,
+          "seed": 6041513
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.0,
+          "seed": 6041514
+        }
+      ]
+    },
+    {
+      "chosen_velocity": 0.0,
+      "id": "eca168",
+      "tests": [
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.0,
+          "seed": 6041512
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.0,
+          "seed": 6041513
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.0,
+          "seed": 6041514
+        }
+      ]
+    },
+    {
+      "chosen_velocity": 0.0,
+      "id": "eca170",
+      "tests": [
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.0,
+          "seed": 6041512
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.0,
+          "seed": 6041513
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.0,
+          "seed": 6041514
+        }
+      ]
+    },
+    {
+      "chosen_velocity": 0.0,
+      "id": "eca172",
+      "tests": [
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.0,
+          "seed": 6041512
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.0,
+          "seed": 6041513
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.0,
+          "seed": 6041514
+        }
+      ]
+    },
+    {
+      "chosen_velocity": 0.0,
+      "id": "eca178",
+      "tests": [
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.0,
+          "seed": 6041512
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.0,
+          "seed": 6041513
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.0,
+          "seed": 6041514
+        }
+      ]
+    },
+    {
+      "chosen_velocity": -0.5,
+      "id": "eca184",
+      "tests": [
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": -0.025311847969306453,
+          "seed": 6041512
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": -0.011319245850184387,
+          "seed": 6041513
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": -0.05264223823974043,
+          "seed": 6041514
+        }
+      ]
+    },
+    {
+      "chosen_velocity": 0.0,
+      "id": "eca200",
+      "tests": [
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.0,
+          "seed": 6041512
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.0,
+          "seed": 6041513
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.0,
+          "seed": 6041514
+        }
+      ]
+    },
+    {
+      "chosen_velocity": 0.0,
+      "id": "eca204",
+      "tests": [
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.0,
+          "seed": 6041512
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.0,
+          "seed": 6041513
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.0,
+          "seed": 6041514
+        }
+      ]
+    },
+    {
+      "chosen_velocity": 0.0,
+      "id": "eca232",
+      "tests": [
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.0,
+          "seed": 6041512
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.0,
+          "seed": 6041513
+        },
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.0,
+          "seed": 6041514
+        }
+      ]
+    },
+    {
+      "chosen_velocity": 0.0,
+      "id": "wide1_g0",
+      "tests": [
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.0,
+          "seed": 6041542
+        }
+      ]
+    },
+    {
+      "chosen_velocity": 0.0,
+      "id": "wide1_g0_shuffle",
+      "tests": [
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.0,
+          "seed": 6041542
+        }
+      ]
+    },
+    {
+      "chosen_velocity": -1.0,
+      "id": "wide1_g1",
+      "tests": [
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.040393057566921464,
+          "seed": 6041542
+        }
+      ]
+    },
+    {
+      "chosen_velocity": -0.5,
+      "id": "wide1_g1_shuffle",
+      "tests": [
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": -1.9031791066437265e-05,
+          "seed": 6041542
+        }
+      ]
+    },
+    {
+      "chosen_velocity": 0.0,
+      "id": "wide2_g0",
+      "tests": [
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.0,
+          "seed": 6041542
+        }
+      ]
+    },
+    {
+      "chosen_velocity": 0.0,
+      "id": "wide2_g0_shuffle",
+      "tests": [
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.0,
+          "seed": 6041542
+        }
+      ]
+    },
+    {
+      "chosen_velocity": -2.0,
+      "id": "wide2_g1",
+      "tests": [
+        {
+          "augmented_selected": true,
+          "baseline_selected": true,
+          "gain_bits": 0.0705278987647554,
+          "seed": 6041542
+        }
+      ]
+    },
+    {
+      "chosen_velocity": 2.0,
+      "id": "wide2_g1_shuffle",
+      "tests": [
+        {
+          "augmented_selected": false,
+          "baseline_selected": true,
+          "gain_bits": -9.091244318215619e-05,
+          "seed": 6041542
+        }
+      ]
+    },
+    {
+      "chosen_velocity": 0.0,
+      "id": "wide3_g0",
+      "tests": [
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.0,
+          "seed": 6041542
+        }
+      ]
+    },
+    {
+      "chosen_velocity": 0.0,
+      "id": "wide3_g0_shuffle",
+      "tests": [
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.0,
+          "seed": 6041542
+        }
+      ]
+    },
+    {
+      "chosen_velocity": -3.0,
+      "id": "wide3_g1",
+      "tests": [
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": 0.014465828989396363,
+          "seed": 6041542
+        }
+      ]
+    },
+    {
+      "chosen_velocity": 0.0,
+      "id": "wide3_g1_shuffle",
+      "tests": [
+        {
+          "augmented_selected": false,
+          "baseline_selected": false,
+          "gain_bits": -0.00015146774243818273,
+          "seed": 6041542
+        }
+      ]
+    }
+  ],
+  "joint_count_tables_exactly_reproduced": 1406,
+  "raw_output_sha256": "ba7c10372ac77d5555315cbf095c47db753bd10f370c8967daae2148462032ad",
+  "result_sha256": "66896337340ea82e0afdd39f4150b2738cc55d10dfc88026820adde39a8c8f44",
+  "reviewer": "OpenAI GPT-6 Astra, independent collaborating session /root/beam_loop_review, 2026-09-15",
+  "rule106_scope": "The sole R6 baseline-positive seed 6041511 trains this unit; its three held-out seeds were already baseline-negative.",
+  "scalar_eca_contexts": 8192,
+  "scalar_wider_contexts": 17472,
+  "scope": "Finite observational prediction with the frozen current/history features; no causal-memory, convention-invariant or universal classifier conclusion.",
+  "seconds": 25.626741683001455,
+  "temporal_split": {
+    "fit_maximum_native_frame": 485,
+    "last_target_native_frame": 1031,
+    "note": "Native-frame gap refers to the ordered observation; permutation is a separate temporal-organization control.",
+    "selection_minimum_native_frame": 512,
+    "training_seed_never_scored_as_test": true
+  }
+}

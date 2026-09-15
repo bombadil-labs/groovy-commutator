@@ -1,0 +1,13 @@
+{
+  "raw_input_hashes": {
+    "experiments/beam_discriminator_loop_20260915/round06/trajectories.npz": "e84b2f23ca8aa12b99f551dfcb5b6971034718db2554034b9cd0f876cb4d9372",
+    "experiments/beam_discriminator_loop_20260915/round10/trajectories.npz": "b54759344c81a160d6651de22edf66063b2c8cef41f8c8f3f4603a3c8ec1c143"
+  },
+  "source_hashes": {
+    "experiments/commutator_history_20260915/response-protocol-freeze.json": "963543a7c82af27fa845605a77c2a209dcbfbcc07697c3ce12737ce18c019b8d",
+    "experiments/commutator_history_20260915/response-protocol.md": "9025b545e8d60e9009d93dfe39063b6a8bcc2d8df6459f44b1459a3459fe146a",
+    "experiments/commutator_history_20260915/result.json": "66896337340ea82e0afdd39f4150b2738cc55d10dfc88026820adde39a8c8f44",
+    "scripts/commutator_history.py": "95f91208738bbd20803bd7ccd6f54842a90182951eaa09e409b5efa970755513",
+    "scripts/commutator_response.py": "6345306085c92642823eaf904bb0cab331bdfd0df941b7bfc5e8c3b81a11c548"
+  }
+}

@@ -1,0 +1,23 @@
+eca 0 seconds 0.11
+eca 1 seconds 0.16
+eca 30 seconds 0.22
+eca 54 seconds 0.28
+eca 73 seconds 0.35
+eca 90 seconds 0.41
+eca 106 seconds 0.47
+eca 110 seconds 0.53
+eca 122 seconds 0.59
+eca 126 seconds 0.65
+eca 150 seconds 0.7
+eca 204 seconds 0.76
+ECA rules admitting short interaction: 224
+Rule 30 witness: {"radius": 1, "rule": 30, "correction": true, "contexts": 128, "interacting_contexts": 128, "witness": {"word": [0, 0, 0, 0, 0, 0, 0], "response_unprimed": [1, 1, 1], "response_primed": [0, 0, 1], "interaction": [1, 1, 0]}}
+Rule 4: {"radius": 1, "rule": 4, "correction": true, "contexts": 128, "interacting_contexts": 56, "witness": {"word": [0, 0, 0, 0, 1, 0, 0], "response_unprimed": [0, 0, 1], "response_primed": [0, 1, 0], "interaction": [0, 1, 1]}}
+eca 30 changed 244 / 288
+eca 54 changed 180 / 288
+eca 73 changed 87 / 288
+eca 90 changed 0 / 288
+eca 106 changed 221 / 288
+eca 110 changed 150 / 288
+eca 126 changed 254 / 288
+seconds 0.8415847440046491

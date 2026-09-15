@@ -20,3 +20,6 @@ The [retrospective binary family](../research/2026-09-14-binary-lift-family.md) 
 ## Update, 2026-09-15: beam-level structure and finite class prediction
 
 The user now explicitly treats the beam as the underlying dynamical object and its dimensional rules as representations. The [adaptive beam investigation](../research/2026-09-15-beam-discriminator-loop.md) proves bounded support transport and a conditional stationary interval-tail invariant for ancestral six-field images. A fixed recurrence/spreading predictor separates54/110 in fresh ECA tests, while a wider-radius family defeats the inference to an ordered spatial background. Sharing a completion still does not identify beams; the broader class and arbitrary-parent questions remain open.
+## Commutator-history boundary, 2026-09-15
+
+The [direct history test](../research/2026-09-15-commutator-history.md) finds finite predictive information in G(S[t]), but a frozen memory requirement does not sharpen the recurrence/spreading baseline. Complement conjugation changes raw gains. Treating that predictor as a beam invariant would require additional arguments about observation and representation; the dimensional question remains open.

@@ -1,0 +1,46 @@
+families 8 seconds 0.87
+families 16 seconds 1.54
+families 24 seconds 2.2
+families 32 seconds 2.86
+families 40 seconds 3.57
+families 48 seconds 4.25
+families 56 seconds 4.98
+families 72 seconds 6.38
+families 80 seconds 7.08
+families 88 seconds 7.76
+families 96 seconds 8.42
+wide1_g0 seconds 8.85
+wide1_g1 seconds 9.05
+wide2_g0 seconds 9.23
+wide2_g1 seconds 9.42
+wide3_g0 seconds 9.62
+wide3_g1 seconds 9.86
+{"id": "eca30", "v": 1.0, "gains": [0.00276, 0.002514, 0.002727], "selected": [false, false, false]}
+{"id": "eca30_shuffle", "v": 1.0, "gains": [-4.7e-05, -4e-05, -4e-05], "selected": [false, false, false]}
+{"id": "eca54", "v": 0.0, "gains": [0.037845, 0.039132, 0.039267], "selected": [true, true, true]}
+{"id": "eca54_shuffle", "v": 0.0, "gains": [0.0002, 8e-05, 0.000301], "selected": [false, false, false]}
+{"id": "eca147", "v": 1.0, "gains": [0.041693, 0.049183, 0.046006], "selected": [true, true, true]}
+{"id": "eca73", "v": 0.0, "gains": [0.211771, 0.202205, 0.213296], "selected": [false, false, false]}
+{"id": "eca73_shuffle", "v": 0.0, "gains": [0.112016, 0.113479, 0.117406], "selected": [false, false, false]}
+{"id": "eca106", "v": -1.0, "gains": [0.04079, 0.039779, 0.040881], "selected": [false, false, false]}
+{"id": "eca106_shuffle", "v": -0.5, "gains": [-4.3e-05, -5.2e-05, -3.7e-05], "selected": [false, false, false]}
+{"id": "eca110", "v": 0.5, "gains": [0.485944, 0.508671, 0.458331], "selected": [true, true, true]}
+{"id": "eca110_shuffle", "v": 0.0, "gains": [-0.000693, -0.000431, -0.000582], "selected": [false, false, false]}
+{"id": "eca124", "v": -0.5, "gains": [0.485944, 0.508671, 0.458331], "selected": [true, true, true]}
+{"id": "eca137", "v": 0.0, "gains": [0.356339, 0.368751, 0.346631], "selected": [true, true, true]}
+{"id": "eca193", "v": 0.0, "gains": [0.356339, 0.368751, 0.346631], "selected": [true, true, true]}
+{"id": "eca126", "v": 0.0, "gains": [-2.2e-05, -1.8e-05, -1.5e-05], "selected": [false, false, false]}
+{"id": "eca126_shuffle", "v": -0.5, "gains": [-2e-05, -2.6e-05, -3.7e-05], "selected": [false, false, false]}
+{"id": "wide1_g0", "v": 0.0, "gains": [0.0], "selected": [false]}
+{"id": "wide1_g0_shuffle", "v": 0.0, "gains": [0.0], "selected": [false]}
+{"id": "wide1_g1", "v": -1.0, "gains": [0.040393], "selected": [false]}
+{"id": "wide1_g1_shuffle", "v": -0.5, "gains": [-1.9e-05], "selected": [false]}
+{"id": "wide2_g0", "v": 0.0, "gains": [0.0], "selected": [false]}
+{"id": "wide2_g0_shuffle", "v": 0.0, "gains": [0.0], "selected": [false]}
+{"id": "wide2_g1", "v": -2.0, "gains": [0.070528], "selected": [true]}
+{"id": "wide2_g1_shuffle", "v": 2.0, "gains": [-9.1e-05], "selected": [false]}
+{"id": "wide3_g0", "v": 0.0, "gains": [0.0], "selected": [false]}
+{"id": "wide3_g0_shuffle", "v": 0.0, "gains": [0.0], "selected": [false]}
+{"id": "wide3_g1", "v": -3.0, "gains": [0.014466], "selected": [false]}
+{"id": "wide3_g1_shuffle", "v": 0.0, "gains": [-0.000151], "selected": [false]}
+complete 11.485 seconds 11059653 raw bytes

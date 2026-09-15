@@ -7,3 +7,5 @@ The two clauses address different controls: in these sampled runs, 73 retains re
 A wider-radius right-permutive family preserves iid spatial slices yet can pass the same finite score, including through 4096-step disturbance continuations. Thus selection does not establish an ordered spatial background. The wider rules have no assigned Wolfram labels. Empty-interval tails have a conditional invariance proof but are also confounded by absorption mixtures.
 
 Source: [eleven-round beam investigation](../research/2026-09-15-beam-discriminator-loop.md). Status: exploratory, with the specified fresh validations and countermechanism preserved.
+
+The subsequent [commutator-history augmentation](../research/2026-09-15-commutator-history.md) adds a fixed requirement for predictive gain from older G values. It preserves all tested core decisions but also retains the radius-two challenge, changing none of the held-out baseline decisions. The original baseline remains the reference; no new threshold is promoted.

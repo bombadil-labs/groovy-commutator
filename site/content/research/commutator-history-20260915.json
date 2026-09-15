@@ -1,0 +1,17 @@
+[
+  {
+    "slug": "commutator-history-20260915",
+    "label": "Commutator history",
+    "title": "Commutator history and repeated perturbation do not yet isolate Class IV",
+    "date": "2026-09-15",
+    "updated": "2026-09-15",
+    "kind": "Experiment",
+    "evidence": "exploratory",
+    "topic": "Dimensional closure",
+    "summary": "Older commutator values improve held-out prediction but retain the radius-two challenge. A separate four-arm experiment finds changed responsiveness in 224 ECA rules, so the weak memory and response criteria do not isolate Class IV.",
+    "takeaway": "Predictive history is measurable, but its amount alone does not resolve the remaining class question or establish beam invariance.",
+    "source": "docs/research/2026-09-15-commutator-history.md",
+    "promotion": {"stage": "research"},
+    "related": ["beam-discriminator-loop-20260915", "class4-independent-20260915"]
+  }
+]
