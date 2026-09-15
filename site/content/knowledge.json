@@ -2432,6 +2432,15 @@
       "research": [
         "commutator-completion-20260915"
       ]
+    },
+    {
+      "source": "commutator-relation-transport",
+      "type": "depends_on",
+      "target": "commutator-completion-freedom",
+      "reason": "The translation quotient and parity transport use the exact affine family of shared free physical-query variables.",
+      "research": [
+        "commutator-relations-20260915"
+      ]
     }
   ],
   "nodes": [
@@ -3503,7 +3512,8 @@
         "binary-lift-g-obstructions-20260914",
         "beam-discriminator-loop-20260915",
         "commutator-history-20260915",
-        "commutator-completion-20260915"
+        "commutator-completion-20260915",
+        "commutator-relations-20260915"
       ],
       "source": "docs/knowledge/dimensional-beam.md",
       "status": "open",
@@ -4655,7 +4665,20 @@
       "updated": "2026-09-15",
       "source": "docs/knowledge/commutator-completion-freedom.md",
       "research": [
-        "commutator-completion-20260915"
+        "commutator-completion-20260915",
+        "commutator-relations-20260915"
+      ]
+    },
+    {
+      "id": "commutator-relation-transport",
+      "title": "Completion-independent parity does not yet identify Class IV",
+      "kind": "finding",
+      "status": "exact",
+      "summary": "After removing spatial copies, finite relation transport depends on width and bit convention and overlaps controls. A conditional sibling-only obstruction holds on two child floors for width-seven 54/110.",
+      "updated": "2026-09-15",
+      "source": "docs/knowledge/commutator-relation-transport.md",
+      "research": [
+        "commutator-relations-20260915"
       ]
     }
   ],

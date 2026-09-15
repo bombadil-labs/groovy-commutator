@@ -30,3 +30,12 @@ The [direct history test](../research/2026-09-15-commutator-history.md) finds fi
 The completion audit makes a new boundary explicit: native ambient-XOR G is generally not determined by the partial-rule beam, already at D2 with complete first-lift constraints. T and ancestral evolution remain fixed. The exact affine family of G fields, or a separately transported XOR operation, supplies a well-defined object to investigate; no class discriminator or native-G transport theorem follows.
 
 Source: [completion-independence audit](../research/2026-09-15-commutator-completion.md).
+
+## Relation transport boundary, 2026-09-15
+
+The [completion-independent relation audit](../research/2026-09-15-commutator-relations.md)
+removes spatial copies and follows seven fixed child readouts. Rules 54/110
+lose ambiguous parity relations at D3/D4 on width seven; width-eight survivors
+share higher-floor signatures with controls, and color complements differ.
+This rules out treating the tested signature as an intrinsic Class-IV marker,
+while leaving the beam construction and its scoped transport results intact.

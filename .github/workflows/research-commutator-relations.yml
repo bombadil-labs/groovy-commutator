@@ -1,0 +1,44 @@
+name: Research commutator relations
+on:
+  pull_request:
+    paths:
+      - 'scripts/commutator_completion.py'
+      - 'results/commutator_completion_20260915.json'
+      - 'review/replay_portable.py'
+      - 'scripts/*commutator_relations.py'
+      - 'scripts/check_result_integrity.py'
+      - 'experiments/commutator_relations_20260915/**'
+      - 'review/*relations*.py'
+      - 'review/comparison.json'
+      - 'review/archive-comparison.json'
+      - 'review/*review.md'
+      - 'results/commutator_relations_20260915.json'
+      - '.github/workflows/research-commutator-relations.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/commutator_completion.py'
+      - 'results/commutator_completion_20260915.json'
+      - 'review/replay_portable.py'
+      - 'scripts/*commutator_relations.py'
+      - 'scripts/check_result_integrity.py'
+      - 'experiments/commutator_relations_20260915/**'
+      - 'review/*relations*.py'
+      - 'review/comparison.json'
+      - 'review/archive-comparison.json'
+      - 'review/*review.md'
+      - 'results/commutator_relations_20260915.json'
+      - '.github/workflows/research-commutator-relations.yml'
+permissions:
+  contents: read
+jobs:
+  commutator-relations-provenance:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m py_compile scripts/commutator_relations.py scripts/summarize_commutator_relations.py scripts/package_commutator_relations.py review/replay_relations.py review/replay_portable.py review/compare_relations.py
+      - run: python scripts/check_result_integrity.py results/commutator_relations_20260915.json

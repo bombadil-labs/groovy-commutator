@@ -13,6 +13,23 @@ when a substantial unit completes; keep the bounded-claim style. Text moved from
 
 Program page: `docs/research/2026-09-09-dimensional-closure-program.md`
 
+## Checkpoint 2026-09-15: recovered relation-transport test completed
+
+Authored by: Codex (OpenAI), /root. Independent scientific review: Codex
+(OpenAI), /root/relations_review. Final integration is tracked by the gathering PR.
+
+- Completed: [the recovered frozen relation test](../2026-09-15-commutator-relations.md),
+  including the all-rule counting audit, full spatial panel and seven child
+  readouts. The note and canonical result carry the numbers and evidence.
+- The prior unrun protocol was recovered unchanged, independently reviewed,
+  implemented and evaluated locally. All raw inputs, primary/replay event
+  arrays, transfer summaries and source hashes are preserved.
+- The signature depends on width and bit convention and overlaps controls.
+  Do not call it a Class-IV discriminator or infer a universal obstruction
+  from the conditional all-free sibling result.
+- Stop this bounded test. Explaining the surviving difference-query
+  collisions is a possible future question; no new experiment is frozen.
+
 ## Checkpoint 2026-09-15: adaptive beam discriminator loop
 
 - Completed: [eleven local adaptive rounds](../2026-09-15-beam-discriminator-loop.md), with standing user approval and one final publication unit. The note and its result files carry the evidence; independent retrospective review is recorded there and in the gathering PR.
