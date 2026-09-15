@@ -32,6 +32,7 @@ export default defineConfig({
         questions: resolve(__dirname, 'questions.html'),
         remainder: resolve(__dirname, 'remainder.html'),
         explorer: resolve(__dirname, 'explorer.html'),
+        dimensionalBridge: resolve(__dirname, 'dimensional-bridge.html'),
         ...research.inputs,
         ...knowledge.inputs,
       },
