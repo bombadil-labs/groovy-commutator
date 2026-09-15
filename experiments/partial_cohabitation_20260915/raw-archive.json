@@ -1,0 +1,58 @@
+{
+  "filename": "partial-cohabitation-raw-20260915.zip",
+  "bytes": 2269188,
+  "sha256": "c33780ddaa22c682a8fb61b4c0ebfd9a0953c550c5cfeabd0d64deb372b93489",
+  "files": {
+    "docs/research/protocols/partial-cohabitation-20260915.md": {
+      "bytes": 4691,
+      "sha256": "fd890f45b1fb468ab4aa8bad3b00dd875d3139f98e27be15f26d1738a4aac800"
+    },
+    "experiments/on_beam_256_4d_20260914/labels.json": {
+      "bytes": 1472,
+      "sha256": "65e811a6ef5575bb697da4fc9e8dfe3c0de131b8c27702aa7990ad4b2d754250"
+    },
+    "experiments/partial_cohabitation_20260915/run/freeze.json": {
+      "bytes": 514,
+      "sha256": "05fdb4116ebcf0a6d31c9bfa25c16dc771d411bc69c28d1d86ae2bb8fc745069"
+    },
+    "experiments/partial_cohabitation_20260915/run/pairs_pooled.npz": {
+      "bytes": 148295,
+      "sha256": "72808c831289815290f4cadb5797de106af5862907ebad2dfd2641757cfb4206"
+    },
+    "experiments/partial_cohabitation_20260915/run/pairs_w7.npz": {
+      "bytes": 136357,
+      "sha256": "748c80e14bfbb201ff81c71f6956bda001d11d685fcfbc4985098e99617b23d5"
+    },
+    "experiments/partial_cohabitation_20260915/run/pairs_w8.npz": {
+      "bytes": 147804,
+      "sha256": "76dd9df03f98fb5bf88e76205013e19800a0b43db8ecaae59e3e1556b810a404"
+    },
+    "experiments/partial_cohabitation_20260915/run/physical_tables.npz": {
+      "bytes": 1974460,
+      "sha256": "b031f6e7b27f4893b87a5a44165364e09fe1086f2a67bc2d2eeb85a721141b40"
+    },
+    "results/partial_cohabitation_20260915.json": {
+      "bytes": 289481,
+      "sha256": "d1f63aec17269554cd31b54111288f714af2221627eca1de7ee9eaf4d3a3ab09"
+    },
+    "review/partial_cohabitation_independent.json": {
+      "bytes": 3602,
+      "sha256": "4c15fe953783c52365397b0f37c82a5268e759114ea045d90aa44f3fb4d77400"
+    },
+    "review/partial_cohabitation_independent.py": {
+      "bytes": 16317,
+      "sha256": "f3d7dd6fde987e5871b3f0f6c72b4c50c6f72414e9d10b26f07de3da8d21da1f"
+    },
+    "scripts/partial_cohabitation_20260915.py": {
+      "bytes": 14055,
+      "sha256": "a9e6a4f822c54aaae0efc2eca79a0bf922e1e97f204ee2288058234aea761e0f"
+    }
+  },
+  "original_input_archive_sha256": "766e4db7083fbdb551bc4aee66abc554079c5d118905f6d65aa5e5372c9418d1",
+  "artifact": {
+    "library_file_id": "libfile_fffed1b8f88c8191bc3049341ef16f51",
+    "file_id": "file_00000000065481f696473f90679d8504",
+    "path": "/partial-cohabitation-raw-20260915.zip",
+    "version": 0
+  }
+}

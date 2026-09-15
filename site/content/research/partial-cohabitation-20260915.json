@@ -1,0 +1,17 @@
+[
+  {
+    "slug": "partial-cohabitation-20260915",
+    "label": "Partial cohabitation",
+    "title": "Unspecified entries change what cohabitation means",
+    "date": "2026-09-15",
+    "updated": "2026-09-15",
+    "kind": "Experiment",
+    "evidence": "exact",
+    "topic": "Observation and memory",
+    "summary": "The current finite D2 families have 20,944 compatible root pairs after pooling two widths. Comparing individually completed tables would reject all of them.",
+    "takeaway": "Shared commitments, unused freedom and contradictory requirements must remain distinct. Raw compatibility still does not isolate Class IV.",
+    "source": "docs/research/2026-09-15-partial-cohabitation.md",
+    "promotion": {"stage": "research"},
+    "related": ["response-quotient-20260915", "uniform-jet6-cache-20260914"]
+  }
+]

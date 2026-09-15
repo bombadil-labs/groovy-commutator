@@ -39,9 +39,9 @@
     "title": "Dimensional Closure and the Commutator Lift",
     "eyebrow": "Working research program",
     "date": "2026-09-09",
-    "updated": "2026-09-14",
+    "updated": "2026-09-15",
     "status": "living",
-    "summary": "A uniform six-field recipe supports native evolution and recovery through 4D for all 256 ECA sources on two complete finite rings. Caching reduces repeated work, but rebuilding the larger six-field family takes longer overall, and the fixed class comparison remains incomplete. Earlier centered-G and six-path 6D results have separate contracts; arbitrary-input and dimension-induction claims remain open.",
+    "summary": "A uniform six-field recipe supports native evolution and recovery through 4D for all 256 ECA sources on two complete finite rings. Caching reduces repeated work, but rebuilding the larger six-field family takes longer overall, and the fixed class comparison remains incomplete. Earlier centered-G and six-path 6D results have separate contracts; arbitrary-input and dimension-induction claims remain open. A separate finite audit distinguishes partial cohabitation from chosen completions; class discrimination remains unresolved.",
     "thesis": "When two dynamical paths fail to commute, represent the disagreement as a new coordinate and ask whether the enlarged representation closes.",
     "source": "docs/research/2026-09-09-dimensional-closure-program.md",
     "supports": [
@@ -83,7 +83,9 @@
       "binary-lift-complements-20260914",
       "sequential-lift-6d-pilot-20260914",
       "on-beam-256-4d-classes-20260914",
-      "uniform-jet6-cache-20260914"
+      "uniform-jet6-cache-20260914",
+      "response-quotient-20260915",
+      "partial-cohabitation-20260915"
     ]
   },
   {
