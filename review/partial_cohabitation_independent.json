@@ -1,0 +1,134 @@
+{
+  "archive_audit": {
+    "archive_hash_matched": true,
+    "member_hashes_checked": 512,
+    "physical_tables_independently_reconstructed": 44,
+    "sampled_decoder_and_successor_checks_passed": true,
+    "sampled_roots": [
+      0,
+      1,
+      9,
+      18,
+      30,
+      41,
+      51,
+      54,
+      90,
+      104,
+      106,
+      110,
+      122,
+      126,
+      132,
+      146,
+      170,
+      196,
+      204,
+      233,
+      254,
+      255
+    ]
+  },
+  "comparison_method": "Actual integer-key dictionaries; shared-key intersection and pointwise default completion on domain unions.",
+  "completed_equality_predicates_recomputed": 391680,
+  "controls": {
+    "completed_equality_subset_exhaustive": true,
+    "conditional_completion_counts_exhaustive": true,
+    "minimum_completion_hamming_distance_exhaustive": true,
+    "ternary_three_key_pairs": 729
+  },
+  "cross_width_roots_checked": 256,
+  "domains": {
+    "pooled": {
+      "compatible_pairs": 20944,
+      "completed_equal_pairs": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "occupied": 14743,
+      "pair_54_110": {
+        "conflicts": 1,
+        "shared_one": 12,
+        "shared_zero": 12,
+        "witness": {
+          "a_forced": 1,
+          "b_forced": 0,
+          "bits_35": "00000100001000001000000000000000000",
+          "key": 553910272
+        }
+      },
+      "pairs": 32640,
+      "seconds": 6.808504993998213,
+      "vacuous": 6201
+    },
+    "w7": {
+      "compatible_pairs": 22528,
+      "completed_equal_pairs": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "occupied": 15865,
+      "pair_54_110": {
+        "conflicts": 0,
+        "shared_one": 7,
+        "shared_zero": 6,
+        "witness": null
+      },
+      "pairs": 32640,
+      "seconds": 4.387224898993736,
+      "vacuous": 6663
+    },
+    "w8": {
+      "compatible_pairs": 20954,
+      "completed_equal_pairs": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "occupied": 14753,
+      "pair_54_110": {
+        "conflicts": 1,
+        "shared_one": 12,
+        "shared_zero": 12,
+        "witness": {
+          "a_forced": 1,
+          "b_forced": 0,
+          "bits_35": "00000100001000001000000000000000000",
+          "key": 553910272
+        }
+      },
+      "pairs": 32640,
+      "seconds": 6.265374583999801,
+      "vacuous": 6201
+    }
+  },
+  "elapsed_seconds": 18.840258228003222,
+  "limitations": [
+    "The old separate-workspace cohabitation implementation was not audited or reproduced.",
+    "Table compatibility is for the finite archived beam families, without decoder compatibility or a full-shift claim.",
+    "Completed-rule equality is an intentionally different predicate; disagreement under fixed defaults alone is not a partial-rule conflict."
+  ],
+  "new_lifts_or_trajectories": 0,
+  "no_author_comparison_functions_imported": true,
+  "pair_records_recomputed": 97920,
+  "physical_tables": 512,
+  "result_sha256": "d1f63aec17269554cd31b54111288f714af2221627eca1de7ee9eaf4d3a3ab09",
+  "source_hashes": {
+    "docs/research/protocols/partial-cohabitation-20260915.md": "fd890f45b1fb468ab4aa8bad3b00dd875d3139f98e27be15f26d1738a4aac800",
+    "experiments/on_beam_256_4d_20260914/labels.json": "65e811a6ef5575bb697da4fc9e8dfe3c0de131b8c27702aa7990ad4b2d754250",
+    "scripts/partial_cohabitation_20260915.py": "a9e6a4f822c54aaae0efc2eca79a0bf922e1e97f204ee2288058234aea761e0f"
+  },
+  "status": "passed",
+  "width_change": {
+    "both": 20944,
+    "both_but_not_pooled": 0,
+    "w7_only": 1584,
+    "w8_only": 10
+  },
+  "witnesses_classes_anchors_and_per_root_statistics_checked": true
+}

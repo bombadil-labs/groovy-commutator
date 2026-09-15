@@ -13,6 +13,14 @@ when a substantial unit completes; keep the bounded-claim style. Text moved from
 
 Program page: `docs/research/2026-09-09-dimensional-closure-program.md`
 
+## Checkpoint 2026-09-15: partial cohabitation and completion equality differ sharply
+
+- Completed locally: the [partial-rule cohabitation audit](../2026-09-15-partial-cohabitation.md) reuses all 256 current six-field D2 roots at complete source rings seven and eight. No new lift or trajectory was computed.
+- Forced support is preserved in the cache. The native default means no flip, not output zero. Pooled-width partial rules have many compatible pairs, while individually completed-table equality removes every distinct pair under all four tested defaults. The unavailable older comparator's implementation is not established by this audit.
+- The note distinguishes vacuous compatibility, shared commitments, conditional additional pins and unavoidable conflicting entries. Pair counts still do not isolate the primary Class-IV families; the preceding response-quotient failure is unchanged.
+- This is an exact finite local-table comparison, not a full-shift, decoder-sharing or dynamic-classification result. Myk's standing Gate 1 approval authorized the locally frozen run. Independent final review and publication follow the combined unit.
+- No new classifier, broader radius, maximum-clique search or trajectory experiment is running under this unit. The content of particular conflicting neighborhoods is a possible next question.
+
 ## Checkpoint 2026-09-15: compatible completion responses fail root-class discrimination
 
 - Completed: the [response quotient experiment](../2026-09-15-response-quotient.md) preserves the current six-field D2 input records, exact one-step response counts, fixed completion-bank trajectories, all failures and independent audit.
@@ -1078,4 +1086,3 @@ verified headline numbers.
 centered-G first-floor family under the full symbolic-parent recursive
 contract, with preparation locality accounted separately. The 3D and
 boundary/individuation threads remain otherwise parked as above.
-

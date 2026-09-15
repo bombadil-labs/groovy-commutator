@@ -6,6 +6,14 @@ This page is the **working synthesis** of the dimensional-lift research program.
 
 The program is parallel to [Dynamics of Erased Distinctions](2026-09-08-dynamics-of-erased-distinctions.md). That program asks when information can be forgotten safely and how a lossy representation repairs itself. This one asks what additional structure must be represented when evolution and transformation refuse to agree.
 
+## 2026-09-15 completion freedom and partial cohabitation
+
+The [response-quotient experiment](2026-09-15-response-quotient.md) fails as a root Class-IV discriminator: fixed hash completions provide maximum global response/retention scores throughout the finite probe panel. All completions agree on the invariant beam, while their unspecified entries supply different off-beam dynamics. The failure does not refute partial-rule compatibility.
+
+The subsequent [partial cohabitation audit](2026-09-15-partial-cohabitation.md) isolates that static relation in the current six-field D2 cache. Pooled complete source rings seven and eight admit a common completion for 20,944 of 32,640 root pairs; 14,743 pairs have shared pinned entries and 6,201 have none. Individually completed-table equality loses every distinct pair under all four tested defaults. The cache preserves forced support; the historical separate-workspace comparator was not audited.
+
+Shared assignments, additional commitments and contradictions are distinct quantities. A compatible second beam costs exactly its newly forced entries when added to a completion family. The minimum Hamming separation between two unrestricted completion families equals the number of conflicting pinned entries. Neither count establishes organized memory or a Class-IV mechanism; raw partner counts still favor rule 0. All claims retain the chosen neighborhood, finite invariant source families and absence of shared-decoder requirements. Myk's standing Gate 1 approval authorized these local runs; independent final review governs publication.
+
 ## 2026-09-14 uniform operator: finite-family breadth persists; construction cost remains
 
 The [uniform six-field cache](2026-09-14-uniform-jet6-cache.md) uses one period-six recipe for every ECA source and tested level, supporting native evolution and recovery through 4D on complete source rings seven and eight. This removes source-dependent recipe selection from that finite-family construction. Independent prospective review precedes the frozen implementation and evaluation; final integration is tracked in gathering #241.

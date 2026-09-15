@@ -30,6 +30,7 @@ ROOT = pathlib.Path(__file__).resolve().parents[1]
 
 # result file -> {hash key recorded in its source_hashes: path the hash was taken of}
 REGISTRY = {
+    'results/partial_cohabitation_20260915.json': {p:p for p in ('scripts/partial_cohabitation_20260915.py', 'docs/research/protocols/partial-cohabitation-20260915.md', 'experiments/on_beam_256_4d_20260914/labels.json')},
     'results/response_quotient_20260915.json': {'docs/research/protocols/response-quotient-20260915.md': 'docs/research/protocols/response-quotient-20260915.md', 'experiments/on_beam_256_4d_20260914/labels.json': 'experiments/on_beam_256_4d_20260914/labels.json', 'experiments/response_quotient_20260915/frozen_runner.py': 'experiments/response_quotient_20260915/frozen_runner.py', 'scripts/response_quotient_20260915.py': 'scripts/response_quotient_20260915.py', 'scripts/summarize_response_quotient_20260915.py': 'scripts/summarize_response_quotient_20260915.py'},
     'results/class4_composite_20260915.json': {'docs/research/protocols/class4-composite-validation-20260915.md': 'docs/research/protocols/class4-composite-validation-20260915.md', 'docs/research/protocols/class4-independent-20260915-clarifications.md': 'docs/research/protocols/class4-independent-20260915-clarifications.md', 'docs/research/protocols/class4-independent-20260915.md': 'docs/research/protocols/class4-independent-20260915.md', 'experiments/on_beam_256_4d_20260914/labels.json': 'experiments/on_beam_256_4d_20260914/labels.json', 'results/class4_independent_20260915.json': 'results/class4_independent_20260915.json', 'scripts/class4_composite_20260915.py': 'scripts/class4_composite_20260915.py', 'scripts/class4_independent_20260915.py': 'scripts/class4_independent_20260915.py', 'src/groovy/ca.py': 'src/groovy/ca.py'},
     'results/class4_independent_20260915.json': {"scripts/class4_independent_20260915.py":"scripts/class4_independent_20260915.py","src/groovy/ca.py":"src/groovy/ca.py","docs/research/protocols/class4-independent-20260915.md":"docs/research/protocols/class4-independent-20260915.md","docs/research/protocols/class4-independent-20260915-clarifications.md":"docs/research/protocols/class4-independent-20260915-clarifications.md","experiments/on_beam_256_4d_20260914/labels.json":"experiments/on_beam_256_4d_20260914/labels.json"},
@@ -222,4 +223,3 @@ def main(argv: list[str]) -> int:
 
 if __name__ == '__main__':
     sys.exit(main(sys.argv[1:]))
-
