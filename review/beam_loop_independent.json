@@ -1,0 +1,562 @@
+{
+  "auditor_sha256": "70facbb5d89d0525e460bf011ea42eaf2b4b4ea1fc3f278154b47cb56de23fc1",
+  "last_audit_seconds": 2.1888408090017037,
+  "raw_archives": {
+    "all_members_match_local_audited_artifacts": true,
+    "manifest_sha256": "dd54b58de295397588b061e19b53eac3a67264ab1e2559fecf4caf2a7fa20679",
+    "members": 170,
+    "volumes": [
+      {
+        "bytes": 313339811,
+        "filename": "beam-loop-raw-20260915-part1.zip",
+        "members": 92,
+        "sha256": "2adc590e791cf0bdb2f7a4b47a0a74774dd5d69f5985fe7acd8246abdbe9bed0"
+      },
+      {
+        "bytes": 310307109,
+        "filename": "beam-loop-raw-20260915-part2.zip",
+        "members": 50,
+        "sha256": "75817918b675a4efe2cbf97fe0f65c74d3ceddcace630c319fd80a686df85e59"
+      },
+      {
+        "bytes": 259868797,
+        "filename": "beam-loop-raw-20260915-part3.zip",
+        "members": 28,
+        "sha256": "ad4bc854908f7f1a655c990b769ca1b5ae7cd79d551525016e744ead95421baf"
+      }
+    ]
+  },
+  "reviewer": "independent collaborating agent /root/beam_loop_review, OpenAI GPT-6 Astra, 2026-09-15",
+  "rounds": {
+    "1": {
+      "all_native_and_decoder_tables_equal": true,
+      "full_line_argument": "key radius at most 4, next-center target radius at most 3; all nine-cell words and all six transverse phases exhaust the union of dependencies",
+      "independent_method": "shrinking open-window evolution; all local keys and both targets regenerated",
+      "phases": 6,
+      "result_sha256": "14c2c2a721b4894dfaee062b3c8aa04781b83003fe3992c10eb2bebe621d3bfd",
+      "roots": 256,
+      "scope": "first lift of all binary radius-one ECAs under the declared six-field encoding; no arbitrary-parent or all-dimensional theorem",
+      "source_words_per_root": 512
+    },
+    "10": {
+      "all_selectors_errors_entropies_growth_and_decisions_equal": true,
+      "complete_open_window_trajectories_and_damage_ensembles_reproduced": 12,
+      "decisions": [
+        {
+          "correction": false,
+          "radius": 1,
+          "seed": 6041541,
+          "selected": false
+        },
+        {
+          "correction": false,
+          "radius": 1,
+          "seed": 6041542,
+          "selected": false
+        },
+        {
+          "correction": true,
+          "radius": 1,
+          "seed": 6041541,
+          "selected": false
+        },
+        {
+          "correction": true,
+          "radius": 1,
+          "seed": 6041542,
+          "selected": false
+        },
+        {
+          "correction": false,
+          "radius": 2,
+          "seed": 6041541,
+          "selected": false
+        },
+        {
+          "correction": false,
+          "radius": 2,
+          "seed": 6041542,
+          "selected": false
+        },
+        {
+          "correction": true,
+          "radius": 2,
+          "seed": 6041541,
+          "selected": true
+        },
+        {
+          "correction": true,
+          "radius": 2,
+          "seed": 6041542,
+          "selected": true
+        },
+        {
+          "correction": false,
+          "radius": 3,
+          "seed": 6041541,
+          "selected": false
+        },
+        {
+          "correction": false,
+          "radius": 3,
+          "seed": 6041542,
+          "selected": false
+        },
+        {
+          "correction": true,
+          "radius": 3,
+          "seed": 6041541,
+          "selected": false
+        },
+        {
+          "correction": true,
+          "radius": 3,
+          "seed": 6041542,
+          "selected": false
+        }
+      ],
+      "geometry": "initial damage half-width2*r*horizon retains the entire influence cone throughout shrinking evolution",
+      "result_sha256": "ae55152db188acbe92e32fad130102f93677eca11b25cb1c49ff32e70fd8b147",
+      "scope": "mechanism adversary with unassigned Wolfram classes; selection challenges ordered-spatial-background interpretation, not established class labels",
+      "symmetry_local_identities_independently_checked": 4096,
+      "theory": "right-permutivity gives2^(2r) preimage blocks for each output block; uniform Bernoulli spatial slices persist; matched residual is AND of2r iid bits"
+    },
+    "11": {
+      "all_checkpoint_exponents_and_fixed_q_decisions_equal": true,
+      "complete4096_step_open_window_damage_ensembles_reproduced": 6,
+      "decisions": [
+        {
+          "horizon": 512,
+          "radius": 1,
+          "seed": 6041541,
+          "selected": false
+        },
+        {
+          "horizon": 1024,
+          "radius": 1,
+          "seed": 6041541,
+          "selected": false
+        },
+        {
+          "horizon": 2048,
+          "radius": 1,
+          "seed": 6041541,
+          "selected": false
+        },
+        {
+          "horizon": 4096,
+          "radius": 1,
+          "seed": 6041541,
+          "selected": false
+        },
+        {
+          "horizon": 512,
+          "radius": 1,
+          "seed": 6041542,
+          "selected": false
+        },
+        {
+          "horizon": 1024,
+          "radius": 1,
+          "seed": 6041542,
+          "selected": false
+        },
+        {
+          "horizon": 2048,
+          "radius": 1,
+          "seed": 6041542,
+          "selected": false
+        },
+        {
+          "horizon": 4096,
+          "radius": 1,
+          "seed": 6041542,
+          "selected": false
+        },
+        {
+          "horizon": 512,
+          "radius": 2,
+          "seed": 6041541,
+          "selected": true
+        },
+        {
+          "horizon": 1024,
+          "radius": 2,
+          "seed": 6041541,
+          "selected": true
+        },
+        {
+          "horizon": 2048,
+          "radius": 2,
+          "seed": 6041541,
+          "selected": true
+        },
+        {
+          "horizon": 4096,
+          "radius": 2,
+          "seed": 6041541,
+          "selected": true
+        },
+        {
+          "horizon": 512,
+          "radius": 2,
+          "seed": 6041542,
+          "selected": true
+        },
+        {
+          "horizon": 1024,
+          "radius": 2,
+          "seed": 6041542,
+          "selected": true
+        },
+        {
+          "horizon": 2048,
+          "radius": 2,
+          "seed": 6041542,
+          "selected": true
+        },
+        {
+          "horizon": 4096,
+          "radius": 2,
+          "seed": 6041542,
+          "selected": true
+        },
+        {
+          "horizon": 512,
+          "radius": 3,
+          "seed": 6041541,
+          "selected": false
+        },
+        {
+          "horizon": 1024,
+          "radius": 3,
+          "seed": 6041541,
+          "selected": false
+        },
+        {
+          "horizon": 2048,
+          "radius": 3,
+          "seed": 6041541,
+          "selected": false
+        },
+        {
+          "horizon": 4096,
+          "radius": 3,
+          "seed": 6041541,
+          "selected": false
+        },
+        {
+          "horizon": 512,
+          "radius": 3,
+          "seed": 6041542,
+          "selected": false
+        },
+        {
+          "horizon": 1024,
+          "radius": 3,
+          "seed": 6041542,
+          "selected": false
+        },
+        {
+          "horizon": 2048,
+          "radius": 3,
+          "seed": 6041542,
+          "selected": true
+        },
+        {
+          "horizon": 4096,
+          "radius": 3,
+          "seed": 6041542,
+          "selected": false
+        }
+      ],
+      "entire0_to512_prefix_matches": true,
+      "result_sha256": "aad41b0b82a582c3224cba0ad87939451442580167f9ff2a4450626e1f9f48f5",
+      "scope": "extension of exact existing trials with independent iid padding; q reused from R10 and no asymptotic exponent established",
+      "trials_per_ensemble": 32
+    },
+    "2": {
+      "all_physical_keys_targets_and_summaries_equal": true,
+      "archive_members": 1024,
+      "cross_floor_changes": {
+        "7": {
+          "gained": 10050,
+          "lost": 0,
+          "shared": 22528
+        },
+        "8": {
+          "gained": 11630,
+          "lost": 0,
+          "shared": 20954
+        }
+      },
+      "domains": {
+        "d2full": {
+          "compatible": 20533,
+          "occupied": 14338,
+          "vacuous": 6195
+        },
+        "d2w7": {
+          "compatible": 22528,
+          "occupied": 15865,
+          "vacuous": 6663
+        },
+        "d2w8": {
+          "compatible": 20954,
+          "occupied": 14753,
+          "vacuous": 6201
+        },
+        "d3w7": {
+          "compatible": 32578,
+          "occupied": 16702,
+          "vacuous": 15876
+        },
+        "d3w8": {
+          "compatible": 32584,
+          "occupied": 18700,
+          "vacuous": 13884
+        }
+      },
+      "interpretation": "saturation and symmetry sensitivity defeat these literal-table graph proxies; they neither disprove a beam invariant nor establish all-input D3 validity",
+      "pair_rows_recomputed": 163200,
+      "reconstructed_forced_entries": 4025024,
+      "result_sha256": "88fa3078eb1fe136caa799dc1233900ff6027a1c85871388a775dab32f9b7690",
+      "scalar_full_patch_bits_checked": 430080
+    },
+    "3": {
+      "all_selected_pair_counts_and_witnesses_equal": true,
+      "archive_members_hashed": 156,
+      "complete_d4_tables_reconstructed": [
+        "w7_r007.npz",
+        "w7_r027.npz",
+        "w7_r030.npz",
+        "w7_r039.npz",
+        "w7_r045.npz",
+        "w7_r054.npz",
+        "w7_r061.npz",
+        "w7_r083.npz",
+        "w7_r089.npz",
+        "w7_r090.npz",
+        "w7_r103.npz",
+        "w7_r106.npz",
+        "w7_r122.npz",
+        "w7_r161.npz",
+        "w7_r169.npz",
+        "w7_r196.npz",
+        "w7_r206.npz",
+        "w7_r217.npz",
+        "w7_r228.npz",
+        "w7_r250.npz",
+        "w7_r252.npz",
+        "w8_r009.npz",
+        "w8_r022.npz",
+        "w8_r026.npz",
+        "w8_r030.npz",
+        "w8_r041.npz",
+        "w8_r054.npz",
+        "w8_r086.npz",
+        "w8_r090.npz",
+        "w8_r110.npz",
+        "w8_r122.npz",
+        "w8_r125.npz",
+        "w8_r126.npz",
+        "w8_r133.npz",
+        "w8_r135.npz",
+        "w8_r149.npz",
+        "w8_r167.npz",
+        "w8_r168.npz",
+        "w8_r181.npz",
+        "w8_r195.npz",
+        "w8_r199.npz",
+        "w8_r228.npz",
+        "w8_r234.npz",
+        "w8_r252.npz"
+      ],
+      "domains": {
+        "7": {
+          "persistent_pairs": 2,
+          "tested_pairs": 62
+        },
+        "8": {
+          "persistent_pairs": 12,
+          "tested_pairs": 56
+        }
+      },
+      "reconstructed_forced_entries": 1847471,
+      "recovery": {
+        "frozen_original_source_hashes_unchanged": true,
+        "repaired_tables_independently_reconstructed": 31
+      },
+      "result_sha256": "8a42609c588c5b406cf30e63e5e917e483dc8a7ac1e1abe4463575c6c65fb695",
+      "scalar_full_patch_bits_checked": 226380,
+      "scope": "D3-conflicting pairs only; no complete D4 graph, no all-input D4 claim"
+    },
+    "4": {
+      "all_candidate_rates_selection_and_statistics_equal": true,
+      "complete_native_trajectories_reproduced": 88,
+      "finite_ring_caveat": "At width512, Rule90 is nilpotent by time256; burn512 guarantees all-zero output. This does not describe its generic infinite-line chaotic behavior.",
+      "result_sha256": "fd11ed1074482715bbfff5d007f624b89a2adb70c2ccb1bd46fb69d6177752d7",
+      "saved_cells_checked": 23429120,
+      "scope": "one seed and one power-of-two ring; exploratory recurrence residual, not an established invariant or classifier"
+    },
+    "5": {
+      "all_selection_residual_statistics_normalizations_and_damage_summaries_equal": true,
+      "complete_damage_ensembles_reproduced": 264,
+      "complete_native_trajectories_reproduced": 528,
+      "damage_trials_per_ensemble": 16,
+      "lightcone_check": "center510 +/-256 stays inside width1021, so no perturbation wrap alias in recorded support diameter",
+      "result_sha256": "e6872446da18a46ac3e1f9595c662d838635c2010f23681288ef46ee046ba6c3",
+      "saved_cells_checked": 210038400,
+      "scope": "fresh prime-width finite-horizon diagnostics; does not establish asymptotic disturbance growth or an intrinsic Class-IV definition"
+    },
+    "6": {
+      "all_candidate_selections_normalizations_growth_decisions_and_majorities_equal": true,
+      "complete_damage_ensembles_reproduced": 352,
+      "complete_native_trajectories_reproduced": 352,
+      "damage_trials_per_ensemble": 32,
+      "majority_selected": [
+        54,
+        110
+      ],
+      "result_sha256": "1e6340352b8a16c99c98d1be0039643970a40a3c8afec9871e83b441b5eda5d6",
+      "saved_cells_checked": 740695296,
+      "scope": "held-out larger finite rings for a predictor selected post hoc in R5; only two independent positive symmetry families"
+    },
+    "7": {
+      "all_macrocolumn_counts_physical_densities_and_extrema_equal": true,
+      "result_sha256": "801830ca281775463d3e37168be04f29b26cd1fad0b0a7d2919b4bc9dfaeb70c",
+      "root_trajectory_cells_reproduced": 1079512,
+      "scope": "ancestral encoding and same-column decoding throughD6; native phase-free D6 rule validity not established; fixed dimension required for asymptotic transport",
+      "support_and_decoder_cases_reproduced": 504,
+      "support_proof": "locality radius grows by at most2 per floor; same-column decoder gives A subset B, locality gives B subset A thickened by2(d-1)",
+      "tail_proof": "stationarity and support inclusion sandwich empty-interval probabilities between source lengths L and L+2R; exponential rate is unchanged if the limit exists"
+    },
+    "8": {
+      "all_candidate_choices_decisions_and_majorities_equal": true,
+      "all_damage_summaries_and_structural_bounds_checked": 704,
+      "complete_damage_curves_independently_replayed": [
+        "d1_s6041531_r009",
+        "d1_s6041532_r009",
+        "d3_s6041531_r009",
+        "d3_s6041532_r009",
+        "d7_s6041531_r009",
+        "d7_s6041532_r009",
+        "d9_s6041531_r009",
+        "d9_s6041532_r009",
+        "d1_s6041531_r018",
+        "d1_s6041532_r018",
+        "d3_s6041531_r018",
+        "d3_s6041532_r018",
+        "d7_s6041531_r018",
+        "d7_s6041532_r018",
+        "d9_s6041531_r018",
+        "d9_s6041532_r018",
+        "d1_s6041531_r054",
+        "d1_s6041532_r054",
+        "d3_s6041531_r054",
+        "d3_s6041532_r054",
+        "d7_s6041531_r054",
+        "d7_s6041532_r054",
+        "d9_s6041531_r054",
+        "d9_s6041532_r054",
+        "d1_s6041531_r073",
+        "d1_s6041532_r073",
+        "d3_s6041531_r073",
+        "d3_s6041532_r073",
+        "d7_s6041531_r073",
+        "d7_s6041532_r073",
+        "d9_s6041531_r073",
+        "d9_s6041532_r073",
+        "d1_s6041531_r106",
+        "d1_s6041532_r106",
+        "d3_s6041531_r106",
+        "d1_s6041531_r110",
+        "d1_s6041532_r110",
+        "d3_s6041531_r110",
+        "d3_s6041532_r110",
+        "d7_s6041531_r110",
+        "d7_s6041532_r110",
+        "d9_s6041531_r110",
+        "d9_s6041532_r110",
+        "d1_s6041531_r126",
+        "d1_s6041532_r126",
+        "d3_s6041531_r126",
+        "d3_s6041532_r126",
+        "d7_s6041531_r126",
+        "d7_s6041532_r126",
+        "d9_s6041531_r126",
+        "d9_s6041532_r126",
+        "d1_s6041531_r204",
+        "d1_s6041532_r204",
+        "d3_s6041531_r204",
+        "d3_s6041532_r204",
+        "d7_s6041531_r204",
+        "d7_s6041532_r204",
+        "d9_s6041531_r204",
+        "d9_s6041532_r204"
+      ],
+      "complete_native_trajectories_reproduced": 704,
+      "damage_replay_scope": "every selected run and every run of roots9,18,54,73,110,126,204; unchanged damage implementation already fully verified in R6",
+      "majority_selected": [
+        54,
+        110
+      ],
+      "per_run_exceptions_to_core_labels": [
+        {
+          "density": 0.1,
+          "rule": 106,
+          "seed": 6041531,
+          "selected": true
+        },
+        {
+          "density": 0.1,
+          "rule": 106,
+          "seed": 6041532,
+          "selected": true
+        },
+        {
+          "density": 0.3,
+          "rule": 106,
+          "seed": 6041531,
+          "selected": true
+        }
+      ],
+      "result_sha256": "cded9b88e1f00fc462c42751c10c0fcdb2be5b5ace969704b7ae64c66f910e10",
+      "saved_cells_checked": 1481390592,
+      "scope": "four Bernoulli input-density ensembles at one width/horizon; finite diagnostics do not imply all-state classification"
+    },
+    "9": {
+      "all_finite_slopes_and_censoring_equal": true,
+      "independent_count_method": "cyclic zero-run lengths, not prefix-sum windows",
+      "lifted_or_source_transport_tables": 21,
+      "native_censored_slope_estimates": 165,
+      "native_interval_counts_independently_recomputed": 3168,
+      "native_runs": 352,
+      "result_sha256": "927dff05d4226e52ac6dedc0a1e42da9fec15906bc244b0ad1f2640221d65ec8",
+      "rule122_absorption_diagnostic_from_existing_trajectories": [
+        {
+          "empty_residual_rows": 140,
+          "first_zero_state": 884,
+          "seed": 6041511
+        },
+        {
+          "empty_residual_rows": 534,
+          "first_zero_state": 490,
+          "seed": 6041512
+        },
+        {
+          "empty_residual_rows": 0,
+          "first_zero_state": null,
+          "seed": 6041513
+        },
+        {
+          "empty_residual_rows": 0,
+          "first_zero_state": null,
+          "seed": 6041514
+        }
+      ],
+      "scope": "finite interval counts and exact cyclic-origin bounds; no existence or estimated value of an infinite-line tail limit established",
+      "transport_inequalities_verified": 189
+    }
+  }
+}

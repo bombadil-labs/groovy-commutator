@@ -1,0 +1,32 @@
+{
+  "post_hoc_inspection": [
+    {
+      "seed": 6041511,
+      "q": 0.8790724864195002,
+      "alpha": 1.0051690008276537,
+      "fully_zero_residual_rows": 140,
+      "all_zero_state_rows": 140
+    },
+    {
+      "seed": 6041512,
+      "q": 0.6520034405173222,
+      "alpha": 1.0047980294398284,
+      "fully_zero_residual_rows": 534,
+      "all_zero_state_rows": 534
+    },
+    {
+      "seed": 6041513,
+      "q": 0.9978355978030246,
+      "alpha": 1.0054419504586456,
+      "fully_zero_residual_rows": 0,
+      "all_zero_state_rows": 0
+    },
+    {
+      "seed": 6041514,
+      "q": 0.9966568070848001,
+      "alpha": 1.004773492655116,
+      "fully_zero_residual_rows": 0,
+      "all_zero_state_rows": 0
+    }
+  ]
+}

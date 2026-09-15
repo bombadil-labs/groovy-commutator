@@ -6,6 +6,12 @@ This page is the **working synthesis** of the dimensional-lift research program.
 
 The program is parallel to [Dynamics of Erased Distinctions](2026-09-08-dynamics-of-erased-distinctions.md). That program asks when information can be forgotten safely and how a lossy representation repairs itself. This one asks what additional structure must be represented when evolution and transformation refuse to agree.
 
+## 2026-09-15: beam support invariants and a finite ECA classifier
+
+The [eleven-round beam investigation](2026-09-15-beam-discriminator-loop.md) treats dimensional rules as representations of an underlying beam. It closes the full-input first-lift local native/decoder check for all ECAs, and proves bounded disturbance-support transport for the ancestral six-field encoding. Conditional stationary interval-tail rates also survive each fixed floor. Arbitrary higher-dimensional parents and universal native-child locality remain separate open questions.
+
+A fixed finite recurrence/spreading predictor separates54/110 from84 undisputed negative representatives across twelve fresh input tests per family. This is not a universal Class IV theorem: a wider-radius random-slice family passes and challenges the ordered-background interpretation. Static cohabitation persistence and naive pooled tails fail their diagnostics. Every adaptive choice, failure, raw array and independent audit is preserved in the single research unit.
+
 ## 2026-09-15 completion freedom and partial cohabitation
 
 The [response-quotient experiment](2026-09-15-response-quotient.md) fails as a root Class-IV discriminator: fixed hash completions provide maximum global response/retention scores throughout the finite probe panel. All completions agree on the invariant beam, while their unspecified entries supply different off-beam dynamics. The failure does not refute partial-rule compatibility.

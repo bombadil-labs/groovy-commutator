@@ -16,3 +16,7 @@ The user-requested [vision and interpretation record](../research/2026-09-10-dim
 ## Update, 2026-09-14: prepared binary source coverage; review pending
 
 The [retrospective binary family](../research/2026-09-14-binary-lift-family.md) covers every ECA source and its [selected repeat](../research/2026-09-14-binary-lift-recursion.md) preserves native evolution and source/parent recovery through 3D. This concerns source-generated period-four prepared families, not independently specified higher-dimensional data. The [G diagnosis](../research/2026-09-14-binary-lift-g-obstructions.md) leaves universal commutator preservation and dimension-induction open. Myk approved the Gate 1 exception; independent Gate 2 review is pending. Faithfulness alone does not establish the broader nontrivial beam objective.
+
+## Update, 2026-09-15: beam-level structure and finite class prediction
+
+The user now explicitly treats the beam as the underlying dynamical object and its dimensional rules as representations. The [adaptive beam investigation](../research/2026-09-15-beam-discriminator-loop.md) proves bounded support transport and a conditional stationary interval-tail invariant for ancestral six-field images. A fixed recurrence/spreading predictor separates54/110 in fresh ECA tests, while a wider-radius family defeats the inference to an ordered spatial background. Sharing a completion still does not identify beams; the broader class and arbitrary-parent questions remain open.

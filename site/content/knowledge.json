@@ -2378,6 +2378,33 @@
       "source": "partial-rule-cohabitation",
       "target": "uniform-six-field-lift-cache",
       "type": "depends_on"
+    },
+    {
+      "source": "beam-support-transport",
+      "type": "depends_on",
+      "target": "uniform-six-field-lift-cache",
+      "reason": "The encoding uses the declared six-field ancestral recipe; the analytic support statement does not depend on extrapolating finite native-rule verification.",
+      "research": [
+        "beam-discriminator-loop-20260915"
+      ]
+    },
+    {
+      "source": "beam-recurrence-spread-candidate",
+      "type": "supports",
+      "target": "class-iv-dimensional-persistence",
+      "reason": "The finite predictor and transported support relation provide a scoped lead; raw recurrence cutoff invariance and universal class specificity remain unproved.",
+      "research": [
+        "beam-discriminator-loop-20260915"
+      ]
+    },
+    {
+      "source": "dimensional-beam",
+      "type": "depends_on",
+      "target": "beam-support-transport",
+      "reason": "The remaining beam question must account for the proved support relation along ancestral representations without identifying every compatible host as the same beam.",
+      "research": [
+        "beam-discriminator-loop-20260915"
+      ]
     }
   ],
   "nodes": [
@@ -2873,13 +2900,14 @@
       "id": "class-iv-dimensional-persistence",
       "kind": "theory",
       "research": [
-        "dimensional-lift"
+        "dimensional-lift",
+        "beam-discriminator-loop-20260915"
       ],
       "source": "docs/knowledge/class-iv-dimensional-persistence.md",
       "status": "proposed",
-      "summary": "The proposed association is untested; a broader lift is needed to include Rules 30, 106, and 110.",
+      "summary": "Prepared lifts now cover all ECA sources. A fresh-tested recurrence/spread candidate separates the core ECA families, but a wider-radius mechanism challenges its interpretation; a beam-level class theorem remains open.",
       "title": "Does dimensional persistence distinguish Class IV?",
-      "updated": "2026-09-08"
+      "updated": "2026-09-15"
     },
     {
       "id": "spacetime-provenance",
@@ -3445,13 +3473,14 @@
         "gradient-intervention-costs",
         "binary-lift-family-20260914",
         "binary-lift-recursion-20260914",
-        "binary-lift-g-obstructions-20260914"
+        "binary-lift-g-obstructions-20260914",
+        "beam-discriminator-loop-20260915"
       ],
       "source": "docs/knowledge/dimensional-beam.md",
       "status": "open",
-      "summary": "Earlier gradient and resource results retain their scope. A new retrospective binary family reaches all 256 ECA sources through 3D on prepared images, pending Gate 2 review; nontrivial endogenous organization and indefinite Gpreservation remain open.",
+      "summary": "The beam is treated as a dynamical object with dimensional representations. Ancestral support and conditional interval-tail invariants are established; arbitrary-parent locality and a universal Class IV property remain open.",
       "title": "What organization survives a recurring dimensional construction?",
-      "updated": "2026-09-14"
+      "updated": "2026-09-15"
     },
     {
       "id": "guard-free-axial-compatibility",
@@ -4539,13 +4568,38 @@
       "id": "partial-rule-cohabitation",
       "kind": "finding",
       "research": [
-        "partial-cohabitation-20260915"
+        "partial-cohabitation-20260915",
+        "beam-discriminator-loop-20260915"
       ],
       "source": "docs/knowledge/partial-rule-cohabitation.md",
       "status": "exact",
       "summary": "In the finite six-field D2 families, 20,944 pooled-width pairs admit a common completion. Comparing four independently completed tables erases all such edges. Shared constraints and unavoidable conflicts remain measurable without a default.",
       "title": "Cohabitation compares constraints, not chosen completions",
       "updated": "2026-09-15"
+    },
+    {
+      "id": "beam-support-transport",
+      "title": "Local lifts preserve disturbance extent up to bounded thickening",
+      "kind": "finding",
+      "status": "exact",
+      "summary": "On phase-aligned ancestral six-field images, root support and lifted macrocolumn support differ by bounded thickening. Fixed-floor spread rates and existing stationary interval-tail rates are preserved.",
+      "updated": "2026-09-15",
+      "source": "docs/knowledge/beam-support-transport.md",
+      "research": [
+        "beam-discriminator-loop-20260915"
+      ]
+    },
+    {
+      "id": "beam-recurrence-spread-candidate",
+      "title": "Recurrence plus spreading separates the core ECA families in fresh tests",
+      "kind": "finding",
+      "status": "exploratory",
+      "summary": "Frozen finite cutoffs select 54/110 in twelve fresh runs each, with no undisputed-negative positives. Wider-radius random-slice rules expose a limitation of the proposed background mechanism.",
+      "updated": "2026-09-15",
+      "source": "docs/knowledge/beam-recurrence-spread-candidate.md",
+      "research": [
+        "beam-discriminator-loop-20260915"
+      ]
     }
   ],
   "schemaVersion": 1

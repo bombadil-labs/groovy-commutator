@@ -1,0 +1,42 @@
+name: Research beam discriminator loop
+on:
+  pull_request:
+    paths:
+      - 'scripts/beam_loop_*.py'
+      - 'scripts/summarize_beam_discriminator_loop.py'
+      - 'scripts/plot_beam_discriminator_loop.py'
+      - 'scripts/package_beam_loop_raw.py'
+      - 'scripts/check_result_integrity.py'
+      - 'src/groovy/ca.py'
+      - 'experiments/beam_discriminator_loop_20260915/**'
+      - 'experiments/on_beam_256_4d_20260914/labels.json'
+      - 'results/beam_discriminator_loop_20260915.*'
+      - 'review/beam_loop_independent.*'
+      - '.github/workflows/research-beam-discriminator-loop.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/beam_loop_*.py'
+      - 'scripts/summarize_beam_discriminator_loop.py'
+      - 'scripts/plot_beam_discriminator_loop.py'
+      - 'scripts/package_beam_loop_raw.py'
+      - 'scripts/check_result_integrity.py'
+      - 'src/groovy/ca.py'
+      - 'experiments/beam_discriminator_loop_20260915/**'
+      - 'experiments/on_beam_256_4d_20260914/labels.json'
+      - 'results/beam_discriminator_loop_20260915.*'
+      - 'review/beam_loop_independent.*'
+      - '.github/workflows/research-beam-discriminator-loop.yml'
+permissions:
+  contents: read
+jobs:
+  provenance:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m py_compile scripts/beam_loop_*.py scripts/summarize_beam_discriminator_loop.py scripts/plot_beam_discriminator_loop.py scripts/package_beam_loop_raw.py review/beam_loop_independent.py
+      - run: python scripts/check_result_integrity.py results/beam_discriminator_loop_20260915.json

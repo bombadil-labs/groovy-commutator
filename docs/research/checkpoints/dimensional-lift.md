@@ -13,6 +13,13 @@ when a substantial unit completes; keep the bounded-claim style. Text moved from
 
 Program page: `docs/research/2026-09-09-dimensional-closure-program.md`
 
+## Checkpoint 2026-09-15: adaptive beam discriminator loop
+
+- Completed: [eleven local adaptive rounds](../2026-09-15-beam-discriminator-loop.md), with standing user approval and one final publication unit. The note and its result files carry the evidence; independent retrospective review is recorded there and in the gathering PR.
+- Full-input first-lift native/decoder consistency is established for all ECAs. Support thickening and conditional interval-tail rates have exact ancestral encoding statements, with checks through6D; this is not a native6D local-rule certificate.
+- A frozen finite recurrence/spread baseline separates the two core ECA families on fresh seeds/densities. Static cohabitation persistence, raw covariance and pooled interval tails do not supply the sought universal discriminator. Wider-radius random-slice examples pass the baseline and constrain its interpretation.
+- Stop this loop. Next work should specify persistent interaction organization and its adversaries before choosing another score. Do not retune106, treat symmetry copies as independent positives, erase the earlier failures, or infer new Wolfram labels for the radius-two family.
+
 ## Checkpoint 2026-09-15: partial cohabitation and completion equality differ sharply
 
 - Completed locally: the [partial-rule cohabitation audit](../2026-09-15-partial-cohabitation.md) reuses all 256 current six-field D2 roots at complete source rings seven and eight. No new lift or trajectory was computed.

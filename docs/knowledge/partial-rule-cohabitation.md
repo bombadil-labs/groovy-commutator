@@ -9,3 +9,7 @@ In the current six-field D2 cache, pooled complete source rings seven and eight 
 Raw partner counts still fail to single out 54/110; rule 0 leads. The counts depend on the declared neighborhood and source families. They are exact finite constraint counts, not an infinite-input theorem or a Class-IV discriminator. The independent response-quotient failure is unchanged.
 
 Source: [partial-rule cohabitation audit](../research/2026-09-15-partial-cohabitation.md). Status: exact within the stated domain.
+
+## Update, 2026-09-15: full-input D2 and higher-floor comparison
+
+The [adaptive beam investigation](../research/2026-09-15-beam-discriminator-loop.md) extends the first-lift native/decoder context check to every infinite-line ECA input and counts20,533 full-input D2 compatible pairs. Near-complete finite D3 compatibility and width-sensitive residual D4 obstructions defeat the tested simple static discriminator. The earlier pooled-ring counts remain correct in their declared smaller domain.

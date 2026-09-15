@@ -1,0 +1,9 @@
+# Round 1: exact first-floor local validity
+
+Locally frozen before execution; authorized by Myk's standing Gate 1 approval. Question: do native evolution and a uniform parent decoder exist for the current six-field first floor on all infinite-line source inputs, rather than only source rings seven/eight?
+
+Construct F(X,E X,E^2 X) using the existing six-field formula and comparison directions +/- one source cell. For every ECA, enumerate all 512 nine-cell source words. Read every transverse phase's radius [3,2] neighborhood at the central source position and require flip target F(X,E X,E^2 X) XOR F(E X,E^2 X,E^3 X), at the center. Separately require decoder output X at that source position for every phase. Physical keys have 35 actual bits; no phase identifier is supplied to the evaluator.
+
+Exhaustiveness argument: an input field value depends on source radius at most two, so a horizontal radius-two child neighborhood depends on source radius at most four. Every next-center field depends on source radius at most three. A source window of length nine covers their union; a complete period-nine ring enumerates exactly these unrestricted local words without identifying any two distinct cells in the dependency window. The new axis has period six, and all its phases are enumerated. This establishes or refutes this particular first-floor local contract on the full line, not arbitrary parent rules or an all-dimensional theorem.
+
+Report native/decoder conflicts for all 256 roots, exact physical partial tables (including both demanded values when inconsistent), first witnesses, counts, source hashes and runtime. Prediction: all 256 pass both. Preserve failure and analyze it before extending dimensions. No class score or radius repair in this round. Check selected physical keys with scalar extraction and verify the six-field formula with direct Boolean expressions. Five-minute/1GiB budget, no Actions.

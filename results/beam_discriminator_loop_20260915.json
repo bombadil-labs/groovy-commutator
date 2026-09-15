@@ -1,0 +1,472 @@
+{
+  "external_array_inputs": {
+    "experiments/beam_discriminator_loop_20260915/round01/tables.npz": "3ba757e58ca1e4c30ae6eb45d774942e859adac110282104299247e33b0373e7",
+    "experiments/beam_discriminator_loop_20260915/round02/d3w7_pairs.npz": "3dc7846afa190a123bc3fe185a85ff3b6c7c00053ca3510da3e5d8287ef44b39",
+    "experiments/beam_discriminator_loop_20260915/round02/d3w8_pairs.npz": "6acb32e25834b2bda41650a1149164ff047c7d42af387cb4ca822ed5580aa145",
+    "experiments/beam_discriminator_loop_20260915/round06/trajectories.npz": "e84b2f23ca8aa12b99f551dfcb5b6971034718db2554034b9cd0f876cb4d9372",
+    "experiments/beam_discriminator_loop_20260915/round10/trajectories.npz": "b54759344c81a160d6651de22edf66063b2c8cef41f8c8f3f4603a3c8ec1c143"
+  },
+  "first_lift_full_input": {
+    "decoder_failed": [],
+    "native_failed": []
+  },
+  "fresh_tests": {
+    "all_rule_hits": {
+      "0": 0,
+      "1": 0,
+      "10": 0,
+      "104": 0,
+      "105": 0,
+      "106": 4,
+      "108": 0,
+      "11": 0,
+      "110": 12,
+      "12": 0,
+      "122": 0,
+      "126": 0,
+      "128": 0,
+      "13": 0,
+      "130": 0,
+      "132": 0,
+      "134": 0,
+      "136": 0,
+      "138": 0,
+      "14": 0,
+      "140": 0,
+      "142": 0,
+      "146": 0,
+      "15": 0,
+      "150": 0,
+      "152": 0,
+      "154": 0,
+      "156": 0,
+      "160": 0,
+      "162": 0,
+      "164": 0,
+      "168": 0,
+      "170": 0,
+      "172": 0,
+      "178": 0,
+      "18": 0,
+      "184": 0,
+      "19": 0,
+      "2": 0,
+      "200": 0,
+      "204": 0,
+      "22": 0,
+      "23": 0,
+      "232": 0,
+      "24": 0,
+      "25": 0,
+      "26": 0,
+      "27": 0,
+      "28": 0,
+      "29": 0,
+      "3": 0,
+      "30": 0,
+      "32": 0,
+      "33": 0,
+      "34": 0,
+      "35": 0,
+      "36": 0,
+      "37": 0,
+      "38": 0,
+      "4": 0,
+      "40": 0,
+      "41": 0,
+      "42": 0,
+      "43": 0,
+      "44": 0,
+      "45": 0,
+      "46": 0,
+      "5": 0,
+      "50": 0,
+      "51": 0,
+      "54": 12,
+      "56": 0,
+      "57": 0,
+      "58": 0,
+      "6": 0,
+      "60": 0,
+      "62": 0,
+      "7": 0,
+      "72": 0,
+      "73": 0,
+      "74": 0,
+      "76": 0,
+      "77": 0,
+      "78": 0,
+      "8": 0,
+      "9": 0,
+      "90": 0,
+      "94": 0
+    },
+    "core_hits": {
+      "110": 12,
+      "54": 12
+    },
+    "disputed_hits": {
+      "106": 4,
+      "41": 0
+    },
+    "runs_per_rule": 12,
+    "undisputed_negative_positive_runs": 0,
+    "undisputed_negative_rules": 84,
+    "undisputed_negative_runs": 1008
+  },
+  "interval_probability_inequalities": 189,
+  "original_cache_sha256": "766e4db7083fbdb551bc4aee66abc554079c5d118905f6d65aa5e5372c9418d1",
+  "raw_archive_manifest": "experiments/beam_discriminator_loop_20260915/raw-archive.json",
+  "review_report": "review/beam_loop_independent.json",
+  "review_scope": "Independent report specifies complete versus targeted replays; evaluation preceded review under standing user authorization.",
+  "rounds": {
+    "1": {
+      "recovery_seconds": null,
+      "result": "experiments/beam_discriminator_loop_20260915/round01/result.json",
+      "seconds": 0.5107520859965007
+    },
+    "10": {
+      "recovery_seconds": null,
+      "result": "experiments/beam_discriminator_loop_20260915/round10/result.json",
+      "seconds": 5.126779268000973
+    },
+    "11": {
+      "recovery_seconds": null,
+      "result": "experiments/beam_discriminator_loop_20260915/round11/result.json",
+      "seconds": 47.443540198000846
+    },
+    "2": {
+      "recovery_seconds": null,
+      "result": "experiments/beam_discriminator_loop_20260915/round02/result.json",
+      "seconds": 46.97354721799638
+    },
+    "3": {
+      "recovery_seconds": 63.87971400099923,
+      "result": "experiments/beam_discriminator_loop_20260915/round03/result.json",
+      "seconds": null
+    },
+    "4": {
+      "recovery_seconds": null,
+      "result": "experiments/beam_discriminator_loop_20260915/round04/result.json",
+      "seconds": 2.594618121998792
+    },
+    "5": {
+      "recovery_seconds": null,
+      "result": "experiments/beam_discriminator_loop_20260915/round05/result.json",
+      "seconds": 30.106170961000316
+    },
+    "6": {
+      "recovery_seconds": null,
+      "result": "experiments/beam_discriminator_loop_20260915/round06/result.json",
+      "seconds": 89.93794563700067
+    },
+    "7": {
+      "recovery_seconds": null,
+      "result": "experiments/beam_discriminator_loop_20260915/round07/result.json",
+      "seconds": 0.9648485240031732
+    },
+    "8": {
+      "recovery_seconds": null,
+      "result": "experiments/beam_discriminator_loop_20260915/round08/result.json",
+      "seconds": 179.06933158799802
+    },
+    "9": {
+      "recovery_seconds": null,
+      "result": "experiments/beam_discriminator_loop_20260915/round09/result.json",
+      "seconds": 4.2501226999957
+    }
+  },
+  "schema_version": 1,
+  "scope": "Eleven adaptive rounds; finite ECA prediction, ancestral support invariants and wider-radius mechanism tests; no universal Class IV theorem.",
+  "source_hashes": {
+    "experiments/beam_discriminator_loop_20260915/BRIEF.md": "26bff260a70a03ea0956ebc8ad335082365e03ab4d611dfc58982bab64b3fa5c",
+    "experiments/beam_discriminator_loop_20260915/INDEX.md": "d2b0ed11dddcf48293aaad79b7765efe95baac7fffa2c469ae7b11fa036a5075",
+    "experiments/beam_discriminator_loop_20260915/environment.json": "ca5048beb505676d66558a75ca795d45438886482f5338316995fb3637b9d23e",
+    "experiments/beam_discriminator_loop_20260915/raw-archive.json": "dd54b58de295397588b061e19b53eac3a67264ab1e2559fecf4caf2a7fa20679",
+    "experiments/beam_discriminator_loop_20260915/round01-protocol.md": "af4f8a7239ce8fcfaf7c3f9c359a0605aad13aba109963dcd210b80648da6425",
+    "experiments/beam_discriminator_loop_20260915/round01-summary.md": "b4609fde21802222cca10d29e228c287bd6e46123137add1902bebd2cc5c369f",
+    "experiments/beam_discriminator_loop_20260915/round01/freeze.json": "b03d22f29b0ffb6d762c483997caea5c93fece54fd6f624505ad7842a8bf5bc0",
+    "experiments/beam_discriminator_loop_20260915/round01/result.json": "14c2c2a721b4894dfaee062b3c8aa04781b83003fe3992c10eb2bebe621d3bfd",
+    "experiments/beam_discriminator_loop_20260915/round02-protocol.md": "98cdacc7a1790212664a70b887421b75639a3f9dd923fbc2f6b29765871a9f6f",
+    "experiments/beam_discriminator_loop_20260915/round02-summary.md": "bdd091053441323e43158dca0d85bfd8522809ab75165b6bd34908597cc1720d",
+    "experiments/beam_discriminator_loop_20260915/round02/freeze.json": "db276dc54fa4a828e1baf2b1143b8a55bf07ec53f9c4a88baf4c161d80ef8754",
+    "experiments/beam_discriminator_loop_20260915/round02/result.json": "88fa3078eb1fe136caa799dc1233900ff6027a1c85871388a775dab32f9b7690",
+    "experiments/beam_discriminator_loop_20260915/round03-protocol.md": "a6e1d72f0cf800099e1e8f2cba284c13d17343e8c34081d8188e4dae0fb84ce2",
+    "experiments/beam_discriminator_loop_20260915/round03-summary.md": "df81db770c21dd0defb9458cebb29e26d315bf4fd3ac8d349ef5824480e9e018",
+    "experiments/beam_discriminator_loop_20260915/round03/freeze.json": "6a6f5e5f6dfa529b5caf51ea7ce275bf7b3adc16d1e4146675ded53ffd29b4f0",
+    "experiments/beam_discriminator_loop_20260915/round03/recovery-freeze.json": "7ab94864344559154244135f0c19ae7415307671017f5ba2104fcfb98257c313",
+    "experiments/beam_discriminator_loop_20260915/round03/result.json": "8a42609c588c5b406cf30e63e5e917e483dc8a7ac1e1abe4463575c6c65fb695",
+    "experiments/beam_discriminator_loop_20260915/round04-protocol.md": "24fa0c46d129275dafa2132e4c36adeebafe15f4f8e1e1e208c72e94a482e04d",
+    "experiments/beam_discriminator_loop_20260915/round04-summary.md": "e0aca958f7150ffb71c7c2805e68c72fdf6fb6ca6354a1de817317ebf04e3946",
+    "experiments/beam_discriminator_loop_20260915/round04/freeze.json": "c5ca413bc52b071aca746e14c2ce09ace3d159d051f500a966d14fa67ae3b4a9",
+    "experiments/beam_discriminator_loop_20260915/round04/result.json": "fd11ed1074482715bbfff5d007f624b89a2adb70c2ccb1bd46fb69d6177752d7",
+    "experiments/beam_discriminator_loop_20260915/round05-protocol.md": "e3e1aa47953b87f3ca7c66221ff7bf5bb1c683bbab18cc6c601382157e0b7534",
+    "experiments/beam_discriminator_loop_20260915/round05-summary.md": "4c9aee91046e112e18a21da540d3b24f256ba17163e502a4954789d16f860a87",
+    "experiments/beam_discriminator_loop_20260915/round05/freeze.json": "209cff0fd9ab1b93e6da3a531ec4e8e43be17eb9fee4a91f40fd3b56fd1b4300",
+    "experiments/beam_discriminator_loop_20260915/round05/result.json": "e6872446da18a46ac3e1f9595c662d838635c2010f23681288ef46ee046ba6c3",
+    "experiments/beam_discriminator_loop_20260915/round06-protocol.md": "6e935f091e64ae4695422a48dc0efd66ce051d25bfec2108de9ba50d6276376f",
+    "experiments/beam_discriminator_loop_20260915/round06-summary.md": "af1b1e8a7ae726c5e02ec71077d6db2e0e41688cdd7e3a91038516a5c395a05b",
+    "experiments/beam_discriminator_loop_20260915/round06/freeze.json": "a2e2f8dd47056d9ac641537be8deaac1f224ba48266d47304030ff260c163a06",
+    "experiments/beam_discriminator_loop_20260915/round06/result.json": "1e6340352b8a16c99c98d1be0039643970a40a3c8afec9871e83b441b5eda5d6",
+    "experiments/beam_discriminator_loop_20260915/round07-protocol.md": "364b9a0f4e3459776a49a182106a3a3d5090f8a312f62c981bc6317cb11f7335",
+    "experiments/beam_discriminator_loop_20260915/round07-summary.md": "40ec5e864c7aad4f737e9797a47a15f455235ae6536d34f790c3aea03f8034f3",
+    "experiments/beam_discriminator_loop_20260915/round07/freeze.json": "88dc1898211f6d91ca5b785d1bc89810cb53b3bd65981d735efc383cd92685af",
+    "experiments/beam_discriminator_loop_20260915/round07/result.json": "801830ca281775463d3e37168be04f29b26cd1fad0b0a7d2919b4bc9dfaeb70c",
+    "experiments/beam_discriminator_loop_20260915/round08-protocol.md": "cffec768f04eada5acbd075d30946fc9390a1aaca24931b7f2b5863cfcad35c4",
+    "experiments/beam_discriminator_loop_20260915/round08-summary.md": "bbcae377826efbb0acb2e737c14107509e015aabb157ab28ff9eec51390e3d0a",
+    "experiments/beam_discriminator_loop_20260915/round08/freeze.json": "da31a45eef07ec47cfa056bbd5939c2dff78179acc4c458bdd1c44b5f329a536",
+    "experiments/beam_discriminator_loop_20260915/round08/result.json": "cded9b88e1f00fc462c42751c10c0fcdb2be5b5ace969704b7ae64c66f910e10",
+    "experiments/beam_discriminator_loop_20260915/round09-inspection.json": "1f37d4477d238775c8eef11a0a805b252f23d8f139633b8168700da838d50441",
+    "experiments/beam_discriminator_loop_20260915/round09-protocol.md": "f6f73b0b5404965c4b98eb07a4fcaa4a362f3375453e48f5d50b033dcc49b75e",
+    "experiments/beam_discriminator_loop_20260915/round09-summary.md": "0d85a9e87faff7fde5d1025ceb2455693edb52e22ff98e4f92f9ac03e5d0f17a",
+    "experiments/beam_discriminator_loop_20260915/round09/freeze.json": "6f9d2e26a3f55868fd756b517496fc7267bcda3c7aff8efe968025676b5ac223",
+    "experiments/beam_discriminator_loop_20260915/round09/result.json": "927dff05d4226e52ac6dedc0a1e42da9fec15906bc244b0ad1f2640221d65ec8",
+    "experiments/beam_discriminator_loop_20260915/round10-protocol.md": "72220017b0bf0f28598b939807a38cd33115e02d45cebf99c67c9901db28f833",
+    "experiments/beam_discriminator_loop_20260915/round10-summary.md": "eaff52534c1f48931336cbae2c9e1e3715f98cea9fbd2995e6d695d6879d3ea2",
+    "experiments/beam_discriminator_loop_20260915/round10/freeze.json": "32d9f42a56d5c17494327cbff648eb4dbc7caffc9a0d913b2821449fb0d2e73f",
+    "experiments/beam_discriminator_loop_20260915/round10/result.json": "ae55152db188acbe92e32fad130102f93677eca11b25cb1c49ff32e70fd8b147",
+    "experiments/beam_discriminator_loop_20260915/round11-protocol.md": "ac11cd847eb0f6d7edf56fdc4b6936108113d6f945016c1d59bc474668ff3752",
+    "experiments/beam_discriminator_loop_20260915/round11-summary.md": "d3617bf08208db76c784f4462b451011ada0f868ace19bb39a9208657992318f",
+    "experiments/beam_discriminator_loop_20260915/round11/freeze.json": "12adaa6f8b1f5c43edf4053b9e840904de19e9f3f287f21c6f21942512616e59",
+    "experiments/beam_discriminator_loop_20260915/round11/result.json": "aad41b0b82a582c3224cba0ad87939451442580167f9ff2a4450626e1f9f48f5",
+    "experiments/on_beam_256_4d_20260914/labels.json": "65e811a6ef5575bb697da4fc9e8dfe3c0de131b8c27702aa7990ad4b2d754250",
+    "review/beam_loop_independent.json": "e5dfe8edfb8158645dde6ebc12c7f2d4cb0de127856d631a6d22c8e47c7faebc",
+    "review/beam_loop_independent.py": "70facbb5d89d0525e460bf011ea42eaf2b4b4ea1fc3f278154b47cb56de23fc1",
+    "scripts/beam_loop_round01.py": "2d82f2c866fe2129ed555bd412494a1888636bacb14dcd5d0449cebd6b20c287",
+    "scripts/beam_loop_round02.py": "50a312a24441b4e3110b9c9019724ed536ddee410c180c54d25671e1494a6c0b",
+    "scripts/beam_loop_round03.py": "1c701c38e6893b53afe9e933a0f949a932534ba05e648128c4bbea50e6ffce41",
+    "scripts/beam_loop_round03_recover.py": "60a736f9ce99788ebbbcd8da4cb10c6cb9d095e0eab96d405bc2f16e6f5460e6",
+    "scripts/beam_loop_round04.py": "d7ce2ffd90fd102f847c61a487f4713043fd0333a7ac3a506f84f38c7e3c44d1",
+    "scripts/beam_loop_round05.py": "b7bf85d77547994dc0b3b24d22a08b197f3ef834d1859a6cd5530ca48ae8f0e9",
+    "scripts/beam_loop_round06.py": "6cbce87f4e11011e4b926404286f6ce667fe2add9bcdcd8f5ab00dd49eccf2af",
+    "scripts/beam_loop_round07.py": "e5b6e5e9ca7d994634f8ac4cc9c408fdc79d236d45af369c4d7eb25841868d76",
+    "scripts/beam_loop_round08.py": "526551c02357b9fa06090d3879f1ddacc231364d67a8760cd2f8e690e02224e6",
+    "scripts/beam_loop_round09.py": "c0b1f48d5f80c7afa0d8d1d85e2b7a1fa30585e59ac18b700ef977e34139c76d",
+    "scripts/beam_loop_round10.py": "edaf15a497f9fb3a255afc48dc492425e25b85f308087ce2b4da641deefc6456",
+    "scripts/beam_loop_round11.py": "d1daa99c5e0ba80940e91fb6507b263eb751a3331a901e8d5b87dad2763de57f",
+    "scripts/package_beam_loop_raw.py": "aa707803e994fec12b93f610e79a02b4c7fd0496c0940c3e5ba6b524d67ea501",
+    "scripts/plot_beam_discriminator_loop.py": "b1dacf1d86c088bd616e4564f9479ac018d6f47426018b3805deb0b06d3ac782",
+    "scripts/summarize_beam_discriminator_loop.py": "15ced8dd4337d99d08bf267c890d6dace0e6cdd879ae6fb22f3a83aa2365079e",
+    "src/groovy/ca.py": "6969d6f0699b48602c8a2f55aecd61d58862e6472fea56f6d1ed9ebb2656d77e"
+  },
+  "support_transport_checks": 504,
+  "wider_radius_extended": [
+    {
+      "checkpoints": {
+        "1024": {
+          "alpha": 1.0097452329403342,
+          "diameter": 891.25,
+          "hamming": 443.28125,
+          "selected": false,
+          "survival": 1.0
+        },
+        "2048": {
+          "alpha": 0.9837979178993264,
+          "diameter": 1762.59375,
+          "hamming": 886.5,
+          "selected": false,
+          "survival": 1.0
+        },
+        "4096": {
+          "alpha": 1.0119339565524412,
+          "diameter": 3554.46875,
+          "hamming": 1779.375,
+          "selected": false,
+          "survival": 1.0
+        },
+        "512": {
+          "alpha": 0.9868190554555106,
+          "diameter": 442.625,
+          "hamming": 224.9375,
+          "selected": false,
+          "survival": 1.0
+        }
+      },
+      "prefix_exact": true,
+      "q": 0.5003302611454147,
+      "radius": 1,
+      "seed": 6041541
+    },
+    {
+      "checkpoints": {
+        "1024": {
+          "alpha": 0.9749461034533062,
+          "diameter": 922.28125,
+          "hamming": 464.09375,
+          "selected": false,
+          "survival": 1.0
+        },
+        "2048": {
+          "alpha": 0.9538067676858587,
+          "diameter": 1786.4375,
+          "hamming": 895.59375,
+          "selected": false,
+          "survival": 1.0
+        },
+        "4096": {
+          "alpha": 0.9916857529355874,
+          "diameter": 3552.34375,
+          "hamming": 1781.9375,
+          "selected": false,
+          "survival": 1.0
+        },
+        "512": {
+          "alpha": 0.9888017933951361,
+          "diameter": 469.21875,
+          "hamming": 237.40625,
+          "selected": false,
+          "survival": 1.0
+        }
+      },
+      "prefix_exact": true,
+      "q": 0.5019494942651402,
+      "radius": 1,
+      "seed": 6041542
+    },
+    {
+      "checkpoints": {
+        "1024": {
+          "alpha": 0.8795791270674639,
+          "diameter": 42.71875,
+          "hamming": 19.75,
+          "selected": true,
+          "survival": 1.0
+        },
+        "2048": {
+          "alpha": 0.5511491782066478,
+          "diameter": 62.59375,
+          "hamming": 29.375,
+          "selected": true,
+          "survival": 1.0
+        },
+        "4096": {
+          "alpha": 0.9200354272457463,
+          "diameter": 118.4375,
+          "hamming": 58.03125,
+          "selected": true,
+          "survival": 1.0
+        },
+        "512": {
+          "alpha": 0.5148505875101418,
+          "diameter": 23.21875,
+          "hamming": 9.3125,
+          "selected": true,
+          "survival": 1.0
+        }
+      },
+      "prefix_exact": true,
+      "q": 0.11805542971202701,
+      "radius": 2,
+      "seed": 6041541
+    },
+    {
+      "checkpoints": {
+        "1024": {
+          "alpha": 0.9272667316403029,
+          "diameter": 32.03125,
+          "hamming": 14.125,
+          "selected": true,
+          "survival": 1.0
+        },
+        "2048": {
+          "alpha": 0.8612291631659854,
+          "diameter": 58.1875,
+          "hamming": 25.625,
+          "selected": true,
+          "survival": 1.0
+        },
+        "4096": {
+          "alpha": 1.0513739709824608,
+          "diameter": 120.59375,
+          "hamming": 59.5625,
+          "selected": true,
+          "survival": 1.0
+        },
+        "512": {
+          "alpha": 0.5349826516444741,
+          "diameter": 16.84375,
+          "hamming": 7.21875,
+          "selected": true,
+          "survival": 1.0
+        }
+      },
+      "prefix_exact": true,
+      "q": 0.1138569005386732,
+      "radius": 2,
+      "seed": 6041542
+    },
+    {
+      "checkpoints": {
+        "1024": {
+          "alpha": 0.19680070743370698,
+          "diameter": 4.65625,
+          "hamming": 2.25,
+          "selected": false,
+          "survival": 1.0
+        },
+        "2048": {
+          "alpha": 0.028758992981424036,
+          "diameter": 4.75,
+          "hamming": 2.21875,
+          "selected": false,
+          "survival": 1.0
+        },
+        "4096": {
+          "alpha": 0.27563444261342734,
+          "diameter": 5.75,
+          "hamming": 2.46875,
+          "selected": false,
+          "survival": 1.0
+        },
+        "512": {
+          "alpha": 0.13972476366661318,
+          "diameter": 4.0625,
+          "hamming": 1.96875,
+          "selected": false,
+          "survival": 1.0
+        }
+      },
+      "prefix_exact": true,
+      "q": 0.03234081636840557,
+      "radius": 3,
+      "seed": 6041541
+    },
+    {
+      "checkpoints": {
+        "1024": {
+          "alpha": 0.29956028185890793,
+          "diameter": 3.5,
+          "hamming": 1.84375,
+          "selected": false,
+          "survival": 1.0
+        },
+        "2048": {
+          "alpha": 0.5849625007211562,
+          "diameter": 5.25,
+          "hamming": 2.59375,
+          "selected": true,
+          "survival": 1.0
+        },
+        "4096": {
+          "alpha": 0.14684138832927118,
+          "diameter": 5.8125,
+          "hamming": 2.84375,
+          "selected": false,
+          "survival": 1.0
+        },
+        "512": {
+          "alpha": 0.24100809950379498,
+          "diameter": 2.84375,
+          "hamming": 1.625,
+          "selected": false,
+          "survival": 1.0
+        }
+      },
+      "prefix_exact": true,
+      "q": 0.0312309474267415,
+      "radius": 3,
+      "seed": 6041542
+    }
+  ],
+  "wider_radius_scope": "No Wolfram labels assigned. Right-permutive iid spatial slices challenge the ordered-background interpretation; q is held fixed for R11."
+}
