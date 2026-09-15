@@ -2441,6 +2441,24 @@
       "research": [
         "commutator-relations-20260915"
       ]
+    },
+    {
+      "source": "observation-catalog-ensemble",
+      "type": "tests",
+      "target": "dimensional-beam",
+      "reason": "The common catalog compares root signatures and bounded native views without presuming a class discriminator.",
+      "research": [
+        "observation-catalog-20260915"
+      ]
+    },
+    {
+      "source": "observation-catalog-ensemble",
+      "type": "depends_on",
+      "target": "commutator-relation-transport",
+      "reason": "The completion-provenance branch reuses the exact symbolic partitions and spatial quotient, then inspects their source populations.",
+      "research": [
+        "observation-catalog-20260915"
+      ]
     }
   ],
   "nodes": [
@@ -3513,7 +3531,8 @@
         "beam-discriminator-loop-20260915",
         "commutator-history-20260915",
         "commutator-completion-20260915",
-        "commutator-relations-20260915"
+        "commutator-relations-20260915",
+        "observation-catalog-20260915"
       ],
       "source": "docs/knowledge/dimensional-beam.md",
       "status": "open",
@@ -4678,7 +4697,20 @@
       "updated": "2026-09-15",
       "source": "docs/knowledge/commutator-relation-transport.md",
       "research": [
-        "commutator-relations-20260915"
+        "commutator-relations-20260915",
+        "observation-catalog-20260915"
+      ]
+    },
+    {
+      "id": "observation-catalog-ensemble",
+      "title": "Observation signatures need an explicit source ensemble",
+      "kind": "finding",
+      "status": "exploratory",
+      "summary": "Seven frozen catalog signatures survive an exhaustive width change but do not retain both core rules across developed trajectories. Full partitions remain available; width, ensemble and sampling effects are not yet isolated.",
+      "updated": "2026-09-15",
+      "source": "docs/knowledge/observation-catalog-ensemble.md",
+      "research": [
+        "observation-catalog-20260915"
       ]
     }
   ],

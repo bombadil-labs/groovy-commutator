@@ -6,6 +6,24 @@ This page is the **working synthesis** of the dimensional-lift research program.
 
 The program is parallel to [Dynamics of Erased Distinctions](2026-09-08-dynamics-of-erased-distinctions.md). That program asks when information can be forgotten safely and how a lossy representation repairs itself. This one asks what additional structure must be represented when evolution and transformation refuse to agree.
 
+## 2026-09-15: an observation catalog separates representation and ensemble questions
+
+The [first observation catalog](2026-09-15-observation-catalog.md) enumerates
+24 primitives and all 276 joint observations, retaining event partitions and
+source transition maps. Seven mechanically selected scalar intervals preserve
+the core 54/110 symmetry families at exhaustive width nine, but none retains
+both canonical roots across both developed-trajectory seeds. This narrows those
+frozen signatures without rejecting the full retained structures. Width,
+ensemble and finite sampling change together in the latter comparison; a future
+factorial comparison must separate their contributions.
+
+The exact native-view and completion-provenance branches remain separate.
+Post hoc endpoint inspection finds that every width-eight D3/D4 shared-free-key
+pair for 54/110 connects period-four source states. This identifies the finite-ring
+population behind the previous promising relations, not an intrinsic Class-IV
+property or an obstruction to other observations. All science was run locally;
+independent verification and final integration are tracked in gathering PR260.
+
 ## 2026-09-15: relational commutator signatures remain width-dependent
 
 The [completion-independent relation audit](2026-09-15-commutator-relations.md)

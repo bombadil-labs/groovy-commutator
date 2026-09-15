@@ -1,0 +1,42 @@
+name: Observation catalog provenance
+on:
+  pull_request:
+    paths:
+      - 'scripts/observation_catalog.py'
+      - 'scripts/summarize_observation_catalog.py'
+      - 'scripts/check_result_integrity.py'
+      - 'docs/research/protocols/observation-catalog-20260915.md'
+      - 'experiments/observation_catalog_20260915/**'
+      - 'experiments/on_beam_256_4d_20260914/labels.json'
+      - 'review/catalog*'
+      - 'review/catalog-replay/**'
+      - 'results/observation_catalog_20260915.json'
+      - '.github/workflows/research-observation-catalog.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/observation_catalog.py'
+      - 'scripts/summarize_observation_catalog.py'
+      - 'scripts/check_result_integrity.py'
+      - 'docs/research/protocols/observation-catalog-20260915.md'
+      - 'experiments/observation_catalog_20260915/**'
+      - 'experiments/on_beam_256_4d_20260914/labels.json'
+      - 'review/catalog*'
+      - 'review/catalog-replay/**'
+      - 'results/observation_catalog_20260915.json'
+      - '.github/workflows/research-observation-catalog.yml'
+permissions:
+  contents: read
+jobs:
+  observation-catalog-integrity:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Compile sources and verify pinned bytes
+        run: |
+          python -m py_compile scripts/observation_catalog.py scripts/summarize_observation_catalog.py review/catalog_oracle.py review/catalog_compare.py review/catalog_period_witnesses.py review/catalog_author_crossreview.py
+          python scripts/check_result_integrity.py results/observation_catalog_20260915.json

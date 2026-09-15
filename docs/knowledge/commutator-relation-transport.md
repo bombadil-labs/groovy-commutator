@@ -33,3 +33,5 @@ is scheduled by this knowledge entry.
 
 Source: [relation-transport audit](../research/2026-09-15-commutator-relations.md).
 Status: exact at the specified finite contracts; no intrinsic Class-IV claim.
+
+Revision 2026-09-15: the [observation catalog](../research/2026-09-15-observation-catalog.md) independently checks the source provenance. A post hoc endpoint inspection finds that every width-eight D3/D4 shared-free pair for 54/110 has source periods (4,4). This identifies the finite-ring population behind those relations without establishing an intrinsic dynamical-class mechanism.
