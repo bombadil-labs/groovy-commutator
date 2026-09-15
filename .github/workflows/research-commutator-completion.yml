@@ -1,0 +1,34 @@
+name: Research commutator completion
+on:
+  pull_request:
+    paths:
+      - 'scripts/*commutator_completion.py'
+      - 'scripts/check_result_integrity.py'
+      - 'experiments/commutator_completion_20260915/**'
+      - 'experiments/beam_discriminator_loop_20260915/round01/result.json'
+      - 'review/commutator_completion_independent.*'
+      - 'results/commutator_completion_20260915.json'
+      - '.github/workflows/research-commutator-completion.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/*commutator_completion.py'
+      - 'scripts/check_result_integrity.py'
+      - 'experiments/commutator_completion_20260915/**'
+      - 'experiments/beam_discriminator_loop_20260915/round01/result.json'
+      - 'review/commutator_completion_independent.*'
+      - 'results/commutator_completion_20260915.json'
+      - '.github/workflows/research-commutator-completion.yml'
+permissions:
+  contents: read
+jobs:
+  commutator-completion-provenance:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m py_compile scripts/commutator_completion.py scripts/summarize_commutator_completion.py scripts/package_commutator_completion.py review/commutator_completion_independent.py
+      - run: python scripts/check_result_integrity.py results/commutator_completion_20260915.json

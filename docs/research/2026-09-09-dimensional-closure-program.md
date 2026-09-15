@@ -767,3 +767,10 @@ This is a bounded factor obstruction for one representation family, not a fixed-
 ## 2026-09-15: commutator history and repeated perturbation
 
 The [direct commutator-history test](2026-09-15-commutator-history.md) finds finite predictive gain but does not sharpen the frozen recurrence/spreading baseline. A four-arm follow-up finds that earlier pulses can modify later responses in 224 of 256 ECAs in the exact short-delay census; delayed chaotic controls also show the effect. These results preserve useful memory measurements while ruling out the specificity of the tested weak criteria. Raw G-history gains change under complement conjugation. No Class IV label, adaptation theorem or G-driven causal feedback claim is promoted.
+
+
+## Completion boundary, 2026-09-15
+
+The completion audit proves G_H(Y)=T(Y) XOR delta_H(D(Y)). Different off-beam assignments change G while leaving native beam evolution and the six lift fields fixed. The D2 counterexample survives the complete arbitrary-input first-lift table; D3/D4 freedom is scoped to finite source families. Completion-independent parity relations remain, but their amount and raw ambiguity counts do not establish class specificity. Ambient XOR and the XOR operation transported through an injective encoding must be distinguished before a new beam-level discriminator is tested.
+
+Source: [completion-independence audit](2026-09-15-commutator-completion.md).

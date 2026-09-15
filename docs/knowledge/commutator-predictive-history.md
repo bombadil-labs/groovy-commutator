@@ -9,3 +9,10 @@ Raw gains change under complement conjugation even though all tested core varian
 Source: [direct commutator-history experiment](../research/2026-09-15-commutator-history.md). Status: exploratory; no universal classification or causal-memory claim.
 
 A separately frozen four-arm follow-up finds that 224 of 256 ECAs admit response modification by an earlier pulse in the tested exact short-delay geometry. Delayed chaotic controls also show it frequently. Rule 4 can show response modulation with identically zero G. Thus the bare modulation criterion and the presence of commutator history cannot be identified with adaptation or Class IV specificity.
+
+
+## Completion boundary, 2026-09-15
+
+The earlier history measurements use total 1D ECA rules and remain valid. Extending the same ambient-XOR G upstairs requires care: the lifted partial rule generally does not assign every difference-field query. The completion audit preserves the resulting affine G family rather than selecting a default.
+
+Source: [completion-independence audit](../research/2026-09-15-commutator-completion.md).
