@@ -1,0 +1,8 @@
+{
+  "protocol_sha256": "ec9c742858fdef3db07879a84f16bcfacb9821e84a2655f3729f2d00fb8b0755",
+  "main_sha": "5b85d812ea9d30ddfec58f1c702c63e1a6c368ca",
+  "pre_implementation_correction": {
+    "old_sha256": "8c69cc84df4e0690e592d125c95fab3d5a6ac5e47d236e9525bceb6368169283",
+    "reason": "Orbit enumeration confirms four additional variants, six labeled rules total; fix a count typo before implementation or evaluation."
+  }
+}

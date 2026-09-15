@@ -1,0 +1,31 @@
+{
+  "archive": "commutator-history-raw-20260915.zip",
+  "bytes": 26468857,
+  "sha256": "07d2691e700d5c0e36496a26cf0c571f88bcbb65b2f91811e115ad3932ad8d76",
+  "members": [
+    {
+      "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round06/trajectories.npz",
+      "bytes": 13175665,
+      "sha256": "e84b2f23ca8aa12b99f551dfcb5b6971034718db2554034b9cd0f876cb4d9372"
+    },
+    {
+      "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round10/trajectories.npz",
+      "bytes": 1983266,
+      "sha256": "b54759344c81a160d6651de22edf66063b2c8cef41f8c8f3f4603a3c8ec1c143"
+    },
+    {
+      "path": "gc-discriminator/experiments/commutator_history_20260915/histories-and-counts.npz",
+      "bytes": 11059653,
+      "sha256": "ba7c10372ac77d5555315cbf095c47db753bd10f370c8967daae2148462032ad"
+    },
+    {
+      "path": "gc-discriminator/experiments/commutator_history_20260915/response-arrays.npz",
+      "bytes": 249289,
+      "sha256": "de10697b7b810db966d885d86faeec1b40bbc8e32a8773f028994646b1d95c28"
+    }
+  ],
+  "reproduction": "Extract beside a gc-discriminator directory containing the repository sources. For a fresh run, move completed generated outputs out of experiments/commutator_history_20260915, preserving protocol.md, protocol-freeze.json, response-protocol.md and response-protocol-freeze.json. Run scripts/commutator_history.py first, then scripts/commutator_response.py after result.json exists. Keep the archived original input arrays in their recorded paths.",
+  "library_file_id": "libfile_80811f0db3dc8191b2b9079264d6320f",
+  "file_id": "file_000000009de081f6bccb5af5f972c0aa",
+  "version": 1
+}

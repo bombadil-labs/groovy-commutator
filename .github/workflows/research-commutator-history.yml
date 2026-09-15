@@ -1,0 +1,42 @@
+name: Research commutator history
+on:
+  pull_request:
+    paths:
+      - 'scripts/commutator_history.py'
+      - 'scripts/commutator_response.py'
+      - 'scripts/*commutator_history.py'
+      - 'scripts/check_result_integrity.py'
+      - 'experiments/commutator_history_20260915/**'
+      - 'experiments/beam_discriminator_loop_20260915/round06/result.json'
+      - 'experiments/beam_discriminator_loop_20260915/round10/result.json'
+      - 'experiments/on_beam_256_4d_20260914/labels.json'
+      - 'review/commutator_*_independent.*'
+      - 'results/commutator_history_20260915.*'
+      - '.github/workflows/research-commutator-history.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/commutator_history.py'
+      - 'scripts/commutator_response.py'
+      - 'scripts/*commutator_history.py'
+      - 'scripts/check_result_integrity.py'
+      - 'experiments/commutator_history_20260915/**'
+      - 'experiments/beam_discriminator_loop_20260915/round06/result.json'
+      - 'experiments/beam_discriminator_loop_20260915/round10/result.json'
+      - 'experiments/on_beam_256_4d_20260914/labels.json'
+      - 'review/commutator_*_independent.*'
+      - 'results/commutator_history_20260915.*'
+      - '.github/workflows/research-commutator-history.yml'
+permissions:
+  contents: read
+jobs:
+  commutator-history-provenance:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m py_compile scripts/commutator_history.py scripts/commutator_response.py scripts/summarize_commutator_history.py scripts/plot_commutator_history.py scripts/package_commutator_history.py review/commutator_history_independent.py review/commutator_response_independent.py
+      - run: python scripts/check_result_integrity.py results/commutator_history_20260915.json

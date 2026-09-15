@@ -2405,6 +2405,24 @@
       "research": [
         "beam-discriminator-loop-20260915"
       ]
+    },
+    {
+      "source": "commutator-predictive-history",
+      "type": "depends_on",
+      "target": "beam-recurrence-spread-candidate",
+      "reason": "The augmentation keeps the earlier q/alpha decision fixed and tests whether explicit commutator history adds useful specificity.",
+      "research": [
+        "commutator-history-20260915"
+      ]
+    },
+    {
+      "source": "dimensional-beam",
+      "type": "depends_on",
+      "target": "commutator-predictive-history",
+      "reason": "Further beam-level class claims must account for the measured response-memory boundary and complement dependence of raw G-history scores.",
+      "research": [
+        "commutator-history-20260915"
+      ]
     }
   ],
   "nodes": [
@@ -3474,7 +3492,8 @@
         "binary-lift-family-20260914",
         "binary-lift-recursion-20260914",
         "binary-lift-g-obstructions-20260914",
-        "beam-discriminator-loop-20260915"
+        "beam-discriminator-loop-20260915",
+        "commutator-history-20260915"
       ],
       "source": "docs/knowledge/dimensional-beam.md",
       "status": "open",
@@ -4598,7 +4617,20 @@
       "updated": "2026-09-15",
       "source": "docs/knowledge/beam-recurrence-spread-candidate.md",
       "research": [
-        "beam-discriminator-loop-20260915"
+        "beam-discriminator-loop-20260915",
+        "commutator-history-20260915"
+      ]
+    },
+    {
+      "id": "commutator-predictive-history",
+      "title": "Commutator history is predictive but does not sharpen the frozen class test",
+      "kind": "finding",
+      "status": "exploratory",
+      "summary": "Older G values improve held-out prediction but retain the radius-two challenge. A separate four-arm test finds changed responsiveness in 224 ECA rules, so response modulation alone is not Class IV specific.",
+      "updated": "2026-09-15",
+      "source": "docs/knowledge/commutator-predictive-history.md",
+      "research": [
+        "commutator-history-20260915"
       ]
     }
   ],

@@ -1,0 +1,389 @@
+{
+  "all_G_histories_local_match_erasure_affine_remote_checks_pass": true,
+  "all_cases_replayed": true,
+  "arrays_exactly_reproduced": 756,
+  "audit_helper_sha256": "2d7cc529b57fe12611cd357ce5529d5c2d952b3b98769d2c53dc2674317b04f4",
+  "auditor_sha256": "3c1ed3ebe30d0a288ba04073d0cf4c9098b477a32f5b1834d1d94aa2c50f1556",
+  "cases": [
+    {
+      "h32_changed_local": 0,
+      "id": "eca0_s6041512_d16"
+    },
+    {
+      "h32_changed_local": 0,
+      "id": "eca0_s6041512_d64"
+    },
+    {
+      "h32_changed_local": 0,
+      "id": "eca0_s6041513_d16"
+    },
+    {
+      "h32_changed_local": 0,
+      "id": "eca0_s6041513_d64"
+    },
+    {
+      "h32_changed_local": 0,
+      "id": "eca0_s6041514_d16"
+    },
+    {
+      "h32_changed_local": 0,
+      "id": "eca0_s6041514_d64"
+    },
+    {
+      "h32_changed_local": 4,
+      "id": "eca1_s6041512_d16"
+    },
+    {
+      "h32_changed_local": 4,
+      "id": "eca1_s6041512_d64"
+    },
+    {
+      "h32_changed_local": 3,
+      "id": "eca1_s6041513_d16"
+    },
+    {
+      "h32_changed_local": 3,
+      "id": "eca1_s6041513_d64"
+    },
+    {
+      "h32_changed_local": 4,
+      "id": "eca1_s6041514_d16"
+    },
+    {
+      "h32_changed_local": 4,
+      "id": "eca1_s6041514_d64"
+    },
+    {
+      "h32_changed_local": 48,
+      "id": "eca30_s6041512_d16"
+    },
+    {
+      "h32_changed_local": 32,
+      "id": "eca30_s6041512_d64"
+    },
+    {
+      "h32_changed_local": 48,
+      "id": "eca30_s6041513_d16"
+    },
+    {
+      "h32_changed_local": 32,
+      "id": "eca30_s6041513_d64"
+    },
+    {
+      "h32_changed_local": 48,
+      "id": "eca30_s6041514_d16"
+    },
+    {
+      "h32_changed_local": 36,
+      "id": "eca30_s6041514_d64"
+    },
+    {
+      "h32_changed_local": 36,
+      "id": "eca54_s6041512_d16"
+    },
+    {
+      "h32_changed_local": 28,
+      "id": "eca54_s6041512_d64"
+    },
+    {
+      "h32_changed_local": 32,
+      "id": "eca54_s6041513_d16"
+    },
+    {
+      "h32_changed_local": 26,
+      "id": "eca54_s6041513_d64"
+    },
+    {
+      "h32_changed_local": 32,
+      "id": "eca54_s6041514_d16"
+    },
+    {
+      "h32_changed_local": 26,
+      "id": "eca54_s6041514_d64"
+    },
+    {
+      "h32_changed_local": 18,
+      "id": "eca73_s6041512_d16"
+    },
+    {
+      "h32_changed_local": 15,
+      "id": "eca73_s6041512_d64"
+    },
+    {
+      "h32_changed_local": 15,
+      "id": "eca73_s6041513_d16"
+    },
+    {
+      "h32_changed_local": 12,
+      "id": "eca73_s6041513_d64"
+    },
+    {
+      "h32_changed_local": 15,
+      "id": "eca73_s6041514_d16"
+    },
+    {
+      "h32_changed_local": 12,
+      "id": "eca73_s6041514_d64"
+    },
+    {
+      "h32_changed_local": 0,
+      "id": "eca90_s6041512_d16"
+    },
+    {
+      "h32_changed_local": 0,
+      "id": "eca90_s6041512_d64"
+    },
+    {
+      "h32_changed_local": 0,
+      "id": "eca90_s6041513_d16"
+    },
+    {
+      "h32_changed_local": 0,
+      "id": "eca90_s6041513_d64"
+    },
+    {
+      "h32_changed_local": 0,
+      "id": "eca90_s6041514_d16"
+    },
+    {
+      "h32_changed_local": 0,
+      "id": "eca90_s6041514_d64"
+    },
+    {
+      "h32_changed_local": 43,
+      "id": "eca106_s6041512_d16"
+    },
+    {
+      "h32_changed_local": 29,
+      "id": "eca106_s6041512_d64"
+    },
+    {
+      "h32_changed_local": 44,
+      "id": "eca106_s6041513_d16"
+    },
+    {
+      "h32_changed_local": 30,
+      "id": "eca106_s6041513_d64"
+    },
+    {
+      "h32_changed_local": 44,
+      "id": "eca106_s6041514_d16"
+    },
+    {
+      "h32_changed_local": 31,
+      "id": "eca106_s6041514_d64"
+    },
+    {
+      "h32_changed_local": 35,
+      "id": "eca110_s6041512_d16"
+    },
+    {
+      "h32_changed_local": 14,
+      "id": "eca110_s6041512_d64"
+    },
+    {
+      "h32_changed_local": 33,
+      "id": "eca110_s6041513_d16"
+    },
+    {
+      "h32_changed_local": 14,
+      "id": "eca110_s6041513_d64"
+    },
+    {
+      "h32_changed_local": 36,
+      "id": "eca110_s6041514_d16"
+    },
+    {
+      "h32_changed_local": 18,
+      "id": "eca110_s6041514_d64"
+    },
+    {
+      "h32_changed_local": 48,
+      "id": "eca122_s6041512_d16"
+    },
+    {
+      "h32_changed_local": 47,
+      "id": "eca122_s6041512_d64"
+    },
+    {
+      "h32_changed_local": 48,
+      "id": "eca122_s6041513_d16"
+    },
+    {
+      "h32_changed_local": 47,
+      "id": "eca122_s6041513_d64"
+    },
+    {
+      "h32_changed_local": 47,
+      "id": "eca122_s6041514_d16"
+    },
+    {
+      "h32_changed_local": 47,
+      "id": "eca122_s6041514_d64"
+    },
+    {
+      "h32_changed_local": 45,
+      "id": "eca126_s6041512_d16"
+    },
+    {
+      "h32_changed_local": 40,
+      "id": "eca126_s6041512_d64"
+    },
+    {
+      "h32_changed_local": 44,
+      "id": "eca126_s6041513_d16"
+    },
+    {
+      "h32_changed_local": 44,
+      "id": "eca126_s6041513_d64"
+    },
+    {
+      "h32_changed_local": 41,
+      "id": "eca126_s6041514_d16"
+    },
+    {
+      "h32_changed_local": 40,
+      "id": "eca126_s6041514_d64"
+    },
+    {
+      "h32_changed_local": 0,
+      "id": "eca150_s6041512_d16"
+    },
+    {
+      "h32_changed_local": 0,
+      "id": "eca150_s6041512_d64"
+    },
+    {
+      "h32_changed_local": 0,
+      "id": "eca150_s6041513_d16"
+    },
+    {
+      "h32_changed_local": 0,
+      "id": "eca150_s6041513_d64"
+    },
+    {
+      "h32_changed_local": 0,
+      "id": "eca150_s6041514_d16"
+    },
+    {
+      "h32_changed_local": 0,
+      "id": "eca150_s6041514_d64"
+    },
+    {
+      "h32_changed_local": 0,
+      "id": "eca204_s6041512_d16"
+    },
+    {
+      "h32_changed_local": 0,
+      "id": "eca204_s6041512_d64"
+    },
+    {
+      "h32_changed_local": 0,
+      "id": "eca204_s6041513_d16"
+    },
+    {
+      "h32_changed_local": 0,
+      "id": "eca204_s6041513_d64"
+    },
+    {
+      "h32_changed_local": 0,
+      "id": "eca204_s6041514_d16"
+    },
+    {
+      "h32_changed_local": 0,
+      "id": "eca204_s6041514_d64"
+    },
+    {
+      "h32_changed_local": 0,
+      "id": "wide1_g0_d16"
+    },
+    {
+      "h32_changed_local": 0,
+      "id": "wide1_g0_d64"
+    },
+    {
+      "h32_changed_local": 42,
+      "id": "wide1_g1_d16"
+    },
+    {
+      "h32_changed_local": 31,
+      "id": "wide1_g1_d64"
+    },
+    {
+      "h32_changed_local": 0,
+      "id": "wide2_g0_d16"
+    },
+    {
+      "h32_changed_local": 0,
+      "id": "wide2_g0_d64"
+    },
+    {
+      "h32_changed_local": 6,
+      "id": "wide2_g1_d16"
+    },
+    {
+      "h32_changed_local": 5,
+      "id": "wide2_g1_d64"
+    },
+    {
+      "h32_changed_local": 0,
+      "id": "wide3_g0_d16"
+    },
+    {
+      "h32_changed_local": 0,
+      "id": "wide3_g0_d64"
+    },
+    {
+      "h32_changed_local": 1,
+      "id": "wide3_g1_d16"
+    },
+    {
+      "h32_changed_local": 1,
+      "id": "wide3_g1_d64"
+    }
+  ],
+  "delayed_four_arm_trials": 5376,
+  "exact_census_contexts": 40960,
+  "horizon_measurements": 16128,
+  "raw_sha256": "de10697b7b810db966d885d86faeec1b40bbc8e32a8773f028994646b1d95c28",
+  "result_sha256": "a680bc5a225decb54f55e44b0c6f798f28610f9356a17011bdfeb8aa4b8dc5bc",
+  "reviewer": "OpenAI GPT-6 Astra, independent collaborating session /root/beam_loop_review, 2026-09-15",
+  "rule4_G_identically_zero_but_short_modulation_contexts": 56,
+  "scope": "Finite response modulation is generic nonlinear state dependence; no Class IV specificity, causal G feedback, learning or irreducible history outside the full state is established.",
+  "seconds": 8.639303985000879,
+  "short_zero_rules": [
+    0,
+    5,
+    10,
+    15,
+    51,
+    54,
+    57,
+    60,
+    80,
+    85,
+    90,
+    95,
+    99,
+    102,
+    105,
+    108,
+    147,
+    150,
+    153,
+    156,
+    160,
+    165,
+    170,
+    175,
+    195,
+    198,
+    201,
+    204,
+    240,
+    245,
+    250,
+    255
+  ],
+  "short_zero_set_equals_center_separable_rules": true
+}

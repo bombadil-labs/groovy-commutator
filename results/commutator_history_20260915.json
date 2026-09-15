@@ -1,0 +1,2194 @@
+{
+  "delayed_response_horizon32": {
+    "eca0": {
+      "changed": 0,
+      "local_trials": 288,
+      "remote_changed": 0,
+      "remote_trials": 96
+    },
+    "eca1": {
+      "changed": 22,
+      "local_trials": 288,
+      "remote_changed": 0,
+      "remote_trials": 96
+    },
+    "eca106": {
+      "changed": 221,
+      "local_trials": 288,
+      "remote_changed": 0,
+      "remote_trials": 96
+    },
+    "eca110": {
+      "changed": 150,
+      "local_trials": 288,
+      "remote_changed": 0,
+      "remote_trials": 96
+    },
+    "eca122": {
+      "changed": 284,
+      "local_trials": 288,
+      "remote_changed": 0,
+      "remote_trials": 96
+    },
+    "eca126": {
+      "changed": 254,
+      "local_trials": 288,
+      "remote_changed": 0,
+      "remote_trials": 96
+    },
+    "eca150": {
+      "changed": 0,
+      "local_trials": 288,
+      "remote_changed": 0,
+      "remote_trials": 96
+    },
+    "eca204": {
+      "changed": 0,
+      "local_trials": 288,
+      "remote_changed": 0,
+      "remote_trials": 96
+    },
+    "eca30": {
+      "changed": 244,
+      "local_trials": 288,
+      "remote_changed": 0,
+      "remote_trials": 96
+    },
+    "eca54": {
+      "changed": 180,
+      "local_trials": 288,
+      "remote_changed": 0,
+      "remote_trials": 96
+    },
+    "eca73": {
+      "changed": 87,
+      "local_trials": 288,
+      "remote_changed": 0,
+      "remote_trials": 96
+    },
+    "eca90": {
+      "changed": 0,
+      "local_trials": 288,
+      "remote_changed": 0,
+      "remote_trials": 96
+    },
+    "wide1_g0": {
+      "changed": 0,
+      "local_trials": 96,
+      "remote_changed": 0,
+      "remote_trials": 32
+    },
+    "wide1_g1": {
+      "changed": 73,
+      "local_trials": 96,
+      "remote_changed": 0,
+      "remote_trials": 32
+    },
+    "wide2_g0": {
+      "changed": 0,
+      "local_trials": 96,
+      "remote_changed": 0,
+      "remote_trials": 32
+    },
+    "wide2_g1": {
+      "changed": 11,
+      "local_trials": 96,
+      "remote_changed": 0,
+      "remote_trials": 32
+    },
+    "wide3_g0": {
+      "changed": 0,
+      "local_trials": 96,
+      "remote_changed": 0,
+      "remote_trials": 32
+    },
+    "wide3_g1": {
+      "changed": 2,
+      "local_trials": 96,
+      "remote_changed": 0,
+      "remote_trials": 32
+    }
+  },
+  "evidence": "exploratory",
+  "history_family_summaries": [
+    {
+      "augmented_selected": [
+        false,
+        false,
+        false
+      ],
+      "gain_bits": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "id": "eca0",
+      "test_seeds": [
+        6041512,
+        6041513,
+        6041514
+      ],
+      "velocity": 0.0
+    },
+    {
+      "augmented_selected": [
+        false,
+        false,
+        false
+      ],
+      "gain_bits": [
+        -0.04674209751220959,
+        -0.09505922961344115,
+        -0.0614722212457256
+      ],
+      "id": "eca1",
+      "test_seeds": [
+        6041512,
+        6041513,
+        6041514
+      ],
+      "velocity": -1.0
+    },
+    {
+      "augmented_selected": [
+        false,
+        false,
+        false
+      ],
+      "gain_bits": [
+        -0.03930515546522095,
+        -0.03262761267561065,
+        -0.049966079492601456
+      ],
+      "id": "eca2",
+      "test_seeds": [
+        6041512,
+        6041513,
+        6041514
+      ],
+      "velocity": 0.5
+    },
+    {
+      "augmented_selected": [
+        false,
+        false,
+        false
+      ],
+      "gain_bits": [
+        -0.018194237251107692,
+        -0.019358782660115703,
+        -0.016347909352545487
+      ],
+      "id": "eca3",
+      "test_seeds": [
+        6041512,
+        6041513,
+        6041514
+      ],
+      "velocity": -0.5
+    },
+    {
+      "augmented_selected": [
+        false,
+        false,
+        false
+      ],
+      "gain_bits": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "id": "eca4",
+      "test_seeds": [
+        6041512,
+        6041513,
+        6041514
+      ],
+      "velocity": 0.0
+    },
+    {
+      "augmented_selected": [
+        false,
+        false,
+        false
+      ],
+      "gain_bits": [
+        0.015314807535273034,
+        0.017661772612620807,
+        0.01316291045767748
+      ],
+      "id": "eca5",
+      "test_seeds": [
+        6041512,
+        6041513,
+        6041514
+      ],
+      "velocity": 0.5
+    },
+    {
+      "augmented_selected": [
+        false,
+        false,
+        false
+      ],
+      "gain_bits": [
+        0.036860607533657,
+        0.025270204888279413,
+        0.04292649680973021
+      ],
+      "id": "eca6",
+      "test_seeds": [
+        6041512,
+        6041513,
+        6041514
+      ],
+      "velocity": -0.5
+    },
+    {
+      "augmented_selected": [
+        false,
+        false,
+        false
+      ],
+      "gain_bits": [
+        0.007950054051059363,
+        0.007255882614195686,
+        0.0070411505750417325
+      ],
+      "id": "eca7",
+      "test_seeds": [
+        6041512,
+        6041513,
+        6041514
+      ],
+      "velocity": 0.0
+    },
+    {
+      "augmented_selected": [
+        false,
+        false,
+        false
+      ],
+      "gain_bits": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "id": "eca8",
+      "test_seeds": [
+        6041512,
+        6041513,
+        6041514
+      ],
+      "velocity": 0.0
+    },
+    {
+      "augmented_selected": [
+        false,
+        false,
+        false
+      ],
+      "gain_bits": [
+        0.10137231386973877,
+        0.13828701656863063,
+        0.14148456138339782
+      ],
+      "id": "eca9",
+      "test_seeds": [
+        6041512,
+        6041513,
+        6041514
+      ],
+      "velocity": 0.5
+    },
+    {
+      "augmented_selected": [
+        false,
+        false,
+        false
+      ],
+      "gain_bits": [
+        0.014099611616510077,
+        0.006628879908570973,
+        -0.003589019611079769
+      ],
+      "id": "eca10",
+      "test_seeds": [
+        6041512,
+        6041513,
+        6041514
+      ],
+      "velocity": -0.5
+    },
+    {
+      "augmented_selected": [
+        false,
+        false,
+        false
+      ],
+      "gain_bits": [
+        0.022032763136662303,
+        0.0279365284693604,
+        0.025792403279010168
+      ],
+      "id": "eca11",
+      "test_seeds": [
+        6041512,
+        6041513,
+        6041514
+      ],
+      "velocity": 0.5
+    },
+    {
+      "augmented_selected": [
+        false,
+        false,
+        false
+      ],
+      "gain_bits": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "id": "eca12",
+      "test_seeds": [
+        6041512,
+        6041513,
+        6041514
+      ],
+      "velocity": 0.0
+    },
+    {
+      "augmented_selected": [
+        false,
+        false,
+        false
+      ],
+      "gain_bits": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "id": "eca13",
+      "test_seeds": [
+        6041512,
+        6041513,
+        6041514
+      ],
+      "velocity": 0.0
+    },
+    {
+      "augmented_selected": [
+        false,
+        false,
+        false
+      ],
+      "gain_bits": [
+        0.0036382158646443424,
+        0.061307212987292914,
+        -0.025533933631315175
+      ],
+      "id": "eca14",
+      "test_seeds": [
+        6041512,
+        6041513,
+        6041514
+      ],
+      "velocity": -0.5
+    },
+    {
+      "augmented_selected": [
+        false,
+        false,
+        false
+      ],
+      "gain_bits": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "id": "eca15",
+      "test_seeds": [
+        6041512,
+        6041513,
+        6041514
+      ],
+      "velocity": 0.0
+    },
+    {
+      "augmented_selected": [
+        false,
+        false,
+        false
+      ],
+      "gain_bits": [
+        0.0059974757659323474,
+        0.006279532911279251,
+        0.005891311942627486
+      ],
+      "id": "eca18",
+      "test_seeds": [
+        6041512,
+        6041513,
+        6041514
+      ],
+      "velocity": 0.0
+    },
+    {
+      "augmented_selected": [
+        false,
+        false,
+        false
+      ],
+      "gain_bits": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "id": "eca19",
+      "test_seeds": [
+        6041512,
+        6041513,
+        6041514
+      ],
+      "velocity": 0.0
+    },
+    {
+      "augmented_selected": [
+        false,
+        false,
+        false
+      ],
+      "gain_bits": [
+        0.0005200436915845374,
+        0.0004341576845292572,
+        0.0004516033185295587
+      ],
+      "id": "eca22",
+      "test_seeds": [
+        6041512,
+        6041513,
+        6041514
+      ],
+      "velocity": -0.5
+    },
+    {
+      "augmented_selected": [
+        false,
+        false,
+        false
+      ],
+      "gain_bits": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "id": "eca23",
+      "test_seeds": [
+        6041512,
+        6041513,
+        6041514
+      ],
+      "velocity": 0.0
+    },
+    {
+      "augmented_selected": [
+        false,
+        false,
+        false
+      ],
+      "gain_bits": [
+        0.013732271375858418,
+        0.009047205387228807,
+        0.012426590315171016
+      ],
+      "id": "eca24",
+      "test_seeds": [
+        6041512,
+        6041513,
+        6041514
+      ],
+      "velocity": 0.5
+    },
+    {
+      "augmented_selected": [
+        false,
+        false,
+        false
+      ],
+      "gain_bits": [
+        0.08634813423450116,
+        0.04116388130371351,
+        0.13787208293571812
+      ],
+      "id": "eca25",
+      "test_seeds": [
+        6041512,
+        6041513,
+        6041514
+      ],
+      "velocity": -1.0
+    },
+    {
+      "augmented_selected": [
+        false,
+        false,
+        false
+      ],
+      "gain_bits": [
+        0.2911926321021204,
+        0.30416503651532545,
+        0.34776606031974966
+      ],
+      "id": "eca26",
+      "test_seeds": [
+        6041512,
+        6041513,
+        6041514
+      ],
+      "velocity": -1.0
+    },
+    {
+      "augmented_selected": [
+        false,
+        false,
+        false
+      ],
+      "gain_bits": [
+        0.0030049511722014532,
+        -0.005315553662934125,
+        -0.005383011118351044
+      ],
+      "id": "eca27",
+      "test_seeds": [
+        6041512,
+        6041513,
+        6041514
+      ],
+      "velocity": 0.0
+    },
+    {
+      "augmented_selected": [
+        false,
+        false,
+        false
+      ],
+      "gain_bits": [
+        0.04088325084494693,
+        0.03922619149214018,
+        0.031457539112987876
+      ],
+      "id": "eca28",
+      "test_seeds": [
+        6041512,
+        6041513,
+        6041514
+      ],
+      "velocity": -0.5
+    },
+    {
+      "augmented_selected": [
+        false,
+        false,
+        false
+      ],
+      "gain_bits": [
+        -0.06981676374351697,
+        -0.05081901608426098,
+        -0.03144081556802236
+      ],
+      "id": "eca29",
+      "test_seeds": [
+        6041512,
+        6041513,
+        6041514
+      ],
+      "velocity": 1.0
+    },
+    {
+      "augmented_selected": [
+        false,
+        false,
+        false
+      ],
+      "gain_bits": [
+        0.002760499374673153,
+        0.002514206868112545,
+        0.0027269246222465515
+      ],
+      "id": "eca30",
+      "test_seeds": [
+        6041512,
+        6041513,
+        6041514
+      ],
+      "velocity": 1.0
+    },
+    {
+      "augmented_selected": [
+        false,
+        false,
+        false
+      ],
+      "gain_bits": [
+        -4.714861469279352e-05,
+        -4.032750719995537e-05,
+        -3.9711432872624464e-05
+      ],
+      "id": "eca30_shuffle",
+      "test_seeds": [
+        6041512,
+        6041513,
+        6041514
+      ],
+      "velocity": 1.0
+    },
+    {
+      "augmented_selected": [
+        false,
+        false,
+        false
+      ],
+      "gain_bits": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "id": "eca32",
+      "test_seeds": [
+        6041512,
+        6041513,
+        6041514
+      ],
+      "velocity": 0.0
+    },
+    {
+      "augmented_selected": [
+        false,
+        false,
+        false
+      ],
+      "gain_bits": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "id": "eca33",
+      "test_seeds": [
+        6041512,
+        6041513,
+        6041514
+      ],
+      "velocity": 0.0
+    },
+    {
+      "augmented_selected": [
+        false,
+        false,
+        false
+      ],
+      "gain_bits": [
+        -0.04336556901942079,
+        -0.014438687484661594,
+        -0.04771233171956235
+      ],
+      "id": "eca34",
+      "test_seeds": [
+        6041512,
+        6041513,
+        6041514
+      ],
+      "velocity": 1.0
+    },
+    {
+      "augmented_selected": [
+        false,
+        false,
+        false
+      ],
+      "gain_bits": [
+        0.03786911706636553,
+        0.03508132788041873,
+        0.05344051362259983
+      ],
+      "id": "eca35",
+      "test_seeds": [
+        6041512,
+        6041513,
+        6041514
+      ],
+      "velocity": 1.0
+    },
+    {
+      "augmented_selected": [
+        false,
+        false,
+        false
+      ],
+      "gain_bits": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "id": "eca36",
+      "test_seeds": [
+        6041512,
+        6041513,
+        6041514
+      ],
+      "velocity": 0.0
+    },
+    {
+      "augmented_selected": [
+        false,
+        false,
+        false
+      ],
+      "gain_bits": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "id": "eca37",
+      "test_seeds": [
+        6041512,
+        6041513,
+        6041514
+      ],
+      "velocity": 0.0
+    },
+    {
+      "augmented_selected": [
+        false,
+        false,
+        false
+      ],
+      "gain_bits": [
+        -0.014830126074391492,
+        -0.010608055331561284,
+        -0.017757756222351095
+      ],
+      "id": "eca38",
+      "test_seeds": [
+        6041512,
+        6041513,
+        6041514
+      ],
+      "velocity": 0.5
+    },
+    {
+      "augmented_selected": [
+        false,
+        false,
+        false
+      ],
+      "gain_bits": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "id": "eca40",
+      "test_seeds": [
+        6041512,
+        6041513,
+        6041514
+      ],
+      "velocity": 0.0
+    },
+    {
+      "augmented_selected": [
+        false,
+        false,
+        false
+      ],
+      "gain_bits": [
+        0.17281855969373552,
+        0.1759495123828158,
+        0.17336564388252415
+      ],
+      "id": "eca41",
+      "test_seeds": [
+        6041512,
+        6041513,
+        6041514
+      ],
+      "velocity": 1.0
+    },
+    {
+      "augmented_selected": [
+        false,
+        false,
+        false
+      ],
+      "gain_bits": [
+        -0.057427735864055696,
+        -0.05134473260170169,
+        -0.04683826223838794
+      ],
+      "id": "eca42",
+      "test_seeds": [
+        6041512,
+        6041513,
+        6041514
+      ],
+      "velocity": 1.0
+    },
+    {
+      "augmented_selected": [
+        false,
+        false,
+        false
+      ],
+      "gain_bits": [
+        0.006767828369801002,
+        0.0021530644905971424,
+        -0.018925049951059703
+      ],
+      "id": "eca43",
+      "test_seeds": [
+        6041512,
+        6041513,
+        6041514
+      ],
+      "velocity": 0.0
+    },
+    {
+      "augmented_selected": [
+        false,
+        false,
+        false
+      ],
+      "gain_bits": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "id": "eca44",
+      "test_seeds": [
+        6041512,
+        6041513,
+        6041514
+      ],
+      "velocity": 0.0
+    },
+    {
+      "augmented_selected": [
+        false,
+        false,
+        false
+      ],
+      "gain_bits": [
+        0.01627211793757688,
+        0.01698275714936992,
+        0.01587871799657059
+      ],
+      "id": "eca45",
+      "test_seeds": [
+        6041512,
+        6041513,
+        6041514
+      ],
+      "velocity": 1.0
+    },
+    {
+      "augmented_selected": [
+        false,
+        false,
+        false
+      ],
+      "gain_bits": [
+        0.03278134365045127,
+        0.029065736196999814,
+        0.023620496296189453
+      ],
+      "id": "eca46",
+      "test_seeds": [
+        6041512,
+        6041513,
+        6041514
+      ],
+      "velocity": -0.5
+    },
+    {
+      "augmented_selected": [
+        false,
+        false,
+        false
+      ],
+      "gain_bits": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "id": "eca50",
+      "test_seeds": [
+        6041512,
+        6041513,
+        6041514
+      ],
+      "velocity": 0.0
+    },
+    {
+      "augmented_selected": [
+        false,
+        false,
+        false
+      ],
+      "gain_bits": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "id": "eca51",
+      "test_seeds": [
+        6041512,
+        6041513,
+        6041514
+      ],
+      "velocity": 0.0
+    },
+    {
+      "augmented_selected": [
+        true,
+        true,
+        true
+      ],
+      "gain_bits": [
+        0.03784495014361855,
+        0.03913214563240841,
+        0.039267193555076574
+      ],
+      "id": "eca54",
+      "test_seeds": [
+        6041512,
+        6041513,
+        6041514
+      ],
+      "velocity": 0.0
+    },
+    {
+      "augmented_selected": [
+        false,
+        false,
+        false
+      ],
+      "gain_bits": [
+        0.00020037049467203083,
+        8.010760916254966e-05,
+        0.0003012186477905354
+      ],
+      "id": "eca54_shuffle",
+      "test_seeds": [
+        6041512,
+        6041513,
+        6041514
+      ],
+      "velocity": 0.0
+    },
+    {
+      "augmented_selected": [
+        true,
+        true,
+        true
+      ],
+      "gain_bits": [
+        0.04169315287540376,
+        0.04918251405152185,
+        0.0460061941362615
+      ],
+      "id": "eca147",
+      "test_seeds": [
+        6041512,
+        6041513,
+        6041514
+      ],
+      "velocity": 1.0
+    },
+    {
+      "augmented_selected": [
+        false,
+        false,
+        false
+      ],
+      "gain_bits": [
+        -0.010199811184079977,
+        0.0006060640352765212,
+        -0.01035314750306826
+      ],
+      "id": "eca56",
+      "test_seeds": [
+        6041512,
+        6041513,
+        6041514
+      ],
+      "velocity": 0.5
+    },
+    {
+      "augmented_selected": [
+        false,
+        false,
+        false
+      ],
+      "gain_bits": [
+        0.000885692097657903,
+        -0.0038292982718643107,
+        7.888487826591961e-05
+      ],
+      "id": "eca57",
+      "test_seeds": [
+        6041512,
+        6041513,
+        6041514
+      ],
+      "velocity": -0.5
+    },
+    {
+      "augmented_selected": [
+        false,
+        false,
+        false
+      ],
+      "gain_bits": [
+        0.056097085056393825,
+        0.053481497472893824,
+        0.05303116422009774
+      ],
+      "id": "eca58",
+      "test_seeds": [
+        6041512,
+        6041513,
+        6041514
+      ],
+      "velocity": -0.5
+    },
+    {
+      "augmented_selected": [
+        false,
+        false,
+        false
+      ],
+      "gain_bits": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "id": "eca60",
+      "test_seeds": [
+        6041512,
+        6041513,
+        6041514
+      ],
+      "velocity": 0.0
+    },
+    {
+      "augmented_selected": [
+        false,
+        false,
+        false
+      ],
+      "gain_bits": [
+        0.13603634797181716,
+        0.07225557502389275,
+        0.07329917153220161
+      ],
+      "id": "eca62",
+      "test_seeds": [
+        6041512,
+        6041513,
+        6041514
+      ],
+      "velocity": 0.0
+    },
+    {
+      "augmented_selected": [
+        false,
+        false,
+        false
+      ],
+      "gain_bits": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "id": "eca72",
+      "test_seeds": [
+        6041512,
+        6041513,
+        6041514
+      ],
+      "velocity": 0.0
+    },
+    {
+      "augmented_selected": [
+        false,
+        false,
+        false
+      ],
+      "gain_bits": [
+        0.21177148499819975,
+        0.20220453680416212,
+        0.21329568722987455
+      ],
+      "id": "eca73",
+      "test_seeds": [
+        6041512,
+        6041513,
+        6041514
+      ],
+      "velocity": 0.0
+    },
+    {
+      "augmented_selected": [
+        false,
+        false,
+        false
+      ],
+      "gain_bits": [
+        0.11201595071189407,
+        0.11347870729314785,
+        0.11740604378731062
+      ],
+      "id": "eca73_shuffle",
+      "test_seeds": [
+        6041512,
+        6041513,
+        6041514
+      ],
+      "velocity": 0.0
+    },
+    {
+      "augmented_selected": [
+        false,
+        false,
+        false
+      ],
+      "gain_bits": [
+        -0.027401129871942653,
+        -0.029338028927749504,
+        -0.039041290636466
+      ],
+      "id": "eca74",
+      "test_seeds": [
+        6041512,
+        6041513,
+        6041514
+      ],
+      "velocity": 0.0
+    },
+    {
+      "augmented_selected": [
+        false,
+        false,
+        false
+      ],
+      "gain_bits": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "id": "eca76",
+      "test_seeds": [
+        6041512,
+        6041513,
+        6041514
+      ],
+      "velocity": 0.0
+    },
+    {
+      "augmented_selected": [
+        false,
+        false,
+        false
+      ],
+      "gain_bits": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "id": "eca77",
+      "test_seeds": [
+        6041512,
+        6041513,
+        6041514
+      ],
+      "velocity": 0.0
+    },
+    {
+      "augmented_selected": [
+        false,
+        false,
+        false
+      ],
+      "gain_bits": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "id": "eca78",
+      "test_seeds": [
+        6041512,
+        6041513,
+        6041514
+      ],
+      "velocity": 0.0
+    },
+    {
+      "augmented_selected": [
+        false,
+        false,
+        false
+      ],
+      "gain_bits": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "id": "eca90",
+      "test_seeds": [
+        6041512,
+        6041513,
+        6041514
+      ],
+      "velocity": 0.0
+    },
+    {
+      "augmented_selected": [
+        false,
+        false,
+        false
+      ],
+      "gain_bits": [
+        0.11635788344987216,
+        0.10321360574056745,
+        0.08736325410717459
+      ],
+      "id": "eca94",
+      "test_seeds": [
+        6041512,
+        6041513,
+        6041514
+      ],
+      "velocity": 0.0
+    },
+    {
+      "augmented_selected": [
+        false,
+        false,
+        false
+      ],
+      "gain_bits": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "id": "eca104",
+      "test_seeds": [
+        6041512,
+        6041513,
+        6041514
+      ],
+      "velocity": 0.0
+    },
+    {
+      "augmented_selected": [
+        false,
+        false,
+        false
+      ],
+      "gain_bits": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "id": "eca105",
+      "test_seeds": [
+        6041512,
+        6041513,
+        6041514
+      ],
+      "velocity": 0.0
+    },
+    {
+      "augmented_selected": [
+        false,
+        false,
+        false
+      ],
+      "gain_bits": [
+        0.04079023812389415,
+        0.03977882226231644,
+        0.040880744587942774
+      ],
+      "id": "eca106",
+      "test_seeds": [
+        6041512,
+        6041513,
+        6041514
+      ],
+      "velocity": -1.0
+    },
+    {
+      "augmented_selected": [
+        false,
+        false,
+        false
+      ],
+      "gain_bits": [
+        -4.319283476439395e-05,
+        -5.165761384917644e-05,
+        -3.749011769516031e-05
+      ],
+      "id": "eca106_shuffle",
+      "test_seeds": [
+        6041512,
+        6041513,
+        6041514
+      ],
+      "velocity": -0.5
+    },
+    {
+      "augmented_selected": [
+        false,
+        false,
+        false
+      ],
+      "gain_bits": [
+        -0.0043430364200060245,
+        -0.0007958162976459682,
+        -0.0020892483094471226
+      ],
+      "id": "eca108",
+      "test_seeds": [
+        6041512,
+        6041513,
+        6041514
+      ],
+      "velocity": 1.0
+    },
+    {
+      "augmented_selected": [
+        true,
+        true,
+        true
+      ],
+      "gain_bits": [
+        0.48594355616170753,
+        0.508670887320812,
+        0.45833056112687764
+      ],
+      "id": "eca110",
+      "test_seeds": [
+        6041512,
+        6041513,
+        6041514
+      ],
+      "velocity": 0.5
+    },
+    {
+      "augmented_selected": [
+        false,
+        false,
+        false
+      ],
+      "gain_bits": [
+        -0.0006930010824617305,
+        -0.0004305784053759698,
+        -0.0005815660575239079
+      ],
+      "id": "eca110_shuffle",
+      "test_seeds": [
+        6041512,
+        6041513,
+        6041514
+      ],
+      "velocity": 0.0
+    },
+    {
+      "augmented_selected": [
+        true,
+        true,
+        true
+      ],
+      "gain_bits": [
+        0.4859435561617075,
+        0.5086708873208121,
+        0.4583305611268774
+      ],
+      "id": "eca124",
+      "test_seeds": [
+        6041512,
+        6041513,
+        6041514
+      ],
+      "velocity": -0.5
+    },
+    {
+      "augmented_selected": [
+        true,
+        true,
+        true
+      ],
+      "gain_bits": [
+        0.35633881325550354,
+        0.3687508353710216,
+        0.34663068161218147
+      ],
+      "id": "eca137",
+      "test_seeds": [
+        6041512,
+        6041513,
+        6041514
+      ],
+      "velocity": 0.0
+    },
+    {
+      "augmented_selected": [
+        true,
+        true,
+        true
+      ],
+      "gain_bits": [
+        0.35633881325550354,
+        0.3687508353710216,
+        0.34663068161218147
+      ],
+      "id": "eca193",
+      "test_seeds": [
+        6041512,
+        6041513,
+        6041514
+      ],
+      "velocity": 0.0
+    },
+    {
+      "augmented_selected": [
+        false,
+        false,
+        false
+      ],
+      "gain_bits": [
+        0.00030381658995881633,
+        -5.083403292471811e-05,
+        -4.726099959262431e-05
+      ],
+      "id": "eca122",
+      "test_seeds": [
+        6041512,
+        6041513,
+        6041514
+      ],
+      "velocity": -1.0
+    },
+    {
+      "augmented_selected": [
+        false,
+        false,
+        false
+      ],
+      "gain_bits": [
+        -2.1817680064928346e-05,
+        -1.7619606619279082e-05,
+        -1.5417554427576974e-05
+      ],
+      "id": "eca126",
+      "test_seeds": [
+        6041512,
+        6041513,
+        6041514
+      ],
+      "velocity": 0.0
+    },
+    {
+      "augmented_selected": [
+        false,
+        false,
+        false
+      ],
+      "gain_bits": [
+        -2.0133243961883984e-05,
+        -2.642546038000848e-05,
+        -3.725892372585804e-05
+      ],
+      "id": "eca126_shuffle",
+      "test_seeds": [
+        6041512,
+        6041513,
+        6041514
+      ],
+      "velocity": -0.5
+    },
+    {
+      "augmented_selected": [
+        false,
+        false,
+        false
+      ],
+      "gain_bits": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "id": "eca128",
+      "test_seeds": [
+        6041512,
+        6041513,
+        6041514
+      ],
+      "velocity": 0.0
+    },
+    {
+      "augmented_selected": [
+        false,
+        false,
+        false
+      ],
+      "gain_bits": [
+        -0.04266337216494864,
+        -0.039576221891653995,
+        -0.021775920101068214
+      ],
+      "id": "eca130",
+      "test_seeds": [
+        6041512,
+        6041513,
+        6041514
+      ],
+      "velocity": 0.5
+    },
+    {
+      "augmented_selected": [
+        false,
+        false,
+        false
+      ],
+      "gain_bits": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "id": "eca132",
+      "test_seeds": [
+        6041512,
+        6041513,
+        6041514
+      ],
+      "velocity": 0.0
+    },
+    {
+      "augmented_selected": [
+        false,
+        false,
+        false
+      ],
+      "gain_bits": [
+        0.09267450729830906,
+        0.07654918813976008,
+        0.08098827331093006
+      ],
+      "id": "eca134",
+      "test_seeds": [
+        6041512,
+        6041513,
+        6041514
+      ],
+      "velocity": -0.5
+    },
+    {
+      "augmented_selected": [
+        false,
+        false,
+        false
+      ],
+      "gain_bits": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "id": "eca136",
+      "test_seeds": [
+        6041512,
+        6041513,
+        6041514
+      ],
+      "velocity": 0.0
+    },
+    {
+      "augmented_selected": [
+        false,
+        false,
+        false
+      ],
+      "gain_bits": [
+        0.00468718971479154,
+        0.008213373878290242,
+        -0.006629201877176638
+      ],
+      "id": "eca138",
+      "test_seeds": [
+        6041512,
+        6041513,
+        6041514
+      ],
+      "velocity": -0.5
+    },
+    {
+      "augmented_selected": [
+        false,
+        false,
+        false
+      ],
+      "gain_bits": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "id": "eca140",
+      "test_seeds": [
+        6041512,
+        6041513,
+        6041514
+      ],
+      "velocity": 0.0
+    },
+    {
+      "augmented_selected": [
+        false,
+        false,
+        false
+      ],
+      "gain_bits": [
+        0.0036382158646443424,
+        0.0423427399907049,
+        -0.025533933631315175
+      ],
+      "id": "eca142",
+      "test_seeds": [
+        6041512,
+        6041513,
+        6041514
+      ],
+      "velocity": -0.5
+    },
+    {
+      "augmented_selected": [
+        false,
+        false,
+        false
+      ],
+      "gain_bits": [
+        0.00027053711427438287,
+        0.0003725252515864863,
+        0.0002948654975335474
+      ],
+      "id": "eca146",
+      "test_seeds": [
+        6041512,
+        6041513,
+        6041514
+      ],
+      "velocity": 0.5
+    },
+    {
+      "augmented_selected": [
+        false,
+        false,
+        false
+      ],
+      "gain_bits": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "id": "eca150",
+      "test_seeds": [
+        6041512,
+        6041513,
+        6041514
+      ],
+      "velocity": 0.0
+    },
+    {
+      "augmented_selected": [
+        false,
+        false,
+        false
+      ],
+      "gain_bits": [
+        0.001008769560543854,
+        0.009105336648787099,
+        0.006918186016842576
+      ],
+      "id": "eca152",
+      "test_seeds": [
+        6041512,
+        6041513,
+        6041514
+      ],
+      "velocity": 0.5
+    },
+    {
+      "augmented_selected": [
+        false,
+        false,
+        false
+      ],
+      "gain_bits": [
+        0.23493125002208973,
+        0.24992152030527293,
+        0.3095431094589305
+      ],
+      "id": "eca154",
+      "test_seeds": [
+        6041512,
+        6041513,
+        6041514
+      ],
+      "velocity": -1.0
+    },
+    {
+      "augmented_selected": [
+        false,
+        false,
+        false
+      ],
+      "gain_bits": [
+        0.03689472793343229,
+        0.03917194223663689,
+        0.03235298863964353
+      ],
+      "id": "eca156",
+      "test_seeds": [
+        6041512,
+        6041513,
+        6041514
+      ],
+      "velocity": 0.5
+    },
+    {
+      "augmented_selected": [
+        false,
+        false,
+        false
+      ],
+      "gain_bits": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "id": "eca160",
+      "test_seeds": [
+        6041512,
+        6041513,
+        6041514
+      ],
+      "velocity": 0.0
+    },
+    {
+      "augmented_selected": [
+        false,
+        false,
+        false
+      ],
+      "gain_bits": [
+        -0.02327405458364762,
+        -0.02303142976811401,
+        -0.05102448139932925
+      ],
+      "id": "eca162",
+      "test_seeds": [
+        6041512,
+        6041513,
+        6041514
+      ],
+      "velocity": 0.5
+    },
+    {
+      "augmented_selected": [
+        false,
+        false,
+        false
+      ],
+      "gain_bits": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "id": "eca164",
+      "test_seeds": [
+        6041512,
+        6041513,
+        6041514
+      ],
+      "velocity": 0.0
+    },
+    {
+      "augmented_selected": [
+        false,
+        false,
+        false
+      ],
+      "gain_bits": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "id": "eca168",
+      "test_seeds": [
+        6041512,
+        6041513,
+        6041514
+      ],
+      "velocity": 0.0
+    },
+    {
+      "augmented_selected": [
+        false,
+        false,
+        false
+      ],
+      "gain_bits": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "id": "eca170",
+      "test_seeds": [
+        6041512,
+        6041513,
+        6041514
+      ],
+      "velocity": 0.0
+    },
+    {
+      "augmented_selected": [
+        false,
+        false,
+        false
+      ],
+      "gain_bits": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "id": "eca172",
+      "test_seeds": [
+        6041512,
+        6041513,
+        6041514
+      ],
+      "velocity": 0.0
+    },
+    {
+      "augmented_selected": [
+        false,
+        false,
+        false
+      ],
+      "gain_bits": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "id": "eca178",
+      "test_seeds": [
+        6041512,
+        6041513,
+        6041514
+      ],
+      "velocity": 0.0
+    },
+    {
+      "augmented_selected": [
+        false,
+        false,
+        false
+      ],
+      "gain_bits": [
+        -0.025311847969306467,
+        -0.01131924585018438,
+        -0.05264223823974043
+      ],
+      "id": "eca184",
+      "test_seeds": [
+        6041512,
+        6041513,
+        6041514
+      ],
+      "velocity": -0.5
+    },
+    {
+      "augmented_selected": [
+        false,
+        false,
+        false
+      ],
+      "gain_bits": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "id": "eca200",
+      "test_seeds": [
+        6041512,
+        6041513,
+        6041514
+      ],
+      "velocity": 0.0
+    },
+    {
+      "augmented_selected": [
+        false,
+        false,
+        false
+      ],
+      "gain_bits": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "id": "eca204",
+      "test_seeds": [
+        6041512,
+        6041513,
+        6041514
+      ],
+      "velocity": 0.0
+    },
+    {
+      "augmented_selected": [
+        false,
+        false,
+        false
+      ],
+      "gain_bits": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "id": "eca232",
+      "test_seeds": [
+        6041512,
+        6041513,
+        6041514
+      ],
+      "velocity": 0.0
+    },
+    {
+      "augmented_selected": [
+        false
+      ],
+      "gain_bits": [
+        0.0
+      ],
+      "id": "wide1_g0",
+      "test_seeds": [
+        6041542
+      ],
+      "velocity": 0.0
+    },
+    {
+      "augmented_selected": [
+        false
+      ],
+      "gain_bits": [
+        0.0
+      ],
+      "id": "wide1_g0_shuffle",
+      "test_seeds": [
+        6041542
+      ],
+      "velocity": 0.0
+    },
+    {
+      "augmented_selected": [
+        false
+      ],
+      "gain_bits": [
+        0.040393057566921464
+      ],
+      "id": "wide1_g1",
+      "test_seeds": [
+        6041542
+      ],
+      "velocity": -1.0
+    },
+    {
+      "augmented_selected": [
+        false
+      ],
+      "gain_bits": [
+        -1.9031791066437265e-05
+      ],
+      "id": "wide1_g1_shuffle",
+      "test_seeds": [
+        6041542
+      ],
+      "velocity": -0.5
+    },
+    {
+      "augmented_selected": [
+        false
+      ],
+      "gain_bits": [
+        0.0
+      ],
+      "id": "wide2_g0",
+      "test_seeds": [
+        6041542
+      ],
+      "velocity": 0.0
+    },
+    {
+      "augmented_selected": [
+        false
+      ],
+      "gain_bits": [
+        0.0
+      ],
+      "id": "wide2_g0_shuffle",
+      "test_seeds": [
+        6041542
+      ],
+      "velocity": 0.0
+    },
+    {
+      "augmented_selected": [
+        true
+      ],
+      "gain_bits": [
+        0.07052789876475543
+      ],
+      "id": "wide2_g1",
+      "test_seeds": [
+        6041542
+      ],
+      "velocity": -2.0
+    },
+    {
+      "augmented_selected": [
+        false
+      ],
+      "gain_bits": [
+        -9.091244318226721e-05
+      ],
+      "id": "wide2_g1_shuffle",
+      "test_seeds": [
+        6041542
+      ],
+      "velocity": 2.0
+    },
+    {
+      "augmented_selected": [
+        false
+      ],
+      "gain_bits": [
+        0.0
+      ],
+      "id": "wide3_g0",
+      "test_seeds": [
+        6041542
+      ],
+      "velocity": 0.0
+    },
+    {
+      "augmented_selected": [
+        false
+      ],
+      "gain_bits": [
+        0.0
+      ],
+      "id": "wide3_g0_shuffle",
+      "test_seeds": [
+        6041542
+      ],
+      "velocity": 0.0
+    },
+    {
+      "augmented_selected": [
+        false
+      ],
+      "gain_bits": [
+        0.014465828989396367
+      ],
+      "id": "wide3_g1",
+      "test_seeds": [
+        6041542
+      ],
+      "velocity": -3.0
+    },
+    {
+      "augmented_selected": [
+        false
+      ],
+      "gain_bits": [
+        -0.00015146774243829375
+      ],
+      "id": "wide3_g1_shuffle",
+      "test_seeds": [
+        6041542
+      ],
+      "velocity": 0.0
+    }
+  ],
+  "limits": [
+    "Finite model-relative predictive gain; no irreducible temporal-memory or causal G-feedback proof.",
+    "No held-out baseline decision changes; the radius-two rule is unclassified and remains selected.",
+    "R6 baseline-positive rule 106 seed trains this test and is not a held-out removal test.",
+    "All ECA families were inspected previously; held-out units are initial conditions.",
+    "Generic response modulation does not establish adaptation, response quality or Class IV specificity.",
+    "Raw G-history gains change under complement conjugation; no beam invariance is established."
+  ],
+  "raw_input_hashes": {
+    "experiments/beam_discriminator_loop_20260915/round06/trajectories.npz": "e84b2f23ca8aa12b99f551dfcb5b6971034718db2554034b9cd0f876cb4d9372",
+    "experiments/beam_discriminator_loop_20260915/round10/trajectories.npz": "b54759344c81a160d6651de22edf66063b2c8cef41f8c8f3f4603a3c8ec1c143"
+  },
+  "raw_output_hashes": {
+    "histories-and-counts.npz": "ba7c10372ac77d5555315cbf095c47db753bd10f370c8967daae2148462032ad",
+    "response-arrays.npz": "de10697b7b810db966d885d86faeec1b40bbc8e32a8773f028994646b1d95c28"
+  },
+  "source_hashes": {
+    "experiments/beam_discriminator_loop_20260915/round06/result.json": "1e6340352b8a16c99c98d1be0039643970a40a3c8afec9871e83b441b5eda5d6",
+    "experiments/beam_discriminator_loop_20260915/round10/result.json": "ae55152db188acbe92e32fad130102f93677eca11b25cb1c49ff32e70fd8b147",
+    "experiments/commutator_history_20260915/freeze.json": "92449bac833bd1fea68108cd8f951c050ebc0c6bf1fdd24041d772a587d00f39",
+    "experiments/commutator_history_20260915/protocol-freeze.json": "d9b8ac975746c1e2cf2e8e03e598307839a11bd22d48def102a8bbe4721cc259",
+    "experiments/commutator_history_20260915/protocol.md": "ec9c742858fdef3db07879a84f16bcfacb9821e84a2655f3729f2d00fb8b0755",
+    "experiments/commutator_history_20260915/raw-archive.json": "93cb282f82df0a5dbdd25962b5ab19854eaf796be790f681571bf9719aec180f",
+    "experiments/commutator_history_20260915/response-freeze.json": "a5fbfa4164966e89d90ec60339d646d38290c8f5e73fa0660a0b41566c6e7ebd",
+    "experiments/commutator_history_20260915/response-protocol-freeze.json": "963543a7c82af27fa845605a77c2a209dcbfbcc07697c3ce12737ce18c019b8d",
+    "experiments/commutator_history_20260915/response-protocol.md": "9025b545e8d60e9009d93dfe39063b6a8bcc2d8df6459f44b1459a3459fe146a",
+    "experiments/commutator_history_20260915/response-result.json": "a680bc5a225decb54f55e44b0c6f798f28610f9356a17011bdfeb8aa4b8dc5bc",
+    "experiments/commutator_history_20260915/result.json": "66896337340ea82e0afdd39f4150b2738cc55d10dfc88026820adde39a8c8f44",
+    "experiments/on_beam_256_4d_20260914/labels.json": "65e811a6ef5575bb697da4fc9e8dfe3c0de131b8c27702aa7990ad4b2d754250",
+    "review/commutator_history_independent.json": "fb5b9b2ce8899f2f14022571994008ac960b7ae4c21503f2473b8421684a8493",
+    "review/commutator_history_independent.py": "2d7cc529b57fe12611cd357ce5529d5c2d952b3b98769d2c53dc2674317b04f4",
+    "review/commutator_response_independent.json": "a231eea4c721e8ca8b66a3e5902f417a4ba56aed570aafb1f73ce76cdc099bea",
+    "review/commutator_response_independent.py": "3c1ed3ebe30d0a288ba04073d0cf4c9098b477a32f5b1834d1d94aa2c50f1556",
+    "scripts/commutator_history.py": "95f91208738bbd20803bd7ccd6f54842a90182951eaa09e409b5efa970755513",
+    "scripts/commutator_response.py": "6345306085c92642823eaf904bb0cab331bdfd0df941b7bfc5e8c3b81a11c548",
+    "scripts/package_commutator_history.py": "bfb9f4605615ec594e717d8bcf9486750758316ac2a0e8842e27be3d836aafae",
+    "scripts/plot_commutator_history.py": "fef27310ab7faa1b0e9bb73638c6faf24592dba1afd9270fe443da3816b7d140",
+    "scripts/summarize_commutator_history.py": "4fcfe13fbe2c5faa1f4463472809a69b7781be24464adb802d9c30f1a2a88edd"
+  },
+  "summary": {
+    "augmented_selected": 6,
+    "baseline_selected": 6,
+    "changed_decisions": 0,
+    "core_selected": 6,
+    "core_tests": 6,
+    "eca_rules_admitting_short_interaction": 224,
+    "history_heldout_representative_tests": 264,
+    "history_representatives": 88,
+    "radius_two_short_contexts": 8192,
+    "radius_two_short_interacting_contexts": 3224,
+    "rule4_G_zero_interacting_contexts": 56,
+    "short_zero_family": "f(l,c,r)=a*c XOR g(l,r), with constant a; exactly 32 tables",
+    "undisputed_negative_selected": 0,
+    "undisputed_negative_tests": 252
+  },
+  "timings_seconds": {
+    "history": 11.48549744799675,
+    "independent_history": 25.626741683001455,
+    "independent_response": 8.639303985000879,
+    "response": 0.8415847440046491
+  }
+}

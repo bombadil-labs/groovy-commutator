@@ -1093,3 +1093,8 @@ verified headline numbers.
 centered-G first-floor family under the full symbolic-parent recursive
 contract, with preparation locality accounted separately. The 3D and
 boundary/individuation threads remain otherwise parked as above.
+
+
+## 2026-09-15: commutator history and repeated perturbation
+
+The [direct commutator-history test](../2026-09-15-commutator-history.md) finds finite predictive gain but does not sharpen the frozen recurrence/spreading baseline. A four-arm follow-up finds that earlier pulses can modify later responses in 224 of 256 ECAs in the exact short-delay census; delayed chaotic controls also show the effect. These results preserve useful memory measurements while ruling out the specificity of the tested weak criteria. Raw G-history gains change under complement conjugation. No Class IV label, adaptation theorem or G-driven causal feedback claim is promoted.
