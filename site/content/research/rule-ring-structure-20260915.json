@@ -1,0 +1,17 @@
+[
+  {
+    "slug": "rule-ring-structure-20260915",
+    "label": "Rule and ring relations",
+    "title": "Whole-state rule relations expose ring effects, but arithmetic correlations shift",
+    "date": "2026-09-15",
+    "updated": "2026-09-15",
+    "kind": "Comparative partition atlas",
+    "evidence": "exploratory",
+    "topic": "Dimensional closure",
+    "summary": "An extensible instrument compares whole-state partitions across eight rules and thirteen ring sizes. Of 27 selected arithmetic associations, four retain their sign, 21 reverse and two become undefined on held-out sizes.",
+    "takeaway": "Preserve complete relations and arithmetic support; the strongest small-ring correlations need not transfer to a new size range.",
+    "source": "docs/research/2026-09-15-rule-ring-structure.md",
+    "promotion": {"stage": "research"},
+    "related": ["observation-catalog-20260915", "commutator-relations-20260915"]
+  }
+]
