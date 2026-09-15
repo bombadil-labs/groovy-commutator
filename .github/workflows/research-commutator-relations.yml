@@ -2,6 +2,9 @@ name: Research commutator relations
 on:
   pull_request:
     paths:
+      - 'scripts/commutator_completion.py'
+      - 'results/commutator_completion_20260915.json'
+      - 'review/replay_portable.py'
       - 'scripts/*commutator_relations.py'
       - 'scripts/check_result_integrity.py'
       - 'experiments/commutator_relations_20260915/**'
@@ -14,6 +17,9 @@ on:
   push:
     branches: [main]
     paths:
+      - 'scripts/commutator_completion.py'
+      - 'results/commutator_completion_20260915.json'
+      - 'review/replay_portable.py'
       - 'scripts/*commutator_relations.py'
       - 'scripts/check_result_integrity.py'
       - 'experiments/commutator_relations_20260915/**'

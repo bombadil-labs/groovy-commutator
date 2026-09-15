@@ -174,8 +174,9 @@ the set-level free/transitive notion of a
 constructed by the experiment. Fixed G cells remain anchored outside those
 free blocks.
 
-Only differences within the same free block are invariant under independent
-block flips. For a linear parity $b^Tg$, invariance is exactly $A^Tb=0$:
+Among ambiguous endpoints, pairwise differences are invariant exactly within
+the same free block. Fixed–fixed differences are invariant as well.
+For a linear parity $b^Tg$, invariance is exactly $A^Tb=0$:
 each free block contributes an even number of selected endpoints. Within a
 block the signed edge value is $c_i\oplus c_j$, so its sum around every loop
 already vanishes. Any nontrivial gluing obstruction would therefore have to
