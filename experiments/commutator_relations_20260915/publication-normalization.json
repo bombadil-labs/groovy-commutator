@@ -1,0 +1,10 @@
+{
+  "difference": "One extra trailing newline in recovered, evaluated prior-summary JSON; scientific JSON values identical.",
+  "evaluated_bytes": 979311,
+  "evaluated_sha256": "77008b0858ef6c2d799ee305862ef2cde93f32ea01bd687508d461b1a944b91e",
+  "repository_bytes": 979310,
+  "repository_sha256": "c437e807465e3959ad6477b2641b187725712c408cfa06ee3812438e2d221d38",
+  "parsed_json_equal": true,
+  "raw_evaluated_input_preserved": "gc-relations/results/commutator_completion_20260915.json in commutator-relations-20260915.zip",
+  "handling": "Preserve frozen input hash and archived evaluated bytes. Canonical publication source hash points to unchanged repository bytes. No scientific recomputation or result modification."
+}

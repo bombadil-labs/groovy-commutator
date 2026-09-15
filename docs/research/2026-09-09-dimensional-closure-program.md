@@ -23,7 +23,9 @@ fixed 13-root panel. D3/D4 completion freedom remains finite-family-relative.
 A conditional obstruction rules out nonconstant sibling-only Boolean
 readouts between disjoint all-free child blocks on width-seven 54/110 at
 D3/D4; it does not rule out other spatial readouts or additional constraints.
-No further experiment is running under this completed unit.
+Equal summary counts do not establish equivalence of the spatially and
+temporally structured partitions. That richer shape/gluing question remains
+unrun. No further experiment is running under this completed unit.
 
 ## 2026-09-15: beam support invariants and a finite ECA classifier
 

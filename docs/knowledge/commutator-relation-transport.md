@@ -21,6 +21,11 @@ cross-block parity. This conditional obstruction does not concern fixed or
 mixed blocks, overlapping spatial readouts, constrained completions, larger
 widths, or universal lift transport.
 
+Equal ranks and survival totals do not establish isomorphism of partitions
+with their spatial and temporal structure retained. That shape question was
+not tested. The ambiguous width-seven D3/D4 partitions of 54/110 are fully
+singleton, a stronger negative on those specific domains.
+
 The relational object remains exact within its completion contract. The next
 open explanatory question is what generates the surviving difference-query
 collisions and their width/representation dependence. No additional experiment

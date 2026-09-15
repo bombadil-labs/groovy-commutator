@@ -56,12 +56,14 @@ def main():
         'review/comparison.json', 'review/physical-replay-review.md',
         'experiments/commutator_relations_20260915/execution-freeze.json',
         'experiments/commutator_relations_20260915/raw-archive.json',
-        'experiments/commutator_relations_20260915/REPRODUCE.md'}
+        'experiments/commutator_relations_20260915/REPRODUCE.md',
+        'experiments/commutator_relations_20260915/publication-normalization.json'}
     for p, value in primary['source_hashes'].items():
         assert sha(ROOT / p) == value
     result = {
         'source_hashes': {p: sha(ROOT / p) for p in sorted(paths)},
         'input_hashes': primary['input_hashes'], 'raw_result_sha256': compare['primary_result_sha256'],
+        'prior_summary_normalization': json.loads((UNIT / 'publication-normalization.json').read_text()),
         'independent_comparison': compare, 'groups': groups,
         'panel_columns': ['width', 'rule', 'dimension', 'contract', 'longitudinal_events', 'spatial_orbits',
                           'longitudinal_rank', 'spatial_rank', 'ambiguous_spatial_events', 'variables',

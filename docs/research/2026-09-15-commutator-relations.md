@@ -157,6 +157,51 @@ readouts, additional constraints on completions, or arbitrary widths and
 dimensions. Width eight does not satisfy the distinct-variable condition for
 these two roots.
 
+## Gauge structure, partition shape and an untested gluing question
+
+After evaluation, Myk shared a proposal to treat completion choice as gauge
+freedom and study the partition's structure instead of its magnitude. The
+finite algebra supports a precise version. If $A$ is the incidence matrix
+with one column per distinct queried free key, the commutator family is
+
+$$\mathcal G=c+\operatorname{im}A,\qquad g\mapsto g+A v,\quad v\in\mathbb F_2^U.$$
+
+The columns have nonempty disjoint supports, so this action is free and
+transitive on the family: it is a torsor for $\mathbb F_2^U$. Each free-query
+block has two allowed bit patterns with every relative parity fixed. This is
+the set-level free/transitive notion of a
+[torsor](https://stacks.math.columbia.edu/tag/04TV); no sheaf or bundle has been
+constructed by the experiment. Fixed G cells remain anchored outside those
+free blocks.
+
+Only differences within the same free block are invariant under independent
+block flips. For a linear parity $b^Tg$, invariance is exactly $A^Tb=0$:
+each free block contributes an even number of selected endpoints. Within a
+block the signed edge value is $c_i\oplus c_j$, so its sum around every loop
+already vanishes. Any nontrivial gluing obstruction would therefore have to
+come from additional compatibility data, such as spatial overlaps, dynamics
+or cross-floor identifications. Calling it a cohomological obstruction before
+specifying those maps and conditions would exceed the result.
+
+The full partitions, constants and physical addresses were preserved and
+compared independently. **Equal relation counts or equal survival totals do
+not establish isomorphism of the spatially or temporally structured
+partitions.** The unembedded same-query graph alone is a union of cliques;
+its unlabeled topology is determined by block sizes. A richer shape question
+needs to retain how those blocks sit in space, evolution and lift addresses.
+That analysis was not performed or scored by this protocol. At width seven,
+the D3/D4 ambiguous partitions for 54/110 are entirely singletons even before
+the remaining spatial quotient; that stronger negative survives any mere
+change of graph summary. Fixed vertices or extra spatial/dynamical edges
+would be additional structure, not a relation measured by this test.
+
+The gauge interpretation is relative to the partial beam and the queried
+observable. Different completions can define different ambient dynamics off
+the beam. Complement conjugation is a distinct relabeling operation; treating
+it jointly with completion freedom requires transporting the law, lift,
+difference operation and address maps consistently. The experiment does not
+identify those two operations as one gauge group.
+
 ## Interpretation and stopping point
 
 The relational object is well-defined and sometimes persists through a lift.
@@ -165,7 +210,8 @@ representatives disappear at one tested width, controls share the positive
 higher-floor signatures at the other, and color-complemented representatives
 have different counts. The latter is a failure of representation invariance
 for this signature, not evidence that the underlying conjugate dynamics
-belong to different classes.
+belong to different classes. These tests do not rule out a discriminator based
+on the richer, untested partition structure described above.
 
 The phrase “identity without essence” motivated inspecting relational
 invariants; this finite result neither establishes nor refutes that broader
@@ -214,3 +260,11 @@ the reviewer independently reviewed the primary implementation. Final
 publication review is pinned to the gathering head. Automatic CI only
 compiles and checks provenance plus the ordinary site tests/build; it does
 not rerun the scientific experiment.
+
+Publication correction: the recovered prior-summary JSON had one extra
+trailing newline relative to the unchanged repository file. CI detected the
+byte-hash mismatch. The parsed JSON is identical. The bundle and execution
+record preserve the actually evaluated bytes and hash; the public source hash
+now points to the exact repository bytes. The [normalization certificate](../../experiments/commutator_relations_20260915/publication-normalization.json)
+records both hashes. No scientific values or frozen inputs were rewritten,
+and no scientific evaluation was rerun for this packaging correction.
