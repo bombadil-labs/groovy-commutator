@@ -1,0 +1,22 @@
+[
+  {
+    "slug": "commutator-relations-20260915",
+    "label": "Commutator relations",
+    "title": "Completion-independent relations survive some lifts, but do not isolate Class IV",
+    "date": "2026-09-15",
+    "updated": "2026-09-15",
+    "kind": "Exact relation audit",
+    "evidence": "exact",
+    "topic": "Dimensional closure",
+    "summary": "An exact translation quotient and independent replay find width-dependent relation transport; controls and color complements prevent a Class-IV interpretation.",
+    "takeaway": "Shared uncertainty can retain fixed parity, but those relations are not yet a representation-invariant dynamical-class marker.",
+    "source": "docs/research/2026-09-15-commutator-relations.md",
+    "promotion": {
+      "stage": "research"
+    },
+    "related": [
+      "commutator-completion-20260915",
+      "beam-discriminator-loop-20260915"
+    ]
+  }
+]

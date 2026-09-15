@@ -6,6 +6,25 @@ This page is the **working synthesis** of the dimensional-lift research program.
 
 The program is parallel to [Dynamics of Erased Distinctions](2026-09-08-dynamics-of-erased-distinctions.md). That program asks when information can be forgotten safely and how a lossy representation repairs itself. This one asks what additional structure must be represented when evolution and transformation refuse to agree.
 
+## 2026-09-15: relational commutator signatures remain width-dependent
+
+The [completion-independent relation audit](2026-09-15-commutator-relations.md)
+removes translated event copies from the exact commutator completion family
+and follows seven fixed address readouts through adjacent lifts. Width-seven
+54/110 have no ambiguous parity relations at D3/D4; width-eight survivors
+persist, but controls 18/126 share the higher-floor signatures and color
+complements differ. The relational object is exact within the contract and
+does not supply an intrinsic Class-IV discriminator.
+
+Independent replay covers all 78 physical panel records, every symbolic event
+partition and all 546 readout comparisons. All-256 counting remains scoped
+to the longitudinal quotient; the full spatial quotient is checked on the
+fixed 13-root panel. D3/D4 completion freedom remains finite-family-relative.
+A conditional obstruction rules out nonconstant sibling-only Boolean
+readouts between disjoint all-free child blocks on width-seven 54/110 at
+D3/D4; it does not rule out other spatial readouts or additional constraints.
+No further experiment is running under this completed unit.
+
 ## 2026-09-15: beam support invariants and a finite ECA classifier
 
 The [eleven-round beam investigation](2026-09-15-beam-discriminator-loop.md) treats dimensional rules as representations of an underlying beam. It closes the full-input first-lift local native/decoder check for all ECAs, and proves bounded disturbance-support transport for the ancestral six-field encoding. Conditional stationary interval-tail rates also survive each fixed floor. Arbitrary higher-dimensional parents and universal native-child locality remain separate open questions.
