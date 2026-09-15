@@ -1,0 +1,14 @@
+{
+  "rules": ["18", "30", "54", "90", "110", "126"],
+  "rings": [7, 8, 9],
+  "ring": [
+    {"name": "arithmetic"},
+    {"name": "divisibility", "id": "divisible_by_4", "params": {"divisor": 4}},
+    {"name": "valuation", "id": "power_of_2", "params": {"prime": 2}},
+    {"name": "valuation", "id": "power_of_3", "params": {"prime": 3}}
+  ],
+  "rule": [{"name": "eca"}],
+  "relation": [{"name": "difference"}],
+  "comparison": [{"name": "change"}],
+  "max_comparisons": 10000
+}

@@ -1,0 +1,28 @@
+name: Rule and ring selector software checks
+on:
+  pull_request:
+    paths:
+      - 'scripts/rule_ring_selectors.py'
+      - 'scripts/import_observation_catalog.py'
+      - 'scripts/test_rule_ring_selectors.py'
+      - 'docs/tools/rule-ring-selectors.md'
+      - 'experiments/rule_ring_selectors/**'
+      - '.github/workflows/rule-ring-selectors.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/rule_ring_selectors.py'
+      - 'scripts/import_observation_catalog.py'
+      - 'scripts/test_rule_ring_selectors.py'
+      - '.github/workflows/rule-ring-selectors.yml'
+jobs:
+  software-checks:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install numpy==2.3.5
+      - run: python scripts/test_rule_ring_selectors.py
