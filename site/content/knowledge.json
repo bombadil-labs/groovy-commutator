@@ -2444,15 +2444,6 @@
     },
     {
       "source": "observation-catalog-ensemble",
-      "type": "tests",
-      "target": "dimensional-beam",
-      "reason": "The common catalog compares root signatures and bounded native views without presuming a class discriminator.",
-      "research": [
-        "observation-catalog-20260915"
-      ]
-    },
-    {
-      "source": "observation-catalog-ensemble",
       "type": "depends_on",
       "target": "commutator-relation-transport",
       "reason": "The completion-provenance branch reuses the exact symbolic partitions and spatial quotient, then inspects their source populations.",
