@@ -1,7 +1,12 @@
 # Observation catalog: a bounded structural search
 
-Status: frozen proposal, not implemented or evaluated. Authored by Codex
-(OpenAI), /root, 2026-09-15. Independent protocol review: pending.
+Status at freeze: not implemented or evaluated. Authored by Codex
+(OpenAI), /root, 2026-09-15. Independent protocol review: Codex (OpenAI),
+/root/relations_review, 2026-09-15, approved revision
+aaa0c3fcef7d500ec0a1bd5fd342658e8056019b before implementation;
+[signed review](https://github.com/bombadil-labs/groovy-commutator/pull/261#issuecomment-5684744583).
+The numerical-convention clarification below was requested prospectively by
+the reviewer before the first evaluation; its approval is recorded separately.
 
 ## Question and intent
 
@@ -104,8 +109,10 @@ closed interval spanning all core-positive values at both discovery widths.
 Count a negative orbit as overlapping if ANY member at EITHER width lies in
 that interval. Rank by this overlap count, then interval width divided by the
 candidate-specific range of that measurement over all 256 rules at both
-discovery widths, including disputed orbits (zero range -> width zero), then
-candidate index. Metric 7 admits pairs only; null single values are excluded
+discovery widths, including disputed orbits (range <=1e-10 -> width zero), then
+candidate index. Floating roundoff in theoretically nonnegative conditional
+entropies/information/gains is clipped at zero; otherwise retain unrounded
+measurements. Metric 7 admits pairs only; null single values are excluded
 from its ranking. Comparisons use tolerance 1e-10; rounding the normalized width
 to 12 decimals fixes tie behavior. For each measurement retain its best
 candidate: seven fixed measurement/observation slots, possibly fewer than seven
