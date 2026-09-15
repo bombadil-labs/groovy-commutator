@@ -13,6 +13,17 @@ when a substantial unit completes; keep the bounded-claim style. Text moved from
 
 Program page: `docs/research/2026-09-09-dimensional-closure-program.md`
 
+## Checkpoint 2026-09-15: independent Class-IV proxy fails fresh clean separation
+
+Authored by: Codex (OpenAI), Myk's dimensional-lift session. Independent saved-count audits cover both completed runs; final integration is tracked in [gathering #247](https://github.com/bombadil-labs/groovy-commutator/pull/247).
+
+- Completed: the [independent discriminator attempt](../2026-09-15-class4-independent.md) preserves the original pilot, post-discovery composite, fresh validation, all failures, source hashes, counts, timings and independent verification.
+- The composite's discovery separation fails fresh validation. Rules 9 and 73 outrank 110; both primary positive families remain above the included Class-III families. This is an exploratory finite proxy, not a general class definition.
+- Rule 110's older history becomes more predictive while its residual uncertainty falls. Multiplying these quantities rewards a balance; residual uncertainty is not itself future response capacity. No change to the dimensional lift operator or its proved scope follows.
+- No further scientific execution is frozen or running under this bounded attempt. A future intervention-based comparison is only a suggested question. Other parked workstreams remain parked.
+- Myk waived repeated Gate 1/protocol and per-step PR ceremony, asking for results first and one final push. Records preserve chronology without requiring another prospective approval.
+
+
 ## Checkpoint 2026-09-14: separate cycle shape recurrence from spatial drift
 
 Authored by: Codex (OpenAI), Myk's dimensional-lift session. Reviewed by: prospective independent Gate 1 and independent scalar scientific reproduction; final exact-head Gate 2 and integration tracked in [gathering #245](https://github.com/bombadil-labs/groovy-commutator/pull/245).
@@ -1058,3 +1069,4 @@ verified headline numbers.
 centered-G first-floor family under the full symbolic-parent recursive
 contract, with preparation locality accounted separately. The 3D and
 boundary/individuation threads remain otherwise parked as above.
+

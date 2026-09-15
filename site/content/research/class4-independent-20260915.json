@@ -1,0 +1,17 @@
+[
+  {
+    "slug": "class4-independent-20260915",
+    "label": "Discriminator pilot",
+    "title": "An independent Class-IV discriminator attempt",
+    "date": "2026-09-15",
+    "updated": "2026-09-15",
+    "kind": "Experiment",
+    "evidence": "exploratory",
+    "topic": "Observation and memory",
+    "summary": "A retention–history composite separates discovery samples, then admits rules 9 and 73 above 110 in fresh validation across all 88 ECA symmetry families.",
+    "takeaway": "Useful predictive history can grow while a balance score falls; residual local uncertainty is not a count of preserved future possibilities.",
+    "source": "docs/research/2026-09-15-class4-independent.md",
+    "promotion": {"stage": "research"},
+    "related": ["orbit-drift-14-20260914"]
+  }
+]
