@@ -154,8 +154,10 @@ root partitions, not full transverse coverage, an intrinsic recognition
 theorem, or a guarantee that transitions match merely because partitions do.
 Also record a common partition's transition relation using the shared source
 successor; matching partitions then transport the observed transition graph.
-Do not call a decoded-root copy independent discovery. Mark omitted native
-sensitivities/G as completion-dependent, rather than evaluate a zero completion.
+Do not call a decoded-root copy independent discovery. Native sensitivities/G
+are not guaranteed determined by on-family constraints and are therefore
+omitted here; some individual queries can be forced. Do not evaluate an
+arbitrary zero completion as an intrinsic observation.
 
 For the latter G, use the existing symbolic partition and constants instead.
 On each contract's fully spatially quotiented free-event blocks, annotate
