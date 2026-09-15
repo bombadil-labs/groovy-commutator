@@ -1,0 +1,13 @@
+{
+  "note": "Byte-identical copy of saved primary relations; no fitting or new CA evaluation.",
+  "prior_archive": {
+    "bytes": 10295413,
+    "file": "rule-ring-structure-20260915.zip",
+    "manifest_sha256": "07da08c8e400ee89605e59dd8ee0159dc2197900a23fe9affed560ed1f9a9d92",
+    "members": 147,
+    "sha256": "46d3ac7cbffffe214bd3ca649a3571b621b5cc402168d2a4230c16ad08e33089"
+  },
+  "sha256": "6566098f3f4c153a8417a2c379f5c61eb29ff25a732a08dad0a3d549770f3b98",
+  "source": "experiments/rule_ring_structure_20260915/compact-relations.json",
+  "source_manifest_sha256": "07da08c8e400ee89605e59dd8ee0159dc2197900a23fe9affed560ed1f9a9d92"
+}
