@@ -2351,6 +2351,24 @@
       "research": [
         "class4-independent-20260915"
       ]
+    },
+    {
+      "source": "completion-response-quotient",
+      "type": "depends_on",
+      "target": "uniform-six-field-lift-cache",
+      "reason": "The experiment perturbs the exact preserved dimension-two finite source families and retains their forced flip-mask tables.",
+      "research": [
+        "response-quotient-20260915"
+      ]
+    },
+    {
+      "source": "completion-response-quotient",
+      "type": "depends_on",
+      "target": "class4-independent-discriminator",
+      "reason": "The experiment follows the failure of residual predictive uncertainty as a proxy for preserved future possibilities; the earlier failures remain unchanged.",
+      "research": [
+        "response-quotient-20260915"
+      ]
     }
   ],
   "nodes": [
@@ -4494,6 +4512,18 @@
       "source": "docs/knowledge/class4-independent-discriminator.md",
       "research": [
         "class4-independent-20260915"
+      ]
+    },
+    {
+      "id": "completion-response-quotient",
+      "title": "Compatible completion freedom can dominate response measurements",
+      "kind": "finding",
+      "status": "exploratory",
+      "summary": "Fixed hash completions give every tested root representative maximum response/retention score on the finite probe panel. Unspecified dynamics can dominate the measurement while all completions still agree on the invariant beam.",
+      "updated": "2026-09-15",
+      "source": "docs/knowledge/completion-response-quotient.md",
+      "research": [
+        "response-quotient-20260915"
       ]
     }
   ],

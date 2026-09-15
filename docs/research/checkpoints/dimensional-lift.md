@@ -13,6 +13,15 @@ when a substantial unit completes; keep the bounded-claim style. Text moved from
 
 Program page: `docs/research/2026-09-09-dimensional-closure-program.md`
 
+## Checkpoint 2026-09-15: compatible completion responses fail root-class discrimination
+
+- Completed: the [response quotient experiment](../2026-09-15-response-quotient.md) preserves the current six-field D2 input records, exact one-step response counts, fixed completion-bank trajectories, all failures and independent audit.
+- Fixed hash completions give maximum global source-retention/response score for every tested representative. The mixed bank adds no class ordering beyond the structured bank and identity outranks the two core positives. The note records the exact finite mechanism and scope.
+- On the invariant beam, completions agree. Outside it, the completion supplies new dynamics. No universal cohabitation or Class-IV impossibility theorem follows from this failed candidate.
+- Myk authorized the new test and waived repeated Gate 1 and per-step PR ceremony. Final source, evidence and records are batched. Two reporting defects were corrected from immutable checkpoints; trajectories were not rerun.
+- No additional scientific execution is planned under this bounded attempt. Keeping the actual rule fixed while perturbing inputs is a next modeling question, not an evaluated result. Other parked workstreams remain parked.
+
+
 ## Checkpoint 2026-09-15: independent Class-IV proxy fails fresh clean separation
 
 Authored by: Codex (OpenAI), Myk's dimensional-lift session. Independent saved-count audits cover both completed runs; final integration is tracked in [gathering #247](https://github.com/bombadil-labs/groovy-commutator/pull/247).

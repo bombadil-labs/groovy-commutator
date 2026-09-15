@@ -1,0 +1,33 @@
+name: Research response quotient
+on:
+  pull_request:
+    paths:
+      - 'scripts/response_quotient_20260915.py'
+      - 'scripts/summarize_response_quotient_20260915.py'
+      - 'results/response_quotient_20260915.json'
+      - 'docs/research/protocols/response-quotient-20260915.md'
+      - 'experiments/response_quotient_20260915/frozen_runner.py'
+      - '.github/workflows/research-response-quotient.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/response_quotient_20260915.py'
+      - 'scripts/summarize_response_quotient_20260915.py'
+      - 'results/response_quotient_20260915.json'
+      - 'docs/research/protocols/response-quotient-20260915.md'
+      - 'experiments/response_quotient_20260915/frozen_runner.py'
+      - '.github/workflows/research-response-quotient.yml'
+permissions:
+  contents: read
+jobs:
+  bounded-controls-and-provenance:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install 'numpy==2.3.5'
+      - run: python scripts/response_quotient_20260915.py --self-test
+      - run: python scripts/check_result_integrity.py results/response_quotient_20260915.json

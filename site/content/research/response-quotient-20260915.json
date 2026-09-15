@@ -1,0 +1,17 @@
+[
+  {
+    "slug": "response-quotient-20260915",
+    "label": "Response quotient",
+    "title": "Unspecified completions dominate the response-capacity test",
+    "date": "2026-09-15",
+    "updated": "2026-09-15",
+    "kind": "Experiment",
+    "evidence": "exploratory",
+    "topic": "Observation and memory",
+    "summary": "Distinct responses and retained source information fail as a root Class-IV discriminator: four hash completions give every tested representative the maximum score.",
+    "takeaway": "Compatible rules can agree on a beam while their unspecified entries supply the dynamics measured after a perturbation.",
+    "source": "docs/research/2026-09-15-response-quotient.md",
+    "promotion": {"stage": "research"},
+    "related": ["class4-independent-20260915", "uniform-jet6-cache-20260914"]
+  }
+]
