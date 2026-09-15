@@ -4,10 +4,11 @@
   "version": "0.1.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
+    "dev": "npm run bridge:build && vite",
+    "build": "npm run bridge:build && vite build",
     "test:research": "node --test scripts/research.test.mjs scripts/research-program.test.mjs scripts/knowledge.test.mjs",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "bridge:build": "node scripts/build-dimensional-bridge.mjs"
   },
   "dependencies": {
     "react": "^18.3.1",
