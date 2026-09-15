@@ -1,0 +1,24 @@
+[
+  {
+    "slug": "beam-discriminator-loop-20260915",
+    "label": "Beam discriminator loop",
+    "title": "Recurrence and spreading: a finite Class IV candidate and beam invariants",
+    "date": "2026-09-15",
+    "updated": "2026-09-15",
+    "kind": "Experiment and proof",
+    "evidence": "exploratory",
+    "topic": "Dimensional closure",
+    "summary": "Eleven adaptive rounds find a fixed finite ECA separator and prove bounded support transport. A wider-radius family challenges the ordered-background interpretation; universal Class IV discrimination remains open.",
+    "takeaway": "A useful finite classifier and a beam invariant are different achievements; both need explicit counterexamples and scope.",
+    "source": "docs/research/2026-09-15-beam-discriminator-loop.md",
+    "promotion": {
+      "stage": "research"
+    },
+    "related": [
+      "partial-cohabitation-20260915",
+      "response-quotient-20260915",
+      "uniform-jet6-cache-20260914",
+      "class4-independent-20260915"
+    ]
+  }
+]

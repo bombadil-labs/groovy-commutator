@@ -1,0 +1,7 @@
+# Round 11 outcome and stopping point
+
+Runtime47.444 seconds. Every extended trial reproduces all513 original R10 aggregate damage entries exactly before continuation. Both radius-two cases remain selected at every doubling through4096. Their diameters grow from23.22/16.84 at512 to118.44/120.59 at4096; final doubling exponents0.920/1.051. Thus the mechanism challenge survives this finite horizon extension. Radius-one remains q-negative and near-linear in spread. Radius-three remains negative at4096, but one trial briefly crosses the growth cutoff at2048, displaying finite-time instability.
+
+Stop after eleven rounds. The useful result is a validated finite ECA candidate, precise support and interval-tail transport statements, and an explicit limitation of the proposed domain interpretation. No universal Class IV discriminator, stationary-tail estimator, all-dimensional native-rule theorem, or new rule-family class labels have been established. Further changes would be a new research unit, not a continuation of threshold tuning until success.
+
+Next ideas for a fresh session: distinguish a rare local correction to an advected random field from interactions among persistent structures; condition temporal mixtures without discarding genuine transients; test response/scattering organization under the same support transport contract. Formulate a falsifiable new property before choosing its estimator. Keep the present fixed predictor as a baseline, and keep the radius-two family as an adversary.

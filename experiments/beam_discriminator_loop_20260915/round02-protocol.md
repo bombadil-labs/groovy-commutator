@@ -1,0 +1,9 @@
+# Round 2: completion-free conflict structure across floors
+
+Freeze before evaluation; standing user approval. Question: does the D2 cohabitation/conflict structure persist at D3 on exactly the same finite source families, and how much does exact full-input D2 change the older finite counts?
+
+Analyze all256 roots. Reuse round1's exact D2 native tables and the archived D2/D3 tables on widths7/8. Compare only forced physical patterns and flip targets, never completions or rule-local IDs. At D3, the period-six lifted axes permit dropping each neighborhood's repeated +3 slice while retaining -3..2; this is an injective compression of all archived radius-three physical patches. Extract actual bits at saved representatives. Native forced entries only, decoder constraints excluded.
+
+For each of five domains (D2w7,D2w8,D2full,D3w7,D3w8), record all unordered pair counts of shared0,shared1,conflicts, per-root compatibility and occupied compatibility degrees, and mean conflicting fraction on occupied pairs. Reuse D2w7/w8 pair matrices where identical; independently check selected pairs. Compute cross-floor edge persistence and within-ECA-symmetry-orbit spread for all reported root statistics. Describe class labels only after measurements; no new score or fit.
+
+Hypotheses: H1 more source constraints only remove D2 edges (analytic control). H2 an informative beam-level compatibility relation persists beyond mere loss of shared support; diagnose vacancy explicitly rather than assuming persistence. H3 native class-relevant summaries are equal within reflected/complement-conjugate root orbits; failures show representation sensitivity unless a transported observable fixes them. D3 remains finite-family, not full shift. Ten-minute computation budget,1.5GiB; scientific work outside Actions. Exact byte keys, no hash-collision approximation.

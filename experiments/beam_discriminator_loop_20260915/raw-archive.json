@@ -1,0 +1,883 @@
+{
+  "extraction": "Extract every volume into one parent directory; gc-discriminator and gc-pilot paths match the frozen runners. The repository supplies scripts and text records.",
+  "format": "ZIP_STORED; individual NPZ and input TAR.GZ members already compressed",
+  "volumes": [
+    {
+      "bytes": 313339811,
+      "filename": "beam-loop-raw-20260915-part1.zip",
+      "library_file_id": "libfile_78b5ac3c98ac81918dd0c44338be426a",
+      "members": [
+        {
+          "bytes": 1289021,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round01/tables.npz",
+          "sha256": "3ba757e58ca1e4c30ae6eb45d774942e859adac110282104299247e33b0373e7"
+        },
+        {
+          "bytes": 134833,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round02/d2full_pairs.npz",
+          "sha256": "f4110d89feb9194e5933071978db7b2bc6295704320c3878a78c6c85b27456ba"
+        },
+        {
+          "bytes": 122675,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round02/d2w7_pairs.npz",
+          "sha256": "4e0871f2f90f479c9df35d437f5189a70408006f0b6aad372e824affa15d3044"
+        },
+        {
+          "bytes": 133417,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round02/d2w8_pairs.npz",
+          "sha256": "2da22f677b268df416ce7895a11229dd0b4adc29845f4037b3bae00a37480eff"
+        },
+        {
+          "bytes": 98075,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round02/d3w7_pairs.npz",
+          "sha256": "3dc7846afa190a123bc3fe185a85ff3b6c7c00053ca3510da3e5d8287ef44b39"
+        },
+        {
+          "bytes": 106001,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round02/d3w8_pairs.npz",
+          "sha256": "6acb32e25834b2bda41650a1149164ff047c7d42af387cb4ca822ed5580aa145"
+        },
+        {
+          "bytes": 61759898,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round02/tables.npz",
+          "sha256": "6333409dc13eb59319b594997b61905eca6af44918f2bd17dd2aeda47b0ce20f"
+        },
+        {
+          "bytes": 2939977,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round03/w7_r007.npz",
+          "sha256": "22bb2c6026ee3935d1b2b127df708debdf410c3e47c6a0069b883c5885a47d95"
+        },
+        {
+          "bytes": 2952659,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round03/w7_r021.npz",
+          "sha256": "edec7372038f2c13d5a83b59ba6eeaf944a06dc01ad17dd5cca69801bc027bf1"
+        },
+        {
+          "bytes": 2973992,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round03/w7_r022.npz",
+          "sha256": "a3a4fc44559bdddc16c1e7982007c359e5d8643fcc5192a625ae82264f6d0823"
+        },
+        {
+          "bytes": 3201299,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round03/w7_r025.npz",
+          "sha256": "6049a76e21dcf9f067ee2fadd4599b231cd9509878038b1e1bfc77039eafb513"
+        },
+        {
+          "bytes": 3238764,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round03/w7_r026.npz",
+          "sha256": "9b5cc5610354a733e6c16dd03d185cd90de64eb697fdbd86bc7360e832a3a0bb"
+        },
+        {
+          "bytes": 3170406,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round03/w7_r027.npz",
+          "sha256": "12fb8fc69125918f88a174acc841a6f2c0fb26eaa5d5ca1fd8e470e36575492d"
+        },
+        {
+          "bytes": 3138291,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round03/w7_r030.npz",
+          "sha256": "81cc87be90bc252bf97cefa12e0e6f1e465f0a35c8820cca6d35abd7bcea6fca"
+        },
+        {
+          "bytes": 2990079,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round03/w7_r031.npz",
+          "sha256": "eb6b97d2dad44bbc055254671eb0067528867d3859a5e85d9dd62968c4d464d9"
+        },
+        {
+          "bytes": 2189285,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round03/w7_r032.npz",
+          "sha256": "bb018baed0e5240c2a208866e2638a6c35c1d8c550d7afbef5606e09a3366532"
+        },
+        {
+          "bytes": 2694175,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round03/w7_r033.npz",
+          "sha256": "2a7df3113606342e3386fb35dcc281a75482ea97f17782bd5134ca11477fce40"
+        },
+        {
+          "bytes": 3146760,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round03/w7_r039.npz",
+          "sha256": "797f70d9616d4f69b25cfb34cefbc5a2a1a4f940b4e6128fcde1fa5e1052af2f"
+        },
+        {
+          "bytes": 3242854,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round03/w7_r041.npz",
+          "sha256": "27b374f00c64b9320a3967bbdf682be3b982bd71b621742321cf292de3c72939"
+        },
+        {
+          "bytes": 2378318,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round03/w7_r044.npz",
+          "sha256": "bd49f07425d969b8b5e622016870da3b08203b364f279259281635271fc36fc7"
+        },
+        {
+          "bytes": 3217492,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round03/w7_r045.npz",
+          "sha256": "446ed72386b4c05ed2b17dff574e2c66cc3df9e22a6dd8c71b6400fbbe6a29fc"
+        },
+        {
+          "bytes": 3162083,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round03/w7_r053.npz",
+          "sha256": "c3f498e110ac2532019075974713d0f056c5c7109570b060fba7be05d447290d"
+        },
+        {
+          "bytes": 3071210,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round03/w7_r054.npz",
+          "sha256": "bfeea0400ecd97cb7f391affb42dcd5fca448dcebab71b140704ce3efda46848"
+        },
+        {
+          "bytes": 3116681,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round03/w7_r060.npz",
+          "sha256": "a7191b09ea156e965d31b41e6fff948dabef42580c4a872b036d3c70fc29681b"
+        },
+        {
+          "bytes": 3219231,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round03/w7_r061.npz",
+          "sha256": "14dc767ea856c1cf3246228f60501ac9861c32d3f8c4a4a97bbff9f2bcee4c41"
+        },
+        {
+          "bytes": 3200331,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round03/w7_r067.npz",
+          "sha256": "3f4749e22c2e2e61374be4dba07ba0e5f5f3331ebc5ff653b55ca59758dbf9be"
+        },
+        {
+          "bytes": 2793213,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round03/w7_r073.npz",
+          "sha256": "f737819b473eda991421daa01458740956b0805cb928f1cfe07f600837e4a773"
+        },
+        {
+          "bytes": 3249369,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round03/w7_r075.npz",
+          "sha256": "81b1b3a845532a74882a3ac02e9b1f11aeef25de960513a92afeff86c20f965a"
+        },
+        {
+          "bytes": 3254465,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round03/w7_r082.npz",
+          "sha256": "d8e0205598de0870f0a70f40c16e4e90d1f7bdd37cece5b8b6768dbf749be924"
+        },
+        {
+          "bytes": 3178507,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round03/w7_r083.npz",
+          "sha256": "fa466aabdebcf8bdb62c14c384159125194962951178e39e4dc0bc1502d4619d"
+        },
+        {
+          "bytes": 3141284,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round03/w7_r086.npz",
+          "sha256": "ef1e137f4122e8fbb48aacaa8f25945078cda91be335dc41658e1aba44e88663"
+        },
+        {
+          "bytes": 2992402,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round03/w7_r087.npz",
+          "sha256": "f2fb720bee4a2670b85d5e71cad220128dd4fbc111f7c3f49e23892e694f731c"
+        },
+        {
+          "bytes": 3254890,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round03/w7_r089.npz",
+          "sha256": "720ef1cd338d3a6dbeba9cf76f90873b5fe19bdd9ab691ca487fc70a275a626a"
+        },
+        {
+          "bytes": 3236578,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round03/w7_r090.npz",
+          "sha256": "a826038e8ce8d051c505573a4aaedfc4c6724ffd98fc450dd00abbb4a4da241b"
+        },
+        {
+          "bytes": 2623637,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round03/w7_r094.npz",
+          "sha256": "db21681f10f6947a5b30392f914f7b89eb6b1bf4f26fde51de8460a0d5be2ef2"
+        },
+        {
+          "bytes": 3238369,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round03/w7_r097.npz",
+          "sha256": "54bf27d270ad805bca72ab2c96ec2152b8b9c2b5b78f2473b1a85374542c983f"
+        },
+        {
+          "bytes": 2379996,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round03/w7_r100.npz",
+          "sha256": "2b3651c3e5bd62e001a8529b3bc9a163c345248bf21afc9dfc48ef01c0c8d7d0"
+        },
+        {
+          "bytes": 3229648,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round03/w7_r101.npz",
+          "sha256": "1815ce2018899ad19aaba6872bbce8e70e74eaa7c82864818665cea6c5596c90"
+        },
+        {
+          "bytes": 3130776,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round03/w7_r102.npz",
+          "sha256": "7d7cc6662a0d40307fb9af2e2da45d4599e186ce76833384f0774f29bc911c89"
+        },
+        {
+          "bytes": 3216418,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round03/w7_r103.npz",
+          "sha256": "b50309b11ca95de9aa2ed7c4cfd6431666a32a9766e20c59f1b237caed86221f"
+        },
+        {
+          "bytes": 2644843,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round03/w7_r104.npz",
+          "sha256": "d2c303e43f97d8cf74d27d731a088df203f30ded16478c1df1608fd209f29413"
+        },
+        {
+          "bytes": 3248777,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round03/w7_r105.npz",
+          "sha256": "9d08851ad47b7736a16c0df532bd391d646989cd18c076a588457ca4ba5366a7"
+        },
+        {
+          "bytes": 3231819,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round03/w7_r106.npz",
+          "sha256": "b578636ae5e732c747e36dd38c37f0af7ac96f2b148070fd4782d7087057fcbb"
+        },
+        {
+          "bytes": 3269797,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round03/w7_r107.npz",
+          "sha256": "61c5989876c5af7e67483443bd73b87b379240121a746473f2c0d4a1410ce13a"
+        },
+        {
+          "bytes": 2795010,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round03/w7_r109.npz",
+          "sha256": "818a2b9f23e0a33ed461394dc3c99b2abe05a39f19e6e7e1cc41660012846ce6"
+        },
+        {
+          "bytes": 3233294,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round03/w7_r120.npz",
+          "sha256": "5e3b32a904ae53789b7facb82e71e9b2cf8f408ea06e53cfbec2d9dcbe11db0c"
+        },
+        {
+          "bytes": 3273485,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round03/w7_r121.npz",
+          "sha256": "7ab31a239bb1d5c6d78031053ed95147114b5706f64ad51bd0c9b68744693a2b"
+        },
+        {
+          "bytes": 3160181,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round03/w7_r122.npz",
+          "sha256": "8f71a99a702466bc346d3930b83fab779ff6570600cfee29525e985e283f37b9"
+        },
+        {
+          "bytes": 2744711,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round03/w7_r123.npz",
+          "sha256": "3ebc23f77a17e108dac2fddadfbad3f4d27b752af26428b9068bb954e06fe6f8"
+        },
+        {
+          "bytes": 2607762,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round03/w7_r133.npz",
+          "sha256": "20c7d5de69539045c6e8edf5024182e43213228fa5e47ddf0394f0a833d1873e"
+        },
+        {
+          "bytes": 3130902,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round03/w7_r134.npz",
+          "sha256": "3efe200be7d5e5dd0ed082b89c30a820e2ffbf3ea9e853c20141bb3b08f527be"
+        },
+        {
+          "bytes": 3165974,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round03/w7_r135.npz",
+          "sha256": "45f4f01e0ba27c35311ba0a9cfc15bceb015dd7d22441306afe96bfc43bb13b1"
+        },
+        {
+          "bytes": 2344413,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round03/w7_r136.npz",
+          "sha256": "e9e3ab70e80a9082d4a59164f56c0c23d1c75048a79f6441e683a6ef67adfcaf"
+        },
+        {
+          "bytes": 1710513,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round03/w7_r140.npz",
+          "sha256": "36360bf1ac989b136dc6b837f02ce2b330f2175e54b90e0ee684a44921d2b61a"
+        },
+        {
+          "bytes": 3096906,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round03/w7_r147.npz",
+          "sha256": "867a65abbd48febce02e9ac0022a2468a8c22f42b3f0b9d6160fe2b4f6ef2d9d"
+        },
+        {
+          "bytes": 3133342,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round03/w7_r148.npz",
+          "sha256": "988ea859e5399001a6435db3ed1903289f91682b0a5d1361ff14136f06ae8cd5"
+        },
+        {
+          "bytes": 3170355,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round03/w7_r149.npz",
+          "sha256": "946a2aaec4d0c0ea42efb84859e60a75ea9ce02e6b72c653d316a1fbf4891f38"
+        },
+        {
+          "bytes": 3222723,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round03/w7_r150.npz",
+          "sha256": "c7c19b50447c95bba1fe34d6f00d3593a6de0311c30af7e25ccbc5966a86f67a"
+        },
+        {
+          "bytes": 3123205,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round03/w7_r151.npz",
+          "sha256": "079bf6b3c62c46a0a22f7d5b0aa1ac647cc3cbbad67e007b94e1fba17e7fce6a"
+        },
+        {
+          "bytes": 3177625,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round03/w7_r153.npz",
+          "sha256": "ab44ecc56ea99654c368caef061352a6c8350324761253f2ab4996a183fae3b7"
+        },
+        {
+          "bytes": 3184177,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round03/w7_r158.npz",
+          "sha256": "d6a246a4e39c82e0f64c8faa98f5a926453f936e76a75d7a4415905edb6ed8c5"
+        },
+        {
+          "bytes": 2560586,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round03/w7_r160.npz",
+          "sha256": "53619c858240d854ae87c8272f1a320ffb94732dd5bb949398156d814f1d4a88"
+        },
+        {
+          "bytes": 3134722,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round03/w7_r161.npz",
+          "sha256": "e33265f64a14289d10b0fb633fd86cc7fe7ff5cc76b91a48ef44b42e9cd10739"
+        },
+        {
+          "bytes": 2520416,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round03/w7_r164.npz",
+          "sha256": "897b22bcfc86ecdecab33c8ce1d4ef5f344ebecdd4a3c4ac1d08b99189e4ab68"
+        },
+        {
+          "bytes": 3239776,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round03/w7_r165.npz",
+          "sha256": "253d7799b3c113da1ef70350af4d745a3c10a416035a655b5b448843683db9af"
+        },
+        {
+          "bytes": 3281886,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round03/w7_r167.npz",
+          "sha256": "2eaf767bd842ca88f1a2f432188e80d3a7a2e3fe957aef87c5a677a2a2eed125"
+        },
+        {
+          "bytes": 2718514,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round03/w7_r168.npz",
+          "sha256": "2d6af8cec7c6dc6f1274e08b2057faa54e009c183bdf1a4523a1b48e4a627599"
+        },
+        {
+          "bytes": 3247942,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round03/w7_r169.npz",
+          "sha256": "7c8d11cc9e06379e21a24eaaee6d22eec5b3595f854502493066363d0e9d830e"
+        },
+        {
+          "bytes": 2554120,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round03/w7_r172.npz",
+          "sha256": "d40af7a4938c5dbbaf73852cf30248b5a2ba196bc0b2df01e0ab2a437458074f"
+        },
+        {
+          "bytes": 3289841,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round03/w7_r181.npz",
+          "sha256": "f2f380fbdf3d20342ee002028c5de7fe789601512c902e806272ac4eb9bb6c6b"
+        },
+        {
+          "bytes": 2356767,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round03/w7_r192.npz",
+          "sha256": "a5a3502610dad3cbf9d2a901701a75963ba443338f7aa0a79ce84c8e6eba9f3b"
+        },
+        {
+          "bytes": 3161592,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round03/w7_r195.npz",
+          "sha256": "1dc2467a09dc8527cedd3d3ec070c46d5ea7ef49564d0ed8408739aa4b66e204"
+        },
+        {
+          "bytes": 1734266,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round03/w7_r196.npz",
+          "sha256": "bb06a9977d94ccbef61d972f6f7ea5fcc9cbc3bcbc66c0bcbf9e0324470059e8"
+        },
+        {
+          "bytes": 2522892,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round03/w7_r202.npz",
+          "sha256": "51742a3d2f069e7e517d98bc05b3e8b4fec573e7d87c4afa1cbb93d5b656bf1e"
+        },
+        {
+          "bytes": 2473859,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round03/w7_r203.npz",
+          "sha256": "5d6fa86a65c2e3905d7c1f3f290fdd3f3666352e5c3327f90358388177137b90"
+        },
+        {
+          "bytes": 1730980,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round03/w7_r206.npz",
+          "sha256": "ba048f35980bde77adafd06da8cd883d26271d3f5da3dbd83b128f7771e8324b"
+        },
+        {
+          "bytes": 3185034,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round03/w7_r214.npz",
+          "sha256": "4816121427b46be3bff3e6398e979423d3f94db96eec09a27374a6e990ba9759"
+        },
+        {
+          "bytes": 2502969,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round03/w7_r216.npz",
+          "sha256": "aabde3b61238bc510fec64ae59c204e9028f0ff291999bf843505c793f05df56"
+        },
+        {
+          "bytes": 2470775,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round03/w7_r217.npz",
+          "sha256": "3db780e8a11fdde9e676e6a729bb782756b0d9c8a740f24c00199a2f2ebb417d"
+        },
+        {
+          "bytes": 2611349,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round03/w7_r218.npz",
+          "sha256": "c1254a763741a4e47e10c391811005cb70487445e5625ce2e7d7d829e6ba5870"
+        },
+        {
+          "bytes": 1732528,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round03/w7_r220.npz",
+          "sha256": "c0dd8eba4b506f089ad17a511a3b0797682d9eaf57d1cda034a06b84c8c73ad9"
+        },
+        {
+          "bytes": 2730792,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round03/w7_r224.npz",
+          "sha256": "778873e4b1604971e401aaca9ae6f8e4a4730269e205bf7b63bfdf01799b2bc5"
+        },
+        {
+          "bytes": 3246623,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round03/w7_r225.npz",
+          "sha256": "825e286212afe31a4d097932799e413942a2f7d68c3fd1203a5f427d30b403cc"
+        },
+        {
+          "bytes": 2563941,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round03/w7_r228.npz",
+          "sha256": "6b5daddadb227018ff844087b3268da3087a688a1bd1cae7af14e48523444724"
+        },
+        {
+          "bytes": 2745423,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round03/w7_r233.npz",
+          "sha256": "acb2988f74fffb97e795c53059a90dfde48beca331ed034a7220f3c8bcd9bb7e"
+        },
+        {
+          "bytes": 2824620,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round03/w7_r234.npz",
+          "sha256": "fe1735209b6da41c4f7ab1b8ec767d968a7efb506b136504efa5c79fc78165f8"
+        },
+        {
+          "bytes": 2550126,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round03/w7_r238.npz",
+          "sha256": "319954753280da2c644bd9b7043ec07ad7035194cae91dad1951ef5bd50ccf7a"
+        },
+        {
+          "bytes": 2819716,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round03/w7_r248.npz",
+          "sha256": "524438ef57d328ad01a8f280647b34ef799be7e37812acd3de9369ca35fa9f52"
+        },
+        {
+          "bytes": 2851426,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round03/w7_r250.npz",
+          "sha256": "6db1705139cd6702fec25072c10477c233ab8f5ac6d774d9b8797b521188ac6d"
+        },
+        {
+          "bytes": 2663405,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round03/w7_r251.npz",
+          "sha256": "98b8a9cf3034b8ef999689ccc1ce9579d287d935ab588a8d75db5fbe47e1f9d4"
+        },
+        {
+          "bytes": 2543791,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round03/w7_r252.npz",
+          "sha256": "7cd75aea7b7d8bab41f5214b873eadaf7b164cc4525fe3479001a55736415b1f"
+        },
+        {
+          "bytes": 6270013,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round03/w8_r009.npz",
+          "sha256": "bb59c851031c1e50e5bea9ba627f70d08e70c9edc915ea74336ea5fc9f66d06f"
+        }
+      ],
+      "sha256": "2adc590e791cf0bdb2f7a4b47a0a74774dd5d69f5985fe7acd8246abdbe9bed0",
+      "version": 0
+    },
+    {
+      "bytes": 310307109,
+      "filename": "beam-loop-raw-20260915-part2.zip",
+      "library_file_id": "libfile_3706c9a6b51c8191b0699b454ff72c35",
+      "members": [
+        {
+          "bytes": 6145738,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round03/w8_r022.npz",
+          "sha256": "026b20f5bf6e3cfacbb6d0a8f84e70aec339d96bb10cf77fa4c2b7c792d61eda"
+        },
+        {
+          "bytes": 6453733,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round03/w8_r025.npz",
+          "sha256": "e15ab4a09b71f4206a6106a9d84071e0b7e0f414c9450cee9e9197dd3be865bd"
+        },
+        {
+          "bytes": 6586279,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round03/w8_r026.npz",
+          "sha256": "efc14ab13092fa94dbfe4bccc86d7f2fe77519b14c790c593c8ff83966853265"
+        },
+        {
+          "bytes": 4879926,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round03/w8_r028.npz",
+          "sha256": "bf12556b439fa5e139b0ec038f1233db0bc76c061e67230cb5fda4cbbd3f6968"
+        },
+        {
+          "bytes": 6560048,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round03/w8_r030.npz",
+          "sha256": "91918156ee21b99dd6683865457be2914b6aa74c417e9384f4308ddcd438d434"
+        },
+        {
+          "bytes": 5534209,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round03/w8_r033.npz",
+          "sha256": "0181d1762286b174b3e8f8264911d21f2e30416164e50e551c27c1d7d98d94fb"
+        },
+        {
+          "bytes": 6177129,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round03/w8_r037.npz",
+          "sha256": "90f91375deebb804750f4c12720c541addf04f23fd7b014b0bbfff3fe4137d12"
+        },
+        {
+          "bytes": 6587278,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round03/w8_r041.npz",
+          "sha256": "2c12a307185fc297961af3933c0b85c4379e09e6b2aa420d4596cf66d4d8509f"
+        },
+        {
+          "bytes": 6371085,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round03/w8_r054.npz",
+          "sha256": "edbb7914ae611f5b3bae11eed5b60bd69162116aadfb3f049bb848c09b5fd555"
+        },
+        {
+          "bytes": 6397774,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round03/w8_r060.npz",
+          "sha256": "5c7e412639dc6a7876b6697d2ba9f859533ed14feb488ac1ff5bc72ec6e6ca9e"
+        },
+        {
+          "bytes": 6512795,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round03/w8_r061.npz",
+          "sha256": "2c994cfaa62dc6657ce339349bc6d2be1240e3d5e08a788071f77dc5d678e4f0"
+        },
+        {
+          "bytes": 6515014,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round03/w8_r062.npz",
+          "sha256": "1f62d0689fb4c80bbdb1f4594c92a69b2247c666effa6826f3d815f22ad01d6d"
+        },
+        {
+          "bytes": 6278408,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round03/w8_r065.npz",
+          "sha256": "d8590472722358c3ff87e7f7d567d760dfe2bd6c1a671f7bf3266e2e3b626cfb"
+        },
+        {
+          "bytes": 6461899,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round03/w8_r067.npz",
+          "sha256": "fd083f41da3027492a45265a2318989a938fe41b2a1f389779bac8ff588cc863"
+        },
+        {
+          "bytes": 4896846,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round03/w8_r070.npz",
+          "sha256": "69e0d224c33d3c2cfbae756084aa8b8412e733a3ffdcf8b402b694d11fefd9d7"
+        },
+        {
+          "bytes": 6607610,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round03/w8_r082.npz",
+          "sha256": "4b2df5a617ae568cd16ffc4beb13576cbe97ce31e3e4c793511449c0871950f6"
+        },
+        {
+          "bytes": 6565106,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round03/w8_r086.npz",
+          "sha256": "6f00e4c1fa43292e56332e663e95ecc84abbc24ff50454db26fa1162b6ca7899"
+        },
+        {
+          "bytes": 6625410,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round03/w8_r090.npz",
+          "sha256": "ff068e50f27167347cc85bad72098e1361b72b77fe7f1e3962cb2973b36a16c3"
+        },
+        {
+          "bytes": 6235915,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round03/w8_r091.npz",
+          "sha256": "c58ded1d7c08a746d5d8d496a8521afb8a1732941cebc70ada12036f061b3df8"
+        },
+        {
+          "bytes": 5549978,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round03/w8_r094.npz",
+          "sha256": "88df7d0c67032f5926e98a396ddb4afb0c02105e0642b7166fa4d09b71f0f0d5"
+        },
+        {
+          "bytes": 6595910,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round03/w8_r097.npz",
+          "sha256": "8d54102b71e33a72a45925c480f9d8c3d98f068d098583985471973019169095"
+        },
+        {
+          "bytes": 6422430,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round03/w8_r102.npz",
+          "sha256": "6d84e3008e499d764babca3567853bae2d6df42d6184522d655f2196de4f6569"
+        },
+        {
+          "bytes": 6500211,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round03/w8_r103.npz",
+          "sha256": "64754f3a677d1f64c13f749665981d3a7b089b5412ef5a9413d0c8504b0caaf4"
+        },
+        {
+          "bytes": 6590262,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round03/w8_r106.npz",
+          "sha256": "b55ed6b989ab66076bf48d7e2717e4004aedfa00308649ff3de5dd57e8345379"
+        },
+        {
+          "bytes": 6643731,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round03/w8_r107.npz",
+          "sha256": "28dc3e4926b55851f09339fe87cac6896cc11700b9e7e578f3cd2846e80c8c5f"
+        },
+        {
+          "bytes": 6451459,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round03/w8_r110.npz",
+          "sha256": "6a64cd01c8228b58ff43e2fefe74a2e542a3f8e4bb9b3d0e48c7960993cdc868"
+        },
+        {
+          "bytes": 6350100,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round03/w8_r111.npz",
+          "sha256": "0bcc9d4069553c330da281e7a3fa5dbfebe6c1e568027c8a164a6cda4410fb44"
+        },
+        {
+          "bytes": 6520532,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round03/w8_r118.npz",
+          "sha256": "7ebb69ae73f4b172fcb43aa111ca916c5d844ba8583847522ad6c7deb9d2363a"
+        },
+        {
+          "bytes": 6608996,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round03/w8_r120.npz",
+          "sha256": "74945d695630c4f371012ffc7cafad6f9933563a2248b9955618491219c60e45"
+        },
+        {
+          "bytes": 6666386,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round03/w8_r121.npz",
+          "sha256": "b45bfe24b16e8e84a66f81de3821b8dd3cabfd816640adc557c2b61218bdec58"
+        },
+        {
+          "bytes": 6393912,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round03/w8_r122.npz",
+          "sha256": "ddbdf86b0f8d4d1c125723e6c737cd5012563741bc82aa774208012f55f993b4"
+        },
+        {
+          "bytes": 5652440,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round03/w8_r123.npz",
+          "sha256": "43f23173d5baa7164e1be5befecb068dd45646744e1c9b0135e065481a8944c3"
+        },
+        {
+          "bytes": 6448911,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round03/w8_r124.npz",
+          "sha256": "2a438d4af95c35702bcb39ab73593c44e305175968f3371805bb311420be3f9c"
+        },
+        {
+          "bytes": 6353520,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round03/w8_r125.npz",
+          "sha256": "52d751006903eebabec6c5075d11a716eda5431a667ee48d70458f400dc4b46c"
+        },
+        {
+          "bytes": 6273502,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round03/w8_r126.npz",
+          "sha256": "03023e97571d7e54e10067e47c25221e749bb064eaa536b7f45ec91a9e32700e"
+        },
+        {
+          "bytes": 6266821,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round03/w8_r129.npz",
+          "sha256": "1bd5a800c24f2029000dadc5c2e15677b37b6a335b996b999e500fd423c9fc50"
+        },
+        {
+          "bytes": 6515069,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round03/w8_r131.npz",
+          "sha256": "0cfed97418fd7d66657710ad4bb51f115253b9ffc7d248dd6a8f32d41584baa4"
+        },
+        {
+          "bytes": 5536316,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round03/w8_r133.npz",
+          "sha256": "a5da463b577752e1f8c5ba16a777b779877ad033fe26ea883b56062ffc69fdfb"
+        },
+        {
+          "bytes": 6618577,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round03/w8_r135.npz",
+          "sha256": "4aa85abc8766f19f31eaaba00d40a95cedc300ff9c2f65cfc6811f0950d77664"
+        },
+        {
+          "bytes": 4592491,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round03/w8_r136.npz",
+          "sha256": "de994f0b2852d581f49fb6325ae6c2ae4c0acfb4a7096057c87229bf42e07cae"
+        },
+        {
+          "bytes": 6481157,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round03/w8_r137.npz",
+          "sha256": "9e5c97e00ce5fb8e8dafc590e0e05833f86da1eca3c6a92307489e75eb80199b"
+        },
+        {
+          "bytes": 3346014,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round03/w8_r140.npz",
+          "sha256": "c182f40a9c184839e7424e6a387e0146add92daae3bae35883893f0ad6f29b52"
+        },
+        {
+          "bytes": 6527657,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round03/w8_r145.npz",
+          "sha256": "e0fa5c997a81306d035555b232e4711a59651887f9c7222e6f97399174d5e8c7"
+        },
+        {
+          "bytes": 6439593,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round03/w8_r147.npz",
+          "sha256": "e06cebf82e6d8d02a244307d99812a22f6191f921dd154611dbb6aa075782cdf"
+        },
+        {
+          "bytes": 6619454,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round03/w8_r149.npz",
+          "sha256": "f5a446024e6eca46b5b91065c63ab7011335e470a0b50736baec982905851c37"
+        },
+        {
+          "bytes": 6374441,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round03/w8_r151.npz",
+          "sha256": "d0640ca8035c9a55c9d0a42284b8b26606749032e1fc55a40eb88572516825e3"
+        },
+        {
+          "bytes": 6504548,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round03/w8_r153.npz",
+          "sha256": "77ef21a8635032185073a4a64eecf6b69d8e2a268ddeefce7b738b9ea1ca3848"
+        },
+        {
+          "bytes": 5026569,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round03/w8_r157.npz",
+          "sha256": "ab8c37710b58f53b8e89fbcc28dbb55b85ad339b26c6f142c8e5100228f00682"
+        },
+        {
+          "bytes": 6355439,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round03/w8_r161.npz",
+          "sha256": "1fbe7e1b271c5253206a63596f9bbb8c4053c4e9073822ccc616b4b8d3d94b37"
+        },
+        {
+          "bytes": 6676559,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round03/w8_r165.npz",
+          "sha256": "9fab090c6a812a6decd58b624505842bc95f1a2c6c5caa14cd7fc3b65d8a6082"
+        }
+      ],
+      "sha256": "75817918b675a4efe2cbf97fe0f65c74d3ceddcace630c319fd80a686df85e59",
+      "version": 0
+    },
+    {
+      "bytes": 259868797,
+      "filename": "beam-loop-raw-20260915-part3.zip",
+      "library_file_id": "libfile_a604fd7e6cc881919989ee0ba9f65bcc",
+      "members": [
+        {
+          "bytes": 6677384,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round03/w8_r167.npz",
+          "sha256": "b39b1a0e77d2c50723cf965575ad4260773925ce388ea847999fa85f9b82f1b3"
+        },
+        {
+          "bytes": 5527667,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round03/w8_r168.npz",
+          "sha256": "2191b84547bed0e53677344b9c3bb08c37e0b03331b52901a54d0f190a7d6857"
+        },
+        {
+          "bytes": 6617180,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round03/w8_r169.npz",
+          "sha256": "68901beea7b0a63e0a8576d758d1c9e33f8964380b337dff6ad713fcdc1cfa6d"
+        },
+        {
+          "bytes": 4985994,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round03/w8_r172.npz",
+          "sha256": "df941152f0d48f4674d5147f9ade539e58be23573837980c741b8f88b3d8effc"
+        },
+        {
+          "bytes": 6696068,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round03/w8_r181.npz",
+          "sha256": "e0455da6597fc6779c9b5abb20e3a18f44487e706d895a36ff422fc83e0c4f46"
+        },
+        {
+          "bytes": 4609040,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round03/w8_r192.npz",
+          "sha256": "51003149773be9752f6277f39e31ba3264521ad1bdc52e0d7945850658ecb0bf"
+        },
+        {
+          "bytes": 6487149,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round03/w8_r193.npz",
+          "sha256": "ffdaf2674986f908bd992995ddac36d309a31f77946a3890b354206a89039caf"
+        },
+        {
+          "bytes": 6496429,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round03/w8_r195.npz",
+          "sha256": "8904b0b95a0702766adf9658646d3162e9901815561f0e3162ba876605d2d779"
+        },
+        {
+          "bytes": 3387671,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round03/w8_r196.npz",
+          "sha256": "5fdae1a341d66d3342b8b7a8cca884d4eaec750cbf702ce7d7ea1d65d1c1b766"
+        },
+        {
+          "bytes": 4987239,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round03/w8_r199.npz",
+          "sha256": "c9d160a7bbec48a951cedeac937070ced0439216488479fc9c77a3dfaf34de4a"
+        },
+        {
+          "bytes": 4897339,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round03/w8_r202.npz",
+          "sha256": "602906449ee6f9b44677947b76ec8929b29aeae5997dfc1ded24606016234ea4"
+        },
+        {
+          "bytes": 3370687,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round03/w8_r206.npz",
+          "sha256": "e871c9ed66a932070abc6a04aa451ff3793400ad752d1ee7a66e089b9bf0b4dd"
+        },
+        {
+          "bytes": 4895313,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round03/w8_r216.npz",
+          "sha256": "b6fbe8b5421a0e9dfbe7cbccf922c26cba78ffed943a0b4ef8a903970cb97003"
+        },
+        {
+          "bytes": 3383425,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round03/w8_r220.npz",
+          "sha256": "0fa41fa20c88b655de72645c3c3c3b010f412b31865f3890f6b97e13a9f11060"
+        },
+        {
+          "bytes": 5536561,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round03/w8_r224.npz",
+          "sha256": "2a203e830f22fe48f5e819a24e4801109103b1639238ead569c64da14c7a5f9e"
+        },
+        {
+          "bytes": 6615000,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round03/w8_r225.npz",
+          "sha256": "f17b9a4363d39ae3b0fb80a013cd0a8bf3e002d353c96dcecd1e1823621b8397"
+        },
+        {
+          "bytes": 4998987,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round03/w8_r228.npz",
+          "sha256": "2e6b094492f79dc34c4ba72fc002673889d11be128e31e1c33325fca95a72cb9"
+        },
+        {
+          "bytes": 5675862,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round03/w8_r234.npz",
+          "sha256": "5c08cdfae0c4c5a5a04a93828f1ee1714306b976dc845f4ef87a3863d7c82fe5"
+        },
+        {
+          "bytes": 4907605,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round03/w8_r238.npz",
+          "sha256": "388d69982a4b69f9c6cf14d6116a359bbcdb0a1cd4de4aca141b6c06b35985f7"
+        },
+        {
+          "bytes": 5684282,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round03/w8_r248.npz",
+          "sha256": "ffb747ff23f5ecf49665e5f44b11f2257ecf4156f5b087030895740992201977"
+        },
+        {
+          "bytes": 4892737,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round03/w8_r252.npz",
+          "sha256": "bdcfa93408f5f7c37df012022dc72ab2dac62afd25a66f1d24b5d24591082c6d"
+        },
+        {
+          "bytes": 383972,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round04/trajectories.npz",
+          "sha256": "9b42f477063fed9cce49ccc94228a6e676221838fd084ed696946bc907d433dd"
+        },
+        {
+          "bytes": 4214668,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round05/trajectories.npz",
+          "sha256": "d78793597ec3c26171a293c44472e102ff3e3ac921cdf271c47f3129aa50d9b3"
+        },
+        {
+          "bytes": 13175665,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round06/trajectories.npz",
+          "sha256": "e84b2f23ca8aa12b99f551dfcb5b6971034718db2554034b9cd0f876cb4d9372"
+        },
+        {
+          "bytes": 26916594,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round08/trajectories.npz",
+          "sha256": "69312f1a9e304e0911e310262694422cd24c4248f34c1babec48d6a57b8d09da"
+        },
+        {
+          "bytes": 1983266,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round10/trajectories.npz",
+          "sha256": "b54759344c81a160d6651de22edf66063b2c8cef41f8c8f3f4603a3c8ec1c143"
+        },
+        {
+          "bytes": 84507,
+          "path": "gc-discriminator/experiments/beam_discriminator_loop_20260915/round11/curves.npz",
+          "sha256": "5bf17f4440470ba940f0063b21d34781d96e5e71ec573a20a9cb53f45ee82e41"
+        },
+        {
+          "bytes": 101773778,
+          "path": "gc-pilot/experiments/uniform_jet6_cache_20260914/run/uniform_jet6_rules.tar.gz",
+          "sha256": "766e4db7083fbdb551bc4aee66abc554079c5d118905f6d65aa5e5372c9418d1"
+        }
+      ],
+      "sha256": "ad4bc854908f7f1a655c990b769ca1b5ae7cd79d551525016e744ead95421baf",
+      "version": 0
+    }
+  ]
+}

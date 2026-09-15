@@ -1,0 +1,7 @@
+# Round 9 outcome
+
+Runtime4.250 seconds. All21 lifted residual tables and189 empirical interval-probability inequalities pass. For54 on the256-frame transport sample, the L32→64 slope is0.06821,0.06805,0.06790 at D1,D2,D3; for110 it is0.01317,0.01326,0.01333. Raw residual densities change substantially. These finite estimates illustrate the asymptotic transport argument, but do not establish a limiting rate.
+
+The replacement-discriminator lead fails a direct adversary:122 has tiny long-interval slopes on two R6 runs. A separately recorded post hoc inspection finds140 and534 fully zero state/residual rows among1024. Pooling active and extinct times supplies a large empty-interval probability at every length. The finite q predictor still rejects both (q0.879/0.652). The tail rate's mathematical invariance does not imply Class IV specificity, stationarity, or immunity to mixtures. This repeats the vacancy problem in another form: lack of activity can look like durable order.
+
+Next, reconsidered fresh: challenge what low q actually means, rather than adding another threshold. The reviewer derived a structural explanation of106's q≈0.5 boundary: its matched-shift residual is an AND of two iid bits. Radius-r generalizations use an AND of2r bits, preserve iid spatial slices, and can make q arbitrarily small. A final controlled test can determine whether the damage-growth clause rejects or admits those mechanisms. Their Wolfram classes will remain unassigned.

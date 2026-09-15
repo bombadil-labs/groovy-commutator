@@ -1,0 +1,8 @@
+{
+  "recorded_after_evaluation": true,
+  "python": "3.12.14",
+  "numpy": "2.3.5",
+  "matplotlib": "3.10.8",
+  "execution": "Local Work Mode container; no scientific evaluations in GitHub Actions",
+  "timing_scope": "Per-round wall time; R3 interrupted and repaired, not a comparable exact benchmark"
+}
