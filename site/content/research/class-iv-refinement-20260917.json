@@ -8,7 +8,7 @@
     "kind": "Experiment",
     "evidence": "exploratory",
     "topic": "Class-IV refinement",
-    "summary": "A dimension-neutral persistence × spreading surrogate keeps the ECA controls but does not place Life, HighLife and Day & Night in one stable quadrant across densities. The exact HighLife width-one = Rule 54 bridge shows the retention statistic is observer-relative while history gain and spreading transport exactly; height-one strips forget twelve of eighteen Life-like rule bits and height two recovers all of them.",
+    "summary": "A dimension-neutral persistence \u00d7 spreading surrogate keeps the ECA controls but does not place Life, HighLife and Day & Night in one stable quadrant across densities. The exact HighLife width-one = Rule 54 bridge shows the retention statistic is observer-relative while history gain and spreading transport exactly; height-one strips forget twelve of eighteen Life-like rule bits and height two recovers all of them.",
     "takeaway": "Selective retention is a statistic of dynamics, observation map and reference ensemble together; a lower-dimensional presentation can be an exact quotient that hides rule distinctions.",
     "source": "docs/research/2026-09-17-cross-dimensional-class4.md",
     "promotion": {
@@ -64,13 +64,13 @@
   {
     "slug": "selective-persistence-discriminator-20260916",
     "label": "Class-IV refinement IV",
-    "title": "Selective predictive persistence × spreading: the recovered discriminator record",
+    "title": "Selective predictive persistence \u00d7 spreading: the recovered discriminator record",
     "date": "2026-09-17",
     "updated": "2026-09-17",
     "kind": "Record of a prospective finite result with partial provenance",
     "evidence": "exploratory",
     "topic": "Class-IV refinement",
-    "summary": "S = max(0,R)·max(0,M) with S > 0.20 and α_512 > 0.50, frozen before fresh simulation, selects 54/110 in 10/10 decisions and 0/420 undisputed negatives across five fresh conditions, rejecting 41/106 and a radius-two rare-correction adversary. The report and tables survive; the protocol, runner and canonical JSON bytes do not.",
+    "summary": "S = max(0,R)\u00b7max(0,M) with S > 0.20 and \u03b1_512 > 0.50, frozen before fresh simulation, selects 54/110 in 10/10 decisions and 0/420 undisputed negatives across five fresh conditions, rejecting 41/106 and a radius-two rare-correction adversary. The report and tables survive; the protocol, runner and canonical JSON bytes do not.",
     "takeaway": "A finite discriminator for the 54/110 core phenotype, not a Wolfram-class classifier, and recorded at the provenance level it can support.",
     "source": "docs/research/2026-09-17-selective-persistence-discriminator-record.md",
     "promotion": {
@@ -85,7 +85,7 @@
   {
     "slug": "fiber-census-20260917",
     "label": "Class-IV refinement V",
-    "title": "The height-one fiber of Rule 54 is enriched in the persistence × spreading phenotype",
+    "title": "The height-one fiber of Rule 54 is enriched in the persistence \u00d7 spreading phenotype",
     "date": "2026-09-17",
     "updated": "2026-09-17",
     "kind": "Experiment",
@@ -119,6 +119,27 @@
       "stage": "research"
     },
     "related": [
+      "fiber-census-20260917",
+      "strip-spectrum-20260917"
+    ]
+  },
+  {
+    "slug": "handed-fiber-census-20260917",
+    "label": "Class-IV refinement VII",
+    "title": "Rule 110 gets a fiber, and it is enriched; chirality is not detectable",
+    "date": "2026-09-17",
+    "updated": "2026-09-17",
+    "kind": "Experiment",
+    "evidence": "exploratory",
+    "topic": "Class-IV refinement",
+    "summary": "A handed family (centre, west neighbour, count of the other seven) whose height-one restriction is a coordinate projection onto all 256 ECAs, every fiber 2^24 rules, so 110 finally has one. Panel of nine fibers at 256 rules each plus all 256 fibers at twelve: fiber(110) is both-positive at 0.543, tied at the top with its mirror 124 and with 54, and far above 30 (0.273). The enrichment is on the persistence axis, not spreading: fibers 22 and 30 spread more and still fall far below. A base's own 1D phenotype predicts its fiber's on both axes across all 256 bases. The mirror fiber 124 is indistinguishable from 110, so chirality is not detectable. The null-pair calibration rejected by chance and was itself mis-designed; a matched-seed control shows the implementation is exactly complement-covariant to 1e-15.",
+    "takeaway": "The height-one quotient at 110 predicts enrichment of its preimages, and marking a direction changes which rules are in a fiber without changing what the fiber is like.",
+    "source": "docs/research/2026-09-17-handed-fiber-census.md",
+    "promotion": {
+      "stage": "research"
+    },
+    "related": [
+      "fiber-census-64-20260917",
       "fiber-census-20260917",
       "strip-spectrum-20260917"
     ]

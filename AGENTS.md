@@ -754,6 +754,40 @@ workflow; research source and result changes now also trigger that workflow.
    orbit fingerprint is identifying: anonymous probes get coarse summaries
    only. Self-gated under Myk's suspended review gates.
 
+15. **Rule 110 has a refinement fiber, and it is enriched; chirality is not
+   detectable** (2026-09-17, `docs/research/2026-09-17-handed-fiber-census.md`,
+   `experiments/handed_fiber_census_20260917/` →
+   `results/handed_fiber_census_20260917/`, 46 min, off Actions). The
+   Life-like family reaches only the 64 reflection-symmetric ECAs, so the
+   Class-IV Program's headline rule had no fiber. The **handed family**
+   `f(c, w, n₇)` (centre, west neighbour, count of the other seven; 32-entry
+   table, index `16c + 8w + n₇`) contains the Life-like family and its
+   height-one restriction is a **coordinate projection onto all 256 ECAs,
+   every fiber exactly `2²⁴` rules** — the eight exposed indices
+   `{0,3,18,21,10,13,28,31}` are distinct. Height two reaches all 32
+   conditions, so it is a genuine refinement with no bolt-on freedom.
+   Census at height two, contract otherwise unchanged, 5,268 rules: fiber(110)
+   is both-positive at 0.543, in a three-way tie with its mirror 124 (0.555)
+   and 54 (0.531), far above 30 (0.273), 90 (0.223), 0 (0.164), 204 (0.105).
+   **The enrichment is on the persistence axis, not spreading** — fibers 22
+   and 30 spread more (0.922, 0.906 vs 0.844) and still fall far below,
+   persisting at 0.469 and 0.312 against 0.629. Across all 256 bases a base's
+   own 1D phenotype predicts its fiber's on **both** axes (spreading
+   p ≈ 2e-16, persistence p ≈ 3e-9, descriptive); the 64-census's
+   non-additivity replicates in eight bits with the same shape (interactions
+   win out of sample for spreading only). **Failed bet:** chirality is not
+   detectable — fiber(124) is indistinguishable from fiber(110) (spread 0.852
+   vs 0.844, p = 0.81, estimate reversed), so marking a direction changes
+   which rules are in a fiber without changing what the fiber is like.
+   **Methodological lesson worth carrying:** the frozen null-pair calibration
+   compared two *independently seeded* samples of the deduced-identical fibers
+   110 and 137 and so rejects at the nominal rate by construction; it did
+   (p = 0.027). A matched-seed control (same seeds, complemented initial
+   states) shows the implementation exactly complement-covariant to 1.6e-15.
+   Null-pair calibrations must pair the draws, not only the distributions.
+   Self-gated under Myk's suspended review gates; protocol drafted by
+   Fable 5.1, amended and executed by Opus 5.
+
 ## Checkpoint logs (read before continuing any workstream)
 
 A checkpoint is a dated statement of state: what a unit completed, what is

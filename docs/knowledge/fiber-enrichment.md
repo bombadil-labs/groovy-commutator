@@ -31,3 +31,43 @@ persistence. The eight affine bases sit inside the others' interquartile
 range. The first census's 0-versus-90 ordering swapped on fresh samples; the
 ends held.
 
+
+## Update, 2026-09-17: rule 110 acquires a fiber
+
+The Life-like family reaches only the 64 reflection-symmetric ECAs, so rule
+110 had no fiber in any census above. The
+[handed census](../research/2026-09-17-handed-fiber-census.md) replaces the
+Moore count by `(centre, west neighbour, count of the other seven)`, 32 table
+entries. Its height-one restriction is a coordinate projection **onto all 256
+ECAs, every fiber exactly 2²⁴ rules**, and it contains the Life-like family.
+
+Nine fibers at 256 rules and all 256 at twelve: fiber(110) is both-positive at
+0.543, in a statistical tie at the top with its mirror 124 (0.555) and with 54
+(0.531), and far above 30 (0.273), 90 (0.223), 0 (0.164) and 204 (0.105). The
+enrichment sits on the **persistence** axis: fibers 22 and 30 spread more
+(0.922, 0.906 against 0.844) and still fall far below on the conjunction,
+because they persist at 0.469 and 0.312 against 0.629.
+
+Two findings generalize beyond the panel. A base's own one-dimensional
+phenotype predicts its fiber's on **both** axes across all 256 bases
+(spreading p ≈ 2 × 10⁻¹⁶, persistence p ≈ 3 × 10⁻⁹, descriptive since fibers
+are not independent); in the Life-like family persistence had looked like a
+purely two-dimensional activity effect. And the non-additivity of the exposed
+bits replicates in eight bits with the same shape: interactions win out of
+sample for spreading only.
+
+Chirality is **not** detectable. The family marks a direction, so fiber(124)
+is a genuinely different set of rules from fiber(110), and the two are
+indistinguishable (spread 0.852 against 0.844, p = 0.81, the point estimate
+leaning opposite to the frozen prediction).
+
+A methodological correction belongs with this entry. The protocol's null-pair
+calibration compared two *independently seeded* samples of the deduced-identical
+fibers 110 and 137, which rejects at the nominal rate by construction; it
+rejected at p = 0.027 and was mistaken for a possible implementation fault. A
+matched-seed control (same seed stream, complemented initial states) shows the
+implementation is exactly complement-covariant to 1.6 × 10⁻¹⁵. Null-pair
+calibrations in this Program must pair the draws, not only the distributions.
+
+Status: still exploratory. One strip height, one density, one contract, and the
+observer is reflection-symmetric while the family is not.

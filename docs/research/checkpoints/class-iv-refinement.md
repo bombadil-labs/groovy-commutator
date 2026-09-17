@@ -7,6 +7,41 @@ when a substantial unit completes; keep the bounded-claim style.
 
 Program page: `docs/research/2026-09-17-class-iv-refinement-program.md`
 
+## Checkpoint 2026-09-17 (third unit): handed fiber census evaluated
+
+- **Completed:** [the handed fiber census](../2026-09-17-handed-fiber-census.md),
+  canonical `results/handed_fiber_census_20260917/` (summary registered with
+  the fast integrity tier). The handed family `f(c, w, n₇)` restricts at
+  height one by a coordinate projection **onto all 256 ECAs**, every fiber
+  exactly `2²⁴` rules, so rule 110 has a fiber for the first time in the
+  Program. P1 held and not narrowly (fiber(110) both-positive 0.543 against
+  0.273 for the flagged comparator 30); P2 held in second place behind the
+  mirror 124; P3 failed (no chirality effect, point estimate reversed);
+  P4 held; P5 held on **both** arms against the drafting agent's expectation;
+  P6 held for spreading and replicated the 64-fiber census's shape.
+- **The enrichment is on the persistence axis.** Fibers 22 and 30 spread
+  more than 110's and still fall far below it on the conjunction. This was
+  not predicted.
+- **Methodological correction, Program-wide:** the P3 calibration compared
+  two *independently seeded* samples of the deduced-identical fibers 110 and
+  137, so it rejects at the nominal rate by construction; it did, at
+  p = 0.027, and briefly put P3's scorability in doubt. A matched-seed
+  control (`control6_matched.py`: same seed stream, complemented initial
+  states) shows the implementation exactly complement-covariant to
+  1.6 × 10⁻¹⁵. **Null-pair calibrations in this Program must pair the draws,
+  not only the distributions.** The run's own control 6 had been
+  under-implemented and was completed after the fact; that is recorded as a
+  deviation.
+- **Do not infer:** a mechanism for the enrichment; that 110 is special
+  beyond its fiber sitting in a three-way tie with 124 and 54; anything at
+  other heights, densities or observers; anything about east-marked rules
+  beyond what reflection deduces. The whole-census tier is twelve rules per
+  fiber and cannot order individual fibers.
+- **Next, unfrozen:** repeat at strip height four, now that P5 supplies a
+  base-level prediction rather than a fiber ranking to reproduce; or ask
+  what a fiber's enriched *members* have in common, which the census
+  machinery cannot answer as posed.
+
 ## Checkpoint 2026-09-17 (second unit): 64-fiber census evaluated
 
 - **Completed:** [the 64-fiber census](../2026-09-17-fiber-census-64.md),

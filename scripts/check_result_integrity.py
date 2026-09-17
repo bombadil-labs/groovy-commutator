@@ -55,6 +55,15 @@ REGISTRY = {
         'families': 'results/forced_tables_20260917/families.json',
         'regime_join': 'results/forced_tables_20260917/regime_join.json',
         'd3_panel': 'results/forced_tables_20260917/d3_panel.json'},
+    'results/handed_fiber_census_20260917/summary.json': {
+        'protocol': 'docs/research/protocols/2026-09-17-handed-fiber-census.md',
+        'run': 'experiments/handed_fiber_census_20260917/run.py',
+        'evaluate': 'experiments/handed_fiber_census_20260917/evaluate.py',
+        'control6': 'experiments/handed_fiber_census_20260917/control6_matched.py',
+        'rows': 'results/handed_fiber_census_20260917/rows.json',
+        'exactness': 'results/handed_fiber_census_20260917/exactness_control.json',
+        'matched_control': 'results/handed_fiber_census_20260917/control6_matched.json',
+        'condition_p_table': 'experiments/class4_selective_persistence_20260916/evidence/class4_selective_persistence_all_conditions_20260916.RECOVERED.csv'},
     'results/fiber_census_64_20260917/summary.json': {
         'protocol': 'docs/research/protocols/2026-09-17-fiber-census-64.md',
         'run': 'experiments/fiber_census_64_20260917/run.py',
