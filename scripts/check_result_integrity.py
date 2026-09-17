@@ -55,6 +55,12 @@ REGISTRY = {
         'families': 'results/forced_tables_20260917/families.json',
         'regime_join': 'results/forced_tables_20260917/regime_join.json',
         'd3_panel': 'results/forced_tables_20260917/d3_panel.json'},
+    'results/matched_completion_20260918/summary.json': {
+        'protocol': 'docs/research/protocols/2026-09-18-matched-completion-persistence.md',
+        'run': 'experiments/matched_completion_20260918/run.py',
+        'evaluate': 'experiments/matched_completion_20260918/evaluate.py',
+        'rows': 'results/matched_completion_20260918/rows.json',
+        'controls': 'results/matched_completion_20260918/controls.json'},
     'results/handed_fiber_census_20260917/summary.json': {
         'protocol': 'docs/research/protocols/2026-09-17-handed-fiber-census.md',
         'run': 'experiments/handed_fiber_census_20260917/run.py',

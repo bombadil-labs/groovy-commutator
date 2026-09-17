@@ -155,7 +155,9 @@ def main():
     diff4 = Y4[i110] - Y4[bases.index(30)]
     k4['paired_110_vs_30_M'] = {'sign_fraction': float((diff4 > 0).mean()),
                                 'mean_diff': float(np.nanmean(diff4)), **wilcoxon(diff4)}
-    k4['censoring'] = {'unsupported': int(A4.unsupported_symbols.sum()),
+    # selective_r returns the unsupported symbols as a list, not a flag.
+    k4['censoring'] = {'rules_with_unsupported_symbols':
+                           int(A4.unsupported_symbols.map(lambda v: len(v) > 0 if isinstance(v, list) else bool(v)).sum()),
                        'monte_carlo': int((A4.reference_mode == 'monte-carlo').sum())}
 
     # ------------------------------------------------------------ predictions
