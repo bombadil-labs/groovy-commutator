@@ -67,6 +67,18 @@ literature (Langton, Wuensche, Feldman–McTague–Crutchfield, Borriello–Walk
 Mediano et al., Mirza 2026), or any result from unrestricted extension
 families, where the trivial bolt-on lemma makes every question empty.
 
+## 2026-09-17: the first unit answers the distributional question for one family
+
+The [fiber census](2026-09-17-fiber-census.md) finds that the base ECA
+predicts the phenotype distribution of its 4096 height-one preimages: at
+height two, 47% of fiber(54) both persists and spreads, against 37% of
+fiber(22), 25% of fiber(0), 22% of fiber(90) and 7% of fiber(204). HighLife
+and Life are typical members of their fibers, and fiber(22) is not bimodal.
+What the ordering means is open: the six fixed bits impose activity (births
+on, survivals off) that may explain it without any further property of the
+base rule; a census over all 64 fibers is the control. Jev Run 3 reproduced
+J1/J3/J5 under operational definitions alone and weakened J4.
+
 ## Initial agenda
 
 1. **Fiber census** (frozen 2026-09-17, first unit): sample the height-one

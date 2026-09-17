@@ -81,5 +81,26 @@
       "beam-discriminator-loop-20260915",
       "class4-independent-20260915"
     ]
+  },
+  {
+    "slug": "fiber-census-20260917",
+    "label": "Class-IV refinement V",
+    "title": "The height-one fiber of Rule 54 is enriched in the persistence × spreading phenotype",
+    "date": "2026-09-17",
+    "updated": "2026-09-17",
+    "kind": "Experiment",
+    "evidence": "exploratory",
+    "topic": "Class-IV refinement",
+    "summary": "Sampling 512 Life-like rules from each height-one fiber of ECAs 54, 22, 90, 204 and 0 and measuring at height two, the both-positive fraction is 0.47, 0.37, 0.25, 0.22 and 0.07. Fibers differ, fiber(54) is enriched, HighLife and Life are typical members of their fibers; the bet that fiber(22) splits into Life-like and explosive halves failed (72% ballistic).",
+    "takeaway": "Under one fixed contract a source rule predicts the phenotype distribution of its refinements; whether that is more than the activity its six fixed bits impose is the next control.",
+    "source": "docs/research/2026-09-17-fiber-census.md",
+    "promotion": {
+      "stage": "research"
+    },
+    "related": [
+      "strip-spectrum-20260917",
+      "cross-dimensional-class4-20260917",
+      "selective-persistence-discriminator-20260916"
+    ]
   }
 ]

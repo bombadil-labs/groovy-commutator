@@ -7,6 +7,20 @@ when a substantial unit completes; keep the bounded-claim style.
 
 Program page: `docs/research/2026-09-17-class-iv-refinement-program.md`
 
+## Checkpoint 2026-09-17 (later): fiber census evaluated
+
+- **Completed:** [the fiber census](../2026-09-17-fiber-census.md), canonical
+  `results/fiber_census_20260917/` (summary registered with the fast
+  integrity tier). P1–P3 held (fibers differ; fiber(54) both-positive 0.47
+  against 0.37/0.25/0.22/0.07 for 22/0/90/204; HighLife and Life typical of
+  their fibers), P4 failed (fiber(22) is 72% ballistic, not bimodal). Two
+  deviations recorded in the note (a glance at the secondary pass before the
+  primary finished; provenance hashes added to the evaluator after the run).
+- **Do not infer:** that the base rule carries more than its fixed bits'
+  activity (untested); anything about the full plane or about 110.
+- **Next, unfrozen:** a 64-fiber census at 128 rules per fiber to separate
+  base rule from fixed-bit activity; an anisotropic family for 110.
+
 ## Checkpoint 2026-09-17: Program opened from the GPT handoff; fiber census frozen and unrun
 
 Authored by Claude/Fable 5.1. Myk suspended the cross-model review gates on

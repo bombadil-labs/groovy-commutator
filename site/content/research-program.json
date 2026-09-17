@@ -134,7 +134,7 @@
     "date": "2026-09-17",
     "updated": "2026-09-17",
     "status": "living",
-    "summary": "Opened from the GPT handoff after the lift theorem closed the existence question. Inherits the Jev scout, the prospectively validated 54/110 discriminator (partial provenance), the cross-dimensional panel and the exact strip restriction. Its question is which distinctions become expressible and which observables transport when representation freedom is added, and whether a source rule confers a susceptibility to the persistence × spreading regime on its refinement fiber. First frozen unit: the height-one fiber census; unrun.",
+    "summary": "Opened from the GPT handoff after the lift theorem closed the existence question. Inherits the Jev scout, the prospectively validated 54/110 discriminator (partial provenance), the cross-dimensional panel and the exact strip restriction. Its question is which distinctions become expressible and which observables transport when representation freedom is added, and whether a source rule confers a susceptibility to the persistence × spreading regime on its refinement fiber. First unit, the height-one fiber census, finds fiber(54) enriched (both-positive 0.47 against 0.37, 0.25, 0.22, 0.07 for 22, 0, 90, 204) with HighLife and Life typical of their fibers; the fixed-bit activity control is next. Jev Run 3 reproduces J1/J3/J5 under operational definitions alone.",
     "thesis": "Treat Class IV as a phenotype under a declared observation contract and ask how it distributes over exact refinement families of a source rule, never as a label to reproduce.",
     "source": "docs/research/2026-09-17-class-iv-refinement-program.md",
     "supports": [
@@ -144,7 +144,8 @@
       "selective-persistence-discriminator-20260916",
       "beam-discriminator-loop-20260915",
       "class4-independent-20260915",
-      "affine-oriented-lift-20260917"
+      "affine-oriented-lift-20260917",
+      "fiber-census-20260917"
     ]
   }
 ]

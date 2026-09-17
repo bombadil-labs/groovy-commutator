@@ -2534,6 +2534,25 @@
       "research": [
         "affine-oriented-lift-20260917"
       ]
+    },
+    {
+      "source": "fiber-enrichment",
+      "type": "tests",
+      "target": "class-iv-refinement-depth",
+      "reason": "The census is the first well-posed instance of the refinement-depth question; it answers the distributional form positively for one family and contract without separating the base rule from its fixed-bit activity.",
+      "research": [
+        "fiber-census-20260917"
+      ]
+    },
+    {
+      "source": "fiber-enrichment",
+      "type": "depends_on",
+      "target": "strip-height-quotient",
+      "reason": "The fiber exists as a finite refinement family only because height-one restriction is an exact quotient with 4096-rule fibers over the reflection-symmetric ECAs.",
+      "research": [
+        "fiber-census-20260917",
+        "strip-spectrum-20260917"
+      ]
     }
   ],
   "nodes": [
@@ -4861,13 +4880,26 @@
       "id": "class-iv-refinement-depth",
       "title": "Does a source rule confer a susceptibility to the complex phenotype on its refinements?",
       "kind": "question",
-      "status": "open",
-      "summary": "The handoff's refinement-depth conjecture is well posed only inside an explicit finite family; the height-one strip fiber is the first, with a frozen unrun census over bases 54, 22, 90, 204 and 0.",
+      "status": "partly-answered",
+      "summary": "Well posed only inside an explicit finite family. In the height-one strip fibers, the base ECA predicts the phenotype distribution of its 4096 preimages (fiber(54) most enriched, identity least); whether this exceeds the activity imposed by the six fixed bits is untested, and 110 has no fiber in this family.",
       "updated": "2026-09-17",
       "source": "docs/knowledge/class-iv-refinement-depth.md",
       "research": [
         "strip-spectrum-20260917",
-        "selective-persistence-discriminator-20260916"
+        "selective-persistence-discriminator-20260916",
+        "fiber-census-20260917"
+      ]
+    },
+    {
+      "id": "fiber-enrichment",
+      "title": "A base rule's height-one fiber is enriched or depleted in the persistence × spreading phenotype",
+      "kind": "finding",
+      "status": "exploratory",
+      "summary": "512-rule samples of the fibers over ECAs 54, 22, 0, 90, 204 measured at height two have both-positive fractions 0.47, 0.37, 0.25, 0.22, 0.07 (Kruskal–Wallis on S* p ≈ 1e-40, descriptive). HighLife and Life sit inside their fibers' 10th–90th percentile bands. One contract, one density, one strip height.",
+      "updated": "2026-09-17",
+      "source": "docs/knowledge/fiber-enrichment.md",
+      "research": [
+        "fiber-census-20260917"
       ]
     }
   ],
