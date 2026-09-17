@@ -6,6 +6,27 @@ This page is the **working synthesis** of the dimensional-lift research program.
 
 The program is parallel to [Dynamics of Erased Distinctions](2026-09-08-dynamics-of-erased-distinctions.md). That program asks when information can be forgotten safely and how a lossy representation repairs itself. This one asks what additional structure must be represented when evolution and transformation refuse to agree.
 
+## 2026-09-17: the lift is a theorem; the Program's existence question is closed
+
+The [affine-oriented lift theorem](2026-09-17-affine-oriented-lift-theorem.md)
+records GPT-5.6 Sol's proof that every binary finite-memory CA on Z^d admits
+an exact, locally recoverable, self-synchronizing lift through every finite
+depth, using one six-field grammar `(X⊕τ_{v+}X, 1⊕X⊕τ_{v−}X, X⊕HX, X⊕H²X, 0, X)`
+with rails `±e` at entry and diagonals `a_n ± e` afterwards. Entry widens the
+inherited memory once, to `M+{−e,0,e}`; each later floor appends one radius-3
+axis. Fable's independent reimplementation verifies the construction on all
+256 ECAs, radius-two parents, Conway's Life and the D3 recursion. The theorem
+is about the marked beam and its phase translates; off-beam completion stays
+free, so nothing about ambient Wolfram class follows, and the completion
+freedom of native G recorded below now has an exact explanation: beam
+evolution fixes tangent transport of a displacement but not point evolution
+of the same displacement. Centered G is polarization on the trajectory graph,
+`G° = B_H(X, D_H X)`. The lift is not unique: a period-3 necklace code lifts
+every binary CA more cheaply, and coset-induced CA already give the trivial
+layered version; the contribution is the specific presentation in which the
+temporal derivatives are spatial coordinates. Review gates were suspended by
+Myk for this integration; see the checkpoint log.
+
 ## 2026-09-15: balanced arithmetic interactions have uneven predictive value
 
 The [factor-balanced study](2026-09-15-factor-balanced-interactions.md) keeps

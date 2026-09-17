@@ -41,3 +41,16 @@ This rules out treating the tested signature as an intrinsic Class-IV marker,
 while leaving the beam construction and its scoped transport results intact.
 
 Revision 2026-09-15: the [observation catalog](../research/2026-09-15-observation-catalog.md) supplies a common comparison framework for 24 primitives and their pairs. Its seven frozen scalar signatures survive width nine but fail to retain both core rules on developed trajectories. Full partitions and transitions remain available; future comparisons must separate width, source ensemble and sampling.
+
+## Update, 2026-09-17: the arbitrary-parent and induction questions are closed
+
+The [affine-oriented lift theorem](../research/2026-09-17-affine-oriented-lift-theorem.md)
+closes the two questions this entry has carried as open since 2026-09-14:
+every binary finite-memory CA on Z^d has an exact, locally recoverable lift,
+and the construction recurses through every finite depth with one radius-3
+axis per floor. The beam is therefore a rule beam: the encoded image of every
+state of the source rule, on which the descendant rule is conjugate to the
+source. What remains open here is the typed Groovy bundle (a single marked beam
+carrying the ancestral commutator completion-independently). The Class-IV
+question leaves this entry for the refinement Program.
+
