@@ -33,3 +33,7 @@ site/dist/
 
 # Generated standalone dimensional-bridge explainer source.
 /site/dimensional-bridge.html
+
+# Per-fiber worker shards are intermediate census output, not evidence: the
+# canonical artifacts are rows.json, exactness_control.json and summary.json.
+results/*/shards/
