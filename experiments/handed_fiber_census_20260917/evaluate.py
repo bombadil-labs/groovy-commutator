@@ -266,7 +266,9 @@ def main():
                'protocol': sha(ROOT / 'docs/research/protocols/2026-09-17-handed-fiber-census.md'),
                'run': sha(HERE / 'run.py'), 'evaluate': sha(HERE / 'evaluate.py'),
                'rows': sha(OUT / 'rows.json'), 'exactness': sha(OUT / 'exactness_control.json'),
-               'condition_p_table': sha(COND_P)}}
+               'condition_p_table': sha(COND_P),
+               'control6': sha(HERE / 'control6_matched.py'),
+               'matched_control': sha(OUT / 'control6_matched.json')}}
     (OUT / 'summary.json').write_text(json.dumps(out, indent=1, sort_keys=True, allow_nan=False) + '\n')
     print(json.dumps({k: v.get('held') for k, v in preds.items()}, indent=1))
 

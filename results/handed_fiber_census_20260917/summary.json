@@ -4889,8 +4889,10 @@
  "protocol": "handed-fiber-census-20260917",
  "source_hashes": {
   "condition_p_table": "2296d1c5722f24edf08bc5f66f231b05be152ff1fc9b479ff77252e6d54fb34a",
-  "evaluate": "02a58f4acaa0c54f85d1886921e80bf107f8d134c858ba49bd3f9636033cb795",
+  "control6": "f1b61c98859a4a6e2d8bce9f83075e35323c863e154bbe388bee4826d16834fa",
+  "evaluate": "642ca4abf263abb39e3d0c5e88caf5ed6a6a5ead010abfd98fd97e0acf18d239",
   "exactness": "499c060a9ecb71e6eedc7f27904f47485421001996982f652856c7ec9d410186",
+  "matched_control": "2277cc3b26324b25af8f8f68fcac4cbfe94cc2bc2b03d4fbb2ab22fe09ef32f3",
   "protocol": "22ec587c3057e834c91b4aecb05e9af931f21722f49da7dc8d320bf022a93bef",
   "rows": "c90c9455a6d3c54574042958b90642ebb3711ba3ac6b30828a4977b1c2592111",
   "run": "8de843f37e0691a4dab1f10c28e6db25b789b79c56b97ac2373bdc33a9f8c996"
