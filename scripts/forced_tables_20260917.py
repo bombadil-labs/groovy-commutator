@@ -167,17 +167,23 @@ def pairwise(tables):
     return shared, conflict, added
 
 def bron_kerbosch(adj, cap_seconds):
-    """Maximal cliques with pivoting; adj: dict node -> set. Returns (cliques found, censored)."""
-    t0 = time.time(); found = []; censored = [False]
+    """Maximal cliques with pivoting; adj: dict node -> set. Keeps only the count and the
+    largest clique (storing every clique exhausted memory on the first run). Returns
+    (count, largest, censored)."""
+    t0 = time.time(); state = {'count': 0, 'largest': [], 'censored': False}
     def bk(R, P, X):
-        if time.time() - t0 > cap_seconds: censored[0] = True; return
-        if not P and not X: found.append(sorted(R)); return
+        if state['censored']: return
+        if time.time() - t0 > cap_seconds: state['censored'] = True; return
+        if not P and not X:
+            state['count'] += 1
+            if len(R) > len(state['largest']): state['largest'] = sorted(R)
+            return
         u = max(P | X, key=lambda v: len(adj[v] & P))
         for v in list(P - adj[u]):
             bk(R | {v}, P & adj[v], X & adj[v]); P = P - {v}; X = X | {v}
-            if censored[0]: return
+            if state['censored']: return
     bk(set(), set(adj), set())
-    return found, censored[0]
+    return state['count'], state['largest'], state['censored']
 
 def greedy_clique(adj):
     best = []
@@ -308,16 +314,16 @@ def main():
                     'compatible_cliques': sum(is_clique(o, adj_c) for o in orbit_sets if len(o) > 1),
                     'nonvacuous_cliques': sum(is_clique(o, adj_nv) for o in orbit_sets if len(o) > 1),
                     'nontrivial_orbits': sum(1 for o in orbit_sets if len(o) > 1)}
-    cliques, censored = bron_kerbosch(adj_nv, 600)
+    n_cliques, largest_clique, censored = bron_kerbosch(adj_nv, 300)
     families = {'compatible_edges': int(compat.sum() // 2), 'nonvacuous_edges': int(nonvac.sum() // 2),
                 'conflict_edges': int((conflict > 0).sum() // 2),
                 'conflict_components': [c for c in components(adj_conf)],
                 'compatible_degree': compat.sum(axis=1).tolist(), 'nonvacuous_degree': nonvac.sum(axis=1).tolist(),
                 'named_sets': named_checks, 'orbit_cliques': orbit_checks,
                 'nonvacuous_greedy_clique': greedy_clique(adj_nv),
-                'nonvacuous_maximal_cliques': {'censored': censored, 'count': len(cliques),
-                                               'max_size': max((len(c) for c in cliques), default=0),
-                                               'largest': max(cliques, key=len) if cliques else []}}
+                'nonvacuous_maximal_cliques': {'censored': censored, 'count_found': n_cliques,
+                                               'max_size_found': len(largest_clique), 'largest_found': largest_clique,
+                                               'cap_seconds': 300}}
     (OUT / 'families.json').write_text(json.dumps(families, indent=1) + '\n')
     print('families', f'{time.time()-t0:.0f}s', 'censored' if censored else '', flush=True)
 
@@ -343,6 +349,7 @@ def main():
     if not args.skip_d3:
         T3 = {}
         for r in D3_PANEL:
+            import gc; gc.collect()
             T3[r] = d3_table(r); d3[str(r)] = {'size': int(len(T3[r]['keys'])), 'windows': T3[r]['windows'], 'collisions': T3[r]['collisions'],
                                               'sha256_keys': hashlib.sha256(T3[r]['keys'].tobytes()).hexdigest()}
             print('d3', r, d3[str(r)]['size'], f'{time.time()-t0:.0f}s', flush=True)
