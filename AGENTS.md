@@ -788,6 +788,47 @@ workflow; research source and result changes now also trigger that workflow.
    Self-gated under Myk's suspended review gates; protocol drafted by
    Fable 5.1, amended and executed by Opus 5.
 
+16. **Persistence decomposes: the base sets history gain, the completion sets
+   retention** (2026-09-18,
+   `docs/research/2026-09-18-matched-completion-persistence.md`,
+   `experiments/matched_completion_20260918/` →
+   `results/matched_completion_20260918/`, 50 min, off Actions). Persistence
+   is `R* > 0 ∧ M* > 0`. Because the handed restriction is a coordinate
+   projection, **a 24-bit completion is one object shared by every fiber**:
+   `embed(r, u)` exists for every base, so the base can be varied with the
+   completion and every seed held fixed across them. Grid: 8 bases
+   {110, 54, 22, 5, 30, 90, 0, 204} × 512 completions at height two, a
+   64-completion replicate tier, a 128-completion height-four arm; 5,632
+   evaluations. **History gain is base-dominated** (df-adjusted variance
+   component 0.0396 vs the completion's 0.0116) and **retention is
+   completion-dominated** (0.0217 vs 0.0348); spreading is base-dominated
+   too, so retention is the one observable the refinement chooses. Holding a
+   completion fixed, 110 beats 30 on `M*` for 87.1% of completions with a
+   null `R*` difference (sign 0.488, mean 0.011). `M*>0` fractions separate
+   sharply (110 0.986, 22 0.984, 5 0.980, 54 0.975 vs 30 0.467, 90 0.564);
+   `R*>0` is flat (0.674 down to 0.258). Two unpredicted structural facts:
+   `M*` **anticorrelates** between distant bases rather than failing to
+   transfer (Spearman −0.414 for 110/30, −0.254 for 110/90, while 54, 5, 22
+   run positive) — unexplained, and the best open question here; and `M*` is
+   **not bit-additive at all** (cross-validated `R²` negative in all eight
+   bases) while `R*` reaches 0.271. **Failed bets:** P3 by 0.042 on one
+   pilot-set threshold (110/54 transfer 0.558 vs 0.60, pilot 0.81 on sixteen
+   completions); P5's conjunction (`R*` additivity 0.271 > 0.25 ceiling;
+   spreading test-retest 0.842 < 0.90 in base 110, while `M*` and `R*` are
+   ≥ 0.955 everywhere); and **P6, which corrects the Class-IV reading** — at
+   height four the persistence-only control rule 5 (1D `M` 0.976 vs 110's
+   0.903) overtakes 110 on mean `M*`, 0.290 vs 0.277, height two being at the
+   ceiling for both. **So history-gain inheritance tracks the base's
+   one-dimensional history gain, not its informal class**: result 15's
+   enrichment stands, Class-IV-ness is not its explanation. Two process
+   lessons: predictions calibrated on a pilot must be declared a
+   pre-registered replication per prediction (P3 failed exactly as that
+   framing anticipates); and P4 was scored on df-adjusted variance components
+   because raw `η²` is inflated for the 512-level factor, but **raw gives the
+   same verdict on both arms** — the adjustment removed an artifact risk, it
+   did not decide the outcome. Self-gated under Myk's suspended review gates;
+   protocol drafted by Fable 5.1, amended and executed by Opus 5.
+
 ## Checkpoint logs (read before continuing any workstream)
 
 A checkpoint is a dated statement of state: what a unit completed, what is

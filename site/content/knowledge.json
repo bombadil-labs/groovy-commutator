@@ -2587,9 +2587,10 @@
       "source": "fiber-enrichment",
       "type": "tests",
       "target": "selective-persistence-discriminator",
-      "reason": "The handed census tests whether the independently recovered one-dimensional persistence discriminator predicts a base rule's refinements; across all 256 bases it does, on both the spreading and the persistence axis.",
+      "reason": "The handed census tests whether the independently recovered one-dimensional persistence discriminator predicts a base rule's refinements; across all 256 bases it does, on both the spreading and the persistence axis. The matched-completion unit sharpens this: the discriminator's one-dimensional history gain, not the base's informal class, is what predicts a fiber's history gain, and a persistence-only control outperforms rule 110 at height four.",
       "research": [
-        "handed-fiber-census-20260917"
+        "handed-fiber-census-20260917",
+        "matched-completion-20260918"
       ]
     }
   ],
@@ -4934,13 +4935,14 @@
       "title": "A base rule's height-one fiber is enriched or depleted in the persistence \u00d7 spreading phenotype",
       "kind": "experiment",
       "status": "completed",
-      "summary": "512-rule samples of the fibers over ECAs 54, 22, 0, 90, 204 measured at height two have both-positive fractions 0.47, 0.37, 0.25, 0.22, 0.07 (Kruskal\u2013Wallis on S* p \u2248 1e-40, descriptive). HighLife and Life sit inside their fibers' 10th\u201390th percentile bands. One contract, one density, one strip height. Across all 64 fibers (128 rules each) the both-positive fraction spans 0.05 to 0.51 and is non-additive in the exposed bits on the spreading axis; the 0/90 ordering did not replicate on fresh samples. A handed family whose height-one restriction is onto all 256 ECAs gives rule 110 a fiber (2^24 rules): it is both-positive at 0.543, tied at the top with its mirror 124 and with 54, far above 30 at 0.273, and the enrichment is on the persistence axis rather than spreading. A base's own 1D phenotype predicts its fiber's on both axes across all 256 bases. Chirality is not detectable: the mirror fiber is indistinguishable.",
-      "updated": "2026-09-17",
+      "summary": "512-rule samples of the fibers over ECAs 54, 22, 0, 90, 204 measured at height two have both-positive fractions 0.47, 0.37, 0.25, 0.22, 0.07 (Kruskal\u2013Wallis on S* p \u2248 1e-40, descriptive). HighLife and Life sit inside their fibers' 10th\u201390th percentile bands. One contract, one density, one strip height. Across all 64 fibers (128 rules each) the both-positive fraction spans 0.05 to 0.51 and is non-additive in the exposed bits on the spreading axis; the 0/90 ordering did not replicate on fresh samples. A handed family whose height-one restriction is onto all 256 ECAs gives rule 110 a fiber (2^24 rules): it is both-positive at 0.543, tied at the top with its mirror 124 and with 54, far above 30 at 0.273, and the enrichment is on the persistence axis rather than spreading. A base's own 1D phenotype predicts its fiber's on both axes across all 256 bases. Chirality is not detectable: the mirror fiber is indistinguishable. A matched base-by-completion grid decomposes the persistence axis: history gain is set by the base (variance component 0.040 against the completion's 0.012) and retention by the completion (0.022 against 0.035); history gain anticorrelates between distant bases and is not bit-additive at all, and at height four a persistence-only control overtakes 110, so the conferral tracks the base's 1D history gain rather than its class.",
+      "updated": "2026-09-18",
       "source": "docs/knowledge/fiber-enrichment.md",
       "research": [
         "fiber-census-20260917",
         "fiber-census-64-20260917",
-        "handed-fiber-census-20260917"
+        "handed-fiber-census-20260917",
+        "matched-completion-20260918"
       ]
     },
     {
