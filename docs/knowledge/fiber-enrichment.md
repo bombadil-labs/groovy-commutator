@@ -71,3 +71,36 @@ calibrations in this Program must pair the draws, not only the distributions.
 
 Status: still exploratory. One strip height, one density, one contract, and the
 observer is reflection-symmetric while the family is not.
+
+## Update, 2026-09-18: persistence decomposes into base and completion
+
+The [matched-completion unit](../research/2026-09-18-matched-completion-persistence.md)
+splits the persistence axis. Persistence is `R* > 0 ∧ M* > 0`: retention and
+history gain. Because the height-one restriction is a coordinate projection, a
+24-bit completion is one object shared by every fiber, so the same completion can
+be embedded under every base and every seed held fixed across them.
+
+Eight bases × 512 completions at height two: **history gain is base-dominated**
+(degrees-of-freedom-adjusted variance component 0.0396 against the completion's
+0.0116) and **retention is completion-dominated** (0.0217 against 0.0348).
+Spreading is base-dominated as well, so retention is the one observable the
+refinement chooses for itself. Holding a completion fixed, rule 110 beats rule 30
+on history gain for 87.1% of completions while their retention difference is null.
+
+Two structural facts beyond the decomposition. History gain **anticorrelates**
+between distant bases rather than merely failing to transfer (Spearman −0.414 for
+110 against 30, −0.254 against 90, while 54, 5 and 22 run positive), so the same
+completion pushes different bases' history gain in opposite directions; this is
+unexplained. And history gain is **not bit-additive at all**: a cross-validated
+ridge fit on the 24 completion bits has negative `R²` in every base, while
+retention is partly additive, up to 0.271.
+
+A correction to the Class-IV reading. At height four the persistence-only control
+rule 5, whose one-dimensional history gain is 0.976 against 110's 0.903, overtakes
+110 on mean history gain (0.290 against 0.277); height two cannot separate them
+because both sit at the ceiling. **History-gain inheritance tracks the base's
+one-dimensional history gain, not its informal class.** The enrichment reported in
+the handed census is real, but Class-IV-ness is not its explanation.
+
+Status: exploratory. Eight bases, one contract, one density, height two for the
+main grid.

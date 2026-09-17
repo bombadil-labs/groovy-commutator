@@ -7,6 +7,52 @@ when a substantial unit completes; keep the bounded-claim style.
 
 Program page: `docs/research/2026-09-17-class-iv-refinement-program.md`
 
+## Checkpoint 2026-09-18 (fourth unit): matched completions evaluated
+
+- **Completed:** [the matched-completion unit](../2026-09-18-matched-completion-persistence.md),
+  canonical `results/matched_completion_20260918/` (summary registered with
+  the fast integrity tier). Eight bases × 512 completions at height two,
+  plus a 64-completion replicate tier and a 128-completion height-four arm;
+  5,632 evaluations, 49.7 minutes.
+- **The persistence axis decomposes.** History gain is base-dominated
+  (variance component 0.0396 against the completion's 0.0116); retention is
+  completion-dominated (0.0217 against 0.0348); spreading is base-dominated
+  too, so retention is the one observable a refinement chooses for itself.
+  P1, P2 and P4 held; P4 on both arms including the one expected to fail.
+- **Two things beyond the decomposition.** History gain **anticorrelates**
+  between distant bases (Spearman −0.414 for 110 against 30) rather than
+  merely failing to transfer, which is unexplained and is the most
+  interesting object the unit produced. And history gain is not bit-additive
+  at all: cross-validated `R²` on the 24 completion bits is negative in
+  every base, while retention reaches 0.271.
+- **A correction to the Class-IV reading, from the control put there for
+  it.** P6 failed because at height four the persistence-only control rule 5
+  (1D history gain 0.976 against 110's 0.903) overtakes 110. Height two
+  cannot separate them; both are at the ceiling. **Do not infer that rule
+  110 is special on the persistence axis**: history-gain inheritance tracks
+  the base's one-dimensional history gain, not its informal class. The
+  handed census's enrichment stands; Class-IV-ness is not its explanation.
+- **Replication, not blind bets, and it mattered.** Every prediction was
+  calibrated on a 132-evaluation pilot measuring the same quantities; the
+  canonical completions were drawn from a disjoint namespace, so the unit is
+  a pre-registered out-of-sample replication and is reported as one. P3
+  failed by 0.042 on one of four pilot-set thresholds (0.558 against 0.60,
+  pilot 0.81 on sixteen completions) — the exact regression that framing
+  anticipated. **Protocols in this Program that set thresholds from a pilot
+  must say so per prediction.**
+- **On the freeze amendment, stated so it is not miscredited:** P4 was
+  scored on degrees-of-freedom-adjusted variance components because raw
+  eta-squared is inflated for the 512-level factor. The raw fractions give
+  the **same** verdict on both arms. The adjustment removed the risk of an
+  artifact deciding a prediction; it did not decide this one.
+- **Do not infer:** a mechanism for any of it; anything about bases outside
+  the panel of eight; anything at other densities or observers; that the
+  transfer matrix's cluster structure is established (its thresholds failed).
+- **Next, unfrozen:** whether the sign of the history-gain transfer between
+  two bases is predicted by their one-dimensional history gains, over all
+  pairs of a panel. That is the first question here whose answer would be a
+  mechanism rather than a distribution.
+
 ## Checkpoint 2026-09-17 (third unit): handed fiber census evaluated
 
 - **Completed:** [the handed fiber census](../2026-09-17-handed-fiber-census.md),

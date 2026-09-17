@@ -143,5 +143,26 @@
       "fiber-census-20260917",
       "strip-spectrum-20260917"
     ]
+  },
+  {
+    "slug": "matched-completion-20260918",
+    "label": "Class-IV refinement VIII",
+    "title": "The base sets history gain, the completion sets retention",
+    "date": "2026-09-18",
+    "updated": "2026-09-18",
+    "kind": "Experiment",
+    "evidence": "exploratory",
+    "topic": "Class-IV refinement",
+    "summary": "Persistence decomposes into retention and history gain, and a matched grid separates them. Because the height-one restriction is a coordinate projection, a completion is one object shared by every fiber, so the base can be varied with the completion and every seed held fixed. Eight bases x 512 completions: history gain is base-dominated (variance component 0.040 against 0.012) and retention completion-dominated (0.022 against 0.035); holding the completion fixed, 110 beats 30 on history gain for 87% of completions with a null retention difference. History gain anticorrelates between distant bases (Spearman -0.414 for 110 against 30) rather than merely failing to transfer, and no linear model on the 24 completion bits predicts it at all. At height four the persistence-only control overtakes 110, so history-gain inheritance tracks 1D history gain rather than Class-IV-ness.",
+    "takeaway": "The source rule confers history gain and the refinement chooses its own retention; the conferral is visible in the base's one-dimensional history gain, not in its class.",
+    "source": "docs/research/2026-09-18-matched-completion-persistence.md",
+    "promotion": {
+      "stage": "research"
+    },
+    "related": [
+      "handed-fiber-census-20260917",
+      "fiber-census-64-20260917",
+      "selective-persistence-discriminator-20260916"
+    ]
   }
 ]
