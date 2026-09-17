@@ -1,0 +1,106 @@
+[
+  {
+    "slug": "cross-dimensional-class4-20260917",
+    "label": "Class-IV refinement I",
+    "title": "Generic 2D soup is not a simple continuation of the ECA phenotype",
+    "date": "2026-09-17",
+    "updated": "2026-09-17",
+    "kind": "Experiment",
+    "evidence": "exploratory",
+    "topic": "Class-IV refinement",
+    "summary": "A dimension-neutral persistence × spreading surrogate keeps the ECA controls but does not place Life, HighLife and Day & Night in one stable quadrant across densities. The exact HighLife width-one = Rule 54 bridge shows the retention statistic is observer-relative while history gain and spreading transport exactly; height-one strips forget twelve of eighteen Life-like rule bits and height two recovers all of them.",
+    "takeaway": "Selective retention is a statistic of dynamics, observation map and reference ensemble together; a lower-dimensional presentation can be an exact quotient that hides rule distinctions.",
+    "source": "docs/research/2026-09-17-cross-dimensional-class4.md",
+    "promotion": {
+      "stage": "research"
+    },
+    "related": [
+      "strip-spectrum-20260917",
+      "selective-persistence-discriminator-20260916",
+      "beam-discriminator-loop-20260915"
+    ]
+  },
+  {
+    "slug": "strip-spectrum-20260917",
+    "label": "Class-IV refinement II",
+    "title": "When added transverse freedom reveals and changes a Life-like rule",
+    "date": "2026-09-17",
+    "updated": "2026-09-17",
+    "kind": "Experiment with exact restriction statements",
+    "evidence": "exploratory",
+    "topic": "Class-IV refinement",
+    "summary": "On periodic strips of height 1 to 16, persistence and spreading are strongly non-monotone in height and ensemble-sensitive; Life and B35/S236 are the same rule at height one and diverge after one update at height two; the selective-surprisal gap decomposes exactly into a coarse-visible term and a within-fiber residual.",
+    "takeaway": "Strip height behaves like a representation scale, not a complexity knob; distinctions erased by a quotient can be kept as residual coordinates.",
+    "source": "docs/research/2026-09-17-strip-spectrum.md",
+    "promotion": {
+      "stage": "candidate",
+      "idea": "A one-dimensional shadow can hide most of a two-dimensional rule",
+      "destination": "Concepts"
+    },
+    "related": [
+      "cross-dimensional-class4-20260917"
+    ]
+  },
+  {
+    "slug": "jev-class4-scout-20260916",
+    "label": "Class-IV refinement III",
+    "title": "Jev as a semantic feature scout for the 54/110 phenotype",
+    "date": "2026-09-17",
+    "updated": "2026-09-17",
+    "kind": "Record of an executed probe",
+    "evidence": "exploratory",
+    "topic": "Class-IV refinement",
+    "summary": "Shown anonymous primitive measurements of 88 ECA representatives, Jev's persistence-across-conditions and selective-memory judgements rank 54 and 110 with AUC 1.0 against Class III and only Class-II confounders; an opaque control does not reproduce this. The matched codebook ablation reproduces J1, J3 and J5 with operational definitions alone and weakens J4.",
+    "takeaway": "A judgement model can point at a mechanism worth distilling; the science then lives in the transparent statistic, not in the model.",
+    "source": "docs/research/2026-09-17-jev-class4-scout-record.md",
+    "promotion": {
+      "stage": "research"
+    },
+    "related": [
+      "selective-persistence-discriminator-20260916",
+      "class4-independent-20260915"
+    ]
+  },
+  {
+    "slug": "selective-persistence-discriminator-20260916",
+    "label": "Class-IV refinement IV",
+    "title": "Selective predictive persistence × spreading: the recovered discriminator record",
+    "date": "2026-09-17",
+    "updated": "2026-09-17",
+    "kind": "Record of a prospective finite result with partial provenance",
+    "evidence": "exploratory",
+    "topic": "Class-IV refinement",
+    "summary": "S = max(0,R)·max(0,M) with S > 0.20 and α_512 > 0.50, frozen before fresh simulation, selects 54/110 in 10/10 decisions and 0/420 undisputed negatives across five fresh conditions, rejecting 41/106 and a radius-two rare-correction adversary. The report and tables survive; the protocol, runner and canonical JSON bytes do not.",
+    "takeaway": "A finite discriminator for the 54/110 core phenotype, not a Wolfram-class classifier, and recorded at the provenance level it can support.",
+    "source": "docs/research/2026-09-17-selective-persistence-discriminator-record.md",
+    "promotion": {
+      "stage": "research"
+    },
+    "related": [
+      "jev-class4-scout-20260916",
+      "beam-discriminator-loop-20260915",
+      "class4-independent-20260915"
+    ]
+  },
+  {
+    "slug": "fiber-census-20260917",
+    "label": "Class-IV refinement V",
+    "title": "The height-one fiber of Rule 54 is enriched in the persistence × spreading phenotype",
+    "date": "2026-09-17",
+    "updated": "2026-09-17",
+    "kind": "Experiment",
+    "evidence": "exploratory",
+    "topic": "Class-IV refinement",
+    "summary": "Sampling 512 Life-like rules from each height-one fiber of ECAs 54, 22, 90, 204 and 0 and measuring at height two, the both-positive fraction is 0.47, 0.37, 0.25, 0.22 and 0.07. Fibers differ, fiber(54) is enriched, HighLife and Life are typical members of their fibers; the bet that fiber(22) splits into Life-like and explosive halves failed (72% ballistic).",
+    "takeaway": "Under one fixed contract a source rule predicts the phenotype distribution of its refinements; whether that is more than the activity its six fixed bits impose is the next control.",
+    "source": "docs/research/2026-09-17-fiber-census.md",
+    "promotion": {
+      "stage": "research"
+    },
+    "related": [
+      "strip-spectrum-20260917",
+      "cross-dimensional-class4-20260917",
+      "selective-persistence-discriminator-20260916"
+    ]
+  }
+]

@@ -1,0 +1,8 @@
+{
+ "mode": "semantic_codebook",
+ "codebook_sha256": "7154d0bed449489a9addad0d2d59b7a63257c82f81c0075d5a8dfc2b693ed31e",
+ "contract_sha256": "0c6b4bf8016d9aa181404a29aa623854bf61a7b196878727dd8be49454ce6518",
+ "questions_sha256": "77f4b1924f9f39845bd200deb30931ec30586934373ef4d363309b66691cb8e6",
+ "source_run1_responses_sha256": "db27592c8540db0ad1533aae8f9a30c21fd62fd1022009dd8fda890c00e3b538",
+ "deviation": "cohort_reference keys were remapped with the same codebook (the frozen sheet says to preserve the cohort reference exactly and also not to reveal old feature names; the two conflict on keys, and the values are preserved exactly)."
+}

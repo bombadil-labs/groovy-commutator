@@ -1,0 +1,50 @@
+{
+  "jev_raw_responses.jsonl": {
+    "bytes": 127991,
+    "sha256": "db27592c8540db0ad1533aae8f9a30c21fd62fd1022009dd8fda890c00e3b538"
+  },
+  "jev_opaque_responses.jsonl": {
+    "bytes": 113938,
+    "sha256": "080443059cc40cd6636b1073c2346273fc7cdb3c8322403999712c32676afb5c"
+  },
+  "run3/codebook_shared.json": {
+    "bytes": 33681,
+    "sha256": "2e16eeb866947e6a69cdc190bd8b5a3aaaf7dcb0ea04c4e519e116f193d22a8f"
+  },
+  "run3/codebook_candidates.json": {
+    "bytes": 552256,
+    "sha256": "4961194be2d1761f49d6db30514ec9a3cc3902e7f3a3956a398b642b00d30a40"
+  },
+  "run3/codebook_run_meta.json": {
+    "bytes": 645,
+    "sha256": "356083f8f4033b6fcf8ec9b3f264337aaaa2aabf15e1ded5601ef3cde2520a37"
+  },
+  "run3/measurement_contract_codebook.json": {
+    "bytes": 23524,
+    "sha256": "e41c1d35ff1b2aa02f81389fe72052ea0a5cd5865082385bc86a0f543c2d993e"
+  },
+  "run3/run_jev_codebook.py": {
+    "bytes": 4211,
+    "sha256": "e184683dc65a7a5042248e0e8cd38e82071cad79d1f3bc80373ace9fed5ed18f"
+  },
+  "JEV_RUN3_CODEBOOK_ABLATION.md": {
+    "bytes": 7746,
+    "sha256": "3cd5105604d70d8227ebeadd2031afc54bf734365d1c75f2f5182b1e6c34482e"
+  },
+  "run3/jev_codebook_responses.jsonl": {
+    "bytes": 222010,
+    "sha256": "bdf7377fa6b14b69dd40faf8e3e1e159f7c2d96837312a06ad46acf01f5be085"
+  },
+  "run3/jev_codebook_evaluation.json": {
+    "bytes": 6903,
+    "sha256": "82ef9fe1408da5d7b8b10c644bc418a12c8f77db6521683a1e7d6fadda6ba967"
+  },
+  "run3/run1_vs_run3_comparison.json": {
+    "bytes": 1049,
+    "sha256": "3f04b1cad3a1e541714c806c94a0b007bcf8ced451dc5896de1bf51d5c645f2a"
+  },
+  "run3/evaluate_run3.py": {
+    "bytes": 4275,
+    "sha256": "14824525530a9943dc54a2c85dbd8cd84809c8097f632782ba224ddcb00dc996"
+  }
+}

@@ -1,0 +1,400 @@
+{
+ "cohort_reference": {
+  "f001": {
+   "iqr": 0.24381112722549136,
+   "median": 0.0,
+   "q1": -0.061089719354340946,
+   "q3": 0.1827214078711504
+  },
+  "f002": {
+   "iqr": 0.06409131850770683,
+   "median": 0.007515457444669929,
+   "q1": 0.0,
+   "q3": 0.06409131850770683
+  },
+  "f003": {
+   "iqr": 0.2803365799554749,
+   "median": 0.00994535201599317,
+   "q1": 0.0,
+   "q3": 0.2803365799554749
+  },
+  "f004": {
+   "iqr": 0.01726284138078024,
+   "median": 0.002368617274024293,
+   "q1": 0.0,
+   "q3": 0.01726284138078024
+  },
+  "f005": {
+   "iqr": 0.2804675341313085,
+   "median": 0.0,
+   "q1": 0.0,
+   "q3": 0.2804675341313085
+  },
+  "f006": {
+   "iqr": 0.04157309447714087,
+   "median": 0.00532663086196955,
+   "q1": 0.0,
+   "q3": 0.04157309447714087
+  },
+  "f007": {
+   "iqr": 0.28783147482001087,
+   "median": 0.0,
+   "q1": -0.010990283056896602,
+   "q3": 0.2768411917631143
+  },
+  "f008": {
+   "iqr": 0.04193457756591676,
+   "median": 0.002010255724402694,
+   "q1": 0.0,
+   "q3": 0.04193457756591676
+  },
+  "f009": {
+   "iqr": 0.3039130832910648,
+   "median": 0.0027137538257578364,
+   "q1": 0.0,
+   "q3": 0.3039130832910648
+  },
+  "f010": {
+   "iqr": 0.011985678889650353,
+   "median": 0.002024925634410743,
+   "q1": 0.0,
+   "q3": 0.011985678889650353
+  },
+  "f011": {
+   "iqr": 0.31169246317273425,
+   "median": 0.0,
+   "q1": 0.0,
+   "q3": 0.31169246317273425
+  },
+  "f012": {
+   "iqr": 0.02680170826439124,
+   "median": 0.0023283586311646787,
+   "q1": 0.0,
+   "q3": 0.02680170826439124
+  },
+  "f013": {
+   "iqr": 0.3850518082509931,
+   "median": 0.0825790790226539,
+   "q1": 0.0,
+   "q3": 0.3850518082509931
+  },
+  "f014": {
+   "iqr": 0.013824420409237759,
+   "median": 0.00037619443452252543,
+   "q1": 0.0,
+   "q3": 0.013824420409237759
+  },
+  "f015": {
+   "iqr": 0.5721769571640987,
+   "median": 0.13749920425942114,
+   "q1": 0.0,
+   "q3": 0.5721769571640987
+  },
+  "f016": {
+   "iqr": 0.012463663618370119,
+   "median": 6.0318551757199135e-05,
+   "q1": 0.0,
+   "q3": 0.012463663618370119
+  },
+  "f017": {
+   "iqr": 0.53232468183814,
+   "median": 0.11408735625081724,
+   "q1": 0.0,
+   "q3": 0.53232468183814
+  },
+  "f018": {
+   "iqr": 0.013841395528404188,
+   "median": 0.0001536187012379786,
+   "q1": 0.0,
+   "q3": 0.013841395528404188
+  },
+  "f019": {
+   "iqr": 0.4570786976436206,
+   "median": 0.09592855477999113,
+   "q1": 0.0,
+   "q3": 0.4570786976436206
+  },
+  "f020": {
+   "iqr": 0.008649820932425813,
+   "median": 0.00018436310961150726,
+   "q1": 0.0,
+   "q3": 0.008649820932425813
+  },
+  "f021": {
+   "iqr": 0.5685793733046635,
+   "median": 0.1372495158142696,
+   "q1": 0.0,
+   "q3": 0.5685793733046635
+  },
+  "f022": {
+   "iqr": 0.008656127972044847,
+   "median": 9.044385481715711e-06,
+   "q1": 0.0,
+   "q3": 0.008656127972044847
+  },
+  "f023": {
+   "iqr": 0.5406088882648947,
+   "median": 0.10663749012529963,
+   "q1": 0.0,
+   "q3": 0.5406088882648947
+  },
+  "f024": {
+   "iqr": 0.00922482015677066,
+   "median": 8.756555317052106e-05,
+   "q1": 0.0,
+   "q3": 0.00922482015677066
+  },
+  "f025": {
+   "iqr": 0.2268272492358246,
+   "median": -0.0013186136881510415,
+   "q1": -0.18130593444553678,
+   "q3": 0.045521314790287815
+  },
+  "f026": {
+   "iqr": 0.13681370437567414,
+   "median": 0.094870556786071,
+   "q1": 0.009432122957188878,
+   "q3": 0.146245827332863
+  },
+  "f027": {
+   "iqr": 0.43493495781052,
+   "median": -0.19016755960063955,
+   "q1": -0.4342794696349599,
+   "q3": 0.0006554881755601111
+  },
+  "f028": {
+   "iqr": 0.22520895936046295,
+   "median": 0.12537913141117507,
+   "q1": 0.015194753049724997,
+   "q3": 0.24040371241018796
+  },
+  "f029": {
+   "iqr": 0.5878776591282859,
+   "median": -0.21443208698004074,
+   "q1": -0.5704042281334608,
+   "q3": 0.017473430994825165
+  },
+  "f030": {
+   "iqr": 0.28674859384684626,
+   "median": 0.15527325967438396,
+   "q1": 0.0229422397169494,
+   "q3": 0.3096908335637957
+  },
+  "f031": {
+   "iqr": 0.19899622671261272,
+   "median": 0.0,
+   "q1": -0.16766716640770052,
+   "q3": 0.03132906030491219
+  },
+  "f032": {
+   "iqr": 0.10774330835493104,
+   "median": 0.05720929280555456,
+   "q1": 0.00952997580049799,
+   "q3": 0.11727328415542902
+  },
+  "f033": {
+   "iqr": 0.4465475734588594,
+   "median": -0.16962520599208802,
+   "q1": -0.43548781298420264,
+   "q3": 0.011059760474656795
+  },
+  "f034": {
+   "iqr": 0.21372739871150925,
+   "median": 0.12115626749569508,
+   "q1": 0.008925261874296434,
+   "q3": 0.22265266058580568
+  },
+  "f035": {
+   "iqr": 0.6025323330900008,
+   "median": -0.14387398973828017,
+   "q1": -0.5621305663341443,
+   "q3": 0.040401766755856536
+  },
+  "f036": {
+   "iqr": 0.251678556338394,
+   "median": 0.13606853047218498,
+   "q1": 0.01601372651647595,
+   "q3": 0.26769228285486996
+  },
+  "f037": {
+   "iqr": 0.017152511015182642,
+   "median": 0.0,
+   "q1": 0.0,
+   "q3": 0.017152511015182642
+  },
+  "f038": {
+   "iqr": 0.012085808037949734,
+   "median": 0.0,
+   "q1": 0.0,
+   "q3": 0.012085808037949734
+  },
+  "f039": {
+   "iqr": 0.007548118698104733,
+   "median": 0.0,
+   "q1": -5.454420016232087e-06,
+   "q3": 0.007542664278088501
+  },
+  "f040": {
+   "iqr": 0.012440764512259228,
+   "median": 0.0006485622223346976,
+   "q1": 0.0,
+   "q3": 0.012440764512259228
+  },
+  "f041": {
+   "iqr": 0.30196078431372547,
+   "median": 0.6862745098039216,
+   "q1": 0.4892156862745098,
+   "q3": 0.7911764705882353
+  },
+  "f042": {
+   "iqr": 0.004510372762603316,
+   "median": 0.012885215392194428,
+   "q1": 0.010378236356669769,
+   "q3": 0.014888609119273085
+  },
+  "f043": {
+   "iqr": 0.13569551735908597,
+   "median": 0.40827859224222873,
+   "q1": 0.32406841886250454,
+   "q3": 0.4597639362215905
+  },
+  "f044": {
+   "iqr": 33.59735887895363,
+   "median": 1164.3290570499557,
+   "q1": 1144.2665245202559,
+   "q3": 1177.8638833992095
+  },
+  "f045": {
+   "iqr": 0.5509803921568627,
+   "median": 0.611764705882353,
+   "q1": 0.39803921568627454,
+   "q3": 0.9490196078431372
+  },
+  "f046": {
+   "iqr": 13.465686274509807,
+   "median": 34.94509803921569,
+   "q1": 29.038235294117648,
+   "q3": 42.503921568627455
+  },
+  "f047": {
+   "iqr": 23.21214171075623,
+   "median": 30.395336268228448,
+   "q1": 20.220641646489103,
+   "q3": 43.432783357245334
+  },
+  "f048": {
+   "iqr": 0.48139887691332306,
+   "median": 0.5985021012842486,
+   "q1": 0.5186011230866769,
+   "q3": 1.0
+  },
+  "f049": {
+   "iqr": 0.2529411764705882,
+   "median": 0.4411764705882353,
+   "q1": 0.31666666666666665,
+   "q3": 0.5696078431372549
+  }
+ },
+ "measurement_contract": {
+  "f001": "Held-out log-loss improvement, in bits per event, from predicting a site's next value with its current value plus a finite window of its own earlier values, relative to predicting from the current value alone; fitted on half of the trajectory seeds and evaluated on the other half, averaged over both fold directions. Measured under trajectory condition A (ring 256, burn-in 256, 512 counted transitions, six seeds), with history window of 12 earlier values; this entry is the mean over the declared per-direction values.",
+  "f002": "Held-out log-loss improvement, in bits per event, from predicting a site's next value with its current value plus a finite window of its own earlier values, relative to predicting from the current value alone; fitted on half of the trajectory seeds and evaluated on the other half, averaged over both fold directions. Measured under trajectory condition A (ring 256, burn-in 256, 512 counted transitions, six seeds), with history window of 12 earlier values; this entry is the range (maximum minus minimum) over the declared per-direction values.",
+  "f003": "Held-out log-loss improvement, in bits per event, from predicting a site's next value with its current value plus a finite window of its own earlier values, relative to predicting from the current value alone; fitted on half of the trajectory seeds and evaluated on the other half, averaged over both fold directions. Measured under trajectory condition A (ring 256, burn-in 256, 512 counted transitions, six seeds), with history window of 4 earlier values; this entry is the mean over the declared per-direction values.",
+  "f004": "Held-out log-loss improvement, in bits per event, from predicting a site's next value with its current value plus a finite window of its own earlier values, relative to predicting from the current value alone; fitted on half of the trajectory seeds and evaluated on the other half, averaged over both fold directions. Measured under trajectory condition A (ring 256, burn-in 256, 512 counted transitions, six seeds), with history window of 4 earlier values; this entry is the range (maximum minus minimum) over the declared per-direction values.",
+  "f005": "Held-out log-loss improvement, in bits per event, from predicting a site's next value with its current value plus a finite window of its own earlier values, relative to predicting from the current value alone; fitted on half of the trajectory seeds and evaluated on the other half, averaged over both fold directions. Measured under trajectory condition A (ring 256, burn-in 256, 512 counted transitions, six seeds), with history window of 8 earlier values; this entry is the mean over the declared per-direction values.",
+  "f006": "Held-out log-loss improvement, in bits per event, from predicting a site's next value with its current value plus a finite window of its own earlier values, relative to predicting from the current value alone; fitted on half of the trajectory seeds and evaluated on the other half, averaged over both fold directions. Measured under trajectory condition A (ring 256, burn-in 256, 512 counted transitions, six seeds), with history window of 8 earlier values; this entry is the range (maximum minus minimum) over the declared per-direction values.",
+  "f007": "Held-out log-loss improvement, in bits per event, from predicting a site's next value with its current value plus a finite window of its own earlier values, relative to predicting from the current value alone; fitted on half of the trajectory seeds and evaluated on the other half, averaged over both fold directions. Measured under trajectory condition B (ring 512, burn-in 512, 512 counted transitions, six independent seeds), with history window of 12 earlier values; this entry is the mean over the declared per-direction values.",
+  "f008": "Held-out log-loss improvement, in bits per event, from predicting a site's next value with its current value plus a finite window of its own earlier values, relative to predicting from the current value alone; fitted on half of the trajectory seeds and evaluated on the other half, averaged over both fold directions. Measured under trajectory condition B (ring 512, burn-in 512, 512 counted transitions, six independent seeds), with history window of 12 earlier values; this entry is the range (maximum minus minimum) over the declared per-direction values.",
+  "f009": "Held-out log-loss improvement, in bits per event, from predicting a site's next value with its current value plus a finite window of its own earlier values, relative to predicting from the current value alone; fitted on half of the trajectory seeds and evaluated on the other half, averaged over both fold directions. Measured under trajectory condition B (ring 512, burn-in 512, 512 counted transitions, six independent seeds), with history window of 4 earlier values; this entry is the mean over the declared per-direction values.",
+  "f010": "Held-out log-loss improvement, in bits per event, from predicting a site's next value with its current value plus a finite window of its own earlier values, relative to predicting from the current value alone; fitted on half of the trajectory seeds and evaluated on the other half, averaged over both fold directions. Measured under trajectory condition B (ring 512, burn-in 512, 512 counted transitions, six independent seeds), with history window of 4 earlier values; this entry is the range (maximum minus minimum) over the declared per-direction values.",
+  "f011": "Held-out log-loss improvement, in bits per event, from predicting a site's next value with its current value plus a finite window of its own earlier values, relative to predicting from the current value alone; fitted on half of the trajectory seeds and evaluated on the other half, averaged over both fold directions. Measured under trajectory condition B (ring 512, burn-in 512, 512 counted transitions, six independent seeds), with history window of 8 earlier values; this entry is the mean over the declared per-direction values.",
+  "f012": "Held-out log-loss improvement, in bits per event, from predicting a site's next value with its current value plus a finite window of its own earlier values, relative to predicting from the current value alone; fitted on half of the trajectory seeds and evaluated on the other half, averaged over both fold directions. Measured under trajectory condition B (ring 512, burn-in 512, 512 counted transitions, six independent seeds), with history window of 8 earlier values; this entry is the range (maximum minus minimum) over the declared per-direction values.",
+  "f013": "Held-out conditional entropy, in bits, of a site's next value given its current value plus the same finite window of its own earlier values; evaluated on the held-out trajectory seeds and averaged over both fold directions. Measured under trajectory condition A (ring 256, burn-in 256, 512 counted transitions, six seeds), with history window of 12 earlier values; this entry is the mean over the declared per-direction values.",
+  "f014": "Held-out conditional entropy, in bits, of a site's next value given its current value plus the same finite window of its own earlier values; evaluated on the held-out trajectory seeds and averaged over both fold directions. Measured under trajectory condition A (ring 256, burn-in 256, 512 counted transitions, six seeds), with history window of 12 earlier values; this entry is the range (maximum minus minimum) over the declared per-direction values.",
+  "f015": "Held-out conditional entropy, in bits, of a site's next value given its current value plus the same finite window of its own earlier values; evaluated on the held-out trajectory seeds and averaged over both fold directions. Measured under trajectory condition A (ring 256, burn-in 256, 512 counted transitions, six seeds), with history window of 4 earlier values; this entry is the mean over the declared per-direction values.",
+  "f016": "Held-out conditional entropy, in bits, of a site's next value given its current value plus the same finite window of its own earlier values; evaluated on the held-out trajectory seeds and averaged over both fold directions. Measured under trajectory condition A (ring 256, burn-in 256, 512 counted transitions, six seeds), with history window of 4 earlier values; this entry is the range (maximum minus minimum) over the declared per-direction values.",
+  "f017": "Held-out conditional entropy, in bits, of a site's next value given its current value plus the same finite window of its own earlier values; evaluated on the held-out trajectory seeds and averaged over both fold directions. Measured under trajectory condition A (ring 256, burn-in 256, 512 counted transitions, six seeds), with history window of 8 earlier values; this entry is the mean over the declared per-direction values.",
+  "f018": "Held-out conditional entropy, in bits, of a site's next value given its current value plus the same finite window of its own earlier values; evaluated on the held-out trajectory seeds and averaged over both fold directions. Measured under trajectory condition A (ring 256, burn-in 256, 512 counted transitions, six seeds), with history window of 8 earlier values; this entry is the range (maximum minus minimum) over the declared per-direction values.",
+  "f019": "Held-out conditional entropy, in bits, of a site's next value given its current value plus the same finite window of its own earlier values; evaluated on the held-out trajectory seeds and averaged over both fold directions. Measured under trajectory condition B (ring 512, burn-in 512, 512 counted transitions, six independent seeds), with history window of 12 earlier values; this entry is the mean over the declared per-direction values.",
+  "f020": "Held-out conditional entropy, in bits, of a site's next value given its current value plus the same finite window of its own earlier values; evaluated on the held-out trajectory seeds and averaged over both fold directions. Measured under trajectory condition B (ring 512, burn-in 512, 512 counted transitions, six independent seeds), with history window of 12 earlier values; this entry is the range (maximum minus minimum) over the declared per-direction values.",
+  "f021": "Held-out conditional entropy, in bits, of a site's next value given its current value plus the same finite window of its own earlier values; evaluated on the held-out trajectory seeds and averaged over both fold directions. Measured under trajectory condition B (ring 512, burn-in 512, 512 counted transitions, six independent seeds), with history window of 4 earlier values; this entry is the mean over the declared per-direction values.",
+  "f022": "Held-out conditional entropy, in bits, of a site's next value given its current value plus the same finite window of its own earlier values; evaluated on the held-out trajectory seeds and averaged over both fold directions. Measured under trajectory condition B (ring 512, burn-in 512, 512 counted transitions, six independent seeds), with history window of 4 earlier values; this entry is the range (maximum minus minimum) over the declared per-direction values.",
+  "f023": "Held-out conditional entropy, in bits, of a site's next value given its current value plus the same finite window of its own earlier values; evaluated on the held-out trajectory seeds and averaged over both fold directions. Measured under trajectory condition B (ring 512, burn-in 512, 512 counted transitions, six independent seeds), with history window of 8 earlier values; this entry is the mean over the declared per-direction values.",
+  "f024": "Held-out conditional entropy, in bits, of a site's next value given its current value plus the same finite window of its own earlier values; evaluated on the held-out trajectory seeds and averaged over both fold directions. Measured under trajectory condition B (ring 512, burn-in 512, 512 counted transitions, six independent seeds), with history window of 8 earlier values; this entry is the range (maximum minus minimum) over the declared per-direction values.",
+  "f025": "Standardized statistic on visited local blocks: for each visited block of the stated width and its two external neighbours, log2 of the number of same-width predecessor blocks producing the same one-step output is compared with the uniform mean over blocks sharing its two outer bits on each side; the visited mean of that difference is divided by the uniform standard deviation over all blocks. Positive values mean the trajectory occupies blocks with fewer same-window predecessors than the boundary-conditioned reference. Measured under trajectory condition A (ring 256, burn-in 256, 512 counted transitions, six seeds), with block width 5; this entry is the mean over the declared per-direction values.",
+  "f026": "Standardized statistic on visited local blocks: for each visited block of the stated width and its two external neighbours, log2 of the number of same-width predecessor blocks producing the same one-step output is compared with the uniform mean over blocks sharing its two outer bits on each side; the visited mean of that difference is divided by the uniform standard deviation over all blocks. Positive values mean the trajectory occupies blocks with fewer same-window predecessors than the boundary-conditioned reference. Measured under trajectory condition A (ring 256, burn-in 256, 512 counted transitions, six seeds), with block width 5; this entry is the range (maximum minus minimum) over the declared per-direction values.",
+  "f027": "Standardized statistic on visited local blocks: for each visited block of the stated width and its two external neighbours, log2 of the number of same-width predecessor blocks producing the same one-step output is compared with the uniform mean over blocks sharing its two outer bits on each side; the visited mean of that difference is divided by the uniform standard deviation over all blocks. Positive values mean the trajectory occupies blocks with fewer same-window predecessors than the boundary-conditioned reference. Measured under trajectory condition A (ring 256, burn-in 256, 512 counted transitions, six seeds), with block width 7; this entry is the mean over the declared per-direction values.",
+  "f028": "Standardized statistic on visited local blocks: for each visited block of the stated width and its two external neighbours, log2 of the number of same-width predecessor blocks producing the same one-step output is compared with the uniform mean over blocks sharing its two outer bits on each side; the visited mean of that difference is divided by the uniform standard deviation over all blocks. Positive values mean the trajectory occupies blocks with fewer same-window predecessors than the boundary-conditioned reference. Measured under trajectory condition A (ring 256, burn-in 256, 512 counted transitions, six seeds), with block width 7; this entry is the range (maximum minus minimum) over the declared per-direction values.",
+  "f029": "Standardized statistic on visited local blocks: for each visited block of the stated width and its two external neighbours, log2 of the number of same-width predecessor blocks producing the same one-step output is compared with the uniform mean over blocks sharing its two outer bits on each side; the visited mean of that difference is divided by the uniform standard deviation over all blocks. Positive values mean the trajectory occupies blocks with fewer same-window predecessors than the boundary-conditioned reference. Measured under trajectory condition A (ring 256, burn-in 256, 512 counted transitions, six seeds), with block width 9; this entry is the mean over the declared per-direction values.",
+  "f030": "Standardized statistic on visited local blocks: for each visited block of the stated width and its two external neighbours, log2 of the number of same-width predecessor blocks producing the same one-step output is compared with the uniform mean over blocks sharing its two outer bits on each side; the visited mean of that difference is divided by the uniform standard deviation over all blocks. Positive values mean the trajectory occupies blocks with fewer same-window predecessors than the boundary-conditioned reference. Measured under trajectory condition A (ring 256, burn-in 256, 512 counted transitions, six seeds), with block width 9; this entry is the range (maximum minus minimum) over the declared per-direction values.",
+  "f031": "Standardized statistic on visited local blocks: for each visited block of the stated width and its two external neighbours, log2 of the number of same-width predecessor blocks producing the same one-step output is compared with the uniform mean over blocks sharing its two outer bits on each side; the visited mean of that difference is divided by the uniform standard deviation over all blocks. Positive values mean the trajectory occupies blocks with fewer same-window predecessors than the boundary-conditioned reference. Measured under trajectory condition B (ring 512, burn-in 512, 512 counted transitions, six independent seeds), with block width 5; this entry is the mean over the declared per-direction values.",
+  "f032": "Standardized statistic on visited local blocks: for each visited block of the stated width and its two external neighbours, log2 of the number of same-width predecessor blocks producing the same one-step output is compared with the uniform mean over blocks sharing its two outer bits on each side; the visited mean of that difference is divided by the uniform standard deviation over all blocks. Positive values mean the trajectory occupies blocks with fewer same-window predecessors than the boundary-conditioned reference. Measured under trajectory condition B (ring 512, burn-in 512, 512 counted transitions, six independent seeds), with block width 5; this entry is the range (maximum minus minimum) over the declared per-direction values.",
+  "f033": "Standardized statistic on visited local blocks: for each visited block of the stated width and its two external neighbours, log2 of the number of same-width predecessor blocks producing the same one-step output is compared with the uniform mean over blocks sharing its two outer bits on each side; the visited mean of that difference is divided by the uniform standard deviation over all blocks. Positive values mean the trajectory occupies blocks with fewer same-window predecessors than the boundary-conditioned reference. Measured under trajectory condition B (ring 512, burn-in 512, 512 counted transitions, six independent seeds), with block width 7; this entry is the mean over the declared per-direction values.",
+  "f034": "Standardized statistic on visited local blocks: for each visited block of the stated width and its two external neighbours, log2 of the number of same-width predecessor blocks producing the same one-step output is compared with the uniform mean over blocks sharing its two outer bits on each side; the visited mean of that difference is divided by the uniform standard deviation over all blocks. Positive values mean the trajectory occupies blocks with fewer same-window predecessors than the boundary-conditioned reference. Measured under trajectory condition B (ring 512, burn-in 512, 512 counted transitions, six independent seeds), with block width 7; this entry is the range (maximum minus minimum) over the declared per-direction values.",
+  "f035": "Standardized statistic on visited local blocks: for each visited block of the stated width and its two external neighbours, log2 of the number of same-width predecessor blocks producing the same one-step output is compared with the uniform mean over blocks sharing its two outer bits on each side; the visited mean of that difference is divided by the uniform standard deviation over all blocks. Positive values mean the trajectory occupies blocks with fewer same-window predecessors than the boundary-conditioned reference. Measured under trajectory condition B (ring 512, burn-in 512, 512 counted transitions, six independent seeds), with block width 9; this entry is the mean over the declared per-direction values.",
+  "f036": "Standardized statistic on visited local blocks: for each visited block of the stated width and its two external neighbours, log2 of the number of same-width predecessor blocks producing the same one-step output is compared with the uniform mean over blocks sharing its two outer bits on each side; the visited mean of that difference is divided by the uniform standard deviation over all blocks. Positive values mean the trajectory occupies blocks with fewer same-window predecessors than the boundary-conditioned reference. Measured under trajectory condition B (ring 512, burn-in 512, 512 counted transitions, six independent seeds), with block width 9; this entry is the range (maximum minus minimum) over the declared per-direction values.",
+  "f037": "Held-out log-loss improvement from adding older samples of the field D(E(S)) XOR E(D(S)) (E one evolution step, D the XOR of a state with its successor), taken beyond the current local neighbourhood of that field, when predicting that field's next local value. This entry is the maximum over held-out seeds.",
+  "f038": "Held-out log-loss improvement from adding older samples of the field D(E(S)) XOR E(D(S)) (E one evolution step, D the XOR of a state with its successor), taken beyond the current local neighbourhood of that field, when predicting that field's next local value. This entry is the mean over the declared per-direction values.",
+  "f039": "Held-out log-loss improvement from adding older samples of the field D(E(S)) XOR E(D(S)) (E one evolution step, D the XOR of a state with its successor), taken beyond the current local neighbourhood of that field, when predicting that field's next local value. This entry is the minimum over held-out seeds.",
+  "f040": "Held-out log-loss improvement from adding older samples of the field D(E(S)) XOR E(D(S)) (E one evolution step, D the XOR of a state with its successor), taken beyond the current local neighbourhood of that field, when predicting that field's next local value. This entry is the range (maximum minus minimum) over held-out seeds.",
+  "f041": "Fraction of the other 255 elementary rules whose partial first-lift local table (forced entries only, unspecified entries left free) can be completed jointly with this rule's partial table, pooled over complete source rings of widths seven and eight.",
+  "f042": "Fraction of the physical child neighbourhood table that this rule's first lift forces, pooled over the same rings.",
+  "f043": "Fraction of this rule's forced child-table entries whose forced value is one.",
+  "f044": "Mean number of table entries a compatible partner newly forces beyond this rule's own forced entries, averaged over compatible partners.",
+  "f045": "Mean number of physical neighbourhoods on which this rule and a partner force different values, averaged over all 255 partners.",
+  "f046": "Mean number of physical neighbourhoods forced by both this rule and a partner, averaged over all 255 partners.",
+  "f047": "Mean number of physical neighbourhoods forced by both this rule and a compatible partner, averaged over compatible partners.",
+  "f048": "Among compatible partners, the fraction with at least one physical neighbourhood forced by both.",
+  "f049": "Fraction of partners sharing at least one forced physical neighbourhood with this rule."
+ },
+ "note": "Values are independent measurements of one deterministic dynamical system. Each measurement code is defined operationally in measurement_contract. Families F1, F2 and F3 group codes by the kind of measurement.",
+ "questions": {
+  "J1": {
+   "criteria": {
+    "false": "The joint pattern is absent, isolated to one condition, or dominated by either near-complete predictability or unstructured uncertainty.",
+    "true": "The history-related measurements and residual-uncertainty measurements jointly support this pattern across more than one recorded condition. Residual uncertainty alone is not evidence of response capacity."
+   },
+   "instructions": "Does the anonymous candidate profile show that information from earlier states remains measurably useful while the observed local dynamics also retains nontrivial residual uncertainty across conditions, rather than collapsing toward either complete predictability or unstructured uncertainty?",
+   "type": "noul"
+  },
+  "J2": {
+   "criteria": {
+    "false": "Compatibility is mostly vacuous, constraints are negligible, or the profile is near-total isolation or rigidity.",
+    "true": "The cohabitation/support measurements show substantial shared constraints together with meaningful exclusions. High compatibility by itself is not sufficient."
+   },
+   "instructions": "Does the anonymous candidate profile show a nontrivial structural constraint regime: neither nearly vacuous compatibility with other partial rules nor near-total isolation or rigidity?",
+   "type": "noul"
+  },
+  "J3": {
+   "criteria": {
+    "false": "The signal is confined to one measurement family, mutually contradictory, or explained by one extreme statistic.",
+    "true": "At least two independent measurement families support the same nontrivial interpretation and no available family strongly contradicts it."
+   },
+   "instructions": "Do the independent retention, history, commutator-history, and partial-rule measurements coherently indicate the same nontrivial intermediate dynamical regime rather than one isolated extreme statistic?",
+   "type": "noul"
+  },
+  "J4": {
+   "criteria": {
+    "false": "The apparent organization occurs only in one condition or varies inconsistently across conditions.",
+    "true": "The measurements are stable or change systematically across more than one recorded condition."
+   },
+   "instructions": "Does the profile provide evidence for organization that persists across changed trajectory conditions rather than appearing only in one finite setting?",
+   "type": "noul"
+  },
+  "J5": {
+   "criteria": {
+    "false": "The profile is consistent with indiscriminate persistence, rapid erasure, or memory without selective predictive relevance.",
+    "true": "Retention and predictive-history evidence jointly support selective, dynamically relevant persistence. A high memory score alone is insufficient."
+   },
+   "instructions": "Does the profile suggest selective retention of dynamically relevant information rather than either indiscriminate memory of everything or rapid erasure?",
+   "type": "noul"
+  },
+  "J6": {
+   "criteria": {
+    "false": "The profile is dominated by order/rigidity, disorder/unconstrained behavior, or lacks coherent coexistence of these properties.",
+    "true": "The named measurements jointly support coexistence of constraints, historical dependence, and remaining alternatives. Numerical proximity to cohort medians alone is not sufficient."
+   },
+   "instructions": "Taken as a whole, does this anonymous profile occupy a structured middle regime in which constraints, historical dependence, and remaining local alternatives coexist?",
+   "type": "noul"
+  }
+ }
+}

@@ -1,0 +1,131 @@
+{
+  "byte_identical": true,
+  "derived_eca_rule": 54,
+  "expected_eca_rule": 54,
+  "first_mismatch_tick": null,
+  "representation_audit": {
+    "M_star_invariance_reason": "identical bit histories and targets imply identical fitted/evaluated M*",
+    "R_star_equal": false,
+    "R_star_same_bit_history_eca_observer": 0.4015225732662602,
+    "R_star_same_bit_history_outer_observer": 0.35993044248513495,
+    "alpha_star_invariance_reason": "identical XOR bit fields along the one-row cylinder imply identical longitudinal support diameters",
+    "eca_reference": [
+      0.15625,
+      0.15625,
+      0.09375,
+      0.09375,
+      0.15625,
+      0.03125,
+      0.09375,
+      0.21875
+    ],
+    "interpretation": "M* and longitudinal spreading are exact under the state conjugacy; R* is observer/reference dependent under the many-to-one outer-totalistic symbol map.",
+    "map_is_injective": false,
+    "outer_reference_pushforward": [
+      0.15625,
+      0.0,
+      0.0,
+      0.3125,
+      0.0,
+      0.0,
+      0.03125,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.09375,
+      0.0,
+      0.0,
+      0.1875,
+      0.0,
+      0.0,
+      0.21875
+    ],
+    "symbol_map": {
+      "000": {
+        "center": 0,
+        "eca_code": 0,
+        "neighbor_count_with_multiplicity": 0,
+        "outer_code": 0
+      },
+      "001": {
+        "center": 0,
+        "eca_code": 1,
+        "neighbor_count_with_multiplicity": 3,
+        "outer_code": 3
+      },
+      "010": {
+        "center": 1,
+        "eca_code": 2,
+        "neighbor_count_with_multiplicity": 2,
+        "outer_code": 11
+      },
+      "011": {
+        "center": 1,
+        "eca_code": 3,
+        "neighbor_count_with_multiplicity": 5,
+        "outer_code": 14
+      },
+      "100": {
+        "center": 0,
+        "eca_code": 4,
+        "neighbor_count_with_multiplicity": 3,
+        "outer_code": 3
+      },
+      "101": {
+        "center": 0,
+        "eca_code": 5,
+        "neighbor_count_with_multiplicity": 6,
+        "outer_code": 6
+      },
+      "110": {
+        "center": 1,
+        "eca_code": 6,
+        "neighbor_count_with_multiplicity": 5,
+        "outer_code": 14
+      },
+      "111": {
+        "center": 1,
+        "eca_code": 7,
+        "neighbor_count_with_multiplicity": 8,
+        "outer_code": 17
+      }
+    }
+  },
+  "ticks_checked": 256,
+  "truth_table": [
+    {
+      "neighborhood": "000",
+      "output": 0
+    },
+    {
+      "neighborhood": "001",
+      "output": 1
+    },
+    {
+      "neighborhood": "010",
+      "output": 1
+    },
+    {
+      "neighborhood": "011",
+      "output": 0
+    },
+    {
+      "neighborhood": "100",
+      "output": 1
+    },
+    {
+      "neighborhood": "101",
+      "output": 1
+    },
+    {
+      "neighborhood": "110",
+      "output": 0
+    },
+    {
+      "neighborhood": "111",
+      "output": 0
+    }
+  ],
+  "width": 521
+}

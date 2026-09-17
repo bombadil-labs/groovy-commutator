@@ -1,0 +1,54 @@
+{
+  "PROVENANCE.json": {
+    "bytes": 1586,
+    "sha256": "7620519f2dfccaf0c79df2d099b34f62b2976d639bbd62cc01531a5e6f06dad5"
+  },
+  "README_FIRST.md": {
+    "bytes": 3236,
+    "sha256": "de6db11fa4fa736abe90d39bd4fd84b4fee45b5ab7d7849d4810255a6f24dc2a"
+  },
+  "evidence/class4_selective_persistence_all_conditions_20260916.RECOVERED.csv": {
+    "bytes": 66898,
+    "sha256": "2296d1c5722f24edf08bc5f66f231b05be152ff1fc9b479ff77252e6d54fb34a"
+  },
+  "evidence/class4_selective_persistence_report_20260916.RECOVERED.md": {
+    "bytes": 6786,
+    "sha256": "11b6075dc10216845913543c282f6a9ad09e43c0a3baa7061fa7a2757e55fd10"
+  },
+  "evidence/class4_selective_persistence_rule_summary_20260916.RECOVERED.csv": {
+    "bytes": 6827,
+    "sha256": "4183491a03be49aa452391ec70ca67116c1db7198637e128a5b0bed411238439"
+  },
+  "reconstructed/class4_selective_persistence_20260916.CANONICAL_RECONSTRUCTED.json": {
+    "bytes": 255470,
+    "sha256": "15b84d48c37eaf4de36d7deb9fd7ebab6e1eb2d3e34a80c8778049f59083b11c"
+  },
+  "reconstructed/class4_selective_persistence_runner.RECONSTRUCTED.py": {
+    "bytes": 10429,
+    "sha256": "9cf2773f5b39675be6b60b766fe63492762900e7d12ae512ddef96f7a91d0224"
+  },
+  "reconstructed/protocol_primary.RECONSTRUCTED.md": {
+    "bytes": 4022,
+    "sha256": "3af5e55e70ce0fd462f716b0a8bade6a4906ebf0d3a50350965e90adab4c5599"
+  },
+  "reconstructed/protocol_stress.RECONSTRUCTED.md": {
+    "bytes": 3276,
+    "sha256": "af1c9f3ff732b946e8c9355f545c4a6f8bed036803c8db1a6da408d83acb0e3f"
+  },
+  "reconstructed/protocol_validation.RECONSTRUCTED.md": {
+    "bytes": 3326,
+    "sha256": "5e969c2aea1a8322ac6400ed2d9bb478af39d291f30f34bd2c0d35419d7a8008"
+  },
+  "reconstructed/seed_manifest.EXAMPLE_NOT_ORIGINAL.json": {
+    "bytes": 468,
+    "sha256": "5b6c351e85ebb077575b00d4b566adfcd54fa8220ab97e632c9148dcb7d86b6d"
+  },
+  "reconstructed/verify_reconstruction.py": {
+    "bytes": 2172,
+    "sha256": "55ab31be30493c4443cc34fbb3785dada235d9a106b530ddae94ae52b32f73ff"
+  },
+  "reference/MEASUREMENT_PROVENANCE.md": {
+    "bytes": 1973,
+    "sha256": "2fca78e003f954ac1f1c948757ab5554539953e5b54b8cd01280e7b336c07fb8"
+  }
+}

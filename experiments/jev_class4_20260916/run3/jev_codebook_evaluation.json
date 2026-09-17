@@ -1,0 +1,354 @@
+{
+  "models": {
+    "jev-1.13.0": 264
+  },
+  "questions": {
+    "J1": {
+      "auc_all": 0.9642857142857143,
+      "auc_class3": 1.0,
+      "disputed": {
+        "106": 0.79,
+        "41": 0.88
+      },
+      "gate": "moderate",
+      "hard_controls": {
+        "122": 0.81,
+        "126": 0.82,
+        "30": 0.77,
+        "73": 0.88,
+        "9": 0.88,
+        "90": 0.72
+      },
+      "lower_positive_rank": 5.0,
+      "negative_rules_at_or_above": [
+        25,
+        14,
+        9,
+        142,
+        62,
+        73
+      ],
+      "negatives_at_or_above_lower_positive": 6,
+      "pair_null_fraction_worse_rank_le_observed": 0.007660738714090287,
+      "positive_ranges": {
+        "110": 0.0,
+        "54": 0.0
+      },
+      "positive_ranks": {
+        "110": 5.0,
+        "54": 5.0
+      },
+      "positive_scores": {
+        "110": 0.88,
+        "54": 0.88
+      },
+      "stable_core_ranges": true,
+      "successful_attempts_core": {
+        "110": 3,
+        "54": 3
+      }
+    },
+    "J2": {
+      "auc_all": 0.44642857142857145,
+      "auc_class3": 0.3181818181818182,
+      "disputed": {
+        "106": 0.83,
+        "41": 0.8
+      },
+      "gate": "none",
+      "hard_controls": {
+        "122": 0.84,
+        "126": 0.82,
+        "30": 0.83,
+        "73": 0.75,
+        "9": 0.76,
+        "90": 0.82
+      },
+      "lower_positive_rank": 49.0,
+      "negative_rules_at_or_above": [
+        56,
+        58,
+        156,
+        22,
+        43,
+        136,
+        152,
+        184,
+        44,
+        142,
+        134,
+        122,
+        104,
+        170,
+        74,
+        28,
+        168,
+        146,
+        14,
+        60,
+        160,
+        38,
+        15,
+        12,
+        138,
+        26,
+        36,
+        154,
+        40,
+        132,
+        24,
+        94,
+        4,
+        128,
+        6,
+        18,
+        46,
+        35,
+        30,
+        164,
+        32,
+        150,
+        3,
+        90,
+        7,
+        172,
+        126,
+        62,
+        130,
+        78,
+        108,
+        162,
+        2
+      ],
+      "negatives_at_or_above_lower_positive": 53,
+      "pair_null_fraction_worse_rank_le_observed": 0.4062927496580027,
+      "positive_ranges": {
+        "110": 0.0,
+        "54": 0.010000000000000009
+      },
+      "positive_ranks": {
+        "110": 49.0,
+        "54": 49.0
+      },
+      "positive_scores": {
+        "110": 0.82,
+        "54": 0.82
+      },
+      "stable_core_ranges": true,
+      "successful_attempts_core": {
+        "110": 3,
+        "54": 3
+      }
+    },
+    "J3": {
+      "auc_all": 0.9642857142857143,
+      "auc_class3": 1.0,
+      "disputed": {
+        "106": 0.53,
+        "41": 0.61
+      },
+      "gate": "moderate",
+      "hard_controls": {
+        "122": 0.56,
+        "126": 0.55,
+        "30": 0.55,
+        "73": 0.6,
+        "9": 0.56,
+        "90": 0.53
+      },
+      "lower_positive_rank": 8.0,
+      "negative_rules_at_or_above": [
+        62,
+        25,
+        58,
+        35,
+        156,
+        142,
+        5
+      ],
+      "negatives_at_or_above_lower_positive": 7,
+      "pair_null_fraction_worse_rank_le_observed": 0.00984952120383037,
+      "positive_ranges": {
+        "110": 0.010000000000000009,
+        "54": 0.010000000000000009
+      },
+      "positive_ranks": {
+        "110": 8.0,
+        "54": 1.5
+      },
+      "positive_scores": {
+        "110": 0.61,
+        "54": 0.64
+      },
+      "stable_core_ranges": true,
+      "successful_attempts_core": {
+        "110": 3,
+        "54": 3
+      }
+    },
+    "J4": {
+      "auc_all": 0.9404761904761905,
+      "auc_class3": 1.0,
+      "disputed": {
+        "106": 0.68,
+        "41": 0.76
+      },
+      "gate": "none",
+      "hard_controls": {
+        "122": 0.7,
+        "126": 0.7,
+        "30": 0.69,
+        "73": 0.75,
+        "9": 0.76,
+        "90": 0.68
+      },
+      "lower_positive_rank": 11.0,
+      "negative_rules_at_or_above": [
+        5,
+        62,
+        156,
+        14,
+        142,
+        29,
+        25,
+        1,
+        9,
+        37,
+        28
+      ],
+      "negatives_at_or_above_lower_positive": 11,
+      "pair_null_fraction_worse_rank_le_observed": 0.0213406292749658,
+      "positive_ranges": {
+        "110": 0.020000000000000018,
+        "54": 0.0
+      },
+      "positive_ranks": {
+        "110": 2.5,
+        "54": 11.0
+      },
+      "positive_scores": {
+        "110": 0.78,
+        "54": 0.76
+      },
+      "stable_core_ranges": true,
+      "successful_attempts_core": {
+        "110": 3,
+        "54": 3
+      }
+    },
+    "J5": {
+      "auc_all": 0.9523809523809523,
+      "auc_class3": 1.0,
+      "disputed": {
+        "106": 0.58,
+        "41": 0.65
+      },
+      "gate": "moderate",
+      "hard_controls": {
+        "122": 0.59,
+        "126": 0.59,
+        "30": 0.57,
+        "73": 0.66,
+        "9": 0.65,
+        "90": 0.55
+      },
+      "lower_positive_rank": 5.5,
+      "negative_rules_at_or_above": [
+        25,
+        5,
+        14,
+        142,
+        62,
+        73
+      ],
+      "negatives_at_or_above_lower_positive": 6,
+      "pair_null_fraction_worse_rank_le_observed": 0.007660738714090287,
+      "positive_ranges": {
+        "110": 0.010000000000000009,
+        "54": 0.020000000000000018
+      },
+      "positive_ranks": {
+        "110": 5.5,
+        "54": 5.5
+      },
+      "positive_scores": {
+        "110": 0.66,
+        "54": 0.66
+      },
+      "stable_core_ranges": true,
+      "successful_attempts_core": {
+        "110": 3,
+        "54": 3
+      }
+    },
+    "J6": {
+      "auc_all": 0.8363095238095238,
+      "auc_class3": 0.8181818181818182,
+      "disputed": {
+        "106": 0.62,
+        "41": 0.68
+      },
+      "gate": "none",
+      "hard_controls": {
+        "122": 0.62,
+        "126": 0.63,
+        "30": 0.63,
+        "73": 0.64,
+        "9": 0.64,
+        "90": 0.61
+      },
+      "lower_positive_rank": 28.0,
+      "negative_rules_at_or_above": [
+        156,
+        146,
+        3,
+        134,
+        18,
+        58,
+        14,
+        22,
+        43,
+        152,
+        7,
+        142,
+        27,
+        24,
+        94,
+        6,
+        108,
+        35,
+        28,
+        62,
+        46,
+        25,
+        1,
+        33,
+        44,
+        56,
+        130,
+        74,
+        2
+      ],
+      "negatives_at_or_above_lower_positive": 29,
+      "pair_null_fraction_worse_rank_le_observed": 0.12722298221614228,
+      "positive_ranges": {
+        "110": 0.010000000000000009,
+        "54": 0.009999999999999898
+      },
+      "positive_ranks": {
+        "110": 28.0,
+        "54": 3.5
+      },
+      "positive_scores": {
+        "110": 0.66,
+        "54": 0.69
+      },
+      "stable_core_ranges": true,
+      "successful_attempts_core": {
+        "110": 3,
+        "54": 3
+      }
+    }
+  },
+  "response_file": "/home/user/groovy-commutator/experiments/jev_class4_20260916/run3/jev_codebook_responses.jsonl"
+}

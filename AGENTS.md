@@ -748,6 +748,12 @@ carries no evidence label. Each Program keeps its checkpoints in a log under
   which the planned learning-and-revising-primitives program branches.
 - `representation-invariants.md` — Invariants Across Representation Contracts,
   opened 2026-09-10: which properties survive a declared change of interpreter.
+- `class-iv-refinement.md` — Class-IV Refinement, opened 2026-09-17 from the
+  GPT handoff after the lift theorem: which distinctions and observables a
+  representation change exposes, and whether a source rule's refinement fiber
+  is enriched in the persistence × spreading phenotype. Its inherited units
+  (Jev scout, the 54/110 discriminator with partial provenance, the 2D panel,
+  the exact strip quotient) are recorded there.
 
 Read the most recent checkpoint for the workstream you are continuing, plus its
 Program page, before doing anything. Add new checkpoints there, not here. A

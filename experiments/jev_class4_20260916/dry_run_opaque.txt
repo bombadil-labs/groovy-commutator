@@ -1,0 +1,1 @@
+opaque candidates 88 attempts 3 question_sha256 c1b5c91468e085dc4ea5beee31acc05e1aeb6cd7c2db1850bef60902dcc209d4 state_bytes_minmax 9075 9939

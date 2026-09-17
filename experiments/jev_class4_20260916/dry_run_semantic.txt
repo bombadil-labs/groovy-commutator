@@ -1,0 +1,1 @@
+semantic candidates 88 attempts 3 question_sha256 77f4b1924f9f39845bd200deb30931ec30586934373ef4d363309b66691cb8e6 state_bytes_minmax 12764 13628
