@@ -79,6 +79,16 @@ on, survivals off) that may explain it without any further property of the
 base rule; a census over all 64 fibers is the control. Jev Run 3 reproduced
 J1/J3/J5 under operational definitions alone and weakened J4.
 
+## 2026-09-17: the base acts as a whole on the spreading axis
+
+The [64-fiber census](2026-09-17-fiber-census-64.md) answers the confound
+the first unit raised. Across all 64 fibers the both-positive fraction is
+not additive in the six exposed bits: pairwise interactions, mainly between
+a birth bit and a survival bit, predict spreading and the conjunction better
+out of sample, while persistence is additive. Whether the base is affine
+(`G ≡ c`) does not matter. Fiber(54) remains the most enriched; the middle
+of the ordering is not resolved at 128 rules per fiber.
+
 ## Initial agenda
 
 1. **Fiber census** (frozen 2026-09-17, first unit): sample the height-one

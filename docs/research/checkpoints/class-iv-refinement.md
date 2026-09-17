@@ -7,6 +7,20 @@ when a substantial unit completes; keep the bounded-claim style.
 
 Program page: `docs/research/2026-09-17-class-iv-refinement-program.md`
 
+## Checkpoint 2026-09-17 (second unit): 64-fiber census evaluated
+
+- **Completed:** [the 64-fiber census](../2026-09-17-fiber-census-64.md),
+  canonical `results/fiber_census_64_20260917/` (summary registered with
+  the fast integrity tier). P1 held (interactions needed for both-positive
+  and spreading; persistence additive out of sample), P2 failed on one
+  inequality (0 and 90 swap), P3 held (affine bases not special), P4 half
+  as bet (B3 for spreading; B0, not S2, for persistence).
+- **Do not infer:** a mechanism for the interactions; anything at other
+  heights or densities; anything about non-symmetric ECAs.
+- **Next, unfrozen:** an anisotropic restriction family giving 110 a fiber;
+  or an observer-covariant persistence statistic so the census transports
+  across strip heights.
+
 ## Checkpoint 2026-09-17 (later): fiber census evaluated
 
 - **Completed:** [the fiber census](../2026-09-17-fiber-census.md), canonical

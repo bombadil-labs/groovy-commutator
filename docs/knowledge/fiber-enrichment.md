@@ -19,3 +19,15 @@ a census over all 64 fibers or fixed-live-bit-matched fibers would separate.
 Rule 110 has no fiber in this family.
 
 Source: [fiber census](../research/2026-09-17-fiber-census.md); protocol `docs/research/protocols/2026-09-17-fiber-census.md`.
+
+## Update, 2026-09-17: all 64 fibers
+
+The [64-fiber census](../research/2026-09-17-fiber-census-64.md) (128 rules
+per fiber) finds both-positive fractions from 0.05 (fiber of 76) to 0.51
+(fiber of 54), median 0.22. A logistic model with pairwise interactions
+between the six exposed bits beats main effects out of sample for
+both-positive and spreading (birth-survival pairs strongest), not for
+persistence. The eight affine bases sit inside the others' interquartile
+range. The first census's 0-versus-90 ordering swapped on fresh samples; the
+ends held.
+
