@@ -50,6 +50,8 @@ jobs:
         run: python -m compileall -q src scripts
       - name: Fast canonical-result integrity
         run: python scripts/check_result_integrity.py
+      - name: Handed-over record manifests (2026-09-16/17 units)
+        run: python scripts/verify_handoff_manifests.py
       - name: Existing algebra regression
         run: python scripts/verify_history_algebra.py
       - name: Representation-design smoke test

@@ -2488,6 +2488,52 @@
       "research": [
         "affine-oriented-lift-20260917"
       ]
+    },
+    {
+      "source": "jev-semantic-scout",
+      "type": "tests",
+      "target": "class-iv-dimensional-persistence",
+      "reason": "Probes whether anonymous primitive measurements carry a second, distillable 54/110 signal; it supplies a lead, not evidence for the beam-level theory.",
+      "research": [
+        "jev-class4-scout-20260916"
+      ]
+    },
+    {
+      "source": "selective-persistence-discriminator",
+      "type": "depends_on",
+      "target": "jev-semantic-scout",
+      "reason": "The S statistic was distilled from the primitives behind the J4/J5 judgements before being frozen and validated on fresh simulation.",
+      "research": [
+        "selective-persistence-discriminator-20260916"
+      ]
+    },
+    {
+      "source": "class-iv-refinement-depth",
+      "type": "depends_on",
+      "target": "strip-height-quotient",
+      "reason": "The first well-posed refinement family is the height-one fiber, which exists only because the restriction is an exact quotient with finite fibers.",
+      "research": [
+        "strip-spectrum-20260917"
+      ]
+    },
+    {
+      "source": "class-iv-refinement-depth",
+      "type": "depends_on",
+      "target": "selective-persistence-discriminator",
+      "reason": "The phenotype whose distribution over a fiber is asked about is the one this discriminator operationalizes, transported to strips as the starred contract.",
+      "research": [
+        "selective-persistence-discriminator-20260916",
+        "cross-dimensional-class4-20260917"
+      ]
+    },
+    {
+      "source": "affine-oriented-lift",
+      "type": "contradicts",
+      "target": "class-iv-dimensional-persistence",
+      "reason": "On the beam the lifted rule is conjugate to its root and off the beam the completion is free, so a dimensional lift by itself cannot confer or test an ambient Class IV property; the theory as a beam-level claim is moot rather than false.",
+      "research": [
+        "affine-oriented-lift-20260917"
+      ]
     }
   ],
   "nodes": [
@@ -2984,13 +3030,15 @@
       "kind": "theory",
       "research": [
         "dimensional-lift",
-        "beam-discriminator-loop-20260915"
+        "beam-discriminator-loop-20260915",
+        "selective-persistence-discriminator-20260916",
+        "affine-oriented-lift-20260917"
       ],
       "source": "docs/knowledge/class-iv-dimensional-persistence.md",
       "status": "proposed",
-      "summary": "Prepared lifts now cover all ECA sources. A fresh-tested recurrence/spread candidate separates the core ECA families, but a wider-radius mechanism challenges its interpretation; a beam-level class theorem remains open.",
+      "summary": "A lift cannot confer ambient Class IV: the beam inherits its root by conjugacy and the completion is free. A prospective finite separator for the 54/110 core phenotype exists with partial provenance. The question continues in the Class-IV refinement Program.",
       "title": "Does dimensional persistence distinguish Class IV?",
-      "updated": "2026-09-15"
+      "updated": "2026-09-17"
     },
     {
       "id": "spacetime-provenance",
@@ -4769,6 +4817,57 @@
       "research": [
         "affine-oriented-lift-20260917",
         "affine-converse"
+      ]
+    },
+    {
+      "id": "strip-height-quotient",
+      "title": "Height-one strips quotient the Life-like rule space; height two is injective",
+      "kind": "finding",
+      "status": "exact",
+      "summary": "Height-one periodic strips restrict every Life-like rule to one of the 64 reflection-symmetric ECAs, forgetting twelve of eighteen rule bits (4096-rule fibers); height two exposes all eighteen. Exhaustive; replayed byte-identically.",
+      "updated": "2026-09-17",
+      "source": "docs/knowledge/strip-height-quotient.md",
+      "research": [
+        "strip-spectrum-20260917",
+        "cross-dimensional-class4-20260917"
+      ]
+    },
+    {
+      "id": "selective-persistence-discriminator",
+      "title": "A frozen persistence × spreading statistic selects the 54/110 core phenotype",
+      "kind": "finding",
+      "status": "exploratory",
+      "summary": "S = max(0,R)·max(0,M) > 0.20 with α_512 > 0.50 selects 54/110 in 10/10 fresh decisions and 0/420 undisputed negatives, rejecting 41/106 and a rare-correction adversary. Prospective and finite; protocol/runner bytes lost, tables survive.",
+      "updated": "2026-09-17",
+      "source": "docs/knowledge/selective-persistence-discriminator.md",
+      "research": [
+        "selective-persistence-discriminator-20260916",
+        "jev-class4-scout-20260916"
+      ]
+    },
+    {
+      "id": "jev-semantic-scout",
+      "title": "Jev semantic probe of anonymous ECA profiles",
+      "kind": "experiment",
+      "status": "completed",
+      "summary": "Two frozen Jev judgements rank 54/110 with AUC 1.0 against Class III on anonymous label-free profiles; an opaque control does not. A scout for the transparent S statistic, not a classifier. The matched codebook ablation is built and unrun.",
+      "updated": "2026-09-17",
+      "source": "docs/knowledge/jev-semantic-scout.md",
+      "research": [
+        "jev-class4-scout-20260916"
+      ]
+    },
+    {
+      "id": "class-iv-refinement-depth",
+      "title": "Does a source rule confer a susceptibility to the complex phenotype on its refinements?",
+      "kind": "question",
+      "status": "open",
+      "summary": "The handoff's refinement-depth conjecture is well posed only inside an explicit finite family; the height-one strip fiber is the first, with a frozen unrun census over bases 54, 22, 90, 204 and 0.",
+      "updated": "2026-09-17",
+      "source": "docs/knowledge/class-iv-refinement-depth.md",
+      "research": [
+        "strip-spectrum-20260917",
+        "selective-persistence-discriminator-20260916"
       ]
     }
   ],

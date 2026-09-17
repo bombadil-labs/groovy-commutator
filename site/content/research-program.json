@@ -126,5 +126,25 @@
       "complement-observation",
       "wiring-dilation"
     ]
+  },
+  {
+    "slug": "class-iv-refinement",
+    "title": "Class-IV Refinement: what a lift makes visible",
+    "eyebrow": "Working research program",
+    "date": "2026-09-17",
+    "updated": "2026-09-17",
+    "status": "living",
+    "summary": "Opened from the GPT handoff after the lift theorem closed the existence question. Inherits the Jev scout, the prospectively validated 54/110 discriminator (partial provenance), the cross-dimensional panel and the exact strip restriction. Its question is which distinctions become expressible and which observables transport when representation freedom is added, and whether a source rule confers a susceptibility to the persistence × spreading regime on its refinement fiber. First frozen unit: the height-one fiber census; unrun.",
+    "thesis": "Treat Class IV as a phenotype under a declared observation contract and ask how it distributes over exact refinement families of a source rule, never as a label to reproduce.",
+    "source": "docs/research/2026-09-17-class-iv-refinement-program.md",
+    "supports": [
+      "cross-dimensional-class4-20260917",
+      "strip-spectrum-20260917",
+      "jev-class4-scout-20260916",
+      "selective-persistence-discriminator-20260916",
+      "beam-discriminator-loop-20260915",
+      "class4-independent-20260915",
+      "affine-oriented-lift-20260917"
+    ]
   }
 ]
