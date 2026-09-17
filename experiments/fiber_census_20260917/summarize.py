@@ -2,7 +2,8 @@
 """Evaluate the fiber census against its frozen predictions and draw the figure.
 
 Reads results/fiber_census_20260917/fiber_census_k2.json (and _k4 if present),
-writes summary.json and fiber_census_k2.svg. Pure NumPy plus an optional
+writes summary.json (with a source_hashes block for the fast integrity tier;
+added after the canonical run, scoring unchanged) and fiber_census_k2.svg. Pure NumPy plus an optional
 matplotlib for the figure. Frozen predictions (protocol section 6):
 
   P1  both-positive fractions differ across fibers (max - min > 0.10) and a
@@ -86,7 +87,13 @@ def main():
         'P4_fiber22_bimodal': {'above_0.9': summ['22']['alpha_above_0.9_fraction'], 'below_0.5': summ['22']['alpha_below_0.5_fraction'],
                                'held': summ['22']['alpha_above_0.9_fraction'] >= 0.25 and summ['22']['alpha_below_0.5_fraction'] >= 0.25},
     }
-    out = {'protocol': d['protocol'], 'height': d['height'], 'per_fiber': summ, 'predictions': preds}
+    import hashlib
+    def sha(path): return hashlib.sha256(path.read_bytes()).hexdigest()
+    out = {'protocol': d['protocol'], 'height': d['height'], 'per_fiber': summ, 'predictions': preds,
+           'source_hashes': {'protocol': sha(ROOT / 'docs/research/protocols/2026-09-17-fiber-census.md'),
+                             'run': sha(HERE / 'run.py'), 'summarize': sha(HERE / 'summarize.py'),
+                             'census_k2': sha(OUT / 'fiber_census_k2.json'), 'census_k4': sha(OUT / 'fiber_census_k4.json'),
+                             'exactness_k2': sha(OUT / 'exactness_control_k2.json'), 'exactness_k4': sha(OUT / 'exactness_control_k4.json')}}
     k4 = OUT / 'fiber_census_k4.json'
     if k4.exists():
         d4 = json.loads(k4.read_text()); _, s4 = summarize(d4['rows']); out['k4_per_fiber'] = s4
