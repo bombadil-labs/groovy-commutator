@@ -4893,8 +4893,8 @@
     {
       "id": "fiber-enrichment",
       "title": "A base rule's height-one fiber is enriched or depleted in the persistence × spreading phenotype",
-      "kind": "finding",
-      "status": "exploratory",
+      "kind": "experiment",
+      "status": "completed",
       "summary": "512-rule samples of the fibers over ECAs 54, 22, 0, 90, 204 measured at height two have both-positive fractions 0.47, 0.37, 0.25, 0.22, 0.07 (Kruskal–Wallis on S* p ≈ 1e-40, descriptive). HighLife and Life sit inside their fibers' 10th–90th percentile bands. One contract, one density, one strip height.",
       "updated": "2026-09-17",
       "source": "docs/knowledge/fiber-enrichment.md",
