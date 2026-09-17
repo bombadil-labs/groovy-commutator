@@ -2562,6 +2562,25 @@
       "research": [
         "fiber-census-64-20260917"
       ]
+    },
+    {
+      "source": "forced-table-dataset",
+      "type": "depends_on",
+      "target": "affine-oriented-lift",
+      "reason": "The tables are ring-free objects only because the lift is a theorem for every finite-memory parent; the dataset is its first-floor instance for the 256 elementary rules.",
+      "research": [
+        "forced-tables-20260917"
+      ]
+    },
+    {
+      "source": "forced-table-dataset",
+      "type": "supports",
+      "target": "partial-rule-cohabitation",
+      "reason": "Full-input cohabitation counts extend the ring-7/8 audit's compatibility relation to the ring-free tables and add the sweep join, which shows the relation carries little ordering beyond the truth table.",
+      "research": [
+        "forced-tables-20260917",
+        "partial-cohabitation-20260915"
+      ]
     }
   ],
   "nodes": [
@@ -4911,6 +4930,19 @@
       "research": [
         "fiber-census-20260917",
         "fiber-census-64-20260917"
+      ]
+    },
+    {
+      "id": "forced-table-dataset",
+      "title": "The first-floor forced tables of all 256 ECAs are cached, ring-free",
+      "kind": "finding",
+      "status": "exact",
+      "summary": "Full-input forced tables (768 to 3,072 entries per rule), section-37 invariants reproduced exactly, cohabitation cached: 30,320 compatible pairs, every commuting pair among them; the conflict metric does not predict the sweep's pair regimes beyond truth-table distance (bet failed).",
+      "updated": "2026-09-17",
+      "source": "docs/knowledge/forced-table-dataset.md",
+      "research": [
+        "forced-tables-20260917",
+        "affine-oriented-lift-20260917"
       ]
     }
   ],

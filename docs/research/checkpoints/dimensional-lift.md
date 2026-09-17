@@ -13,6 +13,26 @@ when a substantial unit completes; keep the bounded-claim style. Text moved from
 
 Program page: `docs/research/2026-09-09-dimensional-closure-program.md`
 
+## Checkpoint 2026-09-17 (dataset): first-floor forced tables cached; the metric bet failed
+
+- **Completed:** [the forced-table dataset](../2026-09-17-forced-tables.md),
+  canonical `results/forced_tables_20260917/` (summary registered with the
+  fast integrity tier). P1 held in full (every section-37 number of the
+  proof state reproduces; that record is now verified, not reported). P3
+  held (reflection-invariant; affine rules a compatible clique; complement
+  covariance found exact). P4 held on the eight-rule D3 panel (second-floor
+  cohabitation equals first-floor on all 28 pairs). **P2's bet failed:** the
+  lift-induced conflict metric's AUC for commute-versus-rest is 0.537 against
+  0.527 for truth-table distance; every commuting pair cohabits, and
+  nonvacuous-meeting rates fall from 0.89 (commute) to 0.47 (noisy).
+- **Do not infer:** family structure from maximal cliques (censored, tens
+  of millions); that cohabitation says anything about dynamics beyond the
+  commute boundary; anything about higher floors beyond the panel.
+- **Next:** a churn resource above D2 is not justified by this unit; off-beam
+  completion sampling is where new information lives. A weighted
+  cohabitation (agreement on keys the beams visit under their own dynamics)
+  is the one open follow-up on the metric.
+
 ## Checkpoint 2026-09-17: the lift theorem is recorded; existence and recursion are closed
 
 Authored by Claude/Fable 5.1 (this session). The proof is GPT-5.6 Sol's

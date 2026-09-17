@@ -6,6 +6,20 @@ This page is the **working synthesis** of the dimensional-lift research program.
 
 The program is parallel to [Dynamics of Erased Distinctions](2026-09-08-dynamics-of-erased-distinctions.md). That program asks when information can be forgotten safely and how a lossy representation repairs itself. This one asks what additional structure must be represented when evolution and transformation refuse to agree.
 
+## 2026-09-17: the first-floor forced tables are a cached, ring-free dataset
+
+The [forced-table dataset](2026-09-17-forced-tables.md) computes every
+rule's first-floor forced table from all 512 source words, verifies each
+section-37 invariant of the proof state exactly, and caches cohabitation.
+The beam pins at most 3,072 of 2³⁵ entries; 93% of rule pairs cohabit,
+every commuting pair does, cohabitation is exactly reflection-invariant
+and complement-covariant, and the affine rules form a compatible clique.
+The frozen bet that the lift-induced conflict metric predicts the sweep's
+pair regimes beyond the truth table failed (AUC 0.537 against 0.527), and
+an eight-rule D3 panel found no cohabitation structure the first floor
+lacks. The dataset is a label-free primitive source for later probes, with
+the caution that its orbit fingerprint is identifying.
+
 ## 2026-09-17: the lift is a theorem; the Program's existence question is closed
 
 The [affine-oriented lift theorem](2026-09-17-affine-oriented-lift-theorem.md)

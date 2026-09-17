@@ -41,7 +41,7 @@
     "date": "2026-09-09",
     "updated": "2026-09-17",
     "status": "living",
-    "summary": "The lift is now a theorem: every binary finite-memory CA on Z^d has an exact, locally recoverable, self-synchronizing lift through every finite depth (proof by GPT-5.6 Sol, finite verification by Fable). It is beam-only and not unique; native G stays completion-dependent, with an exact tangent-versus-point explanation. Open here: the typed Groovy bundle. The Class-IV question moves to its own Program.",
+    "summary": "The lift is now a theorem: every binary finite-memory CA on Z^d has an exact, locally recoverable, self-synchronizing lift through every finite depth (proof by GPT-5.6 Sol, finite verification by Fable). It is beam-only and not unique; native G stays completion-dependent, with an exact tangent-versus-point explanation. Open here: the typed Groovy bundle. The Class-IV question moves to its own Program. The full-input first-floor forced tables of all 256 rules are cached and section 37 verified; cohabitation is nearly universal and its conflict metric does not predict pair regimes beyond the truth table.",
     "thesis": "When two dynamical paths fail to commute, represent the disagreement as a new coordinate and ask whether the enlarged representation closes.",
     "source": "docs/research/2026-09-09-dimensional-closure-program.md",
     "supports": [
@@ -91,7 +91,8 @@
       "commutator-history-20260915",
       "commutator-completion-20260915",
       "commutator-relations-20260915",
-      "affine-oriented-lift-20260917"
+      "affine-oriented-lift-20260917",
+      "forced-tables-20260917"
     ]
   },
   {
