@@ -2553,6 +2553,15 @@
         "fiber-census-20260917",
         "strip-spectrum-20260917"
       ]
+    },
+    {
+      "source": "fiber-enrichment",
+      "type": "supports",
+      "target": "strip-height-quotient",
+      "reason": "The 64-fiber census shows the quotient's six exposed bits interact in their effect on the fiber's dynamics, so the restriction map's kernel is not dynamically inert; scoped to one contract.",
+      "research": [
+        "fiber-census-64-20260917"
+      ]
     }
   ],
   "nodes": [
@@ -4881,13 +4890,14 @@
       "title": "Does a source rule confer a susceptibility to the complex phenotype on its refinements?",
       "kind": "question",
       "status": "partly-answered",
-      "summary": "Well posed only inside an explicit finite family. In the height-one strip fibers, the base ECA predicts the phenotype distribution of its 4096 preimages (fiber(54) most enriched, identity least); whether this exceeds the activity imposed by the six fixed bits is untested, and 110 has no fiber in this family.",
+      "summary": "Well posed only inside an explicit finite family. In the height-one strip fibers the base ECA predicts its preimages' phenotype distribution, and across all 64 fibers that dependence is non-additive in the six exposed bits on the spreading axis (birth-survival interactions) while additive on the persistence axis; the affine property of the base is irrelevant. 110 has no fiber in this family.",
       "updated": "2026-09-17",
       "source": "docs/knowledge/class-iv-refinement-depth.md",
       "research": [
         "strip-spectrum-20260917",
         "selective-persistence-discriminator-20260916",
-        "fiber-census-20260917"
+        "fiber-census-20260917",
+        "fiber-census-64-20260917"
       ]
     },
     {
@@ -4895,11 +4905,12 @@
       "title": "A base rule's height-one fiber is enriched or depleted in the persistence × spreading phenotype",
       "kind": "experiment",
       "status": "completed",
-      "summary": "512-rule samples of the fibers over ECAs 54, 22, 0, 90, 204 measured at height two have both-positive fractions 0.47, 0.37, 0.25, 0.22, 0.07 (Kruskal–Wallis on S* p ≈ 1e-40, descriptive). HighLife and Life sit inside their fibers' 10th–90th percentile bands. One contract, one density, one strip height.",
+      "summary": "512-rule samples of the fibers over ECAs 54, 22, 0, 90, 204 measured at height two have both-positive fractions 0.47, 0.37, 0.25, 0.22, 0.07 (Kruskal–Wallis on S* p ≈ 1e-40, descriptive). HighLife and Life sit inside their fibers' 10th–90th percentile bands. One contract, one density, one strip height. Across all 64 fibers (128 rules each) the both-positive fraction spans 0.05 to 0.51 and is non-additive in the exposed bits on the spreading axis; the 0/90 ordering did not replicate on fresh samples.",
       "updated": "2026-09-17",
       "source": "docs/knowledge/fiber-enrichment.md",
       "research": [
-        "fiber-census-20260917"
+        "fiber-census-20260917",
+        "fiber-census-64-20260917"
       ]
     }
   ],

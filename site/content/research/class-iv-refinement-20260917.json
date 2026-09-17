@@ -102,5 +102,25 @@
       "cross-dimensional-class4-20260917",
       "selective-persistence-discriminator-20260916"
     ]
+  },
+  {
+    "slug": "fiber-census-64-20260917",
+    "label": "Class-IV refinement VI",
+    "title": "The fiber phenotype is not additive in the six exposed bits",
+    "date": "2026-09-17",
+    "updated": "2026-09-17",
+    "kind": "Experiment",
+    "evidence": "exploratory",
+    "topic": "Class-IV refinement",
+    "summary": "All 64 height-one fibers, 128 rules each, at height two: a logistic model with pairwise interactions between the six exposed bits predicts both-positive and spreading fractions better out of sample than main effects alone (LRT p ~ 1e-33; LOO 0.527 vs 0.534), with birth-survival pairs as the strongest terms; persistence is additive out of sample. The affine bases are not special; the 0/90 ordering did not replicate.",
+    "takeaway": "On the spreading axis the base rule acts as a whole on its refinements; on the persistence axis its bits act independently.",
+    "source": "docs/research/2026-09-17-fiber-census-64.md",
+    "promotion": {
+      "stage": "research"
+    },
+    "related": [
+      "fiber-census-20260917",
+      "strip-spectrum-20260917"
+    ]
   }
 ]
