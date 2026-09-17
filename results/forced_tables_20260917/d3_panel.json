@@ -1,0 +1,332 @@
+{
+ "0": {
+  "size": 18432,
+  "windows": 1179648,
+  "collisions": 0,
+  "sha256_keys": "1cf15eaa8eeee29009ce498393d2b84462c0a3563dcb7ea91fe6073a08677745"
+ },
+ "4": {
+  "size": 18432,
+  "windows": 1179648,
+  "collisions": 0,
+  "sha256_keys": "50b3885a5503dd3a475b984b318f4032d4de2b75d260f24d9f6588976f430abd"
+ },
+ "30": {
+  "size": 101376,
+  "windows": 1179648,
+  "collisions": 0,
+  "sha256_keys": "8c9833180e3c1d9fd899cf6c1561cd56abd79aa96877d94b35a7dbebe2919ba6"
+ },
+ "54": {
+  "size": 44136,
+  "windows": 1179648,
+  "collisions": 0,
+  "sha256_keys": "8e157a9a3ed465700c7e508c38376ac3acb2d0039951da474b1022736f25b96b"
+ },
+ "90": {
+  "size": 294912,
+  "windows": 1179648,
+  "collisions": 0,
+  "sha256_keys": "2988eb66e42c76ef1b7385843ff0c70e565dcbdeee73afe20179c3a7731cb81c"
+ },
+ "106": {
+  "size": 103680,
+  "windows": 1179648,
+  "collisions": 0,
+  "sha256_keys": "0afaf2db614d066366b43010fe0cc2b0a89c0e1450898cf6e11db8ce3cadd8b6"
+ },
+ "110": {
+  "size": 49968,
+  "windows": 1179648,
+  "collisions": 0,
+  "sha256_keys": "aa3e34c57641b3cc147142c013df12fff3c1a40fc3e06a4c874d9b5802e72b21"
+ },
+ "184": {
+  "size": 67608,
+  "windows": 1179648,
+  "collisions": 0,
+  "sha256_keys": "1ff7442952d8f778e751cc37460c8a49cd23d6e1c73541df7f9e664b1b745c6b"
+ },
+ "pairs": {
+  "0-4": {
+   "d3_shared": 7200,
+   "d3_conflict": 0,
+   "d3_compatible": true,
+   "d3_nonvacuous": true,
+   "d2_shared": 390,
+   "d2_conflict": 0,
+   "d2_compatible": true,
+   "d2_nonvacuous": true
+  },
+  "0-30": {
+   "d3_shared": 72,
+   "d3_conflict": 0,
+   "d3_compatible": true,
+   "d3_nonvacuous": true,
+   "d2_shared": 18,
+   "d2_conflict": 0,
+   "d2_compatible": true,
+   "d2_nonvacuous": true
+  },
+  "0-54": {
+   "d3_shared": 72,
+   "d3_conflict": 0,
+   "d3_compatible": true,
+   "d3_nonvacuous": true,
+   "d2_shared": 12,
+   "d2_conflict": 0,
+   "d2_compatible": true,
+   "d2_nonvacuous": true
+  },
+  "0-90": {
+   "d3_shared": 144,
+   "d3_conflict": 0,
+   "d3_compatible": true,
+   "d3_nonvacuous": true,
+   "d2_shared": 24,
+   "d2_conflict": 0,
+   "d2_compatible": true,
+   "d2_nonvacuous": true
+  },
+  "0-106": {
+   "d3_shared": 144,
+   "d3_conflict": 0,
+   "d3_compatible": true,
+   "d3_nonvacuous": true,
+   "d2_shared": 24,
+   "d2_conflict": 0,
+   "d2_compatible": true,
+   "d2_nonvacuous": true
+  },
+  "0-110": {
+   "d3_shared": 108,
+   "d3_conflict": 0,
+   "d3_compatible": true,
+   "d3_nonvacuous": true,
+   "d2_shared": 18,
+   "d2_conflict": 0,
+   "d2_compatible": true,
+   "d2_nonvacuous": true
+  },
+  "0-184": {
+   "d3_shared": 108,
+   "d3_conflict": 0,
+   "d3_compatible": true,
+   "d3_nonvacuous": true,
+   "d2_shared": 18,
+   "d2_conflict": 0,
+   "d2_compatible": true,
+   "d2_nonvacuous": true
+  },
+  "4-30": {
+   "d3_shared": 144,
+   "d3_conflict": 0,
+   "d3_compatible": true,
+   "d3_nonvacuous": true,
+   "d2_shared": 30,
+   "d2_conflict": 0,
+   "d2_compatible": true,
+   "d2_nonvacuous": true
+  },
+  "4-54": {
+   "d3_shared": 72,
+   "d3_conflict": 0,
+   "d3_compatible": true,
+   "d3_nonvacuous": true,
+   "d2_shared": 12,
+   "d2_conflict": 0,
+   "d2_compatible": true,
+   "d2_nonvacuous": true
+  },
+  "4-90": {
+   "d3_shared": 72,
+   "d3_conflict": 0,
+   "d3_compatible": true,
+   "d3_nonvacuous": true,
+   "d2_shared": 12,
+   "d2_conflict": 0,
+   "d2_compatible": true,
+   "d2_nonvacuous": true
+  },
+  "4-106": {
+   "d3_shared": 108,
+   "d3_conflict": 0,
+   "d3_compatible": true,
+   "d3_nonvacuous": true,
+   "d2_shared": 18,
+   "d2_conflict": 0,
+   "d2_compatible": true,
+   "d2_nonvacuous": true
+  },
+  "4-110": {
+   "d3_shared": 144,
+   "d3_conflict": 0,
+   "d3_compatible": true,
+   "d3_nonvacuous": true,
+   "d2_shared": 24,
+   "d2_conflict": 0,
+   "d2_compatible": true,
+   "d2_nonvacuous": true
+  },
+  "4-184": {
+   "d3_shared": 72,
+   "d3_conflict": 0,
+   "d3_compatible": true,
+   "d3_nonvacuous": true,
+   "d2_shared": 12,
+   "d2_conflict": 0,
+   "d2_compatible": true,
+   "d2_nonvacuous": true
+  },
+  "30-54": {
+   "d3_shared": 1332,
+   "d3_conflict": 3,
+   "d3_compatible": false,
+   "d3_nonvacuous": false,
+   "d2_shared": 180,
+   "d2_conflict": 4,
+   "d2_compatible": false,
+   "d2_nonvacuous": false
+  },
+  "30-90": {
+   "d3_shared": 864,
+   "d3_conflict": 0,
+   "d3_compatible": true,
+   "d3_nonvacuous": true,
+   "d2_shared": 120,
+   "d2_conflict": 0,
+   "d2_compatible": true,
+   "d2_nonvacuous": true
+  },
+  "30-106": {
+   "d3_shared": 216,
+   "d3_conflict": 0,
+   "d3_compatible": true,
+   "d3_nonvacuous": true,
+   "d2_shared": 30,
+   "d2_conflict": 0,
+   "d2_compatible": true,
+   "d2_nonvacuous": true
+  },
+  "30-110": {
+   "d3_shared": 216,
+   "d3_conflict": 0,
+   "d3_compatible": true,
+   "d3_nonvacuous": true,
+   "d2_shared": 36,
+   "d2_conflict": 0,
+   "d2_compatible": true,
+   "d2_nonvacuous": true
+  },
+  "30-184": {
+   "d3_shared": 108,
+   "d3_conflict": 0,
+   "d3_compatible": true,
+   "d3_nonvacuous": true,
+   "d2_shared": 18,
+   "d2_conflict": 0,
+   "d2_compatible": true,
+   "d2_nonvacuous": true
+  },
+  "54-90": {
+   "d3_shared": 720,
+   "d3_conflict": 4,
+   "d3_compatible": false,
+   "d3_nonvacuous": false,
+   "d2_shared": 102,
+   "d2_conflict": 4,
+   "d2_compatible": false,
+   "d2_nonvacuous": false
+  },
+  "54-106": {
+   "d3_shared": 216,
+   "d3_conflict": 0,
+   "d3_compatible": true,
+   "d3_nonvacuous": true,
+   "d2_shared": 30,
+   "d2_conflict": 0,
+   "d2_compatible": true,
+   "d2_nonvacuous": true
+  },
+  "54-110": {
+   "d3_shared": 288,
+   "d3_conflict": 0,
+   "d3_compatible": true,
+   "d3_nonvacuous": true,
+   "d2_shared": 36,
+   "d2_conflict": 0,
+   "d2_compatible": true,
+   "d2_nonvacuous": true
+  },
+  "54-184": {
+   "d3_shared": 108,
+   "d3_conflict": 0,
+   "d3_compatible": true,
+   "d3_nonvacuous": true,
+   "d2_shared": 18,
+   "d2_conflict": 0,
+   "d2_compatible": true,
+   "d2_nonvacuous": true
+  },
+  "90-106": {
+   "d3_shared": 720,
+   "d3_conflict": 0,
+   "d3_compatible": true,
+   "d3_nonvacuous": true,
+   "d2_shared": 96,
+   "d2_conflict": 0,
+   "d2_compatible": true,
+   "d2_nonvacuous": true
+  },
+  "90-110": {
+   "d3_shared": 504,
+   "d3_conflict": 0,
+   "d3_compatible": true,
+   "d3_nonvacuous": true,
+   "d2_shared": 72,
+   "d2_conflict": 0,
+   "d2_compatible": true,
+   "d2_nonvacuous": true
+  },
+  "90-184": {
+   "d3_shared": 180,
+   "d3_conflict": 0,
+   "d3_compatible": true,
+   "d3_nonvacuous": true,
+   "d2_shared": 30,
+   "d2_conflict": 0,
+   "d2_compatible": true,
+   "d2_nonvacuous": true
+  },
+  "106-110": {
+   "d3_shared": 6300,
+   "d3_conflict": 10,
+   "d3_compatible": false,
+   "d3_nonvacuous": false,
+   "d2_shared": 564,
+   "d2_conflict": 8,
+   "d2_compatible": false,
+   "d2_nonvacuous": false
+  },
+  "106-184": {
+   "d3_shared": 216,
+   "d3_conflict": 0,
+   "d3_compatible": true,
+   "d3_nonvacuous": true,
+   "d2_shared": 36,
+   "d2_conflict": 0,
+   "d2_compatible": true,
+   "d2_nonvacuous": true
+  },
+  "110-184": {
+   "d3_shared": 36,
+   "d3_conflict": 0,
+   "d3_compatible": true,
+   "d3_nonvacuous": true,
+   "d2_shared": 6,
+   "d2_conflict": 0,
+   "d2_compatible": true,
+   "d2_nonvacuous": true
+  }
+ }
+}

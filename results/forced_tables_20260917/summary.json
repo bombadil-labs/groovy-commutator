@@ -1,0 +1,83 @@
+{
+ "predictions": {
+  "P1": {
+   "106_110": {
+    "compatible": false,
+    "shared": 564
+   },
+   "54_110": {
+    "compatible": true,
+    "shared": 36
+   },
+   "all_hull_30": true,
+   "all_sheets_equal": true,
+   "collisions_total": 0,
+   "compatible_pairs": 30320,
+   "held": true,
+   "nonvacuous_pairs": 17926,
+   "output_degrees": {
+    "0": 0,
+    "1": 4,
+    "2": 51,
+    "3": 201,
+    "None": 0
+   },
+   "phase_degrees": {
+    "0": 0,
+    "1": 0,
+    "2": 55,
+    "3": 201,
+    "None": 0
+   },
+   "recovery_degrees": {
+    "0": 0,
+    "1": 0,
+    "2": 95,
+    "3": 161,
+    "None": 0
+   },
+   "sheet_invariants_phase_independent": true,
+   "triple_distinct_values_on_orbits": 88
+  },
+  "P2": {
+   "a_commute_nonvacuous_rate": 0.8848797250859106,
+   "a_held": true,
+   "a_others_pooled": 0.5367899351887152,
+   "b_commute_median_lowest": false,
+   "b_held": true,
+   "b_kruskal_p": 3.4522078239355024e-146,
+   "c_auc_conflict": 0.536853475663998,
+   "c_auc_hamming": 0.526998806487155,
+   "c_held": false,
+   "held": false
+  },
+  "P3": {
+   "affine_clique_compatible": true,
+   "affine_clique_nonvacuous": false,
+   "complement_compatibility_mismatches": 0,
+   "held": true,
+   "reflection_invariant": true
+  },
+  "P4": {
+   "d2_compatible_implies_d3": true,
+   "d2_incompatible_but_d3_compatible": [],
+   "held": true,
+   "nonvacuity_agrees": true
+  }
+ },
+ "protocol": "forced-tables-20260917",
+ "rules": 256,
+ "source_hashes": {
+  "d3_panel": "559f316f4770faf5b8a454fee5728a53be8d84d8d0f21f7e661ec2c325be43db",
+  "families": "72304cb96f6733d3b8d6cf6240d774c13c308e5363b571501c1f3ef07de32718",
+  "invariants": "45806e4fad979531cec741bd6c47c7718eec1d9d0049f84fb9752d6b5fb7385b",
+  "labels": "65e811a6ef5575bb697da4fc9e8dfe3c0de131b8c27702aa7990ad4b2d754250",
+  "pairs": "a62ddfcc24e727fe6d5405541777fa1664877ace8b66ab8d6a0f7ca0446e2177",
+  "protocol": "1a0672e713ef0dd2ae694c56a475cd9b1279a58aca3c7a78533075aaaeecad96",
+  "regime_join": "79895e47a3fa524c6a429b5536e28052ca09f1c76d5bdd35c244e0e339a58523",
+  "script": "4aad96bf483b11065709dc90f6df840fcee6efcbd54111fec812f36c54fff5ce",
+  "sweep": "c157e0ca77afa494c678c1fc419a2bd898673698eeab6e14ff485bf33e007504",
+  "tables_d2": "2aa2c185aa706fa607fbaba66a8909dfab4f2bd995253e13abc76b52d02d3495"
+ },
+ "wall_seconds": 662.0
+}
