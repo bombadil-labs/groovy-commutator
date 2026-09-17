@@ -72,14 +72,51 @@ on 9, 14, 54, 110.
 
 Two positive families, dependent panel statistics, no generalization claim.
 Run 2 changed feature semantics and the question together, so it is not an
-ablation of names alone; the matched operational-codebook ablation (Run 3,
-frozen as `docs/research/protocols/2026-09-17-jev-codebook-ablation.md`, with
-its transformed states built and hash-verified in
-`experiments/jev_class4_20260916/run3/`) is unrun. Jev does not "understand"
+ablation of names alone; Run 3 below is that ablation. Jev does not "understand"
 cellular automata; the scientific object became the transparent `S`
 statistic. The feature table's derivation from the repository's 2026-09-15
 canonical results was not re-derived here; the table is preserved as
 supplied.
+
+## Run 3: the matched operational-codebook ablation
+
+Frozen as `docs/research/protocols/2026-09-17-jev-codebook-ablation.md`:
+the exact Run-1 numeric states (every recorded state hash verified before
+renaming), every feature key replaced by its Run-2 codebook code, a
+`measurement_contract` keyed by those codes that says how each number is
+computed without any of the old names or interpretive words, and the six
+J1–J6 questions unchanged. Acquired 2026-09-17 by a child session of this one
+(`session_019qKFKRapZhjA8EtzVbgTVS`, acquisition only, no analysis, no access
+to rule identities), 264 of 264 requests ok, model `jev-1.13.0`, SDK 0.6.0,
+largest three-attempt range 0.07. Every response's source, transformed,
+question and codebook hashes match the committed request files.
+
+| question | rank 54 | rank 110 | negatives ≥ lower positive | AUC vs Class III | gate | Spearman vs Run 1 | Spearman vs Run 2 (O1) |
+| --- | ---: | ---: | ---: | ---: | --- | ---: | ---: |
+| J1 | 5 | 5 | 6 (25, 14, 9, 142, 62, …) | 1.000 | moderate | 0.80 | 0.44 |
+| J2 | 49 | 49 | 53 | 0.318 | none | 0.69 | 0.23 |
+| J3 | 1.5 | 8 | 7 (62, 25, 58, 35, 156, …) | 1.000 | moderate | 0.68 | 0.33 |
+| J4 | 11 | 2.5 | 11 (5, 62, 156, 14, 142, …) | 1.000 | none | 0.81 | 0.32 |
+| J5 | 5.5 | 5.5 | 6 (25, 5, 14, 142, 62, …) | 1.000 | moderate | 0.68 | 0.46 |
+| J6 | 3.5 | 28 | 29 | 0.818 | none | 0.72 | 0.40 |
+
+Under the frozen interpretation this is closer to "operational meaning is
+sufficient" than to "the effect needed the evocative names": J1, J3 and J5
+keep their moderate gates with AUC 1.0 against Class III, J5 and J1 are
+stable, the {54,110} pair's finite pair-null fractions stay below 0.01 on
+J1/J3/J5, and every question's ranking correlates 0.68–0.81 with Run 1
+against 0.23–0.46 with the opaque generic control. The one degradation is
+J4 (persistence across conditions): rule 54 falls from rank 6 to 11 with
+eleven Class-II negatives at or above it, so its gate lapses while 110 and
+the Class-III AUC hold. Yes-probabilities are uniformly higher in Run 3 than
+Run 1 (means 0.56–0.82 against 0.46–0.72), so the codebook prompt shifts
+calibration as well as ranking. Reading: the operational definitions carry
+most of the J1/J3/J5 signal; the J4 result had some dependence on the
+original naming or on how the conditions were labelled, and should be
+treated as the weaker of the two Jev leads. Files in
+`experiments/jev_class4_20260916/run3/` (`jev_codebook_responses.jsonl`,
+`jev_codebook_evaluation.json`, `run1_vs_run3_comparison.json`,
+`evaluate_run3.py`, the Run-1-scoring evaluator with the mode filter widened).
 
 ## Files
 

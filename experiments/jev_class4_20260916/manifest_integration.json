@@ -30,5 +30,21 @@
   "JEV_RUN3_CODEBOOK_ABLATION.md": {
     "bytes": 7746,
     "sha256": "3cd5105604d70d8227ebeadd2031afc54bf734365d1c75f2f5182b1e6c34482e"
+  },
+  "run3/jev_codebook_responses.jsonl": {
+    "bytes": 222010,
+    "sha256": "bdf7377fa6b14b69dd40faf8e3e1e159f7c2d96837312a06ad46acf01f5be085"
+  },
+  "run3/jev_codebook_evaluation.json": {
+    "bytes": 6903,
+    "sha256": "82ef9fe1408da5d7b8b10c644bc418a12c8f77db6521683a1e7d6fadda6ba967"
+  },
+  "run3/run1_vs_run3_comparison.json": {
+    "bytes": 1049,
+    "sha256": "3f04b1cad3a1e541714c806c94a0b007bcf8ced451dc5896de1bf51d5c645f2a"
+  },
+  "run3/evaluate_run3.py": {
+    "bytes": 4275,
+    "sha256": "14824525530a9943dc54a2c85dbd8cd84809c8097f632782ba224ddcb00dc996"
   }
 }

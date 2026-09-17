@@ -32,8 +32,8 @@ this session to integrate, self-review and merge; every record below says so.
   (`protocols/2026-09-17-fiber-census.md`): 512-rule samples of the
   height-one fibers of ECAs 54, 22, 90, 204, 0 at strip height two under the
   starred contract; the bet is that fiber(54) is enriched in the both-positive
-  region. Also unrun: Jev Run 3 (states built and hash-verified in
-  `experiments/jev_class4_20260916/run3/`; needs `TYPESAFE_API_KEY`).
+  region. Jev Run 3 was acquired the same day by a child session and evaluated:
+  J1/J3/J5 reproduce under operational definitions alone, J4 weakens.
 - **Do not infer:** a universal Class-IV definition; anything about the full
   plane from finite strips; novelty over the storage × spreading literature;
   hash-level provenance for the 2026-09-16 discriminator; that the

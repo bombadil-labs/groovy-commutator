@@ -4850,7 +4850,7 @@
       "title": "Jev semantic probe of anonymous ECA profiles",
       "kind": "experiment",
       "status": "completed",
-      "summary": "Two frozen Jev judgements rank 54/110 with AUC 1.0 against Class III on anonymous label-free profiles; an opaque control does not. A scout for the transparent S statistic, not a classifier. The matched codebook ablation is built and unrun.",
+      "summary": "Two frozen Jev judgements rank 54/110 with AUC 1.0 against Class III on anonymous label-free profiles; an opaque control does not. The matched codebook ablation reproduces J1/J3/J5 and weakens J4. A scout for the transparent S statistic, not a classifier.",
       "updated": "2026-09-17",
       "source": "docs/knowledge/jev-semantic-scout.md",
       "research": [

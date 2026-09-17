@@ -50,7 +50,7 @@
     "kind": "Record of an executed probe",
     "evidence": "exploratory",
     "topic": "Class-IV refinement",
-    "summary": "Shown anonymous primitive measurements of 88 ECA representatives, Jev's persistence-across-conditions and selective-memory judgements rank 54 and 110 with AUC 1.0 against Class III and only Class-II confounders; an opaque control does not reproduce this. The matched codebook ablation is built and unrun.",
+    "summary": "Shown anonymous primitive measurements of 88 ECA representatives, Jev's persistence-across-conditions and selective-memory judgements rank 54 and 110 with AUC 1.0 against Class III and only Class-II confounders; an opaque control does not reproduce this. The matched codebook ablation reproduces J1, J3 and J5 with operational definitions alone and weakens J4.",
     "takeaway": "A judgement model can point at a mechanism worth distilling; the science then lives in the transparent statistic, not in the model.",
     "source": "docs/research/2026-09-17-jev-class4-scout-record.md",
     "promotion": {
