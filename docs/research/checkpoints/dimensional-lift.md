@@ -13,6 +13,51 @@ when a substantial unit completes; keep the bounded-claim style. Text moved from
 
 Program page: `docs/research/2026-09-09-dimensional-closure-program.md`
 
+## Checkpoint 2026-09-17: the lift theorem is recorded; existence and recursion are closed
+
+Authored by Claude/Fable 5.1 (this session). The proof is GPT-5.6 Sol's
+2026-09-16 proof state, imported verbatim as
+`docs/research/proofs/affine-oriented-lift-proof-state-20260917.md` from Myk's
+handoff packet; the acceptance note is
+[the affine-oriented lift theorem](../2026-09-17-affine-oriented-lift-theorem.md)
+with canonical verification `results/affine_lift_20260917.json`
+(`scripts/verify_affine_lift.py`, about ten minutes, off Actions).
+
+**Process.** GPT lost GitHub write access and no other collaborating agent was
+available. Myk suspended the cross-model review gates on 2026-09-17 and
+authorized Fable to integrate, review its own PRs and merge. The author of the
+proof (GPT) and the verifier/integrator (Fable) are different agents, so the
+verification is independent of authorship; the *merge* is not independently
+gated and is recorded as such. Retrospective review by another agent remains
+welcome and follows the correction path.
+
+- **Closed:** existence of an exact, locally recoverable, self-synchronizing
+  binary lift for every binary finite-memory CA on Z^d, and its recursion
+  through every finite depth (affine-oriented six-field grammar, entry memory
+  M+{-e,0,e}, one radius-3 axis per later floor). The repo's previous
+  finite-family census (through 4D on rings 7/8, historical gauge) is now a
+  verification of a special case of a general statement, not the evidence for
+  it. Fable's verifier independently reimplements the construction from the
+  theorem statement and checks it on all 256 ECAs (all 512 dependency words),
+  eight radius-two parents, Conway's Life, the D3 diagonal-rail recursion for
+  all 256 roots, and the row-algebra witnesses; all pass.
+- **Promoted:** centered G is polarization restricted to the trajectory graph,
+  G°(X) = B_H(X, D_H X); exact on the 7-ring for all 256 rules; this is the
+  geometric explanation of the rules 4/200 exception in established result 1.
+  The affine-jet residual carries (K_1, K_2) = (G, [D_H, H^2]); the horizon
+  commutators obey the nonlinear cocycle K_{t+1} = G(H^t X) ⊕ ∂H(K_t).
+- **Not claimed:** uniqueness or canonicity of the lift (the period-3 necklace
+  code is a simpler valid lift; coset-induced CA make the broad statement
+  prior art); k-ary alphabets; any off-beam or ambient property; native
+  single-track G transport (completion-dependent, unchanged). The proof's
+  section 37 first-floor invariants and its 512-rule radius-two control were
+  GPT's computations and are not reproduced here.
+- **Next, and where it lives:** the Class-IV question moves to its own
+  Program (`class-iv-refinement`, opened 2026-09-17). What stays here is the
+  typed Groovy bundle: whether the two-beam ancestral G carrier compresses to
+  one marked beam plus a local vector sector without losing completion
+  independence. No experiment is frozen for it.
+
 ## Checkpoint 2026-09-15: factor-balanced interactions tested
 
 The [factor-balanced study](../2026-09-15-factor-balanced-interactions.md)

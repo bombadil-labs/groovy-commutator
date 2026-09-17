@@ -707,6 +707,32 @@ workflow; research source and result changes now also trigger that workflow.
    deviation record) resolved records-only in sub-PR #226 with no
    scientific or verifier change; merged in PR #218 as `33ddae7`.
 
+13. **The affine-oriented jet lift is a theorem** (2026-09-17,
+   `docs/research/2026-09-17-affine-oriented-lift-theorem.md`, proof by
+   GPT-5.6 Sol imported verbatim in `docs/research/proofs/`, Fable's
+   independent verification `scripts/verify_affine_lift.py` →
+   `results/affine_lift_20260917.json`, ~10 min, off Actions). Every binary
+   finite-memory CA on Z^d has an exact, locally recoverable,
+   self-synchronizing lift by the six-field grammar
+   `(X⊕τ_{v+}X, 1⊕X⊕τ_{v−}X, X⊕HX, X⊕H²X, 0, X)` on a period-six axis,
+   rails `±e` at entry with inherited memory `M+{−e,0,e}` and new-axis
+   radius 3, then diagonals `a_n ± e` with one radius-3 axis per later
+   floor, through every finite depth. Verified on all 256 ECAs (all 512
+   dependency words), eight radius-two parents (2^15 words each), Conway's
+   Life, the D3 diagonal recursion for all 256 roots, and the row-algebra
+   witnesses. Beam-only: off-beam completion is free and no ambient class
+   follows. Not unique (a period-3 necklace code is a simpler valid lift;
+   coset-induced CA are the trivial layered prior art). Binary only.
+   Companion exact identities on the 7-ring, all 256 rules: centered
+   `G°(X) = B_H(X, D_H X)` (polarization on the trajectory graph; all-pairs
+   polarization vanishes iff affine, the restriction also for 4 and 200);
+   `G = ∂H_X(D_HX) ⊕ H(D_HX)` is the tangent-versus-point defect, which is
+   why native lifted G is completion-dependent; the two-beam product lift
+   transports `K_t = D_H(H^tX) ⊕ H^t(D_HX)` (`K_1 = G`) completion-free at
+   every depth, with cocycle `K_{t+1} = G(H^tX) ⊕ ∂H(K_t)`. Review gates
+   were suspended by Myk for this integration (GPT had no GitHub access);
+   author and verifier differ, the merge was self-gated.
+
 ## Checkpoint logs (read before continuing any workstream)
 
 A checkpoint is a dated statement of state: what a unit completed, what is

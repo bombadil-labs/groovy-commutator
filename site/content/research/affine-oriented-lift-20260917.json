@@ -1,0 +1,25 @@
+[
+  {
+    "slug": "affine-oriented-lift-20260917",
+    "label": "Binary lift IX",
+    "title": "Every binary CA lifts: the affine-oriented jet lift theorem",
+    "date": "2026-09-17",
+    "updated": "2026-09-17",
+    "kind": "Proof and finite verification",
+    "evidence": "exact",
+    "topic": "Dimensional closure",
+    "summary": "GPT-5.6 Sol's proof that every binary finite-memory CA on Z^d has an exact, locally recoverable, self-synchronizing lift through every finite depth, imported verbatim; Fable's independent reimplementation verifies all 256 ECAs, radius-two parents, Conway's Life and the D3 recursion. Centered Groovy is polarization on the trajectory graph.",
+    "takeaway": "The dimensional lift's existence and recursion are settled and the Program's open question moves to what the lift makes visible; the lift is a presentation, not a unique object, and says nothing about ambient class.",
+    "source": "docs/research/2026-09-17-affine-oriented-lift-theorem.md",
+    "promotion": {
+      "stage": "candidate",
+      "idea": "The commutator is the gap between moving a difference as a vector and moving it as a point",
+      "destination": "Concepts"
+    },
+    "related": [
+      "uniform-jet6-cache-20260914",
+      "commutator-completion-20260915",
+      "binary-lift-g-obstructions-20260914"
+    ]
+  }
+]

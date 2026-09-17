@@ -2450,6 +2450,44 @@
       "research": [
         "observation-catalog-20260915"
       ]
+    },
+    {
+      "source": "uniform-six-field-lift-cache",
+      "type": "supports",
+      "target": "affine-oriented-lift",
+      "reason": "The finite-family census through 4D on rings seven and eight is a verified special case of the general theorem (historical recovery gauge, same rails); it is evidence for, not the source of, the general statement.",
+      "research": [
+        "uniform-jet6-cache-20260914",
+        "affine-oriented-lift-20260917"
+      ]
+    },
+    {
+      "source": "affine-oriented-lift",
+      "type": "supports",
+      "target": "commutator-completion-freedom",
+      "reason": "The exact chain rule under an intertwining lift shows beam evolution fixes tangent transport of a displacement but not point evolution of that displacement; this is the structural reason native G varies across completions that agree on the beam.",
+      "research": [
+        "affine-oriented-lift-20260917",
+        "commutator-completion-20260915"
+      ]
+    },
+    {
+      "source": "groovy-restricted-polarization",
+      "type": "supports",
+      "target": "nonlinear-zero",
+      "reason": "Rules 4 and 200 have zero centered commutator because their polarization vanishes on the trajectory-displacement graph while remaining nonzero on other pairs; this explains the exception rather than merely recording it.",
+      "research": [
+        "affine-oriented-lift-20260917"
+      ]
+    },
+    {
+      "source": "affine-oriented-lift",
+      "type": "depends_on",
+      "target": "groovy-restricted-polarization",
+      "reason": "The typed reading of the lift (points in the m=1 sector, differences in the m=0 sector) and the affine-jet residual rows are stated through the polarization identity.",
+      "research": [
+        "affine-oriented-lift-20260917"
+      ]
     }
   ],
   "nodes": [
@@ -3523,13 +3561,14 @@
         "commutator-history-20260915",
         "commutator-completion-20260915",
         "commutator-relations-20260915",
-        "observation-catalog-20260915"
+        "observation-catalog-20260915",
+        "affine-oriented-lift-20260917"
       ],
       "source": "docs/knowledge/dimensional-beam.md",
-      "status": "open",
-      "summary": "The beam is treated as a dynamical object with dimensional representations. Ancestral support and conditional interval-tail invariants are established; arbitrary-parent locality and a universal Class IV property remain open.",
+      "status": "partly-answered",
+      "summary": "The beam is a rule beam: every binary finite-memory CA lifts exactly and recursively (2026-09-17 theorem). Ancestral support and interval-tail invariants are established; native G stays completion-dependent; the typed Groovy bundle and the Class-IV question remain open, the latter now in its own Program.",
       "title": "What organization survives a recurring dimensional construction?",
-      "updated": "2026-09-15"
+      "updated": "2026-09-17"
     },
     {
       "id": "guard-free-axial-compatibility",
@@ -4704,6 +4743,32 @@
         "observation-catalog-20260915",
         "rule-ring-structure-20260915",
         "factor-balanced-interactions-20260915"
+      ]
+    },
+    {
+      "id": "affine-oriented-lift",
+      "title": "Every binary finite-memory CA has an exact self-synchronizing lift",
+      "kind": "finding",
+      "status": "exact",
+      "summary": "One six-field grammar lifts any binary finite-memory CA on Z^d exactly, with local phase and parent recovery, and recurses through every finite depth with one radius-3 axis per floor. Proof by GPT-5.6 Sol; finite verification by Fable on all 256 ECAs, radius-two parents, Life and the D3 recursion. Beam-only; not unique; binary only.",
+      "updated": "2026-09-17",
+      "source": "docs/knowledge/affine-oriented-lift.md",
+      "research": [
+        "affine-oriented-lift-20260917",
+        "uniform-jet6-cache-20260914"
+      ]
+    },
+    {
+      "id": "groovy-restricted-polarization",
+      "title": "Centered Groovy is polarization on the trajectory graph",
+      "kind": "finding",
+      "status": "exact",
+      "summary": "G°(X) = B_H(X, D_H X): the centered commutator is polarization restricted to the trajectory-displacement graph, exact on the 7-ring for all 256 rules. All-pairs polarization vanishes only for affine rules; the graph restriction also vanishes for 4 and 200.",
+      "updated": "2026-09-17",
+      "source": "docs/knowledge/groovy-restricted-polarization.md",
+      "research": [
+        "affine-oriented-lift-20260917",
+        "affine-converse"
       ]
     }
   ],

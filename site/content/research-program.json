@@ -39,9 +39,9 @@
     "title": "Dimensional Closure and the Commutator Lift",
     "eyebrow": "Working research program",
     "date": "2026-09-09",
-    "updated": "2026-09-15",
+    "updated": "2026-09-17",
     "status": "living",
-    "summary": "The uniform six-field recipe has finite-family native/recovery checks through 4D and a full-input first-lift ECA consistency check. Ancestral support has exact transport statements, while native G generally depends on off-beam completion choices, already at D2. A finite ECA predictor remains distinct from a beam-level class definition; arbitrary-parent and dimension-induction questions stay open.",
+    "summary": "The lift is now a theorem: every binary finite-memory CA on Z^d has an exact, locally recoverable, self-synchronizing lift through every finite depth (proof by GPT-5.6 Sol, finite verification by Fable). It is beam-only and not unique; native G stays completion-dependent, with an exact tangent-versus-point explanation. Open here: the typed Groovy bundle. The Class-IV question moves to its own Program.",
     "thesis": "When two dynamical paths fail to commute, represent the disagreement as a new coordinate and ask whether the enlarged representation closes.",
     "source": "docs/research/2026-09-09-dimensional-closure-program.md",
     "supports": [
@@ -90,7 +90,8 @@
       "beam-discriminator-loop-20260915",
       "commutator-history-20260915",
       "commutator-completion-20260915",
-      "commutator-relations-20260915"
+      "commutator-relations-20260915",
+      "affine-oriented-lift-20260917"
     ]
   },
   {

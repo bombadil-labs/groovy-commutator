@@ -1,0 +1,165 @@
+{
+ "A_eca_entry": {
+  "failures": {},
+  "per_rule_pass": 256,
+  "rules": 256,
+  "windows_per_rule": 3072
+ },
+ "B1_radius2_entry": {
+  "failures": [],
+  "pass": 8,
+  "rules": 8,
+  "tables": [
+   2117405799,
+   2804871217,
+   375183601,
+   701843324,
+   1075314870,
+   1719551416,
+   2863311530,
+   4042322160
+  ],
+  "windows_per_rule": 196608
+ },
+ "B2_life_entry": {
+  "exhaustive_3x3": {
+   "distinct_windows": 3072,
+   "label": "life-3x3-exhaustive",
+   "multiple_admissible_phases": 0,
+   "native_output_mismatch": 0,
+   "no_admissible_phase": 0,
+   "pass": true,
+   "recovery_mismatch": 0,
+   "window_collisions": 0,
+   "windows": 3072,
+   "wrong_unique_phase": 0
+  },
+  "random_7x7": {
+   "distinct_windows": 117534,
+   "label": "life-7x7-random-400",
+   "multiple_admissible_phases": 0,
+   "native_output_mismatch": 0,
+   "no_admissible_phase": 0,
+   "pass": true,
+   "recovery_mismatch": 0,
+   "window_collisions": 0,
+   "windows": 117600,
+   "wrong_unique_phase": 0
+  }
+ },
+ "C_row_algebra_witnesses": {
+  "alternating_10X10X_rot3": {
+   "dynamical_admissible_any_rule": [],
+   "syntactic_admissible": [
+    0,
+    3
+   ]
+  },
+  "constant_010001_X1_Y1_Z1": {
+   "dynamical_admissible_any_rule": [
+    0
+   ],
+   "syntactic_admissible": [
+    0,
+    2
+   ]
+  },
+  "constant_010100_X0_Y0_Z1": {
+   "dynamical_admissible_any_rule": [
+    4
+   ],
+   "syntactic_admissible": [
+    0,
+    4
+   ]
+  },
+  "pass": true
+ },
+ "D_recursion_d3": {
+  "failures": [],
+  "width7_pass": 256,
+  "width7_rules": 256,
+  "width7_windows_per_rule": 32256,
+  "width8_pass": 16,
+  "width8_rules": [
+   0,
+   4,
+   18,
+   22,
+   30,
+   41,
+   54,
+   60,
+   90,
+   106,
+   110,
+   122,
+   126,
+   150,
+   184,
+   200
+  ]
+ },
+ "E_groovy_identities": {
+  "all_pairs_polarization_zero_rules": [
+   0,
+   15,
+   51,
+   60,
+   85,
+   90,
+   102,
+   105,
+   150,
+   153,
+   165,
+   170,
+   195,
+   204,
+   240,
+   255
+  ],
+  "centered_G_zero_rules": [
+   0,
+   4,
+   15,
+   51,
+   60,
+   85,
+   90,
+   102,
+   105,
+   150,
+   153,
+   165,
+   170,
+   195,
+   200,
+   204,
+   240,
+   255
+  ],
+  "cocycle_failures": 0,
+  "grading_failures": 0,
+  "identity_failures": {},
+  "pass": true,
+  "residual_failures": 0,
+  "ring": 7
+ },
+ "date": "2026-09-17",
+ "schema": "affine-lift-verification-v1",
+ "source_hashes": {
+  "proof": "c7799bdb9f56680714aa119ee4c9a166fb3ec76bb14caf5c8f575d7dde2adb4b",
+  "script": "202e0959aa11a8e6b9563fa81ea5accbe27d518cba12cef6cda33eed533c8ec7"
+ },
+ "summary": {
+  "A_eca_entry_pass": true,
+  "B1_radius2_pass": true,
+  "B2_life_pass": true,
+  "C_witnesses_pass": true,
+  "D_recursion_pass": true,
+  "E_identities_pass": true,
+  "all_pass": true,
+  "wall_seconds": 564.6
+ }
+}
