@@ -201,14 +201,12 @@ def main():
             'n_symmetric_bases': len(sym)}
     inv_path = ROOT / 'results/forced_tables_20260917/invariants.json'
     if inv_path.exists():
-        inv = json.loads(inv_path.read_text())
-        def get(b, key):
-            e = inv.get(str(b), {})
-            return e.get(key) if not isinstance(e.get(key), dict) else None
+        # invariants.json is a list of per-rule records keyed by 'rule', not a dict.
+        inv = {int(e['rule']): e for e in json.loads(inv_path.read_text())}
         sp = {}
-        for key in ('size', 'hull_dim'):
-            vals = [get(b, key) for b in bases]
-            if all(v is not None for v in vals):
+        for key in ('size', 'h2', 'h3'):
+            vals = [inv[b].get(key) for b in bases]
+            if all(isinstance(v, (int, float)) for v in vals):
                 sp[key] = {k: spearman(vals, [per_fiber_tier[b][k] for b in bases])
                            for k in ('persist', 'spread', 'both')}
         desc['spearman_vs_forced_table'] = sp
