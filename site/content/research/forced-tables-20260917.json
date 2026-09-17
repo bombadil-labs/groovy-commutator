@@ -1,0 +1,23 @@
+[
+  {
+    "slug": "forced-tables-20260917",
+    "label": "Binary lift X",
+    "title": "Every ECA's first-floor forced table, full input: section 37 verified and a failed bet",
+    "date": "2026-09-17",
+    "updated": "2026-09-17",
+    "kind": "Dataset and prospective test",
+    "evidence": "exact",
+    "topic": "Dimensional closure",
+    "summary": "Ring-free forced tables of the affine lift for all 256 ECAs (768 to 3,072 entries), every section-37 invariant reproduced exactly, and pairwise cohabitation cached (30,320 compatible, 17,926 nonvacuous). Every commuting pair cohabits, but the lift-induced conflict metric predicts the sweep's pair regimes no better than truth-table distance (AUC 0.537 vs 0.527). On an eight-rule panel the second floor adds no cohabitation structure.",
+    "takeaway": "The beam pins a vanishing fraction of the first-floor table; cohabitation is nearly universal and carries little ordering beyond the eight table bits.",
+    "source": "docs/research/2026-09-17-forced-tables.md",
+    "promotion": {
+      "stage": "research"
+    },
+    "related": [
+      "affine-oriented-lift-20260917",
+      "partial-cohabitation-20260915",
+      "commutator-completion-20260915"
+    ]
+  }
+]

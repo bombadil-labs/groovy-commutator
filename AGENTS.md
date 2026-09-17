@@ -733,6 +733,27 @@ workflow; research source and result changes now also trigger that workflow.
    were suspended by Myk for this integration (GPT had no GitHub access);
    author and verifier differ, the merge was self-gated.
 
+14. **First-floor forced tables cached, section 37 verified, the lift
+   metric does not predict pair regimes** (2026-09-17,
+   `docs/research/2026-09-17-forced-tables.md`,
+   `scripts/forced_tables_20260917.py` → `results/forced_tables_20260917/`,
+   11 min, off Actions). Ring-free full-input tables for all 256 ECAs (768
+   to 3,072 forced entries of 2³⁵; 110: 1,374), zero collisions; every
+   invariant GPT reported in proof section 37 reproduces exactly (hull
+   dimension 30 for all rules; output degrees 4/51/201; 30,320 compatible
+   and 17,926 nonvacuous pairs; the 88-value orbit fingerprint). Cohabitation
+   is exactly reflection-invariant and complement-covariant; the 16 affine
+   rules are a compatible clique; every one of the sweep's 1,164 commuting
+   pairs cohabits, and nonvacuous-meeting rates fall commute 0.89 > drain
+   0.67 > crystalline 0.55 > structured 0.52 > noisy 0.47. **Failed bet:**
+   the conflict metric's AUC for commute-versus-rest is 0.537 against 0.527
+   for truth-table Hamming distance, so cohabitation carries almost no
+   dynamical ordering beyond the eight table bits. On an eight-rule panel
+   D3 cohabitation equals D2 cohabitation. Maximal cliques of the
+   nonvacuous graph are censored (tens of millions) and uninformative. The
+   orbit fingerprint is identifying: anonymous probes get coarse summaries
+   only. Self-gated under Myk's suspended review gates.
+
 ## Checkpoint logs (read before continuing any workstream)
 
 A checkpoint is a dated statement of state: what a unit completed, what is

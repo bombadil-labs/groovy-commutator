@@ -1,0 +1,52 @@
+{
+ "per_regime": {
+  "commute": {
+   "n": 1164,
+   "nonvacuous_rate": 0.8848797250859106,
+   "compatible_rate": 1.0,
+   "conflict_median": 0.0,
+   "conflict_mean": 0.0,
+   "hamming_mean": 3.8848797250859106
+  },
+  "crystalline": {
+   "n": 7302,
+   "nonvacuous_rate": 0.5509449465899754,
+   "compatible_rate": 0.947000821692687,
+   "conflict_median": 0.0,
+   "conflict_mean": 0.2667762256915913,
+   "hamming_mean": 3.916187345932621
+  },
+  "structured": {
+   "n": 14751,
+   "nonvacuous_rate": 0.5184733238424514,
+   "compatible_rate": 0.9350552504914921,
+   "conflict_median": 0.0,
+   "conflict_mean": 0.2875059318012338,
+   "hamming_mean": 4.055860619619009
+  },
+  "noisy": {
+   "n": 5414,
+   "nonvacuous_rate": 0.4713705208718138,
+   "compatible_rate": 0.851865533801256,
+   "conflict_median": 0.0,
+   "conflict_mean": 0.8276690062800148,
+   "hamming_mean": 4.078869597340229
+  },
+  "drain": {
+   "n": 4009,
+   "nonvacuous_rate": 0.6667498129209279,
+   "compatible_rate": 0.9568470940384136,
+   "conflict_median": 0.0,
+   "conflict_mean": 0.13320029932651534,
+   "hamming_mean": 4.001746071339486
+  }
+ },
+ "kruskal_conflict": [
+  681.5451101479605,
+  3.4522078239355024e-146
+ ],
+ "auc_commute_vs_rest": {
+  "neg_conflict": 0.536853475663998,
+  "neg_hamming": 0.526998806487155
+ }
+}
