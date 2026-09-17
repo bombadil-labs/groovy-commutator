@@ -1,0 +1,87 @@
+{
+  "interpretation": "On this Rule54/HighLife width-1 map the coarse observer merges left-right reflected neighborhoods. The selective-surprisal gap is exactly recoverable as coarse-visible plus within-fiber selection. Here KL happens to be unchanged because the trajectory uses the merged fibers in the same conditional proportions as the reference.",
+  "kl_bits": {
+    "coarse": 0.1026198655916981,
+    "conditional_residual": 1.3877787807814457e-17,
+    "fine": 0.10261986559169811
+  },
+  "map": {
+    "0": 0,
+    "1": 3,
+    "2": 11,
+    "3": 14,
+    "4": 3,
+    "5": 6,
+    "6": 14,
+    "7": 17
+  },
+  "reference_coarse": [
+    0.15625,
+    0.0,
+    0.0,
+    0.3125,
+    0.0,
+    0.0,
+    0.03125,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.09375,
+    0.0,
+    0.0,
+    0.1875,
+    0.0,
+    0.0,
+    0.21875
+  ],
+  "reference_fine": [
+    0.15625,
+    0.15625,
+    0.09375,
+    0.09375,
+    0.15625,
+    0.03125,
+    0.09375,
+    0.21875
+  ],
+  "selective_surprisal_gap_bits": {
+    "absolute_chain_error": 1.1102230246251565e-16,
+    "coarse_visible": 0.2519276328222886,
+    "fine": 0.2350280406917702,
+    "reconstructed_fine": 0.2350280406917703,
+    "within_fiber_residual": -0.01689959213051828
+  },
+  "status": "post-hoc exact algebra + finite Rule54 trajectory audit",
+  "theorem": "For any deterministic coarse-graining phi and reference Q, Delta_Q(P)=E_P[-log Q]-E_Q[-log Q] decomposes as the same gap on the pushforward observer plus the difference in conditional reference surprisal inside phi-fibers. Standardized R* is not additive because each observer uses a different reference SD. KL obeys the usual nonnegative chain rule.",
+  "trajectory_coarse": [
+    0.16035118761996162,
+    0.0,
+    0.0,
+    0.2627009357005758,
+    0.0,
+    0.0,
+    0.09764125479846449,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.11879198656429943,
+    0.0,
+    0.0,
+    0.22039947216890596,
+    0.0,
+    0.0,
+    0.1401151631477927
+  ],
+  "trajectory_fine": [
+    0.16035118761996162,
+    0.1313504678502879,
+    0.11879198656429943,
+    0.11019973608445298,
+    0.1313504678502879,
+    0.09764125479846449,
+    0.11019973608445298,
+    0.1401151631477927
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "status": "best_effort_reconstruction",
+  "prepared": "2026-09-17",
+  "historical_protocol_hashes": {
+    "primary_protocol_sha256": "3e5c7efee950261c7e243aa1600951bd57ac163173051a97e7994ab2a3b20325",
+    "validation_protocol_sha256": "71fc7979c03ac93661c803496e9d53fdd02296cbed712120bf13bfe1c26d74ae",
+    "stress_protocol_sha256": "bd3b231e541f15ac8afac21cff0fac52845a74f01ddf06b749579293ea2c8cd2"
+  },
+  "recovered_project_library_sources": {
+    "report": {
+      "file_id": "file_00000000b57081f69143de39eb8185a6",
+      "name": "class4_selective_persistence_report_20260916.md"
+    },
+    "all_conditions": {
+      "file_id": "file_0000000000fc81f6a21ddcc5b61df486",
+      "name": "class4_selective_persistence_all_conditions_20260916.csv"
+    },
+    "rule_summary": {
+      "file_id": "file_000000000c3c81f6a149ab8d281c2c37",
+      "name": "class4_selective_persistence_rule_summary_20260916.csv"
+    }
+  },
+  "preceding_repository_sources": [
+    "scripts/class4_independent_20260915.py",
+    "docs/research/2026-09-15-class4-independent.md",
+    "results/class4_independent_20260915.json",
+    "scripts/class4_composite_20260915.py",
+    "results/class4_composite_20260915.json"
+  ],
+  "known_missing": [
+    "original primary protocol bytes",
+    "original validation protocol bytes",
+    "original stress protocol bytes",
+    "original 2026-09-16 runner bytes",
+    "original per-condition six-seed lists",
+    "exact radius2-correction local rule definition",
+    "original canonical result JSON bytes/schema",
+    "exact perturbation-origin selection convention"
+  ]
+}

@@ -1,0 +1,233 @@
+{
+  "height1": {
+    "depends_on_rule_bits": [
+      "B0",
+      "B3",
+      "B6",
+      "S2",
+      "S5",
+      "S8"
+    ],
+    "eca_rule_formula": "r = B0 + 18*B3 + 32*B6 + 4*S2 + 72*S5 + 128*S8",
+    "free_rule_bits": 12,
+    "image_characterization": "all 64 left-right-reflection-symmetric ECAs",
+    "image_size": 64,
+    "kernel_dimension_over_gf2": 12,
+    "linear_rank_over_gf2": 6,
+    "preimages_per_image": 4096,
+    "reachable_conditions": [
+      {
+        "center": 0,
+        "neighbors": 0
+      },
+      {
+        "center": 0,
+        "neighbors": 3
+      },
+      {
+        "center": 0,
+        "neighbors": 6
+      },
+      {
+        "center": 1,
+        "neighbors": 2
+      },
+      {
+        "center": 1,
+        "neighbors": 5
+      },
+      {
+        "center": 1,
+        "neighbors": 8
+      }
+    ]
+  },
+  "height2": {
+    "all_18_birth_survival_conditions_reachable": true,
+    "reachable_condition_count": 18,
+    "therefore_restriction_is_injective_on_lifelike_rules": true,
+    "witnesses": {
+      "B0": {
+        "C": 0,
+        "L": 0,
+        "R": 0,
+        "row": 0
+      },
+      "B1": {
+        "C": 0,
+        "L": 0,
+        "R": 1,
+        "row": 0
+      },
+      "B2": {
+        "C": 0,
+        "L": 0,
+        "R": 1,
+        "row": 1
+      },
+      "B3": {
+        "C": 0,
+        "L": 0,
+        "R": 3,
+        "row": 0
+      },
+      "B4": {
+        "C": 1,
+        "L": 0,
+        "R": 1,
+        "row": 1
+      },
+      "B5": {
+        "C": 1,
+        "L": 0,
+        "R": 3,
+        "row": 1
+      },
+      "B6": {
+        "C": 1,
+        "L": 1,
+        "R": 1,
+        "row": 1
+      },
+      "B7": {
+        "C": 1,
+        "L": 1,
+        "R": 3,
+        "row": 1
+      },
+      "B8": {
+        "C": 1,
+        "L": 3,
+        "R": 3,
+        "row": 1
+      },
+      "S0": {
+        "C": 1,
+        "L": 0,
+        "R": 0,
+        "row": 0
+      },
+      "S1": {
+        "C": 1,
+        "L": 0,
+        "R": 1,
+        "row": 0
+      },
+      "S2": {
+        "C": 1,
+        "L": 0,
+        "R": 2,
+        "row": 0
+      },
+      "S3": {
+        "C": 1,
+        "L": 0,
+        "R": 3,
+        "row": 0
+      },
+      "S4": {
+        "C": 3,
+        "L": 0,
+        "R": 1,
+        "row": 1
+      },
+      "S5": {
+        "C": 3,
+        "L": 0,
+        "R": 3,
+        "row": 0
+      },
+      "S6": {
+        "C": 3,
+        "L": 1,
+        "R": 1,
+        "row": 1
+      },
+      "S7": {
+        "C": 3,
+        "L": 1,
+        "R": 3,
+        "row": 1
+      },
+      "S8": {
+        "C": 3,
+        "L": 3,
+        "R": 3,
+        "row": 0
+      }
+    }
+  },
+  "interpretation": "Height 1 is a 12-bit-forgetting quotient from 18-bit Life-like rules to 64 symmetric ECAs. Height 2 already exposes every birth/survival condition, so the induced 4-state radius-one strip CA determines the full 2D outer-totalistic rule.",
+  "pair_distinction_valuation": {
+    "all_unordered_distinct_pair_count": 34359607296,
+    "definition": "nu(F,G)=min{k in {1,2}: Res_k(F) != Res_k(G)} for distinct Life-like rules",
+    "height1_same_fiber_pair_count": 536739840,
+    "life_vs_b35s236": {
+      "height2_differing_cell_outputs_by_hidden_rule_bit": {
+        "B5": 12,
+        "S6": 8
+      },
+      "height2_differing_column_triples": 20,
+      "nu": 2
+    },
+    "possible_values": [
+      1,
+      2
+    ]
+  },
+  "panel": {
+    "b35s236": {
+      "births": [
+        3,
+        5
+      ],
+      "height1_eca": 22,
+      "height2_table_sha256": "4613c5f4c7a3e1c65a99dc88f59eb94db5250e9358e7fdb9ccedd24a422639c7",
+      "survives": [
+        2,
+        3,
+        6
+      ]
+    },
+    "day-night": {
+      "births": [
+        3,
+        6,
+        7,
+        8
+      ],
+      "height1_eca": 178,
+      "height2_table_sha256": "840ac17db4a3c0c01ab94c51d850ffab3093c3aac8b876006a26f031adcdd968",
+      "survives": [
+        3,
+        4,
+        6,
+        7,
+        8
+      ]
+    },
+    "highlife": {
+      "births": [
+        3,
+        6
+      ],
+      "height1_eca": 54,
+      "height2_table_sha256": "9b380d837657a94e8cf2c3668f1cb8189c36cdb770cad84cab9323ac12543c77",
+      "survives": [
+        2,
+        3
+      ]
+    },
+    "life": {
+      "births": [
+        3
+      ],
+      "height1_eca": 22,
+      "height2_table_sha256": "5d155318bdd5573f8c19b298c0ea4d6c5e6eb7a92e6c59d010d6d24d8a3ed70c",
+      "survives": [
+        2,
+        3
+      ]
+    }
+  }
+}
