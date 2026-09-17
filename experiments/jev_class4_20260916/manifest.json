@@ -1,0 +1,78 @@
+{
+  "FROZEN_PROTOCOL.md": {
+    "bytes": 18129,
+    "sha256": "9c2f53dbff7b0ac73e8268c491971fa20633a9af7ead908ebe2d5ee86f6de80d"
+  },
+  "FROZEN_PROTOCOL.sha256": {
+    "bytes": 98,
+    "sha256": "b7c7f5497016faaec9f0cb9b1bb7f176c1739c99987da84d56566775a4a02e7d"
+  },
+  "README.md": {
+    "bytes": 1795,
+    "sha256": "877b71e14573578f76c6648594567cb1184876433af19ec57dda1d90f4d1a90a"
+  },
+  "classical_controls.json": {
+    "bytes": 12564,
+    "sha256": "535a049caa08a8ea2e896e17cf56cc9eb909210e718a9b526088491c5015b7f1"
+  },
+  "classical_controls.py": {
+    "bytes": 3314,
+    "sha256": "5ec2d60082d2a189978fafa22ec5ea80247e7440a251b58844ed480838a8f2ef"
+  },
+  "classical_controls.txt": {
+    "bytes": 12564,
+    "sha256": "535a049caa08a8ea2e896e17cf56cc9eb909210e718a9b526088491c5015b7f1"
+  },
+  "cohort_reference.json": {
+    "bytes": 8075,
+    "sha256": "61046152c1bafe793a8dade1828b92d08f346cf7595554fbb18f3b7e6e5a0f29"
+  },
+  "dry_run_opaque.txt": {
+    "bytes": 142,
+    "sha256": "3661fe7148dd0dd5d6fd4a23de7eee694cc2e50aeef6a3b1b1973f9d1c599f33"
+  },
+  "dry_run_semantic.txt": {
+    "bytes": 146,
+    "sha256": "c2b42eb838592a2eb5caa04e6b6f07b88ce83900640c7a4f02e1c15056814657"
+  },
+  "evaluate_jev_probe.py": {
+    "bytes": 4118,
+    "sha256": "16e7edd35beb6a3ca3926ee05fdc4db7827b3b504b7787afebad500251eaa3de"
+  },
+  "feature_names.json": {
+    "bytes": 1998,
+    "sha256": "c3dac69bc0572b62536400066a2e59e3d6e6da46aa6fe0648ba1a63c66d1d69e"
+  },
+  "feature_table.json": {
+    "bytes": 722801,
+    "sha256": "bdbfa3924fabe7f51fa0b382a43c2575f30099df885adaa25c6ab09257b477df"
+  },
+  "opaque_codebook_private.json": {
+    "bytes": 2390,
+    "sha256": "7154d0bed449489a9addad0d2d59b7a63257c82f81c0075d5a8dfc2b693ed31e"
+  },
+  "opaque_requests.json": {
+    "bytes": 884192,
+    "sha256": "e8c93481fc636258915582f9cec7060ea8442ecb6aec9c445fbe2169af41a0e5"
+  },
+  "primitive_features.csv": {
+    "bytes": 68992,
+    "sha256": "324be2788b5d3c9cf9d2a120bc590450d55e1ba648ae5768881afe6b2f97450e"
+  },
+  "requirements.txt": {
+    "bytes": 19,
+    "sha256": "8d6629803b6ebe05f95e34dff38b8cbad57ba8ccf016fb0faac226f8716fc15b"
+  },
+  "run_jev_probe.py": {
+    "bytes": 4425,
+    "sha256": "8f64f09c99e3efc7f02507000efb87b7978e944c4a8bfab2f8ebc38dbf8668b9"
+  },
+  "semantic_requests.json": {
+    "bytes": 1455048,
+    "sha256": "f00ee2a2da3f29806a90c7a58fc24d17a8505eff55c5e8fbdf8fa2451105d384"
+  },
+  "truth_private.json": {
+    "bytes": 9348,
+    "sha256": "2cb6726536fa9817fbb51dee0a1f1622e9b1eec45519060dae3bad59d7c96f88"
+  }
+}

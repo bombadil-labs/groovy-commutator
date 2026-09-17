@@ -1,0 +1,530 @@
+{
+  "anon_001": {
+    "class": 1,
+    "disputed": false,
+    "primary_positive": false,
+    "rule": 32
+  },
+  "anon_002": {
+    "class": 3,
+    "disputed": false,
+    "primary_positive": false,
+    "rule": 150
+  },
+  "anon_003": {
+    "class": 1,
+    "disputed": false,
+    "primary_positive": false,
+    "rule": 168
+  },
+  "anon_004": {
+    "class": 2,
+    "disputed": false,
+    "primary_positive": false,
+    "rule": 25
+  },
+  "anon_005": {
+    "class": 2,
+    "disputed": false,
+    "primary_positive": false,
+    "rule": 1
+  },
+  "anon_006": {
+    "class": 1,
+    "disputed": false,
+    "primary_positive": false,
+    "rule": 0
+  },
+  "anon_007": {
+    "class": 2,
+    "disputed": false,
+    "primary_positive": false,
+    "rule": 58
+  },
+  "anon_008": {
+    "class": 2,
+    "disputed": false,
+    "primary_positive": false,
+    "rule": 232
+  },
+  "anon_009": {
+    "class": 3,
+    "disputed": false,
+    "primary_positive": false,
+    "rule": 45
+  },
+  "anon_010": {
+    "class": 4,
+    "disputed": false,
+    "primary_positive": true,
+    "rule": 54
+  },
+  "anon_011": {
+    "class": 2,
+    "disputed": false,
+    "primary_positive": false,
+    "rule": 156
+  },
+  "anon_012": {
+    "class": 3,
+    "disputed": false,
+    "primary_positive": false,
+    "rule": 146
+  },
+  "anon_013": {
+    "class": 2,
+    "disputed": false,
+    "primary_positive": false,
+    "rule": 14
+  },
+  "anon_014": {
+    "class": 3,
+    "disputed": false,
+    "primary_positive": false,
+    "rule": 60
+  },
+  "anon_015": {
+    "class": 2,
+    "disputed": false,
+    "primary_positive": false,
+    "rule": 9
+  },
+  "anon_016": {
+    "class": 3,
+    "disputed": false,
+    "primary_positive": false,
+    "rule": 22
+  },
+  "anon_017": {
+    "class": 2,
+    "disputed": false,
+    "primary_positive": false,
+    "rule": 43
+  },
+  "anon_018": {
+    "class": 1,
+    "disputed": false,
+    "primary_positive": false,
+    "rule": 136
+  },
+  "anon_019": {
+    "class": 4,
+    "disputed": false,
+    "primary_positive": true,
+    "rule": 110
+  },
+  "anon_020": {
+    "class": 2,
+    "disputed": false,
+    "primary_positive": false,
+    "rule": 140
+  },
+  "anon_021": {
+    "class": 2,
+    "disputed": false,
+    "primary_positive": false,
+    "rule": 33
+  },
+  "anon_022": {
+    "class": 1,
+    "disputed": false,
+    "primary_positive": false,
+    "rule": 160
+  },
+  "anon_023": {
+    "class": 2,
+    "disputed": false,
+    "primary_positive": false,
+    "rule": 3
+  },
+  "anon_024": {
+    "class": 2,
+    "disputed": false,
+    "primary_positive": false,
+    "rule": 38
+  },
+  "anon_025": {
+    "class": 2,
+    "disputed": false,
+    "primary_positive": false,
+    "rule": 15
+  },
+  "anon_026": {
+    "class": 3,
+    "disputed": false,
+    "primary_positive": false,
+    "rule": 90
+  },
+  "anon_027": {
+    "class": 2,
+    "disputed": false,
+    "primary_positive": false,
+    "rule": 152
+  },
+  "anon_028": {
+    "class": 2,
+    "disputed": false,
+    "primary_positive": false,
+    "rule": 178
+  },
+  "anon_029": {
+    "class": 2,
+    "disputed": false,
+    "primary_positive": false,
+    "rule": 184
+  },
+  "anon_030": {
+    "class": 2,
+    "disputed": false,
+    "primary_positive": false,
+    "rule": 34
+  },
+  "anon_031": {
+    "class": 2,
+    "disputed": false,
+    "primary_positive": false,
+    "rule": 42
+  },
+  "anon_032": {
+    "class": 2,
+    "disputed": false,
+    "primary_positive": false,
+    "rule": 57
+  },
+  "anon_033": {
+    "class": 2,
+    "disputed": false,
+    "primary_positive": false,
+    "rule": 12
+  },
+  "anon_034": {
+    "class": 2,
+    "disputed": false,
+    "primary_positive": false,
+    "rule": 138
+  },
+  "anon_035": {
+    "class": 2,
+    "disputed": false,
+    "primary_positive": false,
+    "rule": 26
+  },
+  "anon_036": {
+    "class": 2,
+    "disputed": false,
+    "primary_positive": false,
+    "rule": 7
+  },
+  "anon_037": {
+    "class": 2,
+    "disputed": false,
+    "primary_positive": false,
+    "rule": 44
+  },
+  "anon_038": {
+    "class": 2,
+    "disputed": false,
+    "primary_positive": false,
+    "rule": 142
+  },
+  "anon_039": {
+    "class": 2,
+    "disputed": false,
+    "primary_positive": false,
+    "rule": 36
+  },
+  "anon_040": {
+    "class": 2,
+    "disputed": false,
+    "primary_positive": false,
+    "rule": 172
+  },
+  "anon_041": {
+    "class": 2,
+    "disputed": false,
+    "primary_positive": false,
+    "rule": 27
+  },
+  "anon_042": {
+    "class": 2,
+    "disputed": false,
+    "primary_positive": false,
+    "rule": 154
+  },
+  "anon_043": {
+    "class": 3,
+    "disputed": false,
+    "primary_positive": false,
+    "rule": 126
+  },
+  "anon_044": {
+    "class": 1,
+    "disputed": false,
+    "primary_positive": false,
+    "rule": 40
+  },
+  "anon_045": {
+    "class": 2,
+    "disputed": false,
+    "primary_positive": false,
+    "rule": 62
+  },
+  "anon_046": {
+    "class": 2,
+    "disputed": false,
+    "primary_positive": false,
+    "rule": 23
+  },
+  "anon_047": {
+    "class": 2,
+    "disputed": false,
+    "primary_positive": false,
+    "rule": 132
+  },
+  "anon_048": {
+    "class": 2,
+    "disputed": false,
+    "primary_positive": false,
+    "rule": 76
+  },
+  "anon_049": {
+    "class": 2,
+    "disputed": false,
+    "primary_positive": false,
+    "rule": 134
+  },
+  "anon_050": {
+    "class": 3,
+    "disputed": false,
+    "primary_positive": false,
+    "rule": 122
+  },
+  "anon_051": {
+    "class": 1,
+    "disputed": false,
+    "primary_positive": false,
+    "rule": 8
+  },
+  "anon_052": {
+    "class": 2,
+    "disputed": false,
+    "primary_positive": false,
+    "rule": 77
+  },
+  "anon_053": {
+    "class": 2,
+    "disputed": false,
+    "primary_positive": false,
+    "rule": 56
+  },
+  "anon_054": {
+    "class": 2,
+    "disputed": false,
+    "primary_positive": false,
+    "rule": 24
+  },
+  "anon_055": {
+    "class": 2,
+    "disputed": false,
+    "primary_positive": false,
+    "rule": 104
+  },
+  "anon_056": {
+    "class": 2,
+    "disputed": false,
+    "primary_positive": false,
+    "rule": 94
+  },
+  "anon_057": {
+    "class": 2,
+    "disputed": false,
+    "primary_positive": false,
+    "rule": 204
+  },
+  "anon_058": {
+    "class": 2,
+    "disputed": false,
+    "primary_positive": false,
+    "rule": 51
+  },
+  "anon_059": {
+    "class": 4,
+    "disputed": true,
+    "primary_positive": false,
+    "rule": 106
+  },
+  "anon_060": {
+    "class": 2,
+    "disputed": false,
+    "primary_positive": false,
+    "rule": 130
+  },
+  "anon_061": {
+    "class": 2,
+    "disputed": false,
+    "primary_positive": false,
+    "rule": 11
+  },
+  "anon_062": {
+    "class": 2,
+    "disputed": false,
+    "primary_positive": false,
+    "rule": 170
+  },
+  "anon_063": {
+    "class": 2,
+    "disputed": false,
+    "primary_positive": false,
+    "rule": 4
+  },
+  "anon_064": {
+    "class": 1,
+    "disputed": false,
+    "primary_positive": false,
+    "rule": 128
+  },
+  "anon_065": {
+    "class": 2,
+    "disputed": false,
+    "primary_positive": false,
+    "rule": 74
+  },
+  "anon_066": {
+    "class": 2,
+    "disputed": false,
+    "primary_positive": false,
+    "rule": 73
+  },
+  "anon_067": {
+    "class": 2,
+    "disputed": false,
+    "primary_positive": false,
+    "rule": 6
+  },
+  "anon_068": {
+    "class": 2,
+    "disputed": false,
+    "primary_positive": false,
+    "rule": 78
+  },
+  "anon_069": {
+    "class": 2,
+    "disputed": false,
+    "primary_positive": false,
+    "rule": 108
+  },
+  "anon_070": {
+    "class": 2,
+    "disputed": false,
+    "primary_positive": false,
+    "rule": 5
+  },
+  "anon_071": {
+    "class": 4,
+    "disputed": true,
+    "primary_positive": false,
+    "rule": 41
+  },
+  "anon_072": {
+    "class": 2,
+    "disputed": false,
+    "primary_positive": false,
+    "rule": 13
+  },
+  "anon_073": {
+    "class": 3,
+    "disputed": false,
+    "primary_positive": false,
+    "rule": 18
+  },
+  "anon_074": {
+    "class": 2,
+    "disputed": false,
+    "primary_positive": false,
+    "rule": 46
+  },
+  "anon_075": {
+    "class": 2,
+    "disputed": false,
+    "primary_positive": false,
+    "rule": 37
+  },
+  "anon_076": {
+    "class": 2,
+    "disputed": false,
+    "primary_positive": false,
+    "rule": 29
+  },
+  "anon_077": {
+    "class": 2,
+    "disputed": false,
+    "primary_positive": false,
+    "rule": 50
+  },
+  "anon_078": {
+    "class": 2,
+    "disputed": false,
+    "primary_positive": false,
+    "rule": 35
+  },
+  "anon_079": {
+    "class": 2,
+    "disputed": false,
+    "primary_positive": false,
+    "rule": 19
+  },
+  "anon_080": {
+    "class": 3,
+    "disputed": false,
+    "primary_positive": false,
+    "rule": 30
+  },
+  "anon_081": {
+    "class": 2,
+    "disputed": false,
+    "primary_positive": false,
+    "rule": 10
+  },
+  "anon_082": {
+    "class": 2,
+    "disputed": false,
+    "primary_positive": false,
+    "rule": 72
+  },
+  "anon_083": {
+    "class": 3,
+    "disputed": false,
+    "primary_positive": false,
+    "rule": 105
+  },
+  "anon_084": {
+    "class": 2,
+    "disputed": false,
+    "primary_positive": false,
+    "rule": 162
+  },
+  "anon_085": {
+    "class": 2,
+    "disputed": false,
+    "primary_positive": false,
+    "rule": 2
+  },
+  "anon_086": {
+    "class": 2,
+    "disputed": false,
+    "primary_positive": false,
+    "rule": 164
+  },
+  "anon_087": {
+    "class": 2,
+    "disputed": false,
+    "primary_positive": false,
+    "rule": 200
+  },
+  "anon_088": {
+    "class": 2,
+    "disputed": false,
+    "primary_positive": false,
+    "rule": 28
+  }
+}
