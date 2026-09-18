@@ -2610,6 +2610,24 @@
       "research": [
         "beam-mechanism-20260918"
       ]
+    },
+    {
+      "source": "defect-algebra",
+      "type": "depends_on",
+      "target": "invariant-beam",
+      "reason": "The algebra is about defects on the beam: it presupposes that the equal-row set is invariant and that its reads are exposed entries, which is what makes every perturbed read a free entry.",
+      "research": [
+        "defect-algebra-20260918"
+      ]
+    },
+    {
+      "source": "fiber-enrichment",
+      "type": "supports",
+      "target": "defect-algebra",
+      "reason": "The census supplies the dynamical evidence: the twelve exclusive-ors explain 0.37 to 0.43 of transverse stability where the raw bits explain negative, and refinements built to satisfy all twelve sit on the beam in 83 to 96 percent of trials in seven of eight bases.",
+      "research": [
+        "defect-algebra-20260918"
+      ]
     }
   ],
   "nodes": [
@@ -4953,7 +4971,7 @@
       "title": "A base rule's height-one fiber is enriched or depleted in the persistence \u00d7 spreading phenotype",
       "kind": "experiment",
       "status": "completed",
-      "summary": "512-rule samples of the fibers over ECAs 54, 22, 0, 90, 204 measured at height two have both-positive fractions 0.47, 0.37, 0.25, 0.22, 0.07 (Kruskal\u2013Wallis on S* p \u2248 1e-40, descriptive). HighLife and Life sit inside their fibers' 10th\u201390th percentile bands. One contract, one density, one strip height. Across all 64 fibers (128 rules each) the both-positive fraction spans 0.05 to 0.51 and is non-additive in the exposed bits on the spreading axis; the 0/90 ordering did not replicate on fresh samples. A handed family whose height-one restriction is onto all 256 ECAs gives rule 110 a fiber (2^24 rules): it is both-positive at 0.543, tied at the top with its mirror 124 and with 54, far above 30 at 0.273, and the enrichment is on the persistence axis rather than spreading. A base's own 1D phenotype predicts its fiber's on both axes across all 256 bases. Chirality is not detectable: the mirror fiber is indistinguishable. A matched base-by-completion grid decomposes the persistence axis: history gain is set by the base (variance component 0.040 against the completion's 0.012) and retention by the completion (0.022 against 0.035); history gain anticorrelates between distant bases and is not bit-additive at all, and at height four a persistence-only control overtakes 110, so the conferral tracks the base's 1D history gain rather than its class. The mechanism is now known: an exactly invariant equal-row set on which the strip is the base rule makes history gain a mixture, so beam proximity mediates transfer between bases and the sign of each base's response explains the anticorrelation.",
+      "summary": "512-rule samples of the fibers over ECAs 54, 22, 0, 90, 204 measured at height two have both-positive fractions 0.47, 0.37, 0.25, 0.22, 0.07 (Kruskal\u2013Wallis on S* p \u2248 1e-40, descriptive). HighLife and Life sit inside their fibers' 10th\u201390th percentile bands. One contract, one density, one strip height. Across all 64 fibers (128 rules each) the both-positive fraction spans 0.05 to 0.51 and is non-additive in the exposed bits on the spreading axis; the 0/90 ordering did not replicate on fresh samples. A handed family whose height-one restriction is onto all 256 ECAs gives rule 110 a fiber (2^24 rules): it is both-positive at 0.543, tied at the top with its mirror 124 and with 54, far above 30 at 0.273, and the enrichment is on the persistence axis rather than spreading. A base's own 1D phenotype predicts its fiber's on both axes across all 256 bases. Chirality is not detectable: the mirror fiber is indistinguishable. A matched base-by-completion grid decomposes the persistence axis: history gain is set by the base (variance component 0.040 against the completion's 0.012) and retention by the completion (0.022 against 0.035); history gain anticorrelates between distant bases and is not bit-additive at all, and at height four a persistence-only control overtakes 110, so the conferral tracks the base's 1D history gain rather than its class. The mechanism is now known: an exactly invariant equal-row set on which the strip is the base rule makes history gain a mixture, so beam proximity mediates transfer between bases and the sign of each base's response explains the anticorrelation. The refinement's contribution is finally in a readable basis: twelve pairwise exclusive-ors of its free table entries decide one-step healing on the beam and, through an edge lemma, growth and survival at every step. That also explains why no linear model on the raw bits ever worked.",
       "updated": "2026-09-18",
       "source": "docs/knowledge/fiber-enrichment.md",
       "research": [
@@ -4961,7 +4979,8 @@
         "fiber-census-64-20260917",
         "handed-fiber-census-20260917",
         "matched-completion-20260918",
-        "beam-mechanism-20260918"
+        "beam-mechanism-20260918",
+        "defect-algebra-20260918"
       ]
     },
     {
@@ -4987,6 +5006,18 @@
       "source": "docs/knowledge/invariant-beam.md",
       "research": [
         "beam-mechanism-20260918"
+      ]
+    },
+    {
+      "id": "defect-algebra",
+      "title": "One-step healing on the beam is three pairwise bit-equalities; twelve in all, rank eleven",
+      "kind": "finding",
+      "status": "exact",
+      "summary": "Flipping one cell of a height-two beam state changes exactly six reads, and no post-flip read lands on an exposed entry, so the damage is carried entirely by free table entries. Healing in one step is A(LL,L) and B(L,R) and C(R,RR), each a required equality between two free entries: twelve equalities of GF(2) rank eleven, giving 2,048 signature classes of 8,192 refinements and a thirteen-dimensional universal-healer subspace, with expected one-step healing exactly 1/8. The A pairs are one table index apart, B fourteen, C six. An edge lemma extends the factorization to every step through the edges of any defect cluster, so A governs leftward growth, C rightward growth and B isolated survival; hence A or C never holding implies transverse extinction zero, both always holding implies confinement, and all twelve holding implies immediate healing. Verified by enumeration and as a gating control.",
+      "updated": "2026-09-18",
+      "source": "docs/knowledge/defect-algebra.md",
+      "research": [
+        "defect-algebra-20260918"
       ]
     }
   ],

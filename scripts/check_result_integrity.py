@@ -55,6 +55,12 @@ REGISTRY = {
         'families': 'results/forced_tables_20260917/families.json',
         'regime_join': 'results/forced_tables_20260917/regime_join.json',
         'd3_panel': 'results/forced_tables_20260917/d3_panel.json'},
+    'results/defect_algebra_20260918/summary.json': {
+        'protocol': 'docs/research/protocols/2026-09-18-defect-algebra.md',
+        'run': 'experiments/defect_algebra_20260918/run.py',
+        'evaluate': 'experiments/defect_algebra_20260918/evaluate.py',
+        'rows': 'results/defect_algebra_20260918/rows.json',
+        'controls': 'results/defect_algebra_20260918/controls.json'},
     'results/beam_mechanism_20260918/summary.json': {
         'protocol': 'docs/research/protocols/2026-09-18-beam-mechanism.md',
         'run': 'experiments/beam_mechanism_20260918/run.py',

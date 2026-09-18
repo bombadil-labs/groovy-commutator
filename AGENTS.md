@@ -880,6 +880,65 @@ workflow; research source and result changes now also trigger that workflow.
    low stability). Self-gated under Myk's suspended review gates; protocol
    drafted by Fable 5.1, amended and executed by Opus 5.
 
+18. **The defect algebra: twelve exclusive-ors decide what a refinement does
+   to the beam** (2026-09-18, `docs/research/2026-09-18-defect-algebra.md`,
+   `experiments/defect_algebra_20260918/` →
+   `results/defect_algebra_20260918/`, 37 min, off Actions).
+   **Theorem (exact, independent of the census).** Flip one cell of a beam
+   state: exactly six reads change and **none of the post-flip reads lands on
+   an exposed entry**, so the damage is carried entirely by free entries.
+   One-step healing is `A(LL,L) ∧ B(L,R) ∧ C(R,RR)` — twelve pairwise
+   bit-equalities between free entries, GF(2) rank **11**, giving 2,048
+   signature classes of 8,192 refinements each, a 13-dimensional
+   universal-healer subspace, and expected one-step healing exactly `1/8`.
+   The `A` pairs are 1 table index apart, `B` 14, `C` 6. **Edge lemma:** for
+   any defect cluster the column west of its leftmost defect reads the `A`
+   pair and the column east of its rightmost reads `C`, regardless of the
+   interior, so `A` is leftward growth, `C` rightward, `B` isolated survival
+   at **every** step; hence `A` or `C` never holding ⇒ transverse extinction
+   0, both always holding ⇒ confinement, all twelve ⇒ immediate healing.
+   Re-derived from the read-index definition by the executing session and
+   asserted as a gating control (six perturbed reads none exposed, 14 lit /
+   10 dark, factorization for all three blocks, rank 11, cell sizes exactly
+   8,192, simulated step = violated-constraint count on 256 pairs, zero
+   mismatches).
+   **This corrects result 16.** History gain and transverse stability were
+   recorded there as "not bit-additive at all" (negative CV `R²` on the 24
+   raw bits). On the **twelve exclusive-ors** transverse stability gives CV
+   `R²` **0.369–0.433** in every base, against **−0.145 to −0.271** on the
+   raw bits. The effect was never absent; the basis was wrong. Do not repeat
+   the non-additivity claim without this.
+   Census, 8 bases × 408 completions (192 random, 96 flip partners, 120 built
+   into five signature cells): P1, P2, P3(c), P4, P5, P6 held. `H1` (the
+   beam-measure-weighted healing rate) predicts transverse stability at
+   Spearman 0.685–0.865. **P3(a) failed on one base of eight**: universal
+   healers sit on the beam in 83–96% of trials with median proximity 1.000 in
+   seven bases and **never under the identity rule 204**, so healing isolated
+   defects is very nearly sufficient for residence, with one exception.
+   **P3(b) failed on a non-theorem clause**: growers never sit on the beam
+   (0 everywhere, as required), but in three bases their median proximity
+   *exceeds* the random arm's — **residence from a dense random start is not
+   the same quantity as isolated-defect healing**, and what sets it is the
+   open question. **P4(b) held although expected to fail**: dark-entry flips
+   leave beam proximity as well as transverse stability nearly unchanged, so
+   the ten dark entries appear unread even by dense random states.
+   **Freeze amendment, and a standing rule:** the eastward-grower cell was
+   run rather than deduced, because **reflection is not a symmetry of the
+   handed family** (it maps to the east-marked family — the same reason
+   result 15's chirality question needed measuring). Both growers have
+   transverse extinction exactly 0, confirming the edge lemma in both
+   directions; their proximity statistics differ by ≤ 0.12 with no consistent
+   direction, plausibly noise at 24 per cell.
+   **Process lessons:** the first launch stopped at the matched null-pair
+   control with nothing computed (dropped complement flag; trajectory helpers
+   imported from result 17's unit, carrying its seed namespace), costing two
+   minutes instead of a discarded run — controls-before-observables is paying
+   rent every unit. New rule earned here: **do not import another unit's
+   measurement helpers; copy them with this unit's seed function**, or the
+   provenance silently belongs to the other protocol. Self-gated under Myk's
+   suspended review gates; protocol drafted by Fable 5.1, amended and executed
+   by Opus 5.
+
 ## Checkpoint logs (read before continuing any workstream)
 
 A checkpoint is a dated statement of state: what a unit completed, what is
