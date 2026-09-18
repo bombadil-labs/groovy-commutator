@@ -1,0 +1,542 @@
+{
+ "protocol": "held-structures-20260918",
+ "n_rows": 2112,
+ "pilot": false,
+ "frozen_keys": [
+  "P1a",
+  "P1b",
+  "P2a",
+  "P2b",
+  "P2c",
+  "P3a",
+  "P3b",
+  "P3c",
+  "P3d",
+  "P4a",
+  "P4b",
+  "P4c",
+  "P4d",
+  "P5a-i",
+  "P5a-ii",
+  "P5a-iii",
+  "P5b",
+  "P5c",
+  "P5d",
+  "P6a",
+  "P6b"
+ ],
+ "predictions": {
+  "P1a": {
+   "violations": 0,
+   "rows": 2112,
+   "examples": [],
+   "verdict": "HELD"
+  },
+  "P1b": {
+   "violations": 0,
+   "rows": 2112,
+   "examples": [],
+   "verdict": "HELD"
+  },
+  "P2a": {
+   "violations": 0,
+   "safe_singletons": 28080,
+   "examples": [],
+   "verdict": "HELD"
+  },
+  "P2b": {
+   "violations": 0,
+   "alt_runs": 2031,
+   "examples": [],
+   "verdict": "HELD"
+  },
+  "P2c": {
+   "pair_permanent_Pi512": {
+    "50": 1.0,
+    "51": 1.0,
+    "76": 1.0,
+    "77": 1.0,
+    "178": 1.0,
+    "179": 1.0,
+    "204": 1.0,
+    "205": 1.0
+   },
+   "other_block0_Pi512": {
+    "36": 0.8515625,
+    "37": 0.28515625,
+    "90": 0.296875,
+    "91": 0.35546875,
+    "164": 0.796875,
+    "165": 0.2890625,
+    "218": 0.74609375,
+    "219": 0.85546875
+   },
+   "verdict": "HELD"
+  },
+  "P3a": {
+   "base_mean_S": {
+    "0": 47.158,
+    "5": 52.413,
+    "8": 50.133,
+    "18": 54.796,
+    "22": 47.613,
+    "26": 47.718,
+    "27": 48.019,
+    "30": 48.3,
+    "33": 54.567,
+    "36": 52.538,
+    "37": 52.721,
+    "45": 55.263,
+    "50": 47.956,
+    "51": 47.931,
+    "54": 58.151,
+    "59": 54.244,
+    "76": 50.633,
+    "77": 50.658,
+    "89": 55.971,
+    "90": 56.774,
+    "91": 57.127,
+    "110": 49.639,
+    "163": 52.589,
+    "164": 52.479,
+    "165": 52.579,
+    "177": 53.701,
+    "178": 47.947,
+    "179": 47.973,
+    "204": 50.667,
+    "205": 50.717,
+    "218": 55.865,
+    "219": 56.105,
+    "232": 49.308
+   },
+   "outside_band": {},
+   "band": [
+    40,
+    80
+   ],
+   "verdict": "HELD"
+  },
+  "P3b": {
+   "per_base_spearman": {
+    "0": 0.7,
+    "5": 0.751,
+    "8": 0.754,
+    "18": 0.823,
+    "22": 0.912,
+    "26": 0.842,
+    "27": 0.845,
+    "30": 0.875,
+    "33": 0.771,
+    "36": 0.718,
+    "37": 0.783,
+    "45": 0.791,
+    "50": 0.83,
+    "51": 0.769,
+    "54": 0.852,
+    "59": 0.854,
+    "76": 0.649,
+    "77": 0.668,
+    "89": 0.79,
+    "90": 0.801,
+    "91": 0.741,
+    "110": 0.795,
+    "163": 0.857,
+    "164": 0.691,
+    "165": 0.745,
+    "177": 0.841,
+    "178": 0.818,
+    "179": 0.827,
+    "204": 0.603,
+    "205": 0.602,
+    "218": 0.682,
+    "219": 0.642,
+    "232": 0.732
+   },
+   "n_completions": 36,
+   "below_threshold": {
+    "76": 0.649,
+    "77": 0.668,
+    "164": 0.691,
+    "204": 0.603,
+    "205": 0.602,
+    "218": 0.682,
+    "219": 0.642
+   },
+   "min": 0.602,
+   "verdict": "FAILED"
+  },
+  "P3c": {
+   "n_bases": 19,
+   "bases": [
+    5,
+    18,
+    26,
+    27,
+    33,
+    36,
+    37,
+    45,
+    54,
+    59,
+    89,
+    90,
+    91,
+    163,
+    164,
+    165,
+    177,
+    218,
+    219
+   ],
+   "spearman_S_Pi": 0.41,
+   "bootstrap95": [
+    -0.14,
+    0.764
+   ],
+   "threshold": 0.4,
+   "verdict": "FAILED"
+  },
+  "P3d": {
+   "lowest_base": 27,
+   "lowest_mean_S": 28.051,
+   "pair_permanent": false,
+   "verdict": "FAILED"
+  },
+  "P4a": {
+   "violations": 120,
+   "trials": 4608,
+   "examples": [
+    [
+     51,
+     14076995,
+     293,
+     3,
+     2
+    ],
+    [
+     51,
+     14076995,
+     191,
+     2,
+     3
+    ],
+    [
+     51,
+     14076995,
+     507,
+     3,
+     2
+    ]
+   ],
+   "verdict": "FAILED"
+  },
+  "P4b": {
+   "fraction_diverging_by_step_4": {
+    "90": 0.911,
+    "91": 0.682,
+    "110": 0.855,
+    "218": 0.127,
+    "219": 0.096
+   },
+   "below_threshold": {
+    "91": 0.682,
+    "110": 0.855,
+    "218": 0.127,
+    "219": 0.096
+   },
+   "verdict": "FAILED"
+  },
+  "P4c": {
+   "agreement": 0.9603,
+   "trials": 14848,
+   "threshold": 0.9,
+   "note": "odds 0.4 at freeze -- expected to fail",
+   "verdict": "HELD"
+  },
+  "P4d": {
+   "n_rows": 464,
+   "spearman": 0.812,
+   "bootstrap95": [
+    0.754,
+    0.864
+   ],
+   "threshold": 0.7,
+   "verdict": "HELD"
+  },
+  "P5a-i": {
+   "rows": 396,
+   "violations": 5,
+   "max_I": 6.25,
+   "examples": [
+    [
+     76,
+     13891439,
+     6.25
+    ],
+    [
+     77,
+     13891439,
+     6.25
+    ],
+    [
+     204,
+     13891439,
+     6.25
+    ]
+   ],
+   "verdict": "FAILED"
+  },
+  "P5a-ii": {
+   "quiet_bases": [
+    0,
+    8,
+    22,
+    30,
+    110,
+    232
+   ],
+   "mean_I": {
+    "0": 0.931,
+    "8": 3.917,
+    "22": 0.903,
+    "30": 6.556,
+    "110": 3.139,
+    "232": 0.958
+   },
+   "violations": {
+    "30": 6.556
+   },
+   "verdict": "FAILED"
+  },
+  "P5a-iii": {
+   "matching_rows_with_I_at_least_10": {
+    "50": [
+     6,
+     6
+    ],
+    "51": [
+     6,
+     6
+    ],
+    "76": [
+     6,
+     6
+    ],
+    "77": [
+     6,
+     6
+    ],
+    "178": [
+     6,
+     6
+    ],
+    "179": [
+     6,
+     6
+    ],
+    "204": [
+     6,
+     6
+    ],
+    "205": [
+     6,
+     6
+    ]
+   },
+   "failing_bases": [],
+   "verdict": "HELD"
+  },
+  "P5b": {
+   "median_I_matching_vs_opposite": {
+    "50": [
+     46.417,
+     0.0
+    ],
+    "51": [
+     46.417,
+     0.0
+    ],
+    "76": [
+     76.417,
+     9.083
+    ],
+    "77": [
+     76.417,
+     8.583
+    ],
+    "178": [
+     46.417,
+     0.0
+    ],
+    "179": [
+     46.417,
+     0.0
+    ],
+    "204": [
+     76.417,
+     8.917
+    ],
+    "205": [
+     76.417,
+     8.5
+    ]
+   },
+   "bases_holding": 8,
+   "of": 8,
+   "verdict": "HELD"
+  },
+  "P5c": {
+   "n_bases": 16,
+   "spearman_I_Pi": 0.886,
+   "bootstrap95": [
+    0.735,
+    0.95
+   ],
+   "threshold": 0.5,
+   "verdict": "FAILED"
+  },
+  "P5d": {
+   "n_bases": 27,
+   "spearman_Q_Pi": 0.159,
+   "bootstrap95": [
+    -0.235,
+    0.532
+   ],
+   "threshold": 0.5,
+   "note": "odds 0.45 at freeze -- expected to weaken",
+   "verdict": "FAILED"
+  },
+  "P6a": {
+   "n_bases": 27,
+   "spearman_S_Pi_G_arm": -0.778,
+   "bootstrap95": [
+    -0.915,
+    -0.53
+   ],
+   "threshold": -0.6,
+   "verdict": "HELD"
+  },
+  "P6b": {
+   "n_bases": 27,
+   "spearman_S_Pi_random_arm": -0.233,
+   "bootstrap95": [
+    -0.586,
+    0.166
+   ],
+   "threshold": 0.5,
+   "verdict": "FAILED"
+  }
+ },
+ "descriptive": {
+  "run_width_by_junction": {
+   "Kall_plus": {
+    "n_runs": 18605.217,
+    "n_isolated": 14286.788,
+    "alt": 2691.97,
+    "inphase": 827.821,
+    "mixed": 15085.427
+   },
+   "Kall_minus": {
+    "n_runs": 13625.697,
+    "n_isolated": 12191.515,
+    "alt": 1152.0,
+    "inphase": 440.242,
+    "mixed": 12033.455
+   },
+   "Kex": {
+    "n_runs": 5304.555,
+    "n_isolated": 4101.278,
+    "alt": 1981.523,
+    "inphase": 443.729,
+    "mixed": 2879.303
+   },
+   "Uplus": {
+    "n_runs": 2193.455,
+    "n_isolated": 1817.212,
+    "alt": 1045.333,
+    "inphase": 1148.121,
+    "mixed": 0.0
+   },
+   "G": {
+    "n_runs": 22193.383,
+    "n_isolated": 18346.473,
+    "alt": 878.019,
+    "inphase": 363.178,
+    "mixed": 20952.186
+   },
+   "random": {
+    "n_runs": 24273.881,
+    "n_isolated": 9161.148,
+    "alt": 4353.275,
+    "inphase": 3826.678,
+    "mixed": 16093.928
+   }
+  },
+  "mean_width": {
+   "Kall_plus": 1.6,
+   "Kall_minus": 1.116,
+   "Kex": 1.176,
+   "Uplus": 1.182,
+   "G": 23.307,
+   "random": 4.286
+  },
+  "divergence_step": 64.803,
+  "S_by_arm": {
+   "Kall_plus": 55.592,
+   "Kall_minus": 46.176,
+   "Kex": 10.08,
+   "Uplus": 0.0,
+   "G": 72.221,
+   "random": 55.196
+  },
+  "I_by_arm": {
+   "Kall_plus": 19.473,
+   "Kall_minus": 0.315,
+   "Kex": 5.646,
+   "Uplus": 0.0,
+   "G": 127.581,
+   "random": 37.72
+  },
+  "Q_by_arm": {
+   "Kall_plus": 18.365,
+   "Kall_minus": 4.249,
+   "Kex": 5.242,
+   "Uplus": 9.722,
+   "G": 33.134,
+   "random": 64.438
+  }
+ },
+ "verdicts": {
+  "P1a": "HELD",
+  "P1b": "HELD",
+  "P2a": "HELD",
+  "P2b": "HELD",
+  "P2c": "HELD",
+  "P3a": "HELD",
+  "P3b": "FAILED",
+  "P3c": "FAILED",
+  "P3d": "FAILED",
+  "P4a": "FAILED",
+  "P4b": "FAILED",
+  "P4c": "HELD",
+  "P4d": "HELD",
+  "P5a-i": "FAILED",
+  "P5a-ii": "FAILED",
+  "P5a-iii": "HELD",
+  "P5b": "HELD",
+  "P5c": "FAILED",
+  "P5d": "FAILED",
+  "P6a": "HELD",
+  "P6b": "FAILED"
+ },
+ "source_hashes": {
+  "protocol": "6d6a54d6c412ddc1ba2ad5d302d49d3e3c4f9d1e52748968003d85b528116bb7",
+  "run": "8fca1a8b7cf394fce7a9f8a50d7cd8a37f28031bdb060ccce719d8d283bec195",
+  "evaluate": "8a04e02f37480e039a095eb2e0dad8aac25f2840d80dd7b8acba52277f308b37",
+  "rows": "dc25c8d2126c02c3d9111d538ff30f04d9d4d75a44441ad47c5bb95f4928d338",
+  "controls": "8a16691f18dd12fea0a95c4fc1858f4284bfb8fcc9b63b18cde803a88f942f68",
+  "gadget": "83c1a7e6f975e5ea3f4e1e2c29dc1f18ba36d88444d5e84fe061c6eb242c6350",
+  "algebra": "7ea8127d536629cd0e16ed9413c6493bf89b523983158e41ea9b65d7f94aae6f",
+  "pairs": "21dba62f51add52b41cf75edf629894d32fb4d2f366384f9c4d612a57ae57126"
+ }
+}

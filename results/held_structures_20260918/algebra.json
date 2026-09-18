@@ -1,0 +1,833 @@
+{
+ "pairs": [
+  [
+   1,
+   2
+  ],
+  [
+   2,
+   8
+  ],
+  [
+   2,
+   16
+  ],
+  [
+   3,
+   10
+  ],
+  [
+   3,
+   18
+  ],
+  [
+   4,
+   9
+  ],
+  [
+   4,
+   17
+  ],
+  [
+   4,
+   24
+  ],
+  [
+   5,
+   11
+  ],
+  [
+   5,
+   19
+  ],
+  [
+   5,
+   26
+  ],
+  [
+   6,
+   25
+  ],
+  [
+   7,
+   27
+  ],
+  [
+   10,
+   18
+  ],
+  [
+   11,
+   12
+  ],
+  [
+   11,
+   20
+  ],
+  [
+   12,
+   19
+  ],
+  [
+   12,
+   26
+  ],
+  [
+   13,
+   21
+  ],
+  [
+   13,
+   28
+  ],
+  [
+   14,
+   27
+  ],
+  [
+   15,
+   29
+  ],
+  [
+   19,
+   20
+  ],
+  [
+   20,
+   26
+  ],
+  [
+   21,
+   28
+  ],
+  [
+   22,
+   27
+  ],
+  [
+   23,
+   29
+  ],
+  [
+   29,
+   30
+  ]
+ ],
+ "structs": [
+  "singleton",
+  "alt_interior",
+  "inphase_interior",
+  "alt_edge_w",
+  "alt_edge_e",
+  "inphase_edge_w",
+  "inphase_edge_e",
+  "flank",
+  "one_gap"
+ ],
+ "struct_of_pair": [
+  "flank",
+  "flank",
+  "singleton",
+  "one_gap",
+  "alt_edge_w",
+  "one_gap",
+  "inphase_edge_w",
+  "inphase_edge_e",
+  "flank",
+  "singleton",
+  "alt_interior",
+  "inphase_interior",
+  "inphase_edge_e",
+  "alt_edge_e",
+  "flank",
+  "alt_interior",
+  "alt_interior",
+  "singleton",
+  "alt_edge_e",
+  "alt_edge_w",
+  "inphase_edge_w",
+  "singleton",
+  "flank",
+  "flank",
+  "one_gap",
+  "one_gap",
+  "flank",
+  "flank"
+ ],
+ "dictionary_multi": 0,
+ "alpha_classes": {
+  "0": [
+   1,
+   2,
+   8
+  ],
+  "1": [
+   5,
+   11,
+   12
+  ],
+  "2": [
+   19,
+   20,
+   26
+  ],
+  "3": [
+   23,
+   29,
+   30
+  ]
+ },
+ "cell_sizes": {
+  "AC": 65536,
+  "Uplus": 8192,
+  "K": 57344,
+  "Kall": 24576,
+  "Kex": 28672,
+  "Kbot": 4096
+ },
+ "pair_permanent": [
+  50,
+  51,
+  76,
+  77,
+  178,
+  179,
+  204,
+  205
+ ],
+ "centre_only": [
+  0,
+  51,
+  204,
+  255
+ ],
+ "base_bits": {
+  "36": {
+   "beta": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "gamma": [
+    1,
+    1
+   ],
+   "totalistic": false,
+   "pair_permanent": false,
+   "centre_only": false,
+   "matching_pattern": [
+    0,
+    0
+   ]
+  },
+  "37": {
+   "beta": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "gamma": [
+    1,
+    1
+   ],
+   "totalistic": false,
+   "pair_permanent": false,
+   "centre_only": false,
+   "matching_pattern": [
+    0,
+    0
+   ]
+  },
+  "50": {
+   "beta": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "gamma": [
+    1,
+    1
+   ],
+   "totalistic": false,
+   "pair_permanent": true,
+   "centre_only": false,
+   "matching_pattern": [
+    1,
+    0
+   ]
+  },
+  "51": {
+   "beta": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "gamma": [
+    1,
+    1
+   ],
+   "totalistic": false,
+   "pair_permanent": true,
+   "centre_only": true,
+   "matching_pattern": [
+    1,
+    0
+   ]
+  },
+  "76": {
+   "beta": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "gamma": [
+    1,
+    1
+   ],
+   "totalistic": false,
+   "pair_permanent": true,
+   "centre_only": false,
+   "matching_pattern": [
+    0,
+    1
+   ]
+  },
+  "77": {
+   "beta": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "gamma": [
+    1,
+    1
+   ],
+   "totalistic": false,
+   "pair_permanent": true,
+   "centre_only": false,
+   "matching_pattern": [
+    0,
+    1
+   ]
+  },
+  "90": {
+   "beta": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "gamma": [
+    1,
+    1
+   ],
+   "totalistic": false,
+   "pair_permanent": false,
+   "centre_only": false,
+   "matching_pattern": [
+    1,
+    1
+   ]
+  },
+  "91": {
+   "beta": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "gamma": [
+    1,
+    1
+   ],
+   "totalistic": false,
+   "pair_permanent": false,
+   "centre_only": false,
+   "matching_pattern": [
+    1,
+    1
+   ]
+  },
+  "164": {
+   "beta": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "gamma": [
+    1,
+    1
+   ],
+   "totalistic": false,
+   "pair_permanent": false,
+   "centre_only": false,
+   "matching_pattern": [
+    0,
+    0
+   ]
+  },
+  "165": {
+   "beta": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "gamma": [
+    1,
+    1
+   ],
+   "totalistic": false,
+   "pair_permanent": false,
+   "centre_only": false,
+   "matching_pattern": [
+    0,
+    0
+   ]
+  },
+  "178": {
+   "beta": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "gamma": [
+    1,
+    1
+   ],
+   "totalistic": false,
+   "pair_permanent": true,
+   "centre_only": false,
+   "matching_pattern": [
+    1,
+    0
+   ]
+  },
+  "179": {
+   "beta": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "gamma": [
+    1,
+    1
+   ],
+   "totalistic": false,
+   "pair_permanent": true,
+   "centre_only": false,
+   "matching_pattern": [
+    1,
+    0
+   ]
+  },
+  "204": {
+   "beta": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "gamma": [
+    1,
+    1
+   ],
+   "totalistic": false,
+   "pair_permanent": true,
+   "centre_only": true,
+   "matching_pattern": [
+    0,
+    1
+   ]
+  },
+  "205": {
+   "beta": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "gamma": [
+    1,
+    1
+   ],
+   "totalistic": false,
+   "pair_permanent": true,
+   "centre_only": false,
+   "matching_pattern": [
+    0,
+    1
+   ]
+  },
+  "218": {
+   "beta": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "gamma": [
+    1,
+    1
+   ],
+   "totalistic": false,
+   "pair_permanent": false,
+   "centre_only": false,
+   "matching_pattern": [
+    1,
+    1
+   ]
+  },
+  "219": {
+   "beta": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "gamma": [
+    1,
+    1
+   ],
+   "totalistic": false,
+   "pair_permanent": false,
+   "centre_only": false,
+   "matching_pattern": [
+    1,
+    1
+   ]
+  },
+  "0": {
+   "beta": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "gamma": [
+    1,
+    1
+   ],
+   "totalistic": true,
+   "pair_permanent": false,
+   "centre_only": true,
+   "matching_pattern": [
+    1,
+    1
+   ]
+  },
+  "22": {
+   "beta": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "gamma": [
+    1,
+    1
+   ],
+   "totalistic": true,
+   "pair_permanent": false,
+   "centre_only": false,
+   "matching_pattern": [
+    0,
+    1
+   ]
+  },
+  "232": {
+   "beta": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "gamma": [
+    1,
+    1
+   ],
+   "totalistic": true,
+   "pair_permanent": false,
+   "centre_only": false,
+   "matching_pattern": [
+    1,
+    0
+   ]
+  },
+  "8": {
+   "beta": [
+    1,
+    1,
+    0,
+    1
+   ],
+   "gamma": [
+    1,
+    0
+   ],
+   "totalistic": false,
+   "pair_permanent": false,
+   "centre_only": false,
+   "matching_pattern": [
+    1,
+    1
+   ]
+  },
+  "30": {
+   "beta": [
+    1,
+    1,
+    0,
+    1
+   ],
+   "gamma": [
+    1,
+    0
+   ],
+   "totalistic": false,
+   "pair_permanent": false,
+   "centre_only": false,
+   "matching_pattern": [
+    0,
+    1
+   ]
+  },
+  "110": {
+   "beta": [
+    0,
+    1,
+    1,
+    1
+   ],
+   "gamma": [
+    0,
+    1
+   ],
+   "totalistic": false,
+   "pair_permanent": false,
+   "centre_only": false,
+   "matching_pattern": [
+    0,
+    0
+   ]
+  },
+  "27": {
+   "beta": [
+    0,
+    0,
+    0,
+    1
+   ],
+   "gamma": [
+    1,
+    0
+   ],
+   "totalistic": false,
+   "pair_permanent": false,
+   "centre_only": false,
+   "matching_pattern": [
+    1,
+    1
+   ]
+  },
+  "26": {
+   "beta": [
+    0,
+    0,
+    0,
+    1
+   ],
+   "gamma": [
+    1,
+    0
+   ],
+   "totalistic": false,
+   "pair_permanent": false,
+   "centre_only": false,
+   "matching_pattern": [
+    1,
+    1
+   ]
+  },
+  "45": {
+   "beta": [
+    0,
+    0,
+    1,
+    0
+   ],
+   "gamma": [
+    1,
+    0
+   ],
+   "totalistic": false,
+   "pair_permanent": false,
+   "centre_only": false,
+   "matching_pattern": [
+    0,
+    0
+   ]
+  },
+  "59": {
+   "beta": [
+    0,
+    0,
+    1,
+    0
+   ],
+   "gamma": [
+    1,
+    0
+   ],
+   "totalistic": false,
+   "pair_permanent": false,
+   "centre_only": false,
+   "matching_pattern": [
+    1,
+    0
+   ]
+  },
+  "177": {
+   "beta": [
+    0,
+    1,
+    0,
+    0
+   ],
+   "gamma": [
+    0,
+    1
+   ],
+   "totalistic": false,
+   "pair_permanent": false,
+   "centre_only": false,
+   "matching_pattern": [
+    1,
+    0
+   ]
+  },
+  "89": {
+   "beta": [
+    0,
+    1,
+    0,
+    0
+   ],
+   "gamma": [
+    0,
+    1
+   ],
+   "totalistic": false,
+   "pair_permanent": false,
+   "centre_only": false,
+   "matching_pattern": [
+    1,
+    1
+   ]
+  },
+  "163": {
+   "beta": [
+    1,
+    0,
+    0,
+    0
+   ],
+   "gamma": [
+    0,
+    1
+   ],
+   "totalistic": false,
+   "pair_permanent": false,
+   "centre_only": false,
+   "matching_pattern": [
+    1,
+    0
+   ]
+  },
+  "5": {
+   "beta": [
+    0,
+    0,
+    1,
+    1
+   ],
+   "gamma": [
+    1,
+    1
+   ],
+   "totalistic": false,
+   "pair_permanent": false,
+   "centre_only": false,
+   "matching_pattern": [
+    0,
+    1
+   ]
+  },
+  "18": {
+   "beta": [
+    0,
+    0,
+    1,
+    1
+   ],
+   "gamma": [
+    1,
+    1
+   ],
+   "totalistic": false,
+   "pair_permanent": false,
+   "centre_only": false,
+   "matching_pattern": [
+    1,
+    1
+   ]
+  },
+  "54": {
+   "beta": [
+    1,
+    1,
+    0,
+    0
+   ],
+   "gamma": [
+    1,
+    1
+   ],
+   "totalistic": false,
+   "pair_permanent": false,
+   "centre_only": false,
+   "matching_pattern": [
+    0,
+    0
+   ]
+  },
+  "33": {
+   "beta": [
+    1,
+    1,
+    0,
+    0
+   ],
+   "gamma": [
+    1,
+    1
+   ],
+   "totalistic": false,
+   "pair_permanent": false,
+   "centre_only": false,
+   "matching_pattern": [
+    1,
+    0
+   ]
+  }
+ }
+}
