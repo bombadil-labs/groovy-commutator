@@ -185,5 +185,26 @@
       "handed-fiber-census-20260917",
       "strip-spectrum-20260917"
     ]
+  },
+  {
+    "slug": "defect-algebra-20260918",
+    "label": "Class-IV refinement X",
+    "title": "The defect algebra: twelve exclusive-ors decide what a refinement does to the beam",
+    "date": "2026-09-18",
+    "updated": "2026-09-18",
+    "kind": "Theorem and experiment",
+    "evidence": "exact",
+    "topic": "Class-IV refinement",
+    "summary": "Flipping one cell of a beam state perturbs exactly six reads and none lands on an entry the base rule owns, so one-step healing is a conjunction of three pairwise bit-equalities between free entries, each depending on the window only through two cells. Twelve equalities of GF(2) rank eleven, so refinements fall into 2,048 classes of 8,192 and a thirteen-dimensional subspace heals every defect at once. An edge lemma extends this to every step: the three blocks govern leftward growth, isolated survival and rightward growth through the edges of any defect cluster, fixing transverse extinction outright for whole classes. Measured on eight bases and 408 completions: the twelve exclusive-ors explain 0.37 to 0.43 of transverse stability where the twenty-four raw bits explain negative, resolving the earlier non-additivity as a wrong basis rather than an absent effect; universal healers sit on the beam in 83 to 96 percent of trials in seven of eight bases and never under the identity; growers never sit on the beam but in three bases are closer to it than typical refinements; dark-entry flips leave both transverse stability and beam proximity nearly unchanged.",
+    "takeaway": "What a refinement does to the invariant set is decided by twelve pairwise exclusive-ors of its free table entries, not by the entries themselves.",
+    "source": "docs/research/2026-09-18-defect-algebra.md",
+    "promotion": {
+      "stage": "research"
+    },
+    "related": [
+      "beam-mechanism-20260918",
+      "matched-completion-20260918",
+      "handed-fiber-census-20260917"
+    ]
   }
 ]

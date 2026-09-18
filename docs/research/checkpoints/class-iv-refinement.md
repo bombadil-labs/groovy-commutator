@@ -7,6 +7,64 @@ when a substantial unit completes; keep the bounded-claim style.
 
 Program page: `docs/research/2026-09-17-class-iv-refinement-program.md`
 
+## Checkpoint 2026-09-18 (sixth unit): the defect algebra
+
+- **Completed:** [the defect-algebra unit](../2026-09-18-defect-algebra.md),
+  canonical `results/defect_algebra_20260918/` (registered with the fast
+  integrity tier). 8 bases × 408 completions (192 random, 96 flip partners,
+  120 built into five signature classes); 3,264 evaluations, 37 minutes.
+- **A second theorem, independent of the census.** Flipping one cell of a
+  beam state changes exactly six reads and **none lands on an exposed
+  entry**, so one-step healing is `A(LL,L) ∧ B(L,R) ∧ C(R,RR)`, twelve
+  pairwise bit-equalities between free entries, GF(2) rank **eleven**:
+  2,048 signature classes of 8,192, a thirteen-dimensional universal-healer
+  subspace, expected healing exactly `1/8`. The **edge lemma** extends the
+  factorization to every step through a cluster's edges, so `A` is leftward
+  growth, `C` rightward, `B` isolated survival, and the corollaries fix
+  transverse extinction outright for whole classes. Re-derived by the
+  executing session and asserted as a gating control. Knowledge node
+  `defect-algebra` (finding, exact).
+- **It resolves the fourth unit's non-additivity.** Transverse stability on
+  the twelve exclusive-ors gives cross-validated `R²` 0.37–0.43 in every
+  base; on the twenty-four raw bits it is **negative** in every base. The
+  refinement's effect was never absent, only in the wrong coordinates.
+  **Do not repeat "the completion's effect is not bit-additive" without
+  this correction.**
+- **The open question is answered with one exception.** Refinements built to
+  satisfy all twelve sit on the beam in 83–96% of trials in seven of eight
+  bases, median proximity 1.000. **P3(a) failed because under the identity
+  rule they never do.** So healing isolated defects is very nearly
+  sufficient for residence, and there is one base where it buys nothing.
+- **P3(b) failed on a clause that is not the theorem's.** Growers never sit
+  on the beam (zero everywhere, as the edge lemma requires), but in three
+  bases their median proximity *exceeds* the random arm's. **Residence from
+  a dense random start is not the same quantity as isolated-defect
+  healing**; what sets it beyond the healing signature is the next open
+  question.
+- **P4(b) held although expected to fail**, so the ten dark entries appear
+  unread even by dense random configurations, not merely by isolated
+  defects. P1, P2, P3(c), P5, P6 held.
+- **On the freeze amendment:** both growers have transverse extinction
+  exactly zero, confirming the edge lemma in both directions rather than
+  one. Their proximity statistics differ by up to 0.12 with no consistent
+  direction, plausibly noise at 24 per cell. **Reflection is not a symmetry
+  of this family**, so handedness is never deducible here; measure it.
+- **Do not infer:** anything about Class-IV-ness (the object explained is
+  inheritance of history gain); that residence equals healing (one base and
+  three growers say otherwise); anything at other heights, densities or
+  observers. Eight bases is a panel.
+- **Process, second consecutive unit where it mattered.** The first launch
+  stopped at the matched null-pair control with nothing computed: a dropped
+  complement flag and trajectory helpers imported from the previous unit,
+  carrying its seed namespace. Cost two minutes instead of a discarded run.
+  **Controls before observables, able to fail, is now paying rent every
+  unit.** A further rule earned here: do not import another unit's
+  measurement helpers; copy them with this unit's seed function, or the
+  provenance silently belongs to the other protocol.
+- **Next, unfrozen:** what sets beam residence beyond the healing signature
+  — the identity-rule exception and the three high-proximity grower bases
+  are the two handles.
+
 ## Checkpoint 2026-09-18 (fifth unit): the beam mechanism, with a theorem
 
 - **Completed:** [the beam-mechanism unit](../2026-09-18-beam-mechanism.md),
