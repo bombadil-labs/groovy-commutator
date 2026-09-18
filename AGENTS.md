@@ -939,6 +939,58 @@ workflow; research source and result changes now also trigger that workflow.
    suspended review gates; protocol drafted by Fable 5.1, amended and executed
    by Opus 5.
 
+19. **The dense defect algebra: popcount decides which entries a column reads**
+   (2026-09-18, `docs/research/2026-09-18-dense-defect-algebra.md`,
+   `experiments/dense_defect_algebra_20260918/` →
+   `results/dense_defect_algebra_20260918/`, 58 min, off Actions).
+   **Theorem (exact).** At height two both rows of a column read one table
+   entry each, and the stratum of *both* reads is decided by `Δ`, the
+   difference of the rows' three-cell popcounts: `Δ = 0` reads **exposed**
+   entries (owned by the base ECA), `|Δ| = 1` reads **lit**, `|Δ| ≥ 2` reads
+   **dark**. The 64 six-bit windows give 8 trivially agreeing cases and 28
+   unordered pairs — **6 exposed, 15 lit, 7 dark, no mixed pair**. This
+   **characterizes result 18's 8/14/10 entry partition instead of enumerating
+   it**: the counts were what they were because of what two popcounts can do.
+   GF(2) ranks 11 and 7 over 24 free entries leave exactly **64** completions
+   satisfying every free constraint (`U++`), one per connected component;
+   result 18's twelve are a subset of the fifteen and the three extra lit
+   pairs are implied. **T3:** β-all-hold ⇔ the base is totalistic (exactly 16
+   rules), and such a base with a `U++` completion collapses *any* state in one
+   step (confirmed on 0, 22, 232 × all 64: `agree = 1.000` exactly). **T4:**
+   under 204 and 51 the residual is exactly the width-two anti-phase runs of
+   the initial disagreement field, `agree = 1 − 2N_ap/521`; both bases give a
+   **bit-identical** median `0.9366602687140115` with strata `[50392, 0, 0]`
+   — all blind — while differing sharply on every other arm. **T5:**
+   disagreement survives only through blind columns, verified on trajectories.
+   **This corrects the reading of result 18's open question.** The identity
+   exception is **not** about the base contributing no mixing: rule 51 flips
+   every cell every step and has the identical residual, while totalistic rule
+   0 heals every planted pair. Permanence 1.000 / 1.000 / 0.205 / 0.031 /
+   0.000 on 204 / 51 / 90 / 5 / {0, 22, 110, 30}. **Four bits of the base
+   decide it, not activity.** Do not repeat the activity reading.
+   Census: 20 bases × 7 arms × 208 completions = 4,160 evaluations; ten
+   controls first, all passing, in 170 s. `ρ` tracks pair survival at Spearman
+   **0.934**; all twelve `Π = 0` bases have `ρ ≤ 0.005` and `P(on) ≥ 0.95`.
+   **Failed bets, three of them the executing session's own.** (a) The
+   "base-indifferent grower floor of ~0.75", read post hoc off eight bases, is
+   **refuted** on twenty — bases 54 and 18 sit at 0.316 and 0.279. (b) The
+   stratum decomposition's **specificity fails**: the confined cell `K`, whose
+   residual it calls lit-governed, is ordered by pair survival at −0.454 where
+   `U++` is at −0.992 — the decomposition keeps its direction and loses its
+   clean form. This is the unit's most important negative and it exists only
+   because the `K` arm was restored against the draft, which had dropped it as
+   "not needed" while resting its central argument on it. (c) The **handed**
+   edge assignment (`e_G = β₁+β₃`, `e_G′ = β₂+β₄`) is **unsupported on this
+   panel, not refuted**: the two scores are identical on 13 of 20 bases
+   (Pearson 0.669), each grower is ordered slightly better by the *other*
+   score, and both discriminating within-base tests failed in the reversed
+   direction. (d) The dark-bit bet **reversed**: `D+` beats random on *active*
+   bases (mean +0.095) and loses on *frozen* ones (−0.037) — beam-frozen does
+   not mean dark-quiet, since the frozen bases carry among the highest
+   random-arm dark counts. Self-gated under Myk's suspended review gates;
+   protocol drafted by Fable 5.1, amended (K arm restored, integer control)
+   and executed by Opus 5.
+
 ## Checkpoint logs (read before continuing any workstream)
 
 A checkpoint is a dated statement of state: what a unit completed, what is

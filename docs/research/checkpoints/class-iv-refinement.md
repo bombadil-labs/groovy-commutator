@@ -266,3 +266,59 @@ this session to integrate, self-review and merge; every record below says so.
   hash-level provenance for the 2026-09-16 discriminator; that the
   refinement-depth conjecture is well posed beyond an explicitly restricted
   family (the trivial bolt-on lemma is recorded in the protocol).
+
+## Checkpoint 2026-09-18, seventh unit — the dense defect algebra
+
+**Completed.** The algebra of a dense configuration at height two, exact and
+finite. Every column's two reads land in a stratum decided by the two rows'
+three-cell popcount difference: `Δ = 0` exposed (base-owned), `|Δ| = 1` lit,
+`|Δ| ≥ 2` dark. The 64 six-bit windows give 8 trivially agreeing cases and 28
+unordered pairs — 6 exposed, 15 lit, 7 dark, **no mixed pair**. This
+*characterizes* the sixth unit's 8/14/10 entry partition rather than
+enumerating it. Ranks 11 and 7 over 24 free entries leave exactly 64
+completions (`U++`) satisfying every free constraint. Recorded as its own
+knowledge node, `dense-defect-stratification`, finding/exact.
+
+Census: 4,160 evaluations, 20 bases × 7 arms, 57.8 min off Actions. Ten
+controls first, all passing, in 170 s. **Held:** P1a, P1b, P2, P3a, P3b, P3c,
+P4d, P6a. **Failed:** P4c, P4e, P5, P6b, P7. P4a/P4b split (Spearman held,
+strict separation did not). P3c held at odds 0.55.
+
+**Exact facts to build on.** β-all-hold ⇔ totalistic (16 rules), and such a
+base with a `U++` completion collapses *any* state in one step — confirmed on
+0, 22, 232 × all 64, `agree = 1.000` exactly. Under 204 and 51 the residual is
+exactly the width-two anti-phase runs of the initial disagreement field, so
+`agree = 1 − 2N_ap/521`; both bases give a **bit-identical** median
+`0.9366602687140115` with strata `[50392, 0, 0]`, all blind. Disagreement
+survives only through blind columns (T5), verified on trajectories. `ρ` tracks
+pair survival at Spearman 0.934, and all twelve `Π = 0` bases have `ρ ≤ 0.005`.
+
+**Corrections this unit forced.**
+- The sixth unit's open question was framed around an identity exception the
+  coordinator read as "no mixing." **Wrong.** Rule 51 flips every cell every
+  step and has the identical residual; totalistic rule 0 heals everything.
+  Permanence 1.000 / 1.000 / 0.205 / 0.031 / 0.000 on 204 / 51 / 90 / 5 /
+  {0, 22, 110, 30}. Four bits of the base decide it, not activity.
+- The coordinator's "base-indifferent grower floor of ~0.75", read off eight
+  bases, is **refuted** on twenty: bases 54 and 18 sit at 0.316 and 0.279.
+
+**Do not infer.**
+- That the lit/blind split is clean. It is not: `K`, whose residual the
+  decomposition calls lit-governed, is ordered by pair survival at −0.454
+  where `U++` is at −0.992. The decomposition keeps its direction and loses
+  its clean form. This is the single most important negative here, and it
+  exists only because the `K` arm was restored against the draft.
+- That the handed edge assignment (`e_G = β₁+β₃`, `e_G′ = β₂+β₄`) is
+  established. The two scores are identical on 13 of 20 bases (Pearson 0.669),
+  each grower is ordered slightly better by the *other* score, and the two
+  discriminating within-base tests both failed in the reversed direction.
+  **Unsupported on this panel, not refuted** — the panel lacks the power.
+- That "frozen background" means "dark stratum matters." P6b reversed: `D+`
+  beats random on active bases (+0.095 mean) and loses on frozen ones
+  (−0.037). The frozen bases carry among the *highest* random-arm dark counts.
+- Anything about height three, other densities, other observers, or `M*`.
+
+**Open, and sharper than before.** What orders residence beyond the blind
+bits, given that the blind bits order everything measured here including `K`.
+Whether the handed assignment is real needs a panel where `e_G` and `e_G′`
+differ on many more than seven bases.
