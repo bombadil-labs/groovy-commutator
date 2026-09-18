@@ -120,8 +120,12 @@ def transverse(table, base_rule, u, complement=False):
     for rep in range(4):
         rng = np.random.default_rng(seed('transverse', u, rep))
         x = (rng.random(strip.WIDTH) < 0.5).astype(np.uint8)
-        for _ in range(256): x = eca_step(x, base_rule if not complement else base_rule)
+        # The conjugate beam state must be F_137^256(NOT x) = NOT F_110^256(x), so the
+        # complement is applied to the seed row BEFORE the burn, not after it. Applying
+        # it after gives NOT F_137^256(x), which is a different state, and the control
+        # then compares unmatched beam states.
         if complement: x = (1 - x).astype(np.uint8)
+        for _ in range(256): x = eca_step(x, base_rule)
         for o in rng.choice(strip.WIDTH, size=8, replace=False):
             st = np.vstack([x, x.copy()]); st[1, int(o)] ^= 1
             for t in range(1, 129):
@@ -240,6 +244,14 @@ def main():
             and ctrl['completions_disjoint']['ok'] and ctrl['step_covariance_exact']):
         raise SystemExit('controls failed')
 
+    print('matched null pairs (control, before any tier)...', flush=True)
+    nulls = matched_null_pairs(us)
+    if not all(r['identical_to_1e-9'] for r in nulls):
+        (OUT / 'controls_failed.json').write_text(json.dumps(
+            {'controls': ctrl, 'matched_null_pairs': nulls}, indent=1, allow_nan=False) + '\n')
+        raise SystemExit('matched null-pair control failed; see controls_failed.json')
+    print('matched null pairs pass', flush=True)
+
     t0 = time.time()
     chunks = lambda n, size: [list(range(i, min(i + size, n))) for i in range(0, n, size)]
     specs = ([('main', c, us) for c in chunks(N_COMPLETIONS, 8)]
@@ -249,8 +261,6 @@ def main():
         for i, rows in enumerate(pool.imap_unordered(job, specs, chunksize=1)):
             out += rows
             print(f'chunk {i+1}/{len(specs)} rows={len(out)} {time.time()-t0:.0f}s', flush=True)
-    print('matched null pairs...', flush=True)
-    nulls = matched_null_pairs(us)
     (OUT / 'controls.json').write_text(json.dumps(
         {'protocol': PROTOCOL, 'controls': ctrl, 'matched_null_pairs': nulls,
          'all_matched_identical': all(r['identical_to_1e-9'] for r in nulls),
