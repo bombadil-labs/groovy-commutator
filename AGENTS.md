@@ -1039,6 +1039,15 @@ workflow; research source and result changes now also trigger that workflow.
    as strong on the random arm, so the gadget's applicability does not by itself
    distinguish the confined arm. P7c is **zero of 36** — gadget class does not
    make residence additive.
+   **Correction, same day:** two frozen predictions of this unit, P3(d) and
+   P5(c), were **never scored** — no flank-change field in the rows, no key in
+   the evaluator — and the note and checkpoint originally reported them as
+   unsupported. Their status is **not evaluated**, and this unit gives **no
+   evidence either way on a base-only predictor** of the `K∃` position. The
+   implementation silently dropped two frozen predictions and the pilot test
+   caught only crashes, not incompleteness. **An evaluator must score every
+   frozen prediction or name the ones it does not and why, and a control must
+   assert the scored key set equals the frozen set.**
    **Process rules earned here.** *Verify on the adversarial cell, not a random
    draw* — uniform draws from the confined set are dominated by fast-healing
    classes, which is how two successive independence claims passed their checks
