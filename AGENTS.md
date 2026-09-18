@@ -991,6 +991,63 @@ workflow; research source and result changes now also trigger that workflow.
    protocol drafted by Fable 5.1, amended (K arm restored, integer control)
    and executed by Opus 5.
 
+20. **Permanent structures: the isolated-defect gadget is exact, and specificity
+   fails twice** (2026-09-18,
+   `docs/research/2026-09-18-permanent-structures.md`,
+   `experiments/permanent_structures_20260918/` →
+   `results/permanent_structures_20260918/`, 81 min, off Actions).
+   **Theorem (exact).** Residence is not a transient — the disagreement field is
+   already permanent when scoring begins. Under `A ∧ C` an isolated defect's west
+   flank reads `A(LL,L)`, the defect column `B(L,R)`, the east flank `C(R,RR)`,
+   and the columns two out are inert, so `(L, d₀, d₁, R)` is a **deterministic
+   16-state automaton with a 2-bit input** from the background. SAFE/DOOMED
+   partition the 57,344 confined refinements into **`K∀` 24,576 / `K∃` 28,672 /
+   `K⊥` 4,096**. Gadget against the real step: **0 mismatches of 22,270**. On the
+   four frozen-context bases (204, 51, 0, 8) iterating it predicts **every one of
+   6,144 transverse trials' healing step exactly**; across all 36 bases the
+   partition bounds extinction with **0 violations of 1,728**, every `K⊥` at
+   `T_ext = 1`, no SAFE-started trial ever healing. **T0:** `γ` is a function of
+   `β`, so the 256 rules are **16 blocks of 16**. **T1:** `|D_{t+1}| = Σ_p v_p
+   N_p(t)` exact at 0 of 512 — residence is affine in the 22 violation bits *at
+   fixed census*.
+   **Independence horizon.** Under `A ∧ C` the defect set never grows, but a
+   cluster perturbs the agreeing background (flanks take the forced values, not
+   the base's) and that perturbation travels at speed one: **two clusters
+   separated by `s` columns are independent for `t < s` and no further**. First
+   mismatch never precedes step `s` (minimum 4, 6, 8 at `s` = 4, 6, 8); none
+   within 128 steps once `s ≥ 12`. Established by refuting **two** successive
+   stronger claims — the draft's, and the executing session's own freeze
+   correction of it (15 violations of 72).
+   **Main positive:** residence **is** permanence on the confined arm — pooled
+   Spearman **−0.836**, ≤ −0.6 in every one of 36 bases.
+   **Main negative, and the one to carry:** the stratum decomposition's
+   **specificity fails a second time, under a test built to be fair to it**.
+   Result 19's P7 was *mis-formed* (`K ⊂ A ∧ C` inherits a blind term, so some
+   ordering was guaranteed). This unit subtracts the shared term by construction
+   and `K∀`'s **non-blind** term is still ordered by pair survival at **+0.829**
+   against a predicted `|ρ| ≤ 0.4`. The decomposition has direction, not
+   specificity. Do not restate it as specific.
+   **Failed bets.** P6 is a **design failure of the executing session**: a
+   36-base panel with 23 discriminating on `e_G ≠ e_G′` (against result 19's
+   seven) was chosen precisely to decide handedness, and returned **10 of 23
+   against a chance expectation of 11.5** — no signal, yet inside the
+   pre-registered "unsupported" band rather than the ≤ 9 called a refutation.
+   Handedness is **not refuted**; the banding left a dead zone. P3c failed **not
+   on its named risk** (51 vs 90 behaved as predicted at 0.859 vs 1.0; bases 50
+   and 178 broke it at 0.8125). P3b **inverted** (`K∃` spread 0.188 < `K∀` 0.297,
+   ratio 0.63 against ≥ 2). P4b failed at 12 of 36 — the relationship is nearly
+   as strong on the random arm, so the gadget's applicability does not by itself
+   distinguish the confined arm. P7c is **zero of 36** — gadget class does not
+   make residence additive.
+   **Process rules earned here.** *Verify on the adversarial cell, not a random
+   draw* — uniform draws from the confined set are dominated by fast-healing
+   classes, which is how two successive independence claims passed their checks
+   and died in the control. *Test the evaluator against pilot rows before calling
+   it frozen* (result 19's was committed untested and crashed on load). *Stage
+   results directories by path while a run is in flight*, never `git add -A`.
+   Self-gated under Myk's suspended review gates; protocol drafted by Fable 5.1,
+   amended (independence radius, later itself refuted) and executed by Opus 5.
+
 ## Checkpoint logs (read before continuing any workstream)
 
 A checkpoint is a dated statement of state: what a unit completed, what is

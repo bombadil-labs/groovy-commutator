@@ -322,3 +322,71 @@ pair survival at Spearman 0.934, and all twelve `Π = 0` bases have `ρ ≤ 0.00
 bits, given that the blind bits order everything measured here including `K`.
 Whether the handed assignment is real needs a panel where `e_G` and `e_G′`
 differ on many more than seven bases.
+
+## Checkpoint 2026-09-18, eighth unit — permanent structures
+
+**Completed.** The isolated-defect gadget, exact. Under `A ∧ C` an isolated
+defect is a deterministic 16-state automaton with a 2-bit input from the
+background; SAFE/DOOMED partition the 57,344 confined refinements into
+`K∀` 24,576 / `K∃` 28,672 / `K⊥` 4,096. Gadget against real dynamics: **0
+mismatches of 22,270**. On the four frozen-context bases, **0 mismatches of
+6,144** transverse trials — every healing step predicted exactly. Bounds: **0
+violations of 1,728**, every `K⊥` at `T_ext = 1`, no SAFE-started trial ever
+healing. Two new knowledge nodes, both `finding/exact`:
+`isolated-defect-gadget`, `independence-horizon`.
+
+Census: 3,744 evaluations, 36 bases × 7 arms, 81.2 min off Actions, twelve
+controls first. **Held:** P1, P2, P3a, P4 (both), P5a, P7b. **Failed:** P3b,
+P3c, P4b, P5b, P6, P7c.
+
+**Exact facts to build on.** `T0`: `γ` is a function of `β`, so the 256 rules
+are 16 blocks of 16 and a base's exposed contribution is four bits. `T1`:
+`|D_{t+1}| = Σ_p v_p N_p(t)` exact at 0 of 512 — residence is affine in the 22
+free violation bits *at fixed census*, which is why additivity fails in
+practice. The independence horizon: clusters separated by `s` columns are
+independent for `t < s`, no fixed separation giving all-time independence.
+
+**The positive.** Residence is permanence on the confined arm: pooled Spearman
+**−0.836**, and ≤ −0.6 in every one of 36 bases.
+
+**The negative, and it is the important one.** The stratum decomposition's
+**specificity fails twice**. The seventh unit's P7 was mis-formed (`K ⊂ A ∧ C`
+inherits a blind term, so some ordering was guaranteed). This unit re-formed it
+to subtract the shared term by construction — and `K∀`'s *non-blind* term is
+ordered by pair survival at **+0.829** against a predicted `|ρ| ≤ 0.4`. The
+decomposition keeps its direction and does not have the specificity two
+successive readings looked for.
+
+**Corrections this unit forced.**
+- The draft's 1-cluster independence claim was false; **so was my freeze
+  correction of it** (2-clusters at separation ≥ 3), refuted 15 of 72. Both
+  recorded in a dated protocol addendum written before any tier ran. The
+  dense-union clause was withdrawn from T3 and P1.
+- P3c failed **not on its named risk**: 51 vs 90 behaved as predicted (0.859 vs
+  1.0); bases 50 and 178 broke it at 0.8125, below the frozen anchors.
+- P3b **inverted**: `K∃` is *less* spread across bases (0.188) than `K∀`
+  (0.297), ratio 0.63 against a predicted ≥ 2.
+
+**Do not infer.**
+- That handedness is refuted. **P6 is my design failure**: I built a 36-base
+  panel with 23 discriminating (against seven) precisely to decide it, and got
+  **10 of 23 against a chance expectation of 11.5** — no signal, but inside the
+  band I had pre-registered as "unsupported" rather than the ≤ 9 I had called a
+  refutation. The frozen verdict word stands; the point estimate is chance. My
+  banding left the dead zone, not the panel size.
+- That the gadget explains the confined arm *specifically*. **P4b failed at 12
+  of 36**: the residence/permanence relationship is nearly as strong on the
+  random arm, so formal applicability of the gadget does not by itself
+  distinguish the arms.
+- That gadget class makes residence additive: **P7c is zero of 36 bases**.
+- Anything about height three, other densities, other observers, or `M*`.
+
+**Open.** Why the blind bits order the non-blind residual. Two correctly-formed
+attempts at a base-only predictor (P3d, P5c) are unsupported, so whatever sets
+the `K∃` position is not summarised by any one-step 1D statistic tried so far.
+
+**Process, carried forward.** Verify on the adversarial cell, not a random
+draw — the reason two successive independence claims survived their checks and
+died in the control. Test the evaluator against pilot rows before calling it
+frozen (debt from the seventh unit, cleared here). Stage results directories by
+path while a run is in flight, never `git add -A`.

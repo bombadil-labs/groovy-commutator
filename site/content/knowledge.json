@@ -2646,6 +2646,24 @@
    "research": [
     "dense-defect-algebra-20260918"
    ]
+  },
+  {
+   "source": "isolated-defect-gadget",
+   "type": "depends_on",
+   "target": "dense-defect-stratification",
+   "reason": "The gadget's three reads are the A, B and C constraint pairs of the lit stratum, and the columns two out being inert is the stratification's exposed case; without the popcount stratification there is no reason the perturbed reads land where they do.",
+   "research": [
+    "permanent-structures-20260918"
+   ]
+  },
+  {
+   "source": "independence-horizon",
+   "type": "depends_on",
+   "target": "isolated-defect-gadget",
+   "reason": "The horizon is a statement about how a cluster's forced flank values differ from the base's own, which is exactly what the gadget's A and C reads specify.",
+   "research": [
+    "permanent-structures-20260918"
+   ]
   }
  ],
  "nodes": [
@@ -5049,6 +5067,30 @@
    ],
    "updated": "2026-09-18",
    "source": "docs/knowledge/dense-defect-stratification.md"
+  },
+  {
+   "id": "isolated-defect-gadget",
+   "title": "An isolated defect under confinement is a sixteen-state automaton with a two-bit input",
+   "summary": "When a refinement satisfies the two edge constraints, an isolated defect's west flank reads the A pair, the defect column the B pair, and the east flank the C pair, while the columns two out read exposed entries with agreeing windows. The state (west, the two row values, east) therefore evolves deterministically under a two-bit input supplied by the background. The greatest input-closed set of defect states (SAFE) and the least set closed under every input leading into it (DOOMED) partition the 57,344 confined refinements into 24,576 with a SAFE state, 28,672 with neither, and 4,096 entirely DOOMED. Verified against the real step with zero mismatches of 22,270. On the four bases whose background is frozen the input sequence is fixed by the base alone, and iterating the automaton predicts every one of 6,144 transverse trials' healing step exactly; across all 36 bases the partition bounds the extinction fraction with zero violations of 1,728.",
+   "kind": "finding",
+   "status": "exact",
+   "updated": "2026-09-18",
+   "source": "docs/knowledge/isolated-defect-gadget.md",
+   "research": [
+    "permanent-structures-20260918"
+   ]
+  },
+  {
+   "id": "independence-horizon",
+   "title": "Two defect clusters are independent only for as many steps as they are columns apart",
+   "summary": "Under the confinement constraints the defect set never grows, but a cluster perturbs the agreeing background around it, because its flanks take the values the constraint pairs force rather than the values the base rule would produce. That perturbation travels at speed one, so two clusters separated by s agreeing columns evolve independently for t < s and not beyond: the first mismatch between the joint field and the union of isolated ones never precedes step s (minimum 4, 6, 8 at s = 4, 6, 8), and does not appear within 128 steps once s is at least 12. No fixed separation gives all-time independence. Established by refuting two successive stronger claims, the second made by the executing session at freeze; the refuting check used a persistent cell rather than a uniform draw, which is why earlier verification missed it.",
+   "kind": "finding",
+   "status": "exact",
+   "updated": "2026-09-18",
+   "source": "docs/knowledge/independence-horizon.md",
+   "research": [
+    "permanent-structures-20260918"
+   ]
   }
  ],
  "schemaVersion": 1

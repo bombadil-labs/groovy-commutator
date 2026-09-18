@@ -55,6 +55,15 @@ REGISTRY = {
         'families': 'results/forced_tables_20260917/families.json',
         'regime_join': 'results/forced_tables_20260917/regime_join.json',
         'd3_panel': 'results/forced_tables_20260917/d3_panel.json'},
+    'results/permanent_structures_20260918/summary.json': {
+        'protocol': 'docs/research/protocols/2026-09-18-permanent-structures.md',
+        'run': 'experiments/permanent_structures_20260918/run.py',
+        'evaluate': 'experiments/permanent_structures_20260918/evaluate.py',
+        'rows': 'results/permanent_structures_20260918/rows.json',
+        'controls': 'results/permanent_structures_20260918/controls.json',
+        'gadget': 'results/permanent_structures_20260918/gadget.json',
+        'algebra': 'results/permanent_structures_20260918/algebra.json',
+        'pairs': 'results/permanent_structures_20260918/pairs.json'},
     'results/dense_defect_algebra_20260918/summary.json': {
         'protocol': 'docs/research/protocols/2026-09-18-dense-defect-algebra.md',
         'run': 'experiments/dense_defect_algebra_20260918/run.py',

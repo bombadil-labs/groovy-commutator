@@ -102,7 +102,11 @@ of the ordering is not resolved at 128 rules per fiber.
    what orders beam residence beyond the blind bits, given that they order
    even the cell the stratum decomposition predicts they should not; and
    whether the handed edge assignment survives a panel where the two erosion
-   scores differ on more than seven of twenty bases.)*
+   scores differ on more than seven of twenty bases.)* **(Unit XII answered the
+   first and not the second: isolated-defect permanence orders dense-start
+   residence at pooled −0.836, but the stratum decomposition's specificity fails
+   a second time under a correctly-formed test, and a 23-base discriminating
+   panel returned exactly chance on handedness.)**
 3. **Observer-covariant retention**: replace `R*` by the unstandardized gap
    plus within-fiber residual so the statistic transports under known
    coarse-grainings.
