@@ -11,11 +11,11 @@ reported alongside it. This is a faithful reading of the frozen clause, fixed
 here before the run, not a post hoc choice.
 """
 from __future__ import annotations
-import json, math, statistics as st
+import hashlib, json, math, statistics as st
 from pathlib import Path
 import numpy as np
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 RES = ROOT / 'results/dense_defect_algebra_20260918'
 BASES = [110, 54, 22, 5, 30, 90, 0, 204, 106, 232, 8, 18, 46, 33, 62, 29, 51, 37, 45, 27]
 FROZEN_BASES = [0, 204, 232, 8]
@@ -180,6 +180,19 @@ def main():
                            'random_median_spread': {'sd': float(np.std(rmed)), 'range': [min(rmed), max(rmed)]}},
            'algebra': {k: alg[k] for k in ('agreeing_windows','n_pairs','rank_lit','rank_dark','n_components','n_Upp','totalistic')},
            'n_rows': len(rows)}
+    # Provenance for the fast integrity tier: SHA-256 of the verifier and every
+    # input this summary was computed from. Keys must match the REGISTRY entry
+    # in scripts/check_result_integrity.py exactly.
+    def sha(rel):
+        return hashlib.sha256((ROOT/rel).read_bytes()).hexdigest()
+    out['source_hashes'] = {
+        'protocol': sha('docs/research/protocols/2026-09-18-dense-defect-algebra.md'),
+        'run': sha('experiments/dense_defect_algebra_20260918/run.py'),
+        'evaluate': sha('experiments/dense_defect_algebra_20260918/evaluate.py'),
+        'rows': sha('results/dense_defect_algebra_20260918/rows.json'),
+        'controls': sha('results/dense_defect_algebra_20260918/controls.json'),
+        'pairs': sha('results/dense_defect_algebra_20260918/pairs.json'),
+        'algebra': sha('results/dense_defect_algebra_20260918/algebra.json')}
     (RES/'summary.json').write_text(json.dumps(out, indent=1, default=str))
 
     print(f'rows {len(rows)}')
