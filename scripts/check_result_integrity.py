@@ -55,15 +55,6 @@ REGISTRY = {
         'families': 'results/forced_tables_20260917/families.json',
         'regime_join': 'results/forced_tables_20260917/regime_join.json',
         'd3_panel': 'results/forced_tables_20260917/d3_panel.json'},
-    'results/held_structures_20260918/summary.json': {
-        'protocol': 'docs/research/protocols/2026-09-18-held-structures.md',
-        'run': 'experiments/held_structures_20260918/run.py',
-        'evaluate': 'experiments/held_structures_20260918/evaluate.py',
-        'rows': 'results/held_structures_20260918/rows.json',
-        'controls': 'results/held_structures_20260918/controls.json',
-        'gadget': 'results/held_structures_20260918/gadget.json',
-        'algebra': 'results/held_structures_20260918/algebra.json',
-        'pairs': 'results/held_structures_20260918/pairs.json'},
     'results/permanent_structures_20260918/summary.json': {
         'protocol': 'docs/research/protocols/2026-09-18-permanent-structures.md',
         'run': 'experiments/permanent_structures_20260918/run.py',
