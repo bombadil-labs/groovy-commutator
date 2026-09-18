@@ -97,7 +97,12 @@ of the ordering is not resolved at 128 rules per fiber.
    null, identity and additive bases. Rule 110 has an empty fiber in this
    family; that is a finding, not an omission.
 2. **Anisotropic families for 110**: define a restriction map with nonempty
-   fibers over non-symmetric ECAs and repeat.
+   fibers over non-symmetric ECAs and repeat. *(Done — handed family, units
+   V–XI. The dense defect algebra at unit XI leaves the open question as:
+   what orders beam residence beyond the blind bits, given that they order
+   even the cell the stratum decomposition predicts they should not; and
+   whether the handed edge assignment survives a panel where the two erosion
+   scores differ on more than seven of twenty bases.)*
 3. **Observer-covariant retention**: replace `R*` by the unstandardized gap
    plus within-fiber residual so the statistic transports under known
    coarse-grainings.

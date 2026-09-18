@@ -1,210 +1,230 @@
 [
-  {
-    "slug": "cross-dimensional-class4-20260917",
-    "label": "Class-IV refinement I",
-    "title": "Generic 2D soup is not a simple continuation of the ECA phenotype",
-    "date": "2026-09-17",
-    "updated": "2026-09-17",
-    "kind": "Experiment",
-    "evidence": "exploratory",
-    "topic": "Class-IV refinement",
-    "summary": "A dimension-neutral persistence \u00d7 spreading surrogate keeps the ECA controls but does not place Life, HighLife and Day & Night in one stable quadrant across densities. The exact HighLife width-one = Rule 54 bridge shows the retention statistic is observer-relative while history gain and spreading transport exactly; height-one strips forget twelve of eighteen Life-like rule bits and height two recovers all of them.",
-    "takeaway": "Selective retention is a statistic of dynamics, observation map and reference ensemble together; a lower-dimensional presentation can be an exact quotient that hides rule distinctions.",
-    "source": "docs/research/2026-09-17-cross-dimensional-class4.md",
-    "promotion": {
-      "stage": "research"
-    },
-    "related": [
-      "strip-spectrum-20260917",
-      "selective-persistence-discriminator-20260916",
-      "beam-discriminator-loop-20260915"
-    ]
+ {
+  "slug": "cross-dimensional-class4-20260917",
+  "label": "Class-IV refinement I",
+  "title": "Generic 2D soup is not a simple continuation of the ECA phenotype",
+  "date": "2026-09-17",
+  "updated": "2026-09-17",
+  "kind": "Experiment",
+  "evidence": "exploratory",
+  "topic": "Class-IV refinement",
+  "summary": "A dimension-neutral persistence \u00d7 spreading surrogate keeps the ECA controls but does not place Life, HighLife and Day & Night in one stable quadrant across densities. The exact HighLife width-one = Rule 54 bridge shows the retention statistic is observer-relative while history gain and spreading transport exactly; height-one strips forget twelve of eighteen Life-like rule bits and height two recovers all of them.",
+  "takeaway": "Selective retention is a statistic of dynamics, observation map and reference ensemble together; a lower-dimensional presentation can be an exact quotient that hides rule distinctions.",
+  "source": "docs/research/2026-09-17-cross-dimensional-class4.md",
+  "promotion": {
+   "stage": "research"
   },
-  {
-    "slug": "strip-spectrum-20260917",
-    "label": "Class-IV refinement II",
-    "title": "When added transverse freedom reveals and changes a Life-like rule",
-    "date": "2026-09-17",
-    "updated": "2026-09-17",
-    "kind": "Experiment with exact restriction statements",
-    "evidence": "exploratory",
-    "topic": "Class-IV refinement",
-    "summary": "On periodic strips of height 1 to 16, persistence and spreading are strongly non-monotone in height and ensemble-sensitive; Life and B35/S236 are the same rule at height one and diverge after one update at height two; the selective-surprisal gap decomposes exactly into a coarse-visible term and a within-fiber residual.",
-    "takeaway": "Strip height behaves like a representation scale, not a complexity knob; distinctions erased by a quotient can be kept as residual coordinates.",
-    "source": "docs/research/2026-09-17-strip-spectrum.md",
-    "promotion": {
-      "stage": "candidate",
-      "idea": "A one-dimensional shadow can hide most of a two-dimensional rule",
-      "destination": "Concepts"
-    },
-    "related": [
-      "cross-dimensional-class4-20260917"
-    ]
+  "related": [
+   "strip-spectrum-20260917",
+   "selective-persistence-discriminator-20260916",
+   "beam-discriminator-loop-20260915"
+  ]
+ },
+ {
+  "slug": "strip-spectrum-20260917",
+  "label": "Class-IV refinement II",
+  "title": "When added transverse freedom reveals and changes a Life-like rule",
+  "date": "2026-09-17",
+  "updated": "2026-09-17",
+  "kind": "Experiment with exact restriction statements",
+  "evidence": "exploratory",
+  "topic": "Class-IV refinement",
+  "summary": "On periodic strips of height 1 to 16, persistence and spreading are strongly non-monotone in height and ensemble-sensitive; Life and B35/S236 are the same rule at height one and diverge after one update at height two; the selective-surprisal gap decomposes exactly into a coarse-visible term and a within-fiber residual.",
+  "takeaway": "Strip height behaves like a representation scale, not a complexity knob; distinctions erased by a quotient can be kept as residual coordinates.",
+  "source": "docs/research/2026-09-17-strip-spectrum.md",
+  "promotion": {
+   "stage": "candidate",
+   "idea": "A one-dimensional shadow can hide most of a two-dimensional rule",
+   "destination": "Concepts"
   },
-  {
-    "slug": "jev-class4-scout-20260916",
-    "label": "Class-IV refinement III",
-    "title": "Jev as a semantic feature scout for the 54/110 phenotype",
-    "date": "2026-09-17",
-    "updated": "2026-09-17",
-    "kind": "Record of an executed probe",
-    "evidence": "exploratory",
-    "topic": "Class-IV refinement",
-    "summary": "Shown anonymous primitive measurements of 88 ECA representatives, Jev's persistence-across-conditions and selective-memory judgements rank 54 and 110 with AUC 1.0 against Class III and only Class-II confounders; an opaque control does not reproduce this. The matched codebook ablation reproduces J1, J3 and J5 with operational definitions alone and weakens J4.",
-    "takeaway": "A judgement model can point at a mechanism worth distilling; the science then lives in the transparent statistic, not in the model.",
-    "source": "docs/research/2026-09-17-jev-class4-scout-record.md",
-    "promotion": {
-      "stage": "research"
-    },
-    "related": [
-      "selective-persistence-discriminator-20260916",
-      "class4-independent-20260915"
-    ]
+  "related": [
+   "cross-dimensional-class4-20260917"
+  ]
+ },
+ {
+  "slug": "jev-class4-scout-20260916",
+  "label": "Class-IV refinement III",
+  "title": "Jev as a semantic feature scout for the 54/110 phenotype",
+  "date": "2026-09-17",
+  "updated": "2026-09-17",
+  "kind": "Record of an executed probe",
+  "evidence": "exploratory",
+  "topic": "Class-IV refinement",
+  "summary": "Shown anonymous primitive measurements of 88 ECA representatives, Jev's persistence-across-conditions and selective-memory judgements rank 54 and 110 with AUC 1.0 against Class III and only Class-II confounders; an opaque control does not reproduce this. The matched codebook ablation reproduces J1, J3 and J5 with operational definitions alone and weakens J4.",
+  "takeaway": "A judgement model can point at a mechanism worth distilling; the science then lives in the transparent statistic, not in the model.",
+  "source": "docs/research/2026-09-17-jev-class4-scout-record.md",
+  "promotion": {
+   "stage": "research"
   },
-  {
-    "slug": "selective-persistence-discriminator-20260916",
-    "label": "Class-IV refinement IV",
-    "title": "Selective predictive persistence \u00d7 spreading: the recovered discriminator record",
-    "date": "2026-09-17",
-    "updated": "2026-09-17",
-    "kind": "Record of a prospective finite result with partial provenance",
-    "evidence": "exploratory",
-    "topic": "Class-IV refinement",
-    "summary": "S = max(0,R)\u00b7max(0,M) with S > 0.20 and \u03b1_512 > 0.50, frozen before fresh simulation, selects 54/110 in 10/10 decisions and 0/420 undisputed negatives across five fresh conditions, rejecting 41/106 and a radius-two rare-correction adversary. The report and tables survive; the protocol, runner and canonical JSON bytes do not.",
-    "takeaway": "A finite discriminator for the 54/110 core phenotype, not a Wolfram-class classifier, and recorded at the provenance level it can support.",
-    "source": "docs/research/2026-09-17-selective-persistence-discriminator-record.md",
-    "promotion": {
-      "stage": "research"
-    },
-    "related": [
-      "jev-class4-scout-20260916",
-      "beam-discriminator-loop-20260915",
-      "class4-independent-20260915"
-    ]
+  "related": [
+   "selective-persistence-discriminator-20260916",
+   "class4-independent-20260915"
+  ]
+ },
+ {
+  "slug": "selective-persistence-discriminator-20260916",
+  "label": "Class-IV refinement IV",
+  "title": "Selective predictive persistence \u00d7 spreading: the recovered discriminator record",
+  "date": "2026-09-17",
+  "updated": "2026-09-17",
+  "kind": "Record of a prospective finite result with partial provenance",
+  "evidence": "exploratory",
+  "topic": "Class-IV refinement",
+  "summary": "S = max(0,R)\u00b7max(0,M) with S > 0.20 and \u03b1_512 > 0.50, frozen before fresh simulation, selects 54/110 in 10/10 decisions and 0/420 undisputed negatives across five fresh conditions, rejecting 41/106 and a radius-two rare-correction adversary. The report and tables survive; the protocol, runner and canonical JSON bytes do not.",
+  "takeaway": "A finite discriminator for the 54/110 core phenotype, not a Wolfram-class classifier, and recorded at the provenance level it can support.",
+  "source": "docs/research/2026-09-17-selective-persistence-discriminator-record.md",
+  "promotion": {
+   "stage": "research"
   },
-  {
-    "slug": "fiber-census-20260917",
-    "label": "Class-IV refinement V",
-    "title": "The height-one fiber of Rule 54 is enriched in the persistence \u00d7 spreading phenotype",
-    "date": "2026-09-17",
-    "updated": "2026-09-17",
-    "kind": "Experiment",
-    "evidence": "exploratory",
-    "topic": "Class-IV refinement",
-    "summary": "Sampling 512 Life-like rules from each height-one fiber of ECAs 54, 22, 90, 204 and 0 and measuring at height two, the both-positive fraction is 0.47, 0.37, 0.25, 0.22 and 0.07. Fibers differ, fiber(54) is enriched, HighLife and Life are typical members of their fibers; the bet that fiber(22) splits into Life-like and explosive halves failed (72% ballistic).",
-    "takeaway": "Under one fixed contract a source rule predicts the phenotype distribution of its refinements; whether that is more than the activity its six fixed bits impose is the next control.",
-    "source": "docs/research/2026-09-17-fiber-census.md",
-    "promotion": {
-      "stage": "research"
-    },
-    "related": [
-      "strip-spectrum-20260917",
-      "cross-dimensional-class4-20260917",
-      "selective-persistence-discriminator-20260916"
-    ]
+  "related": [
+   "jev-class4-scout-20260916",
+   "beam-discriminator-loop-20260915",
+   "class4-independent-20260915"
+  ]
+ },
+ {
+  "slug": "fiber-census-20260917",
+  "label": "Class-IV refinement V",
+  "title": "The height-one fiber of Rule 54 is enriched in the persistence \u00d7 spreading phenotype",
+  "date": "2026-09-17",
+  "updated": "2026-09-17",
+  "kind": "Experiment",
+  "evidence": "exploratory",
+  "topic": "Class-IV refinement",
+  "summary": "Sampling 512 Life-like rules from each height-one fiber of ECAs 54, 22, 90, 204 and 0 and measuring at height two, the both-positive fraction is 0.47, 0.37, 0.25, 0.22 and 0.07. Fibers differ, fiber(54) is enriched, HighLife and Life are typical members of their fibers; the bet that fiber(22) splits into Life-like and explosive halves failed (72% ballistic).",
+  "takeaway": "Under one fixed contract a source rule predicts the phenotype distribution of its refinements; whether that is more than the activity its six fixed bits impose is the next control.",
+  "source": "docs/research/2026-09-17-fiber-census.md",
+  "promotion": {
+   "stage": "research"
   },
-  {
-    "slug": "fiber-census-64-20260917",
-    "label": "Class-IV refinement VI",
-    "title": "The fiber phenotype is not additive in the six exposed bits",
-    "date": "2026-09-17",
-    "updated": "2026-09-17",
-    "kind": "Experiment",
-    "evidence": "exploratory",
-    "topic": "Class-IV refinement",
-    "summary": "All 64 height-one fibers, 128 rules each, at height two: a logistic model with pairwise interactions between the six exposed bits predicts both-positive and spreading fractions better out of sample than main effects alone (LRT p ~ 1e-33; LOO 0.527 vs 0.534), with birth-survival pairs as the strongest terms; persistence is additive out of sample. The affine bases are not special; the 0/90 ordering did not replicate.",
-    "takeaway": "On the spreading axis the base rule acts as a whole on its refinements; on the persistence axis its bits act independently.",
-    "source": "docs/research/2026-09-17-fiber-census-64.md",
-    "promotion": {
-      "stage": "research"
-    },
-    "related": [
-      "fiber-census-20260917",
-      "strip-spectrum-20260917"
-    ]
+  "related": [
+   "strip-spectrum-20260917",
+   "cross-dimensional-class4-20260917",
+   "selective-persistence-discriminator-20260916"
+  ]
+ },
+ {
+  "slug": "fiber-census-64-20260917",
+  "label": "Class-IV refinement VI",
+  "title": "The fiber phenotype is not additive in the six exposed bits",
+  "date": "2026-09-17",
+  "updated": "2026-09-17",
+  "kind": "Experiment",
+  "evidence": "exploratory",
+  "topic": "Class-IV refinement",
+  "summary": "All 64 height-one fibers, 128 rules each, at height two: a logistic model with pairwise interactions between the six exposed bits predicts both-positive and spreading fractions better out of sample than main effects alone (LRT p ~ 1e-33; LOO 0.527 vs 0.534), with birth-survival pairs as the strongest terms; persistence is additive out of sample. The affine bases are not special; the 0/90 ordering did not replicate.",
+  "takeaway": "On the spreading axis the base rule acts as a whole on its refinements; on the persistence axis its bits act independently.",
+  "source": "docs/research/2026-09-17-fiber-census-64.md",
+  "promotion": {
+   "stage": "research"
   },
-  {
-    "slug": "handed-fiber-census-20260917",
-    "label": "Class-IV refinement VII",
-    "title": "Rule 110 gets a fiber, and it is enriched; chirality is not detectable",
-    "date": "2026-09-17",
-    "updated": "2026-09-17",
-    "kind": "Experiment",
-    "evidence": "exploratory",
-    "topic": "Class-IV refinement",
-    "summary": "A handed family (centre, west neighbour, count of the other seven) whose height-one restriction is a coordinate projection onto all 256 ECAs, every fiber 2^24 rules, so 110 finally has one. Panel of nine fibers at 256 rules each plus all 256 fibers at twelve: fiber(110) is both-positive at 0.543, tied at the top with its mirror 124 and with 54, and far above 30 (0.273). The enrichment is on the persistence axis, not spreading: fibers 22 and 30 spread more and still fall far below. A base's own 1D phenotype predicts its fiber's on both axes across all 256 bases. The mirror fiber 124 is indistinguishable from 110, so chirality is not detectable. The null-pair calibration rejected by chance and was itself mis-designed; a matched-seed control shows the implementation is exactly complement-covariant to 1e-15.",
-    "takeaway": "The height-one quotient at 110 predicts enrichment of its preimages, and marking a direction changes which rules are in a fiber without changing what the fiber is like.",
-    "source": "docs/research/2026-09-17-handed-fiber-census.md",
-    "promotion": {
-      "stage": "research"
-    },
-    "related": [
-      "fiber-census-64-20260917",
-      "fiber-census-20260917",
-      "strip-spectrum-20260917"
-    ]
+  "related": [
+   "fiber-census-20260917",
+   "strip-spectrum-20260917"
+  ]
+ },
+ {
+  "slug": "handed-fiber-census-20260917",
+  "label": "Class-IV refinement VII",
+  "title": "Rule 110 gets a fiber, and it is enriched; chirality is not detectable",
+  "date": "2026-09-17",
+  "updated": "2026-09-17",
+  "kind": "Experiment",
+  "evidence": "exploratory",
+  "topic": "Class-IV refinement",
+  "summary": "A handed family (centre, west neighbour, count of the other seven) whose height-one restriction is a coordinate projection onto all 256 ECAs, every fiber 2^24 rules, so 110 finally has one. Panel of nine fibers at 256 rules each plus all 256 fibers at twelve: fiber(110) is both-positive at 0.543, tied at the top with its mirror 124 and with 54, and far above 30 (0.273). The enrichment is on the persistence axis, not spreading: fibers 22 and 30 spread more and still fall far below. A base's own 1D phenotype predicts its fiber's on both axes across all 256 bases. The mirror fiber 124 is indistinguishable from 110, so chirality is not detectable. The null-pair calibration rejected by chance and was itself mis-designed; a matched-seed control shows the implementation is exactly complement-covariant to 1e-15.",
+  "takeaway": "The height-one quotient at 110 predicts enrichment of its preimages, and marking a direction changes which rules are in a fiber without changing what the fiber is like.",
+  "source": "docs/research/2026-09-17-handed-fiber-census.md",
+  "promotion": {
+   "stage": "research"
   },
-  {
-    "slug": "matched-completion-20260918",
-    "label": "Class-IV refinement VIII",
-    "title": "The base sets history gain, the completion sets retention",
-    "date": "2026-09-18",
-    "updated": "2026-09-18",
-    "kind": "Experiment",
-    "evidence": "exploratory",
-    "topic": "Class-IV refinement",
-    "summary": "Persistence decomposes into retention and history gain, and a matched grid separates them. Because the height-one restriction is a coordinate projection, a completion is one object shared by every fiber, so the base can be varied with the completion and every seed held fixed. Eight bases x 512 completions: history gain is base-dominated (variance component 0.040 against 0.012) and retention completion-dominated (0.022 against 0.035); holding the completion fixed, 110 beats 30 on history gain for 87% of completions with a null retention difference. History gain anticorrelates between distant bases (Spearman -0.414 for 110 against 30) rather than merely failing to transfer, and no linear model on the 24 completion bits predicts it at all. At height four the persistence-only control overtakes 110, so history-gain inheritance tracks 1D history gain rather than Class-IV-ness.",
-    "takeaway": "The source rule confers history gain and the refinement chooses its own retention; the conferral is visible in the base's one-dimensional history gain, not in its class.",
-    "source": "docs/research/2026-09-18-matched-completion-persistence.md",
-    "promotion": {
-      "stage": "research"
-    },
-    "related": [
-      "handed-fiber-census-20260917",
-      "fiber-census-64-20260917",
-      "selective-persistence-discriminator-20260916"
-    ]
+  "related": [
+   "fiber-census-64-20260917",
+   "fiber-census-20260917",
+   "strip-spectrum-20260917"
+  ]
+ },
+ {
+  "slug": "matched-completion-20260918",
+  "label": "Class-IV refinement VIII",
+  "title": "The base sets history gain, the completion sets retention",
+  "date": "2026-09-18",
+  "updated": "2026-09-18",
+  "kind": "Experiment",
+  "evidence": "exploratory",
+  "topic": "Class-IV refinement",
+  "summary": "Persistence decomposes into retention and history gain, and a matched grid separates them. Because the height-one restriction is a coordinate projection, a completion is one object shared by every fiber, so the base can be varied with the completion and every seed held fixed. Eight bases x 512 completions: history gain is base-dominated (variance component 0.040 against 0.012) and retention completion-dominated (0.022 against 0.035); holding the completion fixed, 110 beats 30 on history gain for 87% of completions with a null retention difference. History gain anticorrelates between distant bases (Spearman -0.414 for 110 against 30) rather than merely failing to transfer, and no linear model on the 24 completion bits predicts it at all. At height four the persistence-only control overtakes 110, so history-gain inheritance tracks 1D history gain rather than Class-IV-ness.",
+  "takeaway": "The source rule confers history gain and the refinement chooses its own retention; the conferral is visible in the base's one-dimensional history gain, not in its class.",
+  "source": "docs/research/2026-09-18-matched-completion-persistence.md",
+  "promotion": {
+   "stage": "research"
   },
-  {
-    "slug": "beam-mechanism-20260918",
-    "label": "Class-IV refinement IX",
-    "title": "The invariant beam: why history gain anticorrelates between rules",
-    "date": "2026-09-18",
-    "updated": "2026-09-18",
-    "kind": "Theorem and experiment",
-    "evidence": "exact",
-    "topic": "Class-IV refinement",
-    "summary": "On a height-two strip the vertical wrap makes an equal-row state read only the table entries the base rule fixes, so the equal-row set is exactly invariant under every rule of the handed family and the strip is the base rule on it. That turns history gain into a mixture: the base's own one-dimensional value on this beam, a completion-set value off it. Beam proximity is therefore a shared mediator to which bases respond with the sign of their own gain minus the off-beam value, which is why the same completion helps one rule and hurts another. Measured on sixteen bases and 256 fresh completions: the anticorrelation replicates at -0.341 and reverses to +0.204 when conditioned on proximity; proximity transfers on every one of the 120 pairs; the response ordering against one-dimensional gain is 0.960; on-beam medians equal the one-dimensional values while off-beam medians sit in a base-indifferent band. The anticorrelation vanishes at height three because nearly everything sits on the beam there and the mixture degenerates.",
-    "takeaway": "An exactly invariant set where the refinement is powerless makes the source rule's own memory leak through, and the sign of each rule's response to it is what produces the anticorrelation.",
-    "source": "docs/research/2026-09-18-beam-mechanism.md",
-    "promotion": {
-      "stage": "research"
-    },
-    "related": [
-      "matched-completion-20260918",
-      "handed-fiber-census-20260917",
-      "strip-spectrum-20260917"
-    ]
+  "related": [
+   "handed-fiber-census-20260917",
+   "fiber-census-64-20260917",
+   "selective-persistence-discriminator-20260916"
+  ]
+ },
+ {
+  "slug": "beam-mechanism-20260918",
+  "label": "Class-IV refinement IX",
+  "title": "The invariant beam: why history gain anticorrelates between rules",
+  "date": "2026-09-18",
+  "updated": "2026-09-18",
+  "kind": "Theorem and experiment",
+  "evidence": "exact",
+  "topic": "Class-IV refinement",
+  "summary": "On a height-two strip the vertical wrap makes an equal-row state read only the table entries the base rule fixes, so the equal-row set is exactly invariant under every rule of the handed family and the strip is the base rule on it. That turns history gain into a mixture: the base's own one-dimensional value on this beam, a completion-set value off it. Beam proximity is therefore a shared mediator to which bases respond with the sign of their own gain minus the off-beam value, which is why the same completion helps one rule and hurts another. Measured on sixteen bases and 256 fresh completions: the anticorrelation replicates at -0.341 and reverses to +0.204 when conditioned on proximity; proximity transfers on every one of the 120 pairs; the response ordering against one-dimensional gain is 0.960; on-beam medians equal the one-dimensional values while off-beam medians sit in a base-indifferent band. The anticorrelation vanishes at height three because nearly everything sits on the beam there and the mixture degenerates.",
+  "takeaway": "An exactly invariant set where the refinement is powerless makes the source rule's own memory leak through, and the sign of each rule's response to it is what produces the anticorrelation.",
+  "source": "docs/research/2026-09-18-beam-mechanism.md",
+  "promotion": {
+   "stage": "research"
   },
-  {
-    "slug": "defect-algebra-20260918",
-    "label": "Class-IV refinement X",
-    "title": "The defect algebra: twelve exclusive-ors decide what a refinement does to the beam",
-    "date": "2026-09-18",
-    "updated": "2026-09-18",
-    "kind": "Theorem and experiment",
-    "evidence": "exact",
-    "topic": "Class-IV refinement",
-    "summary": "Flipping one cell of a beam state perturbs exactly six reads and none lands on an entry the base rule owns, so one-step healing is a conjunction of three pairwise bit-equalities between free entries, each depending on the window only through two cells. Twelve equalities of GF(2) rank eleven, so refinements fall into 2,048 classes of 8,192 and a thirteen-dimensional subspace heals every defect at once. An edge lemma extends this to every step: the three blocks govern leftward growth, isolated survival and rightward growth through the edges of any defect cluster, fixing transverse extinction outright for whole classes. Measured on eight bases and 408 completions: the twelve exclusive-ors explain 0.37 to 0.43 of transverse stability where the twenty-four raw bits explain negative, resolving the earlier non-additivity as a wrong basis rather than an absent effect; universal healers sit on the beam in 83 to 96 percent of trials in seven of eight bases and never under the identity; growers never sit on the beam but in three bases are closer to it than typical refinements; dark-entry flips leave both transverse stability and beam proximity nearly unchanged.",
-    "takeaway": "What a refinement does to the invariant set is decided by twelve pairwise exclusive-ors of its free table entries, not by the entries themselves.",
-    "source": "docs/research/2026-09-18-defect-algebra.md",
-    "promotion": {
-      "stage": "research"
-    },
-    "related": [
-      "beam-mechanism-20260918",
-      "matched-completion-20260918",
-      "handed-fiber-census-20260917"
-    ]
-  }
+  "related": [
+   "matched-completion-20260918",
+   "handed-fiber-census-20260917",
+   "strip-spectrum-20260917"
+  ]
+ },
+ {
+  "slug": "defect-algebra-20260918",
+  "label": "Class-IV refinement X",
+  "title": "The defect algebra: twelve exclusive-ors decide what a refinement does to the beam",
+  "date": "2026-09-18",
+  "updated": "2026-09-18",
+  "kind": "Theorem and experiment",
+  "evidence": "exact",
+  "topic": "Class-IV refinement",
+  "summary": "Flipping one cell of a beam state perturbs exactly six reads and none lands on an entry the base rule owns, so one-step healing is a conjunction of three pairwise bit-equalities between free entries, each depending on the window only through two cells. Twelve equalities of GF(2) rank eleven, so refinements fall into 2,048 classes of 8,192 and a thirteen-dimensional subspace heals every defect at once. An edge lemma extends this to every step: the three blocks govern leftward growth, isolated survival and rightward growth through the edges of any defect cluster, fixing transverse extinction outright for whole classes. Measured on eight bases and 408 completions: the twelve exclusive-ors explain 0.37 to 0.43 of transverse stability where the twenty-four raw bits explain negative, resolving the earlier non-additivity as a wrong basis rather than an absent effect; universal healers sit on the beam in 83 to 96 percent of trials in seven of eight bases and never under the identity; growers never sit on the beam but in three bases are closer to it than typical refinements; dark-entry flips leave both transverse stability and beam proximity nearly unchanged.",
+  "takeaway": "What a refinement does to the invariant set is decided by twelve pairwise exclusive-ors of its free table entries, not by the entries themselves.",
+  "source": "docs/research/2026-09-18-defect-algebra.md",
+  "promotion": {
+   "stage": "research"
+  },
+  "related": [
+   "beam-mechanism-20260918",
+   "matched-completion-20260918",
+   "handed-fiber-census-20260917"
+  ]
+ },
+ {
+  "slug": "dense-defect-algebra-20260918",
+  "label": "Class-IV refinement XI",
+  "title": "The dense defect algebra: 28 pair-constraints, stratified by popcount",
+  "date": "2026-09-18",
+  "updated": "2026-09-18",
+  "kind": "Theorem and experiment",
+  "evidence": "exact",
+  "topic": "Class-IV refinement",
+  "summary": "Every column of a height-two strip has both rows read one table entry each, and which stratum they land in is decided by the difference of the two rows' three-cell popcounts: equal reads the entries the base owns, a difference of one reads lit entries, two or more reads dark ones. The 64 six-bit windows give 8 trivially agreeing cases and 28 unordered pairs splitting 6 exposed, 15 lit and 7 dark, with no mixed pair, which characterizes the previous unit's 8/14/10 entry partition instead of enumerating it. Ranks 11 and 7 leave exactly 64 completions satisfying every free constraint. Totalistic bases collapse any state in one step; under the identity and under its complement the residual is exactly the width-two anti-phase runs of the initial disagreement, bit-identical between the two bases. The census confirms the exact content at full scale and refutes three of the executing session's own bets, including its reading that the identity exception was about activity and its claim of a base-indifferent grower floor.",
+  "takeaway": "Which entries a dense column reads is decided by the two rows' popcount difference, so the single-defect algebra's entry partition has a reason; and the identity exception is not about activity, since a rule that flips every cell every step behaves identically.",
+  "source": "docs/research/2026-09-18-dense-defect-algebra.md",
+  "promotion": {
+   "stage": "research"
+  },
+  "related": [
+   "defect-algebra-20260918",
+   "beam-mechanism-20260918"
+  ]
+ }
 ]
