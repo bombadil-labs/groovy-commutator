@@ -226,5 +226,26 @@
    "defect-algebra-20260918",
    "beam-mechanism-20260918"
   ]
+ },
+ {
+  "slug": "permanent-structures-20260918",
+  "label": "Class-IV refinement XII",
+  "title": "Permanent structures: the isolated-defect gadget, and specificity fails twice",
+  "date": "2026-09-18",
+  "updated": "2026-09-18",
+  "kind": "Theorem and experiment",
+  "evidence": "exact",
+  "topic": "Class-IV refinement",
+  "summary": "Residence is not a transient: the disagreement field is already permanent when scoring begins, and on the confined arm it is almost entirely isolated defects. Under the confinement constraints an isolated defect is a deterministic sixteen-state automaton with a two-bit input from the background, which partitions the 57,344 confined refinements into three exact cells. On the four bases whose background is frozen, every one of 6,144 transverse trials has its healing step predicted exactly by iterating that automaton, and the cell partition predicts individual trial fates with zero bound violations. Isolated-defect permanence orders dense-start residence at pooled Spearman -0.836. The specificity the previous unit looked for fails again under a test built to be fair to it, and a panel chosen to decide handedness returned exactly chance.",
+  "takeaway": "What a confined refinement does to an isolated defect is an exact finite automaton, and it predicts dense-start residence; but the blind bits order the non-blind residual too, so the stratum decomposition has direction without specificity.",
+  "source": "docs/research/2026-09-18-permanent-structures.md",
+  "promotion": {
+   "stage": "research"
+  },
+  "related": [
+   "dense-defect-algebra-20260918",
+   "defect-algebra-20260918",
+   "beam-mechanism-20260918"
+  ]
  }
 ]
