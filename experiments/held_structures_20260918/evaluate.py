@@ -424,12 +424,14 @@ def main():
            'verdicts': {k: (v.get('verdict') or f"NOT EVALUATED: {v['not_evaluated']}")
                         for k, v in preds.items()}}
     if not a.pilot:
+        # Keys must match scripts/check_result_integrity.py's registry exactly:
+        # it fails on an unregistered key and on a registered key left out.
         out['source_hashes'] = {
-            'run.py': sha(HERE/'run.py'), 'evaluate.py': sha(HERE/'evaluate.py'),
             'protocol': sha(u9.PROTOCOL_FILE),
-            'rows.json': sha(OUT/'rows.json'), 'pairs.json': sha(OUT/'pairs.json'),
-            'controls.json': sha(OUT/'controls.json'), 'algebra.json': sha(OUT/'algebra.json'),
-            'gadget.json': sha(OUT/'gadget.json')}
+            'run': sha(HERE/'run.py'), 'evaluate': sha(HERE/'evaluate.py'),
+            'rows': sha(OUT/'rows.json'), 'controls': sha(OUT/'controls.json'),
+            'gadget': sha(OUT/'gadget.json'), 'algebra': sha(OUT/'algebra.json'),
+            'pairs': sha(OUT/'pairs.json')}
         (OUT/'summary.json').write_text(json.dumps(out, indent=1, default=str))
         for k in u9.frozen_keys(): print(f'  {k}: {out["verdicts"][k]}')
     print(json.dumps(out, default=str))
