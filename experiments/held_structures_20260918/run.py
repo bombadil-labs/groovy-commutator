@@ -475,6 +475,11 @@ def build_arms():
     arms['pi'] = [int(v) for v in rng.choice(Uplus, size=8, replace=False)]
     return arms, sizes, cls
 
+# Complement conjugation sends entry index e to 31 - e, hence permutes the read
+# pairs by this involution. Four pairs are fixed; the structural labels are
+# preserved by it, which is why the structural census is invariant outright.
+CONJ_PAIR_PERM = [PAIR_INDEX[tuple(sorted((31-a, 31-b)))] for (a, b) in PAIR_KEYS]
+
 def frozen_keys():
     """Parse the protocol's machine-readable frozen prediction list (control 14)."""
     txt = PROTOCOL_FILE.read_text()
@@ -779,8 +784,23 @@ def controls(arms, sizes, cls, workers=4):
             va, vb = a_.get(k), b_.get(k)
             if va is None or vb is None: continue
             worst = max(worst, abs(float(va)-float(vb)))
-        for k in ('structural_census','structural_survival','pair_census'):
+        # AMENDED, first execution of this control (the protocol's wording was
+        # "every census vector as integers"). The STRUCTURAL census is
+        # complement-INVARIANT: classify_window reads only the defect pattern and
+        # the two junction types, both unchanged when both rows are complemented,
+        # so it is compared raw -- the strictest form, and it holds on every row.
+        # The PAIR census is complement-COVARIANT, not invariant: complement sends
+        # an entry index e to 31-e (the identity conj() implements), so the pair
+        # index is permuted by an involution fixing only 4 of 28 pairs. Comparing
+        # those raw compares different coordinates; it failed 7 of 10 rows and
+        # passed the three whose census happened to be permutation-symmetric.
+        # Under the permutation the difference is exactly 0, so the control keeps
+        # its teeth: this asserts an exact equivariance, it does not relax to a
+        # tolerance. Recorded as a deviation in the protocol addendum.
+        for k in ('structural_census', 'structural_survival'):
             if a_[k] != b_[k]: census_bad += 1
+        for k in ('pair_census', 'pair_survival'):
+            if a_[k] != [b_[k][i] for i in CONJ_PAIR_PERM]: census_bad += 1
         pilot_rows.append(a_)
     c['10_matched_null_pairs'] = {'worst_abs_difference': worst, 'n_pairs': len(spec10),
                                   'census_mismatches': census_bad}

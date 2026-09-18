@@ -361,3 +361,62 @@ helpers copied, never imported; controls before observables, on the adversarial 
 and asserted to have reached it; a specificity claim must name what the base holds
 before it is tested; the evaluator tested against pilot rows *and* the frozen key list
 before it is called frozen; stage results by path.
+
+---
+
+## 9. Addendum — control amendments during execution
+
+Dated 2026-09-18, by the executing session (Claude Opus 5), after the freeze and
+before any tier ran. Both amendments are recorded here because a frozen control
+was changed; neither weakens a control and neither was made after seeing an
+observable.
+
+**Control 10, the matched null pairs.** §2.6 item 10 reads "every scalar to 1e-9,
+every census vector as integers." On its first execution the scalars agreed to
+7.2e-16 and **7 of 10 rows disagreed on the census vectors**, stopping the run
+before any tier — the control working as intended.
+
+The disagreement is the control's, not the implementation's. The two censuses
+transform differently under complement conjugation:
+
+- The **structural** census and its one-step survival are complement-**invariant**.
+  `classify_window` reads only the column's defect pattern and its two junction
+  types, and both are unchanged when *both* rows are complemented. Compared raw,
+  they agree on **every** row.
+- The **pair** census is complement-**covariant**. Complement sends an entry index
+  `e` to `31 − e` — the same identity `conj()` implements, since
+  `idx_of(¬r₀, ¬r₁) = 31 − idx_of(r₀, r₁)` — so the read pair `(i₀, i₁)` maps to
+  `(31 − i₀, 31 − i₁)` and the census vector is **permuted** by an involution that
+  fixes only **4 of 28** pairs. Comparing those vectors raw compares different
+  coordinates. The three rows that passed raw were the ones whose census happened
+  to be symmetric under that permutation (rule 51 is self-dual).
+
+**Amendment:** the structural census and survival are compared raw — the strictest
+form, and the unit's actual scored object — and the pair census and survival are
+compared under the conjugation permutation. Under it the difference is **exactly
+0**, not within a tolerance, so the control now asserts an exact equivariance
+rather than a coincidence of coordinates. It can still fail, and on strictly more
+than it could before: a raw comparison of a permuted vector can only ever have
+tested the 4 fixed pairs meaningfully.
+
+**Control completeness, and why this addendum exists at all.** The first launch of
+the runner printed eight controls and reported them all passing in 41 seconds.
+Controls 6, 8, 10, 11 and **14** had been appended after the function's existing
+`return` and were unreachable. Control 14 — added by this protocol to stop a
+verdict being read from an absence (§2.6, the rule earned from PR #278) — was
+itself the absence. `main()` now asserts that every runtime control named in §2.6
+appears in the returned dictionary and refuses to run a tier otherwise. Item 13 is
+the pre-freeze evaluator exercise and is recorded there as performed rather than
+re-run.
+
+That exercise also earned its keep before the canonical run: scored against real
+control-schema rows, the evaluator's key set matched the frozen list at 21 of 21,
+and the exercise exposed a live bug — `P1b` read each pair's violation bit from
+the completion table, which leaves the base-held entries zero and so marked every
+alternating-edge pair held.
+
+**Three checks, three first executions, three catches.** Control 14 caught the
+`P1b` bug, the completeness guard caught the unreachable controls, and control 10
+caught its own over-strict comparison. The Program's standing rule — *a check that
+cannot fire gates nothing* — is what each of these was written to satisfy, and each
+fired the first time it could.
