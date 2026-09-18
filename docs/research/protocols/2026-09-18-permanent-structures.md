@@ -214,8 +214,10 @@ untested and needed two post-freeze edits.
 ## 4. Frozen predictions (odds are the drafting agent's unless marked)
 
 - **P1 (exactness on the frozen anchors).** Every transverse trial on 204, 51,
-  0, 8 matches the gadget's healing step as an integer; the dense union identity
-  holds at every checked step. Odds **0.9**.
+  0, 8 matches the gadget's healing step as an integer. Odds **0.9**.
+  *(The dense-union clause was withdrawn by the 2026-09-18 addendum below, after
+  control 6 refuted the unconditional independence it rested on. Nothing had been
+  evaluated at that point.)*
 - **P2 (bounds; extreme cells exact).** On all 36 bases and all 48 K
   completions, `T_ext ∈ [P_μ(DOOMED), 1 − P_μ(SAFE)]`; every `K⊥` has
   `T_ext = 1`; every SAFE-started `K∀` trial has healing step 129. Odds **0.9**.
@@ -303,3 +305,75 @@ and chaotic bases alike (T6).
 base; helpers copied, never imported; the runner never spawns or kills by
 pattern; a specificity claim must subtract the shared term before it is tested;
 and the evaluator is tested against pilot rows before it is called frozen.
+
+---
+
+## Addendum, 2026-09-18, after the first launch — T6 corrected and a clause withdrawn
+
+**Nothing was evaluated before this addendum.** The first canonical launch
+stopped in controls with no tier run and no row written, which is what the
+controls-before-observables ordering is for. Two controls failed; they were
+different in kind and are recorded separately.
+
+### Control 5 — an implementation bug, no scientific content
+
+The heal-class clause keyed its check on the loop variable `s`, which the loop
+reassigns, so it tested the **final** state's membership against the **start**
+state's depth guarantee. A trajectory starting outside DOOMED, wandering in and
+healing at step 12 was counted as violating "DOOMED heals within 8", which it
+does not. Keyed on the start state the violation count is **0 of 22,270**, and
+the gadget's transition check was already exact at 0 mismatches of 22,270. Fixed;
+no claim changes.
+
+### Control 6 — a real refutation of this protocol's own freeze amendment
+
+**T6 as frozen is false.** It claimed unconditional independence of 2-clusters
+at separation ≥ 3 agreeing columns; the control failed it **15 of 72**, on 13
+distinct bases, first mismatch at steps 4–11.
+
+The mechanism, measured: under `A ∧ C` the *defect set* never grows (control 7
+holds at 0 of 2,048), but a cluster perturbs the **agreeing background** around
+it — the flank values are `a(LL,L)` and `c(R,RR)`, which need not equal what the
+base rule would produce — and that perturbation travels at speed one. A second
+cluster's trajectory changes only once the perturbation reaches it, at
+`t ≈ separation`. Corrected statement, measured on the adversarial cell:
+
+| separation | 4 | 6 | 8 | 12 | 16 | 24 | 32 |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| first mismatch step, minimum | 4 | 6 | 8 | — | — | — | — |
+| trials with any mismatch in 128 steps | 8/36 | 3/36 | 5/36 | 0 | 0 | 0 | 0 |
+
+**Two clusters separated by `s` agreeing columns evolve independently for
+`t < s`.** No fixed separation gives all-time independence, because the
+perturbation spreads without bound; empirically it does not bite at all within
+128 steps once `s ≥ 12`.
+
+### Why the pre-freeze verification missed it, and the rule that follows
+
+The pre-freeze check drew completions uniformly from `K`, which is dominated by
+fast-healing classes (`K∀` alone is 24,576 of 57,344), so the defects healed
+before any perturbation could travel. The control used a `K∃` completion with
+`|DOOMED| = 2`, where defects persist and wander. **Verify on the adversarial
+cell, not a random draw** — the same lesson the seventh unit learned about
+measuring the cell an argument rests on, in a new place. Recorded as standing
+Program guidance.
+
+### What changes, and what is withdrawn
+
+- **Control 6** now asserts the horizon bound (`independent for t < separation`,
+  tested at separations 4 and 8 on the adversarial cell) and can still fail.
+- **T3's and P1's dense-union clause is WITHDRAWN.** A dense field contains
+  clusters at small separations, so a union identity over it would hold only for
+  a couple of steps and is not worth scoring. **P1 is reduced to its per-trial
+  clause**: every transverse trial on the four frozen anchors matches the
+  gadget's healing step as an integer. That clause is untouched by this
+  correction and was already verified at 0 mismatches.
+- Everything else stands: the gadget and its class partition, the census
+  identity, the bounds (P2), the base-contribution census (P3–P5), handedness
+  with power (P6), additivity (P7).
+
+The independence horizon is promoted to a finding in its own right, on its own
+measurement, regardless of how the census scores.
+
+**This addendum was written before any tier ran and before any row existed.** It
+is a correction to a frozen protocol, not a reinterpretation of a result.

@@ -457,6 +457,7 @@ def controls(arms, sizes, classes):
                 j = int(o)
                 st = np.vstack([x, x.copy()]); st[1, j] ^= 1
                 s = (int(x[(j-1)%W]), int(x[j]), int(x[(j+1)%W]))
+                start = s
                 healed_at = None
                 for t in range(1, 65):
                     LL = int(st[0][(j-2)%W]); RR = int(st[0][(j+2)%W])
@@ -472,28 +473,45 @@ def controls(arms, sizes, classes):
                         if got != pred: bad5 += 1; break
                         s = pred
                     st = nxt
-                if s in doomed and (healed_at is None or healed_at > 8): heal_bad += 1
-                if s in safe and healed_at is not None: heal_bad += 1
+                # Key on the START state: DOOMED's depth bound applies from a
+                # DOOMED start, not from wherever the trajectory ends up. Keying
+                # on the final state counted "entered DOOMED late, healed at 12"
+                # as a violation, which it is not.
+                if start in doomed and (healed_at is None or healed_at > 8): heal_bad += 1
+                if start in safe and healed_at is not None: heal_bad += 1
     c['5_gadget_dynamics'] = {'mismatches': bad5, 'of': n5, 'heal_class_violations': heal_bad}
     if bad5 or heal_bad: fail.append('control5_gadget_dynamics')
 
-    # 6. 2-cluster independence at separation >= 3, ALL bases (the freeze amendment)
-    bad6 = 0; n6 = 0
+    # 6. Independence HORIZON, corrected after the first launch (see the protocol
+    # addendum). The frozen claim -- unconditional independence at separation >= 3
+    # -- is FALSE: this control failed it 15 of 72. The perturbation a cluster
+    # leaves in the agreeing background travels at speed one, so two clusters
+    # separated by s columns evolve independently only for t < s. Measured: the
+    # first mismatch never precedes step s (min t = 4, 6, 8 at s = 4, 6, 8), and
+    # no mismatch at all within 128 steps for s >= 12. This control now asserts
+    # that bound, on the ADVERSARIAL cell (Kex with small DOOMED, where defects
+    # wander) rather than a random draw -- the population the first verification
+    # missed.
+    bad6 = 0; n6 = 0; early = []
+    adv = [u for u in arms['Kex'] if len(gadget(u)[1]) <= 2] or arms['Kex'][:3]
     for br in BASES:
-        u = int(arms['Kex'][0]); r = HandedRule('t', embed(br, bits_of(u)))
-        rng6, x = beam_state(br, u, 2)
-        for dist in (4, 6):
-            j = W//3
-            both = np.vstack([x, x.copy()]); both[1, j] ^= 1; both[1, (j+dist)%W] ^= 1
-            aa = np.vstack([x, x.copy()]); aa[1, j] ^= 1
-            bb = np.vstack([x, x.copy()]); bb[1, (j+dist)%W] ^= 1
-            n6 += 1
-            for _ in range(64):
-                both = handed_step(both, r); aa = handed_step(aa, r); bb = handed_step(bb, r)
-                if not np.array_equal((both[0]!=both[1]), (aa[0]!=aa[1])|(bb[0]!=bb[1])):
-                    bad6 += 1; break
-    c['6_cluster_independence'] = {'violations': bad6, 'of': n6, 'separation': '>=3 (distance 4,6)'}
-    if bad6: fail.append('control6_cluster_independence')
+        for u in adv[:3]:
+            r = HandedRule('t', embed(br, bits_of(u)))
+            rng6, x = beam_state(br, u, 2)
+            for dist in (4, 8):
+                j = W//3
+                both = np.vstack([x, x.copy()]); both[1, j] ^= 1; both[1, (j+dist)%W] ^= 1
+                aa = np.vstack([x, x.copy()]); aa[1, j] ^= 1
+                bb = np.vstack([x, x.copy()]); bb[1, (j+dist)%W] ^= 1
+                n6 += 1
+                for t in range(1, dist):          # the claim: independent for t < separation
+                    both = handed_step(both, r); aa = handed_step(aa, r); bb = handed_step(bb, r)
+                    if not np.array_equal((both[0]!=both[1]), (aa[0]!=aa[1])|(bb[0]!=bb[1])):
+                        bad6 += 1; early.append((br, int(u), dist, t)); break
+    c['6_independence_horizon'] = {'violations_before_separation': bad6, 'of': n6,
+                                   'claim': 'independent for t < separation',
+                                   'examples': early[:4]}
+    if bad6: fail.append('control6_independence_horizon')
 
     # 7. no growth of 2-clusters under A and C; witness under G
     bad7 = 0; n7 = 0
