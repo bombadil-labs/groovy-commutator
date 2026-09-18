@@ -2592,6 +2592,24 @@
         "handed-fiber-census-20260917",
         "matched-completion-20260918"
       ]
+    },
+    {
+      "source": "invariant-beam",
+      "type": "depends_on",
+      "target": "strip-height-quotient",
+      "reason": "The beam is defined by the height-one exposed indices of the strip restriction; the theorem is exactly the statement that an equal-row state reads only those entries.",
+      "research": [
+        "beam-mechanism-20260918"
+      ]
+    },
+    {
+      "source": "fiber-enrichment",
+      "type": "supports",
+      "target": "invariant-beam",
+      "reason": "The matched-completion and beam censuses supply the dynamical evidence for the beam account: on-beam median history gain equals each base's one-dimensional value, off-beam medians are base-indifferent, and conditioning the 110-against-30 transfer on beam proximity moves it from -0.341 to +0.204.",
+      "research": [
+        "beam-mechanism-20260918"
+      ]
     }
   ],
   "nodes": [
@@ -4935,14 +4953,15 @@
       "title": "A base rule's height-one fiber is enriched or depleted in the persistence \u00d7 spreading phenotype",
       "kind": "experiment",
       "status": "completed",
-      "summary": "512-rule samples of the fibers over ECAs 54, 22, 0, 90, 204 measured at height two have both-positive fractions 0.47, 0.37, 0.25, 0.22, 0.07 (Kruskal\u2013Wallis on S* p \u2248 1e-40, descriptive). HighLife and Life sit inside their fibers' 10th\u201390th percentile bands. One contract, one density, one strip height. Across all 64 fibers (128 rules each) the both-positive fraction spans 0.05 to 0.51 and is non-additive in the exposed bits on the spreading axis; the 0/90 ordering did not replicate on fresh samples. A handed family whose height-one restriction is onto all 256 ECAs gives rule 110 a fiber (2^24 rules): it is both-positive at 0.543, tied at the top with its mirror 124 and with 54, far above 30 at 0.273, and the enrichment is on the persistence axis rather than spreading. A base's own 1D phenotype predicts its fiber's on both axes across all 256 bases. Chirality is not detectable: the mirror fiber is indistinguishable. A matched base-by-completion grid decomposes the persistence axis: history gain is set by the base (variance component 0.040 against the completion's 0.012) and retention by the completion (0.022 against 0.035); history gain anticorrelates between distant bases and is not bit-additive at all, and at height four a persistence-only control overtakes 110, so the conferral tracks the base's 1D history gain rather than its class.",
+      "summary": "512-rule samples of the fibers over ECAs 54, 22, 0, 90, 204 measured at height two have both-positive fractions 0.47, 0.37, 0.25, 0.22, 0.07 (Kruskal\u2013Wallis on S* p \u2248 1e-40, descriptive). HighLife and Life sit inside their fibers' 10th\u201390th percentile bands. One contract, one density, one strip height. Across all 64 fibers (128 rules each) the both-positive fraction spans 0.05 to 0.51 and is non-additive in the exposed bits on the spreading axis; the 0/90 ordering did not replicate on fresh samples. A handed family whose height-one restriction is onto all 256 ECAs gives rule 110 a fiber (2^24 rules): it is both-positive at 0.543, tied at the top with its mirror 124 and with 54, far above 30 at 0.273, and the enrichment is on the persistence axis rather than spreading. A base's own 1D phenotype predicts its fiber's on both axes across all 256 bases. Chirality is not detectable: the mirror fiber is indistinguishable. A matched base-by-completion grid decomposes the persistence axis: history gain is set by the base (variance component 0.040 against the completion's 0.012) and retention by the completion (0.022 against 0.035); history gain anticorrelates between distant bases and is not bit-additive at all, and at height four a persistence-only control overtakes 110, so the conferral tracks the base's 1D history gain rather than its class. The mechanism is now known: an exactly invariant equal-row set on which the strip is the base rule makes history gain a mixture, so beam proximity mediates transfer between bases and the sign of each base's response explains the anticorrelation.",
       "updated": "2026-09-18",
       "source": "docs/knowledge/fiber-enrichment.md",
       "research": [
         "fiber-census-20260917",
         "fiber-census-64-20260917",
         "handed-fiber-census-20260917",
-        "matched-completion-20260918"
+        "matched-completion-20260918",
+        "beam-mechanism-20260918"
       ]
     },
     {
@@ -4956,6 +4975,18 @@
       "research": [
         "forced-tables-20260917",
         "affine-oriented-lift-20260917"
+      ]
+    },
+    {
+      "id": "invariant-beam",
+      "title": "The equal-row set of a height-two strip is exactly invariant, and the strip is the base rule on it",
+      "kind": "finding",
+      "status": "exact",
+      "summary": "On a height-two cylinder the vertical wrap sends both off-rows onto the other row, so a state with equal rows has Moore count 3L+2C+3R and west neighbour L, making its condition index 16C+8L+(2L+2C+3R) \u2014 exactly the height-one exposed index. Those entries are fixed by the base ECA and unreachable by any completion, so equal rows stay equal and the strip acts as the base rule there. A closed, shift-invariant, F-invariant subsystem conjugate to the base elementary automaton. Verified exactly for sixteen bases over 256 steps at heights two and three. It makes history gain a mixture of the base's own one-dimensional value on the beam and a completion-set value off it, which mediates transfer between bases and explains the observed anticorrelation.",
+      "updated": "2026-09-18",
+      "source": "docs/knowledge/invariant-beam.md",
+      "research": [
+        "beam-mechanism-20260918"
       ]
     }
   ],

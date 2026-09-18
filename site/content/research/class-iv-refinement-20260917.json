@@ -164,5 +164,26 @@
       "fiber-census-64-20260917",
       "selective-persistence-discriminator-20260916"
     ]
+  },
+  {
+    "slug": "beam-mechanism-20260918",
+    "label": "Class-IV refinement IX",
+    "title": "The invariant beam: why history gain anticorrelates between rules",
+    "date": "2026-09-18",
+    "updated": "2026-09-18",
+    "kind": "Theorem and experiment",
+    "evidence": "exact",
+    "topic": "Class-IV refinement",
+    "summary": "On a height-two strip the vertical wrap makes an equal-row state read only the table entries the base rule fixes, so the equal-row set is exactly invariant under every rule of the handed family and the strip is the base rule on it. That turns history gain into a mixture: the base's own one-dimensional value on this beam, a completion-set value off it. Beam proximity is therefore a shared mediator to which bases respond with the sign of their own gain minus the off-beam value, which is why the same completion helps one rule and hurts another. Measured on sixteen bases and 256 fresh completions: the anticorrelation replicates at -0.341 and reverses to +0.204 when conditioned on proximity; proximity transfers on every one of the 120 pairs; the response ordering against one-dimensional gain is 0.960; on-beam medians equal the one-dimensional values while off-beam medians sit in a base-indifferent band. The anticorrelation vanishes at height three because nearly everything sits on the beam there and the mixture degenerates.",
+    "takeaway": "An exactly invariant set where the refinement is powerless makes the source rule's own memory leak through, and the sign of each rule's response to it is what produces the anticorrelation.",
+    "source": "docs/research/2026-09-18-beam-mechanism.md",
+    "promotion": {
+      "stage": "research"
+    },
+    "related": [
+      "matched-completion-20260918",
+      "handed-fiber-census-20260917",
+      "strip-spectrum-20260917"
+    ]
   }
 ]

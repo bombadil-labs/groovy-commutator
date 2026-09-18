@@ -829,6 +829,57 @@ workflow; research source and result changes now also trigger that workflow.
    did not decide the outcome. Self-gated under Myk's suspended review gates;
    protocol drafted by Fable 5.1, amended and executed by Opus 5.
 
+17. **The invariant beam: an exact theorem, and why history gain
+   anticorrelates between rules** (2026-09-18,
+   `docs/research/2026-09-18-beam-mechanism.md`,
+   `experiments/beam_mechanism_20260918/` →
+   `results/beam_mechanism_20260918/`, 49 min, off Actions).
+   **Theorem (exact, independent of the census).** On a height-two strip the
+   vertical wrap sends both off-rows onto the other row, so a state with equal
+   rows has Moore count `3L+2C+3R` and west neighbour `L`, making its condition
+   index `16C + 8L + (2L+2C+3R)` — **exactly the height-one exposed index** for
+   `(L,C,R)`. Those entries are fixed by the base ECA and unreachable by any
+   completion, so **the equal-row set (the *beam*) is exactly invariant under
+   every rule of the handed family, and on it the strip IS the base rule**: a
+   closed, shift-invariant, `F`-invariant subsystem conjugate to the base
+   elementary automaton. Verified for 16 bases × 8 completions × 256 steps at
+   heights 2 and 3 as a gating control.
+   **Mechanism.** History gain is therefore a mixture — the base's own 1D value
+   on the beam, a completion-set value off it — so beam proximity is a *shared*
+   mediator and each base responds with the sign of its 1D gain minus the
+   off-beam value. Opposite-signed responses to a shared mediator are result
+   16's anticorrelation. Measured on 16 bases × 256 fresh completions: the
+   anticorrelation replicates at −0.341 (bootstrap [−0.444, −0.227]) and
+   **reverses to +0.204** conditioned on the two proximities (+0.163 on
+   transverse stability); transfer sign equals the product of response signs in
+   53 of 55 strong pairs; beam proximity transfers at ≥ 0.349 on **all 120
+   pairs**; response ordering against 1D gain is **0.960** (bootstrap [0.919,
+   0.972]) over 16 bases, 8 of them never used to find the mechanism; on-beam
+   medians equal the 1D values (5: 0.968 vs 0.976; 33: 0.556 vs 0.563; 22:
+   0.132 vs 0.137; chaotic ≈ −0.003 vs 0) while off-beam medians occupy a
+   base-indifferent band 0.029–0.170; retention is unmediated (0.623 raw vs
+   0.634 partial), so the beam is specific to history gain.
+   **Failed bet, and a design lesson:** P4, expected to fail, held. The off-beam
+   value is 0.03–0.17, not the ~0.2 result 16 implied, so rules 18 and 22 still
+   respond positively and the naive sign rule agreed with the mixture reading
+   (P4′, which held on all ten testable bases). **No base on this panel falls in
+   the discriminating window** — 1D gain strictly between 0 and that base's own
+   off-beam median — so the comparison P4 existed to make did not happen.
+   **P7 failed:** the anticorrelation does not survive to height three (+0.074),
+   because on-beam fractions there are far higher (0.771 vs 0.458 for rule 110)
+   and the mixture degenerates. Post hoc reading of a demoted descriptive arm.
+   **Process lesson, learned the hard way:** the first canonical run was
+   discarded because its matched null-pair control failed on a copy-paste bug
+   in the control's own conjugate beam-state construction, **and** because the
+   implementation ran that control *after* the tiers, so a broken control gated
+   nothing. **Controls must run before observables and must raise; a control
+   that cannot fail is worse than no control.** Re-run in full rather than
+   patched so the committed runner is the runner that produced the data.
+   Open: *which* completions attract trajectories onto the beam (transverse
+   stability gates residence almost perfectly downward, ≤ 0.034 on-beam given
+   low stability). Self-gated under Myk's suspended review gates; protocol
+   drafted by Fable 5.1, amended and executed by Opus 5.
+
 ## Checkpoint logs (read before continuing any workstream)
 
 A checkpoint is a dated statement of state: what a unit completed, what is

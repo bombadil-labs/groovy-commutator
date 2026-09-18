@@ -55,6 +55,13 @@ REGISTRY = {
         'families': 'results/forced_tables_20260917/families.json',
         'regime_join': 'results/forced_tables_20260917/regime_join.json',
         'd3_panel': 'results/forced_tables_20260917/d3_panel.json'},
+    'results/beam_mechanism_20260918/summary.json': {
+        'protocol': 'docs/research/protocols/2026-09-18-beam-mechanism.md',
+        'run': 'experiments/beam_mechanism_20260918/run.py',
+        'evaluate': 'experiments/beam_mechanism_20260918/evaluate.py',
+        'rows': 'results/beam_mechanism_20260918/rows.json',
+        'controls': 'results/beam_mechanism_20260918/controls.json',
+        'condition_p_table': 'experiments/class4_selective_persistence_20260916/evidence/class4_selective_persistence_all_conditions_20260916.RECOVERED.csv'},
     'results/matched_completion_20260918/summary.json': {
         'protocol': 'docs/research/protocols/2026-09-18-matched-completion-persistence.md',
         'run': 'experiments/matched_completion_20260918/run.py',
