@@ -1,0 +1,454 @@
+{
+ "agreeing_windows": 8,
+ "n_pairs": 28,
+ "exposed_pairs": [
+  [
+   3,
+   10
+  ],
+  [
+   3,
+   18
+  ],
+  [
+   10,
+   18
+  ],
+  [
+   13,
+   21
+  ],
+  [
+   13,
+   28
+  ],
+  [
+   21,
+   28
+  ]
+ ],
+ "lit_pairs": [
+  [
+   1,
+   2
+  ],
+  [
+   2,
+   8
+  ],
+  [
+   2,
+   16
+  ],
+  [
+   5,
+   11
+  ],
+  [
+   5,
+   19
+  ],
+  [
+   5,
+   26
+  ],
+  [
+   11,
+   12
+  ],
+  [
+   11,
+   20
+  ],
+  [
+   12,
+   19
+  ],
+  [
+   12,
+   26
+  ],
+  [
+   15,
+   29
+  ],
+  [
+   19,
+   20
+  ],
+  [
+   20,
+   26
+  ],
+  [
+   23,
+   29
+  ],
+  [
+   29,
+   30
+  ]
+ ],
+ "dark_pairs": [
+  [
+   4,
+   9
+  ],
+  [
+   4,
+   17
+  ],
+  [
+   4,
+   24
+  ],
+  [
+   6,
+   25
+  ],
+  [
+   7,
+   27
+  ],
+  [
+   14,
+   27
+  ],
+  [
+   22,
+   27
+  ]
+ ],
+ "rank_lit": 11,
+ "rank_dark": 7,
+ "n_components": 6,
+ "n_Upp": 64,
+ "totalistic": [
+  0,
+  1,
+  22,
+  23,
+  104,
+  105,
+  126,
+  127,
+  128,
+  129,
+  150,
+  151,
+  232,
+  233,
+  254,
+  255
+ ],
+ "cell_sizes": {
+  "Upp": 64,
+  "Uplus": 8192,
+  "Dplus": 131072,
+  "G": 8192,
+  "Gprime": 8192,
+  "K": 57344
+ },
+ "base_bits": {
+  "110": {
+   "beta": [
+    0,
+    1,
+    1,
+    1
+   ],
+   "gamma": [
+    0,
+    1
+   ],
+   "e_G": 1,
+   "e_Gprime": 2,
+   "totalistic": false
+  },
+  "54": {
+   "beta": [
+    1,
+    1,
+    0,
+    0
+   ],
+   "gamma": [
+    1,
+    1
+   ],
+   "e_G": 1,
+   "e_Gprime": 1,
+   "totalistic": false
+  },
+  "22": {
+   "beta": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "gamma": [
+    1,
+    1
+   ],
+   "e_G": 2,
+   "e_Gprime": 2,
+   "totalistic": true
+  },
+  "5": {
+   "beta": [
+    0,
+    0,
+    1,
+    1
+   ],
+   "gamma": [
+    1,
+    1
+   ],
+   "e_G": 1,
+   "e_Gprime": 1,
+   "totalistic": false
+  },
+  "30": {
+   "beta": [
+    1,
+    1,
+    0,
+    1
+   ],
+   "gamma": [
+    1,
+    0
+   ],
+   "e_G": 1,
+   "e_Gprime": 2,
+   "totalistic": false
+  },
+  "90": {
+   "beta": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "gamma": [
+    1,
+    1
+   ],
+   "e_G": 0,
+   "e_Gprime": 0,
+   "totalistic": false
+  },
+  "0": {
+   "beta": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "gamma": [
+    1,
+    1
+   ],
+   "e_G": 2,
+   "e_Gprime": 2,
+   "totalistic": true
+  },
+  "204": {
+   "beta": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "gamma": [
+    1,
+    1
+   ],
+   "e_G": 0,
+   "e_Gprime": 0,
+   "totalistic": false
+  },
+  "106": {
+   "beta": [
+    1,
+    0,
+    1,
+    1
+   ],
+   "gamma": [
+    0,
+    1
+   ],
+   "e_G": 2,
+   "e_Gprime": 1,
+   "totalistic": false
+  },
+  "232": {
+   "beta": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "gamma": [
+    1,
+    1
+   ],
+   "e_G": 2,
+   "e_Gprime": 2,
+   "totalistic": true
+  },
+  "8": {
+   "beta": [
+    1,
+    1,
+    0,
+    1
+   ],
+   "gamma": [
+    1,
+    0
+   ],
+   "e_G": 1,
+   "e_Gprime": 2,
+   "totalistic": false
+  },
+  "18": {
+   "beta": [
+    0,
+    0,
+    1,
+    1
+   ],
+   "gamma": [
+    1,
+    1
+   ],
+   "e_G": 1,
+   "e_Gprime": 1,
+   "totalistic": false
+  },
+  "46": {
+   "beta": [
+    0,
+    1,
+    1,
+    0
+   ],
+   "gamma": [
+    0,
+    0
+   ],
+   "e_G": 1,
+   "e_Gprime": 1,
+   "totalistic": false
+  },
+  "33": {
+   "beta": [
+    1,
+    1,
+    0,
+    0
+   ],
+   "gamma": [
+    1,
+    1
+   ],
+   "e_G": 1,
+   "e_Gprime": 1,
+   "totalistic": false
+  },
+  "62": {
+   "beta": [
+    1,
+    1,
+    1,
+    0
+   ],
+   "gamma": [
+    1,
+    0
+   ],
+   "e_G": 2,
+   "e_Gprime": 1,
+   "totalistic": false
+  },
+  "29": {
+   "beta": [
+    1,
+    0,
+    0,
+    1
+   ],
+   "gamma": [
+    0,
+    0
+   ],
+   "e_G": 1,
+   "e_Gprime": 1,
+   "totalistic": false
+  },
+  "51": {
+   "beta": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "gamma": [
+    1,
+    1
+   ],
+   "e_G": 0,
+   "e_Gprime": 0,
+   "totalistic": false
+  },
+  "37": {
+   "beta": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "gamma": [
+    1,
+    1
+   ],
+   "e_G": 0,
+   "e_Gprime": 0,
+   "totalistic": false
+  },
+  "45": {
+   "beta": [
+    0,
+    0,
+    1,
+    0
+   ],
+   "gamma": [
+    1,
+    0
+   ],
+   "e_G": 1,
+   "e_Gprime": 0,
+   "totalistic": false
+  },
+  "27": {
+   "beta": [
+    0,
+    0,
+    0,
+    1
+   ],
+   "gamma": [
+    1,
+    0
+   ],
+   "e_G": 0,
+   "e_Gprime": 1,
+   "totalistic": false
+  }
+ }
+}

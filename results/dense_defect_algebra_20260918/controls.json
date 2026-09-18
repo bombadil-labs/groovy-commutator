@@ -1,0 +1,69 @@
+{
+ "1_algebra": {
+  "agreeing_windows": 8,
+  "pairs": 28,
+  "n_exposed": 6,
+  "n_lit": 15,
+  "n_dark": 7,
+  "n_mixed": 0,
+  "stratification_exact": true,
+  "rank_lit": 11,
+  "rank_dark": 7,
+  "components": 6,
+  "n_Upp": 64,
+  "diagonals_implied": true,
+  "beta_all_equals_totalistic": true,
+  "n_totalistic": 16,
+  "gamma_holds_on_totalistic": true
+ },
+ "2_one_step_law": {
+  "mismatches": 0,
+  "of": 512
+ },
+ "3_one_step_collapse": {
+  "collapse_failures": 0,
+  "of": 768,
+  "witness_nonzero": 32
+ },
+ "4_identity_exception": {
+  "integer_mismatches": 0,
+  "of": 48,
+  "planted_pair_permanence": 1.0,
+  "planted_trials": 64
+ },
+ "5_containment": {
+  "violations": 0,
+  "lit_survival": 0,
+  "dark_survival": 0
+ },
+ "6_regeneration": {
+  "mismatches": 0,
+  "of": 64,
+  "examples": []
+ },
+ "7_beam_invariance": {
+  "failures": 0,
+  "examples": []
+ },
+ "8_matched_null_pairs": {
+  "worst_abs_difference": 9.71445146547012e-16,
+  "n_pairs": 24
+ },
+ "9_disjointness": {
+  "overlap_counts": {
+   "Upp": 0,
+   "Uplus": 0,
+   "Dplus": 0,
+   "G": 0,
+   "Gprime": 0,
+   "K": 0,
+   "random": 0
+  },
+  "Upp_overlap_recorded": []
+ },
+ "10_grower_edge_law": {
+  "violations": 0,
+  "of": 496
+ },
+ "failures": []
+}
