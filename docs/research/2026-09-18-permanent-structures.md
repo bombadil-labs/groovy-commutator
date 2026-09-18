@@ -147,3 +147,28 @@ the attempt and are not supported. Not height three, other densities or observer
 No claim about `M*`. The handed test is scoped to terminal 2-cluster width; its
 null result says the erosion bits do not order that observable, not that chirality
 has no other expression.
+
+## Correction, 2026-09-18 — two frozen predictions were never evaluated
+
+**P3(d) and P5(c) were frozen and not scored, and this note originally reported
+them as unsupported. That was wrong.** Both were stated against the base's 1D
+flank-change rate; the runner records no flank-change field and the evaluator
+implements no `P3d` or `P5c` key, so `summary.json` carries eleven prediction
+keys and neither of these. They could not have been scored, and nothing in the
+run bears on them.
+
+The corrected status is **not evaluated**. In particular, **this unit supplies no
+evidence for or against a base-only predictor of the `K∃` position** — the
+sentence above, and the checkpoint's matching sentence, previously implied a
+negative result that does not exist. The only bearing on that question remains
+the eighth unit's drafting pilot (`|ρ| ≤ 0.36` on the *seventh* unit's rows),
+which is calibration, not evidence.
+
+Found by the ninth unit's drafting agent while reading this unit's artifacts.
+
+**Process gap, and the rule that follows.** The implementation silently omitted
+two frozen predictions and nothing caught it: the evaluator was tested against
+pilot rows for *crashes*, which it passed, but never against the protocol for
+*completeness*. **An evaluator must score every frozen prediction or name the
+ones it does not and why, and a control must assert that the scored key set
+equals the frozen set.** Recorded as standing Program guidance.

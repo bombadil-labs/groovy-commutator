@@ -381,9 +381,15 @@ successive readings looked for.
 - That gadget class makes residence additive: **P7c is zero of 36 bases**.
 - Anything about height three, other densities, other observers, or `M*`.
 
-**Open.** Why the blind bits order the non-blind residual. Two correctly-formed
-attempts at a base-only predictor (P3d, P5c) are unsupported, so whatever sets
-the `K∃` position is not summarised by any one-step 1D statistic tried so far.
+**Open.** Why the blind bits order the non-blind residual.
+
+**Corrected 2026-09-18:** this checkpoint originally said two base-only
+predictors (P3d, P5c) "are unsupported". **They were frozen and never scored** —
+no flank-change field in the rows, no key in the evaluator, eleven prediction
+keys in `summary.json` and neither of these among them. Their status is **not
+evaluated**, and this unit supplies **no evidence either way** on a base-only
+predictor of the `K∃` position. Do not cite it as a negative. Found by the ninth
+unit's drafting agent.
 
 **Process, carried forward.** Verify on the adversarial cell, not a random
 draw — the reason two successive independence claims survived their checks and
