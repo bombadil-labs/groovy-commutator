@@ -696,9 +696,6 @@ def controls(arms, sizes, cls, workers=4):
     if not (len(BASES) == 33 and c['12_panel']['block0_complete']
             and c['12_panel']['pair_permanent_in_panel']): fail.append('control12_panel')
 
-    c['failures'] = fail
-    return c, fail
-
     # 6. the gadget on the DRIVEN stream, all 33 bases
     bad6 = 0; n6 = 0; heal6 = 0
     for u in (arms['Kex'][:2] + arms['Kall_plus'][:1]):
@@ -870,6 +867,23 @@ def main():
     print(f'[algebra] {len(PAIR_KEYS)} pairs, {len(STRUCTS)} structures; cells {sizes}', flush=True)
     print('[controls] running before any tier', flush=True)
     ctl, fail = controls(arms, sizes, cls, a.workers)
+    # A control that did not run is not a control that passed. The protocol's
+    # runtime controls are 1-12 and 14 (13 is the pre-freeze evaluator exercise,
+    # performed and recorded, not a runtime check). This assertion exists because
+    # the first launch of this runner printed eight controls and called them all:
+    # controls 6, 8, 10, 11 and 14 sat after a stray `return` and never executed.
+    # Control 14 -- the one designed to stop verdict-from-absence -- was itself
+    # the absence. Same failure mode, one level up.
+    ctl['13_evaluator_pilot_exercise'] = (
+        'performed pre-freeze against five real control-schema rows; the key set '
+        'matched the frozen list at 21 of 21 and the exercise caught a live bug '
+        '(P1b read the violation bit from the completion, leaving base-held '
+        'entries zero); pilot output deleted, nothing tuned on it')
+    ran = {int(k.split('_')[0]) for k in ctl if k[0].isdigit()}
+    want_ctl = set(range(1, 15)) - {13} | {13}
+    if ran != want_ctl:
+        raise SystemExit(f'CONTROLS INCOMPLETE: ran {sorted(ran)}, want {sorted(want_ctl)}'
+                         ' -- no tier ran')
     (OUT/'controls.json').write_text(json.dumps(ctl, indent=1, default=str))
     for k, v in ctl.items():
         if k != 'failures': print(f'  {k}: {v}', flush=True)
