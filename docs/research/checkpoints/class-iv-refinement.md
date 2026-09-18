@@ -7,6 +7,66 @@ when a substantial unit completes; keep the bounded-claim style.
 
 Program page: `docs/research/2026-09-17-class-iv-refinement-program.md`
 
+## Checkpoint 2026-09-18 (fifth unit): the beam mechanism, with a theorem
+
+- **Completed:** [the beam-mechanism unit](../2026-09-18-beam-mechanism.md),
+  canonical `results/beam_mechanism_20260918/` (summary registered with the
+  fast integrity tier). 16 bases × 256 fresh completions at height two plus a
+  transverse tier and a height-three arm; 4,480 evaluations, 49 minutes.
+- **A theorem, and it does not depend on the census.** On a height-two strip
+  the vertical wrap makes an equal-row state's condition index exactly the
+  height-one exposed index, so such a state reads only entries the base rule
+  fixes: **the equal-row set is exactly invariant under every rule of the
+  family and the strip is the base rule on it.** Proved by index algebra,
+  re-derived by the executing session rather than taken on report, and
+  asserted as a gating control at heights two and three for all sixteen
+  bases. Recorded as knowledge node `invariant-beam` (finding, exact).
+- **The mechanism it implies, measured.** History gain is a mixture: the
+  base's own one-dimensional value on the beam, a completion-set value off
+  it. Beam proximity is a shared mediator; each base responds with the sign
+  of its own gain minus the off-beam value; opposite-signed responses to a
+  shared mediator are the anticorrelation. P1, P2, P3, P5, P6 held. The
+  anticorrelation replicates at −0.341 and **reverses to +0.204** when
+  conditioned on proximity; proximity transfers on **every one of the 120
+  pairs**; the response ordering against one-dimensional gain is **0.960** on
+  sixteen bases, eight of them never used to find the mechanism; on-beam
+  medians equal the one-dimensional values and off-beam medians sit in a
+  base-indifferent band from 0.029 to 0.170.
+- **P4 held although it was the one expected to fail, and that cost the
+  comparison it existed to make.** The previous unit put the off-beam value
+  near 0.2 bits; measured here it is 0.03 to 0.17, low enough that rules 18
+  and 22 still respond positively. The mixture reading (P4′) held on all ten
+  testable bases and the naive sign rule agreed with it only because **no
+  base on this panel falls in the discriminating window**, which needs a
+  one-dimensional gain strictly between zero and that base's own off-beam
+  median. A future panel wanting to separate them must be built for it.
+- **P7 failed on its first arm.** The anticorrelation does not survive to
+  height three (+0.074). The demoted descriptive arm says why: on-beam
+  fractions are far higher at height three (0.771 against 0.458 for rule
+  110), so nearly everything sits on the beam, the mixture degenerates and
+  there is no off-beam population for opposite responses to act on. **This is
+  a post hoc reading of a demoted number, consistent with the mechanism but
+  not independent support for it.**
+- **Do not infer:** that the beam explains Class-IV-ness; it explains
+  inheritance of history gain. Nothing about *which* completions attract
+  trajectories onto the beam, which is now the open question and is about the
+  structure of a completion, not of a base. Sixteen bases is a panel, not a
+  census; one contract, one density.
+- **Process, recorded because it nearly went wrong.** The first canonical run
+  was discarded: its matched null-pair control failed on a copy-paste bug in
+  the control's own conjugate beam-state construction, **and** the
+  implementation ran that control after the tiers rather than before, so a
+  broken control gated nothing. Both fixed, the fix verified in isolation and
+  stated before it was run, and the unit re-run in full rather than patched
+  so the committed runner is the runner that produced the data. **Controls
+  must run before observables and must raise; a control that cannot fail is
+  worse than no control.**
+- **Next, unfrozen:** what makes a completion attract trajectories onto the
+  beam. The unit shows transverse stability gates beam residence almost
+  perfectly downward (at most 0.034 on-beam given low stability), so the
+  handle exists; an exact single-defect first-step analysis on the beam is
+  the natural attack and is a pen-and-computer unit rather than a census.
+
 ## Checkpoint 2026-09-18 (fourth unit): matched completions evaluated
 
 - **Completed:** [the matched-completion unit](../2026-09-18-matched-completion-persistence.md),
