@@ -130,14 +130,64 @@ def transverse_traced(table, base_rule, u, seedfn, complement=False, trace=True)
         res['defect_counts'] = counts
     return res
 
-def evaluate(table, u, seedfn):
+def _initial(k, key, rep, kind, flip):
+    """This unit's own seed namespace. Importing the previous unit's helpers would
+    silently draw the trajectory seeds from its protocol name instead of ours."""
+    rng = np.random.default_rng(seed(kind, *key, k, DENSITY, rep))
+    st = (rng.random((k, strip.WIDTH)) < DENSITY).astype(np.uint8)
+    if flip: st = (1 - st).astype(np.uint8)
+    return rng, st
+
+def sample_events_agree(rule, k, key, flip=False):
+    events = []; total = k * strip.WIDTH; ag = []
+    for rep in range(strip.EVENT_SEEDS):
+        rng, st = _initial(k, key, rep, 'events', flip)
+        for _ in range(strip.BURN): st = base.life_step(st, rule)
+        flat = np.sort(rng.choice(total, size=min(strip.SITES, total), replace=False))
+        ys, xs = flat // strip.WIDTH, flat % strip.WIDTH
+        hist = np.zeros(len(flat), dtype=np.uint8)
+        for _ in range(7):
+            ag.append(float(np.all(st == st[0], axis=0).mean()))
+            hist = ((hist << 1) | st[ys, xs]) & 0xff
+            st = base.life_step(st, rule)
+        cc = []; hh = []; yy = []; zz = []
+        for _ in range(strip.SCORE):
+            ag.append(float(np.all(st == st[0], axis=0).mean()))
+            cur = st[ys, xs].copy(); hist = ((hist << 1) | cur) & 0xff
+            sym = base.life_symbols(st, ys, xs); nxt = base.life_step(st, rule)
+            cc.append(cur); hh.append(hist.copy()); yy.append(nxt[ys, xs].copy()); zz.append(sym)
+            st = nxt
+        events.append({'current': np.concatenate(cc), 'history': np.concatenate(hh),
+                       'target': np.concatenate(yy), 'symbol': np.concatenate(zz)})
+    return events, float(np.mean(ag))
+
+def spread_keyed(rule, k, key, flip=False):
+    x1 = []; x2 = []; extinct = 0; total = k * strip.WIDTH
+    for rep in range(strip.SPREAD_SEEDS):
+        rng, st = _initial(k, key, rep, 'spread', flip)
+        for _ in range(strip.BURN): st = base.life_step(st, rule)
+        for flat in rng.choice(total, size=strip.ORIGINS, replace=False):
+            oy, ox = divmod(int(flat), strip.WIDTH)
+            a = st.copy(); b = st.copy(); b[oy, ox] ^= 1
+            aa = bb = None
+            for tt in range(1, strip.T2 + 1):
+                a = base.life_step(a, rule); b = base.life_step(b, rule)
+                if tt == strip.T1: aa = strip.xdiam(a ^ b, ox)
+                if tt == strip.T2: bb = strip.xdiam(a ^ b, ox)
+            x1.append(aa); x2.append(bb); extinct += int(bb == 0)
+    ma = float(np.mean(x1)); mb = float(np.mean(x2))
+    alpha = 0.0 if (ma == 0 and mb == 0) else (float(math.log2(mb/ma)) if ma > 0 and mb > 0 else None)
+    return {'Dx64': ma, 'Dx128': mb, 'alpha_x': alpha,
+            'extinction_fraction': extinct/len(x2), 'spread_trials': len(x2)}
+
+def evaluate(table, u, seedfn, flip=False):
     r = HandedRule(f'h{table}', table)
     t0 = time.time()
-    events, agree = bm.sample_events_agree(r, 2, ('A', u))
+    events, agree = sample_events_agree(r, 2, ('A', u), flip)
     p, nref, refmode = strip.reference_strip(r, 2)
     R, mu, sd, missing = base.selective_r(events, p)
     M, bll, hll, ntr, nte = base.predictive_gain(events[:4], events[4:6])
-    sp = mc.spread_keyed(r, 2, ('A', u))
+    sp = spread_keyed(r, 2, ('A', u), flip)
     return {'table': table, 'R_star': R, 'M_star': M,
             'S_star': max(0, R) * max(0, M) if math.isfinite(R) else None,
             'agree': agree, 'on_beam': int(agree > 0.98), 'off_beam': int(agree < 0.5),
@@ -235,7 +285,8 @@ def matched_null_pairs(random_us):
         t = embed(110, mc.bits_of(u)); ct = mc.conj_table(t)
         assert res1(ct) == 137
         o1 = evaluate(t, u, seed); o1.update(transverse_traced(t, 110, u, seed, trace=False))
-        o2 = evaluate(ct, u, seed); o2.update(transverse_traced(ct, 137, u, seed, complement=True, trace=False))
+        o2 = evaluate(ct, u, seed, flip=True)
+        o2.update(transverse_traced(ct, 137, u, seed, complement=True, trace=False))
         keys = ('R_star','M_star','alpha_x','agree','T64','T128','T_ext')
         d = {k: (None if o1[k] is None or o2[k] is None else abs(o1[k]-o2[k])) for k in keys}
         rows.append({'completion': u, 'abs_diff': d,
