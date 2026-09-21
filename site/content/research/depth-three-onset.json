@@ -1,0 +1,23 @@
+[
+  {
+    "slug": "depth-three-onset",
+    "label": "Depth-three onset from restricted components",
+    "title": "A depth-three ring certificate by restricting to carrying components: onset 65 under observation 232, realized by exactly two rules",
+    "date": "2026-09-14",
+    "updated": "2026-09-14",
+    "kind": "Exact ring-certificate onset by sparse powers restricted to carrying strong components",
+    "evidence": "exact",
+    "topic": "Algebra and closure",
+    "summary": "The ring criterion only reads (A^m)[v3,v0] for closed violating walks, and every such walk stays inside its strong component, so the eighteenth unit's sparse packed-power onset machinery lifts to depth three by restricting to the carrying components (median 1,726 vertices, max 14,168) instead of the full 65,536-vertex matrix. Onset 65 under observation 232, realized by exactly rules 94 and 133; theorem background and three of four onset bets held, one failed under observations 4 and 32.",
+    "takeaway": "A ring-certificate question phrased in terms of closed violating walks is governed by the size of the carrying components, not the full pair graph -- a reusable cost reduction, not just a one-off result.",
+    "source": "docs/research/2026-09-14-depth-three-onset.md",
+    "promotion": {
+      "stage": "research"
+    },
+    "related": [
+      "closed-violation-depth-three",
+      "depth-two-certificate",
+      "full-shift-depth-three"
+    ]
+  }
+]

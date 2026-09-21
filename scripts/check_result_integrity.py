@@ -266,6 +266,16 @@ REGISTRY = {
         'full_shift_depth_three_result': 'results/full_shift_depth_three_20260912.json',
         'full_shift_depth_three_linear_result': 'results/full_shift_depth_three_linear_20260912.json'},
 
+    'results/depth_three_onset_20260913.json': {
+        'script': 'scripts/verify_depth_three_onset.py',
+        'full_shift_depth_three_script': 'scripts/verify_full_shift_depth_three.py',
+        'depth_two_certificate_script': 'scripts/verify_depth_two_certificate.py',
+        'closed_violation_depth_three_script': 'scripts/verify_closed_violation_depth_three.py',
+        'depth_two_certificate_result': 'results/depth_two_certificate_20260912.json',
+        'closed_violation_depth_three_result': 'results/closed_violation_depth_three_20260913.json',
+        'full_shift_depth_three_result': 'results/full_shift_depth_three_20260912.json',
+        'full_shift_depth_three_linear_result': 'results/full_shift_depth_three_linear_20260912.json'},
+
     'results/dimensional_resonance_response_20260912.json': {
         'script': 'scripts/verify_dimensional_resonance_response.py',
         'protocol': 'docs/research/protocols/dimensional-resonance-response-20260912.md',
