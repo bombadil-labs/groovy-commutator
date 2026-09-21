@@ -1,0 +1,77 @@
+name: Predictive assembly support audit
+
+# Fast automatic tier only. The first canonical PAS evaluation was cancelled after
+# ~4 hours, so scientific evaluation/full replay is not routine GitHub Actions work.
+# Pull requests and pushes compile/self-test the pinned verifier and check recorded
+# hashes when a canonical result exists. An expensive manual replay is an exceptional
+# escape hatch and requires Myk's explicit authorization reference.
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, ready_for_review]
+    paths:
+      - 'scripts/verify_predictive_assembly_support.py'
+      - 'scripts/verify_interface_history_global.py'
+      - 'scripts/verify_interface_history.py'
+      - 'scripts/verify_interface_factor.py'
+      - 'results/predictive_assembly_support_20260912.json'
+      - 'results/interface_history_global_20260912.json'
+      - 'docs/research/protocols/predictive-assembly-support-20260912.md'
+      - 'docs/research/protocols/predictive-assembly-support-gate1-clarification-20260912.md'
+      - 'scripts/check_result_integrity.py'
+      - '.github/workflows/research-predictive-assembly-support.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/verify_predictive_assembly_support.py'
+      - 'scripts/verify_interface_history_global.py'
+      - 'scripts/verify_interface_history.py'
+      - 'scripts/verify_interface_factor.py'
+      - 'results/predictive_assembly_support_20260912.json'
+      - 'results/interface_history_global_20260912.json'
+      - 'docs/research/protocols/predictive-assembly-support-20260912.md'
+      - 'docs/research/protocols/predictive-assembly-support-gate1-clarification-20260912.md'
+      - 'scripts/check_result_integrity.py'
+      - '.github/workflows/research-predictive-assembly-support.yml'
+  workflow_dispatch:
+    inputs:
+      authorization:
+        description: 'Myk authorization reference for this expensive PAS replay'
+        required: true
+        type: string
+
+permissions:
+  contents: read
+
+jobs:
+  predictive-assembly-support:
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -e .
+      - name: Syntax-check the pinned verifier
+        run: python -m py_compile scripts/verify_predictive_assembly_support.py
+      - name: Run implementation-only synthetic/provenance self-test
+        run: python scripts/verify_predictive_assembly_support.py --self-test
+      - name: Recorded source hashes match when canonical result exists
+        run: |
+          if [ -f results/predictive_assembly_support_20260912.json ]; then
+            python scripts/check_result_integrity.py results/predictive_assembly_support_20260912.json
+          else
+            echo 'Scientific PAS result remains absent; fast implementation checks only.'
+          fi
+      - name: Authorized manual full replay only
+        if: github.event_name == 'workflow_dispatch'
+        run: |
+          test -n "${{ inputs.authorization }}"
+          test -f results/predictive_assembly_support_20260912.json
+          echo "Authorized expensive PAS replay: ${{ inputs.authorization }}"
+          cp results/predictive_assembly_support_20260912.json /tmp/expected.json
+          python scripts/verify_predictive_assembly_support.py > /dev/null
+          cmp /tmp/expected.json results/predictive_assembly_support_20260912.json
