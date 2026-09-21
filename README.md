@@ -4,6 +4,19 @@ An operator-commutator framework for cellular automata — generalized from
 a single rule's self-commutator to the relationship *between* pairs of
 rules. Origin: https://liet-codes.github.io/wet-math/commutator.html
 
+## Start here
+
+The current research question is **which distinctions a representation can
+safely discard, which it must retain, and what a change of representation buys**.
+Read [the research direction](docs/research/START_HERE.md) and
+[the next-agent task](docs/research/NEXT_TASK.md): three executable case studies
+using existing exact results. Broad Class-IV searches, further dimensional
+existence sweeps and stalled solver campaigns are parked.
+
+The [limits and prior-art guide](docs/research/2026-09-21-research-boundaries.md)
+explains the mathematical boundaries. [AGENTS.md](AGENTS.md) contains the short
+working instructions; older research remains available as evidence.
+
 ## Research and the public site
 
 The site's **Research** section is the ongoing working record. Each entry has
@@ -29,7 +42,7 @@ continues **Analysis of Collusion Wiki**: recovered Rule 90/110 notes, reproduce
 broad sweeps, exact algebra checks, and new independent-seed history curves.
 The simple Class-IV identification failed; repair depends on the observation.
 This note also corrects the old affine converse: nonlinear Rules 4 and
-200 have zero commutator. Start with the research note for methods and limits.
+200 have zero commutator. This is the historical starting note; use the current direction above for the active task.
 
 ## Layout
 
@@ -51,8 +64,7 @@ This note also corrects the old affine converse: nonlinear Rules 4 and
   mechanism, the pilot sweep.
 - `NOTES.md` — citations, the QM correspondence, and the open interpretive
   thread.
-- `CLAUDE.md` — orientation + established results + open task, for picking
-  this up in an agentic coding session.
+- `AGENTS.md` — current agent guidance; `CLAUDE.md` imports it.
 - `results/` — sweep outputs: `sweep_full.parquet` (raw), 
   `sweep_full_classified.parquet` (regime-labeled, joined with image_ratio),
   `sweep_summary.csv`, `image_ratios.csv`.
@@ -103,12 +115,10 @@ divergence_stats(field)   # structured, persistent disagreement -- not noise, no
 ```
 
 ## Status
-Full 256-rule, 32,640-pair exhaustive sweep complete (5 seeds/pair) — see
-`results/` and `CLAUDE.md`. The public site (`site/`) has been redesigned
-into four pages including a new interactive Explorer, per
-`DESIGN_BRIEF.md` / `INTERACTIVE_EXPLORER_SPEC.md`. Current open threads:
-validating the provisional regime-classification thresholds against the
-real compressibility distribution, extending `groovy-engine.js`'s 2D CA
-support back into `src/groovy/` (see that file's own module docstring),
-and the new instruments (absential view, second-order memory,
-meta-evolution) described in `NOTES.md` section 6.
+
+The original 256-rule / 32,640-pair finite sweep is complete. Its empirical
+classification and corrections remain in the research record. Current work
+is consolidation of exact representation results; see
+[START_HERE](docs/research/START_HERE.md) for active and parked threads and
+[the reset record](docs/research/2026-09-21-research-reset.md) for integration
+of the four previously open research PRs.

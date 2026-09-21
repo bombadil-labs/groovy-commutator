@@ -1,5 +1,12 @@
 # Dimensional Closure and the Commutator Lift
 
+**Current state — 2026-09-21:** Existence and finite recursion are closed under the affine-oriented binary lift theorem. Further work is parked until it demonstrates a locality, readout or intervention advantage over simpler encodings. Predictive assembly support remains unevaluated.
+
+Read [START_HERE](START_HERE.md) for scheduling and [NEXT_TASK](NEXT_TASK.md)
+for the single active deliverable. Earlier “next” sections below are historical
+proposals; they do not authorize resuming a parked line. Integration provenance
+is in the [reset record](2026-09-21-research-reset.md).
+
 This page is the **working synthesis** of the dimensional-lift research program. It collects the line that began with rules becoming spatial data and now asks a sharper question:
 
 > **When two dynamical paths fail to commute, can the disagreement itself become a new spatial coordinate so that the enlarged representation closes?**

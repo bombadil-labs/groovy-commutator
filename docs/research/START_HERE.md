@@ -1,0 +1,77 @@
+# Research: start here
+
+**Current direction, 2026-09-21.** This page is the scheduling authority for
+research. Older notes and checkpoints preserve the evidence; their “next”
+sections are historical proposals, not an instruction to resume them.
+
+**Question:** which distinctions can a representation safely discard, which
+must it retain, and what does changing representation buy us?
+
+Our strongest work answers bounded versions of that question with exact
+factors, counterexamples, graph certificates and explicit constructions.
+“Class IV” remains a motivation, not a specification or success criterion.
+The [limits and prior-art guide](2026-09-21-research-boundaries.md) explains
+what the impossibility theorems constrain and where useful exact work remains.
+
+## One active deliverable
+
+**Publish three small, executable case studies of representation failure and
+repair, using existing results.** The [next-agent task](NEXT_TASK.md) specifies
+the cases, source files, acceptance criteria and stopping rule. Start there;
+do not begin by reading every checkpoint, running a sweep or inventing a new
+metric. This is consolidation with a scientific output, not another census.
+
+The deliverable must let a reader distinguish:
+
+1. the proposed effective law being wrong;
+2. the observation having no autonomous law on its declared domain;
+3. a finite-ring claim failing to transfer to the infinite line.
+
+This establishes a compact account of what the project actually knows before
+we choose another experiment. If an old claim cannot be certified from its
+evidence, a precise correction is a successful outcome.
+
+## What we have, and what is parked
+
+| Thread | State and evidence | Condition for further work |
+| --- | --- | --- |
+| Erased distinctions / representation invariants | **Active consolidation.** Exact closure and refinement criteria; finite-ring and full-line certificates. The [depth-three onset result](2026-09-14-depth-three-onset.md) from PR #229 is now integrated. | Finish the three case studies. Further depth or observation searches need a question whose answer changes a decision. |
+| Dimensional lift | **Existence and finite recursion closed** under the [affine-oriented theorem's contract](2026-09-17-affine-oriented-lift-theorem.md). No uniqueness, optimality or spontaneous organization theorem. | A concrete locality, readout or intervention advantage over ordinary history and the proof's period-three necklace construction, charging encoding and preprocessing costs fairly. |
+| Class-IV discriminator | **Frozen finite benchmark**, with [partial original provenance](2026-09-17-selective-persistence-discriminator-record.md). Its two core positive families are 54 and 110. | An independently defined target and external validation domain; no further feature search on the same labels by default. |
+| Refinement fibers / defects | **Paused.** Local mechanisms are useful in their stated height-two family. The [held-structures completion and correction](2026-09-21-held-structures-account.md) preserves the ninth unit and invalidates three mistimed predictor scores. | A standalone scientific payoff and a bounded protocol; a corrected run is required before reusing those three scores. There is no automatic tenth unit. |
+| Source-recoder recovery (PR #231) | **Archived, incomplete:** 14/22 classified, eight unresolved; no certificate found in the frozen search. Data, code and resumable checkpoints are integrated. | A structural result or a credible method improvement with a small benchmark and hard budget. “More solver time” alone is insufficient. |
+| Predictive assembly support (PR #172) | **Archived, unevaluated:** protocol and implementation preserved; no canonical PAS result. The last off-Actions attempt has an unrecovered outcome. | A concrete use for minimum-test-collection support beyond renaming feature selection, plus a bounded execution plan. |
+| Ring arithmetic, weighted cohabitation, broader observation catalogs, older history/possibility proposals | **Parked.** Negative and partial results stay available. | A mechanism, comparison and stopping rule that justify reopening the line. |
+
+Parking an incomplete computation does not turn it into a negative theorem.
+Scheduling can stop while the mathematics remains open. The old protocol's
+22/22 scientific completion condition does not obligate indefinite spending.
+
+## Rules for choosing the next unit
+
+Before a new experiment, answer these four questions in a short paragraph:
+
+- What uncertainty matters to the project?
+- What result would change the next action, including a negative result?
+- What existing theorem, simpler method or baseline must this beat?
+- What time/resource limit or result ends this line?
+
+Declare the rule, state family, boundary, observation, cadence, horizon and
+resource being measured. Keep an exact theorem, a finite computation, a
+sampled observation and a conjecture distinct. A timeout, missing score or
+lost artifact is never a scientific negative. Do not reuse observed outcomes
+as fresh predictions. Integrity checks verify provenance, not the argument.
+
+Historical research remains at the four Program pages and their checkpoints.
+Read only the lineage needed for the chosen task. Do not append the whole
+research history to agent instructions. Authorship, evaluation and review
+chronology remain in the original records.
+
+## Reset provenance
+
+Myk authorized repository changes, consolidation, closure and merges on
+2026-09-21 and explicitly suspended the Fable peer-review protocol **for this
+reset**. This authorizes integration and correction, not a claim of independent
+scientific review. The [integration record](2026-09-21-research-reset.md)
+lists the four preserved PR heads, checks and limits. Normal review rules
+apply to subsequent work unless Myk changes them.

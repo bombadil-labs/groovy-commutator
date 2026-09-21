@@ -13,6 +13,14 @@ when a substantial unit completes; keep the bounded-claim style. Text moved from
 
 Program page: `docs/research/2026-09-09-dimensional-closure-program.md`
 
+## Checkpoint 2026-09-21: research reset
+
+The affine-oriented existence/recursion theorem closes the existence objective. PR #172 is integrated as archived protocol and implementation only: no canonical PAS result, and the last off-Actions outcome was unrecovered. New lifting work needs a cost advantage over the period-three necklace and ordinary history.
+
+See [current direction](../START_HERE.md), [reset integration record](../2026-09-21-research-reset.md),
+and [held-structures correction](../2026-09-21-held-structures-account.md).
+This is scheduling/integration state, not new independent scientific review.
+
 ## Checkpoint 2026-09-17 (dataset): first-floor forced tables cached; the metric bet failed
 
 - **Completed:** [the forced-table dataset](../2026-09-17-forced-tables.md),

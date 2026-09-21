@@ -1,0 +1,66 @@
+[
+  {
+    "date": "2026-09-21",
+    "updated": "2026-09-21",
+    "promotion": {
+      "stage": "research"
+    },
+    "slug": "research-direction",
+    "recordType": "checkpoint",
+    "scope": "lab",
+    "label": "Research direction",
+    "title": "Research: current direction and the next concrete task",
+    "kind": "Checkpoint: research reset",
+    "evidence": "state",
+    "topic": "Research direction",
+    "summary": "One active deliverable: three executable representation case studies. Completed and partial work is integrated; broad searches and stalled solver campaigns are parked.",
+    "takeaway": "Use existing exact results to make the project’s contribution inspectable before choosing another experiment.",
+    "source": "docs/research/START_HERE.md",
+    "related": [
+      "research-boundaries",
+      "held-structures-account",
+      "depth-three-onset"
+    ]
+  },
+  {
+    "date": "2026-09-21",
+    "updated": "2026-09-21",
+    "promotion": {
+      "stage": "research"
+    },
+    "slug": "research-boundaries",
+    "label": "Research boundaries",
+    "title": "What we can prove, what we cannot infer, and where this project contributes",
+    "kind": "Literature and scope synthesis",
+    "evidence": "exploratory",
+    "topic": "Research direction",
+    "summary": "A map of locality, finite-state decidability, classification limits, universality, coarse-graining and predictive equivalence, with primary sources and explicit repository implications.",
+    "takeaway": "Unbounded impossibility results constrain particular questions; exact factors, obstructions and representation costs remain actionable.",
+    "source": "docs/research/2026-09-21-research-boundaries.md",
+    "related": [
+      "research-direction",
+      "affine-oriented-lift-20260917",
+      "depth-three-onset"
+    ]
+  },
+  {
+    "date": "2026-09-21",
+    "updated": "2026-09-21",
+    "promotion": {
+      "stage": "research"
+    },
+    "slug": "held-structures-account",
+    "label": "Held structures completion",
+    "title": "Held structures: partial results and a stream-timing correction",
+    "kind": "Experiment account and correction",
+    "evidence": "exploratory",
+    "topic": "Class-IV Refinement",
+    "summary": "The 2,112-row ninth unit is integrated with every frozen prediction accounted for. P4a/P4c/P4d are invalidated by an off-by-one input stream; a bounded diagnostic reproduces the defect and repairs three witnesses.",
+    "takeaway": "Passing algebra controls did not validate the measurement path. Preserve the scoped census, invalidate the mistimed scores, and pause before another unit.",
+    "source": "docs/research/2026-09-21-held-structures-account.md",
+    "related": [
+      "research-direction",
+      "defect-algebra-20260918"
+    ]
+  }
+]

@@ -1,0 +1,90 @@
+name: Depth-three onset certificate
+
+# Cost-bounded from the start, per Myk's 2026-09-12 CI-cost boundary (PR #201,
+# tightened by sub-PR #203) and the twentieth unit's protocol Section 3: the
+# canonical run of this verifier is expected at 100-150 minutes, with about four
+# hours as an operational PLANNING ESTIMATE and no wall-clock bound claimed
+# (protocol Section 5, correction B2), so it is NEVER triggered automatically and
+# is run once outside GitHub Actions from the pinned, reviewed implementation.
+# Automatic pull-request and push runs do only what is seconds-to-minutes scale:
+# compile and the verifier's sub-two-minute --self-test (measured at about 45
+# seconds), which writes nothing.
+#
+# This workflow lands in the implementation-only sub-PR, BEFORE any canonical
+# result exists. Per the post-eighteenth-unit convention recorded in
+# scripts/check_result_integrity.py's docstring (Gate-2 B1), a result is
+# registered there only once the canonical run has actually produced the file,
+# and a registered-but-absent result fails that sweep outright. So the
+# seconds-scale integrity step, the registration and the result file's own path
+# triggers are deliberately absent here and are wired in by the evaluation
+# sub-PR, together with the byte-for-byte comparison target of the full replay
+# below (which therefore cannot succeed until that result exists).
+
+on:
+  pull_request:
+    paths:
+      - 'scripts/verify_depth_three_onset.py'
+      - 'scripts/verify_full_shift_depth_three.py'
+      - 'scripts/verify_depth_two_certificate.py'
+      - 'scripts/verify_closed_violation_depth_three.py'
+      - '.github/workflows/research-depth-three-onset.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/verify_depth_three_onset.py'
+      - 'scripts/verify_full_shift_depth_three.py'
+      - 'scripts/verify_depth_two_certificate.py'
+      - 'scripts/verify_closed_violation_depth_three.py'
+      - '.github/workflows/research-depth-three-onset.yml'
+  workflow_dispatch:
+    inputs:
+      authorization:
+        description: 'Myk authorization reference for the expensive full replay (leave empty for the cheap tier only)'
+        required: false
+        type: string
+
+permissions:
+  contents: read
+
+jobs:
+  cheap-tier:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install research package
+        run: python -m pip install -e .
+      - name: Compile Python sources
+        run: python -m compileall -q scripts
+      - name: Verifier self test (writes nothing)
+        run: python scripts/verify_depth_three_onset.py --self-test
+
+  full-replay:
+    # Manual only, and only when an authorization reference is supplied: this is
+    # the 100-to-150-minute replay, never automatic. It has nothing to compare
+    # against until the evaluation sub-PR commits the canonical result and
+    # registers it in scripts/check_result_integrity.py.
+    if: github.event_name == 'workflow_dispatch' && inputs.authorization != ''
+    runs-on: ubuntu-latest
+    timeout-minutes: 420
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install research package
+        run: python -m pip install -e .
+      - name: Rerun the frozen audit and compare the canonical JSON byte for byte
+        run: |
+          echo "Authorized expensive replay: ${{ inputs.authorization }}"
+          test -f results/depth_three_onset_20260913.json || {
+            echo "No canonical result yet: this job is only meaningful from the evaluation sub-PR on." >&2
+            exit 1; }
+          cp results/depth_three_onset_20260913.json /tmp/expected.json
+          python scripts/verify_depth_three_onset.py > /dev/null
+          cmp /tmp/expected.json results/depth_three_onset_20260913.json

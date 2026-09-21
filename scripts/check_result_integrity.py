@@ -55,6 +55,15 @@ REGISTRY = {
         'families': 'results/forced_tables_20260917/families.json',
         'regime_join': 'results/forced_tables_20260917/regime_join.json',
         'd3_panel': 'results/forced_tables_20260917/d3_panel.json'},
+    'results/held_structures_20260918/summary.json': {
+        'protocol': 'docs/research/protocols/2026-09-18-held-structures.md',
+        'run': 'experiments/held_structures_20260918/run.py',
+        'evaluate': 'experiments/held_structures_20260918/evaluate.py',
+        'rows': 'results/held_structures_20260918/rows.json',
+        'controls': 'results/held_structures_20260918/controls.json',
+        'gadget': 'results/held_structures_20260918/gadget.json',
+        'algebra': 'results/held_structures_20260918/algebra.json',
+        'pairs': 'results/held_structures_20260918/pairs.json'},
     'results/permanent_structures_20260918/summary.json': {
         'protocol': 'docs/research/protocols/2026-09-18-permanent-structures.md',
         'run': 'experiments/permanent_structures_20260918/run.py',
@@ -257,6 +266,16 @@ REGISTRY = {
         'full_shift_depth_three_result': 'results/full_shift_depth_three_20260912.json',
         'full_shift_depth_three_linear_result': 'results/full_shift_depth_three_linear_20260912.json'},
 
+    'results/depth_three_onset_20260913.json': {
+        'script': 'scripts/verify_depth_three_onset.py',
+        'full_shift_depth_three_script': 'scripts/verify_full_shift_depth_three.py',
+        'depth_two_certificate_script': 'scripts/verify_depth_two_certificate.py',
+        'closed_violation_depth_three_script': 'scripts/verify_closed_violation_depth_three.py',
+        'depth_two_certificate_result': 'results/depth_two_certificate_20260912.json',
+        'closed_violation_depth_three_result': 'results/closed_violation_depth_three_20260913.json',
+        'full_shift_depth_three_result': 'results/full_shift_depth_three_20260912.json',
+        'full_shift_depth_three_linear_result': 'results/full_shift_depth_three_linear_20260912.json'},
+
     'results/dimensional_resonance_response_20260912.json': {
         'script': 'scripts/verify_dimensional_resonance_response.py',
         'protocol': 'docs/research/protocols/dimensional-resonance-response-20260912.md',
@@ -267,6 +286,38 @@ REGISTRY = {
         'physical_predecessor_script': 'scripts/verify_interface_factor.py'},
 
     'results/factor_balanced_interactions_20260915.json': {'docs/research/protocols/factor-balanced-interactions-20260915.md': 'docs/research/protocols/factor-balanced-interactions-20260915.md', 'experiments/factor_balanced_interactions_20260915/REPRODUCE.md': 'experiments/factor_balanced_interactions_20260915/REPRODUCE.md', 'experiments/factor_balanced_interactions_20260915/confirmation-execution.json': 'experiments/factor_balanced_interactions_20260915/confirmation-execution.json', 'experiments/factor_balanced_interactions_20260915/confirmation-result.json': 'experiments/factor_balanced_interactions_20260915/confirmation-result.json', 'experiments/factor_balanced_interactions_20260915/fit-execution.json': 'experiments/factor_balanced_interactions_20260915/fit-execution.json', 'experiments/factor_balanced_interactions_20260915/fit-result.json': 'experiments/factor_balanced_interactions_20260915/fit-result.json', 'experiments/factor_balanced_interactions_20260915/historical-provenance.json': 'experiments/factor_balanced_interactions_20260915/historical-provenance.json', 'experiments/factor_balanced_interactions_20260915/historical-relations.json': 'experiments/factor_balanced_interactions_20260915/historical-relations.json', 'experiments/factor_balanced_interactions_20260915/implementation-freeze.json': 'experiments/factor_balanced_interactions_20260915/implementation-freeze.json', 'experiments/factor_balanced_interactions_20260915/prediction-seal.json': 'experiments/factor_balanced_interactions_20260915/prediction-seal.json', 'experiments/factor_balanced_interactions_20260915/predictions.json': 'experiments/factor_balanced_interactions_20260915/predictions.json', 'experiments/factor_balanced_interactions_20260915/raw-archive.json': 'experiments/factor_balanced_interactions_20260915/raw-archive.json', 'experiments/factor_balanced_interactions_20260915/raw-manifest.json': 'experiments/factor_balanced_interactions_20260915/raw-manifest.json', 'experiments/factor_balanced_interactions_20260915/score-tables.md': 'experiments/factor_balanced_interactions_20260915/score-tables.md', 'review/factor_balanced/author-crossreview.json': 'review/factor_balanced/author-crossreview.json', 'review/factor_balanced/cases-verification.json': 'review/factor_balanced/cases-verification.json', 'review/factor_balanced/core-row-verification.json': 'review/factor_balanced/core-row-verification.json', 'review/factor_balanced/core_row_check.py': 'review/factor_balanced/core_row_check.py', 'review/factor_balanced/fit-verification.json': 'review/factor_balanced/fit-verification.json', 'review/factor_balanced/fresh-independent-relations.json': 'review/factor_balanced/fresh-independent-relations.json', 'review/factor_balanced/independent-review.md': 'review/factor_balanced/independent-review.md', 'review/factor_balanced/oracle.py': 'review/factor_balanced/oracle.py', 'review/factor_balanced/score-verification.json': 'review/factor_balanced/score-verification.json', 'review/factor_balanced/verify.py': 'review/factor_balanced/verify.py', 'scripts/factor_balanced_interactions.py': 'scripts/factor_balanced_interactions.py', 'scripts/package_factor_balanced.py': 'scripts/package_factor_balanced.py', 'scripts/plot_factor_balanced.py': 'scripts/plot_factor_balanced.py', 'scripts/rule_ring_selectors.py': 'scripts/rule_ring_selectors.py', 'scripts/rule_ring_structure.py': 'scripts/rule_ring_structure.py', 'scripts/summarize_factor_balanced.py': 'scripts/summarize_factor_balanced.py', 'src/groovy/ca.py': 'src/groovy/ca.py'},
+
+    # Dynamics of Erased Distinctions, phase-splice / bounded source-recoder
+    # frontier. These three results predate this registry: they were produced
+    # 2026-09-09/10 on the orphaned branch research/relational-source-recoder-
+    # 20260909 and are registered here when that thread was brought onto main.
+    # Their hash keys are the literal repository paths the producing scripts
+    # recorded, except 'parent_instrument'. The recovery progress result is a
+    # resumable campaign artifact: it is regenerated from the eight per-seed
+    # checkpoints by scripts/aggregate_bounded_source_recoder_exact_recovery.py
+    # and is expected to change while the campaign is unfinished. There is no
+    # automatic full replay for it; the recovery runs off GitHub Actions.
+    'results/phase_splice_source_recoder_20260909.json': {
+        'scripts/experiment_phase_splice_source_recoder.py': 'scripts/experiment_phase_splice_source_recoder.py',
+        'docs/research/protocols/phase-splice-source-recoder-20260909.md': 'docs/research/protocols/phase-splice-source-recoder-20260909.md',
+        'docs/research/protocols/phase-splice-source-recoder-resource-addendum-20260909.md': 'docs/research/protocols/phase-splice-source-recoder-resource-addendum-20260909.md'},
+
+    'results/bounded_source_recoder_synthesis_20260910.json': {
+        'scripts/experiment_bounded_source_recoder_synthesis.py': 'scripts/experiment_bounded_source_recoder_synthesis.py',
+        'docs/research/protocols/bounded-source-recoder-synthesis-20260910.md': 'docs/research/protocols/bounded-source-recoder-synthesis-20260910.md',
+        'results/phase_splice_source_recoder_20260909.json': 'results/phase_splice_source_recoder_20260909.json'},
+
+    'results/bounded_source_recoder_exact_recovery_20260910_progress.json': {
+        'scripts/recover_bounded_source_recoder_exact.py': 'scripts/recover_bounded_source_recoder_exact.py',
+        'docs/research/protocols/bounded-source-recoder-exact-recovery-20260910.md': 'docs/research/protocols/bounded-source-recoder-exact-recovery-20260910.md',
+        'results/bounded_source_recoder_synthesis_20260910.json': 'results/bounded_source_recoder_synthesis_20260910.json',
+        'parent_instrument': 'scripts/experiment_bounded_source_recoder_synthesis.py'},
+
+    'results/held_structures_20260921_timing_audit.json': {
+        'experiments/held_structures_20260918/run.py': 'experiments/held_structures_20260918/run.py',
+        'results/held_structures_20260918/rows.json': 'results/held_structures_20260918/rows.json',
+        'scripts/audit_held_structure_stream_timing.py': 'scripts/audit_held_structure_stream_timing.py'},
+
 }
 
 def sha(p: pathlib.Path) -> str: return hashlib.sha256(p.read_bytes()).hexdigest()

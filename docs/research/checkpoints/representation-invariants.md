@@ -7,6 +7,90 @@ substantial unit completes; keep the bounded-claim style.
 
 Program page: `docs/research/2026-09-10-representation-invariants-program.md`
 
+## Checkpoint 2026-09-21: research reset
+
+PR #229 is integrated under the reset-specific review waiver. Its completed depth-three onset record gives onset 65 under observation 232, with the failed bets preserved. No further depth census is queued; the next task extracts existing certificates.
+
+See [current direction](../START_HERE.md), [reset integration record](../2026-09-21-research-reset.md),
+and [held-structures correction](../2026-09-21-held-structures-account.md).
+This is scheduling/integration state, not new independent scientific review.
+
+## Checkpoint 2026-09-14 (twentieth unit evaluated): depth-three onset 65 under observation 232, realized by rules 94 and 133 alone, gate 2 requested
+
+- Evaluated and reported: `2026-09-14-depth-three-onset.md`, canonical result `results/depth_three_onset_20260913.json`, SHA-256 `089c92edf75707c8720e45dc3e06c791f6466b73223cbdc8f9c03910dda30184`. Run twice from the identical pinned tree in two independent git worktrees, off GitHub Actions (6680.4 s / 6550.6 s, both inside the protocol's 100–150 minute expectation and well under the ~4 h planning estimate), byte-identical — two-environment-style determinism, though both worktrees ran on this session's own machine rather than genuinely separate hardware.
+- **Provenance incident, preserved not hidden:** both canonical-run worktrees finished successfully and wrote their results before this session's container was restarted mid-monitoring, which killed the tracking process (and, separately, the unrelated source-recoder recovery's live solver processes on another branch — see that unit's own records). The already-completed depth-three-onset result files were unaffected; their SHA-256 identity was independently reconfirmed after the restart, and nothing was re-run or reconstructed to produce the reported numbers.
+- Outcome: **T1, T2 and T4 held; T3's theorem background and bets (a), (c), (d) held; bet (b) failed under observations 4 and 32.** The restriction lemma (every return walk of a closed violating walk stays inside its strong component, so the eighteenth unit's sparse packed-power onset machinery can run on the matrix restricted to the carrying components rather than the full 65,536-vertex one) checked out exactly as gate-1 confirmed it would; the restricted `(k, p)` differs from a full-matrix certificate where computed (e.g. under 232 at depth two, restricted `max_k = 24` against the recorded full-matrix `26`) while ring membership still agrees exactly, per T1(a)'s reproduction control.
+- **Headline: `N³_232 = 65` exactly, bet (a), realized by rules 94 and 133 alone** — the nineteenth unit's two non-anchored, eventually-out rules under 232, both `(k, p) = (69, 1)`, leaving membership at ring 9 and not returning until ring 65. More than double the depth-two record onset of 31.
+- Full per-observation onsets `N³_ψ`: 232→65, 4→22, 22→13, 32→22, 90→9, 150→7, 151→13, 165→9, 200→22, 223→22, 236→22, 251→22. Periods `P³_ψ`: 232→1, 4→2, 22→1, 32→2, 90→2, 150→6, 151→1, 165→2, 200→1, 223→2, 236→1, 251→2.
+- **Bet (b) failed**: the per-observation onset ceiling of 15 (derived from the depth-two record) is exceeded under 4 and 32 — both land at 22, driven by a conjugate pair of rules (77/146 under 4, 77/182 under 32) whose departure rings run past the ceiling. Consistent with the nineteenth unit's own finding: ring windows and onsets are properties of the pair (observation, depth level), do not carry up predictably from one level to the next, and a naive ceiling set from the prior level's record is exactly the kind of claim this program keeps finding reasons not to make.
+- Bet (c) and (d) held with margin: onset minus max `n_min` reaches 52 under 232 (bet only required ≥ 6 somewhere) and is exactly 0 under 22 (bet required 0 somewhere); nothing above the frozen ceiling of 65, nothing censored anywhere.
+- Not to be inferred: the restricted `(k, p)` is not claimed equal to any full-matrix certificate. Nothing about depth four. The coincidence that 232's latest onset is realized by exactly its two non-anchored eventually-out rules (a nineteenth-unit-identified set) is observed, not tested as a structural account — still a candidate for the parked structural-witness unit.
+- **Gate 2 requested** from Codex (OpenAI GPT-5.6 Sol) or any other independent collaborating agent, pinned to the evaluation sub-PR's merge head. AGENTS.md's established-results list is deliberately untouched until gate 2 passes.
+- Candidate next units, updated: (a) the depth-three onset is now decided, closing that candidate; (b) full-shift depth four, still parked pending Myk's cost decision; (c) a structural account of the non-diagonal/late-onset witnesses — now with two independent data points (the nineteenth unit's observation-200 late rules, this unit's observation-232 pair) suggesting a pattern worth a dedicated unit; (d) Lemma A / the restriction lemma at depth four on rings, which the twentieth unit's technique suggests may now be more tractable than previously estimated, since restriction (not full-matrix power cost) turned out to be the binding constraint at depth three too.
+
+## Checkpoint 2026-09-13 (twentieth unit opened): depth-three onset via sparse boolean powers restricted to the carrying components, protocol frozen, unrun, gate 1 requested
+
+- Frozen and unrun: `protocols/depth-three-onset-20260913.md`, on a gathering PR
+  from branch `claude/review-github-issues-wf15ni`, restarted from `main` at
+  `61c25eb` after the nineteenth unit's acceptance. Candidate chosen: **(a) the
+  depth-three onset `N³_ψ`**, the one quantity the nineteenth unit's
+  strong-component method could not reach. Scoped before freezing, as that
+  checkpoint asked, by a throwaway probe (exploratory, no committed artifact,
+  numbers recorded in the protocol's Section 3 so they need not be rerun to be
+  trusted).
+- What the probe found. The depth-three pair graph has **out-degree at most 4**
+  (values 0, 2, 4 only; structural, an edge appends one of four pair cells), so
+  the eighteenth unit's gather-OR packed power applies as it stands. But a
+  power of the **full** 65,536-vertex matrix is `2^32` bits = **512 MiB** (the
+  eighteenth unit's "128 MB" was an underestimate) and costs **20.8 s** plus
+  1.65 s to hash — at ~800 pairs and tens of powers each, days; the
+  full-matrix certificate stays out of reach. The lever is restriction: every
+  return walk `v3 ⇝ v0` of a closed violation stays inside their strong
+  component (one-line lemma, protocol Section 1, offered for gate-1 checking),
+  so the power sequence is taken on the matrix restricted to the carrying
+  components — median 1,726 vertices, **maximum 14,168** (rule 43 under 4) over
+  the nineteenth unit's 790 pairs with a closed violation. Measured: **64 ms
+  per power** at that maximum (24 MiB), a byte-confirmed certificate
+  `(k, p) = (12, 1)` in 2.4 s; components of tens of vertices certify in
+  milliseconds. Expected canonical run 100–150 minutes (the graphs are the
+  nineteenth unit's 71 minutes; scans add seconds per pair; the depth-two
+  reproduction control and seven full-matrix cross-check pairs add the rest),
+  with about four hours as an operational planning estimate, not a proven
+  bound; off-Actions from the start under the 2026-09-12 CI-cost boundary,
+  `workflow_dispatch`-only replay to be created in the implementation sub-PR.
+- Why the onset is not a formality: the probe's twelve sample pairs give rule
+  onsets 4, 9, 13, 18, 22 — and **65** for rules 94 and 133 under 232 (the
+  nineteenth unit's two non-anchored eventually-out rules), whose membership
+  leaves at ring 9 and is back in at rings as late as 64 on a pair of
+  13-vertex period-1 components with restricted certificate `(69, 1)`. That is
+  more than double the depth-two record onset of 31. Exploratory until the
+  canonical run; the bets are built on it and can lose.
+- Frozen bets (T3): `N³_232 = 65`, realized by 94 and 133 alone; every other
+  observation's onset at most the depth-two record 31 (`N³_200 ≤ 22`,
+  `N³_4 = N³_32 ≤ 15`, `N³_22 ≤ 16`, `N³_90 ≤ 10`, `N³_150 ≤ 7`); onset minus
+  the latest first-failing ring is at least 6 somewhere and zero somewhere; no
+  rule onset above 65 and nothing censored. Controls (T1): the restricted
+  method reproduces the eighteenth unit's depth-two `D²_ψ(n)`, `P²_ψ`, `N²_ψ`
+  exactly for all 2,048 pairs; reproduces the sixteenth/seventeenth units'
+  rings 4–14 and the nineteenth unit's `n_min`, `p_r`, `R_r`, `P³_ψ`,
+  eventual sets and `D³_ψ^∞`; agrees with unrestricted frontier reachability
+  and with six full 65,536-vertex packed powers on a frozen sample. T4:
+  complement and reflection covariance of certificates, onsets and ring sets.
+- Not to be inferred: the restricted `(k, p)` is a property of the restricted
+  matrix and may differ from a full-matrix certificate; nothing about depth
+  four; the 232 coincidence (late onset on exactly the non-anchored rules) is
+  a candidate for the parked structural-account unit, not tested here.
+- **Gate 1 requested** from Codex (OpenAI GPT-5.6 Sol), or any independent
+  collaborating agent, pinned to the exact protocol-only head named in the PR
+  comment. Nothing implemented, nothing run, AGENTS.md untouched. Codex's
+  first round (at `ba7ba91`) confirmed the restriction lemma, onset machinery
+  and T4 transport and required two account corrections, applied in a
+  re-freeze (protocol Section 5): the T3 background bound is period-aware,
+  `N³_ψ ≥ max_r max(4, n_min(r) − P³_ψ + 1)`, not `N³_ψ ≥ n_min` (false for
+  `P > 1`; under 150 it is only the trivial 4); and the "about four hours"
+  above is a planning estimate, not a bound. Bets unchanged; renewed gate 1
+  requested on the corrected head.
+
 ## Checkpoint 2026-09-13 (nineteenth unit accepted): all-ring depth three decided from strong components
 
 - Evaluated and reported: `2026-09-13-closed-violation-depth-three.md`, canonical result
