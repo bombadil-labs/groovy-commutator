@@ -13,6 +13,14 @@ when a substantial unit completes; keep the bounded-claim style. Text moved from
 
 Program page: `docs/research/2026-09-07-history-and-possibility.md` (precursor program, not a living Program page)
 
+## Checkpoint 2026-09-21: research reset
+
+Older proposals are parked. The current research direction and the three-case consolidation task supersede earlier work-selection instructions; the original history and possibility questions remain open where their records say so.
+
+See [current direction](../START_HERE.md), [reset integration record](../2026-09-21-research-reset.md),
+and [held-structures correction](../2026-09-21-held-structures-account.md).
+This is scheduling/integration state, not new independent scientific review.
+
 ## Checkpoint 2026-09-08: preserve unfinished threads
 
 Registered as the lab-scope checkpoint [Research agenda checkpoint: preserve unfinished threads](../2026-09-08-unfinished-threads.md); the full text lives there.

@@ -71,7 +71,7 @@ export function validateProgram(program, records) {
     if (typeof program[field] !== 'string' || !program[field].trim()) throw new Error(`Research: missing program ${field}`);
   }
   if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(program.slug)) throw new Error(`Research: invalid program slug ${program.slug}`);
-  if (!['living', 'stable', 'superseded'].includes(program.status)) throw new Error('Research: unknown program status');
+  if (!['living', 'stable', 'paused', 'superseded'].includes(program.status)) throw new Error('Research: unknown program status');
   if (!Array.isArray(program.supports) || !program.supports.length) throw new Error('Research: program needs supporting records');
   const bySlug = new Map(records.map((entry) => [entry.slug, entry]));
   for (const slug of program.supports) {
@@ -128,7 +128,7 @@ function publicLabel(entry, programs = []) {
   if (isCheckpoint(entry)) return `Checkpoint · ${scopeName(entry, programs)}`;
   return isLabeledNote(entry) ? entry.label : `Note ${entry.number}`;
 }
-function programStatus(program) { return program.status === 'living' ? 'Living synthesis' : program.status; }
+function programStatus(program) { return ({ living: 'Active consolidation', stable: 'Stable synthesis', paused: 'Paused', superseded: 'Superseded' })[program.status]; }
 
 function programCard(program, { heading = 'h2' } = {}) {
   return `<section class="research-program-feature">
@@ -147,13 +147,14 @@ function renderIndex(records, programs) {
     <h3><a href="${entryUrl(entry)}">${esc(entry.title)}</a></h3><p>${esc(entry.summary)}</p>
     <div class="research-entry-foot">${badge(entry)}${promotion(entry)}</div></div></article>`).join('');
   const programCards = programs.map((program) => programCard(program)).join('');
-  return layout('Research', 'Living programs, chronological research records, and the knowledge base of the Groovy Commutator project.', `
+  return layout('Research', 'Current research direction, program syntheses, chronological records and the knowledge base.', `
     <p class="research-kicker">The working record</p><h1 class="research-heading">Research</h1>
-    <p class="research-intro">The project now keeps three layers here: living Programs that compress distinct active research agendas, chronological Notes that preserve how the evidence developed, dated Checkpoints that state where a Program or the lab stands without adding evidence, and a Knowledge base of smaller reusable claims.</p>
-    <section aria-labelledby="programs"><h2 id="programs" class="research-section-title">Living programs · ${programs.length}</h2>${programCards}</section>
+    <p class="research-intro">Start with the current direction and its one concrete task. Program syntheses explain the evidence; notes and checkpoints preserve the history, including paused and incomplete work.</p>
+    <p class="research-takeaway"><strong>Start here</strong><a href="research-direction.html">Current direction and the next agent task →</a></p>
+    <section aria-labelledby="programs"><h2 id="programs" class="research-section-title">Research programs · ${programs.length}</h2>${programCards}</section>
     <div class="research-layout"><section aria-labelledby="notes"><h2 id="notes" class="research-section-title">Research notes and checkpoints · ${records.length} records</h2>${rows}</section>
     <aside class="research-sidebar" aria-label="About the research">
-      <section><h2>Programs, notes, knowledge</h2><p>Programs say what each active research line currently thinks. Notes retain protocols, negative results, and corrections. Knowledge extracts compact claims without erasing their evidence trail.</p><a href="program.html">Browse the Programs →</a></section>
+      <section><h2>Programs, notes, knowledge</h2><p>Programs summarize what each line knows and whether it is active or paused. Notes retain protocols, negative results, and corrections. Knowledge extracts compact claims without erasing their evidence trail.</p><a href="program.html">Browse the Programs →</a></section>
       <section><h2>From research to explanation</h2><p>The main pages remain the accessible entrance to the original calculus and instruments. Research is no longer only a staging area for them; some mature technical ideas belong here as living programs.</p><a href="../questions.html">Explore the questions →</a></section>
       <section id="to-explain"><h2>To explain next</h2>${candidates.length ? `<ul>${candidates.map((entry) => `<li><a href="${entryUrl(entry)}">${esc(entry.promotion.idea)}</a><small>Candidate for ${esc(entry.promotion.destination)}</small></li>`).join('')}</ul>` : '<p>No explanations are queued.</p>'}<p>Editorial readiness is separate from the strength of the evidence.</p></section>
       <section><h2>Threads</h2><ul>${topics.map((topic) => `<li>${esc(topic)}<small>${records.filter((entry) => entry.topic === topic).length} records</small></li>`).join('')}</ul></section>
@@ -161,10 +162,11 @@ function renderIndex(records, programs) {
 }
 
 function renderProgramsIndex(programs) {
-  return layout('Research Programs', 'Living syntheses for the active research agendas of the Groovy Commutator project.', `<article class="research-article research-program-article">
+  return layout('Research Programs', 'Current and paused research programs of the Groovy Commutator project.', `<article class="research-article research-program-article">
     <a class="research-back" href="index.html">← Research notes</a>
-    <p class="research-kicker">Living syntheses</p><h1 class="research-heading">Research Programs</h1>
-    <p class="research-summary">Programs are the current compressed theories for distinct active lines of investigation. They share one chronological research record but can evolve independently as the project branches.</p>
+    <p class="research-kicker">Program syntheses</p><h1 class="research-heading">Research Programs</h1>
+    <p class="research-summary">The active task consolidates exact representation results. Other lines retain their evidence and explicit reopening conditions; an open mathematical question does not require an active computation.</p>
+    <p class="research-takeaway"><strong>Start here</strong><a href="research-direction.html">Current direction and the next agent task →</a></p>
     ${programs.map((program) => programCard(program)).join('')}
   </article>`, { section: 'programs' });
 }

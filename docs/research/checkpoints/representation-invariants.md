@@ -7,6 +7,14 @@ substantial unit completes; keep the bounded-claim style.
 
 Program page: `docs/research/2026-09-10-representation-invariants-program.md`
 
+## Checkpoint 2026-09-21: research reset
+
+PR #229 is integrated under the reset-specific review waiver. Its completed depth-three onset record gives onset 65 under observation 232, with the failed bets preserved. No further depth census is queued; the next task extracts existing certificates.
+
+See [current direction](../START_HERE.md), [reset integration record](../2026-09-21-research-reset.md),
+and [held-structures correction](../2026-09-21-held-structures-account.md).
+This is scheduling/integration state, not new independent scientific review.
+
 ## Checkpoint 2026-09-14 (twentieth unit evaluated): depth-three onset 65 under observation 232, realized by rules 94 and 133 alone, gate 2 requested
 
 - Evaluated and reported: `2026-09-14-depth-three-onset.md`, canonical result `results/depth_three_onset_20260913.json`, SHA-256 `089c92edf75707c8720e45dc3e06c791f6466b73223cbdc8f9c03910dda30184`. Run twice from the identical pinned tree in two independent git worktrees, off GitHub Actions (6680.4 s / 6550.6 s, both inside the protocol's 100–150 minute expectation and well under the ~4 h planning estimate), byte-identical — two-environment-style determinism, though both worktrees ran on this session's own machine rather than genuinely separate hardware.

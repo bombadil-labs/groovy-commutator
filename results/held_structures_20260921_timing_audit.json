@@ -1,0 +1,50 @@
+{
+  "status": "retrospective diagnostic; full experiment not regenerated",
+  "K_arm_trials": 38016,
+  "stored_driven_healing_mismatches": 3916,
+  "invalidated_prediction_keys": [
+    "P4a",
+    "P4c",
+    "P4d"
+  ],
+  "witnesses": [
+    {
+      "base": 51,
+      "completion": 14076995,
+      "arm": "Kex",
+      "rep": 0,
+      "origin": 293,
+      "actual_heal": 2,
+      "historical_post_step_prediction": 3,
+      "corrected_pre_step_driven_prediction": 2,
+      "corrected_pre_step_free_prediction": 2
+    },
+    {
+      "base": 90,
+      "completion": 16766764,
+      "arm": "Kall_minus",
+      "rep": 1,
+      "origin": 431,
+      "actual_heal": 3,
+      "historical_post_step_prediction": 2,
+      "corrected_pre_step_driven_prediction": 3,
+      "corrected_pre_step_free_prediction": 3
+    },
+    {
+      "base": 110,
+      "completion": 1433512,
+      "arm": "Kex",
+      "rep": 0,
+      "origin": 288,
+      "actual_heal": 7,
+      "historical_post_step_prediction": 6,
+      "corrected_pre_step_driven_prediction": 7,
+      "corrected_pre_step_free_prediction": 6
+    }
+  ],
+  "source_hashes": {
+    "experiments/held_structures_20260918/run.py": "8fca1a8b7cf394fce7a9f8a50d7cd8a37f28031bdb060ccce719d8d283bec195",
+    "results/held_structures_20260918/rows.json": "dc25c8d2126c02c3d9111d538ff30f04d9d4d75a44441ad47c5bb95f4928d338",
+    "scripts/audit_held_structure_stream_timing.py": "0bf4db6c7156cef530a66b6a1f5defb3ed4773a301fffa987fb0ff216a5d13cd"
+  }
+}

@@ -1,5 +1,9 @@
 # Writing research, then explaining it
 
+For the active research question and task, read [START_HERE](START_HERE.md).
+This file is the authoring/workflow guide, not the research agenda. Older
+“next” sections do not reopen parked work.
+
 Research is the public working scientific record. It is built from five
 primitives, each with one job:
 

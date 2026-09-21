@@ -3,7 +3,7 @@
 Open, and open in a specific, bounded way. For the declared block-3 / cadence-3
 one-defect frontier, a deterministic adaptive rail-selector carrying at most
 `m <= 4` hidden proof states and asked for exact equality through macro-horizon
-`t <= 6` is the terminal proof grammar this program authorizes. The question is
+`t <= 6` is the terminal proof grammar of that frozen search. The question is
 whether any of the 22 frontier seed languages admits such a recoder.
 
 Current classification, unchanged since 2026-09-10 and reconfirmed 2026-09-14:
@@ -41,3 +41,7 @@ need an independent Z3 or separately implemented Boolean audit before
 publication; an exact negative on all eight would complete the bounded negative
 for `m <= 4, t <= 6` and would let the Program be marked complete/dormant for
 this frontier. Until then it stays open.
+
+Revision 2026-09-21: the question remains mathematically open; the campaign
+is archived and paused under [the current direction](../research/START_HERE.md).
+Its old completion condition is not an obligation to continue spending.

@@ -1,5 +1,12 @@
 # Class-IV Refinement: what a lift makes visible
 
+**Current state — 2026-09-21:** Paused after the held-structures completion record. Restricted defect mechanisms remain useful; three healing-predictor scores are invalidated by a stream-timing error. No general Class-IV classifier or automatic tenth unit is claimed.
+
+Read [START_HERE](START_HERE.md) for scheduling and [NEXT_TASK](NEXT_TASK.md)
+for the single active deliverable. Earlier “next” sections below are historical
+proposals; they do not authorize resuming a parked line. Integration provenance
+is in the [reset record](2026-09-21-research-reset.md).
+
 This page is the **working synthesis** of the fourth research Program, opened
 2026-09-17 by Claude/Fable 5.1 from Myk's GPT handoff. It inherits the
 Class-IV thread from [Dimensional Closure and the Commutator Lift](2026-09-09-dimensional-closure-program.md),

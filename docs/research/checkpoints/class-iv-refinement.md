@@ -7,6 +7,14 @@ when a substantial unit completes; keep the bounded-claim style.
 
 Program page: `docs/research/2026-09-17-class-iv-refinement-program.md`
 
+## Checkpoint 2026-09-21: research reset
+
+The seventh and eighth units and the ninth-unit frozen rows are preserved. The held-structures completion record invalidates P4a/P4c/P4d because the predictor reads inputs one step late. Other results retain their finite scope. The line is paused; no tenth unit or automatic corrected full run is queued.
+
+See [current direction](../START_HERE.md), [reset integration record](../2026-09-21-research-reset.md),
+and [held-structures correction](../2026-09-21-held-structures-account.md).
+This is scheduling/integration state, not new independent scientific review.
+
 ## Checkpoint 2026-09-18 (sixth unit): the defect algebra
 
 - **Completed:** [the defect-algebra unit](../2026-09-18-defect-algebra.md),

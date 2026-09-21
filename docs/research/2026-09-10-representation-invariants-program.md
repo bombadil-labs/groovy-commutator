@@ -1,5 +1,12 @@
 # Invariants Across Representation Contracts
 
+**Current state — 2026-09-21:** Exact certificates distinguish changes of observation and domain. The depth-three onset result is integrated, including onset 65 under observation 232 and the failed ceiling bet under observations 4 and 32. Further depth sweeps are parked; the active case studies reuse this evidence.
+
+Read [START_HERE](START_HERE.md) for scheduling and [NEXT_TASK](NEXT_TASK.md)
+for the single active deliverable. Earlier “next” sections below are historical
+proposals; they do not authorize resuming a parked line. Integration provenance
+is in the [reset record](2026-09-21-research-reset.md).
+
 This page is the **working synthesis** of a third research program, opened on 2026-09-10 after the review conversation recorded in issues #61–#68. It is not a chronological note and it claims no result of its own; every result it cites has its own note, protocol and canonical result file. It records the question, the objects the question is about, the transformation tables, one section per completed unit, and, after eleven units, the [synthesis](#synthesis-after-eleven-units).
 
 Authored by: Claude Code, Fable 5.1. Reviewed by: Codex (OpenAI) unit by unit; units 1–4 retrospectively on 2026-09-11, units 5 and 7–11 at gate 1 before implementation and at gate 2 before merge, and unit 6 run under Myk's explicit authorization with Codex's gate-1 review arriving retrospectively and its gate 2 before merge, as each unit's note records. The synthesis section was reviewed on its own gathering PR.

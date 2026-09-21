@@ -1,5 +1,11 @@
 # The bounded source-recoder recovery is still stuck at 0/8, and here is exactly where
 
+**Revision 2026-09-21:** integrated as incomplete historical work and parked by
+[the research reset](2026-09-21-research-reset.md). The eight cases remain
+undecided; the old instruction to resume computation is no longer current.
+No pre-evaluation review is retrospectively supplied. Descriptions of a ladder
+of proof grammars do not establish strict class inclusions.
+
 **Date:** 2026-09-14
 **Program:** Dynamics of Erased Distinctions
 **Status:** recovery campaign status and negative resource finding; the frontier remains open

@@ -5,20 +5,20 @@ or representation complexity needed to restore an exact closure or permanence
 argument after an observation has erased a distinction.
 
 The source-recoder sequence gives the idea its concrete shape. On one exact
-frontier the program climbed a controlled ladder of increasingly expressive
+frontier the program climbed a sequence of candidate
 proof grammars, each asked for the same thing — an exact certificate that an
 erased distinction never becomes visible again:
 
 ```
 same-source temporal recurrence
-    < changed source provenance
-    < one spatial phase cut
-    < two-cut diagnostic selector
-    < bounded adaptive finite-state selector (m <= 4)
+    → changed source provenance
+    → one spatial phase cut
+    → two-cut diagnostic selector
+    → bounded adaptive finite-state selector (m <= 4)
 ```
 
-Each rung is a strictly larger class of admissible permanence witnesses, and
-the ladder terminates at a deterministic Mealy-style recoder carrying at most
+Strict nesting of these witness classes is not established here. The arrows
+record the experimental sequence, not proven inclusions. Its final grammar is a deterministic Mealy-style recoder carrying at most
 `m` hidden proof states, which chooses per output symbol which evolved rail
 supplies the recoded background, reinserts the original defect seed, and is
 then asked for exact equality after continued evolution.
@@ -38,3 +38,7 @@ abstraction, another exact quotient — might certify.
 What would change the account: a structural theorem giving a principled bound
 or impossibility result for source-recoder state, which is the first named
 continuation the program leaves open.
+
+Revision 2026-09-21: removed the unsupported strict-inclusion assertion during
+the research reset. The proposed quantity remains unestablished. The associated
+solver campaign is parked, independently of its unresolved mathematics.

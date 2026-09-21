@@ -1,5 +1,11 @@
 # Dynamics of Erased Distinctions: synthesis and research terminus
 
+**Revision 2026-09-21:** integrated as incomplete historical work and parked by
+[the research reset](2026-09-21-research-reset.md). The eight cases remain
+undecided; the old instruction to resume computation is no longer current.
+No pre-evaluation review is retrospectively supplied. Descriptions of a ladder
+of proof grammars do not establish strict class inclusions.
+
 **Date:** 2026-09-10  
 **Program:** Dynamics of Erased Distinctions  
 **Status:** provisional program synthesis; exact recovery of the eight bounded-recoder verification censorings is active and, as of 2026-09-14, still unfinished at 0/8 (see the revision note at the end)  

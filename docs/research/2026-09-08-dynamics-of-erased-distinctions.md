@@ -1,5 +1,12 @@
 # Dynamics of Erased Distinctions
 
+**Current state — 2026-09-21:** Active consolidation: exact closure, predictive refinement and domain-sensitive certificates. The next deliverable is three executable case studies using existing evidence. The bounded source-recoder campaign is archived incomplete at 14/22; no automatic solver continuation.
+
+Read [START_HERE](START_HERE.md) for scheduling and [NEXT_TASK](NEXT_TASK.md)
+for the single active deliverable. Earlier “next” sections below are historical
+proposals; they do not authorize resuming a parked line. Integration provenance
+is in the [reset record](2026-09-21-research-reset.md).
+
 This page is the **working synthesis** of the Groovy Commutator research program around coarse-graining, memory, and representation repair. It is not a chronological experiment and it is not a claim that every open mechanism has been solved. It records the smallest common theory that currently survives the exact closure work, the history and observer searches, the fiber-visibility census, and the selector-shielding results.
 
 The current thesis is:

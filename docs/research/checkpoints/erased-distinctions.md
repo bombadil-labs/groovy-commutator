@@ -14,6 +14,14 @@ when a substantial unit completes; keep the bounded-claim style. Text moved from
 
 Program page: `docs/research/2026-09-08-dynamics-of-erased-distinctions.md`
 
+## Checkpoint 2026-09-21: research reset
+
+The source-recoder material from PR #231 is integrated and parked at 14/22, with eight unresolved and no recovered certificate. The prior 22/22 scientific completion condition remains unmet; scheduling is paused regardless. Current work is the three representation case studies.
+
+See [current direction](../START_HERE.md), [reset integration record](../2026-09-21-research-reset.md),
+and [held-structures correction](../2026-09-21-held-structures-account.md).
+This is scheduling/integration state, not new independent scientific review.
+
 ## 2026-09-14 — Phase-splice source-recoder frontier integrated; recovery still at 0/8
 
 **Authored by:** Claude Code, Opus 5, session `session_01SobHxxYcFURkku6CFKrhSZ`. **Reviewed by:** none at the time of writing; review requested on the gathering PR.
