@@ -1,0 +1,162 @@
+{
+ "1_algebra": {
+  "dictionary_multi": 0,
+  "n_pairs": 28,
+  "n_lit": 15,
+  "n_dark": 7,
+  "rank_lit": 11,
+  "rank_dark": 7,
+  "six_types_seen": 56,
+  "types_mixed_class": 0,
+  "flank_class_violations": 0,
+  "pair_permanent": [
+   50,
+   51,
+   76,
+   77,
+   178,
+   179,
+   204,
+   205
+  ],
+  "n_totalistic": 16,
+  "block0_size": 16,
+  "cell_sizes": {
+   "AC": 65536,
+   "Uplus": 8192,
+   "K": 57344,
+   "Kall": 24576,
+   "Kex": 28672,
+   "Kbot": 4096
+  }
+ },
+ "2_census_identity": {
+  "mismatches": 0,
+  "of": 288
+ },
+ "3_position_lock": {
+  "violations": 0,
+  "tracked": 40286,
+  "witness_violations": 7,
+  "witness_tracked": 24
+ },
+ "4_edge_automaton": {
+  "alt_steps": 7264,
+  "alt_errors": 0,
+  "same_steps": 2252,
+  "same_errors": 0,
+  "same_branch_exercised_at_least_50": true
+ },
+ "5_permanent_runs": {
+  "matching_kept": 168,
+  "of": 168,
+  "opposite_junction_converted": 144,
+  "opposite_trials": 168
+ },
+ "7_free_equals_driven": {
+  "centre_only_first_divergence": {
+   "0": null,
+   "51": null,
+   "204": null,
+   "8": null
+  },
+  "witness": {
+   "90": 2,
+   "110": 2
+  }
+ },
+ "9_beam_invariance": {
+  "failures": 0
+ },
+ "12_panel": {
+  "n_bases": 33,
+  "block0_complete": true,
+  "pair_permanent_in_panel": true,
+  "centre_only": [
+   0,
+   51,
+   204
+  ]
+ },
+ "6_driven_gadget": {
+  "mismatches": 0,
+  "of": 12735,
+  "heal_class_violations": 0,
+  "bases": 33
+ },
+ "8_regeneration": {
+  "mismatches": 0,
+  "of": 64,
+  "examples": []
+ },
+ "10_matched_null_pairs": {
+  "worst_abs_difference": 7.216449660063518e-16,
+  "n_pairs": 10,
+  "census_mismatches": 0
+ },
+ "11_disjointness": {
+  "overlap_counts": {
+   "Kall_plus": 0,
+   "Kall_minus": 0,
+   "Kex": 0,
+   "Uplus": 0,
+   "G": 0,
+   "random": 0
+  },
+  "Uplus_overlap_recorded": []
+ },
+ "14_frozen_key_set": {
+  "frozen": [
+   "P1a",
+   "P1b",
+   "P2a",
+   "P2b",
+   "P2c",
+   "P3a",
+   "P3b",
+   "P3c",
+   "P3d",
+   "P4a",
+   "P4b",
+   "P4c",
+   "P4d",
+   "P5a-i",
+   "P5a-ii",
+   "P5a-iii",
+   "P5b",
+   "P5c",
+   "P5d",
+   "P6a",
+   "P6b"
+  ],
+  "scored": [
+   "P1a",
+   "P1b",
+   "P2a",
+   "P2b",
+   "P2c",
+   "P3a",
+   "P3b",
+   "P3c",
+   "P3d",
+   "P4a",
+   "P4b",
+   "P4c",
+   "P4d",
+   "P5a-i",
+   "P5a-ii",
+   "P5a-iii",
+   "P5b",
+   "P5c",
+   "P5d",
+   "P6a",
+   "P6b"
+  ],
+  "missing": [],
+  "extra": [],
+  "pilot_rows": 10,
+  "error": null
+ },
+ "failures": [],
+ "13_evaluator_pilot_exercise": "performed pre-freeze against five real control-schema rows; the key set matched the frozen list at 21 of 21 and the exercise caught a live bug (P1b read the violation bit from the completion, leaving base-held entries zero); pilot output deleted, nothing tuned on it"
+}
