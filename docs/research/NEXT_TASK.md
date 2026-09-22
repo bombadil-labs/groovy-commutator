@@ -44,8 +44,10 @@ representation-empowerment census. A prospective scientific and cost audit
 found that its primary `C_infinity` endpoint includes the immediately edited
 observation. Identity therefore has disjoint deterministic action rows and one
 bit of capacity for every rule, the binary-action ceiling. The intended
-objective separation is already analytic; the remaining 247-rule computation
-would conflate representation, controller information, clock and readout while
+maximizing-set prediction remains unrun: a repertoire maximizer might also tie
+at one bit. But immediate action leakage makes the registered score a poor test
+of dynamical revisability, and the remaining 247-rule computation would
+conflate representation, controller information, clock and readout while
 changing no current action. The census is parked unrun. Do not implement it
 from the historical protocol.
 

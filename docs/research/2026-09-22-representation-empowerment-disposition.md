@@ -35,8 +35,9 @@ E_C_infinity(identity) = 1 bit
 for every ECA rule. One bit is the upper bound for a binary action channel, so
 identity is a rule-independent global maximizer. Research026's future
 repertoire for identity is zero because an identity macrostate leaves no
-hidden state. The two objectives are therefore already different by an exact
-endpoint argument. Running all rules is unnecessary to establish that fact.
+hidden state. The two score functions are therefore already nonidentical by an
+exact endpoint argument. This does not decide the registered maximizing-set
+prediction: a repertoire maximizer might also attain one bit.
 
 The same shortcut classifies many block observers without any trajectory.
 For a block truth table `h`, let `d_0 h(x)` say whether toggling the input bit

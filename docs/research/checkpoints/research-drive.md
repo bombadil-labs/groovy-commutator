@@ -20,9 +20,11 @@ note](../2026-09-22-representation-empowerment-disposition.md) proves that the
 primary `C_infinity` outcome includes the post-action observation. Identity
 therefore gives disjoint deterministic action rows and exactly one bit of
 capacity for every ECA rule, the binary-action upper bound. The intended
-objective distinction is already analytic because identity has zero hidden
-future repertoire. The remaining census would mix representation, controller
-information, cadence and readout without changing a current decision.
+maximizing-set prediction remains unrun because another observer could tie at
+one bit. The proof instead establishes immediate action leakage: the primary
+score is not a clean test of dynamical persistence. The remaining census would
+mix representation, controller information, cadence and readout without
+changing a current decision.
 
 No primary channels or outcomes were generated. The cost audit estimates
 34,816 stable partitions and about 11.8 million macrostate-conditioned

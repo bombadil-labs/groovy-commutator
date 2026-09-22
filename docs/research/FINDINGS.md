@@ -245,7 +245,7 @@ P/D carrier census is a narrower finite construction with no induction proof.
 question stays dormant because the consumer audit found no caller for it.
 [Exact boundary and corrected status](2026-09-22-recursive-g-boundary.md).
 
-## 16. The planned empowerment census answered itself at the endpoint
+## 16. The planned empowerment census leaked the action at its endpoint
 
 We were curious whether a representation that leaves many futures possible is
 also the representation under which a controller can choose among those
@@ -256,10 +256,12 @@ Its primary future class includes the observation immediately after the
 action. Under identity observation, the controller knows the exact state and
 the two actions produce different identity observations, so their outcome rows
 are disjoint. Identity therefore has the maximum one bit of capacity for every
-rule, while its hidden-future repertoire is zero. The intended distinction is
-already exact; a broad dynamical census is not needed to show it. The run would
-also mix controller information, sampling cadence and outcome semantics and
-lacks the full saved baseline required by its own reproduction gate.
+rule, while its hidden-future repertoire is zero. This exact endpoint contrast
+does not decide whether a repertoire-maximizing observer could also tie at one
+bit. It does show that the registered score is not a clean test of dynamical
+persistence. The run would also mix controller information, sampling cadence
+and outcome semantics and lacks the full saved baseline required by its own
+reproduction gate.
 **Protocol audit complete; census parked unrun.** A new study would need a
 delayed fixed target, common cadence, action-phase controls, a named consumer
 and a representation-cost baseline.

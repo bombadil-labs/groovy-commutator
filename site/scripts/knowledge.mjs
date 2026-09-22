@@ -8,19 +8,20 @@ export const KNOWLEDGE = path.join(SITE, 'content/knowledge.json');
 export const KINDS = {
   concept: ['defined'], finding: ['exact', 'replicated', 'exploratory', 'superseded'],
   question: ['open', 'partly-answered', 'answered'], theory: ['proposed', 'supported', 'refuted', 'superseded'],
-  experiment: ['planned', 'completed'],
+  experiment: ['planned', 'completed', 'parked'],
 };
 export const STATUS = {
   defined: 'Definition', exact: 'Exact within stated bounds', replicated: 'Replicated experiment',
   exploratory: 'Exploratory', superseded: 'Superseded', open: 'Open',
   'partly-answered': 'Partly answered', answered: 'Answered', proposed: 'Proposed',
   supported: 'Supported', refuted: 'Refuted', planned: 'Planned', completed: 'Completed',
+  parked: 'Parked without evaluation',
 };
 export const RELATIONS = {
   depends_on: { label: 'Depends on', inverse: 'Required by', meaning: 'A relies on B as a premise, definition, or experimental setup. Changes to B may require reviewing A.' },
   supports: { label: 'Supports', inverse: 'Supported by', meaning: 'A provides evidence for B within the stated scope. Support alone does not establish B.' },
   contradicts: { label: 'Contradicts', inverse: 'Contradicted by', meaning: 'A provides counterevidence to B within the stated scope.' },
-  tests: { label: 'Tests', inverse: 'Tested by', meaning: 'Experiment A is designed to investigate B. A planned test supplies no result.' },
+  tests: { label: 'Tests', inverse: 'Tested by', meaning: 'Experiment A is designed to investigate B. A planned or parked test supplies no result.' },
 };
 const check = (condition, message) => { if (!condition) throw new Error(`Knowledge: ${message}`); };
 const hasText = (value) => typeof value === 'string' && value.trim().length > 0;
