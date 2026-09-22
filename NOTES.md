@@ -118,49 +118,40 @@ single-rule case at all — two individually nonzero, individually "alive"
 rules producing a *relationship* that's neither identity nor noise. See
 section 5 for the interpretive extension this prompted.
 
-### The drain mechanism (not coordination)
-Decisive test: two **completely independent** random initial states (48%
-Hamming distance, no shared origin) run under (184-then-250 repeated) and
-(250-then-184 repeated) converge to the *identical* all-ones state by step
-12. Rules out coordination between the paths directly — if it were
-coordination, unrelated origins should produce unrelated outcomes.
+### The drain predictor (finite endpoint evidence, not an asymptotic mechanism)
 
-Mechanism: exhaustive enumeration of `image_ratio` (n=14) shows rule 184 at
-0.31 and rule 250 at 0.16 — most of state space is Garden-of-Eden
-configurations (no predecessor; Moore–Myhill garden-of-eden theorem, 1962/63).
-Composing two lossy maps repeatedly shrinks the reachable region of state
-space until there's no room left for two trajectories to stay
-distinguishable. It's entropy death, not relationship. Rule 0 is the
-totalizing limit case: exactly one possible output ever, so it drains
-*everything* instantly, no exceptions.
+One motivating example used two **completely independent** random initial
+states (48% Hamming distance, no shared origin): (184-then-250 repeated) and
+(250-then-184 repeated) both reached the all-ones state by step 12. That
+example argues against an explanation that depends on a shared origin, but it
+does not by itself identify a general mechanism.
 
-Caveat, confirmed not to be the whole story: image_ratio alone does not
-fully predict drain. Rule 4 (image_ratio 0.051) drains to zero against rules
-30, 126, 54, 110 — but not against rule 18 (settles at 0.35), despite rule
-18 and rule 126 sharing the same image_ratio (0.135). The actual condition
-is a finer structural compatibility between the specific pair, more in the
-spirit of Moore-Boykett's permutivity conditions than a scalar lossiness
-score.
+Exhaustive `image_ratio` at n=14 gives rule 184 about 0.31 and rule 250 about
+0.16, motivating a collapse hypothesis. But single-rule image ratio does not
+separate the finite sweep labels. Rule 4 has the same low scalar score against
+pairs with different measured endpoints.
 
-**Resolved (2026-07-01)** — see CLAUDE.md result 5 for the numbers. The
-condition is pairwise and two-part: the *composed* round map's eventual
-image (exhaustive at n=12, iterate until the image stops shrinking) must
-collapse to a tiny set, and the two orderings must collapse into the *same*
-set. Crystalline turns out to be the structural near-miss — a similar
-collapse into *disjoint* (constant-offset) attractors — which is a
-satisfying echo of the affine picture in section 2: the crystalline
-disagreement constant is exactly the fixed offset between the two
-attractor copies. The experiment also forced a taxonomy correction: the
-sweep's shape-based drain label (peak − final > 0.15) both over-counts
-(2,754 "drains" that never converge, median final disagreement 0.418 —
-transient decay, not convergence) and under-counts (895 "quiet drains"
-filed as crystalline because the transient stayed under the threshold).
-"Drain" as a mechanism should be read as: convergence of both orderings
-onto a literally shared attractor — entropy death into a shared grave —
-and it is visible from a 4,096-state toy computation. The Hindley-Rosen /
-confluence analogy in section 3 lands more precisely now: drain is the
-confluent case, crystalline the case where the critical pair never
-resolves but stays at fixed distance.
+**Bounded result (2026-07-01; claim corrected 2026-09-22).** The sweep labels
+come from n=100 rings, five seeds and 100 steps. The pair study exhaustively
+iterated both composed maps on all 4,096 n=12 states for at most 32 rounds and
+recorded each bounded image size and the two images' Jaccard overlap. An image
+that stopped shrinking is exact, but the saved legacy artifact does not record
+that certificate separately for every pair.
+
+Small images and high overlap are strong but imperfect predictors of zero mean
+disagreement at the measured n=100 endpoint: image-size AUC is 0.9077, while
+the best declared two-factor rule has precision 0.7647 and recall 0.6772. The
+shape-based drain label over-counts that endpoint event (2,754 labeled drains
+still have nonzero final disagreement, median 0.418) and under-counts it (895
+crystalline-labeled pairs have zero final disagreement after an earlier
+disagreement). These are endpoint statements, not proofs that either group
+will converge or remain separated forever.
+
+The supported conclusion is that bounded pair-image size and overlap predict
+the finite endpoint label much better than single-rule lossiness. The data do
+not establish a necessary causal mechanism, asymptotic convergence, or literal
+confluence. The older entropy-death/shared-grave language was an
+overinterpretation of this finite association.
 
 ## 5. Open interpretive thread: Unus Mundus as rule composition
 

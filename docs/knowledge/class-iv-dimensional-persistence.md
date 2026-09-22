@@ -15,5 +15,11 @@ inherits its root by conjugacy and the ambient completion is free, so no
 ambient Class IV property can follow from a lift. The recovered
 [discriminator record](../research/2026-09-17-selective-persistence-discriminator-record.md)
 gives a finite prospective separator for the 54/110 core phenotype with
-partial provenance. The question continues as the
-[Class-IV refinement Program](../research/2026-09-17-class-iv-refinement-program.md).
+partial provenance.
+
+The subsequent [Class-IV refinement Program](../research/2026-09-17-class-iv-refinement-program.md)
+retains scoped family mechanisms, failed bets and three invalidated healing
+scores, and is now paused. The discriminator remains a finite benchmark with
+two positive families, not a general Class-IV theorem. Reopening requires an
+independently defined target, an external validation domain and a decision the
+result would change.

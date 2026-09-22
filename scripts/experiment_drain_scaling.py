@@ -1,20 +1,20 @@
 """Ring-size scaling of the drain/convergence predictor.
 
-The drain-mechanism result (CLAUDE.md result 5) computes the pair's
-eventual image and attractor overlap exhaustively at n=12 and predicts
-convergence at the sweep's n=100, with AUC ~0.91. The residual error was
+The drain-mechanism result computes the pair's iterated-image size and overlap
+exhaustively at n=12 under a round cap and predicts zero disagreement at the
+sweep's measured n=100 endpoint, with AUC ~0.91. The residual error was
 *attributed* to ring-size mismatch (attractor structure depends on n) but
 that attribution was never tested. This script tests it: compute the same
 two structural numbers at n = 8, 10, 12, 14 on a fixed sample of pairs and
 watch how the AUC and the operating point move with n.
 
-If the predictor keeps improving with n, the residual is scale mismatch
-and the mechanism story is clean. If it plateaus, something other than
-ring size limits predictability (e.g. seed sampling in the ground truth,
-or genuine sensitivity to initial conditions).
+If the predictor keeps improving with n, scale mismatch is a plausible source
+of residual error. If it plateaus, the data do not support scale as the main
+explanation; seed sampling, the finite endpoint label and other limitations
+remain possible.
 
-Sample: ALL converged pairs (final = 0 with peak > 0 in the sweep) plus a
-random sample of non-converged pairs, so the expensive n=14 pass stays
+Sample: ALL zero-endpoint pairs (final = 0 with peak > 0 in the sweep) plus a
+random sample of other pairs, so the expensive n=14 pass stays
 tractable while the AUC estimate stays honest.
 
 Output: site/src/data/drain_scaling.json (compact, feeds one paragraph +

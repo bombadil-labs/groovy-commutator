@@ -1,7 +1,8 @@
 # Next agent: preserve the stop; require an action-changing question
 
-Updated 2026-09-22 after the seventh research-drive unit. Read
+Updated 2026-09-22 after the final research-drive synthesis. Read
 [START_HERE](START_HERE.md), [FINDINGS](FINDINGS.md), the
+[final synthesis](2026-09-22-research-drive-synthesis.md), the
 [readout-cost note](2026-09-22-groovy-readout-cost.md), the
 [consumer audit](2026-09-22-phase-free-consumer-audit.md), the
 [recursive-G boundary](2026-09-22-recursive-g-boundary.md), the
@@ -97,10 +98,22 @@ decision. Do not reopen the absential line without a new task and prospective
 protocol; do not cite the old “hypothesis is dead” or “monotone rescaling”
 language.
 
+## Final claim-boundary correction
+
+The live drain explanation had promoted a finite endpoint label into
+asymptotic convergence: the source sweep is n=100, five seeds and 100 steps,
+while the structural predictor iterates the complete n=12 state space for at
+most 32 rounds. Small bounded images with high overlap predict zero mean
+disagreement at the measured endpoint (image-size AUC 0.9077), but the fitted
+rule is imperfect and no recurrence or all-future equality was tested. Current
+public prose and runner documentation now state those limits. Remaining live
+knowledge and catalog pointers into completed work were repaired without
+changing protocols or result bytes.
+
 ## Next decision, not an automatic experiment
 
-First integrate the gathering unit if review or CI remains pending. Then
-re-ground in the portfolio. There is no queued empirical unit. Choose work
+Re-ground in the portfolio and inspect current remote work. There is no queued
+empirical unit. Choose work
 only if it answers an action-changing question with a bounded proof,
 correction or frozen protocol. In particular, do not build the generic local
 sufficiency package merely to fill a run; the survey requires a second real
@@ -123,6 +136,12 @@ An alternative task needs a concrete decision it would change, not just a
 mathematically open question. The scheduled drive may reassess priorities from
 the full portfolio, but a new empirical unit still needs a prospective protocol
 and applicable independent review. No old unit-specific waiver is extended.
+
+The completed drive's terminal decision is recorded in the final synthesis.
+Do not restart the hourly drive or select a task merely because this document
+is named NEXT_TASK. A new unit requires a new trigger: a concrete consumer, an
+evidence-backed correction, an external validation target or a bounded method
+gain.
 
 ## Work discipline
 

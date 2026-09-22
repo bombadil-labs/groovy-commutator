@@ -17,7 +17,9 @@ what the impossibility theorems constrain and where useful exact work remains.
 
 Read [What we have learned](FINDINGS.md) for the running plain-language
 findings, and [the program survey](2026-09-22-program-survey.md) for the
-recommended portfolio. Keep one active design agenda under Erased Distinctions:
+recommended portfolio. The [research-drive synthesis](2026-09-22-research-drive-synthesis.md)
+records the completed comparison, subsequent audits and current justified stop.
+Keep one active design agenda under Erased Distinctions:
 local sufficient state and the cost of representation. Representation Invariants
 supplies shared methods; it is not a separate automatic census queue.
 

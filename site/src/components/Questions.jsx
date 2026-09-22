@@ -160,15 +160,16 @@ function LineageChart({ history }) {
   );
 }
 
-// log2(pair eventual image size) x attractor overlap, one dot per sampled
-// pair -- the two structural coordinates the drain answer lives in.
+// log2(pair image size after at most the recorded rounds) x image overlap,
+// one dot per sampled pair -- the two bounded structural coordinates used by
+// the drain predictor.
 function DrainScatter() {
   const W = 520, H = 280, padL = 42, padR = 12, padT = 12, padB = 40;
   const w = W - padL - padR, h = H - padT - padB;
   const groups = [
     { key: 'other', color: '#c9bda9', label: 'noisy / structured / mislabeled drain' },
-    { key: 'crystalline', color: 'var(--crystalline)', label: 'crystalline (never converges)' },
-    { key: 'converged', color: 'var(--drain)', label: 'converged (final disagreement = 0)' },
+    { key: 'crystalline', color: 'var(--crystalline)', label: 'crystalline (nonzero measured endpoint)' },
+    { key: 'converged', color: 'var(--drain)', label: 'zero disagreement at measured endpoint' },
   ];
   const x = (lg) => padL + (lg / 12) * w;
   const y = (j) => padT + (1 - j) * h;
@@ -184,10 +185,10 @@ function DrainScatter() {
           <text key={v} x={padL - 6} y={y(v) + 3} textAnchor="end" fontFamily="IBM Plex Mono, monospace" fontSize="10" fill="#6b6055">{v}</text>
         ))}
         <text x={padL + w / 2} y={H - 6} textAnchor="middle" fontFamily="IBM Plex Mono, monospace" fontSize="10" fill="#6b6055">
-          log&#8322; of the pair&#8217;s eventual image (0 = one single reachable state)
+          log&#8322; of the pair&#8217;s bounded iterated image (0 = one retained state)
         </text>
         <text x={12} y={padT + h / 2} textAnchor="middle" fontFamily="IBM Plex Mono, monospace" fontSize="10" fill="#6b6055" transform={`rotate(-90 12 ${padT + h / 2})`}>
-          attractor overlap
+          bounded-image overlap
         </text>
         {groups.map((g) => (
           <g key={g.key}>
@@ -614,7 +615,7 @@ export default function Questions() {
         <QuestionCard
           id="regime-counts"
           q="When two elementary CA rules run against each other, what actually happens?"
-          status="established" statusLabel="Established"
+          status="established" statusLabel="Finite sweep — five empirical labels"
         >
           <p style={{ fontSize: '0.92rem', color: 'var(--ink-soft)', margin: '0 0 1rem' }}>
             The object under study, in the <a href="concepts.html#engines" style={{ color: 'var(--accent)' }}>Concepts
@@ -631,20 +632,22 @@ export default function Questions() {
               ], note: 'the field every pair question below measures' },
           ]} />
           <p style={{ fontSize: '0.92rem', color: 'var(--ink-soft)', margin: '0 0 1rem' }}>
-            Across all 256 rules &mdash; all 32,640 unordered pairs, 5 seeds each &mdash; that remainder settles
-            into one of five regimes (see Concepts for what each one means):
+            Across all 256 rules &mdash; all 32,640 unordered pairs, 5 seeds each on n=100 rings for 100
+            steps &mdash; the sweep assigned that remainder one of five empirical regime labels (see Concepts
+            for what each label means):
           </p>
           <RegimeBarChart />
           <p className="gc-mono" style={{ fontSize: '0.72rem', color: 'var(--ink-soft)', margin: '0.5rem 0 0' }}>
-            * the drain count is known-inflated by a classifier artifact (honest census &asymp; 2,150) &mdash; see
-            the drain question below; the correction doesn't change which regime is largest.
+            * the drain label is known-inflated by a classifier artifact; 2,150 pairs instead had zero mean
+            disagreement at the measured endpoint after earlier disagreement &mdash; see the drain question below.
+            This correction doesn't change which label is largest.
           </p>
           <p style={{ fontSize: '0.88rem', color: 'var(--ink-soft)', margin: '1rem 0 0' }}>
             <strong style={{ color: 'var(--ink)' }}>What this says:</strong> structured divergence &mdash; the regime
             with no single-rule analog &mdash; was expected to be a narrow sliver between agreement and noise. At
-            full scale it's the <strong>largest single regime</strong>, covering nearly half of all pairs. Two
-            arbitrary rules are more likely than not to settle into a persistent, legible, non-identical relationship
-            rather than either merging or dissolving into static.
+            this finite sweep it's the <strong>largest single label</strong>, covering nearly half of all pairs.
+            Under the declared horizon and classifier, two arbitrary rules are more often labeled as structured
+            divergence than as either agreement or noise. This is not an asymptotic classification theorem.
           </p>
           <p style={{ fontSize: '0.88rem', color: 'var(--ink-soft)', margin: '0.6rem 0 0' }}>
             Two revisions to these counts came out of checking them &mdash; the boundary lines hold up better than
@@ -704,8 +707,9 @@ export default function Questions() {
             <strong style={{ color: 'var(--ink)' }}>What this says:</strong> no. Distributions for drain, crystalline,
             and structured overlap heavily &mdash; there's no clean image_ratio threshold that separates them. Two
             rules can share an identical image_ratio and still differ in whether they drain against a third. The
-            real condition is something more structural than a single score &mdash; a pair-level property, found and
-            measured in the <a href="#drain-mechanism" style={{ color: 'var(--accent)' }}>drain question below</a>.
+            single-rule image_ratio is insufficient in this finite dataset. Bounded pair-image size and overlap
+            are stronger but imperfect predictors of the measured endpoint label, as shown in the{' '}
+            <a href="#drain-mechanism" style={{ color: 'var(--accent)' }}>drain question below</a>.
           </p>
         </QuestionCard>
 
@@ -911,33 +915,33 @@ export default function Questions() {
         <QuestionCard
           id="drain-mechanism"
           q="What actually predicts the drain regime, if not image_ratio alone?"
-          status="established" statusLabel="Answered — with a correction"
+          status="established" statusLabel="Finite predictor — endpoint claim corrected"
         >
           <p style={{ fontSize: '0.92rem', color: 'var(--ink-soft)', margin: '0 0 1rem' }}>
             This was the open question above all others, and it's now been run
             (<code className="gc-code">scripts/experiment_drain_predictor.py</code>). The move: stop scoring rules
             one at a time and measure the <em>pair</em>. For every one of the 32,640 pairs, take the map one
             ordering's <Op>engine</Op> walks &mdash; the composite B&#8728;A, one full round of A-then-B &mdash;
-            push the <em>entire</em> n=12 state space (4,096 states) through it repeatedly, and record two
-            structural numbers: how small the
-            reachable set collapses (the pair's <strong>eventual image</strong>), and how much the two orderings'
-            eventual images <strong>overlap</strong> as sets (Jaccard).
+            push the <em>entire</em> n=12 state space (4,096 states) through it for at most 32 rounds, and
+            record two structural numbers: how small each iterated image becomes, and how much the two
+            bounded images <strong>overlap</strong> as sets (Jaccard). An image that stopped shrinking is exact;
+            the stored result does not separately mark which pairs reached that certificate before the cap.
           </p>
           <p style={{ fontSize: '0.92rem', color: 'var(--ink-soft)', margin: '0 0 1rem' }}>
             <strong style={{ color: 'var(--ink)' }}>First, the correction the experiment forced.</strong> The sweep's
-            "drain" label (disagreement peak minus final &gt; 0.15) turns out to conflate two populations. Of the
-            4,009 labeled drains, {drainData.n_soft_drain_label.toLocaleString()} never actually converge &mdash;
-            their disagreement decays from an early transient and then settles at a median of{' '}
-            {drainData.median_final_soft_drain} <em>forever</em>. Real convergence (final disagreement exactly zero,
-            after genuinely disagreeing) covers {drainData.n_converged.toLocaleString()} pairs &mdash;{' '}
+            "drain" label (disagreement peak minus final &gt; 0.15) turns out to conflate two measured endpoint
+            populations. Of the 4,009 labeled drains, {drainData.n_soft_drain_label.toLocaleString()} still have
+            nonzero mean disagreement at the final recorded frame, with median{' '}
+            {drainData.median_final_soft_drain}. Zero disagreement at that endpoint after earlier disagreement
+            occurs for {drainData.n_converged.toLocaleString()} pairs &mdash;{' '}
             {drainData.converged_labeled_drain.toLocaleString()} labeled drain, plus{' '}
             {drainData.converged_labeled_crystalline} "quiet drains" that hid inside the crystalline count because
-            their transient spike was too small to trip the threshold. The honest drain census is ~2,150 pairs
-            (6.6%), not 4,009 (12.3%).
+            their transient spike was too small to trip the threshold. Thus 2,150 pairs (6.6%), not 4,009
+            (12.3%), satisfy this stricter finite endpoint label. No recurrence or all-future equality was tested.
           </p>
           <p style={{ fontSize: '0.92rem', color: 'var(--ink-soft)', margin: '0 0 0.9rem' }}>
-            Against that corrected ground truth, the two structural numbers &mdash; computed at toy scale, n=12,
-            exhaustively &mdash; predict what happens at the sweep's n=100:
+            Against that corrected finite endpoint label, the two structural numbers &mdash; computed exhaustively
+            at toy scale, n=12 &mdash; predict the sweep's n=100 label:
           </p>
           <DrainScatter />
           <div style={{ overflowX: 'auto', margin: '1.1rem 0 0' }}>
@@ -946,8 +950,8 @@ export default function Questions() {
               <div className="head">pairs</div>
               <div className="head">median image</div>
               <div className="head">median overlap</div>
-              {[['converged (real drain)', 'converged'], ['"drain"-labeled, never converges', 'soft_drain_label'],
-                ['crystalline (non-converging)', 'crystalline_not_converged'], ['structured', 'structured'],
+              {[['zero endpoint after disagreement', 'converged'], ['"drain"-labeled, nonzero endpoint', 'soft_drain_label'],
+                ['crystalline, nonzero endpoint', 'crystalline_not_converged'], ['structured', 'structured'],
                 ['noisy', 'noisy']].map(([label, key]) => {
                 const m = drainData.medians[key];
                 return (
@@ -962,25 +966,26 @@ export default function Questions() {
             </div>
           </div>
           <p style={{ fontSize: '0.92rem', color: 'var(--ink-soft)', margin: '1.1rem 0 0' }}>
-            And the counterexample that killed the single-rule story is fully resolved: rule 4 against 30, 126, 54
-            collapses to a shared attractor of {drainData.counterexample[0].pair_image_count},{' '}
+            The counterexample that killed the single-rule story is also separated by the bounded pair measure:
+            rule 4 against 30, 126, 54 has shared bounded images of{' '}
+            {drainData.counterexample[0].pair_image_count},{' '}
             {drainData.counterexample[1].pair_image_count}, and {drainData.counterexample[2].pair_image_count} states
-            (overlap 1.0) &mdash; while rule 4 against 18, same single-rule image_ratio as 126, keeps{' '}
-            {drainData.counterexample[3].pair_image_count} reachable states with only partial overlap
-            ({drainData.counterexample[3].jaccard}), and doesn't drain.
+            (overlap 1.0) &mdash; while rule 4 against 18, with the same single-rule image_ratio as 126, keeps{' '}
+            {drainData.counterexample[3].pair_image_count} states in its bounded image with only partial overlap
+            ({drainData.counterexample[3].jaccard}) and a different measured endpoint label.
           </p>
           <p style={{ fontSize: '0.88rem', color: 'var(--ink-soft)', margin: '1rem 0 0' }}>
-            <strong style={{ color: 'var(--ink)' }}>What this says:</strong> drain is a two-part condition, and both
-            parts belong to the pair, not to either rule: the composed dynamics must crush state space down to a
-            tiny attractor set, <em>and</em> both orderings must crush it into the <em>same</em> attractor set.
-            Crystalline is the near-miss case that shares the collapse but lands in disjoint (constant-offset)
-            attractors &mdash; overlap 0.05 vs. 1.0, with similar image sizes. As a detector, ranking pairs by the
-            n=12 structure separates converged from everything else at AUC {drainData.auc_pair_image} (the old
-            min-image_ratio baseline: {drainData.auc_min_image_ratio}), and the crisp rule &ldquo;shared attractor
-            of &le; {drainData.best_rule.max_image} states&rdquo; gets precision {drainData.best_rule.precision} /
+            <strong style={{ color: 'var(--ink)' }}>What this says:</strong> small iterated images and high overlap
+            are strong finite predictors of the measured zero-disagreement endpoint, and both quantities belong
+            to the pair rather than either rule. The crystalline-labeled nonzero-endpoint cases have similar
+            median image size but much lower overlap &mdash; 0.05 vs. 1.0. As a detector, ranking pairs by the
+            n=12 bounded structure separates the endpoint labels at AUC {drainData.auc_pair_image} (the old
+            min-image_ratio baseline: {drainData.auc_min_image_ratio}), and the crisp rule &ldquo;bounded image
+            &le; {drainData.best_rule.max_image} states with overlap &ge; {drainData.best_rule.min_jaccard}&rdquo;
+            gets precision {drainData.best_rule.precision} /
             recall {drainData.best_rule.recall} &mdash; a 4,096-state toy computation predicting behavior at n=100.
-            The mechanism question is settled: it's entropy death into a <em>shared</em> grave, and you can see the
-            grave from n=12.
+            That imperfect predictor establishes a bounded association, not a causal mechanism; it does not prove
+            asymptotic convergence, necessity, or sufficiency.
           </p>
           <p style={{ fontSize: '0.88rem', color: 'var(--ink-soft)', margin: '0.8rem 0 0' }}>
             <strong style={{ color: 'var(--ink)' }}>Does the toy's size matter?</strong> The residual error was
@@ -988,9 +993,9 @@ export default function Questions() {
             same sample) mostly <em>refutes</em> it: AUC{' '}
             {drainScalingData.by_n.map((r, i) => (
               <Fragment key={r.n}>{i > 0 && ' · '}<span className="gc-mono">{r.auc_image.toFixed(3)}</span> at n={r.n}</Fragment>
-            ))}. Even the 256-state computation nearly matches the 16,384-state one &mdash; the structure that
-            predicts convergence is visible at any ring size, and the remaining error must come mostly from the
-            ground truth itself (five sampled seeds per pair at n=100), not from the predictor's scale.
+            ))}. Even the 256-state computation nearly matches the 16,384-state one on this sample. The similar
+            sampled AUCs do not support ring size as the main explanation for the residual error; five-seed
+            sampling, the 100-step endpoint label, and other model limitations remain plausible contributors.
           </p>
         </QuestionCard>
 

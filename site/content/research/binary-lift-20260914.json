@@ -4,11 +4,11 @@
     "label": "Binary lift I",
     "title": "A four-reference binary lift family covers all 256 ECAs",
     "date": "2026-09-14",
-    "updated": "2026-09-14",
+    "updated": "2026-09-22",
     "kind": "Experiment",
     "evidence": "exact",
     "topic": "Dimensional closure",
-    "summary": "All 256 ECAs admit a faithful binary first floor in the completed four-reference census, at native radius 2. G remains incomplete.",
+    "summary": "All 256 ECAs admit a faithful binary first floor in the completed four-reference census, at native radius 2. The selected first-floor G carriers were still partial in this historical census; later two-beam ancestral source-G transport is exact through every finite depth.",
     "takeaway": "Four reference formulas cover every source rule; native faithfulness and commutator preservation remain separate gates.",
     "source": "docs/research/2026-09-14-binary-lift-family.md",
     "promotion": {
@@ -18,20 +18,22 @@
       "binary-lift-recursion-20260914",
       "binary-lift-g-obstructions-20260914",
       "dimensional-intertwining",
-      "dimensional-vision-and-interpretation"
+      "dimensional-vision-and-interpretation",
+      "affine-oriented-lift-20260917",
+      "recursive-g-boundary"
     ]
   },
   {
     "slug": "binary-lift-recursion-20260914",
     "label": "Binary lift II",
-    "title": "Every ECA has a faithful binary path through 3D; recursive G remains incomplete",
+    "title": "Every ECA has a faithful binary path through 3D; the selected G carrier stays partial",
     "date": "2026-09-14",
-    "updated": "2026-09-14",
+    "updated": "2026-09-22",
     "kind": "Experiment",
     "evidence": "exact",
     "topic": "Dimensional closure",
     "summary": "One reflection-aligned path per rule retains native evolution and source/parent recovery through 3D. Selected G passes 200/220; best-known alternatives cover 206.",
-    "takeaway": "Finite-dimensional native closure is universal across the ECA sources tested; recursive G and induction remain open.",
+    "takeaway": "This finite 3D census preceded the general theorem. Later work proves two-beam ancestral source-G transport through every finite depth; native descendant G is completion-dependent, and one-beam typed compression is open but dormant.",
     "source": "docs/research/2026-09-14-binary-lift-recursion.md",
     "promotion": {
       "stage": "research"
@@ -40,7 +42,9 @@
       "binary-lift-family-20260914",
       "binary-lift-g-obstructions-20260914",
       "dimensional-intertwining",
-      "dimensional-vision-and-interpretation"
+      "dimensional-vision-and-interpretation",
+      "affine-oriented-lift-20260917",
+      "recursive-g-boundary"
     ]
   },
   {

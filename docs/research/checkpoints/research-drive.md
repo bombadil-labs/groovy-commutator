@@ -1,5 +1,62 @@
 # Research drive handoff
 
+## 2026-09-22 — final unit: synthesis and verified stop
+
+Inspected remote main `cfe14b06e13a72a3ba5784534ffefeff77b9f75b`
+through the Bombadil Labs connector. No open PRs or issues were present.
+Re-read the agent guide, scheduling authority, next task, findings, portfolio
+survey and seventh-unit handoff before scanning the remaining current public
+and reusable surfaces for live conclusions stronger than their evidence.
+
+Selected a terminal claim-boundary synthesis and pointer audit because the prior units had
+closed the recommended comparison, found no consumer for the remaining lift
+interface, parked the only planned broad census for an exact endpoint defect,
+and repaired the active status surface. Another experiment had no declared
+decision to change. Making that stop legible to the next agent outranked
+manufacturing a new target.
+
+The [final synthesis](../2026-09-22-research-drive-synthesis.md) states the
+project's productive representation question, consolidates the seven bounded
+units and separates exact results, finite evidence, open mathematics and
+scheduling decisions. It records four concrete reopening triggers. The
+portfolio survey now points to the completed outcome rather than presenting
+the readout comparison as future work. One remaining public catalog takeaway
+that called the completed 64-fiber study “the next control” now names that
+follow-up and the paused Program. An independent read-only audit then found a
+more important current overclaim: the public drain page described a 100-step,
+five-seed endpoint label as convergence “forever” and a capped n=12 iterated
+image as a settled asymptotic mechanism. The page, NOTES and runner documentation
+now state the finite horizon, cap, imperfect precision/recall and unproved
+alternatives. Three reusable knowledge pages and ten remaining catalog entries
+across nine files that pointed into completed or parked work were also brought
+to current status.
+START_HERE, NEXT_TASK and FINDINGS point to the terminal disposition.
+
+No experiment, protocol, solver run, result byte or scientific threshold was
+changed. The drain correction reinterprets preserved finite results; it does
+not rerun them. This unit adds no new mathematical theorem and does not declare
+the open questions impossible. Its terminal claim is operational: after the
+current-surface corrections, the repository supplies no action-changing
+empirical unit, so the correct next action is to preserve the stop until a
+named trigger appears.
+
+Gathering branch: `gather/research-drive-synthesis`; [PR
+#292](https://github.com/bombadil-labs/groovy-commutator/pull/292). Independent
+Sol review first blocked stale drain language in NOTES and two public causal
+claims, plus undifferentiated recursive-G wording. The corrected scientific
+head `ceb0397292414464e7222344c638173f07ab0893` was then approved. All four CI
+checks passed on that head. The PR review thread records the approval and final
+integration disposition.
+
+Next decision-relevant questions:
+
+1. Has a concrete consumer appeared with output, geometry, cadence, workload
+   and full cost contract?
+2. Has new evidence contradicted a current reusable conclusion, or supplied an
+   external validation target independent of the examples used to design it?
+3. Has an archived incomplete line gained a bounded structural or method
+   improvement? If none applies, do not start a research unit.
+
 ## 2026-09-22 — seventh unit: absential claim-boundary correction
 
 Inspected remote main `51dbd9e251b280984b8324f2fcb1af5db1942b0a`

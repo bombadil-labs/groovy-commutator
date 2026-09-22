@@ -4,12 +4,12 @@
     "label": "Binary lift VI",
     "title": "Six fixed binary recipes retain native evolution and recovery through 6D",
     "date": "2026-09-14",
-    "updated": "2026-09-14",
+    "updated": "2026-09-22",
     "kind": "Experiment",
     "evidence": "exploratory",
     "topic": "Dimensional closure",
     "summary": "Six published recipes pass sequential native evolution and recovery through 6D on every width-seven source state, with fixed parent completions and measured dimensional costs.",
-    "takeaway": "The finite native/recovery pilot passes; arbitrary inputs, recursive G and a general bare-rule lift generator remain open.",
+    "takeaway": "The finite native/recovery pilot passes. The later affine-oriented theorem proves existence for arbitrary binary finite-memory parents and recursion through every fixed finite depth; this pilot remains finite verification, not that proof.",
     "source": "docs/research/2026-09-14-sequential-lift-6d-pilot.md",
     "promotion": {
       "stage": "research"

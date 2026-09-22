@@ -29,5 +29,11 @@ for periodically repeated block encodings. See the
 The [two-strip test](../research/2026-09-08-coupled-strips.md) proves exact
 independence for any aligned collection with at least one background row
 between strips. Direct adjacency generally leaves the current code and creates
-a nonlinear residual in the touching rows. The next open question is whether
-an enlarged joint representation can retain that interface state.
+a nonlinear residual in the touching rows.
+
+The proposed enlarged joint interface was subsequently tested in the
+[six-bit interface study](../research/2026-09-08-interface-state.md). It retains
+the first coarse output but fails on reachable trajectories by fine tick four;
+one finite pulse pair has an all-time outward-escape proof. This closes that
+fixed-height enlargement under its declared contract. Other collective
+descriptions remain mathematically open but are not an automatic next unit.
