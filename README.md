@@ -10,8 +10,9 @@ The current research question is **which distinctions a representation can
 safely discard, which it must retain, and what a change of representation buys**.
 Read [what we have learned](docs/research/FINDINGS.md),
 [the program survey](docs/research/2026-09-22-program-survey.md), and
-[the next-agent task](docs/research/NEXT_TASK.md): one bounded representation-cost
-comparison design. Broad Class-IV searches, further dimensional
+[the next-agent task](docs/research/NEXT_TASK.md): the bounded readout comparison
+is complete; further work needs a concrete consumer and resource contract.
+Broad Class-IV searches, further dimensional
 existence sweeps and stalled solver campaigns are parked.
 
 The [limits and prior-art guide](docs/research/2026-09-21-research-boundaries.md)

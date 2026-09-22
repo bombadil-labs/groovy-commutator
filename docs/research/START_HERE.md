@@ -21,12 +21,13 @@ recommended portfolio. Keep one active design agenda under Erased Distinctions:
 local sufficient state and the cost of representation. Representation Invariants
 supplies shared methods; it is not a separate automatic census queue.
 
-The next recommended deliverable is a bounded cost comparison design for
-reading the original Rule-110 Groovy field: direct source access, ordinary
-stored time slices, period-three encoding and the affine six-field lift.
-Charge initialization, maintenance, storage and local access. The
-[handoff](NEXT_TASK.md) gives the stop conditions. No new numerical campaign
-or advantage claim is authorized by this recommendation.
+The [bounded Groovy readout comparison](2026-09-22-groovy-readout-cost.md)
+is complete: a three-track cache matches the six-field lift's marked readout.
+That caching benefit does not require the lift. Phase-free binary geometry is
+a different interface, not a free property of named tracks. No broad benchmark
+is justified by this candidate. The [handoff](NEXT_TASK.md) names the remaining
+decision: whether an actual consumer needs the stricter interface. Do not
+replace the failed advantage proposal with a sequence of friendlier targets.
 
 The CA/CRDT connection produced a completed fixed-interface retention result,
 not a fifth program. The dimensional existence objective is complete. The
@@ -50,8 +51,8 @@ It is compatible with established eight-state simulators that change protocol.
 
 The [agent handoff](NEXT_TASK.md) records publication through PR #282 and
 targeted verification. On main, this unit is integrated. No new
-numerical campaign is queued. The proposed design unit must identify a resource advantage worth proving
-or close its candidate comparison; the
+numerical campaign is queued. The readout design unit closed its candidate
+comparison under a marked-track interface; the
 closed direct-quotient question does not need more rings or source rules.
 
 ## What we have, and what is parked

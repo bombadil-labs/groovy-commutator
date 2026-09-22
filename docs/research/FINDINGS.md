@@ -196,6 +196,22 @@ to spend indefinitely just because a finite question remains decidable.
 [Recoder account](2026-09-10-erased-distinctions-terminus.md);
 [integration dispositions](2026-09-21-research-reset.md).
 
+## 13. A useful readout cache is not yet a dimensional advantage
+
+We were curious whether the six-field lift makes the original Rule-110 Groovy
+field cheaper to read than ordinary storage. We compared explicit formulas,
+charging initialization, update work, storage and local access rather than
+running another census.
+
+The lift's fast readout uses two difference fields. A three-track recoding of
+ordinary stored time slices supplies the same four-bit readout and can maintain
+it with a local update. The six-field geometry is unnecessary for that marked,
+named-track operation. This does not replace its phase-free binary interface:
+finding the right row without an address is a different cost. **Bounded design
+complete; no-go for a broad benchmark of this proposed advantage.** A real
+consumer requiring phase-free geometry would justify a different comparison.
+[Derivation and cost contract](2026-09-22-groovy-readout-cost.md).
+
 ## Keeping this useful
 
 After a completed or stopped unit, update its entry or add one short account:

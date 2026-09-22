@@ -1,44 +1,40 @@
-# Next agent: one bounded representation-cost design
+# Next agent: ground the next operation in a real consumer
 
-Updated 2026-09-22. PR #282 integrated the representation case studies and
-causal-retention audit; #280 is closed. Do not recreate that work.
+Updated 2026-09-22 after the first research-drive unit. Read
+[START_HERE](START_HERE.md), [FINDINGS](FINDINGS.md), the
+[readout-cost note](2026-09-22-groovy-readout-cost.md), and the
+[research-drive handoff](checkpoints/research-drive.md). Check current remote
+PR state before recreating or extending work.
 
-Read [START_HERE](START_HERE.md), [the accessible findings](FINDINGS.md), and
-[the program survey](2026-09-22-program-survey.md). Historical next-unit
-proposals do not override this handoff.
+## What just finished
 
-## Recommended deliverable
+The original-source Groovy readout comparison has an algebraic answer:
+G = D XOR T XOR H(D), with D=X XOR H(X), T=X XOR H²(X). A maintained
+three-track cache matches the six-field jet's four-bit marked readout.
+Initialization and maintenance are charged explicitly. This is not an
+empirical speedup, a minimal-circuit proof, or a phase-free binary encoding.
+Do not restart the proposed broad readout benchmark.
 
-Write one short comparison contract and a go/no-go recommendation for reading
-the **original Rule-110 Groovy field at one site**, comparing direct source
-access, ordinary stored time slices, the period-three encoding and the affine
-six-field lift. This is design work, not a frozen experiment or a finding of
-advantage. Use arbitrary binary configurations on the integer line, a common
-synchronous source cadence, and the same output semantics. Specify geometry
-and local access before comparing costs.
+## Next decision, not an automatic experiment
 
-Count storage, local reads, computation/table size, initialization and upkeep
-of derived fields. Do not compare native descendant G with ancestral G or give
-one representation free preprocessing. Start from the
-[lift theorem and its simpler baseline](2026-09-17-affine-oriented-lift-theorem.md)
-and the [locality obstruction](2026-09-21-causal-retention.md).
+First integrate the gathering unit if review or CI remains pending. Once it is
+integrated, inspect actual existing operations/callers before proposing more
+research. Does a real consumer need a phase-free binary local interface, as
+opposed to named fields? If so, record its exact output, geometry, cadence and
+cost constraints and the simplest competing implementation. If no such consumer
+exists, leave the dimensional application question dormant rather than inventing
+one solely to preserve the research line.
 
-Budget: one short analysis pass, at most one agent session. Use existing
-formulas and certificates. No new simulation, all-rule sweep, solver search,
-or expensive replay. Conclude with a precise candidate tradeoff, a baseline
-dominance argument, or a named unresolved assumption. Then stop. Failure to
-find an advantage does not trigger another benchmark automatically.
+The primary agenda remains local sufficient state and representation cost.
+An alternative task needs a concrete decision it would change, not just a
+mathematically open question. The scheduled drive may reassess priorities from
+the full portfolio, but a new empirical unit still needs a prospective protocol
+and applicable independent review. No old unit-specific waiver is extended.
 
-A new empirical unit needs its own prospective protocol and applicable review
-under AGENTS.md. This scheduling recommendation neither backdates review nor
-extends the earlier unit-specific exception to new experiments.
+## Work discipline
 
-## Maintaining the account
-
-When a unit ends, update FINDINGS.md in plain language: curious about X, tried
-Y, found Z, within domain W. Link its evidence and keep negatives, incomplete
-computations and invalidated scores distinct. Do not re-run history merely to
-write a summary. Preserve all canonical result bytes.
-
-The other programs remain parked as described in START_HERE. There is no
-parallel fifth CA/CRDT program and no automatic next numerical experiment.
+Preserve canonical result bytes; use a gathering branch and PR. Keep one bounded
+unit in progress. No automatic increase of ring size, history depth, recoder
+budget or classifier search. Update findings when a unit ends. Record negative,
+incomplete and invalidated outcomes separately. The next one to three questions
+are in the handoff; do not turn every question into a mandatory experiment.
