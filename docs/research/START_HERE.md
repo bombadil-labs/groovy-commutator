@@ -13,7 +13,7 @@ factors, counterexamples, graph certificates and explicit constructions.
 The [limits and prior-art guide](2026-09-21-research-boundaries.md) explains
 what the impossibility theorems constrain and where useful exact work remains.
 
-## Completed bounded unit; integrate before expanding
+## Completed bounded unit
 
 The [three executable case studies](representation-case-studies.md) now let a
 reader distinguish:
@@ -28,7 +28,8 @@ lower bound: Rule 110's Nakamura interface requires all twelve local states
 when current/phase readout, radius one and atomic-update semantics are fixed.
 It is compatible with established eight-state simulators that change protocol.
 
-The [agent handoff](NEXT_TASK.md) covers verification and integration. No new
+The [agent handoff](NEXT_TASK.md) records publication through PR #282 and
+targeted verification. On main, this unit is integrated. No new
 numerical campaign is queued. A new unit must identify an operation and a
 resource advantage worth proving, or a concrete unresolved obstruction; the
 closed direct-quotient question does not need more rings or source rules.
@@ -37,7 +38,7 @@ closed direct-quotient question does not need more rings or source rules.
 
 | Thread | State and evidence | Condition for further work |
 | --- | --- | --- |
-| Erased distinctions / representation invariants | **Bounded unit complete.** Three executable representation cases and the restricted Rule-110 causal-retention lower bound. The [depth-three onset result](2026-09-14-depth-three-onset.md) remains integrated. | Verify/integrate the current unit. Further depth or observation searches need a question whose answer changes a decision. |
+| Erased distinctions / representation invariants | **Bounded unit complete.** Three executable representation cases and the restricted Rule-110 causal-retention lower bound. The [depth-three onset result](2026-09-14-depth-three-onset.md) remains integrated. | Start from the completed unit (PR #282). Further depth or observation searches need a question whose answer changes a decision. |
 | Dimensional lift | **Existence and finite recursion closed** under the [affine-oriented theorem's contract](2026-09-17-affine-oriented-lift-theorem.md). No uniqueness, optimality or spontaneous organization theorem. | A concrete locality, readout or intervention advantage over ordinary history and the proof's period-three necklace construction, charging encoding and preprocessing costs fairly. |
 | Class-IV discriminator | **Frozen finite benchmark**, with [partial original provenance](2026-09-17-selective-persistence-discriminator-record.md). Its two core positive families are 54 and 110. | An independently defined target and external validation domain; no further feature search on the same labels by default. |
 | Refinement fibers / defects | **Paused.** Local mechanisms are useful in their stated height-two family. The [held-structures completion and correction](2026-09-21-held-structures-account.md) preserves the ninth unit and invalidates three mistimed predictor scores. | A standalone scientific payoff and a bounded protocol; a corrected run is required before reusing those three scores. There is no automatic tenth unit. |
