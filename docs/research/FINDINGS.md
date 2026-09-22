@@ -341,6 +341,43 @@ classifier comparison.
 [Runner and frozen setup](../../scripts/experiment_absential_2d.py);
 [published aggregate](../../site/src/data/absential_2d.json).
 
+## 21. The drain predictor measured endpoints, not forever
+
+We were curious why some rule pairs lose their disagreement in the original
+finite sweep. We exhaustively iterated both composed maps on n=12 rings for at
+most 32 rounds, then used their bounded image sizes and overlap to predict a
+label from n=100 rings, five seeds and a 100-step horizon.
+
+We found a useful finite association: small images with high overlap strongly
+predict zero mean disagreement at the measured endpoint (image-size AUC
+0.9077), and a simple two-factor rule has precision 0.7647 and recall 0.6772.
+The old public explanation went too far by calling nonzero endpoints “never,”
+zero endpoints convergence, and the bounded images a settled asymptotic
+mechanism. **The corrected result is a finite predictor, not a recurrence or
+all-future theorem.** Similar AUCs on sampled n=8 through n=14 rings do not make
+ring size the proven source of the remaining error.
+[Frozen public aggregate](../../site/src/data/drain_predictor.json);
+[runner and declared caps](../../scripts/experiment_drain_predictor.py).
+
+## 22. The portfolio audit found a justified stopping point
+
+We were concerned that the project might be spending effort because questions
+were mathematically open rather than because their answers would change an
+action. We tried the strongest concrete application proposal, audited every
+apparent consumer of the remaining distinctive geometry, checked the last
+planned broad census before running it, and reconciled live status pages with
+their preserved evidence.
+
+We found that the readout benefit was reproducible with an ordinary cache, no
+current caller required the stricter interface, and the planned empowerment
+score leaked the action at its endpoint. We also found and corrected stale work
+pointers and an overclaimed absential negative. **There is now no queued
+empirical unit.** This is a scheduling conclusion, not a theorem that the open
+mathematics is unimportant or impossible. Work reopens for a concrete consumer,
+an evidence-backed correction, an external validation target or a bounded
+method gain whose outcome changes a decision.
+[Research-drive synthesis](2026-09-22-research-drive-synthesis.md).
+
 ## Keeping this useful
 
 After a completed or stopped unit, update its entry or add one short account:

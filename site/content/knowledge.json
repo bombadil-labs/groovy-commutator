@@ -3427,13 +3427,14 @@
       "kind": "finding",
       "research": [
         "defect-fates",
-        "coupled-strips"
+        "coupled-strips",
+        "interface-state"
       ],
       "source": "docs/knowledge/finite-strip-rule90.md",
       "status": "exact",
-      "summary": "The same 2D interpreter supports a two-row encoding with two-cell logical flips and a specified alternating background.",
+      "summary": "The same 2D interpreter supports a two-row encoding with two-cell logical flips and a specified alternating background. The later six-bit joint-interface enlargement fails on reachable trajectories by fine tick four.",
       "title": "Rule 90 occupies a finite two-row strip",
-      "updated": "2026-09-08"
+      "updated": "2026-09-22"
     },
     {
       "id": "sparsity-is-not-reassembly",
@@ -3500,13 +3501,14 @@
       "kind": "question",
       "research": [
         "coupled-strips",
-        "interface-state"
+        "interface-state",
+        "pulse-shape-scattering"
       ],
       "source": "docs/knowledge/coupled-strip-closure.md",
       "status": "partly-answered",
-      "summary": "The six-bit enlargement fails; one finite encounter excludes every fixed-height band. Other descriptions and special input families remain open.",
+      "summary": "The six-bit enlargement fails; one finite encounter excludes every fixed-height band. The completed four-site pulse-shape follow-up sends all 1,600 declared encounters outward; wider descriptions remain open but unqueued.",
       "title": "Can interacting strips retain an exact joint description?",
-      "updated": "2026-09-08"
+      "updated": "2026-09-22"
     },
     {
       "id": "interface-state-failure",

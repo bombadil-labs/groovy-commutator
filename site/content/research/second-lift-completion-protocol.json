@@ -9,7 +9,7 @@
     "evidence": "superseded",
     "topic": "Algebra and closure",
     "summary": "This frozen Rule32 product-alphabet protocol fixed both completions, the inherited family, K/O depth/radius budgets, causal bounds and independent checks. Its bounded execution was completed on 2026-09-11.",
-    "takeaway": "Continue with the completed comparison: inherited tuples close at exact minimum radius one through depth two, while all declared ambient controls conflict through radius two.",
+    "takeaway": "See the completed comparison: inherited tuples close at exact minimum radius one through depth two, while all declared ambient controls conflict through radius two.",
     "source": "docs/research/2026-09-10-second-lift-completion-protocol.md",
     "supersededBy": "second-lift-completion",
     "promotion": {

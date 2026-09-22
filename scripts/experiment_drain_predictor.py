@@ -4,18 +4,20 @@ does not?
 
 Hypothesis tested here, two factors, both properties of the PAIR:
 
-1. Joint collapse. Take the round map of the divergence construction,
+1. Bounded joint collapse. Take the round map of the divergence construction,
    M1 = phi_b . phi_a (one full round of path1) and M2 = phi_a . phi_b
    (path2), and push the ENTIRE n-bit state space through each repeatedly,
    deduplicating between rounds. The image shrinks monotonically until it
-   stabilizes on the set of states lying on eventual cycles. Call
-   |M^k({0,1}^n)| the pair's eventual image -- how much room the composed
-   dynamics leaves for trajectories to stay distinguishable.
+   either stabilizes or reaches the declared 32-round cap. A stabilized image
+   is the exact eventual image; the saved legacy artifact does not record that
+   certificate separately for each pair. The reported image size is therefore
+   interpreted as a bounded iterated-image measure.
 
-2. Shared attractor. Drain means the two orderings converge to the SAME
-   trajectory, so their eventual images must overlap; crystalline pairs
-   also collapse hard but into DISJOINT (constant-offset) attractors.
-   Measured as Jaccard overlap of the two eventual-image sets.
+2. Bounded-image overlap. Compare the two orderings' retained sets after that
+   iteration by Jaccard overlap. High overlap plus a small image is tested as a
+   predictor of zero disagreement at the measured n=100, 100-step endpoint;
+   neither the endpoint label nor this finite proxy proves asymptotic
+   convergence.
 
 Commuting pairs are carved out first by the exact test (one step of
 phi_a.phi_b vs phi_b.phi_a over all 2^n states -- exhaustive at n=12).
@@ -152,9 +154,9 @@ def main() -> None:
     # ---- analysis ----------------------------------------------------------
     # First finding (came out of running this, not the original hypothesis):
     # the sweep's "drain" label conflates two populations. Ground truth for
-    # the mechanism question is CONVERGENCE -- the two orderings end up on
-    # the literally identical trajectory (final disagreement 0) after having
-    # actually disagreed (peak > 0; peak == 0 is commute).
+    # the stricter finite label is zero disagreement at the measured endpoint
+    # after earlier disagreement (peak > 0; peak == 0 is commute). This does
+    # not certify recurrence or equality at every later time.
     converged = ((df["final"] == 0.0) & (df["peak"] > 0.0)).to_numpy()
     is_drain_label = (df["regime"] == "drain").to_numpy()
     conv_labeled_drain = int((converged & is_drain_label).sum())
@@ -257,11 +259,11 @@ def main() -> None:
     site_data.mkdir(parents=True, exist_ok=True)
     (site_data / "drain_predictor.json").write_text(json.dumps(site_json, indent=1))
 
-    print(f"\nconverged pairs (final=0, peak>0): {int(converged.sum())} "
+    print(f"\nzero-endpoint pairs (final=0, peak>0): {int(converged.sum())} "
           f"({conv_labeled_drain} labeled drain + {conv_labeled_cryst} hiding in crystalline)")
-    print(f"soft 'drain' label, never converges: {int(soft_drain.sum())} "
+    print(f"soft 'drain' label, nonzero measured endpoint: {int(soft_drain.sum())} "
           f"(median final disagreement {median_final_soft:.3f})")
-    print("\nAUC (converged vs rest):")
+    print("\nAUC (zero measured endpoint vs rest):")
     print(f"  -log2(pair_image_count):           {auc_pair:.4f}")
     print(f"  two-factor jaccard*(1-image_frac): {auc_two:.4f}")
     print(f"  -min(image_ratio) [old baseline]:  {auc_base:.4f}")

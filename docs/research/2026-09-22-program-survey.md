@@ -7,6 +7,19 @@ review, or authorization for a new numerical campaign. Surveyed main:
 connector issue/PR listing failed with metadata errors during the survey, so
 this does not claim a fresh inventory of remote issue state.
 
+**Outcome update, 2026-09-22.** The recommended readout comparison was completed
+and integrated in PR #284: an ordinary three-track cache matches the six-field
+lift's marked original-source Groovy readout. A subsequent consumer audit found
+no current operation requiring the lift's stricter phase-free geometry. The
+remaining drive corrected stale statuses and one absential overclaim, and
+stopped a planned empowerment census whose endpoint leaked the action. A final
+audit also narrowed the public drain account from asymptotic language to its
+actual finite endpoint and bounded-image evidence. The
+[final synthesis](2026-09-22-research-drive-synthesis.md) supersedes this
+survey's prospective “immediate unit”: there is now no queued empirical unit.
+The historical rationale below is retained to show how that decision was
+reached.
+
 Read [What we have learned](FINDINGS.md) for the accessible running account.
 The four historical Program pages remain source syntheses. They need not each
 generate their own next experiment.

@@ -16,7 +16,13 @@ background as an exact description of all these adjacent inputs.
 
 The remaining question is a different joint representation, special input
 families, or controlled encounters. A finite symbolic description of growing
-support is not excluded. The next bounded lead varies pulse encounter geometry.
+support is not excluded.
+
+The advertised pulse-geometry follow-up was completed in the
+[four-site pulse-shape study](../research/2026-09-08-pulse-shape-scattering.md):
+all 1,600 declared encounters acquired persistent top and bottom boundary
+certificates, with 16 boundary-signature pairs but no annihilation or separated
+reconstitution. Wider shapes and other geometries remain open, not queued.
 
 The [composition experiment](../research/2026-09-08-coupled-strips.md) gives exact
 interface formulas and failures to build on. Alternate alignments, controlled
