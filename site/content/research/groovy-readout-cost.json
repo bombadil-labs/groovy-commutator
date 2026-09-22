@@ -1,0 +1,17 @@
+[
+  {
+    "slug": "groovy-readout-cost",
+    "label": "Groovy readout cost",
+    "title": "Groovy readout: the useful cache does not require the six-field lift",
+    "date": "2026-09-22",
+    "updated": "2026-09-22",
+    "kind": "Algebraic construction and cost account",
+    "evidence": "exact",
+    "topic": "Representation costs",
+    "summary": "A maintained three-track recoding of stored time slices matches the six-field jet's four-bit marked Groovy readout. Initialization and upkeep are explicit; phase-free binary geometry is a different contract.",
+    "takeaway": "Separate caching benefit from dimensional advantage before funding another benchmark.",
+    "source": "docs/research/2026-09-22-groovy-readout-cost.md",
+    "promotion": {"stage": "research"},
+    "related": ["affine-oriented-lift-20260917", "causal-retention", "research-portfolio-20260922"]
+  }
+]

@@ -13,6 +13,13 @@ when a substantial unit completes; keep the bounded-claim style. Text moved from
 
 Program page: `docs/research/2026-09-09-dimensional-closure-program.md`
 
+## Checkpoint 2026-09-22: readout-cost design complete
+
+The [cost note](../2026-09-22-groovy-readout-cost.md) derives a three-track
+cache with the same four-bit marked query as the jet. No phase-free binary
+dominance or empirical speedup is inferred. No broad benchmark is queued;
+the [drive handoff](research-drive.md) records the next consumer decision.
+
 ## Checkpoint 2026-09-21: executable cases and causal-retention unit complete
 
 The [three cases](../representation-case-studies.md) now have a fast verifier.

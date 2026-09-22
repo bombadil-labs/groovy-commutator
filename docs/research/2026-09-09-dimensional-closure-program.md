@@ -1,6 +1,6 @@
 # Dimensional Closure and the Commutator Lift
 
-**Current portfolio — 2026-09-22:** Existence and finite recursion are complete under the affine-oriented contract. A bounded cost comparison must establish a reason to reopen; no representation advantage is yet claimed.
+**Current portfolio — 2026-09-22:** Existence and finite recursion are complete. The [bounded readout comparison](2026-09-22-groovy-readout-cost.md) finds the marked query benefit available from a smaller ordinary cache. Phase-free geometry remains a separate contract; no new campaign is justified without a consumer requiring it.
 
 Read [the findings](FINDINGS.md) and [the portfolio survey](2026-09-22-program-survey.md). Historical program sections below retain their original evidence and chronology.
 
