@@ -267,6 +267,57 @@ delayed fixed target, common cadence, action-phase controls, a named consumer
 and a representation-cost baseline.
 [Endpoint proof and disposition](2026-09-22-representation-empowerment-disposition.md).
 
+## 17. More retained differences restore some closure, at an explicit cost
+
+We were curious whether departures from a replicated dimensional beam could
+evolve autonomously without retaining the underlying binary field. We first
+kept only differences between neighboring transverse slices, then kept both
+horizontal and vertical differences.
+
+The transverse-only observation closes for 6 of 66 declared source laws. For
+the other 60, complete observed fields can agree while their next observations
+differ, so no larger neighborhood of that observation can repair the loss.
+The two-component full gradient admits four additional nonlinear laws, for 10
+of 66 total, but costs two bits per site and still leaves 56 complete-field
+obstructions. A completed follow-up proves that eight nonconstant self-dual
+laws preserve periodic loop bits while constants erase them. **Exact
+observation-relative sequence complete.** This is a lesson about which state a
+factor needs, not compression, intrinsic dimension or spontaneous organization.
+[Transverse result](2026-09-10-transverse-difference-closure.md);
+[full-gradient result](2026-09-10-full-gradient-closure.md);
+[loop invariant](2026-09-10-gradient-loop-invariants.md).
+
+## 18. Pulse shape changed the boundary signature, not the bounded fate
+
+We were curious whether changing the logical shape of two colliding Rule-90
+strip pulses would produce extinction, exact reassembly, fold-in or fan-out.
+We exhaustively tested eight normalized four-site shapes on each strip, all 64
+ordered pairs and 25 relative displacements: 1,600 declared encounters.
+
+Every case acquired exact persistent top and bottom boundary certificates, and
+none annihilated or reconstituted as separated strips. Shape still mattered:
+the run found 16 paired outgoing boundary signatures. **Frozen four-site family
+answered; wider shapes and other geometries remain open.** The aggregate and
+audit summaries survive, but the 6.9 MB raw primary file does not and this
+legacy lineage is not registered by the current integrity checker.
+[Bounded pulse-shape result](2026-09-08-pulse-shape-scattering.md).
+
+## 19. A second correction lift stayed local without becoming spatial
+
+We were curious whether Rule32's second correction lift stays local because of
+its inherited family or merely because of one arbitrary total completion. We
+exhaustively compared two completions, correction and future coordinates,
+inherited and ambient domains, depths zero through two and cap radii zero
+through two, using independent evaluators and retained conflict witnesses.
+
+Every inherited case has exact minimum cap radius one under both completions,
+while storage grows from 2 to 4 to 6 bits per site. Every declared ambient case
+conflicts through radius two. **Bounded comparison complete.** The closure
+belongs to the organized inherited family, but the construction remains
+product-alphabet state on a one-dimensional lattice. Larger ambient radii and
+depths above two remain open.
+[Completed second-lift comparison](2026-09-11-second-lift-completion.md).
+
 ## Keeping this useful
 
 After a completed or stopped unit, update its entry or add one short account:

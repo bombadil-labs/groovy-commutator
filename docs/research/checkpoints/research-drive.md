@@ -1,5 +1,56 @@
 # Research drive handoff
 
+## 2026-09-22 — fifth unit: active knowledge status repair
+
+Inspected remote main `ce989f283e81666769c359046b7d3cc2463b8573`
+through the Bombadil Labs connector. No open PRs or issues were present.
+Fetched a fresh main tree and re-read the agent guide, scheduling authority,
+next task, findings, portfolio and latest handoff before scanning every active
+knowledge node with an open, proposed, partly answered or planned status.
+
+Selected a bounded status/provenance repair because the current scheduling
+authority correctly queues no experiment, but several live knowledge pages
+still described completed follow-ups as “next” or “unrun.” A fresh agent
+following those page-local pointers could duplicate exact work. Repairing that
+surface outranked manufacturing a new empirical unit.
+
+Independent read-only Sol audits traced four lineages against their completed
+notes and surviving artifacts:
+
+- the Rule32 second-lift comparison completed its 72-case frozen matrix;
+- the four-site pulse-shape study completed all 1,600 declared encounters;
+- bounded local recoding and completion-change examples partly answer the
+  admissible-transformation question;
+- transverse difference, full gradient and loop-invariant studies completed
+  the follow-up chain advertised by earlier axial-lift pages.
+
+The repair updates current knowledge prose, node status/provenance, catalog
+cards, Program support lists and dated research-note banners. It also adds
+three accessible FINDINGS accounts. The frozen second-lift protocol and every
+canonical result byte remain unchanged. Fast integrity verification confirms
+the registered second-lift result SHA-256
+`5ecc4d863b9308f7a788297d1e6d3a82d86d021797032f72a8b24161f54b2e29`.
+
+Limits remain explicit. Second-lift radius-one closure is only through depth
+two, and ambient conflicts are only through radius two. Pulse-shape closure is
+only the declared four-site/25-offset family; its aggregate and audit survive,
+but the raw primary file is absent and the legacy summaries are not registered
+by the current integrity checker. Gradient conclusions are relative to their
+declared observations and retained-state costs.
+
+Gathering branch: `gather/second-lift-status-repair`. PR, reviewed head, CI and
+merge disposition must be appended after publication. No experiment, solver,
+canonical artifact or expensive Actions dispatch was created.
+
+Next decision-relevant questions:
+
+1. After this repair, does any current node summary—not a dated historical
+   section—still direct an agent into already completed or parked work?
+2. Does a real new consumer now justify a representation-cost comparison or a
+   local-sufficiency tool? If not, preserve the stop.
+3. If the active surface is coherent, the next useful unit may be a verified
+   stopping point rather than another research claim.
+
 ## 2026-09-22 — fourth unit: representation-empowerment disposition
 
 Inspected remote main `010d47be043cac9dfd652bfe3745f75d704f167b`

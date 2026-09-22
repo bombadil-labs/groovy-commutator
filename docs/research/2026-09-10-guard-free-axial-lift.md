@@ -1,5 +1,9 @@
 # A guard-free dimensional tower: compatibility and axis order
 
+**2026-09-22 status update:** the transverse-difference follow-up proposed
+below was subsequently [completed](2026-09-10-transverse-difference-closure.md).
+The future-tense section remains as freeze-time chronology.
+
 Can the same elementary cellular automaton be applied along every spatial axis, with no correction rows or guard roles, while preserving its lower-dimensional evolution? **Yes for exactly 66 of the 256 source rules under literal replication.** The same 66 pass every adjacent dimensional interface. Exactly 24 rules are independent of axis order in every dimension; 14 satisfy both requirements.
 
 These are results for one fixed constructor and encoding. They establish a binary dimensional family on the full ambient lattice, not a uniquely selected extension, self-assembly, or an intrinsic minimum dimension. Rule32 fails this constructor; its earlier guarded correction closure remains a separate valid result.
