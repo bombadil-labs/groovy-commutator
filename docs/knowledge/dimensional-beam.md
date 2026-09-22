@@ -27,7 +27,7 @@ The [direct history test](../research/2026-09-15-commutator-history.md) finds fi
 
 ## Completion boundary, 2026-09-15
 
-The completion audit makes a new boundary explicit: native ambient-XOR G is generally not determined by the partial-rule beam, already at D2 with complete first-lift constraints. T and ancestral evolution remain fixed. The exact affine family of G fields, or a separately transported XOR operation, supplies a well-defined object to investigate; no class discriminator or native-G transport theorem follows.
+The completion audit makes a new boundary explicit: native ambient-XOR G is generally not determined by the partial-rule beam, already at D2 with complete first-lift constraints. T and ancestral evolution remain fixed. The exact affine-space family `c + im(A)` of possible native-G fields under compatible completions, or a separately transported XOR operation, supplies a well-defined object to investigate; no class discriminator or native-G transport theorem follows.
 
 Source: [completion-independence audit](../research/2026-09-15-commutator-completion.md).
 
@@ -50,7 +50,7 @@ every binary finite-memory CA on Z^d has an exact, locally recoverable lift,
 and the construction recurses through every finite depth with one radius-3
 axis per floor. The beam is therefore a rule beam: the encoded image of every
 state of the source rule, on which the descendant rule is conjugate to the
-source. What remains open here is the typed Groovy bundle (a single marked beam
-carrying the ancestral commutator completion-independently). The Class-IV
+source. What remains open here is the typed Groovy bundle: whether the proved
+two-beam carrier compresses to one marked point/frame beam plus a locally
+defined vector sector while remaining completion-independent. The Class-IV
 question leaves this entry for the refinement Program.
-

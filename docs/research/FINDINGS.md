@@ -230,6 +230,21 @@ full cost contract and by beating ordinary storage, the three-track cache and,
 where relevant, the simpler period-three necklace.
 [Consumer audit and reopening contract](2026-09-22-phase-free-consumer-audit.md).
 
+## 15. “Recursive G” was three different questions
+
+We were confused by records saying both that Groovy transports through the
+lift and that recursive G remains open. We traced each claim to its exact
+object instead of treating the shared name as a contradiction.
+
+Ancestral source G already transports exactly through every finite lift depth
+using two marked beams. Native descendant cellwise G is a different operation
+and is generally completion-dependent. Compressing the two-beam construction
+to one marked point beam plus a typed vector sector is still open. The older
+P/D carrier census is a narrower finite construction with no induction proof.
+**Terminology audit complete; no experiment follows.** The open compression
+question stays dormant because the consumer audit found no caller for it.
+[Exact boundary and corrected status](2026-09-22-recursive-g-boundary.md).
+
 ## Keeping this useful
 
 After a completed or stopped unit, update its entry or add one short account:

@@ -411,24 +411,6 @@
       "type": "depends_on"
     },
     {
-      "reason": "The local encoding supplies the current candidate whose global and recursive compatibility is unresolved.",
-      "research": [
-        "dimensional-lift"
-      ],
-      "source": "recursive-dimensional-family",
-      "target": "outer-totalistic-lift",
-      "type": "depends_on"
-    },
-    {
-      "reason": "A persistence association requires a defined compatible family and evolution-sensitive score; neither is settled.",
-      "research": [
-        "dimensional-lift"
-      ],
-      "source": "class-iv-dimensional-persistence",
-      "target": "recursive-dimensional-family",
-      "type": "depends_on"
-    },
-    {
       "reason": "Rule ambiguity and future equivalence are conditioned on the specified complete panel and fixed-rule provenance alternatives.",
       "research": [
         "spacetime-provenance"
@@ -3221,13 +3203,16 @@
         "block-compatibility",
         "binary-lift-family-20260914",
         "binary-lift-recursion-20260914",
-        "binary-lift-g-obstructions-20260914"
+        "binary-lift-g-obstructions-20260914",
+        "affine-oriented-lift-20260917",
+        "phase-free-consumer-audit",
+        "recursive-g-boundary"
       ],
       "source": "docs/knowledge/recursive-dimensional-family.md",
-      "status": "partly-answered",
-      "summary": "The new retrospective binary family covers all 256 ECA sources faithfully through 3D on prepared period-four images. Gate 2 review, universal G, arbitrary higher-dimensional inputs and indefinite recursion remain open.",
+      "status": "answered",
+      "summary": "The affine-oriented theorem lifts every binary finite-memory parent on all states and recurses through every fixed finite depth. The result is marked-beam conjugacy, not off-beam control, native-G preservation, or a resource advantage.",
       "title": "Which families remain compatible across dimensions?",
-      "updated": "2026-09-14"
+      "updated": "2026-09-22"
     },
     {
       "id": "class-iv-dimensional-persistence",
@@ -4811,13 +4796,15 @@
         "binary-lift-recursion-20260914",
         "binary-lift-g-obstructions-20260914",
         "binary-lift-dt2-20260914",
-        "binary-lift-complements-20260914"
+        "binary-lift-complements-20260914",
+        "affine-oriented-lift-20260917",
+        "recursive-g-boundary"
       ],
       "source": "docs/knowledge/recursive-binary-g-lift.md",
-      "status": "open",
-      "summary": "Centered G is now universal at the first floor; recursive compatibility, parent recovery and preparation costs remain open.",
-      "title": "Can one binary lift grammar preserve centered G indefinitely for every ECA?",
-      "updated": "2026-09-14"
+      "status": "partly-answered",
+      "summary": "Two-beam ancestral source-G transport is exact through every finite depth. The historical native P/D-carrier recursion remains finite, native descendant G is generally completion-dependent, and one-beam typed compression remains open but dormant.",
+      "title": "Which meaning of recursive G does the binary lift preserve?",
+      "updated": "2026-09-22"
     },
     {
       "id": "centered-binary-g-first-floor",
@@ -4861,13 +4848,15 @@
       "kind": "finding",
       "research": [
         "uniform-jet6-cache-20260914",
-        "commutator-completion-20260915"
+        "commutator-completion-20260915",
+        "affine-oriented-lift-20260917",
+        "recursive-g-boundary"
       ],
       "source": "docs/knowledge/uniform-six-field-lift-cache.md",
       "status": "exploratory",
       "summary": "One period-six recipe passes all 256 ECA sources through 4D on two finite rings. Caching improves reuse, but the larger rebuild takes longer and fixed class prediction weakens.",
       "title": "A uniform six-field lift works through 4D on the finite families",
-      "updated": "2026-09-15"
+      "updated": "2026-09-22"
     },
     {
       "id": "orbit-period-drift",
@@ -5002,12 +4991,14 @@
       "title": "Every binary finite-memory CA has an exact self-synchronizing lift",
       "kind": "finding",
       "status": "exact",
-      "summary": "One six-field grammar lifts any binary finite-memory CA on Z^d exactly, with local phase and parent recovery, and recurses through every finite depth with one radius-3 axis per floor. Proof by GPT-5.6 Sol; finite verification by Fable on all 256 ECAs, radius-two parents, Life and the D3 recursion. Beam-only; not unique; binary only.",
-      "updated": "2026-09-17",
+      "summary": "One six-field grammar lifts any binary finite-memory CA on Z^d exactly through every finite depth. Two beams transport ancestral G; native descendant G is generally completion-dependent. No current downstream consumer needs the phase-free interface.",
+      "updated": "2026-09-22",
       "source": "docs/knowledge/affine-oriented-lift.md",
       "research": [
         "affine-oriented-lift-20260917",
-        "uniform-jet6-cache-20260914"
+        "uniform-jet6-cache-20260914",
+        "phase-free-consumer-audit",
+        "recursive-g-boundary"
       ]
     },
     {

@@ -63,7 +63,7 @@ variables, and equal/opposite pair counts $E,O$, the quotient has
 $$R=M/w-U,\qquad E'={2E-M(w-1)\over 2w^2},\qquad O'=O/w^2.$$
 
 Every division was checked to be exact and nonnegative. The physical panel
-then compares the **entire centered pointed configuration Y**, using exact
+then compares the **entire pointer-centered configuration Y**, using exact
 packed bytes, to remove any remaining transverse translation copies. Equal
 local patches or equal difference fields alone do not define this quotient.
 Every merged class has the same symbolic variable and affine constant.

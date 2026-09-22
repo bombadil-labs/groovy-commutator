@@ -151,8 +151,10 @@ established (Cervelle, Formenti and Guillon; Guillon and Richard); Toffoli's
 are the older relatives. The candidate contribution is the specific
 presentation: binary, one affine orientation bit, no address tape, the added
 axis carrying `X`, `HX`, `H²X` and two oriented spatial differences so that
-Groovy, polarization and tangent structure become spatial coordinates, closed
-under its own grammar. The strongest canonicity statement available is that
+the D/T rows make Groovy, polarization and tangent structure available as
+marked readouts and secant-versus-vector residual coordinates, closed under
+its own grammar. This does not make native descendant G a row of one jet. The
+strongest canonicity statement available is that
 the orientation bit is unique among one-row markers in the frozen six-row
 grammar, up to chirality. Call it *the affine-oriented jet lift*, never *the
 lift*.

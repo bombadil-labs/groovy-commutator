@@ -23,7 +23,8 @@ Limits: the theorem concerns the marked beam only; off-beam completion is
 free and no ambient property follows. The lift is not unique (a period-3
 necklace code is a simpler valid lift; coset-induced CA give the trivial
 layered version), it is binary only, and native single-track G of a completed
-descendant remains completion-dependent. The two-beam product lift transports
+descendant is generally completion-dependent when its difference-field query
+leaves the forced domain. The two-beam product lift transports
 the ancestral horizon commutators `K_t = D_H(H^t X) ⊕ H^t(D_H X)` (with
 `K_1 = G`) completion-independently at every depth.
 
@@ -33,5 +34,9 @@ downstream operation requiring this phase-free layout. Existing physical-key
 scripts construct or study the lift itself. The marked Groovy readout is
 matched by a smaller named cache. Leave application work dormant until an
 independent caller supplies an exact geometry and cost contract.
+
+Terminology: [the recursive-G boundary](../research/2026-09-22-recursive-g-boundary.md)
+separates this proved two-beam ancestral transport from native descendant G
+and the still-open one-beam typed compression.
 
 Source: [the affine-oriented lift theorem](../research/2026-09-17-affine-oriented-lift-theorem.md).

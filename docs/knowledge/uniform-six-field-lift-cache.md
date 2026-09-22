@@ -8,7 +8,17 @@ Immutable native-family and physical-key caches avoid repeated construction; the
 
 The broad source-degree/phase-rank class pattern persists, but the fixed all-lift classifier loses 13.37/10.71 percentage points at widths seven/eight. One recipe removes recipe selection without producing a clean class boundary. Rank normalization changes with phase count, and source-coordinate measurements are not minimum native-rule complexity.
 
-This result concerns complete finite invariant families and explicit completion choices. An arbitrary-input, phase-free local evaluator derived solely from bare C remains open, as do recursive G and induction over dimension. A compact evaluator with an adequate domain proof would change the computational account; further finite tables alone would not prove it.
+This result concerns complete finite invariant families and explicit completion choices.
+Its original open boundary was later split by the [affine-oriented lift
+theorem](../research/2026-09-17-affine-oriented-lift-theorem.md). Given a typed
+binary finite-memory parent law, including its memory geometry and chosen
+direction, a phase-free local evaluator now exists on every parent state and
+recurses through every fixed finite depth. This does not provide a minimal or
+inexpensive evaluator from untyped truth-table bytes, recursive native
+descendant G, or an optimized arbitrary-phase Groovy readout. The
+[recursive-G boundary](../research/2026-09-22-recursive-g-boundary.md)
+distinguishes those questions, and the consumer audit leaves optimization
+dormant.
 
 Post-run analytic clarification, 2026-09-14: for a parent that shifts by r cells, the child's minimum horizontal radius is exactly r. Two sources differing only at position 3r have identical lifted radius-R patches whenever R < r but different next temporal-row outputs; the same horizontal shift supplies a matching child. Thus the fixed child radius two cannot cover arbitrary root radii. Neighborhood geometry is part of C, so deriving a radius from it remains compatible with a pure-function generator. The research note gives the argument and explains how algebraic cancellations can accelerate the same uniform definition.
 
