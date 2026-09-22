@@ -1,0 +1,34 @@
+{
+  "original_commit": "7c55ffa8d9925c5041498c2c7915bb2d51d78a02",
+  "original_source_hashes": {
+    "scripts/groovy_field_followups.py": "6fb2bf31303784084926ca34f2354c007d545b84f2e781e79ef0be14efdde77c",
+    "scripts/groovy_field_rule110_lift.py": "a68c77f81af1db627bd2f4b88ab37ba36141906a815160b47e86fd55560cca49",
+    "scripts/groovy_field_suite.py": "c0cfa7ef06cb11c0456f732d9ecb95097a7199a0cfe062f67714b2b45661f4c5",
+    "scripts/groovy_field_summarize.py": "6419ee9dcd0ceede895232fcde23d964ff394a498f7ba0bd4eb94cca720c70d4",
+    "src/groovy/groovy_field.py": "7f35a0ce5a77211cdf56df0dbe65b641f49b1f602c60bb0bb8665ab46ea6aace"
+  },
+  "schema": "groovy-field-review-manifest-v1",
+  "scope": "Original results/figure preserved; original hashes refer to pinned Git revision. New source hashes pin the correction implementation. Integrity is byte provenance, not scientific certification.",
+  "sha256": {
+    ".github/workflows/research-groovy-field.yml": "87b6f267baed434e2ace07c726ba9117ad34edc02b90c9018822bbedf3333f2f",
+    "docs/research/assets/groovy-field-rule110.png": "69be0055416fc767d2e76f318edff52b5901124191993915137c3f8e2bbe7104",
+    "results/groovy_field_20260922/census.json": "113a5f75ddf60be135eaa12c40ad43c20719a71a2a9f1a3542e611425d61061e",
+    "results/groovy_field_20260922/followup_complement.json": "4e51c233d4ee7f18929db1a47bc6be2c6c3954c1659e686f1432faef78647bf3",
+    "results/groovy_field_20260922/followup_gonly5.json": "dd880e98694500b3eee29cdd7cf83b3cb4c834b7d82b5172c151f9f7aa12df14",
+    "results/groovy_field_20260922/followup_universal3.json": "1d7d0346779e901b9ebe2748719d84b461ee431e03bdf6be921150ce6fbf6f05",
+    "results/groovy_field_20260922/reachable.json": "c5a34211da1d15c656f3823412b33f3403a4cd9b2ccc6e5a75e4d9e0c8d9c6c2",
+    "results/groovy_field_20260922/review_audit.json": "67a335b0d9f80afa735564fc39cbfc8f13729a69eefd126763fc7aa5ea97f9b1",
+    "results/groovy_field_20260922/rule110_lift.json": "7d7a8c7d565648fee8f8e230f6ce371db0f33dee43714b850e8f411ee5ce853b",
+    "results/groovy_field_20260922/summary.json": "fc78629470837832bab8edb112f3dc985192ddb00989c156ad55347a7b5bbb67",
+    "results/groovy_field_20260922/taxonomy.json": "74e3a305632fcf079750f3bdce885f39682d377554a2552db204eeafc9360fc0",
+    "results/groovy_field_20260922/tracks110.json": "b06bebdb87aa9cf1f4494f2e4234cfcdc41f2f7dbfada0c95595592241f543ec",
+    "results/groovy_field_20260922/validate.json": "906536e6806bb54d280147db7e4e833a3e6f78e3092cc529bac9cc0299a556dd",
+    "scripts/groovy_field_followups.py": "545a09109311551b4cfa7fd120c2f5299da7520cd78140b0cbeb441668452a22",
+    "scripts/groovy_field_rule110_lift.py": "3d0baef8e1dcc9a02d02be71f9a3d50b2d7d3c14904411f84a177abe7c791723",
+    "scripts/groovy_field_suite.py": "3ff96ac58c7e0484df5a70d2be42e0ddd2e3ae29a647f2c3ec7c1fa3574d9592",
+    "scripts/groovy_field_summarize.py": "9d988838067dd900d2a7f1e34ec48c0e4891c2745228731bc967094312379ea3",
+    "scripts/verify_groovy_field_audit.py": "8f1d725980ad52dadd17b71c106361dd6db81f306f82bb0631e28ad5a63c9dbb",
+    "src/groovy/groovy_field.py": "66e3f175adf38a820f8d756c3a26e82156db5eb0bf134ac448c687960687fc94",
+    "tests/test_groovy_field.py": "1cf290929c61dee857c0fae7a1abb69c728d856a2a7f5a2e1bab4020c928f01b"
+  }
+}

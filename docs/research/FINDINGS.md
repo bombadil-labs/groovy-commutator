@@ -398,6 +398,41 @@ restricted source family, added context, or another cadence, and does not
 identify a minimal repair. Those are separate questions, with none queued by
 this result. [Exact certificate and known positive](2026-09-22-rule110-g-autonomy.md).
 
+## 24. Some Groovy fields become autonomous when they remember their history
+
+We were curious whether the Groovy field could compute its own next state
+without seeing the source cells. We tried exact pair-graph closure tests and
+local-table searches across the 256 elementary rules, with bounded memory and
+resource limits. The original census reports 140 rules closing with one to
+four remembered fields. A focused independent replay confirms that Rule 30
+needs three and Rule 54 needs five. Rule 110 still has a full-line
+counterexample at memory five; this does not prove that all finite memory fails.
+
+Adding the source gradient and two steps of observation history closes all
+256 rules in the census. The gradient alone loses the choice between a source
+and its global complement. The whole repaired history can recover that choice
+for some sources; it always merges the two uniform sources. Its fibers are
+therefore at most two, not a global-complement quotient. The uniform blind
+spot is exact algebra; the wider background/defect taxonomy describes selected
+witnesses, not an established mechanism.
+
+Review found that the old negative verifier checked finite interiors without
+validating the declared infinite tails, and most witness strings had not been
+saved. We corrected the verifier and replayed all 220 retained memory-1
+witnesses successfully, plus eight selected higher-memory witnesses. The
+remaining old records retain that provenance limitation. Future runs save
+full witnesses and explicit certification failures. Original result bytes
+and source hashes are preserved, not silently upgraded.
+
+The repaired Rule-110 law runs on valid four-track histories. Its native
+Groovy field is not yet defined: XOR can leave that domain, requiring an
+explicit choice of off-image dynamics. That choice is the next prerequisite
+for a tower question. The output-complement count (19/21) is conditional on
+an identity/swap pair switching, not a predictor of whether switching occurs.
+[Program](2026-09-22-groovy-field-program.md),
+[census, corrections and replay](2026-09-22-groovy-field-census.md),
+[current checkpoint](checkpoints/groovy-field.md).
+
 ## Keeping this useful
 
 After a completed or stopped unit, update its entry or add one short account:

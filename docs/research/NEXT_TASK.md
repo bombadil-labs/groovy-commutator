@@ -1,4 +1,20 @@
-# Next agent: Rule-110 G autonomy is decided; choose a new contract deliberately
+# Next agent: continue The Groovy Field
+
+Updated 2026-09-22. Myk opened [The Groovy Field](2026-09-22-groovy-field-program.md)
+as an active program after the Rule-110 autonomy unit below. Read its
+[census note](2026-09-22-groovy-field-census.md) and
+[checkpoint](checkpoints/groovy-field.md) first; the checkpoint orders the open
+questions. [PR #294](https://github.com/bombadil-labs/groovy-commutator/pull/294)
+contains the program and fixes reviewed by Claude and Codex. Myk authorized
+merging after this review; on main, treat this unit as integrated. The checkpoint
+records the reviewed revisions and remaining evidence limits.
+The corrected verifier checks actual infinite tails. The bounded audit preserves
+old bytes and replays the retained witnesses, headline laws and all-ring proof;
+it does not recertify the entire census. See the checkpoint before extending
+any claim, especially D0 quotients or native-G towers. The section below is the
+preceding unit's handoff, kept for context.
+
+## Preceding handoff: Rule-110 G autonomy
 
 Updated 2026-09-22 after Myk's direct request to investigate whether a derived
 field can follow its own rule. Read [START_HERE](START_HERE.md),
@@ -56,7 +72,7 @@ reopen old experiments, or extend a historical review waiver.
 ## Work discipline
 
 Preserve canonical bytes; use one gathering branch and PR per bounded unit.
-Freeze a new empirical protocol and obtain applicable independent review
-before evaluation. Keep source rule, state family, boundary, observation,
+Freeze a new empirical protocol before evaluation; review happens when Myk
+requests it. Keep source rule, state family, boundary, observation,
 cadence, horizon and resource contract explicit. Update the findings and
 current handoff when a unit ends; retain failed and unscored outcomes.

@@ -1,0 +1,22 @@
+[
+  {
+    "label": "Groovy field",
+    "slug": "groovy-field-census",
+    "title": "When can the Groovy field run on its own? A full-line census",
+    "date": "2026-09-22",
+    "updated": "2026-09-22",
+    "kind": "Exact census",
+    "evidence": "exact",
+    "topic": "Algebra and closure",
+    "summary": "A bounded full-line census reports 140 elementary-rule Groovy fields closing with one to four remembered fields. Independent replay confirms Rule 30 at memory three and Rule 54 at five; source gradients with two-step histories repair all 256 in the census.",
+    "takeaway": "A repair can make G autonomous while identifying at most complementary sources. Uniform sources stay merged, but other complement pairs can be separated. Native Groovy iteration of a repaired law requires off-image dynamics.",
+    "source": "docs/research/2026-09-22-groovy-field-census.md",
+    "promotion": {
+      "stage": "research"
+    },
+    "related": [
+      "g-autonomy-boundary",
+      "affine-oriented-lift-20260917"
+    ]
+  }
+]

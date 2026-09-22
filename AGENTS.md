@@ -39,36 +39,21 @@ under a different effective law.
   what outcome changes our action, what simpler baseline must be beaten, and
   what ends the line. Keep the scope bounded; there is no automatic next unit.
 
-## Gathering branches and cross-model review
+## Gathering branches and review
 
 Use one `gather/<unit>` branch and draft PR per coherent task, based on `main`.
 State the purpose, scope, completion criteria and verification. Preserve
 protocol → implementation → evaluation history with merge commits. Do not
 force-push or overwrite shared work. Use isolated worktrees when needed.
+See the [research authoring guide](docs/research/README.md#integrate-a-research-unit-through-a-gathering-pr).
 
-The default research workflow has two independent review gates: before a
-frozen experiment is implemented/evaluated, and before its complete unit
-merges into `main`. See the [research authoring guide](docs/research/README.md#integrate-a-research-unit-through-a-gathering-pr)
-for the full workflow and exception record. A gate requires explicit review
-by an agent independent of that contribution, pinned to the current head;
-green CI alone is not review. Material changes require renewed review.
-The reviewer merges when findings are resolved and applicable checks pass.
-Do not infer independence from GitHub usernames; agents may share an account.
-
-**Dated exception:** Myk explicitly authorized repository consolidation,
-closure and merges on 2026-09-21 and suspended peer review with Fable for
-this reset. The [reset record](docs/research/2026-09-21-research-reset.md)
-states its scope. Integration under that exception is not an independent
-scientific sign-off and does not backdate review. This is not a standing
-waiver for later work. Do not ask Myk to reauthorize actions already covered
-by the current session's explicit instructions.
-
-**Additional session exception, 2026-09-21:** Myk subsequently authorized
-Codex to work solo on the representation case studies and bounded
-[causal-retention unit](docs/research/protocols/nakamura-retention-20260921.md),
-including its separately frozen [locality follow-up](docs/research/protocols/nakamura-local-retention-20260921.md),
-including setup, evaluation and integration. Record self-review honestly;
-this is not independent review or a standing waiver for other units.
+Since 2026-09-22 there is no standing cross-agent review protocol. Myk works
+with agents directly and asks one to review another's work case by case.
+When a review happens, record the reviewer and reviewed revision; otherwise
+say `Reviewed by: none`. Self-checks and green CI are verification, not
+review. Merge into `main` at Myk's direction. Do not ask Myk to reauthorize
+actions already covered by the current session's explicit instructions.
+Earlier gate records and waivers remain provenance in their own notes.
 
 ## Evidence and cost
 

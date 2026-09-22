@@ -166,33 +166,18 @@ larger editorial pass. Record what changed and why in Research.
 
 ## Integrate a research unit through a gathering PR
 
-Follow the canonical [gathering-branch workflow](../../AGENTS.md#gathering-branches-and-cross-model-review).
+Follow the canonical [gathering-branch workflow](../../AGENTS.md#gathering-branches-and-review).
 A draft `gather/<unit>` PR into `main` carries the unit's scope and completion
 criteria. Small sub-PRs target that branch and may be self-merged after
 self-review and relevant checks. Integration into the gathering branch does
-not make a result independently reviewed or published on `main`.
+not publish a result on `main`.
 
-There are two distinct review gates:
-
-1. **Before implementation and evaluation:** an independent collaborating
-   agent reviews the frozen protocol, including definitions, predictions, domain, budget,
-   controls and scoring of failures or censored outcomes. Record the reviewed
-   revision, date and review link. Material protocol changes require renewed
-   review before the affected run. Previously observed outcomes must remain
-   labeled exploratory or post hoc; later review cannot change their history.
-   If no independent reviewer is available, Myk may explicitly authorize proceeding
-   under the exception in `AGENTS.md`: record the dated authorization on the
-   protocol and state in the results note that evaluation preceded review.
-   Unavailability alone does not authorize a run or waive final review.
-2. **Before merge into main:** an independent collaborating agent reviews the complete unit at
-   the gathering PR's current head SHA, including code, evidence, deviations,
-   negative findings, proofs and limits, and the updated current account.
-   Resolve findings and obtain explicit signed sign-off with green relevant
-   checks. Review at protocol freeze is not approval of the eventual results.
-   The reviewer merges on sign-off: when the review finds no blockers and the
-   head's checks are green, the reviewing agent merges with a merge commit in
-   the same pass; a sign-off given while a check is still running is
-   conditional on it, and whichever side first sees it green merges.
+Myk retired the standing cross-agent review gates on 2026-09-22. Freeze a
+protocol before implementation and evaluation, and record any later material
+change as a deviation. Previously observed outcomes must remain labeled
+exploratory or post hoc. Myk asks for review case by case; a requested review
+names its reviewer, pins the current head SHA and states its scope. Merge into
+`main` at Myk's direction.
 
 Result files are guarded in two tiers. Every pull request touching an audit
 runs a fast check that recomputes the SHA-256 hashes each canonical JSON
@@ -215,25 +200,21 @@ script and document both the fast automatic tier and the off-CI full-replay path
 The gathering PR lists sub-PRs and issue closure references. Notes and
 protocols retain their own authorship/review provenance, distinguishing
 pre-evaluation and retrospective review. Update the Program, dependent
-knowledge entries and checkpoint when applicable; a checkpoint must identify
-pending review rather than describing an unapproved unit as accepted.
+knowledge entries and checkpoint when applicable; a checkpoint must not
+describe work as reviewed or accepted before that has happened.
 Preserve original protocols and datasets when correcting a completed run.
 
 ### Multiple collaborating agents
 
-The review protocol is intentionally not limited to one fixed pair of models.
-Codex and Claude/Fable are the current default reciprocal reviewers, and new
-collaborating agents may join the same authorship/review pool. The invariant is
-**independence**: an agent may not supply the independent gate for work it
-authored. For jointly authored work, record contribution boundaries and arrange
-cross-review so each independently gated contribution is reviewed by someone
-who did not author it.
+Several agents contribute to this repository. When Myk asks one agent to
+review another's work, the reviewer must not have authored the contribution it
+reviews. For jointly authored work, record contribution boundaries.
 
 A collaborator may introduce a new research Program through a normal gathering
 PR. The proposal should make the research question or thesis legible, situate
 it relative to the existing Programs without assuming it belongs to one of
 them, state scope and non-claims, sketch the initial research agenda, name its
-owner(s) and intended reviewer pool, and add the Program/checkpoint registration
+owner(s), and add the Program/checkpoint registration
 when the proposal is accepted. A distinct outside perspective is allowed to
 remain a distinct Program; conceptual overlap alone is not grounds to collapse
 it into an existing line.
@@ -242,9 +223,7 @@ Agents may share a GitHub account, so provenance is semantic rather than tied to
 GitHub username. Sign substantive PR comments/reviews with agent/model/session
 identity and date, and pin reviews to the exact head SHA and scope. Branch names,
 PR context, commit authorship and signed comments together identify who authored
-and who reviewed a unit. This also lets automated review cycles recognize work
-from newly participating collaborators without hard-coding one username or one
-model family.
+and who reviewed a unit.
 
 ## Authorship and review
 
@@ -256,19 +235,13 @@ Authored by: <person or agent session>. Reviewed by: <person or agent session>, 
 ```
 
 Name agents by their signed identity as used in issues (for example
-"Codex (OpenAI)" or "Claude Code, Fable 5.1") and people by name. For a frozen
-protocol the review happens **before** the implementation commit and before any
-evaluation; record the reviewer and date on the protocol itself, and link the
-issue thread or PR where the review took place. Notes, checkpoints and
-non-experimental work without review say `Reviewed by: none`. An unrun
-protocol may also say `Reviewed by: none`, but that is pending status, not
-permission to evaluate. Before proceeding, its provenance must name the
-reviewer, date, reviewed revision and review link, or record the explicit
-exception: `Protocol review: none at freeze; run authorized by Myk <date>`
-with an authorization reference. Exception runs retain that line and add
-retrospective review separately; never replace it with apparent pre-run
-approval. Existing notes are not edited retroactively; add the line when a
-note is next revised.
+"Codex (OpenAI)" or "Claude Code, Fable 5.1") and people by name. Work without
+review says `Reviewed by: none`; since 2026-09-22 that is the normal state and
+does not block evaluation. When Myk requests review of a frozen protocol before
+evaluation, record the reviewer, date and reviewed revision on the protocol and
+link the thread or PR. A review after evaluation is retrospective; never
+present it as pre-run approval. Existing notes are not edited retroactively;
+add the line when a note is next revised.
 
 ## Formatting, evidence links, and revisions
 

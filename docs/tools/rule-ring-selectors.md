@@ -177,4 +177,4 @@ contexts, missing/null cases, duplicate rejection, 150 parameterized custom
 selectors, a structural payload/relation/comparison, pre-evaluation budgets,
 plugin provenance, atomic output failure, and exact synthetic catalog indices.
 No scientific signature is selected or confirmed by these tests. New empirical
-searches retain the repository's independent protocol and result review gates.
+searches still need their own frozen protocol.
