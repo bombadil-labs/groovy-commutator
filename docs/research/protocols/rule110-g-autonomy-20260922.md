@@ -1,8 +1,12 @@
 # Can Rule 110's original Groovy field evolve autonomously?
 
-Date: 2026-09-22. Status: frozen intent; implementation and evaluation pending.
-Authored by: Codex (OpenAI), this session. Reviewed by: pending independent
-Gate 1 review, to be recorded in the gathering PR and a separate review record.
+Date: 2026-09-22. Status: frozen intent; independently approved before implementation.
+Authored by: Codex (OpenAI), this session. Reviewed by: Sol (gpt-5.6-sol),
+agent `/root/g_autonomy_review`, 2026-09-22, at protocol revision
+`ad38b4937321501889b6b8a1caab4e4bfb54052e`; [Gate 1 approval](https://github.com/bombadil-labs/groovy-commutator/pull/293#issuecomment-5780787370).
+Only this provenance header was updated after approval. The post-freeze,
+pre-execution hand-derived candidate is recorded in the unit's review record;
+P1 will not be described as blind at execution.
 Base main: `5aee7bb9ac6c70eaa114a8ed5baf38ba6b10e8c1`.
 
 ## Decision and prior evidence
