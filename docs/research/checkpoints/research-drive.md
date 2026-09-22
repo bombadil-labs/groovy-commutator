@@ -24,10 +24,11 @@ the later bounded results and current dispositions.
 
 The preserved absential experiment tested seven Life-like rules on 60-by-60
 tori, eight seeds per rule, 240 steps with a settled tail, and still-life/glider
-probes. In every tested condition the absential score tracked the raw score
-rather than cross-cutting it. The public prose now calls this a bounded
-negative, and FINDINGS adds an accessible account. No protocol, runner, result
-byte or classifier threshold changed.
+probes. At the reported aggregate level the absential score did not separate
+the hand-labeled behaviors more clearly than the raw score. The public prose
+now calls this a bounded negative, and FINDINGS adds an accessible account.
+Runtime, observation and storage costs were not tested. No protocol, runner,
+result byte or classifier threshold changed.
 
 Endogenous establishment of a dimensional interpretation and iterative
 remainder closure are legitimate open questions rather than stale claims.

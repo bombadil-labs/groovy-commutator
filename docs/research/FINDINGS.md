@@ -320,20 +320,23 @@ depths above two remain open.
 
 ## 20. Absential compressibility did not add a Class-IV shortcut
 
-We were curious whether the off cells next to live cells supplied a cheaper or
-clearer detector of informally complex behavior than the evolving state itself.
+We were curious whether the off cells next to live cells separated informally
+complex behavior more clearly under the same compression score than the
+evolving state itself.
 An initial 1D comparison was inconclusive, so we tried the idea where it was
 actually motivated: seven Life-like rules on 60-by-60 tori, eight random seeds
 per rule, a settled-window comparison, and separate still-life and glider
 probes.
 
 In every tested condition, absential-field compressibility tracked the raw
-state's compressibility rather than cross-cutting it. For example, the three
-informal Class-IV cases occupied the same middle region in both views, while
-the still-life and glider probes stayed paired. **The declared shortcut is a
-completed negative, not an open question.** This is a finite result for one
-compression score and a small hand-selected rule set, not an impossibility
-theorem or a general classifier of CA behavior.
+state's compressibility rather than cross-cutting it. For example, Life,
+HighLife and the III/IV Day & Night case occupied the same middle region in
+both views, while the still-life and glider probes stayed paired. **The
+declared separation test is a completed negative, not an open question.** This
+is a finite result for one compression score and a small hand-selected rule
+set, not an impossibility theorem or a general classifier of CA behavior.
+Runtime, observation and storage costs were not compared, so “cheaper” remains
+untested.
 [Runner and frozen setup](../../scripts/experiment_absential_2d.py);
 [published aggregate](../../site/src/data/absential_2d.json).
 
