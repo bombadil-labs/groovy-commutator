@@ -1,11 +1,16 @@
 # Invariants Across Representation Contracts
 
-**Current state — 2026-09-21:** Exact certificates distinguish changes of observation and domain. The depth-three onset result is integrated, including onset 65 under observation 232 and the failed ceiling bet under observations 4 and 32. Further depth sweeps are parked; the active case studies reuse this evidence.
+**Current state — 2026-09-21:** Three executable cases distinguish law choice, factor failure and domain transfer. The causal-retention audit separates whole-field necessary conditions from radius-one implementation. Further depth sweeps remain parked.
 
 Read [START_HERE](START_HERE.md) for scheduling and [NEXT_TASK](NEXT_TASK.md)
-for the single active deliverable. Earlier “next” sections below are historical
+for verification and integration of the completed unit. Earlier “next” sections below are historical
 proposals; they do not authorize resuming a parked line. Integration provenance
 is in the [reset record](2026-09-21-research-reset.md).
+
+Current-update provenance: Codex (OpenAI), 2026-09-21, under Myk’s explicit
+solo authorization; no independent review of this update. See the
+[case studies](representation-case-studies.md) and
+[causal-retention account](2026-09-21-causal-retention.md).
 
 This page is the **working synthesis** of a third research program, opened on 2026-09-10 after the review conversation recorded in issues #61–#68. It is not a chronological note and it claims no result of its own; every result it cites has its own note, protocol and canonical result file. It records the question, the objects the question is about, the transformation tables, one section per completed unit, and, after eleven units, the [synthesis](#synthesis-after-eleven-units).
 

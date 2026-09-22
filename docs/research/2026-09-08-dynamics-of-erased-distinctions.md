@@ -1,11 +1,16 @@
 # Dynamics of Erased Distinctions
 
-**Current state — 2026-09-21:** Active consolidation: exact closure, predictive refinement and domain-sensitive certificates. The next deliverable is three executable case studies using existing evidence. The bounded source-recoder campaign is archived incomplete at 14/22; no automatic solver continuation.
+**Current state — 2026-09-21:** The three executable representation cases are complete. A bounded causal-retention audit certifies a twelve-state minimum for the fixed Rule-110 Nakamura interface; other protocols remain possible. Source-recoder recovery remains archived incomplete at 14/22.
 
 Read [START_HERE](START_HERE.md) for scheduling and [NEXT_TASK](NEXT_TASK.md)
-for the single active deliverable. Earlier “next” sections below are historical
+for verification and integration of the completed unit. Earlier “next” sections below are historical
 proposals; they do not authorize resuming a parked line. Integration provenance
 is in the [reset record](2026-09-21-research-reset.md).
+
+Current-update provenance: Codex (OpenAI), 2026-09-21, under Myk’s explicit
+solo authorization; no independent review of this update. See the
+[case studies](representation-case-studies.md) and
+[causal-retention account](2026-09-21-causal-retention.md).
 
 This page is the **working synthesis** of the Groovy Commutator research program around coarse-graining, memory, and representation repair. It is not a chronological experiment and it is not a claim that every open mechanism has been solved. It records the smallest common theory that currently survives the exact closure work, the history and observer searches, the fiber-visibility census, and the selector-shielding results.
 

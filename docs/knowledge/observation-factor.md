@@ -5,3 +5,11 @@ For a declared family X invariant under deterministic T=F^q and observation P, a
 [Research022](../research/2026-09-08-observation-closure.md) distinguishes factor closure from transport under a chosen candidate. The [shared account](../research/2026-09-10-shared-closure-account.md) states the full domain/cadence contract. For Rule255, D is invertible complementation, G is everywhere one, and the actual derivative factor is constant zero. Nonzero G therefore need not indicate information loss or failure of factor closure.
 
 For arbitrary observation spaces use disagreement between maps; XOR requires an appropriate binary-group structure. The theorem does not by itself provide a local implementation or an RG fixed point. Existing experimental evidence labels are unchanged.
+
+The [three executable cases](../research/representation-case-studies.md)
+give compact algebra, a ring obstruction and a domain-sensitive graph
+certificate. The [causal-retention audit](../research/2026-09-21-causal-retention.md)
+applies the criterion to labelled local updates: preserve enabledness and
+successors, then check the promised locality separately. Eight Rule-110
+quotients survived a bounded whole-field check; seven failed the radius-one
+condition. Their finite survival was never a factor-existence proof.

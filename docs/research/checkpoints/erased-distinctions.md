@@ -14,6 +14,18 @@ when a substantial unit completes; keep the bounded-claim style. Text moved from
 
 Program page: `docs/research/2026-09-08-dynamics-of-erased-distinctions.md`
 
+## Checkpoint 2026-09-21: executable cases and causal-retention unit complete
+
+The [three cases](../representation-case-studies.md) now have a fast verifier.
+The [causal-retention account](../2026-09-21-causal-retention.md) records the
+restricted Rule-110 twelve-state lower bound, both frozen audits, and the
+whole-field/locality distinction. This adds no asynchronous property to the
+dimensional lift and no Class-IV claim. The numerical search has stopped.
+Codex authored and self-verified under Myk's explicit solo authorization;
+independent review is not claimed. Follow [the handoff](../NEXT_TASK.md) for
+verification and integration status, then require a concrete cost advantage
+before proposing another unit. Earlier queued work remains historical.
+
 ## Checkpoint 2026-09-21: research reset
 
 The source-recoder material from PR #231 is integrated and parked at 14/22, with eight unresolved and no recovered certificate. The prior 22/22 scientific completion condition remains unmet; scheduling is paused regardless. Current work is the three representation case studies.

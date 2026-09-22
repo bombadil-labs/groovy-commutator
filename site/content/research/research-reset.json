@@ -13,13 +13,15 @@
     "kind": "Checkpoint: research reset",
     "evidence": "state",
     "topic": "Research direction",
-    "summary": "One active deliverable: three executable representation case studies. Completed and partial work is integrated; broad searches and stalled solver campaigns are parked.",
-    "takeaway": "Use existing exact results to make the project’s contribution inspectable before choosing another experiment.",
+    "summary": "Three executable representation cases and a bounded causal-retention lower bound are complete. Verify and integrate the unit before proposing another experiment.",
+    "takeaway": "Exact certificates and explicit locality costs provide a completed scientific result; broad searches remain parked.",
     "source": "docs/research/START_HERE.md",
     "related": [
       "research-boundaries",
       "held-structures-account",
-      "depth-three-onset"
+      "depth-three-onset",
+      "representation-case-studies",
+      "causal-retention"
     ]
   },
   {

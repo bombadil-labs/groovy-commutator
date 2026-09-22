@@ -1,0 +1,391 @@
+{
+  "schema": 1,
+  "protocol": "nakamura-local-retention-20260921",
+  "protocol_freeze_commit": "bc7741b",
+  "review": "none; explicit solo authorization",
+  "source_hashes": {
+    "scripts/verify_nakamura_local_retention.py": "ccf806c1e874678ca4434e1abfbac6eb8eb130e71bc3da1eb4e51e1b1de8e6ee",
+    "scripts/verify_nakamura_retention.py": "221064a8034b20c16fe2438507804178b54c25347249bdc3ac26ba166c2d6504",
+    "src/groovy/ca.py": "6969d6f0699b48602c8a2f55aecd61d58862e6472fea56f6d1ed9ebb2656d77e",
+    "docs/research/protocols/nakamura-retention-20260921.md": "2422b57bf725a88dc64c6896fbcb6c666abbaf9b2caac8fbd3dda9afd636b93a",
+    "docs/research/protocols/nakamura-local-retention-20260921.md": "b78826827804cbbdd03273f459bdef1c25fb103cd245cfae20a2daca29ede01e",
+    "results/nakamura_retention_20260921.json": "62057361685a60a845f464a267c61e712303227920b8d4114b925c787d4707a1"
+  },
+  "radius": 1,
+  "ring": 5,
+  "rules": {
+    "110": {
+      "rule": 110,
+      "unique_prefixes": 3069,
+      "candidates": [
+        {
+          "keep_mask": 56,
+          "alphabet_size": 9,
+          "status": "refuted",
+          "witness": {
+            "x": {
+              "source": "00011",
+              "initial_age": 0,
+              "updates": [
+                0
+              ]
+            },
+            "y": {
+              "source": "01111",
+              "initial_age": 0,
+              "updates": [
+                3
+              ]
+            },
+            "sites": [
+              4,
+              2
+            ],
+            "observed_neighbourhood": [
+              7,
+              7,
+              2
+            ],
+            "enabled": [
+              true,
+              true
+            ],
+            "successor_labels": [
+              9,
+              2
+            ],
+            "successor_current": [
+              1,
+              0
+            ]
+          }
+        },
+        {
+          "keep_mask": 57,
+          "alphabet_size": 10,
+          "status": "refuted",
+          "witness": {
+            "x": {
+              "source": "00011",
+              "initial_age": 0,
+              "updates": [
+                0
+              ]
+            },
+            "y": {
+              "source": "01111",
+              "initial_age": 0,
+              "updates": [
+                3
+              ]
+            },
+            "sites": [
+              4,
+              2
+            ],
+            "observed_neighbourhood": [
+              7,
+              7,
+              2
+            ],
+            "enabled": [
+              true,
+              true
+            ],
+            "successor_labels": [
+              9,
+              2
+            ],
+            "successor_current": [
+              1,
+              0
+            ]
+          }
+        },
+        {
+          "keep_mask": 58,
+          "alphabet_size": 10,
+          "status": "refuted",
+          "witness": {
+            "x": {
+              "source": "00011",
+              "initial_age": 1,
+              "updates": [
+                0
+              ]
+            },
+            "y": {
+              "source": "01111",
+              "initial_age": 1,
+              "updates": [
+                3
+              ]
+            },
+            "sites": [
+              4,
+              2
+            ],
+            "observed_neighbourhood": [
+              9,
+              9,
+              4
+            ],
+            "enabled": [
+              true,
+              true
+            ],
+            "successor_labels": [
+              11,
+              4
+            ],
+            "successor_current": [
+              1,
+              0
+            ]
+          }
+        },
+        {
+          "keep_mask": 59,
+          "alphabet_size": 11,
+          "status": "refuted",
+          "witness": {
+            "x": {
+              "source": "00011",
+              "initial_age": 1,
+              "updates": [
+                0
+              ]
+            },
+            "y": {
+              "source": "01111",
+              "initial_age": 1,
+              "updates": [
+                3
+              ]
+            },
+            "sites": [
+              4,
+              2
+            ],
+            "observed_neighbourhood": [
+              9,
+              9,
+              4
+            ],
+            "enabled": [
+              true,
+              true
+            ],
+            "successor_labels": [
+              11,
+              4
+            ],
+            "successor_current": [
+              1,
+              0
+            ]
+          }
+        },
+        {
+          "keep_mask": 60,
+          "alphabet_size": 10,
+          "status": "refuted",
+          "witness": {
+            "x": {
+              "source": "00011",
+              "initial_age": 0,
+              "updates": [
+                0
+              ]
+            },
+            "y": {
+              "source": "01111",
+              "initial_age": 0,
+              "updates": [
+                3
+              ]
+            },
+            "sites": [
+              4,
+              2
+            ],
+            "observed_neighbourhood": [
+              7,
+              7,
+              2
+            ],
+            "enabled": [
+              true,
+              true
+            ],
+            "successor_labels": [
+              9,
+              2
+            ],
+            "successor_current": [
+              1,
+              0
+            ]
+          }
+        },
+        {
+          "keep_mask": 61,
+          "alphabet_size": 11,
+          "status": "refuted",
+          "witness": {
+            "x": {
+              "source": "00011",
+              "initial_age": 0,
+              "updates": [
+                0
+              ]
+            },
+            "y": {
+              "source": "01111",
+              "initial_age": 0,
+              "updates": [
+                3
+              ]
+            },
+            "sites": [
+              4,
+              2
+            ],
+            "observed_neighbourhood": [
+              7,
+              7,
+              2
+            ],
+            "enabled": [
+              true,
+              true
+            ],
+            "successor_labels": [
+              9,
+              2
+            ],
+            "successor_current": [
+              1,
+              0
+            ]
+          }
+        },
+        {
+          "keep_mask": 62,
+          "alphabet_size": 11,
+          "status": "refuted",
+          "witness": {
+            "x": {
+              "source": "00011",
+              "initial_age": 2,
+              "updates": [
+                0
+              ]
+            },
+            "y": {
+              "source": "01111",
+              "initial_age": 2,
+              "updates": [
+                3
+              ]
+            },
+            "sites": [
+              4,
+              2
+            ],
+            "observed_neighbourhood": [
+              11,
+              11,
+              0
+            ],
+            "enabled": [
+              true,
+              true
+            ],
+            "successor_labels": [
+              7,
+              0
+            ],
+            "successor_current": [
+              1,
+              0
+            ]
+          }
+        },
+        {
+          "keep_mask": 63,
+          "alphabet_size": 12,
+          "status": "survives_finite_check",
+          "witness": null
+        }
+      ],
+      "surviving_masks": [
+        63
+      ]
+    },
+    "204": {
+      "rule": 204,
+      "unique_prefixes": 2976,
+      "candidates": [
+        {
+          "keep_mask": 56,
+          "alphabet_size": 9,
+          "status": "survives_finite_check",
+          "witness": null
+        },
+        {
+          "keep_mask": 57,
+          "alphabet_size": 10,
+          "status": "survives_finite_check",
+          "witness": null
+        },
+        {
+          "keep_mask": 58,
+          "alphabet_size": 10,
+          "status": "survives_finite_check",
+          "witness": null
+        },
+        {
+          "keep_mask": 59,
+          "alphabet_size": 11,
+          "status": "survives_finite_check",
+          "witness": null
+        },
+        {
+          "keep_mask": 60,
+          "alphabet_size": 10,
+          "status": "survives_finite_check",
+          "witness": null
+        },
+        {
+          "keep_mask": 61,
+          "alphabet_size": 11,
+          "status": "survives_finite_check",
+          "witness": null
+        },
+        {
+          "keep_mask": 62,
+          "alphabet_size": 11,
+          "status": "survives_finite_check",
+          "witness": null
+        },
+        {
+          "keep_mask": 63,
+          "alphabet_size": 12,
+          "status": "survives_finite_check",
+          "witness": null
+        }
+      ],
+      "surviving_masks": [
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63
+      ]
+    }
+  }
+}

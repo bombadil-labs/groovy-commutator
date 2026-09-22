@@ -8,6 +8,13 @@ Compensated re-encodings may preserve computation while changing locality or edi
 
 Minimum dimensional ancestry is currently relative to a chosen tower. Intrinsic dimension, prime-like decomposition, natural selection of an encoding, and endogenous semantic program change remain open. Guarded instruments and negative findings remain useful under their declared scopes; Class IV does not direct the search.
 
+The [Rule-110 causal-retention bound](../research/2026-09-21-causal-retention.md)
+is a concrete resource-contract example: twelve local labels are necessary for
+a pointwise encoding of Nakamura's simulator preserving current/age readout,
+radius one and atomic-update semantics. Published eight-state simulations
+change that protocol, so their existence does not contradict this scoped bound.
+Spatial phase in a dimensional encoding is not automatically temporal age.
+
 ## Four distinct resonance questions
 
 The [Concepts explanation](/groovy-commutator/concepts.html#resonance) distinguishes preservation of a family, faithful represented dynamics, restoration under declared perturbations, and endogenous organization. Returning to valid code does not necessarily recover undamaged content. Endogenous establishment of the interpretation remains open.

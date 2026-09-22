@@ -1,0 +1,97 @@
+{
+  "schema": 1,
+  "kind": "existing-certificate extraction",
+  "source_hashes": {
+    "scripts/verify_representation_case_studies.py": "9ff77ceb6bf986cee2a290b56fab06bc5490a8021082114a95db73ed25f49eef",
+    "scripts/verify_depth_one_certificate.py": "30a625330c2eca0c1dbff8c9a8f86c5cf9de8e465a086cf90956f510bc24c8d4",
+    "src/groovy/ca.py": "6969d6f0699b48602c8a2f55aecd61d58862e6472fea56f6d1ed9ebb2656d77e",
+    "results/ring_closure_certificate_20260911.json": "e329829bf5329589813d8e097cc6bcf660e4a6bbc0db44e985419aaee3d2e0f4",
+    "results/depth_one_certificate_20260911.json": "a02d6f4a76c0098d987bced462bfd15ddba8d933f4a4d280c5a0d3bc16c987e8",
+    "results/full_shift_depth_two_20260911.json": "96c448ecdd57de14b41be786954709f6948974ccd1350cfccde51250527650df"
+  },
+  "cases": {
+    "A": {
+      "rule": 255,
+      "observation": "D = I XOR E",
+      "ring_check": 7,
+      "states_checked": 128,
+      "effective_law": "constant zero",
+      "general_certificate": "E(x)=1; D(x)=1 XOR x; DE(x)=0; ED(x)=1"
+    },
+    "B": {
+      "rule": 223,
+      "observation": 22,
+      "ring": 7,
+      "states_checked": 128,
+      "witness": {
+        "x": "0011110",
+        "y": "0101101",
+        "equal_present": "0100001",
+        "next_x": "0000000",
+        "next_y": "0100001"
+      }
+    },
+    "C": {
+      "rule": 58,
+      "observation": 232,
+      "all_ring_certificate": {
+        "vertices": 256,
+        "violating_walks": 196,
+        "power_equality": [
+          11,
+          23
+        ],
+        "period": 12,
+        "small_rings_checked": [
+          1,
+          2,
+          3
+        ]
+      },
+      "full_line_witness": {
+        "psi": 232,
+        "rule": 58,
+        "v0": 15,
+        "v3": 246,
+        "violating_block": {
+          "x": "0011101",
+          "y": "0011110"
+        },
+        "left_cycle_word": {
+          "x": "0011",
+          "y": "0011"
+        },
+        "left_path_word": {
+          "x": "",
+          "y": ""
+        },
+        "right_path_word": {
+          "x": "00",
+          "y": "01"
+        },
+        "right_cycle_word": {
+          "x": "100",
+          "y": "001"
+        },
+        "left_period": 4,
+        "right_period": 3,
+        "window_length": 30,
+        "centre": 15,
+        "trimmed_margin": 3,
+        "window": {
+          "x": "001100110011001110100100100100",
+          "y": "001100110011001111001001001001"
+        },
+        "psi_agrees_on_interior": true,
+        "psi_F_agrees_on_interior": true,
+        "psi_F2_disagrees_at_centre": true,
+        "pass": true
+      },
+      "central_second_observations": [
+        1,
+        0
+      ],
+      "tail_certificate": "every five-cell edge in both periodic tails and their bridge is in A"
+    }
+  }
+}

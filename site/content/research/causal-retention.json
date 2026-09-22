@@ -1,0 +1,44 @@
+[
+  {
+    "slug": "representation-case-studies",
+    "label": "Representation cases",
+    "title": "Three executable cases of representation failure and repair",
+    "date": "2026-09-21",
+    "updated": "2026-09-21",
+    "kind": "Exact certificate account",
+    "evidence": "exact",
+    "topic": "Observation and memory",
+    "summary": "A wrong candidate law, a genuine factor obstruction, and a finite-ring/full-line gap, each with an executable certificate.",
+    "takeaway": "Distinguish law choice, erased information and domain before choosing a repair.",
+    "source": "docs/research/representation-case-studies.md",
+    "promotion": {
+      "stage": "research"
+    },
+    "related": [
+      "research-boundaries",
+      "shared-closure-account",
+      "causal-retention"
+    ]
+  },
+  {
+    "slug": "causal-retention",
+    "label": "Causal retention",
+    "title": "What Rule 110 must remember at a fixed asynchronous interface",
+    "date": "2026-09-21",
+    "updated": "2026-09-21",
+    "kind": "Exact certificate account",
+    "evidence": "exact",
+    "topic": "Observation and memory",
+    "summary": "All 63 nontrivial quotients of the twelve-state Nakamura interface fail when current/phase readout, radius one and atomic semantics are fixed.",
+    "takeaway": "Whole-field necessary checks can miss local implementation obstructions; this restricted bound permits other eight-state protocols.",
+    "source": "docs/research/2026-09-21-causal-retention.md",
+    "promotion": {
+      "stage": "research"
+    },
+    "related": [
+      "representation-case-studies",
+      "research-boundaries",
+      "affine-oriented-lift-20260917"
+    ]
+  }
+]

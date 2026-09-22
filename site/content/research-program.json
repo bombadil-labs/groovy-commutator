@@ -6,7 +6,7 @@
     "date": "2026-09-08",
     "updated": "2026-09-21",
     "status": "living",
-    "summary": "Active consolidation: exact closure, predictive refinement and domain-sensitive certificates. The next deliverable is three executable case studies using existing evidence. The bounded source-recoder campaign is archived incomplete at 14/22; no automatic solver continuation.",
+    "summary": "The three executable representation cases are complete. A bounded causal-retention audit certifies a twelve-state minimum for the fixed Rule-110 Nakamura interface; other protocols remain possible. Source-recoder recovery remains archived incomplete at 14/22.",
     "thesis": "Retain exactly the distinctions required by a declared observation, and make the certificates, costs and prior-art boundary explicit.",
     "source": "docs/research/2026-09-08-dynamics-of-erased-distinctions.md",
     "supports": [
@@ -33,7 +33,9 @@
       "representation-empowerment-protocol",
       "conservative-online-suffix-learner",
       "erased-distinctions-terminus",
-      "bounded-source-recoder-recovery-status"
+      "bounded-source-recoder-recovery-status",
+      "representation-case-studies",
+      "causal-retention"
     ]
   },
   {
@@ -43,7 +45,7 @@
     "date": "2026-09-09",
     "updated": "2026-09-21",
     "status": "stable",
-    "summary": "Existence and finite recursion are closed under the affine-oriented binary lift theorem. Further work is parked until it demonstrates a locality, readout or intervention advantage over simpler encodings. Predictive assembly support remains unevaluated.",
+    "summary": "Existence and finite recursion remain closed under the affine-oriented theorem. The asynchronous comparison adds a cost baseline, not an asynchronous property of this lift. Further work needs a concrete locality, readout or intervention advantage.",
     "thesis": "An exact representation is useful when its declared resource advantages survive comparison with simpler encodings.",
     "source": "docs/research/2026-09-09-dimensional-closure-program.md",
     "supports": [
@@ -94,7 +96,9 @@
       "commutator-completion-20260915",
       "commutator-relations-20260915",
       "affine-oriented-lift-20260917",
-      "forced-tables-20260917"
+      "forced-tables-20260917",
+      "representation-case-studies",
+      "causal-retention"
     ]
   },
   {
@@ -104,7 +108,7 @@
     "date": "2026-09-10",
     "updated": "2026-09-21",
     "status": "stable",
-    "summary": "Exact certificates distinguish changes of observation and domain. The depth-three onset result is integrated, including onset 65 under observation 232 and the failed ceiling bet under observations 4 and 32. Further depth sweeps are parked; the active case studies reuse this evidence.",
+    "summary": "Three executable cases distinguish law choice, factor failure and domain transfer. The causal-retention audit separates whole-field necessary conditions from radius-one implementation. Further depth sweeps remain parked.",
     "thesis": "State which properties survive a change of representation and certify the boundary of that claim.",
     "source": "docs/research/2026-09-10-representation-invariants-program.md",
     "supports": [
@@ -128,7 +132,9 @@
       "isolated-cell",
       "complement-observation",
       "wiring-dilation",
-      "depth-three-onset"
+      "depth-three-onset",
+      "representation-case-studies",
+      "causal-retention"
     ]
   },
   {

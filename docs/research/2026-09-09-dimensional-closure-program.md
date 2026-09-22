@@ -1,11 +1,16 @@
 # Dimensional Closure and the Commutator Lift
 
-**Current state — 2026-09-21:** Existence and finite recursion are closed under the affine-oriented binary lift theorem. Further work is parked until it demonstrates a locality, readout or intervention advantage over simpler encodings. Predictive assembly support remains unevaluated.
+**Current state — 2026-09-21:** Existence and finite recursion remain closed under the affine-oriented theorem. The asynchronous comparison adds a cost baseline, not an asynchronous property of this lift. Further work needs a concrete locality, readout or intervention advantage.
 
 Read [START_HERE](START_HERE.md) for scheduling and [NEXT_TASK](NEXT_TASK.md)
-for the single active deliverable. Earlier “next” sections below are historical
+for verification and integration of the completed unit. Earlier “next” sections below are historical
 proposals; they do not authorize resuming a parked line. Integration provenance
 is in the [reset record](2026-09-21-research-reset.md).
+
+Current-update provenance: Codex (OpenAI), 2026-09-21, under Myk’s explicit
+solo authorization; no independent review of this update. See the
+[case studies](representation-case-studies.md) and
+[causal-retention account](2026-09-21-causal-retention.md).
 
 This page is the **working synthesis** of the dimensional-lift research program. It collects the line that began with rules becoming spatial data and now asks a sharper question:
 

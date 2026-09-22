@@ -7,6 +7,18 @@ substantial unit completes; keep the bounded-claim style.
 
 Program page: `docs/research/2026-09-10-representation-invariants-program.md`
 
+## Checkpoint 2026-09-21: executable cases and causal-retention unit complete
+
+The [three cases](../representation-case-studies.md) now have a fast verifier.
+The [causal-retention account](../2026-09-21-causal-retention.md) records the
+restricted Rule-110 twelve-state lower bound, both frozen audits, and the
+whole-field/locality distinction. This adds no asynchronous property to the
+dimensional lift and no Class-IV claim. The numerical search has stopped.
+Codex authored and self-verified under Myk's explicit solo authorization;
+independent review is not claimed. Follow [the handoff](../NEXT_TASK.md) for
+verification and integration status, then require a concrete cost advantage
+before proposing another unit. Earlier queued work remains historical.
+
 ## Checkpoint 2026-09-21: research reset
 
 PR #229 is integrated under the reset-specific review waiver. Its completed depth-three onset record gives onset 65 under observation 232, with the failed bets preserved. No further depth census is queued; the next task extracts existing certificates.

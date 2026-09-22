@@ -1,64 +1,65 @@
-# Next agent task: three executable representation case studies
+# Next agent: start from the completed representation unit
 
-**Ready to start:** tracked in [issue #280](https://github.com/bombadil-labs/groovy-commutator/issues/280). Read [START_HERE](START_HERE.md) and the
-[boundaries guide](2026-09-21-research-boundaries.md), then only the sources
-listed below. Deliver one compact scientific note and one fast verifier.
-No new sweep, empirical predictor or general-purpose framework is needed.
+**Scientific work complete in this unit, 2026-09-21.** The original
+[issue #280](https://github.com/bombadil-labs/groovy-commutator/issues/280)
+asked for three executable representation cases. They are now in
+[the case-study note](representation-case-studies.md), with a fast verifier
+and canonical report. A separately frozen, bounded follow-up produced the
+[causal-retention result](2026-09-21-causal-retention.md). Read these two notes
+and [START_HERE](START_HERE.md); no historical census is needed.
 
-## Purpose
+## What was settled
 
-Make the project's central distinction inspectable: a nonzero commutator,
-failure of autonomous observation, and failure to transfer a certificate
-between domains are different things. This is an exposition and certificate
-extraction task. Do not claim the factor criterion or predictive equivalence
-itself is new mathematics.
+- Rule 255 separates same-law commutator error from information loss.
+- Rule 223 / observation 22 has an explicit width-seven factor obstruction.
+- Rule 58 / observation 232 has a checked all-ring depth-one certificate and
+  a full-line counterexample with verified periodic tails and connecting path.
+- For Rule 110, no nontrivial pointwise quotient of Nakamura's twelve-state
+  interface preserves current/phase readout, radius one and each atomic update.
+  The first whole-field check rejected 56/64 candidates; the local follow-up
+  rejected the remaining seven nonidentity candidates. The proof reduces to
+  two reachable local examples and their three uniform phase rotations.
+- Existing eight-state simulations use a different protocol. No lower bound
+  on all asynchronous simulators, novel general theorem, Class-IV metric, or
+  asynchronous advantage of the six-field dimensional lift is claimed.
 
-## Fixed cases
+## Verification and integration
 
-| Case | What to exhibit | Existing sources |
-| --- | --- | --- |
-| A: Rule 255, derivative observation | `D` is complementation, `G` is identically one, yet `D E = B D` with `B` constant zero. An explicit changed law repairs same-law disagreement without adding state. | [Erased distinctions](2026-09-08-dynamics-of-erased-distinctions.md), [shared closure account](2026-09-10-shared-closure-account.md), `scripts/verify_history_algebra.py`. |
-| B: Rule 223, observation 22, ring 7 | Two actual ring states with equal present observed fields and different next observed fields. Verify the witness with the source CA. Explain why this rules out every deterministic present-only factor on that domain. | [Ring closure certificate](2026-09-11-ring-closure-certificate.md), `scripts/verify_ring_closure_certificate.py`, `results/ring_closure_certificate_20260911.json`. Rings 3–6 close; ring 7 does not. |
-| C: Rule 58, observation 232 | The existing all-ring depth-at-most-one certificate and an eventually periodic pair witnessing failure at depth one on the full shift. Verify both tails, the finite bridge and the violating output; a cropped picture alone is insufficient. | [Depth-one certificate](2026-09-11-depth-one-certificate.md), [full-shift depth two](2026-09-11-full-shift-depth-two.md), `scripts/verify_depth_one_certificate.py`, `scripts/verify_full_shift_depth_two.py`, their canonical JSON results. The latter also excludes full-shift depth at most two; that stronger statement is optional here. |
+The completed unit is published in [PR #282](https://github.com/bombadil-labs/groovy-commutator/pull/282).
+On main, treat this unit as integrated; do not recreate its branch or reopen
+#280. If reading the gathering branch before merge, check that PR for CI and
+integration status. The connector outage is resolved. The
+[publication record](../../review/representation-causality-publication.md)
+maps original local commits to identical imported snapshots.
 
-In case C, depth refers to **forward observed-word refinement of initial
-states**, not an online learner's suffix memory. Spell out the quantified
-domain and time index before discussing “memory.”
+For a targeted verification when needed, run from the repository root:
 
-## Deliverables and acceptance
+```bash
+python scripts/verify_representation_case_studies.py --check
+python scripts/verify_nakamura_retention.py --check
+python scripts/verify_nakamura_local_retention.py --check
+python -m unittest discover -s tests -p 'test_representation_certificate_rejection.py'
+python scripts/check_result_integrity.py
+npm run test:research --prefix site
+npm run build --prefix site
+```
 
-1. `docs/research/representation-case-studies.md`: roughly 1,500–2,000 words,
-   one common notation, three explicit contracts, certificate/witness links,
-   and a short prior-art comparison. Explain what was already known and what
-   this repository contributes. Cite the primary sources in the boundaries
-   guide; do not label the examples novel without establishing that.
-2. `scripts/verify_representation_case_studies.py`: deterministic, under one
-   minute on an ordinary CPU, with a nonzero exit for a malformed witness.
-   Reuse existing CA primitives and stored certificates; never invoke an
-   entire historical census. Case B's 128 ring states are a sufficient bounded
-   fallback if the stored file lacks explicit states. For C, use the existing
-   graph-path certificate rather than extrapolating a finite ring sweep.
-3. Register the note. If a new small certificate JSON is needed, preserve its
-   source hashes and register it in the existing integrity checker. Update an
-   existing knowledge entry only where the account changes; a new graph of
-   near-duplicate entries is unnecessary.
-4. End with one recommendation: either name a specific representation-cost
-   comparison worth doing next, or say no new experiment is justified yet.
-   A candidate comparison is the affine six-field lift against the period-three
-   necklace under the same readout/intervention budget; do not execute it as
-   part of this task.
+Myk explicitly authorized solo completion and integration of this unit; no
+independent sign-off is claimed. Historical canonical bytes must remain
+unchanged; the three new reports hash their inputs explicitly.
 
-Run the small verifier, `python scripts/check_result_integrity.py`,
-`npm run test:research --prefix site`, and `npm run build --prefix site`.
-Use a gathering PR with the normal review workflow. This is not a request
-for a fresh scientific experiment; any changed scientific domain or new
-empirical claim needs its own protocol boundary.
+## What is not next
 
-## Stop
+The two frozen numerical protocols are complete. Do not extend horizons,
+increase ring sizes, run all 256 rules, or reinterpret finite survivors as
+working simulators. The exact radius-one obstructions already close the
+stated direct-compression route. Source-recoder recovery and Class-IV feature
+searches remain parked.
 
-Stop when the three cases can be checked and understood. If an existing
-certificate cannot support its stated claim, document the exact gap, preserve
-the evidence and correct the claim rather than launching a search to rescue
-it. Do not expand to all rules, additional observations, greater depth,
-classification metrics or solver recovery. Report an unresolved case explicitly;
-it must not silently disappear from the deliverable.
+Any proposed next scientific unit must name one operation that a representation
+makes cheaper, match the readout/cadence/locality requirements of the competing
+methods, and charge encoding and initialization costs. Ordinary stored history,
+published asynchronous simulators and the period-three necklace are relevant
+baselines under different contracts. If no concrete advantage or necessary
+decision can be stated, stop after integration. A clean completed result is a
+valid stopping point; there is no requirement to keep producing experiments.
