@@ -16,13 +16,15 @@ no-go for a broad benchmark of that candidate, not an impossibility theorem
 about other applications.
 
 Author's initial proof note: local commit `1b0006762673fa4eac351d4172bfa1dde768b4da`,
-branch `gather/groovy-readout-cost`. Independent Sol reviewer
+branch `gather/groovy-readout-cost`, [gathering PR #284](https://github.com/bombadil-labs/groovy-commutator/pull/284).
+Independent Sol reviewer
 `/root/readout_review` approved that note without blocking findings. Final
 pinned-head review, CI and integration status belong in the gathering PR.
 On main, this note is integrated; on a gathering branch, inspect remote state.
 No scientific runner, protocol, canonical result or expensive Actions dispatch
-was added. Existing site tests/build and applicable CI are integration checks,
-not substitutes for mathematical review.
+was added. All 21 local research-site tests, the full site build and canonical
+integrity registry passed. Applicable CI and final independent head review
+remain required; these checks are not substitutes for mathematical review.
 
 Next decision-relevant questions:
 
