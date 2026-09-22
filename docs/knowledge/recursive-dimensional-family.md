@@ -35,3 +35,16 @@ hypothesis is separate and needs its precise formulation before testing.
 ## Update, 2026-09-14: prepared binary source coverage; review pending
 
 The [retrospective binary family](../research/2026-09-14-binary-lift-family.md) covers every ECA source and its [selected repeat](../research/2026-09-14-binary-lift-recursion.md) preserves native evolution and source/parent recovery through 3D. This concerns source-generated period-four prepared families, not independently specified higher-dimensional data. The [G diagnosis](../research/2026-09-14-binary-lift-g-obstructions.md) leaves universal commutator preservation and dimension-induction open. Myk approved the Gate 1 exception; independent Gate 2 review is pending. Faithfulness alone does not establish the broader nontrivial beam objective.
+
+## Update, 2026-09-22: arbitrary-parent existence and induction are answered
+
+The [affine-oriented lift
+theorem](../research/2026-09-17-affine-oriented-lift-theorem.md) supersedes the
+existence boundary above. Every binary finite-memory CA on `Z^d`, acting on
+all of its states, has an exact phase-recoverable lift, and the same grammar
+recurses through every fixed finite depth. This is conjugacy on the marked
+beam and its phase translates. It does not constrain arbitrary off-beam child
+states, add independent area information, prove native descendant G transport,
+or establish a resource advantage. The [consumer
+audit](../research/2026-09-22-phase-free-consumer-audit.md) found no current
+application requiring that interface.

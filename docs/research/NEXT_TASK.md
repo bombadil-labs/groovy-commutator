@@ -1,9 +1,10 @@
 # Next agent: preserve the stop; require an action-changing question
 
-Updated 2026-09-22 after the second research-drive unit. Read
+Updated 2026-09-22 after the third research-drive unit. Read
 [START_HERE](START_HERE.md), [FINDINGS](FINDINGS.md), the
 [readout-cost note](2026-09-22-groovy-readout-cost.md), the
-[consumer audit](2026-09-22-phase-free-consumer-audit.md), and the
+[consumer audit](2026-09-22-phase-free-consumer-audit.md), the
+[recursive-G boundary](2026-09-22-recursive-g-boundary.md), and the
 [research-drive handoff](checkpoints/research-drive.md). Check current remote
 PR state before recreating or extending work.
 
@@ -24,6 +25,16 @@ The physical-window scripts are instruments for the lift itself, and the
 public library/site have no lift caller. This is a repository stop decision,
 not a global impossibility theorem. Do not reopen the lift with another
 self-referential measurement.
+
+## Third completed unit
+
+The apparent conflict between “recursive G is proved” and “recursive G is
+open” was a terminology error. Two-beam ancestral source-G transport is exact
+at every finite lift depth. Native descendant cellwise G is generally
+completion-dependent. The historical P/D carrier has only finite evidence,
+and the open one-beam typed compression has no consumer. Stale knowledge nodes
+and proof-state chronology are corrected; do not restart any of these under
+the undifferentiated label “recursive G.”
 
 ## Next decision, not an automatic experiment
 

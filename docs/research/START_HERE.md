@@ -33,6 +33,12 @@ question dormant until a consumer supplies an exact operation and cost
 contract. Do not replace the failed advantage proposal with a sequence of
 friendlier targets.
 
+The [recursive-G boundary audit](2026-09-22-recursive-g-boundary.md) also
+resolves a stale naming conflict. Two-beam ancestral source-G transport is
+proved through every finite depth; native descendant G remains generally
+completion-dependent; one-beam typed compression is open but dormant. Do not
+schedule “recursive G” without naming which of these objects is intended.
+
 The CA/CRDT connection produced a completed fixed-interface retention result,
 not a fifth program. The dimensional existence objective is complete. The
 Class-IV, refinement, arithmetic and recoder extensions remain parked unless

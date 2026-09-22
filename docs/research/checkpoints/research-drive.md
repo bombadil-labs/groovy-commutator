@@ -1,5 +1,41 @@
 # Research drive handoff
 
+## 2026-09-22 — third unit: recursive-G boundary and stale-state repair
+
+Inspected remote main `8d10669a5a2d5a13f34af341ecde2ec9bb1e6852`
+through the Bombadil Labs connector. No open PRs or issues were present.
+Re-read the agent guide, scheduling authority, next task, findings, portfolio
+and integrated handoff. The local clone lacked that squash object but its
+audited files contained the current main tree; publication uses a fresh remote
+branch from main.
+
+Selected the recursive-G semantic audit because no empirical unit is justified
+and active knowledge entries still advertised arbitrary-parent induction as
+open. That could send an agent back into a closed existence problem. Two
+read-only Sol audits independently traced the proof, finite experiments,
+completion audit and knowledge graph.
+
+The [boundary note](../2026-09-22-recursive-g-boundary.md) records the result:
+two-beam ancestral source-G transport is exact at every finite depth; native
+descendant G is generally completion-dependent; historical P/D carrier
+recursion remains finite; one-beam typed compression remains open but dormant.
+The unit corrects reusable knowledge nodes, obsolete dependency premises and
+two interim proof-state sections without rewriting historical experiment
+claims. No new theorem, protocol, runner or result bytes were created.
+
+Gathering branch: `gather/recursive-g-boundary`. Record the remote head, PR,
+final independent review, checks and merge disposition here or on the PR when
+published.
+
+Next decision-relevant questions:
+
+1. Is there any remaining active knowledge node whose current summary—not a
+   dated historical claim—would cause an agent to reopen settled work?
+2. Does a concrete new operation need a local-sufficiency certificate or the
+   one-beam typed interface? If not, do not build either.
+3. If no action-changing question exists, preserve the cleaned state rather
+   than manufacture another research unit.
+
 ## 2026-09-22 — second unit: phase-free consumer audit
 
 Inspected main `b0cebf5210288529da865dc990c78ef9618f4be6`, including the
