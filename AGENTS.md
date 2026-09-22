@@ -9,6 +9,8 @@ Read [the current research direction](docs/research/START_HERE.md), then
 representation cases and bounded causal-retention audit are complete in this
 unit, published through PR #282. On main, treat them as integrated before
 proposing another experiment.
+The [running findings](docs/research/FINDINGS.md) summarize completed and stopped
+work in plain language. Update them when a unit ends, linking its evidence.
 Read only the source lineage it needs. Do not resume an old “next unit” just
 because a Program page, protocol or checkpoint proposes it.
 

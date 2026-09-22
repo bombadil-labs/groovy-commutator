@@ -1,65 +1,44 @@
-# Next agent: start from the completed representation unit
+# Next agent: one bounded representation-cost design
 
-**Scientific work complete in this unit, 2026-09-21.** The original
-[issue #280](https://github.com/bombadil-labs/groovy-commutator/issues/280)
-asked for three executable representation cases. They are now in
-[the case-study note](representation-case-studies.md), with a fast verifier
-and canonical report. A separately frozen, bounded follow-up produced the
-[causal-retention result](2026-09-21-causal-retention.md). Read these two notes
-and [START_HERE](START_HERE.md); no historical census is needed.
+Updated 2026-09-22. PR #282 integrated the representation case studies and
+causal-retention audit; #280 is closed. Do not recreate that work.
 
-## What was settled
+Read [START_HERE](START_HERE.md), [the accessible findings](FINDINGS.md), and
+[the program survey](2026-09-22-program-survey.md). Historical next-unit
+proposals do not override this handoff.
 
-- Rule 255 separates same-law commutator error from information loss.
-- Rule 223 / observation 22 has an explicit width-seven factor obstruction.
-- Rule 58 / observation 232 has a checked all-ring depth-one certificate and
-  a full-line counterexample with verified periodic tails and connecting path.
-- For Rule 110, no nontrivial pointwise quotient of Nakamura's twelve-state
-  interface preserves current/phase readout, radius one and each atomic update.
-  The first whole-field check rejected 56/64 candidates; the local follow-up
-  rejected the remaining seven nonidentity candidates. The proof reduces to
-  two reachable local examples and their three uniform phase rotations.
-- Existing eight-state simulations use a different protocol. No lower bound
-  on all asynchronous simulators, novel general theorem, Class-IV metric, or
-  asynchronous advantage of the six-field dimensional lift is claimed.
+## Recommended deliverable
 
-## Verification and integration
+Write one short comparison contract and a go/no-go recommendation for reading
+the **original Rule-110 Groovy field at one site**, comparing direct source
+access, ordinary stored time slices, the period-three encoding and the affine
+six-field lift. This is design work, not a frozen experiment or a finding of
+advantage. Use arbitrary binary configurations on the integer line, a common
+synchronous source cadence, and the same output semantics. Specify geometry
+and local access before comparing costs.
 
-The completed unit is published in [PR #282](https://github.com/bombadil-labs/groovy-commutator/pull/282).
-On main, treat this unit as integrated; do not recreate its branch or reopen
-#280. If reading the gathering branch before merge, check that PR for CI and
-integration status. The connector outage is resolved. The
-[publication record](../../review/representation-causality-publication.md)
-maps original local commits to identical imported snapshots.
+Count storage, local reads, computation/table size, initialization and upkeep
+of derived fields. Do not compare native descendant G with ancestral G or give
+one representation free preprocessing. Start from the
+[lift theorem and its simpler baseline](2026-09-17-affine-oriented-lift-theorem.md)
+and the [locality obstruction](2026-09-21-causal-retention.md).
 
-For a targeted verification when needed, run from the repository root:
+Budget: one short analysis pass, at most one agent session. Use existing
+formulas and certificates. No new simulation, all-rule sweep, solver search,
+or expensive replay. Conclude with a precise candidate tradeoff, a baseline
+dominance argument, or a named unresolved assumption. Then stop. Failure to
+find an advantage does not trigger another benchmark automatically.
 
-```bash
-python scripts/verify_representation_case_studies.py --check
-python scripts/verify_nakamura_retention.py --check
-python scripts/verify_nakamura_local_retention.py --check
-python -m unittest discover -s tests -p 'test_representation_certificate_rejection.py'
-python scripts/check_result_integrity.py
-npm run test:research --prefix site
-npm run build --prefix site
-```
+A new empirical unit needs its own prospective protocol and applicable review
+under AGENTS.md. This scheduling recommendation neither backdates review nor
+extends the earlier unit-specific exception to new experiments.
 
-Myk explicitly authorized solo completion and integration of this unit; no
-independent sign-off is claimed. Historical canonical bytes must remain
-unchanged; the three new reports hash their inputs explicitly.
+## Maintaining the account
 
-## What is not next
+When a unit ends, update FINDINGS.md in plain language: curious about X, tried
+Y, found Z, within domain W. Link its evidence and keep negatives, incomplete
+computations and invalidated scores distinct. Do not re-run history merely to
+write a summary. Preserve all canonical result bytes.
 
-The two frozen numerical protocols are complete. Do not extend horizons,
-increase ring sizes, run all 256 rules, or reinterpret finite survivors as
-working simulators. The exact radius-one obstructions already close the
-stated direct-compression route. Source-recoder recovery and Class-IV feature
-searches remain parked.
-
-Any proposed next scientific unit must name one operation that a representation
-makes cheaper, match the readout/cadence/locality requirements of the competing
-methods, and charge encoding and initialization costs. Ordinary stored history,
-published asynchronous simulators and the period-three necklace are relevant
-baselines under different contracts. If no concrete advantage or necessary
-decision can be stated, stop after integration. A clean completed result is a
-valid stopping point; there is no requirement to keep producing experiments.
+The other programs remain parked as described in START_HERE. There is no
+parallel fifth CA/CRDT program and no automatic next numerical experiment.

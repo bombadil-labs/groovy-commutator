@@ -1,5 +1,9 @@
 # Class-IV Refinement: what a lift makes visible
 
+**Current portfolio — 2026-09-22:** Retain scoped family and defect findings, failed bets and three invalidated healing scores. Reopening needs a standalone prediction or control task; no automatic next unit.
+
+Read [the findings](FINDINGS.md) and [the portfolio survey](2026-09-22-program-survey.md). Historical program sections below retain their original evidence and chronology.
+
 **Current state — 2026-09-21:** Paused after the held-structures completion record. Restricted defect mechanisms remain useful; three healing-predictor scores are invalidated by a stream-timing error. No general Class-IV classifier or automatic tenth unit is claimed.
 
 Read [START_HERE](START_HERE.md) for scheduling and [NEXT_TASK](NEXT_TASK.md)

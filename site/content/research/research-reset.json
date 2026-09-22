@@ -1,7 +1,7 @@
 [
   {
     "date": "2026-09-21",
-    "updated": "2026-09-21",
+    "updated": "2026-09-22",
     "promotion": {
       "stage": "research"
     },
@@ -13,7 +13,7 @@
     "kind": "Checkpoint: research reset",
     "evidence": "state",
     "topic": "Research direction",
-    "summary": "Three executable representation cases and a bounded causal-retention lower bound are complete. Verify and integrate the unit before proposing another experiment.",
+    "summary": "The completed case studies and causal-retention audit feed one representation-cost design agenda. Read the accessible findings and portfolio survey before starting further work.",
     "takeaway": "Exact certificates and explicit locality costs provide a completed scientific result; broad searches remain parked.",
     "source": "docs/research/START_HERE.md",
     "related": [
@@ -21,7 +21,9 @@
       "held-structures-account",
       "depth-three-onset",
       "representation-case-studies",
-      "causal-retention"
+      "causal-retention",
+      "research-findings",
+      "research-portfolio-20260922"
     ]
   },
   {

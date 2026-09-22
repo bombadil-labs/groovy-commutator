@@ -1,5 +1,9 @@
 # Dynamics of Erased Distinctions
 
+**Current portfolio — 2026-09-22:** Primary home for the recommended local sufficient-state and representation-cost agenda. Completed findings are summarized in plain language; next is one bounded comparison design, not a census.
+
+Read [the findings](FINDINGS.md) and [the portfolio survey](2026-09-22-program-survey.md). Historical program sections below retain their original evidence and chronology.
+
 **Current state — 2026-09-21:** The three executable representation cases are complete. A bounded causal-retention audit certifies a twelve-state minimum for the fixed Rule-110 Nakamura interface; other protocols remain possible. Source-recoder recovery remains archived incomplete at 14/22.
 
 Read [START_HERE](START_HERE.md) for scheduling and [NEXT_TASK](NEXT_TASK.md)

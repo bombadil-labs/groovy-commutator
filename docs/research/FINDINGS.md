@@ -1,0 +1,206 @@
+# What we have learned
+
+Running plain-language summary, updated 2026-09-22. This is a synthesis of
+existing evidence, not a new experiment or independent review. Each entry
+links to the technical account that states its assumptions and verification.
+“Complete” means the stated investigation has ended, not that every related
+mathematical question is solved. The [program survey](2026-09-22-program-survey.md)
+explains what deserves work next.
+
+## 1. A disagreement can mean we chose the wrong law
+
+We were curious whether the Groovy commutator detects information lost when
+we describe a system by its changes instead of its full state. We compared
+“evolve, then describe” with “describe, then apply the original rule.”
+
+We found that these can disagree everywhere even when the description loses
+no information. Rule 255 provides a tiny exact example: its change mask is
+just the original bits reversed, but the correct update for that mask is a
+different rule. A large commutator is therefore not, by itself, evidence of
+failed prediction or complexity. First ask whether a suitable update law
+exists at all. **Complete: exact counterexample and general factor criterion.**
+[Case A and the criterion](representation-case-studies.md).
+
+## 2. Some erased information comes back to matter
+
+We were curious which hidden differences can safely be forgotten. We grouped
+states by what an observer sees, then separated groups whenever their observed
+futures differed. On finite systems this gives the exact distinctions needed
+to determine the observer's entire future.
+
+We found that information hidden now divides into information that eventually
+matters and information this observer never needs. Under Rule 106, the same
+initial hidden defect stays invisible forever in one finite context and
+becomes visible after 51 steps in another. Its surroundings change its fate.
+These forward-future partitions are not automatically an online observer's
+memory requirement. **Complete examples and finite constructions; no universal
+memory bound.** [Erased distinctions synthesis](2026-09-08-dynamics-of-erased-distinctions.md).
+
+## 3. Repairing a description can require a seemingly useless first step
+
+We were curious whether repeatedly adding the most immediately helpful
+distinction finds the cheapest predictive description. We compared greedy
+repair with exact optima in small, fully enumerated observation families.
+
+It worked in all 1,590 nonclosed two-cell cases. In the three-cell study it
+failed in four of 30,856 cases, all in the Rule-24/231 family. In a verified
+counterexample, a distinction with essentially no immediate predictive benefit
+makes a later distinction much more valuable. The failure also survives a
+fresh ring size. **Complete within the tested families:** a concrete reason
+that immediate information gain need not find the cheapest representation.
+[Repair and predictive synergy](2026-09-08-block3-representation-design.md).
+
+## 4. Coordinates can change the answer unless the observer changes too
+
+We were curious which measurements describe the dynamics and which describe
+our chosen notation. We reversed directions, exchanged binary labels,
+repacked cells, changed wiring and changed rules away from a preserved family.
+
+We found exact examples of all three possibilities: a quantity stays the
+same, transforms predictably, or really changes because the observation was
+held fixed while the system changed. In particular, a native commutator
+value is not automatically an intrinsic signature of a rule. The observer,
+decoding rule and permitted local access belong in the claim.
+**Completed audits, now a shared method rather than a standing census.**
+[Transformation synthesis](2026-09-10-representation-invariants-program.md#synthesis-after-eleven-units).
+
+## 5. Even every finite ring can miss an infinite-line obstruction
+
+We were curious whether small-ring results reveal how much observed history
+determines the next observation. We built finite graphs of pairs of possible
+states and checked paths and cycles, producing certificates rather than
+extrapolating simulation plots.
+
+We found both late size effects and a stronger domain difference. Rule 58
+under observation 232 has a depth-one certificate on every finite ring, yet
+fails that property on the infinite line. An explicit pair with periodic tails
+shows why. Elsewhere, a certified depth-three ring pattern only settles into
+its eventual behavior at size 65. **Complete for the certified contracts:**
+small-ring agreement is insufficient, and even all-ring agreement does not
+automatically answer the infinite-line question. These are forward observed-word
+depths, not universal suffix-memory requirements.
+[Executable case C](representation-case-studies.md);
+[depth-three certificate](2026-09-14-depth-three-onset.md).
+
+## 6. Every binary finite-memory CA can be represented one dimension higher
+
+We were curious whether one construction could lift arbitrary binary cellular
+automata and then lift its own results again. We developed the affine-oriented
+six-field construction, a general proof and finite verification cases.
+
+The existence and every-finite-depth recursion question is settled under that
+construction's assumptions. The encoded states evolve exactly as the source
+and permit local recovery. This is a substantial completed mathematical result.
+It does not determine what happens outside the encoded family, establish an
+infinite-dimensional limit, or make the construction optimal. A simpler
+period-three encoding also meets the broad existence requirement. The open
+value question is what the six fields make cheaper or easier to access.
+**Existence program complete; resource advantage unestablished.**
+[Theorem, verification and simpler baseline](2026-09-17-affine-oriented-lift-theorem.md).
+
+## 7. Sharing a representation is a question about constraints
+
+We were curious when two lifted rules can inhabit one native rule. We compared
+the table entries actually forced by their encoded states, keeping unspecified
+entries separate from zeros or any other default.
+
+In the specified width-seven/eight cache, 20,944 of 32,640 root pairs admit a
+common completion, although no pair has identical individually completed tables
+under the four default policies tested. Compatibility is not equality of
+arbitrary completions. Rule 0 has more compatible partners than the two core
+Class-IV examples, so the raw count does not isolate them. A 54/110 conflict
+appears at width eight that width seven misses. **Complete finite audit and
+constraint-counting formulas; no global cohabitation or Class-IV theorem.**
+[Partial cohabitation](2026-09-15-partial-cohabitation.md).
+
+## 8. Asynchronous computation makes the cost of forgetting concrete
+
+We were curious whether the CRDT-like commuting-update idea lets an
+asynchronous CA store less history. We took the established Nakamura simulator
+and tested every way of merging its previous-bit distinctions while preserving
+current-bit and phase readout, radius-one access and each atomic update.
+
+For Rule 110, all 63 nontrivial mergers fail. Seven passed the first whole-field
+necessary check but failed when the update had to use only its local neighbors.
+Two reachable examples, rotated through the three phases, prove the restricted
+twelve-state requirement. Existing eight-state protocols change the interface;
+this result does not rule them out. **Fixed-interface question complete.**
+[Causal-retention proof](2026-09-21-causal-retention.md).
+
+The analogy supplied a useful question, not a new equivalence theorem. These
+cells compute different pieces of a state, whereas CRDT replicas maintain a
+shared object. Commuting asynchronous updates and CRDT convergence already
+have established theories: [Gács](https://cs-web.bu.edu/faculty/gacs/papers/commut.pdf)
+and [Letia, Preguiça and Shapiro](https://arxiv.org/abs/0907.0929).
+
+## 9. We found a promising finite discriminator, not a definition of Class IV
+
+We were curious whether selective persistence together with disturbance
+spreading picks out complex behavior. A frozen statistic separated the 54/110
+core from the declared undisputed negatives across five fresh conditions in
+the surviving tables: 10 positive decisions and no positives among 420
+undisputed negative decisions.
+
+That is a scoped empirical success. It has only two core positive families,
+depends on the declared observations and ensembles, and does not settle
+disputed cases or generalize to arbitrary CA. Some original protocol and runner
+bytes were lost; reconstructed files are not the originals. **Finite benchmark
+frozen; universal classification unestablished.** Further threshold hunting on
+the same examples would not supply the missing external test.
+[Surviving evidence and provenance limits](2026-09-17-selective-persistence-discriminator-record.md).
+
+## 10. Refinements have local mechanisms, but the broad story did not hold
+
+We were curious whether simple lower-dimensional rules predict structured
+behavior in families of richer rules. We studied narrow strips, rule families
+with the same restriction, and the survival or healing of small defects.
+
+We found exact restriction relationships, finite family differences and useful
+local defect mechanisms. Several stronger specificity and transfer predictions
+failed. The final held-structures record contains 2,112 rows; a later audit
+invalidated three healing-predictor scores because inputs were shifted by one
+time step. Nine other scores held and nine failed under their stated tests.
+Three corrected witnesses diagnose the bug; they do not repair the full study.
+**Paused with retained findings and explicit invalidations; no automatic next
+unit or general explanation of Class IV.**
+[Program](2026-09-17-class-iv-refinement-program.md);
+[completion and correction](2026-09-21-held-structures-account.md).
+
+## 11. Ring arithmetic matters, but its predictive value is uneven
+
+We were curious whether prime factors and divisibility organize relationships
+between rules. We enumerated whole-state relations and tested selected
+arithmetic associations on held-out sizes.
+
+Most first-study associations reversed sign. A better-balanced follow-up with
+arithmetic interactions beat both simpler models in 88 of 252 tasks, but gains
+were uneven; for the 54/110 pair it won only on basin relations. This is limited
+predictive value, not an arithmetic explanation of Class IV. **Both bounded
+studies complete; broader mechanism open and parked.**
+[Initial study](2026-09-15-rule-ring-structure.md);
+[balanced follow-up](2026-09-15-factor-balanced-interactions.md).
+
+## 12. Failure to find a proof is not proof of impossibility
+
+We were curious whether small machines could certify that hidden defects stay
+hidden forever. Several exact encodings and bounded certificate grammars were
+tried. Changing the encoding sometimes made a previously difficult finite
+question easy, showing that computational cost can belong to the proof method.
+
+The final source-recoder search found no certificate: 14 of 22 seed languages
+were ruled out within the frozen grammar, while eight remained unresolved.
+Those eight are not negatives. Separately, predictive assembly support has
+preserved code and a protocol but no recovered canonical result. **Both are
+archived incomplete, not scientifically closed.** Neither creates an obligation
+to spend indefinitely just because a finite question remains decidable.
+[Recoder account](2026-09-10-erased-distinctions-terminus.md);
+[integration dispositions](2026-09-21-research-reset.md).
+
+## Keeping this useful
+
+After a completed or stopped unit, update its entry or add one short account:
+what we wanted to know, what we tried, what we found, the domain where it holds,
+and what decision it changes. Link to the evidence. Preserve failed predictions,
+missing results and corrections. Change an earlier conclusion visibly when
+evidence changes it. Do not append every run, reproduce the technical ledger,
+or call a parked question solved.
