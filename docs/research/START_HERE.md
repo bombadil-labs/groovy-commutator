@@ -39,6 +39,15 @@ proved through every finite depth; native descendant G remains generally
 completion-dependent; one-beam typed compression is open but dormant. Do not
 schedule “recursive G” without naming which of these objects is intended.
 
+The only remaining experiment still marked planned was the 2026-09-10
+representation-empowerment census. A prospective
+[endpoint and cost audit](2026-09-22-representation-empowerment-disposition.md)
+parks it unrun. Its primary stable-future outcome includes the post-action
+observation, so identity attains the binary channel's one-bit ceiling for every
+rule; a broad census would not test dynamical persistence. Any replacement
+needs a delayed fixed target, common cadence, action-phase controls, a named
+consumer and a cost baseline under a new protocol.
+
 The CA/CRDT connection produced a completed fixed-interface retention result,
 not a fifth program. The dimensional existence objective is complete. The
 Class-IV, refinement, arithmetic and recoder extensions remain parked unless

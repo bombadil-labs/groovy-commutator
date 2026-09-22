@@ -173,6 +173,13 @@ None is a no-op: each retains concrete writing, archival, editorial, or experime
 
 Current progress: **8 of 8 complete**. All agreed issue deliverables are merged; the final item is [PR78](https://github.com/bombadil-labs/groovy-commutator/pull/78) for #64 (2026-09-10). The empowerment and second-lift censuses remain planned and unrun; the conservative learner is an implemented instrument without a new CA evaluation.
 
+**2026-09-22 status update:** the second-lift comparison was subsequently
+completed. The representation-empowerment census was not run; a prospective
+[endpoint audit](2026-09-22-representation-empowerment-disposition.md) parked
+it after proving that its primary immediate-inclusive outcome makes identity a
+universal one-bit capacity maximizer. The preceding sentence is retained as
+the 2026-09-10 scheduling state, not current direction.
+
 Plan added 2026-09-10 after PR69. All eight issues were open at the plan freeze; none was a no-op. The order below is a scheduling recommendation built from the signed scopes above. Creating this checklist does not begin a new experiment or change an evidence label.
 
 Clear the five consolidation and publication items first. They make the existing reasoning and reproduced examples durable. Then freeze the second-lift comparison closest to this dimensional workstream, freeze the separate static control channel, and implement the conservative observer. New experimental execution remains explicitly distinguishable from proposal completion.

@@ -1,5 +1,50 @@
 # Research drive handoff
 
+## 2026-09-22 — fourth unit: representation-empowerment disposition
+
+Inspected remote main `010d47be043cac9dfd652bfe3745f75d704f167b`
+through the Bombadil Labs connector. No open PRs or issues were present.
+Re-read the agent guide, scheduling authority, next task, findings, portfolio,
+latest handoff and the active knowledge surface.
+
+The scan found one contradiction to “no queued empirical unit”: the frozen
+2026-09-10 `representation-empowerment-census` was still marked planned and
+unrun. Selected a prospective disposition audit because it was the only active
+entry that could cause a fresh agent to launch a broad computation. This
+outranked inventing another experiment and directly decides whether the
+registered census should run.
+
+Two independent read-only Sol audits covered scientific validity and
+implementation/provenance cost. The [disposition
+note](../2026-09-22-representation-empowerment-disposition.md) proves that the
+primary `C_infinity` outcome includes the post-action observation. Identity
+therefore gives disjoint deterministic action rows and exactly one bit of
+capacity for every ECA rule, the binary-action upper bound. The intended
+objective distinction is already analytic because identity has zero hidden
+future repertoire. The remaining census would mix representation, controller
+information, cadence and readout without changing a current decision.
+
+No primary channels or outcomes were generated. The cost audit estimates
+34,816 stable partitions and about 11.8 million macrostate-conditioned
+channels even with complement representatives, with multi-core-hour and
+multi-gigabyte requirements. The repository also lacks the full Research026
+per-pair baseline required by the frozen protocol's reproduction gate. These
+are implementation limitations, not negative evidence; the endpoint proof is
+the reason to stop.
+
+Gathering branch: `gather/representation-empowerment-disposition`. PR, reviewed
+head, CI and merge disposition must be appended after publication. The unit
+adds no runner, result bytes or expensive Actions dispatch.
+
+Next decision-relevant questions:
+
+1. Does any remaining active knowledge summary still advertise parked work as
+   planned, rather than merely preserving a dated historical proposal?
+2. Is there a named delayed-control consumer for which representation cost
+   matters under a fixed cadence and fixed target? If not, preserve the stop.
+3. If no action-changing correction remains, use the next run to verify the
+   portfolio surface rather than manufacture a new experiment.
+
 ## 2026-09-22 — third unit: recursive-G boundary and stale-state repair
 
 Inspected remote main `8d10669a5a2d5a13f34af341ecde2ec9bb1e6852`

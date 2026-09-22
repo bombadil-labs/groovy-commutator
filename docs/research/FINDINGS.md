@@ -245,6 +245,26 @@ P/D carrier census is a narrower finite construction with no induction proof.
 question stays dormant because the consumer audit found no caller for it.
 [Exact boundary and corrected status](2026-09-22-recursive-g-boundary.md).
 
+## 16. The planned empowerment census answered itself at the endpoint
+
+We were curious whether a representation that leaves many futures possible is
+also the representation under which a controller can choose among those
+futures. We audited the frozen no-op/flip protocol before implementing its
+247-rule census.
+
+Its primary future class includes the observation immediately after the
+action. Under identity observation, the controller knows the exact state and
+the two actions produce different identity observations, so their outcome rows
+are disjoint. Identity therefore has the maximum one bit of capacity for every
+rule, while its hidden-future repertoire is zero. The intended distinction is
+already exact; a broad dynamical census is not needed to show it. The run would
+also mix controller information, sampling cadence and outcome semantics and
+lacks the full saved baseline required by its own reproduction gate.
+**Protocol audit complete; census parked unrun.** A new study would need a
+delayed fixed target, common cadence, action-phase controls, a named consumer
+and a representation-cost baseline.
+[Endpoint proof and disposition](2026-09-22-representation-empowerment-disposition.md).
+
 ## Keeping this useful
 
 After a completed or stopped unit, update its entry or add one short account:
