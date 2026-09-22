@@ -1,4 +1,4 @@
-# Next agent: verify and integrate the completed representation unit
+# Next agent: start from the completed representation unit
 
 **Scientific work complete in this unit, 2026-09-21.** The original
 [issue #280](https://github.com/bombadil-labs/groovy-commutator/issues/280)
@@ -25,14 +25,14 @@ and [START_HERE](START_HERE.md); no historical census is needed.
 
 ## Verification and integration
 
-The gathering branch is `gather/representation-causality`, based on main
-`30559ffcf1357c8dde828e2e620d3e7d65d01a3b`. Check remote state before integrating;
-this handoff does not certify that publication succeeded. The original session
-encountered GitHub connector metadata errors and unavailable direct-push
-credentials. An accompanying git bundle/patch, if used, preserves this branch's
-protocol → implementation → evaluation chronology.
+The completed unit is published in [PR #282](https://github.com/bombadil-labs/groovy-commutator/pull/282).
+On main, treat this unit as integrated; do not recreate its branch or reopen
+#280. If reading the gathering branch before merge, check that PR for CI and
+integration status. The connector outage is resolved. The
+[publication record](../../review/representation-causality-publication.md)
+maps original local commits to identical imported snapshots.
 
-Run from the repository root:
+For a targeted verification when needed, run from the repository root:
 
 ```bash
 python scripts/verify_representation_case_studies.py --check
@@ -44,11 +44,9 @@ npm run test:research --prefix site
 npm run build --prefix site
 ```
 
-Use a gathering PR into main, preserving the commits; close #280 upon successful
-integration. Myk explicitly authorized solo completion and integration of this
-unit; do not invent an independent sign-off or ask for the same authorization
-again. If this is already merged, skip integration. Historical canonical bytes
-must remain unchanged; the three new reports hash their inputs explicitly.
+Myk explicitly authorized solo completion and integration of this unit; no
+independent sign-off is claimed. Historical canonical bytes must remain
+unchanged; the three new reports hash their inputs explicitly.
 
 ## What is not next
 

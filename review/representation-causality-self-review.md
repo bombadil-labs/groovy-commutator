@@ -48,7 +48,7 @@ Both canonical numerical runs completed inside their 60-second limits. The
 new checks are short enough to join the existing fast research CI; no expensive
 historical census or paid manual Actions job was launched.
 
-## Publication limit
+## Original publication failure (resolved)
 
 The Bombadil GitHub MCP and the standard GitHub MCP returned HTTP 400
 `Invalid MCP request metadata`, including on read-only operations. Direct
@@ -57,7 +57,9 @@ No PR was created, no remote branch was pushed, no issue was closed, and no
 remote merge is claimed. The local gathering branch and delivery bundle keep
 the frozen-protocol chronology intact for an authenticated continuation.
 
-When access works, push this branch, open its gathering PR, run normal checks,
-merge with the existing solo authorization, and close #280. See
-[the handoff](../docs/research/NEXT_TASK.md). Do not mark publication complete
-based only on this self-review.
+Access recovered on 2026-09-22 after Myk refreshed the Bombadil connector.
+The five commits were imported in order into [PR #282](https://github.com/bombadil-labs/groovy-commutator/pull/282),
+and the imported tree exactly matches the original local head. See the
+[publication record](representation-causality-publication.md) for SHA mapping.
+The preceding paragraph records the state at the original failed attempt;
+PR #282 supplies authoritative CI and merge status.
