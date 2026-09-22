@@ -34,9 +34,14 @@ per-pair baseline required by the frozen protocol's reproduction gate. These
 are implementation limitations, not negative evidence; the endpoint proof is
 the reason to stop.
 
-Gathering branch: `gather/representation-empowerment-disposition`. PR, reviewed
-head, CI and merge disposition must be appended after publication. The unit
-adds no runner, result bytes or expensive Actions dispatch.
+Gathering branch: `gather/representation-empowerment-disposition`; [PR
+#288](https://github.com/bombadil-labs/groovy-commutator/pull/288). Independent
+Sol review first requested two blocking corrections, then approved scientific
+head `a44b4355c4c983d2db6e79a128ebd9629fa5f564` after the maximizing-set claim
+was narrowed and an explicit `parked` experiment state replaced the misleading
+`completed` badge. All four CI checks passed on that head. The PR review thread
+records the final administrative-head and merge disposition. The unit adds no
+runner, result bytes or expensive Actions dispatch.
 
 Next decision-relevant questions:
 
