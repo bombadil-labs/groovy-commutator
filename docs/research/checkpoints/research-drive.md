@@ -28,10 +28,14 @@ because a transverse row repeats. It records, without rewriting historical
 evidence, that old uniform-jet artifacts use the nonlinear recovery gauge
 while the theorem uses the locally recodable affine gauge.
 
-Gathering branch: `gather/phase-free-consumer-audit`. No empirical protocol,
-runner, generated result or Actions dispatch was needed. Record the eventual
-commit, PR, independent final-head review, CI and merge here or on the PR;
-until then this is authored work awaiting the normal gate.
+Gathering branch: `gather/phase-free-consumer-audit`; remote head
+`e91e1dcdb1830ceeb4dd26f166fab53207b0964f`; [PR
+#285](https://github.com/bombadil-labs/groovy-commutator/pull/285). An
+independent Sol final-head review approved the note without blocking findings
+and is recorded on the PR (GitHub COMMENT because the connector shares the
+author identity). All four CI checks passed. The PR was squash-merged as
+`72d56ac0063876247d1ed84308063427268bba78`. No empirical protocol, runner,
+generated result or expensive Actions dispatch was added.
 
 Next decision-relevant questions:
 
