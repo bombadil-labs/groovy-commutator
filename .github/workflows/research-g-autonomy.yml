@@ -1,0 +1,39 @@
+name: Groovy autonomy certificate
+
+on:
+  pull_request:
+    paths:
+      - 'docs/research/protocols/rule110-g-autonomy-20260922.md'
+      - 'scripts/verify_rule110_g_autonomy*.py'
+      - 'scripts/check_result_integrity.py'
+      - 'results/rule110_g_autonomy_20260922.json'
+      - 'experiments/rule110_g_autonomy_20260922/**'
+      - '.github/workflows/research-g-autonomy.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'docs/research/protocols/rule110-g-autonomy-20260922.md'
+      - 'scripts/verify_rule110_g_autonomy*.py'
+      - 'scripts/check_result_integrity.py'
+      - 'results/rule110_g_autonomy_20260922.json'
+      - 'experiments/rule110_g_autonomy_20260922/**'
+      - '.github/workflows/research-g-autonomy.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  exact-g-certificate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Check source provenance and replay the bounded record
+        run: |
+          python scripts/verify_rule110_g_autonomy.py --integrity
+          python scripts/verify_rule110_g_autonomy.py --check
+      - name: Independently replay the periodic certificate and controls
+        run: python scripts/verify_rule110_g_autonomy_certificate.py

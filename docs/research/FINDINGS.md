@@ -378,6 +378,26 @@ an evidence-backed correction, an external validation target or a bounded
 method gain whose outcome changes a decision.
 [Research-drive synthesis](2026-09-22-research-drive-synthesis.md).
 
+## 23. A Groovy field can have its own law, but Rule 110's loses needed state
+
+We were curious whether a CA's derivative or Groovy field could evolve on its
+own under a different rule. Existing work already gives a positive example:
+Rule 32's Groovy field follows Rule 128. We rechecked that identity and tested
+whether Rule 110's original Groovy field is also enough to determine its future.
+
+We found a complete obstruction using two repeating three-cell patterns. The
+sources 001 and 011 both have Groovy field 010, but their next Groovy fields
+are 010 and 000. The same calculation holds when those patterns repeat across
+the infinite line. Even reading the entire present G field cannot tell which
+successor is required. **Full-line Rule-110 G-only autonomy is ruled out at
+one-step cadence.** This closes the candidate without a larger-radius search.
+
+The missing source distinction matters; the field's apparent structure alone
+does not make it a sufficient state. This does not rule out a specified
+restricted source family, added context, or another cadence, and does not
+identify a minimal repair. Those are separate questions, with none queued by
+this result. [Exact certificate and known positive](2026-09-22-rule110-g-autonomy.md).
+
 ## Keeping this useful
 
 After a completed or stopped unit, update its entry or add one short account:

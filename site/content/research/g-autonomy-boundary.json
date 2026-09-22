@@ -1,0 +1,22 @@
+[
+  {
+    "label": "Groovy autonomy",
+    "slug": "g-autonomy-boundary",
+    "title": "A Groovy field can have its own rule, but Rule 110's does not",
+    "date": "2026-09-22",
+    "updated": "2026-09-22",
+    "kind": "Exact factor obstruction",
+    "evidence": "exact",
+    "topic": "Algebra and closure",
+    "summary": "A three-site periodic witness proves that Rule 110's entire original Groovy field cannot determine its next field. The known Rule-32 G-to-Rule128 factor remains an exact positive example.",
+    "takeaway": "Autonomy requires retaining every distinction that can affect the next observation; looking farther away cannot restore a distinction erased from the entire field.",
+    "source": "docs/research/2026-09-22-rule110-g-autonomy.md",
+    "promotion": {
+      "stage": "research"
+    },
+    "related": [
+      "local-correction-caps",
+      "correction-future-coordinates"
+    ]
+  }
+]

@@ -1,0 +1,334 @@
+{
+  "base_main": "5aee7bb9ac6c70eaa114a8ed5baf38ba6b10e8c1",
+  "controls": {
+    "C1_rule32_factor": {
+      "identity": "G_32 E_32 = E_128 G_32",
+      "source_windows": 128,
+      "status": "pass"
+    },
+    "C2_rule90_constant": {
+      "identity": "G_90 = 0",
+      "source_windows": 32,
+      "status": "pass"
+    }
+  },
+  "domain": "full binary integer line; cadence one; original-source G",
+  "local": [
+    {
+      "R": 0,
+      "conflict": {
+        "G_patch": "0",
+        "next_G_center": [
+          0,
+          1
+        ],
+        "source_words": [
+          "0000000",
+          "0000010"
+        ]
+      },
+      "realized_patches": 2,
+      "required_targets": {
+        "0": [
+          0,
+          1
+        ],
+        "1": [
+          0,
+          1
+        ]
+      },
+      "source_radius": 3,
+      "source_windows": 128,
+      "status": "conflict",
+      "table_zero_off_image": null
+    },
+    {
+      "R": 1,
+      "conflict": {
+        "G_patch": "100",
+        "next_G_center": [
+          0,
+          1
+        ],
+        "source_words": [
+          "0001000",
+          "0001010"
+        ]
+      },
+      "realized_patches": 8,
+      "required_targets": {
+        "000": [
+          0,
+          1
+        ],
+        "001": [
+          0,
+          1
+        ],
+        "010": [
+          0,
+          1
+        ],
+        "011": [
+          0,
+          1
+        ],
+        "100": [
+          0,
+          1
+        ],
+        "101": [
+          0,
+          1
+        ],
+        "110": [
+          0,
+          1
+        ],
+        "111": [
+          0
+        ]
+      },
+      "source_radius": 3,
+      "source_windows": 128,
+      "status": "conflict",
+      "table_zero_off_image": null
+    },
+    {
+      "R": 2,
+      "conflict": {
+        "G_patch": "01000",
+        "next_G_center": [
+          0,
+          1
+        ],
+        "source_words": [
+          "000010000",
+          "000010100"
+        ]
+      },
+      "realized_patches": 27,
+      "required_targets": {
+        "00000": [
+          0,
+          1
+        ],
+        "00001": [
+          0,
+          1
+        ],
+        "00010": [
+          0,
+          1
+        ],
+        "00011": [
+          0,
+          1
+        ],
+        "00100": [
+          0,
+          1
+        ],
+        "00101": [
+          1
+        ],
+        "00110": [
+          0,
+          1
+        ],
+        "00111": [
+          1
+        ],
+        "01000": [
+          0,
+          1
+        ],
+        "01001": [
+          0,
+          1
+        ],
+        "01010": [
+          0,
+          1
+        ],
+        "01011": [
+          0
+        ],
+        "01100": [
+          0,
+          1
+        ],
+        "01101": [
+          0
+        ],
+        "01110": [
+          0
+        ],
+        "10000": [
+          0,
+          1
+        ],
+        "10001": [
+          0,
+          1
+        ],
+        "10010": [
+          0,
+          1
+        ],
+        "10011": [
+          0
+        ],
+        "10100": [
+          0,
+          1
+        ],
+        "10101": [
+          1
+        ],
+        "10110": [
+          0
+        ],
+        "11000": [
+          0,
+          1
+        ],
+        "11001": [
+          0,
+          1
+        ],
+        "11010": [
+          0,
+          1
+        ],
+        "11100": [
+          0
+        ],
+        "11101": [
+          0
+        ]
+      },
+      "source_radius": 4,
+      "source_windows": 512,
+      "status": "conflict",
+      "table_zero_off_image": null
+    }
+  ],
+  "prediction_context": "001/011 collision candidate hand-derived after protocol freeze, before execution",
+  "predictions": {
+    "P1_no_full_shift_factor": "supported_by_counterexample"
+  },
+  "protocol_deviations": [],
+  "protocol_reviewed_commit": "ad38b4937321501889b6b8a1caab4e4bfb54052e",
+  "rings": [
+    {
+      "distinct_G_words": 1,
+      "n": 1,
+      "states_visited": 2,
+      "status": "no_collision_on_this_ring"
+    },
+    {
+      "distinct_G_words": 1,
+      "n": 2,
+      "states_visited": 4,
+      "status": "no_collision_on_this_ring"
+    },
+    {
+      "n": 3,
+      "states_visited": 4,
+      "status": "collision"
+    },
+    {
+      "n": 4,
+      "states_visited": 0,
+      "status": "not_run_after_witness"
+    },
+    {
+      "n": 5,
+      "states_visited": 0,
+      "status": "not_run_after_witness"
+    },
+    {
+      "n": 6,
+      "states_visited": 0,
+      "status": "not_run_after_witness"
+    },
+    {
+      "n": 7,
+      "states_visited": 0,
+      "status": "not_run_after_witness"
+    },
+    {
+      "n": 8,
+      "states_visited": 0,
+      "status": "not_run_after_witness"
+    },
+    {
+      "n": 9,
+      "states_visited": 0,
+      "status": "not_run_after_witness"
+    },
+    {
+      "n": 10,
+      "states_visited": 0,
+      "status": "not_run_after_witness"
+    },
+    {
+      "n": 11,
+      "states_visited": 0,
+      "status": "not_run_after_witness"
+    },
+    {
+      "n": 12,
+      "states_visited": 0,
+      "status": "not_run_after_witness"
+    },
+    {
+      "n": 13,
+      "states_visited": 0,
+      "status": "not_run_after_witness"
+    },
+    {
+      "n": 14,
+      "states_visited": 0,
+      "status": "not_run_after_witness"
+    },
+    {
+      "n": 15,
+      "states_visited": 0,
+      "status": "not_run_after_witness"
+    },
+    {
+      "n": 16,
+      "states_visited": 0,
+      "status": "not_run_after_witness"
+    }
+  ],
+  "rule": 110,
+  "schema": "groovy-g-autonomy-v1",
+  "source_hashes": {
+    "docs/research/protocols/rule110-g-autonomy-20260922.md": "e2999687aeb04cf752a820d053ceaa031d5cac257b515b1d77469b837b2f5dfd",
+    "scripts/verify_rule110_g_autonomy.py": "064d4e06053c86782835a2930958880ce7a06162c5c6fdd805af1aa87f48922e"
+  },
+  "status": "no_full_shift_factor",
+  "witness": {
+    "n": 3,
+    "sources": [
+      {
+        "D": "010",
+        "E": "011",
+        "G": "010",
+        "S": "001",
+        "next_G": "010"
+      },
+      {
+        "D": "100",
+        "E": "111",
+        "G": "010",
+        "S": "011",
+        "next_G": "000"
+      }
+    ]
+  }
+}
