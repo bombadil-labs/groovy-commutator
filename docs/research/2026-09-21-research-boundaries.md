@@ -78,6 +78,7 @@ another in a claim. Nor does a solver timeout establish any of them.
 | [Rupe and Crutchfield, local causal states](https://arxiv.org/abs/1801.00515) | Domains, defects and coherent structures can be identified relative to local predictive organization. | Merely finding particles is not a Class-IV discriminator; compare with existing domain/particle accounts before inventing another score. |
 | [Feldman, McTague and Crutchfield, complexity–entropy diagrams](https://arxiv.org/abs/0806.4789) | Multiple statistical dimensions can reveal structure. | No universal one-dimensional “edge of chaos” ranking follows. |
 | [Capobianco, induced cellular automata](https://arxiv.org/pdf/0711.3841) | Embedding CA into a larger underlying group has established constructions. | Cross-dimensional existence is not the novelty claim; distinguish the six-field grammar, binary phase decoding and memory bounds. |
+| [Nakamura's asynchronous construction, presented by Lee et al.](https://doi.org/10.1016/j.physd.2004.03.007), and [Gács's invariant histories](https://cs-web.bu.edu/faculty/gacs/papers/commut.pdf) | Current/previous/phase information can implement schedule-independent local histories; a previous message field can suffice when it contains everything neighbours consult. | This is established simulation machinery, not a Class-IV signature. Compare radius, alphabet, initialization, readout and cadence; the known eight-state binary construction changes the protocol. |
 
 These are comparison targets, not a claim that the repository has completed a
 priority search. The specific census, witness, graph restriction or encoding
@@ -132,9 +133,20 @@ score as evidence.
 
 ## What a useful next result looks like
 
+**Completed bounded example, 2026-09-21:** the
+[causal-retention account](2026-09-21-causal-retention.md) now certifies that
+Rule 110's twelve-state Nakamura interface has no nontrivial pointwise quotient
+preserving its current/age readout, radius one and atomic-update semantics.
+Whole-field checks initially left eight candidates; local witnesses refuted
+the seven nonidentity survivors. This restricted lower bound does not conflict
+with other eight-state simulation protocols. It supplies no new property of
+our dimensional lift. Scheduling commutativity and the Groovy DE/ED comparison
+are different contracts.
+
 A reader should be able to name a contract, inspect a certificate or witness,
 understand the closest prior method and say what decision the result changes.
-The [three-case task](NEXT_TASK.md) is designed to produce that account from
-evidence already paid for. A general classifier, another rule catalogue or a
+The [three executable cases](representation-case-studies.md) now give that
+account from evidence already paid for. The [handoff](NEXT_TASK.md) records
+completion and the integration boundary. A general classifier, another rule catalogue or a
 larger solver budget is not the default continuation. The mathematics can
 remain open after a line stops receiving computation.

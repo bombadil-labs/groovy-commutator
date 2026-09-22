@@ -13,29 +13,31 @@ factors, counterexamples, graph certificates and explicit constructions.
 The [limits and prior-art guide](2026-09-21-research-boundaries.md) explains
 what the impossibility theorems constrain and where useful exact work remains.
 
-## One active deliverable
+## Completed bounded unit; integrate before expanding
 
-**Publish three small, executable case studies of representation failure and
-repair, using existing results.** The [next-agent task](NEXT_TASK.md) specifies
-the cases, source files, acceptance criteria and stopping rule. Start there;
-do not begin by reading every checkpoint, running a sweep or inventing a new
-metric. This is consolidation with a scientific output, not another census.
-
-The deliverable must let a reader distinguish:
+The [three executable case studies](representation-case-studies.md) now let a
+reader distinguish:
 
 1. the proposed effective law being wrong;
 2. the observation having no autonomous law on its declared domain;
 3. a finite-ring claim failing to transfer to the infinite line.
 
-This establishes a compact account of what the project actually knows before
-we choose another experiment. If an old claim cannot be certified from its
-evidence, a precise correction is a successful outcome.
+Each has a fast verifier and explicit certificate. The separately frozen
+[causal-retention audit](2026-09-21-causal-retention.md) adds a restricted
+lower bound: Rule 110's Nakamura interface requires all twelve local states
+when current/phase readout, radius one and atomic-update semantics are fixed.
+It is compatible with established eight-state simulators that change protocol.
+
+The [agent handoff](NEXT_TASK.md) covers verification and integration. No new
+numerical campaign is queued. A new unit must identify an operation and a
+resource advantage worth proving, or a concrete unresolved obstruction; the
+closed direct-quotient question does not need more rings or source rules.
 
 ## What we have, and what is parked
 
 | Thread | State and evidence | Condition for further work |
 | --- | --- | --- |
-| Erased distinctions / representation invariants | **Active consolidation.** Exact closure and refinement criteria; finite-ring and full-line certificates. The [depth-three onset result](2026-09-14-depth-three-onset.md) from PR #229 is now integrated. | Finish the three case studies. Further depth or observation searches need a question whose answer changes a decision. |
+| Erased distinctions / representation invariants | **Bounded unit complete.** Three executable representation cases and the restricted Rule-110 causal-retention lower bound. The [depth-three onset result](2026-09-14-depth-three-onset.md) remains integrated. | Verify/integrate the current unit. Further depth or observation searches need a question whose answer changes a decision. |
 | Dimensional lift | **Existence and finite recursion closed** under the [affine-oriented theorem's contract](2026-09-17-affine-oriented-lift-theorem.md). No uniqueness, optimality or spontaneous organization theorem. | A concrete locality, readout or intervention advantage over ordinary history and the proof's period-three necklace construction, charging encoding and preprocessing costs fairly. |
 | Class-IV discriminator | **Frozen finite benchmark**, with [partial original provenance](2026-09-17-selective-persistence-discriminator-record.md). Its two core positive families are 54 and 110. | An independently defined target and external validation domain; no further feature search on the same labels by default. |
 | Refinement fibers / defects | **Paused.** Local mechanisms are useful in their stated height-two family. The [held-structures completion and correction](2026-09-21-held-structures-account.md) preserves the ninth unit and invalidates three mistimed predictor scores. | A standalone scientific payoff and a bounded protocol; a corrected run is required before reusing those three scores. There is no automatic tenth unit. |
@@ -75,3 +77,8 @@ reset**. This authorizes integration and correction, not a claim of independent
 scientific review. The [integration record](2026-09-21-research-reset.md)
 lists the four preserved PR heads, checks and limits. Normal review rules
 apply to subsequent work unless Myk changes them.
+
+Myk subsequently authorized Codex to set up and continue this case-study and
+causal-retention work **solo** on 2026-09-21. Its protocols and notes record
+that additional exception. Self-verification does not constitute independent
+review; the exception is scoped to this unit and its frozen locality follow-up.

@@ -13,6 +13,18 @@ when a substantial unit completes; keep the bounded-claim style. Text moved from
 
 Program page: `docs/research/2026-09-09-dimensional-closure-program.md`
 
+## Checkpoint 2026-09-21: executable cases and causal-retention unit complete
+
+The [three cases](../representation-case-studies.md) now have a fast verifier.
+The [causal-retention account](../2026-09-21-causal-retention.md) records the
+restricted Rule-110 twelve-state lower bound, both frozen audits, and the
+whole-field/locality distinction. This adds no asynchronous property to the
+dimensional lift and no Class-IV claim. The numerical search has stopped.
+Codex authored and self-verified under Myk's explicit solo authorization;
+independent review is not claimed. Follow [the handoff](../NEXT_TASK.md) for
+verification and integration status, then require a concrete cost advantage
+before proposing another unit. Earlier queued work remains historical.
+
 ## Checkpoint 2026-09-21: research reset
 
 The affine-oriented existence/recursion theorem closes the existence objective. PR #172 is integrated as archived protocol and implementation only: no canonical PAS result, and the last off-Actions outcome was unrecovered. New lifting work needs a cost advantage over the period-three necklace and ordinary history.

@@ -5,8 +5,9 @@
 ## Start here
 
 Read [the current research direction](docs/research/START_HERE.md), then
-[the single next task](docs/research/NEXT_TASK.md). That task is to publish
-three executable representation case studies from existing evidence.
+[the current handoff](docs/research/NEXT_TASK.md). The three executable
+representation cases and bounded causal-retention audit are complete in this
+unit. Verify/integrate them before proposing another experiment.
 Read only the source lineage it needs. Do not resume an old “next unit” just
 because a Program page, protocol or checkpoint proposes it.
 
@@ -62,6 +63,7 @@ by the current session's explicit instructions.
 **Additional session exception, 2026-09-21:** Myk subsequently authorized
 Codex to work solo on the representation case studies and bounded
 [causal-retention unit](docs/research/protocols/nakamura-retention-20260921.md),
+including its separately frozen [locality follow-up](docs/research/protocols/nakamura-local-retention-20260921.md),
 including setup, evaluation and integration. Record self-review honestly;
 this is not independent review or a standing waiver for other units.
 
