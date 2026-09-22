@@ -5,7 +5,9 @@ as an active program after the Rule-110 autonomy unit below. Read its
 [census note](2026-09-22-groovy-field-census.md) and
 [checkpoint](checkpoints/groovy-field.md) first; the checkpoint orders the open
 questions. [PR #294](https://github.com/bombadil-labs/groovy-commutator/pull/294)
-contains the program and Codex's requested fixes; Claude's review is next.
+contains the program and fixes reviewed by Claude and Codex. Myk authorized
+merging after this review; on main, treat this unit as integrated. The checkpoint
+records the reviewed revisions and remaining evidence limits.
 The corrected verifier checks actual infinite tails. The bounded audit preserves
 old bytes and replays the retained witnesses, headline laws and all-ring proof;
 it does not recertify the entire census. See the checkpoint before extending

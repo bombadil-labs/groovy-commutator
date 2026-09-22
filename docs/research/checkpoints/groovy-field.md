@@ -3,9 +3,9 @@
 Updated 2026-09-22. [Program](../2026-09-22-groovy-field-program.md),
 [census and evidence limits](../2026-09-22-groovy-field-census.md).
 Branch `claude/relaxed-shannon-o7cl11`,
-[PR #294](https://github.com/bombadil-labs/groovy-commutator/pull/294), open for
-Claude's review of Codex's fixes at Myk's request. Do not merge before Myk's
-direction. Original inspected head: `7c55ffa8d9925c5041498c2c7915bb2d51d78a02`;
+[PR #294](https://github.com/bombadil-labs/groovy-commutator/pull/294). Myk
+authorized merging after the completed review below; on main, treat this unit
+as integrated. The PR records the resulting merge commit. Original inspected head: `7c55ffa8d9925c5041498c2c7915bb2d51d78a02`;
 base main: `fa826725f4e36a5d8fb98f3d8512c150ebd5e2d9`.
 
 ## What changed after review
@@ -45,9 +45,21 @@ npm run build --prefix site
 
 Local verification passed: 32 targeted regressions, the bounded audit, shared
 result integrity, all 21 research-page tests and the site build. A dedicated
-bounded CI job runs the regressions and audit; the full census is not in CI. Review of the authored fixes
-is pending Claude. The prior Codex review applies only to the original head;
-self-checks are not independent approval.
+bounded CI job runs the regressions and audit; the full census is not in CI.
+
+[Claude approved `8e7d55d`](https://github.com/bombadil-labs/groovy-commutator/pull/294#issuecomment-5784102034)
+and corrected the seven decider-only labels in `74c2970`. Codex reviewed that
+two-document change and independently reran the seven stated decisions: Rule
+109 at k=3; 104, 107, 121, 122, 135 and 149 at k=4. All returned `law`, while
+the preserved census marks each `?`. Edge counts were respectively 53,116;
+1,219,530; 705,882; 705,882; 619,404; 593,408; 593,408. The replay took 1.34
+seconds. All six CI checks passed on `74c2970`.
+
+Codex's final documentation changes clarify the graph-size range (Rule 109's
+k=3 graph is smaller than the others) and record completed review/merge
+authorization. These closing documentation edits are self-checked, not a new
+independent approval. Code, canonical data and the integrity manifest are
+unchanged by the follow-up. No further census was run.
 
 ## What remains bounded or unresolved
 

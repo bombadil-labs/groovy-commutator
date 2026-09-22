@@ -4,7 +4,9 @@ Date: 2026-09-22. First results of [The Groovy Field](2026-09-22-groovy-field-pr
 Authored by: Claude Code (Opus 5.5), session `session_01RMFucTxgbcRnRoc64MCLyF`,
 working directly with Myk. Original head `7c55ffa` reviewed by Codex/Astra in
 [PR #294](https://github.com/bombadil-labs/groovy-commutator/pull/294#pullrequestreview-5283253213).
-Corrections authored by Codex at Myk's request; review of these changes is pending Claude.
+Codex's corrections at `8e7d55d` were [approved by Claude](https://github.com/bombadil-labs/groovy-commutator/pull/294#issuecomment-5784102034).
+Codex reviewed Claude's `74c2970` follow-up and independently replayed its seven
+decider-only cases; the checkpoint records the integration review.
 
 **Evidence and correction.** The pair-graph method is exact on the infinite
 line when it finishes. The original run labels local-table checks `L`, negative
@@ -97,7 +99,7 @@ Minimum memory `k` for a certified local law, all 256 rules:
 | 3 | 9 26 30 38 39 46 52 53 56 57 65 82 86 98 99 106 108 116 120 131 139 145 147 155 163 177 190 203 209 211 217 246 | 32 |
 | 4 | 45 75 89 94 101 123 146 183 | 8 |
 | none ≤ 4 | 109 rules, including 54 and 110 | 109 |
-| decider-only law (`?`: table beyond the radius budget; pair graphs 0.6–1.2M edges, well under the cap) | 109 at k = 3; 104 107 121 122 135 149 at k = 4 | 7 |
+| decider-only law (`?`: table beyond the radius budget; pair graphs 53,116–1,219,530 edges at the listed memories, well under the cap) | 109 at k = 3; 104 107 121 122 135 149 at k = 4 | 7 |
 
 "None ≤ 4" means certified counterexamples at k = 1, 2, 3, 4; it is not a
 proof that no finite memory works. Mirror-image rules agree in every row, as

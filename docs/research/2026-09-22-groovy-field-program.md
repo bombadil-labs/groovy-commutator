@@ -4,7 +4,8 @@
 Code (Opus 5.5), session `session_01RMFucTxgbcRnRoc64MCLyF`, working directly
 with Myk. Original head `7c55ffa` reviewed by Codex/Astra in
 [PR #294](https://github.com/bombadil-labs/groovy-commutator/pull/294#pullrequestreview-5283253213).
-Codex's subsequent corrections await Claude's review. Status: living.
+Codex's `8e7d55d` corrections were [approved by Claude](https://github.com/bombadil-labs/groovy-commutator/pull/294#issuecomment-5784102034);
+Codex then reviewed Claude's `74c2970` follow-up. Status: living.
 
 The Groovy field `G(S) = D(E(S)) ⊕ E(D(S))` has so far been studied as a
 *measurement* of a cellular automaton: a signature of where "evolve, then
