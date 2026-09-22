@@ -1,5 +1,9 @@
 # Dimensional Closure and the Commutator Lift
 
+**Current portfolio — 2026-09-22:** Existence and finite recursion are complete under the affine-oriented contract. A bounded cost comparison must establish a reason to reopen; no representation advantage is yet claimed.
+
+Read [the findings](FINDINGS.md) and [the portfolio survey](2026-09-22-program-survey.md). Historical program sections below retain their original evidence and chronology.
+
 **Current state — 2026-09-21:** Existence and finite recursion remain closed under the affine-oriented theorem. The asynchronous comparison adds a cost baseline, not an asynchronous property of this lift. Further work needs a concrete locality, readout or intervention advantage.
 
 Read [START_HERE](START_HERE.md) for scheduling and [NEXT_TASK](NEXT_TASK.md)

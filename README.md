@@ -8,9 +8,10 @@ rules. Origin: https://liet-codes.github.io/wet-math/commutator.html
 
 The current research question is **which distinctions a representation can
 safely discard, which it must retain, and what a change of representation buys**.
-Read [the research direction](docs/research/START_HERE.md) and
-[the next-agent task](docs/research/NEXT_TASK.md): three executable case studies
-using existing exact results. Broad Class-IV searches, further dimensional
+Read [what we have learned](docs/research/FINDINGS.md),
+[the program survey](docs/research/2026-09-22-program-survey.md), and
+[the next-agent task](docs/research/NEXT_TASK.md): one bounded representation-cost
+comparison design. Broad Class-IV searches, further dimensional
 existence sweeps and stalled solver campaigns are parked.
 
 The [limits and prior-art guide](docs/research/2026-09-21-research-boundaries.md)

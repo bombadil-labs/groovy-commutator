@@ -4,6 +4,12 @@ For the active research question and task, read [START_HERE](START_HERE.md).
 This file is the authoring/workflow guide, not the research agenda. Older
 “next” sections do not reopen parked work.
 
+[FINDINGS.md](FINDINGS.md) is the accessible running synthesis: what we were
+curious about, what we tried, what we found, and within which limits. Update
+it when a unit ends; link evidence and preserve corrections and inconclusive
+outcomes. It adds no evidence or independent review. The
+[portfolio survey](2026-09-22-program-survey.md) explains current scheduling.
+
 Research is the public working scientific record. It is built from five
 primitives, each with one job:
 

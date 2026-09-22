@@ -1,5 +1,9 @@
 # Invariants Across Representation Contracts
 
+**Current portfolio — 2026-09-22:** Completed transformation audits and ring/full-line certificates now serve as shared methods for the primary agenda. No independent depth-sweep queue.
+
+Read [the findings](FINDINGS.md) and [the portfolio survey](2026-09-22-program-survey.md). Historical program sections below retain their original evidence and chronology.
+
 **Current state — 2026-09-21:** Three executable cases distinguish law choice, factor failure and domain transfer. The causal-retention audit separates whole-field necessary conditions from radius-one implementation. Further depth sweeps remain parked.
 
 Read [START_HERE](START_HERE.md) for scheduling and [NEXT_TASK](NEXT_TASK.md)

@@ -1,0 +1,48 @@
+[
+  {
+    "slug": "research-findings",
+    "label": "What we have learned",
+    "title": "What we have learned",
+    "date": "2026-09-22",
+    "updated": "2026-09-22",
+    "recordType": "checkpoint",
+    "scope": "lab",
+    "kind": "Checkpoint: synthesis and scheduling",
+    "evidence": "state",
+    "topic": "Research direction",
+    "summary": "A running plain-language account of twelve completed or stopped investigations, with evidence links and explicit limits.",
+    "takeaway": "Completed work should change the next decision; a historical program is not an automatic experiment queue.",
+    "source": "docs/research/FINDINGS.md",
+    "promotion": {
+      "stage": "research"
+    },
+    "related": [
+      "research-direction",
+      "representation-case-studies",
+      "causal-retention"
+    ]
+  },
+  {
+    "slug": "research-portfolio-20260922",
+    "label": "Research portfolio: one active question",
+    "title": "Research portfolio: one active question",
+    "date": "2026-09-22",
+    "updated": "2026-09-22",
+    "recordType": "checkpoint",
+    "scope": "lab",
+    "kind": "Checkpoint: synthesis and scheduling",
+    "evidence": "state",
+    "topic": "Research direction",
+    "summary": "Consolidate scheduling around local sufficient state and representation costs; keep completed objectives and incomplete archives distinct.",
+    "takeaway": "Completed work should change the next decision; a historical program is not an automatic experiment queue.",
+    "source": "docs/research/2026-09-22-program-survey.md",
+    "promotion": {
+      "stage": "research"
+    },
+    "related": [
+      "research-direction",
+      "representation-case-studies",
+      "causal-retention"
+    ]
+  }
+]

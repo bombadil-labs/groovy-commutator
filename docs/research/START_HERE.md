@@ -1,6 +1,6 @@
 # Research: start here
 
-**Current direction, 2026-09-21.** This page is the scheduling authority for
+**Current direction, 2026-09-22.** This page is the scheduling authority for
 research. Older notes and checkpoints preserve the evidence; their “next”
 sections are historical proposals, not an instruction to resume them.
 
@@ -12,6 +12,26 @@ factors, counterexamples, graph certificates and explicit constructions.
 “Class IV” remains a motivation, not a specification or success criterion.
 The [limits and prior-art guide](2026-09-21-research-boundaries.md) explains
 what the impossibility theorems constrain and where useful exact work remains.
+
+## Portfolio after the completed unit
+
+Read [What we have learned](FINDINGS.md) for the running plain-language
+findings, and [the program survey](2026-09-22-program-survey.md) for the
+recommended portfolio. Keep one active design agenda under Erased Distinctions:
+local sufficient state and the cost of representation. Representation Invariants
+supplies shared methods; it is not a separate automatic census queue.
+
+The next recommended deliverable is a bounded cost comparison design for
+reading the original Rule-110 Groovy field: direct source access, ordinary
+stored time slices, period-three encoding and the affine six-field lift.
+Charge initialization, maintenance, storage and local access. The
+[handoff](NEXT_TASK.md) gives the stop conditions. No new numerical campaign
+or advantage claim is authorized by this recommendation.
+
+The CA/CRDT connection produced a completed fixed-interface retention result,
+not a fifth program. The dimensional existence objective is complete. The
+Class-IV, refinement, arithmetic and recoder extensions remain parked unless
+they meet the reopening conditions in the survey.
 
 ## Completed bounded unit
 
@@ -30,8 +50,8 @@ It is compatible with established eight-state simulators that change protocol.
 
 The [agent handoff](NEXT_TASK.md) records publication through PR #282 and
 targeted verification. On main, this unit is integrated. No new
-numerical campaign is queued. A new unit must identify an operation and a
-resource advantage worth proving, or a concrete unresolved obstruction; the
+numerical campaign is queued. The proposed design unit must identify a resource advantage worth proving
+or close its candidate comparison; the
 closed direct-quotient question does not need more rings or source rules.
 
 ## What we have, and what is parked
