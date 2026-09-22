@@ -23,9 +23,14 @@ The unit corrects reusable knowledge nodes, obsolete dependency premises and
 two interim proof-state sections without rewriting historical experiment
 claims. No new theorem, protocol, runner or result bytes were created.
 
-Gathering branch: `gather/recursive-g-boundary`. Record the remote head, PR,
-final independent review, checks and merge disposition here or on the PR when
-published.
+Gathering branch: `gather/recursive-g-boundary`; reviewed scientific head
+`9b95abb489436ac7fd13d68fa711517522c7c941`; [PR
+#287](https://github.com/bombadil-labs/groovy-commutator/pull/287). Independent
+Sol review found one blocking count conflation, then approved the corrected
+head. All four CI checks passed after a truncated remote catalog upload was
+repaired; the failed first attempt was a publication defect, not scientific
+evidence. Final administrative-head review and merge disposition are recorded
+on the PR.
 
 Next decision-relevant questions:
 
