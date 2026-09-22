@@ -40,9 +40,13 @@ current-surface corrections, the repository supplies no action-changing
 empirical unit, so the correct next action is to preserve the stop until a
 named trigger appears.
 
-Gathering branch: `gather/research-drive-synthesis`; PR and reviewed head are
-recorded in the integration thread once published. Applicable fast checks and
-independent final-head review remain required before merge.
+Gathering branch: `gather/research-drive-synthesis`; [PR
+#292](https://github.com/bombadil-labs/groovy-commutator/pull/292). Independent
+Sol review first blocked stale drain language in NOTES and two public causal
+claims, plus undifferentiated recursive-G wording. The corrected scientific
+head `ceb0397292414464e7222344c638173f07ab0893` was then approved. All four CI
+checks passed on that head. The PR review thread records the approval and final
+integration disposition.
 
 Next decision-relevant questions:
 

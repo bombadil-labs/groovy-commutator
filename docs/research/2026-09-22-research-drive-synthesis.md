@@ -75,7 +75,9 @@ The associated integration-provenance repair is [PR #286](https://github.com/bom
 The seven prior units received pinned independent Sol review and the applicable
 four CI checks. Those reviews assess their units; they do not turn this
 synthesis into an independent literature review. The final correction and
-synthesis require their own pinned review and checks before integration.
+synthesis received pinned independent Sol review at
+`ceb0397292414464e7222344c638173f07ab0893` after one blocking correction
+round, and all four applicable CI checks passed on that scientific head.
 
 ## What is known, and what is not
 
