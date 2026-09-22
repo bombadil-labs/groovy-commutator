@@ -59,6 +59,12 @@ scientific sign-off and does not backdate review. This is not a standing
 waiver for later work. Do not ask Myk to reauthorize actions already covered
 by the current session's explicit instructions.
 
+**Additional session exception, 2026-09-21:** Myk subsequently authorized
+Codex to work solo on the representation case studies and bounded
+[causal-retention unit](docs/research/protocols/nakamura-retention-20260921.md),
+including setup, evaluation and integration. Record self-review honestly;
+this is not independent review or a standing waiver for other units.
+
 ## Evidence and cost
 
 - Do not run an expensive historical experiment merely to orient yourself.
