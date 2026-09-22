@@ -56,7 +56,7 @@ reopen old experiments, or extend a historical review waiver.
 ## Work discipline
 
 Preserve canonical bytes; use one gathering branch and PR per bounded unit.
-Freeze a new empirical protocol and obtain applicable independent review
-before evaluation. Keep source rule, state family, boundary, observation,
+Freeze a new empirical protocol before evaluation; review happens when Myk
+requests it. Keep source rule, state family, boundary, observation,
 cadence, horizon and resource contract explicit. Update the findings and
 current handoff when a unit ends; retain failed and unscored outcomes.

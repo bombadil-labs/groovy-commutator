@@ -4,7 +4,6 @@
 PR role: <!-- sub-PR into gather/<unit>, or gathering PR into main -->
 Gathering PR / included sub-PRs:
 Related issues: <!-- Refs #... in sub-PRs; Closes #... only in the resolving gathering PR. -->
-Other-model reviewer:
 
 ## Changes and evidence
 
@@ -17,16 +16,11 @@ Numbers changed since last reviewed head: <!-- yes/no/N/A; identify which numeri
 
 <!-- Commands/checks and outcomes; identify anything not run and why. -->
 
-## Review gates
+## Review
 
-<!-- Use N/A with a reason for non-experimental work. -->
-Protocol review before implementation/evaluation: <!-- reviewer, date, revision and link -->
 Self-review and relevant checks:
-<!-- Gathering PR only: obtain actual review; do not prefill another agent's sign-off. -->
-Other-model final review: <!-- identity, date, current head SHA, scope and review link -->
+Reviewed by: <!-- none, or the reviewer Myk requested: identity, date, head SHA, scope and link -->
 Remaining blockers:
 
-<!-- Follow AGENTS.md#gathering-branches-and-cross-model-review.
-Sub-PR integration is not independent scientific approval.
-Gathering PRs wait for explicit other-model sign-off before merging to main;
-the reviewer merges on a clean sign-off with green checks. -->
+<!-- Follow AGENTS.md#gathering-branches-and-review. There are no standing
+review gates: Myk requests review case by case and directs merges into main. -->

@@ -134,8 +134,9 @@ Myk authorized repository changes, consolidation, closure and merges on
 2026-09-21 and explicitly suspended the Fable peer-review protocol **for this
 reset**. This authorizes integration and correction, not a claim of independent
 scientific review. The [integration record](2026-09-21-research-reset.md)
-lists the four preserved PR heads, checks and limits. Normal review rules
-apply to subsequent work unless Myk changes them.
+lists the four preserved PR heads, checks and limits. On 2026-09-22 Myk
+retired the standing review gates; review is now requested case by case
+(see `AGENTS.md`).
 
 Myk subsequently authorized Codex to set up and continue this case-study and
 causal-retention work **solo** on 2026-09-21. Its protocols and notes record
