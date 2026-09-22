@@ -8,8 +8,8 @@
     "kind": "Exact census",
     "evidence": "exact",
     "topic": "Algebra and closure",
-    "summary": "Across all 256 elementary rules, 140 Groovy fields are local autonomous systems with one to four steps of memory; Rule 30 needs three. The Groovy field can never see the uniform D0 bit, and adding the source gradient with two steps closes every rule.",
-    "takeaway": "What the Groovy field lacks is mostly background identity, including phase; keeping the gradient restores everything except the D0 bit, which never needs restoring.",
+    "summary": "A bounded full-line census reports 140 elementary-rule Groovy fields closing with one to four remembered fields. Independent replay confirms Rule 30 at memory three and Rule 54 at five; source gradients with two-step histories repair all 256 in the census.",
+    "takeaway": "A repair can make G autonomous while identifying at most complementary sources. Uniform sources stay merged, but other complement pairs can be separated. Native Groovy iteration of a repaired law requires off-image dynamics.",
     "source": "docs/research/2026-09-22-groovy-field-census.md",
     "promotion": {
       "stage": "research"

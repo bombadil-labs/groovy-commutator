@@ -2,7 +2,9 @@
 
 **Research program, opened 2026-09-22 at Myk's request.** Authored by: Claude
 Code (Opus 5.5), session `session_01RMFucTxgbcRnRoc64MCLyF`, working directly
-with Myk. Reviewed by: none. Status: living.
+with Myk. Original head `7c55ffa` reviewed by Codex/Astra in
+[PR #294](https://github.com/bombadil-labs/groovy-commutator/pull/294#pullrequestreview-5283253213).
+Codex's subsequent corrections await Claude's review. Status: living.
 
 The Groovy field `G(S) = D(E(S)) ⊕ E(D(S))` has so far been studied as a
 *measurement* of a cellular automaton: a signature of where "evolve, then
@@ -52,9 +54,10 @@ repairs that exactly. The first results are in the
    and does the lift's lesson about the zero-dimensional base **D0** — the
    spatially uniform layer, where only a single ℤ₂ bit survives — tell us what
    the Groovy field is missing?
-10. **Can it be iterated?** If the repaired system is itself a cellular
-    automaton, it has its own Groovy field. Does repeating the construction
-    give a tower, as the six-field lift does?
+10. **Can it be iterated?** The repaired law is initially defined only on
+    valid observation histories. XOR can leave that domain, so a native Groovy
+    field requires a declared off-image completion. After specifying one, is
+    any tower result invariant to that choice?
 
 ## Method
 
@@ -69,42 +72,51 @@ The decisive tool is exact:
   graph has a bi-infinite path through a disagreeing window. By
   compactness (Curtis–Hedlund–Lyndon), when no counterexample exists, the law
   is automatically local.
-- **Certificates.** No verdict is recorded on the decider's word alone. Every
-  "law" is certified by an explicit table checked against every source window
-  in its causal support; every "no law" by an explicit pair of eventually
-  periodic infinite configurations, verified by a separate tuple
-  implementation. Finite-ring brute force is used only as a consistency check.
+- **Evidence.** The original run used exhaustive local-table checks for laws
+  and finite-interior tuple checks for negative witnesses; the serializers
+  retained only some certificates. Graph-cap and decider-only entries are
+  unresolved or uncertified, not theorems. The corrected witness checker
+  verifies the actual infinite extensions and their seams. The bounded
+  [review audit](../../scripts/verify_groovy_field_audit.py) replays all 220
+  retained memory-1 witnesses, selected higher-memory witnesses, two headline
+  laws independently, and an all-ring SCC proof. It does not recertify the
+  unretained evidence. New runs retain full witness and failure records.
 - **Code.** [`src/groovy/groovy_field.py`](../../src/groovy/groovy_field.py),
   [`scripts/groovy_field_suite.py`](../../scripts/groovy_field_suite.py),
   [`scripts/groovy_field_rule110_lift.py`](../../scripts/groovy_field_rule110_lift.py),
   [`scripts/groovy_field_summarize.py`](../../scripts/groovy_field_summarize.py),
   [`scripts/groovy_field_followups.py`](../../scripts/groovy_field_followups.py),
   tests in [`tests/test_groovy_field.py`](../../tests/test_groovy_field.py).
-  The whole suite runs in minutes on a laptop.
+  The original full suite and follow-ups took about 40 minutes on four cores;
+  CI runs only the bounded audit and regressions.
 
 Two exact facts frame the lift question:
 
 - **G sits inside the six-field lift.** With the six-field rows
   `F2 = X ⊕ H(X)` and `F3 = X ⊕ H²(X)`, `G = F2 ⊕ F3 ⊕ H(F2)`. So G is a local
-  function of the existing lift; a closed Groovy system is a *quotient* of that
-  construction, keeping only what the Groovy field needs.
+  function of the existing lift on valid marked beams. The corresponding
+  history factor is on the source-realizable subshift, not arbitrary ambient
+  binary configurations or unmarked beams.
 - **G is always blind to D0.** On a uniform configuration `c^Z` the rule
   acts as a one-cell map `u(c) = φ(ccc)`, which is affine, and
   `G(c^Z) = u(c) ⊕ u(u(c)) ⊕ u(c ⊕ u(c))` is the same constant for `c = 0`
   and `c = 1`. No rule's Groovy field can tell the two uniform backgrounds
-  apart.
+  apart, even with their future G histories. This is not global complement
+  invariance on nonuniform states. A gradient alone has complement-pair fibers;
+  G and history may split them. The repaired fibers have size at most two, and
+  the uniform pair shows that the maximum is attained.
 
 ## Stages
 
 | Stage | Question(s) | State |
 | --- | --- | --- |
-| 1. Rule 110 repairs: every radius-one extra track, memory 1–3 | 3, 4 | complete |
-| 2. All 256 rules: G alone (memory ≤ 4) and every one-bit track (memory ≤ 2, then 3) | 1, 2, 4, 5 | complete |
-| 3. Reachable states: G alone after one and two steps of burn-in | 6 | complete |
-| Taxonomy: classify each counterexample by how its two tails differ | 3, 9 | complete |
-| 4. The Rule 110 repaired system as a CA | 8 | complete |
-| Follow-ups: output complement vs D0; universal repairs at memory 3; G alone at memory 5 | 2, 5, 9 | complete |
-| 5. Towers: the Groovy field of the repaired system | 10 | open |
+| 1. Rule 110 repairs: every radius-one extra track, memory 1–3 | 3, 4 | bounded run complete; see evidence limits |
+| 2. All 256 rules: G alone (memory ≤ 4) and every one-bit track (memory ≤ 2, then 3) | 1, 2, 4, 5 | bounded run complete; see evidence limits |
+| 3. Reachable states: G alone after one and two steps of burn-in | 6 | bounded run complete; see evidence limits |
+| Taxonomy: classify each counterexample by how its two tails differ | 3, 9 | bounded run complete; see evidence limits |
+| 4. Rule 110 dynamics on valid histories | 8 | bounded run complete; see evidence limits |
+| Follow-ups: output complement vs D0; universal repairs at memory 3; G alone at memory 5 | 2, 5, 9 | bounded run complete; see evidence limits |
+| 5. Towers: the Groovy field of the repaired system | 10 | requires an off-image completion contract |
 | 6. A general operator beyond one-bit, radius-one tracks | 5, 9 | open |
 
 Results and their evidence level are in the
@@ -118,3 +130,5 @@ decisions are in the [checkpoint](checkpoints/groovy-field.md).
   interest is structural: they identify what the Groovy field loses.
 - No Class-IV, universality or physics claim.
 - Finite-ring checks are consistency checks, never evidence for a line claim.
+- A completed bounded run can contain unresolved or uncertified outcomes.
+  “No law through memory five” is not “no finite memory works.”

@@ -1,50 +1,83 @@
 # The Groovy Field: checkpoint
 
-Updated 2026-09-22. Program page: [The Groovy Field](../2026-09-22-groovy-field-program.md).
-Results: [census note](../2026-09-22-groovy-field-census.md).
-Branch `claude/relaxed-shannon-o7cl11`; no PR opened yet (Myk decides).
+Updated 2026-09-22. [Program](../2026-09-22-groovy-field-program.md),
+[census and evidence limits](../2026-09-22-groovy-field-census.md).
+Branch `claude/relaxed-shannon-o7cl11`,
+[PR #294](https://github.com/bombadil-labs/groovy-commutator/pull/294), open for
+Claude's review of Codex's fixes at Myk's request. Do not merge before Myk's
+direction. Original inspected head: `7c55ffa8d9925c5041498c2c7915bb2d51d78a02`;
+base main: `fa826725f4e36a5d8fb98f3d8512c150ebd5e2d9`.
 
-## State
+## What changed after review
 
-Stages 1–4 of the program are complete: Rule 110 repairs, the all-rule
-census, one-step burn-in and the Rule 110 repaired system. Same-day
-follow-ups added the output-complement/D0 cross-tabulation, universal repairs
-with memory 3 (18 radius-one tracks, including the two-bit-forgetting `l ⊕ r`
-and `l ⊕ c ⊕ r` and the lossy nonlinear track 57) and G alone at memory 5
-(Rule 54 certified; ten more rules decider-only). The suite reruns
-in about 25 minutes on four cores; every recorded verdict is certified except
-108 memory-1 laws whose tables exceed radius 8 (marked decider-only).
-Myk opened this program directly on 2026-09-22 and asked to skip protocol
-ceremony; results are exploratory-exact, not preregistered predictions.
+The original review found a real certificate-checker gap and several
+interpretive overclaims. Codex fixed the verifier to validate binary words,
+periods and defect metadata, then check the explicit bi-infinite extensions,
+including both seams. Schema-v2 writers retain complete negative witnesses,
+positive-check parameters and uncertified/resource-limit reasons, record source
+hashes, and refuse to overwrite existing artifacts before starting a run.
 
-## Open questions, in priority order
+The new unit-specific manifest pins every original result and source revision,
+plus a separate bounded audit. All 220 retained memory-1 negative witnesses
+pass the corrected verifier. Eight selected witnesses establish the lower
+memory bounds for Rules 30/54 and Rule-110 failures at memory 3/5. Independent
+unpacked exhaustive checks cover all 2,097,152 source windows for each headline
+law: Rule 30 at k=3, radius 6; Rule 54 at k=5, radius 4. The scalar SCC check
+certifies no Rule-110 memory-3 periodic counterexample at any ring size,
+while a stored infinite-line witness demonstrates failure there.
 
-0. **Keep/swap and D0.** Among complement pairs where one rule fixes both
-   uniform states and the other swaps them, the swapping rule closes 19 of 21
-   times. Find the mechanism: a proof that a D0 swap lets G carry information
-   a frozen D0 bit hides, or a counterexample family.
+Also corrected: gradient-only complement fibers versus repaired histories;
+valid marked-beam factors versus ambient quotients; selected-witness taxonomy
+versus a mechanism claim; the conditional 19/21 complement count; burn-in and
+limit-set memory bounds; missing track-57 evidence; and the summary's ambiguous
+burn-in key. The four-track Rule-110 table is undefined on an explicit XOR
+state, so a native-G tower needs off-image dynamics specified first.
 
-1. **Towers.** The repaired systems are CAs on several bit-tracks. Does the
-   Groovy field of a repaired system (componentwise XOR) again close with a
-   small repair? Needs the decider generalized to multi-track, larger-radius
-   sources.
-2. **The rules without a short-memory law** (55 have certified
-   counterexamples at memory 5; 50 exceed the cap). Is there any finite memory,
-   or a proof that none exists (the Rule 110 memory-3 witness suggests
-   background-tail constructions)? A family of witnesses indexed by k would
-   settle a rule.
-3. **How little can a universal repair keep?** With memory 3, `l ⊕ r` and
-   `l ⊕ c ⊕ r` forget two bits and track 57 forgets unboundedly much in the
-   track alone, yet the whole lifted state stays nearly injective for complex
-   rules. Measure the lifted-state quotient exactly on the full line (pair
-   graph with "source differs"), and search radius-2 markers.
-4. **Two-step burn-in** is censored by the 15M-edge cap for 118 rules; a
-   leaner decider would be needed before interpreting it.
+Fast verification:
 
-## Cautions
+```bash
+python scripts/verify_groovy_field_audit.py --check
+python -m pytest tests/test_groovy_field.py -q
+python scripts/check_result_integrity.py
+npm run test:research --prefix site
+npm run build --prefix site
+```
 
-- Finite rings are only a consistency check here; Rule 110 shows they can
-  agree unanimously and still be wrong about the line.
-- "No law with memory ≤ 4" is not a no-go theorem.
-- Retaining the source always closes; do not describe these repairs as
-  compression.
+Local verification passed: 32 targeted regressions, the bounded audit, shared
+result integrity, all 21 research-page tests and the site build. A dedicated
+bounded CI job runs the regressions and audit; the full census is not in CI. Review of the authored fixes
+is pending Claude. The prior Codex review applies only to the original head;
+self-checks are not independent approval.
+
+## What remains bounded or unresolved
+
+The original census/follow-ups are exploratory exact computations, not
+preregistered predictions. Through k=4: 140 rules have local laws, 109 have
+reported negative witnesses, and seven are unresolved. At k=5 among the other
+116: Rule 54 has a replayed law; ten are decider-only; 55 have reported
+counterexamples; 50 exceed the graph cap. There are also 108 decider-only
+memory-1 track entries and eight intermediate G-only `?` entries in the
+original census. Do not convert these into failures or certified positives.
+
+Original serializers discarded most witness strings and all positive tables.
+The audit covers the retained negatives and selected headline claims, not all
+of that missing evidence. Original JSON and figure bytes are unchanged, as are
+the original source hashes (which refer to `7c55ffa`, not today's verifier).
+A full replay would take about 40 minutes on four cores and needs a specific
+reason. Two-step burn-in is censored for 118 rules. The limit-set witness only
+excludes Rule-110 memory-1 closure, not arbitrary memory.
+
+## Next decision questions
+
+1. **Towers:** what off-image completion and invariance claim would make native
+   G of a repaired history system well-defined and scientifically useful?
+   Specify this before generalizing the decider or running a tower census.
+2. **Finite memory:** can one exhibit a bounded, explicitly parameterized family
+   of Rule-110 witnesses for all k? A single k=5 failure is not such a proof.
+3. **Repair fibers:** which distinctions does a specified repaired history
+   retain on the full line? Track-only fiber counts cannot answer that; avoid
+   calling the gradient repair a global-complement quotient.
+
+The keep/swap cross-tabulation is an observation to explain if a concrete
+mechanism emerges, not a reason to launch a further census. No new broad
+computation is queued by this correction pass.

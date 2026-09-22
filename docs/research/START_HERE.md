@@ -18,8 +18,8 @@ what the impossibility theorems constrain and where useful exact work remains.
 On 2026-09-22 Myk opened [The Groovy Field](2026-09-22-groovy-field-program.md)
 as a new research program: can a rule's Groovy field run as a dynamical system
 of its own, and what is it missing when it cannot? The first
-[census](2026-09-22-groovy-field-census.md) decides this exactly on the full
-line for all 256 elementary rules. 140 Groovy fields close with one to four
+[census](2026-09-22-groovy-field-census.md) applies an exact full-line method
+to all 256 elementary rules, with explicit resource limits and evidence gaps. 140 Groovy fields close with one to four
 steps of memory; every Groovy field is blind to the uniform D0 bit; and the
 source gradient plus two steps of memory repairs all of them. Open questions
 and their order are in the [checkpoint](checkpoints/groovy-field.md).
@@ -107,7 +107,7 @@ closed direct-quotient question does not need more rings or source rules.
 
 | Thread | State and evidence | Condition for further work |
 | --- | --- | --- |
-| The Groovy Field | **Active program.** Exact full-line [census](2026-09-22-groovy-field-census.md) of Groovy-field autonomy and repairs for all 256 elementary rules. | Follow the [checkpoint](checkpoints/groovy-field.md): towers, the 109 rules without a short-memory law, richer repairs. |
+| The Groovy Field | **Active program.** Exact full-line [census](2026-09-22-groovy-field-census.md) of Groovy-field autonomy and repairs for all 256 elementary rules. | Follow the [checkpoint](checkpoints/groovy-field.md): review the corrections; define off-image dynamics before towers; bounded-memory obstructions remain distinct from a no-finite-memory theorem. |
 | Erased distinctions / representation invariants | **Bounded units complete.** Three executable representation cases, the restricted Rule-110 causal-retention lower bound, and the [original-source G autonomy boundary](2026-09-22-rule110-g-autonomy.md). The [depth-three onset result](2026-09-14-depth-three-onset.md) remains integrated. | Start from the completed unit (PR #282). Further depth or observation searches need a question whose answer changes a decision. |
 | Dimensional lift | **Existence and finite recursion closed; application dormant** under the [affine-oriented theorem's contract](2026-09-17-affine-oriented-lift-theorem.md) and [consumer audit](2026-09-22-phase-free-consumer-audit.md). No current downstream caller, uniqueness, optimality or spontaneous organization theorem. | A concrete locality, readout or intervention advantage over ordinary history and the proof's period-three necklace construction, charging encoding and preprocessing costs fairly. |
 | Class-IV discriminator | **Frozen finite benchmark**, with [partial original provenance](2026-09-17-selective-persistence-discriminator-record.md). Its two core positive families are 54 and 110. | An independently defined target and external validation domain; no further feature search on the same labels by default. |

@@ -4,7 +4,13 @@ Updated 2026-09-22. Myk opened [The Groovy Field](2026-09-22-groovy-field-progra
 as an active program after the Rule-110 autonomy unit below. Read its
 [census note](2026-09-22-groovy-field-census.md) and
 [checkpoint](checkpoints/groovy-field.md) first; the checkpoint orders the open
-questions. The section below is the preceding unit's handoff, kept for context.
+questions. [PR #294](https://github.com/bombadil-labs/groovy-commutator/pull/294)
+contains the program and Codex's requested fixes; Claude's review is next.
+The corrected verifier checks actual infinite tails. The bounded audit preserves
+old bytes and replays the retained witnesses, headline laws and all-ring proof;
+it does not recertify the entire census. See the checkpoint before extending
+any claim, especially D0 quotients or native-G towers. The section below is the
+preceding unit's handoff, kept for context.
 
 ## Preceding handoff: Rule-110 G autonomy
 

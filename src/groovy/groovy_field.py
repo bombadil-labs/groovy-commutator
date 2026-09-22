@@ -11,8 +11,8 @@ The question for ``(rule, tracks, k, t)`` is whether, on the domain
 ``E^t({0,1}^Z)`` (all configurations when ``t = 0``), the observation at time
 ``t+k`` is a function of the observations at times ``t, ..., t+k-1``. By
 compactness and the Curtis-Hedlund-Lyndon theorem such a function, when it
-exists, is a sliding block code: a local second-order-style law on ``k``
-stacked copies of the observation.
+exists, is a sliding block code on the valid observation-history subshift.
+This does not specify its values on arbitrary ``k``-track configurations.
 
 ``decide`` answers exactly. Pairs of source configurations with equal
 observation histories at every site form a subshift of finite type on the
@@ -25,9 +25,11 @@ path; both node sets are computed by pruning.
 
 ``certify_law`` then finds an explicit radius-``R`` table by exhausting every
 source window covering the table's full causal support, and ``witness``
-extracts an eventually periodic counterexample pair from the graph. Both are
-checked by the independent tuple implementation in ``TupleCA``; the decider's
-verdict is only reported as a theorem once certified.
+extracts an eventually periodic counterexample pair from the graph. These
+negative witnesses are checked by the independent tuple implementation in
+``TupleCA``. The local-table search shares packed arithmetic with the decider;
+selected laws also have an independent unpacked replay in the review audit.
+Resource-limited and decider-only outcomes remain explicitly labelled.
 """
 from __future__ import annotations
 
@@ -301,27 +303,66 @@ def witness(v: Verdict, reps: int = 0) -> dict:
 
 
 def verify_witness(rule, tracks, k, t, wit) -> dict:
-    """Check a witness with TupleCA: equal histories everywhere, differing next.
+    """Verify an explicitly defined bi-infinite pair, including both tail seams.
 
-    Tails are periodic with the recorded periods; every local window of the
-    bi-infinite pair occurs inside the checked interior because each tail is
-    repeated enough times, so this finite check covers the whole line.
+    A word s of length n means s[i] for 0 <= i < n, s[i % lp] to its
+    left, and s[n-rp + (i-n) % rp] to its right. Periods need not be minimal.
+    ``tail_reps`` is optional construction provenance, not a coverage claim.
+
+    With r = t+k+2, padding by 2*r+max(lp,rp) includes every body/seam
+    neighbourhood and a complete period strictly inside each tail, after
+    trimming the radius-r causal margin. Translation invariance therefore
+    extends the history equality to every integer site. The next observation
+    must differ at the declared source coordinate ``defect_cell``.
+    Malformed certificates return verified=False and an error.
     """
+    def invalid(reason):
+        return {"verified": False, "error": reason}
+
+    try:
+        tracks = tuple(tracks)
+    except TypeError:
+        return invalid("tracks must be an iterable of ECA truth tables")
+    if any(type(v) is not int or not 0 <= v <= 255 for v in (rule, *tracks)):
+        return invalid("rule and tracks must be integers from 0 to 255")
+    if type(k) is not int or k < 1 or type(t) is not int or t < 0:
+        return invalid("k must be positive and t nonnegative integers")
+    if not isinstance(wit, dict):
+        return invalid("witness must be an object")
+    a, b = wit.get("S"), wit.get("S_prime")
+    if any(not isinstance(s, str) or not s or set(s) - {"0", "1"} for s in (a, b)):
+        return invalid("source words must be nonempty binary strings")
+    if len(a) != len(b):
+        return invalid("source words must have equal lengths")
+    n = len(a)
+    lp, rp = wit.get("left_period"), wit.get("right_period")
+    if any(type(p) is not int or not 1 <= p <= n for p in (lp, rp)):
+        return invalid("tail periods must be positive integers no longer than the words")
+    defect = wit.get("defect_cell")
+    if type(defect) is not int or not 0 <= defect < n:
+        return invalid("defect_cell must index the recorded source words")
+    if "tail_reps" in wit and (type(wit["tail_reps"]) is not int or wit["tail_reps"] < 1):
+        return invalid("tail_reps, if supplied, must be a positive integer")
+    radius = t + k + 2
+    pad = 2 * radius + max(lp, rp)
+
+    def extend(s):
+        return tuple(int(s[i % lp] if i < 0 else
+                         s[n-rp + (i-n) % rp] if i >= n else s[i])
+                     for i in range(-pad, n + pad))
+
+    a, b = extend(a), extend(b)
     ca = TupleCA(rule)
-    a = tuple(int(c) for c in wit["S"])
-    b = tuple(int(c) for c in wit["S_prime"])
-    tracks = tuple(tracks)
-    history_equal = True
-    for j in range(t, t + k):
-        for wa, wb in zip(ca.observe(a, j, tracks), ca.observe(b, j, tracks)):
-            if wa != wb:
-                history_equal = False
+    history_equal = all(ca.observe(a, j, tracks) == ca.observe(b, j, tracks)
+                        for j in range(t, t + k))
     diffs = []
-    for idx, (wa, wb) in enumerate(zip(ca.observe(a, t + k, tracks), ca.observe(b, t + k, tracks))):
-        off = (len(a) - len(wa)) // 2
-        diffs += [(idx, i + off) for i in range(len(wa)) if wa[i] != wb[i]]
-    return {"history_equal_on_whole_interior": history_equal,
-            "next_differs_at": diffs[:6], "verified": history_equal and bool(diffs)}
+    for idx, (wa, wb) in enumerate(zip(ca.observe(a, t+k, tracks), ca.observe(b, t+k, tracks))):
+        offset = radius - pad
+        diffs.extend((idx, i + offset) for i, (x, y) in enumerate(zip(wa, wb)) if x != y)
+    at_defect = any(i == defect for _, i in diffs)
+    return {"history_equal_on_full_line": history_equal,
+            "next_differs_at": diffs[:6], "declared_defect_differs": at_defect,
+            "verified": history_equal and at_defect}
 
 
 def certify_law(rule, tracks, k, t, r_max=6, max_bits=21) -> dict:

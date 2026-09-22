@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Stage 4: the Rule-110 Groovy lift as a CA in its own right.
+"""Stage 4: local Rule-110 dynamics on the valid observation-history subshift.
 
 The lifted state is (G_t, X_t, G_{t+1}, X_{t+1}) with X the "inside a run of
 three ones" track (truth table 128). Stage 1 certifies a radius-3 law
@@ -12,13 +12,16 @@ three ones" track (truth table 128). Stage 1 certifies a radius-3 law
    lifted state, and that shared states agree forever after (they must);
 4. renders the source / G / X spacetime diagram as a PNG.
 
-Run: python scripts/groovy_field_rule110_lift.py
-Outputs: results/groovy_field_20260922/rule110_lift.json and
-docs/research/assets/groovy-field-rule110.png
+The table is partial off the source-realizable subshift. In particular, XOR
+of valid states can leave its domain, so native Groovy iteration requires an
+explicit off-image completion, which this script does not choose.
+
+Run with --output-dir for a new run. Existing result bytes are never replaced.
 """
 from __future__ import annotations
 
 import json
+import argparse
 import struct
 import sys
 import zlib
@@ -29,6 +32,7 @@ import numpy as np
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "src"))
 from groovy.groovy_field import TupleCA  # noqa: E402
+from groovy_field_suite import output_path, write_record, source_hashes  # noqa: E402
 
 RULE, TRACK, R = 110, 128, 3
 OUT = ROOT / "results" / "groovy_field_20260922"
@@ -68,7 +72,7 @@ def extract_table():
 
 
 def lifted_step(a, b, table):
-    """(a, b) = ((G_t, X_t), (G_{t+1}, X_{t+1})) arrays -> next pair."""
+    """Advance a valid history; raises KeyError for an unassigned off-image key."""
     n = len(a[0])
     ng, nx = np.zeros(n, np.uint8), np.zeros(n, np.uint8)
     for i in range(n):
@@ -87,10 +91,16 @@ def png(path, rows, scale=2):
         return c + struct.pack(">I", zlib.crc32(t + d) & 0xffffffff)
     data = (b"\x89PNG\r\n\x1a\n" + chunk(b"IHDR", struct.pack(">IIBBBBB", w, h, 8, 2, 0, 0, 0))
             + chunk(b"IDAT", zlib.compress(raw, 9)) + chunk(b"IEND", b""))
-    path.write_bytes(data)
+    with path.open("xb") as f:
+        f.write(data)
 
 
 def main():
+    ap = argparse.ArgumentParser(description=__doc__)
+    ap.add_argument("--output-dir", type=Path, default=OUT)
+    args = ap.parse_args()
+    path = output_path(args.output_dir, "rule110_lift.json")
+    asset = output_path(args.output_dir, "groovy-field-rule110.png")
     table = extract_table()
     rng = np.random.default_rng(20260922)
     sims = []
@@ -137,15 +147,15 @@ def main():
         cols.append(np.where(a == 1, ink[p][1], ink[p][0]).astype(np.uint8))
         cols.append(gap)
     img = np.concatenate(cols[:-1], axis=1)
-    asset = ROOT / "docs" / "research" / "assets" / "groovy-field-rule110.png"
     png(asset, img)
 
-    OUT.mkdir(parents=True, exist_ok=True)
     doc = {"stage": "rule110_lift", "rule": RULE, "track": TRACK, "radius": R,
+           "schema": "groovy-field-v2", "source_hashes": source_hashes(),
+           "domain": "source-realizable two-step observation histories",
            "table_realized_patterns": len(table),
            "autonomous_simulation": sims, "ring_quotient": quot,
-           "figure": str(asset.relative_to(ROOT))}
-    (OUT / "rule110_lift.json").write_text(json.dumps(doc, indent=1) + "\n")
+           "figure": asset.name}
+    write_record(path, doc)
     print(json.dumps({k: v for k, v in doc.items() if k != "ring_quotient"}, indent=1))
     print("quotient", [(q["ring"], q["source_states"], q["lifted_states"]) for q in quot])
 

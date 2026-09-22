@@ -4,14 +4,16 @@
 Includes sanity checks that must hold if the data are right:
 * mirror-image rules have identical G-only and burn-in verdicts;
 * retaining the source (track 204) closes every rule at k = 1;
-* every recorded verdict is certified (no '?').
+* unresolved and decider-only verdicts are counted, not silently promoted.
 """
 from __future__ import annotations
 
 import hashlib
+import argparse
 import json
 from collections import Counter
 from pathlib import Path
+from groovy_field_suite import output_path, write_record
 
 ROOT = Path(__file__).resolve().parents[1]
 DIR = ROOT / "results" / "groovy_field_20260922"
@@ -53,6 +55,13 @@ def min_k(entry):
 
 
 def main():
+    global DIR
+    ap = argparse.ArgumentParser(description=__doc__)
+    ap.add_argument("--input-dir", type=Path, default=DIR)
+    ap.add_argument("--output-dir", type=Path, default=DIR)
+    args = ap.parse_args()
+    path = output_path(args.output_dir, "summary.json")
+    DIR = args.input_dir
     val, t110, tax, cen, rea = (load(n) for n in ("validate", "tracks110", "taxonomy", "census", "reachable"))
     lift = json.loads((DIR / "rule110_lift.json").read_text())
     S = {"sanity": {}}
@@ -103,13 +112,15 @@ def main():
 
     kinds1, kindsmax = Counter(), Counter()
     for r, x in tax.items():
-        ks = [k for k in ("k1", "k2", "k3", "k4") if isinstance(x.get(k), dict)]
+        ks = [k for k in ("k1", "k2", "k3", "k4")
+              if isinstance(x.get(k), dict) and "kind" in x[k]]
         if ks:
             kinds1[x[ks[0]]["kind"] if ks[0] == "k1" else "none"] += 1
             kindsmax[x[ks[-1]]["kind"]] += 1
     S["witness_kinds_G_only_k1"] = dict(kinds1)
     S["witness_kinds_G_only_last_failing_k"] = dict(kindsmax)
-    S["rule110_tracks_k2_failure_kinds"] = dict(Counter(tax["110"]["tracks_k2"].values()))
+    S["rule110_tracks_k2_failure_kinds"] = dict(Counter(
+        v["kind"] if isinstance(v, dict) else v for v in tax["110"]["tracks_k2"].values()))
 
     rk = {}
     for r, x in rea.items():
@@ -125,9 +136,10 @@ def main():
             return ">3"
         rk[int(r)] = (mk(1), mk(2))
     S["sanity"]["mirror_reachable_agree"] = all(rk[r] == rk[mirror(r)] for r in range(256))
-    better = sorted(r for r in range(256)
-                    if isinstance(rk[r][1], int) and (not isinstance(gk[r], int) or rk[r][1] < gk[r]))
-    S["burn_in_helps_rules"] = better
+    for t in (1, 2):
+        S[f"burn_in_helps_rules_t{t}"] = sorted(r for r in range(256)
+            if isinstance(rk[r][t-1], int)
+            and (not isinstance(gk[r], int) or rk[r][t-1] < gk[r]))
     S["burn_in_min_k_t1"] = dict(Counter(str(v[0]) for v in rk.values()))
     S["burn_in_min_k_t2"] = dict(Counter(str(v[1]) for v in rk.values()))
 
@@ -142,9 +154,13 @@ def main():
         "reachable": rea["110"],
         "lift": {k: lift[k] for k in ("table_realized_patterns", "autonomous_simulation", "ring_quotient")},
     }
-    S["source_hashes"] = {p: hashlib.sha256((ROOT / p).read_bytes()).hexdigest() for p in SOURCES}
-    (DIR / "summary.json").write_text(json.dumps(S, indent=1) + "\n")
-    print(json.dumps({k: v for k, v in S.items() if k not in ("closing_tracks_k1_count", "source_hashes")}, indent=1)[:6000])
+    S["schema"] = "groovy-field-summary-v2"
+    # These are the summarizer's sources, not the sources that generated old inputs.
+    S["summary_source_hashes"] = {p: hashlib.sha256((ROOT / p).read_bytes()).hexdigest() for p in SOURCES}
+    S["input_hashes"] = {f"{n}.json": hashlib.sha256((DIR / f"{n}.json").read_bytes()).hexdigest()
+                         for n in ("validate", "tracks110", "taxonomy", "census", "reachable", "rule110_lift")}
+    write_record(path, S)
+    print(json.dumps({k: v for k, v in S.items() if k not in ("closing_tracks_k1_count", "summary_source_hashes")}, indent=1)[:6000])
 
 
 if __name__ == "__main__":

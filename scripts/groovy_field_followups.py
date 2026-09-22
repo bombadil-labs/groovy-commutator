@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Cheap follow-ups to the Groovy-field census (hypotheses 1-3 of the checkpoint).
+"""Bounded exploratory follow-ups to the Groovy-field census.
 
   complement  Does complementing a rule's output (phi -> 255-phi) switch G-only
               closure, and does the rule's D0 map explain the switches? Uses
@@ -10,11 +10,12 @@
   gonly5      G alone at memory 5 for rules with no law at memory <= 4 or
               unresolved there.
 Run: python scripts/groovy_field_followups.py STAGE [--jobs N]
-Outputs: results/groovy_field_20260922/followup_STAGE.json
+Use --output-dir for a new run; the preserved input census is cited by hash.
 """
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import sys
 import time
@@ -24,7 +25,8 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
-from groovy_field_suite import certified, code  # noqa: E402
+from groovy_field_suite import (certified, code, entry, output_path, write_record,
+                                source_hashes)  # noqa: E402
 
 DIR = ROOT / "results" / "groovy_field_20260922"
 CENSUS = json.loads((DIR / "census.json").read_text())["data"]
@@ -73,35 +75,35 @@ def stage_complement():
 
 
 def job_universal3(track):
-    fails = []
+    fails, evaluated = [], {}
     for r in range(256):
         t = CENSUS[str(r)]["tracks"]
         if "L" in (t["k1"]["verdicts"][track], t["k2"]["verdicts"][track]):
             continue
         k3 = t.get("k3")
-        v = k3["verdicts"][track] if k3 else code(certified(r, (track,), 3, 0))
+        if k3:
+            v = k3["verdicts"][track]
+        else:
+            evaluated[str(r)] = entry(certified(r, (track,), 3, 0))
+            v = evaluated[str(r)]["verdict"]
         if v != "L":
             fails.append([r, v])
-    return track, fails
+    return track, {"failures": fails, "evaluated_k3": evaluated,
+                   "other_cases": "reused input census; see input_census_sha256"}
 
 
 def job_gonly5(rule):
     rec = certified(rule, (), 5, 0)
-    out = {"verdict": code(rec)}
-    if code(rec) == "L":
-        out["radius"] = rec["certificate"]["radius"]
-    elif code(rec) == "C":
-        out["periods"] = rec["periods"]
-    elif rec["status"] == "too_large":
-        out["edges"] = rec["edges"]
-    return rule, out
+    return rule, entry(rec)
 
 
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("stage", choices=["complement", "universal3", "gonly5"])
     ap.add_argument("--jobs", type=int, default=4)
+    ap.add_argument("--output-dir", type=Path, default=DIR)
     a = ap.parse_args()
+    path = output_path(a.output_dir, f"followup_{a.stage}.json")
     t0 = time.time()
     if a.stage == "complement":
         data = stage_complement()
@@ -111,9 +113,10 @@ def main():
         with Pool(a.jobs) as pool:
             raw = dict(pool.imap_unordered(fn, items))
         data = {str(k): raw[k] for k in sorted(raw)}
-    doc = {"stage": a.stage, "schema": "groovy-field-v1",
+    doc = {"stage": a.stage, "schema": "groovy-field-v2", "source_hashes": source_hashes(),
+           "input_census_sha256": hashlib.sha256((DIR / "census.json").read_bytes()).hexdigest(),
            "elapsed_seconds": round(time.time() - t0, 1), "data": data}
-    (DIR / f"followup_{a.stage}.json").write_text(json.dumps(doc, indent=1, sort_keys=True) + "\n")
+    write_record(path, doc)
     print(a.stage, "done in", doc["elapsed_seconds"], "s")
 
 

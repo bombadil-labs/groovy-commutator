@@ -180,7 +180,7 @@
     "date": "2026-09-22",
     "updated": "2026-09-22",
     "status": "living",
-    "summary": "Can a rule's Groovy field run as a dynamical system of its own, and if not, what exactly is it missing? Exact full-line census of all 256 elementary rules, with certified laws and counterexamples.",
+    "summary": "Can a rule's Groovy field run as a dynamical system of its own, and what must a repair retain? Bounded full-line census with explicit resource and provenance limits, plus independent replay of selected headline claims.",
     "thesis": "The distinctions a Groovy field needs to become self-sufficient name what it throws away; a uniform repair would be a new lift operator.",
     "source": "docs/research/2026-09-22-groovy-field-program.md",
     "supports": [

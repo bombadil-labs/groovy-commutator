@@ -2,15 +2,28 @@
 
 Date: 2026-09-22. First results of [The Groovy Field](2026-09-22-groovy-field-program.md).
 Authored by: Claude Code (Opus 5.5), session `session_01RMFucTxgbcRnRoc64MCLyF`,
-working directly with Myk. Reviewed by: none.
+working directly with Myk. Original head `7c55ffa` reviewed by Codex/Astra in
+[PR #294](https://github.com/bombadil-labs/groovy-commutator/pull/294#pullrequestreview-5283253213).
+Corrections authored by Codex at Myk's request; review of these changes is pending Claude.
 
-**Evidence.** Every verdict below is exact on the full infinite line unless
-marked otherwise. A "law" is certified by an explicit local table checked
-against every source window of its causal support; a "no law" by an explicit
-pair of eventually periodic configurations verified by a separate
-implementation. A handful of laws the decider finds but whose tables exceeded
-the certification budget are reported as *decider only*. Finite rings were
-used only as a consistency check (no disagreements in 512 checks).
+**Evidence and correction.** The pair-graph method is exact on the infinite
+line when it finishes. The original run labels local-table checks `L`, negative
+witness checks `C`, graph-cap outcomes `T`, and uncertified decisions `?`.
+Those labels are preserved, including unresolved cases. The table search shares
+packed arithmetic with the decider; it was not an independent implementation.
+Most negative witness strings and all full positive tables were discarded by
+the original serializer. The old witness checker checked a finite interior but
+neither validated its tail metadata nor checked the extension seams.
+
+The [review audit](../../results/groovy_field_20260922/review_audit.json) now
+checks the actual infinite extensions of all 220 retained G-only memory-1
+witnesses; all pass. It also retains eight selected lower-memory/Rule-110
+witnesses, independently exhausts the Rule-30 memory-3 and Rule-54 memory-5
+laws, and supplies the all-finite-rings SCC proof below. It does **not**
+retroactively recertify every unretained census witness. Below, “certified”
+outside this audit means the original run's local check, subject to that
+provenance limitation. New schema-v2 runs retain the full negative certificate,
+positive check parameters, and explicit failure status. No census was rerun.
 
 ## Short answers
 
@@ -18,40 +31,41 @@ used only as a consistency check (no disagreements in 512 checks).
    rules, yes: its next value is a local function of its last one to four
    values. For 109 rules it cannot with four steps of memory, and 7 are
    unresolved within the computation budget.
-2. **Does memory help?** A lot. Only 36 rules close with no memory at all;
+2. **Does memory help?** A lot. Only 36 rules close from the present field alone;
    64 more need two steps, 32 need three (including Rules 30 and 106) and 8
    need four. A follow-up pushed to five: **Rule 54's Groovy field is
    fifth-order autonomous** (certified), ten more rules close at five by the
    decider, and Rule 110 still does not.
-3. **What is missing?** Two kinds of things. Most often the Groovy field
-   cannot tell **which background** it is in: two different periodic
-   backgrounds, or two shifts of the same one, produce identical Groovy
-   fields. Otherwise it misses a **finite hidden defect** that stays invisible
-   for a few steps and then surfaces.
-4. **Cheapest repair?** Every rule is closed at memory one by some single
+3. **What is missing?** Selected witnesses hide finite defects or differences
+   between eventual backgrounds, including their phase. This is a taxonomy of
+   one algorithm-chosen witness per case, not an exhaustive classification of
+   information loss or a causal explanation of closure.
+4. **A one-bit repair?** Every rule is closed at memory one by some single
    extra bit per cell. For Rule 110, 82 of the 256 possible one-bit tracks work
    with no memory and 220 with two steps. Marking runs of `111` is one of them.
 5. **One repair for every rule?** Yes, and it is informative. Adding the
    **spatial gradient** of the source (`Sᵢ₋₁ ⊕ Sᵢ`, one bit per cell) with two
-   steps of memory closes the Groovy field of **all 256 rules**. The gradient
-   is the source with exactly one bit removed: global complement, the D0 bit.
-   With three steps of memory, tracks that forget two bits (`l ⊕ r`,
-   `l ⊕ c ⊕ r`) and even a lossy nonlinear track are also universal (see
-   follow-ups).
+   steps of memory closes the Groovy field of **all 256 rules**. The gradient alone identifies a source up to global complement. Adding G
+   and history can distinguish that pair: the repaired system has fibers of
+   size at most two, with the two uniform sources always merged. This is not
+   a global-complement quotient. Three-step repairs include tracks with larger
+   fibers (see follow-ups).
 6. **Reachable states?** Letting the rule run one step first lowers the
    needed memory for 45 rules, but did not rescue any rule that had no law
    with four steps of memory. Rule 110 still has no law after one or two
-   steps of burn-in, and it has an exact obstruction on its limit set.
+   steps of burn-in at the tested memory lengths 1–3. Its limit-set witness
+   excludes present-only (memory-1) closure; it says nothing about longer memory.
 7. **Finite rings?** Not trustworthy here: Rule 110's Groovy field with three
-   steps of memory is deterministic on every finite ring (a pair-graph
-   result, checked directly up to 16 cells) and fails on the infinite line (the tails ... 000 and ... 111 are indistinguishable to G).
-8. **The repaired Rule 110 system** is a radius-3 cellular automaton on four
-   bit-tracks that runs autonomously and forgets exactly one distinction on
-   finite rings.
+   steps of memory is deterministic on every finite ring (the audit's exact SCC
+   certificate) and fails on the infinite line (the tails ... 000 and ... 111 are indistinguishable to G).
+8. **The repaired Rule 110 system** has radius-3 local dynamics on the
+   source-realizable four-track history subshift. The tested rings of size
+   8–16 are injective for odd lengths and merge one source pair for even lengths.
+   This is not a quotient-size theorem for all rings or the infinite line.
 9. **A new lift?** "Groovy field + gradient rail, two steps" is a uniform
-   operator for all elementary rules. It is a *quotient* of the existing
-   six-field lift: it keeps the Groovy field and one rail, and drops exactly
-   the D0 bit the Groovy field can never see.
+   operator for all elementary rules under this observation contract. Its
+   relation to the six-field lift is a factor on valid marked beams and their
+   histories, not on arbitrary ambient binary configurations.
 
 ## Two exact facts behind the lift question
 
@@ -106,8 +120,10 @@ obstruction, not every obstruction):
 | all-zeros vs all-ones ("uniform swap", the D0 bit) | 22 | 23 |
 | mixtures of the above | 26 | 22 |
 
-As memory grows, finite defects get resolved and background identity
-(including phase) becomes the dominant thing the Groovy field cannot see.
+These counts describe the selected certificates only. The “last failing k”
+varies by rule, and another graph traversal could choose different witnesses.
+The table does not show that finite defects generally resolve, that background
+blindness is a dominant mechanism, or that the pure tails alone cause failure.
 
 The rule's action on D0 correlates with how badly this hurts. Among the 64
 rules that fix both uniform states (so the D0 bit persists forever), 42 have
@@ -125,39 +141,50 @@ choices), added to the Groovy field as one extra bit per cell.
   the source.
 - **At memory 2 the gradient becomes universal.** Tracks 60 (`l ⊕ c`), 102
   (`c ⊕ r`) and their complements 195, 153 close all 256 rules. On the full
-  line, pairs of configurations with the same gradient history are equal or
-  globally complementary, and for every rule the decider finds complementary
-  pairs that the repaired system cannot separate: it forgets the D0 bit and
-  nothing else (the non-separation is a decider result, not certified by a
-  witness).
+  line, a gradient field alone determines the source up to complement: equal
+  gradients imply that the pointwise XOR of the sources is constant. Thus every
+  repaired history fiber is contained in a complement pair. The uniform pair
+  remains merged for every rule and every history length, so the maximum fiber
+  size is exactly two. But G can split nonuniform complement pairs: for Rule 110,
+  periodic `001` and `110` have the same gradient `101`, yet G is `010` and
+  `100`. This is an explicit counterexample to “forgets exactly global complement.”
 - **The derivative is a good but not universal repair.** Adding `D` itself
   (track `φ ⊕ 204`) closes 128 rules at memory 1 and 180 at memory 2, but
-  never Rule 110.
-- 108 memory-1 laws found by the decider need a table radius above 8 and are
-  recorded as decider-only; no conclusion above depends on them.
+  not Rule 110 at the tested memory lengths 1–3.
+- 108 memory-1 laws found by the decider were not certified within the radius-8,
+  21-bit window budget and are recorded as decider-only. Eight intermediate G-only entries are also `?`;
+  they are not extra certified laws. The minimum-memory counts use only `L`.
 
 ## Rule 110 in detail
 
 - **G alone:** no law at memory 1–4 on all states; none at memory 1–3 after one
   or two steps of burn-in. On its limit set, the temporally periodic sources
   `011010` and `011100` already share `G = 110000` and have different next
-  fields (from the PR #293 review).
+  fields `110010` and `100001`. Both sources have temporal period nine, proving
+  a limit-set obstruction at memory 1 only (replayed in the audit).
 - **Tracks:** 82 close at memory 1, 220 at memory 2, 222 at memory 3, and 34
   never close at memory ≤ 3 — including `D` (track 162) and the run-of-`000`
   marker (track 1). For every track that still fails at memory 2, the recorded
   counterexample is background blindness (28 phase, 8 other), never a finite
   defect.
-- **Why the run-of-`000` marker fails but run-of-`111` works:** its surviving
-  counterexamples are the period-4 background `(0111)^∞` against its
-  two-cell shift `(1101)^∞`. That background contains no `000`, so the marker
-  cannot see its phase; `111` runs mark it.
+- **The run-of-`000` witness:** its left tails use the period-4 background
+  `(0111)^∞` and its two-cell shift `(1101)^∞`, joined to a common zero right
+  tail. The pure periodic backgrounds alone have equal observations and equal
+  successors forever; they are not counterexamples. The differing future
+  requires the interface. `111` marks these phases; its sufficiency as a repair
+  comes from the separate exhaustive local-law check.
 - **The repaired system** (G plus the run-of-`111` track, two steps):
-  a radius-3 law on four bit-tracks with 1,195 realized neighbourhood patterns.
-  Run as a cellular automaton from lifted initial data alone, it reproduced G
+  a radius-3 law on the valid four-track history subshift with 1,195 realized
+  neighbourhood patterns. Run from lifted initial data alone, it reproduced G
   and the track computed from the true source at every step on rings of 40,
   64 and 101 cells. On rings of 8–16 cells it merges exactly one pair of
   source states (the two phases of `(01)ⁿ` on even rings), whose futures are
-  identical — a quotient that discards only a distinction that never matters.
+  identical. The quotient-size measurement is limited to those ring sizes.
+  The table has no declared off-image completion. For source `001`, the valid
+  state Z is `(010,000,010,000)`, B(Z) is `(010,000,000,111)`, and their XOR
+  is `(000,000,010,111)`. B is undefined there. Therefore the native expression
+  `G_B(Z) = B(Z) ⊕ B²(Z) ⊕ B(Z ⊕ B(Z))` needs a chosen off-image completion;
+  the existing table alone does not define a Groovy tower.
 
 ![Rule 110 source (left), Groovy field (centre) and run-of-111 track (right), 120 steps on a 160-cell ring after 40 steps of burn-in](assets/groovy-field-rule110.png)
 
@@ -169,41 +196,42 @@ results `followup_complement.json`, `followup_universal3.json` and
 
 **Output complement and D0 (census data only).** Complementing a rule's
 output (`φ → 255 − φ`) changes whether G closes within four steps for 41 of
-the 121 fully resolved pairs. What predicts the switch is whether the rule
-*keeps* its uniform states or *swaps* them, not which constant they fall to:
+the 121 fully resolved pairs. The frequency of switching is nearly the same
+for identity/swap pairs (21/61) and constant-map pairs (20/60). Conditional on
+an identity/swap pair switching, the swap side is the closing side 19/21 times:
 
 | Complement pair type (D0 maps) | both close | switches | neither |
 | --- | ---: | ---: | ---: |
 | one sends both uniform states to 0, the other to 1 | 29 | 20 (9 vs 11) | 11 |
 | one fixes both uniform states, the other swaps them | 19 | 21 (**swap side closes 19**, fixed side 2) | 21 |
 
-When a rule keeps the D0 bit alive by swapping it every step, G can often
-track the dynamics anyway; when it keeps the D0 bit frozen, G usually
-cannot. Rule 110 (no law ≤ 4) and its complement Rule 145 (third-order
-autonomous) are one such pair. This is a count over 121 pairs, not a theorem.
+Rule 110 (no law ≤ 4) and its complement Rule 145 (third-order autonomous)
+are one such pair. This is a conditional asymmetry in this census, not evidence
+that the D0 map predicts whether a pair switches, nor a mechanism theorem.
 
 **Universal repairs with three steps of memory.** Eighteen radius-one tracks
-close every rule with memory ≤ 3 (all verdicts certified): the six source
+close every rule with memory ≤ 3 (original local-table checks; full tables
+were not retained): the six source
 copies, the four gradients, and
 
 | Track | Formula | Sources sharing one track field on rings of 12 / 18 / 24 cells |
 | --- | --- | --- |
 | 90, 165 | `l ⊕ r` and its complement | 4 / 4 / 4 (forgets ℤ₂ × ℤ₂: even and odd sublattice complements) |
 | 150, 105 | `l ⊕ c ⊕ r` and its complement | 4 / 4 / 4 when the ring length is divisible by 3 (forgets a period-3 ℤ₂ × ℤ₂) |
-| 57, 99, 156, 198 | `c ⊕ (l ∨ ¬r)`, its mirror and complements | up to 18 / 76 / 322 (unbounded) |
+| 57, 99, 156, 198 | `c ⊕ (l ∨ ¬r)`, its mirror and complements | nonlinear; preimage-size exploration was not retained as a replayable artifact |
 
-So the universal operator is not unique, and some universal repairs forget far
-more than the D0 bit *in the track*. The whole lifted state is another matter:
-on 16-cell rings, G plus its own history is nearly injective for complex rules
-(Rules 30, 54, 110 merge at most 2–4 sources per lifted state under every
-universal repair), while for trivial rules (0, 204) the lossy track-57 lift
-merges up to 47. How much a Groovy lift forgets depends on the rule more than
-on the repair.
+The track alone and the whole repaired history are different observations:
+the latter retains histories of both G and the track. The original prose also
+reported track-57 preimage counts 18/76/322 on rings 12/18/24 and selected
+16-cell repaired-history fiber sizes, without retaining their computation or
+results. These remain unarchived exploratory observations, not evidence of an
+unbounded preimage theorem or of whether rule or repair matters more.
 
 **G alone with five steps of memory** (the 116 rules without a law at four):
 Rule 54 closes, certified with a radius-4 table. Rules 22, 107, 109, 121, 122,
 135, 149, 151, 182 and 218 close by the decider, but their tables need a
-radius above 4 and are not certified. 55 rules, including 110, have certified
+certificate search exceeded its source-window budget and they are not
+certified. This failure does not establish their minimum radius. 55 rules, including 110, have certified
 counterexamples at five; 50 exceed the pair-graph cap.
 
 ## Data and reproduction
@@ -218,26 +246,46 @@ Results in `results/groovy_field_20260922/`:
 [`summary`](../../results/groovy_field_20260922/summary.json) with sanity checks
 and source hashes.
 
+The original artifacts and source-hash record remain byte-for-byte at their
+original revision `7c55ffa8d9925c5041498c2c7915bb2d51d78a02`. Their source hashes
+refer to that revision, not the repaired verifier. A unit-specific
+[manifest](../../results/groovy_field_20260922/review_manifest.json) registers
+those bytes, the new audit and its implementation without modifying the central
+registry (which would trigger 42 historical workflows).
+
+Fast verification, including independent replay of the two headline laws:
+
 ```bash
 pip install -e . pytest
-for s in validate tracks110 taxonomy census; do python scripts/groovy_field_suite.py $s; done
-python scripts/groovy_field_suite.py reachable --jobs 2
-python scripts/groovy_field_rule110_lift.py
-python scripts/groovy_field_summarize.py
-python -m pytest tests/test_groovy_field.py
+python scripts/verify_groovy_field_audit.py --check
+python -m pytest tests/test_groovy_field.py -q
 ```
 
-About 25 minutes on four cores. Budgets: pair graphs over 15 million edges
-are recorded as unresolved; tables up to radius 8 (21-bit source windows).
-Two-step burn-in data are heavily censored by the edge cap (118 rules
-unresolved) and are not interpreted.
+The full original evaluation and follow-ups took about 40 minutes on four
+cores and are not part of CI. The repaired runners require a fresh
+`--output-dir` when an output already exists, retain schema-v2 evidence, and
+record source hashes. Follow-ups cite the preserved input census by hash.
+To derive a corrected summary without any new scientific evaluation:
+
+```bash
+python scripts/groovy_field_summarize.py --output-dir /tmp/groovy-summary-review
+```
+
+**Summary erratum:** the preserved `burn_in_helps_rules` key is the two-step
+list (49 rules), despite its ambiguous name. The one-step list has 45 rules.
+New summaries expose separate `burn_in_helps_rules_t1` and `_t2` keys and hash
+the input files; they do not relabel old data with new generator hashes.
+
+Budgets: pair graphs over 15 million edges are unresolved; local tables use
+source windows of at most 21 bits and search radii up to 8. Two-step burn-in
+is heavily censored (118 rules unresolved); no broad interpretation is made.
 
 ## Limits
 
 - "No law with memory ≤ 4" is not "no law at any memory".
 - Tracks are radius-one and one bit; richer repairs are untested.
-- The universal gradient repair is not a compression: it stores nearly the
-  whole source. Its content is that exactly one bit — D0 — can be dropped
-  from the source for every rule once the Groovy field is kept.
+- The universal gradient repair is not a storage or runtime advantage. It
+  stores G and gradient histories. Its fibers are at most complement pairs;
+  that is not the same as erasing one bit from every source.
 - One-step burn-in results depend on the edge cap for 4 rules; two-step
   results are not used.

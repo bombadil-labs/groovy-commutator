@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """The Groovy field research suite: exact closure data for all elementary CA.
 
-Every verdict comes from ``groovy.groovy_field.decide`` and is independently
-certified before it is recorded: a law by an exhaustive finite-window table
-(``certify_law``), a counterexample by an explicit eventually periodic pair
+Every verdict comes from ``groovy.groovy_field.decide`` and carries its evidence
+status: a law by an exhaustive finite-window table (``certify_law``, shared
+packed arithmetic), a counterexample by an explicit eventually periodic pair
 verified with the tuple implementation (``witness`` + ``verify_witness``).
 A verdict whose certificate could not be produced within budget is recorded
 as such and never counted as a theorem.
@@ -14,11 +14,12 @@ Stages (see docs/research/2026-09-22-groovy-field-program.md):
   census    all 256 rules: G alone (k <= 4) and every track (k <= 2, then 3)
   reachable all 256 rules: G alone after burn-in t = 1, 2
 Run:  python scripts/groovy_field_suite.py STAGE [--jobs N]
-Outputs: results/groovy_field_20260922/STAGE.json
+Use --output-dir for a new run; existing artifacts are never overwritten.
 """
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import sys
 import time
@@ -33,10 +34,38 @@ from groovy.groovy_field import (decide, witness, verify_witness,  # noqa: E402
 OUT = ROOT / "results" / "groovy_field_20260922"
 
 
+def output_path(directory, name):
+    """Refuse an overwrite before spending time evaluating a stage."""
+    path = Path(directory) / name
+    if path.exists():
+        raise FileExistsError(f"Preserving {path}; choose a fresh --output-dir")
+    path.parent.mkdir(parents=True, exist_ok=True)
+    return path
+
+
+def source_hashes():
+    paths = [ROOT / "src/groovy/groovy_field.py", *sorted((ROOT / "scripts").glob("groovy_field_*.py"))]
+    return {str(p.relative_to(ROOT)): hashlib.sha256(p.read_bytes()).hexdigest() for p in paths}
+
+
+def write_record(path, doc):
+    with path.open("x") as f:
+        f.write(json.dumps(doc, indent=1, sort_keys=True) + "\n")
+
+
+def entry(rec):
+    """Keep the compact verdict and the evidence needed to interpret/replay it."""
+    out = {"verdict": code(rec), **rec}
+    if code(rec) == "L":
+        out["radius"] = rec["certificate"]["radius"]
+    return out
+
+
 def certified(rule, tracks, k, t):
     """Decide and certify one case. Returns a compact record."""
     v = decide(rule, tracks, k, t)
-    rec = {"status": v.status}
+    rec = {"status": v.status, "rule": rule, "tracks": list(tracks), "k": k, "t": t,
+           "edges": v.edges}
     if v.status == "law":
         c = certify_law(rule, tracks, k, t, r_max=8)
         rec["certificate"] = c
@@ -46,7 +75,8 @@ def certified(rule, tracks, k, t):
         chk = verify_witness(rule, tracks, k, t, w)
         rec["certified"] = chk["verified"]
         rec["periods"] = [w["left_period"], w["right_period"]]
-        rec["witness"] = {"S": w["S"], "S_prime": w["S_prime"], "defect_cell": w["defect_cell"]}
+        rec["witness"] = w
+        rec["verification"] = chk
     else:
         rec["certified"] = False
         rec["edges"] = v.edges
@@ -67,7 +97,7 @@ def job_validate(rule):
     for k in (1, 2):
         rec = certified(rule, (), k, 0)
         ring = next((n for n in range(1, 9) if ring_collision(rule, (), k, 0, n)), None)
-        out[f"k{k}"] = {"verdict": code(rec), "first_ring_collision": ring,
+        out[f"k{k}"] = {**entry(rec), "first_ring_collision": ring,
                         "consistent": not (ring is not None and rec["status"] == "law")}
     return rule, out
 
@@ -76,9 +106,7 @@ def job_tracks110(track):
     out = {}
     for k in (1, 2, 3):
         rec = certified(110, (track,), k, 0)
-        out[f"k{k}"] = {"verdict": code(rec)}
-        if rec["status"] == "law" and rec["certified"]:
-            out[f"k{k}"]["radius"] = rec["certificate"]["radius"]
+        out[f"k{k}"] = entry(rec)
     return track, out
 
 
@@ -86,26 +114,20 @@ def job_census(rule):
     res = {"G_only": {}, "tracks": {}}
     for k in (1, 2, 3, 4):
         rec = certified(rule, (), k, 0)
-        entry = {"verdict": code(rec)}
-        if code(rec) == "L":
-            entry["radius"] = rec["certificate"]["radius"]
-        elif code(rec) == "C":
-            entry["periods"] = rec["periods"]
-            if k == 1:
-                entry["witness"] = rec["witness"]
-        res["G_only"][f"k{k}"] = entry
+        res["G_only"][f"k{k}"] = entry(rec)
         if code(rec) == "L":
             break
     for k in (1, 2):
-        s, radii = [], []
+        s, radii, records = [], [], []
         for tr in range(256):
             rec = certified(rule, (tr,), k, 0)
             s.append(code(rec))
             radii.append(rec["certificate"]["radius"] if code(rec) == "L" else -1)
-        res["tracks"][f"k{k}"] = {"verdicts": "".join(s), "radius": radii}
+            records.append(entry(rec))
+        res["tracks"][f"k{k}"] = {"verdicts": "".join(s), "radius": radii, "records": records}
     if "L" not in res["tracks"]["k2"]["verdicts"]:
-        s = [code(certified(rule, (tr,), 3, 0)) for tr in range(256)]
-        res["tracks"]["k3"] = {"verdicts": "".join(s)}
+        records = [entry(certified(rule, (tr,), 3, 0)) for tr in range(256)]
+        res["tracks"]["k3"] = {"verdicts": "".join(r["verdict"] for r in records), "records": records}
     return rule, res
 
 
@@ -114,12 +136,7 @@ def job_reachable(rule):
     for t in (1, 2):
         for k in (1, 2, 3):
             rec = certified(rule, (), k, t)
-            entry = {"verdict": code(rec)}
-            if code(rec) == "L":
-                entry["radius"] = rec["certificate"]["radius"]
-            elif code(rec) == "C":
-                entry["periods"] = rec["periods"]
-            res[f"t{t}k{k}"] = entry
+            res[f"t{t}k{k}"] = entry(rec)
             if code(rec) in ("L", "T"):
                 break
     return rule, res
@@ -157,15 +174,15 @@ def job_taxonomy(rule):
     for k in (1, 2, 3, 4):
         rec = certified(rule, (), k, 0)
         if code(rec) != "C":
-            out[f"k{k}"] = code(rec)
+            out[f"k{k}"] = entry(rec)
             break
-        out[f"k{k}"] = {"kind": classify(rec), "periods": rec["periods"]}
+        out[f"k{k}"] = {"kind": classify(rec), **entry(rec)}
     if rule == 110:
         out["tracks_k2"] = {}
         for tr in range(256):
             rec = certified(110, (tr,), 2, 0)
             if code(rec) == "C":
-                out["tracks_k2"][str(tr)] = classify(rec)
+                out["tracks_k2"][str(tr)] = {"kind": classify(rec), **entry(rec)}
     return rule, out
 
 
@@ -180,16 +197,17 @@ def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("stage", choices=STAGES)
     ap.add_argument("--jobs", type=int, default=4)
+    ap.add_argument("--output-dir", type=Path, default=OUT)
     a = ap.parse_args()
+    path = output_path(a.output_dir, f"{a.stage}.json")
     fn, items = STAGES[a.stage]
     t0 = time.time()
     with Pool(a.jobs) as pool:
         data = dict(pool.imap_unordered(fn, items))
-    OUT.mkdir(parents=True, exist_ok=True)
-    doc = {"stage": a.stage, "schema": "groovy-field-v1",
+    doc = {"stage": a.stage, "schema": "groovy-field-v2", "source_hashes": source_hashes(),
            "elapsed_seconds": round(time.time() - t0, 1),
            "data": {str(key): data[key] for key in sorted(data)}}
-    (OUT / f"{a.stage}.json").write_text(json.dumps(doc, indent=1, sort_keys=True) + "\n")
+    write_record(path, doc)
     print(a.stage, "done in", doc["elapsed_seconds"], "s")
 
 
