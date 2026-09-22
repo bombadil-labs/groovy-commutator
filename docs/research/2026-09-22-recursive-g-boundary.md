@@ -85,10 +85,11 @@ exact parity relations without yielding a native-G transport theorem.
 The 2026-09-14 binary-lift census searched a specific period-four/five P/D
 grammar with source-dependent recipe selection. Its cumulative first-floor
 family has faithful and centered-G carriers for all 256 ECAs, while original
-G is carried for 156. The selected repeat retained 206 best-known 3D paths;
-the older 4D population was a finite sample. No induction theorem was proved
-for this grammar, and compatibility can depend on the chosen parent
-completion.
+G is carried for 156. The selected repeat carried recursive G for 200 of 220
+eligible selected 3D paths; retained alternative recipes raised best-known 3D
+coverage to 206. A separate fixed 4D sample had 113 paths, 105 of them
+G-passing. No induction theorem was proved for this grammar, and compatibility
+can depend on the chosen parent completion.
 
 That narrow recursive native-carrier question remains mathematically
 unfinished. It cannot be used to deny the later two-beam ancestral theorem,
