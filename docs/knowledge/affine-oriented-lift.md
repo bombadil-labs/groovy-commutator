@@ -27,4 +27,11 @@ descendant remains completion-dependent. The two-beam product lift transports
 the ancestral horizon commutators `K_t = D_H(H^t X) ⊕ H^t(D_H X)` (with
 `K_1 = G`) completion-independently at every depth.
 
+Application status, 2026-09-22: the [repository consumer
+audit](../research/2026-09-22-phase-free-consumer-audit.md) found no current
+downstream operation requiring this phase-free layout. Existing physical-key
+scripts construct or study the lift itself. The marked Groovy readout is
+matched by a smaller named cache. Leave application work dormant until an
+independent caller supplies an exact geometry and cost contract.
+
 Source: [the affine-oriented lift theorem](../research/2026-09-17-affine-oriented-lift-theorem.md).

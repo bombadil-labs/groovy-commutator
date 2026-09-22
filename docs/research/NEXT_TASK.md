@@ -1,8 +1,9 @@
-# Next agent: ground the next operation in a real consumer
+# Next agent: preserve the stop; require an action-changing question
 
-Updated 2026-09-22 after the first research-drive unit. Read
+Updated 2026-09-22 after the second research-drive unit. Read
 [START_HERE](START_HERE.md), [FINDINGS](FINDINGS.md), the
-[readout-cost note](2026-09-22-groovy-readout-cost.md), and the
+[readout-cost note](2026-09-22-groovy-readout-cost.md), the
+[consumer audit](2026-09-22-phase-free-consumer-audit.md), and the
 [research-drive handoff](checkpoints/research-drive.md). Check current remote
 PR state before recreating or extending work.
 
@@ -15,15 +16,29 @@ Initialization and maintenance are charged explicitly. This is not an
 empirical speedup, a minimal-circuit proof, or a phase-free binary encoding.
 Do not restart the proposed broad readout benchmark.
 
+## Second completed unit
+
+Two pinned read-only audits inspected the active code and current
+documentation. No downstream consumer requires phase-free binary geometry.
+The physical-window scripts are instruments for the lift itself, and the
+public library/site have no lift caller. This is a repository stop decision,
+not a global impossibility theorem. Do not reopen the lift with another
+self-referential measurement.
+
 ## Next decision, not an automatic experiment
 
-First integrate the gathering unit if review or CI remains pending. Once it is
-integrated, inspect actual existing operations/callers before proposing more
-research. Does a real consumer need a phase-free binary local interface, as
-opposed to named fields? If so, record its exact output, geometry, cadence and
-cost constraints and the simplest competing implementation. If no such consumer
-exists, leave the dimensional application question dormant rather than inventing
-one solely to preserve the research line.
+First integrate the gathering unit if review or CI remains pending. Then
+re-ground in the portfolio. There is no queued empirical unit. Choose work
+only if it answers an action-changing question with a bounded proof,
+correction or frozen protocol. In particular, do not build the generic local
+sufficiency package merely to fill a run; the survey requires a second real
+consumer first.
+
+A newly identified phase-free consumer must state its exact output, geometry,
+cadence, workload and full cost constraints. Compare it at least with ordinary
+source access, the named three-track Groovy cache where applicable, and the
+period-three necklace for strict unknown-phase geometry. Otherwise preserve
+the stop and prefer a concrete scientific-integrity correction over new data.
 
 The primary agenda remains local sufficient state and representation cost.
 An alternative task needs a concrete decision it would change, not just a

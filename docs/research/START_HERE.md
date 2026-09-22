@@ -25,9 +25,13 @@ The [bounded Groovy readout comparison](2026-09-22-groovy-readout-cost.md)
 is complete: a three-track cache matches the six-field lift's marked readout.
 That caching benefit does not require the lift. Phase-free binary geometry is
 a different interface, not a free property of named tracks. No broad benchmark
-is justified by this candidate. The [handoff](NEXT_TASK.md) names the remaining
-decision: whether an actual consumer needs the stricter interface. Do not
-replace the failed advantage proposal with a sequence of friendlier targets.
+is justified by this candidate. A subsequent [consumer
+audit](2026-09-22-phase-free-consumer-audit.md) found no current downstream
+operation requiring the stricter interface: physical-window scripts study the
+lift itself, and the public code has no lift caller. Leave the application
+question dormant until a consumer supplies an exact operation and cost
+contract. Do not replace the failed advantage proposal with a sequence of
+friendlier targets.
 
 The CA/CRDT connection produced a completed fixed-interface retention result,
 not a fifth program. The dimensional existence objective is complete. The
@@ -60,7 +64,7 @@ closed direct-quotient question does not need more rings or source rules.
 | Thread | State and evidence | Condition for further work |
 | --- | --- | --- |
 | Erased distinctions / representation invariants | **Bounded unit complete.** Three executable representation cases and the restricted Rule-110 causal-retention lower bound. The [depth-three onset result](2026-09-14-depth-three-onset.md) remains integrated. | Start from the completed unit (PR #282). Further depth or observation searches need a question whose answer changes a decision. |
-| Dimensional lift | **Existence and finite recursion closed** under the [affine-oriented theorem's contract](2026-09-17-affine-oriented-lift-theorem.md). No uniqueness, optimality or spontaneous organization theorem. | A concrete locality, readout or intervention advantage over ordinary history and the proof's period-three necklace construction, charging encoding and preprocessing costs fairly. |
+| Dimensional lift | **Existence and finite recursion closed; application dormant** under the [affine-oriented theorem's contract](2026-09-17-affine-oriented-lift-theorem.md) and [consumer audit](2026-09-22-phase-free-consumer-audit.md). No current downstream caller, uniqueness, optimality or spontaneous organization theorem. | A concrete locality, readout or intervention advantage over ordinary history and the proof's period-three necklace construction, charging encoding and preprocessing costs fairly. |
 | Class-IV discriminator | **Frozen finite benchmark**, with [partial original provenance](2026-09-17-selective-persistence-discriminator-record.md). Its two core positive families are 54 and 110. | An independently defined target and external validation domain; no further feature search on the same labels by default. |
 | Refinement fibers / defects | **Paused.** Local mechanisms are useful in their stated height-two family. The [held-structures completion and correction](2026-09-21-held-structures-account.md) preserves the ninth unit and invalidates three mistimed predictor scores. | A standalone scientific payoff and a bounded protocol; a corrected run is required before reusing those three scores. There is no automatic tenth unit. |
 | Source-recoder recovery (PR #231) | **Archived, incomplete:** 14/22 classified, eight unresolved; no certificate found in the frozen search. Data, code and resumable checkpoints are integrated. | A structural result or a credible method improvement with a small benchmark and hard budget. “More solver time” alone is insufficient. |

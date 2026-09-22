@@ -120,8 +120,10 @@ as a speedup. No minimal circuit or minimal read neighborhood is claimed.
 The [existing theorem](2026-09-17-affine-oriented-lift-theorem.md) gives the
 necklace a phase-free binary update with horizontal/vertical radii (1,1),
 and the first-floor six-field lift sufficient radii (2,3). The latter's
-potential native truth table has 35 binary inputs. These are sufficient
-neighborhoods, not mandatory dense-table storage or proven minimal radii.
+ambient full-shift stencil has 35 positions. On a valid period-six beam its
+first and seventh transverse rows coincide, so an on-beam physical key has 30
+distinct mutable cells. These are sufficient neighborhoods, not mandatory
+dense-table storage or proven minimal radii.
 
 At an unknown necklace phase, the vertical triple has one or two ones;
 majority recovers X regardless of its rotation. Decoding five neighboring
@@ -153,3 +155,7 @@ accounting for decoding and upkeep. A strict-geometry decoder optimization
 could then be a different justified question; it is not automatically next.
 Ordinary source access remains the low-storage baseline. Caching can be useful,
 but we have not specified a workload that makes its extra maintenance pay.
+The subsequent [repository consumer
+audit](2026-09-22-phase-free-consumer-audit.md) found no current downstream
+operation requiring the stricter interface, so the application question is
+dormant rather than queued for a decoder benchmark.
