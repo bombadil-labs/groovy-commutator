@@ -53,7 +53,9 @@ self-checks are not independent approval.
 
 The original census/follow-ups are exploratory exact computations, not
 preregistered predictions. Through k=4: 140 rules have local laws, 109 have
-reported negative witnesses, and seven are unresolved. At k=5 among the other
+reported negative witnesses, and seven are decider-only laws (Rule 109 at
+k=3, the others at k=4; tables not certified within the radius budget, graphs
+well under the edge cap). At k=5 among the other
 116: Rule 54 has a replayed law; ten are decider-only; 55 have reported
 counterexamples; 50 exceed the graph cap. There are also 108 decider-only
 memory-1 track entries and eight intermediate G-only `?` entries in the

@@ -29,8 +29,10 @@ positive check parameters, and explicit failure status. No census was rerun.
 
 1. **Can the Groovy field run on its own?** For 140 of the 256 elementary
    rules, yes: its next value is a local function of its last one to four
-   values. For 109 rules it cannot with four steps of memory, and 7 are
-   unresolved within the computation budget.
+   values. For 109 rules it cannot with four steps of memory. For the
+   remaining 7 the decider finds a law (Rule 109 at memory 3, the others at
+   memory 4), but no table was certified within the radius budget; they are
+   decider-only, not certified.
 2. **Does memory help?** A lot. Only 36 rules close from the present field alone;
    64 more need two steps, 32 need three (including Rules 30 and 106) and 8
    need four. A follow-up pushed to five: **Rule 54's Groovy field is
@@ -95,7 +97,7 @@ Minimum memory `k` for a certified local law, all 256 rules:
 | 3 | 9 26 30 38 39 46 52 53 56 57 65 82 86 98 99 106 108 116 120 131 139 145 147 155 163 177 190 203 209 211 217 246 | 32 |
 | 4 | 45 75 89 94 101 123 146 183 | 8 |
 | none ≤ 4 | 109 rules, including 54 and 110 | 109 |
-| unresolved | 104 107 109 121 122 135 149 (graph over size cap at k = 3 or 4) | 7 |
+| decider-only law (`?`: table beyond the radius budget; pair graphs 0.6–1.2M edges, well under the cap) | 109 at k = 3; 104 107 121 122 135 149 at k = 4 | 7 |
 
 "None ≤ 4" means certified counterexamples at k = 1, 2, 3, 4; it is not a
 proof that no finite memory works. Mirror-image rules agree in every row, as
