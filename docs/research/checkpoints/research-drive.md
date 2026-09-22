@@ -1,5 +1,49 @@
 # Research drive handoff
 
+## 2026-09-22 — sixth unit: public-status audit and verified stop
+
+Inspected remote main `97ddaa4796fcfc134d6796a8053aa2dc483c0d07`
+through the Bombadil Labs connector. No open PRs or issues were present.
+Fetched a fresh main tree and re-read the agent guide, scheduling authority,
+next task, findings, portfolio and latest handoff before checking README, the
+public Concepts and Questions pages, the research catalog and current knowledge
+summaries against those authorities.
+
+Selected a bounded public-status audit because the repository now correctly
+queues no empirical work, and the remaining high-value risk was a fresh agent
+or reader following a stale public claim. This outranked manufacturing another
+experiment or building generic infrastructure without a second consumer.
+
+The audit found one actionable contradiction. The Concepts page still called
+absential compressibility an open Class-IV-detector question, while the linked
+Questions page already reports the completed negative. The preserved
+experiment tested seven Life-like rules on 60-by-60 tori, eight seeds per rule,
+240 steps with a settled tail, and still-life/glider probes. In every tested
+condition the absential score tracked the raw score rather than cross-cutting
+it. The public prose now calls this a bounded negative, and FINDINGS adds an
+accessible account. No protocol, runner, result byte or classifier threshold
+changed.
+
+The other apparent public open question—endogenous establishment of a
+dimensional interpretation—is legitimate rather than stale. It still lacks a
+declared consumer, organization mechanism and resource contract, so it does
+not justify an automatic experiment. Historical planning prose and scoped
+knowledge questions remain provenance, not scheduling authority.
+
+Gathering branch: `gather/public-status-stop`; publication and review state
+belong in its PR. Local verification covers the research-site tests, production
+site build, canonical result-integrity check and whitespace check. An
+independent final-head review remains required before integration.
+
+Next decision-relevant questions:
+
+1. Has a concrete consumer appeared with an output, geometry, cadence and full
+   resource contract that changes the representation-cost decision?
+2. Is there a specific current claim contradicted by preserved evidence, as
+   opposed to a merely open mathematical question or dated plan?
+3. If neither condition holds, preserve this verified stop and do not create a
+   research unit simply because time or compute is available.
+
 ## 2026-09-22 — fifth unit: active knowledge status repair
 
 Inspected remote main `ce989f283e81666769c359046b7d3cc2463b8573`

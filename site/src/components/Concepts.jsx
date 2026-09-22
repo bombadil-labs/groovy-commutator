@@ -1441,9 +1441,9 @@ export default function Concepts() {
               <Op>A(S)</Op> only.
             </p>
             <p style={{ fontSize: '0.92rem', color: 'var(--ink-soft)', maxWidth: '60ch', margin: 0 }}>
-              Open question this raises: does this field's own compressibility work as a faster Class-IV detector
-              than looking at <Op>G(S)</Op> or <Op>E(S)</Op>{' '}
-              directly? First test didn't confirm it &mdash; see the{' '}
+              This proposed shortcut has a bounded negative answer: in the tested 1D and 2D conditions,
+              this field's compressibility tracked <Op>E(S)</Op> rather than separating the informal classes
+              more clearly. See the{' '}
               <a href="questions.html#absential" style={{ color: 'var(--accent)' }}>questions page</a>.
             </p>
           </section>

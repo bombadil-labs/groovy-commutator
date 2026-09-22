@@ -1,6 +1,6 @@
 # Next agent: preserve the stop; require an action-changing question
 
-Updated 2026-09-22 after the fifth research-drive unit. Read
+Updated 2026-09-22 after the sixth research-drive unit. Read
 [START_HERE](START_HERE.md), [FINDINGS](FINDINGS.md), the
 [readout-cost note](2026-09-22-groovy-readout-cost.md), the
 [consumer audit](2026-09-22-phase-free-consumer-audit.md), the
@@ -64,6 +64,20 @@ Do not rerun these units to resolve their old future-tense prose. The second
 lift is exact only through depth two and its ambient failure only through
 radius two. The pulse result is only the declared four-site family. The
 gradient results are observation-relative and charge their retained state.
+
+## Sixth completed unit
+
+A current public-surface audit found one remaining actionable contradiction:
+the Concepts page still called absential compressibility an open Class-IV
+detector question even though the Questions page reports the completed 1D/2D
+negative. The site now labels that conclusion as bounded, negative and finite,
+and FINDINGS records its setup and limits in plain language. The dimensional
+organization question on the same page is genuinely open and remains so; it
+does not supply a queued experiment without a consumer and resource contract.
+
+This closes the current-status audit. Do not turn generic mathematical
+openness or historical future tense into a work queue. A new unit needs a
+specific discrepancy, caller or decision that the result would change.
 
 ## Next decision, not an automatic experiment
 
