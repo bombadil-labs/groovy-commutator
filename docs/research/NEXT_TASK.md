@@ -1,6 +1,6 @@
 # Next agent: preserve the stop; require an action-changing question
 
-Updated 2026-09-22 after the sixth research-drive unit. Read
+Updated 2026-09-22 after the seventh research-drive unit. Read
 [START_HERE](START_HERE.md), [FINDINGS](FINDINGS.md), the
 [readout-cost note](2026-09-22-groovy-readout-cost.md), the
 [consumer audit](2026-09-22-phase-free-consumer-audit.md), the
@@ -82,6 +82,20 @@ and resource contract. One-beam typed compression is likewise open but dormant.
 This closes the present public-status audit. Do not turn generic mathematical
 openness or historical future tense into a work queue. A new unit needs a
 specific discrepancy, caller or decision that the result would change.
+
+## Seventh completed unit
+
+The public absential answer still overstated its own finite data after the
+status repair. Its 2D medians preserve broad low/middle/high bands but reorder
+the middle cases, directly refuting “a monotone rescaling in every condition.”
+The corrected answer is a bounded negative for sharper separation under one
+compression score on the declared panel. It is not a runtime, observation or
+storage-cost result, a universal classifier, or an impossibility theorem.
+
+This correction changes no experiment, canonical result or scheduling
+decision. Do not reopen the absential line without a new task and prospective
+protocol; do not cite the old “hypothesis is dead” or “monotone rescaling”
+language.
 
 ## Next decision, not an automatic experiment
 

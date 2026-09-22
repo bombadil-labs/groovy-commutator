@@ -78,9 +78,9 @@ legible to a first-time visitor:
 - The affine theorem and its statement.
 - The full-sweep findings (32,640 pairs, regime distribution, the
   image_ratio-doesn't-predict-regime result, the regime heatmap).
-- The newer, honestly-inconclusive results (absential field as a
-  Class-IV detector — tested, didn't pan out, control test showed it was
-  a density artifact; the meta-evolution generator comparison).
+- The newer bounded results (the selected 1D/2D absential panels did not show
+  clearer class separation than raw compressibility; this was not a cost test
+  or controlled general classifier; the meta-evolution generator comparison).
 - The project's voice: confident about what's proven, explicit about
   what's only suggestive or exploratory, comfortable publishing a result
   that didn't confirm the hypothesis rather than hiding it.

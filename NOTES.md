@@ -216,8 +216,8 @@ proposed *use*: running the structure/noise compressibility diagnostic
 of on `G`, as a candidate cheap Class-IV detector — a still life's
 absential ring should be small and frozen, a Class III pattern's should
 churn at high density with no structure, a glider's should trace a
-compressible, persistent moving shape. Untested against known Class I-IV
-rules so far.
+compressible, persistent moving shape. This was the proposal; the later
+bounded 1D/2D panels below did not show the hoped-for clearer separation.
 
 **Second-order / reversible memory.** `S(t+1) = phi(S(t)) XOR S(t-1)` is
 the standard Margolus-Fredkin construction for giving 1D CA both memory
@@ -351,31 +351,32 @@ I/II/III/IV (rules 0, 4, 30, 110) and compared `compressibility` of the
 absential-field trajectory against compressibility of the raw state
 trajectory. Result: they track each other closely at this sample size
 (e.g. rule 110: raw 0.920 vs. absential 0.828; rule 30: raw 1.005 vs.
-absential 0.905) — the absential view is consistently a little more
-compressible than the raw state, but not dramatically, and not in an
-obviously class-discriminating way beyond what raw-state compressibility
-already shows. Doesn't confirm the original hypothesis (a "cheap fast
-Class-IV detector" distinct from existing diagnostics) on this small test.
-Worth a real test before discarding: more rules per class, the actual
-glider/still-life cases the hypothesis was framed around (gliders don't
-really exist as objects at the elementary-CA scale the same way they do
-in Conway's Life — the closer test would be a CA with known stable
-localized structures), not just four representative rules.
+absential 0.905), while Rules 0 and 4 are equal or reverse that direction.
+The four-rule panel shows no obvious class discrimination beyond what
+raw-state compressibility already supplies. It does not confirm the original
+hypothesis (a distinct "cheap fast Class-IV detector") and does not measure
+cost. At proposal time this motivated a 2D follow-up with hand-labeled
+Life-like rules and explicit still-life/glider probes, recorded below.
 
-**That closer test has now been run and the hypothesis is dead**
+**That closer 2D test is a bounded negative, not a monotone theorem**
 (2026-07-01, `scripts/experiment_absential_2d.py`, `src/groovy/ca2d.py`):
-seven Life-like 2D rules from soup plus pure still-life and pure glider
-fields under Life itself. Absential compressibility is a monotone
-rescaling of raw compressibility in every condition — slightly more
-compressible than raw in 1D, slightly less in 2D (the Moore halo is
-denser), never cross-cutting, never adding discrimination. Established
-negative; see CLAUDE.md result 10. Two byproducts worth keeping: plain
-settled-window compressibility bands the informal classes by itself
-(frozen 0.01–0.02 / Class IV 0.32–0.36 / additive 0.61 / chaos 0.79 —
-"interesting" is the middle band again, rhyming with structured
-divergence), and the affine theorem crossed dimensions intact
-(B1357/S1357 is neighbor parity, the 2D rule 90; its G₂ vanished on
-every random grid tested while Life's never did).
+seven Life-like 2D rules from soup plus attempted still-life and glider
+placements under Life itself; placement overlaps were not rejected. The
+aggregate medians preserve the same broad
+low/middle/high grouping, but they are not a monotone rescaling: the
+absential score reorders Day & Night, HighLife, and Life. The supported
+negative is narrower: this panel found no clearer hand-labeled separation
+than raw compressibility already supplied. Day & Night used density 0.5
+while the other random soups used 0.15, so this was not a controlled
+classifier benchmark. It did not compare runtime, observation, or storage
+cost and is not a universal classifier. Two
+byproducts worth keeping: raw settled-window compressibility descriptively
+groups this hand-picked panel (frozen 0.007–0.016 / Life, HighLife, and
+III/IV Day & Night 0.32–0.36 / additive 0.61 / Seeds 0.79), and the affine
+theorem supplies a separate exact byproduct: B1357/S1357 is neighbor parity,
+so G₂ vanishes identically. All 50 random Replicator consistency checks agreed;
+Life was nonzero in all 50 sampled controls, which is not itself a
+dimension-general theorem.
 
 ## 7. Pre-hoc composition: the fourth input, and what it took to make it real
 

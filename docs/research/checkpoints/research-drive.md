@@ -1,5 +1,49 @@
 # Research drive handoff
 
+## 2026-09-22 — seventh unit: absential claim-boundary correction
+
+Inspected remote main `51dbd9e251b280984b8324f2fcb1af5db1942b0a`
+through the Bombadil Labs connector. No open PRs or issues were present.
+Re-read the agent guide, scheduling authority, next task, findings, portfolio
+and sixth-unit handoff before checking the remaining scientific-integrity note
+from PR #290's review against the preserved absential runner, aggregate JSON
+and 56-row result table.
+
+Selected this correction because the public Questions page and NOTES still
+claimed a “monotone rescaling in every condition,” while the displayed medians
+themselves contain an inversion. Day & Night's raw settled median is higher
+than Life's and HighLife's, but its absential median is lower. Correcting a
+current overclaim outranked inventing a new experiment after the verified stop.
+
+The public question now asks about sharper separation rather than unmeasured
+cheapness. It records the supported result: the declared hand-picked panel
+keeps the same broad low/middle/high bands without the absential score making a
+clearer hand-labeled separation. The question, NOTES and FINDINGS now state
+that this is one compression score on seven 2D rules plus two Life probes, not
+a monotone theorem, universal classifier, cost comparison or impossibility
+result. Day & Night's different initial density and the structure-probe
+placement overlaps are now disclosed. The 1D table remains an inconclusive
+four-rule prelude. No protocol, result byte or threshold changed; runner edits
+are documentation/comments only and deliberately preserve the legacy output
+note for byte reproducibility.
+
+Gathering branch: `gather/absential-claim-boundary`; [PR
+#291](https://github.com/bombadil-labs/groovy-commutator/pull/291). Independent
+Sol review first blocked one stale present-tense “Untested” sentence, then
+approved scientific head `9d4da90711f5fba5c3f49c748eb992c7bd91ca47`
+after it was corrected and the frozen raw band was reported exactly. All four
+CI checks passed on that head. The PR review thread records the final
+administrative-head and merge disposition.
+
+Next decision-relevant questions:
+
+1. Is any remaining current conclusion stronger than its preserved evidence,
+   rather than merely informal or historical prose?
+2. Has a concrete representation consumer appeared with a task and full cost
+   contract? If not, preserve the stop.
+3. If neither condition holds, use the final synthesis to state what was
+   learned and what would genuinely justify reopening work.
+
 ## 2026-09-22 — sixth unit: public-status audit and verified stop
 
 Inspected remote main `97ddaa4796fcfc134d6796a8053aa2dc483c0d07`
