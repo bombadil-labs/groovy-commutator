@@ -185,7 +185,8 @@
     "source": "docs/research/2026-09-22-groovy-field-program.md",
     "supports": [
       "g-autonomy-boundary",
-      "groovy-field-census"
+      "groovy-field-census",
+      "groovy-three-row-geometry"
     ]
   }
 ]

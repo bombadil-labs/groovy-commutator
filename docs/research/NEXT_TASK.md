@@ -1,6 +1,19 @@
 # Next agent: continue The Groovy Field
 
-Updated 2026-09-22. Myk opened [The Groovy Field](2026-09-22-groovy-field-program.md)
+Updated 2026-09-22. Latest unit: [three raw Groovy rows as spatial geometry](2026-09-22-groovy-three-row-geometry.md),
+[PR #295](https://github.com/bombadil-labs/groovy-commutator/pull/295).
+Read its [concise handoff](checkpoints/groovy-three-row-geometry.md) first.
+The raw, phase-free, period-three Rule-30 encoding has an exact whole-plane
+collision and cannot advance under any uniform local rule at one-step cadence.
+The ordered memory-three law remains valid. No radius expansion or further
+period search is useful under that contract. A marker/boundary/different
+encoding needs its own explicit design question; no such evaluation is queued.
+This unit is authored and self-verified by Codex; Reviewed by: none. Consult
+the PR for current integration status rather than assuming it has merged.
+
+## Preceding unit: Groovy Field census and corrections
+
+Myk opened [The Groovy Field](2026-09-22-groovy-field-program.md)
 as an active program after the Rule-110 autonomy unit below. Read its
 [census note](2026-09-22-groovy-field-census.md) and
 [checkpoint](checkpoints/groovy-field.md) first; the checkpoint orders the open

@@ -433,6 +433,29 @@ an identity/swap pair switching, not a predictor of whether switching occurs.
 [census, corrections and replay](2026-09-22-groovy-field-census.md),
 [current checkpoint](checkpoints/groovy-field.md).
 
+## 25. Turning memory into raw spatial rows can erase temporal order
+
+We were curious whether Rule 30's three remembered Groovy fields could become
+three spatial rows of a uniform binary 2D rule. We tried repeating those rows
+vertically, removing row labels, and requiring the encoded history to advance
+one source step under the same rule everywhere.
+
+We found an exact obstruction in an eleven-cell periodic source. Its Groovy
+rows go A, B, C, A, B', with B' different from B. The first history advancement
+is therefore indistinguishable from shifting the three-row plane vertically,
+but the next one is not. A uniform rule must respect that spatial shift.
+The same complete input plane would require two different outputs, so **no
+neighborhood size can make this particular encoding work**. We stopped without
+running the larger local-table test.
+
+The three ordered observations still suffice under the existing law. What
+fails is forgetting their temporal roles. Keeping a marker or boundary, or
+using another encoding, remains possible; a marker channel gives a direct
+construction with a larger alphabet. This makes the next question precise:
+how should a spatial representation carry its temporal seam, and at what cost?
+[Certificate, proof and scope](2026-09-22-groovy-three-row-geometry.md),
+[handoff](checkpoints/groovy-three-row-geometry.md).
+
 ## Keeping this useful
 
 After a completed or stopped unit, update its entry or add one short account:

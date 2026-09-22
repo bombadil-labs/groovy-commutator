@@ -24,7 +24,14 @@ steps of memory; every Groovy field is blind to the uniform D0 bit; and the
 source gradient plus two steps of memory repairs all of them. Open questions
 and their order are in the [checkpoint](checkpoints/groovy-field.md).
 
-## Latest direct request: original-source G autonomy
+Myk's latest question promotes Rule 30's three remembered G rows to spatial
+geometry. The [completed raw-three-row test](2026-09-22-groovy-three-row-geometry.md)
+finds an exact phase collision: the unlabelled period-three encoding cannot
+advance uniformly at any radius. Ordered memory remains sufficient. A marker,
+boundary or different encoding would be a new contract; no repair search is
+automatically queued. Start with its [handoff](checkpoints/groovy-three-row-geometry.md).
+
+## Preceding direct request: original-source G autonomy
 
 After the research drive ended, Myk asked whether D or G could evolve under
 its own law and authorized a bounded test of Rule 110. The
@@ -107,7 +114,7 @@ closed direct-quotient question does not need more rings or source rules.
 
 | Thread | State and evidence | Condition for further work |
 | --- | --- | --- |
-| The Groovy Field | **Active program.** Exact full-line [census](2026-09-22-groovy-field-census.md) of Groovy-field autonomy and repairs for all 256 elementary rules. | Follow the [checkpoint](checkpoints/groovy-field.md): review the corrections; define off-image dynamics before towers; bounded-memory obstructions remain distinct from a no-finite-memory theorem. |
+| The Groovy Field | **Active program; latest bounded unit complete.** The [census](2026-09-22-groovy-field-census.md) distinguishes temporal closure from the [raw-three-row geometry obstruction](2026-09-22-groovy-three-row-geometry.md). | Specify how a new spatial encoding retains temporal roles before another geometry test. Follow the [checkpoint](checkpoints/groovy-field.md); towers still require off-image dynamics, and bounded-memory failures are not no-finite-memory theorems. |
 | Erased distinctions / representation invariants | **Bounded units complete.** Three executable representation cases, the restricted Rule-110 causal-retention lower bound, and the [original-source G autonomy boundary](2026-09-22-rule110-g-autonomy.md). The [depth-three onset result](2026-09-14-depth-three-onset.md) remains integrated. | Start from the completed unit (PR #282). Further depth or observation searches need a question whose answer changes a decision. |
 | Dimensional lift | **Existence and finite recursion closed; application dormant** under the [affine-oriented theorem's contract](2026-09-17-affine-oriented-lift-theorem.md) and [consumer audit](2026-09-22-phase-free-consumer-audit.md). No current downstream caller, uniqueness, optimality or spontaneous organization theorem. | A concrete locality, readout or intervention advantage over ordinary history and the proof's period-three necklace construction, charging encoding and preprocessing costs fairly. |
 | Class-IV discriminator | **Frozen finite benchmark**, with [partial original provenance](2026-09-17-selective-persistence-discriminator-record.md). Its two core positive families are 54 and 110. | An independently defined target and external validation domain; no further feature search on the same labels by default. |

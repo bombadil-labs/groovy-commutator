@@ -107,6 +107,18 @@ Two exact facts frame the lift question:
   G and history may split them. The repaired fibers have size at most two, and
   the uniform pair shows that the maximum is attained.
 
+## Latest geometric follow-up
+
+Codex (OpenAI), at Myk's request on 2026-09-22; Reviewed by: none.
+The [raw-three-row test](2026-09-22-groovy-three-row-geometry.md) distinguishes
+ordered temporal closure from a uniform binary spatial encoding. Rule 30's
+three raw G rows, repeated vertically without phase labels, have an exact
+whole-plane collision at one-step cadence. No neighborhood enlargement fixes
+that encoding. A marker channel gives a larger-alphabet construction from the
+known law; a different binary geometry remains a separate design question.
+The [unit handoff](checkpoints/groovy-three-row-geometry.md) records the frozen
+protocol, certificate and stopping decision.
+
 ## Stages
 
 | Stage | Question(s) | State |
@@ -119,6 +131,7 @@ Two exact facts frame the lift question:
 | Follow-ups: output complement vs D0; universal repairs at memory 3; G alone at memory 5 | 2, 5, 9 | bounded run complete; see evidence limits |
 | 5. Towers: the Groovy field of the repaired system | 10 | requires an off-image completion contract |
 | 6. A general operator beyond one-bit, radius-one tracks | 5, 9 | open |
+| Raw three-row geometry: Rule-30 temporal roles as spatial rows | 8, 9 | closed negative for the unlabelled period-three encoding; no repair search queued |
 
 Results and their evidence level are in the
 [census note](2026-09-22-groovy-field-census.md); the current state and next

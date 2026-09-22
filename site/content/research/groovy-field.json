@@ -18,5 +18,25 @@
       "g-autonomy-boundary",
       "affine-oriented-lift-20260917"
     ]
+  },
+  {
+    "label": "Groovy geometry",
+    "slug": "groovy-three-row-geometry",
+    "title": "Three Groovy rows need their temporal seam",
+    "date": "2026-09-22",
+    "updated": "2026-09-22",
+    "kind": "Exact obstruction",
+    "evidence": "exact",
+    "topic": "Algebra and closure",
+    "summary": "An eleven-cell periodic Rule-30 source gives identical unlabelled three-row input planes requiring different successors. No uniform binary 2D rule can advance this period-three encoding at one-step cadence, at any radius.",
+    "takeaway": "Ordered memory-three autonomy survives. Spatially arranging the raw bits and forgetting their temporal roles is a further information loss; markers, boundaries or another encoding remain possible.",
+    "source": "docs/research/2026-09-22-groovy-three-row-geometry.md",
+    "promotion": {
+      "stage": "research"
+    },
+    "related": [
+      "groovy-field-census",
+      "affine-oriented-lift-20260917"
+    ]
   }
 ]

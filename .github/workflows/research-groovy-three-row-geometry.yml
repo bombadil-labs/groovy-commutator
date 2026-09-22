@@ -1,0 +1,38 @@
+name: Groovy three-row geometry certificate
+
+on:
+  pull_request:
+    paths:
+      - 'scripts/groovy_three_row_geometry.py'
+      - 'src/groovy/ca.py'
+      - 'tests/test_groovy_three_row_geometry.py'
+      - 'results/groovy_three_row_geometry_20260922.json'
+      - 'docs/research/protocols/groovy-three-row-geometry-20260922.md'
+      - '.github/workflows/research-groovy-three-row-geometry.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/groovy_three_row_geometry.py'
+      - 'src/groovy/ca.py'
+      - 'tests/test_groovy_three_row_geometry.py'
+      - 'results/groovy_three_row_geometry_20260922.json'
+      - 'docs/research/protocols/groovy-three-row-geometry-20260922.md'
+      - '.github/workflows/research-groovy-three-row-geometry.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  geometry-certificate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    env:
+      OPENBLAS_NUM_THREADS: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install numpy pytest
+      - run: python scripts/groovy_three_row_geometry.py --check
+      - run: python -m pytest tests/test_groovy_three_row_geometry.py -q

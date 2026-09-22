@@ -1,0 +1,148 @@
+{
+  "schema_version": 1,
+  "rule": 30,
+  "memory": 3,
+  "source_cadence": 1,
+  "vertical_period": 3,
+  "max_horizontal_period": 12,
+  "protocol_commit": "5fdd92803f74cecae8e429a61025506bd0197073",
+  "inspected_main": "a8dee2d0510f22e7f992a65346e3167cd64ac2dd",
+  "implementation_commit": "a354d42ff678c6528ee3c7840ef3c3bc57d2a6dd",
+  "source_hashes": {
+    "docs/research/protocols/groovy-three-row-geometry-20260922.md": "22a85af03d120341aeef947ed7042771c18d965729340f2e520d475fae54f30b",
+    "scripts/groovy_three_row_geometry.py": "d360a7412688d0347339f31d175a719b3004ee77fa5d4a7d290143d895176e7f",
+    "src/groovy/ca.py": "6969d6f0699b48602c8a2f55aecd61d58862e6472fea56f6d1ed9ebb2656d77e"
+  },
+  "search": {
+    "status": "whole_plane_collision",
+    "counts": [
+      {
+        "period": 1,
+        "source_words_visited": 2,
+        "phase_cases": 6,
+        "complete": true
+      },
+      {
+        "period": 2,
+        "source_words_visited": 4,
+        "phase_cases": 12,
+        "complete": true
+      },
+      {
+        "period": 3,
+        "source_words_visited": 8,
+        "phase_cases": 24,
+        "complete": true
+      },
+      {
+        "period": 4,
+        "source_words_visited": 16,
+        "phase_cases": 48,
+        "complete": true
+      },
+      {
+        "period": 5,
+        "source_words_visited": 32,
+        "phase_cases": 96,
+        "complete": true
+      },
+      {
+        "period": 6,
+        "source_words_visited": 64,
+        "phase_cases": 192,
+        "complete": true
+      },
+      {
+        "period": 7,
+        "source_words_visited": 128,
+        "phase_cases": 384,
+        "complete": true
+      },
+      {
+        "period": 8,
+        "source_words_visited": 256,
+        "phase_cases": 768,
+        "complete": true
+      },
+      {
+        "period": 9,
+        "source_words_visited": 512,
+        "phase_cases": 1536,
+        "complete": true
+      },
+      {
+        "period": 10,
+        "source_words_visited": 1024,
+        "phase_cases": 3072,
+        "complete": true
+      },
+      {
+        "period": 11,
+        "source_words_visited": 498,
+        "phase_cases": 1492,
+        "complete": false
+      }
+    ],
+    "certificate": {
+      "horizontal_period": 11,
+      "examples": [
+        {
+          "source": "00010011110",
+          "phase": 1,
+          "g_rows": [
+            "00110110010",
+            "01100010011",
+            "00100010010",
+            "00110110010"
+          ]
+        },
+        {
+          "source": "00111110001",
+          "phase": 0,
+          "g_rows": [
+            "01100010011",
+            "00100010010",
+            "00110110010",
+            "01100010111"
+          ]
+        }
+      ],
+      "input_rows": [
+        "01100010011",
+        "00100010010",
+        "00110110010"
+      ],
+      "output_rows": [
+        [
+          "00100010010",
+          "00110110010",
+          "01100010011"
+        ],
+        [
+          "00100010010",
+          "00110110010",
+          "01100010111"
+        ]
+      ],
+      "defect_xy": [
+        8,
+        2
+      ]
+    }
+  },
+  "local_stencil_test": {
+    "status": "not_evaluated",
+    "reason": "whole-plane obstruction already excludes every stencil"
+  },
+  "verification": {
+    "verified": true,
+    "method": "scalar Rule-30 Boolean formula",
+    "identical_full_periodic_inputs": true,
+    "different_required_successors": true,
+    "defect_outputs": [
+      "0",
+      "1"
+    ],
+    "scope": "all finite neighborhoods, via periodic extension to Z^2"
+  }
+}
