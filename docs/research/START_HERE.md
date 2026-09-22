@@ -13,6 +13,22 @@ factors, counterexamples, graph certificates and explicit constructions.
 The [limits and prior-art guide](2026-09-21-research-boundaries.md) explains
 what the impossibility theorems constrain and where useful exact work remains.
 
+## Latest direct request: original-source G autonomy
+
+After the research drive ended, Myk asked whether D or G could evolve under
+its own law and authorized a bounded test of Rule 110. The
+[completed unit](2026-09-22-rule110-g-autonomy.md) proves that Rule 110's G has
+no deterministic present-only factor on the full binary line at cadence one:
+periodic sources 001 and 011 have identical G fields and different next G
+fields. A larger spatial neighborhood cannot fix this. The known Rule-32
+G -> Rule128 identity remains an exact positive example.
+
+This directly answers one sufficient-state question within Erased
+Distinctions; it does not reopen dimensional applications or the scheduled
+drive. See the [current handoff](checkpoints/g-autonomy.md) before choosing a
+follow-up. No broader census, history search or restricted-domain experiment
+is automatically queued.
+
 ## Portfolio after the completed unit
 
 Read [What we have learned](FINDINGS.md) for the running plain-language
@@ -80,7 +96,7 @@ closed direct-quotient question does not need more rings or source rules.
 
 | Thread | State and evidence | Condition for further work |
 | --- | --- | --- |
-| Erased distinctions / representation invariants | **Bounded unit complete.** Three executable representation cases and the restricted Rule-110 causal-retention lower bound. The [depth-three onset result](2026-09-14-depth-three-onset.md) remains integrated. | Start from the completed unit (PR #282). Further depth or observation searches need a question whose answer changes a decision. |
+| Erased distinctions / representation invariants | **Bounded units complete.** Three executable representation cases, the restricted Rule-110 causal-retention lower bound, and the [original-source G autonomy boundary](2026-09-22-rule110-g-autonomy.md). The [depth-three onset result](2026-09-14-depth-three-onset.md) remains integrated. | Start from the completed unit (PR #282). Further depth or observation searches need a question whose answer changes a decision. |
 | Dimensional lift | **Existence and finite recursion closed; application dormant** under the [affine-oriented theorem's contract](2026-09-17-affine-oriented-lift-theorem.md) and [consumer audit](2026-09-22-phase-free-consumer-audit.md). No current downstream caller, uniqueness, optimality or spontaneous organization theorem. | A concrete locality, readout or intervention advantage over ordinary history and the proof's period-three necklace construction, charging encoding and preprocessing costs fairly. |
 | Class-IV discriminator | **Frozen finite benchmark**, with [partial original provenance](2026-09-17-selective-persistence-discriminator-record.md). Its two core positive families are 54 and 110. | An independently defined target and external validation domain; no further feature search on the same labels by default. |
 | Refinement fibers / defects | **Paused.** Local mechanisms are useful in their stated height-two family. The [held-structures completion and correction](2026-09-21-held-structures-account.md) preserves the ninth unit and invalidates three mistimed predictor scores. | A standalone scientific payoff and a bounded protocol; a corrected run is required before reusing those three scores. There is no automatic tenth unit. |

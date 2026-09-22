@@ -2731,6 +2731,15 @@
       "source": "presentation-versus-dynamical-complexity",
       "target": "sofic-permanence-certificate",
       "type": "depends_on"
+    },
+    {
+      "source": "g-autonomy-boundary",
+      "type": "depends_on",
+      "target": "observation-factor",
+      "reason": "The Rule-110 periodic collision violates the necessary equal-observation/equal-successor criterion for any deterministic factor, including nonlocal ones.",
+      "research": [
+        "g-autonomy-boundary"
+      ]
     }
   ],
   "nodes": [
@@ -5251,6 +5260,19 @@
       "source": "docs/knowledge/held-structures-stream-timing.md",
       "research": [
         "held-structures-account"
+      ]
+    },
+    {
+      "id": "g-autonomy-boundary",
+      "title": "Groovy autonomy depends on rule and domain",
+      "kind": "finding",
+      "status": "exact",
+      "summary": "Rule 32's G follows Rule128; Rule 110's G has no present-only full-line factor at cadence one, certified by equal periodic G fields with different successors.",
+      "updated": "2026-09-22",
+      "source": "docs/knowledge/g-autonomy-boundary.md",
+      "research": [
+        "g-autonomy-boundary",
+        "local-correction-caps"
       ]
     }
   ],

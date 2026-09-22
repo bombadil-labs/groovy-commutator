@@ -19,8 +19,19 @@ Authored by: Codex (OpenAI), 2026-09-22.
   [Signed review record](https://github.com/bombadil-labs/groovy-commutator/pull/293#issuecomment-5780787370).
   The reviewer performed no target implementation or evaluation. The protocol's
   provenance header was subsequently updated; scientific scope stayed fixed.
-- Implementation is committed after Gate 1 and before the primary evaluation.
-  The pinned implementation and execution time belong in `execution.json`.
-  Final independent result review is pending, tracked on PR #293.
+- Implementation commit `232662516b858eabb4743dce9f8ef2c76847bec6` follows
+  Gate 1 and precedes the primary evaluation. The run began at
+  `2026-09-22T17:17:39.484484+00:00`; `execution.json` preserves the timing,
+  resource account and result hash. It stopped at the period-three witness
+  after ten ring states, without extending any frozen budget.
+- The primary record supports P1 by exact counterexample. Its source hashes,
+  deterministic replay and the existing canonical integrity registry pass.
+  Site validation passes all 21 tests and the production build.
+- Sol's separate tuple/causal-window certificate verifier and
+  [independent audit](independent-review.md) check the result without importing
+  the primary evaluator. The author reviews that contribution in turn.
+  Current-head independent final review, applicable CI and merge disposition
+  are recorded on [PR #293](https://github.com/bombadil-labs/groovy-commutator/pull/293),
+  the authority for whether the gathering branch has integrated.
 
 No old reset or solo-research waiver is used for this unit.

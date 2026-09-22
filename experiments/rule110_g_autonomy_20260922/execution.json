@@ -1,0 +1,10 @@
+{
+  "elapsed_seconds": 0.011821406995295547,
+  "finished_utc": "2026-09-22T17:17:39.496304+00:00",
+  "implementation_commit": "232662516b858eabb4743dce9f8ef2c76847bec6",
+  "memory_budget_bytes": 1073741824,
+  "peak_rss_kib": 12416,
+  "result_sha256": "d4be4bef70fe7073328c46e061722752bbc33eec7992a2f5d10e90ddfa0bcdc4",
+  "started_utc": "2026-09-22T17:17:39.484484+00:00",
+  "wall_budget_seconds": 120
+}
