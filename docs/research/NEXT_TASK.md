@@ -67,15 +67,19 @@ gradient results are observation-relative and charge their retained state.
 
 ## Sixth completed unit
 
-A current public-surface audit found one remaining actionable contradiction:
-the Concepts page still called absential compressibility an open Class-IV
-detector question even though the Questions page reports the completed 1D/2D
-negative. The site now labels that conclusion as bounded, negative and finite,
-and FINDINGS records its setup and limits in plain language. The dimensional
-organization question on the same page is genuinely open and remains so; it
-does not supply a queued experiment without a consumer and resource contract.
+A current public-surface audit found six remaining forward-looking status
+defects. The Concepts page still called absential compressibility open and a
+historical remainder question the site's research frontier. Two research
+catalog entries still called proved finite-depth recursion open and completed
+pulse-shape work “next.” Two knowledge summaries still said the paused
+Class-IV refinement Program was continuing. These pointers are corrected, and
+FINDINGS records the bounded absential negative in plain language.
 
-This closes the current-status audit. Do not turn generic mathematical
+The dimensional organization and iterative-remainder questions are genuinely
+open and remain so; neither supplies a queued experiment without a consumer
+and resource contract. One-beam typed compression is likewise open but dormant.
+
+This closes the present public-status audit. Do not turn generic mathematical
 openness or historical future tense into a work queue. A new unit needs a
 specific discrepancy, caller or decision that the result would change.
 

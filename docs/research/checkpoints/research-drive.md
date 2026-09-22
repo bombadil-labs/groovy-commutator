@@ -14,21 +14,27 @@ queues no empirical work, and the remaining high-value risk was a fresh agent
 or reader following a stale public claim. This outranked manufacturing another
 experiment or building generic infrastructure without a second consumer.
 
-The audit found one actionable contradiction. The Concepts page still called
-absential compressibility an open Class-IV-detector question, while the linked
-Questions page already reports the completed negative. The preserved
-experiment tested seven Life-like rules on 60-by-60 tori, eight seeds per rule,
-240 steps with a settled tail, and still-life/glider probes. In every tested
-condition the absential score tracked the raw score rather than cross-cutting
-it. The public prose now calls this a bounded negative, and FINDINGS adds an
-accessible account. No protocol, runner, result byte or classifier threshold
-changed.
+An independent read-only Sol audit found six actionable forward-looking status
+defects. The Concepts page still called absential compressibility open and a
+historical remainder question the site's research frontier. The research
+catalog still called proved fixed-finite-depth recursion open and completed
+pulse-shape work the next control. Two knowledge summaries still said the
+paused Class-IV refinement Program was continuing. These pointers now state
+the later bounded results and current dispositions.
 
-The other apparent public open question—endogenous establishment of a
-dimensional interpretation—is legitimate rather than stale. It still lacks a
-declared consumer, organization mechanism and resource contract, so it does
-not justify an automatic experiment. Historical planning prose and scoped
-knowledge questions remain provenance, not scheduling authority.
+The preserved absential experiment tested seven Life-like rules on 60-by-60
+tori, eight seeds per rule, 240 steps with a settled tail, and still-life/glider
+probes. In every tested condition the absential score tracked the raw score
+rather than cross-cutting it. The public prose now calls this a bounded
+negative, and FINDINGS adds an accessible account. No protocol, runner, result
+byte or classifier threshold changed.
+
+Endogenous establishment of a dimensional interpretation and iterative
+remainder closure are legitimate open questions rather than stale claims.
+One-beam typed compression is also open but dormant. None has a declared
+consumer and resource contract that would justify an automatic experiment.
+Historical planning prose and scoped knowledge questions remain provenance,
+not scheduling authority.
 
 Gathering branch: `gather/public-status-stop`; publication and review state
 belong in its PR. Local verification covers the research-site tests, production

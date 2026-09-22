@@ -1497,7 +1497,7 @@ export default function Concepts() {
             <p style={{ ...pBody, marginTop: '1.1rem', marginBottom: 0 }}>
               Try rule 90 in the pinned panel: both fields go flat &mdash; for affine rules the two constructions
               agree forever, one more face of the affine theorem. For most rules they disagree, and whether that
-              disagreement can follow a rule of its own is The Walk, this site's research frontier. The{' '}
+              disagreement can follow a rule of its own is the question The Walk investigates. The{' '}
               <span className="gc-mono" style={{ fontSize: '0.85em', fontWeight: 700 }}>ENGINE</span> label on the
               sections below marks constructions of this shape: fields that walk on their own output rather than
               watching <Op>E</Op>'s.
