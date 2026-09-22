@@ -38,9 +38,13 @@ but the raw primary file is absent and the legacy summaries are not registered
 by the current integrity checker. Gradient conclusions are relative to their
 declared observations and retained-state costs.
 
-Gathering branch: `gather/second-lift-status-repair`. PR, reviewed head, CI and
-merge disposition must be appended after publication. No experiment, solver,
-canonical artifact or expensive Actions dispatch was created.
+Gathering branch: `gather/second-lift-status-repair`; [PR
+#289](https://github.com/bombadil-labs/groovy-commutator/pull/289). Independent
+Sol final-head review approved scientific head
+`ef51e6db4ab16a72389675d82197c095da4a4240` without blocking findings. All
+four CI checks passed. The PR review thread records the final
+administrative-head and merge disposition. No experiment, solver, canonical
+artifact or expensive Actions dispatch was created.
 
 Next decision-relevant questions:
 
