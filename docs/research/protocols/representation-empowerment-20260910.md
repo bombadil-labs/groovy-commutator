@@ -5,6 +5,13 @@
 **Scope:** static `n=12` ECA observer census only; no dimensional-lift or adaptive-observer claim.  
 **Dependencies:** Research025 (`fiber-visibility`), Research026 (`possibility-frontier`), and the existing Research026 observer census. The separately frozen gradient-intervention protocol has a different action/outcome contract and is not numerically pooled with this experiment.
 
+**Disposition, 2026-09-22:** preserved but parked unrun. A prospective
+[endpoint and cost audit](../2026-09-22-representation-empowerment-disposition.md)
+proved that the immediate-inclusive primary outcome makes identity a universal
+one-bit capacity maximizer. Do not treat the planned-work section below as a
+current instruction. Any repaired control question requires a new protocol;
+the frozen specification below is unchanged historical provenance.
+
 ## Question
 
 Research026 already separates two objectives for a lossy representation `P`:

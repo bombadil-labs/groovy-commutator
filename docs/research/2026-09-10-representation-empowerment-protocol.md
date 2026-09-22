@@ -1,6 +1,6 @@
 # A third representation objective: the control channel is now specified
 
-The [parallel-agent protocol](protocols/representation-empowerment-20260910.md) completes the proposal-writing scope of [issue63](https://github.com/bombadil-labs/groovy-commutator/issues/63#issuecomment-5622837474). The [named representation-empowerment census](../knowledge/representation-empowerment-planned.md) is **planned and unrun**. This note registers the work and records the source and certification contract; it reports no new channel measurement.
+The [parallel-agent protocol](protocols/representation-empowerment-20260910.md) completes the proposal-writing scope of [issue63](https://github.com/bombadil-labs/groovy-commutator/issues/63#issuecomment-5622837474). The [named representation-empowerment census](../knowledge/representation-empowerment-planned.md) was **planned and unrun**. A 2026-09-22 [prospective audit](2026-09-22-representation-empowerment-disposition.md) parked it before implementation: the immediate-inclusive primary endpoint makes identity a universal one-bit capacity maximizer. This note preserves the original source and certification contract; it reports no new channel measurement.
 
 ## Preserve the observer and its clock
 
@@ -10,7 +10,7 @@ Its objects are observer/cadence pairs (P,q), not observations alone. Identity a
 
 Write E for one fine ECA update and T=E^q for the given observer's macro step. One action occurs before the first T step. Finite outcomes observe T(a(S_0)),...,T^h(a(S_0)); the initial-inclusive variant also includes P(a(S_0)). The stable future class uses the same T. Thus h is a macro-observation horizon and hq is its fine-tick duration. Reusing the old stable class while silently changing its sampling clock would change the question.
 
-The original 247-rule breaker denominator and prior repertoire-optimum conventions are retained. The nine other rules are controls. The frozen majority prediction is still unrun.
+The original 247-rule breaker denominator and prior repertoire-optimum conventions are retained in the frozen record. The nine other rules are controls. The frozen majority prediction was not run and is no longer scheduled.
 
 ## Information available to the controller
 
@@ -35,6 +35,6 @@ Aggregate certificate intervals with the same exact p(y) weights used for scores
 
 ## What closing the proposal means
 
-The protocol, planned-work entry, research catalog and Erased Distinctions Program now point to one named deliverable. The implementation must be committed before the new census, reproduce the old closure/repertoire controls, and satisfy the exact and numerical checks. Only that later completed result can move the experiment out of planned status.
+The protocol, planned-work entry, research catalog and Erased Distinctions Program originally pointed to one named deliverable. Before the implementation was written, the 2026-09-22 audit showed that its primary endpoint does not justify the census. The historical implementation requirements remain part of the frozen record, but they are not a current work order.
 
 No new numerical result, observer-selection rule or evidence upgrade is supplied here.

@@ -134,7 +134,7 @@
 .kb-review { border-left: 3px solid #9a402f; background: var(--bg-alt); padding: .75rem 1.25rem; margin-top: 1.5rem; font-size: 1rem; }
 .kb-review h2 { font-size: 1.2rem; margin: .5rem 0; }
 .research-status.refuted { color: #803524; border-color: #a9604c; }
-.research-status.proposed, .research-status.planned { border-style: dashed; }
+.research-status.proposed, .research-status.planned, .research-status.parked { border-style: dashed; }
 @media (max-width: 800px) {
   .kb-layout { grid-template-columns: minmax(0, 1fr); gap: 2rem; }
   .kb-sidebar { display: block; }

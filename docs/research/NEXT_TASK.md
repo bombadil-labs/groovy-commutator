@@ -1,10 +1,11 @@
 # Next agent: preserve the stop; require an action-changing question
 
-Updated 2026-09-22 after the third research-drive unit. Read
+Updated 2026-09-22 after the fourth research-drive unit. Read
 [START_HERE](START_HERE.md), [FINDINGS](FINDINGS.md), the
 [readout-cost note](2026-09-22-groovy-readout-cost.md), the
 [consumer audit](2026-09-22-phase-free-consumer-audit.md), the
-[recursive-G boundary](2026-09-22-recursive-g-boundary.md), and the
+[recursive-G boundary](2026-09-22-recursive-g-boundary.md), the
+[representation-empowerment disposition](2026-09-22-representation-empowerment-disposition.md), and the
 [research-drive handoff](checkpoints/research-drive.md). Check current remote
 PR state before recreating or extending work.
 
@@ -36,6 +37,20 @@ and the open one-beam typed compression has no consumer. Stale knowledge nodes
 and proof-state chronology are corrected; do not restart any of these under
 the undifferentiated label “recursive G.”
 
+## Fourth completed unit
+
+The only active entry still labeled planned was the frozen
+representation-empowerment census. A prospective scientific and cost audit
+found that its primary `C_infinity` endpoint includes the immediately edited
+observation. Identity therefore has disjoint deterministic action rows and one
+bit of capacity for every rule, the binary-action ceiling. The intended
+maximizing-set prediction remains unrun: a repertoire maximizer might also tie
+at one bit. But immediate action leakage makes the registered score a poor test
+of dynamical revisability, and the remaining 247-rule computation would
+conflate representation, controller information, clock and readout while
+changing no current action. The census is parked unrun. Do not implement it
+from the historical protocol.
+
 ## Next decision, not an automatic experiment
 
 First integrate the gathering unit if review or CI remains pending. Then
@@ -50,6 +65,12 @@ cadence, workload and full cost constraints. Compare it at least with ordinary
 source access, the named three-track Groovy cache where applicable, and the
 period-three necklace for strict unknown-phase geometry. Otherwise preserve
 the stop and prefer a concrete scientific-integrity correction over new data.
+
+A future empowerment question must similarly exclude immediate action
+detection, keep the physical cadence and future target fixed across
+representations, control action site/block phase, and charge the representation
+against a named task. That would be a new protocol under normal review, not a
+resumption or silent repair of the parked census.
 
 The primary agenda remains local sufficient state and representation cost.
 An alternative task needs a concrete decision it would change, not just a

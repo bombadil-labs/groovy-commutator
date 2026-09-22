@@ -1262,7 +1262,7 @@
       "type": "depends_on"
     },
     {
-      "reason": "The planned comparison reuses the declared static observer/cadence domain and repertoire optimum.",
+      "reason": "The parked protocol reused the declared static observer/cadence domain and repertoire optimum; its primary endpoint was later found to credit immediate action detection.",
       "research": [
         "representation-empowerment-protocol",
         "possibility-frontier"
@@ -4142,13 +4142,14 @@
       "id": "representation-empowerment-census",
       "kind": "experiment",
       "research": [
-        "representation-empowerment-protocol"
+        "representation-empowerment-protocol",
+        "representation-empowerment-disposition"
       ],
       "source": "docs/knowledge/representation-empowerment-planned.md",
-      "status": "planned",
-      "summary": "The hidden-state no-op/flip census uses fixed observer/cadence pairs, exact channels and capacity certificates. Implementation and evaluation remain unrun.",
-      "title": "Compare future repertoire with representation empowerment",
-      "updated": "2026-09-10"
+      "status": "parked",
+      "summary": "A prospective audit proved that the immediate-inclusive primary endpoint makes identity a universal one-bit capacity maximizer. The broad census is parked unrun; any delayed-control replacement needs a new protocol.",
+      "title": "Representation-empowerment census parked before evaluation",
+      "updated": "2026-09-22"
     },
     {
       "id": "conservative-online-suffix-learner",

@@ -1,0 +1,17 @@
+[
+  {
+    "slug": "representation-empowerment-disposition",
+    "label": "Empowerment census disposition",
+    "title": "An endpoint proof stops the representation-empowerment census",
+    "date": "2026-09-22",
+    "updated": "2026-09-22",
+    "kind": "Exact protocol audit and scheduling decision",
+    "evidence": "exact",
+    "topic": "Representation costs",
+    "summary": "Because the primary stable-future outcome includes the post-action observation, identity has one bit of capacity for every rule; the planned broad census is parked unrun.",
+    "takeaway": "Exclude immediate action detection and hold target, cadence and cost fixed before comparing control across representations.",
+    "source": "docs/research/2026-09-22-representation-empowerment-disposition.md",
+    "promotion": {"stage": "research"},
+    "related": ["representation-empowerment-protocol", "possibility-frontier", "research-portfolio-20260922"]
+  }
+]
