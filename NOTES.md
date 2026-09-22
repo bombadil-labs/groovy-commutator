@@ -216,8 +216,8 @@ proposed *use*: running the structure/noise compressibility diagnostic
 of on `G`, as a candidate cheap Class-IV detector — a still life's
 absential ring should be small and frozen, a Class III pattern's should
 churn at high density with no structure, a glider's should trace a
-compressible, persistent moving shape. Untested against known Class I-IV
-rules so far.
+compressible, persistent moving shape. This was the proposal; the later
+bounded 1D/2D panels below did not show the hoped-for clearer separation.
 
 **Second-order / reversible memory.** `S(t+1) = phi(S(t)) XOR S(t-1)` is
 the standard Margolus-Fredkin construction for giving 1D CA both memory
@@ -371,7 +371,7 @@ while the other random soups used 0.15, so this was not a controlled
 classifier benchmark. It did not compare runtime, observation, or storage
 cost and is not a universal classifier. Two
 byproducts worth keeping: raw settled-window compressibility descriptively
-groups this hand-picked panel (frozen 0.01–0.02 / Life, HighLife, and
+groups this hand-picked panel (frozen 0.007–0.016 / Life, HighLife, and
 III/IV Day & Night 0.32–0.36 / additive 0.61 / Seeds 0.79), and the affine
 theorem supplies a separate exact byproduct: B1357/S1357 is neighbor parity,
 so G₂ vanishes identically. All 50 random Replicator consistency checks agreed;

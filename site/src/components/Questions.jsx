@@ -899,7 +899,7 @@ export default function Questions() {
             Day &amp; Night also starts from density 0.5 while the other random soups start from 0.15, so this is
             not a controlled classifier benchmark.
             A descriptive byproduct of this panel is that raw settled-window compressibility puts the two frozen
-            cases at 0.01&ndash;0.02, Life, HighLife, and III/IV Day &amp; Night in a middle band
+            cases at 0.007&ndash;0.016, Life, HighLife, and III/IV Day &amp; Night in a middle band
             (0.32&ndash;0.36), and Seeds at 0.79. That is not a validated general classifier. The affine theorem
             has a separate exact-algebra byproduct: B1357/S1357 (&ldquo;Replicator&rdquo;) is neighbor parity, so the
             affine theorem gives G<sub>2D</sub> &equiv; 0. The runner's {absential2dData.affine_2d.trials} random
