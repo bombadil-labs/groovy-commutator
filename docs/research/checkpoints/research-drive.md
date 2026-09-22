@@ -37,10 +37,14 @@ consumer and resource contract that would justify an automatic experiment.
 Historical planning prose and scoped knowledge questions remain provenance,
 not scheduling authority.
 
-Gathering branch: `gather/public-status-stop`; publication and review state
-belong in its PR. Local verification covers the research-site tests, production
-site build, canonical result-integrity check and whitespace check. An
-independent final-head review remains required before integration.
+Gathering branch: `gather/public-status-stop`; [PR
+#290](https://github.com/bombadil-labs/groovy-commutator/pull/290). Independent
+Sol review first blocked a cost overclaim, then approved scientific head
+`a5e49af82d7289b601e39c91a549ebc4633f6dbb` after the finding was narrowed to
+separation under one compression score and runtime, observation and storage
+costs were left explicitly untested. All four CI checks passed on that head.
+The PR review thread records the final administrative-head and merge
+disposition.
 
 Next decision-relevant questions:
 
