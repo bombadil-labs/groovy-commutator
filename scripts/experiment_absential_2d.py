@@ -8,13 +8,14 @@ to live ones -- should compress in a class-discriminating way. A still
 life's absential ring is small and frozen; Class III churn keeps a dense,
 incompressible halo; a glider's halo is a compressible moving shape. The 1D
 test was inconclusive (raw and absential compressibility tracked each other
-closely). This is the fair 2D version.
+closely). This is the more directly motivated 2D version.
 
 Setup: seven Life-like rules with well-known informal characters, random
 soup starts, compressibility of the raw trajectory vs. the absential-field
-trajectory measured over the full run and over a "settled" tail window
-(where Class IV should have condensed into structures while Class III is
-still churning). Also verifies, as a cross-dimension bonus, that the affine
+trajectory measured over the full run and over a late tail window chosen to
+look beyond the initial transient. Day & Night uses density 0.5 while the
+other random soups use 0.15, so the result is not a controlled classifier
+benchmark. Also verifies, as a cross-dimension bonus, that the affine
 theorem survives the move to 2D: B1357/S1357 (Replicator) is neighbor
 parity -- GF(2)-linear, the 2D analog of rule 90 -- so G2 must vanish
 identically (checked against Life as a nonlinear control).
@@ -51,6 +52,9 @@ RULES = [
     # key, born, survive, soup density, informal class / why it's here.
     # Day & Night gets 0.5: it's a high-density rule, and 0.15 soup just
     # dies -- which would test the soup, not the rule.
+    # The legacy output note overstates this case: S23 leaves sparse survivors
+    # over the measured horizon. Retain the string to preserve result bytes;
+    # the public display applies a corrected label.
     ("no_birth", set(), {2, 3}, DENSITY, "I — everything dies from soup"),
     ("maze", {3}, {1, 2, 3, 4, 5}, DENSITY, "II — freezes into a static maze"),
     ("life", {3}, {2, 3}, DENSITY, "IV — still lifes, oscillators, gliders"),
@@ -63,7 +67,10 @@ RULES = [
 
 def glider_grid(n_gliders: int, rng: np.random.Generator) -> np.ndarray:
     """Sparse field of gliders on an empty grid -- the 'moving structure'
-    probe the absential hypothesis was originally framed around."""
+    probe the absential hypothesis was originally framed around.
+
+    Placements are attempted independently and may overlap.
+    """
     g = np.zeros((H, W), dtype=np.uint8)
     cells = [(0, 1), (1, 2), (2, 0), (2, 1), (2, 2)]
     for k in range(n_gliders):
@@ -74,7 +81,7 @@ def glider_grid(n_gliders: int, rng: np.random.Generator) -> np.ndarray:
 
 
 def blocks_grid(n_blocks: int, rng: np.random.Generator) -> np.ndarray:
-    """Sparse field of 2x2 still-life blocks -- the 'static structure' probe."""
+    """Sparse attempted block placements; placements may overlap."""
     g = np.zeros((H, W), dtype=np.uint8)
     for k in range(n_blocks):
         r0, c0 = rng.integers(0, H - 4), rng.integers(0, W - 4)
@@ -110,8 +117,8 @@ def main() -> None:
             ))
         print(f"{key}: done", flush=True)
 
-    # the structure probes: under Life itself, pure still lifes vs pure
-    # gliders vs settled soup -- the hypothesis's own home turf
+    # The structure probes under Life. Placements may overlap, so these are
+    # sparse attempted structure fields rather than guaranteed pure ensembles.
     probes = []
     for probe_name, maker in (("still_lifes", blocks_grid), ("gliders", glider_grid)):
         raws, abss = [], []
