@@ -36,7 +36,8 @@
       "bounded-source-recoder-recovery-status",
       "representation-case-studies",
       "causal-retention",
-      "groovy-readout-cost"
+      "groovy-readout-cost",
+      "phase-free-consumer-audit"
     ]
   },
   {
@@ -46,7 +47,7 @@
     "date": "2026-09-09",
     "updated": "2026-09-22",
     "status": "stable",
-    "summary": "Existence and finite recursion are complete. The marked Groovy query benefit is available from a smaller ordinary cache; phase-free binary geometry needs a separate consumer-driven comparison.",
+    "summary": "Existence and finite recursion are complete. No current downstream caller needs the phase-free binary layout; application work is dormant pending a consumer-driven comparison.",
     "thesis": "An exact representation is useful when its declared resource advantages survive comparison with simpler encodings.",
     "source": "docs/research/2026-09-09-dimensional-closure-program.md",
     "supports": [
@@ -100,7 +101,8 @@
       "forced-tables-20260917",
       "representation-case-studies",
       "causal-retention",
-      "groovy-readout-cost"
+      "groovy-readout-cost",
+      "phase-free-consumer-audit"
     ]
   },
   {

@@ -212,6 +212,24 @@ complete; no-go for a broad benchmark of this proposed advantage.** A real
 consumer requiring phase-free geometry would justify a different comparison.
 [Derivation and cost contract](2026-09-22-groovy-readout-cost.md).
 
+## 14. No current caller needs the lift's phase-free geometry
+
+We were curious whether some existing operation still required the six-field
+lift's address-free binary layout after the marked Groovy readout advantage
+disappeared. We audited the active code, site, research registry and current
+documentation, separating downstream uses from tools that study the lift
+itself.
+
+The public code has no lift caller. The scripts that really consume
+unknown-phase windows are verifiers, finite-beam replayers or measurements of
+the construction itself. Other open motivations do not declare a workload
+that needs spatial phase. **Repository audit complete; leave the dimensional
+application question dormant.** This is not an impossibility theorem. A real
+future consumer can reopen it by stating its output, geometry, cadence and
+full cost contract and by beating ordinary storage, the three-track cache and,
+where relevant, the simpler period-three necklace.
+[Consumer audit and reopening contract](2026-09-22-phase-free-consumer-audit.md).
+
 ## Keeping this useful
 
 After a completed or stopped unit, update its entry or add one short account:

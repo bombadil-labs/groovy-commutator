@@ -1,0 +1,17 @@
+[
+  {
+    "slug": "phase-free-consumer-audit",
+    "label": "Phase-free consumer audit",
+    "title": "Phase-free geometry: no current downstream consumer",
+    "date": "2026-09-22",
+    "updated": "2026-09-22",
+    "kind": "Repository consumer audit and scheduling decision",
+    "evidence": "exploratory",
+    "topic": "Representation costs",
+    "summary": "The active code and current research record contain no independent consumer of the affine lift's phase-free binary local geometry; physical-window users study the lift itself.",
+    "takeaway": "Keep the dimensional application question dormant until a caller supplies an exact operation, geometry, workload and full cost contract.",
+    "source": "docs/research/2026-09-22-phase-free-consumer-audit.md",
+    "promotion": {"stage": "research"},
+    "related": ["groovy-readout-cost", "affine-oriented-lift-20260917", "research-portfolio-20260922"]
+  }
+]
