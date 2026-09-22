@@ -27,10 +27,13 @@ four-rule prelude. No protocol, result byte or threshold changed; runner edits
 are documentation/comments only and deliberately preserve the legacy output
 note for byte reproducibility.
 
-Gathering branch: `gather/absential-claim-boundary`; publication and review
-state belong in its PR. Local verification must include the research-site
-tests, production build, canonical result-integrity check and whitespace
-check. Independent final-head review remains required before integration.
+Gathering branch: `gather/absential-claim-boundary`; [PR
+#291](https://github.com/bombadil-labs/groovy-commutator/pull/291). Independent
+Sol review first blocked one stale present-tense “Untested” sentence, then
+approved scientific head `9d4da90711f5fba5c3f49c748eb992c7bd91ca47`
+after it was corrected and the frozen raw band was reported exactly. All four
+CI checks passed on that head. The PR review thread records the final
+administrative-head and merge disposition.
 
 Next decision-relevant questions:
 
