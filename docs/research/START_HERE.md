@@ -25,11 +25,15 @@ source gradient plus two steps of memory repairs all of them. Open questions
 and their order are in the [checkpoint](checkpoints/groovy-field.md).
 
 Myk's latest question promotes Rule 30's three remembered G rows to spatial
-geometry. The [completed raw-three-row test](2026-09-22-groovy-three-row-geometry.md)
-finds an exact phase collision: the unlabelled period-three encoding cannot
-advance uniformly at any radius. Ordered memory remains sufficient. A marker,
-boundary or different encoding would be a new contract; no repair search is
-automatically queued. Start with its [handoff](checkpoints/groovy-three-row-geometry.md).
+geometry. The [raw-three-row test](2026-09-22-groovy-three-row-geometry.md)
+finds an exact phase collision. The separately frozen
+[one-row repair](2026-09-22-groovy-separator-lift.md) then succeeds for both a
+zero separator and a one separator: four binary spatial rows evolve under a
+uniform 13-by-4 local rule at one source step per update. The ones separator
+is locally recognizable because G never contains 1111; the zero law shows
+that unique phase labels are not necessary when ambiguous readings agree on
+the output. This two-candidate follow-up is complete. Start with its
+[handoff](checkpoints/groovy-three-row-geometry.md) before proposing another unit.
 
 ## Preceding direct request: original-source G autonomy
 
@@ -114,7 +118,7 @@ closed direct-quotient question does not need more rings or source rules.
 
 | Thread | State and evidence | Condition for further work |
 | --- | --- | --- |
-| The Groovy Field | **Active program; latest bounded unit complete.** The [census](2026-09-22-groovy-field-census.md) distinguishes temporal closure from the [raw-three-row geometry obstruction](2026-09-22-groovy-three-row-geometry.md). | Specify how a new spatial encoding retains temporal roles before another geometry test. Follow the [checkpoint](checkpoints/groovy-field.md); towers still require off-image dynamics, and bounded-memory failures are not no-finite-memory theorems. |
+| The Groovy Field | **Active program; latest bounded unit complete.** Three raw G rows fail as geometry; a [constant fourth row](2026-09-22-groovy-separator-lift.md) succeeds in binary at cadence one. | Choose an operation that needs the spatial representation before optimizing it or exploring ambient dynamics. Follow the [checkpoint](checkpoints/groovy-field.md); any native-G result must name its completion. |
 | Erased distinctions / representation invariants | **Bounded units complete.** Three executable representation cases, the restricted Rule-110 causal-retention lower bound, and the [original-source G autonomy boundary](2026-09-22-rule110-g-autonomy.md). The [depth-three onset result](2026-09-14-depth-three-onset.md) remains integrated. | Start from the completed unit (PR #282). Further depth or observation searches need a question whose answer changes a decision. |
 | Dimensional lift | **Existence and finite recursion closed; application dormant** under the [affine-oriented theorem's contract](2026-09-17-affine-oriented-lift-theorem.md) and [consumer audit](2026-09-22-phase-free-consumer-audit.md). No current downstream caller, uniqueness, optimality or spontaneous organization theorem. | A concrete locality, readout or intervention advantage over ordinary history and the proof's period-three necklace construction, charging encoding and preprocessing costs fairly. |
 | Class-IV discriminator | **Frozen finite benchmark**, with [partial original provenance](2026-09-17-selective-persistence-discriminator-record.md). Its two core positive families are 54 and 110. | An independently defined target and external validation domain; no further feature search on the same labels by default. |

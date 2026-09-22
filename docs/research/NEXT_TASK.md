@@ -1,13 +1,18 @@
 # Next agent: continue The Groovy Field
 
-Updated 2026-09-22. Latest unit: [three raw Groovy rows as spatial geometry](2026-09-22-groovy-three-row-geometry.md),
+Updated 2026-09-22. Latest unit: [one extra binary row repairs spatial Groovy history](2026-09-22-groovy-separator-lift.md),
 [PR #295](https://github.com/bombadil-labs/groovy-commutator/pull/295).
 Read its [concise handoff](checkpoints/groovy-three-row-geometry.md) first.
-The raw, phase-free, period-three Rule-30 encoding has an exact whole-plane
-collision and cannot advance under any uniform local rule at one-step cadence.
-The ordered memory-three law remains valid. No radius expansion or further
-period search is useful under that contract. A marker/boundary/different
-encoding needs its own explicit design question; no such evaluation is queued.
+The raw period-three Rule-30 encoding still has an exact whole-plane collision.
+A separately frozen follow-up appends one constant row: both 0 and 1 produce
+a uniform binary 2D law on the 13-by-4 stencil, at one-step cadence. Each
+positive was independently checked over the complete 21-bit cone and all four
+phases. The ones construction has executable plane dynamics; the zero table
+has 657,893 forced keys and a matching independent digest. Unique temporal
+labels are sufficient but not necessary: ambiguous interpretations may agree
+on the next bit. The two-candidate repair is complete; no broader census or
+native-G evaluation is queued. Any next task needs a specified operation and
+representation cost or a declared ambient completion question.
 This unit is authored and self-verified by Codex; Reviewed by: none. Consult
 the PR for current integration status rather than assuming it has merged.
 

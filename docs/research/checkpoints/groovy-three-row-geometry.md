@@ -6,7 +6,58 @@ Branch `gather/groovy-three-row-geometry`,
 [PR #295](https://github.com/bombadil-labs/groovy-commutator/pull/295).
 This handoff records branch work; the PR is authoritative for merge status.
 
-## Starting point and selected question
+## Latest follow-up: a constant fourth row works
+
+Myk asked to keep exploring after the raw-three-row negative. The
+[new result](../2026-09-22-groovy-separator-lift.md) completes a separately
+frozen comparison of separators 0 and 1. Both give uniform binary 2D laws
+on x=-6..6, y=-2..1, at one source step per update, over every source state
+and every vertical phase.
+
+- Protocol: [`28475d0`](https://github.com/bombadil-labs/groovy-commutator/commit/28475d0de55491f86299cbcd704c9538d5805db2).
+  Graph/search implementation: [`628c1ac`](https://github.com/bombadil-labs/groovy-commutator/commit/628c1acffce1fe932125d3fe1252e4038418fa81).
+- The exact 16-node graph proves the maximum ones run in G_30 is three.
+  Thus an all-ones separator has a local four-bit marker test. Source zero
+  proves there is no corresponding zero-run bound.
+- `results/groovy_four_row_separator_20260922.json` retains stage one, including
+  the then-pending positive construction and zero-table test. Do not edit that
+  chronology. No zero-separator collision was found for periods 1..12.
+- Construction/table implementation before evaluation:
+  [`19b011f`](https://github.com/bombadil-labs/groovy-commutator/commit/19b011fc7017e428af6bfb502a7be5cbf5b2c562).
+  `results/groovy_separator_lift_20260922.json` settles both candidates.
+- The ones rule reuses the 164,477-key marked history table and explicitly
+  decodes phase; `src/groovy/separator_lift.py` provides its total local rule
+  and finite periodic-plane step. An independent unpacked Boolean replay checks
+  2^21 complete source words in all four phases (8,388,608 cases).
+- The zero law has 657,893 forced 52-bit keys with matching packed/unpacked
+  digest `1cb4e0c97e4f708af70e7f6538f08930b5b4589c6a92e0367a9f86b5f45a3149`.
+  Phases need not be individually identifiable when all readings agree on the
+  next bit. This refines the earlier marker-oriented interpretation.
+- The note gives a general necessary-and-sufficient phase-fiber compatibility
+  criterion by compactness; this is a post-evaluation proof deduction. It also
+  charges four stored bits per source column, initialization, table preparation,
+  maintenance and local access. No speed or global optimality claim follows.
+
+Fast follow-up verification (in addition to the original checks below):
+
+```
+OPENBLAS_NUM_THREADS=1 python scripts/groovy_four_row_separator.py --check
+OPENBLAS_NUM_THREADS=1 python scripts/verify_groovy_separator_lift.py --check
+python -m pytest tests/test_groovy_separator_lift.py -q
+```
+
+Local follow-up verification passed: graph/search replay, complete-cone replay
+in 6.90 seconds, 20 combined geometry regression cases, 64 existing integrity
+records, 21 research-page tests and site build. The note records the minor
+execution-order deviation (fixed zero screening before construction replay);
+all candidates and decision criteria remained frozen.
+
+All historical records and their implementation hashes remain intact. New
+records use the same narrow CI workflow instead of triggering unrelated
+historical workflows through the central registry. Review status remains none;
+current verification and integration status are in PR #295.
+
+## Preceding unit: starting point and selected question
 
 Inspected/fetched main `a8dee2d0510f22e7f992a65346e3167cd64ac2dd` (merged #294).
 No open PRs or issues at inspection. Read AGENTS, current direction, next task,
@@ -68,17 +119,18 @@ tests and the site build. The unit-specific checker covers the new record;
 the shared checker covers old registered evidence. Remote CI status is in the
 PR. Do not call self-checks a review or assume merge authorization.
 
-## Next decision questions
+## Next decision questions after the four-row repair
 
-1. Should the next representation retain a visible strip boundary or encode
-   a temporal seam in a binary plane? Specify the new encoding and readout
-   before an experiment. Marker-channel closure is already constructive.
-2. If a binary repair is desired, what exact resource should it minimize
-   relative to existing generic and six-field encodings: cells, neighborhood,
-   initialization or maintenance? There is no cost advantage established here.
+1. Which operation on this spatial history is worth studying beyond exact
+   source emulation? Specify its output and geometry. The four-row realization
+   now exists; another generic existence construction would add little.
+2. Does that operation justify optimizing stored cells, locality or access
+   relative to named tracks and existing lifts? The four-row construction has
+   explicit costs, but no performance advantage or global minimality result.
 3. If attention shifts to native G of a new 2D rule, what off-image completion
    and invariance question makes that well-defined? On-image agreement alone
    still does not specify native G.
 
 No further evaluation is queued by this unit. The user's time-to-space
-proposal remains a valid design direction with temporal roles now explicit.
+proposal now has exact four-row binary realizations, with both uniquely marked
+and harmlessly ambiguous temporal roles.

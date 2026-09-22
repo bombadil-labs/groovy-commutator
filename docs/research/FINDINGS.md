@@ -456,6 +456,28 @@ how should a spatial representation carry its temporal seam, and at what cost?
 [Certificate, proof and scope](2026-09-22-groovy-three-row-geometry.md),
 [handoff](checkpoints/groovy-three-row-geometry.md).
 
+## 26. One constant row repairs the binary spatial history
+
+We were curious whether one extra binary row could repair the three-row phase
+failure without adding a separate state channel. We tried an all-ones row and
+an all-zeros row, each appended to Rule 30's three Groovy history rows and
+repeated vertically.
+
+We found that **both work**, with one uniform binary 2D rule at one source step
+per update and a 13-column by four-row neighborhood. For the ones separator,
+the reason is particularly clear: a true Rule-30 Groovy row can never contain
+four consecutive ones. The extra row is therefore locally recognizable.
+The zero separator also closes, although temporal roles can remain ambiguous;
+all valid interpretations of an ambiguous neighborhood request the same bit.
+
+We checked the complete 21-bit source cone in all four phases, with separate
+packed and unpacked computations. These are exact local laws, not finite-ring
+extrapolations. The extra geometry costs a fourth stored bit per source column
+and additional local access; it has no demonstrated speed advantage over
+three named history tracks. The useful refinement is that we do not need to
+recover every hidden label, only distinctions that change the next update.
+[Construction, certificates and costs](2026-09-22-groovy-separator-lift.md).
+
 ## Keeping this useful
 
 After a completed or stopped unit, update its entry or add one short account:

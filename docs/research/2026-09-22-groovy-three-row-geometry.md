@@ -4,6 +4,12 @@
 Reviewed by: none. Self-verification uses two implementations, not two reviewers.
 [PR #295](https://github.com/bombadil-labs/groovy-commutator/pull/295).
 
+**Subsequent repair:** the separately frozen
+[constant-fourth-row follow-up](2026-09-22-groovy-separator-lift.md) succeeds
+for both zero and one separators. The raw-three-row obstruction below stands;
+the new result changes the encoding. The final section preserves the next
+question as it stood before that follow-up.
+
 ## What we asked
 
 Rule 30's Groovy field has a certified local update when it retains three

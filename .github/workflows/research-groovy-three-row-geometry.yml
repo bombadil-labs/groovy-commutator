@@ -4,19 +4,37 @@ on:
   pull_request:
     paths:
       - 'scripts/groovy_three_row_geometry.py'
+      - 'scripts/groovy_four_row_separator.py'
+      - 'scripts/verify_groovy_separator_lift.py'
+      - 'src/groovy/separator_lift.py'
+      - 'src/groovy/groovy_field.py'
       - 'src/groovy/ca.py'
       - 'tests/test_groovy_three_row_geometry.py'
+      - 'tests/test_groovy_separator_lift.py'
       - 'results/groovy_three_row_geometry_20260922.json'
+      - 'results/groovy_four_row_separator_20260922.json'
+      - 'results/groovy_separator_lift_20260922.json'
+      - 'results/groovy_field_20260922/review_audit.json'
       - 'docs/research/protocols/groovy-three-row-geometry-20260922.md'
+      - 'docs/research/protocols/groovy-four-row-separator-20260922.md'
       - '.github/workflows/research-groovy-three-row-geometry.yml'
   push:
     branches: [main]
     paths:
       - 'scripts/groovy_three_row_geometry.py'
+      - 'scripts/groovy_four_row_separator.py'
+      - 'scripts/verify_groovy_separator_lift.py'
+      - 'src/groovy/separator_lift.py'
+      - 'src/groovy/groovy_field.py'
       - 'src/groovy/ca.py'
       - 'tests/test_groovy_three_row_geometry.py'
+      - 'tests/test_groovy_separator_lift.py'
       - 'results/groovy_three_row_geometry_20260922.json'
+      - 'results/groovy_four_row_separator_20260922.json'
+      - 'results/groovy_separator_lift_20260922.json'
+      - 'results/groovy_field_20260922/review_audit.json'
       - 'docs/research/protocols/groovy-three-row-geometry-20260922.md'
+      - 'docs/research/protocols/groovy-four-row-separator-20260922.md'
       - '.github/workflows/research-groovy-three-row-geometry.yml'
 
 permissions:
@@ -35,4 +53,6 @@ jobs:
           python-version: '3.12'
       - run: python -m pip install numpy pytest
       - run: python scripts/groovy_three_row_geometry.py --check
-      - run: python -m pytest tests/test_groovy_three_row_geometry.py -q
+      - run: python scripts/groovy_four_row_separator.py --check
+      - run: python scripts/verify_groovy_separator_lift.py --check
+      - run: python -m pytest tests/test_groovy_three_row_geometry.py tests/test_groovy_separator_lift.py -q

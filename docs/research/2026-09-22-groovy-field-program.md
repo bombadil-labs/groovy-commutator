@@ -114,8 +114,11 @@ The [raw-three-row test](2026-09-22-groovy-three-row-geometry.md) distinguishes
 ordered temporal closure from a uniform binary spatial encoding. Rule 30's
 three raw G rows, repeated vertically without phase labels, have an exact
 whole-plane collision at one-step cadence. No neighborhood enlargement fixes
-that encoding. A marker channel gives a larger-alphabet construction from the
-known law; a different binary geometry remains a separate design question.
+that encoding. A separately frozen [constant-row follow-up](2026-09-22-groovy-separator-lift.md)
+then certifies a uniform binary 2D rule for each of the two four-row encodings
+(G_0,G_1,G_2,0) and (G_0,G_1,G_2,1), on a 13-by-4 stencil. G cannot contain
+1111, making the ones separator locally recognizable. The zero law also works,
+showing that ambiguous temporal labels are harmless when successors agree.
 The [unit handoff](checkpoints/groovy-three-row-geometry.md) records the frozen
 protocol, certificate and stopping decision.
 
@@ -131,7 +134,8 @@ protocol, certificate and stopping decision.
 | Follow-ups: output complement vs D0; universal repairs at memory 3; G alone at memory 5 | 2, 5, 9 | bounded run complete; see evidence limits |
 | 5. Towers: the Groovy field of the repaired system | 10 | requires an off-image completion contract |
 | 6. A general operator beyond one-bit, radius-one tracks | 5, 9 | open |
-| Raw three-row geometry: Rule-30 temporal roles as spatial rows | 8, 9 | closed negative for the unlabelled period-three encoding; no repair search queued |
+| Raw three-row geometry: Rule-30 temporal roles as spatial rows | 8, 9 | closed negative for the unlabelled period-three encoding |
+| One constant binary separator row | 8, 9 | both 0 and 1 certified at four rows, 13-by-4 stencil, one-step cadence; bounded unit complete |
 
 Results and their evidence level are in the
 [census note](2026-09-22-groovy-field-census.md); the current state and next

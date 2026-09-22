@@ -186,7 +186,8 @@
     "supports": [
       "g-autonomy-boundary",
       "groovy-field-census",
-      "groovy-three-row-geometry"
+      "groovy-three-row-geometry",
+      "groovy-separator-lift"
     ]
   }
 ]

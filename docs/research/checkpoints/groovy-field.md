@@ -6,14 +6,17 @@ Updated 2026-09-22. [Program](../2026-09-22-groovy-field-program.md),
 ## Latest unit: temporal rows as binary geometry
 
 Myk asked to test whether the three ordered Rule-30 G rows can instead run
-as unlabelled spatial rows. The [new note](../2026-09-22-groovy-three-row-geometry.md)
-and [handoff](groovy-three-row-geometry.md) record an exact period-11
-whole-plane collision. Raw vertical period three at one-step cadence is
-impossible at every radius; the marked memory-three law is unaffected.
+as unlabelled spatial rows. The [first note](../2026-09-22-groovy-three-row-geometry.md)
+records an exact period-11 whole-plane collision. The separately frozen
+[constant-row repair](../2026-09-22-groovy-separator-lift.md) succeeds for either
+constant: four binary rows support a uniform 13-by-4 rule at cadence one.
+G never contains 1111, so a ones separator is locally recognizable. A zero
+separator also closes without uniquely naming every temporal phase. See the
+[handoff](groovy-three-row-geometry.md) for certificates and the completion record.
 [PR #295](https://github.com/bombadil-labs/groovy-commutator/pull/295) preserves
 protocol, implementation and evaluation chronology. Authored by: Codex
 (OpenAI). Reviewed by: none. The PR carries current integration status.
-This closes one geometric encoding, not dimensional lifts in general.
+This closes the raw-three-row negative and the two four-row repair candidates.
 
 ## Preceding unit: census and certificate correction
 
@@ -98,10 +101,10 @@ excludes Rule-110 memory-1 closure, not arbitrary memory.
 
 ## Next decision questions
 
-1. **Temporal seam:** if raw G histories are represented spatially, what
-   marker, boundary or encoding retains the missing temporal role? A marker
-   channel suffices by construction; a binary repair needs an explicit cost
-   and geometry contract. The raw period-three line is closed.
+1. **Spatial operation:** the four-row binary repair is now exact. What
+   specified operation benefits from arranging history spatially, after paying
+   for the extra row, table construction, access and maintenance? A new encoding
+   census or neighborhood minimization is not justified without that decision.
 2. **Towers:** what off-image completion and invariance claim would make native
    G of a repaired history system well-defined and useful? Specify this before
    running a tower census; the geometry obstruction itself is on-image.
