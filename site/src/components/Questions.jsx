@@ -707,8 +707,9 @@ export default function Questions() {
             <strong style={{ color: 'var(--ink)' }}>What this says:</strong> no. Distributions for drain, crystalline,
             and structured overlap heavily &mdash; there's no clean image_ratio threshold that separates them. Two
             rules can share an identical image_ratio and still differ in whether they drain against a third. The
-            real condition is something more structural than a single score &mdash; a pair-level property, found and
-            measured in the <a href="#drain-mechanism" style={{ color: 'var(--accent)' }}>drain question below</a>.
+            single-rule image_ratio is insufficient in this finite dataset. Bounded pair-image size and overlap
+            are stronger but imperfect predictors of the measured endpoint label, as shown in the{' '}
+            <a href="#drain-mechanism" style={{ color: 'var(--accent)' }}>drain question below</a>.
           </p>
         </QuestionCard>
 
@@ -983,7 +984,7 @@ export default function Questions() {
             &le; {drainData.best_rule.max_image} states with overlap &ge; {drainData.best_rule.min_jaccard}&rdquo;
             gets precision {drainData.best_rule.precision} /
             recall {drainData.best_rule.recall} &mdash; a 4,096-state toy computation predicting behavior at n=100.
-            That imperfect predictor is evidence for a bounded collapse-and-overlap mechanism; it does not prove
+            That imperfect predictor establishes a bounded association, not a causal mechanism; it does not prove
             asymptotic convergence, necessity, or sufficiency.
           </p>
           <p style={{ fontSize: '0.88rem', color: 'var(--ink-soft)', margin: '0.8rem 0 0' }}>

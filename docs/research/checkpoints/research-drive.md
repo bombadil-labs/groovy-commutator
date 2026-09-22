@@ -25,10 +25,11 @@ that called the completed 64-fiber study “the next control” now names that
 follow-up and the paused Program. An independent read-only audit then found a
 more important current overclaim: the public drain page described a 100-step,
 five-seed endpoint label as convergence “forever” and a capped n=12 iterated
-image as a settled asymptotic mechanism. The page and runner documentation now
-state the finite horizon, cap, imperfect precision/recall and unproved
-alternatives. Three reusable knowledge pages and eight remaining catalog
-pointers into completed or parked work were also brought to current status.
+image as a settled asymptotic mechanism. The page, NOTES and runner documentation
+now state the finite horizon, cap, imperfect precision/recall and unproved
+alternatives. Three reusable knowledge pages and ten remaining catalog entries
+across nine files that pointed into completed or parked work were also brought
+to current status.
 START_HERE, NEXT_TASK and FINDINGS point to the terminal disposition.
 
 No experiment, protocol, solver run, result byte or scientific threshold was
