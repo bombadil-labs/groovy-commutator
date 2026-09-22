@@ -906,6 +906,7 @@
   "src/groovy/groovy_field.py": "7f35a0ce5a77211cdf56df0dbe65b641f49b1f602c60bb0bb8665ab46ea6aace",
   "scripts/groovy_field_suite.py": "c0cfa7ef06cb11c0456f732d9ecb95097a7199a0cfe062f67714b2b45661f4c5",
   "scripts/groovy_field_rule110_lift.py": "a68c77f81af1db627bd2f4b88ab37ba36141906a815160b47e86fd55560cca49",
-  "scripts/groovy_field_summarize.py": "a2ca54fe52a4e6d1bfc0fa7486ddebcf15fa09b0b5e20c25b1bc7e3855bfbf58"
+  "scripts/groovy_field_summarize.py": "6419ee9dcd0ceede895232fcde23d964ff394a498f7ba0bd4eb94cca720c70d4",
+  "scripts/groovy_field_followups.py": "6fb2bf31303784084926ca34f2354c007d545b84f2e781e79ef0be14efdde77c"
  }
 }

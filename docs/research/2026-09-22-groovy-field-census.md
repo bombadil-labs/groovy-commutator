@@ -20,7 +20,9 @@ used only as a consistency check (no disagreements in 512 checks).
    unresolved within the computation budget.
 2. **Does memory help?** A lot. Only 36 rules close with no memory at all;
    64 more need two steps, 32 need three (including Rules 30 and 106) and 8
-   need four. Rules 54 and 110 do not close with four.
+   need four. A follow-up pushed to five: **Rule 54's Groovy field is
+   fifth-order autonomous** (certified), ten more rules close at five by the
+   decider, and Rule 110 still does not.
 3. **What is missing?** Two kinds of things. Most often the Groovy field
    cannot tell **which background** it is in: two different periodic
    backgrounds, or two shifts of the same one, produce identical Groovy
@@ -33,7 +35,9 @@ used only as a consistency check (no disagreements in 512 checks).
    **spatial gradient** of the source (`Sᵢ₋₁ ⊕ Sᵢ`, one bit per cell) with two
    steps of memory closes the Groovy field of **all 256 rules**. The gradient
    is the source with exactly one bit removed: global complement, the D0 bit.
-   No one-bit track that forgets more than that works universally.
+   With three steps of memory, tracks that forget two bits (`l ⊕ r`,
+   `l ⊕ c ⊕ r`) and even a lossy nonlinear track are also universal (see
+   follow-ups).
 6. **Reachable states?** Letting the rule run one step first lowers the
    needed memory for 45 rules, but did not rescue any rule that had no law
    with four steps of memory. Rule 110 still has no law after one or two
@@ -156,6 +160,51 @@ choices), added to the Groovy field as one extra bit per cell.
   identical — a quotient that discards only a distinction that never matters.
 
 ![Rule 110 source (left), Groovy field (centre) and run-of-111 track (right), 120 steps on a 160-cell ring after 40 steps of burn-in](assets/groovy-field-rule110.png)
+
+## Follow-ups (same day)
+
+Run with [`scripts/groovy_field_followups.py`](../../scripts/groovy_field_followups.py);
+results `followup_complement.json`, `followup_universal3.json` and
+`followup_gonly5.json` in the same folder.
+
+**Output complement and D0 (census data only).** Complementing a rule's
+output (`φ → 255 − φ`) changes whether G closes within four steps for 41 of
+the 121 fully resolved pairs. What predicts the switch is whether the rule
+*keeps* its uniform states or *swaps* them, not which constant they fall to:
+
+| Complement pair type (D0 maps) | both close | switches | neither |
+| --- | ---: | ---: | ---: |
+| one sends both uniform states to 0, the other to 1 | 29 | 20 (9 vs 11) | 11 |
+| one fixes both uniform states, the other swaps them | 19 | 21 (**swap side closes 19**, fixed side 2) | 21 |
+
+When a rule keeps the D0 bit alive by swapping it every step, G can often
+track the dynamics anyway; when it keeps the D0 bit frozen, G usually
+cannot. Rule 110 (no law ≤ 4) and its complement Rule 145 (third-order
+autonomous) are one such pair. This is a count over 121 pairs, not a theorem.
+
+**Universal repairs with three steps of memory.** Eighteen radius-one tracks
+close every rule with memory ≤ 3 (all verdicts certified): the six source
+copies, the four gradients, and
+
+| Track | Formula | Sources sharing one track field on rings of 12 / 18 / 24 cells |
+| --- | --- | --- |
+| 90, 165 | `l ⊕ r` and its complement | 4 / 4 / 4 (forgets ℤ₂ × ℤ₂: even and odd sublattice complements) |
+| 150, 105 | `l ⊕ c ⊕ r` and its complement | 4 / 4 / 4 when the ring length is divisible by 3 (forgets a period-3 ℤ₂ × ℤ₂) |
+| 57, 99, 156, 198 | `c ⊕ (l ∨ ¬r)`, its mirror and complements | up to 18 / 76 / 322 (unbounded) |
+
+So the universal operator is not unique, and some universal repairs forget far
+more than the D0 bit *in the track*. The whole lifted state is another matter:
+on 16-cell rings, G plus its own history is nearly injective for complex rules
+(Rules 30, 54, 110 merge at most 2–4 sources per lifted state under every
+universal repair), while for trivial rules (0, 204) the lossy track-57 lift
+merges up to 47. How much a Groovy lift forgets depends on the rule more than
+on the repair.
+
+**G alone with five steps of memory** (the 116 rules without a law at four):
+Rule 54 closes, certified with a radius-4 table. Rules 22, 107, 109, 121, 122,
+135, 149, 151, 182 and 218 close by the decider, but their tables need a
+radius above 4 and are not certified. 55 rules, including 110, have certified
+counterexamples at five; 50 exceed the pair-graph cap.
 
 ## Data and reproduction
 

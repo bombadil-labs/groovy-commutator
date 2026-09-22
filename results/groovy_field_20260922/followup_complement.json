@@ -1,0 +1,1700 @@
+{
+ "data": {
+  "by_d0_pair": {
+   "both->0|both->1": {
+    "both close": 29,
+    "neither closes": 11,
+    "switches": 20,
+    "unresolved": 4
+   },
+   "swap|identity": {
+    "both close": 19,
+    "neither closes": 21,
+    "switches": 21,
+    "unresolved": 3
+   }
+  },
+  "by_kind": {
+   "both close": 48,
+   "neither closes": 32,
+   "switches": 41,
+   "unresolved": 7
+  },
+  "pairs": 128,
+  "rows": [
+   {
+    "complement": 255,
+    "d0": [
+     "both->0",
+     "both->1"
+    ],
+    "kind": "both close",
+    "min_k": [
+     1,
+     1
+    ],
+    "rule": 0
+   },
+   {
+    "complement": 254,
+    "d0": [
+     "swap",
+     "identity"
+    ],
+    "kind": "both close",
+    "min_k": [
+     1,
+     2
+    ],
+    "rule": 1
+   },
+   {
+    "complement": 253,
+    "d0": [
+     "both->0",
+     "both->1"
+    ],
+    "kind": "both close",
+    "min_k": [
+     1,
+     2
+    ],
+    "rule": 2
+   },
+   {
+    "complement": 252,
+    "d0": [
+     "swap",
+     "identity"
+    ],
+    "kind": "switches",
+    "min_k": [
+     2,
+     ">4"
+    ],
+    "rule": 3
+   },
+   {
+    "complement": 251,
+    "d0": [
+     "both->0",
+     "both->1"
+    ],
+    "kind": "both close",
+    "min_k": [
+     1,
+     2
+    ],
+    "rule": 4
+   },
+   {
+    "complement": 250,
+    "d0": [
+     "swap",
+     "identity"
+    ],
+    "kind": "switches",
+    "min_k": [
+     2,
+     ">4"
+    ],
+    "rule": 5
+   },
+   {
+    "complement": 249,
+    "d0": [
+     "both->0",
+     "both->1"
+    ],
+    "kind": "switches",
+    "min_k": [
+     ">4",
+     2
+    ],
+    "rule": 6
+   },
+   {
+    "complement": 248,
+    "d0": [
+     "swap",
+     "identity"
+    ],
+    "kind": "neither closes",
+    "min_k": [
+     ">4",
+     ">4"
+    ],
+    "rule": 7
+   },
+   {
+    "complement": 247,
+    "d0": [
+     "both->0",
+     "both->1"
+    ],
+    "kind": "both close",
+    "min_k": [
+     1,
+     2
+    ],
+    "rule": 8
+   },
+   {
+    "complement": 246,
+    "d0": [
+     "swap",
+     "identity"
+    ],
+    "kind": "both close",
+    "min_k": [
+     3,
+     3
+    ],
+    "rule": 9
+   },
+   {
+    "complement": 245,
+    "d0": [
+     "both->0",
+     "both->1"
+    ],
+    "kind": "both close",
+    "min_k": [
+     2,
+     2
+    ],
+    "rule": 10
+   },
+   {
+    "complement": 244,
+    "d0": [
+     "swap",
+     "identity"
+    ],
+    "kind": "switches",
+    "min_k": [
+     ">4",
+     2
+    ],
+    "rule": 11
+   },
+   {
+    "complement": 243,
+    "d0": [
+     "both->0",
+     "both->1"
+    ],
+    "kind": "both close",
+    "min_k": [
+     1,
+     2
+    ],
+    "rule": 12
+   },
+   {
+    "complement": 242,
+    "d0": [
+     "swap",
+     "identity"
+    ],
+    "kind": "switches",
+    "min_k": [
+     2,
+     ">4"
+    ],
+    "rule": 13
+   },
+   {
+    "complement": 241,
+    "d0": [
+     "both->0",
+     "both->1"
+    ],
+    "kind": "switches",
+    "min_k": [
+     ">4",
+     2
+    ],
+    "rule": 14
+   },
+   {
+    "complement": 240,
+    "d0": [
+     "swap",
+     "identity"
+    ],
+    "kind": "both close",
+    "min_k": [
+     1,
+     1
+    ],
+    "rule": 15
+   },
+   {
+    "complement": 239,
+    "d0": [
+     "both->0",
+     "both->1"
+    ],
+    "kind": "both close",
+    "min_k": [
+     1,
+     2
+    ],
+    "rule": 16
+   },
+   {
+    "complement": 238,
+    "d0": [
+     "swap",
+     "identity"
+    ],
+    "kind": "switches",
+    "min_k": [
+     2,
+     ">4"
+    ],
+    "rule": 17
+   },
+   {
+    "complement": 237,
+    "d0": [
+     "both->0",
+     "both->1"
+    ],
+    "kind": "both close",
+    "min_k": [
+     2,
+     2
+    ],
+    "rule": 18
+   },
+   {
+    "complement": 236,
+    "d0": [
+     "swap",
+     "identity"
+    ],
+    "kind": "both close",
+    "min_k": [
+     1,
+     1
+    ],
+    "rule": 19
+   },
+   {
+    "complement": 235,
+    "d0": [
+     "both->0",
+     "both->1"
+    ],
+    "kind": "switches",
+    "min_k": [
+     ">4",
+     2
+    ],
+    "rule": 20
+   },
+   {
+    "complement": 234,
+    "d0": [
+     "swap",
+     "identity"
+    ],
+    "kind": "neither closes",
+    "min_k": [
+     ">4",
+     ">4"
+    ],
+    "rule": 21
+   },
+   {
+    "complement": 233,
+    "d0": [
+     "both->0",
+     "both->1"
+    ],
+    "kind": "neither closes",
+    "min_k": [
+     ">4",
+     ">4"
+    ],
+    "rule": 22
+   },
+   {
+    "complement": 232,
+    "d0": [
+     "swap",
+     "identity"
+    ],
+    "kind": "both close",
+    "min_k": [
+     2,
+     2
+    ],
+    "rule": 23
+   },
+   {
+    "complement": 231,
+    "d0": [
+     "both->0",
+     "both->1"
+    ],
+    "kind": "both close",
+    "min_k": [
+     2,
+     2
+    ],
+    "rule": 24
+   },
+   {
+    "complement": 230,
+    "d0": [
+     "swap",
+     "identity"
+    ],
+    "kind": "neither closes",
+    "min_k": [
+     ">4",
+     ">4"
+    ],
+    "rule": 25
+   },
+   {
+    "complement": 229,
+    "d0": [
+     "both->0",
+     "both->1"
+    ],
+    "kind": "switches",
+    "min_k": [
+     3,
+     ">4"
+    ],
+    "rule": 26
+   },
+   {
+    "complement": 228,
+    "d0": [
+     "swap",
+     "identity"
+    ],
+    "kind": "switches",
+    "min_k": [
+     2,
+     ">4"
+    ],
+    "rule": 27
+   },
+   {
+    "complement": 227,
+    "d0": [
+     "both->0",
+     "both->1"
+    ],
+    "kind": "neither closes",
+    "min_k": [
+     ">4",
+     ">4"
+    ],
+    "rule": 28
+   },
+   {
+    "complement": 226,
+    "d0": [
+     "swap",
+     "identity"
+    ],
+    "kind": "switches",
+    "min_k": [
+     2,
+     ">4"
+    ],
+    "rule": 29
+   },
+   {
+    "complement": 225,
+    "d0": [
+     "both->0",
+     "both->1"
+    ],
+    "kind": "switches",
+    "min_k": [
+     3,
+     ">4"
+    ],
+    "rule": 30
+   },
+   {
+    "complement": 224,
+    "d0": [
+     "swap",
+     "identity"
+    ],
+    "kind": "neither closes",
+    "min_k": [
+     ">4",
+     ">4"
+    ],
+    "rule": 31
+   },
+   {
+    "complement": 223,
+    "d0": [
+     "both->0",
+     "both->1"
+    ],
+    "kind": "both close",
+    "min_k": [
+     1,
+     1
+    ],
+    "rule": 32
+   },
+   {
+    "complement": 222,
+    "d0": [
+     "swap",
+     "identity"
+    ],
+    "kind": "both close",
+    "min_k": [
+     2,
+     2
+    ],
+    "rule": 33
+   },
+   {
+    "complement": 221,
+    "d0": [
+     "both->0",
+     "both->1"
+    ],
+    "kind": "both close",
+    "min_k": [
+     2,
+     1
+    ],
+    "rule": 34
+   },
+   {
+    "complement": 220,
+    "d0": [
+     "swap",
+     "identity"
+    ],
+    "kind": "neither closes",
+    "min_k": [
+     ">4",
+     ">4"
+    ],
+    "rule": 35
+   },
+   {
+    "complement": 219,
+    "d0": [
+     "both->0",
+     "both->1"
+    ],
+    "kind": "both close",
+    "min_k": [
+     1,
+     1
+    ],
+    "rule": 36
+   },
+   {
+    "complement": 218,
+    "d0": [
+     "swap",
+     "identity"
+    ],
+    "kind": "neither closes",
+    "min_k": [
+     ">4",
+     ">4"
+    ],
+    "rule": 37
+   },
+   {
+    "complement": 217,
+    "d0": [
+     "both->0",
+     "both->1"
+    ],
+    "kind": "both close",
+    "min_k": [
+     3,
+     3
+    ],
+    "rule": 38
+   },
+   {
+    "complement": 216,
+    "d0": [
+     "swap",
+     "identity"
+    ],
+    "kind": "switches",
+    "min_k": [
+     3,
+     ">4"
+    ],
+    "rule": 39
+   },
+   {
+    "complement": 215,
+    "d0": [
+     "both->0",
+     "both->1"
+    ],
+    "kind": "neither closes",
+    "min_k": [
+     ">4",
+     ">4"
+    ],
+    "rule": 40
+   },
+   {
+    "complement": 214,
+    "d0": [
+     "swap",
+     "identity"
+    ],
+    "kind": "neither closes",
+    "min_k": [
+     ">4",
+     ">4"
+    ],
+    "rule": 41
+   },
+   {
+    "complement": 213,
+    "d0": [
+     "both->0",
+     "both->1"
+    ],
+    "kind": "switches",
+    "min_k": [
+     2,
+     ">4"
+    ],
+    "rule": 42
+   },
+   {
+    "complement": 212,
+    "d0": [
+     "swap",
+     "identity"
+    ],
+    "kind": "neither closes",
+    "min_k": [
+     ">4",
+     ">4"
+    ],
+    "rule": 43
+   },
+   {
+    "complement": 211,
+    "d0": [
+     "both->0",
+     "both->1"
+    ],
+    "kind": "switches",
+    "min_k": [
+     ">4",
+     3
+    ],
+    "rule": 44
+   },
+   {
+    "complement": 210,
+    "d0": [
+     "swap",
+     "identity"
+    ],
+    "kind": "both close",
+    "min_k": [
+     4,
+     2
+    ],
+    "rule": 45
+   },
+   {
+    "complement": 209,
+    "d0": [
+     "both->0",
+     "both->1"
+    ],
+    "kind": "both close",
+    "min_k": [
+     3,
+     3
+    ],
+    "rule": 46
+   },
+   {
+    "complement": 208,
+    "d0": [
+     "swap",
+     "identity"
+    ],
+    "kind": "both close",
+    "min_k": [
+     2,
+     2
+    ],
+    "rule": 47
+   },
+   {
+    "complement": 207,
+    "d0": [
+     "both->0",
+     "both->1"
+    ],
+    "kind": "both close",
+    "min_k": [
+     2,
+     1
+    ],
+    "rule": 48
+   },
+   {
+    "complement": 206,
+    "d0": [
+     "swap",
+     "identity"
+    ],
+    "kind": "neither closes",
+    "min_k": [
+     ">4",
+     ">4"
+    ],
+    "rule": 49
+   },
+   {
+    "complement": 205,
+    "d0": [
+     "both->0",
+     "both->1"
+    ],
+    "kind": "both close",
+    "min_k": [
+     2,
+     1
+    ],
+    "rule": 50
+   },
+   {
+    "complement": 204,
+    "d0": [
+     "swap",
+     "identity"
+    ],
+    "kind": "both close",
+    "min_k": [
+     1,
+     1
+    ],
+    "rule": 51
+   },
+   {
+    "complement": 203,
+    "d0": [
+     "both->0",
+     "both->1"
+    ],
+    "kind": "both close",
+    "min_k": [
+     3,
+     3
+    ],
+    "rule": 52
+   },
+   {
+    "complement": 202,
+    "d0": [
+     "swap",
+     "identity"
+    ],
+    "kind": "switches",
+    "min_k": [
+     3,
+     ">4"
+    ],
+    "rule": 53
+   },
+   {
+    "complement": 201,
+    "d0": [
+     "both->0",
+     "both->1"
+    ],
+    "kind": "switches",
+    "min_k": [
+     ">4",
+     2
+    ],
+    "rule": 54
+   },
+   {
+    "complement": 200,
+    "d0": [
+     "swap",
+     "identity"
+    ],
+    "kind": "both close",
+    "min_k": [
+     2,
+     1
+    ],
+    "rule": 55
+   },
+   {
+    "complement": 199,
+    "d0": [
+     "both->0",
+     "both->1"
+    ],
+    "kind": "switches",
+    "min_k": [
+     3,
+     ">4"
+    ],
+    "rule": 56
+   },
+   {
+    "complement": 198,
+    "d0": [
+     "swap",
+     "identity"
+    ],
+    "kind": "switches",
+    "min_k": [
+     3,
+     ">4"
+    ],
+    "rule": 57
+   },
+   {
+    "complement": 197,
+    "d0": [
+     "both->0",
+     "both->1"
+    ],
+    "kind": "neither closes",
+    "min_k": [
+     ">4",
+     ">4"
+    ],
+    "rule": 58
+   },
+   {
+    "complement": 196,
+    "d0": [
+     "swap",
+     "identity"
+    ],
+    "kind": "neither closes",
+    "min_k": [
+     ">4",
+     ">4"
+    ],
+    "rule": 59
+   },
+   {
+    "complement": 195,
+    "d0": [
+     "both->0",
+     "both->1"
+    ],
+    "kind": "both close",
+    "min_k": [
+     1,
+     1
+    ],
+    "rule": 60
+   },
+   {
+    "complement": 194,
+    "d0": [
+     "swap",
+     "identity"
+    ],
+    "kind": "neither closes",
+    "min_k": [
+     ">4",
+     ">4"
+    ],
+    "rule": 61
+   },
+   {
+    "complement": 193,
+    "d0": [
+     "both->0",
+     "both->1"
+    ],
+    "kind": "neither closes",
+    "min_k": [
+     ">4",
+     ">4"
+    ],
+    "rule": 62
+   },
+   {
+    "complement": 192,
+    "d0": [
+     "swap",
+     "identity"
+    ],
+    "kind": "switches",
+    "min_k": [
+     2,
+     ">4"
+    ],
+    "rule": 63
+   },
+   {
+    "complement": 191,
+    "d0": [
+     "both->0",
+     "both->1"
+    ],
+    "kind": "both close",
+    "min_k": [
+     1,
+     2
+    ],
+    "rule": 64
+   },
+   {
+    "complement": 190,
+    "d0": [
+     "swap",
+     "identity"
+    ],
+    "kind": "both close",
+    "min_k": [
+     3,
+     3
+    ],
+    "rule": 65
+   },
+   {
+    "complement": 189,
+    "d0": [
+     "both->0",
+     "both->1"
+    ],
+    "kind": "both close",
+    "min_k": [
+     2,
+     2
+    ],
+    "rule": 66
+   },
+   {
+    "complement": 188,
+    "d0": [
+     "swap",
+     "identity"
+    ],
+    "kind": "neither closes",
+    "min_k": [
+     ">4",
+     ">4"
+    ],
+    "rule": 67
+   },
+   {
+    "complement": 187,
+    "d0": [
+     "both->0",
+     "both->1"
+    ],
+    "kind": "both close",
+    "min_k": [
+     1,
+     2
+    ],
+    "rule": 68
+   },
+   {
+    "complement": 186,
+    "d0": [
+     "swap",
+     "identity"
+    ],
+    "kind": "switches",
+    "min_k": [
+     2,
+     ">4"
+    ],
+    "rule": 69
+   },
+   {
+    "complement": 185,
+    "d0": [
+     "both->0",
+     "both->1"
+    ],
+    "kind": "neither closes",
+    "min_k": [
+     ">4",
+     ">4"
+    ],
+    "rule": 70
+   },
+   {
+    "complement": 184,
+    "d0": [
+     "swap",
+     "identity"
+    ],
+    "kind": "switches",
+    "min_k": [
+     2,
+     ">4"
+    ],
+    "rule": 71
+   },
+   {
+    "complement": 183,
+    "d0": [
+     "both->0",
+     "both->1"
+    ],
+    "kind": "both close",
+    "min_k": [
+     1,
+     4
+    ],
+    "rule": 72
+   },
+   {
+    "complement": 182,
+    "d0": [
+     "swap",
+     "identity"
+    ],
+    "kind": "neither closes",
+    "min_k": [
+     ">4",
+     ">4"
+    ],
+    "rule": 73
+   },
+   {
+    "complement": 181,
+    "d0": [
+     "both->0",
+     "both->1"
+    ],
+    "kind": "neither closes",
+    "min_k": [
+     ">4",
+     ">4"
+    ],
+    "rule": 74
+   },
+   {
+    "complement": 180,
+    "d0": [
+     "swap",
+     "identity"
+    ],
+    "kind": "switches",
+    "min_k": [
+     4,
+     ">4"
+    ],
+    "rule": 75
+   },
+   {
+    "complement": 179,
+    "d0": [
+     "both->0",
+     "both->1"
+    ],
+    "kind": "both close",
+    "min_k": [
+     1,
+     2
+    ],
+    "rule": 76
+   },
+   {
+    "complement": 178,
+    "d0": [
+     "swap",
+     "identity"
+    ],
+    "kind": "both close",
+    "min_k": [
+     2,
+     2
+    ],
+    "rule": 77
+   },
+   {
+    "complement": 177,
+    "d0": [
+     "both->0",
+     "both->1"
+    ],
+    "kind": "switches",
+    "min_k": [
+     ">4",
+     3
+    ],
+    "rule": 78
+   },
+   {
+    "complement": 176,
+    "d0": [
+     "swap",
+     "identity"
+    ],
+    "kind": "neither closes",
+    "min_k": [
+     ">4",
+     ">4"
+    ],
+    "rule": 79
+   },
+   {
+    "complement": 175,
+    "d0": [
+     "both->0",
+     "both->1"
+    ],
+    "kind": "both close",
+    "min_k": [
+     2,
+     2
+    ],
+    "rule": 80
+   },
+   {
+    "complement": 174,
+    "d0": [
+     "swap",
+     "identity"
+    ],
+    "kind": "switches",
+    "min_k": [
+     ">4",
+     2
+    ],
+    "rule": 81
+   },
+   {
+    "complement": 173,
+    "d0": [
+     "both->0",
+     "both->1"
+    ],
+    "kind": "switches",
+    "min_k": [
+     3,
+     ">4"
+    ],
+    "rule": 82
+   },
+   {
+    "complement": 172,
+    "d0": [
+     "swap",
+     "identity"
+    ],
+    "kind": "switches",
+    "min_k": [
+     2,
+     ">4"
+    ],
+    "rule": 83
+   },
+   {
+    "complement": 171,
+    "d0": [
+     "both->0",
+     "both->1"
+    ],
+    "kind": "switches",
+    "min_k": [
+     ">4",
+     2
+    ],
+    "rule": 84
+   },
+   {
+    "complement": 170,
+    "d0": [
+     "swap",
+     "identity"
+    ],
+    "kind": "both close",
+    "min_k": [
+     1,
+     1
+    ],
+    "rule": 85
+   },
+   {
+    "complement": 169,
+    "d0": [
+     "both->0",
+     "both->1"
+    ],
+    "kind": "switches",
+    "min_k": [
+     3,
+     ">4"
+    ],
+    "rule": 86
+   },
+   {
+    "complement": 168,
+    "d0": [
+     "swap",
+     "identity"
+    ],
+    "kind": "neither closes",
+    "min_k": [
+     ">4",
+     ">4"
+    ],
+    "rule": 87
+   },
+   {
+    "complement": 167,
+    "d0": [
+     "both->0",
+     "both->1"
+    ],
+    "kind": "neither closes",
+    "min_k": [
+     ">4",
+     ">4"
+    ],
+    "rule": 88
+   },
+   {
+    "complement": 166,
+    "d0": [
+     "swap",
+     "identity"
+    ],
+    "kind": "switches",
+    "min_k": [
+     4,
+     ">4"
+    ],
+    "rule": 89
+   },
+   {
+    "complement": 165,
+    "d0": [
+     "both->0",
+     "both->1"
+    ],
+    "kind": "both close",
+    "min_k": [
+     1,
+     1
+    ],
+    "rule": 90
+   },
+   {
+    "complement": 164,
+    "d0": [
+     "swap",
+     "identity"
+    ],
+    "kind": "neither closes",
+    "min_k": [
+     ">4",
+     ">4"
+    ],
+    "rule": 91
+   },
+   {
+    "complement": 163,
+    "d0": [
+     "both->0",
+     "both->1"
+    ],
+    "kind": "switches",
+    "min_k": [
+     ">4",
+     3
+    ],
+    "rule": 92
+   },
+   {
+    "complement": 162,
+    "d0": [
+     "swap",
+     "identity"
+    ],
+    "kind": "neither closes",
+    "min_k": [
+     ">4",
+     ">4"
+    ],
+    "rule": 93
+   },
+   {
+    "complement": 161,
+    "d0": [
+     "both->0",
+     "both->1"
+    ],
+    "kind": "switches",
+    "min_k": [
+     4,
+     ">4"
+    ],
+    "rule": 94
+   },
+   {
+    "complement": 160,
+    "d0": [
+     "swap",
+     "identity"
+    ],
+    "kind": "both close",
+    "min_k": [
+     2,
+     2
+    ],
+    "rule": 95
+   },
+   {
+    "complement": 159,
+    "d0": [
+     "both->0",
+     "both->1"
+    ],
+    "kind": "neither closes",
+    "min_k": [
+     ">4",
+     ">4"
+    ],
+    "rule": 96
+   },
+   {
+    "complement": 158,
+    "d0": [
+     "swap",
+     "identity"
+    ],
+    "kind": "neither closes",
+    "min_k": [
+     ">4",
+     ">4"
+    ],
+    "rule": 97
+   },
+   {
+    "complement": 157,
+    "d0": [
+     "both->0",
+     "both->1"
+    ],
+    "kind": "switches",
+    "min_k": [
+     3,
+     ">4"
+    ],
+    "rule": 98
+   },
+   {
+    "complement": 156,
+    "d0": [
+     "swap",
+     "identity"
+    ],
+    "kind": "switches",
+    "min_k": [
+     3,
+     ">4"
+    ],
+    "rule": 99
+   },
+   {
+    "complement": 155,
+    "d0": [
+     "both->0",
+     "both->1"
+    ],
+    "kind": "switches",
+    "min_k": [
+     ">4",
+     3
+    ],
+    "rule": 100
+   },
+   {
+    "complement": 154,
+    "d0": [
+     "swap",
+     "identity"
+    ],
+    "kind": "both close",
+    "min_k": [
+     4,
+     2
+    ],
+    "rule": 101
+   },
+   {
+    "complement": 153,
+    "d0": [
+     "both->0",
+     "both->1"
+    ],
+    "kind": "both close",
+    "min_k": [
+     1,
+     1
+    ],
+    "rule": 102
+   },
+   {
+    "complement": 152,
+    "d0": [
+     "swap",
+     "identity"
+    ],
+    "kind": "neither closes",
+    "min_k": [
+     ">4",
+     ">4"
+    ],
+    "rule": 103
+   },
+   {
+    "complement": 151,
+    "d0": [
+     "both->0",
+     "both->1"
+    ],
+    "kind": "unresolved",
+    "min_k": [
+     "unresolved",
+     ">4"
+    ],
+    "rule": 104
+   },
+   {
+    "complement": 150,
+    "d0": [
+     "swap",
+     "identity"
+    ],
+    "kind": "both close",
+    "min_k": [
+     1,
+     1
+    ],
+    "rule": 105
+   },
+   {
+    "complement": 149,
+    "d0": [
+     "both->0",
+     "both->1"
+    ],
+    "kind": "unresolved",
+    "min_k": [
+     3,
+     "unresolved"
+    ],
+    "rule": 106
+   },
+   {
+    "complement": 148,
+    "d0": [
+     "swap",
+     "identity"
+    ],
+    "kind": "unresolved",
+    "min_k": [
+     "unresolved",
+     ">4"
+    ],
+    "rule": 107
+   },
+   {
+    "complement": 147,
+    "d0": [
+     "both->0",
+     "both->1"
+    ],
+    "kind": "both close",
+    "min_k": [
+     3,
+     3
+    ],
+    "rule": 108
+   },
+   {
+    "complement": 146,
+    "d0": [
+     "swap",
+     "identity"
+    ],
+    "kind": "unresolved",
+    "min_k": [
+     "unresolved",
+     4
+    ],
+    "rule": 109
+   },
+   {
+    "complement": 145,
+    "d0": [
+     "both->0",
+     "both->1"
+    ],
+    "kind": "switches",
+    "min_k": [
+     ">4",
+     3
+    ],
+    "rule": 110
+   },
+   {
+    "complement": 144,
+    "d0": [
+     "swap",
+     "identity"
+    ],
+    "kind": "switches",
+    "min_k": [
+     2,
+     ">4"
+    ],
+    "rule": 111
+   },
+   {
+    "complement": 143,
+    "d0": [
+     "both->0",
+     "both->1"
+    ],
+    "kind": "switches",
+    "min_k": [
+     2,
+     ">4"
+    ],
+    "rule": 112
+   },
+   {
+    "complement": 142,
+    "d0": [
+     "swap",
+     "identity"
+    ],
+    "kind": "neither closes",
+    "min_k": [
+     ">4",
+     ">4"
+    ],
+    "rule": 113
+   },
+   {
+    "complement": 141,
+    "d0": [
+     "both->0",
+     "both->1"
+    ],
+    "kind": "neither closes",
+    "min_k": [
+     ">4",
+     ">4"
+    ],
+    "rule": 114
+   },
+   {
+    "complement": 140,
+    "d0": [
+     "swap",
+     "identity"
+    ],
+    "kind": "neither closes",
+    "min_k": [
+     ">4",
+     ">4"
+    ],
+    "rule": 115
+   },
+   {
+    "complement": 139,
+    "d0": [
+     "both->0",
+     "both->1"
+    ],
+    "kind": "both close",
+    "min_k": [
+     3,
+     3
+    ],
+    "rule": 116
+   },
+   {
+    "complement": 138,
+    "d0": [
+     "swap",
+     "identity"
+    ],
+    "kind": "both close",
+    "min_k": [
+     2,
+     2
+    ],
+    "rule": 117
+   },
+   {
+    "complement": 137,
+    "d0": [
+     "both->0",
+     "both->1"
+    ],
+    "kind": "neither closes",
+    "min_k": [
+     ">4",
+     ">4"
+    ],
+    "rule": 118
+   },
+   {
+    "complement": 136,
+    "d0": [
+     "swap",
+     "identity"
+    ],
+    "kind": "switches",
+    "min_k": [
+     2,
+     ">4"
+    ],
+    "rule": 119
+   },
+   {
+    "complement": 135,
+    "d0": [
+     "both->0",
+     "both->1"
+    ],
+    "kind": "unresolved",
+    "min_k": [
+     3,
+     "unresolved"
+    ],
+    "rule": 120
+   },
+   {
+    "complement": 134,
+    "d0": [
+     "swap",
+     "identity"
+    ],
+    "kind": "unresolved",
+    "min_k": [
+     "unresolved",
+     ">4"
+    ],
+    "rule": 121
+   },
+   {
+    "complement": 133,
+    "d0": [
+     "both->0",
+     "both->1"
+    ],
+    "kind": "unresolved",
+    "min_k": [
+     "unresolved",
+     ">4"
+    ],
+    "rule": 122
+   },
+   {
+    "complement": 132,
+    "d0": [
+     "swap",
+     "identity"
+    ],
+    "kind": "both close",
+    "min_k": [
+     4,
+     2
+    ],
+    "rule": 123
+   },
+   {
+    "complement": 131,
+    "d0": [
+     "both->0",
+     "both->1"
+    ],
+    "kind": "switches",
+    "min_k": [
+     ">4",
+     3
+    ],
+    "rule": 124
+   },
+   {
+    "complement": 130,
+    "d0": [
+     "swap",
+     "identity"
+    ],
+    "kind": "switches",
+    "min_k": [
+     2,
+     ">4"
+    ],
+    "rule": 125
+   },
+   {
+    "complement": 129,
+    "d0": [
+     "both->0",
+     "both->1"
+    ],
+    "kind": "both close",
+    "min_k": [
+     2,
+     2
+    ],
+    "rule": 126
+   },
+   {
+    "complement": 128,
+    "d0": [
+     "swap",
+     "identity"
+    ],
+    "kind": "both close",
+    "min_k": [
+     2,
+     2
+    ],
+    "rule": 127
+   }
+  ],
+  "switches_closing_side_d0": {
+   "both->0": 9,
+   "both->1": 11,
+   "identity": 2,
+   "swap": 19
+  }
+ },
+ "elapsed_seconds": 0.0,
+ "schema": "groovy-field-v1",
+ "stage": "complement"
+}

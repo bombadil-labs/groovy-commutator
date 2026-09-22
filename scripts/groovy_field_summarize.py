@@ -16,7 +16,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 DIR = ROOT / "results" / "groovy_field_20260922"
 SOURCES = ["src/groovy/groovy_field.py", "scripts/groovy_field_suite.py",
-           "scripts/groovy_field_rule110_lift.py", "scripts/groovy_field_summarize.py"]
+           "scripts/groovy_field_rule110_lift.py", "scripts/groovy_field_summarize.py",
+           "scripts/groovy_field_followups.py"]
 
 
 def load(name):

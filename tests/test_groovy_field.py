@@ -26,9 +26,17 @@ def verdict(rule, tracks, k, t=0):
     (110, (1,), 3, 0, "counterexample"),  # run-of-zeros marker misses phase
     (110, (204,), 1, 0, "law"),       # retaining the source always closes
     (30, (), 3, 0, "law"),            # Rule 30's G is third-order autonomous
+    (145, (), 3, 0, "law"),           # output complement of 110 closes
+    (110, (90,), 3, 0, "law"),        # l xor r repairs 110 at memory 3
+    (54, (57,), 3, 0, "law"),         # lossy nonlinear universal track
 ])
 def test_known_verdicts(rule, tracks, k, t, expected):
     assert verdict(rule, tracks, k, t) == expected
+
+
+def test_rule54_is_fifth_order_by_decider():
+    assert decide(54, (), 4, 0).status == "counterexample"
+    assert decide(54, (), 5, 0).status == "law"
 
 
 def test_memory3_110_is_invisible_to_every_ring():

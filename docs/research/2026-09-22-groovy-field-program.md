@@ -78,6 +78,7 @@ The decisive tool is exact:
   [`scripts/groovy_field_suite.py`](../../scripts/groovy_field_suite.py),
   [`scripts/groovy_field_rule110_lift.py`](../../scripts/groovy_field_rule110_lift.py),
   [`scripts/groovy_field_summarize.py`](../../scripts/groovy_field_summarize.py),
+  [`scripts/groovy_field_followups.py`](../../scripts/groovy_field_followups.py),
   tests in [`tests/test_groovy_field.py`](../../tests/test_groovy_field.py).
   The whole suite runs in minutes on a laptop.
 
@@ -87,11 +88,11 @@ Two exact facts frame the lift question:
   `F2 = X ⊕ H(X)` and `F3 = X ⊕ H²(X)`, `G = F2 ⊕ F3 ⊕ H(F2)`. So G is a local
   function of the existing lift; a closed Groovy system is a *quotient* of that
   construction, keeping only what the Groovy field needs.
-- **G is blind to D0 whenever the rule's uniform map makes it so.** On a
-  uniform configuration `c^Z` the rule acts as a one-cell map
-  `u(c) = φ(ccc)`, and `G(c^Z) = u(c) ⊕ u(u(c)) ⊕ u(c ⊕ u(c))` is a constant.
-  When that constant is the same for both `c`, the Groovy field cannot tell
-  the two uniform backgrounds apart at all.
+- **G is always blind to D0.** On a uniform configuration `c^Z` the rule
+  acts as a one-cell map `u(c) = φ(ccc)`, which is affine, and
+  `G(c^Z) = u(c) ⊕ u(u(c)) ⊕ u(c ⊕ u(c))` is the same constant for `c = 0`
+  and `c = 1`. No rule's Groovy field can tell the two uniform backgrounds
+  apart.
 
 ## Stages
 
@@ -102,6 +103,7 @@ Two exact facts frame the lift question:
 | 3. Reachable states: G alone after one and two steps of burn-in | 6 | complete |
 | Taxonomy: classify each counterexample by how its two tails differ | 3, 9 | complete |
 | 4. The Rule 110 repaired system as a CA | 8 | complete |
+| Follow-ups: output complement vs D0; universal repairs at memory 3; G alone at memory 5 | 2, 5, 9 | complete |
 | 5. Towers: the Groovy field of the repaired system | 10 | open |
 | 6. A general operator beyond one-bit, radius-one tracks | 5, 9 | open |
 

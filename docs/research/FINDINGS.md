@@ -414,7 +414,10 @@ including how that background is shifted. It can never tell the all-zeros
 background from the all-ones one, for any rule: that uniform "D0" bit is
 invisible to it by algebra. Adding the source's spatial gradient — the
 source with exactly that one bit removed — and two steps of memory makes the
-Groovy field self-sufficient for every rule. **Complete for this census:
+Groovy field self-sufficient for every rule. Follow-ups found that Rule 54's
+Groovy field needs five remembered values, and that whether a rule keeps or
+swaps its two uniform states strongly predicts whether its Groovy field can
+run alone. **Complete for this census:
 exact counts, a universal repair, and a named blind spot.** Richer repairs,
 towers and the 109 rules without a short-memory law remain open in
 [The Groovy Field](2026-09-22-groovy-field-program.md).
