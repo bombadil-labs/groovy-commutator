@@ -4,12 +4,12 @@
     "label": "Guard-free axial lift",
     "title": "A guard-free dimensional tower: compatibility and axis order",
     "date": "2026-09-10",
-    "updated": "2026-09-10",
+    "updated": "2026-09-22",
     "kind": "Exact census and all-dimensional proof",
     "evidence": "exact",
     "topic": "Algebra and closure",
     "summary": "A binary axial constructor preserves literal replication for exactly 66 ECA sources at every dimensional interface. Twenty-four rules are independent of axis order; 14 satisfy both requirements.",
-    "takeaway": "Guard rows are not necessary for exact dimensional compatibility, but replication and usually axis order remain supplied choices. The next test asks whether transverse differences have autonomous dynamics.",
+    "takeaway": "Guard rows are not necessary for exact dimensional compatibility, but replication and usually axis order remain supplied choices. The completed transverse follow-up finds six autonomous observations and sixty full-field obstructions.",
     "source": "docs/research/2026-09-10-guard-free-axial-lift.md",
     "promotion": {
       "stage": "research"
@@ -18,7 +18,8 @@
       "extension-freedom",
       "rule32-physical-cap",
       "dimensional-intertwining",
-      "selector-two-lift"
+      "selector-two-lift",
+      "transverse-difference-closure"
     ]
   }
 ]

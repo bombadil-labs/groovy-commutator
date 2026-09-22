@@ -1,6 +1,6 @@
 # Next agent: preserve the stop; require an action-changing question
 
-Updated 2026-09-22 after the fourth research-drive unit. Read
+Updated 2026-09-22 after the fifth research-drive unit. Read
 [START_HERE](START_HERE.md), [FINDINGS](FINDINGS.md), the
 [readout-cost note](2026-09-22-groovy-readout-cost.md), the
 [consumer audit](2026-09-22-phase-free-consumer-audit.md), the
@@ -50,6 +50,20 @@ of dynamical revisability, and the remaining 247-rule computation would
 conflate representation, controller information, clock and readout while
 changing no current action. The census is parked unrun. Do not implement it
 from the historical protocol.
+
+## Fifth completed unit
+
+The active knowledge surface no longer points forward from already completed
+work. A status audit repaired the second-lift protocol card, the bounded
+pulse-shape question, the admissible-transformation examples and the
+guard-free → transverse difference → full gradient → loop sequence. Canonical
+protocols and result bytes were unchanged. The running findings now contain
+plain-language accounts of the completed results and their limits.
+
+Do not rerun these units to resolve their old future-tense prose. The second
+lift is exact only through depth two and its ambient failure only through
+radius two. The pulse result is only the declared four-site family. The
+gradient results are observation-relative and charge their retained state.
 
 ## Next decision, not an automatic experiment
 

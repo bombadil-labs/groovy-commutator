@@ -1,5 +1,9 @@
 # Transverse differences close for six rules; the other sixty need more information
 
+**2026-09-22 status update:** the full-gradient follow-up proposed below was
+subsequently [completed](2026-09-10-full-gradient-closure.md). The future-tense
+section remains as freeze-time chronology.
+
 For the66 replication-compatible axial ECA sources, can differences between neighboring slices evolve without access to the underlying binary field? **Exactly six can:0,150,170,204,240,255.** For every other source in this family, two complete infinite fields have identical full difference fields and different next differences. No deterministic update on these differences alone can work, even if it reads the entire observed field.
 
 This is an exact result for one declared observation under the unchanged axial laws. It identifies information discarded by that observation, not a universal obstruction to higher-dimensional organization. The [vision and interpretation record](2026-09-10-dimensional-vision-and-interpretation.md) explains how this distinction guides the research.

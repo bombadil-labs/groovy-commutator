@@ -1,5 +1,9 @@
 # Both spatial differences restore closure for four nonlinear rules
 
+**2026-09-22 status update:** the gradient-loop follow-up proposed below was
+subsequently [completed](2026-09-10-gradient-loop-invariants.md). The
+future-tense section remains as freeze-time chronology.
+
 Keeping horizontal and vertical differences gives an autonomous gradient law for **10 of the 66 compatible axial ECA sources**, compared with six for transverse differences alone. The newly admitted rules are **142,178,212,232**: majority functions with zero or one input negated. The other 56 sources still have complete identical gradient observations with different next gradients. Their remaining global complement ambiguity is causally consequential.
 
 This is a separately declared observation comparison under the same ordered binary laws. It retains more information and costs two component bits per site. It does not retroactively change the [transverse-only result](2026-09-10-transverse-difference-closure.md), select a canonical representation, or supply a preferred law outside the gradient image. The [vision and interpretation contract](2026-09-10-dimensional-vision-and-interpretation.md) remains the research guide.

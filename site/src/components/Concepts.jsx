@@ -1751,7 +1751,9 @@ export default function Concepts() {
             <a href="research/correction-future-coordinates.html">triangular coordinate theorem</a>{' '}
             then relates their correction tuples by an invertible local recoding. At each fixed finite depth, whole-field
             fibers and factor existence agree on B; coordinate radius and cost can differ. This is an analytic consequence,
-            not a completed second-lift census.
+            not a conclusion inferred from the later{' '}
+            <a href="research/second-lift-completion.html">completed bounded second-lift comparison</a>,
+            which separately measured local cap radii through depth two.
           </p>
           <p style={{ ...pBody, marginBottom: 0 }}>
             Read the <a href="research/dimensional-vision-and-interpretation.html">dimensional vision note</a>{' '}

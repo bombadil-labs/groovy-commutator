@@ -1,6 +1,12 @@
 # Freeze the second lift around its actual open question
 
-The [bounded protocol](protocols/second-lift-completion-comparison-20260910.md) is now specified after the completed gradient intervention audit. Its [implementation and evaluation](../knowledge/second-lift-completion-comparison.md) remain **planned and unrun**. This note completes the agreed protocol-writing scope of [issue67](https://github.com/bombadil-labs/groovy-commutator/issues/67#issuecomment-5622839866).
+**Status update, 2026-09-22:** the bounded experiment was completed on
+2026-09-11. See the [result note](2026-09-11-second-lift-completion.md) and
+[knowledge record](../knowledge/second-lift-completion-comparison.md). The
+frozen protocol remains unchanged as provenance; future-tense language below
+records its pre-execution state.
+
+The [bounded protocol](protocols/second-lift-completion-comparison-20260910.md) was specified after the completed gradient intervention audit. At publication, its implementation and evaluation were planned and unrun. This note completed the agreed protocol-writing scope of [issue67](https://github.com/bombadil-labs/groovy-commutator/issues/67#issuecomment-5622839866).
 
 ## What is already settled
 
@@ -48,6 +54,6 @@ python exploratory/issue67-completion-recoding/completion_recoding_rule32.py
 
 Archival replay matches the complete original stdout against ca.py blob 38ef0e7cf8c53063e389c4b63c0a1191c16de045. A dedicated replay gate protects the archive. It does not invoke a product-alphabet cap evaluator.
 
-## Execution remains a visible planned task
+## Freeze-time execution plan — completed 2026-09-11
 
-The [planned experiment](../knowledge/second-lift-completion-comparison.md) is linked from the dimensional Program and this note. Its acceptance checklist requires a pinned implementation before primary evaluation, complete local domains, independent digests and witnesses, the stated recoding controls and a final matrix with resource accounting. The proposal may be closed when this protocol is merged; the experiment stays planned until that separate deliverable is complete.
+The experiment was originally registered as a separate planned deliverable. Its acceptance checklist required a pinned implementation before primary evaluation, complete local domains, independent digests and witnesses, the stated recoding controls and a final matrix with resource accounting. The completed result satisfies that checklist within the frozen depth and radius bounds; the [result note](2026-09-11-second-lift-completion.md) records the execution and limits.

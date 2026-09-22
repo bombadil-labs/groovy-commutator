@@ -789,9 +789,10 @@
       "type": "depends_on"
     },
     {
-      "reason": "The broader shape search uses the single-pulse law as its geometric baseline and reuses its persistent-boundary certificate.",
+      "reason": "Research021 uses the exact single-pulse law as its 25-case control and reuses its persistent-boundary certificate to classify the wider bounded shape family.",
       "research": [
-        "pulse-scattering"
+        "pulse-scattering",
+        "pulse-shape-scattering"
       ],
       "source": "pulse-shape-scattering",
       "target": "single-pulse-scattering-law",
@@ -996,9 +997,10 @@
       "type": "depends_on"
     },
     {
-      "reason": "The next comparison keeps the same source laws and uses the established transverse-only information loss as its baseline before adding the other derivative component.",
+      "reason": "The completed full-gradient comparison keeps the same source laws and uses the established transverse-only information loss as its baseline before adding the other derivative component.",
       "research": [
-        "transverse-difference-closure"
+        "transverse-difference-closure",
+        "full-gradient-closure"
       ],
       "source": "full-gradient-closure",
       "target": "transverse-closure-obstruction",
@@ -1503,6 +1505,15 @@
         "higher-block-recoding"
       ],
       "source": "higher-block-recoding-test",
+      "target": "admissible-transformations",
+      "type": "tests"
+    },
+    {
+      "reason": "Completes the first bounded change-of-completion example on a shared invariant family, with literal coordinate and local-cap costs reported.",
+      "research": [
+        "second-lift-completion"
+      ],
+      "source": "second-lift-completion-comparison",
       "target": "admissible-transformations",
       "type": "tests"
     },
@@ -3574,13 +3585,14 @@
       "id": "pulse-shape-scattering",
       "kind": "question",
       "research": [
-        "pulse-scattering"
+        "pulse-scattering",
+        "pulse-shape-scattering"
       ],
       "source": "docs/knowledge/pulse-shape-scattering.md",
-      "status": "open",
-      "summary": "Vary finite logical pulse shape/state rather than position alone and look for extinction, exact reconstitution, fan-out, fold-in and distinct persistent boundary channels.",
-      "title": "Which pulse shapes produce different scattering fates?",
-      "updated": "2026-09-08"
+      "status": "answered",
+      "summary": "Across all 1,600 frozen four-site encounters, every case has exact persistent top and bottom extreme-support certificates; shape changes 16 outgoing boundary signatures but produces no extinction or separated-strip reconstitution in this family.",
+      "title": "Do four-site pulse shapes change the bounded scattering fate?",
+      "updated": "2026-09-22"
     },
     {
       "id": "correction-future-coordinates",
@@ -3811,13 +3823,14 @@
       "id": "guard-free-axial-compatibility",
       "kind": "finding",
       "research": [
-        "guard-free-axial-lift"
+        "guard-free-axial-lift",
+        "transverse-difference-closure"
       ],
       "source": "docs/knowledge/guard-free-axial-compatibility.md",
       "status": "exact",
       "summary": "Literal replication intertwines every adjacent axial dimension for exactly 66 ECA sources. This removes guards while retaining a prepared replication code, source word in the law, and processing that grows with dimension.",
       "title": "Exact dimensional compatibility without guard rows",
-      "updated": "2026-09-10"
+      "updated": "2026-09-22"
     },
     {
       "id": "axial-axis-order",
@@ -3836,13 +3849,14 @@
       "kind": "experiment",
       "research": [
         "guard-free-axial-lift",
-        "transverse-difference-closure"
+        "transverse-difference-closure",
+        "full-gradient-closure"
       ],
       "source": "docs/knowledge/transverse-difference-closure.md",
       "status": "completed",
       "summary": "The unchanged 66-source experiment finds six autonomous transverse laws and sixty full-field obstructions. A separately frozen witness-extension audit resolves three failures hidden by the original 3-by-3 periodic control.",
       "title": "Do transverse differences evolve autonomously?",
-      "updated": "2026-09-10"
+      "updated": "2026-09-22"
     },
     {
       "id": "representation-contract",
@@ -3862,13 +3876,14 @@
       "id": "transverse-closure-obstruction",
       "kind": "finding",
       "research": [
-        "transverse-difference-closure"
+        "transverse-difference-closure",
+        "full-gradient-closure"
       ],
       "source": "docs/knowledge/transverse-closure-obstruction.md",
       "status": "exact",
       "summary": "Exactly six of the 66 compatible axial sources admit autonomous transverse-difference dynamics. For the other sixty, identical full observations have different next values, ruling out every deterministic update on that observation alone.",
       "title": "Transverse differences alone discard causally necessary column baselines",
-      "updated": "2026-09-10"
+      "updated": "2026-09-22"
     },
     {
       "id": "full-gradient-closure",
@@ -3876,13 +3891,14 @@
       "research": [
         "transverse-difference-closure",
         "dimensional-vision-and-interpretation",
-        "full-gradient-closure"
+        "full-gradient-closure",
+        "gradient-loop-invariants"
       ],
       "source": "docs/knowledge/full-gradient-closure.md",
       "status": "completed",
       "summary": "The unchanged 66-source comparison admits ten full-gradient laws, including four nonlinear majority variants. A complement-factor proof and complete-field certificates classify all 56 failures; image constraints and storage costs remain explicit.",
       "title": "Does retaining both spatial differences restore closure?",
-      "updated": "2026-09-10"
+      "updated": "2026-09-22"
     },
     {
       "id": "full-gradient-factor",
@@ -4179,13 +4195,15 @@
       "id": "admissible-transformations",
       "kind": "question",
       "research": [
-        "representation-invariants-audit"
+        "representation-invariants-audit",
+        "higher-block-recoding",
+        "second-lift-completion"
       ],
       "source": "docs/knowledge/admissible-transformations.md",
-      "status": "open",
-      "summary": "The record uses several distinct transformations; none is a group and each needs declared transports and costs.",
+      "status": "partly-answered",
+      "summary": "Bounded audits cover global relabelings, one injective two-block recoding, and one H128/H160 completion change with explicit transports and costs; broader recoding and completion families remain open.",
       "title": "Which re-interpretations of a represented dynamics are admissible, and what does each cost?",
-      "updated": "2026-09-11"
+      "updated": "2026-09-22"
     },
     {
       "id": "commutator-complement-covariance",
