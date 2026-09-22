@@ -1,0 +1,22 @@
+[
+  {
+    "label": "Groovy field",
+    "slug": "groovy-field-census",
+    "title": "When can the Groovy field run on its own? A full-line census",
+    "date": "2026-09-22",
+    "updated": "2026-09-22",
+    "kind": "Exact census",
+    "evidence": "exact",
+    "topic": "Algebra and closure",
+    "summary": "Across all 256 elementary rules, 140 Groovy fields are local autonomous systems with one to four steps of memory; Rule 30 needs three. The Groovy field can never see the uniform D0 bit, and adding the source gradient with two steps closes every rule.",
+    "takeaway": "What the Groovy field lacks is mostly background identity, including phase; keeping the gradient restores everything except the D0 bit, which never needs restoring.",
+    "source": "docs/research/2026-09-22-groovy-field-census.md",
+    "promotion": {
+      "stage": "research"
+    },
+    "related": [
+      "g-autonomy-boundary",
+      "affine-oriented-lift-20260917"
+    ]
+  }
+]

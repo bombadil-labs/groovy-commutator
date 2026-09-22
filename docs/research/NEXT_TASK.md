@@ -1,4 +1,12 @@
-# Next agent: Rule-110 G autonomy is decided; choose a new contract deliberately
+# Next agent: continue The Groovy Field
+
+Updated 2026-09-22. Myk opened [The Groovy Field](2026-09-22-groovy-field-program.md)
+as an active program after the Rule-110 autonomy unit below. Read its
+[census note](2026-09-22-groovy-field-census.md) and
+[checkpoint](checkpoints/groovy-field.md) first; the checkpoint orders the open
+questions. The section below is the preceding unit's handoff, kept for context.
+
+## Preceding handoff: Rule-110 G autonomy
 
 Updated 2026-09-22 after Myk's direct request to investigate whether a derived
 field can follow its own rule. Read [START_HERE](START_HERE.md),

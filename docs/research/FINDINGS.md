@@ -398,6 +398,28 @@ restricted source family, added context, or another cadence, and does not
 identify a minimal repair. Those are separate questions, with none queued by
 this result. [Exact certificate and known positive](2026-09-22-rule110-g-autonomy.md).
 
+## 24. The Groovy field can often run on its own, and what it misses has a name
+
+We were curious whether a rule's Groovy field could be a dynamical system in
+its own right — computing its own next value without ever seeing the cells —
+and, when it cannot, what it is missing. We decided this exactly on the
+infinite line for all 256 elementary rules, certifying every law with an
+explicit local table and every failure with an explicit pair of
+configurations.
+
+We found that 140 rules' Groovy fields are self-sufficient once they
+remember one to four of their own past values; Rule 30's needs three. For
+the rest, the Groovy field mostly cannot tell which background it is in,
+including how that background is shifted. It can never tell the all-zeros
+background from the all-ones one, for any rule: that uniform "D0" bit is
+invisible to it by algebra. Adding the source's spatial gradient — the
+source with exactly that one bit removed — and two steps of memory makes the
+Groovy field self-sufficient for every rule. **Complete for this census:
+exact counts, a universal repair, and a named blind spot.** Richer repairs,
+towers and the 109 rules without a short-memory law remain open in
+[The Groovy Field](2026-09-22-groovy-field-program.md).
+[Census and evidence](2026-09-22-groovy-field-census.md).
+
 ## Keeping this useful
 
 After a completed or stopped unit, update its entry or add one short account:

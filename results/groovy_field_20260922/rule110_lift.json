@@ -1,0 +1,81 @@
+{
+ "stage": "rule110_lift",
+ "rule": 110,
+ "track": 128,
+ "radius": 3,
+ "table_realized_patterns": 1195,
+ "autonomous_simulation": [
+  {
+   "ring": 40,
+   "steps": 60,
+   "lifted_matches_source": true
+  },
+  {
+   "ring": 64,
+   "steps": 80,
+   "lifted_matches_source": true
+  },
+  {
+   "ring": 101,
+   "steps": 60,
+   "lifted_matches_source": true
+  }
+ ],
+ "ring_quotient": [
+  {
+   "ring": 8,
+   "source_states": 256,
+   "lifted_states": 255,
+   "largest_class": 2
+  },
+  {
+   "ring": 9,
+   "source_states": 512,
+   "lifted_states": 512,
+   "largest_class": 1
+  },
+  {
+   "ring": 10,
+   "source_states": 1024,
+   "lifted_states": 1023,
+   "largest_class": 2
+  },
+  {
+   "ring": 11,
+   "source_states": 2048,
+   "lifted_states": 2048,
+   "largest_class": 1
+  },
+  {
+   "ring": 12,
+   "source_states": 4096,
+   "lifted_states": 4095,
+   "largest_class": 2
+  },
+  {
+   "ring": 13,
+   "source_states": 8192,
+   "lifted_states": 8192,
+   "largest_class": 1
+  },
+  {
+   "ring": 14,
+   "source_states": 16384,
+   "lifted_states": 16383,
+   "largest_class": 2
+  },
+  {
+   "ring": 15,
+   "source_states": 32768,
+   "lifted_states": 32768,
+   "largest_class": 1
+  },
+  {
+   "ring": 16,
+   "source_states": 65536,
+   "lifted_states": 65535,
+   "largest_class": 2
+  }
+ ],
+ "figure": "docs/research/assets/groovy-field-rule110.png"
+}
