@@ -1441,9 +1441,9 @@ export default function Concepts() {
               <Op>A(S)</Op> only.
             </p>
             <p style={{ fontSize: '0.92rem', color: 'var(--ink-soft)', maxWidth: '60ch', margin: 0 }}>
-              Open question this raises: does this field's own compressibility work as a faster Class-IV detector
-              than looking at <Op>G(S)</Op> or <Op>E(S)</Op>{' '}
-              directly? First test didn't confirm it &mdash; see the{' '}
+              This proposed shortcut has a bounded negative answer: in the tested 1D and 2D conditions,
+              this field's compressibility tracked <Op>E(S)</Op> rather than separating the informal classes
+              more clearly. See the{' '}
               <a href="questions.html#absential" style={{ color: 'var(--accent)' }}>questions page</a>.
             </p>
           </section>
@@ -1497,7 +1497,7 @@ export default function Concepts() {
             <p style={{ ...pBody, marginTop: '1.1rem', marginBottom: 0 }}>
               Try rule 90 in the pinned panel: both fields go flat &mdash; for affine rules the two constructions
               agree forever, one more face of the affine theorem. For most rules they disagree, and whether that
-              disagreement can follow a rule of its own is The Walk, this site's research frontier. The{' '}
+              disagreement can follow a rule of its own is the question The Walk investigates. The{' '}
               <span className="gc-mono" style={{ fontSize: '0.85em', fontWeight: 700 }}>ENGINE</span> label on the
               sections below marks constructions of this shape: fields that walk on their own output rather than
               watching <Op>E</Op>'s.

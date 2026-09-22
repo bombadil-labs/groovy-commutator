@@ -1,6 +1,6 @@
 # Next agent: preserve the stop; require an action-changing question
 
-Updated 2026-09-22 after the fifth research-drive unit. Read
+Updated 2026-09-22 after the sixth research-drive unit. Read
 [START_HERE](START_HERE.md), [FINDINGS](FINDINGS.md), the
 [readout-cost note](2026-09-22-groovy-readout-cost.md), the
 [consumer audit](2026-09-22-phase-free-consumer-audit.md), the
@@ -64,6 +64,24 @@ Do not rerun these units to resolve their old future-tense prose. The second
 lift is exact only through depth two and its ambient failure only through
 radius two. The pulse result is only the declared four-site family. The
 gradient results are observation-relative and charge their retained state.
+
+## Sixth completed unit
+
+A current public-surface audit found six remaining forward-looking status
+defects. The Concepts page still called absential compressibility open and a
+historical remainder question the site's research frontier. Two research
+catalog entries still called proved finite-depth recursion open and completed
+pulse-shape work “next.” Two knowledge summaries still said the paused
+Class-IV refinement Program was continuing. These pointers are corrected, and
+FINDINGS records the bounded absential negative in plain language.
+
+The dimensional organization and iterative-remainder questions are genuinely
+open and remain so; neither supplies a queued experiment without a consumer
+and resource contract. One-beam typed compression is likewise open but dormant.
+
+This closes the present public-status audit. Do not turn generic mathematical
+openness or historical future tense into a work queue. A new unit needs a
+specific discrepancy, caller or decision that the result would change.
 
 ## Next decision, not an automatic experiment
 

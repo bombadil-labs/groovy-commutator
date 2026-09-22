@@ -1,5 +1,60 @@
 # Research drive handoff
 
+## 2026-09-22 — sixth unit: public-status audit and verified stop
+
+Inspected remote main `97ddaa4796fcfc134d6796a8053aa2dc483c0d07`
+through the Bombadil Labs connector. No open PRs or issues were present.
+Fetched a fresh main tree and re-read the agent guide, scheduling authority,
+next task, findings, portfolio and latest handoff before checking README, the
+public Concepts and Questions pages, the research catalog and current knowledge
+summaries against those authorities.
+
+Selected a bounded public-status audit because the repository now correctly
+queues no empirical work, and the remaining high-value risk was a fresh agent
+or reader following a stale public claim. This outranked manufacturing another
+experiment or building generic infrastructure without a second consumer.
+
+An independent read-only Sol audit found six actionable forward-looking status
+defects. The Concepts page still called absential compressibility open and a
+historical remainder question the site's research frontier. The research
+catalog still called proved fixed-finite-depth recursion open and completed
+pulse-shape work the next control. Two knowledge summaries still said the
+paused Class-IV refinement Program was continuing. These pointers now state
+the later bounded results and current dispositions.
+
+The preserved absential experiment tested seven Life-like rules on 60-by-60
+tori, eight seeds per rule, 240 steps with a settled tail, and still-life/glider
+probes. At the reported aggregate level the absential score did not separate
+the hand-labeled behaviors more clearly than the raw score. The public prose
+now calls this a bounded negative, and FINDINGS adds an accessible account.
+Runtime, observation and storage costs were not tested. No protocol, runner,
+result byte or classifier threshold changed.
+
+Endogenous establishment of a dimensional interpretation and iterative
+remainder closure are legitimate open questions rather than stale claims.
+One-beam typed compression is also open but dormant. None has a declared
+consumer and resource contract that would justify an automatic experiment.
+Historical planning prose and scoped knowledge questions remain provenance,
+not scheduling authority.
+
+Gathering branch: `gather/public-status-stop`; [PR
+#290](https://github.com/bombadil-labs/groovy-commutator/pull/290). Independent
+Sol review first blocked a cost overclaim, then approved scientific head
+`a5e49af82d7289b601e39c91a549ebc4633f6dbb` after the finding was narrowed to
+separation under one compression score and runtime, observation and storage
+costs were left explicitly untested. All four CI checks passed on that head.
+The PR review thread records the final administrative-head and merge
+disposition.
+
+Next decision-relevant questions:
+
+1. Has a concrete consumer appeared with an output, geometry, cadence and full
+   resource contract that changes the representation-cost decision?
+2. Is there a specific current claim contradicted by preserved evidence, as
+   opposed to a merely open mathematical question or dated plan?
+3. If neither condition holds, preserve this verified stop and do not create a
+   research unit simply because time or compute is available.
+
 ## 2026-09-22 — fifth unit: active knowledge status repair
 
 Inspected remote main `ce989f283e81666769c359046b7d3cc2463b8573`
