@@ -18,5 +18,46 @@
       "g-autonomy-boundary",
       "affine-oriented-lift-20260917"
     ]
+  },
+  {
+    "label": "Groovy geometry",
+    "slug": "groovy-three-row-geometry",
+    "title": "Three Groovy rows need their temporal seam",
+    "date": "2026-09-22",
+    "updated": "2026-09-22",
+    "kind": "Exact obstruction",
+    "evidence": "exact",
+    "topic": "Algebra and closure",
+    "summary": "An eleven-cell periodic Rule-30 source gives identical unlabelled three-row input planes requiring different successors. No uniform binary 2D rule can advance this period-three encoding at one-step cadence, at any radius.",
+    "takeaway": "Ordered memory-three autonomy survives. Spatially arranging the raw bits and forgetting their temporal roles is a further information loss; markers, boundaries or another encoding remain possible.",
+    "source": "docs/research/2026-09-22-groovy-three-row-geometry.md",
+    "promotion": {
+      "stage": "research"
+    },
+    "related": [
+      "groovy-field-census",
+      "affine-oriented-lift-20260917"
+    ]
+  },
+  {
+    "label": "Groovy separator",
+    "slug": "groovy-separator-lift",
+    "title": "One extra binary row makes the Groovy history spatial",
+    "date": "2026-09-22",
+    "updated": "2026-09-22",
+    "kind": "Exact construction",
+    "evidence": "exact",
+    "topic": "Algebra and closure",
+    "summary": "Either a zero or a one separator repairs the three-row Rule-30 Groovy history as a uniform binary 2D CA on a 13-by-4 stencil. The complete 21-bit source cone and all four phases are checked independently.",
+    "takeaway": "G never contains 1111, so a ones row is a local marker. A zero separator also closes: unique temporal labels are unnecessary when ambiguous readings agree on the successor. The extra row and local access have explicit costs.",
+    "source": "docs/research/2026-09-22-groovy-separator-lift.md",
+    "promotion": {
+      "stage": "research"
+    },
+    "related": [
+      "groovy-three-row-geometry",
+      "groovy-field-census",
+      "affine-oriented-lift-20260917"
+    ]
   }
 ]

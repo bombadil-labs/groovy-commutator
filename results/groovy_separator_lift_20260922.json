@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "implementation_commit": "19b011fc7017e428af6bfb502a7be5cbf5b2c562",
+  "source_hashes": {
+    "docs/research/protocols/groovy-four-row-separator-20260922.md": "fefde286274e3f25db4ef5817f1e96bfeb069b44fada4fc561c68b91d38f891a",
+    "results/groovy_four_row_separator_20260922.json": "880cffb70b22c4f689ff2f4194c2c8fc927f97377aa71e74ceb523a884eaf960",
+    "results/groovy_field_20260922/review_audit.json": "67a335b0d9f80afa735564fc39cbfc8f13729a69eefd126763fc7aa5ea97f9b1",
+    "scripts/verify_groovy_separator_lift.py": "519c17a44ce40ed0c9edb1318d988c1de3af578338338892bce5dfb4ffb13e9f",
+    "src/groovy/separator_lift.py": "92e3130d7fd2be58ee8db11a786336973e7d1bc5641f971a84fb3111096b7b9c",
+    "scripts/groovy_four_row_separator.py": "bc9e9ec020618ced053cda0d9c300c072c4bded3cdcd1dd7b62ced4e3a922cbf",
+    "scripts/groovy_three_row_geometry.py": "d360a7412688d0347339f31d175a719b3004ee77fa5d4a7d290143d895176e7f",
+    "src/groovy/groovy_field.py": "66e3f175adf38a820f8d756c3a26e82156db5eb0bf134ac448c687960687fc94",
+    "src/groovy/ca.py": "6969d6f0699b48602c8a2f55aecd61d58862e6472fea56f6d1ed9ebb2656d77e"
+  },
+  "one_separator": {
+    "status": "certified_constructive_law",
+    "source_bits": 21,
+    "cases_by_phase": [
+      2097152,
+      2097152,
+      2097152,
+      2097152
+    ],
+    "history_patterns": 164477,
+    "history_table_sha256": "18f3c68d51445779c5bdd8f03d0bdc4bf4ff9af58dd56db652a9e38e2a6fa57a",
+    "forbidden_data_word": "1111",
+    "stencil": {
+      "x": [
+        -6,
+        6
+      ],
+      "y": [
+        -2,
+        1
+      ]
+    },
+    "completion": "zero for invalid marker or absent history key"
+  },
+  "zero_separator": {
+    "separator": 0,
+    "status": "local_law",
+    "source_bits": 21,
+    "phase_cases": 8388608,
+    "forced_patterns": 657893,
+    "table_sha256": "1cb4e0c97e4f708af70e7f6538f08930b5b4589c6a92e0367a9f86b5f45a3149"
+  },
+  "independent_zero_table": {
+    "forced_patterns": 657893,
+    "table_sha256": "1cb4e0c97e4f708af70e7f6538f08930b5b4589c6a92e0367a9f86b5f45a3149"
+  }
+}
