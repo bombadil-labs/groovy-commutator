@@ -1,0 +1,47 @@
+name: One-dimensional Groovy recursion
+
+on:
+  pull_request:
+    paths:
+      - 'scripts/groovy_1d_second_generation.py'
+      - 'scripts/groovy_1d_third_generation.py'
+      - 'tests/test_groovy_1d_second_generation.py'
+      - 'tests/test_groovy_1d_third_generation.py'
+      - 'results/groovy_1d_second_generation_20260923.json'
+      - 'results/groovy_1d_third_generation_20260923.json'
+      - 'docs/research/protocols/groovy-1d-second-generation-20260923.md'
+      - 'docs/research/protocols/groovy-1d-third-generation-20260923.md'
+      - 'results/groovy_field_20260922/census.json'
+      - '.github/workflows/research-groovy-1d-recursion.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/groovy_1d_second_generation.py'
+      - 'scripts/groovy_1d_third_generation.py'
+      - 'tests/test_groovy_1d_second_generation.py'
+      - 'tests/test_groovy_1d_third_generation.py'
+      - 'results/groovy_1d_second_generation_20260923.json'
+      - 'results/groovy_1d_third_generation_20260923.json'
+      - 'docs/research/protocols/groovy-1d-second-generation-20260923.md'
+      - 'docs/research/protocols/groovy-1d-third-generation-20260923.md'
+      - 'results/groovy_field_20260922/census.json'
+      - '.github/workflows/research-groovy-1d-recursion.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  recursion-certificate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    env:
+      OPENBLAS_NUM_THREADS: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -e . pytest
+      - run: python scripts/groovy_1d_second_generation.py --check
+      - run: python scripts/groovy_1d_third_generation.py --check
+      - run: python -m pytest tests/test_groovy_1d_second_generation.py tests/test_groovy_1d_third_generation.py -q

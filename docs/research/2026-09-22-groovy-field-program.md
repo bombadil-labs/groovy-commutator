@@ -20,6 +20,21 @@ exploration showing that one extra bit per cell plus two steps of history
 repairs that exactly. The first results are in the
 [census note](2026-09-22-groovy-field-census.md).
 
+## Current focus: 1D recursion
+
+On 2026-09-23 Myk asks about the G of an autonomous G field, staying in 1D.
+The [first bounded recursion unit](2026-09-23-groovy-1d-second-generation.md)
+resolves the 36 present-only binary cases under specified smallest-radius
+laws: 33 constant second fields, nonconstant inherited positives for 2/16,
+and a second-generation failure for 32 under both radius-one choices.
+Full descendant-domain results are recorded separately. Finite-memory cases
+such as Rule 30 are outside this unit. Myk's requested
+[third-generation follow-up](2026-09-23-groovy-1d-third-generation.md) also
+closes for both mirror sources on the first-one / second-zero branch, with
+a radius-four update. Other tested choices fail or remain unresolved beyond
+radius four. The choice of rule completion now affects the closure verdict.
+No fourth generation is queued.
+
 ## The questions, in plain English
 
 1. **Can a rule's Groovy field run on its own?** If you are only shown the
@@ -132,7 +147,7 @@ protocol, certificate and stopping decision.
 | Taxonomy: classify each counterexample by how its two tails differ | 3, 9 | bounded run complete; see evidence limits |
 | 4. Rule 110 dynamics on valid histories | 8 | bounded run complete; see evidence limits |
 | Follow-ups: output complement vs D0; universal repairs at memory 3; G alone at memory 5 | 2, 5, 9 | bounded run complete; see evidence limits |
-| 5. Towers: the Groovy field of the repaired system | 10 | requires an off-image completion contract |
+| 5. 1D recursive G | 10 | second-generation unit and requested third-generation 2/16 follow-up complete under explicit rules; no fourth generation queued |
 | 6. A general operator beyond one-bit, radius-one tracks | 5, 9 | open |
 | Raw three-row geometry: Rule-30 temporal roles as spatial rows | 8, 9 | closed negative for the unlabelled period-three encoding |
 | One constant binary separator row | 8, 9 | both 0 and 1 certified at four rows, 13-by-4 stencil, one-step cadence; bounded unit complete |
@@ -147,6 +162,6 @@ decisions are in the [checkpoint](checkpoints/groovy-field.md).
   always closes trivially; the repaired Groovy systems are larger. Their
   interest is structural: they identify what the Groovy field loses.
 - No Class-IV, universality or physics claim.
-- Finite-ring checks are consistency checks, never evidence for a line claim.
+- Finite-ring positives do not establish full-line closure. Whole-field periodic counterexamples extend to exact infinite-line negatives.
 - A completed bounded run can contain unresolved or uncertified outcomes.
   “No law through memory five” is not “no finite memory works.”

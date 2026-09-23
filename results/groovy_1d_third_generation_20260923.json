@@ -1,0 +1,518 @@
+{
+  "data": {
+    "cases": [
+      {
+        "composition_verification": {
+          "direct_unpacked_triple_g": true,
+          "source_bits": 21,
+          "source_words": 2097152
+        },
+        "first_fill": 0,
+        "first_update": {
+          "outputs_ascending": "00100010000100000000001000010000",
+          "radius": 2
+        },
+        "inherited_domain": {
+          "all_spatial_radii_excluded": true,
+          "periods_screened": 7,
+          "status": "no_present_only_law",
+          "verification": {
+            "direct_scalar_triple_g_periodic_witness": true
+          },
+          "witness": {
+            "observations": [
+              "0000001",
+              "0000001"
+            ],
+            "period": 7,
+            "sources": [
+              "0011111",
+              "0100110"
+            ],
+            "successors": [
+              "0000010",
+              "0000000"
+            ]
+          }
+        },
+        "native_g_of_second_update": {
+          "outputs_ascending": "00000000000000001100000000100000000011001111101011111100000000000000000011110000000000001100110000000011000000000000000011010000000000000000000011000000001000000000111100000000111111001111000000000000000011110000000011001100000011110000000000001100000000000000000000000000110000000010000000001100111110101111110000000000000000001111000000000000110011000000111111111010000000000000000000000000000000001100000000100000000011001111101011111100111100000000000011110000000000001100110000001100111110100000110000000000",
+          "radius": 4
+        },
+        "same_as_second_observation": false,
+        "second_fill": 0,
+        "second_update": {
+          "outputs_ascending": "00110011000010100011000000100000",
+          "radius": 2
+        },
+        "source_rule": 2,
+        "third_observation": {
+          "one_entries": 14528,
+          "output_bytes_sha256": "711335fb35e4088bb99294261f1d7e2afcc7a0954a9d91877691127b068a4723",
+          "radius": 8,
+          "table_size": 131072
+        }
+      },
+      {
+        "composition_verification": {
+          "direct_unpacked_triple_g": true,
+          "source_bits": 21,
+          "source_words": 2097152
+        },
+        "first_fill": 0,
+        "first_update": {
+          "outputs_ascending": "00100010000100000000001000010000",
+          "radius": 2
+        },
+        "inherited_domain": {
+          "all_spatial_radii_excluded": true,
+          "periods_screened": 10,
+          "status": "no_present_only_law",
+          "verification": {
+            "direct_scalar_triple_g_periodic_witness": true
+          },
+          "witness": {
+            "observations": [
+              "0000010001",
+              "0000010001"
+            ],
+            "period": 10,
+            "sources": [
+              "0011110011",
+              "0100100110"
+            ],
+            "successors": [
+              "0000100010",
+              "0000100000"
+            ]
+          }
+        },
+        "native_g_of_second_update": {
+          "outputs_ascending": "00000000001100001111111100000000000000000011000011111111000000000000000000110000111111110000000000000000001100000011000000000000000000000011000011111111000000000000000000110000111111110000000000000000001100001111111100000000000000000011111100110000000000000000000000110000111111110000000000000000001100001111111100000000000000000011000011111111000000000000000000110000001100000000000000000000001100001111111100000000000000000011000011111111000000000000000000110000000011110000000000000000001111110011000000000000",
+          "radius": 4
+        },
+        "same_as_second_observation": false,
+        "second_fill": 1,
+        "second_update": {
+          "outputs_ascending": "00110111001111110011011100110011",
+          "radius": 2
+        },
+        "source_rule": 2,
+        "third_observation": {
+          "one_entries": 888,
+          "output_bytes_sha256": "bf32d2dcb7e50923cc3afaebd001bd4b77b19faa649abcf77ed90673342e7efa",
+          "radius": 6,
+          "table_size": 8192
+        }
+      },
+      {
+        "composition_verification": {
+          "direct_unpacked_triple_g": true,
+          "source_bits": 21,
+          "source_words": 2097152
+        },
+        "first_fill": 1,
+        "first_update": {
+          "outputs_ascending": "00100011001100110010111100111111",
+          "radius": 2
+        },
+        "inherited_domain": {
+          "forced_outputs_ascending": "000000?01?11??1??0??0?00????11????0?????11??1111????????1?11????????00??????????000?????1?111?11?????????????????0??0?00????????000000??1?11?????0??0?00????11??000?00???????????0??0?000???11?1????00??????????0000??????1?1?110?00????11???111?0??0?0?????11??000000?01?11?????0??0?00????11????0?????11??1111????????1?11????000?00??1?11??1???????????????????0?????11???11111??????1?11??1?00??????1?11??1?????????????????000?00?0?????????0??0?000???11?10???00?0????????000?????1?111?11??0?????11??1111?0??0?001?11????",
+          "periods_screened": 12,
+          "radius": 4,
+          "smaller_radius_attempts": [
+            {
+              "conflicting_neighborhood": 0,
+              "radius": 0,
+              "source_bits": 15,
+              "source_words_checked": 32768,
+              "status": "local_conflict"
+            },
+            {
+              "conflicting_neighborhood": 6,
+              "radius": 1,
+              "source_bits": 15,
+              "source_words_checked": 32768,
+              "status": "local_conflict"
+            },
+            {
+              "conflicting_neighborhood": 14,
+              "radius": 2,
+              "source_bits": 17,
+              "source_words_checked": 32768,
+              "status": "local_conflict"
+            },
+            {
+              "conflicting_neighborhood": 56,
+              "radius": 3,
+              "source_bits": 19,
+              "source_words_checked": 65536,
+              "status": "local_conflict"
+            }
+          ],
+          "source_bits": 21,
+          "source_words": 2097152,
+          "status": "law",
+          "verification": {
+            "source_bits": 21,
+            "unpacked_source_words": 2097152,
+            "verified": true
+          }
+        },
+        "native_g_of_second_update": {
+          "outputs_ascending": "00000000111111110000111100000000110011111111111111000000000000000000000011111111000011110000000011111111000000001100000000000000000000001111111100001111000000001100111111111111110000000000000011001111111111110000111100000000111111110000000011000000000000000000000011111111000011110000000011001111111111111100000000000000000000001111111100001111000000001111111100000000110000000000000000000000111111110000111100000000000000001111111111000000000000001100111111111111000011110000000011111111000000001100000000000000",
+          "radius": 4
+        },
+        "same_as_second_observation": false,
+        "second_fill": 0,
+        "second_update": {
+          "outputs_ascending": "00110000001100000011000010000000",
+          "radius": 2
+        },
+        "source_rule": 2,
+        "third_observation": {
+          "one_entries": 2114,
+          "output_bytes_sha256": "3d5db9d7a57c5a5ac8254668709988708d2e4c3417045cbd709c78997029ef2a",
+          "radius": 6,
+          "table_size": 8192
+        }
+      },
+      {
+        "composition_verification": {
+          "direct_unpacked_triple_g": true,
+          "source_bits": 21,
+          "source_words": 2097152
+        },
+        "first_fill": 1,
+        "first_update": {
+          "outputs_ascending": "00100011001100110010111100111111",
+          "radius": 2
+        },
+        "inherited_domain": {
+          "periods_screened": 12,
+          "radius_attempts": [
+            {
+              "conflicting_neighborhood": 0,
+              "radius": 0,
+              "source_bits": 17,
+              "source_words_checked": 32768,
+              "status": "local_conflict"
+            },
+            {
+              "conflicting_neighborhood": 0,
+              "radius": 1,
+              "source_bits": 17,
+              "source_words_checked": 32768,
+              "status": "local_conflict"
+            },
+            {
+              "conflicting_neighborhood": 1,
+              "radius": 2,
+              "source_bits": 19,
+              "source_words_checked": 32768,
+              "status": "local_conflict"
+            },
+            {
+              "conflicting_neighborhood": 2,
+              "radius": 3,
+              "source_bits": 21,
+              "source_words_checked": 32768,
+              "status": "local_conflict"
+            },
+            {
+              "conflicting_neighborhood": 4,
+              "radius": 4,
+              "source_bits": 23,
+              "source_words_checked": 32768,
+              "status": "local_conflict"
+            }
+          ],
+          "status": "unresolved_within_budget",
+          "verification": {
+            "reason": "unresolved search is not a certificate",
+            "verified": false
+          }
+        },
+        "native_g_of_second_update": {
+          "outputs_ascending": "00000000110001000011000011000000111100000000001100000001000000000000000011000100111100001100111100000001111100001111111100000000000000001100010000110000110000001111000000000011000000010000000011110000001101111100000000000000000011100011100011111111000000000000000011000100001100001100000011110000000000110000000100000000000000001100010011110000110011110000000111110000111111110000000000000000110001000000000000001111111100000000001100000001000000001111000011111100110000000000000000001110001110001111111100000000",
+          "radius": 4
+        },
+        "same_as_second_observation": false,
+        "second_fill": 1,
+        "second_update": {
+          "outputs_ascending": "00110001001101110011000111111111",
+          "radius": 2
+        },
+        "source_rule": 2,
+        "third_observation": {
+          "one_entries": 7796,
+          "output_bytes_sha256": "85ca9a6a798e42b3a9254b94ac070990e8b4432995222cb1d0a1f53e6c093ff5",
+          "radius": 7,
+          "table_size": 32768
+        }
+      },
+      {
+        "composition_verification": {
+          "direct_unpacked_triple_g": true,
+          "source_bits": 21,
+          "source_words": 2097152
+        },
+        "first_fill": 0,
+        "first_update": {
+          "outputs_ascending": "00000000100011000000000000110000",
+          "radius": 2
+        },
+        "inherited_domain": {
+          "all_spatial_radii_excluded": true,
+          "periods_screened": 7,
+          "status": "no_present_only_law",
+          "verification": {
+            "direct_scalar_triple_g_periodic_witness": true
+          },
+          "witness": {
+            "observations": [
+              "0000001",
+              "0000001"
+            ],
+            "period": 7,
+            "sources": [
+              "1011001",
+              "1100100"
+            ],
+            "successors": [
+              "1000000",
+              "0000000"
+            ]
+          }
+        },
+        "native_g_of_second_update": {
+          "outputs_ascending": "00000000000000001111000011110000000011011101010100001111001110000000000011110111000000001111001100000010110101010000111100000000000000000000000000000000111100000000110111010101111100000011000000000000001011100000000000000000000000101101010100000000000000000000000000000000111100001111000000001101110101010000111100111000000000001111011100000000111100110000001000000000000011110000000000000000000000000000000011110000000011011101010100000000001110000000000000101110000000000000000000000010000000000000000000000000",
+          "radius": 4
+        },
+        "same_as_second_observation": false,
+        "second_fill": 0,
+        "second_update": {
+          "outputs_ascending": "00000010110110100000000011001000",
+          "radius": 2
+        },
+        "source_rule": 16,
+        "third_observation": {
+          "one_entries": 14528,
+          "output_bytes_sha256": "65fc517fd2dfd09d108c8b22cd5a947a4c8382515d55148fcfdb9b56dbc505eb",
+          "radius": 8,
+          "table_size": 131072
+        }
+      },
+      {
+        "composition_verification": {
+          "direct_unpacked_triple_g": true,
+          "source_bits": 21,
+          "source_words": 2097152
+        },
+        "first_fill": 0,
+        "first_update": {
+          "outputs_ascending": "00000000100011000000000000110000",
+          "radius": 2
+        },
+        "inherited_domain": {
+          "all_spatial_radii_excluded": true,
+          "periods_screened": 10,
+          "status": "no_present_only_law",
+          "verification": {
+            "direct_scalar_triple_g_periodic_witness": true
+          },
+          "witness": {
+            "observations": [
+              "0000010001",
+              "0000010001"
+            ],
+            "period": 10,
+            "sources": [
+              "0110011001",
+              "1001001100"
+            ],
+            "successors": [
+              "1000001000",
+              "1000000000"
+            ]
+          }
+        },
+        "native_g_of_second_update": {
+          "outputs_ascending": "00000000000000001111111011110000000000000000000000000000000000000000000000000000111111111111000000000000000000110000000000000000000000000000000011111110111111111111111111111111000000000000000000000000000000001111111111110000000000000000001100000000000000000000000000000000111111101111000000000000000000000000000000000000000000000000000011111111111100000000000000000011000000000000000000000000000000001111111011111111111111111111111100000000000000000000000000000000111111111111000000000000000000110000000000000000",
+          "radius": 4
+        },
+        "same_as_second_observation": false,
+        "second_fill": 1,
+        "second_update": {
+          "outputs_ascending": "00000010111111110000111011111111",
+          "radius": 2
+        },
+        "source_rule": 16,
+        "third_observation": {
+          "one_entries": 888,
+          "output_bytes_sha256": "9e2c4759bdcdf0385527cb5913108b95c462b7420487f2faa6f25f34acd76cd0",
+          "radius": 6,
+          "table_size": 8192
+        }
+      },
+      {
+        "composition_verification": {
+          "direct_unpacked_triple_g": true,
+          "source_bits": 21,
+          "source_words": 2097152
+        },
+        "first_fill": 1,
+        "first_update": {
+          "outputs_ascending": "00000101111111110000010100111111",
+          "radius": 2
+        },
+        "inherited_domain": {
+          "forced_outputs_ascending": "0000?0?0??00??0?????0?00?????1??1111?1??11???111????1??11100?1?1000?0000??00????000???????000?00????????11?????1111?1?11??11??1?000??0??0000?000????0?00????????1111?1??????????????1?1111???1?1????????????????000???????000?001??1?1??11???111????1?11?????1??0000?0????00????000?0?00??000100????????11???111????????????????000?0000??00????????????????????????????11???111111???????11??1?000???????????0???????0?????????1111?1??????????????1??111???1?100?????0???0????000???????000??0????????11???111????1?11??11????",
+          "periods_screened": 12,
+          "radius": 4,
+          "smaller_radius_attempts": [
+            {
+              "conflicting_neighborhood": 0,
+              "radius": 0,
+              "source_bits": 15,
+              "source_words_checked": 32768,
+              "status": "local_conflict"
+            },
+            {
+              "conflicting_neighborhood": 3,
+              "radius": 1,
+              "source_bits": 15,
+              "source_words_checked": 32768,
+              "status": "local_conflict"
+            },
+            {
+              "conflicting_neighborhood": 14,
+              "radius": 2,
+              "source_bits": 17,
+              "source_words_checked": 65536,
+              "status": "local_conflict"
+            },
+            {
+              "conflicting_neighborhood": 14,
+              "radius": 3,
+              "source_bits": 19,
+              "source_words_checked": 163840,
+              "status": "local_conflict"
+            }
+          ],
+          "source_bits": 21,
+          "source_words": 2097152,
+          "status": "law",
+          "verification": {
+            "source_bits": 21,
+            "unpacked_source_words": 2097152,
+            "verified": true
+          }
+        },
+        "native_g_of_second_update": {
+          "outputs_ascending": "00000011111011110000000011111111111111111111000000000000000000000000001111101111111111110000000011111111111100000000000000000000000000000000111100000000000000001111111111110000000000000000000000000011111011111111111100000000111111111111000000000000000000000000001111101111000000001111111111111111111100000000000000000000000000111110111111111111000000001111111111110000000000000000000000000000000011110000000000000000111111111111000000000000000000000000001111101111111111110000000011111111111100000000000000000000",
+          "radius": 4
+        },
+        "same_as_second_observation": false,
+        "second_fill": 0,
+        "second_update": {
+          "outputs_ascending": "00010000111000000000000011100000",
+          "radius": 2
+        },
+        "source_rule": 16,
+        "third_observation": {
+          "one_entries": 2114,
+          "output_bytes_sha256": "3761bc8645a9dc27486968b6077ffeeb6a57e5ec96d7f31414d7c96eb78055fa",
+          "radius": 6,
+          "table_size": 8192
+        }
+      },
+      {
+        "composition_verification": {
+          "direct_unpacked_triple_g": true,
+          "source_bits": 21,
+          "source_words": 2097152
+        },
+        "first_fill": 1,
+        "first_update": {
+          "outputs_ascending": "00000101111111110000010100111111",
+          "radius": 2
+        },
+        "inherited_domain": {
+          "periods_screened": 12,
+          "radius_attempts": [
+            {
+              "conflicting_neighborhood": 0,
+              "radius": 0,
+              "source_bits": 17,
+              "source_words_checked": 32768,
+              "status": "local_conflict"
+            },
+            {
+              "conflicting_neighborhood": 2,
+              "radius": 1,
+              "source_bits": 17,
+              "source_words_checked": 32768,
+              "status": "local_conflict"
+            },
+            {
+              "conflicting_neighborhood": 8,
+              "radius": 2,
+              "source_bits": 19,
+              "source_words_checked": 32768,
+              "status": "local_conflict"
+            },
+            {
+              "conflicting_neighborhood": 40,
+              "radius": 3,
+              "source_bits": 21,
+              "source_words_checked": 32768,
+              "status": "local_conflict"
+            },
+            {
+              "conflicting_neighborhood": 81,
+              "radius": 4,
+              "source_bits": 23,
+              "source_words_checked": 32768,
+              "status": "local_conflict"
+            }
+          ],
+          "status": "unresolved_within_budget",
+          "verification": {
+            "reason": "unresolved search is not a certificate",
+            "verified": false
+          }
+        },
+        "native_g_of_second_update": {
+          "outputs_ascending": "00000011111100000000111100001111111111010000110011101100000000000000000000000011000000000000111100000001000000110001110000000000000000111111000011101100000011110000001100001111000000000000000000000000000000110000000000001111000000101111000000011100000000000000001111110000000011110000111111111101000011001110110000000000000000000000001100000000000011111111111100000000000111000000000000000011111100001110110000001111000000110000111100000000000000000000000000001100000000001111111100000010111100000001110000000000",
+          "radius": 4
+        },
+        "same_as_second_observation": false,
+        "second_fill": 1,
+        "second_update": {
+          "outputs_ascending": "00010001111100110001001111111111",
+          "radius": 2
+        },
+        "source_rule": 16,
+        "third_observation": {
+          "one_entries": 7796,
+          "output_bytes_sha256": "59a53918dbcfc49d825d25ee7bca96b850ea59b47b16d5b35b5e5383ada22e20",
+          "radius": 7,
+          "table_size": 32768
+        }
+      }
+    ],
+    "fourth_generation_evaluated": false,
+    "scope": "third inherited generation only; sources 2/16; fixed zero/one completions"
+  },
+  "implementation_commit": "8c7559cf5b6d34bae2cb662f1f5271eac35eb627",
+  "schema": 1,
+  "sha256": {
+    "docs/research/protocols/groovy-1d-second-generation-20260923.md": "8a2a86cff122d7480bb88e42a0edb60e0db0b4070e9b03ef3e1b0e4e8246a061",
+    "docs/research/protocols/groovy-1d-third-generation-20260923.md": "cd85ca33e71ae7d8e7a4e0f531880015dccbda0af977fe7bd9d89d160a0266f9",
+    "results/groovy_1d_second_generation_20260923.json": "c39b7681f7600195e5c8d40720c878c88972baeb596fb2f38a273f65a578aaa0",
+    "results/groovy_field_20260922/census.json": "113a5f75ddf60be135eaa12c40ad43c20719a71a2a9f1a3542e611425d61061e",
+    "scripts/groovy_1d_second_generation.py": "48b46e7c621fb9b03da468d14d0b7819b36559266a3277523cbce8eb793533a9",
+    "scripts/groovy_1d_third_generation.py": "28cc971fa773c368c84947f4676b6337b6af87fe3f78e4c0604ea04e39b99000"
+  }
+}
