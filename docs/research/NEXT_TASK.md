@@ -1,6 +1,29 @@
 # Next agent: require a concrete operation before another search
 
 Updated 2026-09-23. Authored by Codex (OpenAI). Reviewed by: none.
+Latest completed unit: [observation discovery #303](https://github.com/bombadil-labs/groovy-commutator/pull/303).
+Inspected main `45c8698d2a2e3c0dfcd9bb01dee1556fde58ba15`; protocol
+`02948ab8ff523574a4ee11fdf0b379714ca87221` preceded implementation
+`eced9cee90570db53a2280f6101abffe441ef7da` and evaluation. Myk authorized
+this unit and merging completed work. Reviewed by: none.
+
+We tested whether witnesses can select which raw, XOR or past observations
+belong in a sufficient view. The Rule-90 calibration selected the known side
+XOR. On Rule 30, all three search arms chose six current bits at -2..3; the
+offered relations and history did not reduce feature count. Guided full
+queries fell from 26,892 to 67, but raw-only search was fastest (0.0046 s
+versus 0.4118 s guided total). P1/P3/P5 held; P2/P4 failed. Canonical result:
+`results/observation_discovery_20260923.json`. Separate scalar audit checks all
+1,024 calibration/test rows and 69 witnesses in under a second locally.
+
+[The note](2026-09-23-observation-discovery.md) states the exact local full-line
+one-step contract and post-evaluation algebraic cancellation. The interactive
+site page `observation-discovery.html` displays saved failure pairs and costs.
+The winner's six source bits already determine the mandatory G bit; a direct
+six-bit lookup can omit G. This is grammar-bound observation selection, not
+an autonomous reduced CA or a new biological object. Do not expand the grammar
+or continue a census to force a relational advantage.
+
 The five earlier gathering units #295–#299 and follow-ups
 [target eligibility #300](https://github.com/bombadil-labs/groovy-commutator/pull/300),
 [delayed action #301](https://github.com/bombadil-labs/groovy-commutator/pull/301),

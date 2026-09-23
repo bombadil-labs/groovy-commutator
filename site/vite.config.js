@@ -34,6 +34,7 @@ export default defineConfig({
         explorer: resolve(__dirname, 'explorer.html'),
         dimensionalBridge: resolve(__dirname, 'dimensional-bridge.html'),
         reusableDescriptions: resolve(__dirname, 'reusable-descriptions.html'),
+        observationDiscovery: resolve(__dirname, 'observation-discovery.html'),
         ...research.inputs,
         ...knowledge.inputs,
       },

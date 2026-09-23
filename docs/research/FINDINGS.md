@@ -647,6 +647,27 @@ bits and two update intervals to replace a directly available 12-bit
 snapshot; no efficiency or general noise-removal claim follows.
 [Exact contract and witnesses](2026-09-23-masked-history-sensing.md).
 
+## 2026-09-23: witnesses select a boundary, but extra relations do not help here
+
+We were curious whether a failed prediction could tell a search which nearby
+bits, relations or history to observe. We fixed a 20-feature menu and checked
+every local causal input for a known Rule-90 XOR calibration and a prospective
+Rule-30 next-G readout task. The calibration recovered the expected relation.
+
+For Rule 30, we found that six ordinary current bits, sites -2 through +3,
+are optimal in this menu. None of the offered XOR or past features reduced
+that requirement. Remembering counterexamples cut full checks from 26,892 to
+67, but raw-only search was much faster overall than either full-menu arm.
+The six bits already determine current G, so a simpler direct six-bit lookup
+can omit that redundant base observation. A cancellation in Rule 30's formula
+explains the asymmetric input support.
+
+This is an exact one-step local readout certificate with a visual witness
+viewer, not autonomous observer evolution or unrestricted object discovery.
+The predicted relational advantage and use of history both failed. Stop this
+grammar expansion; retain the counterexample interface for a separately
+motivated task. [Results, visual viewer and costs](2026-09-23-observation-discovery.md).
+
 ## Keeping this useful
 
 After a completed or stopped unit, update its entry or add one short account:

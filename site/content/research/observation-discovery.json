@@ -1,0 +1,22 @@
+[
+  {
+    "label": "Observation discovery",
+    "slug": "observation-discovery",
+    "title": "Find the missing distinction",
+    "date": "2026-09-23",
+    "updated": "2026-09-23",
+    "kind": "Exact local observation certificate",
+    "evidence": "exact",
+    "topic": "Observation and search",
+    "summary": "Counterexamples guide feature selection. Rule 30 needs six current bits in the frozen grammar; offered XOR and history features save nothing. A visual viewer shows the conflicting source pairs.",
+    "takeaway": "The search identifies sufficient input support, but raw-only search wins on cost. One-step readout is distinct from autonomous observer dynamics.",
+    "source": "docs/research/2026-09-23-observation-discovery.md",
+    "promotion": {
+      "stage": "research"
+    },
+    "related": [
+      "relational-search-pilot",
+      "masked-history-sensing"
+    ]
+  }
+]

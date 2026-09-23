@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Find the missing distinction — Groovy Commutator</title></head>
+<body>
+<main>
+<nav><a href="./index.html">Groovy Commutator</a><a href="./research/observation-discovery.html">Evidence &amp; limits ↗</a></nav>
+<p class="eyebrow">A witness you can inspect</p><h1>Find the missing distinction.</h1>
+<p class="intro">Two worlds look the same through an inadequate view. Their next outputs disagree. What must we observe to tell them apart?</p>
+<div class="controls"><label>Case <select id="case"><option value="1">Rule 30 · next G bit</option><option value="0">Rule 90 · known XOR calibration</option></select></label><label>Failed view <select id="witness"></select></label><button id="toggle" type="button">Show winning view</button></div>
+<p id="verdict" aria-live="polite"></p>
+<section class="worlds" id="worlds"></section>
+<section><h2>What the observer reads</h2><div id="features" class="feature-list"></div><p class="muted">Blue outlines mark current reads. Amber outlines mark stored past reads. Each square is a source bit; time runs downward. The outer current squares lie outside the recorded cone.</p></section>
+<section><h2>What the full search found</h2><p id="finding"></p><div class="table-wrap"><table><thead><tr><th>Search</th><th>Retained bits</th><th>Raw reads¹</th><th>Past cells</th><th>Full checks</th><th>Total seconds²</th></tr></thead><tbody id="costs"></tbody></table></div><p class="muted">¹ Includes the mandatory base observation's raw support. ² Candidate preparation plus search, one recorded trial. Source evolution and verification are separate. These are measured software times, not portable speedups.</p></section>
+<section class="boundary"><h2>A boundary for one task</h2><p>Every one of the 512 nine-bit predecessor windows was checked. This covers the complete local causal cone on the infinite line for the next central output. The winning view is sufficient for that one-step prediction. It has no certified autonomous update rule.</p><p>The search chooses from 20 supplied features: nearby bits, adjacent XORs, one side-to-side XOR, three past bits and three temporal XORs. The minimum is within that grammar. This is a concrete test of observation selection; it does not discover an unrestricted biological object.</p><a href="./research/observation-discovery.html">Read the frozen predictions, exact certificate and costs →</a></section>
+</main><script type="module" src="./src/pages/observation-discovery.js"></script>
+</body></html>
