@@ -74,5 +74,6 @@ representation search.
 - [Canonical result](../../results/return_target_20260923.json), SHA256 `02213ca3dd688ca4c3451751b867f3310a63d65c6866a8f485cf370c00e3b2f1`.
 - `python experiments/return_target_20260923/verify.py results/return_target_20260923.json`
   independently audits the complete result; `python scripts/check_result_integrity.py`
-  checks source hashes only. [Draft PR #300](https://github.com/bombadil-labs/groovy-commutator/pull/300)
-  holds this gathering unit pending Myk's merge direction.
+  checks source hashes only. [PR #300](https://github.com/bombadil-labs/groovy-commutator/pull/300)
+  was merged into main as `b916109ad849ffb360b55680ca29481c3aff393d`;
+  the dated protocol and result bytes remain unchanged.
