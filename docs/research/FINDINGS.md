@@ -433,6 +433,28 @@ an identity/swap pair switching, not a predictor of whether switching occurs.
 [census, corrections and replay](2026-09-22-groovy-field-census.md),
 [current checkpoint](checkpoints/groovy-field.md).
 
+## 2026-09-23: predicting persistence and choosing repair need different views
+
+We were curious whether a description that predicts a pattern's fate could
+hide distinctions needed to preserve it. We tried every three-bit block
+encoding for a 12-cell Rule-54 ring, with four stripe phases, one unknown
+bit injury and one chance for an external controller to flip a bit.
+
+We found that two local labels suffice to predict passive persistence, while
+four are necessary to choose the correct repair. The repair view records
+differences between neighboring bits and can forget whether the entire source
+is complemented. It does not simply refine the cheaper parity view: changing
+the task changes which distinctions matter. These are exact minima among the
+4,140 encoders in this grammar, checked on all 52 allowed initial states.
+
+We also found that the chosen target never recovers passively. Even with a
+four-step delay, successful repair means immediately undoing the injury.
+**This is an exact detection-versus-correction baseline, not adaptive
+self-repair or endogenous purpose.** Our prediction of a natural conflict
+requiring more than two states failed; each state has only one winning action.
+Any richer repair study must establish genuine return dynamics before another
+observer search. [Result, witness and costs](2026-09-23-prediction-repair.md).
+
 ## Keeping this useful
 
 After a completed or stopped unit, update its entry or add one short account:

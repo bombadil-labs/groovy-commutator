@@ -1,4 +1,25 @@
-# Next agent: continue The Groovy Field
+# Next agent: prediction and repair unit complete
+
+Updated 2026-09-23. Myk authorized the proposed prediction-to-repair unit.
+Read [START_HERE](START_HERE.md), [FINDINGS](FINDINGS.md), the
+[result](2026-09-23-prediction-repair.md) and
+[checkpoint](checkpoints/prediction-repair.md).
+
+The exact Rule-54 comparison found minimum local alphabets 2 for passive
+target prediction and 4 for one-action repair. The repair view retains adjacent
+differences and forgets global complementation on the initial domain. However,
+this target has no passive return trajectories, so delayed repair reduces to
+static error correction. Do not call it autonomous recovery or endogenous purpose.
+P1–P4 supported; P5 failed. The complete candidate audit and canonical evidence
+are preserved in [draft PR #299](https://github.com/bombadil-labs/groovy-commutator/pull/299).
+
+No automatic follow-up. A stronger dynamical-repair question needs a target
+with genuine return paths before another observer search. Separate draft PRs
+#295–#298 were left unchanged; inspect their current status and reconcile shared
+agenda edits at integration. This branch is based on main `a8dee2d`, not those
+unmerged branches. Reviewed by: none. Merge only at Myk's direction.
+
+## Earlier handoff: The Groovy Field
 
 Updated 2026-09-22. Myk opened [The Groovy Field](2026-09-22-groovy-field-program.md)
 as an active program after the Rule-110 autonomy unit below. Read its

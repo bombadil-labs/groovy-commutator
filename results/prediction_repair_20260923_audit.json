@@ -1,0 +1,16 @@
+{
+  "ok": true,
+  "source_states_checked": 4096,
+  "initial_states_checked": 52,
+  "candidate_rows_checked": 4140,
+  "guided_search_certificates_checked": 3,
+  "predictions": {
+    "P1": "supported",
+    "P2": "supported",
+    "P3": "supported",
+    "P4": "supported",
+    "P5": "failed"
+  },
+  "elapsed_seconds": 0.4149441269983072,
+  "result_sha256": "bba465222ddb694c36e4d7eb85b2af603862b3db58cbd65f3e257aa644a9c064"
+}

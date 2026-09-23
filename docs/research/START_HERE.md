@@ -1,6 +1,6 @@
 # Research: start here
 
-**Current direction, 2026-09-22.** This page is the scheduling authority for
+**Current direction, 2026-09-23.** This page is the scheduling authority for
 research. Older notes and checkpoints preserve the evidence; their “next”
 sections are historical proposals, not an instruction to resume them.
 
@@ -13,7 +13,27 @@ factors, counterexamples, graph certificates and explicit constructions.
 The [limits and prior-art guide](2026-09-21-research-boundaries.md) explains
 what the impossibility theorems constrain and where useful exact work remains.
 
-## Active program: The Groovy Field
+## Latest authorized unit: prediction and repair
+
+Myk approved testing which distinctions let a system's observer predict
+persistence versus choose a repair. The [completed finite
+comparison](2026-09-23-prediction-repair.md) exhausts 4,140 block encoders on
+one Rule-54 injury contract. Prediction needs 2 local labels; repair and joint
+sufficiency need 4. The repair view forgets global complementation on the
+allowed initial states and is not a refinement of the parity predictor.
+
+The target also proved dynamically isolated: delayed repair is equivalent to
+immediate error correction. Treat this as an exact baseline, not an agency or
+spontaneous-recovery result. Read the [checkpoint](checkpoints/prediction-repair.md)
+before a follow-up. Require a target with genuine return dynamics before
+optimizing another repair observer; no broad census is queued.
+
+This work is in [draft PR #299](https://github.com/bombadil-labs/groovy-commutator/pull/299),
+based on main `a8dee2d`. Separate units #295–#298 remain unmerged and unchanged;
+reconcile their scheduling edits when integrating. The earlier Groovy Field
+program remains a scientific context, not a command to resume every open line.
+
+## Program context: The Groovy Field
 
 On 2026-09-22 Myk opened [The Groovy Field](2026-09-22-groovy-field-program.md)
 as a new research program: can a rule's Groovy field run as a dynamical system
@@ -24,7 +44,7 @@ steps of memory; every Groovy field is blind to the uniform D0 bit; and the
 source gradient plus two steps of memory repairs all of them. Open questions
 and their order are in the [checkpoint](checkpoints/groovy-field.md).
 
-## Latest direct request: original-source G autonomy
+## Earlier direct request: original-source G autonomy
 
 After the research drive ended, Myk asked whether D or G could evolve under
 its own law and authorized a bounded test of Rule 110. The
