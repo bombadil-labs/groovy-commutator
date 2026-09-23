@@ -1,6 +1,6 @@
 # Research: start here
 
-**Current direction, 2026-09-22.** This page is the scheduling authority for
+**Current direction, 2026-09-23.** This page is the scheduling authority for
 research. Older notes and checkpoints preserve the evidence; their “next”
 sections are historical proposals, not an instruction to resume them.
 
@@ -12,6 +12,22 @@ factors, counterexamples, graph certificates and explicit constructions.
 “Class IV” remains a motivation, not a specification or success criterion.
 The [limits and prior-art guide](2026-09-21-research-boundaries.md) explains
 what the impossibility theorems constrain and where useful exact work remains.
+
+## Latest authorized unit: relational search pilot complete
+
+Myk accepted the [relational-search decision](2026-09-23-relational-search-decision.md)
+for one bounded method test. The [completed pilot](2026-09-23-relational-search-pilot.md)
+reuses a known Rule-24 representation problem: retaining exact failure
+witnesses reduced full verifier calls from 278 to 11 at the same optimum.
+Recorded search time also improved; both arms used Prolog, so this is not a
+language comparison. Jev remains unscored because credentials were absent.
+
+Read the [current handoff](checkpoints/relational-search.md). PR #298 records
+this unit; it does not integrate the separate draft PRs #295–#297. Keep the
+witness interface, with Datalog and predicate invention deferred. No second
+benchmark or archived recoder restart is automatically queued. A further
+comparison needs an independently justified operation and a cheaper native
+frontend control before claiming a language advantage.
 
 ## Active program: The Groovy Field
 

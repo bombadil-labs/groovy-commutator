@@ -1,0 +1,32 @@
+[
+  {
+    "label": "Search decision",
+    "slug": "relational-search-decision",
+    "title": "A small relational language for discovering necessary distinctions",
+    "date": "2026-09-23",
+    "updated": "2026-09-23",
+    "kind": "Research decision",
+    "evidence": "open",
+    "topic": "Observation and memory",
+    "summary": "Myk accepted a bounded Prolog grammar and exact witness-verification pilot, with optional Jev ranking confined to equal-cost candidates. Datalog and predicate invention are deferred.",
+    "takeaway": "Separate candidate vocabulary, search order and exact verification; a learned score cannot certify or prune a candidate.",
+    "source": "docs/research/2026-09-23-relational-search-decision.md",
+    "promotion": {"stage": "research"},
+    "related": ["relational-search-pilot", "block3-representation-design"]
+  },
+  {
+    "label": "Search pilot",
+    "slug": "relational-search-pilot",
+    "title": "A failed prediction can constrain the next description",
+    "date": "2026-09-23",
+    "updated": "2026-09-23",
+    "kind": "Bounded method benchmark",
+    "evidence": "replicated",
+    "topic": "Observation and memory",
+    "summary": "On the known finite Rule-24 repair, exact witness reuse reduces full verifier calls from 278 to 11 and recorded median search time from 0.686 to 0.409 seconds, retaining the same optimum. Jev was not evaluated.",
+    "takeaway": "A concrete conflict can force a distinction that has no immediate greedy gain. This one-case result supports witness reuse, not a general Prolog or AI advantage.",
+    "source": "docs/research/2026-09-23-relational-search-pilot.md",
+    "promotion": {"stage": "research"},
+    "related": ["relational-search-decision", "block3-representation-design", "contextual-quotient"]
+  }
+]

@@ -1,6 +1,6 @@
 # What we have learned
 
-Running plain-language summary, updated 2026-09-22. This is a synthesis of
+Running plain-language summary, updated 2026-09-23. This is a synthesis of
 existing evidence, not a new experiment or independent review. Each entry
 links to the technical account that states its assumptions and verification.
 “Complete” means the stated investigation has ended, not that every related
@@ -432,6 +432,29 @@ an identity/swap pair switching, not a predictor of whether switching occurs.
 [Program](2026-09-22-groovy-field-program.md),
 [census, corrections and replay](2026-09-22-groovy-field-census.md),
 [current checkpoint](checkpoints/groovy-field.md).
+
+## A concrete failure can guide the search for missing distinctions
+
+We were curious whether a small relational language could make representation
+search more effective. We tried the already solved Rule-24 case where greedy
+repair overlooks a useful combination of distinctions. Both methods kept all
+406 permitted encoders and the same exact verifier; one also remembered pairs
+of source states showing why previous candidates failed.
+
+We found that reusing those witnesses reduced full verifier calls from 278
+to 11 while recovering the same cheapest encoder. Across three fresh-process
+trials per method, median search time including startup and preprocessing
+fell from 0.686 to 0.409 seconds. A further 2.013 seconds audited all saved
+certificates and the known optimum. The first witness forces the distinction
+that the old greedy study recorded as having no immediate information gain.
+
+This gives us a concrete search principle: **retain what the failures prove
+must be distinguishable, even when a local score does not reward it yet.**
+It is one known finite case, and both methods used Prolog; no language-wide
+or universal efficiency claim follows. Jev's optional ranking was not run
+because credentials were missing. The bounded pilot is complete, with no
+automatic larger search. [Decision](2026-09-23-relational-search-decision.md);
+[evidence and costs](2026-09-23-relational-search-pilot.md).
 
 ## Keeping this useful
 

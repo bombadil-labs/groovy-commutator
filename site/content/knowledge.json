@@ -2740,6 +2740,16 @@
       "research": [
         "g-autonomy-boundary"
       ]
+    },
+    {
+      "source": "witness-guided-encoder-search",
+      "type": "depends_on",
+      "target": "predictive-synergy",
+      "reason": "The pilot uses the known finite counterexample and its independently verified optimum as a method regression, without extending the historical census.",
+      "research": [
+        "relational-search-pilot",
+        "block3-representation-design"
+      ]
     }
   ],
   "nodes": [
@@ -5273,6 +5283,19 @@
       "research": [
         "g-autonomy-boundary",
         "local-correction-caps"
+      ]
+    },
+    {
+      "id": "witness-guided-encoder-search",
+      "title": "One counterexample can reject several descriptions",
+      "kind": "finding",
+      "status": "replicated",
+      "summary": "On one known finite Rule-24 problem, exact witness constraints reduce full verifier calls from 278 to 11 at the same optimum. Both arms use Prolog; Jev is unscored.",
+      "updated": "2026-09-23",
+      "source": "docs/knowledge/witness-guided-encoder-search.md",
+      "research": [
+        "relational-search-pilot",
+        "relational-search-decision"
       ]
     }
   ],
