@@ -1,27 +1,9 @@
-# Next agent: finite return-target preflight on draft PR #300
+# Next agent: reconcile the masked-history result when checks pass
 
 Updated 2026-09-23. Authored by Codex (OpenAI). Reviewed by: none.
-Inspected main `69c9121c627b15952d57b179a1bc6b0c95ccb29a`, with no open
-PR before this unit. Draft [PR #300](https://github.com/bombadil-labs/groovy-commutator/pull/300)
-contains frozen protocol commit `b44a27c`, pinned implementation `fd2c76e`,
-and an exact 12-cell Rule-54 target-eligibility result. **It is not merged.**
-The [note](2026-09-23-return-target-eligibility.md) and canonical
-`results/return_target_20260923.json` contain the evidence. The 30-second
-producer and independent scalar audit both completed, auditing all 4,096
-transitions and seven candidate families. No independent agent review was
-requested. Do not duplicate this preflight or imply it supplies a controller.
+Main includes PR #300 and the completed delayed-action PR #301. Independent [PR #302](https://github.com/bombadil-labs/groovy-commutator/pull/302) remains draft and needs integration. The #301 protocol and pinned implementation preceded its canonical result, which the same-author scalar verifier rechecked; there was no independent scientific review. Myk directed reconciliation and integration of these completed drafts. Preserve all three findings and source-hash registry entries.
 
-The selected eight-state target has 96 outside one-bit injuries: 36 return by
-four steps, 48 only later, 12 never. The old four-phase target has zero
-returns among 48 injuries. P1, P2, P3 all passed under the frozen protocol.
-The selected target is an eligibility example, not proof of autonomous
-maintenance, a beneficial sensor or an infinite-line result.
-Myk explicitly directed reconciliation and merging of PRs #295–#299.
-[START_HERE](START_HERE.md) is the scheduling authority;
-[FINDINGS](FINDINGS.md) is the accessible running account;
-the [integration record](2026-09-23-research-integration.md) pins original heads
-and verification. On main, all five units are integrated; do not recreate them
-or interpret their historical draft status as a current blocker.
+For #301, no one-flip action at the two-step decision point rescues any of the 60 injuries that miss the four-step target passively, even with full-state access; 36 of 96 succeed by doing nothing. P1 passed and P2–P4 failed. This closes only the declared action/cadence/endpoint contract. The [note](2026-09-23-delayed-repair-feasibility.md) and `results/delayed_repair_feasibility_20260923.json` carry exact evidence.
 
 ## What the combined work says
 
@@ -51,17 +33,13 @@ not an independent review. There is no standing cross-agent gate to reactivate.
 
 ## Next one to three decisions
 
-1. **Operational contract:** is the goal an external repair policy, repeated
-   disturbance tolerance, or maintenance by constraints inside the system?
-   For the new candidate, name observation, actions, target, cadence, domain
-   and cost model, including a passive-success baseline before any sensor search.
-2. **Payoff and stopping rule:** which exact obstruction, construction or
-   negative outcome would settle the next decision? Reuse the witness interface
-   with the simplest suitable frontend. Jev setup is parked; the Prolog pilot
-   does not oblige further language comparisons.
-3. **Integration:** PR #300 is a draft gathering unit. Verify its checks and
-   retain it pending Myk's direction to merge; do not infer authorization from
-   the completed earlier integration of PRs #295–#299.
+1. **Integration:** #300 is integrated; merge #301 after current-head checks, preserving both frozen protocols and all failed predictions. #302 is independent but touches shared research pages.
+2. **Operational motivation:** identify a consumer or mechanism that needs
+   repeated disturbance tolerance, an internal maintenance constraint, or
+   another precisely specified task. Early return alone is not enough.
+3. **Decision gate:** for any such new contract, compare passive dynamics,
+   full-state action feasibility, and a fixed-action baseline before searching
+   encoders; state in advance what negative result stops that line.
 
 No next empirical unit is automatically queued by integration. Dimensional
 applications, all-rule censuses, a fourth G generation, prime-distribution claims

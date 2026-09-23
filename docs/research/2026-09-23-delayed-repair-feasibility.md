@@ -6,7 +6,7 @@ no independent scientific review and no larger-ring or biological claim.
 
 ## Why ask this question?
 
-The [target preflight, draft PR #300](https://github.com/bombadil-labs/groovy-commutator/pull/300)
+The [target preflight, merged PR #300](https://github.com/bombadil-labs/groovy-commutator/pull/300)
 found an invariant eight-state target on the 12-cell periodic Rule-54 ring.
 Some of its one-bit injuries return without help, while others do not. We
 asked whether this makes **delayed intervention** meaningful before spending
@@ -69,7 +69,7 @@ passive and full-state baselines before any representation search.
 ## Evidence and provenance
 
 - Inspected main: `69c9121c627b15952d57b179a1bc6b0c95ccb29a`.
-- Scientific prerequisite: [draft PR #300](https://github.com/bombadil-labs/groovy-commutator/pull/300),
+- Scientific prerequisite: [integrated PR #300](https://github.com/bombadil-labs/groovy-commutator/pull/300),
   result SHA256 `02213ca3dd688ca4c3451751b867f3310a63d65c6866a8f485cf370c00e3b2f1`.
 - [Protocol commit](https://github.com/bombadil-labs/groovy-commutator/commit/58ae1451e80b9f5565626f74f31b77cc85adba68) before implementation and evaluation.
 - [Implementation commit](https://github.com/bombadil-labs/groovy-commutator/commit/4d1f51681b3708bb52adff94347367fe2f9fbc1a) before evaluation.
@@ -77,5 +77,5 @@ passive and full-state baselines before any representation search.
   SHA256 `0f31c5d037550dab35bc09289acccd04457685a6dc3b30cb82521f801b246857`.
 - Recheck: `python experiments/delayed_repair_feasibility_20260923/verify.py results/delayed_repair_feasibility_20260923.json`.
   `python scripts/check_result_integrity.py` checks source hashes only.
-  [Draft PR #301](https://github.com/bombadil-labs/groovy-commutator/pull/301)
-  contains this unit and depends scientifically on draft PR #300.
+  [PR #301](https://github.com/bombadil-labs/groovy-commutator/pull/301)
+  contains this unit, integrated after PR #300 on which it depends scientifically.
