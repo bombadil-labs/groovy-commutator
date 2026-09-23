@@ -628,6 +628,25 @@ guarantee useful delayed control. A compressed sensor cannot improve this
 contract; other action times, goals and target families remain untested.
 [Exact result and failed predictions](2026-09-23-delayed-repair-feasibility.md).
 
+## 2026-09-23: visible history can reveal a missing cell
+
+We were curious whether a known gap in a sensor could be repaired by watching
+the system evolve, and whether answering a particular question might need
+less information than recovering the entire hidden state. We tried hiding
+one fixed cell from each observation of the same 52-state Rule-54 source
+family, keeping the gap location known. We counted every compatible-source
+fiber across twelve gap positions and up to two subsequent time steps.
+
+We found 48 ambiguous fibers at time zero, 24 after one update, and none
+after two. The dynamics make the missing distinction visible elsewhere. But
+our prediction of a strictly cheaper task-specific answer **failed**: every
+ambiguous time-zero fiber also disagreed on the task. Any longer history that
+retains the first view can only split those fibers, so task prediction and
+full source recovery become possible together here. This costs 33 observed
+bits and two update intervals to replace a directly available 12-bit
+snapshot; no efficiency or general noise-removal claim follows.
+[Exact contract and witnesses](2026-09-23-masked-history-sensing.md).
+
 ## Keeping this useful
 
 After a completed or stopped unit, update its entry or add one short account:

@@ -109,4 +109,4 @@ independently motivated task or the collaborator's actual operator and loss.
 - `python experiments/masked_history_sensing_20260923/verify.py results/masked_history_sensing_20260923.json`
   independently recomputes the finite claims; the source-hash registry is a
   separate fast provenance check. The gathering [draft PR #302](https://github.com/bombadil-labs/groovy-commutator/pull/302)
-  retains protocol, code, evidence and failed P4 pending main integration.
+  retains protocol, code, evidence and failed P4 on main.
