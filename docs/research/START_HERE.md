@@ -15,6 +15,14 @@ what the impossibility theorems constrain and where useful exact work remains.
 
 ## Active program: The Groovy Field
 
+**Latest direct comparison, 2026-09-23:** Myk requested a proof-backed visual
+bridge between arithmetic and CA representations. The
+[reusable-descriptions unit](2026-09-23-reusable-descriptions.md) separates
+necessary state refinement, an unspecified native-rule extension, and a
+transported-operation obstruction. See its [handoff](checkpoints/reusable-descriptions.md).
+The unit is complete within its scope; no new census is queued. Concurrent
+draft PRs #295 (geometry) and #296 (1D recursion) retain their own status.
+
 On 2026-09-22 Myk opened [The Groovy Field](2026-09-22-groovy-field-program.md)
 as a new research program: can a rule's Groovy field run as a dynamical system
 of its own, and what is it missing when it cannot? The first

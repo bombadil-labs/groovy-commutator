@@ -33,6 +33,7 @@ export default defineConfig({
         remainder: resolve(__dirname, 'remainder.html'),
         explorer: resolve(__dirname, 'explorer.html'),
         dimensionalBridge: resolve(__dirname, 'dimensional-bridge.html'),
+        reusableDescriptions: resolve(__dirname, 'reusable-descriptions.html'),
         ...research.inputs,
         ...knowledge.inputs,
       },

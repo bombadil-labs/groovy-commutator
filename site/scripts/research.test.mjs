@@ -66,6 +66,13 @@ test('one catalog addition creates a page and an index entry with no route edit'
   assert.equal(fs.existsSync(path.join(output, 'new-note.html')), false);
 });
 
+test('links to curated interactive pages stay on the built site', () => {
+  render(withFixture('# Note\n\n[Interactive comparison](../../../site/reusable-descriptions.html)\n'));
+  const href = readPage('new-note').match(/href="([^"]+)">Interactive comparison/)[1];
+  assert.equal(path.resolve(output, href), path.join(ROOT, 'site/reusable-descriptions.html'));
+  assert.doesNotMatch(href, /github\.com/);
+});
+
 test('evidence and promotion remain independent, and superseded notes retain a route forward', () => {
   const entries = catalog();
   entries[0].evidence = 'superseded';

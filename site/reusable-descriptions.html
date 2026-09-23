@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>When a description becomes reusable — Groovy Commutator</title>
+</head>
+<body>
+  <header class="rd-page-nav"><a href="./index.html">Groovy Commutator</a><a href="./research/reusable-descriptions.html">Proofs &amp; scope</a></header>
+  <main class="rd-page">
+    <h1>When a description becomes reusable</h1>
+    <p class="rd-page-lede">Two exact cases show what a new description needs before we can operate on it: enough state to distinguish different futures, and a rule that covers the states our operations create.</p>
+    <div id="rd-mount"></div>
+    <section class="rd-page-explanation">
+      <h2>What the comparison establishes</h2>
+      <p><strong>The arithmetic repair is forced.</strong> Counting factors of two, capped at three, merges integers with different futures under “add one.” Repeatedly split only when those futures disagree. The final eight states are exactly the remainders modulo eight. Their update is a simple cycle. No source information was supplied from outside; previously hidden distinctions became explicit.</p>
+      <p>The refinement selector uses forward futures to <em>derive</em> a sufficient representation. It is not an online prediction algorithm, a claim that three past observations suffice, or permission to peek at the future during operation. Once derived, the working state is the three-bit remainder.</p>
+      <p><strong>The CA example needs a rule specification.</strong> Its G field already has an exact autonomous evolution. Taking a difference creates a neighborhood that never occurs in a valid G field. Two total rules can agree on every valid evolution and disagree there. Choosing 0 or 1 supplies a rule convention, not another bit about the source state.</p>
+      <p>There is also a genuine lost-state obstruction in this same CA: source XOR cannot be reconstructed from its G fields alone. The proof note gives two source pairs with identical observed inputs but different observed XOR outputs. Native XOR of two observed rows and the observed XOR of two sources are separate operations.</p>
+      <p><strong>Shared principle:</strong> states may be identified only when the operations we require cannot tell them apart. This is familiar congruence and quotient mathematics. The comparison is a concrete bridge, not a new theorem about prime distribution or a claim that every representation needs the same repair.</p>
+      <p><a href="./research/reusable-descriptions.html">Read the proofs, costs, exact witnesses, and limitations →</a></p>
+    </section>
+  </main>
+  <script type="module" src="./src/pages/reusable-descriptions.js"></script>
+</body>
+</html>

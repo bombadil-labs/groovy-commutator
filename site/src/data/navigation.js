@@ -5,5 +5,6 @@ export const PAGES = [
   { href: 'questions.html', label: 'Questions', key: 'questions' },
   { href: 'remainder.html', label: 'The Walk', key: 'remainder' },
   { href: 'explorer.html', label: 'Explorer', key: 'explorer' },
+  { href: 'reusable-descriptions.html', label: 'Operations', key: 'operations' },
   { href: 'research/index.html', label: 'Research', key: 'research' },
 ];
