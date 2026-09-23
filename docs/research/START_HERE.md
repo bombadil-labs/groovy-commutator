@@ -1,6 +1,6 @@
 # Research: start here
 
-**Current direction, 2026-09-23.** This page is the scheduling authority for
+**Current direction, 2026-09-22.** This page is the scheduling authority for
 research. Older notes and checkpoints preserve the evidence; their “next”
 sections are historical proposals, not an instruction to resume them.
 
@@ -24,22 +24,16 @@ steps of memory; every Groovy field is blind to the uniform D0 bit; and the
 source gradient plus two steps of memory repairs all of them. Open questions
 and their order are in the [checkpoint](checkpoints/groovy-field.md).
 
-## Latest direct request: one-dimensional recursive G
-
-Myk asks which autonomous 1D Groovy fields have an autonomous G field of
-their own. The [present-only binary unit](2026-09-23-groovy-1d-second-generation.md)
-is complete: of 36 first-stage laws, 33 have constant native G. Rules 2 and
-16 have nonconstant inherited second-G laws under both specified derived
-rules, while Rule 32 fails for both radius-one choices. Arbitrary descendant
-starting rows give different answers; the note separates the domains.
-Read the [handoff](checkpoints/groovy-1d-second-generation.md) before choosing
-further work. Memory-bearing cases such as Rule 30 are outside this unit.
-The spatial-geometry work in draft PR #295 remains separate; current work
-is 1D recursion. Myk then requested [one further generation](2026-09-23-groovy-1d-third-generation.md).
-Both 2/16 extend nontrivially with first-rule one-fill and second-rule zero-fill,
-using a radius-four third update. Other tested choices fail or remain unresolved
-beyond radius four. Read the [third-generation handoff](checkpoints/groovy-1d-third-generation.md).
-This requested follow-up is complete; no fourth generation is queued.
+Myk's latest question promotes Rule 30's three remembered G rows to spatial
+geometry. The [raw-three-row test](2026-09-22-groovy-three-row-geometry.md)
+finds an exact phase collision. The separately frozen
+[one-row repair](2026-09-22-groovy-separator-lift.md) then succeeds for both a
+zero separator and a one separator: four binary spatial rows evolve under a
+uniform 13-by-4 local rule at one source step per update. The ones separator
+is locally recognizable because G never contains 1111; the zero law shows
+that unique phase labels are not necessary when ambiguous readings agree on
+the output. This two-candidate follow-up is complete. Start with its
+[handoff](checkpoints/groovy-three-row-geometry.md) before proposing another unit.
 
 ## Preceding direct request: original-source G autonomy
 
@@ -124,7 +118,7 @@ closed direct-quotient question does not need more rings or source rules.
 
 | Thread | State and evidence | Condition for further work |
 | --- | --- | --- |
-| The Groovy Field | **Latest bounded unit complete.** [1D second-generation closure](2026-09-23-groovy-1d-second-generation.md): nonconstant inherited positives for 2/16 under specified laws; 32 fails for both radius-one choices; 33 pointwise cases collapse to constants. | Follow the [latest handoff](checkpoints/groovy-1d-second-generation.md). The [third generation](2026-09-23-groovy-1d-third-generation.md) extends both 2/16 on an explicit branch. Memory-bearing cases such as Rule 30 remain open; no fourth generation is queued. |
+| The Groovy Field | **Active program; latest bounded unit complete.** Three raw G rows fail as geometry; a [constant fourth row](2026-09-22-groovy-separator-lift.md) succeeds in binary at cadence one. | Choose an operation that needs the spatial representation before optimizing it or exploring ambient dynamics. Follow the [checkpoint](checkpoints/groovy-field.md); any native-G result must name its completion. |
 | Erased distinctions / representation invariants | **Bounded units complete.** Three executable representation cases, the restricted Rule-110 causal-retention lower bound, and the [original-source G autonomy boundary](2026-09-22-rule110-g-autonomy.md). The [depth-three onset result](2026-09-14-depth-three-onset.md) remains integrated. | Start from the completed unit (PR #282). Further depth or observation searches need a question whose answer changes a decision. |
 | Dimensional lift | **Existence and finite recursion closed; application dormant** under the [affine-oriented theorem's contract](2026-09-17-affine-oriented-lift-theorem.md) and [consumer audit](2026-09-22-phase-free-consumer-audit.md). No current downstream caller, uniqueness, optimality or spontaneous organization theorem. | A concrete locality, readout or intervention advantage over ordinary history and the proof's period-three necklace construction, charging encoding and preprocessing costs fairly. |
 | Class-IV discriminator | **Frozen finite benchmark**, with [partial original provenance](2026-09-17-selective-persistence-discriminator-record.md). Its two core positive families are 54 and 110. | An independently defined target and external validation domain; no further feature search on the same labels by default. |

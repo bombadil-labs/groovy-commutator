@@ -1,6 +1,6 @@
 # What we have learned
 
-Running plain-language summary, updated 2026-09-23. This is a synthesis of
+Running plain-language summary, updated 2026-09-22. This is a synthesis of
 existing evidence, not a new experiment or independent review. Each entry
 links to the technical account that states its assumptions and verification.
 “Complete” means the stated investigation has ended, not that every related
@@ -433,56 +433,50 @@ an identity/swap pair switching, not a predictor of whether switching occurs.
 [census, corrections and replay](2026-09-22-groovy-field-census.md),
 [current checkpoint](checkpoints/groovy-field.md).
 
-## 1D recursion: a second G field can close, and it can fail
+## 25. Turning memory into raw spatial rows can erase temporal order
 
-We were curious whether a Groovy field with its own 1D rule could itself
-have an autonomous Groovy field. We reconstructed the 36 present-only laws
-in the earlier census. Thirty-three act on each bit independently, so their
-own Groovy fields are constant. Only sources 2, 16 and 32 needed a spatial
-second-generation check.
+We were curious whether Rule 30's three remembered Groovy fields could become
+three spatial rows of a uniform binary 2D rule. We tried repeating those rows
+vertically, removing row labels, and requiring the encoded history to advance
+one source step under the same rule everywhere.
 
-We found nonconstant second-generation laws for Rules 2 and 16 on the fields
-actually inherited from the original source, for two specified first-level
-rules each. The second update needs radius two. Rule 32 fails for both of
-its radius-one first-level rules: identical complete second-G fields can
-require different successors. All three nonpointwise descendants fail when
-started from arbitrary binary rows, so that stronger test would have hidden
-the inherited positives. Changing unspecified first-level entries changes
-the second observation even when the closure verdict stays the same.
+We found an exact obstruction in an eleven-cell periodic source. Its Groovy
+rows go A, B, C, A, B', with B' different from B. The first history advancement
+is therefore indistinguishable from shifting the three-row plane vertically,
+but the next one is not. A uniform rule must respect that spatial shift.
+The same complete input plane would require two different outputs, so **no
+neighborhood size can make this particular encoding work**. We stopped without
+running the larger local-table test.
 
-These are complete-cone identities and exact periodic counterexamples.
-The unit stays in 1D and does not test finite-memory cases such as Rule 30,
-a third generation, or every possible completion. **A nontrivial second
-layer exists under the stated contract; an indefinitely closed tower is
-not established.** [Exact result and explicit rules](2026-09-23-groovy-1d-second-generation.md).
+The three ordered observations still suffice under the existing law. What
+fails is forgetting their temporal roles. Keeping a marker or boundary, or
+using another encoding, remains possible; a marker channel gives a direct
+construction with a larger alphabet. This makes the next question precise:
+how should a spatial representation carry its temporal seam, and at what cost?
+[Certificate, proof and scope](2026-09-22-groovy-three-row-geometry.md),
+[handoff](checkpoints/groovy-three-row-geometry.md).
 
-## 1D recursion, continued: a third layer exists, but the branch matters
+## 26. One constant row repairs the binary spatial history
 
-We then asked whether either nonconstant 2/16 chain extends one further G.
-We followed both existing first-rule choices and two fixed choices for the
-second rule's unused entries. Both mirror sources have a nonconstant third
-field with an exact radius-four update when the first fill is one and the
-second fill is zero. Each positive was checked over every 21-bit source cone.
+We were curious whether one extra binary row could repair the three-row phase
+failure without adding a separate state channel. We tried an all-ones row and
+an all-zeros row, each appended to Rule 30's three Groovy history rows and
+repeated vertically.
 
-The zero/zero and zero/one choices fail with complete periodic counterexamples.
-The one/one choice has no law at radii zero through four but remains unresolved
-at larger radii. All eight third fields differ from their second fields.
-**An explicit third-generation 1D chain exists; choosing unused rule entries
-now changes whether the recursion closes.** This does not establish an
-indefinitely closed hierarchy. The requested extra generation is complete;
-no fourth generation is queued. [Exact follow-up](2026-09-23-groovy-1d-third-generation.md).
+We found that **both work**, with one uniform binary 2D rule at one source step
+per update and a 13-column by four-row neighborhood. For the ones separator,
+the reason is particularly clear: a true Rule-30 Groovy row can never contain
+four consecutive ones. The extra row is therefore locally recognizable.
+The zero separator also closes, although temporal roles can remain ambiguous;
+all valid interpretations of an ambiguous neighborhood request the same bit.
 
-An important interpretation followed from Myk's question about evaporation:
-Rule 2 produces separated ones after a single source update, and thereafter
-only shifts them left; Rule 16 shifts right. Every fixed local G observation
-inherits that rigid motion. Thus these nonconstant recursive fields do not
-demonstrate increasingly rich long-term dynamics. Closure from all original
-sources concerns retaining enough information for the initial transient.
-Across recursive observations, once two sources become indistinguishable,
-no later layer can distinguish them again. This need not reduce the density
-of ones: the successful branch's saved tables give initial fair-source
-expectations of 13.7% at the second layer and 25.8% at the third.
-These are algebraic deductions and table interpretations, not another run.
+We checked the complete 21-bit source cone in all four phases, with separate
+packed and unpacked computations. These are exact local laws, not finite-ring
+extrapolations. The extra geometry costs a fourth stored bit per source column
+and additional local access; it has no demonstrated speed advantage over
+three named history tracks. The useful refinement is that we do not need to
+recover every hidden label, only distinctions that change the next update.
+[Construction, certificates and costs](2026-09-22-groovy-separator-lift.md).
 
 ## Keeping this useful
 

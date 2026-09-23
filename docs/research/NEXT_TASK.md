@@ -1,28 +1,24 @@
 # Next agent: continue The Groovy Field
 
-Latest completed follow-up: [third recursive G for Rules 2/16](2026-09-23-groovy-1d-third-generation.md),
-continuing [PR #296](https://github.com/bombadil-labs/groovy-commutator/pull/296).
-The [current handoff](checkpoints/groovy-1d-third-generation.md) records both
-nonconstant radius-four positives on the first-one / second-zero branch,
-four exact negatives under other choices and two cases unresolved beyond
-radius four. These are inherited fields on the original 1D source domain.
-No fourth generation is queued. Earlier units below retain their original scope.
+Updated 2026-09-22. Latest unit: [one extra binary row repairs spatial Groovy history](2026-09-22-groovy-separator-lift.md),
+[PR #295](https://github.com/bombadil-labs/groovy-commutator/pull/295).
+Read its [concise handoff](checkpoints/groovy-three-row-geometry.md) first.
+The raw period-three Rule-30 encoding still has an exact whole-plane collision.
+A separately frozen follow-up appends one constant row: both 0 and 1 produce
+a uniform binary 2D law on the 13-by-4 stencil, at one-step cadence. Each
+positive was independently checked over the complete 21-bit cone and all four
+phases. The ones construction has executable plane dynamics; the zero table
+has 657,893 forced keys and a matching independent digest. Unique temporal
+labels are sufficient but not necessary: ambiguous interpretations may agree
+on the next bit. The two-candidate repair is complete; no broader census or
+native-G evaluation is queued. Any next task needs a specified operation and
+representation cost or a declared ambient completion question.
+This unit is authored and self-verified by Codex; Reviewed by: none. Consult
+the PR for current integration status rather than assuming it has merged.
 
-## Second-generation unit
+## Preceding unit: Groovy Field census and corrections
 
-Latest completed unit, 2026-09-23: [1D second-generation G](2026-09-23-groovy-1d-second-generation.md),
-[PR #296](https://github.com/bombadil-labs/groovy-commutator/pull/296).
-Read its [handoff](checkpoints/groovy-1d-second-generation.md) first. Among
-36 present-only first-generation laws, 33 collapse to constant native G;
-2/16 close nontrivially on inherited fields for the two specified derived
-rules; 32 fails for both radius-one completions. These are exact complete-cone
-positives and periodic whole-field negatives. Memory-bearing cases, including
-Rule 30, remain outside this unit. No third generation is queued.
-Authored by Codex; Reviewed by: none. Check the PR for integration status.
-
-## Prior census handoff
-
-Updated 2026-09-22. Myk opened [The Groovy Field](2026-09-22-groovy-field-program.md)
+Myk opened [The Groovy Field](2026-09-22-groovy-field-program.md)
 as an active program after the Rule-110 autonomy unit below. Read its
 [census note](2026-09-22-groovy-field-census.md) and
 [checkpoint](checkpoints/groovy-field.md) first; the checkpoint orders the open
