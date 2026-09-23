@@ -1,0 +1,17 @@
+[
+  {
+    "label": "Prediction and repair",
+    "slug": "prediction-repair",
+    "title": "Which distinctions are needed to predict and to repair?",
+    "date": "2026-09-23",
+    "updated": "2026-09-23",
+    "kind": "Finite exact comparison",
+    "evidence": "exact",
+    "topic": "Algebra and closure",
+    "summary": "On a fixed Rule-54 ring and one-injury task, a two-label parity view predicts passive persistence, while repair requires four labels recording adjacent differences. The minimum repair view still merges complementary sources.",
+    "takeaway": "Task sufficiency need not preserve a previous sensor's labels. But this target admits no passive return from outside, so its delayed repair task reduces to static error correction; autonomous recovery and purpose remain untested.",
+    "source": "docs/research/2026-09-23-prediction-repair.md",
+    "promotion": { "stage": "research" },
+    "related": ["groovy-field-census", "representation-empowerment-disposition"]
+  }
+]

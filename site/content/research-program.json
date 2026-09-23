@@ -178,14 +178,16 @@
     "title": "The Groovy Field",
     "eyebrow": "Research program",
     "date": "2026-09-22",
-    "updated": "2026-09-22",
+    "updated": "2026-09-23",
     "status": "living",
-    "summary": "Can a rule's Groovy field run as a dynamical system of its own, and what must a repair retain? Bounded full-line census with explicit resource and provenance limits, plus independent replay of selected headline claims.",
-    "thesis": "The distinctions a Groovy field needs to become self-sufficient name what it throws away; a uniform repair would be a new lift operator.",
+    "summary": "Completed bounded units establish Rule-30 four-row binary history geometry and explicit 1D second/third G generations for Rules 2/16. Geometry, inherited state and off-image rule choices have different requirements; no further census or generation is queued.",
+    "thesis": "Identify which distinctions a Groovy field must retain for a specified operation, distinguishing state loss, access restrictions and unspecified rule completion.",
     "source": "docs/research/2026-09-22-groovy-field-program.md",
     "supports": [
       "g-autonomy-boundary",
       "groovy-field-census",
+      "groovy-1d-second-generation",
+      "groovy-1d-third-generation",
       "groovy-three-row-geometry",
       "groovy-separator-lift"
     ]

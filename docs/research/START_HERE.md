@@ -13,67 +13,40 @@ factors, counterexamples, graph certificates and explicit constructions.
 The [limits and prior-art guide](2026-09-21-research-boundaries.md) explains
 what the impossibility theorems constrain and where useful exact work remains.
 
-## Latest authorized unit: relational search pilot complete
+## Current agenda after integration
 
-Myk accepted the [relational-search decision](2026-09-23-relational-search-decision.md)
-for one bounded method test. The [completed pilot](2026-09-23-relational-search-pilot.md)
-reuses a known Rule-24 representation problem: retaining exact failure
-witnesses reduced full verifier calls from 278 to 11 at the same optimum.
-Recorded search time also improved; both arms used Prolog, so this is not a
-language comparison. Jev remains unscored because credentials were absent.
+Myk authorized reconciliation and merging of the five completed gathering
+units on 2026-09-23. Their protocols, implementations, canonical results and
+bounded negative outcomes are retained. See the
+[integration record](2026-09-23-research-integration.md) and
+[current handoff](NEXT_TASK.md). On main, treat all five as integrated.
 
-Read the [current handoff](checkpoints/relational-search.md). PR #298 records
-this unit; it does not integrate the separate draft PRs #295–#297. Keep the
-witness interface, with Datalog and predicate invention deferred. No second
-benchmark or archived recoder restart is automatically queued. A further
-comparison needs an independently justified operation and a cheaper native
-frontend control before claiming a language advantage.
+| Completed unit | What it establishes | Remaining boundary |
+| --- | --- | --- |
+| [Rule-30 history geometry](2026-09-22-groovy-separator-lift.md), PR #295 | Raw unlabelled three-row encoding fails; either constant fourth row gives a uniform binary 13-by-4 rule. | Exact realization, with costs; no operational advantage or optimality claim. |
+| [1D recursive G](2026-09-23-groovy-1d-third-generation.md), PR #296 | Explicit nonconstant second and third generations exist for mirror Rules 2/16 on specified inherited branches. | Completion matters; one tested branch stays unresolved beyond radius four. Long-term source motion is rigid translation; no fourth generation queued. |
+| [Reusable descriptions](2026-09-23-reusable-descriptions.md), PR #297 | Increment, native G and source XOR demand different retained distinctions or rule conventions; an interactive comparison makes this visible. | The arithmetic quotient is established mathematics; no prime-distribution result or minimal CA repair. |
+| [Relational search](2026-09-23-relational-search-pilot.md), PR #298 | Exact witnesses reduce full verifier calls from 278 to 11 on the known finite Rule-24 case. | Both arms use Prolog; no language advantage. Jev remains unevaluated and parked. |
+| [Prediction and repair](2026-09-23-prediction-repair.md), PR #299 | Two local labels predict stripe persistence; four suffice and are necessary for repair in the fixed grammar. | The target has no passive return paths, so the delayed task reduces to static correction. |
 
-## Active program: The Groovy Field
+The operative direction is **task-specific representation and maintenance**:
+what must be visible to predict, intervene, or preserve a specified organization?
+The next useful decision is whether a concrete proposed target has genuine
+return dynamics from outside it. Establish that eligibility and an intervention
+contract before another observer search. The last stripe target does not qualify;
+changing its delay cannot create recovery.
 
-**Latest direct comparison, 2026-09-23:** Myk requested a proof-backed visual
-bridge between arithmetic and CA representations. The
-[reusable-descriptions unit](2026-09-23-reusable-descriptions.md) separates
-necessary state refinement, an unspecified native-rule extension, and a
-transported-operation obstruction. See its [handoff](checkpoints/reusable-descriptions.md).
-The unit is complete within its scope; no new census is queued. Concurrent
-draft PRs #295 (geometry) and #296 (1D recursion) retain their own status.
+Keep the exact Python verifier and witness interface. The bounded Prolog pilot
+is available when its grammar is useful; it is not mandatory infrastructure.
+Prediction/repair already uses a native Python frontend without a language
+performance claim. Jev setup, Datalog migration and predicate invention are
+not prerequisites or scheduled work.
 
-On 2026-09-22 Myk opened [The Groovy Field](2026-09-22-groovy-field-program.md)
-as a new research program: can a rule's Groovy field run as a dynamical system
-of its own, and what is it missing when it cannot? The first
-[census](2026-09-22-groovy-field-census.md) applies an exact full-line method
-to all 256 elementary rules, with explicit resource limits and evidence gaps. 140 Groovy fields close with one to four
-steps of memory; every Groovy field is blind to the uniform D0 bit; and the
-source gradient plus two steps of memory repairs all of them. Open questions
-and their order are in the [checkpoint](checkpoints/groovy-field.md).
-
-Myk's latest question promotes Rule 30's three remembered G rows to spatial
-geometry. The [raw-three-row test](2026-09-22-groovy-three-row-geometry.md)
-finds an exact phase collision. The separately frozen
-[one-row repair](2026-09-22-groovy-separator-lift.md) then succeeds for both a
-zero separator and a one separator: four binary spatial rows evolve under a
-uniform 13-by-4 local rule at one source step per update. The ones separator
-is locally recognizable because G never contains 1111; the zero law shows
-that unique phase labels are not necessary when ambiguous readings agree on
-the output. This two-candidate follow-up is complete. Start with its
-[handoff](checkpoints/groovy-three-row-geometry.md) before proposing another unit.
-
-## Preceding direct request: original-source G autonomy
-
-After the research drive ended, Myk asked whether D or G could evolve under
-its own law and authorized a bounded test of Rule 110. The
-[completed unit](2026-09-22-rule110-g-autonomy.md) proves that Rule 110's G has
-no deterministic present-only factor on the full binary line at cadence one:
-periodic sources 001 and 011 have identical G fields and different next G
-fields. A larger spatial neighborhood cannot fix this. The known Rule-32
-G -> Rule128 identity remains an exact positive example.
-
-This directly answers one sufficient-state question within Erased
-Distinctions; it does not reopen dimensional applications or the scheduled
-drive. See the [current handoff](checkpoints/g-autonomy.md) before choosing a
-follow-up. No broader census, history search or restricted-domain experiment
-is automatically queued.
+No empirical unit is automatically queued. The [Groovy Field
+program](2026-09-22-groovy-field-program.md) remains a source of exact results
+and specified open questions; its old stage ordering does not supersede this
+agenda. The earlier Rule-110 autonomy obstruction and the completed research
+drive remain in force.
 
 ## Portfolio after the completed unit
 
@@ -142,7 +115,7 @@ closed direct-quotient question does not need more rings or source rules.
 
 | Thread | State and evidence | Condition for further work |
 | --- | --- | --- |
-| The Groovy Field | **Active program; latest bounded unit complete.** Three raw G rows fail as geometry; a [constant fourth row](2026-09-22-groovy-separator-lift.md) succeeds in binary at cadence one. | Choose an operation that needs the spatial representation before optimizing it or exploring ambient dynamics. Follow the [checkpoint](checkpoints/groovy-field.md); any native-G result must name its completion. |
+| The Groovy Field | **Bounded units complete in a living program.** Exact full-line [census](2026-09-22-groovy-field-census.md) of Groovy-field autonomy and repairs for all 256 elementary rules. | Use the [checkpoint](checkpoints/groovy-field.md) for evidence and limits. Geometry and 1D recursion units are integrated; a further operation or bound needs a decision argument. Bounded-memory obstructions remain distinct from a no-finite-memory theorem. |
 | Erased distinctions / representation invariants | **Bounded units complete.** Three executable representation cases, the restricted Rule-110 causal-retention lower bound, and the [original-source G autonomy boundary](2026-09-22-rule110-g-autonomy.md). The [depth-three onset result](2026-09-14-depth-three-onset.md) remains integrated. | Start from the completed unit (PR #282). Further depth or observation searches need a question whose answer changes a decision. |
 | Dimensional lift | **Existence and finite recursion closed; application dormant** under the [affine-oriented theorem's contract](2026-09-17-affine-oriented-lift-theorem.md) and [consumer audit](2026-09-22-phase-free-consumer-audit.md). No current downstream caller, uniqueness, optimality or spontaneous organization theorem. | A concrete locality, readout or intervention advantage over ordinary history and the proof's period-three necklace construction, charging encoding and preprocessing costs fairly. |
 | Class-IV discriminator | **Frozen finite benchmark**, with [partial original provenance](2026-09-17-selective-persistence-discriminator-record.md). Its two core positive families are 54 and 110. | An independently defined target and external validation domain; no further feature search on the same labels by default. |

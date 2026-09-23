@@ -1,0 +1,28 @@
+[
+  {
+    "slug": "research-integration-20260923",
+    "label": "Representation units: integration",
+    "title": "Integration of five completed representation units",
+    "date": "2026-09-23",
+    "updated": "2026-09-23",
+    "recordType": "checkpoint",
+    "scope": "lab",
+    "kind": "Checkpoint: integration and scheduling",
+    "evidence": "state",
+    "topic": "Research direction",
+    "summary": "Consolidates PRs #295–#299 with original research histories and evidence intact, one current agenda, and explicit boundaries between completed results and future proposals.",
+    "takeaway": "Choose a precise maintenance target with genuine return dynamics before another repair-observer search; no new experiment is automatically queued.",
+    "source": "docs/research/2026-09-23-research-integration.md",
+    "promotion": {
+      "stage": "research"
+    },
+    "related": [
+      "research-findings",
+      "groovy-separator-lift",
+      "groovy-1d-third-generation",
+      "reusable-descriptions",
+      "relational-search-pilot",
+      "prediction-repair"
+    ]
+  }
+]

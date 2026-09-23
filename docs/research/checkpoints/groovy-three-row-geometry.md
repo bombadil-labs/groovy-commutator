@@ -1,5 +1,12 @@
 # Three-row Groovy geometry: handoff
 
+**Integration update, 2026-09-23:** Myk authorized reconciliation and merging
+of PRs #295–#299. On main, this unit is integrated. The
+[combined account](../2026-09-23-research-integration.md) and
+[current handoff](../NEXT_TASK.md) supersede the branch-publication status and
+proposed work ordering below. The remaining record preserves the unit’s
+original inspection, evidence and verification chronology.
+
 Updated 2026-09-22. Authored by: Codex (OpenAI). Reviewed by: none.
 [Result and proof](../2026-09-22-groovy-three-row-geometry.md).
 Branch `gather/groovy-three-row-geometry`,
