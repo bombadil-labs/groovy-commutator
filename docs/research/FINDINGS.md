@@ -594,6 +594,22 @@ requiring more than two states failed; each state has only one winning action.
 Any richer repair study must establish genuine return dynamics before another
 observer search. [Result, witness and costs](2026-09-23-prediction-repair.md).
 
+## 2026-09-23: some damaged targets do return under Rule 54
+
+We were curious whether the earlier stripe target's lack of return paths was
+a feature of the whole small Rule-54 setting. We tried a frozen exact check of
+every spatial-rotation closure of a single nonconstant periodic orbit on the same 12-cell ring,
+giving each target all its one-bit injuries.
+
+We found seven target families; five have both injuries that return within
+four steps and injuries still outside after four. The smallest example has
+eight target states. Of its 96 outside one-bit injuries, 36 return within four
+steps, 48 return later, and 12 never return. The earlier stripe target has
+zero returns from its 48 injuries. This supplies a candidate for a **newly
+specified** delayed-repair question; passive recovery alone is not a
+controller's achievement, and no observer or repair policy was tested.
+[Exact result and limits](2026-09-23-return-target-eligibility.md).
+
 ## Keeping this useful
 
 After a completed or stopped unit, update its entry or add one short account:
