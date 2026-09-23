@@ -1,25 +1,21 @@
-# Next agent: delayed Rule-54 repair fails under full-state control
+# Next agent: finite return-target preflight on draft PR #300
 
 Updated 2026-09-23. Authored by Codex (OpenAI). Reviewed by: none.
-Inspected main `69c9121c627b15952d57b179a1bc6b0c95ccb29a`. Two
-research units are currently **draft, not merged**: [PR #300](https://github.com/bombadil-labs/groovy-commutator/pull/300)
-contains the frozen eight-state Rule-54 target preflight, while [PR #301](https://github.com/bombadil-labs/groovy-commutator/pull/301)
-tests the one-flip, two-step delayed action contract on that exact target.
-PR #301 is based on main but scientifically depends on #300; if Myk directs
-integration, merge #300 first and reconcile this handoff without overwriting
-the first unit's evidence. Its protocol commit is `58ae145`, implementation
-commit `4d1f516`; the [note](2026-09-23-delayed-repair-feasibility.md),
-canonical `results/delayed_repair_feasibility_20260923.json`, and separate
-scalar verifier pin the completed finite result. All 96 injuries and 13
-actions were checked, and the independent scalar implementation replayed
-every outcome under the 30-second cap. No independent reviewer participated.
+Inspected main `69c9121c627b15952d57b179a1bc6b0c95ccb29a`, with no open
+PR before this unit. Draft [PR #300](https://github.com/bombadil-labs/groovy-commutator/pull/300)
+contains frozen protocol commit `b44a27c`, pinned implementation `fd2c76e`,
+and an exact 12-cell Rule-54 target-eligibility result. **It is not merged.**
+The [note](2026-09-23-return-target-eligibility.md) and canonical
+`results/return_target_20260923.json` contain the evidence. The 30-second
+producer and independent scalar audit both completed, auditing all 4,096
+transitions and seven candidate families. No independent agent review was
+requested. Do not duplicate this preflight or imply it supplies a controller.
 
-**Decision:** 36/96 sources return by step four without intervention; no
-action at the two-step decision point rescues any of the other 60. The best
-fixed policy and full-state policy also succeed on 36/96. Frozen P1 passed,
-P2–P4 failed. Stop this exact observer/control contract. Do not rerun a
-nearby delay, target or action simply to manufacture a positive result.
-
+The selected eight-state target has 96 outside one-bit injuries: 36 return by
+four steps, 48 only later, 12 never. The old four-phase target has zero
+returns among 48 injuries. P1, P2, P3 all passed under the frozen protocol.
+The selected target is an eligibility example, not proof of autonomous
+maintenance, a beneficial sensor or an infinite-line result.
 Myk explicitly directed reconciliation and merging of PRs #295–#299.
 [START_HERE](START_HERE.md) is the scheduling authority;
 [FINDINGS](FINDINGS.md) is the accessible running account;
@@ -55,14 +51,17 @@ not an independent review. There is no standing cross-agent gate to reactivate.
 
 ## Next one to three decisions
 
-1. **Integration:** if Myk directs it, reconcile and merge #300 before #301,
-   retaining both frozen protocols and all failed predictions.
-2. **Operational motivation:** identify a consumer or mechanism that needs
-   repeated disturbance tolerance, an internal maintenance constraint, or
-   another precisely specified task. Early return alone is not enough.
-3. **Decision gate:** for any such new contract, compare passive dynamics,
-   full-state action feasibility, and a fixed-action baseline before searching
-   encoders; state in advance what negative result stops that line.
+1. **Operational contract:** is the goal an external repair policy, repeated
+   disturbance tolerance, or maintenance by constraints inside the system?
+   For the new candidate, name observation, actions, target, cadence, domain
+   and cost model, including a passive-success baseline before any sensor search.
+2. **Payoff and stopping rule:** which exact obstruction, construction or
+   negative outcome would settle the next decision? Reuse the witness interface
+   with the simplest suitable frontend. Jev setup is parked; the Prolog pilot
+   does not oblige further language comparisons.
+3. **Integration:** PR #300 is a draft gathering unit. Verify its checks and
+   retain it pending Myk's direction to merge; do not infer authorization from
+   the completed earlier integration of PRs #295–#299.
 
 No next empirical unit is automatically queued by integration. Dimensional
 applications, all-rule censuses, a fourth G generation, prime-distribution claims

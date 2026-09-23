@@ -31,15 +31,12 @@ bounded negative outcomes are retained. See the
 
 The operative direction is **task-specific representation and maintenance**:
 what must be visible to predict, intervene, or preserve a specified organization?
-[Draft PR #300](https://github.com/bombadil-labs/groovy-commutator/pull/300)
-found a target with both returning and nonreturning one-bit injuries on the
-same small Rule-54 ring, but eligibility was insufficient: the [bounded
-delayed-action audit](2026-09-23-delayed-repair-feasibility.md), draft PR #301,
-finds that after waiting two steps no one-flip action can improve the
-four-step outcome. Full-state access offers no gain, so no sensor search is
-justified under that contract. Both PRs remain draft branch evidence, with
-#301 scientifically dependent on #300. A new maintenance unit needs a
-separately motivated operation and passive/full-state baselines first.
+The [target-eligibility preflight](2026-09-23-return-target-eligibility.md)
+on draft PR #300 identifies a qualifying eight-state Rule-54 target: 36 of
+96 one-bit injuries return by step four, 48 return later and 12 never return.
+The prior stripe target still has no outside return. The next decision is an
+intervention contract and a passive/full-state baseline, not an automatic
+observer search. This preflight is branch evidence until integration.
 
 Keep the exact Python verifier and witness interface. The bounded Prolog pilot
 is available when its grammar is useful; it is not mandatory infrastructure.

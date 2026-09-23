@@ -594,23 +594,21 @@ requiring more than two states failed; each state has only one winning action.
 Any richer repair study must establish genuine return dynamics before another
 observer search. [Result, witness and costs](2026-09-23-prediction-repair.md).
 
-## 2026-09-23: delayed one-flip repair fails despite passive return
+## 2026-09-23: some damaged targets do return under Rule 54
 
-We were curious whether finding a target that sometimes recovers on its own
-would make delayed intervention meaningful. A separate [target preflight,
-draft PR #300](https://github.com/bombadil-labs/groovy-commutator/pull/300)
-found an eight-state Rule-54 target with both returning and nonreturning
-one-bit injuries on the 12-cell ring. We tried waiting two CA steps after
-injury, then allowing a controller to see all 12 current bits and flip one
-bit before scoring target membership two steps later.
+We were curious whether the earlier stripe target's lack of return paths was
+a feature of the whole small Rule-54 setting. We tried a frozen exact check of
+every spatial-rotation closure of a single nonconstant periodic orbit on the same 12-cell ring,
+giving each target all its one-bit injuries.
 
-We found that 36 of 96 injuries reach the target without help. None of the
-other 60 can be rescued by *any* of the 13 available actions; the best
-full-state policy and the best fixed action (noop) both succeed on exactly 36.
-Three frozen positive predictions failed. Thus early passive return does not
-guarantee useful delayed control. A compressed sensor cannot improve this
-contract; other action times, goals and target families remain untested.
-[Exact result and failed predictions](2026-09-23-delayed-repair-feasibility.md).
+We found seven target families; five have both injuries that return within
+four steps and injuries still outside after four. The smallest example has
+eight target states. Of its 96 outside one-bit injuries, 36 return within four
+steps, 48 return later, and 12 never return. The earlier stripe target has
+zero returns from its 48 injuries. This supplies a candidate for a **newly
+specified** delayed-repair question; passive recovery alone is not a
+controller's achievement, and no observer or repair policy was tested.
+[Exact result and limits](2026-09-23-return-target-eligibility.md).
 
 ## Keeping this useful
 
