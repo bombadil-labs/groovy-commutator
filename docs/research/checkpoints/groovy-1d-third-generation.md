@@ -51,6 +51,16 @@ pinned implementation changed during publication.
 
 ## Next decisions
 
+Following Myk's interpretation question, the result note now includes a
+post-evaluation algebraic simplification: E_2^2 = left-shift composed with
+E_2, and E_16 has the reflected identity. After one source step, every fixed
+local observation (including these G generations) simply translates. The
+all-source closure problem therefore concerns the initial transient.
+Recursion cannot recover lost source distinctions, but one-bit density need
+not decrease. No new experiment, protocol or canonical result was introduced
+for this deduction; all pinned bytes remain unchanged. This limits the
+scientific motivation for adding depth alone.
+
 The requested extra generation is complete; nothing further is queued.
 If Myk continues, distinguish (1) a fourth generation of the explicit
 successful branch, (2) a structural reason for closure independent of chosen

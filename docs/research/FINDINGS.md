@@ -472,6 +472,18 @@ now changes whether the recursion closes.** This does not establish an
 indefinitely closed hierarchy. The requested extra generation is complete;
 no fourth generation is queued. [Exact follow-up](2026-09-23-groovy-1d-third-generation.md).
 
+An important interpretation followed from Myk's question about evaporation:
+Rule 2 produces separated ones after a single source update, and thereafter
+only shifts them left; Rule 16 shifts right. Every fixed local G observation
+inherits that rigid motion. Thus these nonconstant recursive fields do not
+demonstrate increasingly rich long-term dynamics. Closure from all original
+sources concerns retaining enough information for the initial transient.
+Across recursive observations, once two sources become indistinguishable,
+no later layer can distinguish them again. This need not reduce the density
+of ones: the successful branch's saved tables give initial fair-source
+expectations of 13.7% at the second layer and 25.8% at the third.
+These are algebraic deductions and table interpretations, not another run.
+
 ## Keeping this useful
 
 After a completed or stopped unit, update its entry or add one short account:

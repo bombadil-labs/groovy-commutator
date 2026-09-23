@@ -86,6 +86,58 @@ commutators directly with scalar periodic arithmetic.
 
 ## Verification and boundaries
 
+### Interpretation: one transient, then rigid transport
+
+The following is an algebraic deduction after the evaluations, prompted by
+Myk's question about "evaporation". It requires no new experiment and is an
+important limit on the significance of the surviving chains.
+
+Rule 2 outputs one exactly on input neighborhood 001. Consequently, two
+ones in any updated source row cannot be one or two cells apart: the
+corresponding 001 neighborhoods would contradict each other. They are
+separated by at least two zeros. On such a row Y, Rule 2 simply copies the
+right neighbor, because every one already has two zeros immediately to its
+left. Define the left shift by `sigma(Y)[i] = Y[i+1]`. Then, for every S,
+
+```
+E_2^2(S) = sigma(E_2(S)).
+E_2^t(S) = sigma^(t-1)(E_2(S)) for t >= 1.
+```
+
+Rule 16 is the reflected statement with right shift. Every fixed local G
+observation, including every composed O_k here, commutes with spatial
+translation. Therefore
+
+```
+O_k(E_2^t(S)) = sigma^(t-1)(O_k(E_2(S))) for t >= 1.
+```
+
+All these inherited traces are rigidly translating after the first source
+update. A nonconstant higher G is not evidence of richer long-term dynamics
+in this family. Closure on all original sources asks whether the observation
+also predicts the initial transient; on the one-step source image, **every
+fixed local observation already has the simple shift law**, whether or not
+it closes on the full starting domain. The growing all-source update radius
+does not contradict this post-transient simplicity. This deduction concerns
+inherited fields, not arbitrary states of F, H or J, and not other source rules.
+
+"Evaporation of distinctions" has a precise limited interpretation. Since
+`O_(k+1) = G_Fk composed with O_k`, any two sources identified by O_k remain
+identified at later generations, once the rule choices are fixed. A later
+layer cannot recover lost original-source distinctions. This does not prove
+strict information loss at every stage or an entropy-decrease rate.
+
+Nor is it necessarily thinning of one-bits. Under an independent fair-bit
+original source at the initial time, the successful branch has expected
+one-fraction `280/2048` (13.7%) at generation two and `2114/8192` (25.8%) at
+generation three. These expectations follow directly from the saved truth
+tables, not a new trajectory experiment. Density can increase while source
+information cannot. The useful result here concerns retained distinctions
+and transient predictability; additional recursion depth alone would not
+establish emergent dynamical complexity.
+
+### Provenance and checks
+
 - [Frozen follow-up protocol](protocols/groovy-1d-third-generation-20260923.md),
   commit [`4c93804`](https://github.com/bombadil-labs/groovy-commutator/commit/4c93804f9dc70031c07a3b4704eac4aca56e1505).
 - [Implementation before evaluation](../../scripts/groovy_1d_third_generation.py),
