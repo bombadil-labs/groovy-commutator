@@ -433,25 +433,50 @@ an identity/swap pair switching, not a predictor of whether switching occurs.
 [census, corrections and replay](2026-09-22-groovy-field-census.md),
 [current checkpoint](checkpoints/groovy-field.md).
 
-## Reusable descriptions: some repairs retain state, others specify a rule
+## 25. Turning memory into raw spatial rows can erase temporal order
 
-We were curious what a description must retain before we can operate on it.
-We compared a capped count of prime factors with a one-dimensional Groovy
-field, using exact proofs and a small interactive display.
+We were curious whether Rule 30's three remembered Groovy fields could become
+three spatial rows of a uniform binary 2D rule. We tried repeating those rows
+vertically, removing row labels, and requiring the encoded history to advance
+one source step under the same rule everywhere.
 
-We found that counting factors of two up to three needs exactly the remainder
-modulo eight to predict its future under repeated addition of one. All eight
-residues are necessary, and together they suffice. In the CA example, Rule
-32's G already predicts its next field, but taking another native G requires
-a rule entry that valid G fields never visit. Two choices give different Gs
-while preserving every valid trajectory. More trajectory history cannot select
-that rule convention. Separately, source XOR cannot be reconstructed from
-G_32 alone: an erased source distinction matters to that operation.
+We found an exact obstruction in an eleven-cell periodic source. Its Groovy
+rows go A, B, C, A, B', with B' different from B. The first history advancement
+is therefore indistinguishable from shifting the three-row plane vertically,
+but the next one is not. A uniform rule must respect that spatial shift.
+The same complete input plane would require two different outputs, so **no
+neighborhood size can make this particular encoding work**. We stopped without
+running the larger local-table test.
 
-**Completed proof and visual comparison.** This applies established quotient
-mathematics to explicit examples; it does not prove a minimal CA state repair
-or a theorem about prime distribution.
-[Interactive source, proofs, witnesses and costs](2026-09-23-reusable-descriptions.md).
+The three ordered observations still suffice under the existing law. What
+fails is forgetting their temporal roles. Keeping a marker or boundary, or
+using another encoding, remains possible; a marker channel gives a direct
+construction with a larger alphabet. This makes the next question precise:
+how should a spatial representation carry its temporal seam, and at what cost?
+[Certificate, proof and scope](2026-09-22-groovy-three-row-geometry.md),
+[handoff](checkpoints/groovy-three-row-geometry.md).
+
+## 26. One constant row repairs the binary spatial history
+
+We were curious whether one extra binary row could repair the three-row phase
+failure without adding a separate state channel. We tried an all-ones row and
+an all-zeros row, each appended to Rule 30's three Groovy history rows and
+repeated vertically.
+
+We found that **both work**, with one uniform binary 2D rule at one source step
+per update and a 13-column by four-row neighborhood. For the ones separator,
+the reason is particularly clear: a true Rule-30 Groovy row can never contain
+four consecutive ones. The extra row is therefore locally recognizable.
+The zero separator also closes, although temporal roles can remain ambiguous;
+all valid interpretations of an ambiguous neighborhood request the same bit.
+
+We checked the complete 21-bit source cone in all four phases, with separate
+packed and unpacked computations. These are exact local laws, not finite-ring
+extrapolations. The extra geometry costs a fourth stored bit per source column
+and additional local access; it has no demonstrated speed advantage over
+three named history tracks. The useful refinement is that we do not need to
+recover every hidden label, only distinctions that change the next update.
+[Construction, certificates and costs](2026-09-22-groovy-separator-lift.md).
 
 ## Keeping this useful
 
