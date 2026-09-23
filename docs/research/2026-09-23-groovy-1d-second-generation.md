@@ -139,3 +139,12 @@ fail at that generation.** There is no general self-sustaining tower theorem
 here. Larger-radius first-level completions, arbitrary completions for 2/16,
 memory-bearing laws such as Rule 30's, and a third generation are untested.
 No speedup, complexity-class or physical interpretation is claimed.
+
+## Subsequently requested third generation
+
+After this unit closed, Myk asked whether the 2/16 chains extend again.
+The [separately frozen follow-up](2026-09-23-groovy-1d-third-generation.md)
+finds a nonconstant radius-four third law for each, on the already fixed
+first-one / second-zero branch. The all-zero branch fails and the all-one
+branch remains unresolved beyond radius four. Original evidence and the
+second-generation implementation above are unchanged.

@@ -28,7 +28,12 @@ resolves the 36 present-only binary cases under specified smallest-radius
 laws: 33 constant second fields, nonconstant inherited positives for 2/16,
 and a second-generation failure for 32 under both radius-one choices.
 Full descendant-domain results are recorded separately. Finite-memory cases
-such as Rule 30 are outside this unit; no third generation is queued.
+such as Rule 30 are outside this unit. Myk's requested
+[third-generation follow-up](2026-09-23-groovy-1d-third-generation.md) also
+closes for both mirror sources on the first-one / second-zero branch, with
+a radius-four update. Other tested choices fail or remain unresolved beyond
+radius four. The choice of rule completion now affects the closure verdict.
+No fourth generation is queued.
 
 ## The questions, in plain English
 
@@ -127,7 +132,7 @@ Two exact facts frame the lift question:
 | Taxonomy: classify each counterexample by how its two tails differ | 3, 9 | bounded run complete; see evidence limits |
 | 4. Rule 110 dynamics on valid histories | 8 | bounded run complete; see evidence limits |
 | Follow-ups: output complement vs D0; universal repairs at memory 3; G alone at memory 5 | 2, 5, 9 | bounded run complete; see evidence limits |
-| 5. 1D second-generation G | 10 | present-only unit complete; 2/16 inherited positives, 32 negative, 33 constant; memory-bearing cases remain open |
+| 5. 1D recursive G | 10 | second-generation unit and requested third-generation 2/16 follow-up complete under explicit rules; no fourth generation queued |
 | 6. A general operator beyond one-bit, radius-one tracks | 5, 9 | open |
 
 Results and their evidence level are in the

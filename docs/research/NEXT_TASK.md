@@ -1,5 +1,15 @@
 # Next agent: continue The Groovy Field
 
+Latest completed follow-up: [third recursive G for Rules 2/16](2026-09-23-groovy-1d-third-generation.md),
+continuing [PR #296](https://github.com/bombadil-labs/groovy-commutator/pull/296).
+The [current handoff](checkpoints/groovy-1d-third-generation.md) records both
+nonconstant radius-four positives on the first-one / second-zero branch,
+four exact negatives under other choices and two cases unresolved beyond
+radius four. These are inherited fields on the original 1D source domain.
+No fourth generation is queued. Earlier units below retain their original scope.
+
+## Second-generation unit
+
 Latest completed unit, 2026-09-23: [1D second-generation G](2026-09-23-groovy-1d-second-generation.md),
 [PR #296](https://github.com/bombadil-labs/groovy-commutator/pull/296).
 Read its [handoff](checkpoints/groovy-1d-second-generation.md) first. Among

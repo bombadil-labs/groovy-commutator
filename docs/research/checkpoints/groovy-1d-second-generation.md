@@ -6,6 +6,13 @@ Updated 2026-09-23. [Result note](../2026-09-23-groovy-1d-second-generation.md).
 Inspected main: `a8dee2d0510f22e7f992a65346e3167cd64ac2dd`.
 PR #295 was the only open PR at inspection and remains separate, unmerged.
 
+## Subsequent direct request
+
+Myk asked for one further generation after this unit closed. The
+[third-generation handoff](groovy-1d-third-generation.md) now records that
+completed follow-up in the same PR. The scope and next-decision text below
+preserve the second-generation unit's state before that request.
+
 ## Selected question and result
 
 Myk explicitly redirected attention to 1D autonomous G fields and their own

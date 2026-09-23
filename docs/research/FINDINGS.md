@@ -456,6 +456,22 @@ a third generation, or every possible completion. **A nontrivial second
 layer exists under the stated contract; an indefinitely closed tower is
 not established.** [Exact result and explicit rules](2026-09-23-groovy-1d-second-generation.md).
 
+## 1D recursion, continued: a third layer exists, but the branch matters
+
+We then asked whether either nonconstant 2/16 chain extends one further G.
+We followed both existing first-rule choices and two fixed choices for the
+second rule's unused entries. Both mirror sources have a nonconstant third
+field with an exact radius-four update when the first fill is one and the
+second fill is zero. Each positive was checked over every 21-bit source cone.
+
+The zero/zero and zero/one choices fail with complete periodic counterexamples.
+The one/one choice has no law at radii zero through four but remains unresolved
+at larger radii. All eight third fields differ from their second fields.
+**An explicit third-generation 1D chain exists; choosing unused rule entries
+now changes whether the recursion closes.** This does not establish an
+indefinitely closed hierarchy. The requested extra generation is complete;
+no fourth generation is queued. [Exact follow-up](2026-09-23-groovy-1d-third-generation.md).
+
 ## Keeping this useful
 
 After a completed or stopped unit, update its entry or add one short account:

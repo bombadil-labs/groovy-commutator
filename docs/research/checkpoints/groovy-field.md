@@ -8,7 +8,15 @@ authorized merging after the completed review below; on main, treat this unit
 as integrated. The PR records the resulting merge commit. Original inspected head: `7c55ffa8d9925c5041498c2c7915bb2d51d78a02`;
 base main: `fa826725f4e36a5d8fb98f3d8512c150ebd5e2d9`.
 
-## Latest unit: 1D second-generation G
+## Latest follow-up: third-generation G
+
+Myk requested one further generation for 2/16. The
+[third-generation handoff](groovy-1d-third-generation.md) is current: the
+first-one / second-zero branch gives a nonconstant radius-four law for both;
+other tested branches fail or remain unresolved beyond radius four. The
+requested follow-up is complete, and no fourth generation is queued.
+
+## Preceding unit: 1D second-generation G
 
 Myk redirected the question to autonomous 1D fields and their own G fields.
 The [bounded present-only unit](../2026-09-23-groovy-1d-second-generation.md)

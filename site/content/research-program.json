@@ -180,13 +180,14 @@
     "date": "2026-09-22",
     "updated": "2026-09-23",
     "status": "living",
-    "summary": "Autonomous 1D Groovy fields and their descendants: the present-only second-generation unit gives nonconstant inherited positives for Rules 2/16, failure for Rule 32, and constant fields for the other 33 cases, under specified derived laws.",
+    "summary": "Autonomous 1D Groovy fields and their descendants: Rules 2/16 have exact nonconstant second and third generations on specified inherited branches. Rule choice and starting domain affect closure; no fourth generation is queued.",
     "thesis": "Identify which distinctions a Groovy field must retain to predict itself, and when its own Groovy field also closes under a specified one-dimensional law.",
     "source": "docs/research/2026-09-22-groovy-field-program.md",
     "supports": [
       "g-autonomy-boundary",
       "groovy-field-census",
-      "groovy-1d-second-generation"
+      "groovy-1d-second-generation",
+      "groovy-1d-third-generation"
     ]
   }
 ]
