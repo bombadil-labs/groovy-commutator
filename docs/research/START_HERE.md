@@ -31,10 +31,15 @@ bounded negative outcomes are retained. See the
 
 The operative direction is **task-specific representation and maintenance**:
 what must be visible to predict, intervene, or preserve a specified organization?
-The next useful decision is whether a concrete proposed target has genuine
-return dynamics from outside it. Establish that eligibility and an intervention
-contract before another observer search. The last stripe target does not qualify;
-changing its delay cannot create recovery.
+[Draft PR #300](https://github.com/bombadil-labs/groovy-commutator/pull/300)
+found a target with both returning and nonreturning one-bit injuries on the
+same small Rule-54 ring, but eligibility was insufficient: the [bounded
+delayed-action audit](2026-09-23-delayed-repair-feasibility.md), draft PR #301,
+finds that after waiting two steps no one-flip action can improve the
+four-step outcome. Full-state access offers no gain, so no sensor search is
+justified under that contract. Both PRs remain draft branch evidence, with
+#301 scientifically dependent on #300. A new maintenance unit needs a
+separately motivated operation and passive/full-state baselines first.
 
 Keep the exact Python verifier and witness interface. The bounded Prolog pilot
 is available when its grammar is useful; it is not mandatory infrastructure.

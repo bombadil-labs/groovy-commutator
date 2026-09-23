@@ -1,6 +1,25 @@
-# Next agent: five completed units integrated; choose the next contract
+# Next agent: delayed Rule-54 repair fails under full-state control
 
 Updated 2026-09-23. Authored by Codex (OpenAI). Reviewed by: none.
+Inspected main `69c9121c627b15952d57b179a1bc6b0c95ccb29a`. Two
+research units are currently **draft, not merged**: [PR #300](https://github.com/bombadil-labs/groovy-commutator/pull/300)
+contains the frozen eight-state Rule-54 target preflight, while [PR #301](https://github.com/bombadil-labs/groovy-commutator/pull/301)
+tests the one-flip, two-step delayed action contract on that exact target.
+PR #301 is based on main but scientifically depends on #300; if Myk directs
+integration, merge #300 first and reconcile this handoff without overwriting
+the first unit's evidence. Its protocol commit is `58ae145`, implementation
+commit `4d1f516`; the [note](2026-09-23-delayed-repair-feasibility.md),
+canonical `results/delayed_repair_feasibility_20260923.json`, and separate
+scalar verifier pin the completed finite result. All 96 injuries and 13
+actions were checked, and the independent scalar implementation replayed
+every outcome under the 30-second cap. No independent reviewer participated.
+
+**Decision:** 36/96 sources return by step four without intervention; no
+action at the two-step decision point rescues any of the other 60. The best
+fixed policy and full-state policy also succeed on 36/96. Frozen P1 passed,
+P2–P4 failed. Stop this exact observer/control contract. Do not rerun a
+nearby delay, target or action simply to manufacture a positive result.
+
 Myk explicitly directed reconciliation and merging of PRs #295–#299.
 [START_HERE](START_HERE.md) is the scheduling authority;
 [FINDINGS](FINDINGS.md) is the accessible running account;
@@ -36,17 +55,14 @@ not an independent review. There is no standing cross-agent gate to reactivate.
 
 ## Next one to three decisions
 
-1. **Target eligibility:** does a proposed maintenance target admit genuine
-   return trajectories from outside it? Check this before searching observers.
-   The last stripe target fails that test; merely increasing delay cannot help.
-2. **Operational contract:** is the goal an external repair policy, repeated
-   disturbance tolerance, or maintenance by constraints inside the system?
-   Name the observation, actions, target, cadence, domain and cost model before
-   transferring conclusions between them.
-3. **Payoff and stopping rule:** which exact obstruction, construction or
-   negative outcome would settle the next decision? Reuse the witness interface
-   with the simplest suitable frontend. Jev setup is parked; the Prolog pilot
-   does not oblige further language comparisons.
+1. **Integration:** if Myk directs it, reconcile and merge #300 before #301,
+   retaining both frozen protocols and all failed predictions.
+2. **Operational motivation:** identify a consumer or mechanism that needs
+   repeated disturbance tolerance, an internal maintenance constraint, or
+   another precisely specified task. Early return alone is not enough.
+3. **Decision gate:** for any such new contract, compare passive dynamics,
+   full-state action feasibility, and a fixed-action baseline before searching
+   encoders; state in advance what negative result stops that line.
 
 No next empirical unit is automatically queued by integration. Dimensional
 applications, all-rule censuses, a fourth G generation, prime-distribution claims
