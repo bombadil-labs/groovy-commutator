@@ -1,0 +1,17 @@
+[
+  {
+    "label": "Return-target eligibility",
+    "slug": "return-target-eligibility",
+    "title": "Can a damaged Rule-54 pattern return on its own?",
+    "date": "2026-09-23",
+    "updated": "2026-09-23",
+    "kind": "Finite exact preflight",
+    "evidence": "exact",
+    "topic": "Algebra and closure",
+    "summary": "Among seven spatial-rotation closures of nonconstant periodic orbits on a 12-cell Rule-54 ring, five have both one-bit injuries that return within four steps and injuries that do not.",
+    "takeaway": "The smallest candidate has 36 early returns, 48 later returns and 12 injuries that never return; this establishes target eligibility, not self-repair or a useful controller.",
+    "source": "docs/research/2026-09-23-return-target-eligibility.md",
+    "promotion": { "stage": "research" },
+    "related": ["prediction-repair"]
+  }
+]
