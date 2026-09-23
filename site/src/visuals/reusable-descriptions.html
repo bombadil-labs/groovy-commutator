@@ -1,0 +1,37 @@
+<div id="reusable-descriptions-lab">
+  <h2>What must a description retain?</h2>
+  <div class="rd-panels">
+    <section aria-labelledby="rd-arithmetic-title">
+      <h3 id="rd-arithmetic-title">Arithmetic · distinguish the states</h3>
+      <div class="rd-subtitle text-small">Factors of two, capped at 3 · add one each step</div>
+      <div class="rd-control">
+        <label class="form-label" for="rd-depth">Keep states together only if their counts agree</label>
+        <select class="form-select" id="rd-depth">
+          <option value="0">Now</option>
+          <option value="1">Now and after one increment</option>
+          <option value="2">Through two increments</option>
+          <option value="3">Through three increments</option>
+        </select>
+      </div>
+      <div class="rd-plot-label text-small">Grouped remainders · matching count sequences at right</div>
+      <div id="rd-groups" class="rd-groups" role="list" aria-label="Groups of indistinguishable remainders"></div>
+      <div id="rd-arithmetic-status" class="rd-status" aria-live="polite"></div>
+      <div id="rd-arithmetic-witness" class="rd-witness" aria-label="Selected ambiguity witness"></div>
+    </section>
+    <section aria-labelledby="rd-ca-title">
+      <h3 id="rd-ca-title">CA · specify the operation</h3>
+      <div class="rd-subtitle text-small">Rule 32 source · periodic ring of seven cells</div>
+      <div class="rd-control">
+        <span class="form-label" id="rd-operation-label">Operation on its G field</span>
+        <div class="viz-row" role="group" aria-labelledby="rd-operation-label">
+          <button class="btn" type="button" data-rd-stage="0" aria-pressed="true">Evolve</button>
+          <button class="btn" type="button" data-rd-stage="1" aria-pressed="false">Difference</button>
+          <button class="btn" type="button" data-rd-stage="2" aria-pressed="false">Next G</button>
+        </div>
+      </div>
+      <div id="rd-ca-rows" class="rd-ca-rows" aria-label="Exact binary fields"></div>
+      <div id="rd-ca-status" class="rd-status" aria-live="polite"></div>
+      <div id="rd-ca-choices" class="rd-choices" aria-label="Two compatible rule choices"></div>
+    </section>
+  </div>
+</div>

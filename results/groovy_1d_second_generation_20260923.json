@@ -1,0 +1,1351 @@
+{
+  "data": {
+    "first_stage": [
+      {
+        "factor_certificate": {
+          "forced_outputs_ascending": "0?",
+          "radius": 0,
+          "source_bits": 1,
+          "source_words": 2,
+          "status": "law"
+        },
+        "native_g": {
+          "outputs_ascending": "00",
+          "radius": 0
+        },
+        "smaller_radius_attempts": [],
+        "source_rule": 0,
+        "verification": {
+          "source_bits": 3,
+          "unpacked_source_words": 8,
+          "verified": true
+        },
+        "zero_fill_rule": {
+          "outputs_ascending": "00",
+          "radius": 0
+        }
+      },
+      {
+        "factor_certificate": {
+          "forced_outputs_ascending": "01",
+          "radius": 0,
+          "source_bits": 5,
+          "source_words": 32,
+          "status": "law"
+        },
+        "native_g": {
+          "outputs_ascending": "00",
+          "radius": 0
+        },
+        "smaller_radius_attempts": [],
+        "source_rule": 1,
+        "verification": {
+          "source_bits": 7,
+          "unpacked_source_words": 128,
+          "verified": true
+        },
+        "zero_fill_rule": {
+          "outputs_ascending": "01",
+          "radius": 0
+        }
+      },
+      {
+        "factor_certificate": {
+          "forced_outputs_ascending": "0010001?00?100??00?0??1?00?1????",
+          "radius": 2,
+          "source_bits": 9,
+          "source_words": 512,
+          "status": "law"
+        },
+        "native_g": {
+          "outputs_ascending": "00001100000111000000001000010000000000000001001100000000000000000000110000001100000000111110000000000000000100110000000100000000000011000001110000000011000100000000000000010011000000000000000000001100000011000000001111100000000000000001001100000001000000000000110000011100000000100001000000000000000100110000000000000000000011000000110000000011111000000000000000010011000000010000000000001100000111000000001100010000000000000001001100000000000000000000110000001100000000111110000000000000000100110000000100000000",
+          "radius": 4
+        },
+        "smaller_radius_attempts": [
+          {
+            "radius": 0,
+            "source_bits": 7,
+            "status": "local_conflict"
+          },
+          {
+            "radius": 1,
+            "source_bits": 7,
+            "status": "local_conflict"
+          }
+        ],
+        "source_rule": 2,
+        "verification": {
+          "source_bits": 9,
+          "unpacked_source_words": 512,
+          "verified": true
+        },
+        "zero_fill_rule": {
+          "outputs_ascending": "00100010000100000000001000010000",
+          "radius": 2
+        }
+      },
+      {
+        "factor_certificate": {
+          "forced_outputs_ascending": "0?",
+          "radius": 0,
+          "source_bits": 1,
+          "source_words": 2,
+          "status": "law"
+        },
+        "native_g": {
+          "outputs_ascending": "00",
+          "radius": 0
+        },
+        "smaller_radius_attempts": [],
+        "source_rule": 4,
+        "verification": {
+          "source_bits": 3,
+          "unpacked_source_words": 8,
+          "verified": true
+        },
+        "zero_fill_rule": {
+          "outputs_ascending": "00",
+          "radius": 0
+        }
+      },
+      {
+        "factor_certificate": {
+          "forced_outputs_ascending": "00",
+          "radius": 0,
+          "source_bits": 5,
+          "source_words": 32,
+          "status": "law"
+        },
+        "native_g": {
+          "outputs_ascending": "00",
+          "radius": 0
+        },
+        "smaller_radius_attempts": [],
+        "source_rule": 8,
+        "verification": {
+          "source_bits": 7,
+          "unpacked_source_words": 128,
+          "verified": true
+        },
+        "zero_fill_rule": {
+          "outputs_ascending": "00",
+          "radius": 0
+        }
+      },
+      {
+        "factor_certificate": {
+          "forced_outputs_ascending": "00",
+          "radius": 0,
+          "source_bits": 5,
+          "source_words": 32,
+          "status": "law"
+        },
+        "native_g": {
+          "outputs_ascending": "00",
+          "radius": 0
+        },
+        "smaller_radius_attempts": [],
+        "source_rule": 12,
+        "verification": {
+          "source_bits": 7,
+          "unpacked_source_words": 128,
+          "verified": true
+        },
+        "zero_fill_rule": {
+          "outputs_ascending": "00",
+          "radius": 0
+        }
+      },
+      {
+        "factor_certificate": {
+          "forced_outputs_ascending": "?1",
+          "radius": 0,
+          "source_bits": 1,
+          "source_words": 2,
+          "status": "law"
+        },
+        "native_g": {
+          "outputs_ascending": "00",
+          "radius": 0
+        },
+        "smaller_radius_attempts": [],
+        "source_rule": 15,
+        "verification": {
+          "source_bits": 3,
+          "unpacked_source_words": 8,
+          "verified": true
+        },
+        "zero_fill_rule": {
+          "outputs_ascending": "01",
+          "radius": 0
+        }
+      },
+      {
+        "factor_certificate": {
+          "forced_outputs_ascending": "00000?0?1???11??00000?0?0011????",
+          "radius": 2,
+          "source_bits": 9,
+          "source_words": 512,
+          "status": "law"
+        },
+        "native_g": {
+          "outputs_ascending": "00000000000000000000000000000000000000000000000000001111000000001111111100000000000000000000000011111111000000000000000000000000000000000000000000000000000000000000000000000000000011110000000000000000000000001111111100000000000000001111111100000000000000000000000000000000000000000000000000000000000000000000111100000000111111110000000000000000000000001111111100000000000000000000000000000000000000000000000000000000111100001111111111110000000000000000000000000000001111110000111100000000111111110000000000000000",
+          "radius": 4
+        },
+        "smaller_radius_attempts": [
+          {
+            "radius": 0,
+            "source_bits": 7,
+            "status": "local_conflict"
+          },
+          {
+            "radius": 1,
+            "source_bits": 7,
+            "status": "local_conflict"
+          }
+        ],
+        "source_rule": 16,
+        "verification": {
+          "source_bits": 9,
+          "unpacked_source_words": 512,
+          "verified": true
+        },
+        "zero_fill_rule": {
+          "outputs_ascending": "00000000100011000000000000110000",
+          "radius": 2
+        }
+      },
+      {
+        "factor_certificate": {
+          "forced_outputs_ascending": "11",
+          "radius": 0,
+          "source_bits": 5,
+          "source_words": 32,
+          "status": "law"
+        },
+        "native_g": {
+          "outputs_ascending": "11",
+          "radius": 0
+        },
+        "smaller_radius_attempts": [],
+        "source_rule": 19,
+        "verification": {
+          "source_bits": 7,
+          "unpacked_source_words": 128,
+          "verified": true
+        },
+        "zero_fill_rule": {
+          "outputs_ascending": "11",
+          "radius": 0
+        }
+      },
+      {
+        "factor_certificate": {
+          "forced_outputs_ascending": "00000?01",
+          "radius": 1,
+          "source_bits": 7,
+          "source_words": 128,
+          "status": "law"
+        },
+        "native_g": {
+          "outputs_ascending": "00000000000000110000000000000010",
+          "radius": 2
+        },
+        "smaller_radius_attempts": [
+          {
+            "radius": 0,
+            "source_bits": 7,
+            "status": "local_conflict"
+          }
+        ],
+        "source_rule": 32,
+        "verification": {
+          "source_bits": 7,
+          "unpacked_source_words": 128,
+          "verified": true
+        },
+        "zero_fill_rule": {
+          "outputs_ascending": "00000001",
+          "radius": 1
+        }
+      },
+      {
+        "factor_certificate": {
+          "forced_outputs_ascending": "00",
+          "radius": 0,
+          "source_bits": 5,
+          "source_words": 32,
+          "status": "law"
+        },
+        "native_g": {
+          "outputs_ascending": "00",
+          "radius": 0
+        },
+        "smaller_radius_attempts": [],
+        "source_rule": 36,
+        "verification": {
+          "source_bits": 7,
+          "unpacked_source_words": 128,
+          "verified": true
+        },
+        "zero_fill_rule": {
+          "outputs_ascending": "00",
+          "radius": 0
+        }
+      },
+      {
+        "factor_certificate": {
+          "forced_outputs_ascending": "?1",
+          "radius": 0,
+          "source_bits": 1,
+          "source_words": 2,
+          "status": "law"
+        },
+        "native_g": {
+          "outputs_ascending": "00",
+          "radius": 0
+        },
+        "smaller_radius_attempts": [],
+        "source_rule": 51,
+        "verification": {
+          "source_bits": 3,
+          "unpacked_source_words": 8,
+          "verified": true
+        },
+        "zero_fill_rule": {
+          "outputs_ascending": "01",
+          "radius": 0
+        }
+      },
+      {
+        "factor_certificate": {
+          "forced_outputs_ascending": "0?",
+          "radius": 0,
+          "source_bits": 1,
+          "source_words": 2,
+          "status": "law"
+        },
+        "native_g": {
+          "outputs_ascending": "00",
+          "radius": 0
+        },
+        "smaller_radius_attempts": [],
+        "source_rule": 60,
+        "verification": {
+          "source_bits": 3,
+          "unpacked_source_words": 8,
+          "verified": true
+        },
+        "zero_fill_rule": {
+          "outputs_ascending": "00",
+          "radius": 0
+        }
+      },
+      {
+        "factor_certificate": {
+          "forced_outputs_ascending": "00",
+          "radius": 0,
+          "source_bits": 5,
+          "source_words": 32,
+          "status": "law"
+        },
+        "native_g": {
+          "outputs_ascending": "00",
+          "radius": 0
+        },
+        "smaller_radius_attempts": [],
+        "source_rule": 64,
+        "verification": {
+          "source_bits": 7,
+          "unpacked_source_words": 128,
+          "verified": true
+        },
+        "zero_fill_rule": {
+          "outputs_ascending": "00",
+          "radius": 0
+        }
+      },
+      {
+        "factor_certificate": {
+          "forced_outputs_ascending": "00",
+          "radius": 0,
+          "source_bits": 5,
+          "source_words": 32,
+          "status": "law"
+        },
+        "native_g": {
+          "outputs_ascending": "00",
+          "radius": 0
+        },
+        "smaller_radius_attempts": [],
+        "source_rule": 68,
+        "verification": {
+          "source_bits": 7,
+          "unpacked_source_words": 128,
+          "verified": true
+        },
+        "zero_fill_rule": {
+          "outputs_ascending": "00",
+          "radius": 0
+        }
+      },
+      {
+        "factor_certificate": {
+          "forced_outputs_ascending": "00",
+          "radius": 0,
+          "source_bits": 5,
+          "source_words": 32,
+          "status": "law"
+        },
+        "native_g": {
+          "outputs_ascending": "00",
+          "radius": 0
+        },
+        "smaller_radius_attempts": [],
+        "source_rule": 72,
+        "verification": {
+          "source_bits": 7,
+          "unpacked_source_words": 128,
+          "verified": true
+        },
+        "zero_fill_rule": {
+          "outputs_ascending": "00",
+          "radius": 0
+        }
+      },
+      {
+        "factor_certificate": {
+          "forced_outputs_ascending": "00",
+          "radius": 0,
+          "source_bits": 5,
+          "source_words": 32,
+          "status": "law"
+        },
+        "native_g": {
+          "outputs_ascending": "00",
+          "radius": 0
+        },
+        "smaller_radius_attempts": [],
+        "source_rule": 76,
+        "verification": {
+          "source_bits": 7,
+          "unpacked_source_words": 128,
+          "verified": true
+        },
+        "zero_fill_rule": {
+          "outputs_ascending": "00",
+          "radius": 0
+        }
+      },
+      {
+        "factor_certificate": {
+          "forced_outputs_ascending": "?1",
+          "radius": 0,
+          "source_bits": 1,
+          "source_words": 2,
+          "status": "law"
+        },
+        "native_g": {
+          "outputs_ascending": "00",
+          "radius": 0
+        },
+        "smaller_radius_attempts": [],
+        "source_rule": 85,
+        "verification": {
+          "source_bits": 3,
+          "unpacked_source_words": 8,
+          "verified": true
+        },
+        "zero_fill_rule": {
+          "outputs_ascending": "01",
+          "radius": 0
+        }
+      },
+      {
+        "factor_certificate": {
+          "forced_outputs_ascending": "0?",
+          "radius": 0,
+          "source_bits": 1,
+          "source_words": 2,
+          "status": "law"
+        },
+        "native_g": {
+          "outputs_ascending": "00",
+          "radius": 0
+        },
+        "smaller_radius_attempts": [],
+        "source_rule": 90,
+        "verification": {
+          "source_bits": 3,
+          "unpacked_source_words": 8,
+          "verified": true
+        },
+        "zero_fill_rule": {
+          "outputs_ascending": "00",
+          "radius": 0
+        }
+      },
+      {
+        "factor_certificate": {
+          "forced_outputs_ascending": "0?",
+          "radius": 0,
+          "source_bits": 1,
+          "source_words": 2,
+          "status": "law"
+        },
+        "native_g": {
+          "outputs_ascending": "00",
+          "radius": 0
+        },
+        "smaller_radius_attempts": [],
+        "source_rule": 102,
+        "verification": {
+          "source_bits": 3,
+          "unpacked_source_words": 8,
+          "verified": true
+        },
+        "zero_fill_rule": {
+          "outputs_ascending": "00",
+          "radius": 0
+        }
+      },
+      {
+        "factor_certificate": {
+          "forced_outputs_ascending": "?1",
+          "radius": 0,
+          "source_bits": 1,
+          "source_words": 2,
+          "status": "law"
+        },
+        "native_g": {
+          "outputs_ascending": "00",
+          "radius": 0
+        },
+        "smaller_radius_attempts": [],
+        "source_rule": 105,
+        "verification": {
+          "source_bits": 3,
+          "unpacked_source_words": 8,
+          "verified": true
+        },
+        "zero_fill_rule": {
+          "outputs_ascending": "01",
+          "radius": 0
+        }
+      },
+      {
+        "factor_certificate": {
+          "forced_outputs_ascending": "0?",
+          "radius": 0,
+          "source_bits": 1,
+          "source_words": 2,
+          "status": "law"
+        },
+        "native_g": {
+          "outputs_ascending": "00",
+          "radius": 0
+        },
+        "smaller_radius_attempts": [],
+        "source_rule": 150,
+        "verification": {
+          "source_bits": 3,
+          "unpacked_source_words": 8,
+          "verified": true
+        },
+        "zero_fill_rule": {
+          "outputs_ascending": "00",
+          "radius": 0
+        }
+      },
+      {
+        "factor_certificate": {
+          "forced_outputs_ascending": "?1",
+          "radius": 0,
+          "source_bits": 1,
+          "source_words": 2,
+          "status": "law"
+        },
+        "native_g": {
+          "outputs_ascending": "00",
+          "radius": 0
+        },
+        "smaller_radius_attempts": [],
+        "source_rule": 153,
+        "verification": {
+          "source_bits": 3,
+          "unpacked_source_words": 8,
+          "verified": true
+        },
+        "zero_fill_rule": {
+          "outputs_ascending": "01",
+          "radius": 0
+        }
+      },
+      {
+        "factor_certificate": {
+          "forced_outputs_ascending": "?1",
+          "radius": 0,
+          "source_bits": 1,
+          "source_words": 2,
+          "status": "law"
+        },
+        "native_g": {
+          "outputs_ascending": "00",
+          "radius": 0
+        },
+        "smaller_radius_attempts": [],
+        "source_rule": 165,
+        "verification": {
+          "source_bits": 3,
+          "unpacked_source_words": 8,
+          "verified": true
+        },
+        "zero_fill_rule": {
+          "outputs_ascending": "01",
+          "radius": 0
+        }
+      },
+      {
+        "factor_certificate": {
+          "forced_outputs_ascending": "0?",
+          "radius": 0,
+          "source_bits": 1,
+          "source_words": 2,
+          "status": "law"
+        },
+        "native_g": {
+          "outputs_ascending": "00",
+          "radius": 0
+        },
+        "smaller_radius_attempts": [],
+        "source_rule": 170,
+        "verification": {
+          "source_bits": 3,
+          "unpacked_source_words": 8,
+          "verified": true
+        },
+        "zero_fill_rule": {
+          "outputs_ascending": "00",
+          "radius": 0
+        }
+      },
+      {
+        "factor_certificate": {
+          "forced_outputs_ascending": "?1",
+          "radius": 0,
+          "source_bits": 1,
+          "source_words": 2,
+          "status": "law"
+        },
+        "native_g": {
+          "outputs_ascending": "00",
+          "radius": 0
+        },
+        "smaller_radius_attempts": [],
+        "source_rule": 195,
+        "verification": {
+          "source_bits": 3,
+          "unpacked_source_words": 8,
+          "verified": true
+        },
+        "zero_fill_rule": {
+          "outputs_ascending": "01",
+          "radius": 0
+        }
+      },
+      {
+        "factor_certificate": {
+          "forced_outputs_ascending": "0?",
+          "radius": 0,
+          "source_bits": 1,
+          "source_words": 2,
+          "status": "law"
+        },
+        "native_g": {
+          "outputs_ascending": "00",
+          "radius": 0
+        },
+        "smaller_radius_attempts": [],
+        "source_rule": 200,
+        "verification": {
+          "source_bits": 3,
+          "unpacked_source_words": 8,
+          "verified": true
+        },
+        "zero_fill_rule": {
+          "outputs_ascending": "00",
+          "radius": 0
+        }
+      },
+      {
+        "factor_certificate": {
+          "forced_outputs_ascending": "0?",
+          "radius": 0,
+          "source_bits": 1,
+          "source_words": 2,
+          "status": "law"
+        },
+        "native_g": {
+          "outputs_ascending": "00",
+          "radius": 0
+        },
+        "smaller_radius_attempts": [],
+        "source_rule": 204,
+        "verification": {
+          "source_bits": 3,
+          "unpacked_source_words": 8,
+          "verified": true
+        },
+        "zero_fill_rule": {
+          "outputs_ascending": "00",
+          "radius": 0
+        }
+      },
+      {
+        "factor_certificate": {
+          "forced_outputs_ascending": "11",
+          "radius": 0,
+          "source_bits": 5,
+          "source_words": 32,
+          "status": "law"
+        },
+        "native_g": {
+          "outputs_ascending": "11",
+          "radius": 0
+        },
+        "smaller_radius_attempts": [],
+        "source_rule": 205,
+        "verification": {
+          "source_bits": 7,
+          "unpacked_source_words": 128,
+          "verified": true
+        },
+        "zero_fill_rule": {
+          "outputs_ascending": "11",
+          "radius": 0
+        }
+      },
+      {
+        "factor_certificate": {
+          "forced_outputs_ascending": "11",
+          "radius": 0,
+          "source_bits": 5,
+          "source_words": 32,
+          "status": "law"
+        },
+        "native_g": {
+          "outputs_ascending": "11",
+          "radius": 0
+        },
+        "smaller_radius_attempts": [],
+        "source_rule": 207,
+        "verification": {
+          "source_bits": 7,
+          "unpacked_source_words": 128,
+          "verified": true
+        },
+        "zero_fill_rule": {
+          "outputs_ascending": "11",
+          "radius": 0
+        }
+      },
+      {
+        "factor_certificate": {
+          "forced_outputs_ascending": "11",
+          "radius": 0,
+          "source_bits": 5,
+          "source_words": 32,
+          "status": "law"
+        },
+        "native_g": {
+          "outputs_ascending": "11",
+          "radius": 0
+        },
+        "smaller_radius_attempts": [],
+        "source_rule": 219,
+        "verification": {
+          "source_bits": 7,
+          "unpacked_source_words": 128,
+          "verified": true
+        },
+        "zero_fill_rule": {
+          "outputs_ascending": "11",
+          "radius": 0
+        }
+      },
+      {
+        "factor_certificate": {
+          "forced_outputs_ascending": "11",
+          "radius": 0,
+          "source_bits": 5,
+          "source_words": 32,
+          "status": "law"
+        },
+        "native_g": {
+          "outputs_ascending": "11",
+          "radius": 0
+        },
+        "smaller_radius_attempts": [],
+        "source_rule": 221,
+        "verification": {
+          "source_bits": 7,
+          "unpacked_source_words": 128,
+          "verified": true
+        },
+        "zero_fill_rule": {
+          "outputs_ascending": "11",
+          "radius": 0
+        }
+      },
+      {
+        "factor_certificate": {
+          "forced_outputs_ascending": "11",
+          "radius": 0,
+          "source_bits": 5,
+          "source_words": 32,
+          "status": "law"
+        },
+        "native_g": {
+          "outputs_ascending": "11",
+          "radius": 0
+        },
+        "smaller_radius_attempts": [],
+        "source_rule": 223,
+        "verification": {
+          "source_bits": 7,
+          "unpacked_source_words": 128,
+          "verified": true
+        },
+        "zero_fill_rule": {
+          "outputs_ascending": "11",
+          "radius": 0
+        }
+      },
+      {
+        "factor_certificate": {
+          "forced_outputs_ascending": "00",
+          "radius": 0,
+          "source_bits": 5,
+          "source_words": 32,
+          "status": "law"
+        },
+        "native_g": {
+          "outputs_ascending": "00",
+          "radius": 0
+        },
+        "smaller_radius_attempts": [],
+        "source_rule": 236,
+        "verification": {
+          "source_bits": 7,
+          "unpacked_source_words": 128,
+          "verified": true
+        },
+        "zero_fill_rule": {
+          "outputs_ascending": "00",
+          "radius": 0
+        }
+      },
+      {
+        "factor_certificate": {
+          "forced_outputs_ascending": "0?",
+          "radius": 0,
+          "source_bits": 1,
+          "source_words": 2,
+          "status": "law"
+        },
+        "native_g": {
+          "outputs_ascending": "00",
+          "radius": 0
+        },
+        "smaller_radius_attempts": [],
+        "source_rule": 240,
+        "verification": {
+          "source_bits": 3,
+          "unpacked_source_words": 8,
+          "verified": true
+        },
+        "zero_fill_rule": {
+          "outputs_ascending": "00",
+          "radius": 0
+        }
+      },
+      {
+        "factor_certificate": {
+          "forced_outputs_ascending": "?1",
+          "radius": 0,
+          "source_bits": 1,
+          "source_words": 2,
+          "status": "law"
+        },
+        "native_g": {
+          "outputs_ascending": "00",
+          "radius": 0
+        },
+        "smaller_radius_attempts": [],
+        "source_rule": 255,
+        "verification": {
+          "source_bits": 3,
+          "unpacked_source_words": 8,
+          "verified": true
+        },
+        "zero_fill_rule": {
+          "outputs_ascending": "01",
+          "radius": 0
+        }
+      }
+    ],
+    "nonpointwise_descendants": [
+      {
+        "inherited_observation_same_under_two_fills": false,
+        "source_rule": 2,
+        "variants": [
+          {
+            "derived_rule": {
+              "outputs_ascending": "00100010000100000000001000010000",
+              "radius": 2
+            },
+            "fill": 0,
+            "full_descendant_domain": {
+              "all_spatial_radii_excluded": true,
+              "periods_screened": 7,
+              "status": "no_present_only_law",
+              "verification": {
+                "scalar_periodic_witness": true
+              },
+              "witness": {
+                "observations": [
+                  "0000001",
+                  "0000001"
+                ],
+                "period": 7,
+                "sources": [
+                  "1101000",
+                  "1110110"
+                ],
+                "successors": [
+                  "0000010",
+                  "0010000"
+                ]
+              }
+            },
+            "independent_composed_words": 8192,
+            "independent_g_table_words": 512,
+            "inherited_domain": {
+              "forced_outputs_ascending": "00110?1100??1?1?00110???001?00??",
+              "periods_screened": 12,
+              "radius": 2,
+              "smaller_radius_attempts": [
+                {
+                  "radius": 0,
+                  "source_bits": 13,
+                  "status": "local_conflict"
+                },
+                {
+                  "radius": 1,
+                  "source_bits": 13,
+                  "status": "local_conflict"
+                }
+              ],
+              "source_bits": 15,
+              "source_words": 32768,
+              "status": "law",
+              "verification": {
+                "source_bits": 15,
+                "unpacked_source_words": 32768,
+                "verified": true
+              }
+            },
+            "inherited_observation": {
+              "outputs_ascending": "00001111010000000011000000000000000000000000000000000000000000000000111110111111000000000000000000001111000000000000000000000000000011110100000000000000000000000000111100000000000000000000000000001111010000000000000000000000000011110000000000000000000000000000111101000000001100000000000000000000000000000000000000000000000011110100000000000000000000000000111100000000000000000000000000001111010000000000000000000000000011110000000000000000000000000000111101000000000000000000000000001111000000000000000000000000000011110100000000110000000000000000000000000000000000000000000000001111101111110000000000000000000011110000000000000000000000000000111101000000000000000000000000001111000000000000000000000000000011110100000000000000000000000000111100000000000000000000000000001111010000000011000000000000000000000000000000000000000000000000111101000000000000000000000000001111000000000000000000000000000011110100000000000000000000000000111100000000000000000000000000001111010000000000000000000000000011110000000000000000000000000000111101000000001100000000000000000000000000000000000000000000000011111011111100000000000000000000111100000000000000000000000000001111010000000000000000000000000011110000000000000000000000000000111101000000000000000000000000001111000000000000000000000000000011110100000000110000000000000000000000000000000000000000000000001111010000000000000000000000000011110000000000000000000000000000111101000000000000000000000000001111000000000000000000000000000011110100000000000000000000000000111100000000000000000000000000001111010000000011000000000000000000000000000000000000000000000000111110111111000000000000000000001111000000000000000000000000000011110100000000000000000000000000111100000000000000000000000000001111010000000000000000000000000011110000000000000000000000000000111101000000001100000000000000000000000000000000000000000000000011110100000000000000000000000000111100000000000000000000000000001111010000000000000000000000000011110000000000000000000000000000111101000000000000000000000000001111000000000000000000000000",
+              "radius": 5
+            },
+            "native_g": {
+              "outputs_ascending": "00001100000111000000001000010000000000000001001100000000000000000000110000001100000000111110000000000000000100110000000100000000000011000001110000000011000100000000000000010011000000000000000000001100000011000000001111100000000000000001001100000001000000000000110000011100000000100001000000000000000100110000000000000000000011000000110000000011111000000000000000010011000000010000000000001100000111000000001100010000000000000001001100000000000000000000110000001100000000111110000000000000000100110000000100000000",
+              "radius": 4
+            }
+          },
+          {
+            "derived_rule": {
+              "outputs_ascending": "00100011001100110010111100111111",
+              "radius": 2
+            },
+            "fill": 1,
+            "full_descendant_domain": {
+              "all_spatial_radii_excluded": true,
+              "periods_screened": 4,
+              "status": "no_present_only_law",
+              "verification": {
+                "scalar_periodic_witness": true
+              },
+              "witness": {
+                "observations": [
+                  "0001",
+                  "0001"
+                ],
+                "period": 4,
+                "sources": [
+                  "0100",
+                  "0111"
+                ],
+                "successors": [
+                  "0010",
+                  "0000"
+                ]
+              }
+            },
+            "independent_composed_words": 8192,
+            "independent_g_table_words": 512,
+            "inherited_domain": {
+              "forced_outputs_ascending": "0011000?00110???0011000?1???????",
+              "periods_screened": 12,
+              "radius": 2,
+              "smaller_radius_attempts": [
+                {
+                  "radius": 0,
+                  "source_bits": 11,
+                  "status": "local_conflict"
+                },
+                {
+                  "radius": 1,
+                  "source_bits": 13,
+                  "status": "local_conflict"
+                }
+              ],
+              "source_bits": 15,
+              "source_words": 32768,
+              "status": "law",
+              "verification": {
+                "source_bits": 15,
+                "unpacked_source_words": 32768,
+                "verified": true
+              }
+            },
+            "inherited_observation": {
+              "outputs_ascending": "00001111000000000000000000000000000011110000000000000000000000000000111100000000000000000000000000001111000000000000000000000000000011110000000011001111111111110000111100000000000000000000000000001111010000000000000000000000000011110000000000000000000000000000111100000000000000000000000000000000000000000000000000000000000011110100000000000000000000000000111100000000000000000000000000001111000000000000000000000000000011110000000000000000000000000000111101000000000000000000000000001111000000000000000000000000000011110000000000000000000000000000111100000000000000000000000000001111000000000000000000000000000011110000000000000000000000000000111100000000000000000000000000001111000000000000000000000000000011110100000000000000000000000000111100000000000000000000000000001111000000000000000000000000000000000000000000000000000000000000111101000000000000000000000000001111000000000000000000000000000011110000000000000000000000000000111100000000000000000000000000001111010000000000000000000000000011110000000000000000000000000000111100000000000000000000000000001111000000000000000000000000000011110000000000000000000000000000111100000000000000000000000000001111000000001100111111111111000011110000000000000000000000000000111101000000000000000000000000001111000000000000000000000000000011110000000000000000000000000000000000000000000000000000000000001111010000000000000000000000000011110000000000000000000000000000111100000000000000000000000000001111000000000000000000000000000011110100000000000000000000000000111100000000000000000000000000001111000000000000000000000000000011110000000000000000000000000000111100000000000000000000000000001111000000000000000000000000000011110000000000000000000000000000111100000000000000000000000000001111010000000000000000000000000011110000000000000000000000000000111100000000000000000000000000000000000000000000000000000000000011110100000000000000000000000000111100000000000000000000000000001111000000000000000000000000000011110000000000000000000000000000111101000000000000000000000000001111000000000000000000000000",
+              "radius": 5
+            },
+            "native_g": {
+              "outputs_ascending": "00001100000011000000000000110000000000001111111100000000000000000000110000001100111111110000000000000000000000000000111100000000000011000000110000000000001100000000110011111111111100000000000000001100000011001111111100000000000011000000000000001111000000000000110000001100000000000011000000000000111111110000000000000000000011001111110000001111111100000000000000000000000011110000000000001100000011000000000000110000000011001111111111110000000000000000110011111100000011111111000000001100000000000000111100000000",
+              "radius": 4
+            }
+          }
+        ]
+      },
+      {
+        "inherited_observation_same_under_two_fills": false,
+        "source_rule": 16,
+        "variants": [
+          {
+            "derived_rule": {
+              "outputs_ascending": "00000000100011000000000000110000",
+              "radius": 2
+            },
+            "fill": 0,
+            "full_descendant_domain": {
+              "all_spatial_radii_excluded": true,
+              "periods_screened": 7,
+              "status": "no_present_only_law",
+              "verification": {
+                "scalar_periodic_witness": true
+              },
+              "witness": {
+                "observations": [
+                  "0000001",
+                  "0000001"
+                ],
+                "period": 7,
+                "sources": [
+                  "0100110",
+                  "1101110"
+                ],
+                "successors": [
+                  "1000000",
+                  "0001000"
+                ]
+              }
+            },
+            "independent_composed_words": 8192,
+            "independent_g_table_words": 512,
+            "inherited_domain": {
+              "forced_outputs_ascending": "0000001011?11?1?0000???011??1???",
+              "periods_screened": 12,
+              "radius": 2,
+              "smaller_radius_attempts": [
+                {
+                  "radius": 0,
+                  "source_bits": 13,
+                  "status": "local_conflict"
+                },
+                {
+                  "radius": 1,
+                  "source_bits": 13,
+                  "status": "local_conflict"
+                }
+              ],
+              "source_bits": 15,
+              "source_words": 32768,
+              "status": "law",
+              "verification": {
+                "source_bits": 15,
+                "unpacked_source_words": 32768,
+                "verified": true
+              }
+            },
+            "inherited_observation": {
+              "outputs_ascending": "00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000011110000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001111111111111111111111111111111100000000111111111111111111111111000000000000000000000000000000000000000000000000000000000000000000000000000000001111000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000011111111000000000000000000000000000000000000000000000000000000000000000000000000111100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000011111111111111111111111111111111000000001111111111111111111111110000000000000000000000000000000000000000000000000000000000000000000000000000000011110000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000011111111111111110000111111111111000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000111111111111111111111111111111110000000011111111111111111111111100000000000000000000000000000000000000000000000000000000000000000000000000000000111100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001111111100000000000000000000000000000000000000000000000000000000000000000000000011110000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001111111111111111111111111111111100000000111111111111111111111111000000000000000000000000000000000000000000000000000000000000000000000000000000001111000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "radius": 5
+            },
+            "native_g": {
+              "outputs_ascending": "00000000000000000000000000000000000000000000000000001111000000001111111100000000000000000000000011111111000000000000000000000000000000000000000000000000000000000000000000000000000011110000000000000000000000001111111100000000000000001111111100000000000000000000000000000000000000000000000000000000000000000000111100000000111111110000000000000000000000001111111100000000000000000000000000000000000000000000000000000000111100001111111111110000000000000000000000000000001111110000111100000000111111110000000000000000",
+              "radius": 4
+            }
+          },
+          {
+            "derived_rule": {
+              "outputs_ascending": "00000101111111110000010100111111",
+              "radius": 2
+            },
+            "fill": 1,
+            "full_descendant_domain": {
+              "all_spatial_radii_excluded": true,
+              "periods_screened": 4,
+              "status": "no_present_only_law",
+              "verification": {
+                "scalar_periodic_witness": true
+              },
+              "witness": {
+                "observations": [
+                  "0001",
+                  "0001"
+                ],
+                "period": 4,
+                "sources": [
+                  "0110",
+                  "1101"
+                ],
+                "successors": [
+                  "1000",
+                  "0000"
+                ]
+              }
+            },
+            "independent_composed_words": 8192,
+            "independent_g_table_words": 512,
+            "inherited_domain": {
+              "forced_outputs_ascending": "0001000?111?00??000?00??111?????",
+              "periods_screened": 12,
+              "radius": 2,
+              "smaller_radius_attempts": [
+                {
+                  "radius": 0,
+                  "source_bits": 11,
+                  "status": "local_conflict"
+                },
+                {
+                  "radius": 1,
+                  "source_bits": 13,
+                  "status": "local_conflict"
+                }
+              ],
+              "source_bits": 15,
+              "source_words": 32768,
+              "status": "law",
+              "verification": {
+                "source_bits": 15,
+                "unpacked_source_words": 32768,
+                "verified": true
+              }
+            },
+            "inherited_observation": {
+              "outputs_ascending": "00000000000000000000000000000000000000000000000000000000000000000000000011000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000110000000000000000000000000000000000000000000000000000001111111111111111111111111111111111110000111111111111111111111111000000001100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000011000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001100000000000000000000000000000000000000000000000000000011111111111111111111111111111111111100001111111111111111111111110000000011000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000110000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001100000000000000000000000000000000000000000000000000000000000000000000000000111111111111000000000000000000000000000000000000000011000000000000000000000000000000000000000000000000000000111111111111111111111111111111111111000011111111111111111111111100000000110000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000110000000000000000000000000000000000000000000000000000001111111111111111111111111111111111110000111111111111111111111111000000001100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000011000000000000000000000000000000000000000000000000000000",
+              "radius": 5
+            },
+            "native_g": {
+              "outputs_ascending": "00000000000000000000101000110000000001011111000000000101000000001111111100110011000011110000111111111111111100000000000000000000000000000000000000001010001100000000010111110000111101010000000000000000000000000000111100001111000000001111000000000000000000000000000000000000000010100011000000000101111100000000010100000000111111110011001100001111000011111111111111110000000000000000000000000000000000000000101000110000000001011111000011110101000000000000000000000000000011110000111100000000111100000000000000000000",
+              "radius": 4
+            }
+          }
+        ]
+      },
+      {
+        "inherited_observation_same_under_two_fills": false,
+        "source_rule": 32,
+        "variants": [
+          {
+            "derived_rule": {
+              "outputs_ascending": "00000001",
+              "radius": 1
+            },
+            "fill": 0,
+            "full_descendant_domain": {
+              "all_spatial_radii_excluded": true,
+              "periods_screened": 8,
+              "status": "no_present_only_law",
+              "verification": {
+                "scalar_periodic_witness": true
+              },
+              "witness": {
+                "observations": [
+                  "00010001",
+                  "00010001"
+                ],
+                "period": 8,
+                "sources": [
+                  "10111011",
+                  "10111111"
+                ],
+                "successors": [
+                  "00000000",
+                  "00001010"
+                ]
+              }
+            },
+            "independent_composed_words": 512,
+            "independent_g_table_words": 32,
+            "inherited_domain": {
+              "all_spatial_radii_excluded": true,
+              "periods_screened": 11,
+              "status": "no_present_only_law",
+              "verification": {
+                "scalar_periodic_witness": true
+              },
+              "witness": {
+                "observations": [
+                  "00000100001",
+                  "00000100001"
+                ],
+                "period": 11,
+                "sources": [
+                  "01010101101",
+                  "01110101101"
+                ],
+                "successors": [
+                  "10001000000",
+                  "00000000000"
+                ]
+              }
+            },
+            "inherited_observation": {
+              "outputs_ascending": "00000000000000000000000000000000000000000000000000000000000000000000000000000000000011110000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000111100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001011000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000011110000000000000000000000000000000000000000",
+              "radius": 4
+            },
+            "native_g": {
+              "outputs_ascending": "00000000000000110000000000000010",
+              "radius": 2
+            }
+          },
+          {
+            "derived_rule": {
+              "outputs_ascending": "00000101",
+              "radius": 1
+            },
+            "fill": 1,
+            "full_descendant_domain": {
+              "all_spatial_radii_excluded": true,
+              "periods_screened": 6,
+              "status": "no_present_only_law",
+              "verification": {
+                "scalar_periodic_witness": true
+              },
+              "witness": {
+                "observations": [
+                  "011011",
+                  "011011"
+                ],
+                "period": 6,
+                "sources": [
+                  "011011",
+                  "011111"
+                ],
+                "successors": [
+                  "000000",
+                  "001010"
+                ]
+              }
+            },
+            "independent_composed_words": 512,
+            "independent_g_table_words": 32,
+            "inherited_domain": {
+              "all_spatial_radii_excluded": true,
+              "periods_screened": 12,
+              "status": "no_present_only_law",
+              "verification": {
+                "scalar_periodic_witness": true
+              },
+              "witness": {
+                "observations": [
+                  "000001000001",
+                  "000001000001"
+                ],
+                "period": 12,
+                "sources": [
+                  "010101011101",
+                  "011101010101"
+                ],
+                "successors": [
+                  "100010000000",
+                  "000000100010"
+                ]
+              }
+            },
+            "inherited_observation": {
+              "outputs_ascending": "00000000000000000000000000000000000000000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001011000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000",
+              "radius": 4
+            },
+            "native_g": {
+              "outputs_ascending": "00000000000001010000001100000110",
+              "radius": 2
+            }
+          }
+        ]
+      }
+    ],
+    "pointwise_count": 33,
+    "present_only_sources": [
+      0,
+      1,
+      2,
+      4,
+      8,
+      12,
+      15,
+      16,
+      19,
+      32,
+      36,
+      51,
+      60,
+      64,
+      68,
+      72,
+      76,
+      85,
+      90,
+      102,
+      105,
+      150,
+      153,
+      165,
+      170,
+      195,
+      200,
+      204,
+      205,
+      207,
+      219,
+      221,
+      223,
+      236,
+      240,
+      255
+    ],
+    "scope": "present-only binary 1D; specified minimal-radius zero/one completions; no memory search"
+  },
+  "implementation_commit": "13ba2c9aabd3c39440a6f0a1b63c894f5cd71f92",
+  "schema": 1,
+  "sha256": {
+    "docs/research/protocols/groovy-1d-second-generation-20260923.md": "8a2a86cff122d7480bb88e42a0edb60e0db0b4070e9b03ef3e1b0e4e8246a061",
+    "results/groovy_field_20260922/census.json": "113a5f75ddf60be135eaa12c40ad43c20719a71a2a9f1a3542e611425d61061e",
+    "scripts/groovy_1d_second_generation.py": "48b46e7c621fb9b03da468d14d0b7819b36559266a3277523cbce8eb793533a9"
+  }
+}

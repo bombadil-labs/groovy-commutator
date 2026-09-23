@@ -2,6 +2,24 @@
 
 Updated 2026-09-22. [Program](../2026-09-22-groovy-field-program.md),
 [census and evidence limits](../2026-09-22-groovy-field-census.md).
+
+## Latest unit: temporal rows as binary geometry
+
+Myk asked to test whether the three ordered Rule-30 G rows can instead run
+as unlabelled spatial rows. The [first note](../2026-09-22-groovy-three-row-geometry.md)
+records an exact period-11 whole-plane collision. The separately frozen
+[constant-row repair](../2026-09-22-groovy-separator-lift.md) succeeds for either
+constant: four binary rows support a uniform 13-by-4 rule at cadence one.
+G never contains 1111, so a ones separator is locally recognizable. A zero
+separator also closes without uniquely naming every temporal phase. See the
+[handoff](groovy-three-row-geometry.md) for certificates and the completion record.
+[PR #295](https://github.com/bombadil-labs/groovy-commutator/pull/295) preserves
+protocol, implementation and evaluation chronology. Authored by: Codex
+(OpenAI). Reviewed by: none. The PR carries current integration status.
+This closes the raw-three-row negative and the two four-row repair candidates.
+
+## Preceding unit: census and certificate correction
+
 Branch `claude/relaxed-shannon-o7cl11`,
 [PR #294](https://github.com/bombadil-labs/groovy-commutator/pull/294). Myk
 authorized merging after the completed review below; on main, treat this unit
@@ -83,14 +101,20 @@ excludes Rule-110 memory-1 closure, not arbitrary memory.
 
 ## Next decision questions
 
-1. **Towers:** what off-image completion and invariance claim would make native
-   G of a repaired history system well-defined and scientifically useful?
-   Specify this before generalizing the decider or running a tower census.
-2. **Finite memory:** can one exhibit a bounded, explicitly parameterized family
+1. **Spatial operation:** the four-row binary repair is now exact. What
+   specified operation benefits from arranging history spatially, after paying
+   for the extra row, table construction, access and maintenance? A new encoding
+   census or neighborhood minimization is not justified without that decision.
+2. **Towers:** what off-image completion and invariance claim would make native
+   G of a repaired history system well-defined and useful? Specify this before
+   running a tower census; the geometry obstruction itself is on-image.
+3. **Finite memory:** can one exhibit a bounded, explicitly parameterized family
    of Rule-110 witnesses for all k? A single k=5 failure is not such a proof.
-3. **Repair fibers:** which distinctions does a specified repaired history
-   retain on the full line? Track-only fiber counts cannot answer that; avoid
-   calling the gradient repair a global-complement quotient.
+
+The older repair-fiber question also remains open: track-only counts do not
+establish full repaired-history fibers, and the gradient repair is not a
+global-complement quotient. These are decisions to motivate, not an automatic
+queue of experiments.
 
 The keep/swap cross-tabulation is an observation to explain if a concrete
 mechanism emerges, not a reason to launch a further census. No new broad

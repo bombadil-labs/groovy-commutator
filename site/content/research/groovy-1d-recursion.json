@@ -1,0 +1,42 @@
+[
+  {
+    "label": "1D Groovy recursion",
+    "slug": "groovy-1d-second-generation",
+    "title": "When does a one-dimensional G field have an autonomous G field?",
+    "date": "2026-09-23",
+    "updated": "2026-09-23",
+    "kind": "Exact bounded classification",
+    "evidence": "exact",
+    "topic": "Algebra and closure",
+    "summary": "Among 36 present-only first-level laws, 33 have constant native G. Rules 2 and 16 have nonconstant second-generation closure on inherited fields under two specified derived rules; Rule 32 fails for both radius-one choices.",
+    "takeaway": "A second generation can close in 1D, but the inherited domain matters: the three tested nonpointwise descendant rules fail present-only G closure when started from arbitrary binary rows.",
+    "source": "docs/research/2026-09-23-groovy-1d-second-generation.md",
+    "promotion": {
+      "stage": "research"
+    },
+    "related": [
+      "groovy-field-census",
+      "g-autonomy-boundary"
+    ]
+  },
+  {
+    "label": "Third 1D Groovy generation",
+    "slug": "groovy-1d-third-generation",
+    "title": "A third recursive G exists for two explicit 1D chains",
+    "date": "2026-09-23",
+    "updated": "2026-09-23",
+    "kind": "Exact bounded follow-up",
+    "evidence": "exact",
+    "topic": "Algebra and closure",
+    "summary": "Rules 2 and 16 extend to a nonconstant third G with a radius-four inherited update on the first-one / second-zero branch. Other fixed choices fail or remain unresolved beyond radius four.",
+    "takeaway": "Closure depends on unused rule entries. Rules 2/16 and all their inherited G traces simply translate after one source step, so this result concerns transient predictability rather than rich long-term dynamics.",
+    "source": "docs/research/2026-09-23-groovy-1d-third-generation.md",
+    "promotion": {
+      "stage": "research"
+    },
+    "related": [
+      "groovy-1d-second-generation",
+      "groovy-field-census"
+    ]
+  }
+]
