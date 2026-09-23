@@ -1,0 +1,41 @@
+name: Relational search certificates
+on:
+  pull_request:
+    paths:
+      - 'experiments/relational_search_20260923/**'
+      - 'tests/test_relational_search.py'
+      - 'scripts/audit_block3_representation_design.py'
+      - 'docs/research/protocols/relational-search-pilot-20260923.md'
+      - 'results/relational_search_20260923.json'
+      - '.github/workflows/research-relational-search.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'experiments/relational_search_20260923/**'
+      - 'tests/test_relational_search.py'
+      - 'scripts/audit_block3_representation_design.py'
+      - 'docs/research/protocols/relational-search-pilot-20260923.md'
+      - 'results/relational_search_20260923.json'
+      - '.github/workflows/research-relational-search.yml'
+permissions:
+  contents: read
+jobs:
+  certificates:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: python -m pip install numpy
+      - run: npm ci --prefix experiments/relational_search_20260923 --no-audit --no-fund
+      - run: python -m unittest discover -s tests -p test_relational_search.py
+      - name: Verify canonical evidence when present
+        run: |
+          if test -f results/relational_search_20260923.json; then
+            python experiments/relational_search_20260923/verify.py results/relational_search_20260923.json
+          fi

@@ -1,4 +1,21 @@
-# Next agent: continue The Groovy Field
+# Next agent: relational search pilot complete
+
+Updated 2026-09-23. Myk authorized formalizing the search-language decision
+and implementing one bounded pilot. Start with its
+[result](2026-09-23-relational-search-pilot.md) and
+[handoff](checkpoints/relational-search.md). The local comparison is complete:
+all 406 candidates retained, the same exact known optimum recovered, fewer
+full oracle calls with witnesses. Jev is explicitly not evaluated because no
+credential was available. Review and integration are pending in
+[PR #298](https://github.com/bombadil-labs/groovy-commutator/pull/298).
+
+No new empirical run is queued by this result. The handoff states the next
+decision questions and how to verify saved evidence. PRs #295, #296 and #297
+remain separate draft units; inspect their current remote state and preserve
+their findings when reconciling agendas. The following sections retain the
+previous main-branch handoff rather than silently treating draft work as merged.
+
+## Preceding handoff: The Groovy Field
 
 Updated 2026-09-22. Latest unit: [one extra binary row repairs spatial Groovy history](2026-09-22-groovy-separator-lift.md),
 [PR #295](https://github.com/bombadil-labs/groovy-commutator/pull/295).
