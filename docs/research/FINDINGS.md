@@ -1,6 +1,6 @@
 # What we have learned
 
-Running plain-language summary, updated 2026-09-23. This is a synthesis of
+Running plain-language summary, updated 2026-09-22. This is a synthesis of
 existing evidence, not a new experiment or independent review. Each entry
 links to the technical account that states its assumptions and verification.
 “Complete” means the stated investigation has ended, not that every related
@@ -433,28 +433,50 @@ an identity/swap pair switching, not a predictor of whether switching occurs.
 [census, corrections and replay](2026-09-22-groovy-field-census.md),
 [current checkpoint](checkpoints/groovy-field.md).
 
-## A concrete failure can guide the search for missing distinctions
+## 25. Turning memory into raw spatial rows can erase temporal order
 
-We were curious whether a small relational language could make representation
-search more effective. We tried the already solved Rule-24 case where greedy
-repair overlooks a useful combination of distinctions. Both methods kept all
-406 permitted encoders and the same exact verifier; one also remembered pairs
-of source states showing why previous candidates failed.
+We were curious whether Rule 30's three remembered Groovy fields could become
+three spatial rows of a uniform binary 2D rule. We tried repeating those rows
+vertically, removing row labels, and requiring the encoded history to advance
+one source step under the same rule everywhere.
 
-We found that reusing those witnesses reduced full verifier calls from 278
-to 11 while recovering the same cheapest encoder. Across three fresh-process
-trials per method, median search time including startup and preprocessing
-fell from 0.686 to 0.409 seconds. A further 2.013 seconds audited all saved
-certificates and the known optimum. The first witness forces the distinction
-that the old greedy study recorded as having no immediate information gain.
+We found an exact obstruction in an eleven-cell periodic source. Its Groovy
+rows go A, B, C, A, B', with B' different from B. The first history advancement
+is therefore indistinguishable from shifting the three-row plane vertically,
+but the next one is not. A uniform rule must respect that spatial shift.
+The same complete input plane would require two different outputs, so **no
+neighborhood size can make this particular encoding work**. We stopped without
+running the larger local-table test.
 
-This gives us a concrete search principle: **retain what the failures prove
-must be distinguishable, even when a local score does not reward it yet.**
-It is one known finite case, and both methods used Prolog; no language-wide
-or universal efficiency claim follows. Jev's optional ranking was not run
-because credentials were missing. The bounded pilot is complete, with no
-automatic larger search. [Decision](2026-09-23-relational-search-decision.md);
-[evidence and costs](2026-09-23-relational-search-pilot.md).
+The three ordered observations still suffice under the existing law. What
+fails is forgetting their temporal roles. Keeping a marker or boundary, or
+using another encoding, remains possible; a marker channel gives a direct
+construction with a larger alphabet. This makes the next question precise:
+how should a spatial representation carry its temporal seam, and at what cost?
+[Certificate, proof and scope](2026-09-22-groovy-three-row-geometry.md),
+[handoff](checkpoints/groovy-three-row-geometry.md).
+
+## 26. One constant row repairs the binary spatial history
+
+We were curious whether one extra binary row could repair the three-row phase
+failure without adding a separate state channel. We tried an all-ones row and
+an all-zeros row, each appended to Rule 30's three Groovy history rows and
+repeated vertically.
+
+We found that **both work**, with one uniform binary 2D rule at one source step
+per update and a 13-column by four-row neighborhood. For the ones separator,
+the reason is particularly clear: a true Rule-30 Groovy row can never contain
+four consecutive ones. The extra row is therefore locally recognizable.
+The zero separator also closes, although temporal roles can remain ambiguous;
+all valid interpretations of an ambiguous neighborhood request the same bit.
+
+We checked the complete 21-bit source cone in all four phases, with separate
+packed and unpacked computations. These are exact local laws, not finite-ring
+extrapolations. The extra geometry costs a fourth stored bit per source column
+and additional local access; it has no demonstrated speed advantage over
+three named history tracks. The useful refinement is that we do not need to
+recover every hidden label, only distinctions that change the next update.
+[Construction, certificates and costs](2026-09-22-groovy-separator-lift.md).
 
 ## Keeping this useful
 
