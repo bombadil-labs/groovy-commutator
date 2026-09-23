@@ -1,0 +1,37 @@
+name: Prediction and repair certificates
+on:
+  pull_request:
+    paths:
+      - 'experiments/prediction_repair_20260923/**'
+      - 'tests/test_prediction_repair.py'
+      - 'src/groovy/ca.py'
+      - 'results/prediction_repair_20260923.json'
+      - 'docs/research/protocols/prediction-repair-20260923.md'
+      - '.github/workflows/research-prediction-repair.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'experiments/prediction_repair_20260923/**'
+      - 'tests/test_prediction_repair.py'
+      - 'src/groovy/ca.py'
+      - 'results/prediction_repair_20260923.json'
+      - 'docs/research/protocols/prediction-repair-20260923.md'
+      - '.github/workflows/research-prediction-repair.yml'
+permissions:
+  contents: read
+jobs:
+  certificates:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install numpy
+      - run: python -m unittest discover -s tests -p test_prediction_repair.py
+      - name: Audit canonical evidence when present
+        run: |
+          if test -f results/prediction_repair_20260923.json; then
+            python experiments/prediction_repair_20260923/verify.py results/prediction_repair_20260923.json
+          fi
