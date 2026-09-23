@@ -1,0 +1,535 @@
+{
+  "created_utc": "2026-09-23T16:59:03.452671+00:00",
+  "protocol_commit": "7aaaef3fee531df7e17988bacab00dd58b4bd596",
+  "implementation_commit": "829fe69816fb5e20136f562197510a21c476298a",
+  "source_hashes": {
+    "experiments/masked_history_sensing_20260923/run.py": "93fdd5c9e6b67e5b171ffdeded4147c332c859c9af488663c6dde80919d78ab9",
+    "experiments/masked_history_sensing_20260923/verify.py": "200834646a4e5b273319f6ed4cce53e5ac5fdb4ff68fa456b46a50aa0b1f9483",
+    "docs/research/protocols/masked-history-sensing-20260923.md": "b42e254c21101828ca9249fcf4792da8cf87abf4d846c96ca6fa90781c23012f",
+    "src/groovy/ca.py": "6969d6f0699b48602c8a2f55aecd61d58862e6472fea56f6d1ed9ebb2656d77e"
+  },
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "contract": {
+    "rule": 54,
+    "ring": 12,
+    "boundary": "periodic",
+    "target": [
+      819,
+      1638,
+      2457,
+      3276
+    ],
+    "domain": [
+      307,
+      409,
+      563,
+      614,
+      787,
+      803,
+      817,
+      818,
+      819,
+      823,
+      827,
+      883,
+      947,
+      1126,
+      1228,
+      1574,
+      1606,
+      1634,
+      1636,
+      1638,
+      1639,
+      1646,
+      1654,
+      1766,
+      1843,
+      1894,
+      2201,
+      2252,
+      2329,
+      2441,
+      2449,
+      2456,
+      2457,
+      2459,
+      2461,
+      2489,
+      2521,
+      2867,
+      2969,
+      3148,
+      3212,
+      3268,
+      3272,
+      3276,
+      3277,
+      3278,
+      3292,
+      3308,
+      3481,
+      3532,
+      3686,
+      3788
+    ],
+    "mask_known": true,
+    "observed_cell_count_per_snapshot": 11,
+    "task_endpoint": 4,
+    "history_horizons": [
+      0,
+      1,
+      2
+    ]
+  },
+  "rows": [
+    {
+      "history_h": 0,
+      "per_mask": [
+        {
+          "mask": 0,
+          "distinct_observations": 48,
+          "task_conflict_fibers": 4,
+          "task_conflict_cases": 8,
+          "source_conflict_fibers": 4,
+          "source_conflict_cases": 8,
+          "max_fiber_size": 2
+        },
+        {
+          "mask": 1,
+          "distinct_observations": 48,
+          "task_conflict_fibers": 4,
+          "task_conflict_cases": 8,
+          "source_conflict_fibers": 4,
+          "source_conflict_cases": 8,
+          "max_fiber_size": 2
+        },
+        {
+          "mask": 2,
+          "distinct_observations": 48,
+          "task_conflict_fibers": 4,
+          "task_conflict_cases": 8,
+          "source_conflict_fibers": 4,
+          "source_conflict_cases": 8,
+          "max_fiber_size": 2
+        },
+        {
+          "mask": 3,
+          "distinct_observations": 48,
+          "task_conflict_fibers": 4,
+          "task_conflict_cases": 8,
+          "source_conflict_fibers": 4,
+          "source_conflict_cases": 8,
+          "max_fiber_size": 2
+        },
+        {
+          "mask": 4,
+          "distinct_observations": 48,
+          "task_conflict_fibers": 4,
+          "task_conflict_cases": 8,
+          "source_conflict_fibers": 4,
+          "source_conflict_cases": 8,
+          "max_fiber_size": 2
+        },
+        {
+          "mask": 5,
+          "distinct_observations": 48,
+          "task_conflict_fibers": 4,
+          "task_conflict_cases": 8,
+          "source_conflict_fibers": 4,
+          "source_conflict_cases": 8,
+          "max_fiber_size": 2
+        },
+        {
+          "mask": 6,
+          "distinct_observations": 48,
+          "task_conflict_fibers": 4,
+          "task_conflict_cases": 8,
+          "source_conflict_fibers": 4,
+          "source_conflict_cases": 8,
+          "max_fiber_size": 2
+        },
+        {
+          "mask": 7,
+          "distinct_observations": 48,
+          "task_conflict_fibers": 4,
+          "task_conflict_cases": 8,
+          "source_conflict_fibers": 4,
+          "source_conflict_cases": 8,
+          "max_fiber_size": 2
+        },
+        {
+          "mask": 8,
+          "distinct_observations": 48,
+          "task_conflict_fibers": 4,
+          "task_conflict_cases": 8,
+          "source_conflict_fibers": 4,
+          "source_conflict_cases": 8,
+          "max_fiber_size": 2
+        },
+        {
+          "mask": 9,
+          "distinct_observations": 48,
+          "task_conflict_fibers": 4,
+          "task_conflict_cases": 8,
+          "source_conflict_fibers": 4,
+          "source_conflict_cases": 8,
+          "max_fiber_size": 2
+        },
+        {
+          "mask": 10,
+          "distinct_observations": 48,
+          "task_conflict_fibers": 4,
+          "task_conflict_cases": 8,
+          "source_conflict_fibers": 4,
+          "source_conflict_cases": 8,
+          "max_fiber_size": 2
+        },
+        {
+          "mask": 11,
+          "distinct_observations": 48,
+          "task_conflict_fibers": 4,
+          "task_conflict_cases": 8,
+          "source_conflict_fibers": 4,
+          "source_conflict_cases": 8,
+          "max_fiber_size": 2
+        }
+      ],
+      "distinct_observations": 576,
+      "task_conflict_fibers": 48,
+      "task_conflict_cases": 96,
+      "source_conflict_fibers": 48,
+      "source_conflict_cases": 96,
+      "task_witness": {
+        "mask": 0,
+        "sources": [
+          818,
+          819
+        ],
+        "labels": [
+          0,
+          1
+        ],
+        "first_later_split": 1
+      },
+      "source_witness": {
+        "mask": 0,
+        "sources": [
+          818,
+          819
+        ],
+        "labels": [
+          0,
+          1
+        ],
+        "first_later_split": 1
+      },
+      "observed_bits_per_case": 11,
+      "ca_steps_per_source": 0
+    },
+    {
+      "history_h": 1,
+      "per_mask": [
+        {
+          "mask": 0,
+          "distinct_observations": 50,
+          "task_conflict_fibers": 2,
+          "task_conflict_cases": 4,
+          "source_conflict_fibers": 2,
+          "source_conflict_cases": 4,
+          "max_fiber_size": 2
+        },
+        {
+          "mask": 1,
+          "distinct_observations": 50,
+          "task_conflict_fibers": 2,
+          "task_conflict_cases": 4,
+          "source_conflict_fibers": 2,
+          "source_conflict_cases": 4,
+          "max_fiber_size": 2
+        },
+        {
+          "mask": 2,
+          "distinct_observations": 50,
+          "task_conflict_fibers": 2,
+          "task_conflict_cases": 4,
+          "source_conflict_fibers": 2,
+          "source_conflict_cases": 4,
+          "max_fiber_size": 2
+        },
+        {
+          "mask": 3,
+          "distinct_observations": 50,
+          "task_conflict_fibers": 2,
+          "task_conflict_cases": 4,
+          "source_conflict_fibers": 2,
+          "source_conflict_cases": 4,
+          "max_fiber_size": 2
+        },
+        {
+          "mask": 4,
+          "distinct_observations": 50,
+          "task_conflict_fibers": 2,
+          "task_conflict_cases": 4,
+          "source_conflict_fibers": 2,
+          "source_conflict_cases": 4,
+          "max_fiber_size": 2
+        },
+        {
+          "mask": 5,
+          "distinct_observations": 50,
+          "task_conflict_fibers": 2,
+          "task_conflict_cases": 4,
+          "source_conflict_fibers": 2,
+          "source_conflict_cases": 4,
+          "max_fiber_size": 2
+        },
+        {
+          "mask": 6,
+          "distinct_observations": 50,
+          "task_conflict_fibers": 2,
+          "task_conflict_cases": 4,
+          "source_conflict_fibers": 2,
+          "source_conflict_cases": 4,
+          "max_fiber_size": 2
+        },
+        {
+          "mask": 7,
+          "distinct_observations": 50,
+          "task_conflict_fibers": 2,
+          "task_conflict_cases": 4,
+          "source_conflict_fibers": 2,
+          "source_conflict_cases": 4,
+          "max_fiber_size": 2
+        },
+        {
+          "mask": 8,
+          "distinct_observations": 50,
+          "task_conflict_fibers": 2,
+          "task_conflict_cases": 4,
+          "source_conflict_fibers": 2,
+          "source_conflict_cases": 4,
+          "max_fiber_size": 2
+        },
+        {
+          "mask": 9,
+          "distinct_observations": 50,
+          "task_conflict_fibers": 2,
+          "task_conflict_cases": 4,
+          "source_conflict_fibers": 2,
+          "source_conflict_cases": 4,
+          "max_fiber_size": 2
+        },
+        {
+          "mask": 10,
+          "distinct_observations": 50,
+          "task_conflict_fibers": 2,
+          "task_conflict_cases": 4,
+          "source_conflict_fibers": 2,
+          "source_conflict_cases": 4,
+          "max_fiber_size": 2
+        },
+        {
+          "mask": 11,
+          "distinct_observations": 50,
+          "task_conflict_fibers": 2,
+          "task_conflict_cases": 4,
+          "source_conflict_fibers": 2,
+          "source_conflict_cases": 4,
+          "max_fiber_size": 2
+        }
+      ],
+      "distinct_observations": 600,
+      "task_conflict_fibers": 24,
+      "task_conflict_cases": 48,
+      "source_conflict_fibers": 24,
+      "source_conflict_cases": 48,
+      "task_witness": {
+        "mask": 0,
+        "sources": [
+          1638,
+          1639
+        ],
+        "labels": [
+          1,
+          0
+        ],
+        "first_later_split": 2
+      },
+      "source_witness": {
+        "mask": 0,
+        "sources": [
+          1638,
+          1639
+        ],
+        "labels": [
+          1,
+          0
+        ],
+        "first_later_split": 2
+      },
+      "observed_bits_per_case": 22,
+      "ca_steps_per_source": 1
+    },
+    {
+      "history_h": 2,
+      "per_mask": [
+        {
+          "mask": 0,
+          "distinct_observations": 52,
+          "task_conflict_fibers": 0,
+          "task_conflict_cases": 0,
+          "source_conflict_fibers": 0,
+          "source_conflict_cases": 0,
+          "max_fiber_size": 1
+        },
+        {
+          "mask": 1,
+          "distinct_observations": 52,
+          "task_conflict_fibers": 0,
+          "task_conflict_cases": 0,
+          "source_conflict_fibers": 0,
+          "source_conflict_cases": 0,
+          "max_fiber_size": 1
+        },
+        {
+          "mask": 2,
+          "distinct_observations": 52,
+          "task_conflict_fibers": 0,
+          "task_conflict_cases": 0,
+          "source_conflict_fibers": 0,
+          "source_conflict_cases": 0,
+          "max_fiber_size": 1
+        },
+        {
+          "mask": 3,
+          "distinct_observations": 52,
+          "task_conflict_fibers": 0,
+          "task_conflict_cases": 0,
+          "source_conflict_fibers": 0,
+          "source_conflict_cases": 0,
+          "max_fiber_size": 1
+        },
+        {
+          "mask": 4,
+          "distinct_observations": 52,
+          "task_conflict_fibers": 0,
+          "task_conflict_cases": 0,
+          "source_conflict_fibers": 0,
+          "source_conflict_cases": 0,
+          "max_fiber_size": 1
+        },
+        {
+          "mask": 5,
+          "distinct_observations": 52,
+          "task_conflict_fibers": 0,
+          "task_conflict_cases": 0,
+          "source_conflict_fibers": 0,
+          "source_conflict_cases": 0,
+          "max_fiber_size": 1
+        },
+        {
+          "mask": 6,
+          "distinct_observations": 52,
+          "task_conflict_fibers": 0,
+          "task_conflict_cases": 0,
+          "source_conflict_fibers": 0,
+          "source_conflict_cases": 0,
+          "max_fiber_size": 1
+        },
+        {
+          "mask": 7,
+          "distinct_observations": 52,
+          "task_conflict_fibers": 0,
+          "task_conflict_cases": 0,
+          "source_conflict_fibers": 0,
+          "source_conflict_cases": 0,
+          "max_fiber_size": 1
+        },
+        {
+          "mask": 8,
+          "distinct_observations": 52,
+          "task_conflict_fibers": 0,
+          "task_conflict_cases": 0,
+          "source_conflict_fibers": 0,
+          "source_conflict_cases": 0,
+          "max_fiber_size": 1
+        },
+        {
+          "mask": 9,
+          "distinct_observations": 52,
+          "task_conflict_fibers": 0,
+          "task_conflict_cases": 0,
+          "source_conflict_fibers": 0,
+          "source_conflict_cases": 0,
+          "max_fiber_size": 1
+        },
+        {
+          "mask": 10,
+          "distinct_observations": 52,
+          "task_conflict_fibers": 0,
+          "task_conflict_cases": 0,
+          "source_conflict_fibers": 0,
+          "source_conflict_cases": 0,
+          "max_fiber_size": 1
+        },
+        {
+          "mask": 11,
+          "distinct_observations": 52,
+          "task_conflict_fibers": 0,
+          "task_conflict_cases": 0,
+          "source_conflict_fibers": 0,
+          "source_conflict_cases": 0,
+          "max_fiber_size": 1
+        }
+      ],
+      "distinct_observations": 624,
+      "task_conflict_fibers": 0,
+      "task_conflict_cases": 0,
+      "source_conflict_fibers": 0,
+      "source_conflict_cases": 0,
+      "task_witness": null,
+      "source_witness": null,
+      "observed_bits_per_case": 33,
+      "ca_steps_per_source": 2
+    }
+  ],
+  "first_sufficient_history_by_mask": {
+    "task_conflict_cases": [
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2
+    ],
+    "source_conflict_cases": [
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2
+    ]
+  },
+  "predictions": {
+    "P1": "supported",
+    "P2": "supported",
+    "P3": "supported",
+    "P4": "failed"
+  },
+  "status": "complete",
+  "elapsed_seconds": 0.0034930159999930765
+}
