@@ -610,6 +610,24 @@ specified** delayed-repair question; passive recovery alone is not a
 controller's achievement, and no observer or repair policy was tested.
 [Exact result and limits](2026-09-23-return-target-eligibility.md).
 
+## 2026-09-23: delayed one-flip repair fails despite passive return
+
+We were curious whether finding a target that sometimes recovers on its own
+would make delayed intervention meaningful. A separate [target preflight,
+PR #300](https://github.com/bombadil-labs/groovy-commutator/pull/300)
+found an eight-state Rule-54 target with both returning and nonreturning
+one-bit injuries on the 12-cell ring. We tried waiting two CA steps after
+injury, then allowing a controller to see all 12 current bits and flip one
+bit before scoring target membership two steps later.
+
+We found that 36 of 96 injuries reach the target without help. None of the
+other 60 can be rescued by *any* of the 13 available actions; the best
+full-state policy and the best fixed action (noop) both succeed on exactly 36.
+Three frozen positive predictions failed. Thus early passive return does not
+guarantee useful delayed control. A compressed sensor cannot improve this
+contract; other action times, goals and target families remain untested.
+[Exact result and failed predictions](2026-09-23-delayed-repair-feasibility.md).
+
 ## Keeping this useful
 
 After a completed or stopped unit, update its entry or add one short account:

@@ -31,12 +31,13 @@ bounded negative outcomes are retained. See the
 
 The operative direction is **task-specific representation and maintenance**:
 what must be visible to predict, intervene, or preserve a specified organization?
-The [target-eligibility preflight](2026-09-23-return-target-eligibility.md)
-on draft PR #300 identifies a qualifying eight-state Rule-54 target: 36 of
-96 one-bit injuries return by step four, 48 return later and 12 never return.
-The prior stripe target still has no outside return. The next decision is an
-intervention contract and a passive/full-state baseline, not an automatic
-observer search. This preflight is branch evidence until integration.
+The [integrated target-eligibility preflight](2026-09-23-return-target-eligibility.md),
+PR #300, found a Rule-54 target with both returning and nonreturning one-bit
+injuries. Eligibility alone was insufficient: the [delayed-action audit](2026-09-23-delayed-repair-feasibility.md)
+on PR #301 found that after waiting two steps no one-flip action improves the
+four-step outcome, even with all 12 bits visible. It is integrated into main. No observer search is justified under that
+contract. A new maintenance unit needs a separately motivated operation and
+passive/full-state baselines before a representation search.
 
 Keep the exact Python verifier and witness interface. The bounded Prolog pilot
 is available when its grammar is useful; it is not mandatory infrastructure.
