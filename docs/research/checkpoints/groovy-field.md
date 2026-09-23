@@ -1,12 +1,25 @@
 # The Groovy Field: checkpoint
 
-Updated 2026-09-22. [Program](../2026-09-22-groovy-field-program.md),
+Updated 2026-09-23. [Program](../2026-09-22-groovy-field-program.md),
 [census and evidence limits](../2026-09-22-groovy-field-census.md).
-Branch `claude/relaxed-shannon-o7cl11`,
+Preceding census branch `claude/relaxed-shannon-o7cl11`,
 [PR #294](https://github.com/bombadil-labs/groovy-commutator/pull/294). Myk
 authorized merging after the completed review below; on main, treat this unit
 as integrated. The PR records the resulting merge commit. Original inspected head: `7c55ffa8d9925c5041498c2c7915bb2d51d78a02`;
 base main: `fa826725f4e36a5d8fb98f3d8512c150ebd5e2d9`.
+
+## Latest unit: 1D second-generation G
+
+Myk redirected the question to autonomous 1D fields and their own G fields.
+The [bounded present-only unit](../2026-09-23-groovy-1d-second-generation.md)
+is complete in [PR #296](https://github.com/bombadil-labs/groovy-commutator/pull/296).
+See its [handoff](groovy-1d-second-generation.md): 33 pointwise cases have
+constant native G, 2/16 close nontrivially on inherited fields for the two
+specified derived rules, and 32 fails for both radius-one completions.
+The full descendant-domain negatives are not substituted for the inherited
+question. Rule 30's memory-bearing system is outside the unit. The next
+questions below are historical census proposals; the latest handoff governs
+this completed unit's possible follow-up.
 
 ## What changed after review
 

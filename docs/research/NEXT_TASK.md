@@ -1,5 +1,17 @@
 # Next agent: continue The Groovy Field
 
+Latest completed unit, 2026-09-23: [1D second-generation G](2026-09-23-groovy-1d-second-generation.md),
+[PR #296](https://github.com/bombadil-labs/groovy-commutator/pull/296).
+Read its [handoff](checkpoints/groovy-1d-second-generation.md) first. Among
+36 present-only first-generation laws, 33 collapse to constant native G;
+2/16 close nontrivially on inherited fields for the two specified derived
+rules; 32 fails for both radius-one completions. These are exact complete-cone
+positives and periodic whole-field negatives. Memory-bearing cases, including
+Rule 30, remain outside this unit. No third generation is queued.
+Authored by Codex; Reviewed by: none. Check the PR for integration status.
+
+## Prior census handoff
+
 Updated 2026-09-22. Myk opened [The Groovy Field](2026-09-22-groovy-field-program.md)
 as an active program after the Rule-110 autonomy unit below. Read its
 [census note](2026-09-22-groovy-field-census.md) and

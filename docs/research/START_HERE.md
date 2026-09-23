@@ -1,6 +1,6 @@
 # Research: start here
 
-**Current direction, 2026-09-22.** This page is the scheduling authority for
+**Current direction, 2026-09-23.** This page is the scheduling authority for
 research. Older notes and checkpoints preserve the evidence; their “next”
 sections are historical proposals, not an instruction to resume them.
 
@@ -24,7 +24,20 @@ steps of memory; every Groovy field is blind to the uniform D0 bit; and the
 source gradient plus two steps of memory repairs all of them. Open questions
 and their order are in the [checkpoint](checkpoints/groovy-field.md).
 
-## Latest direct request: original-source G autonomy
+## Latest direct request: one-dimensional second-generation G
+
+Myk asks which autonomous 1D Groovy fields have an autonomous G field of
+their own. The [present-only binary unit](2026-09-23-groovy-1d-second-generation.md)
+is complete: of 36 first-stage laws, 33 have constant native G. Rules 2 and
+16 have nonconstant inherited second-G laws under both specified derived
+rules, while Rule 32 fails for both radius-one choices. Arbitrary descendant
+starting rows give different answers; the note separates the domains.
+Read the [handoff](checkpoints/groovy-1d-second-generation.md) before choosing
+further work. Memory-bearing cases such as Rule 30 are outside this unit.
+The spatial-geometry work in draft PR #295 remains separate; current work
+is 1D recursion. No third generation or memory census is automatically queued.
+
+## Preceding direct request: original-source G autonomy
 
 After the research drive ended, Myk asked whether D or G could evolve under
 its own law and authorized a bounded test of Rule 110. The
@@ -107,7 +120,7 @@ closed direct-quotient question does not need more rings or source rules.
 
 | Thread | State and evidence | Condition for further work |
 | --- | --- | --- |
-| The Groovy Field | **Active program.** Exact full-line [census](2026-09-22-groovy-field-census.md) of Groovy-field autonomy and repairs for all 256 elementary rules. | Follow the [checkpoint](checkpoints/groovy-field.md): review the corrections; define off-image dynamics before towers; bounded-memory obstructions remain distinct from a no-finite-memory theorem. |
+| The Groovy Field | **Latest bounded unit complete.** [1D second-generation closure](2026-09-23-groovy-1d-second-generation.md): nonconstant inherited positives for 2/16 under specified laws; 32 fails for both radius-one choices; 33 pointwise cases collapse to constants. | Follow the [latest handoff](checkpoints/groovy-1d-second-generation.md). Memory-bearing cases such as Rule 30 remain open; no third generation is queued. |
 | Erased distinctions / representation invariants | **Bounded units complete.** Three executable representation cases, the restricted Rule-110 causal-retention lower bound, and the [original-source G autonomy boundary](2026-09-22-rule110-g-autonomy.md). The [depth-three onset result](2026-09-14-depth-three-onset.md) remains integrated. | Start from the completed unit (PR #282). Further depth or observation searches need a question whose answer changes a decision. |
 | Dimensional lift | **Existence and finite recursion closed; application dormant** under the [affine-oriented theorem's contract](2026-09-17-affine-oriented-lift-theorem.md) and [consumer audit](2026-09-22-phase-free-consumer-audit.md). No current downstream caller, uniqueness, optimality or spontaneous organization theorem. | A concrete locality, readout or intervention advantage over ordinary history and the proof's period-three necklace construction, charging encoding and preprocessing costs fairly. |
 | Class-IV discriminator | **Frozen finite benchmark**, with [partial original provenance](2026-09-17-selective-persistence-discriminator-record.md). Its two core positive families are 54 and 110. | An independently defined target and external validation domain; no further feature search on the same labels by default. |

@@ -1,6 +1,6 @@
 # What we have learned
 
-Running plain-language summary, updated 2026-09-22. This is a synthesis of
+Running plain-language summary, updated 2026-09-23. This is a synthesis of
 existing evidence, not a new experiment or independent review. Each entry
 links to the technical account that states its assumptions and verification.
 “Complete” means the stated investigation has ended, not that every related
@@ -432,6 +432,29 @@ an identity/swap pair switching, not a predictor of whether switching occurs.
 [Program](2026-09-22-groovy-field-program.md),
 [census, corrections and replay](2026-09-22-groovy-field-census.md),
 [current checkpoint](checkpoints/groovy-field.md).
+
+## 1D recursion: a second G field can close, and it can fail
+
+We were curious whether a Groovy field with its own 1D rule could itself
+have an autonomous Groovy field. We reconstructed the 36 present-only laws
+in the earlier census. Thirty-three act on each bit independently, so their
+own Groovy fields are constant. Only sources 2, 16 and 32 needed a spatial
+second-generation check.
+
+We found nonconstant second-generation laws for Rules 2 and 16 on the fields
+actually inherited from the original source, for two specified first-level
+rules each. The second update needs radius two. Rule 32 fails for both of
+its radius-one first-level rules: identical complete second-G fields can
+require different successors. All three nonpointwise descendants fail when
+started from arbitrary binary rows, so that stronger test would have hidden
+the inherited positives. Changing unspecified first-level entries changes
+the second observation even when the closure verdict stays the same.
+
+These are complete-cone identities and exact periodic counterexamples.
+The unit stays in 1D and does not test finite-memory cases such as Rule 30,
+a third generation, or every possible completion. **A nontrivial second
+layer exists under the stated contract; an indefinitely closed tower is
+not established.** [Exact result and explicit rules](2026-09-23-groovy-1d-second-generation.md).
 
 ## Keeping this useful
 

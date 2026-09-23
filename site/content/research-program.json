@@ -178,14 +178,15 @@
     "title": "The Groovy Field",
     "eyebrow": "Research program",
     "date": "2026-09-22",
-    "updated": "2026-09-22",
+    "updated": "2026-09-23",
     "status": "living",
-    "summary": "Can a rule's Groovy field run as a dynamical system of its own, and what must a repair retain? Bounded full-line census with explicit resource and provenance limits, plus independent replay of selected headline claims.",
-    "thesis": "The distinctions a Groovy field needs to become self-sufficient name what it throws away; a uniform repair would be a new lift operator.",
+    "summary": "Autonomous 1D Groovy fields and their descendants: the present-only second-generation unit gives nonconstant inherited positives for Rules 2/16, failure for Rule 32, and constant fields for the other 33 cases, under specified derived laws.",
+    "thesis": "Identify which distinctions a Groovy field must retain to predict itself, and when its own Groovy field also closes under a specified one-dimensional law.",
     "source": "docs/research/2026-09-22-groovy-field-program.md",
     "supports": [
       "g-autonomy-boundary",
-      "groovy-field-census"
+      "groovy-field-census",
+      "groovy-1d-second-generation"
     ]
   }
 ]
