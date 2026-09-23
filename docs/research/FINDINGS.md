@@ -433,27 +433,50 @@ an identity/swap pair switching, not a predictor of whether switching occurs.
 [census, corrections and replay](2026-09-22-groovy-field-census.md),
 [current checkpoint](checkpoints/groovy-field.md).
 
-## 2026-09-23: predicting persistence and choosing repair need different views
+## 25. Turning memory into raw spatial rows can erase temporal order
 
-We were curious whether a description that predicts a pattern's fate could
-hide distinctions needed to preserve it. We tried every three-bit block
-encoding for a 12-cell Rule-54 ring, with four stripe phases, one unknown
-bit injury and one chance for an external controller to flip a bit.
+We were curious whether Rule 30's three remembered Groovy fields could become
+three spatial rows of a uniform binary 2D rule. We tried repeating those rows
+vertically, removing row labels, and requiring the encoded history to advance
+one source step under the same rule everywhere.
 
-We found that two local labels suffice to predict passive persistence, while
-four are necessary to choose the correct repair. The repair view records
-differences between neighboring bits and can forget whether the entire source
-is complemented. It does not simply refine the cheaper parity view: changing
-the task changes which distinctions matter. These are exact minima among the
-4,140 encoders in this grammar, checked on all 52 allowed initial states.
+We found an exact obstruction in an eleven-cell periodic source. Its Groovy
+rows go A, B, C, A, B', with B' different from B. The first history advancement
+is therefore indistinguishable from shifting the three-row plane vertically,
+but the next one is not. A uniform rule must respect that spatial shift.
+The same complete input plane would require two different outputs, so **no
+neighborhood size can make this particular encoding work**. We stopped without
+running the larger local-table test.
 
-We also found that the chosen target never recovers passively. Even with a
-four-step delay, successful repair means immediately undoing the injury.
-**This is an exact detection-versus-correction baseline, not adaptive
-self-repair or endogenous purpose.** Our prediction of a natural conflict
-requiring more than two states failed; each state has only one winning action.
-Any richer repair study must establish genuine return dynamics before another
-observer search. [Result, witness and costs](2026-09-23-prediction-repair.md).
+The three ordered observations still suffice under the existing law. What
+fails is forgetting their temporal roles. Keeping a marker or boundary, or
+using another encoding, remains possible; a marker channel gives a direct
+construction with a larger alphabet. This makes the next question precise:
+how should a spatial representation carry its temporal seam, and at what cost?
+[Certificate, proof and scope](2026-09-22-groovy-three-row-geometry.md),
+[handoff](checkpoints/groovy-three-row-geometry.md).
+
+## 26. One constant row repairs the binary spatial history
+
+We were curious whether one extra binary row could repair the three-row phase
+failure without adding a separate state channel. We tried an all-ones row and
+an all-zeros row, each appended to Rule 30's three Groovy history rows and
+repeated vertically.
+
+We found that **both work**, with one uniform binary 2D rule at one source step
+per update and a 13-column by four-row neighborhood. For the ones separator,
+the reason is particularly clear: a true Rule-30 Groovy row can never contain
+four consecutive ones. The extra row is therefore locally recognizable.
+The zero separator also closes, although temporal roles can remain ambiguous;
+all valid interpretations of an ambiguous neighborhood request the same bit.
+
+We checked the complete 21-bit source cone in all four phases, with separate
+packed and unpacked computations. These are exact local laws, not finite-ring
+extrapolations. The extra geometry costs a fourth stored bit per source column
+and additional local access; it has no demonstrated speed advantage over
+three named history tracks. The useful refinement is that we do not need to
+recover every hidden label, only distinctions that change the next update.
+[Construction, certificates and costs](2026-09-22-groovy-separator-lift.md).
 
 ## Keeping this useful
 

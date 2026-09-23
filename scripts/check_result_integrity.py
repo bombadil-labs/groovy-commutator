@@ -30,12 +30,15 @@ ROOT = pathlib.Path(__file__).resolve().parents[1]
 
 # result file -> {hash key recorded in its source_hashes: path the hash was taken of}
 REGISTRY = {
-    'results/prediction_repair_20260923.json': {p: p for p in (
-        'experiments/prediction_repair_20260923/core.py',
-        'experiments/prediction_repair_20260923/run.py',
-        'experiments/prediction_repair_20260923/verify.py',
-        'docs/research/protocols/prediction-repair-20260923.md',
-        'src/groovy/ca.py')},
+    'results/relational_search_20260923.json': {p: p for p in (
+        'experiments/relational_search_20260923/run.py',
+        'experiments/relational_search_20260923/verify.py',
+        'experiments/relational_search_20260923/grammar.pl',
+        'experiments/relational_search_20260923/bridge.mjs',
+        'experiments/relational_search_20260923/package.json',
+        'experiments/relational_search_20260923/package-lock.json',
+        'scripts/audit_block3_representation_design.py',
+        'docs/research/protocols/relational-search-pilot-20260923.md')},
     'results/representation_case_studies_20260921.json': {p: p for p in (
         'scripts/verify_representation_case_studies.py', 'scripts/verify_depth_one_certificate.py',
         'src/groovy/ca.py', 'results/ring_closure_certificate_20260911.json',

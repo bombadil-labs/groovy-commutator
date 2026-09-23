@@ -1,27 +1,41 @@
-# Next agent: prediction and repair unit complete
+# Next agent: relational search pilot complete
 
-Updated 2026-09-23. Myk authorized the proposed prediction-to-repair unit.
-Read [START_HERE](START_HERE.md), [FINDINGS](FINDINGS.md), the
-[result](2026-09-23-prediction-repair.md) and
-[checkpoint](checkpoints/prediction-repair.md).
+Updated 2026-09-23. Myk authorized formalizing the search-language decision
+and implementing one bounded pilot. Start with its
+[result](2026-09-23-relational-search-pilot.md) and
+[handoff](checkpoints/relational-search.md). The local comparison is complete:
+all 406 candidates retained, the same exact known optimum recovered, fewer
+full oracle calls with witnesses. Jev is explicitly not evaluated because no
+credential was available. Review and integration are pending in
+[PR #298](https://github.com/bombadil-labs/groovy-commutator/pull/298).
 
-The exact Rule-54 comparison found minimum local alphabets 2 for passive
-target prediction and 4 for one-action repair. The repair view retains adjacent
-differences and forgets global complementation on the initial domain. However,
-this target has no passive return trajectories, so delayed repair reduces to
-static error correction. Do not call it autonomous recovery or endogenous purpose.
-P1–P4 supported; P5 failed. The complete candidate audit and canonical evidence
-are preserved in [draft PR #299](https://github.com/bombadil-labs/groovy-commutator/pull/299).
+No new empirical run is queued by this result. The handoff states the next
+decision questions and how to verify saved evidence. PRs #295, #296 and #297
+remain separate draft units; inspect their current remote state and preserve
+their findings when reconciling agendas. The following sections retain the
+previous main-branch handoff rather than silently treating draft work as merged.
 
-No automatic follow-up. A stronger dynamical-repair question needs a target
-with genuine return paths before another observer search. Separate draft PRs
-#295–#298 were left unchanged; inspect their current status and reconcile shared
-agenda edits at integration. This branch is based on main `a8dee2d`, not those
-unmerged branches. Reviewed by: none. Merge only at Myk's direction.
+## Preceding handoff: The Groovy Field
 
-## Earlier handoff: The Groovy Field
+Updated 2026-09-22. Latest unit: [one extra binary row repairs spatial Groovy history](2026-09-22-groovy-separator-lift.md),
+[PR #295](https://github.com/bombadil-labs/groovy-commutator/pull/295).
+Read its [concise handoff](checkpoints/groovy-three-row-geometry.md) first.
+The raw period-three Rule-30 encoding still has an exact whole-plane collision.
+A separately frozen follow-up appends one constant row: both 0 and 1 produce
+a uniform binary 2D law on the 13-by-4 stencil, at one-step cadence. Each
+positive was independently checked over the complete 21-bit cone and all four
+phases. The ones construction has executable plane dynamics; the zero table
+has 657,893 forced keys and a matching independent digest. Unique temporal
+labels are sufficient but not necessary: ambiguous interpretations may agree
+on the next bit. The two-candidate repair is complete; no broader census or
+native-G evaluation is queued. Any next task needs a specified operation and
+representation cost or a declared ambient completion question.
+This unit is authored and self-verified by Codex; Reviewed by: none. Consult
+the PR for current integration status rather than assuming it has merged.
 
-Updated 2026-09-22. Myk opened [The Groovy Field](2026-09-22-groovy-field-program.md)
+## Preceding unit: Groovy Field census and corrections
+
+Myk opened [The Groovy Field](2026-09-22-groovy-field-program.md)
 as an active program after the Rule-110 autonomy unit below. Read its
 [census note](2026-09-22-groovy-field-census.md) and
 [checkpoint](checkpoints/groovy-field.md) first; the checkpoint orders the open

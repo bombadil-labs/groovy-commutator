@@ -13,27 +13,31 @@ factors, counterexamples, graph certificates and explicit constructions.
 The [limits and prior-art guide](2026-09-21-research-boundaries.md) explains
 what the impossibility theorems constrain and where useful exact work remains.
 
-## Latest authorized unit: prediction and repair
+## Latest authorized unit: relational search pilot complete
 
-Myk approved testing which distinctions let a system's observer predict
-persistence versus choose a repair. The [completed finite
-comparison](2026-09-23-prediction-repair.md) exhausts 4,140 block encoders on
-one Rule-54 injury contract. Prediction needs 2 local labels; repair and joint
-sufficiency need 4. The repair view forgets global complementation on the
-allowed initial states and is not a refinement of the parity predictor.
+Myk accepted the [relational-search decision](2026-09-23-relational-search-decision.md)
+for one bounded method test. The [completed pilot](2026-09-23-relational-search-pilot.md)
+reuses a known Rule-24 representation problem: retaining exact failure
+witnesses reduced full verifier calls from 278 to 11 at the same optimum.
+Recorded search time also improved; both arms used Prolog, so this is not a
+language comparison. Jev remains unscored because credentials were absent.
 
-The target also proved dynamically isolated: delayed repair is equivalent to
-immediate error correction. Treat this as an exact baseline, not an agency or
-spontaneous-recovery result. Read the [checkpoint](checkpoints/prediction-repair.md)
-before a follow-up. Require a target with genuine return dynamics before
-optimizing another repair observer; no broad census is queued.
+Read the [current handoff](checkpoints/relational-search.md). PR #298 records
+this unit; it does not integrate the separate draft PRs #295–#297. Keep the
+witness interface, with Datalog and predicate invention deferred. No second
+benchmark or archived recoder restart is automatically queued. A further
+comparison needs an independently justified operation and a cheaper native
+frontend control before claiming a language advantage.
 
-This work is in [draft PR #299](https://github.com/bombadil-labs/groovy-commutator/pull/299),
-based on main `a8dee2d`. Separate units #295–#298 remain unmerged and unchanged;
-reconcile their scheduling edits when integrating. The earlier Groovy Field
-program remains a scientific context, not a command to resume every open line.
+## Active program: The Groovy Field
 
-## Program context: The Groovy Field
+**Latest direct comparison, 2026-09-23:** Myk requested a proof-backed visual
+bridge between arithmetic and CA representations. The
+[reusable-descriptions unit](2026-09-23-reusable-descriptions.md) separates
+necessary state refinement, an unspecified native-rule extension, and a
+transported-operation obstruction. See its [handoff](checkpoints/reusable-descriptions.md).
+The unit is complete within its scope; no new census is queued. Concurrent
+draft PRs #295 (geometry) and #296 (1D recursion) retain their own status.
 
 On 2026-09-22 Myk opened [The Groovy Field](2026-09-22-groovy-field-program.md)
 as a new research program: can a rule's Groovy field run as a dynamical system
@@ -44,7 +48,18 @@ steps of memory; every Groovy field is blind to the uniform D0 bit; and the
 source gradient plus two steps of memory repairs all of them. Open questions
 and their order are in the [checkpoint](checkpoints/groovy-field.md).
 
-## Earlier direct request: original-source G autonomy
+Myk's latest question promotes Rule 30's three remembered G rows to spatial
+geometry. The [raw-three-row test](2026-09-22-groovy-three-row-geometry.md)
+finds an exact phase collision. The separately frozen
+[one-row repair](2026-09-22-groovy-separator-lift.md) then succeeds for both a
+zero separator and a one separator: four binary spatial rows evolve under a
+uniform 13-by-4 local rule at one source step per update. The ones separator
+is locally recognizable because G never contains 1111; the zero law shows
+that unique phase labels are not necessary when ambiguous readings agree on
+the output. This two-candidate follow-up is complete. Start with its
+[handoff](checkpoints/groovy-three-row-geometry.md) before proposing another unit.
+
+## Preceding direct request: original-source G autonomy
 
 After the research drive ended, Myk asked whether D or G could evolve under
 its own law and authorized a bounded test of Rule 110. The
@@ -127,7 +142,7 @@ closed direct-quotient question does not need more rings or source rules.
 
 | Thread | State and evidence | Condition for further work |
 | --- | --- | --- |
-| The Groovy Field | **Active program.** Exact full-line [census](2026-09-22-groovy-field-census.md) of Groovy-field autonomy and repairs for all 256 elementary rules. | Follow the [checkpoint](checkpoints/groovy-field.md): review the corrections; define off-image dynamics before towers; bounded-memory obstructions remain distinct from a no-finite-memory theorem. |
+| The Groovy Field | **Active program; latest bounded unit complete.** Three raw G rows fail as geometry; a [constant fourth row](2026-09-22-groovy-separator-lift.md) succeeds in binary at cadence one. | Choose an operation that needs the spatial representation before optimizing it or exploring ambient dynamics. Follow the [checkpoint](checkpoints/groovy-field.md); any native-G result must name its completion. |
 | Erased distinctions / representation invariants | **Bounded units complete.** Three executable representation cases, the restricted Rule-110 causal-retention lower bound, and the [original-source G autonomy boundary](2026-09-22-rule110-g-autonomy.md). The [depth-three onset result](2026-09-14-depth-three-onset.md) remains integrated. | Start from the completed unit (PR #282). Further depth or observation searches need a question whose answer changes a decision. |
 | Dimensional lift | **Existence and finite recursion closed; application dormant** under the [affine-oriented theorem's contract](2026-09-17-affine-oriented-lift-theorem.md) and [consumer audit](2026-09-22-phase-free-consumer-audit.md). No current downstream caller, uniqueness, optimality or spontaneous organization theorem. | A concrete locality, readout or intervention advantage over ordinary history and the proof's period-three necklace construction, charging encoding and preprocessing costs fairly. |
 | Class-IV discriminator | **Frozen finite benchmark**, with [partial original provenance](2026-09-17-selective-persistence-discriminator-record.md). Its two core positive families are 54 and 110. | An independently defined target and external validation domain; no further feature search on the same labels by default. |

@@ -2742,12 +2742,13 @@
       ]
     },
     {
-      "source": "prediction-versus-repair",
+      "source": "witness-guided-encoder-search",
       "type": "depends_on",
-      "target": "predictive-future-refinement",
-      "reason": "The passive target is certified by stabilized future equivalence on all 4,096 source states before restriction to the 52 allowed initial states; repair is separately tested by common successful actions.",
+      "target": "predictive-synergy",
+      "reason": "The pilot uses the known finite counterexample and its independently verified optimum as a method regression, without extending the historical census.",
       "research": [
-        "prediction-repair"
+        "relational-search-pilot",
+        "block3-representation-design"
       ]
     }
   ],
@@ -5285,15 +5286,16 @@
       ]
     },
     {
-      "id": "prediction-versus-repair",
-      "title": "Predicting persistence can discard a distinction needed for repair",
+      "id": "witness-guided-encoder-search",
+      "title": "One counterexample can reject several descriptions",
       "kind": "finding",
-      "status": "exact",
-      "summary": "For one Rule-54 ring injury task, block parity predicts target persistence with two labels, while repair needs four-label adjacent differences. Repair can forget global complement, but the delayed task reduces to static correction.",
+      "status": "replicated",
+      "summary": "On one known finite Rule-24 problem, exact witness constraints reduce full verifier calls from 278 to 11 at the same optimum. Both arms use Prolog; Jev is unscored.",
       "updated": "2026-09-23",
-      "source": "docs/knowledge/prediction-versus-repair.md",
+      "source": "docs/knowledge/witness-guided-encoder-search.md",
       "research": [
-        "prediction-repair"
+        "relational-search-pilot",
+        "relational-search-decision"
       ]
     }
   ],
