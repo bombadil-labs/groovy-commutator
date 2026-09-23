@@ -53,6 +53,14 @@ failed predictions remain in the linked notes and
 [running findings](FINDINGS.md). No empirical unit is queued merely because
 a result leaves an interesting mathematical question open.
 
+The user-authorized [observation-discovery unit](2026-09-23-observation-discovery.md)
+(#303) is complete. It extends witness-guided search to selecting observations
+from a frozen grammar. Rule 90 recovers its known XOR calibration; Rule 30's
+next-G readout needs six current source bits and gains nothing from the offered
+history or XOR features. Raw-only search is the cheaper method here. The
+visual witness viewer makes each missing distinction inspectable. Retain that
+interface; no broader observation grammar or rule census follows automatically.
+
 Keep the exact Python verifier and witness interface. The bounded Prolog pilot
 is available when its grammar is useful; it is not mandatory infrastructure.
 Prediction/repair already uses a native Python frontend without a language

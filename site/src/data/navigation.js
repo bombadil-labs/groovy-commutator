@@ -6,5 +6,6 @@ export const PAGES = [
   { href: 'remainder.html', label: 'The Walk', key: 'remainder' },
   { href: 'explorer.html', label: 'Explorer', key: 'explorer' },
   { href: 'reusable-descriptions.html', label: 'Operations', key: 'operations' },
+  { href: 'observation-discovery.html', label: 'Witnesses', key: 'witnesses' },
   { href: 'research/index.html', label: 'Research', key: 'research' },
 ];
