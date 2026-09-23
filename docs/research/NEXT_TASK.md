@@ -1,113 +1,55 @@
-# Next agent: relational search pilot complete
+# Next agent: five completed units integrated; choose the next contract
 
-Updated 2026-09-23. Myk authorized formalizing the search-language decision
-and implementing one bounded pilot. Start with its
-[result](2026-09-23-relational-search-pilot.md) and
-[handoff](checkpoints/relational-search.md). The local comparison is complete:
-all 406 candidates retained, the same exact known optimum recovered, fewer
-full oracle calls with witnesses. Jev is explicitly not evaluated because no
-credential was available. Review and integration are pending in
-[PR #298](https://github.com/bombadil-labs/groovy-commutator/pull/298).
+Updated 2026-09-23. Authored by Codex (OpenAI). Reviewed by: none.
+Myk explicitly directed reconciliation and merging of PRs #295–#299.
+[START_HERE](START_HERE.md) is the scheduling authority;
+[FINDINGS](FINDINGS.md) is the accessible running account;
+the [integration record](2026-09-23-research-integration.md) pins original heads
+and verification. On main, all five units are integrated; do not recreate them
+or interpret their historical draft status as a current blocker.
 
-No new empirical run is queued by this result. The handoff states the next
-decision questions and how to verify saved evidence. PRs #295, #296 and #297
-remain separate draft units; inspect their current remote state and preserve
-their findings when reconciling agendas. The following sections retain the
-previous main-branch handoff rather than silently treating draft work as merged.
+## What the combined work says
 
-## Preceding handoff: The Groovy Field
+1. **History geometry:** Rule 30's raw three-row encoding loses a temporal
+   distinction; one constant fourth row repairs it. Both binary separator
+   choices have exact uniform 13-by-4 laws. No speed or optimality claim.
+2. **Recursive 1D G:** mirror Rules 2/16 have specified nonconstant second
+   and third generations. Completion choices change third-level closure;
+   one branch remains unresolved beyond radius four. After the first source
+   step the dynamics translate rigidly. More depth alone has no established payoff.
+3. **Reusable descriptions:** what an observation needs depends on the operation.
+   Retaining erased state, widening access and choosing an off-image rule
+   extension solve different problems. The arithmetic/CA interactive comparison
+   is available at the site's reusable-descriptions route.
+4. **Search method:** exact conflict witnesses reduced full queries from 278
+   to 11 in the known Rule-24 test. Both arms used Prolog. No language-wide
+   advantage, Jev result or universal-verifier breakthrough was established.
+5. **Prediction and repair:** in the fixed Rule-54 task, minimum local alphabets
+   are 2 for passive target prediction and 4 for repair. The repair view can
+   forget global complement and is not a refinement of parity. However the
+   target has no incoming passive paths, so delayed repair is static correction.
 
-Updated 2026-09-22. Latest unit: [one extra binary row repairs spatial Groovy history](2026-09-22-groovy-separator-lift.md),
-[PR #295](https://github.com/bombadil-labs/groovy-commutator/pull/295).
-Read its [concise handoff](checkpoints/groovy-three-row-geometry.md) first.
-The raw period-three Rule-30 encoding still has an exact whole-plane collision.
-A separately frozen follow-up appends one constant row: both 0 and 1 produce
-a uniform binary 2D law on the 13-by-4 stencil, at one-step cadence. Each
-positive was independently checked over the complete 21-bit cone and all four
-phases. The ones construction has executable plane dynamics; the zero table
-has 657,893 forced keys and a matching independent digest. Unique temporal
-labels are sufficient but not necessary: ambiguous interpretations may agree
-on the next bit. The two-candidate repair is complete; no broader census or
-native-G evaluation is queued. Any next task needs a specified operation and
-representation cost or a declared ambient completion question.
-This unit is authored and self-verified by Codex; Reviewed by: none. Consult
-the PR for current integration status rather than assuming it has merged.
+Read the linked unit notes in START_HERE for full contracts and evidence.
+Original protocols, canonical bytes, failed predictions and unresolved outcomes
+remain intact. Separate implementation checks and green CI are self-verification,
+not an independent review. There is no standing cross-agent gate to reactivate.
 
-## Preceding unit: Groovy Field census and corrections
+## Next one to three decisions
 
-Myk opened [The Groovy Field](2026-09-22-groovy-field-program.md)
-as an active program after the Rule-110 autonomy unit below. Read its
-[census note](2026-09-22-groovy-field-census.md) and
-[checkpoint](checkpoints/groovy-field.md) first; the checkpoint orders the open
-questions. [PR #294](https://github.com/bombadil-labs/groovy-commutator/pull/294)
-contains the program and fixes reviewed by Claude and Codex. Myk authorized
-merging after this review; on main, treat this unit as integrated. The checkpoint
-records the reviewed revisions and remaining evidence limits.
-The corrected verifier checks actual infinite tails. The bounded audit preserves
-old bytes and replays the retained witnesses, headline laws and all-ring proof;
-it does not recertify the entire census. See the checkpoint before extending
-any claim, especially D0 quotients or native-G towers. The section below is the
-preceding unit's handoff, kept for context.
+1. **Target eligibility:** does a proposed maintenance target admit genuine
+   return trajectories from outside it? Check this before searching observers.
+   The last stripe target fails that test; merely increasing delay cannot help.
+2. **Operational contract:** is the goal an external repair policy, repeated
+   disturbance tolerance, or maintenance by constraints inside the system?
+   Name the observation, actions, target, cadence, domain and cost model before
+   transferring conclusions between them.
+3. **Payoff and stopping rule:** which exact obstruction, construction or
+   negative outcome would settle the next decision? Reuse the witness interface
+   with the simplest suitable frontend. Jev setup is parked; the Prolog pilot
+   does not oblige further language comparisons.
 
-## Preceding handoff: Rule-110 G autonomy
-
-Updated 2026-09-22 after Myk's direct request to investigate whether a derived
-field can follow its own rule. Read [START_HERE](START_HERE.md),
-[FINDINGS](FINDINGS.md), the [autonomy note](2026-09-22-rule110-g-autonomy.md)
-and the [current handoff](checkpoints/g-autonomy.md). Inspect current remote
-PR state before recreating or extending work.
-
-## What just finished
-
-For original-source Rule-110 G, no deterministic present-only law exists on
-the full binary integer line at one-step cadence. The periodically repeated
-sources 001 and 011 both give G=010, but their next G fields are 010 and 000.
-This is an exact whole-field collision, so even unlimited spatial access
-cannot resolve it. Rings 1 and 2 were exhausted; ring 3 supplied the certificate
-and ended the frozen search. The note proves the infinite-line transfer.
-
-The positive counterpart was already in the repository: G_32 follows Rule128
-exactly. This unit reverified it as a control. Derived fields can therefore
-have autonomous dynamics, but the source rule and observation determine
-whether they retain enough information. Do not confuse this with same-law
-commutation, correction-tuple closure, or native G in a dimensional lift.
-
-[PR #293](https://github.com/bombadil-labs/groovy-commutator/pull/293) contains
-the frozen protocol, pinned implementation, canonical result, independent
-certificate replay and plain-language finding. The PR records final-head
-review, CI and integration. On main, treat this unit as integrated.
-
-## What a follow-up would need to decide
-
-Do not increase the radius of a G-only Rule-110 rule under this contract: the
-counterexample already excludes it. A meaningful follow-up must specify a
-new claim, such as an invariant source family, a particular retained context,
-or a structural property of the known autonomous Rule-32 field. State why its
-answer changes our understanding or next action, plus a bounded stopping rule.
-A context that distinguishes these two sources is necessary; this witness
-alone does not prove that any proposed small repair is globally sufficient.
-
-There is no automatic all-rule census, history-depth escalation, or physical
-analogy experiment. The next three decision questions are in the handoff.
-
-## Preserve the earlier research-drive conclusions
-
-The [completed drive synthesis](2026-09-22-research-drive-synthesis.md) and
-[drive handoff](checkpoints/research-drive.md) preserve its full chronology.
-The original-source readout benefit is matched by an ordinary three-track
-cache; no current consumer needs the lift's stricter geometry. Two-beam
-ancestral source-G transport is exact, while native descendant G is generally
-completion-dependent. The empowerment census remains parked unrun. Corrected
-absential and drain claims remain bounded by their actual evidence.
-
-Those results and the [program survey](2026-09-22-program-survey.md) remain
-current. This direct user-authorized question did not restart the hourly drive,
-reopen old experiments, or extend a historical review waiver.
-
-## Work discipline
-
-Preserve canonical bytes; use one gathering branch and PR per bounded unit.
-Freeze a new empirical protocol before evaluation; review happens when Myk
-requests it. Keep source rule, state family, boundary, observation,
-cadence, horizon and resource contract explicit. Update the findings and
-current handoff when a unit ends; retain failed and unscored outcomes.
+No next empirical unit is automatically queued by integration. Dimensional
+applications, all-rule censuses, a fourth G generation, prime-distribution claims
+and the archived hard recoder campaign remain outside the current task. The
+earlier [research-drive synthesis](2026-09-22-research-drive-synthesis.md) remains
+valid; integration is not a reversal of its stopping decisions.

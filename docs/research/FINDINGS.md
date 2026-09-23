@@ -1,6 +1,6 @@
 # What we have learned
 
-Running plain-language summary, updated 2026-09-22. This is a synthesis of
+Running plain-language summary, updated 2026-09-23. This is a synthesis of
 existing evidence, not a new experiment or independent review. Each entry
 links to the technical account that states its assumptions and verification.
 “Complete” means the stated investigation has ended, not that every related
@@ -477,6 +477,122 @@ and additional local access; it has no demonstrated speed advantage over
 three named history tracks. The useful refinement is that we do not need to
 recover every hidden label, only distinctions that change the next update.
 [Construction, certificates and costs](2026-09-22-groovy-separator-lift.md).
+
+## 1D recursion: a second G field can close, and it can fail
+
+We were curious whether a Groovy field with its own 1D rule could itself
+have an autonomous Groovy field. We reconstructed the 36 present-only laws
+in the earlier census. Thirty-three act on each bit independently, so their
+own Groovy fields are constant. Only sources 2, 16 and 32 needed a spatial
+second-generation check.
+
+We found nonconstant second-generation laws for Rules 2 and 16 on the fields
+actually inherited from the original source, for two specified first-level
+rules each. The second update needs radius two. Rule 32 fails for both of
+its radius-one first-level rules: identical complete second-G fields can
+require different successors. All three nonpointwise descendants fail when
+started from arbitrary binary rows, so that stronger test would have hidden
+the inherited positives. Changing unspecified first-level entries changes
+the second observation even when the closure verdict stays the same.
+
+These are complete-cone identities and exact periodic counterexamples.
+The unit stays in 1D and does not test finite-memory cases such as Rule 30,
+a third generation, or every possible completion. **A nontrivial second
+layer exists under the stated contract; an indefinitely closed tower is
+not established.** [Exact result and explicit rules](2026-09-23-groovy-1d-second-generation.md).
+
+## 1D recursion, continued: a third layer exists, but the branch matters
+
+We then asked whether either nonconstant 2/16 chain extends one further G.
+We followed both existing first-rule choices and two fixed choices for the
+second rule's unused entries. Both mirror sources have a nonconstant third
+field with an exact radius-four update when the first fill is one and the
+second fill is zero. Each positive was checked over every 21-bit source cone.
+
+The zero/zero and zero/one choices fail with complete periodic counterexamples.
+The one/one choice has no law at radii zero through four but remains unresolved
+at larger radii. All eight third fields differ from their second fields.
+**An explicit third-generation 1D chain exists; choosing unused rule entries
+now changes whether the recursion closes.** This does not establish an
+indefinitely closed hierarchy. The requested extra generation is complete;
+no fourth generation is queued. [Exact follow-up](2026-09-23-groovy-1d-third-generation.md).
+
+An important interpretation followed from Myk's question about evaporation:
+Rule 2 produces separated ones after a single source update, and thereafter
+only shifts them left; Rule 16 shifts right. Every fixed local G observation
+inherits that rigid motion. Thus these nonconstant recursive fields do not
+demonstrate increasingly rich long-term dynamics. Closure from all original
+sources concerns retaining enough information for the initial transient.
+Across recursive observations, once two sources become indistinguishable,
+no later layer can distinguish them again. This need not reduce the density
+of ones: the successful branch's saved tables give initial fair-source
+expectations of 13.7% at the second layer and 25.8% at the third.
+These are algebraic deductions and table interpretations, not another run.
+
+## Reusable descriptions: some repairs retain state, others specify a rule
+
+We were curious what a description must retain before we can operate on it.
+We compared a capped count of prime factors with a one-dimensional Groovy
+field, using exact proofs and a small interactive display.
+
+We found that counting factors of two up to three needs exactly the remainder
+modulo eight to predict its future under repeated addition of one. All eight
+residues are necessary, and together they suffice. In the CA example, Rule
+32's G already predicts its next field, but taking another native G requires
+a rule entry that valid G fields never visit. Two choices give different Gs
+while preserving every valid trajectory. More trajectory history cannot select
+that rule convention. Separately, source XOR cannot be reconstructed from
+G_32 alone: an erased source distinction matters to that operation.
+
+**Completed proof and visual comparison.** This applies established quotient
+mathematics to explicit examples; it does not prove a minimal CA state repair
+or a theorem about prime distribution.
+[Interactive source, proofs, witnesses and costs](2026-09-23-reusable-descriptions.md).
+
+## A concrete failure can guide the search for missing distinctions
+
+We were curious whether a small relational language could make representation
+search more effective. We tried the already solved Rule-24 case where greedy
+repair overlooks a useful combination of distinctions. Both methods kept all
+406 permitted encoders and the same exact verifier; one also remembered pairs
+of source states showing why previous candidates failed.
+
+We found that reusing those witnesses reduced full verifier calls from 278
+to 11 while recovering the same cheapest encoder. Across three fresh-process
+trials per method, median search time including startup and preprocessing
+fell from 0.686 to 0.409 seconds. A further 2.013 seconds audited all saved
+certificates and the known optimum. The first witness forces the distinction
+that the old greedy study recorded as having no immediate information gain.
+
+This gives us a concrete search principle: **retain what the failures prove
+must be distinguishable, even when a local score does not reward it yet.**
+It is one known finite case, and both methods used Prolog; no language-wide
+or universal efficiency claim follows. Jev's optional ranking was not run
+because credentials were missing. The bounded pilot is complete, with no
+automatic larger search. [Decision](2026-09-23-relational-search-decision.md);
+[evidence and costs](2026-09-23-relational-search-pilot.md).
+
+## 2026-09-23: predicting persistence and choosing repair need different views
+
+We were curious whether a description that predicts a pattern's fate could
+hide distinctions needed to preserve it. We tried every three-bit block
+encoding for a 12-cell Rule-54 ring, with four stripe phases, one unknown
+bit injury and one chance for an external controller to flip a bit.
+
+We found that two local labels suffice to predict passive persistence, while
+four are necessary to choose the correct repair. The repair view records
+differences between neighboring bits and can forget whether the entire source
+is complemented. It does not simply refine the cheaper parity view: changing
+the task changes which distinctions matter. These are exact minima among the
+4,140 encoders in this grammar, checked on all 52 allowed initial states.
+
+We also found that the chosen target never recovers passively. Even with a
+four-step delay, successful repair means immediately undoing the injury.
+**This is an exact detection-versus-correction baseline, not adaptive
+self-repair or endogenous purpose.** Our prediction of a natural conflict
+requiring more than two states failed; each state has only one winning action.
+Any richer repair study must establish genuine return dynamics before another
+observer search. [Result, witness and costs](2026-09-23-prediction-repair.md).
 
 ## Keeping this useful
 

@@ -1,5 +1,12 @@
 # Prediction and repair: completed finite baseline
 
+**Integration update, 2026-09-23:** Myk authorized reconciliation and merging
+of PRs #295–#299. On main, this unit is integrated. The
+[combined account](../2026-09-23-research-integration.md) and
+[current handoff](../NEXT_TASK.md) supersede the branch-publication status and
+proposed work ordering below. The remaining record preserves the unit’s
+original inspection, evidence and verification chronology.
+
 Updated 2026-09-23. Authored by Codex (OpenAI). Reviewed by: none.
 
 Myk authorized the proposed prediction-to-repair unit ("Make it so").

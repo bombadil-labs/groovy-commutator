@@ -2750,6 +2750,15 @@
         "relational-search-pilot",
         "block3-representation-design"
       ]
+    },
+    {
+      "source": "prediction-versus-repair",
+      "type": "depends_on",
+      "target": "predictive-future-refinement",
+      "reason": "The passive target is certified by stabilized future equivalence on all 4,096 source states before restriction to the 52 allowed initial states; repair is separately tested by common successful actions.",
+      "research": [
+        "prediction-repair"
+      ]
     }
   ],
   "nodes": [
@@ -5296,6 +5305,18 @@
       "research": [
         "relational-search-pilot",
         "relational-search-decision"
+      ]
+    },
+    {
+      "id": "prediction-versus-repair",
+      "title": "Predicting persistence can discard a distinction needed for repair",
+      "kind": "finding",
+      "status": "exact",
+      "summary": "For one Rule-54 ring injury task, block parity predicts target persistence with two labels, while repair needs four-label adjacent differences. Repair can forget global complement, but the delayed task reduces to static correction.",
+      "updated": "2026-09-23",
+      "source": "docs/knowledge/prediction-versus-repair.md",
+      "research": [
+        "prediction-repair"
       ]
     }
   ],

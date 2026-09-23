@@ -1,9 +1,39 @@
 # The Groovy Field: checkpoint
 
-Updated 2026-09-22. [Program](../2026-09-22-groovy-field-program.md),
+Updated 2026-09-23. [Program](../2026-09-22-groovy-field-program.md),
 [census and evidence limits](../2026-09-22-groovy-field-census.md).
+The geometry and recursion units are consolidated in the
+[2026-09-23 integration](../2026-09-23-research-integration.md).
+[START_HERE](../START_HERE.md) governs the current agenda; these completed
+program units do not automatically queue deeper recursion or a new census.
+Preceding census branch `claude/relaxed-shannon-o7cl11`,
+[PR #294](https://github.com/bombadil-labs/groovy-commutator/pull/294). Myk
+authorized merging after the completed review below; on main, treat this unit
+as integrated. The PR records the resulting merge commit. Original inspected head: `7c55ffa8d9925c5041498c2c7915bb2d51d78a02`;
+base main: `fa826725f4e36a5d8fb98f3d8512c150ebd5e2d9`.
 
-## Latest unit: temporal rows as binary geometry
+## Completed 1D follow-up: third-generation G
+
+Myk requested one further generation for 2/16. The
+[third-generation handoff](groovy-1d-third-generation.md) records the result: the
+first-one / second-zero branch gives a nonconstant radius-four law for both;
+other tested branches fail or remain unresolved beyond radius four. The
+requested follow-up is complete, and no fourth generation is queued.
+
+## Preceding unit: 1D second-generation G
+
+Myk redirected the question to autonomous 1D fields and their own G fields.
+The [bounded present-only unit](../2026-09-23-groovy-1d-second-generation.md)
+is complete in [PR #296](https://github.com/bombadil-labs/groovy-commutator/pull/296).
+See its [handoff](groovy-1d-second-generation.md): 33 pointwise cases have
+constant native G, 2/16 close nontrivially on inherited fields for the two
+specified derived rules, and 32 fails for both radius-one completions.
+The full descendant-domain negatives are not substituted for the inherited
+question. Rule 30's memory-bearing system is outside the unit. The next
+questions below are historical census proposals; the latest handoff governs
+this completed unit's possible follow-up.
+
+## Completed geometric unit: temporal rows as binary geometry
 
 Myk asked to test whether the three ordered Rule-30 G rows can instead run
 as unlabelled spatial rows. The [first note](../2026-09-22-groovy-three-row-geometry.md)
@@ -17,14 +47,6 @@ separator also closes without uniquely naming every temporal phase. See the
 protocol, implementation and evaluation chronology. Authored by: Codex
 (OpenAI). Reviewed by: none. The PR carries current integration status.
 This closes the raw-three-row negative and the two four-row repair candidates.
-
-## Preceding unit: census and certificate correction
-
-Branch `claude/relaxed-shannon-o7cl11`,
-[PR #294](https://github.com/bombadil-labs/groovy-commutator/pull/294). Myk
-authorized merging after the completed review below; on main, treat this unit
-as integrated. The PR records the resulting merge commit. Original inspected head: `7c55ffa8d9925c5041498c2c7915bb2d51d78a02`;
-base main: `fa826725f4e36a5d8fb98f3d8512c150ebd5e2d9`.
 
 ## What changed after review
 
@@ -99,22 +121,16 @@ A full replay would take about 40 minutes on four cores and needs a specific
 reason. Two-step burn-in is censored for 118 rules. The limit-set witness only
 excludes Rule-110 memory-1 closure, not arbitrary memory.
 
-## Next decision questions
+## Historical census questions; not a work queue
 
-1. **Spatial operation:** the four-row binary repair is now exact. What
-   specified operation benefits from arranging history spatially, after paying
-   for the extra row, table construction, access and maintenance? A new encoding
-   census or neighborhood minimization is not justified without that decision.
-2. **Towers:** what off-image completion and invariance claim would make native
-   G of a repaired history system well-defined and useful? Specify this before
-   running a tower census; the geometry obstruction itself is on-image.
-3. **Finite memory:** can one exhibit a bounded, explicitly parameterized family
+1. **Towers:** what off-image completion and invariance claim would make native
+   G of a repaired history system well-defined and scientifically useful?
+   Specify this before generalizing the decider or running a tower census.
+2. **Finite memory:** can one exhibit a bounded, explicitly parameterized family
    of Rule-110 witnesses for all k? A single k=5 failure is not such a proof.
-
-The older repair-fiber question also remains open: track-only counts do not
-establish full repaired-history fibers, and the gradient repair is not a
-global-complement quotient. These are decisions to motivate, not an automatic
-queue of experiments.
+3. **Repair fibers:** which distinctions does a specified repaired history
+   retain on the full line? Track-only fiber counts cannot answer that; avoid
+   calling the gradient repair a global-complement quotient.
 
 The keep/swap cross-tabulation is an observation to explain if a concrete
 mechanism emerges, not a reason to launch a further census. No new broad

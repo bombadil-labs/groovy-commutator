@@ -4,13 +4,13 @@
     "label": "What we have learned",
     "title": "What we have learned",
     "date": "2026-09-22",
-    "updated": "2026-09-22",
+    "updated": "2026-09-23",
     "recordType": "checkpoint",
     "scope": "lab",
     "kind": "Checkpoint: synthesis and scheduling",
     "evidence": "state",
     "topic": "Research direction",
-    "summary": "A running plain-language account of twelve completed or stopped investigations, with evidence links and explicit limits.",
+    "summary": "A running plain-language account of completed and stopped investigations, including history geometry, recursive G, operation-dependent descriptions, relational search, and prediction versus repair.",
     "takeaway": "Completed work should change the next decision; a historical program is not an automatic experiment queue.",
     "source": "docs/research/FINDINGS.md",
     "promotion": {
@@ -19,7 +19,10 @@
     "related": [
       "research-direction",
       "representation-case-studies",
-      "causal-retention"
+      "causal-retention",
+      "prediction-repair",
+      "relational-search-pilot",
+      "reusable-descriptions"
     ]
   },
   {

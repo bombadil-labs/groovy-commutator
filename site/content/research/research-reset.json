@@ -1,7 +1,7 @@
 [
   {
     "date": "2026-09-21",
-    "updated": "2026-09-22",
+    "updated": "2026-09-23",
     "promotion": {
       "stage": "research"
     },
@@ -10,11 +10,11 @@
     "scope": "lab",
     "label": "Research direction",
     "title": "Research: current direction and the next concrete task",
-    "kind": "Checkpoint: research reset",
+    "kind": "Checkpoint: current research direction",
     "evidence": "state",
     "topic": "Research direction",
-    "summary": "The readout-cost design is complete: a three-track cache matches the jet's marked query. Further work needs a concrete consumer and matched resource contract, not another census.",
-    "takeaway": "Exact certificates and explicit locality costs provide a completed scientific result; broad searches remain parked.",
+    "summary": "Five completed representation units are integrated. The current question is what distinctions support prediction, intervention and maintenance under a specified contract.",
+    "takeaway": "Establish genuine return dynamics for a proposed repair target before searching observers; historical open questions and completed units do not automatically queue new experiments.",
     "source": "docs/research/START_HERE.md",
     "related": [
       "research-boundaries",
@@ -24,7 +24,9 @@
       "causal-retention",
       "research-findings",
       "research-portfolio-20260922",
-      "groovy-readout-cost"
+      "groovy-readout-cost",
+      "research-integration-20260923",
+      "prediction-repair"
     ]
   },
   {

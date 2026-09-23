@@ -20,9 +20,9 @@ exploration showing that one extra bit per cell plus two steps of history
 repairs that exactly. The first results are in the
 [census note](2026-09-22-groovy-field-census.md).
 
-## Current focus: 1D recursion
+## Completed bounded 1D recursion
 
-On 2026-09-23 Myk asks about the G of an autonomous G field, staying in 1D.
+On 2026-09-23 Myk asked about the G of an autonomous G field, staying in 1D.
 The [first bounded recursion unit](2026-09-23-groovy-1d-second-generation.md)
 resolves the 36 present-only binary cases under specified smallest-radius
 laws: 33 constant second fields, nonconstant inherited positives for 2/16,
@@ -34,6 +34,11 @@ closes for both mirror sources on the first-one / second-zero branch, with
 a radius-four update. Other tested choices fail or remain unresolved beyond
 radius four. The choice of rule completion now affects the closure verdict.
 No fourth generation is queued.
+
+The [integration account](2026-09-23-research-integration.md) consolidates these
+completed units and the subsequent operation/search/repair work.
+[START_HERE](START_HERE.md) is the scheduling authority. Open mathematical
+questions below are not automatic experiments.
 
 ## The questions, in plain English
 
@@ -122,7 +127,7 @@ Two exact facts frame the lift question:
   G and history may split them. The repaired fibers have size at most two, and
   the uniform pair shows that the maximum is attained.
 
-## Latest geometric follow-up
+## Completed geometric follow-up
 
 Codex (OpenAI), at Myk's request on 2026-09-22; Reviewed by: none.
 The [raw-three-row test](2026-09-22-groovy-three-row-geometry.md) distinguishes
