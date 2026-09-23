@@ -31,19 +31,13 @@ bounded negative outcomes are retained. See the
 
 The operative direction is **task-specific representation and maintenance**:
 what must be visible to predict, intervene, or preserve a specified organization?
-Three bounded follow-ups remain on separate gathering branches, not main:
-[PR #300](https://github.com/bombadil-labs/groovy-commutator/pull/300)
-finds a target with passive return paths;
-[PR #301](https://github.com/bombadil-labs/groovy-commutator/pull/301)
-finds no full-state one-flip gain after a two-step delay on that target;
-and [PR #302](https://github.com/bombadil-labs/groovy-commutator/pull/302)
-tests a different, observational question on the *integrated* stripe domain.
-Its [known-erasure result](2026-09-23-masked-history-sensing.md) shows that
-two visible updates reveal one hidden cell, but task prediction and exact
-source reconstruction become possible together in this domain. The next
-decision needs either an independently motivated sensing task where those
-demands differ, or the collaborator's specified corruption/operator model.
-Do not launch an automatic target, delay, noise or observer sweep.
+The [integrated target-eligibility preflight](2026-09-23-return-target-eligibility.md),
+PR #300, found a Rule-54 target with both returning and nonreturning one-bit
+injuries. Eligibility alone was insufficient: the [delayed-action audit](2026-09-23-delayed-repair-feasibility.md)
+on PR #301 found that after waiting two steps no one-flip action improves the
+four-step outcome, even with all 12 bits visible. It is integrated into main. No observer search is justified under that
+contract. A new maintenance unit needs a separately motivated operation and
+passive/full-state baselines before a representation search.
 
 Keep the exact Python verifier and witness interface. The bounded Prolog pilot
 is available when its grammar is useful; it is not mandatory infrastructure.
