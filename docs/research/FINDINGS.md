@@ -433,6 +433,26 @@ an identity/swap pair switching, not a predictor of whether switching occurs.
 [census, corrections and replay](2026-09-22-groovy-field-census.md),
 [current checkpoint](checkpoints/groovy-field.md).
 
+## Reusable descriptions: some repairs retain state, others specify a rule
+
+We were curious what a description must retain before we can operate on it.
+We compared a capped count of prime factors with a one-dimensional Groovy
+field, using exact proofs and a small interactive display.
+
+We found that counting factors of two up to three needs exactly the remainder
+modulo eight to predict its future under repeated addition of one. All eight
+residues are necessary, and together they suffice. In the CA example, Rule
+32's G already predicts its next field, but taking another native G requires
+a rule entry that valid G fields never visit. Two choices give different Gs
+while preserving every valid trajectory. More trajectory history cannot select
+that rule convention. Separately, source XOR cannot be reconstructed from
+G_32 alone: an erased source distinction matters to that operation.
+
+**Completed proof and visual comparison.** This applies established quotient
+mathematics to explicit examples; it does not prove a minimal CA state repair
+or a theorem about prime distribution.
+[Interactive source, proofs, witnesses and costs](2026-09-23-reusable-descriptions.md).
+
 ## Keeping this useful
 
 After a completed or stopped unit, update its entry or add one short account:

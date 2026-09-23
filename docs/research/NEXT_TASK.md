@@ -1,5 +1,11 @@
 # Next agent: continue The Groovy Field
 
+Latest direct unit: [reusable descriptions](2026-09-23-reusable-descriptions.md).
+Read its [handoff](checkpoints/reusable-descriptions.md) for the visual comparison,
+arithmetic minimality proof and the distinction between state loss and rule
+completion. No further experiment is queued. Inspect its gathering PR and
+concurrent #295/#296 before changing or integrating any of these units.
+
 Updated 2026-09-22. Myk opened [The Groovy Field](2026-09-22-groovy-field-program.md)
 as an active program after the Rule-110 autonomy unit below. Read its
 [census note](2026-09-22-groovy-field-census.md) and

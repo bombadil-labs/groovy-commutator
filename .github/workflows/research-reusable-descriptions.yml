@@ -1,0 +1,27 @@
+name: Reusable descriptions
+on:
+  pull_request:
+    paths:
+      - 'docs/research/protocols/reusable-descriptions-20260923.md'
+      - 'scripts/verify_reusable_descriptions.py'
+      - 'results/reusable_descriptions_20260923.json'
+      - 'site/src/lib/reusable-description-model.mjs'
+      - 'site/scripts/reusable-descriptions.test.mjs'
+      - '.github/workflows/research-reusable-descriptions.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  exact-examples:
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: python scripts/verify_reusable_descriptions.py
+      - run: node --test site/scripts/reusable-descriptions.test.mjs

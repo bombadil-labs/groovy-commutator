@@ -178,7 +178,8 @@ export function renderMarkdown(source, { bySource, ref, output, dependencies, re
       const href = token.attrGet('href');
       if (href && !/^(?:[a-z][a-z0-9+.-]*:|#|\/)/i.test(href)) {
         const { absolute, fragment } = localTarget(href);
-        const linked = bySource.get(absolute);
+        const sitePage = PAGES.some(p => path.resolve(SITE, p.href) === absolute);
+        const linked = bySource.get(absolute) || (sitePage ? path.relative(output, absolute).split(path.sep).join('/') : null);
         token.attrSet('href', linked ? `${linked}${fragment}` : repoUrl(path.relative(ROOT, absolute), ref, fragment));
       }
     }

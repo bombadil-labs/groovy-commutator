@@ -1,0 +1,5608 @@
+{
+  "schema": 1,
+  "scope": "Exact proof examples; no statistical experiment",
+  "sha256": {
+    "docs/research/protocols/reusable-descriptions-20260923.md": "3840348f0c8cac7f46e9549be927a10eab3d120a14af69640e6006825990c473",
+    "scripts/verify_reusable_descriptions.py": "5ff8e86e36aece374b4a914e74c9efad5a467c41749082b3658be6e02e47ee07",
+    "site/src/lib/reusable-description-model.mjs": "04f051180d30c2c81f9fa4fa1959224414a00cc65abb4e267b1f5747934cdd3a"
+  },
+  "checks": {
+    "source_cone_length": 7,
+    "source_cones": 128,
+    "arithmetic_caps": [
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  "examples": {
+    "arithmetic": [
+      {
+        "k": 1,
+        "modulus": 2,
+        "values": [
+          1,
+          0
+        ],
+        "partitions": [
+          [
+            {
+              "word": [
+                1
+              ],
+              "residues": [
+                0
+              ],
+              "nextGroups": [
+                1
+              ]
+            },
+            {
+              "word": [
+                0
+              ],
+              "residues": [
+                1
+              ],
+              "nextGroups": [
+                0
+              ]
+            }
+          ],
+          [
+            {
+              "word": [
+                1,
+                0
+              ],
+              "residues": [
+                0
+              ],
+              "nextGroups": [
+                1
+              ]
+            },
+            {
+              "word": [
+                0,
+                1
+              ],
+              "residues": [
+                1
+              ],
+              "nextGroups": [
+                0
+              ]
+            }
+          ]
+        ]
+      },
+      {
+        "k": 2,
+        "modulus": 4,
+        "values": [
+          2,
+          0,
+          1,
+          0
+        ],
+        "partitions": [
+          [
+            {
+              "word": [
+                2
+              ],
+              "residues": [
+                0
+              ],
+              "nextGroups": [
+                1
+              ]
+            },
+            {
+              "word": [
+                0
+              ],
+              "residues": [
+                1,
+                3
+              ],
+              "nextGroups": [
+                2,
+                0
+              ]
+            },
+            {
+              "word": [
+                1
+              ],
+              "residues": [
+                2
+              ],
+              "nextGroups": [
+                1
+              ]
+            }
+          ],
+          [
+            {
+              "word": [
+                2,
+                0
+              ],
+              "residues": [
+                0
+              ],
+              "nextGroups": [
+                1
+              ]
+            },
+            {
+              "word": [
+                0,
+                1
+              ],
+              "residues": [
+                1
+              ],
+              "nextGroups": [
+                2
+              ]
+            },
+            {
+              "word": [
+                1,
+                0
+              ],
+              "residues": [
+                2
+              ],
+              "nextGroups": [
+                3
+              ]
+            },
+            {
+              "word": [
+                0,
+                2
+              ],
+              "residues": [
+                3
+              ],
+              "nextGroups": [
+                0
+              ]
+            }
+          ],
+          [
+            {
+              "word": [
+                2,
+                0,
+                1
+              ],
+              "residues": [
+                0
+              ],
+              "nextGroups": [
+                1
+              ]
+            },
+            {
+              "word": [
+                0,
+                1,
+                0
+              ],
+              "residues": [
+                1
+              ],
+              "nextGroups": [
+                2
+              ]
+            },
+            {
+              "word": [
+                1,
+                0,
+                2
+              ],
+              "residues": [
+                2
+              ],
+              "nextGroups": [
+                3
+              ]
+            },
+            {
+              "word": [
+                0,
+                2,
+                0
+              ],
+              "residues": [
+                3
+              ],
+              "nextGroups": [
+                0
+              ]
+            }
+          ],
+          [
+            {
+              "word": [
+                2,
+                0,
+                1,
+                0
+              ],
+              "residues": [
+                0
+              ],
+              "nextGroups": [
+                1
+              ]
+            },
+            {
+              "word": [
+                0,
+                1,
+                0,
+                2
+              ],
+              "residues": [
+                1
+              ],
+              "nextGroups": [
+                2
+              ]
+            },
+            {
+              "word": [
+                1,
+                0,
+                2,
+                0
+              ],
+              "residues": [
+                2
+              ],
+              "nextGroups": [
+                3
+              ]
+            },
+            {
+              "word": [
+                0,
+                2,
+                0,
+                1
+              ],
+              "residues": [
+                3
+              ],
+              "nextGroups": [
+                0
+              ]
+            }
+          ]
+        ]
+      },
+      {
+        "k": 3,
+        "modulus": 8,
+        "values": [
+          3,
+          0,
+          1,
+          0,
+          2,
+          0,
+          1,
+          0
+        ],
+        "partitions": [
+          [
+            {
+              "word": [
+                3
+              ],
+              "residues": [
+                0
+              ],
+              "nextGroups": [
+                1
+              ]
+            },
+            {
+              "word": [
+                0
+              ],
+              "residues": [
+                1,
+                3,
+                5,
+                7
+              ],
+              "nextGroups": [
+                2,
+                3,
+                0
+              ]
+            },
+            {
+              "word": [
+                1
+              ],
+              "residues": [
+                2,
+                6
+              ],
+              "nextGroups": [
+                1
+              ]
+            },
+            {
+              "word": [
+                2
+              ],
+              "residues": [
+                4
+              ],
+              "nextGroups": [
+                1
+              ]
+            }
+          ],
+          [
+            {
+              "word": [
+                3,
+                0
+              ],
+              "residues": [
+                0
+              ],
+              "nextGroups": [
+                1
+              ]
+            },
+            {
+              "word": [
+                0,
+                1
+              ],
+              "residues": [
+                1,
+                5
+              ],
+              "nextGroups": [
+                2
+              ]
+            },
+            {
+              "word": [
+                1,
+                0
+              ],
+              "residues": [
+                2,
+                6
+              ],
+              "nextGroups": [
+                3,
+                5
+              ]
+            },
+            {
+              "word": [
+                0,
+                2
+              ],
+              "residues": [
+                3
+              ],
+              "nextGroups": [
+                4
+              ]
+            },
+            {
+              "word": [
+                2,
+                0
+              ],
+              "residues": [
+                4
+              ],
+              "nextGroups": [
+                1
+              ]
+            },
+            {
+              "word": [
+                0,
+                3
+              ],
+              "residues": [
+                7
+              ],
+              "nextGroups": [
+                0
+              ]
+            }
+          ],
+          [
+            {
+              "word": [
+                3,
+                0,
+                1
+              ],
+              "residues": [
+                0
+              ],
+              "nextGroups": [
+                1
+              ]
+            },
+            {
+              "word": [
+                0,
+                1,
+                0
+              ],
+              "residues": [
+                1,
+                5
+              ],
+              "nextGroups": [
+                2,
+                5
+              ]
+            },
+            {
+              "word": [
+                1,
+                0,
+                2
+              ],
+              "residues": [
+                2
+              ],
+              "nextGroups": [
+                3
+              ]
+            },
+            {
+              "word": [
+                0,
+                2,
+                0
+              ],
+              "residues": [
+                3
+              ],
+              "nextGroups": [
+                4
+              ]
+            },
+            {
+              "word": [
+                2,
+                0,
+                1
+              ],
+              "residues": [
+                4
+              ],
+              "nextGroups": [
+                1
+              ]
+            },
+            {
+              "word": [
+                1,
+                0,
+                3
+              ],
+              "residues": [
+                6
+              ],
+              "nextGroups": [
+                6
+              ]
+            },
+            {
+              "word": [
+                0,
+                3,
+                0
+              ],
+              "residues": [
+                7
+              ],
+              "nextGroups": [
+                0
+              ]
+            }
+          ],
+          [
+            {
+              "word": [
+                3,
+                0,
+                1,
+                0
+              ],
+              "residues": [
+                0
+              ],
+              "nextGroups": [
+                1
+              ]
+            },
+            {
+              "word": [
+                0,
+                1,
+                0,
+                2
+              ],
+              "residues": [
+                1
+              ],
+              "nextGroups": [
+                2
+              ]
+            },
+            {
+              "word": [
+                1,
+                0,
+                2,
+                0
+              ],
+              "residues": [
+                2
+              ],
+              "nextGroups": [
+                3
+              ]
+            },
+            {
+              "word": [
+                0,
+                2,
+                0,
+                1
+              ],
+              "residues": [
+                3
+              ],
+              "nextGroups": [
+                4
+              ]
+            },
+            {
+              "word": [
+                2,
+                0,
+                1,
+                0
+              ],
+              "residues": [
+                4
+              ],
+              "nextGroups": [
+                5
+              ]
+            },
+            {
+              "word": [
+                0,
+                1,
+                0,
+                3
+              ],
+              "residues": [
+                5
+              ],
+              "nextGroups": [
+                6
+              ]
+            },
+            {
+              "word": [
+                1,
+                0,
+                3,
+                0
+              ],
+              "residues": [
+                6
+              ],
+              "nextGroups": [
+                7
+              ]
+            },
+            {
+              "word": [
+                0,
+                3,
+                0,
+                1
+              ],
+              "residues": [
+                7
+              ],
+              "nextGroups": [
+                0
+              ]
+            }
+          ],
+          [
+            {
+              "word": [
+                3,
+                0,
+                1,
+                0,
+                2
+              ],
+              "residues": [
+                0
+              ],
+              "nextGroups": [
+                1
+              ]
+            },
+            {
+              "word": [
+                0,
+                1,
+                0,
+                2,
+                0
+              ],
+              "residues": [
+                1
+              ],
+              "nextGroups": [
+                2
+              ]
+            },
+            {
+              "word": [
+                1,
+                0,
+                2,
+                0,
+                1
+              ],
+              "residues": [
+                2
+              ],
+              "nextGroups": [
+                3
+              ]
+            },
+            {
+              "word": [
+                0,
+                2,
+                0,
+                1,
+                0
+              ],
+              "residues": [
+                3
+              ],
+              "nextGroups": [
+                4
+              ]
+            },
+            {
+              "word": [
+                2,
+                0,
+                1,
+                0,
+                3
+              ],
+              "residues": [
+                4
+              ],
+              "nextGroups": [
+                5
+              ]
+            },
+            {
+              "word": [
+                0,
+                1,
+                0,
+                3,
+                0
+              ],
+              "residues": [
+                5
+              ],
+              "nextGroups": [
+                6
+              ]
+            },
+            {
+              "word": [
+                1,
+                0,
+                3,
+                0,
+                1
+              ],
+              "residues": [
+                6
+              ],
+              "nextGroups": [
+                7
+              ]
+            },
+            {
+              "word": [
+                0,
+                3,
+                0,
+                1,
+                0
+              ],
+              "residues": [
+                7
+              ],
+              "nextGroups": [
+                0
+              ]
+            }
+          ],
+          [
+            {
+              "word": [
+                3,
+                0,
+                1,
+                0,
+                2,
+                0
+              ],
+              "residues": [
+                0
+              ],
+              "nextGroups": [
+                1
+              ]
+            },
+            {
+              "word": [
+                0,
+                1,
+                0,
+                2,
+                0,
+                1
+              ],
+              "residues": [
+                1
+              ],
+              "nextGroups": [
+                2
+              ]
+            },
+            {
+              "word": [
+                1,
+                0,
+                2,
+                0,
+                1,
+                0
+              ],
+              "residues": [
+                2
+              ],
+              "nextGroups": [
+                3
+              ]
+            },
+            {
+              "word": [
+                0,
+                2,
+                0,
+                1,
+                0,
+                3
+              ],
+              "residues": [
+                3
+              ],
+              "nextGroups": [
+                4
+              ]
+            },
+            {
+              "word": [
+                2,
+                0,
+                1,
+                0,
+                3,
+                0
+              ],
+              "residues": [
+                4
+              ],
+              "nextGroups": [
+                5
+              ]
+            },
+            {
+              "word": [
+                0,
+                1,
+                0,
+                3,
+                0,
+                1
+              ],
+              "residues": [
+                5
+              ],
+              "nextGroups": [
+                6
+              ]
+            },
+            {
+              "word": [
+                1,
+                0,
+                3,
+                0,
+                1,
+                0
+              ],
+              "residues": [
+                6
+              ],
+              "nextGroups": [
+                7
+              ]
+            },
+            {
+              "word": [
+                0,
+                3,
+                0,
+                1,
+                0,
+                2
+              ],
+              "residues": [
+                7
+              ],
+              "nextGroups": [
+                0
+              ]
+            }
+          ],
+          [
+            {
+              "word": [
+                3,
+                0,
+                1,
+                0,
+                2,
+                0,
+                1
+              ],
+              "residues": [
+                0
+              ],
+              "nextGroups": [
+                1
+              ]
+            },
+            {
+              "word": [
+                0,
+                1,
+                0,
+                2,
+                0,
+                1,
+                0
+              ],
+              "residues": [
+                1
+              ],
+              "nextGroups": [
+                2
+              ]
+            },
+            {
+              "word": [
+                1,
+                0,
+                2,
+                0,
+                1,
+                0,
+                3
+              ],
+              "residues": [
+                2
+              ],
+              "nextGroups": [
+                3
+              ]
+            },
+            {
+              "word": [
+                0,
+                2,
+                0,
+                1,
+                0,
+                3,
+                0
+              ],
+              "residues": [
+                3
+              ],
+              "nextGroups": [
+                4
+              ]
+            },
+            {
+              "word": [
+                2,
+                0,
+                1,
+                0,
+                3,
+                0,
+                1
+              ],
+              "residues": [
+                4
+              ],
+              "nextGroups": [
+                5
+              ]
+            },
+            {
+              "word": [
+                0,
+                1,
+                0,
+                3,
+                0,
+                1,
+                0
+              ],
+              "residues": [
+                5
+              ],
+              "nextGroups": [
+                6
+              ]
+            },
+            {
+              "word": [
+                1,
+                0,
+                3,
+                0,
+                1,
+                0,
+                2
+              ],
+              "residues": [
+                6
+              ],
+              "nextGroups": [
+                7
+              ]
+            },
+            {
+              "word": [
+                0,
+                3,
+                0,
+                1,
+                0,
+                2,
+                0
+              ],
+              "residues": [
+                7
+              ],
+              "nextGroups": [
+                0
+              ]
+            }
+          ],
+          [
+            {
+              "word": [
+                3,
+                0,
+                1,
+                0,
+                2,
+                0,
+                1,
+                0
+              ],
+              "residues": [
+                0
+              ],
+              "nextGroups": [
+                1
+              ]
+            },
+            {
+              "word": [
+                0,
+                1,
+                0,
+                2,
+                0,
+                1,
+                0,
+                3
+              ],
+              "residues": [
+                1
+              ],
+              "nextGroups": [
+                2
+              ]
+            },
+            {
+              "word": [
+                1,
+                0,
+                2,
+                0,
+                1,
+                0,
+                3,
+                0
+              ],
+              "residues": [
+                2
+              ],
+              "nextGroups": [
+                3
+              ]
+            },
+            {
+              "word": [
+                0,
+                2,
+                0,
+                1,
+                0,
+                3,
+                0,
+                1
+              ],
+              "residues": [
+                3
+              ],
+              "nextGroups": [
+                4
+              ]
+            },
+            {
+              "word": [
+                2,
+                0,
+                1,
+                0,
+                3,
+                0,
+                1,
+                0
+              ],
+              "residues": [
+                4
+              ],
+              "nextGroups": [
+                5
+              ]
+            },
+            {
+              "word": [
+                0,
+                1,
+                0,
+                3,
+                0,
+                1,
+                0,
+                2
+              ],
+              "residues": [
+                5
+              ],
+              "nextGroups": [
+                6
+              ]
+            },
+            {
+              "word": [
+                1,
+                0,
+                3,
+                0,
+                1,
+                0,
+                2,
+                0
+              ],
+              "residues": [
+                6
+              ],
+              "nextGroups": [
+                7
+              ]
+            },
+            {
+              "word": [
+                0,
+                3,
+                0,
+                1,
+                0,
+                2,
+                0,
+                1
+              ],
+              "residues": [
+                7
+              ],
+              "nextGroups": [
+                0
+              ]
+            }
+          ]
+        ]
+      },
+      {
+        "k": 4,
+        "modulus": 16,
+        "values": [
+          4,
+          0,
+          1,
+          0,
+          2,
+          0,
+          1,
+          0,
+          3,
+          0,
+          1,
+          0,
+          2,
+          0,
+          1,
+          0
+        ],
+        "partitions": [
+          [
+            {
+              "word": [
+                4
+              ],
+              "residues": [
+                0
+              ],
+              "nextGroups": [
+                1
+              ]
+            },
+            {
+              "word": [
+                0
+              ],
+              "residues": [
+                1,
+                3,
+                5,
+                7,
+                9,
+                11,
+                13,
+                15
+              ],
+              "nextGroups": [
+                2,
+                3,
+                4,
+                0
+              ]
+            },
+            {
+              "word": [
+                1
+              ],
+              "residues": [
+                2,
+                6,
+                10,
+                14
+              ],
+              "nextGroups": [
+                1
+              ]
+            },
+            {
+              "word": [
+                2
+              ],
+              "residues": [
+                4,
+                12
+              ],
+              "nextGroups": [
+                1
+              ]
+            },
+            {
+              "word": [
+                3
+              ],
+              "residues": [
+                8
+              ],
+              "nextGroups": [
+                1
+              ]
+            }
+          ],
+          [
+            {
+              "word": [
+                4,
+                0
+              ],
+              "residues": [
+                0
+              ],
+              "nextGroups": [
+                1
+              ]
+            },
+            {
+              "word": [
+                0,
+                1
+              ],
+              "residues": [
+                1,
+                5,
+                9,
+                13
+              ],
+              "nextGroups": [
+                2
+              ]
+            },
+            {
+              "word": [
+                1,
+                0
+              ],
+              "residues": [
+                2,
+                6,
+                10,
+                14
+              ],
+              "nextGroups": [
+                3,
+                5,
+                7
+              ]
+            },
+            {
+              "word": [
+                0,
+                2
+              ],
+              "residues": [
+                3,
+                11
+              ],
+              "nextGroups": [
+                4
+              ]
+            },
+            {
+              "word": [
+                2,
+                0
+              ],
+              "residues": [
+                4,
+                12
+              ],
+              "nextGroups": [
+                1
+              ]
+            },
+            {
+              "word": [
+                0,
+                3
+              ],
+              "residues": [
+                7
+              ],
+              "nextGroups": [
+                6
+              ]
+            },
+            {
+              "word": [
+                3,
+                0
+              ],
+              "residues": [
+                8
+              ],
+              "nextGroups": [
+                1
+              ]
+            },
+            {
+              "word": [
+                0,
+                4
+              ],
+              "residues": [
+                15
+              ],
+              "nextGroups": [
+                0
+              ]
+            }
+          ],
+          [
+            {
+              "word": [
+                4,
+                0,
+                1
+              ],
+              "residues": [
+                0
+              ],
+              "nextGroups": [
+                1
+              ]
+            },
+            {
+              "word": [
+                0,
+                1,
+                0
+              ],
+              "residues": [
+                1,
+                5,
+                9,
+                13
+              ],
+              "nextGroups": [
+                2,
+                5,
+                8
+              ]
+            },
+            {
+              "word": [
+                1,
+                0,
+                2
+              ],
+              "residues": [
+                2,
+                10
+              ],
+              "nextGroups": [
+                3
+              ]
+            },
+            {
+              "word": [
+                0,
+                2,
+                0
+              ],
+              "residues": [
+                3,
+                11
+              ],
+              "nextGroups": [
+                4
+              ]
+            },
+            {
+              "word": [
+                2,
+                0,
+                1
+              ],
+              "residues": [
+                4,
+                12
+              ],
+              "nextGroups": [
+                1
+              ]
+            },
+            {
+              "word": [
+                1,
+                0,
+                3
+              ],
+              "residues": [
+                6
+              ],
+              "nextGroups": [
+                6
+              ]
+            },
+            {
+              "word": [
+                0,
+                3,
+                0
+              ],
+              "residues": [
+                7
+              ],
+              "nextGroups": [
+                7
+              ]
+            },
+            {
+              "word": [
+                3,
+                0,
+                1
+              ],
+              "residues": [
+                8
+              ],
+              "nextGroups": [
+                1
+              ]
+            },
+            {
+              "word": [
+                1,
+                0,
+                4
+              ],
+              "residues": [
+                14
+              ],
+              "nextGroups": [
+                9
+              ]
+            },
+            {
+              "word": [
+                0,
+                4,
+                0
+              ],
+              "residues": [
+                15
+              ],
+              "nextGroups": [
+                0
+              ]
+            }
+          ],
+          [
+            {
+              "word": [
+                4,
+                0,
+                1,
+                0
+              ],
+              "residues": [
+                0
+              ],
+              "nextGroups": [
+                1
+              ]
+            },
+            {
+              "word": [
+                0,
+                1,
+                0,
+                2
+              ],
+              "residues": [
+                1,
+                9
+              ],
+              "nextGroups": [
+                2
+              ]
+            },
+            {
+              "word": [
+                1,
+                0,
+                2,
+                0
+              ],
+              "residues": [
+                2,
+                10
+              ],
+              "nextGroups": [
+                3
+              ]
+            },
+            {
+              "word": [
+                0,
+                2,
+                0,
+                1
+              ],
+              "residues": [
+                3,
+                11
+              ],
+              "nextGroups": [
+                4
+              ]
+            },
+            {
+              "word": [
+                2,
+                0,
+                1,
+                0
+              ],
+              "residues": [
+                4,
+                12
+              ],
+              "nextGroups": [
+                5,
+                9
+              ]
+            },
+            {
+              "word": [
+                0,
+                1,
+                0,
+                3
+              ],
+              "residues": [
+                5
+              ],
+              "nextGroups": [
+                6
+              ]
+            },
+            {
+              "word": [
+                1,
+                0,
+                3,
+                0
+              ],
+              "residues": [
+                6
+              ],
+              "nextGroups": [
+                7
+              ]
+            },
+            {
+              "word": [
+                0,
+                3,
+                0,
+                1
+              ],
+              "residues": [
+                7
+              ],
+              "nextGroups": [
+                8
+              ]
+            },
+            {
+              "word": [
+                3,
+                0,
+                1,
+                0
+              ],
+              "residues": [
+                8
+              ],
+              "nextGroups": [
+                1
+              ]
+            },
+            {
+              "word": [
+                0,
+                1,
+                0,
+                4
+              ],
+              "residues": [
+                13
+              ],
+              "nextGroups": [
+                10
+              ]
+            },
+            {
+              "word": [
+                1,
+                0,
+                4,
+                0
+              ],
+              "residues": [
+                14
+              ],
+              "nextGroups": [
+                11
+              ]
+            },
+            {
+              "word": [
+                0,
+                4,
+                0,
+                1
+              ],
+              "residues": [
+                15
+              ],
+              "nextGroups": [
+                0
+              ]
+            }
+          ],
+          [
+            {
+              "word": [
+                4,
+                0,
+                1,
+                0,
+                2
+              ],
+              "residues": [
+                0
+              ],
+              "nextGroups": [
+                1
+              ]
+            },
+            {
+              "word": [
+                0,
+                1,
+                0,
+                2,
+                0
+              ],
+              "residues": [
+                1,
+                9
+              ],
+              "nextGroups": [
+                2
+              ]
+            },
+            {
+              "word": [
+                1,
+                0,
+                2,
+                0,
+                1
+              ],
+              "residues": [
+                2,
+                10
+              ],
+              "nextGroups": [
+                3
+              ]
+            },
+            {
+              "word": [
+                0,
+                2,
+                0,
+                1,
+                0
+              ],
+              "residues": [
+                3,
+                11
+              ],
+              "nextGroups": [
+                4,
+                9
+              ]
+            },
+            {
+              "word": [
+                2,
+                0,
+                1,
+                0,
+                3
+              ],
+              "residues": [
+                4
+              ],
+              "nextGroups": [
+                5
+              ]
+            },
+            {
+              "word": [
+                0,
+                1,
+                0,
+                3,
+                0
+              ],
+              "residues": [
+                5
+              ],
+              "nextGroups": [
+                6
+              ]
+            },
+            {
+              "word": [
+                1,
+                0,
+                3,
+                0,
+                1
+              ],
+              "residues": [
+                6
+              ],
+              "nextGroups": [
+                7
+              ]
+            },
+            {
+              "word": [
+                0,
+                3,
+                0,
+                1,
+                0
+              ],
+              "residues": [
+                7
+              ],
+              "nextGroups": [
+                8
+              ]
+            },
+            {
+              "word": [
+                3,
+                0,
+                1,
+                0,
+                2
+              ],
+              "residues": [
+                8
+              ],
+              "nextGroups": [
+                1
+              ]
+            },
+            {
+              "word": [
+                2,
+                0,
+                1,
+                0,
+                4
+              ],
+              "residues": [
+                12
+              ],
+              "nextGroups": [
+                10
+              ]
+            },
+            {
+              "word": [
+                0,
+                1,
+                0,
+                4,
+                0
+              ],
+              "residues": [
+                13
+              ],
+              "nextGroups": [
+                11
+              ]
+            },
+            {
+              "word": [
+                1,
+                0,
+                4,
+                0,
+                1
+              ],
+              "residues": [
+                14
+              ],
+              "nextGroups": [
+                12
+              ]
+            },
+            {
+              "word": [
+                0,
+                4,
+                0,
+                1,
+                0
+              ],
+              "residues": [
+                15
+              ],
+              "nextGroups": [
+                0
+              ]
+            }
+          ],
+          [
+            {
+              "word": [
+                4,
+                0,
+                1,
+                0,
+                2,
+                0
+              ],
+              "residues": [
+                0
+              ],
+              "nextGroups": [
+                1
+              ]
+            },
+            {
+              "word": [
+                0,
+                1,
+                0,
+                2,
+                0,
+                1
+              ],
+              "residues": [
+                1,
+                9
+              ],
+              "nextGroups": [
+                2
+              ]
+            },
+            {
+              "word": [
+                1,
+                0,
+                2,
+                0,
+                1,
+                0
+              ],
+              "residues": [
+                2,
+                10
+              ],
+              "nextGroups": [
+                3,
+                9
+              ]
+            },
+            {
+              "word": [
+                0,
+                2,
+                0,
+                1,
+                0,
+                3
+              ],
+              "residues": [
+                3
+              ],
+              "nextGroups": [
+                4
+              ]
+            },
+            {
+              "word": [
+                2,
+                0,
+                1,
+                0,
+                3,
+                0
+              ],
+              "residues": [
+                4
+              ],
+              "nextGroups": [
+                5
+              ]
+            },
+            {
+              "word": [
+                0,
+                1,
+                0,
+                3,
+                0,
+                1
+              ],
+              "residues": [
+                5
+              ],
+              "nextGroups": [
+                6
+              ]
+            },
+            {
+              "word": [
+                1,
+                0,
+                3,
+                0,
+                1,
+                0
+              ],
+              "residues": [
+                6
+              ],
+              "nextGroups": [
+                7
+              ]
+            },
+            {
+              "word": [
+                0,
+                3,
+                0,
+                1,
+                0,
+                2
+              ],
+              "residues": [
+                7
+              ],
+              "nextGroups": [
+                8
+              ]
+            },
+            {
+              "word": [
+                3,
+                0,
+                1,
+                0,
+                2,
+                0
+              ],
+              "residues": [
+                8
+              ],
+              "nextGroups": [
+                1
+              ]
+            },
+            {
+              "word": [
+                0,
+                2,
+                0,
+                1,
+                0,
+                4
+              ],
+              "residues": [
+                11
+              ],
+              "nextGroups": [
+                10
+              ]
+            },
+            {
+              "word": [
+                2,
+                0,
+                1,
+                0,
+                4,
+                0
+              ],
+              "residues": [
+                12
+              ],
+              "nextGroups": [
+                11
+              ]
+            },
+            {
+              "word": [
+                0,
+                1,
+                0,
+                4,
+                0,
+                1
+              ],
+              "residues": [
+                13
+              ],
+              "nextGroups": [
+                12
+              ]
+            },
+            {
+              "word": [
+                1,
+                0,
+                4,
+                0,
+                1,
+                0
+              ],
+              "residues": [
+                14
+              ],
+              "nextGroups": [
+                13
+              ]
+            },
+            {
+              "word": [
+                0,
+                4,
+                0,
+                1,
+                0,
+                2
+              ],
+              "residues": [
+                15
+              ],
+              "nextGroups": [
+                0
+              ]
+            }
+          ],
+          [
+            {
+              "word": [
+                4,
+                0,
+                1,
+                0,
+                2,
+                0,
+                1
+              ],
+              "residues": [
+                0
+              ],
+              "nextGroups": [
+                1
+              ]
+            },
+            {
+              "word": [
+                0,
+                1,
+                0,
+                2,
+                0,
+                1,
+                0
+              ],
+              "residues": [
+                1,
+                9
+              ],
+              "nextGroups": [
+                2,
+                9
+              ]
+            },
+            {
+              "word": [
+                1,
+                0,
+                2,
+                0,
+                1,
+                0,
+                3
+              ],
+              "residues": [
+                2
+              ],
+              "nextGroups": [
+                3
+              ]
+            },
+            {
+              "word": [
+                0,
+                2,
+                0,
+                1,
+                0,
+                3,
+                0
+              ],
+              "residues": [
+                3
+              ],
+              "nextGroups": [
+                4
+              ]
+            },
+            {
+              "word": [
+                2,
+                0,
+                1,
+                0,
+                3,
+                0,
+                1
+              ],
+              "residues": [
+                4
+              ],
+              "nextGroups": [
+                5
+              ]
+            },
+            {
+              "word": [
+                0,
+                1,
+                0,
+                3,
+                0,
+                1,
+                0
+              ],
+              "residues": [
+                5
+              ],
+              "nextGroups": [
+                6
+              ]
+            },
+            {
+              "word": [
+                1,
+                0,
+                3,
+                0,
+                1,
+                0,
+                2
+              ],
+              "residues": [
+                6
+              ],
+              "nextGroups": [
+                7
+              ]
+            },
+            {
+              "word": [
+                0,
+                3,
+                0,
+                1,
+                0,
+                2,
+                0
+              ],
+              "residues": [
+                7
+              ],
+              "nextGroups": [
+                8
+              ]
+            },
+            {
+              "word": [
+                3,
+                0,
+                1,
+                0,
+                2,
+                0,
+                1
+              ],
+              "residues": [
+                8
+              ],
+              "nextGroups": [
+                1
+              ]
+            },
+            {
+              "word": [
+                1,
+                0,
+                2,
+                0,
+                1,
+                0,
+                4
+              ],
+              "residues": [
+                10
+              ],
+              "nextGroups": [
+                10
+              ]
+            },
+            {
+              "word": [
+                0,
+                2,
+                0,
+                1,
+                0,
+                4,
+                0
+              ],
+              "residues": [
+                11
+              ],
+              "nextGroups": [
+                11
+              ]
+            },
+            {
+              "word": [
+                2,
+                0,
+                1,
+                0,
+                4,
+                0,
+                1
+              ],
+              "residues": [
+                12
+              ],
+              "nextGroups": [
+                12
+              ]
+            },
+            {
+              "word": [
+                0,
+                1,
+                0,
+                4,
+                0,
+                1,
+                0
+              ],
+              "residues": [
+                13
+              ],
+              "nextGroups": [
+                13
+              ]
+            },
+            {
+              "word": [
+                1,
+                0,
+                4,
+                0,
+                1,
+                0,
+                2
+              ],
+              "residues": [
+                14
+              ],
+              "nextGroups": [
+                14
+              ]
+            },
+            {
+              "word": [
+                0,
+                4,
+                0,
+                1,
+                0,
+                2,
+                0
+              ],
+              "residues": [
+                15
+              ],
+              "nextGroups": [
+                0
+              ]
+            }
+          ],
+          [
+            {
+              "word": [
+                4,
+                0,
+                1,
+                0,
+                2,
+                0,
+                1,
+                0
+              ],
+              "residues": [
+                0
+              ],
+              "nextGroups": [
+                1
+              ]
+            },
+            {
+              "word": [
+                0,
+                1,
+                0,
+                2,
+                0,
+                1,
+                0,
+                3
+              ],
+              "residues": [
+                1
+              ],
+              "nextGroups": [
+                2
+              ]
+            },
+            {
+              "word": [
+                1,
+                0,
+                2,
+                0,
+                1,
+                0,
+                3,
+                0
+              ],
+              "residues": [
+                2
+              ],
+              "nextGroups": [
+                3
+              ]
+            },
+            {
+              "word": [
+                0,
+                2,
+                0,
+                1,
+                0,
+                3,
+                0,
+                1
+              ],
+              "residues": [
+                3
+              ],
+              "nextGroups": [
+                4
+              ]
+            },
+            {
+              "word": [
+                2,
+                0,
+                1,
+                0,
+                3,
+                0,
+                1,
+                0
+              ],
+              "residues": [
+                4
+              ],
+              "nextGroups": [
+                5
+              ]
+            },
+            {
+              "word": [
+                0,
+                1,
+                0,
+                3,
+                0,
+                1,
+                0,
+                2
+              ],
+              "residues": [
+                5
+              ],
+              "nextGroups": [
+                6
+              ]
+            },
+            {
+              "word": [
+                1,
+                0,
+                3,
+                0,
+                1,
+                0,
+                2,
+                0
+              ],
+              "residues": [
+                6
+              ],
+              "nextGroups": [
+                7
+              ]
+            },
+            {
+              "word": [
+                0,
+                3,
+                0,
+                1,
+                0,
+                2,
+                0,
+                1
+              ],
+              "residues": [
+                7
+              ],
+              "nextGroups": [
+                8
+              ]
+            },
+            {
+              "word": [
+                3,
+                0,
+                1,
+                0,
+                2,
+                0,
+                1,
+                0
+              ],
+              "residues": [
+                8
+              ],
+              "nextGroups": [
+                9
+              ]
+            },
+            {
+              "word": [
+                0,
+                1,
+                0,
+                2,
+                0,
+                1,
+                0,
+                4
+              ],
+              "residues": [
+                9
+              ],
+              "nextGroups": [
+                10
+              ]
+            },
+            {
+              "word": [
+                1,
+                0,
+                2,
+                0,
+                1,
+                0,
+                4,
+                0
+              ],
+              "residues": [
+                10
+              ],
+              "nextGroups": [
+                11
+              ]
+            },
+            {
+              "word": [
+                0,
+                2,
+                0,
+                1,
+                0,
+                4,
+                0,
+                1
+              ],
+              "residues": [
+                11
+              ],
+              "nextGroups": [
+                12
+              ]
+            },
+            {
+              "word": [
+                2,
+                0,
+                1,
+                0,
+                4,
+                0,
+                1,
+                0
+              ],
+              "residues": [
+                12
+              ],
+              "nextGroups": [
+                13
+              ]
+            },
+            {
+              "word": [
+                0,
+                1,
+                0,
+                4,
+                0,
+                1,
+                0,
+                2
+              ],
+              "residues": [
+                13
+              ],
+              "nextGroups": [
+                14
+              ]
+            },
+            {
+              "word": [
+                1,
+                0,
+                4,
+                0,
+                1,
+                0,
+                2,
+                0
+              ],
+              "residues": [
+                14
+              ],
+              "nextGroups": [
+                15
+              ]
+            },
+            {
+              "word": [
+                0,
+                4,
+                0,
+                1,
+                0,
+                2,
+                0,
+                1
+              ],
+              "residues": [
+                15
+              ],
+              "nextGroups": [
+                0
+              ]
+            }
+          ],
+          [
+            {
+              "word": [
+                4,
+                0,
+                1,
+                0,
+                2,
+                0,
+                1,
+                0,
+                3
+              ],
+              "residues": [
+                0
+              ],
+              "nextGroups": [
+                1
+              ]
+            },
+            {
+              "word": [
+                0,
+                1,
+                0,
+                2,
+                0,
+                1,
+                0,
+                3,
+                0
+              ],
+              "residues": [
+                1
+              ],
+              "nextGroups": [
+                2
+              ]
+            },
+            {
+              "word": [
+                1,
+                0,
+                2,
+                0,
+                1,
+                0,
+                3,
+                0,
+                1
+              ],
+              "residues": [
+                2
+              ],
+              "nextGroups": [
+                3
+              ]
+            },
+            {
+              "word": [
+                0,
+                2,
+                0,
+                1,
+                0,
+                3,
+                0,
+                1,
+                0
+              ],
+              "residues": [
+                3
+              ],
+              "nextGroups": [
+                4
+              ]
+            },
+            {
+              "word": [
+                2,
+                0,
+                1,
+                0,
+                3,
+                0,
+                1,
+                0,
+                2
+              ],
+              "residues": [
+                4
+              ],
+              "nextGroups": [
+                5
+              ]
+            },
+            {
+              "word": [
+                0,
+                1,
+                0,
+                3,
+                0,
+                1,
+                0,
+                2,
+                0
+              ],
+              "residues": [
+                5
+              ],
+              "nextGroups": [
+                6
+              ]
+            },
+            {
+              "word": [
+                1,
+                0,
+                3,
+                0,
+                1,
+                0,
+                2,
+                0,
+                1
+              ],
+              "residues": [
+                6
+              ],
+              "nextGroups": [
+                7
+              ]
+            },
+            {
+              "word": [
+                0,
+                3,
+                0,
+                1,
+                0,
+                2,
+                0,
+                1,
+                0
+              ],
+              "residues": [
+                7
+              ],
+              "nextGroups": [
+                8
+              ]
+            },
+            {
+              "word": [
+                3,
+                0,
+                1,
+                0,
+                2,
+                0,
+                1,
+                0,
+                4
+              ],
+              "residues": [
+                8
+              ],
+              "nextGroups": [
+                9
+              ]
+            },
+            {
+              "word": [
+                0,
+                1,
+                0,
+                2,
+                0,
+                1,
+                0,
+                4,
+                0
+              ],
+              "residues": [
+                9
+              ],
+              "nextGroups": [
+                10
+              ]
+            },
+            {
+              "word": [
+                1,
+                0,
+                2,
+                0,
+                1,
+                0,
+                4,
+                0,
+                1
+              ],
+              "residues": [
+                10
+              ],
+              "nextGroups": [
+                11
+              ]
+            },
+            {
+              "word": [
+                0,
+                2,
+                0,
+                1,
+                0,
+                4,
+                0,
+                1,
+                0
+              ],
+              "residues": [
+                11
+              ],
+              "nextGroups": [
+                12
+              ]
+            },
+            {
+              "word": [
+                2,
+                0,
+                1,
+                0,
+                4,
+                0,
+                1,
+                0,
+                2
+              ],
+              "residues": [
+                12
+              ],
+              "nextGroups": [
+                13
+              ]
+            },
+            {
+              "word": [
+                0,
+                1,
+                0,
+                4,
+                0,
+                1,
+                0,
+                2,
+                0
+              ],
+              "residues": [
+                13
+              ],
+              "nextGroups": [
+                14
+              ]
+            },
+            {
+              "word": [
+                1,
+                0,
+                4,
+                0,
+                1,
+                0,
+                2,
+                0,
+                1
+              ],
+              "residues": [
+                14
+              ],
+              "nextGroups": [
+                15
+              ]
+            },
+            {
+              "word": [
+                0,
+                4,
+                0,
+                1,
+                0,
+                2,
+                0,
+                1,
+                0
+              ],
+              "residues": [
+                15
+              ],
+              "nextGroups": [
+                0
+              ]
+            }
+          ],
+          [
+            {
+              "word": [
+                4,
+                0,
+                1,
+                0,
+                2,
+                0,
+                1,
+                0,
+                3,
+                0
+              ],
+              "residues": [
+                0
+              ],
+              "nextGroups": [
+                1
+              ]
+            },
+            {
+              "word": [
+                0,
+                1,
+                0,
+                2,
+                0,
+                1,
+                0,
+                3,
+                0,
+                1
+              ],
+              "residues": [
+                1
+              ],
+              "nextGroups": [
+                2
+              ]
+            },
+            {
+              "word": [
+                1,
+                0,
+                2,
+                0,
+                1,
+                0,
+                3,
+                0,
+                1,
+                0
+              ],
+              "residues": [
+                2
+              ],
+              "nextGroups": [
+                3
+              ]
+            },
+            {
+              "word": [
+                0,
+                2,
+                0,
+                1,
+                0,
+                3,
+                0,
+                1,
+                0,
+                2
+              ],
+              "residues": [
+                3
+              ],
+              "nextGroups": [
+                4
+              ]
+            },
+            {
+              "word": [
+                2,
+                0,
+                1,
+                0,
+                3,
+                0,
+                1,
+                0,
+                2,
+                0
+              ],
+              "residues": [
+                4
+              ],
+              "nextGroups": [
+                5
+              ]
+            },
+            {
+              "word": [
+                0,
+                1,
+                0,
+                3,
+                0,
+                1,
+                0,
+                2,
+                0,
+                1
+              ],
+              "residues": [
+                5
+              ],
+              "nextGroups": [
+                6
+              ]
+            },
+            {
+              "word": [
+                1,
+                0,
+                3,
+                0,
+                1,
+                0,
+                2,
+                0,
+                1,
+                0
+              ],
+              "residues": [
+                6
+              ],
+              "nextGroups": [
+                7
+              ]
+            },
+            {
+              "word": [
+                0,
+                3,
+                0,
+                1,
+                0,
+                2,
+                0,
+                1,
+                0,
+                4
+              ],
+              "residues": [
+                7
+              ],
+              "nextGroups": [
+                8
+              ]
+            },
+            {
+              "word": [
+                3,
+                0,
+                1,
+                0,
+                2,
+                0,
+                1,
+                0,
+                4,
+                0
+              ],
+              "residues": [
+                8
+              ],
+              "nextGroups": [
+                9
+              ]
+            },
+            {
+              "word": [
+                0,
+                1,
+                0,
+                2,
+                0,
+                1,
+                0,
+                4,
+                0,
+                1
+              ],
+              "residues": [
+                9
+              ],
+              "nextGroups": [
+                10
+              ]
+            },
+            {
+              "word": [
+                1,
+                0,
+                2,
+                0,
+                1,
+                0,
+                4,
+                0,
+                1,
+                0
+              ],
+              "residues": [
+                10
+              ],
+              "nextGroups": [
+                11
+              ]
+            },
+            {
+              "word": [
+                0,
+                2,
+                0,
+                1,
+                0,
+                4,
+                0,
+                1,
+                0,
+                2
+              ],
+              "residues": [
+                11
+              ],
+              "nextGroups": [
+                12
+              ]
+            },
+            {
+              "word": [
+                2,
+                0,
+                1,
+                0,
+                4,
+                0,
+                1,
+                0,
+                2,
+                0
+              ],
+              "residues": [
+                12
+              ],
+              "nextGroups": [
+                13
+              ]
+            },
+            {
+              "word": [
+                0,
+                1,
+                0,
+                4,
+                0,
+                1,
+                0,
+                2,
+                0,
+                1
+              ],
+              "residues": [
+                13
+              ],
+              "nextGroups": [
+                14
+              ]
+            },
+            {
+              "word": [
+                1,
+                0,
+                4,
+                0,
+                1,
+                0,
+                2,
+                0,
+                1,
+                0
+              ],
+              "residues": [
+                14
+              ],
+              "nextGroups": [
+                15
+              ]
+            },
+            {
+              "word": [
+                0,
+                4,
+                0,
+                1,
+                0,
+                2,
+                0,
+                1,
+                0,
+                3
+              ],
+              "residues": [
+                15
+              ],
+              "nextGroups": [
+                0
+              ]
+            }
+          ],
+          [
+            {
+              "word": [
+                4,
+                0,
+                1,
+                0,
+                2,
+                0,
+                1,
+                0,
+                3,
+                0,
+                1
+              ],
+              "residues": [
+                0
+              ],
+              "nextGroups": [
+                1
+              ]
+            },
+            {
+              "word": [
+                0,
+                1,
+                0,
+                2,
+                0,
+                1,
+                0,
+                3,
+                0,
+                1,
+                0
+              ],
+              "residues": [
+                1
+              ],
+              "nextGroups": [
+                2
+              ]
+            },
+            {
+              "word": [
+                1,
+                0,
+                2,
+                0,
+                1,
+                0,
+                3,
+                0,
+                1,
+                0,
+                2
+              ],
+              "residues": [
+                2
+              ],
+              "nextGroups": [
+                3
+              ]
+            },
+            {
+              "word": [
+                0,
+                2,
+                0,
+                1,
+                0,
+                3,
+                0,
+                1,
+                0,
+                2,
+                0
+              ],
+              "residues": [
+                3
+              ],
+              "nextGroups": [
+                4
+              ]
+            },
+            {
+              "word": [
+                2,
+                0,
+                1,
+                0,
+                3,
+                0,
+                1,
+                0,
+                2,
+                0,
+                1
+              ],
+              "residues": [
+                4
+              ],
+              "nextGroups": [
+                5
+              ]
+            },
+            {
+              "word": [
+                0,
+                1,
+                0,
+                3,
+                0,
+                1,
+                0,
+                2,
+                0,
+                1,
+                0
+              ],
+              "residues": [
+                5
+              ],
+              "nextGroups": [
+                6
+              ]
+            },
+            {
+              "word": [
+                1,
+                0,
+                3,
+                0,
+                1,
+                0,
+                2,
+                0,
+                1,
+                0,
+                4
+              ],
+              "residues": [
+                6
+              ],
+              "nextGroups": [
+                7
+              ]
+            },
+            {
+              "word": [
+                0,
+                3,
+                0,
+                1,
+                0,
+                2,
+                0,
+                1,
+                0,
+                4,
+                0
+              ],
+              "residues": [
+                7
+              ],
+              "nextGroups": [
+                8
+              ]
+            },
+            {
+              "word": [
+                3,
+                0,
+                1,
+                0,
+                2,
+                0,
+                1,
+                0,
+                4,
+                0,
+                1
+              ],
+              "residues": [
+                8
+              ],
+              "nextGroups": [
+                9
+              ]
+            },
+            {
+              "word": [
+                0,
+                1,
+                0,
+                2,
+                0,
+                1,
+                0,
+                4,
+                0,
+                1,
+                0
+              ],
+              "residues": [
+                9
+              ],
+              "nextGroups": [
+                10
+              ]
+            },
+            {
+              "word": [
+                1,
+                0,
+                2,
+                0,
+                1,
+                0,
+                4,
+                0,
+                1,
+                0,
+                2
+              ],
+              "residues": [
+                10
+              ],
+              "nextGroups": [
+                11
+              ]
+            },
+            {
+              "word": [
+                0,
+                2,
+                0,
+                1,
+                0,
+                4,
+                0,
+                1,
+                0,
+                2,
+                0
+              ],
+              "residues": [
+                11
+              ],
+              "nextGroups": [
+                12
+              ]
+            },
+            {
+              "word": [
+                2,
+                0,
+                1,
+                0,
+                4,
+                0,
+                1,
+                0,
+                2,
+                0,
+                1
+              ],
+              "residues": [
+                12
+              ],
+              "nextGroups": [
+                13
+              ]
+            },
+            {
+              "word": [
+                0,
+                1,
+                0,
+                4,
+                0,
+                1,
+                0,
+                2,
+                0,
+                1,
+                0
+              ],
+              "residues": [
+                13
+              ],
+              "nextGroups": [
+                14
+              ]
+            },
+            {
+              "word": [
+                1,
+                0,
+                4,
+                0,
+                1,
+                0,
+                2,
+                0,
+                1,
+                0,
+                3
+              ],
+              "residues": [
+                14
+              ],
+              "nextGroups": [
+                15
+              ]
+            },
+            {
+              "word": [
+                0,
+                4,
+                0,
+                1,
+                0,
+                2,
+                0,
+                1,
+                0,
+                3,
+                0
+              ],
+              "residues": [
+                15
+              ],
+              "nextGroups": [
+                0
+              ]
+            }
+          ],
+          [
+            {
+              "word": [
+                4,
+                0,
+                1,
+                0,
+                2,
+                0,
+                1,
+                0,
+                3,
+                0,
+                1,
+                0
+              ],
+              "residues": [
+                0
+              ],
+              "nextGroups": [
+                1
+              ]
+            },
+            {
+              "word": [
+                0,
+                1,
+                0,
+                2,
+                0,
+                1,
+                0,
+                3,
+                0,
+                1,
+                0,
+                2
+              ],
+              "residues": [
+                1
+              ],
+              "nextGroups": [
+                2
+              ]
+            },
+            {
+              "word": [
+                1,
+                0,
+                2,
+                0,
+                1,
+                0,
+                3,
+                0,
+                1,
+                0,
+                2,
+                0
+              ],
+              "residues": [
+                2
+              ],
+              "nextGroups": [
+                3
+              ]
+            },
+            {
+              "word": [
+                0,
+                2,
+                0,
+                1,
+                0,
+                3,
+                0,
+                1,
+                0,
+                2,
+                0,
+                1
+              ],
+              "residues": [
+                3
+              ],
+              "nextGroups": [
+                4
+              ]
+            },
+            {
+              "word": [
+                2,
+                0,
+                1,
+                0,
+                3,
+                0,
+                1,
+                0,
+                2,
+                0,
+                1,
+                0
+              ],
+              "residues": [
+                4
+              ],
+              "nextGroups": [
+                5
+              ]
+            },
+            {
+              "word": [
+                0,
+                1,
+                0,
+                3,
+                0,
+                1,
+                0,
+                2,
+                0,
+                1,
+                0,
+                4
+              ],
+              "residues": [
+                5
+              ],
+              "nextGroups": [
+                6
+              ]
+            },
+            {
+              "word": [
+                1,
+                0,
+                3,
+                0,
+                1,
+                0,
+                2,
+                0,
+                1,
+                0,
+                4,
+                0
+              ],
+              "residues": [
+                6
+              ],
+              "nextGroups": [
+                7
+              ]
+            },
+            {
+              "word": [
+                0,
+                3,
+                0,
+                1,
+                0,
+                2,
+                0,
+                1,
+                0,
+                4,
+                0,
+                1
+              ],
+              "residues": [
+                7
+              ],
+              "nextGroups": [
+                8
+              ]
+            },
+            {
+              "word": [
+                3,
+                0,
+                1,
+                0,
+                2,
+                0,
+                1,
+                0,
+                4,
+                0,
+                1,
+                0
+              ],
+              "residues": [
+                8
+              ],
+              "nextGroups": [
+                9
+              ]
+            },
+            {
+              "word": [
+                0,
+                1,
+                0,
+                2,
+                0,
+                1,
+                0,
+                4,
+                0,
+                1,
+                0,
+                2
+              ],
+              "residues": [
+                9
+              ],
+              "nextGroups": [
+                10
+              ]
+            },
+            {
+              "word": [
+                1,
+                0,
+                2,
+                0,
+                1,
+                0,
+                4,
+                0,
+                1,
+                0,
+                2,
+                0
+              ],
+              "residues": [
+                10
+              ],
+              "nextGroups": [
+                11
+              ]
+            },
+            {
+              "word": [
+                0,
+                2,
+                0,
+                1,
+                0,
+                4,
+                0,
+                1,
+                0,
+                2,
+                0,
+                1
+              ],
+              "residues": [
+                11
+              ],
+              "nextGroups": [
+                12
+              ]
+            },
+            {
+              "word": [
+                2,
+                0,
+                1,
+                0,
+                4,
+                0,
+                1,
+                0,
+                2,
+                0,
+                1,
+                0
+              ],
+              "residues": [
+                12
+              ],
+              "nextGroups": [
+                13
+              ]
+            },
+            {
+              "word": [
+                0,
+                1,
+                0,
+                4,
+                0,
+                1,
+                0,
+                2,
+                0,
+                1,
+                0,
+                3
+              ],
+              "residues": [
+                13
+              ],
+              "nextGroups": [
+                14
+              ]
+            },
+            {
+              "word": [
+                1,
+                0,
+                4,
+                0,
+                1,
+                0,
+                2,
+                0,
+                1,
+                0,
+                3,
+                0
+              ],
+              "residues": [
+                14
+              ],
+              "nextGroups": [
+                15
+              ]
+            },
+            {
+              "word": [
+                0,
+                4,
+                0,
+                1,
+                0,
+                2,
+                0,
+                1,
+                0,
+                3,
+                0,
+                1
+              ],
+              "residues": [
+                15
+              ],
+              "nextGroups": [
+                0
+              ]
+            }
+          ],
+          [
+            {
+              "word": [
+                4,
+                0,
+                1,
+                0,
+                2,
+                0,
+                1,
+                0,
+                3,
+                0,
+                1,
+                0,
+                2
+              ],
+              "residues": [
+                0
+              ],
+              "nextGroups": [
+                1
+              ]
+            },
+            {
+              "word": [
+                0,
+                1,
+                0,
+                2,
+                0,
+                1,
+                0,
+                3,
+                0,
+                1,
+                0,
+                2,
+                0
+              ],
+              "residues": [
+                1
+              ],
+              "nextGroups": [
+                2
+              ]
+            },
+            {
+              "word": [
+                1,
+                0,
+                2,
+                0,
+                1,
+                0,
+                3,
+                0,
+                1,
+                0,
+                2,
+                0,
+                1
+              ],
+              "residues": [
+                2
+              ],
+              "nextGroups": [
+                3
+              ]
+            },
+            {
+              "word": [
+                0,
+                2,
+                0,
+                1,
+                0,
+                3,
+                0,
+                1,
+                0,
+                2,
+                0,
+                1,
+                0
+              ],
+              "residues": [
+                3
+              ],
+              "nextGroups": [
+                4
+              ]
+            },
+            {
+              "word": [
+                2,
+                0,
+                1,
+                0,
+                3,
+                0,
+                1,
+                0,
+                2,
+                0,
+                1,
+                0,
+                4
+              ],
+              "residues": [
+                4
+              ],
+              "nextGroups": [
+                5
+              ]
+            },
+            {
+              "word": [
+                0,
+                1,
+                0,
+                3,
+                0,
+                1,
+                0,
+                2,
+                0,
+                1,
+                0,
+                4,
+                0
+              ],
+              "residues": [
+                5
+              ],
+              "nextGroups": [
+                6
+              ]
+            },
+            {
+              "word": [
+                1,
+                0,
+                3,
+                0,
+                1,
+                0,
+                2,
+                0,
+                1,
+                0,
+                4,
+                0,
+                1
+              ],
+              "residues": [
+                6
+              ],
+              "nextGroups": [
+                7
+              ]
+            },
+            {
+              "word": [
+                0,
+                3,
+                0,
+                1,
+                0,
+                2,
+                0,
+                1,
+                0,
+                4,
+                0,
+                1,
+                0
+              ],
+              "residues": [
+                7
+              ],
+              "nextGroups": [
+                8
+              ]
+            },
+            {
+              "word": [
+                3,
+                0,
+                1,
+                0,
+                2,
+                0,
+                1,
+                0,
+                4,
+                0,
+                1,
+                0,
+                2
+              ],
+              "residues": [
+                8
+              ],
+              "nextGroups": [
+                9
+              ]
+            },
+            {
+              "word": [
+                0,
+                1,
+                0,
+                2,
+                0,
+                1,
+                0,
+                4,
+                0,
+                1,
+                0,
+                2,
+                0
+              ],
+              "residues": [
+                9
+              ],
+              "nextGroups": [
+                10
+              ]
+            },
+            {
+              "word": [
+                1,
+                0,
+                2,
+                0,
+                1,
+                0,
+                4,
+                0,
+                1,
+                0,
+                2,
+                0,
+                1
+              ],
+              "residues": [
+                10
+              ],
+              "nextGroups": [
+                11
+              ]
+            },
+            {
+              "word": [
+                0,
+                2,
+                0,
+                1,
+                0,
+                4,
+                0,
+                1,
+                0,
+                2,
+                0,
+                1,
+                0
+              ],
+              "residues": [
+                11
+              ],
+              "nextGroups": [
+                12
+              ]
+            },
+            {
+              "word": [
+                2,
+                0,
+                1,
+                0,
+                4,
+                0,
+                1,
+                0,
+                2,
+                0,
+                1,
+                0,
+                3
+              ],
+              "residues": [
+                12
+              ],
+              "nextGroups": [
+                13
+              ]
+            },
+            {
+              "word": [
+                0,
+                1,
+                0,
+                4,
+                0,
+                1,
+                0,
+                2,
+                0,
+                1,
+                0,
+                3,
+                0
+              ],
+              "residues": [
+                13
+              ],
+              "nextGroups": [
+                14
+              ]
+            },
+            {
+              "word": [
+                1,
+                0,
+                4,
+                0,
+                1,
+                0,
+                2,
+                0,
+                1,
+                0,
+                3,
+                0,
+                1
+              ],
+              "residues": [
+                14
+              ],
+              "nextGroups": [
+                15
+              ]
+            },
+            {
+              "word": [
+                0,
+                4,
+                0,
+                1,
+                0,
+                2,
+                0,
+                1,
+                0,
+                3,
+                0,
+                1,
+                0
+              ],
+              "residues": [
+                15
+              ],
+              "nextGroups": [
+                0
+              ]
+            }
+          ],
+          [
+            {
+              "word": [
+                4,
+                0,
+                1,
+                0,
+                2,
+                0,
+                1,
+                0,
+                3,
+                0,
+                1,
+                0,
+                2,
+                0
+              ],
+              "residues": [
+                0
+              ],
+              "nextGroups": [
+                1
+              ]
+            },
+            {
+              "word": [
+                0,
+                1,
+                0,
+                2,
+                0,
+                1,
+                0,
+                3,
+                0,
+                1,
+                0,
+                2,
+                0,
+                1
+              ],
+              "residues": [
+                1
+              ],
+              "nextGroups": [
+                2
+              ]
+            },
+            {
+              "word": [
+                1,
+                0,
+                2,
+                0,
+                1,
+                0,
+                3,
+                0,
+                1,
+                0,
+                2,
+                0,
+                1,
+                0
+              ],
+              "residues": [
+                2
+              ],
+              "nextGroups": [
+                3
+              ]
+            },
+            {
+              "word": [
+                0,
+                2,
+                0,
+                1,
+                0,
+                3,
+                0,
+                1,
+                0,
+                2,
+                0,
+                1,
+                0,
+                4
+              ],
+              "residues": [
+                3
+              ],
+              "nextGroups": [
+                4
+              ]
+            },
+            {
+              "word": [
+                2,
+                0,
+                1,
+                0,
+                3,
+                0,
+                1,
+                0,
+                2,
+                0,
+                1,
+                0,
+                4,
+                0
+              ],
+              "residues": [
+                4
+              ],
+              "nextGroups": [
+                5
+              ]
+            },
+            {
+              "word": [
+                0,
+                1,
+                0,
+                3,
+                0,
+                1,
+                0,
+                2,
+                0,
+                1,
+                0,
+                4,
+                0,
+                1
+              ],
+              "residues": [
+                5
+              ],
+              "nextGroups": [
+                6
+              ]
+            },
+            {
+              "word": [
+                1,
+                0,
+                3,
+                0,
+                1,
+                0,
+                2,
+                0,
+                1,
+                0,
+                4,
+                0,
+                1,
+                0
+              ],
+              "residues": [
+                6
+              ],
+              "nextGroups": [
+                7
+              ]
+            },
+            {
+              "word": [
+                0,
+                3,
+                0,
+                1,
+                0,
+                2,
+                0,
+                1,
+                0,
+                4,
+                0,
+                1,
+                0,
+                2
+              ],
+              "residues": [
+                7
+              ],
+              "nextGroups": [
+                8
+              ]
+            },
+            {
+              "word": [
+                3,
+                0,
+                1,
+                0,
+                2,
+                0,
+                1,
+                0,
+                4,
+                0,
+                1,
+                0,
+                2,
+                0
+              ],
+              "residues": [
+                8
+              ],
+              "nextGroups": [
+                9
+              ]
+            },
+            {
+              "word": [
+                0,
+                1,
+                0,
+                2,
+                0,
+                1,
+                0,
+                4,
+                0,
+                1,
+                0,
+                2,
+                0,
+                1
+              ],
+              "residues": [
+                9
+              ],
+              "nextGroups": [
+                10
+              ]
+            },
+            {
+              "word": [
+                1,
+                0,
+                2,
+                0,
+                1,
+                0,
+                4,
+                0,
+                1,
+                0,
+                2,
+                0,
+                1,
+                0
+              ],
+              "residues": [
+                10
+              ],
+              "nextGroups": [
+                11
+              ]
+            },
+            {
+              "word": [
+                0,
+                2,
+                0,
+                1,
+                0,
+                4,
+                0,
+                1,
+                0,
+                2,
+                0,
+                1,
+                0,
+                3
+              ],
+              "residues": [
+                11
+              ],
+              "nextGroups": [
+                12
+              ]
+            },
+            {
+              "word": [
+                2,
+                0,
+                1,
+                0,
+                4,
+                0,
+                1,
+                0,
+                2,
+                0,
+                1,
+                0,
+                3,
+                0
+              ],
+              "residues": [
+                12
+              ],
+              "nextGroups": [
+                13
+              ]
+            },
+            {
+              "word": [
+                0,
+                1,
+                0,
+                4,
+                0,
+                1,
+                0,
+                2,
+                0,
+                1,
+                0,
+                3,
+                0,
+                1
+              ],
+              "residues": [
+                13
+              ],
+              "nextGroups": [
+                14
+              ]
+            },
+            {
+              "word": [
+                1,
+                0,
+                4,
+                0,
+                1,
+                0,
+                2,
+                0,
+                1,
+                0,
+                3,
+                0,
+                1,
+                0
+              ],
+              "residues": [
+                14
+              ],
+              "nextGroups": [
+                15
+              ]
+            },
+            {
+              "word": [
+                0,
+                4,
+                0,
+                1,
+                0,
+                2,
+                0,
+                1,
+                0,
+                3,
+                0,
+                1,
+                0,
+                2
+              ],
+              "residues": [
+                15
+              ],
+              "nextGroups": [
+                0
+              ]
+            }
+          ],
+          [
+            {
+              "word": [
+                4,
+                0,
+                1,
+                0,
+                2,
+                0,
+                1,
+                0,
+                3,
+                0,
+                1,
+                0,
+                2,
+                0,
+                1
+              ],
+              "residues": [
+                0
+              ],
+              "nextGroups": [
+                1
+              ]
+            },
+            {
+              "word": [
+                0,
+                1,
+                0,
+                2,
+                0,
+                1,
+                0,
+                3,
+                0,
+                1,
+                0,
+                2,
+                0,
+                1,
+                0
+              ],
+              "residues": [
+                1
+              ],
+              "nextGroups": [
+                2
+              ]
+            },
+            {
+              "word": [
+                1,
+                0,
+                2,
+                0,
+                1,
+                0,
+                3,
+                0,
+                1,
+                0,
+                2,
+                0,
+                1,
+                0,
+                4
+              ],
+              "residues": [
+                2
+              ],
+              "nextGroups": [
+                3
+              ]
+            },
+            {
+              "word": [
+                0,
+                2,
+                0,
+                1,
+                0,
+                3,
+                0,
+                1,
+                0,
+                2,
+                0,
+                1,
+                0,
+                4,
+                0
+              ],
+              "residues": [
+                3
+              ],
+              "nextGroups": [
+                4
+              ]
+            },
+            {
+              "word": [
+                2,
+                0,
+                1,
+                0,
+                3,
+                0,
+                1,
+                0,
+                2,
+                0,
+                1,
+                0,
+                4,
+                0,
+                1
+              ],
+              "residues": [
+                4
+              ],
+              "nextGroups": [
+                5
+              ]
+            },
+            {
+              "word": [
+                0,
+                1,
+                0,
+                3,
+                0,
+                1,
+                0,
+                2,
+                0,
+                1,
+                0,
+                4,
+                0,
+                1,
+                0
+              ],
+              "residues": [
+                5
+              ],
+              "nextGroups": [
+                6
+              ]
+            },
+            {
+              "word": [
+                1,
+                0,
+                3,
+                0,
+                1,
+                0,
+                2,
+                0,
+                1,
+                0,
+                4,
+                0,
+                1,
+                0,
+                2
+              ],
+              "residues": [
+                6
+              ],
+              "nextGroups": [
+                7
+              ]
+            },
+            {
+              "word": [
+                0,
+                3,
+                0,
+                1,
+                0,
+                2,
+                0,
+                1,
+                0,
+                4,
+                0,
+                1,
+                0,
+                2,
+                0
+              ],
+              "residues": [
+                7
+              ],
+              "nextGroups": [
+                8
+              ]
+            },
+            {
+              "word": [
+                3,
+                0,
+                1,
+                0,
+                2,
+                0,
+                1,
+                0,
+                4,
+                0,
+                1,
+                0,
+                2,
+                0,
+                1
+              ],
+              "residues": [
+                8
+              ],
+              "nextGroups": [
+                9
+              ]
+            },
+            {
+              "word": [
+                0,
+                1,
+                0,
+                2,
+                0,
+                1,
+                0,
+                4,
+                0,
+                1,
+                0,
+                2,
+                0,
+                1,
+                0
+              ],
+              "residues": [
+                9
+              ],
+              "nextGroups": [
+                10
+              ]
+            },
+            {
+              "word": [
+                1,
+                0,
+                2,
+                0,
+                1,
+                0,
+                4,
+                0,
+                1,
+                0,
+                2,
+                0,
+                1,
+                0,
+                3
+              ],
+              "residues": [
+                10
+              ],
+              "nextGroups": [
+                11
+              ]
+            },
+            {
+              "word": [
+                0,
+                2,
+                0,
+                1,
+                0,
+                4,
+                0,
+                1,
+                0,
+                2,
+                0,
+                1,
+                0,
+                3,
+                0
+              ],
+              "residues": [
+                11
+              ],
+              "nextGroups": [
+                12
+              ]
+            },
+            {
+              "word": [
+                2,
+                0,
+                1,
+                0,
+                4,
+                0,
+                1,
+                0,
+                2,
+                0,
+                1,
+                0,
+                3,
+                0,
+                1
+              ],
+              "residues": [
+                12
+              ],
+              "nextGroups": [
+                13
+              ]
+            },
+            {
+              "word": [
+                0,
+                1,
+                0,
+                4,
+                0,
+                1,
+                0,
+                2,
+                0,
+                1,
+                0,
+                3,
+                0,
+                1,
+                0
+              ],
+              "residues": [
+                13
+              ],
+              "nextGroups": [
+                14
+              ]
+            },
+            {
+              "word": [
+                1,
+                0,
+                4,
+                0,
+                1,
+                0,
+                2,
+                0,
+                1,
+                0,
+                3,
+                0,
+                1,
+                0,
+                2
+              ],
+              "residues": [
+                14
+              ],
+              "nextGroups": [
+                15
+              ]
+            },
+            {
+              "word": [
+                0,
+                4,
+                0,
+                1,
+                0,
+                2,
+                0,
+                1,
+                0,
+                3,
+                0,
+                1,
+                0,
+                2,
+                0
+              ],
+              "residues": [
+                15
+              ],
+              "nextGroups": [
+                0
+              ]
+            }
+          ],
+          [
+            {
+              "word": [
+                4,
+                0,
+                1,
+                0,
+                2,
+                0,
+                1,
+                0,
+                3,
+                0,
+                1,
+                0,
+                2,
+                0,
+                1,
+                0
+              ],
+              "residues": [
+                0
+              ],
+              "nextGroups": [
+                1
+              ]
+            },
+            {
+              "word": [
+                0,
+                1,
+                0,
+                2,
+                0,
+                1,
+                0,
+                3,
+                0,
+                1,
+                0,
+                2,
+                0,
+                1,
+                0,
+                4
+              ],
+              "residues": [
+                1
+              ],
+              "nextGroups": [
+                2
+              ]
+            },
+            {
+              "word": [
+                1,
+                0,
+                2,
+                0,
+                1,
+                0,
+                3,
+                0,
+                1,
+                0,
+                2,
+                0,
+                1,
+                0,
+                4,
+                0
+              ],
+              "residues": [
+                2
+              ],
+              "nextGroups": [
+                3
+              ]
+            },
+            {
+              "word": [
+                0,
+                2,
+                0,
+                1,
+                0,
+                3,
+                0,
+                1,
+                0,
+                2,
+                0,
+                1,
+                0,
+                4,
+                0,
+                1
+              ],
+              "residues": [
+                3
+              ],
+              "nextGroups": [
+                4
+              ]
+            },
+            {
+              "word": [
+                2,
+                0,
+                1,
+                0,
+                3,
+                0,
+                1,
+                0,
+                2,
+                0,
+                1,
+                0,
+                4,
+                0,
+                1,
+                0
+              ],
+              "residues": [
+                4
+              ],
+              "nextGroups": [
+                5
+              ]
+            },
+            {
+              "word": [
+                0,
+                1,
+                0,
+                3,
+                0,
+                1,
+                0,
+                2,
+                0,
+                1,
+                0,
+                4,
+                0,
+                1,
+                0,
+                2
+              ],
+              "residues": [
+                5
+              ],
+              "nextGroups": [
+                6
+              ]
+            },
+            {
+              "word": [
+                1,
+                0,
+                3,
+                0,
+                1,
+                0,
+                2,
+                0,
+                1,
+                0,
+                4,
+                0,
+                1,
+                0,
+                2,
+                0
+              ],
+              "residues": [
+                6
+              ],
+              "nextGroups": [
+                7
+              ]
+            },
+            {
+              "word": [
+                0,
+                3,
+                0,
+                1,
+                0,
+                2,
+                0,
+                1,
+                0,
+                4,
+                0,
+                1,
+                0,
+                2,
+                0,
+                1
+              ],
+              "residues": [
+                7
+              ],
+              "nextGroups": [
+                8
+              ]
+            },
+            {
+              "word": [
+                3,
+                0,
+                1,
+                0,
+                2,
+                0,
+                1,
+                0,
+                4,
+                0,
+                1,
+                0,
+                2,
+                0,
+                1,
+                0
+              ],
+              "residues": [
+                8
+              ],
+              "nextGroups": [
+                9
+              ]
+            },
+            {
+              "word": [
+                0,
+                1,
+                0,
+                2,
+                0,
+                1,
+                0,
+                4,
+                0,
+                1,
+                0,
+                2,
+                0,
+                1,
+                0,
+                3
+              ],
+              "residues": [
+                9
+              ],
+              "nextGroups": [
+                10
+              ]
+            },
+            {
+              "word": [
+                1,
+                0,
+                2,
+                0,
+                1,
+                0,
+                4,
+                0,
+                1,
+                0,
+                2,
+                0,
+                1,
+                0,
+                3,
+                0
+              ],
+              "residues": [
+                10
+              ],
+              "nextGroups": [
+                11
+              ]
+            },
+            {
+              "word": [
+                0,
+                2,
+                0,
+                1,
+                0,
+                4,
+                0,
+                1,
+                0,
+                2,
+                0,
+                1,
+                0,
+                3,
+                0,
+                1
+              ],
+              "residues": [
+                11
+              ],
+              "nextGroups": [
+                12
+              ]
+            },
+            {
+              "word": [
+                2,
+                0,
+                1,
+                0,
+                4,
+                0,
+                1,
+                0,
+                2,
+                0,
+                1,
+                0,
+                3,
+                0,
+                1,
+                0
+              ],
+              "residues": [
+                12
+              ],
+              "nextGroups": [
+                13
+              ]
+            },
+            {
+              "word": [
+                0,
+                1,
+                0,
+                4,
+                0,
+                1,
+                0,
+                2,
+                0,
+                1,
+                0,
+                3,
+                0,
+                1,
+                0,
+                2
+              ],
+              "residues": [
+                13
+              ],
+              "nextGroups": [
+                14
+              ]
+            },
+            {
+              "word": [
+                1,
+                0,
+                4,
+                0,
+                1,
+                0,
+                2,
+                0,
+                1,
+                0,
+                3,
+                0,
+                1,
+                0,
+                2,
+                0
+              ],
+              "residues": [
+                14
+              ],
+              "nextGroups": [
+                15
+              ]
+            },
+            {
+              "word": [
+                0,
+                4,
+                0,
+                1,
+                0,
+                2,
+                0,
+                1,
+                0,
+                3,
+                0,
+                1,
+                0,
+                2,
+                0,
+                1
+              ],
+              "residues": [
+                15
+              ],
+              "nextGroups": [
+                0
+              ]
+            }
+          ]
+        ]
+      }
+    ],
+    "ca": {
+      "source": "0101010",
+      "sourceNext": "0010100",
+      "y": "0011100",
+      "cases": [
+        {
+          "rule": 128,
+          "next": "0001000",
+          "next2": "0000000",
+          "difference": "0010100",
+          "evolvedDifference": "0000000",
+          "g": "0001000"
+        },
+        {
+          "rule": 160,
+          "next": "0001000",
+          "next2": "0000000",
+          "difference": "0010100",
+          "evolvedDifference": "0001000",
+          "g": "0000000"
+        }
+      ],
+      "xorWitness": {
+        "zeroG": "0000000",
+        "oneG": "0000000",
+        "operand": "0101010",
+        "operandG": "0011100",
+        "complement": "1010101",
+        "complementG": "0111110"
+      }
+    }
+  }
+}
