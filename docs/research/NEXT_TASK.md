@@ -24,6 +24,10 @@ all 624 source-mask cases; no independent reviewer participated. It tests
 observation and compatibility, not physical repair, a published HAVOKSLAM
 algorithm or auditory-cortex physiology. Result and source-hash checks,
 publisher tests and site build are recorded in PR #302.
+The time-zero fibers have size at most two; every nonsingleton fiber pairs
+opposite task labels. Therefore, under *any* further observation that retains
+the initial visible row, task sufficiency and source identity sufficiency
+coincide on this declared domain (post-evaluation refinement deduction).
 
 Myk explicitly directed reconciliation and merging of PRs #295–#299.
 [START_HERE](START_HERE.md) is the scheduling authority;

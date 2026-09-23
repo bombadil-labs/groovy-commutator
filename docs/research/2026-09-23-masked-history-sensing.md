@@ -62,6 +62,15 @@ reconstruction attain sufficiency together here, despite their different
 definitions. This is a limit of this corpus and sensor, not a theorem that
 tasks always require reconstructing everything.
 
+There is a stronger **post-evaluation consequence** of the audited time-zero
+fibers: each has at most two sources, and every two-source fiber has opposing
+task labels. Any later observation that *retains* the time-zero view can only
+split those fibers, never merge them. Thus task identification and exact
+source identification coincide for **any** longer such history, not merely
+for the three horizons evaluated. The finite fiber audit supplies the premise;
+the refinement argument supplies the all-horizon conclusion under this
+declared source domain and fixed mask.
+
 ## Cost and interpretation
 
 Time restores information that a permanently missing spatial sensor cannot
