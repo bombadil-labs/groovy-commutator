@@ -1,0 +1,190 @@
+{
+  "created_utc": "2026-09-23T06:02:57.865624+00:00",
+  "implementation_commit": "fd2c76ebe083636a8779a0c1e1b3e2085e85ddbe",
+  "protocol_commit": "b44a27ccfda26cb75421649512e27ad1e222cef5",
+  "source_hashes": {
+    "experiments/return_target_20260923/run.py": "a39b21e2d963941d48d7c74fb1755ccc7fcd0228dd57e8dd8987994b02fb2ba1",
+    "experiments/return_target_20260923/verify.py": "8fe50d5e1d7099c0978e8c714672ab73789cdd1d09267018731936dbbd49d77a",
+    "docs/research/protocols/return-target-eligibility-20260923.md": "91a4d91c751b982ee68ab3b0f053891fd68df5d212600dced90084b2d1d2113c",
+    "src/groovy/ca.py": "6969d6f0699b48602c8a2f55aecd61d58862e6472fea56f6d1ed9ebb2656d77e"
+  },
+  "contract": {
+    "rule": 54,
+    "ring": 12,
+    "boundary": "periodic",
+    "injury_bits": 1,
+    "passive_return_horizon": 4
+  },
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "transition_sha256": "26dfccfb6a93ad962cf82e2b4a4513a642bb39c46b71874224647775c12ef10c",
+  "candidate_sha256": "38fa9aefd2112c05f940be6f626fa428e40cd9ef007ba5d71cfb4d9061e32a9e",
+  "candidate_count": 7,
+  "some_early_count": 5,
+  "eligible_count": 5,
+  "family_rows": [
+    {
+      "size": 4,
+      "period": 2,
+      "representative": 819,
+      "injuries": 48,
+      "early": 0,
+      "late": 0,
+      "never": 48,
+      "early_witness": null,
+      "not_by_four_witness": {
+        "state": 307,
+        "first_return": null
+      }
+    },
+    {
+      "size": 8,
+      "period": 4,
+      "representative": 273,
+      "injuries": 96,
+      "early": 36,
+      "late": 48,
+      "never": 12,
+      "early_witness": {
+        "state": 17,
+        "first_return": 2
+      },
+      "not_by_four_witness": {
+        "state": 275,
+        "first_return": 10
+      }
+    },
+    {
+      "size": 24,
+      "period": 4,
+      "representative": 65,
+      "injuries": 252,
+      "early": 12,
+      "late": 12,
+      "never": 228,
+      "early_witness": {
+        "state": 73,
+        "first_return": 4
+      },
+      "not_by_four_witness": {
+        "state": 1,
+        "first_return": null
+      }
+    },
+    {
+      "size": 24,
+      "period": 12,
+      "representative": 279,
+      "injuries": 240,
+      "early": 48,
+      "late": 12,
+      "never": 180,
+      "early_witness": {
+        "state": 113,
+        "first_return": 1
+      },
+      "not_by_four_witness": {
+        "state": 119,
+        "first_return": null
+      }
+    },
+    {
+      "size": 24,
+      "period": 12,
+      "representative": 285,
+      "injuries": 240,
+      "early": 48,
+      "late": 12,
+      "never": 180,
+      "early_witness": {
+        "state": 71,
+        "first_return": 1
+      },
+      "not_by_four_witness": {
+        "state": 119,
+        "first_return": null
+      }
+    },
+    {
+      "size": 48,
+      "period": 4,
+      "representative": 69,
+      "injuries": 468,
+      "early": 0,
+      "late": 0,
+      "never": 468,
+      "early_witness": null,
+      "not_by_four_witness": {
+        "state": 5,
+        "first_return": null
+      }
+    },
+    {
+      "size": 60,
+      "period": 10,
+      "representative": 33,
+      "injuries": 600,
+      "early": 96,
+      "late": 24,
+      "never": 480,
+      "early_witness": {
+        "state": 767,
+        "first_return": 2
+      },
+      "not_by_four_witness": {
+        "state": 1,
+        "first_return": null
+      }
+    }
+  ],
+  "selected": {
+    "states": [
+      273,
+      546,
+      1092,
+      1911,
+      2184,
+      3003,
+      3549,
+      3822
+    ],
+    "size": 8,
+    "period": 4,
+    "representative": 273,
+    "injuries": 96,
+    "early": 36,
+    "late": 48,
+    "never": 12,
+    "early_witness": {
+      "state": 17,
+      "first_return": 2
+    },
+    "not_by_four_witness": {
+      "state": 275,
+      "first_return": 10
+    }
+  },
+  "old_stripe": {
+    "states": [
+      819,
+      1638,
+      2457,
+      3276
+    ],
+    "injuries": 48,
+    "early": 0,
+    "late": 0,
+    "never": 48,
+    "early_witness": null,
+    "not_by_four_witness": {
+      "state": 307,
+      "first_return": null
+    }
+  },
+  "predictions": {
+    "P1": "supported",
+    "P2": "supported",
+    "P3": "supported"
+  },
+  "status": "complete",
+  "elapsed_seconds": 0.004672305003623478
+}

@@ -1,0 +1,17 @@
+[
+  {
+    "label": "Delayed repair feasibility",
+    "slug": "delayed-repair-feasibility",
+    "title": "Can a controller rescue a damaged Rule-54 target after waiting two steps?",
+    "date": "2026-09-23",
+    "updated": "2026-09-23",
+    "kind": "Finite exact obstruction",
+    "evidence": "exact",
+    "topic": "Algebra and closure",
+    "summary": "On a fixed 12-cell Rule-54 target, 36 of 96 one-bit injuries return by step four. None of the remaining 60 can be rescued by a one-bit flip after waiting two steps, even when the controller sees the full state.",
+    "takeaway": "Passive return does not imply that a delayed intervention can help. Under this action and endpoint contract, searching for a more compact observer cannot improve control.",
+    "source": "docs/research/2026-09-23-delayed-repair-feasibility.md",
+    "promotion": { "stage": "research" },
+    "related": ["prediction-repair"]
+  }
+]
