@@ -1,6 +1,30 @@
-# Next agent: five completed units integrated; choose the next contract
+# Next agent: three bounded drafts; no automatic search queued
 
 Updated 2026-09-23. Authored by Codex (OpenAI). Reviewed by: none.
+Inspected main `69c9121c627b15952d57b179a1bc6b0c95ccb29a`. There are
+three **unmerged draft** gathering PRs based on that main:
+[target eligibility #300](https://github.com/bombadil-labs/groovy-commutator/pull/300),
+[delayed action #301](https://github.com/bombadil-labs/groovy-commutator/pull/301),
+and [masked-history sensing #302](https://github.com/bombadil-labs/groovy-commutator/pull/302).
+#301 depends scientifically on #300. #302 instead uses the already
+integrated #299 source domain and is independent of #300/#301. If Myk
+directs main integration, preserve protocol/implementation/result ancestry
+on each branch and reconcile overlapping scheduling and findings prose;
+merge #300 before #301. Do not treat these drafts as accepted main results.
+
+For #302, protocol commit `7aaaef3` preceded pinned implementation
+`829fe69` and evaluation. The
+[note](2026-09-23-masked-history-sensing.md), canonical
+`results/masked_history_sensing_20260923.json`, and separate scalar audit
+record an exact known-erasure test: 52 sources × 12 hidden-cell locations,
+Rule-54 on a 12-cell periodic ring. Task-conflicting fibers at visible
+times 0, 0–1 and 0–2: **48, 24, 0**. Full-state reconstruction has the
+same counts. P1–P3 supported, P4 failed. Same-author scalar audit checked
+all 624 source-mask cases; no independent reviewer participated. It tests
+observation and compatibility, not physical repair, a published HAVOKSLAM
+algorithm or auditory-cortex physiology. Result and source-hash checks,
+publisher tests and site build are recorded in PR #302.
+
 Myk explicitly directed reconciliation and merging of PRs #295–#299.
 [START_HERE](START_HERE.md) is the scheduling authority;
 [FINDINGS](FINDINGS.md) is the accessible running account;
@@ -36,17 +60,17 @@ not an independent review. There is no standing cross-agent gate to reactivate.
 
 ## Next one to three decisions
 
-1. **Target eligibility:** does a proposed maintenance target admit genuine
-   return trajectories from outside it? Check this before searching observers.
-   The last stripe target fails that test; merely increasing delay cannot help.
-2. **Operational contract:** is the goal an external repair policy, repeated
-   disturbance tolerance, or maintenance by constraints inside the system?
-   Name the observation, actions, target, cadence, domain and cost model before
-   transferring conclusions between them.
-3. **Payoff and stopping rule:** which exact obstruction, construction or
-   negative outcome would settle the next decision? Reuse the witness interface
-   with the simplest suitable frontend. Jev setup is parked; the Prolog pilot
-   does not oblige further language comparisons.
+1. **Integration:** if Myk directs it, merge and reconcile #300 before #301;
+   #302 is independent of those two but all touch FINDINGS, START_HERE and
+   NEXT_TASK. Preserve every frozen protocol and failed prediction.
+2. **Sensing question:** obtain a concrete corruption/operator definition
+   and a task independently of the handpicked stripe source family. Only
+   then test whether task identification can strictly precede exact source
+   reconstruction with costs charged.
+3. **Maintenance question:** require a consumer or mechanism for repeated
+   disturbance tolerance or internal constraints; check passive and
+   full-state action baselines before any observer search. No nearby
+   delay/target sweep follows from #301's negative result.
 
 No next empirical unit is automatically queued by integration. Dimensional
 applications, all-rule censuses, a fourth G generation, prime-distribution claims

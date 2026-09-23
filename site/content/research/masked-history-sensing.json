@@ -1,0 +1,17 @@
+[
+  {
+    "label": "Masked history sensing",
+    "slug": "masked-history-sensing",
+    "title": "Can visible history reveal a hidden cell?",
+    "date": "2026-09-23",
+    "updated": "2026-09-23",
+    "kind": "Finite exact observation test",
+    "evidence": "exact",
+    "topic": "Observation and memory",
+    "summary": "With one known cell hidden on a 12-cell Rule-54 ring, 48 source fibers are ambiguous at the first snapshot, 24 after one update and none after two. A four-step target question and full source recovery resolve together on this fixed 52-state family.",
+    "takeaway": "Time can reveal a hidden distinction, but in this test the task-specific answer is no cheaper than exact source identification. Known observational erasure is distinct from unknown noise or physical repair.",
+    "source": "docs/research/2026-09-23-masked-history-sensing.md",
+    "promotion": { "stage": "research" },
+    "related": ["prediction-repair"]
+  }
+]
