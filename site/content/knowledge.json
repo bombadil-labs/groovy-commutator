@@ -5318,6 +5318,18 @@
       "research": [
         "prediction-repair"
       ]
+    },
+    {
+      "id": "feedback-causality",
+      "title": "A rule cannot always choose itself from its own Groovy field",
+      "kind": "finding",
+      "status": "exact",
+      "summary": "Constant ECA rules give an exact no-solution or two-solution obstruction to simultaneous G-guided rule choice. Reference-rule and lagged realized-path sensors are distinct causal alternatives.",
+      "updated": "2026-09-24",
+      "source": "docs/knowledge/feedback-causality.md",
+      "research": [
+        "feedback-causality"
+      ]
     }
   ],
   "schemaVersion": 1

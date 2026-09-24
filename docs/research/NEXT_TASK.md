@@ -1,6 +1,23 @@
 # Next agent: require a concrete operation before another search
 
 Updated 2026-09-24. Authored by Codex (OpenAI). Reviewed by: none.
+**Current continuation (inspected main `1e32518c3bfe17ea08077cd80fc03c1697c8b36f`):**
+[The feedback-causality note](2026-09-24-feedback-causality.md) proves that
+`r=F(G_r(s))` need not specify a next rule. Constant ECA 0/255 give G fields
+0/1 for every state: an opposite selector has no fixed point, while a
+matching selector has two. The note supplies two causal contracts: a fixed
+reference rule's counterfactual G, and an already completed mixed-rule
+residual with two-step history. This is an exact policy-definition correction,
+not a feedback performance test. The finite Rule-30 observer-orbit result in
+PR #305 remains unchanged. No empirical unit is currently queued.
+
+**Next decisions:** (1) find an independently motivated target with genuine
+return/maintenance and a declared perturbation process, then test whether
+full-state actions can improve on passive evolution; (2) only if that gate
+passes, select a causal sensor contract and pre-register matched fixed-rule,
+clocked and controller-track costs. If no independent consumer or target
+appears, park H3. Preserve the negative Rule-54 full-state repair gate.
+
 Latest unit: the [observer-orbit hypotheses](2026-09-24-observer-orbit-program.md)
 and [frozen Rule-30 preflight](protocols/observer-orbit-preflight-20260924.md)
 were prepared against inspected main `37a3429e436060d6e6ee1662ca4b7d9d169c000d`.
