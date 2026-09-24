@@ -1,6 +1,13 @@
 # Next agent: require a concrete operation before another search
 
 Updated 2026-09-24. Authored by Codex (OpenAI). Reviewed by: none.
+New bounded question: the
+[observer-orbit hypotheses](2026-09-24-observer-orbit-program.md) and
+[frozen Rule-30 preflight](protocols/observer-orbit-preflight-20260924.md)
+were prepared against main `37a3429e436060d6e6ee1662ca4b7d9d169c000d`.
+Test one six-cell ring and periods at most six; preserve the predictions,
+source-compatible cycle witnesses and both controls. A negative ends that
+example; no selector search or rule census follows from this protocol.
 The maintained [observation/law taxonomy](2026-09-24-observation-law-taxonomy.md)
 defines the distinct same-rule, factor, recursive and controlled-switching
 questions. It adds no empirical unit; require a specified operation and
@@ -101,7 +108,7 @@ not an independent review. There is no standing cross-agent gate to reactivate.
    reproducing check contradicts it; preserve original result bytes and
    failed predictions.
 
-No next empirical unit is automatically queued. Dimensional applications,
+Only the declared six-cell observer-orbit preflight is queued. Dimensional applications,
 all-rule censuses, a fourth G generation, prime-distribution claims and the
 archived hard recoder campaign remain outside the current task. The earlier
 [research-drive synthesis](2026-09-22-research-drive-synthesis.md) remains

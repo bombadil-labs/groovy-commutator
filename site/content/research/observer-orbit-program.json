@@ -1,0 +1,17 @@
+[
+  {
+    "label": "Observer-relative orbit dynamics",
+    "slug": "observer-orbit-program",
+    "title": "Which observed cycles can a system actually follow?",
+    "date": "2026-09-24",
+    "updated": "2026-09-24",
+    "kind": "Research program",
+    "evidence": "open",
+    "topic": "Observation and memory",
+    "summary": "A bounded program separates real source orbits from phantom observed cycles, then asks whether a causal observer can select rules that maintain structure under matched resource budgets.",
+    "takeaway": "Periodic-orbit zeta functions organize recurrence; exact source-compatible witnesses and costed feedback are the decisions that matter.",
+    "source": "docs/research/2026-09-24-observer-orbit-program.md",
+    "promotion": { "stage": "research" },
+    "related": ["observation-law-taxonomy", "groovy-field-census", "observation-discovery"]
+  }
+]

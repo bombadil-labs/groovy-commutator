@@ -117,6 +117,9 @@ being sought. The sharper question is whether a local observer/selector can
 maintain the condition for its own future rule changes, under fair baselines.
 No search is scheduled until an operation, target, resource bound and
 negative-result stopping decision are written down.
+The subsequently frozen [observer-orbit program](2026-09-24-observer-orbit-program.md)
+begins with a single finite-ring observation check; its causal feedback
+hypothesis remains conditional on a separate operational contract.
 
 Temporally switched CA and memory-enriched ECA have existing research
 literatures; changing the rule or adding a clock is not itself a novelty
