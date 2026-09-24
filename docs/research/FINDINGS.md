@@ -733,12 +733,30 @@ or by causal reference-rule G, and gave each group its best common action.
 We found that G merges 1,054 raw decision states into 850 observed words yet
 still matches the full-state ceiling, 408 successes; our prediction that it
 would lose a rescue **failed**. This is information sufficiency on one
-finite ring. Computing G reads all 34 current bits and adds three full-ring
-Rule-54 evaluations; a held-cell address still needs coordination. No
+finite ring. Computing G reads all 34 current bits and uses three full-ring
+Rule-54 evaluations in total (two additional if the native update's first
+pass can be shared); a held-cell address still needs coordination. No
 local policy or efficiency gain has been established. A next comparison
 must pit a locally implemented G selector against a raw selector with the
 same source footprint and price all those costs.
 [Frozen gate and evidence](2026-09-24-rule54-g-sensor-gate.md).
+
+## 2026-09-24: a simple raw neighborhood finds repair sites that one G bit misses
+
+We were curious whether the entire G field's repair information could
+be used by a local one-bit trigger at each site. We kept the 1,156 Rule-54
+trials and compared the same unique-site hold arbiter fed by one G bit,
+one E or D bit, or one exact five-bit raw neighborhood pattern.
+
+We found that neither G bit value ever uniquely identifies a site on
+these trials. It ties noop at 340 successes; our predicted G gain failed.
+A raw five-bit pattern, using the same radius-two source footprint, scores
+374: 34 additional rescues and no harmed passive successes. It still
+falls short of the full-field 408 ceiling. This is a negative for **this
+one-trigger grammar**, not for every G-based selector. It gives us no
+reason to launch a 255-rule discriminator sweep, whose rule-specific
+repair targets and action feasibility have not been specified.
+[Exact local comparison and stopping decision](2026-09-24-rule54-local-sensor-gate.md).
 
 ## Keeping this useful
 

@@ -1,0 +1,17 @@
+[
+  {
+    "label": "Rule-54 local sensor gate",
+    "slug": "rule54-local-sensor-gate",
+    "title": "Can a local Groovy bit select a repair site?",
+    "date": "2026-09-24",
+    "updated": "2026-09-24",
+    "kind": "Exact finite-ring controller-grammar comparison",
+    "evidence": "exact",
+    "topic": "Observation and memory",
+    "summary": "On the frozen Rule-54 route task, a one-bit G trigger never picks a unique site (340/1,156), while one raw five-bit pattern rescues 34 more trials under the same arbiter (374/1,156).",
+    "takeaway": "The complete G field still retains the repair decision, but this local G grammar has no advantage over a simpler raw selector. No cross-rule repair sweep is warranted by it.",
+    "source": "docs/research/2026-09-24-rule54-local-sensor-gate.md",
+    "promotion": { "stage": "research" },
+    "related": ["rule54-g-sensor-gate", "rule54-glider-route-gate", "observer-orbit-program"]
+  }
+]

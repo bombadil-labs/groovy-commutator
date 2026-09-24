@@ -38,9 +38,16 @@ The subsequent [fixed-reference G information gate](2026-09-24-rule54-g-sensor-g
 shows that the complete G field retains the full-state 408/1,156 ceiling
 while grouping 1,054 current states into 850 observed words. The prediction
 of information loss failed. This upper bound still reads all 34 current
-bits and pays three additional Rule-54 evaluations; no local selector or
-cost advantage is established. The next question is a matched local
-address-and-cost contract, if it can change the decision.
+bits and pays three total Rule-54 evaluations (two additional if the
+native update's first pass is shared); no local selector or cost advantage
+was established. The subsequent [matched local trigger gate](2026-09-24-rule54-local-sensor-gate.md)
+finds that G-bit triggers never choose a unique repair address, while one
+raw five-bit pattern rescues 34 additional trials under the same arbiter.
+This negative is limited to that frozen one-bit G grammar. **Do not start
+a full-ECA repair-discriminator sweep:** independent native targets and
+positive action-feasibility gates are missing, and this proposed local
+G advantage failed on the existing target. A fresh Rule-110 target
+requires its own justification, not automatic transfer from Rule 54.
 
 ## Current agenda after integration
 

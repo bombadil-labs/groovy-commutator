@@ -1,0 +1,450 @@
+{
+  "cost": {
+    "address_flags_emitted": 34,
+    "compiled_g_table_bits_uncompressed": 32,
+    "native_g_extra_rule_passes_if_base_step_reused": 2,
+    "native_g_rule_passes_total": 3,
+    "source_reads_per_site_g_or_compiled": 5
+  },
+  "families": {
+    "compiled_g": {
+      "best": {
+        "harm_witness": null,
+        "harms": 0,
+        "rescue_witness": null,
+        "rescues": 0,
+        "score": 340,
+        "unique": 0
+      },
+      "best_predicate": null,
+      "menu": {
+        "0": {
+          "harm_witness": null,
+          "harms": 0,
+          "rescue_witness": null,
+          "rescues": 0,
+          "score": 340,
+          "unique": 0
+        },
+        "1": {
+          "harm_witness": null,
+          "harms": 0,
+          "rescue_witness": null,
+          "rescues": 0,
+          "score": 340,
+          "unique": 0
+        }
+      }
+    },
+    "d": {
+      "best": {
+        "harm_witness": null,
+        "harms": 0,
+        "rescue_witness": null,
+        "rescues": 0,
+        "score": 340,
+        "unique": 0
+      },
+      "best_predicate": null,
+      "menu": {
+        "0": {
+          "harm_witness": null,
+          "harms": 0,
+          "rescue_witness": null,
+          "rescues": 0,
+          "score": 340,
+          "unique": 0
+        },
+        "1": {
+          "harm_witness": null,
+          "harms": 0,
+          "rescue_witness": null,
+          "rescues": 0,
+          "score": 340,
+          "unique": 0
+        }
+      }
+    },
+    "e": {
+      "best": {
+        "harm_witness": null,
+        "harms": 0,
+        "rescue_witness": null,
+        "rescues": 0,
+        "score": 340,
+        "unique": 0
+      },
+      "best_predicate": null,
+      "menu": {
+        "0": {
+          "harm_witness": null,
+          "harms": 0,
+          "rescue_witness": null,
+          "rescues": 0,
+          "score": 340,
+          "unique": 0
+        },
+        "1": {
+          "harm_witness": null,
+          "harms": 0,
+          "rescue_witness": null,
+          "rescues": 0,
+          "score": 340,
+          "unique": 0
+        }
+      }
+    },
+    "g": {
+      "best": {
+        "harm_witness": null,
+        "harms": 0,
+        "rescue_witness": null,
+        "rescues": 0,
+        "score": 340,
+        "unique": 0
+      },
+      "best_predicate": null,
+      "menu": {
+        "0": {
+          "harm_witness": null,
+          "harms": 0,
+          "rescue_witness": null,
+          "rescues": 0,
+          "score": 340,
+          "unique": 0
+        },
+        "1": {
+          "harm_witness": null,
+          "harms": 0,
+          "rescue_witness": null,
+          "rescues": 0,
+          "score": 340,
+          "unique": 0
+        }
+      }
+    },
+    "raw": {
+      "best": {
+        "harm_witness": null,
+        "harms": 0,
+        "rescue_witness": [
+          0,
+          24,
+          24
+        ],
+        "rescues": 34,
+        "score": 374,
+        "unique": 102
+      },
+      "best_predicate": 19,
+      "menu": {
+        "0": {
+          "harm_witness": null,
+          "harms": 0,
+          "rescue_witness": null,
+          "rescues": 0,
+          "score": 340,
+          "unique": 170
+        },
+        "1": {
+          "harm_witness": null,
+          "harms": 0,
+          "rescue_witness": null,
+          "rescues": 0,
+          "score": 340,
+          "unique": 714
+        },
+        "10": {
+          "harm_witness": null,
+          "harms": 0,
+          "rescue_witness": null,
+          "rescues": 0,
+          "score": 340,
+          "unique": 136
+        },
+        "11": {
+          "harm_witness": null,
+          "harms": 0,
+          "rescue_witness": null,
+          "rescues": 0,
+          "score": 340,
+          "unique": 952
+        },
+        "12": {
+          "harm_witness": null,
+          "harms": 0,
+          "rescue_witness": null,
+          "rescues": 0,
+          "score": 340,
+          "unique": 68
+        },
+        "13": {
+          "harm_witness": null,
+          "harms": 0,
+          "rescue_witness": null,
+          "rescues": 0,
+          "score": 340,
+          "unique": 0
+        },
+        "14": {
+          "harm_witness": null,
+          "harms": 0,
+          "rescue_witness": null,
+          "rescues": 0,
+          "score": 340,
+          "unique": 204
+        },
+        "15": {
+          "harm_witness": null,
+          "harms": 0,
+          "rescue_witness": null,
+          "rescues": 0,
+          "score": 340,
+          "unique": 476
+        },
+        "16": {
+          "harm_witness": null,
+          "harms": 0,
+          "rescue_witness": null,
+          "rescues": 0,
+          "score": 340,
+          "unique": 714
+        },
+        "17": {
+          "harm_witness": null,
+          "harms": 0,
+          "rescue_witness": null,
+          "rescues": 0,
+          "score": 340,
+          "unique": 0
+        },
+        "18": {
+          "harm_witness": null,
+          "harms": 0,
+          "rescue_witness": null,
+          "rescues": 0,
+          "score": 340,
+          "unique": 102
+        },
+        "19": {
+          "harm_witness": null,
+          "harms": 0,
+          "rescue_witness": [
+            0,
+            24,
+            24
+          ],
+          "rescues": 34,
+          "score": 374,
+          "unique": 102
+        },
+        "2": {
+          "harm_witness": null,
+          "harms": 0,
+          "rescue_witness": null,
+          "rescues": 0,
+          "score": 340,
+          "unique": 0
+        },
+        "20": {
+          "harm_witness": null,
+          "harms": 0,
+          "rescue_witness": null,
+          "rescues": 0,
+          "score": 340,
+          "unique": 884
+        },
+        "21": {
+          "harm_witness": null,
+          "harms": 0,
+          "rescue_witness": null,
+          "rescues": 0,
+          "score": 340,
+          "unique": 0
+        },
+        "22": {
+          "harm_witness": null,
+          "harms": 0,
+          "rescue_witness": null,
+          "rescues": 0,
+          "score": 340,
+          "unique": 0
+        },
+        "23": {
+          "harm_witness": [
+            0,
+            25,
+            30
+          ],
+          "harms": 68,
+          "rescue_witness": null,
+          "rescues": 0,
+          "score": 272,
+          "unique": 204
+        },
+        "24": {
+          "harm_witness": null,
+          "harms": 0,
+          "rescue_witness": null,
+          "rescues": 0,
+          "score": 340,
+          "unique": 408
+        },
+        "25": {
+          "harm_witness": null,
+          "harms": 0,
+          "rescue_witness": [
+            0,
+            26,
+            26
+          ],
+          "rescues": 34,
+          "score": 374,
+          "unique": 102
+        },
+        "26": {
+          "harm_witness": null,
+          "harms": 0,
+          "rescue_witness": null,
+          "rescues": 0,
+          "score": 340,
+          "unique": 952
+        },
+        "27": {
+          "harm_witness": null,
+          "harms": 0,
+          "rescue_witness": null,
+          "rescues": 0,
+          "score": 340,
+          "unique": 272
+        },
+        "28": {
+          "harm_witness": [
+            0,
+            21,
+            24
+          ],
+          "harms": 68,
+          "rescue_witness": null,
+          "rescues": 0,
+          "score": 272,
+          "unique": 442
+        },
+        "29": {
+          "harm_witness": [
+            0,
+            21,
+            28
+          ],
+          "harms": 68,
+          "rescue_witness": null,
+          "rescues": 0,
+          "score": 272,
+          "unique": 204
+        },
+        "3": {
+          "harm_witness": null,
+          "harms": 0,
+          "rescue_witness": null,
+          "rescues": 0,
+          "score": 340,
+          "unique": 408
+        },
+        "30": {
+          "harm_witness": null,
+          "harms": 0,
+          "rescue_witness": null,
+          "rescues": 0,
+          "score": 340,
+          "unique": 476
+        },
+        "31": {
+          "harm_witness": null,
+          "harms": 0,
+          "rescue_witness": null,
+          "rescues": 0,
+          "score": 340,
+          "unique": 0
+        },
+        "4": {
+          "harm_witness": null,
+          "harms": 0,
+          "rescue_witness": null,
+          "rescues": 0,
+          "score": 340,
+          "unique": 0
+        },
+        "5": {
+          "harm_witness": null,
+          "harms": 0,
+          "rescue_witness": null,
+          "rescues": 0,
+          "score": 340,
+          "unique": 884
+        },
+        "6": {
+          "harm_witness": null,
+          "harms": 0,
+          "rescue_witness": null,
+          "rescues": 0,
+          "score": 340,
+          "unique": 68
+        },
+        "7": {
+          "harm_witness": [
+            0,
+            25,
+            22
+          ],
+          "harms": 68,
+          "rescue_witness": null,
+          "rescues": 0,
+          "score": 272,
+          "unique": 442
+        },
+        "8": {
+          "harm_witness": null,
+          "harms": 0,
+          "rescue_witness": null,
+          "rescues": 0,
+          "score": 340,
+          "unique": 0
+        },
+        "9": {
+          "harm_witness": null,
+          "harms": 0,
+          "rescue_witness": null,
+          "rescues": 0,
+          "score": 340,
+          "unique": 102
+        }
+      }
+    }
+  },
+  "fixed": {
+    "harm_witness": null,
+    "harms": 0,
+    "rescue_witness": null,
+    "rescues": 0,
+    "score": 340,
+    "unique": 0
+  },
+  "full_state_ceiling": 408,
+  "g_local_truth_table": 919354048,
+  "implementation_commit": "0a08aa45bb79d61c405bf488bf25b42bbbb5b96f",
+  "predictions": {
+    "P1_g_exceeds_fixed": "failed",
+    "P2_cheap_simple_matches_g": "supported",
+    "P3_compiled_g_matches": "supported"
+  },
+  "protocol": "docs/research/protocols/2026-09-24-rule54-local-sensor-gate.md",
+  "schema": "rule54-local-sensor-gate-v1",
+  "source": "results/rule54_glider_route_gate_20260924.json",
+  "source_hashes": {
+    "docs/research/protocols/2026-09-24-rule54-local-sensor-gate.md": "370d0d0131f5e93063b76ebd7d8f5d78dc833b21baa410f0a17e8f555ae347bd",
+    "experiments/rule54_local_sensor_gate_20260924/run.py": "c83a43fef63ddef758ca9e72e1422a561cb82643af09c52166c409dcdd1981a9",
+    "experiments/rule54_local_sensor_gate_20260924/verify.py": "2a81ce9749f3b4b3f26416c519dfb85455361b3d34dc3cd14793a17c36a81799"
+  },
+  "source_sha256": "b390b49d3506b5e78e45fbcbd3de710bdcad60b3b0a6d21054e1dc276d166f75",
+  "trials": 1156
+}
