@@ -71,6 +71,15 @@ one-shot full-state feasibility, not H3's claimed G advantage or
 indefinite maintenance. Any sensor follow-up must compare G with raw
 local fault localization and price address coordination.
 
+**H3 information gate, completed:** [the fixed-reference G sensor
+comparison](2026-09-24-rule54-g-sensor-gate.md) finds that the whole
+G field still permits all 408 successes on the same 1,156 cases while
+collapsing 1,054 raw states into 850 observation fibers. The prospectively
+predicted information loss failed. G must first read all 34 raw bits and
+perform three extra Rule-54 evaluations. No local selector or cheaper
+feedback mechanism has been shown; matched raw-local access and total
+address-coordination costs are the only reason to continue H3 here.
+
 ## Scope and prior art
 
 Every finite deterministic map has a rational orbit zeta function. A

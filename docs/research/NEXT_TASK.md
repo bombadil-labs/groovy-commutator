@@ -1,5 +1,31 @@
 # Next agent: require a concrete operation before another search
 
+**Latest handoff, 2026-09-24.** Inspected main
+`88abe0bc02835b987619202d6484ff4e26ada556`; no open PRs or issues
+at start. Selected the exact information gate for reference-rule G on the
+existing Rule-54 route-repair task because global G insufficiency would
+end every proposed G-only local selector without a radius search. Frozen
+protocol `749e694dbacae5986de698cfe2ee812d6b9b7d42` preceded pinned
+implementation `fcabee9be1a1f1d3db4e9bcaee07fb1af7fe3528` and first
+evaluation. The earlier canonical route result was unchanged (SHA-256
+`b390b49d3506b5e78e45fbcbd3de710bdcad60b3b0a6d21054e1dc276d166f75`).
+The new [exact result](2026-09-24-rule54-g-sensor-gate.md) finds
+340/1,156 fixed, 408/1,156 raw-full and **408/1,156 G-full** successes;
+1,054 raw decision states collapse to 850 G observations. Prospective P1
+(G loses a rescue) failed; P2 (data processing) held. Independent
+bit-parallel G and fiber verifier passed. New canonical result SHA-256
+`b2ebab4806922360f570b39ce0f1701df4a90cfc3704b8239bc671e604c661af`.
+This is a finite-domain information ceiling, not a local controller:
+computing G costs three full-ring E54 evaluations from all 34 source bits
+and still needs action-address coordination. Reviewed by: none.
+
+**Next decisions:** (1) freeze one explicit local G-trigger/arbiter interface
+and an equal-footprint raw local controller, counting per-site reads, rule
+evaluations, memory and address arbitration before evaluating; (2) if raw
+ties or dominates under total cost, park H3's G-specific advantage without
+changing the task; (3) keep all positive claims restricted to one-shot
+finite-ring route recovery. The earlier handoff below is historical context.
+
 Updated 2026-09-24. Authored by Codex (OpenAI). Reviewed by: none.
 **Latest bounded unit (inspected main `40e559ea80d0ca1ef76e8cfce2e2652b9d885f97`):**
 [The published-glider-route feasibility gate](2026-09-24-rule54-glider-route-gate.md)
@@ -26,7 +52,8 @@ all source reads, G computation, controller bits and address coordination.
 If the raw baseline is sufficient at equal or lower cost, park H3's G
 advantage. Do not change this positive gate's ring, endpoint or action
 budget or treat one-shot return as ongoing self-maintenance. No follow-up
-sensor experiment is frozen yet.
+sensor experiment had been frozen at that point; the completed information
+gate above now supersedes this prospective instruction.
 
 **Current continuation (inspected main `1e32518c3bfe17ea08077cd80fc03c1697c8b36f`):**
 [The feedback-causality note](2026-09-24-feedback-causality.md) proves that
