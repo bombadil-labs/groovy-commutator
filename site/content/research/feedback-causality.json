@@ -1,0 +1,17 @@
+[
+  {
+    "label": "Feedback causality",
+    "slug": "feedback-causality",
+    "title": "Can a rule choose itself using its own G?",
+    "date": "2026-09-24",
+    "updated": "2026-09-24",
+    "kind": "Exact policy-definition obstruction",
+    "evidence": "exact",
+    "topic": "Observation and memory",
+    "summary": "A simultaneous G-guided rule selector can have zero or multiple solutions even with constant elementary rules. Fixed-reference G and lagged realized-path residuals give two distinct causal alternatives.",
+    "takeaway": "Name and price the sensor before looking for a feedback benefit. No maintenance target or policy performance was tested.",
+    "source": "docs/research/2026-09-24-feedback-causality.md",
+    "promotion": { "stage": "research" },
+    "related": ["observer-orbit-program", "observation-law-taxonomy", "observer-orbit-preflight", "delayed-repair-feasibility"]
+  }
+]

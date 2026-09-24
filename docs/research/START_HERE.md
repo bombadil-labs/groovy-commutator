@@ -24,6 +24,11 @@ observer invents cycles on one six-cell ring, while the identity and valid
 three-row history controls do not through period six.
 Feedback and Class-IV-like behaviour are contingent later questions, not
 outcomes of an orbit-counting preflight.
+The subsequent [causality note](2026-09-24-feedback-causality.md) proves that
+choosing a rule from the G field of that same as-yet-unchosen rule need not
+define an update at all. Specify either fixed-reference G or a lagged
+realized-path residual before any policy search; neither supplies the missing
+independent maintenance target.
 
 ## Current agenda after integration
 

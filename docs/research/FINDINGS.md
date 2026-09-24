@@ -687,6 +687,23 @@ belong to incompatible hidden states. We did not test rule selection,
 maintenance, Class IV or computational advantage.
 [Exact counts, witness and limits](2026-09-24-observer-orbit-preflight.md).
 
+## 2026-09-24: a rule selector cannot always consult its own G
+
+We were curious what it means for a changing-rule CA to choose its next
+rule using G. We tried the two simplest candidate rules, all-zero and
+all-one output, and asked for each rule's G *before* choosing which rule
+to apply. We found a small exact obstruction: the candidate G field is
+all zeros or all ones respectively. A selector that chooses the opposite
+rule has no consistent choice; one that chooses the matching rule has two.
+
+We can make a causal experiment by using G under a fixed reference rule,
+or by using a residual from completed past steps. The latter mixes rules
+when the schedule changes, so we must name what it measures and pay for
+its memory and latency. **Exact policy-definition correction, not a
+feedback benefit:** we still need an independently specified target before
+testing whether such a controller helps.
+[Proof and causal interfaces](2026-09-24-feedback-causality.md).
+
 ## Keeping this useful
 
 After a completed or stopped unit, update its entry or add one short account:

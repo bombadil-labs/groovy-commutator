@@ -110,6 +110,10 @@ updates and storage. A future-dependent `G` computed from a rule that has
 not yet been chosen makes a circular policy; use a declared reference rule
 or an already available lagged observation. If changing the rule changes
 which derivative is meant, explicitly define that time-dependent derivative.
+An [exact constant-rule counterexample](2026-09-24-feedback-causality.md)
+makes the circularity operational: a simultaneous `r=F(G_r(s))` can have
+zero or two valid rule choices. The note specifies causal reference-rule and
+lagged mixed-rule residual interfaces and their distinct costs.
 
 This is a **design question**, not an empirical finding or a definition of
 Class IV. An externally supplied rule sequence can carry the organization

@@ -52,6 +52,14 @@ period six. This supports H1 at the specified ring and validates H2 as a
 prior-result calibration there. It offers no evidence for H3 and does not
 queue a feedback experiment without an independently specified target.
 
+**H3 causal prerequisite, exact:** [the rule-choice obstruction](2026-09-24-feedback-causality.md)
+shows that the simultaneous instruction “choose a rule from its own G” can
+have either no solution or multiple solutions, even using the two constant
+ECAs on any ring. Choose a fixed-reference counterfactual G or a suitably
+lagged realized-path residual before specifying a controller; these are
+different sensors with different costs and meanings. This clears a policy
+definition, not H3's independent target or empirical test.
+
 ## Scope and prior art
 
 Every finite deterministic map has a rational orbit zeta function. A
