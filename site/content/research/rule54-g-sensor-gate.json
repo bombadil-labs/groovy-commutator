@@ -9,7 +9,7 @@
     "evidence": "exact",
     "topic": "Observation and memory",
     "summary": "The complete reference-rule G field matches the full-state 408/1,156 route-repair ceiling while collapsing 1,054 decision states to 850 observations; the predicted loss failed.",
-    "takeaway": "Information sufficiency does not make G a cheaper or local controller. It reads all 34 raw bits, needs three extra Rule-54 evaluations, and still must address one held site.",
+    "takeaway": "Information sufficiency does not make G a cheaper or local controller. It reads all 34 raw bits, needs three Rule-54 evaluations total (two extra if the native update is shared), and still must address one held site.",
     "source": "docs/research/2026-09-24-rule54-g-sensor-gate.md",
     "promotion": { "stage": "research" },
     "related": ["rule54-glider-route-gate", "observer-orbit-program", "feedback-causality"]

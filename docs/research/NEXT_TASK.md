@@ -1,5 +1,42 @@
 # Next agent: require a concrete operation before another search
 
+**Latest handoff, 2026-09-24: local sensor gate and sweep decision.**
+Inspected main `4515a5e43ab329d584b306601dbe4a4e27088eb7`, with no
+open issues or PRs. Myk asked whether Rule 110 and other ECAs might share
+the complete G field's Rule-54 repair sufficiency, and authorized working
+until deciding whether a full sweep was justified. The highest-impact
+prerequisite was the [matched local Rule-54 comparison](2026-09-24-rule54-local-sensor-gate.md),
+since the 408/1,156 full-field ceiling does not implement an addressed
+local intervention. Protocol freeze `0cacece9ff8d72fa99bf61e6bda57e6f3713ba3f`
+and pinned implementation `0a08aa45bb79d61c405bf488bf25b42bbbb5b96f`
+preceded evaluation on [gathering PR #309](https://github.com/bombadil-labs/groovy-commutator/pull/309).
+Original outcome JSON was unchanged, SHA-256
+`b390b49d3506b5e78e45fbcbd3de710bdcad60b3b0a6d21054e1dc276d166f75`.
+New canonical result SHA-256
+`04374a9ec5b0a5c67ecdea92d2cffde6784cdba0f6d8460c43cb1267afce7970`.
+
+Result: best fixed/noop, G-bit, E-bit and D-bit unique-site triggers all
+score 340/1,156; best five-bit raw equality scores **374/1,156**, with
+34 additional rescues, no harmed passive successes, and the same
+radius-two source footprint and address arbiter. Full-field G/raw
+information upper bound remains 408. Prospective P1 failed, P2/P3 held;
+the independent scalar verifier rechecks the five-bit G table and all
+policy outcomes. Post hoc, every G field has 4–10 ones, so a one-bit
+predicate never selects exactly one site. Cost correction: full G
+requires three E passes total, **two additional** if the physical
+`E(s)` update is reused; all selectors share address coordination.
+Reviewed by: none. Historical evidence and failed predictions remain.
+
+**Decision:** do not run a 255-rule sweep. This particular local G policy
+failed its gain prediction even against a simple raw selector, and the
+cross-rule statistic would require independently defined native targets,
+perturbations and positive intervention gates. No Rule-110 repair claim
+was evaluated. Its established nonautonomy result concerns a different
+operation. A future Rule-110 unit first needs an independent repair target
+and full-state-vs-fixed feasibility gate; no such unit is queued to rescue
+this failed discriminator proposal. The earlier handoffs below remain
+historical provenance.
+
 **Latest handoff, 2026-09-24.** Inspected main
 `88abe0bc02835b987619202d6484ff4e26ada556`; no open PRs or issues
 at start. Selected the exact information gate for reference-rule G on the

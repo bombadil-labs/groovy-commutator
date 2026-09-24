@@ -76,9 +76,19 @@ comparison](2026-09-24-rule54-g-sensor-gate.md) finds that the whole
 G field still permits all 408 successes on the same 1,156 cases while
 collapsing 1,054 raw states into 850 observation fibers. The prospectively
 predicted information loss failed. G must first read all 34 raw bits and
-perform three extra Rule-54 evaluations. No local selector or cheaper
+perform three Rule-54 evaluations in total (two additional if the
+physical update's first pass can be reused). No local selector or cheaper
 feedback mechanism has been shown; matched raw-local access and total
 address-coordination costs are the only reason to continue H3 here.
+
+**H3 local trigger gate, completed:** [the matched one-site
+comparison](2026-09-24-rule54-local-sensor-gate.md) found no dynamic
+rescue from either `G_i` bit trigger (340/1,156), whereas a five-bit raw
+source pattern with the same source radius and address arbiter gets
+374/1,156. The global G information result still stands; this specific
+policy has no G advantage. Park the proposed cross-rule H3
+discriminator campaign; independent Rule-110 feasibility and comparable
+rule-specific targets would be prerequisites to any future small panel.
 
 ## Scope and prior art
 

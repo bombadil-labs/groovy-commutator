@@ -40,7 +40,11 @@ general, or establish out-of-domain accuracy.
 Both full-field observations require access to all 34 current source bits.
 Raw readout needs no additional Rule-54 update; calculating G from this
 snapshot requires three full-ring Rule-54 evaluations and intermediate
-fields/XORs. A central selector must still communicate a hold/noop flag
+fields/XORs. **Cost clarification after the local follow-up:** the first
+`E(s)` evaluation can be shared with the next physical update if that
+output is available before selecting the hold; this leaves two *additional*
+passes, rather than three additional passes. A central selector must still
+communicate a hold/noop flag
 and one of 34 addresses (six bits suffice) and gather information across
 the ring. Using a literal 34-bit key and six-bit action per observed word
 would give uncompressed tables of 42,160 bits for raw states and 34,000
@@ -80,3 +84,10 @@ Our independent bit-parallel evaluator rechecks G and the exact observation
 groups. Neither script constitutes an independent peer review. The ring
 adaptation remains a one-shot finite target inspired by published glider
 encodings, not a glider-persistence proof or a Class-IV result.
+
+**Subsequent local decision:** the [frozen one-trigger gate](2026-09-24-rule54-local-sensor-gate.md)
+found that `G_i=0/1` never uniquely selects a site, while one raw
+five-bit source pattern rescues 34 further trials under identical
+address arbitration. The complete G field remains sufficient in the
+original information sense; a one-bit G trigger is insufficient in
+this specified local policy grammar.
