@@ -1,0 +1,33 @@
+{
+  "best_fixed_score": 340,
+  "cost": {
+    "central_address_bits": 6,
+    "g_rule_evaluations": 3,
+    "g_source_bits_read": 34,
+    "g_table_uncompressed_bits": 34000,
+    "source_bits_read": 34,
+    "source_rule_evaluations": 0,
+    "source_table_uncompressed_bits": 42160
+  },
+  "full_g_fibers": 850,
+  "full_g_score": 408,
+  "full_source_fibers": 1054,
+  "full_source_score": 408,
+  "g_witness": null,
+  "implementation_commit": "fcabee9be1a1f1d3db4e9bcaee07fb1af7fe3528",
+  "loss_from_source": 0,
+  "predictions": {
+    "P1_g_loses_at_least_one": "failed",
+    "P2_g_never_beats_source": "supported"
+  },
+  "protocol": "docs/research/protocols/2026-09-24-rule54-g-sensor-gate.md",
+  "schema": "rule54-g-sensor-gate-v1",
+  "source": "results/rule54_glider_route_gate_20260924.json",
+  "source_hashes": {
+    "docs/research/protocols/2026-09-24-rule54-g-sensor-gate.md": "1e1ca3ad3080b47201f780656880d3b72a8c0158bfeb0ff4744af41ef9111086",
+    "experiments/rule54_g_sensor_gate_20260924/run.py": "7a7123894f2cb7500976658c1ee43918935e38b66e6dc0f7cd586eab052f312d",
+    "experiments/rule54_g_sensor_gate_20260924/verify.py": "289ff2a784db25d622e3b25730ef306a55fb6d339ecfdb1e986f0af8c3850a53"
+  },
+  "source_sha256": "b390b49d3506b5e78e45fbcbd3de710bdcad60b3b0a6d21054e1dc276d166f75",
+  "trials": 1156
+}

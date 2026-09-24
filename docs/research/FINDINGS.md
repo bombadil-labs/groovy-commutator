@@ -723,6 +723,23 @@ The published encodings motivate the seed; the finite-ring route is our
 adaptation, not a proof of glider identity at every time.
 [Full result, limits and independent replay](2026-09-24-rule54-glider-route-gate.md).
 
+## 2026-09-24: G retains this repair decision but has no demonstrated cost advantage
+
+We were curious whether the whole Rule-54 G field would lose a distinction
+needed to choose a held cell for the route-repair task. We froze the old
+1,156 trials and their action outcomes, grouped them by current raw state
+or by causal reference-rule G, and gave each group its best common action.
+
+We found that G merges 1,054 raw decision states into 850 observed words yet
+still matches the full-state ceiling, 408 successes; our prediction that it
+would lose a rescue **failed**. This is information sufficiency on one
+finite ring. Computing G reads all 34 current bits and adds three full-ring
+Rule-54 evaluations; a held-cell address still needs coordination. No
+local policy or efficiency gain has been established. A next comparison
+must pit a locally implemented G selector against a raw selector with the
+same source footprint and price all those costs.
+[Frozen gate and evidence](2026-09-24-rule54-g-sensor-gate.md).
+
 ## Keeping this useful
 
 After a completed or stopped unit, update its entry or add one short account:

@@ -34,6 +34,13 @@ now finds delayed repair opportunities using a single held-site rule
 switch. A known-injury-address oracle matches the full-state bound, so
 the decision is whether a G sensor earns its acquisition and coordination
 cost against plain local fault localization. No G selector was tested.
+The subsequent [fixed-reference G information gate](2026-09-24-rule54-g-sensor-gate.md)
+shows that the complete G field retains the full-state 408/1,156 ceiling
+while grouping 1,054 current states into 850 observed words. The prediction
+of information loss failed. This upper bound still reads all 34 current
+bits and pays three additional Rule-54 evaluations; no local selector or
+cost advantage is established. The next question is a matched local
+address-and-cost contract, if it can change the decision.
 
 ## Current agenda after integration
 
