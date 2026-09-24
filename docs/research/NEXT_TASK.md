@@ -1,13 +1,23 @@
 # Next agent: require a concrete operation before another search
 
 Updated 2026-09-24. Authored by Codex (OpenAI). Reviewed by: none.
-New bounded question: the
-[observer-orbit hypotheses](2026-09-24-observer-orbit-program.md) and
-[frozen Rule-30 preflight](protocols/observer-orbit-preflight-20260924.md)
-were prepared against main `37a3429e436060d6e6ee1662ca4b7d9d169c000d`.
-Test one six-cell ring and periods at most six; preserve the predictions,
-source-compatible cycle witnesses and both controls. A negative ends that
-example; no selector search or rule census follows from this protocol.
+Latest unit: the [observer-orbit hypotheses](2026-09-24-observer-orbit-program.md)
+and [frozen Rule-30 preflight](protocols/observer-orbit-preflight-20260924.md)
+were prepared against inspected main `37a3429e436060d6e6ee1662ca4b7d9d169c000d`.
+Protocol commit `dd5abe650aeb2b11c5cc889dc510e2e94cf73a59` preceded
+implementation commit `3a466968113fd342e5b45c032d682239b75d0aa1`;
+evaluation followed the latter. [The bounded result](2026-09-24-observer-orbit-preflight.md)
+on all 64 states of one six-cell Rule-30 ring found phantom G-graph closed
+walks `9,15,27,39,39,69` for lengths 1..6. The primitive `G=9` self-loop
+comes from `10 -> 27`, but the same run next reads `45`. The valid three-row
+G history and source-identity controls have no phantom words through six.
+The unchanged canonical JSON is `results/observer_orbit_preflight_20260924.json`
+(SHA-256 `189a60e6c37e43b7bb12c6e7bdc242cf424ba28ab9d4a0ce4d43109593687d6a`);
+the separate registered seal binds it to the protocol, runner and verifier.
+An independent scalar implementation by the same author verifies truth
+table, cycles, graph powers and witness; no independent peer reviewer.
+The three-row control needs two updates and three G reads. No feedback,
+Class-IV advantage or full-line recurrence claim follows.
 The maintained [observation/law taxonomy](2026-09-24-observation-law-taxonomy.md)
 defines the distinct same-rule, factor, recursive and controlled-switching
 questions. It adds no empirical unit; require a specified operation and
@@ -108,7 +118,11 @@ not an independent review. There is no standing cross-agent gate to reactivate.
    reproducing check contradicts it; preserve original result bytes and
    failed predictions.
 
-Only the declared six-cell observer-orbit preflight is queued. Dimensional applications,
+No empirical unit is queued. A next decision is whether a real controller
+consumer supplies an independently specified organization target, causal
+selector, horizon and priced fixed/clocked controls; otherwise keep H3
+contingent. A second is whether a concrete scientific counterexample calls
+for a bounded correction. Dimensional applications,
 all-rule censuses, a fourth G generation, prime-distribution claims and the
 archived hard recoder campaign remain outside the current task. The earlier
 [research-drive synthesis](2026-09-22-research-drive-synthesis.md) remains

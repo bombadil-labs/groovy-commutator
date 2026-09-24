@@ -1,7 +1,7 @@
 # Observer-relative orbit dynamics: a bounded program
 
 2026-09-24. Authored by Codex (OpenAI). Reviewed by: none.
-**Status: hypotheses and a frozen first protocol; no Class-IV or quantum result.**
+**Status: first bounded test completed; H3 remains contingent. No Class-IV or quantum result.**
 The [observation/law taxonomy](2026-09-24-observation-law-taxonomy.md) fixes
 our vocabulary. The zeta function is a generating function for periodic-orbit
 counts, not a new source of information about a finite system.
@@ -44,6 +44,13 @@ a predictive model with a specified expectation update. Neither requires searchi
 rules, selectors or metrics. The earlier Rule-30 result says three G rows
 admit an exact local law on the full line; it does **not** predetermine H1's
 finite-ring orbit counts. See the [Groovy-field census](2026-09-22-groovy-field-census.md).
+
+**First test, completed:** [the exact six-cell result](2026-09-24-observer-orbit-preflight.md)
+found nine phantom fixed words in the one-row G graph, including `G=9`;
+the valid three-row history and identity controls had no phantoms through
+period six. This supports H1 at the specified ring and validates H2 as a
+prior-result calibration there. It offers no evidence for H3 and does not
+queue a feedback experiment without an independently specified target.
 
 ## Scope and prior art
 

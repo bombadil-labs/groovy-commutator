@@ -1,0 +1,10 @@
+{
+  "schema": "observer-orbit-provenance-seal-v1",
+  "source_hashes": {
+    "docs/research/protocols/observer-orbit-preflight-20260924.md": "f81be8e934d37311e3bfbd8e8219b808572298762d73f986b52b6bd6b5a9c14a",
+    "experiments/observer_orbit_preflight_20260924/run.py": "13238c40d7316dee7c044156985fd98dc8d6465ef5ac69bf4e8dbb2c8f96e195",
+    "experiments/observer_orbit_preflight_20260924/verify.py": "66fdf3bc3cb78a2c97bc835e83a9d84b8543f8b8ff9eaae9ccec129a63bc0257",
+    "results/observer_orbit_preflight_20260924.json": "189a60e6c37e43b7bb12c6e7bdc242cf424ba28ab9d4a0ce4d43109593687d6a"
+  },
+  "summary": "Original one-shot result and frozen inputs, sealed after evaluation without changing result bytes"
+}

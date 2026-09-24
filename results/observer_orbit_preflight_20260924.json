@@ -1,0 +1,1488 @@
+{
+  "cases": {
+    "identity": {
+      "edges": [
+        {
+          "example_source": 0,
+          "from": 0,
+          "to": 0
+        },
+        {
+          "example_source": 1,
+          "from": 1,
+          "to": 35
+        },
+        {
+          "example_source": 2,
+          "from": 2,
+          "to": 7
+        },
+        {
+          "example_source": 3,
+          "from": 3,
+          "to": 37
+        },
+        {
+          "example_source": 4,
+          "from": 4,
+          "to": 14
+        },
+        {
+          "example_source": 5,
+          "from": 5,
+          "to": 45
+        },
+        {
+          "example_source": 6,
+          "from": 6,
+          "to": 11
+        },
+        {
+          "example_source": 7,
+          "from": 7,
+          "to": 41
+        },
+        {
+          "example_source": 8,
+          "from": 8,
+          "to": 28
+        },
+        {
+          "example_source": 9,
+          "from": 9,
+          "to": 63
+        },
+        {
+          "example_source": 10,
+          "from": 10,
+          "to": 27
+        },
+        {
+          "example_source": 11,
+          "from": 11,
+          "to": 57
+        },
+        {
+          "example_source": 12,
+          "from": 12,
+          "to": 22
+        },
+        {
+          "example_source": 13,
+          "from": 13,
+          "to": 53
+        },
+        {
+          "example_source": 14,
+          "from": 14,
+          "to": 19
+        },
+        {
+          "example_source": 15,
+          "from": 15,
+          "to": 49
+        },
+        {
+          "example_source": 16,
+          "from": 16,
+          "to": 56
+        },
+        {
+          "example_source": 17,
+          "from": 17,
+          "to": 27
+        },
+        {
+          "example_source": 18,
+          "from": 18,
+          "to": 63
+        },
+        {
+          "example_source": 19,
+          "from": 19,
+          "to": 29
+        },
+        {
+          "example_source": 20,
+          "from": 20,
+          "to": 54
+        },
+        {
+          "example_source": 21,
+          "from": 21,
+          "to": 21
+        },
+        {
+          "example_source": 22,
+          "from": 22,
+          "to": 51
+        },
+        {
+          "example_source": 23,
+          "from": 23,
+          "to": 17
+        },
+        {
+          "example_source": 24,
+          "from": 24,
+          "to": 44
+        },
+        {
+          "example_source": 25,
+          "from": 25,
+          "to": 15
+        },
+        {
+          "example_source": 26,
+          "from": 26,
+          "to": 43
+        },
+        {
+          "example_source": 27,
+          "from": 27,
+          "to": 9
+        },
+        {
+          "example_source": 28,
+          "from": 28,
+          "to": 38
+        },
+        {
+          "example_source": 29,
+          "from": 29,
+          "to": 5
+        },
+        {
+          "example_source": 30,
+          "from": 30,
+          "to": 35
+        },
+        {
+          "example_source": 31,
+          "from": 31,
+          "to": 1
+        },
+        {
+          "example_source": 32,
+          "from": 32,
+          "to": 49
+        },
+        {
+          "example_source": 33,
+          "from": 33,
+          "to": 50
+        },
+        {
+          "example_source": 34,
+          "from": 34,
+          "to": 54
+        },
+        {
+          "example_source": 35,
+          "from": 35,
+          "to": 52
+        },
+        {
+          "example_source": 36,
+          "from": 36,
+          "to": 63
+        },
+        {
+          "example_source": 37,
+          "from": 37,
+          "to": 60
+        },
+        {
+          "example_source": 38,
+          "from": 38,
+          "to": 58
+        },
+        {
+          "example_source": 39,
+          "from": 39,
+          "to": 56
+        },
+        {
+          "example_source": 40,
+          "from": 40,
+          "to": 45
+        },
+        {
+          "example_source": 41,
+          "from": 41,
+          "to": 46
+        },
+        {
+          "example_source": 42,
+          "from": 42,
+          "to": 42
+        },
+        {
+          "example_source": 43,
+          "from": 43,
+          "to": 40
+        },
+        {
+          "example_source": 44,
+          "from": 44,
+          "to": 39
+        },
+        {
+          "example_source": 45,
+          "from": 45,
+          "to": 36
+        },
+        {
+          "example_source": 46,
+          "from": 46,
+          "to": 34
+        },
+        {
+          "example_source": 47,
+          "from": 47,
+          "to": 32
+        },
+        {
+          "example_source": 48,
+          "from": 48,
+          "to": 25
+        },
+        {
+          "example_source": 49,
+          "from": 49,
+          "to": 26
+        },
+        {
+          "example_source": 50,
+          "from": 50,
+          "to": 30
+        },
+        {
+          "example_source": 51,
+          "from": 51,
+          "to": 28
+        },
+        {
+          "example_source": 52,
+          "from": 52,
+          "to": 23
+        },
+        {
+          "example_source": 53,
+          "from": 53,
+          "to": 20
+        },
+        {
+          "example_source": 54,
+          "from": 54,
+          "to": 18
+        },
+        {
+          "example_source": 55,
+          "from": 55,
+          "to": 16
+        },
+        {
+          "example_source": 56,
+          "from": 56,
+          "to": 13
+        },
+        {
+          "example_source": 57,
+          "from": 57,
+          "to": 14
+        },
+        {
+          "example_source": 58,
+          "from": 58,
+          "to": 10
+        },
+        {
+          "example_source": 59,
+          "from": 59,
+          "to": 8
+        },
+        {
+          "example_source": 60,
+          "from": 60,
+          "to": 7
+        },
+        {
+          "example_source": 61,
+          "from": 61,
+          "to": 4
+        },
+        {
+          "example_source": 62,
+          "from": 62,
+          "to": 2
+        },
+        {
+          "example_source": 63,
+          "from": 63,
+          "to": 0
+        }
+      ],
+      "first_primitive_phantom": null,
+      "name": "identity",
+      "observation_table": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63
+      ],
+      "phantom_words": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "rooted_closed_walks": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "source_cycle_observations": [
+        [
+          0
+        ],
+        [
+          21
+        ],
+        [
+          42
+        ]
+      ],
+      "true_periodic_words": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "vertices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63
+      ]
+    },
+    "native_g": {
+      "edges": [
+        {
+          "example_source": 0,
+          "from": 0,
+          "to": 0
+        },
+        {
+          "example_source": 23,
+          "from": 1,
+          "to": 9
+        },
+        {
+          "example_source": 31,
+          "from": 1,
+          "to": 33
+        },
+        {
+          "example_source": 62,
+          "from": 2,
+          "to": 3
+        },
+        {
+          "example_source": 46,
+          "from": 2,
+          "to": 18
+        },
+        {
+          "example_source": 2,
+          "from": 3,
+          "to": 37
+        },
+        {
+          "example_source": 61,
+          "from": 4,
+          "to": 6
+        },
+        {
+          "example_source": 29,
+          "from": 4,
+          "to": 36
+        },
+        {
+          "example_source": 4,
+          "from": 6,
+          "to": 11
+        },
+        {
+          "example_source": 6,
+          "from": 7,
+          "to": 41
+        },
+        {
+          "example_source": 58,
+          "from": 8,
+          "to": 9
+        },
+        {
+          "example_source": 59,
+          "from": 8,
+          "to": 12
+        },
+        {
+          "example_source": 10,
+          "from": 9,
+          "to": 9
+        },
+        {
+          "example_source": 27,
+          "from": 9,
+          "to": 45
+        },
+        {
+          "example_source": 19,
+          "from": 11,
+          "to": 4
+        },
+        {
+          "example_source": 14,
+          "from": 11,
+          "to": 11
+        },
+        {
+          "example_source": 8,
+          "from": 12,
+          "to": 22
+        },
+        {
+          "example_source": 57,
+          "from": 13,
+          "to": 11
+        },
+        {
+          "example_source": 25,
+          "from": 13,
+          "to": 41
+        },
+        {
+          "example_source": 12,
+          "from": 14,
+          "to": 19
+        },
+        {
+          "example_source": 53,
+          "from": 16,
+          "to": 18
+        },
+        {
+          "example_source": 55,
+          "from": 16,
+          "to": 24
+        },
+        {
+          "example_source": 20,
+          "from": 18,
+          "to": 18
+        },
+        {
+          "example_source": 54,
+          "from": 18,
+          "to": 27
+        },
+        {
+          "example_source": 22,
+          "from": 19,
+          "to": 26
+        },
+        {
+          "example_source": 30,
+          "from": 19,
+          "to": 50
+        },
+        {
+          "example_source": 38,
+          "from": 22,
+          "to": 8
+        },
+        {
+          "example_source": 28,
+          "from": 22,
+          "to": 22
+        },
+        {
+          "example_source": 16,
+          "from": 24,
+          "to": 44
+        },
+        {
+          "example_source": 49,
+          "from": 25,
+          "to": 25
+        },
+        {
+          "example_source": 26,
+          "from": 25,
+          "to": 32
+        },
+        {
+          "example_source": 50,
+          "from": 26,
+          "to": 19
+        },
+        {
+          "example_source": 51,
+          "from": 26,
+          "to": 22
+        },
+        {
+          "example_source": 18,
+          "from": 27,
+          "to": 0
+        },
+        {
+          "example_source": 24,
+          "from": 28,
+          "to": 38
+        },
+        {
+          "example_source": 43,
+          "from": 32,
+          "to": 36
+        },
+        {
+          "example_source": 47,
+          "from": 32,
+          "to": 48
+        },
+        {
+          "example_source": 1,
+          "from": 33,
+          "to": 50
+        },
+        {
+          "example_source": 3,
+          "from": 35,
+          "to": 52
+        },
+        {
+          "example_source": 5,
+          "from": 36,
+          "to": 36
+        },
+        {
+          "example_source": 45,
+          "from": 36,
+          "to": 54
+        },
+        {
+          "example_source": 41,
+          "from": 37,
+          "to": 2
+        },
+        {
+          "example_source": 7,
+          "from": 37,
+          "to": 37
+        },
+        {
+          "example_source": 60,
+          "from": 38,
+          "to": 37
+        },
+        {
+          "example_source": 44,
+          "from": 38,
+          "to": 52
+        },
+        {
+          "example_source": 11,
+          "from": 41,
+          "to": 13
+        },
+        {
+          "example_source": 15,
+          "from": 41,
+          "to": 25
+        },
+        {
+          "example_source": 13,
+          "from": 44,
+          "to": 16
+        },
+        {
+          "example_source": 56,
+          "from": 44,
+          "to": 44
+        },
+        {
+          "example_source": 9,
+          "from": 45,
+          "to": 0
+        },
+        {
+          "example_source": 32,
+          "from": 48,
+          "to": 25
+        },
+        {
+          "example_source": 33,
+          "from": 49,
+          "to": 26
+        },
+        {
+          "example_source": 52,
+          "from": 50,
+          "to": 1
+        },
+        {
+          "example_source": 35,
+          "from": 50,
+          "to": 50
+        },
+        {
+          "example_source": 37,
+          "from": 52,
+          "to": 38
+        },
+        {
+          "example_source": 39,
+          "from": 52,
+          "to": 44
+        },
+        {
+          "example_source": 36,
+          "from": 54,
+          "to": 0
+        },
+        {
+          "example_source": 48,
+          "from": 56,
+          "to": 13
+        }
+      ],
+      "first_primitive_phantom": {
+        "edge_sources": [
+          10
+        ],
+        "period": 1,
+        "word": [
+          9
+        ]
+      },
+      "name": "native_g",
+      "observation_table": [
+        0,
+        33,
+        3,
+        35,
+        6,
+        36,
+        7,
+        37,
+        12,
+        45,
+        9,
+        41,
+        14,
+        44,
+        11,
+        41,
+        24,
+        9,
+        27,
+        11,
+        18,
+        0,
+        19,
+        1,
+        28,
+        13,
+        25,
+        9,
+        22,
+        4,
+        19,
+        1,
+        48,
+        49,
+        18,
+        50,
+        54,
+        52,
+        22,
+        52,
+        36,
+        37,
+        0,
+        32,
+        38,
+        36,
+        2,
+        32,
+        56,
+        25,
+        26,
+        26,
+        50,
+        16,
+        18,
+        16,
+        44,
+        13,
+        8,
+        8,
+        38,
+        4,
+        2,
+        0
+      ],
+      "phantom_words": [
+        9,
+        15,
+        27,
+        39,
+        39,
+        69
+      ],
+      "rooted_closed_walks": [
+        10,
+        16,
+        28,
+        40,
+        40,
+        70
+      ],
+      "source_cycle_observations": [
+        [
+          0
+        ],
+        [
+          0
+        ],
+        [
+          0
+        ]
+      ],
+      "true_periodic_words": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "vertices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        6,
+        7,
+        8,
+        9,
+        11,
+        12,
+        13,
+        14,
+        16,
+        18,
+        19,
+        22,
+        24,
+        25,
+        26,
+        27,
+        28,
+        32,
+        33,
+        35,
+        36,
+        37,
+        38,
+        41,
+        44,
+        45,
+        48,
+        49,
+        50,
+        52,
+        54,
+        56
+      ]
+    },
+    "three_row_history": {
+      "edges": [
+        {
+          "example_source": 0,
+          "from": 0,
+          "to": 0
+        },
+        {
+          "example_source": 18,
+          "from": 27,
+          "to": 0
+        },
+        {
+          "example_source": 9,
+          "from": 45,
+          "to": 0
+        },
+        {
+          "example_source": 36,
+          "from": 54,
+          "to": 0
+        },
+        {
+          "example_source": 54,
+          "from": 1746,
+          "to": 27
+        },
+        {
+          "example_source": 27,
+          "from": 2889,
+          "to": 45
+        },
+        {
+          "example_source": 45,
+          "from": 3492,
+          "to": 54
+        },
+        {
+          "example_source": 35,
+          "from": 7346,
+          "to": 36978
+        },
+        {
+          "example_source": 7,
+          "from": 10597,
+          "to": 73893
+        },
+        {
+          "example_source": 14,
+          "from": 17099,
+          "to": 147723
+        },
+        {
+          "example_source": 28,
+          "from": 34198,
+          "to": 37398
+        },
+        {
+          "example_source": 52,
+          "from": 36978,
+          "to": 37441
+        },
+        {
+          "example_source": 38,
+          "from": 37398,
+          "to": 37448
+        },
+        {
+          "example_source": 23,
+          "from": 37441,
+          "to": 184905
+        },
+        {
+          "example_source": 58,
+          "from": 37448,
+          "to": 184905
+        },
+        {
+          "example_source": 61,
+          "from": 45444,
+          "to": 45766
+        },
+        {
+          "example_source": 4,
+          "from": 45766,
+          "to": 17099
+        },
+        {
+          "example_source": 57,
+          "from": 45773,
+          "to": 17099
+        },
+        {
+          "example_source": 11,
+          "from": 45929,
+          "to": 45773
+        },
+        {
+          "example_source": 6,
+          "from": 55879,
+          "to": 45929
+        },
+        {
+          "example_source": 56,
+          "from": 68396,
+          "to": 74796
+        },
+        {
+          "example_source": 41,
+          "from": 73893,
+          "to": 74882
+        },
+        {
+          "example_source": 13,
+          "from": 74796,
+          "to": 74896
+        },
+        {
+          "example_source": 46,
+          "from": 74882,
+          "to": 111762
+        },
+        {
+          "example_source": 53,
+          "from": 74896,
+          "to": 111762
+        },
+        {
+          "example_source": 33,
+          "from": 79537,
+          "to": 206042
+        },
+        {
+          "example_source": 59,
+          "from": 90888,
+          "to": 91532
+        },
+        {
+          "example_source": 8,
+          "from": 91532,
+          "to": 34198
+        },
+        {
+          "example_source": 51,
+          "from": 91546,
+          "to": 34198
+        },
+        {
+          "example_source": 22,
+          "from": 91795,
+          "to": 91546
+        },
+        {
+          "example_source": 15,
+          "from": 104041,
+          "to": 132697
+        },
+        {
+          "example_source": 32,
+          "from": 104048,
+          "to": 132697
+        },
+        {
+          "example_source": 25,
+          "from": 105037,
+          "to": 104041
+        },
+        {
+          "example_source": 47,
+          "from": 105504,
+          "to": 104048
+        },
+        {
+          "example_source": 12,
+          "from": 107726,
+          "to": 91795
+        },
+        {
+          "example_source": 20,
+          "from": 111762,
+          "to": 1746
+        },
+        {
+          "example_source": 49,
+          "from": 132697,
+          "to": 149529
+        },
+        {
+          "example_source": 19,
+          "from": 147723,
+          "to": 149764
+        },
+        {
+          "example_source": 26,
+          "from": 149529,
+          "to": 149792
+        },
+        {
+          "example_source": 29,
+          "from": 149764,
+          "to": 223524
+        },
+        {
+          "example_source": 43,
+          "from": 149792,
+          "to": 223524
+        },
+        {
+          "example_source": 62,
+          "from": 151746,
+          "to": 153923
+        },
+        {
+          "example_source": 2,
+          "from": 153923,
+          "to": 10597
+        },
+        {
+          "example_source": 60,
+          "from": 153958,
+          "to": 10597
+        },
+        {
+          "example_source": 37,
+          "from": 154036,
+          "to": 153958
+        },
+        {
+          "example_source": 3,
+          "from": 159011,
+          "to": 154036
+        },
+        {
+          "example_source": 48,
+          "from": 168824,
+          "to": 105037
+        },
+        {
+          "example_source": 55,
+          "from": 181776,
+          "to": 183064
+        },
+        {
+          "example_source": 16,
+          "from": 183064,
+          "to": 68396
+        },
+        {
+          "example_source": 39,
+          "from": 183092,
+          "to": 68396
+        },
+        {
+          "example_source": 44,
+          "from": 183590,
+          "to": 183092
+        },
+        {
+          "example_source": 10,
+          "from": 184905,
+          "to": 2889
+        },
+        {
+          "example_source": 50,
+          "from": 206042,
+          "to": 208019
+        },
+        {
+          "example_source": 31,
+          "from": 206913,
+          "to": 208033
+        },
+        {
+          "example_source": 30,
+          "from": 208019,
+          "to": 7346
+        },
+        {
+          "example_source": 1,
+          "from": 208033,
+          "to": 7346
+        },
+        {
+          "example_source": 24,
+          "from": 215452,
+          "to": 183590
+        },
+        {
+          "example_source": 5,
+          "from": 223524,
+          "to": 3492
+        }
+      ],
+      "first_primitive_phantom": null,
+      "name": "three_row_history",
+      "observation_table": [
+        0,
+        208033,
+        153923,
+        159011,
+        45766,
+        223524,
+        55879,
+        10597,
+        91532,
+        45,
+        184905,
+        45929,
+        107726,
+        74796,
+        17099,
+        104041,
+        183064,
+        184905,
+        27,
+        147723,
+        111762,
+        0,
+        91795,
+        37441,
+        215452,
+        105037,
+        149529,
+        2889,
+        34198,
+        149764,
+        208019,
+        206913,
+        104048,
+        79537,
+        111762,
+        7346,
+        54,
+        154036,
+        37398,
+        183092,
+        223524,
+        73893,
+        0,
+        149792,
+        183590,
+        3492,
+        74882,
+        105504,
+        168824,
+        132697,
+        206042,
+        91546,
+        36978,
+        74896,
+        1746,
+        181776,
+        68396,
+        45773,
+        37448,
+        90888,
+        153958,
+        45444,
+        151746,
+        0
+      ],
+      "phantom_words": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "rooted_closed_walks": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "source_cycle_observations": [
+        [
+          0
+        ],
+        [
+          0
+        ],
+        [
+          0
+        ]
+      ],
+      "true_periodic_words": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "vertices": [
+        0,
+        27,
+        45,
+        54,
+        1746,
+        2889,
+        3492,
+        7346,
+        10597,
+        17099,
+        34198,
+        36978,
+        37398,
+        37441,
+        37448,
+        45444,
+        45766,
+        45773,
+        45929,
+        55879,
+        68396,
+        73893,
+        74796,
+        74882,
+        74896,
+        79537,
+        90888,
+        91532,
+        91546,
+        91795,
+        104041,
+        104048,
+        105037,
+        105504,
+        107726,
+        111762,
+        132697,
+        147723,
+        149529,
+        149764,
+        149792,
+        151746,
+        153923,
+        153958,
+        154036,
+        159011,
+        168824,
+        181776,
+        183064,
+        183092,
+        183590,
+        184905,
+        206042,
+        206913,
+        208019,
+        208033,
+        215452,
+        223524
+      ]
+    }
+  },
+  "implementation_commit": "3a466968113fd342e5b45c032d682239b75d0aa1",
+  "implementation_sha256": "13238c40d7316dee7c044156985fd98dc8d6465ef5ac69bf4e8dbb2c8f96e195",
+  "max_period": 6,
+  "predictions": {
+    "P1_primitive_phantom_within_six": "supported",
+    "P2_history_no_phantoms": "supported",
+    "P3_identity_no_phantoms": "supported"
+  },
+  "protocol": "docs/research/protocols/observer-orbit-preflight-20260924.md",
+  "rule": 30,
+  "schema": "observer-orbit-preflight-v1",
+  "source_cycles": [
+    [
+      0
+    ],
+    [
+      21
+    ],
+    [
+      42
+    ]
+  ],
+  "source_transient_states": 61,
+  "source_transition": [
+    0,
+    35,
+    7,
+    37,
+    14,
+    45,
+    11,
+    41,
+    28,
+    63,
+    27,
+    57,
+    22,
+    53,
+    19,
+    49,
+    56,
+    27,
+    63,
+    29,
+    54,
+    21,
+    51,
+    17,
+    44,
+    15,
+    43,
+    9,
+    38,
+    5,
+    35,
+    1,
+    49,
+    50,
+    54,
+    52,
+    63,
+    60,
+    58,
+    56,
+    45,
+    46,
+    42,
+    40,
+    39,
+    36,
+    34,
+    32,
+    25,
+    26,
+    30,
+    28,
+    23,
+    20,
+    18,
+    16,
+    13,
+    14,
+    10,
+    8,
+    7,
+    4,
+    2,
+    0
+  ],
+  "width": 6
+}

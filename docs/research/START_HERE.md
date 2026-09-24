@@ -19,8 +19,9 @@ design direction, not a new Class-IV result or an automatically queued run.
 Myk requested testable hypotheses for a bounded
 [observer-relative orbit program](2026-09-24-observer-orbit-program.md).
 Its first [frozen preflight](protocols/observer-orbit-preflight-20260924.md)
-checks whether a one-step Rule-30 G observer invents a primitive cycle on
-one six-cell ring, with identity and valid three-row history controls.
+is [complete](2026-09-24-observer-orbit-preflight.md): a one-step Rule-30 G
+observer invents cycles on one six-cell ring, while the identity and valid
+three-row history controls do not through period six.
 Feedback and Class-IV-like behaviour are contingent later questions, not
 outcomes of an orbit-counting preflight.
 
@@ -78,8 +79,9 @@ Prediction/repair already uses a native Python frontend without a language
 performance claim. Jev setup, Datalog migration and predicate invention are
 not prerequisites or scheduled work.
 
-The one explicitly requested observer-orbit preflight above is the only
-queued empirical unit. The [Groovy Field
+The requested observer-orbit preflight is complete. No empirical unit is
+queued; feedback needs its own independent target and costed baseline before
+a protocol. The [Groovy Field
 program](2026-09-22-groovy-field-program.md) remains a source of exact results
 and specified open questions; its old stage ordering does not supersede this
 agenda. The earlier Rule-110 autonomy obstruction and the completed research
