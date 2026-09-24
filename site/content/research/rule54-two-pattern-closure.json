@@ -1,0 +1,17 @@
+[
+  {
+    "label": "Rule-54 two-pattern closure",
+    "slug": "rule54-two-pattern-closure",
+    "title": "Two raw patterns close the one-shot repair task",
+    "date": "2026-09-24",
+    "updated": "2026-09-24",
+    "kind": "Exact finite-ring post-selected controller",
+    "evidence": "exact",
+    "topic": "Observation and memory",
+    "summary": "Raw five-bit patterns 19 OR 25 under one unique-site arbiter recover all 68 salvageable injuries in the frozen 1,156-trial Rule-54 route, matching the full-state score of 408 without collisions or harm.",
+    "takeaway": "This post-selected one-shot controller closes the fixed task without G computation. It does not show repeated maintenance, independent generalization, or a cross-rule discriminator.",
+    "source": "docs/research/2026-09-24-rule54-two-pattern-closure.md",
+    "promotion": { "stage": "research" },
+    "related": ["rule54-local-sensor-gate", "rule54-g-sensor-gate", "rule54-glider-route-gate"]
+  }
+]

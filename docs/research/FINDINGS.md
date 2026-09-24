@@ -758,6 +758,23 @@ reason to launch a 255-rule discriminator sweep, whose rule-specific
 repair targets and action feasibility have not been specified.
 [Exact local comparison and stopping decision](2026-09-24-rule54-local-sensor-gate.md).
 
+## 2026-09-24: two raw patterns recover every repairable injury on this route
+
+We were curious whether the two raw five-bit patterns found in the
+previous gate would interfere when combined. Myk approved a single
+frozen follow-up: every site flags pattern 19 **or** 25, and the
+unchanged arbiter holds a cell only when exactly one site flags.
+
+We found no overlap on any of the 1,156 trials. The combined raw
+controller rescues all 68 recoverable passive failures, harms no passive
+success, and matches the full-state score of 408. The patterns were
+chosen after the prior result, so this is exact **in-domain closure**,
+not independent generalization. The whole G field's sufficiency remains
+true, but this task no longer offers a G-specific control gain. A
+repeated-disturbance or cross-rule question needs a new independent
+target and cost contract, not more tuning of this route.
+[Frozen combination and exact evidence](2026-09-24-rule54-two-pattern-closure.md).
+
 ## Keeping this useful
 
 After a completed or stopped unit, update its entry or add one short account:

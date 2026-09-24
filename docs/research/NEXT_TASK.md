@@ -1,5 +1,41 @@
 # Next agent: require a concrete operation before another search
 
+**Latest handoff, 2026-09-24: Rule-54 route-repair task closed.**
+Inspected main `cd9f2bccdd53fa744c434745235d4186b9d44216`, with no
+open issues or PRs at the start. Myk approved exactly one post-selection
+closure check after raw local patterns 19 and 25 each independently
+rescued 34 injuries. The [frozen OR protocol](protocols/2026-09-24-rule54-two-pattern-closure.md)
+was committed as `66d2acca21667f48472bb50b9942a8f074469c78`, the
+runner and independent scalar verifier were pinned as
+`a52a7ecc3d51a13c366015d78fdb74e4ea185b10`, then the domain was
+evaluated on [gathering PR #310](https://github.com/bombadil-labs/groovy-commutator/pull/310).
+The new [canonical result](../../results/rule54_two_pattern_closure_20260924.json)
+has SHA-256 `88f948fe3afcc919355692fbebec5b7866ec665830504a6b686bbad1d2aeaa97`.
+Both original outcome and single-pattern canonical results are untouched;
+their SHA-256s are bound in the new record and checked by the independent
+verifier. Reviewed by: none.
+
+Result: one flag per site for local raw pattern 19 OR 25, then the same
+unique-site arbiter, succeeds on **408/1,156**: all 68 passively failing
+but action-recoverable cases are rescued, zero passive successes are
+harmed. The two patterns never co-occur on a trial. It holds a site in
+204 trials; each old single pattern still scores 374, noop scores 340,
+and full-state G/raw information ceiling is 408. Both predictions
+within this specifically post-selected follow-up held, and an
+independent scalar implementation recomputed the physical outcomes.
+The controller reads five current raw bits and compares two constants
+per site, emits a flag, and still pays for shared address arbitration.
+It uses no G field or history. This is a finite one-shot, selected-domain
+match, **not** held-out confirmation, glider persistence, an uncoordinated
+local CA, or a cross-rule discriminator.
+
+**Next decision:** stop tuning this Rule-54 route; no third pattern or
+priority rule, Rule-110 transplant, or 255-rule sweep follows. Reopen
+only for a separately justified repeated-disturbance target or independent
+consumer, with passive/fixed/full-state feasibility gates before sensors,
+and explicitly cost any distributed address arbitration. Earlier
+handoffs below preserve the original predictions and narrower results.
+
 **Latest handoff, 2026-09-24: local sensor gate and sweep decision.**
 Inspected main `4515a5e43ab329d584b306601dbe4a4e27088eb7`, with no
 open issues or PRs. Myk asked whether Rule 110 and other ECAs might share

@@ -99,3 +99,10 @@ five-bit causal cones, all predicate actions and scores. Neither is
 independent peer review. These claims concern a finite, one-shot,
 adapted Rule-54 route; they are not persistent glider control, a
 classification theorem or a 255-rule census.
+
+**Authorized post-selection closure:** Myk asked for one additional
+frozen check of the observed patterns 19 and 25 together. The
+[subsequent result](2026-09-24-rule54-two-pattern-closure.md) reaches
+the full-state 408/1,156 score with no collision or harm on this
+same domain. This does not revise the failed G-bit prediction or
+retroactively make pattern selection independent.

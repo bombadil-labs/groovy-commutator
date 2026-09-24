@@ -90,6 +90,14 @@ policy has no G advantage. Park the proposed cross-rule H3
 discriminator campaign; independent Rule-110 feasibility and comparable
 rule-specific targets would be prerequisites to any future small panel.
 
+**One-shot task closure, user-authorized post-selection:** a
+[frozen OR of raw patterns 19/25](2026-09-24-rule54-two-pattern-closure.md)
+under the same unique-site arbiter matches the 408/1,156 full-state
+reward, with no competing flags or harmed passive successes. The raw
+local controller makes G unnecessary for this fixed task, but neither
+policy establishes repeated autonomous maintenance. No further H3
+selector search on this route is queued.
+
 ## Scope and prior art
 
 Every finite deterministic map has a rational orbit zeta function. A
