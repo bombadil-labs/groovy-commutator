@@ -1,0 +1,23 @@
+[
+  {
+    "label": "Observer-orbit preflight",
+    "slug": "observer-orbit-preflight",
+    "title": "When an observed cycle is not a source cycle",
+    "date": "2026-09-24",
+    "updated": "2026-09-24",
+    "kind": "Exact finite-ring observation certificate",
+    "evidence": "exact",
+    "topic": "Observation and memory",
+    "summary": "On a six-cell Rule-30 ring, the one-step Groovy graph invents recurrent words: G=9 can follow itself once but cannot remain there. Valid three-row G histories and source identity have no phantom cycles through period six.",
+    "takeaway": "Source-compatible cycles matter more than the observer graph alone; history costs two updates and three G reads. No feedback or Class-IV advantage tested.",
+    "source": "docs/research/2026-09-24-observer-orbit-preflight.md",
+    "promotion": {
+      "stage": "research"
+    },
+    "related": [
+      "observer-orbit-program",
+      "observation-law-taxonomy",
+      "groovy-field-census"
+    ]
+  }
+]

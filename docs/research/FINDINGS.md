@@ -1,6 +1,6 @@
 # What we have learned
 
-Running plain-language summary, updated 2026-09-23. This is a synthesis of
+Running plain-language summary, updated 2026-09-24. This is a synthesis of
 existing evidence, not a new experiment or independent review. Each entry
 links to the technical account that states its assumptions and verification.
 “Complete” means the stated investigation has ended, not that every related
@@ -667,6 +667,25 @@ viewer, not autonomous observer evolution or unrestricted object discovery.
 The predicted relational advantage and use of history both failed. Stop this
 grammar expansion; retain the counterexample interface for a separately
 motivated task. [Results, visual viewer and costs](2026-09-23-observation-discovery.md).
+
+## 2026-09-24: an observer can see a cycle its source never repeats
+
+We were curious whether tracking only Rule 30's Groovy field would make a
+repeating pattern appear possible even though no underlying Rule-30 run can
+follow it indefinitely. We tried every state of one six-cell ring and
+compared cycles in the graph of possible one-step G changes with the actual
+source cycles. We also checked an observer retaining three G time slices and
+one retaining the complete source state.
+
+We found an apparent `G=9` loop: one source step really reads `9 -> 9`,
+but the same run next reads `45`. The one-step graph has nine apparent
+fixed words absent from source cycles; both controls have zero phantom
+cycles through six steps. Three G slices take two updates and three reads
+to acquire. **Complete for this finite ring and tested periods:** an
+observer can invent recurrence by stitching together transitions that
+belong to incompatible hidden states. We did not test rule selection,
+maintenance, Class IV or computational advantage.
+[Exact counts, witness and limits](2026-09-24-observer-orbit-preflight.md).
 
 ## Keeping this useful
 
