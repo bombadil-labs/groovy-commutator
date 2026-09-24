@@ -48,6 +48,14 @@ a full-ECA repair-discriminator sweep:** independent native targets and
 positive action-feasibility gates are missing, and this proposed local
 G advantage failed on the existing target. A fresh Rule-110 target
 requires its own justification, not automatic transfer from Rule 54.
+Myk approved one final, specifically selected raw-pattern combination
+after this gate. The [frozen two-pattern closure](2026-09-24-rule54-two-pattern-closure.md)
+finds that 19 OR 25 never collide and reaches the full-state 408/1,156
+reward without harming a passive success. This is exact on the selected
+finite task, post-selected and not a general raw-versus-G theorem.
+**The Rule-54 one-shot repair benchmark is now closed.** A genuine
+continuation needs a new independently specified repeated-disturbance
+target and costed consumer; there is no queued ECA sweep.
 
 ## Current agenda after integration
 

@@ -1,0 +1,1017 @@
+{
+  "cost": {
+    "extra_g_evaluations": 0,
+    "flags_per_site": 1,
+    "literal_pattern_bits": 10,
+    "source_radius": 2,
+    "source_reads_per_site": 5
+  },
+  "fixed": 340,
+  "full_state": 408,
+  "implementation_commit": "a52a7ecc3d51a13c366015d78fdb74e4ea185b10",
+  "or": {
+    "both_pattern_trials": 0,
+    "collisions": [],
+    "harmed": [],
+    "harms": 0,
+    "rescued": [
+      {
+        "action": 24,
+        "trial": [
+          0,
+          24
+        ]
+      },
+      {
+        "action": 26,
+        "trial": [
+          0,
+          26
+        ]
+      },
+      {
+        "action": 25,
+        "trial": [
+          1,
+          25
+        ]
+      },
+      {
+        "action": 27,
+        "trial": [
+          1,
+          27
+        ]
+      },
+      {
+        "action": 26,
+        "trial": [
+          2,
+          26
+        ]
+      },
+      {
+        "action": 28,
+        "trial": [
+          2,
+          28
+        ]
+      },
+      {
+        "action": 27,
+        "trial": [
+          3,
+          27
+        ]
+      },
+      {
+        "action": 29,
+        "trial": [
+          3,
+          29
+        ]
+      },
+      {
+        "action": 28,
+        "trial": [
+          4,
+          28
+        ]
+      },
+      {
+        "action": 30,
+        "trial": [
+          4,
+          30
+        ]
+      },
+      {
+        "action": 29,
+        "trial": [
+          5,
+          29
+        ]
+      },
+      {
+        "action": 31,
+        "trial": [
+          5,
+          31
+        ]
+      },
+      {
+        "action": 30,
+        "trial": [
+          6,
+          30
+        ]
+      },
+      {
+        "action": 32,
+        "trial": [
+          6,
+          32
+        ]
+      },
+      {
+        "action": 31,
+        "trial": [
+          7,
+          31
+        ]
+      },
+      {
+        "action": 33,
+        "trial": [
+          7,
+          33
+        ]
+      },
+      {
+        "action": 0,
+        "trial": [
+          8,
+          0
+        ]
+      },
+      {
+        "action": 32,
+        "trial": [
+          8,
+          32
+        ]
+      },
+      {
+        "action": 1,
+        "trial": [
+          9,
+          1
+        ]
+      },
+      {
+        "action": 33,
+        "trial": [
+          9,
+          33
+        ]
+      },
+      {
+        "action": 0,
+        "trial": [
+          10,
+          0
+        ]
+      },
+      {
+        "action": 2,
+        "trial": [
+          10,
+          2
+        ]
+      },
+      {
+        "action": 1,
+        "trial": [
+          11,
+          1
+        ]
+      },
+      {
+        "action": 3,
+        "trial": [
+          11,
+          3
+        ]
+      },
+      {
+        "action": 2,
+        "trial": [
+          12,
+          2
+        ]
+      },
+      {
+        "action": 4,
+        "trial": [
+          12,
+          4
+        ]
+      },
+      {
+        "action": 3,
+        "trial": [
+          13,
+          3
+        ]
+      },
+      {
+        "action": 5,
+        "trial": [
+          13,
+          5
+        ]
+      },
+      {
+        "action": 4,
+        "trial": [
+          14,
+          4
+        ]
+      },
+      {
+        "action": 6,
+        "trial": [
+          14,
+          6
+        ]
+      },
+      {
+        "action": 5,
+        "trial": [
+          15,
+          5
+        ]
+      },
+      {
+        "action": 7,
+        "trial": [
+          15,
+          7
+        ]
+      },
+      {
+        "action": 6,
+        "trial": [
+          16,
+          6
+        ]
+      },
+      {
+        "action": 8,
+        "trial": [
+          16,
+          8
+        ]
+      },
+      {
+        "action": 7,
+        "trial": [
+          17,
+          7
+        ]
+      },
+      {
+        "action": 9,
+        "trial": [
+          17,
+          9
+        ]
+      },
+      {
+        "action": 8,
+        "trial": [
+          18,
+          8
+        ]
+      },
+      {
+        "action": 10,
+        "trial": [
+          18,
+          10
+        ]
+      },
+      {
+        "action": 9,
+        "trial": [
+          19,
+          9
+        ]
+      },
+      {
+        "action": 11,
+        "trial": [
+          19,
+          11
+        ]
+      },
+      {
+        "action": 10,
+        "trial": [
+          20,
+          10
+        ]
+      },
+      {
+        "action": 12,
+        "trial": [
+          20,
+          12
+        ]
+      },
+      {
+        "action": 11,
+        "trial": [
+          21,
+          11
+        ]
+      },
+      {
+        "action": 13,
+        "trial": [
+          21,
+          13
+        ]
+      },
+      {
+        "action": 12,
+        "trial": [
+          22,
+          12
+        ]
+      },
+      {
+        "action": 14,
+        "trial": [
+          22,
+          14
+        ]
+      },
+      {
+        "action": 13,
+        "trial": [
+          23,
+          13
+        ]
+      },
+      {
+        "action": 15,
+        "trial": [
+          23,
+          15
+        ]
+      },
+      {
+        "action": 14,
+        "trial": [
+          24,
+          14
+        ]
+      },
+      {
+        "action": 16,
+        "trial": [
+          24,
+          16
+        ]
+      },
+      {
+        "action": 15,
+        "trial": [
+          25,
+          15
+        ]
+      },
+      {
+        "action": 17,
+        "trial": [
+          25,
+          17
+        ]
+      },
+      {
+        "action": 16,
+        "trial": [
+          26,
+          16
+        ]
+      },
+      {
+        "action": 18,
+        "trial": [
+          26,
+          18
+        ]
+      },
+      {
+        "action": 17,
+        "trial": [
+          27,
+          17
+        ]
+      },
+      {
+        "action": 19,
+        "trial": [
+          27,
+          19
+        ]
+      },
+      {
+        "action": 18,
+        "trial": [
+          28,
+          18
+        ]
+      },
+      {
+        "action": 20,
+        "trial": [
+          28,
+          20
+        ]
+      },
+      {
+        "action": 19,
+        "trial": [
+          29,
+          19
+        ]
+      },
+      {
+        "action": 21,
+        "trial": [
+          29,
+          21
+        ]
+      },
+      {
+        "action": 20,
+        "trial": [
+          30,
+          20
+        ]
+      },
+      {
+        "action": 22,
+        "trial": [
+          30,
+          22
+        ]
+      },
+      {
+        "action": 21,
+        "trial": [
+          31,
+          21
+        ]
+      },
+      {
+        "action": 23,
+        "trial": [
+          31,
+          23
+        ]
+      },
+      {
+        "action": 22,
+        "trial": [
+          32,
+          22
+        ]
+      },
+      {
+        "action": 24,
+        "trial": [
+          32,
+          24
+        ]
+      },
+      {
+        "action": 23,
+        "trial": [
+          33,
+          23
+        ]
+      },
+      {
+        "action": 25,
+        "trial": [
+          33,
+          25
+        ]
+      }
+    ],
+    "rescues": 68,
+    "score": 408,
+    "unique_trials": 204
+  },
+  "predictions": {
+    "P1_full_ceiling_no_harm": "supported",
+    "P2_no_salvageable_double_trigger": "supported"
+  },
+  "protocol": "docs/research/protocols/2026-09-24-rule54-two-pattern-closure.md",
+  "schema": "rule54-two-pattern-closure-v1",
+  "single": {
+    "19": {
+      "both_pattern_trials": 0,
+      "collisions": [],
+      "harmed": [],
+      "harms": 0,
+      "rescued": [
+        {
+          "action": 24,
+          "trial": [
+            0,
+            24
+          ]
+        },
+        {
+          "action": 25,
+          "trial": [
+            1,
+            25
+          ]
+        },
+        {
+          "action": 26,
+          "trial": [
+            2,
+            26
+          ]
+        },
+        {
+          "action": 27,
+          "trial": [
+            3,
+            27
+          ]
+        },
+        {
+          "action": 28,
+          "trial": [
+            4,
+            28
+          ]
+        },
+        {
+          "action": 29,
+          "trial": [
+            5,
+            29
+          ]
+        },
+        {
+          "action": 30,
+          "trial": [
+            6,
+            30
+          ]
+        },
+        {
+          "action": 31,
+          "trial": [
+            7,
+            31
+          ]
+        },
+        {
+          "action": 32,
+          "trial": [
+            8,
+            32
+          ]
+        },
+        {
+          "action": 33,
+          "trial": [
+            9,
+            33
+          ]
+        },
+        {
+          "action": 0,
+          "trial": [
+            10,
+            0
+          ]
+        },
+        {
+          "action": 1,
+          "trial": [
+            11,
+            1
+          ]
+        },
+        {
+          "action": 2,
+          "trial": [
+            12,
+            2
+          ]
+        },
+        {
+          "action": 3,
+          "trial": [
+            13,
+            3
+          ]
+        },
+        {
+          "action": 4,
+          "trial": [
+            14,
+            4
+          ]
+        },
+        {
+          "action": 5,
+          "trial": [
+            15,
+            5
+          ]
+        },
+        {
+          "action": 6,
+          "trial": [
+            16,
+            6
+          ]
+        },
+        {
+          "action": 7,
+          "trial": [
+            17,
+            7
+          ]
+        },
+        {
+          "action": 8,
+          "trial": [
+            18,
+            8
+          ]
+        },
+        {
+          "action": 9,
+          "trial": [
+            19,
+            9
+          ]
+        },
+        {
+          "action": 10,
+          "trial": [
+            20,
+            10
+          ]
+        },
+        {
+          "action": 11,
+          "trial": [
+            21,
+            11
+          ]
+        },
+        {
+          "action": 12,
+          "trial": [
+            22,
+            12
+          ]
+        },
+        {
+          "action": 13,
+          "trial": [
+            23,
+            13
+          ]
+        },
+        {
+          "action": 14,
+          "trial": [
+            24,
+            14
+          ]
+        },
+        {
+          "action": 15,
+          "trial": [
+            25,
+            15
+          ]
+        },
+        {
+          "action": 16,
+          "trial": [
+            26,
+            16
+          ]
+        },
+        {
+          "action": 17,
+          "trial": [
+            27,
+            17
+          ]
+        },
+        {
+          "action": 18,
+          "trial": [
+            28,
+            18
+          ]
+        },
+        {
+          "action": 19,
+          "trial": [
+            29,
+            19
+          ]
+        },
+        {
+          "action": 20,
+          "trial": [
+            30,
+            20
+          ]
+        },
+        {
+          "action": 21,
+          "trial": [
+            31,
+            21
+          ]
+        },
+        {
+          "action": 22,
+          "trial": [
+            32,
+            22
+          ]
+        },
+        {
+          "action": 23,
+          "trial": [
+            33,
+            23
+          ]
+        }
+      ],
+      "rescues": 34,
+      "score": 374,
+      "unique_trials": 102
+    },
+    "25": {
+      "both_pattern_trials": 0,
+      "collisions": [],
+      "harmed": [],
+      "harms": 0,
+      "rescued": [
+        {
+          "action": 26,
+          "trial": [
+            0,
+            26
+          ]
+        },
+        {
+          "action": 27,
+          "trial": [
+            1,
+            27
+          ]
+        },
+        {
+          "action": 28,
+          "trial": [
+            2,
+            28
+          ]
+        },
+        {
+          "action": 29,
+          "trial": [
+            3,
+            29
+          ]
+        },
+        {
+          "action": 30,
+          "trial": [
+            4,
+            30
+          ]
+        },
+        {
+          "action": 31,
+          "trial": [
+            5,
+            31
+          ]
+        },
+        {
+          "action": 32,
+          "trial": [
+            6,
+            32
+          ]
+        },
+        {
+          "action": 33,
+          "trial": [
+            7,
+            33
+          ]
+        },
+        {
+          "action": 0,
+          "trial": [
+            8,
+            0
+          ]
+        },
+        {
+          "action": 1,
+          "trial": [
+            9,
+            1
+          ]
+        },
+        {
+          "action": 2,
+          "trial": [
+            10,
+            2
+          ]
+        },
+        {
+          "action": 3,
+          "trial": [
+            11,
+            3
+          ]
+        },
+        {
+          "action": 4,
+          "trial": [
+            12,
+            4
+          ]
+        },
+        {
+          "action": 5,
+          "trial": [
+            13,
+            5
+          ]
+        },
+        {
+          "action": 6,
+          "trial": [
+            14,
+            6
+          ]
+        },
+        {
+          "action": 7,
+          "trial": [
+            15,
+            7
+          ]
+        },
+        {
+          "action": 8,
+          "trial": [
+            16,
+            8
+          ]
+        },
+        {
+          "action": 9,
+          "trial": [
+            17,
+            9
+          ]
+        },
+        {
+          "action": 10,
+          "trial": [
+            18,
+            10
+          ]
+        },
+        {
+          "action": 11,
+          "trial": [
+            19,
+            11
+          ]
+        },
+        {
+          "action": 12,
+          "trial": [
+            20,
+            12
+          ]
+        },
+        {
+          "action": 13,
+          "trial": [
+            21,
+            13
+          ]
+        },
+        {
+          "action": 14,
+          "trial": [
+            22,
+            14
+          ]
+        },
+        {
+          "action": 15,
+          "trial": [
+            23,
+            15
+          ]
+        },
+        {
+          "action": 16,
+          "trial": [
+            24,
+            16
+          ]
+        },
+        {
+          "action": 17,
+          "trial": [
+            25,
+            17
+          ]
+        },
+        {
+          "action": 18,
+          "trial": [
+            26,
+            18
+          ]
+        },
+        {
+          "action": 19,
+          "trial": [
+            27,
+            19
+          ]
+        },
+        {
+          "action": 20,
+          "trial": [
+            28,
+            20
+          ]
+        },
+        {
+          "action": 21,
+          "trial": [
+            29,
+            21
+          ]
+        },
+        {
+          "action": 22,
+          "trial": [
+            30,
+            22
+          ]
+        },
+        {
+          "action": 23,
+          "trial": [
+            31,
+            23
+          ]
+        },
+        {
+          "action": 24,
+          "trial": [
+            32,
+            24
+          ]
+        },
+        {
+          "action": 25,
+          "trial": [
+            33,
+            25
+          ]
+        }
+      ],
+      "rescues": 34,
+      "score": 374,
+      "unique_trials": 102
+    }
+  },
+  "source_hashes": {
+    "docs/research/protocols/2026-09-24-rule54-two-pattern-closure.md": "26106dcc7f1aa5266236b09647d64578c4696552b13de1b36b454ba6a478afd0",
+    "experiments/rule54_two_pattern_closure_20260924/run.py": "25c2579aa8c86193e64b38120a75a4920455d60fbeaf0e739c286694f8410bd8",
+    "experiments/rule54_two_pattern_closure_20260924/verify.py": "23de7f0bd779df16601be706d8ca86646d3bfad59a5b856df385848e578acc31",
+    "results/rule54_glider_route_gate_20260924.json": "b390b49d3506b5e78e45fbcbd3de710bdcad60b3b0a6d21054e1dc276d166f75",
+    "results/rule54_local_sensor_gate_20260924.json": "04374a9ec5b0a5c67ecdea92d2cffde6784cdba0f6d8460c43cb1267afce7970"
+  },
+  "sources": {
+    "results/rule54_glider_route_gate_20260924.json": "b390b49d3506b5e78e45fbcbd3de710bdcad60b3b0a6d21054e1dc276d166f75",
+    "results/rule54_local_sensor_gate_20260924.json": "04374a9ec5b0a5c67ecdea92d2cffde6784cdba0f6d8460c43cb1267afce7970"
+  },
+  "trial_count": 1156
+}
