@@ -1,8 +1,13 @@
 # Next agent: require a concrete operation before another search
 
-Updated 2026-09-23. Authored by Codex (OpenAI). Reviewed by: none.
+Updated 2026-09-24. Authored by Codex (OpenAI). Reviewed by: none.
+The maintained [observation/law taxonomy](2026-09-24-observation-law-taxonomy.md)
+defines the distinct same-rule, factor, recursive and controlled-switching
+questions. It adds no empirical unit; require a specified operation and
+matched control before searching rule schedules or recursive branches.
 Latest completed unit: [observation discovery #303](https://github.com/bombadil-labs/groovy-commutator/pull/303).
-Inspected main `45c8698d2a2e3c0dfcd9bb01dee1556fde58ba15`; protocol
+Taxonomy-only update inspected main `7301e9dc1ac00549b72b97c46b7380c689ecb914`.
+The earlier empirical unit inspected main `45c8698d2a2e3c0dfcd9bb01dee1556fde58ba15`; its protocol
 `02948ab8ff523574a4ee11fdf0b379714ca87221` preceded implementation
 `eced9cee90570db53a2280f6101abffe441ef7da` and evaluation. Myk authorized
 this unit and merging completed work. Reviewed by: none.

@@ -12,6 +12,10 @@ factors, counterexamples, graph certificates and explicit constructions.
 “Class IV” remains a motivation, not a specification or success criterion.
 The [limits and prior-art guide](2026-09-21-research-boundaries.md) explains
 what the impossibility theorems constrain and where useful exact work remains.
+The maintained [observation/law taxonomy](2026-09-24-observation-law-taxonomy.md)
+keeps same-rule G, an observer's own effective law, off-image completions and
+rule-switching controllers distinct. Its controller question is a proposed
+design direction, not a new Class-IV result or an automatically queued run.
 
 ## Current agenda after integration
 
