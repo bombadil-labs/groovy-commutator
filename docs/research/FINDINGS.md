@@ -704,6 +704,25 @@ feedback benefit:** we still need an independently specified target before
 testing whether such a controller helps.
 [Proof and causal interfaces](2026-09-24-feedback-causality.md).
 
+## 2026-09-24: one delayed rule hold can restore a moving-structure route
+
+We were curious whether a controller with complete state access could help
+at all on a target taken from published Rule-54 glider encodings, before
+asking G to choose actions. We froze a 34-cell finite-ring adaptation,
+injured each rotation at each cell, and allowed one cell to retain its
+previous value during the update two steps later.
+
+We found 340/1,156 passive successes, also the best fixed-action score.
+A full-state controller succeeds on 408/1,156: 68 additional injuries
+recover. They rejoin the undamaged route only at time seven, four updates
+after the held-site action. Yet the simple oracle “hold the original injury
+site,” if that hidden address is supplied, also succeeds on 408. **Exact
+one-shot feasibility on this ring, not a G advantage:** we still have to
+compare the cost of inferring that address from G with direct raw sensing.
+The published encodings motivate the seed; the finite-ring route is our
+adaptation, not a proof of glider identity at every time.
+[Full result, limits and independent replay](2026-09-24-rule54-glider-route-gate.md).
+
 ## Keeping this useful
 
 After a completed or stopped unit, update its entry or add one short account:

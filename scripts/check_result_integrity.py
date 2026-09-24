@@ -30,6 +30,10 @@ ROOT = pathlib.Path(__file__).resolve().parents[1]
 
 # result file -> {hash key recorded in its source_hashes: path the hash was taken of}
 REGISTRY = {
+    'results/rule54_glider_route_gate_20260924.json': {p: p for p in (
+        'experiments/rule54_glider_route_gate_20260924/run.py',
+        'experiments/rule54_glider_route_gate_20260924/verify.py',
+        'docs/research/protocols/2026-09-24-rule54-glider-route-gate.md')},
     'results/observer_orbit_preflight_20260924_seal.json': {p: p for p in (
         'results/observer_orbit_preflight_20260924.json',
         'experiments/observer_orbit_preflight_20260924/run.py',

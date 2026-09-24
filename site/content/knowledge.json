@@ -5330,6 +5330,18 @@
       "research": [
         "feedback-causality"
       ]
+    },
+    {
+      "id": "rule54-route-repair-feasibility",
+      "title": "A held site can restore one published Rule-54 route",
+      "kind": "finding",
+      "status": "exact",
+      "summary": "One delayed held-site update rescues 68 of 1,156 damaged finite Rule-54 routes beyond passive and fixed controls. The known-injury-site oracle matches the full-state result; G has not been tested.",
+      "updated": "2026-09-24",
+      "source": "docs/knowledge/rule54-route-repair-feasibility.md",
+      "research": [
+        "rule54-glider-route-gate"
+      ]
     }
   ],
   "schemaVersion": 1

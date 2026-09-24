@@ -29,6 +29,11 @@ choosing a rule from the G field of that same as-yet-unchosen rule need not
 define an update at all. Specify either fixed-reference G or a lagged
 realized-path residual before any policy search; neither supplies the missing
 independent maintenance target.
+An independently sourced Rule-54 [route feasibility gate](2026-09-24-rule54-glider-route-gate.md)
+now finds delayed repair opportunities using a single held-site rule
+switch. A known-injury-address oracle matches the full-state bound, so
+the decision is whether a G sensor earns its acquisition and coordination
+cost against plain local fault localization. No G selector was tested.
 
 ## Current agenda after integration
 
