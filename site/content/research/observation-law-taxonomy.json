@@ -1,0 +1,17 @@
+[
+  {
+    "label": "Observation and law taxonomy",
+    "slug": "observation-law-taxonomy",
+    "title": "When does a description acquire its own rule?",
+    "date": "2026-09-24",
+    "updated": "2026-09-24",
+    "kind": "Living conceptual reference",
+    "evidence": "open",
+    "topic": "Algebra and closure",
+    "summary": "A maintained map of same-rule Groovy disagreement, intrinsic observer closure, effective laws, completion-dependent recursion, external schedules and observation-controlled rule choice.",
+    "takeaway": "G tests one choice of observer and effective rule. A law for an observation may differ from the source rule, and feeding that law back creates a new system whose controller must be counted.",
+    "source": "docs/research/2026-09-24-observation-law-taxonomy.md",
+    "promotion": { "stage": "research" },
+    "related": ["groovy-field-census", "groovy-1d-third-generation", "observation-discovery", "reusable-descriptions"]
+  }
+]

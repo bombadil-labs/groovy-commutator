@@ -26,6 +26,9 @@ For one CA rule, `E(S) = phi(S)`, `D(S) = S XOR E(S)` and
 `G(S) = D(E(S)) XOR E(D(S))`. Read `src/groovy/` module docstrings for
 definitions. Same-law commutation is distinct from autonomous evolution
 under a different effective law.
+The [observation/law taxonomy](docs/research/2026-09-24-observation-law-taxonomy.md)
+also distinguishes intrinsic observer closure, off-image rule completion,
+recursive G and externally or internally chosen rule schedules.
 
 - Declare rule, state family, boundary, observation, cadence and horizon.
 - Distinguish exact algebra, exhaustive finite computation, sampled evidence,
