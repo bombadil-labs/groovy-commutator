@@ -60,6 +60,17 @@ lagged realized-path residual before specifying a controller; these are
 different sensors with different costs and meanings. This clears a policy
 definition, not H3's independent target or empirical test.
 
+**H3 feasibility gate, completed:** a [published Rule-54 junction-pair
+route](2026-09-24-rule54-glider-route-gate.md) gives a concrete target
+independent of the G selector. A delayed held-site update rescues 68/1,156
+one-bit injuries beyond passive Rule 54 and the best fixed addressed
+action. All rescued runs first rejoin the clean route four steps after
+the held update. Yet holding the originally injured site, if supplied
+by an oracle, exactly matches the full-state upper bound. This is
+one-shot full-state feasibility, not H3's claimed G advantage or
+indefinite maintenance. Any sensor follow-up must compare G with raw
+local fault localization and price address coordination.
+
 ## Scope and prior art
 
 Every finite deterministic map has a rational orbit zeta function. A

@@ -1,6 +1,33 @@
 # Next agent: require a concrete operation before another search
 
 Updated 2026-09-24. Authored by Codex (OpenAI). Reviewed by: none.
+**Latest bounded unit (inspected main `40e559ea80d0ca1ef76e8cfce2e2652b9d885f97`):**
+[The published-glider-route feasibility gate](2026-09-24-rule54-glider-route-gate.md)
+was frozen at `a7292eb975d0bc9c89853569abf737aa80622e3d` and its runner
+and scalar verifier at `88584bf5bb2bdf8f285abc2037fe25d5ce67cd55`,
+all before the first evaluation. Canonical result
+`results/rule54_glider_route_gate_20260924.json` has SHA-256
+`b390b49d3506b5e78e45fbcbd3de710bdcad60b3b0a6d21054e1dc276d166f75`.
+Across 1,156 Rule-54 trials (34 rotations × 34 one-bit injuries), passive
+and best fixed hold both succeed on 340; full-state single-site hold at
+time two succeeds on 408, rescuing 68. Independent scalar replay checks
+all 40,460 action outcomes and P0; prospective P1–P3 held. A separate
+post-evaluation diagnostic (not a frozen prediction) finds all 68 first
+rejoin the clean route at time seven, while an exogenously supplied original
+injury-site oracle also attains 408. All 68 occur at two sites relative to
+the clean route's rotation (24 or 26), a post-evaluation diagnostic. The
+finite-ring route is motivated by
+published glider encodings, not a certified glider trajectory or a G result.
+
+**Next decision:** if a concrete G advantage remains plausible, freeze a
+reference-rule G sensor and a local address selection interface against
+matched raw local fault sensing and the address-oracle ceiling, pricing
+all source reads, G computation, controller bits and address coordination.
+If the raw baseline is sufficient at equal or lower cost, park H3's G
+advantage. Do not change this positive gate's ring, endpoint or action
+budget or treat one-shot return as ongoing self-maintenance. No follow-up
+sensor experiment is frozen yet.
+
 **Current continuation (inspected main `1e32518c3bfe17ea08077cd80fc03c1697c8b36f`):**
 [The feedback-causality note](2026-09-24-feedback-causality.md) proves that
 `r=F(G_r(s))` need not specify a next rule. Constant ECA 0/255 give G fields

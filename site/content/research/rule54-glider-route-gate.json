@@ -1,0 +1,17 @@
+[
+  {
+    "label": "Rule-54 glider-route gate",
+    "slug": "rule54-glider-route-gate",
+    "title": "Can a one-site rule hold recover a published Rule-54 route?",
+    "date": "2026-09-24",
+    "updated": "2026-09-24",
+    "kind": "Exact finite full-state feasibility gate",
+    "evidence": "exact",
+    "topic": "Observation and memory",
+    "summary": "For an independently sourced Rule-54 junction-pair seed, a full-state single-site held update at time two recovers 68 of 1,156 injured trajectories beyond passive and fixed controls; all first rejoin the clean route at time seven.",
+    "takeaway": "Dynamic repair is feasible under this frozen contract, but holding a known injury address matches the full-state bound. No G sensor or autonomous controller was tested.",
+    "source": "docs/research/2026-09-24-rule54-glider-route-gate.md",
+    "promotion": { "stage": "research" },
+    "related": ["observer-orbit-program", "feedback-causality", "delayed-repair-feasibility"]
+  }
+]
