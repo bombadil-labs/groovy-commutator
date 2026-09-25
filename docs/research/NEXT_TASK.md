@@ -1,5 +1,32 @@
 # Next agent: require a concrete operation before another search
 
+**Latest handoff, 2026-09-25: density observer/readout correction.**
+Inspected main `5823d46ef2512525b5de72c0afc16dc6c3000d76` after merged
+[PR #314](https://github.com/bombadil-labs/groovy-commutator/pull/314);
+the Bombadil Labs connector reported no open PRs/issues. Myk approved a
+bounded comparison of three output/observer contracts. The
+[new note](2026-09-25-density-observer-readout.md) adds the omitted 1996
+Capcarrere–Sipper–Tomassini theorem: a fixed Rule 184 solves the density
+*label* task if the observer reads same-symbol adjacent blocks. Fukś's
+Rule-232 stage produces a homogeneous-majority endpoint under a length-timed
+switch. A whole-ring scan at `n=floor((L-2)/2)`, a fixed pair port from
+`T=ceil(L/2)` through `T+L-1`, and the two-rule endpoint at `L-2` are
+distinct interfaces. The note charges timing, access and site updates,
+and contrasts a central counter. An elementary fixed-port causal-cone
+argument shows no finite, clockless tie certificate on every arbitrary
+unmarked ring without length information. No new experiment or canonical
+result. Reviewed by: none. Gathering branch:
+`gather/density-observer-contract-20260925`.
+
+**Decision:** correct the former suggestion that composition first makes
+the majority distinguishable. The answer is already in Rule 184's
+reachable pattern language, at a readout cost. Rule 232 changes the output
+format and locality of access. The selected 30/54/110 application stays
+parked. Next questions only with a named consumer: (1) is a static local
+pair sensor, global scan or distributed consensus the required output?
+(2) who supplies ring length and deadlines, and what does access cost?
+Otherwise no empirical unit is queued; do not start a new schedule sweep.
+
 **Latest handoff, 2026-09-25: external density-classification calibration.**
 Inspected main `e4647fbe86ab4d561247159dfb79cae681ecddf8` after PR #313;
 the Bombadil Labs connector reported no open PRs/issues. Myk authorized
