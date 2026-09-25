@@ -797,6 +797,26 @@ radius-at-most-three CA at three-step sampling, so future applications must
 compare that fused baseline and count the phase clock and evaluations.
 [Proof, frozen finite check and decision](2026-09-25-rule-composition-phase.md).
 
+## 2026-09-25: exactly when the chosen rule order survives a first step
+
+We were curious whether a first CA rule could erase the distinctions that
+make two later rules sensitive to order. We froze Rules 54 and 110 as the
+later pair and checked five chosen first rules against *every* seven-bit
+source neighborhood. This yields a full-line certificate for the
+three-step local maps, unlike the earlier finite-ring cycle comparison.
+
+We found that Rule 54 as a first step excludes three of the 32 possible
+middle five-bit patterns. One of the three was sensitive to later rule
+order, but twelve sensitive patterns remain. Rules 30 and 90 leave all
+32 possible middle patterns, and the selected later orders differ on
+52 of 128 source neighborhoods after either prefix. Constant Rule 0
+erases the difference by erasing every source distinction. We have
+explicit seven-bit witnesses for every nonconstant prefix. These are
+exact local counts, not probabilities, a recurrence result or a useful
+control method. No further prefix search is queued without a concrete
+task and fused-rule cost comparison.
+[Frozen order-image gate and full-line certificates](2026-09-25-order-image-gate.md).
+
 ## Keeping this useful
 
 After a completed or stopped unit, update its entry or add one short account:
