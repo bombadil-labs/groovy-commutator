@@ -1,5 +1,30 @@
 # Next agent: require a concrete operation before another search
 
+**Latest handoff, 2026-09-25: external density-classification calibration.**
+Inspected main `e4647fbe86ab4d561247159dfb79cae681ecddf8` after PR #313;
+the Bombadil Labs connector reported no open PRs/issues. Myk authorized
+reconstructing Fukś's Rule-184→232 theorem and comparing its controller,
+local updates and direct counting baseline. The
+[costed prior-art note](2026-09-25-density-classification-contract.md)
+states the periodic-ring contract `L≥2`, exact deadlines
+`n=floor((L-2)/2)` and `m=floor((L-1)/2)`, tie handling and the
+paper's finite-ring proof ingredients. No experiment, canonical result or
+new theorem was produced. Reviewed by: none. Gathering branch:
+`gather/density-classification-contract-20260925`; publication and merge
+provenance are available from its PR once created.
+
+**Decision:** the known two-rule success depends on a length-dependent
+external switch. Charge its timer, known `L`, broadcast and `L(L-2)` site
+updates; direct central count uses `L` reads plus `L` writes where global
+access is permitted. Our PR #313 fixed-three-step fusion theorem does not
+remove the length-dependent controller. This reopens composition only as a
+concrete model-boundary calibration, not a schedule search. The selected
+30/54/110 application remains parked. Next questions, conditional on a
+consumer: (1) what physical interface actually forbids central count yet
+allows a global rule clock? (2) can a specified local timer realize the
+length-dependent switch, with its states and synchronization charged?
+Otherwise stop; no empirical unit is queued.
+
 **Latest handoff, 2026-09-25: composition resource contract and stop.**
 Inspected main `7e3ee102119f9e0c8757388ee93a6ad8e316e0ae` after
 [PR #312](https://github.com/bombadil-labs/groovy-commutator/pull/312),

@@ -82,6 +82,17 @@ establishes a resource win; an intermediate-read or physical-radius
 consumer must specify clock, storage, locality and update costs before
 another composition unit. **This application line is parked.**
 
+An external [density-classification calibration](2026-09-25-density-classification-contract.md)
+sharpens that stop: Fukś's proved 184→232 program solves a real task that
+no single fixed uniform binary CA solves under the classical contract. It
+runs each stage for a length-dependent number of steps and obtains its
+switch from an external controller. Rule 184 turns conserved density into
+the absence of one kind of adjacent defect; Rule 232 amplifies the remaining
+side. Count the known ring length, timer, rule broadcast, site updates and
+output access; compare a direct count when global reads are permitted.
+This is prior art and a model-boundary example, not a consumer of our
+selected 30/54/110 schedule or a new experiment queue.
+
 ## Current agenda after integration
 
 Myk authorized reconciliation and merging of the five completed gathering

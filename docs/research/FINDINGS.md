@@ -838,6 +838,28 @@ been specified, so the application line is parked while the exact
 composition findings remain available.
 [Resource contract and decision](2026-09-25-rule-composition-resource-contract.md).
 
+## 2026-09-25: a known two-rule classifier clarifies what composition buys
+
+We were curious whether rule composition has an independently useful task
+after our selected three-rule order difference failed to supply one. We
+reconstructed Fukś's proved density classifier: on a periodic ring of known
+length `L`, apply Rule 184 for `floor((L-2)/2)` rounds and Rule 232 for
+`floor((L-1)/2)` rounds. The first stage preserves the count of ones but
+eliminates one kind of adjacent pair according to the majority; the second
+stage turns that organized pattern into all zeros or all ones. A tie becomes
+alternating. The theorem covers every binary source at each `L≥2`.
+
+We found a concrete way a representation change serves a task, with a
+crucial cost: an external controller knows `L` and chooses when the rule
+changes. A single fixed uniform binary CA cannot perfectly classify all
+inputs under the classical impossibility result, but that result does not
+forbid a timed two-rule program. Direct central counting needs only one
+read pass and an output pass if global access is allowed, while the CA
+schedule spends `L-2` local rounds. This is established prior art and a
+calibration for future cost claims, not evidence that our selected schedule
+is useful or that composition beats direct counting.
+[Sources, mechanism and resource contract](2026-09-25-density-classification-contract.md).
+
 ## Keeping this useful
 
 After a completed or stopped unit, update its entry or add one short account:
