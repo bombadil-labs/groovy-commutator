@@ -852,13 +852,36 @@ alternating. The theorem covers every binary source at each `L≥2`.
 We found a concrete way a representation change serves a task, with a
 crucial cost: an external controller knows `L` and chooses when the rule
 changes. A single fixed uniform binary CA cannot perfectly classify all
-inputs under the classical impossibility result, but that result does not
-forbid a timed two-rule program. Direct central counting needs only one
+inputs **by converging to a uniform majority output** under the classical
+impossibility result, but that result does not forbid a timed two-rule
+program or a different output language. Direct central counting needs only one
 read pass and an output pass if global access is allowed, while the CA
 schedule spends `L-2` local rounds. This is established prior art and a
 calibration for future cost claims, not evidence that our selected schedule
 is useful or that composition beats direct counting.
 [Sources, mechanism and resource contract](2026-09-25-density-classification-contract.md).
+
+## 2026-09-25: the answer was in Rule 184's pattern before Rule 232
+
+We were curious whether the two-rule program was necessary to *find* the
+majority. We checked an earlier theorem we had omitted. Capcarrere,
+Sipper and Tomassini proved that Rule 184 alone classifies every periodic
+binary ring if we read the surviving `11` block as one-majority, `00` as
+zero-majority, and no like pair as a tie. Fukś's second rule instead
+turns that pattern answer into an all-zero or all-one ring (alternating
+on ties). The 1995 impossibility concerns that uniform-output contract.
+
+We compared three ways to obtain the label: scan the Rule-184 ring at a
+known deadline, monitor one fixed adjacent pair until a known deadline,
+or run both rules and read the homogeneous-majority endpoint. They charge
+different clock, spatial access, waiting and update costs. A fixed local
+port with no length information cannot certify a tie after finite time
+on every unmarked ring: a farther-away single-bit change can create a
+majority while leaving that finite observation unchanged. This is an
+exact causal-cone observation, not a new empirical finding or a claim
+that the staged scheme beats direct counting. The composition application
+line stays parked without a consumer.
+[Proof sources and observer contract](2026-09-25-density-observer-readout.md).
 
 ## Keeping this useful
 
