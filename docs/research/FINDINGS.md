@@ -775,6 +775,28 @@ repeated-disturbance or cross-rule question needs a new independent
 target and cost contract, not more tuning of this route.
 [Frozen combination and exact evidence](2026-09-24-rule54-two-pattern-closure.md).
 
+## 2026-09-25: what rule composition can and cannot change
+
+We were curious whether changing the order of whole ECA rules could change
+the recurrent organization. We first proved a general phase fact: applying
+two rules in opposite orders gives exactly the same number of periodic
+cycles of each length on every finite ring, even when the resulting states
+and transient paths disagree. Thus their finite-ring dynamical zeta functions
+are identical. A different three-rule permutation can escape that constraint:
+on a six-cell ring, the selected schedule 30→54→110 has seven fixed points
+and two period-nine cycles, whereas 30→110→54 has one fixed point and one
+period-six cycle. Independent implementations checked the exact enumerations
+at widths four, six and eight.
+
+We found the point of contact with our representation question: after a
+shared first rule, the other two orders differ precisely where the later
+rules fail to commute **on the first rule's image**. The first step can hide
+their disagreement. This does not show more complex behavior, a useful
+controller, or a prime mechanism. A three-step schedule is also a single
+radius-at-most-three CA at three-step sampling, so future applications must
+compare that fused baseline and count the phase clock and evaluations.
+[Proof, frozen finite check and decision](2026-09-25-rule-composition-phase.md).
+
 ## Keeping this useful
 
 After a completed or stopped unit, update its entry or add one short account:

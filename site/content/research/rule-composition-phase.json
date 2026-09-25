@@ -1,0 +1,17 @@
+[
+  {
+    "label": "Rule composition and phase",
+    "slug": "rule-composition-phase",
+    "title": "When does the order of CA rules change the cycles?",
+    "date": "2026-09-25",
+    "updated": "2026-09-25",
+    "kind": "Proof and exact finite check",
+    "evidence": "exact",
+    "topic": "Algebra and closure",
+    "summary": "Cyclic rotations of a rule schedule have identical periodic-cycle counts on every finite ring. One frozen 30/54/110 comparison shows a noncyclic permutation changes the cycles at widths 4, 6 and 8.",
+    "takeaway": "A first rule filters which later order differences are visible; compare any claimed benefit against the equivalent fused CA and charge its rule schedule.",
+    "source": "docs/research/2026-09-25-rule-composition-phase.md",
+    "promotion": { "stage": "research" },
+    "related": ["feedback-causality", "observation-law-taxonomy"]
+  }
+]

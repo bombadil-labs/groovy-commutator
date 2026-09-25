@@ -1,6 +1,6 @@
 # Research: start here
 
-**Current direction, 2026-09-24.** This page is the scheduling authority for
+**Current direction, 2026-09-25.** This page is the scheduling authority for
 research. Older notes and checkpoints preserve the evidence; their “next”
 sections are historical proposals, not an instruction to resume them.
 
@@ -56,6 +56,16 @@ finite task, post-selected and not a general raw-versus-G theorem.
 **The Rule-54 one-shot repair benchmark is now closed.** A genuine
 continuation needs a new independently specified repeated-disturbance
 target and costed consumer; there is no queued ECA sweep.
+
+A bounded [rule-composition analysis](2026-09-25-rule-composition-phase.md)
+now proves that cyclic rotations of a fixed rule schedule have equal
+finite-ring periodic-cycle counts and zeta functions. A frozen 30/54/110
+example shows that a **noncyclic** permutation can change those counts on
+small rings. The first rule controls which later order differences remain
+visible through its image. This is an exact guardrail and a finite example,
+not an independent target, Class-IV discriminator, or reason to search every
+schedule. Compare any proposed schedule with its fused radius-three rule
+at matched sampling and count intermediate phase and update costs.
 
 ## Current agenda after integration
 

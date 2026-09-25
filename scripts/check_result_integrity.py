@@ -30,6 +30,10 @@ ROOT = pathlib.Path(__file__).resolve().parents[1]
 
 # result file -> {hash key recorded in its source_hashes: path the hash was taken of}
 REGISTRY = {
+    'results/three_rule_order_20260925.json': {p: p for p in (
+        'docs/research/protocols/2026-09-25-three-rule-order.md',
+        'experiments/three_rule_order_20260925/run.py',
+        'src/groovy/ca.py')},
     'results/rule54_two_pattern_closure_20260924.json': {p: p for p in (
         'docs/research/protocols/2026-09-24-rule54-two-pattern-closure.md',
         'experiments/rule54_two_pattern_closure_20260924/run.py',

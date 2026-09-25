@@ -1,5 +1,45 @@
 # Next agent: require a concrete operation before another search
 
+**Latest handoff, 2026-09-25: composition phase and bounded order check.**
+Inspected main `95570ba142edebb7db466ceb88f6d600da8db868`; Bombadil
+Labs GitHub connector listed no open issues or PRs. Myk asked us to pursue
+rule composition and branch at natural stopping points. The exact
+[composition note](2026-09-25-rule-composition-phase.md) proves cyclic
+rotations of any fixed schedule have identical periodic-point and cycle
+counts, hence identical finite-ring dynamical zeta functions. This is an
+elementary general map fact, not a claimed new theorem about ECA. For
+three rules, swapping noncyclic slots after a common prefix tests the
+cross-rule order defect only on the prefix's reachable image. That is the
+specific representation distinction this branch exposed.
+
+The selected 30/54/110 comparison was frozen on the publishing branch at
+`736af639bbaad39ad3c30ef909f5d753976fbb9c` before the pinned and
+independently verified runner at
+`a53d95d504d09802227c7ef6e10f8d1f5222e7db`. Exact finite-ring
+enumeration at widths 4, 6 and 8 finds unequal cycle structures for
+30→54→110 versus 30→110→54; cyclic rotation 54→110→30 matches the first
+at every width. On width six the first has seven period-one and two
+period-nine cycles; the noncyclic permutation has one period-one and one
+period-six cycle. Canonical file:
+`results/three_rule_order_20260925.json`, SHA-256
+`9fd6af4bb8627c2777aa1602adf3711b6d40e41506da43165e94d0106c12dbbe`.
+The library vector step and an independent scalar LUT agree on all
+transitions; independent orbit tracing verifies cycle counts. Evidence is
+finite for the selected rings, with no complexity, infinite-line,
+maintainability, or cost superiority claim. Reviewed by: none.
+
+**Next decision:** do not enumerate pair/triple schedules for their own
+sake. A future question needs a task, source family and output that depend
+on rule order; then compare against the fused radius-at-most-three CA,
+including initialization, clock/selector, read radius and intermediate
+updates. If the task is externally repeated maintenance, specify the
+perturbation process before pursuing a selector. Local selection is a
+different construction already in `src/groovy/prehoc.py`; same-time local
+source selectors collapse to an ordinary ECA. Existing Rule-54 one-shot
+repair stays closed. Gathering branch `gather/rule-composition-context-20260925`
+is isolated from the previous dirty local checkout; link PR and merge commit
+when published. No automatic empirical unit is queued.
+
 **Latest handoff, 2026-09-24: Rule-54 route-repair task closed.**
 Inspected main `cd9f2bccdd53fa744c434745235d4186b9d44216`, with no
 open issues or PRs at the start. Myk approved exactly one post-selection
