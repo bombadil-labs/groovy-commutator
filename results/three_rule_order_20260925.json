@@ -1,0 +1,144 @@
+{
+  "protocol": "docs/research/protocols/2026-09-25-three-rule-order.md",
+  "evaluation": "exhaustive periodic rings of widths 4,6,8; scalar/vector agreement",
+  "source_hashes": {
+    "docs/research/protocols/2026-09-25-three-rule-order.md": "a7683f3672a5ac1a74bbe37483ae2dc052dec0390212fdccd4f3b39be39a6557",
+    "experiments/three_rule_order_20260925/run.py": "bf2ebc408d7a83523cdabf9c3729d830c418b4b1918c3fb288f0e7ef543cb088",
+    "src/groovy/ca.py": "6969d6f0699b48602c8a2f55aecd61d58862e6472fea56f6d1ed9ebb2656d77e"
+  },
+  "rows": [
+    {
+      "width": 4,
+      "orders": [
+        {
+          "first_to_last": [
+            30,
+            54,
+            110
+          ],
+          "cycles_by_period": {
+            "1": 5,
+            "4": 1
+          }
+        },
+        {
+          "first_to_last": [
+            30,
+            110,
+            54
+          ],
+          "cycles_by_period": {
+            "1": 5
+          }
+        },
+        {
+          "first_to_last": [
+            54,
+            110,
+            30
+          ],
+          "cycles_by_period": {
+            "1": 5,
+            "4": 1
+          }
+        }
+      ],
+      "first_disagreement": {
+        "source": 1,
+        "first_result": 6,
+        "second_result": 1
+      },
+      "maps_agree": false
+    },
+    {
+      "width": 6,
+      "orders": [
+        {
+          "first_to_last": [
+            30,
+            54,
+            110
+          ],
+          "cycles_by_period": {
+            "1": 7,
+            "9": 2
+          }
+        },
+        {
+          "first_to_last": [
+            30,
+            110,
+            54
+          ],
+          "cycles_by_period": {
+            "1": 1,
+            "6": 1
+          }
+        },
+        {
+          "first_to_last": [
+            54,
+            110,
+            30
+          ],
+          "cycles_by_period": {
+            "1": 7,
+            "9": 2
+          }
+        }
+      ],
+      "first_disagreement": {
+        "source": 1,
+        "first_result": 30,
+        "second_result": 15
+      },
+      "maps_agree": false
+    },
+    {
+      "width": 8,
+      "orders": [
+        {
+          "first_to_last": [
+            30,
+            54,
+            110
+          ],
+          "cycles_by_period": {
+            "1": 5,
+            "4": 3
+          }
+        },
+        {
+          "first_to_last": [
+            30,
+            110,
+            54
+          ],
+          "cycles_by_period": {
+            "1": 5,
+            "4": 2,
+            "8": 1,
+            "16": 1
+          }
+        },
+        {
+          "first_to_last": [
+            54,
+            110,
+            30
+          ],
+          "cycles_by_period": {
+            "1": 5,
+            "4": 3
+          }
+        }
+      ],
+      "first_disagreement": {
+        "source": 1,
+        "first_result": 102,
+        "second_result": 39
+      },
+      "maps_agree": false
+    }
+  ]
+}
