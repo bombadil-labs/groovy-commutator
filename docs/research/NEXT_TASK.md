@@ -1,5 +1,40 @@
 # Next agent: require a concrete operation before another search
 
+**Latest handoff, 2026-09-25: local order-image gate finished.** Inspected
+main `bf938190b9c492e8017dd530bdf498d5b02caa4e`, with no open PRs or
+issues. Myk approved the proposed exact seven-bit diagnostic following
+[PR #311](https://github.com/bombadil-labs/groovy-commutator/pull/311).
+The [protocol](protocols/2026-09-25-order-image-gate.md) was published at
+`91f0b73e819a4a8ff3a0a311370ed45c7944d5c8` before the pinned
+[runner](../../experiments/order_image_gate_20260925/run.py) at
+`1a51e22fcbe9cb2abb4d7717a6d013be4670fb32`, then evaluation.
+Reviewed by: none.
+
+Fix the later pair to 54 and 110. For all 128 source patches and five
+preselected first rules 204, 30, 90, 54, 0, full-line order-difference
+patch counts are respectively **52, 52, 52, 43, 0**. The respective
+five-bit intermediate images have **32, 32, 32, 29, 1** words; of the
+13 pair-order-sensitive middle words they retain **13, 13, 13, 12, 0**.
+Rule 54 excludes middle words 13, 21, 22, only the last order-sensitive;
+it partially filters but does not erase the difference. The first
+Rule 30 witness is `1010000` (outputs 1 vs 0), proving the compositions
+differ as full-line *maps*. It does not extend the finite-ring cycle result
+to infinite-line recurrence. Scalar truth tables and vectorized 11-cell
+rings with both exterior fills agree on every output. Canonical file
+`results/order_image_gate_20260925.json` has SHA-256
+`af55c1bd4f0dbc08c90b0121e2f3d76319f8297080028277492a67200c7df549`;
+registered source hashes bind protocol, runner and library ECA step.
+The [result note](2026-09-25-order-image-gate.md) contains costs, witnesses,
+limitations and exact certificate scope. The prior PR #311 canonical bytes
+are untouched.
+
+**Next decision:** no additional prefix/rule search follows. A new unit
+needs an independent downstream task and source family where rule order
+matters, and a matched fused radius-three CA baseline. Counting differing
+neighborhoods alone is neither a measured distribution nor a dynamical
+advantage. This branch is `gather/rule-composition-local-witness-20260925`;
+the PR and integration provenance should be linked upon publication.
+
 **Latest handoff, 2026-09-25: composition phase and bounded order check.**
 Inspected main `95570ba142edebb7db466ceb88f6d600da8db868`; Bombadil
 Labs GitHub connector listed no open issues or PRs. Myk asked us to pursue

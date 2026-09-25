@@ -66,6 +66,13 @@ visible through its image. This is an exact guardrail and a finite example,
 not an independent target, Class-IV discriminator, or reason to search every
 schedule. Compare any proposed schedule with its fused radius-three rule
 at matched sampling and count intermediate phase and update costs.
+The subsequent [exact seven-bit order-image gate](2026-09-25-order-image-gate.md)
+checks the full line for fixed Rules 54/110 following five frozen first
+rules. Rule 54 partially filters the order disagreement; Rules 30/90
+preserve all sensitive intermediate words; Rule 0 erases everything.
+Explicit local words witness full-line *map* difference for each
+nonconstant prefix, without changing the finite-ring-only status of the
+earlier cycle counts. No follow-on prefix search is queued.
 
 ## Current agenda after integration
 

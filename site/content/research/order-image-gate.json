@@ -1,0 +1,17 @@
+[
+  {
+    "label": "Local rule-order image gate",
+    "slug": "order-image-gate",
+    "title": "Which rule-order differences survive a first update?",
+    "date": "2026-09-25",
+    "updated": "2026-09-25",
+    "kind": "Exact local-map certificate",
+    "evidence": "exact",
+    "topic": "Algebra and closure",
+    "summary": "Complete seven-bit local tables show that a Rule-54 prefix removes one of thirteen Rule-54/110 order-sensitive intermediate words but leaves twelve; Rules 30 and 90 leave all thirteen accessible.",
+    "takeaway": "A prefix filters later rule order through its reachable local image. This proves full-line map difference, not an advantage in recurrence, control or complexity.",
+    "source": "docs/research/2026-09-25-order-image-gate.md",
+    "promotion": { "stage": "research" },
+    "related": ["rule-composition-phase", "observation-law-taxonomy"]
+  }
+]
