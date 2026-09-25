@@ -1,5 +1,33 @@
 # Next agent: require a concrete operation before another search
 
+**Latest handoff, 2026-09-25: composition resource contract and stop.**
+Inspected main `7e3ee102119f9e0c8757388ee93a6ad8e316e0ae` after
+[PR #312](https://github.com/bombadil-labs/groovy-commutator/pull/312),
+with no open PRs/issues. Myk approved a bounded design gate following
+the exact local-image result. The
+[decision note](2026-09-25-rule-composition-resource-contract.md) proves
+for any three fixed ECAs `A,B,C` that a repeated schedule with no
+mid-epoch input has the same every-third-row output as the fused
+`F=C∘B∘A` for **all** initial configurations and horizons. Each selected
+Rule-30-first fused rule genuinely needs symmetric radius three on the
+full line: outer-bit witnesses 12/13 and 0/64 for 30→54→110; 4/5 and
+0/64 for 30→110→54, derived post hoc from the unchanged canonical 128-bit
+tables in `results/order_image_gate_20260925.json`. No new empirical
+evaluation, result bytes or global optimality claim. Reviewed by: none.
+
+The contract compares three sequential radius-one updates and a
+global three-phase clock with a direct seven-bit fused epoch lookup,
+or with a fixed radius-one CA that stores a local phase label.
+Twenty-four ECA lookup bits versus 128 direct radius-three truth-table
+entries are two encodings; the fair fused implementation may use the
+same three-table recipe. **Decision:** no endpoint-only behavioral
+experiment or schedule census; composition applications are dormant
+until a consumer specifies intermediate output or intervention, a
+physical locality constraint, and a matched storage/clock/access/latency
+score. The old Rule-54 repair benchmark remains closed. This unit's
+gathering branch is `gather/rule-composition-resource-contract-20260925`;
+publication PR and merge provenance can be read from that branch.
+
 **Latest handoff, 2026-09-25: local order-image gate finished.** Inspected
 main `bf938190b9c492e8017dd530bdf498d5b02caa4e`, with no open PRs or
 issues. Myk approved the proposed exact seven-bit diagnostic following
