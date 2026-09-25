@@ -5,16 +5,26 @@ experiment, original theorem, or computational performance claim. Inspected
 main `e4647fbe86ab4d561247159dfb79cae681ecddf8` after PR #313; no open
 PRs or issues. Reviewed by: none.
 
+**Same-day correction:** [the observer/readout audit](2026-09-25-density-observer-readout.md)
+adds the omitted 1996 result of Capcarrere, Sipper and Tomassini: Rule 184
+alone classifies density when the output is the surviving `11` or `00`
+block language. The 1997 Rule-232 stage makes the answer available as a
+homogeneous majority endpoint. Composition is needed for that *output
+contract*, not to make the density distinction first exist. The following
+theorem and cost accounting remain valid under their stated contract.
+
 ## Why this is the right external example
 
 Our selected three-rule permutations changed finite-ring cycles, but supplied
 no task requiring their intermediate rows. A real, independent task is the
 finite-ring density classification problem. Land and Belew proved the
 impossibility of a **single, fixed, uniform two-state CA** perfectly
-classifying all binary strings. Fukś then proved that a **length-timed
-two-rule program** solves it. The latter changes the model by supplying a
-rule switch and the ring length to an external controller. It does not refute
-the former. This is prior art, not a discovery of this project.
+classifying all binary strings by converging to a **uniform binary output**.
+Fukś then proved that a **length-timed two-rule program** solves that
+output task. The latter changes the model by supplying a rule switch and
+the ring length to an external controller. The earlier 1996 result changes
+the output interpretation instead. Neither refutes the impossibility
+theorem. This is prior art, not a discovery of this project.
 
 Primary sources: [Fukś, *Physical Review E* 55, R2081 (1997), Proposition
 4](https://arxiv.org/pdf/comp-gas/9703001) ([journal
@@ -59,7 +69,7 @@ formalized it.
 | --- | --- | --- |
 | Fukś schedule | Two fixed 8-entry rule tables; `L` must be known to schedule the switch after `n` rounds and stop after `m`. An external stage bit and a counter sized with `L` are one realization; selecting/broadcasting the active rule is a real control channel. One binary cell per ring site. | `L(L-2)` binary-site updates (for `L≥2`), each reading a radius-one triple and writing a bit. Approximately `3L(L-2)` logical input incidences, with overlapping reads. Latency `L-2` synchronous rounds. Endpoint is distributed across all cells; count the external clock and any observation/readout costs. |
 | Central count and write | A processor reads `L` source bits, keeps a counter with `ceil(log2(L+1))` bits (plus control), and knows `L`. A tie output needs an arbitrary spatial parity origin for one of the two alternating phases. | One pass of `L` reads to count and `L` output writes; access is global or sequential and the processor is not a radius-one uniform binary CA. Its wall-clock latency depends on the access model. It uses asymptotically fewer operations than the CA's aggregate site updates in a model with cheap global/sequential access; it cannot be called a local-communication baseline under a model that forbids that access. |
-| Single fixed binary CA | No externally staged rule choice or length-dependent switch; uniform local law and one bit per site. | Perfect classification on all lengths/sources is ruled out under the classical contract, irrespective of how long one waits. This is an impossibility for that model, not for the centralized or staged models. |
+| Single fixed binary CA | No externally staged rule choice or length-dependent switch; uniform local law and one bit per site. | Perfect classification *by convergence to the uniform majority state* on all lengths/sources is ruled out under the classical contract, irrespective of how long one waits. The different Rule-184 block readout succeeds under another output contract. |
 
 The external controller may store `L` and a round counter once globally. If
 instead each cell must autonomously know when to switch, merely adding a
@@ -80,7 +90,10 @@ part of the contract.
 ## Decision
 
 This is a known successful **task-specific transformation of a global count
-into a local defect language**, followed by amplification. It is a useful
+into a local defect language**, followed by amplification to a homogeneous
+majority output (the tie stays alternating). The first stage alone already
+supports a perfect classifier under
+the 1996 observer contract. This is a useful
 calibration for how to state observer, clock, memory and locality constraints
 when a schedule seems to outperform one CA. It gives no Groovy-specific
 advantage, Class-IV discriminator, prime result or complexity-theoretic
