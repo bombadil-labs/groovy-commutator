@@ -73,6 +73,14 @@ preserve all sensitive intermediate words; Rule 0 erases everything.
 Explicit local words witness full-line *map* difference for each
 nonconstant prefix, without changing the finite-ring-only status of the
 earlier cycle counts. No follow-on prefix search is queued.
+The [resource decision gate](2026-09-25-rule-composition-resource-contract.md)
+proves that a three-rule schedule and its own fused radius-at-most-three
+CA have identical outputs at every three-step epoch on every source. The
+saved Rule-30-first local tables show both fused maps genuinely require
+symmetric radius three. Neither table size nor rule ordering alone
+establishes a resource win; an intermediate-read or physical-radius
+consumer must specify clock, storage, locality and update costs before
+another composition unit. **This application line is parked.**
 
 ## Current agenda after integration
 

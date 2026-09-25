@@ -1,0 +1,17 @@
+[
+  {
+    "label": "Rule-composition resource contract",
+    "slug": "rule-composition-resource-contract",
+    "title": "What could composing rules actually buy?",
+    "date": "2026-09-25",
+    "updated": "2026-09-25",
+    "kind": "Exact design decision",
+    "evidence": "exact",
+    "topic": "Algebra and closure",
+    "summary": "A repeated three-rule schedule and its own fused radius-three CA give exactly the same outputs every three steps. Selected saved tables show both Rule-30-first fused maps genuinely need radius three.",
+    "takeaway": "Any benefit must have an intermediate-read or physical-resource contract, with clock, storage, locality and access costs charged fairly. Composition applications are parked until a consumer exists.",
+    "source": "docs/research/2026-09-25-rule-composition-resource-contract.md",
+    "promotion": { "stage": "research" },
+    "related": ["rule-composition-phase", "order-image-gate", "observation-law-taxonomy"]
+  }
+]

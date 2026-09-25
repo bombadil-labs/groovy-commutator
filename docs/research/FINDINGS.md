@@ -817,6 +817,27 @@ control method. No further prefix search is queued without a concrete
 task and fused-rule cost comparison.
 [Frozen order-image gate and full-line certificates](2026-09-25-order-image-gate.md).
 
+## 2026-09-25: the rule schedule's possible value needs a physical interface
+
+We were curious what the new rule-order difference could actually buy.
+We compared a three-rule schedule with its own fused three-step rule,
+accounting separately for stored rule tables, a phase clock, physical
+read radius, intermediate updates and output cadence. We also checked
+the already saved local tables: both selected Rule-30-first schedules
+really require symmetric radius three when fused on the full line.
+
+We found an exact stopping gate: if a task observes only every third
+row and supplies no input between steps, the schedule and its fused
+rule give *identical* outputs for every starting state at every epoch.
+Storing three small tables instead of one direct seven-bit lookup is
+one possible implementation tradeoff, not a behavioral or information
+advantage; the fused map can use that same three-table recipe. A task
+that reads intermediate rows or restricts physical update locality
+would need a clock and matched cost contract. No such consumer has
+been specified, so the application line is parked while the exact
+composition findings remain available.
+[Resource contract and decision](2026-09-25-rule-composition-resource-contract.md).
+
 ## Keeping this useful
 
 After a completed or stopped unit, update its entry or add one short account:
