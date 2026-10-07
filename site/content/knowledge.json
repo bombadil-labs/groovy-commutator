@@ -2759,6 +2759,15 @@
       "research": [
         "prediction-repair"
       ]
+    },
+    {
+      "source": "matched-history-groovy-coupling",
+      "type": "depends_on",
+      "target": "predictive-future-refinement",
+      "reason": "The matched test defines each repair step using the exact future-equivalence refinement tower.",
+      "research": [
+        "matched-history-transport-20261007"
+      ]
     }
   ],
   "nodes": [
@@ -5341,6 +5350,18 @@
       "source": "docs/knowledge/rule54-route-repair-feasibility.md",
       "research": [
         "rule54-glider-route-gate"
+      ]
+    },
+    {
+      "id": "matched-history-groovy-coupling",
+      "title": "Matched predictive history can differ in Groovy coupling",
+      "kind": "finding",
+      "status": "exact",
+      "summary": "At fresh widths 16 and 18, every nonzero Rule-110 predictive repair is determined by the current predictive label plus current centered Groovy, while matched Rule 62 has exact early counterexamples and only about 77% cumulative Groovy-coupled repair.",
+      "updated": "2026-10-07",
+      "source": "docs/knowledge/matched-history-groovy-coupling.md",
+      "research": [
+        "matched-history-transport-20261007"
       ]
     }
   ],
