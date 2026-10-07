@@ -13,7 +13,7 @@ def main():
         output=Path(work)/'result.json'
         subprocess.run([sys.executable,str(RUN),'--output',str(output)],cwd=ROOT,check=True)
         replay=json.loads(output.read_text())
-    assert list(saved['rows'])==list(replay['rows'])
+    assert set(saved['rows'])==set(replay['rows'])  # JSON key order is not scientific data
     for n,ref in saved['rows'].items():
         actual=replay['rows'][n]
         for key in ['n','source_states','jet_image_states','fiber_histogram',
