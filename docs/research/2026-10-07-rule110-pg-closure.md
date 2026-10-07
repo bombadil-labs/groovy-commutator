@@ -269,6 +269,112 @@ This returns the project to its central question in a more precise form:
 what additional coordinate is needed to make the correction field itself
 coherent?
 
+## Post-hoc phase-gradient repair: closure by almost reconstructing the source
+
+The infinite-line obstruction identifies a specific hidden object: the block
+phase
+
+\[
+Q_j=X_{2j}.
+\]
+
+Block parity satisfies
+
+\[
+P_j=Q_j\oplus X_{2j+1},
+\]
+
+so parity forgets one phase bit per block.
+
+The witness pair differs by a half-line flip of \(Q\). That suggests storing
+the phase gradient
+
+\[
+\Phi_j=Q_j\oplus Q_{j+1}
+=X_{2j}\oplus X_{2j+2}.
+\]
+
+Define the augmented symbol
+
+\[
+W_j=
+(P_j,G^\circ_{2j},G^\circ_{2j+1},\Phi_j).
+\]
+
+A separate exact post-hoc verifier tests whether \(W\) updates autonomously at
+cadence two.
+
+Radius zero fails. Radius one fails.
+
+At macro radius two, however, the full augmented state closes exactly:
+
+\[
+\boxed{
+(W_{j-2},W_{j-1},W_j,W_{j+1},W_{j+2})
+\longmapsto
+W'_j
+}
+\]
+
+on all \(2^{14}=16{,}384\) source words in the complete causal window,
+covering 3,876 distinct admissible current contexts.
+
+So the hidden phase gradient is enough to repair the failure of
+\((P,G^\circ)\) autonomy.
+
+But it is a poor compression.
+
+Given \(P\) and \(\Phi\), choose one global phase bit \(Q_0\). The entire even
+sublattice then follows from
+
+\[
+Q_{j+1}=Q_j\oplus\Phi_j,
+\]
+
+and every odd source bit follows from
+
+\[
+X_{2j+1}=Q_j\oplus P_j.
+\]
+
+Therefore \((P,\Phi)\) already reconstructs the source up to at most one global
+complement bit. On every connected periodic ring its fibers have size exactly
+two before adding Groovy; exhaustive rings 8, 10 and 12 reproduce that
+two-to-one count.
+
+Thus
+
+\[
+(P,G^\circ,\Phi)
+\]
+
+restores autonomous local coherence by retaining essentially the microscopic
+state.
+
+This is a blocked version of a pattern already present in the repository.
+The 2026-09-22 Groovy-field census found that source spatial-gradient rails are
+a universal one-bit repair for Groovy with history and noted that such
+gradients determine the source up to global complement. The six-field lift
+also carries explicit gradient rails. The new result is the Rule-110/block-
+parity specialization: the hidden **block phase gradient** is precisely enough
+to repair the present-time parity-plus-Groovy state, at radius two.
+
+Verifier:
+[verify_rule110_phase_gradient_repair.py](../../scripts/verify_rule110_phase_gradient_repair.py).  
+Result:
+[rule110_phase_gradient_repair_20261007.json](../../results/rule110_phase_gradient_repair_20261007.json).
+
+The resulting hierarchy is now exact:
+
+1. **Parity alone:** compressed but non-Markovian.
+2. **Parity + centered Groovy:** enough for the next parity readout, but not
+   enough to update Groovy itself.
+3. **Parity + Groovy + block-phase gradient:** autonomous and local, but
+   almost microscopically complete.
+
+This sharply locates the remaining problem: find a state between levels 2 and
+3, if one exists.
+
 ## Next structural target
 
 The infinite witness suggests a concrete missing object rather than another
