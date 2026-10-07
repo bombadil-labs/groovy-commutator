@@ -1,11 +1,36 @@
 # What we have learned
 
-Running plain-language summary, updated 2026-09-24. This is a synthesis of
+Running plain-language summary, updated 2026-10-07. This is a synthesis of
 existing evidence, not a new experiment or independent review. Each entry
 links to the technical account that states its assumptions and verification.
 “Complete” means the stated investigation has ended, not that every related
 mathematical question is solved. The [program survey](2026-09-22-program-survey.md)
 explains what deserves work next.
+
+## Similar amounts of history can be doing different jobs — 2026-10-07
+
+An independent census showed that Rule 62 and Rule 110 are nearly matched in
+how much predictive history the block-2 parity observer requires. We used that
+as a control and asked whether the newly necessary distinctions are related to
+the current centered Groovy field in the same way.
+
+They are not.
+
+At fresh widths 16 and 18, every nonzero Rule-110 minimal-repair step is
+exactly determined by the pair (current predictive-history state, current
+centered G). Rule 62 has exact counterexamples in its first two repair steps at
+both widths: the same predictive label and same centered G can still require
+different next observations.
+
+Quantitatively, 100% of Rule 110's predictive-repair information is Groovy-
+coupled at both widths, versus about 77.2% for Rule 62. A post-hoc complete
+local audit sharpens this: for Rule 110 the next block-parity bit is an exact
+radius-one function of current block parity plus current centered Groovy.
+So Groovy is a sufficient present-time correction coordinate for this coarse
+Rule-110 dynamics; Rule 62 fails even the whole-field parity-plus-Groovy factor
+on explicit witnesses. This is a matched mechanism result, not a Class-IV
+classifier or a minimality theorem.
+[Exact account](2026-10-07-matched-history-transport.md).
 
 ## 1. A disagreement can mean we chose the wrong law
 

@@ -1,11 +1,21 @@
 # Research: start here
 
-**Current direction, 2026-09-25.** This page is the scheduling authority for
+**Current direction, 2026-10-07.** This page is the scheduling authority for
 research. Older notes and checkpoints preserve the evidence; their “next”
 sections are historical proposals, not an instruction to resume them.
 
 **Question:** which distinctions can a representation safely discard, which
 must it retain, and what does changing representation buy us?
+
+**New matched mechanism result.** The
+[Rule-62/Rule-110 comparison](2026-10-07-matched-history-transport.md)
+holds predictive-compression demand approximately fixed and asks what the
+newly necessary history is tracking. At fresh widths 16 and 18 every Rule-110
+repair step factors through current predictive state plus current centered
+Groovy; Rule 62 has exact early counterexamples. A complete local audit then
+proves a stronger Rule-110 identity: current block parity plus current centered
+Groovy already has a radius-one induced law for the next block-parity field.
+The next useful question is structural/minimality, not another rule census.
 
 Our strongest work answers bounded versions of that question with exact
 factors, counterexamples, graph certificates and explicit constructions.

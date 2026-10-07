@@ -2759,6 +2759,15 @@
       "research": [
         "prediction-repair"
       ]
+    },
+    {
+      "source": "matched-history-groovy-coupling",
+      "type": "depends_on",
+      "target": "predictive-future-refinement",
+      "reason": "The matched test defines each repair step using the exact future-equivalence refinement tower.",
+      "research": [
+        "matched-history-transport-20261007"
+      ]
     }
   ],
   "nodes": [
@@ -5341,6 +5350,18 @@
       "source": "docs/knowledge/rule54-route-repair-feasibility.md",
       "research": [
         "rule54-glider-route-gate"
+      ]
+    },
+    {
+      "id": "matched-history-groovy-coupling",
+      "title": "Centered Groovy supplies an exact Rule 110 parity readout correction",
+      "kind": "finding",
+      "status": "exact",
+      "summary": "Under block-2 parity at cadence two, Rule 110's next parity field is an exact radius-one function of current parity plus current centered Groovy. This is readout sufficiency, not autonomous (P,G) closure; matched Rule 62 fails even the whole-field parity-plus-G factor.",
+      "updated": "2026-10-07",
+      "source": "docs/knowledge/matched-history-groovy-coupling.md",
+      "research": [
+        "matched-history-transport-20261007"
       ]
     }
   ],
