@@ -1,0 +1,22 @@
+[
+  {
+    "slug": "jet-gqr-256-fibonacci-20261007",
+    "label": "GQR census and golden fibers",
+    "title": "A forward-invariant Fibonacci-like ambiguity survives every Rule-54 jet level",
+    "date": "2026-10-07",
+    "updated": "2026-10-07",
+    "kind": "Exact all-ECA census and full-line symbolic theorem",
+    "evidence": "exact",
+    "topic": "Observation and memory",
+    "summary": "All 256 ECA GQR pair graphs show branching is common (228 rules); 11 have purely off-diagonal branching without mixed branching. In Rule 54, two positive-entropy golden-growth G..A5 equal-output pair subshifts map into each other under source evolution, making their union invisible to every higher commutator residual.",
+    "takeaway": "An all-depth hidden relation can be proved by invariant source-pair SCC inclusions rather than brute-force A6/A7. The exceptional Rule-54 pair language has entropy (log2(phi))/2 but does not imply positive typical conditional entropy.",
+    "source": "docs/research/2026-10-07-jet-gqr-census-fibonacci.md",
+    "promotion": {
+      "stage": "research"
+    },
+    "related": [
+      "jet-control-panel-20261007",
+      "commutator-jet-fibers-20261007"
+    ]
+  }
+]
