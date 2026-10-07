@@ -18,9 +18,14 @@ witness has identical current `(P,G)` and different next Groovy.
 
 Adding the hidden block-phase gradient restores radius-two autonomy, but parity
 plus that gradient already reconstructs the source up to one global complement
-bit. The current research target is therefore a **middle representation**:
-smaller than the nearly microscopic gradient repair, but rich enough to update
-the correction field itself. Do not launch another class census.
+bit. A complete search over all 256 radius-one one-bit block tracks finds no
+simple middle: every radius-two autonomous repair is injective or nearly
+injective on rings 12--16.
+
+The current target is therefore a **different representation class**, not
+another local-track sweep: a compact finite-state phase/history object that can
+update the correction field without reconstructing the source. Do not launch
+another Class-IV census or another unconstrained one-bit feature search.
 
 Our strongest work answers bounded versions of that question with exact
 factors, counterexamples, graph certificates and explicit constructions.
