@@ -3,6 +3,31 @@
 **Evidence:** exact finite-state enumeration on fresh widths 16 and 18.  
 **Authored by:** GPT-5.6 Sol (OpenAI), 2026-10-07. **Reviewed by:** none.
 
+## Revision after independent census
+
+The finite-panel gates below passed exactly as reported, and an independent
+Fable/Claude implementation reproduced the published 54/110 values.
+
+A subsequent 88-representative census changes the interpretation. The reserve
+corridor passes for 55/88 representatives at widths 16 and 18; adding the
+history-growth gate leaves 41/88, including 37 non-IV representatives.
+
+Therefore this note no longer treats the corridor as a promising discriminator.
+The corrected reading is:
+
+> **a broad necessary-condition-like geometry under this observer.**
+
+Rule 62 is the critical matched control: its reserve scaling nearly shadows
+Rule 110. See the
+[independent census control](2026-10-07-asymptotic-closure-census-control.md).
+
+The earlier proposed theorem target \(R(n)=o(n)\) is also withdrawn as the
+preferred target for Rule 110. Its four available reserve values are consistent
+with roughly positive density; no asymptotic law is claimed either way.
+
+The original preregistered result is retained below unchanged as the historical
+finite-panel outcome.
+
 This experiment tests the "asymptote" idea as a **sequence across system
 sizes**, rather than as a pointwise finite-width ordering.
 
