@@ -1,5 +1,32 @@
 # Next agent: require a concrete operation before another search
 
+**Latest handoff, 2026-10-07: 54/30/90 jet controls completed.**
+See [the exact comparison](2026-10-07-jet-control-panel.md), frozen panel
+and separate Rule-54 deeper-fiber protocols, saved summaries and
+scripts/experiment_jet_control_panel.py. Stacked draft PR #327 builds on
+the completed jet-fiber #326 branch. Independent reviewer: none.
+
+On the binary full shift, additive Rule 90 has G,Q,R,A4,A5 identically zero.
+Rules 54 and 30 both first attain full source spatial entropy at GQR, as does
+Rule 110. However Rule 30's full-line equal-GQR source-pair fiber has only
+periodic recurrent off-diagonal cycles, while Rule 54 has four branching
+off-diagonal SCCs. Three branching SCCs survive the separately frozen A4/A5
+extension. Exact selected SCC polynomials show a shift from sqrt(2) growth
+at GQR to sqrt(phi) growth through A5 (post-hoc structural finding).
+
+**Corrections:** full jet entropy does NOT generically imply the hidden
+equal-output pair graph is phase-only; critical jet radius does NOT
+generically equal the longest surviving phase period (Rule30 gives 4 vs 6).
+The exceptional positive-entropy Rule-54 pair language is not positive
+conditional entropy for a typical jet observation under an arbitrary prior.
+
+**Next decision:** do not connect a generic six-step threshold to the
+six-field lift or run a Class-IV census. If more work is commissioned, take
+one exact Rule-54 exceptional branching SCC and identify its symbolic
+generators, its constraint relation to familiar ether/glider languages if
+supported, and whether the golden-mean spectral factor has an exact
+two-cell presentation. Freeze that symbolic grammar question independently.
+
 **Latest handoff, 2026-10-07: exact latent-Q unit complete.** See the
 [research note](2026-10-07-rule110-latent-q.md), frozen protocol, canonical
 JSON and 21 finite certificates. Gathering branch:
