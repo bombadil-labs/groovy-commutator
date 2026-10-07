@@ -1,0 +1,22 @@
+[
+  {
+    "slug": "asymptotic-closure-wedge-20261007",
+    "label": "Asymptotic-closure wedge",
+    "title": "A two-axis closure wedge passes at width 12 and fails at width 14",
+    "date": "2026-10-07",
+    "updated": "2026-10-07",
+    "kind": "Exact fresh-width falsification",
+    "evidence": "exact",
+    "topic": "Observation and memory",
+    "summary": "Rules 54/110 sit strictly between Rule 184 and Rule 30 in repair-depth and safe-forgetting density at fresh width 12. At width 14 Rule 110 ties Rule 184 in repair depth, failing the preregistered strict wedge; width 16 was not run.",
+    "takeaway": "The two-axis geometry captures the intended finite-width contrast once, but pointwise repair-depth ordering is not robust across the next fresh width.",
+    "source": "docs/research/2026-10-07-asymptotic-closure-wedge.md",
+    "promotion": {
+      "stage": "research"
+    },
+    "related": [
+      "asymptotic-closure-20261007",
+      "history-lift-closure"
+    ]
+  }
+]
