@@ -30,6 +30,12 @@ ROOT = pathlib.Path(__file__).resolve().parents[1]
 
 # result file -> {hash key recorded in its source_hashes: path the hash was taken of}
 REGISTRY = {
+    'results/rule110_middle_tracks_20261007.json': {
+        'script_sha256': 'scripts/experiment_rule110_middle_tracks.py'},
+    'results/rule110_phase_gradient_repair_20261007.json': {
+        'script_sha256': 'scripts/verify_rule110_phase_gradient_repair.py'},
+    'results/rule110_pg_closure_20261007.json': {
+        'script_sha256': 'scripts/verify_rule110_pg_closure.py'},
     'results/rule110_parity_g_factor_20261007.json': {
         'script_sha256': 'scripts/verify_rule110_parity_g_factor.py'},
     'results/matched_history_transport_20261007.json': {
