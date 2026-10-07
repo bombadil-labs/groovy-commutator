@@ -31,9 +31,13 @@ already reconstructs the microscopic source up to one global complement bit.
 
 So the exact hierarchy is: parity alone needs history; parity+Groovy repairs
 the next parity readout; parity+Groovy+phase-gradient is autonomous but almost
-microscopic. The open target is a genuinely smaller state between the last two.
+microscopic. A complete search over all 256 radius-one one-bit block tracks
+finds no simple middle: every track that restores radius-two autonomy is
+injective or merges only one or two source pairs on rings 12--16. The next
+representation family must therefore be qualitatively different from "add one
+local bit."
 [Matched experiment](2026-10-07-matched-history-transport.md);
-[closure correction](2026-10-07-rule110-pg-closure.md).
+[closure and middle-track account](2026-10-07-rule110-pg-closure.md).
 
 
 ## 1. A disagreement can mean we chose the wrong law
