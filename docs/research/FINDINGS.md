@@ -29,8 +29,14 @@ Equivalently, the ordinary base projection of the state/change bundle commutes
 with evolution, while `G` is the defect of the *other* projection: discard a
 change's basepoint, reinterpret its bits as an ordinary state, and evolve them.
 The older horizon fields `K_t` are the same projection defect after `t` steps.
-There is also a literal but deliberately weaker cocycle statement: with the
-ordinary trivial coefficient action, polarization is the exact 2-coboundary
+The correctly typed finite-difference transport is itself an exact nonlinear
+skew-product cocycle:
+`Phi_n(X,U) = H^n(X XOR U) XOR H^n(X)`; in basepoint-plus-endpoint
+coordinates it is simply conjugate to the pair dynamics `H × H`. Affine rules
+are special because this fibre action becomes basepoint-independent and linear.
+
+A second, distinct cocycle statement is cohomological. With the ordinary
+trivial coefficient action, polarization is the exact 2-coboundary
 `B_H = δ(H XOR H(0))`. It is therefore always a 2-cocycle but always represents
 the zero cohomology class; the useful signal is the nonzero representative,
 not a nontrivial ordinary `H^2` obstruction.
@@ -48,6 +54,13 @@ and each annihilates the other's image. Since each rule's `D` is the other
 one, both terms in its Groovy commutator vanish. An exact ANF
 classification proves there are no other nonlinear cases: the complete
 centered-flat ECA class is the 16 affine rules plus exactly 4 and 200.
+
+The algebraic home also turns out to be established: binary finite-radius
+cellular automata form a near-ring under pointwise XOR and composition.
+Polarization is exactly the missing distributive law of a centered nonlinear
+rule, and centered Groovy is that defect evaluated on `I` and `D_H`.
+Rules 4/200 generate a four-element Boolean ring inside this larger nonlinear
+near-ring.
 
 See [the exact typed-difference account](2026-10-06-typed-difference-geometry.md).
 This is an algebraic/representation result, not a Class-IV discriminator or an
