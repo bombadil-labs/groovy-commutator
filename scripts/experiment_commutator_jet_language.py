@@ -270,19 +270,6 @@ def entropy_and_block_counts(
     return rho, entropy, counts
 
 
-def shortest_subset_depths(dfa_transitions):
-    distance = [None] * len(dfa_transitions)
-    distance[0] = 0
-    queue = deque([0])
-    while queue:
-        state = queue.popleft()
-        for dest in dfa_transitions[state].values():
-            if distance[dest] is None:
-                distance[dest] = distance[state] + 1
-                queue.append(dest)
-    return distance
-
-
 def prefix_result(rule: int, end_level: int) -> dict:
     levels = tuple(range(1, end_level + 1))
     transitions, alphabet, radius = labeled_source_graph(rule, levels)
@@ -298,25 +285,6 @@ def prefix_result(rule: int, end_level: int) -> dict:
     )
 
     subset_sizes = [len(s) for s in subsets]
-    distances = shortest_subset_depths(dfa)
-    depth_stats = {}
-    for depth in range(17):
-        sizes = [
-            len(subsets[i])
-            for i, d in enumerate(distances)
-            if d == depth
-        ]
-        if sizes:
-            sizes_sorted = sorted(sizes)
-            depth_stats[str(depth)] = {
-                "reachable_subset_states": len(sizes),
-                "minimum_compatible_source_contexts": min(sizes),
-                "median_compatible_source_contexts": float(
-                    np.median(sizes_sorted)
-                ),
-                "maximum_compatible_source_contexts": max(sizes),
-            }
-
     return {
         "prefix_levels": list(levels),
         "prefix_names": ["G", "Q", "R", "A4", "A5"][:end_level],
@@ -337,7 +305,6 @@ def prefix_result(rule: int, end_level: int) -> dict:
             "median": float(np.median(subset_sizes)),
             "maximum": max(subset_sizes),
             "has_singleton_context": min(subset_sizes) == 1,
-            "shortest_depth_stats": depth_stats,
         },
     }
 
