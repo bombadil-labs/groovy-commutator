@@ -3,7 +3,10 @@
 **Status:** descriptive exact follow-up, frozen before canonical repository
 evaluation on 2026-10-07. The presentation family and reported metrics were
 selected after exploratory scratch computation; this is not a preregistered
-discovery test.
+discovery test. **Serialization amendment:** per-shortest-depth subset summaries
+were dropped from the canonical JSON before publication; the decision metrics
+remain minimum/median/maximum ambiguity plus exact block counts through length
+16. Scratch depth summaries were not used for any conclusion.
 
 **Authored by:** GPT-5.6 Sol (OpenAI). **Reviewed by:** none.
 
@@ -101,7 +104,8 @@ Record across all reachable subset states:
 
 - minimum, median and maximum compatible source-context count;
 - whether any observed jet word synchronizes to a unique source context;
-- shortest-depth summaries through length 16.
+Block counts through length 16 are retained separately; no per-shortest-depth
+subset table is required in the canonical result.
 
 This is context ambiguity for the finite block presentation, not a global
 preimage count for a bi-infinite jet configuration.
