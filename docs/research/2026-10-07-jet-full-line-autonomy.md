@@ -288,6 +288,95 @@ This includes genuinely different mechanisms: half-period
 time-phase ambiguity, spatial phase ambiguity, and distinctions
 lost because H is many-to-one.
 
+## The transient Fibonacci component has a simpler eight-phase generator
+
+The 52-vertex/58-edge Rule-54 C_small component is **not** a half-period
+time-shift family in its present source coordinates: it maps to an
+eight-site periodic *pair* cycle after one H update, and that cycle
+then enters the golden half-period component.
+
+To explain its own Fibonacci growth without searching 3,561,416
+pair edges again, take the target period-eight successor pair
+
+\[
+u=(00100111)^\mathbb Z,\qquad
+v=(01110010)^\mathbb Z
+\]
+
+with a common spatial phase, and consider every local 13-site source-pair
+window satisfying:
+
+1. Rule-54's 11 central successor bits agree with corresponding
+   phase shifts of \(u,v\);
+2. the two current windows have identical \(G,Q,R,A_4,A_5\)
+   center labels.
+
+The eight possible target phases produce 882 locally admissible
+source-pair edges on 704 source-context-pair vertices.
+**Only one recurrent SCC survives** the bi-infinite graph test. It
+has exactly 52 vertices, 58 edges, and its complete edge set has SHA-256
+
+\[
+\texttt{8038efc7d2c33bca3b4ad5fbcc7acaa970feb7924de46c196ccd69418679cb7a},
+\]
+
+matching the independently reconstructed C_small component **edge-for-edge**.
+
+So C_small has a constructive characterization:
+
+> **The unique recurrent preimage-pair language of an eight-phase periodic
+> output pair, subject to current J5 equality.**
+
+The internal graph carries an eight-state spatial phase clock; its
+52 vertices split across phase classes of cardinalities
+\(5,8,8,5,5,8,8,5\). On one phase, the **eight-step return**
+adjacency reduces to the exact five-state matrix
+
+\[
+B_8=
+\begin{pmatrix}
+1&0&0&1&0\\
+1&0&0&1&0\\
+0&1&1&0&1\\
+0&1&1&0&1\\
+0&1&1&0&1
+\end{pmatrix}.
+\]
+
+Its two row patterns have groups of sizes two and three.
+The resulting *equitable transition-count quotient* is
+
+\[
+\boxed{
+M_8=
+\begin{pmatrix}1&1\\1&2\end{pmatrix},
+\qquad
+\chi_{M_8}(z)=z^2-3z+1.
+}
+\]
+
+Its Perron eigenvalue is \(\varphi^2\). Because the clock advances
+eight source sites per step, the source-pair language has
+entropy \(\frac14\log_2\varphi\) bits per site, agreeing with the
+previous \(z^8-z^4-1\) characteristic-polynomial calculation.
+
+The exact numbers of paired periodic paths with source periods
+8, 16, 24 and 32 are **24, 56, 144, 376**, or eight times
+the Lucas numbers 3, 7, 18, 47. That periodic counting law
+is now explained by the two-state return quotient.
+
+This is **not** a proof of topological conjugacy to a two-state
+golden-mean shift: equitable transition counts preserve this
+growth calculation but do not establish a one-to-one symbolic code.
+It is a concrete finite-state generator for the transient
+preimage-erasure mechanism, complementary to Fable's sparse
+period-four generator for the persistent golden pair.
+
+Reproducer:
+[csmall_symbolic_generator.py](../../experiments/jet_full_line_autonomy_20261007/csmall_symbolic_generator.py).
+The post-hoc result is also saved as
+[preimage-clock data](../../results/rule54_csmall_preimage_clock_20261007.json).
+
 ## Rule 110's obstruction is an interface
 
 At m=5, Rule 110 has 4,204 essential pair vertices and 8,366
