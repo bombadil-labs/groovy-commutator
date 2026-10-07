@@ -265,6 +265,71 @@ so
 
 This is the centered form of the residual that the 2026-09-17 verifier had already found as `(0,0,K1,K2,0,0)`, with `K1 = G`. The new result is the interpretation: the residual is not a failure of the beam section to intertwine. It is the nonlinear cross-effect of the **encoding itself**, concentrated in its two temporal rows.
 
+
+### Polarization is an exact 2-cocycle — and therefore not a nontrivial obstruction class
+
+There is one precise sense in which the cocycle intuition *does* become
+literal.
+
+Let the additive configuration group be \(V\), let \(V\) also be the
+coefficient module with trivial action, and center the rule:
+
+\[
+\bar H(X)=H(X)\oplus H(0).
+\]
+
+Then the polarization is
+
+\[
+B_H(X,Y)
+=
+\bar H(X\oplus Y)\oplus\bar H(X)\oplus\bar H(Y).
+\]
+
+For ordinary group cohomology with trivial coefficients, this is exactly the
+2-coboundary of the 1-cochain \(\bar H\):
+
+\[
+\boxed{B_H=\delta\bar H.}
+\]
+
+Consequently it obeys the 2-cocycle identity identically,
+
+\[
+B_H(X,Y)\oplus B_H(X\oplus Y,Z)
+=
+B_H(Y,Z)\oplus B_H(X,Y\oplus Z),
+\]
+
+but its cohomology class is always zero:
+
+\[
+[B_H]=0\in H^2(V,V).
+\]
+
+This is an important negative result for the original extension-obstruction
+hypothesis. The nonlinearity measured by \(B_H\) is real at the level of the
+**cocycle representative**, but ordinary group cohomology quotients it away
+because the representative is already exact. The distinction between an
+affine and nonlinear rule is therefore \(B_H=0\) versus \(B_H\ne0\), not a
+nonzero cohomology class.
+
+Centered Groovy is the restriction of this exact 2-coboundary to the rule's
+own dynamical graph,
+
+\[
+G_H^\circ(X)=B_H(X,d_H(X)).
+\]
+
+Rules 4 and 200 show why the restriction matters: \(B_H\) is globally nonzero
+for both rules, while it vanishes on every pair \((X,d_H(X))\) selected by
+their own dynamics.
+
+This statement uses the ordinary trivial coefficient action. A different
+module action or a different cohomology theory could encode other structure;
+nothing here rules that out. It does rule out interpreting the present
+polarization itself as a nontrivial ordinary \(H^2\) obstruction.
+
 ## 6. The horizon law is nonlinear change transport, not generally a linear cocycle
 
 Let
