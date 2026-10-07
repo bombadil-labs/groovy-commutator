@@ -18,7 +18,11 @@ The centred six-field encoding has second cross-effect
 \((0,0,B_H,B_{H^2},0,0)\), specializing on the trajectory graph to the
 previously observed centered \((K_1,K_2)\) residual. Exhaustive ECA checks on
 the complete declared local domains found zero failures; finite-difference
-transport is basepoint-independent exactly for the 16 affine ECAs.
+transport is basepoint-independent exactly for the 16 affine ECAs. The full
+finite-difference transport \(\Phi_n(X,U)=H^n(X\oplus U)\oplus H^n(X)\)
+is a nonlinear skew-product cocycle, conjugate to \(H\times H\) in
+basepoint-plus-endpoint coordinates; affine rules are the special case where
+the fibre action becomes linear and basepoint-independent.
 
 The frozen third-cross-effect probes do not expose nonlinear zero-G Rules 4/200.
 A post-hoc exact radius-two audit instead shows those two rules are
