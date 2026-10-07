@@ -1,5 +1,35 @@
 # Checkpoints: Dimensional Closure and the Commutator Lift
 
+
+## Checkpoint 2026-10-06: typed difference geometry
+
+The bounded unit in
+[\`2026-10-06-typed-difference-geometry.md\`](../2026-10-06-typed-difference-geometry.md)
+is complete on branch \`gather/cocycle-lift-20261006\` / draft PR #316.
+The literal cocycle-lift hypothesis failed cleanly: the accepted beam section
+already intertwines exactly, so its section/evolution defect is zero.
+
+The replacement account is exact algebra. With
+\(\partial H_X(U)=H(X\oplus U)\oplus H(X)\) and
+\(d_H(X)=X\oplus H(X)\),
+\(\partial H_X(d_HX)=d_H(HX)\), while centered Groovy is
+\(\partial H_X(d_HX)\oplus\partial H_0(d_HX)\).
+The centred six-field encoding has second cross-effect
+\((0,0,B_H,B_{H^2},0,0)\), specializing on the trajectory graph to the
+previously observed centered \((K_1,K_2)\) residual. Exhaustive ECA checks on
+the complete declared local domains found zero failures; finite-difference
+transport is basepoint-independent exactly for the 16 affine ECAs.
+
+The frozen third-cross-effect probes do not expose nonlinear zero-G Rules 4/200.
+A post-hoc exact radius-two audit instead shows those two rules are
+projection-like complements: XOR identity, idempotent individually, and
+mutually annihilating. This explains their zero commutator without making them
+affine.
+
+No follow-up census is queued. A next unit would need a concrete consumer, or a
+specific literature/formalization question about the change-action
+interpretation. Do not reopen Class-IV scoring from this algebraic result.
+
 Checkpoint log for the dimensional workstream, including its 2D
 encoding lineage (column and block compatibility, encoded defects, strips,
 the interface escape) that preceded the Program page's own supports list, the
