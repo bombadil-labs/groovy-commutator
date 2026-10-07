@@ -1,11 +1,20 @@
 # Research: start here
 
-**Current direction, 2026-09-25.** This page is the scheduling authority for
+**Current direction, 2026-10-07.** This page is the scheduling authority for
 research. Older notes and checkpoints preserve the evidence; their “next”
 sections are historical proposals, not an instruction to resume them.
 
 **Question:** which distinctions can a representation safely discard, which
 must it retain, and what does changing representation buy us?
+
+**Update — asymptotic closure specificity control.** The exact finite-panel
+[scaling test](2026-10-07-asymptotic-closure-scaling.md) passed, but an
+[independent 88-representative census](2026-10-07-asymptotic-closure-census-control.md)
+shows the gate is broad: 41/88 representatives pass the full corridor-plus-growth
+condition, including 37 non-IV rules. Treat the corridor as a matching variable,
+not a discriminator. Rule 62 nearly shadows Rule 110 and is the selected matched
+control for the next mechanistic question. Do not rescue the corridor with a
+new threshold or subextensive-reserve claim.
 
 Our strongest work answers bounded versions of that question with exact
 factors, counterexamples, graph certificates and explicit constructions.

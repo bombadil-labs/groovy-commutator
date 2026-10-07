@@ -1,11 +1,35 @@
 # What we have learned
 
-Running plain-language summary, updated 2026-09-24. This is a synthesis of
+Running plain-language summary, updated 2026-10-07. This is a synthesis of
 existing evidence, not a new experiment or independent review. Each entry
 links to the technical account that states its assumptions and verification.
 “Complete” means the stated investigation has ended, not that every related
 mathematical question is solved. The [program survey](2026-09-22-program-survey.md)
 explains what deserves work next.
+
+## Asymptotic-closure scaling is broad; use it as a matching variable — 2026-10-07
+
+We tested whether Rules 54/110 occupy an intermediate predictive-compression
+regime: new history distinctions keep becoming necessary with system size, but
+the stable quotient neither collapses to microscopic identity like Rule 30 nor
+stays as coarse as Rule 184. The preregistered 16/18 finite-panel gates passed.
+
+An independent Fable/Claude implementation reproduced those values and then ran
+the specificity control we had deliberately stopped short of. The result
+changes the interpretation: 55 of 88 canonical representatives satisfy the
+reserve corridor at both fresh widths, and 41 of 88 also increase history depth
+from width 14 to 18. Those 41 include 2 Class I, 30 Class II, 5 Class III and
+all 4 Class IV representatives.
+
+So the corridor is **not a Class-IV discriminator**. It is a broad
+necessary-condition-like geometry under this observer.
+
+Rule 62 is especially useful: its reserve sequence nearly shadows Rule 110,
+making it a matched control for asking what the retained history actually
+does. The earlier proposed subextensive-reserve theorem target is withdrawn;
+four Rule-110 points do not support that preference.
+[Independent census control](2026-10-07-asymptotic-closure-census-control.md).
+
 
 ## 1. A disagreement can mean we chose the wrong law
 

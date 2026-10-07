@@ -2759,6 +2759,15 @@
       "research": [
         "prediction-repair"
       ]
+    },
+    {
+      "source": "asymptotic-closure-corridor",
+      "type": "depends_on",
+      "target": "predictive-future-refinement",
+      "reason": "The scaling result uses the exact future-equivalence tower as the canonical minimal predictive refinement on each finite ring.",
+      "research": [
+        "asymptotic-closure-scaling-20261007"
+      ]
     }
   ],
   "nodes": [
@@ -5341,6 +5350,19 @@
       "source": "docs/knowledge/rule54-route-repair-feasibility.md",
       "research": [
         "rule54-glider-route-gate"
+      ]
+    },
+    {
+      "id": "asymptotic-closure-corridor",
+      "title": "The asymptotic-closure corridor is broad under block parity",
+      "kind": "finding",
+      "status": "exact",
+      "summary": "Rules 54/110 pass the bounded reserve-plus-growth gate, but an independent 88-representative census finds 41 passers, including 37 non-IV rules. The corridor is a matching variable / necessary-condition-like geometry, not a discriminator.",
+      "updated": "2026-10-07",
+      "source": "docs/knowledge/asymptotic-closure-corridor.md",
+      "research": [
+        "asymptotic-closure-scaling-20261007",
+        "asymptotic-closure-census-control-20261007"
       ]
     }
   ],
