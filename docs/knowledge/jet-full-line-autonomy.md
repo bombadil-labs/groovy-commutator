@@ -27,10 +27,18 @@ while J4 has 12 counterexample paths. J5 therefore induces a unique continuous
 shift-commuting map on its admissible image; exact context enumeration gives
 its sharp radius-six local rule there.
 
-This is **autonomy**, not injectivity or compression. Complete periodic
-Rule-54 source rings at widths 8..18 show that J5 retains almost every source
-state under the uniform source prior; at n18 it has 261,985 image states from
-262,144 sources, and loses only 0.00122 bits.
+This is **autonomy**, not topological injectivity or positive-rate source
+compression. Complete periodic Rule-54 source rings at widths 8..18 show
+that J5 retains almost every source state under the uniform prior; at n18 it
+has 261,985 image states from 262,144 sources and loses only 0.00122 bits.
+
+A stronger full-line entropy corollary holds: the non-diagonal recurrent
+equal-J5 source-pair graph consists solely of eleven periodic cycles and
+three branching components with largest spectral radius sqrt(phi). It has
+zero essential intercomponent edges, so the entire set of ambiguous source
+configurations has topological entropy (log2 phi)/2 < 1. Therefore a
+fair-Bernoulli random source almost surely has a singleton J5 fiber,
+despite the explicit positive-entropy exceptional phase-gauge language.
 
 The exceptional ambiguous source pairs include the Rule-54 period-four
 half-period gauge, transient preimages, and separate periodic phase sectors.
