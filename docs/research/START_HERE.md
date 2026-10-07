@@ -1,11 +1,23 @@
 # Research: start here
 
-**Current direction, 2026-09-25.** This page is the scheduling authority for
+**Current direction, 2026-10-07.** This page is the scheduling authority for
 research. Older notes and checkpoints preserve the evidence; their “next”
 sections are historical proposals, not an instruction to resume them.
 
 **Question:** which distinctions can a representation safely discard, which
 must it retain, and what does changing representation buy us?
+
+**New bounded result — asymptotic closure.** The exact
+[scaling test](2026-10-07-asymptotic-closure-scaling.md) asks whether new
+predictive distinctions keep appearing with system size while the stable
+predictive quotient remains nontrivially compressed. Under the fixed block-2
+parity observer, fresh widths 16 and 18 place Rules 54/110 between Rule 30's
+near-identity quotient and Rule 184's much coarser quotient, while both core
+rules acquire new required history relative to width 14. This is a finite-panel
+scaling lead, not a Class-IV definition or infinite-line theorem. The next
+useful target is a symbolic or finite certificate for the scaling sequence;
+do not launch an all-256 census or tune another finite threshold from this
+result alone.
 
 Our strongest work answers bounded versions of that question with exact
 factors, counterexamples, graph certificates and explicit constructions.
