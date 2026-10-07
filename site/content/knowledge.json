@@ -5354,10 +5354,10 @@
     },
     {
       "id": "matched-history-groovy-coupling",
-      "title": "Matched predictive history can differ in Groovy coupling",
+      "title": "Centered Groovy closes Rule 110 block parity as a local present-time factor",
       "kind": "finding",
       "status": "exact",
-      "summary": "At fresh widths 16 and 18, every nonzero Rule-110 predictive repair is determined by the current predictive label plus current centered Groovy, while matched Rule 62 has exact early counterexamples and only about 77% cumulative Groovy-coupled repair.",
+      "summary": "Under block-2 parity at cadence two, Rule 110's next macrostate is an exact radius-one function of current parity plus current centered Groovy on the complete local source domain. Matched Rule 62 fails even the whole-field factor on explicit witnesses.",
       "updated": "2026-10-07",
       "source": "docs/knowledge/matched-history-groovy-coupling.md",
       "research": [
