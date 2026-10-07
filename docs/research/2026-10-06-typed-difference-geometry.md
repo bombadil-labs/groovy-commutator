@@ -73,7 +73,49 @@ then
 
 This is the commuting square the initial extension hypothesis was looking for, but it lives in the **state/change bundle**, not in a defect of the dimensional beam section.
 
-The distinction is established mathematical territory rather than new vocabulary. Change-action and Cartesian-difference work treats discrete derivatives as transport of changes and explicitly includes finite-difference and Boolean differential calculi. See Alvarez-Picallo and Pacaud Lemay, [Cartesian Difference Categories](https://arxiv.org/abs/2011.12600).
+There is also a precise standard dynamical-systems structure here. Define
+
+\[
+\Phi_n(X,U)=H^n(X\oplus U)\oplus H^n(X)
+=\partial(H^n)_X(U).
+\]
+
+Then
+
+\[
+\boxed{
+\Phi_{n+m}(X,U)
+=
+\Phi_m\!\left(H^nX,\Phi_n(X,U)\right),
+}
+\]
+
+so \(U\mapsto\Phi_n(X,U)\) is a discrete-time **nonlinear cocycle** over the base dynamics \(H\). Equivalently,
+
+\[
+(TH)^n(X,U)=(H^nX,\Phi_n(X,U)).
+\]
+
+This is not merely analogy. Under the coordinate change
+
+\[
+\Psi(X,U)=(X,X\oplus U),
+\]
+
+the change transport is conjugate to ordinary pair dynamics:
+
+\[
+\boxed{
+\Psi\circ TH=(H\times H)\circ\Psi.
+}
+\]
+
+Thus the finite-difference bundle is exactly the pair system written in
+basepoint-plus-displacement coordinates. What is special about affine rules is
+not cocyclehood; it is that the fibre map becomes basepoint-independent and
+linear in \(U\).
+
+The distinction is established mathematical territory rather than new vocabulary. Change-action and Cartesian-difference work treats discrete derivatives as transport of changes and explicitly includes finite-difference and Boolean differential calculi. See Alvarez-Picallo and Pacaud Lemay, [Cartesian Difference Categories](https://arxiv.org/abs/2011.12600). Standard skew-product terminology likewise allows nonlinear fibre maps; a *linear cocycle* is the narrower special case.
 
 ## 3. Centered Groovy is basepoint dependence of change transport
 
@@ -330,7 +372,7 @@ module action or a different cohomology theory could encode other structure;
 nothing here rules that out. It does rule out interpreting the present
 polarization itself as a nontrivial ordinary \(H^2\) obstruction.
 
-## 6. The horizon law is nonlinear change transport, not generally a linear cocycle
+## 6. The transport is a nonlinear cocycle; the horizon residual compares it with point evolution
 
 Let
 
@@ -367,7 +409,10 @@ The two `H(U_t)` terms cancel.
 
 The previous verifier checked this through short horizons. The new runner independently checks horizons 0 through 6 for every state of rings 5, 6 and 7 under all 256 ECAs, with zero failures.
 
-Calling this simply a "cocycle" would hide an important distinction. A standard linear cocycle/skew product has a fibre action linear in the fibre variable, typically `F(x,v)=(Tx,A(x)v)`. Our finite-difference transport need not be additive in `u`, and the recurrence above uses the moving basepoint `R_t`. For affine ECAs it collapses to a fixed linear fibre action. For nonlinear ECAs the safer description is **basepoint-dependent change transport** or a nonlinear skew/change-action law unless a stronger categorical formulation is supplied.
+The literature check sharpens the terminology. The maps \(\Phi_n\) above already satisfy the ordinary skew-product cocycle law; they need not be linear in the fibre variable for that word to apply. What fails for nonlinear ECAs is the stronger **linear-cocycle** form. The one-step fibre map \(U\mapsto\partial H_X(U)\) depends on the basepoint and need not be additive in \(U\). For affine ECAs it collapses to a fixed linear action.
+
+The horizon residual \(K_t\) is therefore not itself the fundamental cocycle. It compares two transports of the same initial bit pattern: the genuine nonlinear cocycle transport
+\(\Phi_t(X,d_HX)=d_H(H^tX)\), and the ordinary point orbit \(H^t(d_HX)\). The recurrence above is the error-propagation law between those two paths.
 
 ## 7. Exact verification
 
@@ -549,7 +594,7 @@ Three pieces of vocabulary already exist and should be used rather than reinvent
 
 1. **Finite differences / change actions.** Cartesian difference categories explicitly encompass finite differences and Boolean differential calculus and carry tangent-bundle structure: https://arxiv.org/abs/2011.12600
 2. **Cross-effects.** The second cross-effect as failure of additivity and higher cross-effects as polynomial-degree tests go back to Eilenberg-Mac Lane; a modern concise statement appears in https://math.jhu.edu/~eriehl/BJORT.pdf
-3. **Linear cocycles.** Standard dynamical-systems usage takes a skew product with linear fibre action `A(x)v`; our nonlinear finite-difference action should not be silently identified with that narrower object.
+3. **Skew-product cocycles.** Standard cocycle definitions allow nonlinear fibre maps and require the composition law satisfied by \(\Phi_n\) above. A *linear cocycle* is the narrower case with fibre action such as `A(x)v`.
 
 The candidate project-specific contribution is therefore not the existence of finite differences, cross-effects, tangent bundles, or cocycles. It is the specific identification of the Groovy objects:
 
