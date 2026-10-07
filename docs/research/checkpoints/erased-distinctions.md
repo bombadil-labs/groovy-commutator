@@ -14,6 +14,22 @@ when a substantial unit completes; keep the bounded-claim style. Text moved from
 
 Program page: docs/research/2026-09-08-dynamics-of-erased-distinctions.md
 
+## Checkpoint 2026-10-07: exact latent-Q unit complete
+
+The [latent-Q quotient](../2026-10-07-rule110-latent-q.md) computes the
+coarsest all-future refinement on the frozen full source rings. Retaining
+parity/G permits only the two uniform/alternating source-pair mergers on
+every tested even width 6--18. G-only also fails the declared compression
+gate. Minimal equivariant binary Q fields and finite autonomous lookup laws
+are constructed, with preserved local-radius failures and exact witnesses.
+
+This bounds all autonomous augmentations on those finite domains, not just
+local tracks. It does not establish an infinite-line impossibility theorem.
+The protocol, code, original Windows-byte run, canonical replay, certificates
+and self-verification are preserved. Reviewed by: none. No further run is
+queued; the earlier proposed different-feature search is superseded by this
+information bound for the same visible state and finite source families.
+
 ## Checkpoint 2026-10-07: Rule-110 readout correction is not autonomous state
 
 The [Rule-110 closure audit](../2026-10-07-rule110-pg-closure.md) corrects the

@@ -23,7 +23,7 @@ function withFixture(markdown) {
     date: '2026-09-08', updated: '2026-09-08', kind: 'Research plan',
     evidence: 'open', topic: 'Observation and memory',
     summary: 'A test of adding a note through the catalog.', takeaway: 'An open question.',
-    source: path.relative(ROOT, fixtureSource),
+    source: path.relative(ROOT, fixtureSource).split(path.sep).join('/'),
     promotion: { stage: 'research' }, related: ['history-repairability'],
   }];
 }

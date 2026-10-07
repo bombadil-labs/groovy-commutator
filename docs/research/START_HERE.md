@@ -22,10 +22,20 @@ bit. A complete search over all 256 radius-one one-bit block tracks finds no
 simple middle: every radius-two autonomous repair is injective or nearly
 injective on rings 12--16.
 
-The current target is therefore a **different representation class**, not
-another local-track sweep: a compact finite-state phase/history object that can
-update the correction field without reconstructing the source. Do not launch
-another Class-IV census or another unconstrained one-bit feature search.
+The subsequent [exact latent-Q quotient](2026-10-07-rule110-latent-q.md)
+now bounds every representation class on the tested full source rings.
+For every even n=6 through 18, the coarsest autonomous refinement retaining
+(P,G) merges only the uniform pair and the alternating pair; every other
+source is distinguished. G alone also becomes nearly microscopic. Binary Q
+fields realize the minimal quotients with finite whole-field autonomy and
+translation covariance, but fail the frozen compression gate and local
+radius<=3 construction checks. The former local repairs already achieved
+optimal compression on the overlapping tested rings.
+
+This bounded unit is complete. A different encoding cannot recover meaningful
+joint compression while retaining the same visible state on these domains.
+Changing the observer/source family or proving a full-line result is a separate
+question. No further run, Class-IV census or feature search is queued.
 
 Our strongest work answers bounded versions of that question with exact
 factors, counterexamples, graph certificates and explicit constructions.

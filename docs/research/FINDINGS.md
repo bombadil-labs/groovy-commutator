@@ -7,6 +7,28 @@ links to the technical account that states its assumptions and verification.
 mathematical question is solved. The [program survey](2026-09-22-program-survey.md)
 explains what deserves work next.
 
+## The missing coordinate is small but the joint state is microscopic — 2026-10-07
+
+We computed the minimal future-equivalence quotient instead of guessing
+another repair feature. On every even Rule-110 ring from 6 through 18 cells,
+the optimal autonomous refinement retaining current parity and Groovy merges
+only two source pairs. At n=18 it retains 262,142 of 262,144 distinctions and
+forgets just 0.00001526 bits under the uniform source prior. G alone also
+requires nearly the whole source once it must update itself.
+
+Binary latent Q fields on the original lattice realize these exact quotients
+and respect the declared translations. But their joint states fail the frozen
+compression gate, and the constructed codes fail local update radii 0--3.
+The extra Q above parity/G is small (0.2514 conditional bits at n=18);
+the existing parity/G state already carries 17.7486 bits. Thus small latent
+context and meaningful total compression are separate questions.
+
+Every autonomous augmentation retaining the observer must refine this exact
+quotient, regardless of its feature grammar. The prior best local repairs
+already achieved optimal compression on the overlapping tested rings.
+This is a finite-domain bound, not an infinite-line impossibility theorem.
+[Protocol, certificates and realization limits](2026-10-07-rule110-latent-q.md).
+
 ## Similar amounts of history can be doing different jobs — 2026-10-07
 
 Rule 62 and Rule 110 are nearly matched in how much predictive history the
@@ -33,9 +55,9 @@ So the exact hierarchy is: parity alone needs history; parity+Groovy repairs
 the next parity readout; parity+Groovy+phase-gradient is autonomous but almost
 microscopic. A complete search over all 256 radius-one one-bit block tracks
 finds no simple middle: every track that restores radius-two autonomy is
-injective or merges only one or two source pairs on rings 12--16. The next
-representation family must therefore be qualitatively different from "add one
-local bit."
+injective or merges only one or two source pairs on rings 12--16. The
+subsequent exact-Q result above strengthens this from a feature-family
+negative to an optimal compression bound on the tested rings.
 [Matched experiment](2026-10-07-matched-history-transport.md);
 [closure and middle-track account](2026-10-07-rule110-pg-closure.md).
 

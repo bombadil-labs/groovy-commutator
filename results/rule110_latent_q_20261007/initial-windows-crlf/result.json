@@ -1,0 +1,2911 @@
+{
+  "schema": "rule110-latent-q-v1",
+  "date": "2026-10-07",
+  "rule": 110,
+  "cadence": 2,
+  "widths": [
+    6,
+    8,
+    10,
+    12,
+    14,
+    16,
+    18
+  ],
+  "prior": "uniform sources",
+  "protocol": "docs/research/protocols/rule110-latent-q-20261007.md",
+  "source_hashes": {
+    "docs/research/protocols/rule110-latent-q-20261007.md": "d509096e8aa29c4ddfc1ef4fcdb74c1432d9b83ccfc10a13b75a049fbb4cf6a6",
+    "scripts/experiment_rule110_latent_q.py": "c5bc017560c66369746e327396a52610835a3136e58cb501de6e3305b730a7ad",
+    "scripts/experiment_matched_history_transport.py": "e136f3367323e0b0cce5773e75ec092aebeea16ef409f25f1791c25d8e8a4565"
+  },
+  "profiles": {
+    "6": {
+      "P": {
+        "status": "stable",
+        "refinement": {
+          "status": "stable",
+          "depth": 3,
+          "class_counts": [
+            8,
+            35,
+            53,
+            56
+          ],
+          "split_witnesses": [
+            {
+              "refinement": 1,
+              "x": 0,
+              "y": 3,
+              "current_observation": 0,
+              "first_difference": {
+                "time": 1,
+                "observation_x": 0,
+                "observation_y": 1,
+                "at_x": 0,
+                "at_y": 50
+              }
+            },
+            {
+              "refinement": 2,
+              "x": 3,
+              "y": 15,
+              "current_observation": 0,
+              "first_difference": {
+                "time": 2,
+                "observation_x": 1,
+                "observation_y": 7,
+                "at_x": 14,
+                "at_y": 37
+              }
+            },
+            {
+              "refinement": 3,
+              "x": 1,
+              "y": 62,
+              "current_observation": 1,
+              "first_difference": {
+                "time": 3,
+                "observation_x": 7,
+                "observation_y": 4,
+                "at_x": 37,
+                "at_y": 47
+              }
+            }
+          ]
+        },
+        "metrics": {
+          "classes": 56,
+          "source_states": 64,
+          "class_size_histogram": {
+            "1": 48,
+            "2": 8
+          },
+          "H_observation": 3.0,
+          "H_quotient": 5.75,
+          "latent_conditional_bits": 2.75,
+          "residual_source_bits": 0.25,
+          "residual_per_site": 0.041666666666666664,
+          "max_future_classes_per_visible_fiber": 8,
+          "worst_fiber_label_bits": 3,
+          "merged_witness": {
+            "x": 0,
+            "y": 63,
+            "class": 0,
+            "class_size": 2,
+            "current_observation": 0,
+            "coalescence_epoch": 1,
+            "coalescence_search_cap": 128
+          }
+        },
+        "certificate": {
+          "path": "results/rule110_latent_q_20261007/n6_P.npz",
+          "array_sha256": {
+            "labels": "c48c2e7640223ab370eadee61e2740b1be8e6c9e503acce3be0d8c630503a4aa",
+            "representatives": "18150b7100c5c3f0e94f6b0e4c4bc80991ad0ec607083da7f074d76399157b2c",
+            "successor": "d875315ab7fc2bcac3ba39d876a6265f6c6ec316229ad9910307ec5908b76380"
+          }
+        },
+        "checks": {
+          "full_finite_closure": true,
+          "lift_decoder": true,
+          "tuple_witness_replay": true,
+          "independent_explicit_future_partition": true
+        }
+      },
+      "G": {
+        "status": "stable",
+        "refinement": {
+          "status": "stable",
+          "depth": 1,
+          "class_counts": [
+            34,
+            58
+          ],
+          "split_witnesses": [
+            {
+              "refinement": 1,
+              "x": 2,
+              "y": 10,
+              "current_observation": 1,
+              "first_difference": {
+                "time": 1,
+                "observation_x": 48,
+                "observation_y": 36,
+                "at_x": 35,
+                "at_y": 41
+              }
+            }
+          ]
+        },
+        "metrics": {
+          "classes": 58,
+          "source_states": 64,
+          "class_size_histogram": {
+            "1": 54,
+            "2": 3,
+            "4": 1
+          },
+          "H_observation": 4.866729296672174,
+          "H_quotient": 5.78125,
+          "latent_conditional_bits": 0.9145207033278258,
+          "residual_source_bits": 0.21875,
+          "residual_per_site": 0.036458333333333336,
+          "max_future_classes_per_visible_fiber": 3,
+          "worst_fiber_label_bits": 2,
+          "merged_witness": {
+            "x": 0,
+            "y": 21,
+            "class": 0,
+            "class_size": 4,
+            "current_observation": 0,
+            "coalescence_epoch": 1,
+            "coalescence_search_cap": 128
+          }
+        },
+        "encoding": {
+          "status": "constructed",
+          "translation_stride": 1,
+          "visible_orbits": 7,
+          "matched_class_orbits": 11,
+          "exact_partition": true,
+          "translation_covariant": true,
+          "autonomous": true,
+          "H_Q": 1.9237949406953985,
+          "Q_distinct_words": 7,
+          "max_orbit_demand_by_generator": {
+            "1": {
+              "1": 1
+            },
+            "3": {
+              "1": 1,
+              "2": 1
+            },
+            "6": {
+              "1": 3
+            }
+          }
+        },
+        "locality": {
+          "0": {
+            "status": "conflict",
+            "witness": {
+              "x": 1,
+              "y": 4,
+              "context": 0,
+              "target_x": 0,
+              "target_y": 1
+            }
+          },
+          "1": {
+            "status": "conflict",
+            "witness": {
+              "x": 0,
+              "y": 8,
+              "context": 0,
+              "target_x": 0,
+              "target_y": 3
+            }
+          },
+          "2": {
+            "status": "conflict",
+            "witness": {
+              "x": 25,
+              "y": 40,
+              "context": 1,
+              "target_x": 1,
+              "target_y": 0
+            }
+          },
+          "3": {
+            "status": "pass_finite_domain",
+            "contexts": 58
+          }
+        },
+        "certificate": {
+          "path": "results/rule110_latent_q_20261007/n6_G.npz",
+          "array_sha256": {
+            "labels": "b58ffb9deccccd48e1b6203f743ddf9be855defca31f43d0a126498a970e4ef1",
+            "representatives": "6252b71aa82d1b94817558142c4b8d7efb1c4d9fc7080753760d29391639c878",
+            "successor": "44269365fd7cdd3bc6efdecf138e13eb744fc525eb0d184f42d2ded744baa1de",
+            "qclass": "1ff6d265c1587004cc1c431cfb3f74a3f3adbde5f22746d31f9e00eb4bdfc3d0"
+          }
+        },
+        "checks": {
+          "full_finite_closure": true,
+          "lift_decoder": true,
+          "tuple_witness_replay": true,
+          "independent_explicit_future_partition": true
+        }
+      },
+      "PG": {
+        "status": "stable",
+        "refinement": {
+          "status": "stable",
+          "depth": 1,
+          "class_counts": [
+            59,
+            62
+          ],
+          "split_witnesses": [
+            {
+              "refinement": 1,
+              "x": 49,
+              "y": 50,
+              "current_observation": 88,
+              "first_difference": {
+                "time": 1,
+                "observation_x": 77,
+                "observation_y": 67,
+                "at_x": 61,
+                "at_y": 14
+              }
+            }
+          ]
+        },
+        "metrics": {
+          "classes": 62,
+          "source_states": 64,
+          "class_size_histogram": {
+            "1": 60,
+            "2": 2
+          },
+          "H_observation": 5.84375,
+          "H_quotient": 5.9375,
+          "latent_conditional_bits": 0.09375,
+          "residual_source_bits": 0.0625,
+          "residual_per_site": 0.010416666666666666,
+          "max_future_classes_per_visible_fiber": 2,
+          "worst_fiber_label_bits": 1,
+          "merged_witness": {
+            "x": 0,
+            "y": 63,
+            "class": 0,
+            "class_size": 2,
+            "current_observation": 0,
+            "coalescence_epoch": 1,
+            "coalescence_search_cap": 128
+          }
+        },
+        "encoding": {
+          "status": "constructed",
+          "translation_stride": 2,
+          "visible_orbits": 21,
+          "matched_class_orbits": 22,
+          "exact_partition": true,
+          "translation_covariant": true,
+          "autonomous": true,
+          "H_Q": 0.34726597513537405,
+          "Q_distinct_words": 4,
+          "max_orbit_demand_by_generator": {
+            "2": {
+              "1": 1
+            },
+            "6": {
+              "1": 2
+            }
+          }
+        },
+        "locality": {
+          "0": {
+            "status": "conflict",
+            "witness": {
+              "x": 0,
+              "y": 8,
+              "context": 0,
+              "target_x": 0,
+              "target_y": 7
+            }
+          },
+          "1": {
+            "status": "pass_finite_domain",
+            "contexts": 62
+          },
+          "2": {
+            "status": "pass_finite_domain",
+            "contexts": 62
+          },
+          "3": {
+            "status": "pass_finite_domain",
+            "contexts": 62
+          }
+        },
+        "certificate": {
+          "path": "results/rule110_latent_q_20261007/n6_PG.npz",
+          "array_sha256": {
+            "labels": "46e62d8308d31822ff75136343ac7e4bb83e51b36b8c13354f970eee7033efb1",
+            "representatives": "b22dba2ae9cdf0934105017cc196d76afa164f05d63159f34b334ee5b50db35a",
+            "successor": "a17bf790f2f4024b68cd93717affc7daf14b7bb29622e140f1a2120e9e1e6c04",
+            "qclass": "1ce9a213790173de6bd4a31a865b067d10a12beaa1a44f251c6119f977c82715"
+          }
+        },
+        "checks": {
+          "full_finite_closure": true,
+          "lift_decoder": true,
+          "tuple_witness_replay": true,
+          "independent_explicit_future_partition": true
+        }
+      }
+    },
+    "8": {
+      "P": {
+        "status": "stable",
+        "refinement": {
+          "status": "stable",
+          "depth": 3,
+          "class_counts": [
+            16,
+            126,
+            214,
+            222
+          ],
+          "split_witnesses": [
+            {
+              "refinement": 1,
+              "x": 0,
+              "y": 3,
+              "current_observation": 0,
+              "first_difference": {
+                "time": 1,
+                "observation_x": 0,
+                "observation_y": 1,
+                "at_x": 0,
+                "at_y": 194
+              }
+            },
+            {
+              "refinement": 2,
+              "x": 3,
+              "y": 15,
+              "current_observation": 0,
+              "first_difference": {
+                "time": 2,
+                "observation_x": 1,
+                "observation_y": 3,
+                "at_x": 50,
+                "at_y": 249
+              }
+            },
+            {
+              "refinement": 3,
+              "x": 1,
+              "y": 254,
+              "current_observation": 1,
+              "first_difference": {
+                "time": 3,
+                "observation_x": 13,
+                "observation_y": 12,
+                "at_x": 157,
+                "at_y": 175
+              }
+            }
+          ]
+        },
+        "metrics": {
+          "classes": 222,
+          "source_states": 256,
+          "class_size_histogram": {
+            "1": 194,
+            "2": 22,
+            "3": 6
+          },
+          "H_observation": 4.0,
+          "H_quotient": 7.716682324168044,
+          "latent_conditional_bits": 3.716682324168044,
+          "residual_source_bits": 0.28331767583195633,
+          "residual_per_site": 0.03541470947899454,
+          "max_future_classes_per_visible_fiber": 16,
+          "worst_fiber_label_bits": 4,
+          "merged_witness": {
+            "x": 0,
+            "y": 255,
+            "class": 0,
+            "class_size": 2,
+            "current_observation": 0,
+            "coalescence_epoch": 1,
+            "coalescence_search_cap": 128
+          }
+        },
+        "certificate": {
+          "path": "results/rule110_latent_q_20261007/n8_P.npz",
+          "array_sha256": {
+            "labels": "044940d1b3520232b61d5e956ea501cdb6f8f12eb9b92dd847386915d02578e1",
+            "representatives": "60ad1c83425a8db5c24374c43bd422c757067bf17b41f0fa346777d26de1194b",
+            "successor": "ab886d4dcf120792c460246245a147e2bf890d06e58bdf5bf5bfa4976035604d"
+          }
+        },
+        "checks": {
+          "full_finite_closure": true,
+          "lift_decoder": true,
+          "tuple_witness_replay": true,
+          "independent_explicit_future_partition": true
+        }
+      },
+      "G": {
+        "status": "stable",
+        "refinement": {
+          "status": "stable",
+          "depth": 1,
+          "class_counts": [
+            99,
+            251
+          ],
+          "split_witnesses": [
+            {
+              "refinement": 1,
+              "x": 2,
+              "y": 10,
+              "current_observation": 1,
+              "first_difference": {
+                "time": 1,
+                "observation_x": 192,
+                "observation_y": 196,
+                "at_x": 131,
+                "at_y": 137
+              }
+            }
+          ]
+        },
+        "metrics": {
+          "classes": 251,
+          "source_states": 256,
+          "class_size_histogram": {
+            "1": 248,
+            "2": 2,
+            "4": 1
+          },
+          "H_observation": 6.330745407472074,
+          "H_quotient": 7.953125,
+          "latent_conditional_bits": 1.6223795925279259,
+          "residual_source_bits": 0.046875,
+          "residual_per_site": 0.005859375,
+          "max_future_classes_per_visible_fiber": 7,
+          "worst_fiber_label_bits": 3,
+          "merged_witness": {
+            "x": 0,
+            "y": 85,
+            "class": 0,
+            "class_size": 4,
+            "current_observation": 0,
+            "coalescence_epoch": 1,
+            "coalescence_search_cap": 128
+          }
+        },
+        "encoding": {
+          "status": "constructed",
+          "translation_stride": 1,
+          "visible_orbits": 15,
+          "matched_class_orbits": 34,
+          "exact_partition": true,
+          "translation_covariant": true,
+          "autonomous": true,
+          "H_Q": 3.3622285861049797,
+          "Q_distinct_words": 25,
+          "max_orbit_demand_by_generator": {
+            "1": {
+              "1": 1
+            },
+            "2": {
+              "1": 1
+            },
+            "4": {
+              "1": 1
+            },
+            "8": {
+              "1": 7
+            }
+          }
+        },
+        "locality": {
+          "0": {
+            "status": "conflict",
+            "witness": {
+              "x": 1,
+              "y": 4,
+              "context": 0,
+              "target_x": 0,
+              "target_y": 3
+            }
+          },
+          "1": {
+            "status": "conflict",
+            "witness": {
+              "x": 0,
+              "y": 8,
+              "context": 0,
+              "target_x": 0,
+              "target_y": 1
+            }
+          },
+          "2": {
+            "status": "conflict",
+            "witness": {
+              "x": 96,
+              "y": 97,
+              "context": 0,
+              "target_x": 0,
+              "target_y": 2
+            }
+          },
+          "3": {
+            "status": "conflict",
+            "witness": {
+              "x": 85,
+              "y": 162,
+              "context": 0,
+              "target_x": 0,
+              "target_y": 3
+            }
+          }
+        },
+        "certificate": {
+          "path": "results/rule110_latent_q_20261007/n8_G.npz",
+          "array_sha256": {
+            "labels": "571bc99705721c0b26a4af0fced8f699ea13b076a082c7fe8a10a806e9df80a9",
+            "representatives": "b77e0cae3e34f9890a91a482b1a393890d863ffa9197e9c2cead803a5f28391e",
+            "successor": "e88841c4d8f43aac844429e053f4dc1e2a4c8180cb53cada45cddbee36d8c99c",
+            "qclass": "67079e6082c5dd33567e00076a8e4f3edbeb880dadeea596c165437d4c0ed064"
+          }
+        },
+        "checks": {
+          "full_finite_closure": true,
+          "lift_decoder": true,
+          "tuple_witness_replay": true,
+          "independent_explicit_future_partition": true
+        }
+      },
+      "PG": {
+        "status": "stable",
+        "refinement": {
+          "status": "stable",
+          "depth": 1,
+          "class_counts": [
+            242,
+            254
+          ],
+          "split_witnesses": [
+            {
+              "refinement": 1,
+              "x": 60,
+              "y": 252,
+              "current_observation": 14,
+              "first_difference": {
+                "time": 1,
+                "observation_x": 661,
+                "observation_y": 736,
+                "at_x": 55,
+                "at_y": 199
+              }
+            }
+          ]
+        },
+        "metrics": {
+          "classes": 254,
+          "source_states": 256,
+          "class_size_histogram": {
+            "1": 252,
+            "2": 2
+          },
+          "H_observation": 7.890625,
+          "H_quotient": 7.984375,
+          "latent_conditional_bits": 0.09375,
+          "residual_source_bits": 0.015625,
+          "residual_per_site": 0.001953125,
+          "max_future_classes_per_visible_fiber": 2,
+          "worst_fiber_label_bits": 1,
+          "merged_witness": {
+            "x": 0,
+            "y": 255,
+            "class": 0,
+            "class_size": 2,
+            "current_observation": 0,
+            "coalescence_epoch": 1,
+            "coalescence_search_cap": 128
+          }
+        },
+        "encoding": {
+          "status": "constructed",
+          "translation_stride": 2,
+          "visible_orbits": 65,
+          "matched_class_orbits": 68,
+          "exact_partition": true,
+          "translation_covariant": true,
+          "autonomous": true,
+          "H_Q": 0.3667208579140698,
+          "Q_distinct_words": 5,
+          "max_orbit_demand_by_generator": {
+            "2": {
+              "1": 1
+            },
+            "4": {
+              "1": 1
+            },
+            "8": {
+              "1": 2
+            }
+          }
+        },
+        "locality": {
+          "0": {
+            "status": "conflict",
+            "witness": {
+              "x": 0,
+              "y": 8,
+              "context": 0,
+              "target_x": 0,
+              "target_y": 7
+            }
+          },
+          "1": {
+            "status": "conflict",
+            "witness": {
+              "x": 40,
+              "y": 232,
+              "context": 3,
+              "target_x": 7,
+              "target_y": 5
+            }
+          },
+          "2": {
+            "status": "pass_finite_domain",
+            "contexts": 254
+          },
+          "3": {
+            "status": "pass_finite_domain",
+            "contexts": 254
+          }
+        },
+        "certificate": {
+          "path": "results/rule110_latent_q_20261007/n8_PG.npz",
+          "array_sha256": {
+            "labels": "ec9726875244a6567783bf757f59b80e94246d2fb38964d0456f81719dcb25a1",
+            "representatives": "28ecb0caac4fcfdddd96917e50d6a5150797db8ba8a175d85839779e208d343d",
+            "successor": "02a47a46b92a4a0fe6cd25ca621c195f0f45a6b2fc4b6e100d3cf51df6814ca0",
+            "qclass": "d80ae0bff91af518e67037cb727afdbf6a30f20a3aa88ec33a43e3185135fb19"
+          }
+        },
+        "checks": {
+          "full_finite_closure": true,
+          "lift_decoder": true,
+          "tuple_witness_replay": true,
+          "independent_explicit_future_partition": true
+        }
+      }
+    },
+    "10": {
+      "P": {
+        "status": "stable",
+        "refinement": {
+          "status": "stable",
+          "depth": 4,
+          "class_counts": [
+            32,
+            432,
+            817,
+            862,
+            867
+          ],
+          "split_witnesses": [
+            {
+              "refinement": 1,
+              "x": 0,
+              "y": 3,
+              "current_observation": 0,
+              "first_difference": {
+                "time": 1,
+                "observation_x": 0,
+                "observation_y": 1,
+                "at_x": 0,
+                "at_y": 770
+              }
+            },
+            {
+              "refinement": 2,
+              "x": 3,
+              "y": 15,
+              "current_observation": 0,
+              "first_difference": {
+                "time": 2,
+                "observation_x": 1,
+                "observation_y": 3,
+                "at_x": 194,
+                "at_y": 969
+              }
+            },
+            {
+              "refinement": 3,
+              "x": 1,
+              "y": 1022,
+              "current_observation": 1,
+              "first_difference": {
+                "time": 3,
+                "observation_x": 25,
+                "observation_y": 24,
+                "at_x": 625,
+                "at_y": 691
+              }
+            },
+            {
+              "refinement": 4,
+              "x": 770,
+              "y": 782,
+              "current_observation": 1,
+              "first_difference": {
+                "time": 4,
+                "observation_x": 8,
+                "observation_y": 12,
+                "at_x": 908,
+                "at_y": 940
+              }
+            }
+          ]
+        },
+        "metrics": {
+          "classes": 867,
+          "source_states": 1024,
+          "class_size_histogram": {
+            "1": 740,
+            "2": 102,
+            "3": 20,
+            "4": 5
+          },
+          "H_observation": 5.0,
+          "H_quotient": 9.66884985347337,
+          "latent_conditional_bits": 4.66884985347337,
+          "residual_source_bits": 0.3311501465266303,
+          "residual_per_site": 0.033115014652663026,
+          "max_future_classes_per_visible_fiber": 32,
+          "worst_fiber_label_bits": 5,
+          "merged_witness": {
+            "x": 0,
+            "y": 1023,
+            "class": 0,
+            "class_size": 2,
+            "current_observation": 0,
+            "coalescence_epoch": 1,
+            "coalescence_search_cap": 128
+          }
+        },
+        "certificate": {
+          "path": "results/rule110_latent_q_20261007/n10_P.npz",
+          "array_sha256": {
+            "labels": "4f51293ae010499f78e99470623ced642f24224640a9cb2b7eed22e0a1675bb4",
+            "representatives": "0c81d8be70c83c8e5656242f074db2e597a38eaa69133fffaffc8107dd973195",
+            "successor": "2e475014d6bfe39cffc0ef39f1cf17f055162e43bdce4053ba0c3f78b93cb600"
+          }
+        },
+        "checks": {
+          "full_finite_closure": true,
+          "lift_decoder": true,
+          "tuple_witness_replay": true,
+          "independent_explicit_future_partition": true
+        }
+      },
+      "G": {
+        "status": "stable",
+        "refinement": {
+          "status": "stable",
+          "depth": 2,
+          "class_counts": [
+            326,
+            1011,
+            1021
+          ],
+          "split_witnesses": [
+            {
+              "refinement": 1,
+              "x": 2,
+              "y": 10,
+              "current_observation": 1,
+              "first_difference": {
+                "time": 1,
+                "observation_x": 768,
+                "observation_y": 772,
+                "at_x": 515,
+                "at_y": 521
+              }
+            },
+            {
+              "refinement": 2,
+              "x": 466,
+              "y": 474,
+              "current_observation": 73,
+              "first_difference": {
+                "time": 2,
+                "observation_x": 14,
+                "observation_y": 792,
+                "at_x": 124,
+                "at_y": 625
+              }
+            }
+          ]
+        },
+        "metrics": {
+          "classes": 1021,
+          "source_states": 1024,
+          "class_size_histogram": {
+            "1": 1020,
+            "4": 1
+          },
+          "H_observation": 7.980138077826748,
+          "H_quotient": 9.9921875,
+          "latent_conditional_bits": 2.012049422173252,
+          "residual_source_bits": 0.0078125,
+          "residual_per_site": 0.00078125,
+          "max_future_classes_per_visible_fiber": 11,
+          "worst_fiber_label_bits": 4,
+          "merged_witness": {
+            "x": 0,
+            "y": 341,
+            "class": 0,
+            "class_size": 4,
+            "current_observation": 0,
+            "coalescence_epoch": 1,
+            "coalescence_search_cap": 128
+          }
+        },
+        "encoding": {
+          "status": "constructed",
+          "translation_stride": 1,
+          "visible_orbits": 35,
+          "matched_class_orbits": 106,
+          "exact_partition": true,
+          "translation_covariant": true,
+          "autonomous": true,
+          "H_Q": 4.055038385308743,
+          "Q_distinct_words": 46,
+          "max_orbit_demand_by_generator": {
+            "1": {
+              "1": 1
+            },
+            "5": {
+              "1": 3,
+              "2": 4
+            },
+            "10": {
+              "1": 9
+            }
+          }
+        },
+        "locality": {
+          "0": {
+            "status": "conflict",
+            "witness": {
+              "x": 1,
+              "y": 4,
+              "context": 0,
+              "target_x": 0,
+              "target_y": 3
+            }
+          },
+          "1": {
+            "status": "conflict",
+            "witness": {
+              "x": 0,
+              "y": 8,
+              "context": 0,
+              "target_x": 0,
+              "target_y": 1
+            }
+          },
+          "2": {
+            "status": "conflict",
+            "witness": {
+              "x": 368,
+              "y": 369,
+              "context": 0,
+              "target_x": 0,
+              "target_y": 2
+            }
+          },
+          "3": {
+            "status": "conflict",
+            "witness": {
+              "x": 650,
+              "y": 672,
+              "context": 0,
+              "target_x": 0,
+              "target_y": 2
+            }
+          }
+        },
+        "certificate": {
+          "path": "results/rule110_latent_q_20261007/n10_G.npz",
+          "array_sha256": {
+            "labels": "779b1a0af2e9af2df46981412927df1c94017d3d805353ab93f621773d962f4b",
+            "representatives": "1ee607aee552186ea2c4cecc5913519781606b7eb5879ee12f1e545092af692d",
+            "successor": "4a17693b915549a53d2e08609a0c112ccb034d20fba16e121cc33e38215f14d4",
+            "qclass": "71c8772918e90cb5985e96435bb08d842efb6b292c5bc42c8ab1956161d98578"
+          }
+        },
+        "checks": {
+          "full_finite_closure": true,
+          "lift_decoder": true,
+          "tuple_witness_replay": true,
+          "independent_explicit_future_partition": true
+        }
+      },
+      "PG": {
+        "status": "stable",
+        "refinement": {
+          "status": "stable",
+          "depth": 1,
+          "class_counts": [
+            957,
+            1022
+          ],
+          "split_witnesses": [
+            {
+              "refinement": 1,
+              "x": 60,
+              "y": 252,
+              "current_observation": 14,
+              "first_difference": {
+                "time": 1,
+                "observation_x": 2581,
+                "observation_y": 2657,
+                "at_x": 55,
+                "at_y": 199
+              }
+            }
+          ]
+        },
+        "metrics": {
+          "classes": 1022,
+          "source_states": 1024,
+          "class_size_histogram": {
+            "1": 1020,
+            "2": 2
+          },
+          "H_observation": 9.865454650868342,
+          "H_quotient": 9.99609375,
+          "latent_conditional_bits": 0.13063909913165794,
+          "residual_source_bits": 0.00390625,
+          "residual_per_site": 0.000390625,
+          "max_future_classes_per_visible_fiber": 3,
+          "worst_fiber_label_bits": 2,
+          "merged_witness": {
+            "x": 0,
+            "y": 1023,
+            "class": 0,
+            "class_size": 2,
+            "current_observation": 0,
+            "coalescence_epoch": 1,
+            "coalescence_search_cap": 128
+          }
+        },
+        "encoding": {
+          "status": "constructed",
+          "translation_stride": 2,
+          "visible_orbits": 193,
+          "matched_class_orbits": 206,
+          "exact_partition": true,
+          "translation_covariant": true,
+          "autonomous": true,
+          "H_Q": 0.51331651576596,
+          "Q_distinct_words": 11,
+          "max_orbit_demand_by_generator": {
+            "2": {
+              "1": 1
+            },
+            "10": {
+              "1": 3
+            }
+          }
+        },
+        "locality": {
+          "0": {
+            "status": "conflict",
+            "witness": {
+              "x": 0,
+              "y": 8,
+              "context": 0,
+              "target_x": 0,
+              "target_y": 7
+            }
+          },
+          "1": {
+            "status": "conflict",
+            "witness": {
+              "x": 960,
+              "y": 963,
+              "context": 0,
+              "target_x": 0,
+              "target_y": 2
+            }
+          },
+          "2": {
+            "status": "pass_finite_domain",
+            "contexts": 1022
+          },
+          "3": {
+            "status": "pass_finite_domain",
+            "contexts": 1022
+          }
+        },
+        "certificate": {
+          "path": "results/rule110_latent_q_20261007/n10_PG.npz",
+          "array_sha256": {
+            "labels": "3bbde0cf0d798aec810df045919af30297c932ad1844598fd105d434baa6aaf5",
+            "representatives": "3202a06cb6a1f2390cc53feb526f9ec48668d2bd5769cf619ecaee0c710fe8b8",
+            "successor": "239ed48cefbe4d72f08a0ddc934b53f1c938210bd6dfeb5b9a62067d4e32deeb",
+            "qclass": "12260947b7d550f0e2dc186d13606a8885c06b70a32c04cee31a938cb2d61c03"
+          }
+        },
+        "checks": {
+          "full_finite_closure": true,
+          "lift_decoder": true,
+          "tuple_witness_replay": true,
+          "independent_explicit_future_partition": true
+        }
+      }
+    },
+    "12": {
+      "P": {
+        "status": "stable",
+        "refinement": {
+          "status": "stable",
+          "depth": 4,
+          "class_counts": [
+            64,
+            1465,
+            3115,
+            3316,
+            3340
+          ],
+          "split_witnesses": [
+            {
+              "refinement": 1,
+              "x": 0,
+              "y": 3,
+              "current_observation": 0,
+              "first_difference": {
+                "time": 1,
+                "observation_x": 0,
+                "observation_y": 1,
+                "at_x": 0,
+                "at_y": 3074
+              }
+            },
+            {
+              "refinement": 2,
+              "x": 3,
+              "y": 15,
+              "current_observation": 0,
+              "first_difference": {
+                "time": 2,
+                "observation_x": 1,
+                "observation_y": 3,
+                "at_x": 770,
+                "at_y": 3849
+              }
+            },
+            {
+              "refinement": 3,
+              "x": 1,
+              "y": 4094,
+              "current_observation": 1,
+              "first_difference": {
+                "time": 3,
+                "observation_x": 49,
+                "observation_y": 48,
+                "at_x": 2497,
+                "at_y": 2755
+              }
+            },
+            {
+              "refinement": 4,
+              "x": 3074,
+              "y": 3086,
+              "current_observation": 1,
+              "first_difference": {
+                "time": 4,
+                "observation_x": 20,
+                "observation_y": 18,
+                "at_x": 3631,
+                "at_y": 3639
+              }
+            }
+          ]
+        },
+        "metrics": {
+          "classes": 3340,
+          "source_states": 4096,
+          "class_size_histogram": {
+            "1": 2754,
+            "2": 455,
+            "3": 98,
+            "4": 27,
+            "5": 6
+          },
+          "H_observation": 6.0,
+          "H_quotient": 11.594326948716152,
+          "latent_conditional_bits": 5.5943269487161515,
+          "residual_source_bits": 0.40567305128384784,
+          "residual_per_site": 0.03380608760698732,
+          "max_future_classes_per_visible_fiber": 64,
+          "worst_fiber_label_bits": 6,
+          "merged_witness": {
+            "x": 0,
+            "y": 4095,
+            "class": 0,
+            "class_size": 2,
+            "current_observation": 0,
+            "coalescence_epoch": 1,
+            "coalescence_search_cap": 128
+          }
+        },
+        "certificate": {
+          "path": "results/rule110_latent_q_20261007/n12_P.npz",
+          "array_sha256": {
+            "labels": "9272a491b09c890e32035740fb366c73d045cf417ac207fc264e5a4871d470d0",
+            "representatives": "c928717d64157723ef6aa9cc3e9299de215aeb486aa17dc3e0c51951caffd123",
+            "successor": "68d786e0372662b2c15598fde23f6fb89c65f130dbe2004179f940e6a0c88c22"
+          }
+        },
+        "checks": {
+          "full_finite_closure": true,
+          "lift_decoder": true,
+          "tuple_witness_replay": true,
+          "independent_explicit_future_partition": false
+        }
+      },
+      "G": {
+        "status": "stable",
+        "refinement": {
+          "status": "stable",
+          "depth": 2,
+          "class_counts": [
+            1016,
+            4028,
+            4088
+          ],
+          "split_witnesses": [
+            {
+              "refinement": 1,
+              "x": 2,
+              "y": 10,
+              "current_observation": 1,
+              "first_difference": {
+                "time": 1,
+                "observation_x": 3072,
+                "observation_y": 3076,
+                "at_x": 2051,
+                "at_y": 2057
+              }
+            },
+            {
+              "refinement": 2,
+              "x": 658,
+              "y": 722,
+              "current_observation": 73,
+              "first_difference": {
+                "time": 2,
+                "observation_x": 1136,
+                "observation_y": 1222,
+                "at_x": 2528,
+                "at_y": 2444
+              }
+            }
+          ]
+        },
+        "metrics": {
+          "classes": 4088,
+          "source_states": 4096,
+          "class_size_histogram": {
+            "1": 4082,
+            "2": 5,
+            "4": 1
+          },
+          "H_observation": 9.579005661456403,
+          "H_quotient": 11.99560546875,
+          "latent_conditional_bits": 2.416599807293597,
+          "residual_source_bits": 0.00439453125,
+          "residual_per_site": 0.0003662109375,
+          "max_future_classes_per_visible_fiber": 15,
+          "worst_fiber_label_bits": 4,
+          "merged_witness": {
+            "x": 0,
+            "y": 1365,
+            "class": 0,
+            "class_size": 4,
+            "current_observation": 0,
+            "coalescence_epoch": 1,
+            "coalescence_search_cap": 128
+          }
+        },
+        "encoding": {
+          "status": "constructed",
+          "translation_stride": 1,
+          "visible_orbits": 91,
+          "matched_class_orbits": 349,
+          "exact_partition": true,
+          "translation_covariant": true,
+          "autonomous": true,
+          "H_Q": 4.7999731508630425,
+          "Q_distinct_words": 91,
+          "max_orbit_demand_by_generator": {
+            "1": {
+              "1": 1
+            },
+            "2": {
+              "1": 1
+            },
+            "3": {
+              "1": 1,
+              "2": 1,
+              "4": 3
+            },
+            "4": {
+              "1": 1
+            },
+            "6": {
+              "1": 3,
+              "2": 5
+            },
+            "12": {
+              "1": 14
+            }
+          }
+        },
+        "locality": {
+          "0": {
+            "status": "conflict",
+            "witness": {
+              "x": 1,
+              "y": 4,
+              "context": 0,
+              "target_x": 0,
+              "target_y": 3
+            }
+          },
+          "1": {
+            "status": "conflict",
+            "witness": {
+              "x": 0,
+              "y": 8,
+              "context": 0,
+              "target_x": 0,
+              "target_y": 1
+            }
+          },
+          "2": {
+            "status": "conflict",
+            "witness": {
+              "x": 1296,
+              "y": 1297,
+              "context": 0,
+              "target_x": 0,
+              "target_y": 2
+            }
+          },
+          "3": {
+            "status": "conflict",
+            "witness": {
+              "x": 1312,
+              "y": 1313,
+              "context": 0,
+              "target_x": 0,
+              "target_y": 2
+            }
+          }
+        },
+        "certificate": {
+          "path": "results/rule110_latent_q_20261007/n12_G.npz",
+          "array_sha256": {
+            "labels": "2478753c4ef01c018968ed5b0ed4e8f840557344317f4a7989c88ca9dc240616",
+            "representatives": "31d224870462dee234401dc18955342411bc2828092295d5bd67691dd5473f5b",
+            "successor": "9f10482c6a538403c259f70e510044ceb534f3676f61f47cc3946b1f65cddf85",
+            "qclass": "d95043960afd730e5d027cfdbcc0bbd6f22cb43cd5c17671033c821615fc29bf"
+          }
+        },
+        "checks": {
+          "full_finite_closure": true,
+          "lift_decoder": true,
+          "tuple_witness_replay": true,
+          "independent_explicit_future_partition": false
+        }
+      },
+      "PG": {
+        "status": "stable",
+        "refinement": {
+          "status": "stable",
+          "depth": 1,
+          "class_counts": [
+            3773,
+            4094
+          ],
+          "split_witnesses": [
+            {
+              "refinement": 1,
+              "x": 60,
+              "y": 252,
+              "current_observation": 14,
+              "first_difference": {
+                "time": 1,
+                "observation_x": 10261,
+                "observation_y": 10337,
+                "at_x": 55,
+                "at_y": 199
+              }
+            }
+          ]
+        },
+        "metrics": {
+          "classes": 4094,
+          "source_states": 4096,
+          "class_size_histogram": {
+            "1": 4092,
+            "2": 2
+          },
+          "H_observation": 11.834573248281508,
+          "H_quotient": 11.9990234375,
+          "latent_conditional_bits": 0.16445018921849197,
+          "residual_source_bits": 0.0009765625,
+          "residual_per_site": 8.138020833333333e-05,
+          "max_future_classes_per_visible_fiber": 4,
+          "worst_fiber_label_bits": 2,
+          "merged_witness": {
+            "x": 0,
+            "y": 4095,
+            "class": 0,
+            "class_size": 2,
+            "current_observation": 0,
+            "coalescence_epoch": 1,
+            "coalescence_search_cap": 128
+          }
+        },
+        "encoding": {
+          "status": "constructed",
+          "translation_stride": 2,
+          "visible_orbits": 644,
+          "matched_class_orbits": 698,
+          "exact_partition": true,
+          "translation_covariant": true,
+          "autonomous": true,
+          "H_Q": 0.6445302227638057,
+          "Q_distinct_words": 22,
+          "max_orbit_demand_by_generator": {
+            "2": {
+              "1": 1
+            },
+            "4": {
+              "1": 1
+            },
+            "6": {
+              "1": 2,
+              "2": 1
+            },
+            "12": {
+              "1": 4
+            }
+          }
+        },
+        "locality": {
+          "0": {
+            "status": "conflict",
+            "witness": {
+              "x": 0,
+              "y": 8,
+              "context": 0,
+              "target_x": 0,
+              "target_y": 7
+            }
+          },
+          "1": {
+            "status": "conflict",
+            "witness": {
+              "x": 3840,
+              "y": 3843,
+              "context": 0,
+              "target_x": 0,
+              "target_y": 2
+            }
+          },
+          "2": {
+            "status": "conflict",
+            "witness": {
+              "x": 224,
+              "y": 4067,
+              "context": 7,
+              "target_x": 0,
+              "target_y": 2
+            }
+          },
+          "3": {
+            "status": "pass_finite_domain",
+            "contexts": 4094
+          }
+        },
+        "certificate": {
+          "path": "results/rule110_latent_q_20261007/n12_PG.npz",
+          "array_sha256": {
+            "labels": "2fa5e7ec3318cbac1d87efd9ac5b35cf9d6be49862b44a4980d81c4c1f36cd4f",
+            "representatives": "b22a996ff7c4411743991ab7f448641f35612da34820c2c131991a22134c366e",
+            "successor": "3072cece0e0ab9ca0196cd1eda6052bf34319c1a410f81527724281cc1933900",
+            "qclass": "21981931ba851a7aea72a5bb260c4a763b3c07d7213230411925bfbd06383c08"
+          }
+        },
+        "checks": {
+          "full_finite_closure": true,
+          "lift_decoder": true,
+          "tuple_witness_replay": true,
+          "independent_explicit_future_partition": false
+        }
+      }
+    },
+    "14": {
+      "P": {
+        "status": "stable",
+        "refinement": {
+          "status": "stable",
+          "depth": 4,
+          "class_counts": [
+            128,
+            4937,
+            11958,
+            12833,
+            12931
+          ],
+          "split_witnesses": [
+            {
+              "refinement": 1,
+              "x": 0,
+              "y": 3,
+              "current_observation": 0,
+              "first_difference": {
+                "time": 1,
+                "observation_x": 0,
+                "observation_y": 1,
+                "at_x": 0,
+                "at_y": 12290
+              }
+            },
+            {
+              "refinement": 2,
+              "x": 3,
+              "y": 15,
+              "current_observation": 0,
+              "first_difference": {
+                "time": 2,
+                "observation_x": 1,
+                "observation_y": 3,
+                "at_x": 3074,
+                "at_y": 15369
+              }
+            },
+            {
+              "refinement": 3,
+              "x": 1,
+              "y": 16382,
+              "current_observation": 1,
+              "first_difference": {
+                "time": 3,
+                "observation_x": 97,
+                "observation_y": 96,
+                "at_x": 9985,
+                "at_y": 11011
+              }
+            },
+            {
+              "refinement": 4,
+              "x": 12290,
+              "y": 12302,
+              "current_observation": 1,
+              "first_difference": {
+                "time": 4,
+                "observation_x": 40,
+                "observation_y": 42,
+                "at_x": 14515,
+                "at_y": 14523
+              }
+            }
+          ]
+        },
+        "metrics": {
+          "classes": 12931,
+          "source_states": 16384,
+          "class_size_histogram": {
+            "1": 10353,
+            "2": 1948,
+            "3": 441,
+            "4": 147,
+            "5": 28,
+            "6": 14
+          },
+          "H_observation": 7.0,
+          "H_quotient": 13.529351063732978,
+          "latent_conditional_bits": 6.529351063732978,
+          "residual_source_bits": 0.47064893626702253,
+          "residual_per_site": 0.033617781161930184,
+          "max_future_classes_per_visible_fiber": 128,
+          "worst_fiber_label_bits": 7,
+          "merged_witness": {
+            "x": 0,
+            "y": 16383,
+            "class": 0,
+            "class_size": 2,
+            "current_observation": 0,
+            "coalescence_epoch": 1,
+            "coalescence_search_cap": 128
+          }
+        },
+        "certificate": {
+          "path": "results/rule110_latent_q_20261007/n14_P.npz",
+          "array_sha256": {
+            "labels": "a8c1b7e8d16ced5a07abdf04c31f9fd590949cb176c6d613c95b9e380a9c9ce3",
+            "representatives": "4ad7e35b698ba6946357572ac9675e576a7354ab002f37f17646a609ab99aeac",
+            "successor": "3946c1d0977fa95647f5274a453a80d86abd435d69610f3d35cbbd4dc5250bfe"
+          }
+        },
+        "checks": {
+          "full_finite_closure": true,
+          "lift_decoder": true,
+          "tuple_witness_replay": true,
+          "independent_explicit_future_partition": false
+        }
+      },
+      "G": {
+        "status": "stable",
+        "refinement": {
+          "status": "stable",
+          "depth": 2,
+          "class_counts": [
+            3277,
+            16101,
+            16381
+          ],
+          "split_witnesses": [
+            {
+              "refinement": 1,
+              "x": 2,
+              "y": 10,
+              "current_observation": 1,
+              "first_difference": {
+                "time": 1,
+                "observation_x": 12288,
+                "observation_y": 12292,
+                "at_x": 8195,
+                "at_y": 8201
+              }
+            },
+            {
+              "refinement": 2,
+              "x": 2706,
+              "y": 2770,
+              "current_observation": 73,
+              "first_difference": {
+                "time": 2,
+                "observation_x": 4912,
+                "observation_y": 4870,
+                "at_x": 9824,
+                "at_y": 9740
+              }
+            }
+          ]
+        },
+        "metrics": {
+          "classes": 16381,
+          "source_states": 16384,
+          "class_size_histogram": {
+            "1": 16380,
+            "4": 1
+          },
+          "H_observation": 11.188467373693326,
+          "H_quotient": 13.99951171875,
+          "latent_conditional_bits": 2.8110443450566738,
+          "residual_source_bits": 0.00048828125,
+          "residual_per_site": 3.487723214285714e-05,
+          "max_future_classes_per_visible_fiber": 28,
+          "worst_fiber_label_bits": 5,
+          "merged_witness": {
+            "x": 0,
+            "y": 5461,
+            "class": 0,
+            "class_size": 4,
+            "current_observation": 0,
+            "coalescence_epoch": 1,
+            "coalescence_search_cap": 128
+          }
+        },
+        "encoding": {
+          "status": "constructed",
+          "translation_stride": 1,
+          "visible_orbits": 239,
+          "matched_class_orbits": 1180,
+          "exact_partition": true,
+          "translation_covariant": true,
+          "autonomous": true,
+          "H_Q": 5.540709899645676,
+          "Q_distinct_words": 211,
+          "max_orbit_demand_by_generator": {
+            "1": {
+              "1": 1
+            },
+            "7": {
+              "1": 4,
+              "2": 7
+            },
+            "14": {
+              "1": 28
+            }
+          }
+        },
+        "locality": {
+          "0": {
+            "status": "conflict",
+            "witness": {
+              "x": 1,
+              "y": 4,
+              "context": 0,
+              "target_x": 0,
+              "target_y": 3
+            }
+          },
+          "1": {
+            "status": "conflict",
+            "witness": {
+              "x": 0,
+              "y": 8,
+              "context": 0,
+              "target_x": 0,
+              "target_y": 1
+            }
+          },
+          "2": {
+            "status": "conflict",
+            "witness": {
+              "x": 5072,
+              "y": 5073,
+              "context": 0,
+              "target_x": 0,
+              "target_y": 2
+            }
+          },
+          "3": {
+            "status": "conflict",
+            "witness": {
+              "x": 5184,
+              "y": 5185,
+              "context": 0,
+              "target_x": 0,
+              "target_y": 2
+            }
+          }
+        },
+        "certificate": {
+          "path": "results/rule110_latent_q_20261007/n14_G.npz",
+          "array_sha256": {
+            "labels": "dfadef28db336551c975f2392fb2cefbe13f894b2140d7b3a0eee3f10d8d46f9",
+            "representatives": "c148da227a41bce7315901e78b77f4bab2f499fbd92a3ac4292c253e4d092a77",
+            "successor": "ac7ccce41db04bc7d6ebcb56d043dd62fa328f40e7d1c78f3eb2b5f5e2879850",
+            "qclass": "f967a370051fea54e0380633ab989ea2b650993983e2ef51187ff50b7b9f6565"
+          }
+        },
+        "checks": {
+          "full_finite_closure": true,
+          "lift_decoder": true,
+          "tuple_witness_replay": true,
+          "independent_explicit_future_partition": false
+        }
+      },
+      "PG": {
+        "status": "stable",
+        "refinement": {
+          "status": "stable",
+          "depth": 1,
+          "class_counts": [
+            14877,
+            16382
+          ],
+          "split_witnesses": [
+            {
+              "refinement": 1,
+              "x": 60,
+              "y": 252,
+              "current_observation": 14,
+              "first_difference": {
+                "time": 1,
+                "observation_x": 40981,
+                "observation_y": 41057,
+                "at_x": 55,
+                "at_y": 199
+              }
+            }
+          ]
+        },
+        "metrics": {
+          "classes": 16382,
+          "source_states": 16384,
+          "class_size_histogram": {
+            "1": 16380,
+            "2": 2
+          },
+          "H_observation": 13.805178085570194,
+          "H_quotient": 13.999755859375,
+          "latent_conditional_bits": 0.1945777738048058,
+          "residual_source_bits": 0.000244140625,
+          "residual_per_site": 1.743861607142857e-05,
+          "max_future_classes_per_visible_fiber": 5,
+          "worst_fiber_label_bits": 3,
+          "merged_witness": {
+            "x": 0,
+            "y": 16383,
+            "class": 0,
+            "class_size": 2,
+            "current_observation": 0,
+            "coalescence_epoch": 1,
+            "coalescence_search_cap": 128
+          }
+        },
+        "encoding": {
+          "status": "constructed",
+          "translation_stride": 2,
+          "visible_orbits": 2127,
+          "matched_class_orbits": 2342,
+          "exact_partition": true,
+          "translation_covariant": true,
+          "autonomous": true,
+          "H_Q": 0.7601233715200111,
+          "Q_distinct_words": 22,
+          "max_orbit_demand_by_generator": {
+            "2": {
+              "1": 1
+            },
+            "14": {
+              "1": 5
+            }
+          }
+        },
+        "locality": {
+          "0": {
+            "status": "conflict",
+            "witness": {
+              "x": 0,
+              "y": 8,
+              "context": 0,
+              "target_x": 0,
+              "target_y": 7
+            }
+          },
+          "1": {
+            "status": "conflict",
+            "witness": {
+              "x": 15360,
+              "y": 15363,
+              "context": 0,
+              "target_x": 0,
+              "target_y": 2
+            }
+          },
+          "2": {
+            "status": "conflict",
+            "witness": {
+              "x": 16128,
+              "y": 16131,
+              "context": 0,
+              "target_x": 0,
+              "target_y": 2
+            }
+          },
+          "3": {
+            "status": "pass_finite_domain",
+            "contexts": 16382
+          }
+        },
+        "certificate": {
+          "path": "results/rule110_latent_q_20261007/n14_PG.npz",
+          "array_sha256": {
+            "labels": "5af1d6f50849612c9a1cdfcc919c84d6718c8c4b5fdf5683a3112b5b6399ae29",
+            "representatives": "c87dbee15c22319def0581c6c5e6cbfdeef7e5b63c950bfa944660bf2afd563c",
+            "successor": "4dfefb3994337ff4a0b683f4f3bfb30d6a74582ac8cf1218689e7378b65b24ad",
+            "qclass": "fe2ab0f2f9679ce1f390c5f7e2b8f4ae909a0721f4f5b9af0c6617267be75816"
+          }
+        },
+        "checks": {
+          "full_finite_closure": true,
+          "lift_decoder": true,
+          "tuple_witness_replay": true,
+          "independent_explicit_future_partition": false
+        }
+      }
+    },
+    "16": {
+      "P": {
+        "status": "stable",
+        "refinement": {
+          "status": "stable",
+          "depth": 5,
+          "class_counts": [
+            256,
+            16638,
+            45798,
+            49534,
+            49966,
+            49982
+          ],
+          "split_witnesses": [
+            {
+              "refinement": 1,
+              "x": 0,
+              "y": 3,
+              "current_observation": 0,
+              "first_difference": {
+                "time": 1,
+                "observation_x": 0,
+                "observation_y": 1,
+                "at_x": 0,
+                "at_y": 49154
+              }
+            },
+            {
+              "refinement": 2,
+              "x": 3,
+              "y": 15,
+              "current_observation": 0,
+              "first_difference": {
+                "time": 2,
+                "observation_x": 1,
+                "observation_y": 3,
+                "at_x": 12290,
+                "at_y": 61449
+              }
+            },
+            {
+              "refinement": 3,
+              "x": 1,
+              "y": 65534,
+              "current_observation": 1,
+              "first_difference": {
+                "time": 3,
+                "observation_x": 193,
+                "observation_y": 192,
+                "at_x": 39937,
+                "at_y": 44035
+              }
+            },
+            {
+              "refinement": 4,
+              "x": 49154,
+              "y": 49166,
+              "current_observation": 1,
+              "first_difference": {
+                "time": 4,
+                "observation_x": 80,
+                "observation_y": 82,
+                "at_x": 58051,
+                "at_y": 58059
+              }
+            },
+            {
+              "refinement": 5,
+              "x": 61442,
+              "y": 61454,
+              "current_observation": 1,
+              "first_difference": {
+                "time": 5,
+                "observation_x": 116,
+                "observation_y": 114,
+                "at_x": 5663,
+                "at_y": 54791
+              }
+            }
+          ]
+        },
+        "metrics": {
+          "classes": 49982,
+          "source_states": 65536,
+          "class_size_histogram": {
+            "1": 38754,
+            "2": 8338,
+            "3": 1874,
+            "4": 764,
+            "5": 120,
+            "6": 112,
+            "7": 8,
+            "8": 8,
+            "9": 4
+          },
+          "H_observation": 8.0,
+          "H_quotient": 15.46148315411135,
+          "latent_conditional_bits": 7.461483154111351,
+          "residual_source_bits": 0.5385168458886493,
+          "residual_per_site": 0.033657302868040584,
+          "max_future_classes_per_visible_fiber": 256,
+          "worst_fiber_label_bits": 8,
+          "merged_witness": {
+            "x": 0,
+            "y": 65535,
+            "class": 0,
+            "class_size": 2,
+            "current_observation": 0,
+            "coalescence_epoch": 1,
+            "coalescence_search_cap": 128
+          }
+        },
+        "certificate": {
+          "path": "results/rule110_latent_q_20261007/n16_P.npz",
+          "array_sha256": {
+            "labels": "171fd4b1dcf1eee7f3c64e74483e31697ac67c3cda8ccfb92c682cbb094428f6",
+            "representatives": "36428e85edb882459dd1f468479e7dce077a8115174fdae18793b149ddc49cb9",
+            "successor": "a650708575827bbe791b91eb99ab6d6900b0448ac85757e31afa637275b2fdde"
+          }
+        },
+        "checks": {
+          "full_finite_closure": true,
+          "lift_decoder": true,
+          "tuple_witness_replay": true,
+          "independent_explicit_future_partition": false
+        }
+      },
+      "G": {
+        "status": "stable",
+        "refinement": {
+          "status": "stable",
+          "depth": 2,
+          "class_counts": [
+            10451,
+            64251,
+            65531
+          ],
+          "split_witnesses": [
+            {
+              "refinement": 1,
+              "x": 2,
+              "y": 10,
+              "current_observation": 1,
+              "first_difference": {
+                "time": 1,
+                "observation_x": 49152,
+                "observation_y": 49156,
+                "at_x": 32771,
+                "at_y": 32777
+              }
+            },
+            {
+              "refinement": 2,
+              "x": 10898,
+              "y": 10962,
+              "current_observation": 73,
+              "first_difference": {
+                "time": 2,
+                "observation_x": 19504,
+                "observation_y": 19462,
+                "at_x": 39008,
+                "at_y": 38924
+              }
+            }
+          ]
+        },
+        "metrics": {
+          "classes": 65531,
+          "source_states": 65536,
+          "class_size_histogram": {
+            "1": 65528,
+            "2": 2,
+            "4": 1
+          },
+          "H_observation": 12.78918246495566,
+          "H_quotient": 15.99981689453125,
+          "latent_conditional_bits": 3.21063442957559,
+          "residual_source_bits": 0.00018310546875,
+          "residual_per_site": 1.1444091796875e-05,
+          "max_future_classes_per_visible_fiber": 49,
+          "worst_fiber_label_bits": 6,
+          "merged_witness": {
+            "x": 0,
+            "y": 21845,
+            "class": 0,
+            "class_size": 4,
+            "current_observation": 0,
+            "coalescence_epoch": 1,
+            "coalescence_search_cap": 128
+          }
+        },
+        "encoding": {
+          "status": "constructed",
+          "translation_stride": 1,
+          "visible_orbits": 662,
+          "matched_class_orbits": 4114,
+          "exact_partition": true,
+          "translation_covariant": true,
+          "autonomous": true,
+          "H_Q": 6.177408100322284,
+          "Q_distinct_words": 393,
+          "max_orbit_demand_by_generator": {
+            "1": {
+              "1": 1
+            },
+            "2": {
+              "1": 1
+            },
+            "4": {
+              "1": 1
+            },
+            "8": {
+              "1": 7,
+              "2": 21
+            },
+            "16": {
+              "1": 46
+            }
+          }
+        },
+        "locality": {
+          "0": {
+            "status": "conflict",
+            "witness": {
+              "x": 1,
+              "y": 4,
+              "context": 0,
+              "target_x": 0,
+              "target_y": 3
+            }
+          },
+          "1": {
+            "status": "conflict",
+            "witness": {
+              "x": 0,
+              "y": 8,
+              "context": 0,
+              "target_x": 0,
+              "target_y": 1
+            }
+          },
+          "2": {
+            "status": "conflict",
+            "witness": {
+              "x": 18592,
+              "y": 18593,
+              "context": 0,
+              "target_x": 0,
+              "target_y": 2
+            }
+          },
+          "3": {
+            "status": "conflict",
+            "witness": {
+              "x": 20672,
+              "y": 20673,
+              "context": 0,
+              "target_x": 0,
+              "target_y": 2
+            }
+          }
+        },
+        "certificate": {
+          "path": "results/rule110_latent_q_20261007/n16_G.npz",
+          "array_sha256": {
+            "labels": "39efa74224eeda4ce5311a6d61a54406542dd23c32b350d362439825efd6f6d2",
+            "representatives": "b919c8a6cdf5e181e60183ad3c378a737ce3766f66be39631e4f43c23b5d04e8",
+            "successor": "e3cab3bc893eddb72e213864f35d67d5991c43ebaedabe780edafb4b58864bc1",
+            "qclass": "92c75d106cd28ba0a1a9629f5211971cf2e20e7da971009c1fe0ad2c3c1f967c"
+          }
+        },
+        "checks": {
+          "full_finite_closure": true,
+          "lift_decoder": true,
+          "tuple_witness_replay": true,
+          "independent_explicit_future_partition": false
+        }
+      },
+      "PG": {
+        "status": "stable",
+        "refinement": {
+          "status": "stable",
+          "depth": 1,
+          "class_counts": [
+            58682,
+            65534
+          ],
+          "split_witnesses": [
+            {
+              "refinement": 1,
+              "x": 60,
+              "y": 252,
+              "current_observation": 14,
+              "first_difference": {
+                "time": 1,
+                "observation_x": 163861,
+                "observation_y": 163937,
+                "at_x": 55,
+                "at_y": 199
+              }
+            }
+          ]
+        },
+        "metrics": {
+          "classes": 65534,
+          "source_states": 65536,
+          "class_size_histogram": {
+            "1": 65532,
+            "2": 2
+          },
+          "H_observation": 15.776692143672122,
+          "H_quotient": 15.99993896484375,
+          "latent_conditional_bits": 0.22324682117162808,
+          "residual_source_bits": 6.103515625e-05,
+          "residual_per_site": 3.814697265625e-06,
+          "max_future_classes_per_visible_fiber": 6,
+          "worst_fiber_label_bits": 3,
+          "merged_witness": {
+            "x": 0,
+            "y": 65535,
+            "class": 0,
+            "class_size": 2,
+            "current_observation": 0,
+            "coalescence_epoch": 1,
+            "coalescence_search_cap": 128
+          }
+        },
+        "encoding": {
+          "status": "constructed",
+          "translation_stride": 2,
+          "visible_orbits": 7370,
+          "matched_class_orbits": 8228,
+          "exact_partition": true,
+          "translation_covariant": true,
+          "autonomous": true,
+          "H_Q": 0.8717733507860234,
+          "Q_distinct_words": 37,
+          "max_orbit_demand_by_generator": {
+            "2": {
+              "1": 1
+            },
+            "4": {
+              "1": 1
+            },
+            "8": {
+              "1": 2,
+              "2": 1
+            },
+            "16": {
+              "1": 6
+            }
+          }
+        },
+        "locality": {
+          "0": {
+            "status": "conflict",
+            "witness": {
+              "x": 0,
+              "y": 8,
+              "context": 0,
+              "target_x": 0,
+              "target_y": 7
+            }
+          },
+          "1": {
+            "status": "conflict",
+            "witness": {
+              "x": 61440,
+              "y": 61443,
+              "context": 0,
+              "target_x": 0,
+              "target_y": 2
+            }
+          },
+          "2": {
+            "status": "conflict",
+            "witness": {
+              "x": 64512,
+              "y": 64515,
+              "context": 0,
+              "target_x": 0,
+              "target_y": 2
+            }
+          },
+          "3": {
+            "status": "conflict",
+            "witness": {
+              "x": 3840,
+              "y": 65295,
+              "context": 4,
+              "target_x": 0,
+              "target_y": 4
+            }
+          }
+        },
+        "certificate": {
+          "path": "results/rule110_latent_q_20261007/n16_PG.npz",
+          "array_sha256": {
+            "labels": "a1585eab0949a40cec1c7634055700e6ddef049247aedc21c89daeb3bed99e71",
+            "representatives": "03c3e7541b9942deb13169cf05ab8e6492bed5436c7edb09da8c868ecc17d7aa",
+            "successor": "6f5aa30ea77c08200cc1a3b53ed079a882f61fcca6c595500d3fde00117de276",
+            "qclass": "5f4c40006705bd9232b0bba251314299455cba9feccedd9a7720686f55e6a2b7"
+          }
+        },
+        "checks": {
+          "full_finite_closure": true,
+          "lift_decoder": true,
+          "tuple_witness_replay": true,
+          "independent_explicit_future_partition": false
+        }
+      }
+    },
+    "18": {
+      "P": {
+        "status": "stable",
+        "refinement": {
+          "status": "stable",
+          "depth": 6,
+          "class_counts": [
+            512,
+            56060,
+            175301,
+            191279,
+            193169,
+            193241,
+            193259
+          ],
+          "split_witnesses": [
+            {
+              "refinement": 1,
+              "x": 0,
+              "y": 3,
+              "current_observation": 0,
+              "first_difference": {
+                "time": 1,
+                "observation_x": 0,
+                "observation_y": 1,
+                "at_x": 0,
+                "at_y": 196610
+              }
+            },
+            {
+              "refinement": 2,
+              "x": 3,
+              "y": 15,
+              "current_observation": 0,
+              "first_difference": {
+                "time": 2,
+                "observation_x": 1,
+                "observation_y": 3,
+                "at_x": 49154,
+                "at_y": 245769
+              }
+            },
+            {
+              "refinement": 3,
+              "x": 1,
+              "y": 262142,
+              "current_observation": 1,
+              "first_difference": {
+                "time": 3,
+                "observation_x": 385,
+                "observation_y": 384,
+                "at_x": 159745,
+                "at_y": 176131
+              }
+            },
+            {
+              "refinement": 4,
+              "x": 196610,
+              "y": 196622,
+              "current_observation": 1,
+              "first_difference": {
+                "time": 4,
+                "observation_x": 160,
+                "observation_y": 162,
+                "at_x": 232195,
+                "at_y": 232203
+              }
+            },
+            {
+              "refinement": 5,
+              "x": 258050,
+              "y": 258062,
+              "current_observation": 1,
+              "first_difference": {
+                "time": 5,
+                "observation_x": 52,
+                "observation_y": 50,
+                "at_x": 259615,
+                "at_y": 259591
+              }
+            },
+            {
+              "refinement": 6,
+              "x": 196654,
+              "y": 196846,
+              "current_observation": 5,
+              "first_difference": {
+                "time": 6,
+                "observation_x": 114,
+                "observation_y": 66,
+                "at_x": 255688,
+                "at_y": 254200
+              }
+            }
+          ]
+        },
+        "metrics": {
+          "classes": 193259,
+          "source_states": 262144,
+          "class_size_histogram": {
+            "1": 145137,
+            "2": 35159,
+            "3": 7875,
+            "4": 3690,
+            "5": 522,
+            "6": 684,
+            "7": 36,
+            "8": 102,
+            "9": 36,
+            "10": 9,
+            "12": 9
+          },
+          "H_observation": 9.0,
+          "H_quotient": 17.39414857433473,
+          "latent_conditional_bits": 8.394148574334729,
+          "residual_source_bits": 0.6058514256652701,
+          "residual_per_site": 0.03365841253695945,
+          "max_future_classes_per_visible_fiber": 512,
+          "worst_fiber_label_bits": 9,
+          "merged_witness": {
+            "x": 0,
+            "y": 262143,
+            "class": 0,
+            "class_size": 2,
+            "current_observation": 0,
+            "coalescence_epoch": 1,
+            "coalescence_search_cap": 128
+          }
+        },
+        "certificate": {
+          "path": "results/rule110_latent_q_20261007/n18_P.npz",
+          "array_sha256": {
+            "labels": "7cc1bba32272f8364eb1347842faeb0abdcc0a16175a356aa1d2dd0e3353f236",
+            "representatives": "574a6f8fdaa6d0b42e23314cbe72040181a8eba136eee63d320c73eb75486513",
+            "successor": "b5286fef8a0e13a9893d6344b98f422dce8699f52e01bae10ef097fae20e6bf4"
+          }
+        },
+        "checks": {
+          "full_finite_closure": true,
+          "lift_decoder": true,
+          "tuple_witness_replay": true,
+          "independent_explicit_future_partition": false
+        }
+      },
+      "G": {
+        "status": "stable",
+        "refinement": {
+          "status": "stable",
+          "depth": 2,
+          "class_counts": [
+            33370,
+            256378,
+            262138
+          ],
+          "split_witnesses": [
+            {
+              "refinement": 1,
+              "x": 2,
+              "y": 10,
+              "current_observation": 1,
+              "first_difference": {
+                "time": 1,
+                "observation_x": 196608,
+                "observation_y": 196612,
+                "at_x": 131075,
+                "at_y": 131081
+              }
+            },
+            {
+              "refinement": 2,
+              "x": 43666,
+              "y": 43730,
+              "current_observation": 73,
+              "first_difference": {
+                "time": 2,
+                "observation_x": 77872,
+                "observation_y": 77830,
+                "at_x": 155744,
+                "at_y": 155660
+              }
+            }
+          ]
+        },
+        "metrics": {
+          "classes": 262138,
+          "source_states": 262144,
+          "class_size_histogram": {
+            "1": 262134,
+            "2": 3,
+            "4": 1
+          },
+          "H_observation": 14.389194637379756,
+          "H_quotient": 17.99994659423828,
+          "latent_conditional_bits": 3.6107519568585253,
+          "residual_source_bits": 5.340576171875e-05,
+          "residual_per_site": 2.966986762152778e-06,
+          "max_future_classes_per_visible_fiber": 76,
+          "worst_fiber_label_bits": 7,
+          "merged_witness": {
+            "x": 0,
+            "y": 87381,
+            "class": 0,
+            "class_size": 4,
+            "current_observation": 0,
+            "coalescence_epoch": 1,
+            "coalescence_search_cap": 128
+          }
+        },
+        "encoding": {
+          "status": "constructed",
+          "translation_stride": 1,
+          "visible_orbits": 1869,
+          "matched_class_orbits": 14599,
+          "exact_partition": true,
+          "translation_covariant": true,
+          "autonomous": true,
+          "H_Q": 6.818569996760218,
+          "Q_distinct_words": 718,
+          "max_orbit_demand_by_generator": {
+            "1": {
+              "1": 1
+            },
+            "3": {
+              "1": 1,
+              "2": 1,
+              "3": 2,
+              "6": 9
+            },
+            "6": {
+              "1": 3,
+              "3": 14
+            },
+            "9": {
+              "1": 6,
+              "2": 15
+            },
+            "18": {
+              "1": 76
+            }
+          }
+        },
+        "locality": {
+          "0": {
+            "status": "conflict",
+            "witness": {
+              "x": 1,
+              "y": 4,
+              "context": 0,
+              "target_x": 0,
+              "target_y": 3
+            }
+          },
+          "1": {
+            "status": "conflict",
+            "witness": {
+              "x": 0,
+              "y": 8,
+              "context": 0,
+              "target_x": 0,
+              "target_y": 1
+            }
+          },
+          "2": {
+            "status": "conflict",
+            "witness": {
+              "x": 43296,
+              "y": 43312,
+              "context": 0,
+              "target_x": 0,
+              "target_y": 2
+            }
+          },
+          "3": {
+            "status": "conflict",
+            "witness": {
+              "x": 43424,
+              "y": 43456,
+              "context": 0,
+              "target_x": 0,
+              "target_y": 2
+            }
+          }
+        },
+        "certificate": {
+          "path": "results/rule110_latent_q_20261007/n18_G.npz",
+          "array_sha256": {
+            "labels": "c6e344ff2006d0096494af14e1452721eca34298c5712a7480f23b0e56d8d413",
+            "representatives": "bc4aff8802e9ad198acf07162ca90a984615cc7e305f2c70b23a8a2d7046d54f",
+            "successor": "04ad5122771473172b6cda6834ba7faed8e50496d5e3d1ee3b38679a501a0ba2",
+            "qclass": "46c4238c1c7e79fafada7ae1cdafa4547e4fa079c43a081d777eaba7d1bee1dd"
+          }
+        },
+        "checks": {
+          "full_finite_closure": true,
+          "lift_decoder": true,
+          "tuple_witness_replay": true,
+          "independent_explicit_future_partition": false
+        }
+      },
+      "PG": {
+        "status": "stable",
+        "refinement": {
+          "status": "stable",
+          "depth": 1,
+          "class_counts": [
+            231494,
+            262142
+          ],
+          "split_witnesses": [
+            {
+              "refinement": 1,
+              "x": 60,
+              "y": 252,
+              "current_observation": 14,
+              "first_difference": {
+                "time": 1,
+                "observation_x": 655381,
+                "observation_y": 655457,
+                "at_x": 55,
+                "at_y": 199
+              }
+            }
+          ]
+        },
+        "metrics": {
+          "classes": 262142,
+          "source_states": 262144,
+          "class_size_histogram": {
+            "1": 262140,
+            "2": 2
+          },
+          "H_observation": 17.748565945912596,
+          "H_quotient": 17.999984741210938,
+          "latent_conditional_bits": 0.251418795298342,
+          "residual_source_bits": 1.52587890625e-05,
+          "residual_per_site": 8.477105034722222e-07,
+          "max_future_classes_per_visible_fiber": 8,
+          "worst_fiber_label_bits": 3,
+          "merged_witness": {
+            "x": 0,
+            "y": 262143,
+            "class": 0,
+            "class_size": 2,
+            "current_observation": 0,
+            "coalescence_epoch": 1,
+            "coalescence_search_cap": 128
+          }
+        },
+        "encoding": {
+          "status": "constructed",
+          "translation_stride": 2,
+          "visible_orbits": 25736,
+          "matched_class_orbits": 29142,
+          "exact_partition": true,
+          "translation_covariant": true,
+          "autonomous": true,
+          "H_Q": 0.9805239541397397,
+          "Q_distinct_words": 58,
+          "max_orbit_demand_by_generator": {
+            "2": {
+              "1": 1
+            },
+            "6": {
+              "1": 2,
+              "3": 2
+            },
+            "18": {
+              "1": 8
+            }
+          }
+        },
+        "locality": {
+          "0": {
+            "status": "conflict",
+            "witness": {
+              "x": 0,
+              "y": 8,
+              "context": 0,
+              "target_x": 0,
+              "target_y": 7
+            }
+          },
+          "1": {
+            "status": "conflict",
+            "witness": {
+              "x": 245760,
+              "y": 245763,
+              "context": 0,
+              "target_x": 0,
+              "target_y": 2
+            }
+          },
+          "2": {
+            "status": "conflict",
+            "witness": {
+              "x": 258048,
+              "y": 258051,
+              "context": 0,
+              "target_x": 0,
+              "target_y": 2
+            }
+          },
+          "3": {
+            "status": "conflict",
+            "witness": {
+              "x": 261120,
+              "y": 261123,
+              "context": 0,
+              "target_x": 0,
+              "target_y": 2
+            }
+          }
+        },
+        "certificate": {
+          "path": "results/rule110_latent_q_20261007/n18_PG.npz",
+          "array_sha256": {
+            "labels": "ea05205a122e3453aff954f7f2dbc63f0b6e15e8c2525b1c6ad54ebe6a65a969",
+            "representatives": "8c8e69b4cfd861c78317d7b9864499ce0aeb9d0ac08d080d99c40cf7f3e0d948",
+            "successor": "cb24a91dbd80c49215b1c347c577c6ddb122e6d5c0eb54abb1891ea8ef72fd83",
+            "qclass": "0d62b30b0932e196f4b918d9b799436c891dd25e6cd452de502f0eb7db8e3aa6"
+          }
+        },
+        "checks": {
+          "full_finite_closure": true,
+          "lift_decoder": true,
+          "tuple_witness_replay": true,
+          "independent_explicit_future_partition": false
+        }
+      }
+    }
+  },
+  "gates": {
+    "P1": {
+      "question": "PG optimal compression >= 1 percent at 14,16,18",
+      "status": "fail"
+    },
+    "P2": {
+      "question": "G optimal compression >= 1 percent at 14,16,18",
+      "status": "fail"
+    },
+    "P3": {
+      "question": "exact minimal equivariant binary encoders at every width",
+      "status": "pass"
+    },
+    "P4": {
+      "question": "constructed Q repetition compatible and radius<=3 across widths",
+      "status": "fail"
+    }
+  },
+  "repetition": {
+    "G": [
+      {
+        "d": 6,
+        "n": 12,
+        "status": "pass",
+        "conflicts": 0
+      },
+      {
+        "d": 6,
+        "n": 18,
+        "status": "pass",
+        "conflicts": 0
+      },
+      {
+        "d": 8,
+        "n": 16,
+        "status": "pass",
+        "conflicts": 0
+      }
+    ],
+    "PG": [
+      {
+        "d": 6,
+        "n": 12,
+        "status": "pass",
+        "conflicts": 0
+      },
+      {
+        "d": 6,
+        "n": 18,
+        "status": "pass",
+        "conflicts": 0
+      },
+      {
+        "d": 8,
+        "n": 16,
+        "status": "pass",
+        "conflicts": 0
+      }
+    ]
+  },
+  "joint_locality": {
+    "G": {
+      "0": {
+        "status": "conflict",
+        "witness": {
+          "x": 1,
+          "y": 4,
+          "context": 0,
+          "target_x": 0,
+          "target_y": 1,
+          "n_x": 6,
+          "n_y": 6
+        },
+        "widths": [
+          6,
+          8,
+          10,
+          12,
+          14,
+          16,
+          18
+        ]
+      },
+      "1": {
+        "status": "conflict",
+        "witness": {
+          "x": 0,
+          "y": 8,
+          "context": 0,
+          "target_x": 0,
+          "target_y": 3,
+          "n_x": 6,
+          "n_y": 6
+        },
+        "widths": [
+          6,
+          8,
+          10,
+          12,
+          14,
+          16,
+          18
+        ]
+      },
+      "2": {
+        "status": "conflict",
+        "witness": {
+          "x": 96,
+          "y": 97,
+          "context": 0,
+          "target_x": 0,
+          "target_y": 2,
+          "n_x": 8,
+          "n_y": 8
+        },
+        "widths": [
+          6,
+          8,
+          10,
+          12,
+          14,
+          16,
+          18
+        ]
+      },
+      "3": {
+        "status": "conflict",
+        "witness": {
+          "x": 85,
+          "y": 162,
+          "context": 0,
+          "target_x": 0,
+          "target_y": 3,
+          "n_x": 8,
+          "n_y": 8
+        },
+        "widths": [
+          6,
+          8,
+          10,
+          12,
+          14,
+          16,
+          18
+        ]
+      }
+    },
+    "PG": {
+      "0": {
+        "status": "conflict",
+        "witness": {
+          "x": 0,
+          "y": 8,
+          "context": 0,
+          "target_x": 0,
+          "target_y": 7,
+          "n_x": 6,
+          "n_y": 6
+        },
+        "widths": [
+          6,
+          8,
+          10,
+          12,
+          14,
+          16,
+          18
+        ]
+      },
+      "1": {
+        "status": "conflict",
+        "witness": {
+          "x": 960,
+          "y": 963,
+          "context": 0,
+          "target_x": 0,
+          "target_y": 2,
+          "n_x": 10,
+          "n_y": 10
+        },
+        "widths": [
+          6,
+          8,
+          10,
+          12,
+          14,
+          16,
+          18
+        ]
+      },
+      "2": {
+        "status": "conflict",
+        "witness": {
+          "x": 16128,
+          "y": 16131,
+          "context": 0,
+          "target_x": 0,
+          "target_y": 2,
+          "n_x": 14,
+          "n_y": 14
+        },
+        "widths": [
+          6,
+          8,
+          10,
+          12,
+          14,
+          16,
+          18
+        ]
+      },
+      "3": {
+        "status": "conflict",
+        "witness": {
+          "x": 261120,
+          "y": 261123,
+          "context": 0,
+          "target_x": 0,
+          "target_y": 2,
+          "n_x": 18,
+          "n_y": 18
+        },
+        "widths": [
+          6,
+          8,
+          10,
+          12,
+          14,
+          16,
+          18
+        ]
+      }
+    }
+  }
+}

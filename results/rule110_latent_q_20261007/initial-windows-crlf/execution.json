@@ -1,0 +1,10 @@
+{
+  "implementation_commit": "429ecb40d1479f0d440cad612abb64b9f339551c",
+  "runtime_seconds": 4.030999999959022,
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "numpy": "2.3.5",
+  "platform": "Windows-11-10.0.22621-SP0",
+  "result_sha256": "d823ef3291e49a4a0915ef059ef126edffade2268399b45a0ba2297324a66ce2",
+  "reviewed_by": "none",
+  "certificates_bytes": 5805643
+}
