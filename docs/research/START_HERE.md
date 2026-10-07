@@ -12,8 +12,10 @@ must it retain, and what does changing representation buy us?
 holds predictive-compression demand approximately fixed and asks what the
 newly necessary history is tracking. At fresh widths 16 and 18 every Rule-110
 repair step factors through current predictive state plus current centered
-Groovy; Rule 62 has exact early counterexamples. The next useful question is
-structural: why that factor holds for Rule 110, not another rule census.
+Groovy; Rule 62 has exact early counterexamples. A complete local audit then
+proves a stronger Rule-110 identity: current block parity plus current centered
+Groovy already has a radius-one induced law for the next block-parity field.
+The next useful question is structural/minimality, not another rule census.
 
 Our strongest work answers bounded versions of that question with exact
 factors, counterexamples, graph certificates and explicit constructions.
