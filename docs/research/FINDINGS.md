@@ -7,7 +7,31 @@ links to the technical account that states its assumptions and verification.
 mathematical question is solved. The [program survey](2026-09-22-program-survey.md)
 explains what deserves work next.
 
-## The full-entropy jet leaves only phase/gauge ambiguity — 2026-10-07
+## Full source entropy does not imply a phase-only hidden fiber — 2026-10-07
+
+We compared Rules 54, 30 and 90 before attempting to connect jet depth to the
+six-field lift. Rule 90 is an exact additive control: G and every higher jet
+field vanish. Rules 54 and 30 both first recover full source spatial entropy
+at (G,Q,R), just as Rule 110 does.
+
+But exact full-line equal-jet source-pair graphs expose a decisive distinction.
+At GQR, Rule 30 has only periodic off-diagonal recurrent cycles (periods
+1,2,6). Rule 54 retains four branching off-diagonal recurrent SCCs with
+positive symbolic source-pair entropy; the strongest has Perron \(\sqrt2\),
+or 0.5 bits/site within that exceptional pair language.
+
+A separately frozen depth check finds three branching Rule-54 SCCs persist
+through A5, with Perron about 1.272. The original equality between longest
+hidden phase period and critical jet source radius is false already for
+Rule 30 (period 6, radius 4), and Rule 54 has period-8 cycles at source radius 6.
+
+This is **not** a Class-IV discriminator: 110 and 54 differ. Also, positive
+entropy of exceptional ambiguous *pairs* is not positive conditional
+information density for typical source states. The warranted next target is
+the symbolic generators of the surviving Rule-54 branching fibers.
+[Exact panel and follow-up](2026-10-07-jet-control-panel.md).
+
+## In the original Rule-110/62 pair, the full-entropy jet leaves only phase/gauge ambiguity — 2026-10-07
 
 The intrinsic commutator jet does more than recover source entropy gradually.
 Exact infinite-line pair graphs show a qualitative transition in what remains

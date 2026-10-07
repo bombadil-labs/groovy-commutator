@@ -1,0 +1,22 @@
+[
+  {
+    "slug": "jet-control-panel-20261007",
+    "label": "Commutator jet controls",
+    "title": "Rule 54 retains branching jet fibers where Rule 30 has only phases",
+    "date": "2026-10-07",
+    "updated": "2026-10-07",
+    "kind": "Exact three-rule controls and bounded follow-up",
+    "evidence": "exact",
+    "topic": "Observation and memory",
+    "summary": "Rules 54 and 30 recover full source spatial entropy at GQR, just like Rule 110; additive Rule 90 has G=Q=R=0. But Rule 54's equal-jet source-pair graph still has four branching recurrent off-diagonal SCCs, and three survive through A5. Rule 30 has only periodic off-diagonal recurrent cycles by GQR.",
+    "takeaway": "Full spatial entropy does not imply phase-only hidden fibers. The previously noticed equality of critical jet radius with longest surviving phase period is falsified by Rule 30.",
+    "source": "docs/research/2026-10-07-jet-control-panel.md",
+    "promotion": {
+      "stage": "research"
+    },
+    "related": [
+      "commutator-jet-20261007",
+      "commutator-jet-fibers-20261007"
+    ]
+  }
+]

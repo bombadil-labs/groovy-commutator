@@ -7,6 +7,22 @@ sections are historical proposals, not an instruction to resume them.
 **Question:** which distinctions can a representation safely discard, which
 must it retain, and what does changing representation buy us?
 
+**New three-rule jet control (2026-10-07).**
+[The 54/30/90 comparison](2026-10-07-jet-control-panel.md) corrects a
+too-broad phase-only intuition from the original 110/62 pair. Rule 90
+vanishes above D because H is additive. Rules 54 and 30 both recover full
+spatial entropy by (G,Q,R), but only Rule 30 has exclusively periodic
+off-diagonal recurrent phase cycles there. Rule 54 retains branching
+positive-entropy source-pair components through A5, even though its total
+jet image entropy already equals the source entropy. Rule 30's surviving
+period-six phase cycle at source radius four also falsifies the proposed
+radius/max-period coincidence.
+
+**Current next question:** explain the symbolic generators of the surviving
+Rule-54 branching equal-output pair language, independently of the lift and
+without a class census. Do not treat the original 110/62 phase-only result
+as a universal transition law.
+
 **New commutator-jet result.** The
 [2026-10-07 jet unit](2026-10-07-commutator-jet.md) defines
 \(D,G,Q,R,\ldots\) recursively by \(A_{k+1}=A_k\circ H\oplus H\circ A_k\).
@@ -24,9 +40,10 @@ has a positive-entropy mixed hidden fiber; at the first full-entropy prefix the
 non-diagonal recurrent ambiguity collapses to zero-entropy periodic phase
 cycles plus domain-wall interfaces.
 
-The next useful target is therefore a **finite-state phase automaton** extracted
-from that residual pair graph. Do not add another raw residual field, launch a
-Class-IV census, or resume local feature search.
+For those original two rules a finite-state phase automaton remains an
+interesting historical direction; the new Rule-54 control demonstrates that
+phase-only ambiguity is not generic at the first full-entropy prefix. Do not
+launch a Class-IV census or another blind local feature search.
 
 **New Rule-110 mechanism result.** The
 [matched Rule-62/Rule-110 comparison](2026-10-07-matched-history-transport.md)

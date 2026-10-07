@@ -56,6 +56,8 @@ jobs:
         run: |
           python scripts/experiment_rule110_latent_q.py --verify
           python scripts/verify_rule110_latent_q.py
+      - name: Rule 54/30/90 commutator-jet comparator replay
+        run: python scripts/verify_jet_control_panel.py
       - name: Observation-discovery saved certificate and semantic checks
         run: |
           python -m unittest discover -s experiments/observation_discovery_20260923 -p test_semantics.py
