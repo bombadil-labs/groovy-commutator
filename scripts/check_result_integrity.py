@@ -30,6 +30,8 @@ ROOT = pathlib.Path(__file__).resolve().parents[1]
 
 # result file -> {hash key recorded in its source_hashes: path the hash was taken of}
 REGISTRY = {
+    'results/matched_history_transport_20261007.json': {
+        'script_sha256': 'scripts/experiment_matched_history_transport.py'},
     'results/order_image_gate_20260925.json': {p: p for p in (
         'docs/research/protocols/2026-09-25-order-image-gate.md',
         'experiments/order_image_gate_20260925/run.py',
