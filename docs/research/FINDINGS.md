@@ -7,6 +7,33 @@ links to the technical account that states its assumptions and verification.
 mathematical question is solved. The [program survey](2026-09-22-program-survey.md)
 explains what deserves work next.
 
+## A Rule-54 golden-growth ambiguity survives every higher jet — 2026-10-07
+
+An exact all-256 GQR source-pair census shows branching off-diagonal recurrent
+fibers are common: 228/256 rules branch; 28/256 have only periodic
+off-diagonal recurrent ambiguity. Rule 54 is in a smaller 11-rule group with
+purely off-diagonal branching SCCs but no mixed branching SCC.
+
+The post-primary Rule-54 invariance test found something much stronger than a
+rare count. Two G..A5 equal-output off-diagonal SCCs with exact Perron root
+sqrt(phi) have 52/68 and 84/110 vertices/edges. Every admissible three-edge
+path in the first (110 total) evolves into the second; every one in the
+second (178 total) evolves into the first. All 288 exact local tests pass an
+independent scalar jet computation. The 52/58 third branching SCC does *not*
+belong to this closed pair.
+
+Their union is an invariant full-line source-pair relation with positive
+spatial pair-language entropy (log2(phi))/2. Because it remains invisible
+to G at all future times, the universal jet recurrence proves by induction
+that **every higher residual A_k, k>=1, also agrees on each pair**.
+
+This is a genuine all-depth invisibility certificate, not an infinite
+field-by-field simulation. It does not imply positive conditional entropy for
+a typical source configuration, a Class-IV discriminator, or a six-field lift
+correspondence. The golden-component selection was an explicitly
+post-primary follow-up after the original three-SCC union failed.
+[Exact full-line theorem and census](2026-10-07-jet-gqr-census-fibonacci.md).
+
 ## Full source entropy does not imply a phase-only hidden fiber — 2026-10-07
 
 We compared Rules 54, 30 and 90 before attempting to connect jet depth to the

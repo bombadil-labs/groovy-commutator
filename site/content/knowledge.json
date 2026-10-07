@@ -2786,6 +2786,15 @@
       "research": [
         "rule110-latent-q-20261007"
       ]
+    },
+    {
+      "source": "rule54-golden-jet-fiber",
+      "target": "commutator-jet",
+      "type": "depends_on",
+      "reason": "All-depth indistinguishability follows by induction from the intrinsic commutator-jet recurrence and the invariant source-pair SCC swap.",
+      "research": [
+        "jet-gqr-256-fibonacci-20261007"
+      ]
     }
   ],
   "nodes": [
@@ -5416,6 +5425,18 @@
       "source": "docs/knowledge/commutator-jet.md",
       "research": [
         "commutator-jet-20261007"
+      ]
+    },
+    {
+      "id": "rule54-golden-jet-fiber",
+      "title": "Rule 54 has an invariant Fibonacci-like ambiguity invisible to every higher jet",
+      "kind": "finding",
+      "status": "exact",
+      "updated": "2026-10-07",
+      "summary": "An all-256 GQR census finds branching off-diagonal fibers common. But two Rule54 positive-entropy golden-growth G..A5 pair SCCs map into each other under source evolution, so all higher commutator residuals remain identical on this invariant exceptional source-pair language.",
+      "source": "docs/knowledge/rule54-golden-jet-fiber.md",
+      "research": [
+        "jet-gqr-256-fibonacci-20261007"
       ]
     }
   ],
