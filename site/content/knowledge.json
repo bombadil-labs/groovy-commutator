@@ -2759,6 +2759,15 @@
       "research": [
         "prediction-repair"
       ]
+    },
+    {
+      "source": "asymptotic-closure-corridor",
+      "type": "depends_on",
+      "target": "predictive-future-refinement",
+      "reason": "The scaling result uses the exact future-equivalence tower as the canonical minimal predictive refinement on each finite ring.",
+      "research": [
+        "asymptotic-closure-scaling-20261007"
+      ]
     }
   ],
   "nodes": [
@@ -5341,6 +5350,18 @@
       "source": "docs/knowledge/rule54-route-repair-feasibility.md",
       "research": [
         "rule54-glider-route-gate"
+      ]
+    },
+    {
+      "id": "asymptotic-closure-corridor",
+      "title": "A bounded asymptotic-closure corridor survives fresh scaling tests",
+      "kind": "finding",
+      "status": "exact",
+      "summary": "At fresh widths 16 and 18 under block-2 parity, Rules 54/110 acquire new predictive history while their stable quotient keeps a safe-forgetting reserve between Rule 30's near-identity quotient and Rule 184's much coarser quotient.",
+      "updated": "2026-10-07",
+      "source": "docs/knowledge/asymptotic-closure-corridor.md",
+      "research": [
+        "asymptotic-closure-scaling-20261007"
       ]
     }
   ],
