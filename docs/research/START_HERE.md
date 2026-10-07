@@ -7,6 +7,21 @@ sections are historical proposals, not an instruction to resume them.
 **Question:** which distinctions can a representation safely discard, which
 must it retain, and what does changing representation buy us?
 
+**New commutator-jet result.** The
+[2026-10-07 jet unit](2026-10-07-commutator-jet.md) defines
+\(D,G,Q,R,\ldots\) recursively by \(A_{k+1}=A_k\circ H\oplus H\circ A_k\).
+This makes each new field the exact transport residual of the previous one.
+Cadence changes mix jet order with polarization, so the tower is nonlinear.
+Rules 110 and 62 have symmetry-equivalent derivative maps but different higher
+jet structure: Rule 62 has a radius-three local DG→Q factor; Rule 110 fails
+through radius three. Finite-ring jet closure is mostly near-injective, so do
+not treat it as a compression win.
+
+The next useful target is the **language of realized jet configurations**:
+can the raw binary jet be minimized as a constrained symbolic state without
+reintroducing the microscopic source? Do not launch a class census or another
+source-feature sweep.
+
 **New Rule-110 mechanism result.** The
 [matched Rule-62/Rule-110 comparison](2026-10-07-matched-history-transport.md)
 shows that current centered Groovy contains every distinction needed for Rule
