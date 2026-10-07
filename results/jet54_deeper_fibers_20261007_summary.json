@@ -82,5 +82,15 @@
   "cautions": [
     "Positive entropy of exceptional equal-output pair language is not a positive conditional entropy per typical input.",
     "No deeper levels, other rules, or lift comparisons were evaluated by this separately bounded follow-up."
-  ]
+  ],
+  "posthoc_exact_spectral_factors": {
+    "provenance": "Computed after frozen Rule54 A4/A5 results on selected existing SCC adjacency matrices; not a preregistered criterion.",
+    "GQR_32v_48e": "z^30*(z^2-2)",
+    "GQRA4_32v_42e": "z^24*(z^2-z+1)*(z^2+z+1)*(z^4-z^2-1)",
+    "GQRA4A5_52v_68e": "z^44*(z^2-z+1)*(z^2+z+1)*(z^4-z^2-1)",
+    "Perron_GQR": "sqrt(2)",
+    "Perron_A4_A5": "sqrt((1+sqrt(5))/2)",
+    "entropy_A4_A5": "0.5*log2((1+sqrt(5))/2)",
+    "caution": "Spectral factors do not establish conjugacy to a Fibonacci/golden-mean shift."
+  }
 }
