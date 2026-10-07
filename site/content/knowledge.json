@@ -5454,7 +5454,7 @@
       "kind": "finding",
       "status": "exact",
       "updated": "2026-10-07",
-      "summary": "Exact source-pair graph tests show full-line G-anchored jet autonomy first at GQR for Rule30 and at GQRA4A5 for Rules54/62, with minimal induced local radii 5/6/6. Rule110 fails through A5. Full-line autonomy does not imply meaningful source compression.",
+      "summary": "Rule54 J5=GQRA4A5 is an exact autonomous full-line factor with minimum radius six. Its non-diagonal equal-jet source-pair language has entropy (log2 phi)/2 < 1 and zero cross-component edges, so fair-Bernoulli sources almost surely have unique J5 images despite exceptional phase partners. Rule30 closes at J3/radius5, Rule62 at J5/radius6, Rule110 fails through A5.",
       "source": "docs/knowledge/jet-full-line-autonomy.md",
       "research": [
         "jet-full-line-autonomy-20261007"
