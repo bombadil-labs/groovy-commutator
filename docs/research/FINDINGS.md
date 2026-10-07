@@ -7,36 +7,29 @@ links to the technical account that states its assumptions and verification.
 mathematical question is solved. The [program survey](2026-09-22-program-survey.md)
 explains what deserves work next.
 
-## A predictive quotient can keep receding without becoming the microstate — 2026-10-07
+## Asymptotic-closure scaling is broad; use it as a matching variable — 2026-10-07
 
-We were curious whether "asymptotic closure" could distinguish a complex regime:
-as the system grows, new historical distinctions keep becoming necessary, but
-the minimal predictive quotient does not simply expand all the way to the
-microscopic state.
+We tested whether Rules 54/110 occupy an intermediate predictive-compression
+regime: new history distinctions keep becoming necessary with system size, but
+the stable quotient neither collapses to microscopic identity like Rule 30 nor
+stays as coarse as Rule 184. The preregistered 16/18 finite-panel gates passed.
 
-A first one-axis test failed because Rule 30 had an even longer tail of cheap
-repairs than Rules 54/110; its stable quotient, however, retained essentially
-every source bit. A strict two-axis finite-width wedge then passed at width 12
-and failed at width 14 when Rule 110 tied the transport control in integer
-history depth.
+An independent Fable/Claude implementation reproduced those values and then ran
+the specificity control we had deliberately stopped short of. The result
+changes the interpretation: 55 of 88 canonical representatives satisfy the
+reserve corridor at both fresh widths, and 41 of 88 also increase history depth
+from width 14 to 18. Those 41 include 2 Class I, 30 Class II, 5 Class III and
+all 4 Class IV representatives.
 
-We therefore froze a scaling-sequence test before evaluating fresh widths 16
-and 18. Under the same block-2 parity observer, Rules 54 and 110 pass all frozen
-gates. Their safe-forgetting reserves remain strictly between Rule 30 and Rule
-184 at both widths:
+So the corridor is **not a Class-IV discriminator**. It is a broad
+necessary-condition-like geometry under this observer.
 
-- width 16: Rule 30 = 0.00024 bits; 54 = 0.744; 110 = 0.539; 184 = 4.004;
-- width 18: Rule 30 = 0.00013 bits; 54 = 0.772; 110 = 0.606; 184 = 4.502.
+Rule 62 is especially useful: its reserve sequence nearly shadows Rule 110,
+making it a matched control for asking what the retained history actually
+does. The earlier proposed subextensive-reserve theorem target is withdrawn;
+four Rule-110 points do not support that preference.
+[Independent census control](2026-10-07-asymptotic-closure-census-control.md).
 
-Both core rules also acquire new required predictive history relative to the
-width-14 baselines: Rule 54 goes from depth 5 to 7 by width 18; Rule 110 from
-4 to 6.
-
-This is an **exact bounded scaling pattern**, not an asymptotic theorem or a
-Class-IV classifier. It says that, on this observer and panel, the core complex
-rules keep needing new distinctions with scale while their predictive quotient
-remains neither as fine as Rule 30's near-identity quotient nor as coarse as
-Rule 184's. [Exact account](2026-10-07-asymptotic-closure-scaling.md).
 
 ## 1. A disagreement can mean we chose the wrong law
 
