@@ -1,44 +1,25 @@
-# Centered Groovy closes Rule 110 block parity as a local present-time factor
+# Centered Groovy supplies an exact Rule 110 parity readout correction
 
-Under the nonoverlapping block-2 parity observer at cadence two, Rule 62 and
-Rule 110 need nearly the same amount of predictive history on the tested finite
-rings. Their mechanisms differ.
+Under nonoverlapping block-2 parity at cadence two, Rule 62 and Rule 110 need nearly the same amount of predictive history on the tested finite rings. Their mechanisms differ.
 
-At fresh widths 16 and 18, every nonzero Rule-110 predictive repair is exactly
-determined by the current predictive label plus the current centered Groovy
-field. Rule 62 has exact early counterexamples.
+At fresh widths 16 and 18, every nonzero Rule-110 predictive repair is exactly determined by the current predictive label plus current centered Groovy. Rule 62 has exact early counterexamples.
 
-A post-hoc complete local audit explains the Rule-110 pattern more strongly.
-Let
+A complete local audit sharpens the Rule-110 readout statement: if
 
 \[
-Z_j=(P_j,G^\circ_{2j},G^\circ_{2j+1}).
+Z_j=(P_j,G^\circ_{2j},G^\circ_{2j+1}),
 \]
 
-Exhausting all 1,024 source words in the complete ten-bit causal window proves
-that
+then the next block-parity bit is an exact radius-one function
 
 \[
 P(H^2X)_j=F(Z_{j-1},Z_j,Z_{j+1})
 \]
 
-for an induced radius-one local law on the admissible Rule-110 image.
+on the full admissible source image.
 
-Thus augmenting current block parity by current centered Groovy restores a
-present-only local state for this coarse dynamics. The observed history that
-parity alone required can be compressed into this correction coordinate.
+This makes centered Groovy a sufficient present-time **correction coordinate for the next parity readout**. It does not by itself make \((P,G)\) an autonomous state; a separate follow-up audit shows that the next Groovy field is not determined by the complete current \((P,G)\) fields.
 
-Within the nine obvious radius-one feature bits, exhaustive subset search finds
-a unique minimum-cardinality seven-feature presentation. This is not a
-minimality theorem over arbitrary encodings.
-
-Rule 62 fails the radius-one factor and has whole-ring witnesses with identical
-current parity and identical centered Groovy but different next parity.
-Therefore its missing predictive history cannot be compressed into Groovy
-alone under the same contract.
-
-This is a Rule-110/observer-specific sufficiency result, not a Class-IV
-classifier, uniqueness theorem or infinite-line claim about every
-representation.
+Rule 62 fails even the whole-field current-parity-plus-Groovy factor for the next parity readout on explicit witnesses.
 
 Source: [matched history transport](../research/2026-10-07-matched-history-transport.md).
