@@ -9,12 +9,11 @@ second-stage search for an algebra in which rule composition, polarization,
 Groovy and dimensional lifting fit naturally. For the first three of those
 objects, that algebra already has a name.
 
-Timothy Boykett's 2024 paper *Near-rings of Cellular Automata* proves that
-cellular automata over group-structured alphabets form a centralizer near-ring
-under composition and cell-wise group addition. For binary cellular automata,
-the addition is pointwise XOR. The paper is:
-T. Boykett, *Journal of Cellular Automata* 18(1), 1–16 (2024),
-doi:10.32908/jca.v18.310718.
+Timothy Boykett's 2024 paper
+[*Near-rings of Cellular Automata*](https://doi.org/10.32908/jca.v18.310718)
+shows that cellular automata over group-structured alphabets form a centralizer
+near-ring under composition and cell-wise group addition. For binary cellular
+automata, the addition is pointwise XOR.
 
 This note records where the Groovy objects sit in that established structure.
 It does not claim the near-ring of cellular automata as a new construction.
@@ -31,25 +30,27 @@ FG=Fcirc G.
 ]
 
 Composition is associative and pointwise XOR is an abelian group operation.
-With the multiplication convention above,
+With this multiplication convention,
 
 [
 (Foplus G)H=FHoplus GH
 ]
 
-always. The other distributive law need not hold:
+always, because postcomposition by the same map (H) preserves pointwise XOR
+in the outer slot. The other distributive law need not hold:
 
 [
 F(Goplus H)
-stackrel{?}{=}FGoplus FH.
+stackrel{?}{=}
+FGoplus FH.
 ]
 
-That one-sided distributivity is exactly the transformation-near-ring
-phenomenon. Restricting to translation-equivariant continuous finite-memory
-maps gives the cellular-automaton near-ring studied by Boykett.
+That one-sided distributivity is the transformation-near-ring phenomenon.
+Restricting to translation-equivariant continuous finite-memory maps gives the
+cellular-automaton near-ring studied by Boykett.
 
-Elementary rules are not closed under composition because radii grow; they are
-a finite generating slice inside this larger finite-radius CA near-ring.
+Elementary rules are not closed under composition because radii can grow; they
+are a finite slice inside this larger finite-radius CA near-ring.
 
 ## 2. Polarization is the missing distributive law
 
@@ -71,8 +72,8 @@ F(GXoplus HX)oplus F(GX)oplus F(HX)
 B_F(GX,HX).
 ]
 
-Thus the familiar polarization/cross-effect is precisely the term that prevents
-the CA near-ring from being a ring on the other side.
+Thus the familiar polarization/cross-effect is precisely the term that
+prevents the CA near-ring from being a ring on the other side.
 
 For an arbitrary CA (F), center it first:
 
@@ -80,22 +81,21 @@ For an arbitrary CA (F), center it first:
 ar F(X)=F(X)oplus F(0).
 ]
 
-Then (ar F(0)=0), and the same identity applies with (B_F=B_{ar F}).
-
-So the project-specific object has a standard algebraic location:
+Then (ar F(0)=0), and (B_F=B_{ar F}). Therefore
 
 [
 oxed{
 B_F
 =
-	ext{the missing distributivity term of the centered CA near-ring element }F.
+	ext{the missing distributivity term of the centered near-ring element }F.
 }
 ]
 
-This is compatible with the cohomological statement in the companion
-typed-difference note: the same (B_F) is the exact group 2-coboundary
-(deltaar F). The near-ring view says what algebraic law it measures;
-the cohomology view says its ordinary (H^2) class is nevertheless trivial.
+This complements the cohomological statement in the companion
+[typed-difference note](2026-10-06-typed-difference-geometry.md): the same
+(B_F) is the exact group 2-coboundary (deltaar F). The near-ring view
+states which algebraic law it measures; ordinary group cohomology states that
+its cohomology class is nevertheless trivial.
 
 ## 3. Groovy is one dynamically selected distributivity test
 
@@ -105,7 +105,7 @@ Let
 D_H=Ioplus H.
 ]
 
-The 2026-10-06 typed-difference result gives
+The typed-difference result gives
 
 [
 G_H^circ(X)=B_H(X,D_HX).
@@ -121,16 +121,16 @@ R_{ar H}(I,D_H).
 }
 ]
 
-Because (Ioplus D_H=H), this can also be written
+Since (Ioplus D_H=H), it may also be written
 
 [
 G_H^circ
 =
-ar H,H
+ar H H
 oplus
-ar H,I
+ar H I
 oplus
-ar H,D_H.
+ar H D_H.
 ]
 
 Groovy is therefore not an arbitrary nonlinearity score. It asks one particular
@@ -150,13 +150,13 @@ If (H) is a zero-preserving additive cellular automaton, then
 H(Goplus K)=HGoplus HK
 ]
 
-for all (G,K), so (H) is distributive on both sides. Additive cellular
-automata therefore form the ring-like core inside the larger CA near-ring.
+for all (G,K). Additive cellular automata therefore form the
+two-sided-distributive ring core inside the larger CA near-ring.
 
 For group shifts this is the familiar group-algebra picture: convolution
 kernels compose by group-algebra multiplication, and the corresponding linear
 cellular automata compose in the same way. In the one-dimensional binary
-finite-radius case the ring can be represented by Laurent polynomials over
+finite-radius case this ring can be represented by Laurent polynomials over
 (mathbb F_2); on a finite periodic ring the spatial group becomes cyclic.
 
 This is the clean relation to the OpenAI-math group-algebra result that
@@ -173,7 +173,7 @@ Let
 P=H_4,qquad Q=H_{200}.
 ]
 
-The exact radius-two audit in the companion unit established
+The exact radius-two audit in the companion unit establishes
 
 [
 Poplus Q=I,
@@ -191,26 +191,80 @@ Therefore the four maps
 {0,P,Q,I}
 ]
 
-are closed under XOR and composition and have exactly the multiplication and
-addition table of the four-element Boolean ring
-(mathbb F_2	imesmathbb F_2).
+are closed under XOR and composition and have exactly the addition and
+multiplication tables of the four-element Boolean ring
 
-So "projection-like" can be sharpened:
+[
+mathbb F_2	imesmathbb F_2.
+]
+
+So the earlier phrase “projection-like complements” can be sharpened:
 
 > **Rules 4 and 200 are complementary orthogonal idempotents that generate a
 > four-element Boolean ring inside the nonlinear CA near-ring.**
 
 They remain nonlinear as functions on configuration space: neither is an
-additive endomorphism of the configuration group. But the tiny algebra generated
-by (I) and either rule happens to be ring-like. Groovy probes precisely that
-tiny slice, so its vanishing is no longer mysterious.
+additive endomorphism of the configuration group. But the tiny algebra
+generated by (I) and either rule happens to be ring-like.
+
+This gives an algebraic explanation of their zero Groovy field. Since
+(D_P=Q) and (D_Q=P),
+
+[
+G_P
+=
+D_P Poplus P D_P
+=
+QPoplus PQ
+=
+0,
+]
+
+and symmetrically (G_Q=0).
 
 The complete ECA ANF classification in
 [the typed-difference note](2026-10-06-typed-difference-geometry.md) proves
-that these are the only nonlinear elementary rules with
+that Rules 4 and 200 are the only nonlinear elementary rules with
 (G_H^circequiv0).
 
-## 6. What this settles, and what it does not
+This small ring is structurally suggestive, but no novelty is claimed for the
+idempotence itself. Idempotent ECAs have been studied explicitly; Boykett and
+related composition work already place Rules 4 and 200 among the idempotent
+elementary rules. The specific complementary-XOR/mutual-annihilation
+identification is the project-level observation relevant to Groovy.
+
+## 6. The typed geometry and near-ring algebra say the same thing from two sides
+
+The companion note defines the nonlinear cocycle
+
+[
+Phi_n(X,U)
+=
+H^n(Xoplus U)oplus H^n(X),
+]
+
+which transports a based change (U) along the base orbit (Xmapsto H^nX).
+At one step the fibre map is (partial H_X(U)).
+
+The near-ring defect (B_H(X,U)) compares this transport at two basepoints:
+
+[
+B_H(X,U)
+=
+partial H_X(U)opluspartial H_0(U).
+]
+
+So the two views are equivalent descriptions of the same nonlinearity:
+
+- **typed geometry:** a change cannot generally be transported without its
+  basepoint;
+- **near-ring algebra:** left composition by a nonlinear (H) is not
+  distributive over XOR in its input.
+
+Centered Groovy chooses the particular change (U=D_HX) selected by the
+dynamics itself.
+
+## 7. What this settles, and what it does not
 
 The handoff asked whether we needed to invent a near-ring, operad or category
 to house nonlinear rule composition. For binary CA, the near-ring part is
@@ -224,14 +278,14 @@ Within that existing algebra, this project can now state its objects cleanly:
 - (B_F) is the missing distributivity cross-effect;
 - (G_H^circ=R_{ar H}(I,D_H)) is the dynamically selected instance of that
   defect;
-- the typed change bundle explains geometrically why the defect is a basepoint
-  error;
+- the nonlinear finite-difference cocycle explains geometrically why that
+  defect is a basepoint error;
 - the affine-oriented lift stores enough temporal change data to avoid making
   that type error on its marked beam.
 
-This does **not** yet identify the dimensional lift operator itself as a
-near-ring functor, ideal construction, quotient, radical or extension. Those
-would be separate claims requiring separate definitions and tests.
+This does **not** identify the dimensional lift operator itself as a near-ring
+functor, ideal construction, quotient, radical or extension. Those would be
+separate claims requiring separate definitions and tests.
 
 A concrete future question, if a downstream consumer needs it, is whether
 other finite-radius nonlinear CAs with graph-restricted zero Groovy can be
