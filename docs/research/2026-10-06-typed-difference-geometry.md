@@ -226,7 +226,7 @@ Calling this simply a "cocycle" would hide an important distinction. A standard 
 
 The canonical runner is independent of NumPy and uses integer-encoded periodic ECAs. Its own SHA-256 is
 
-`5f929b9727d3d9f8529bcf42eacc567dc7f85c95d4905062dd8adb907d6c5919`.
+`66253f440ad565280e215c6b4631af256bef29a878c39ab18c1a55167e7ba5eb`.
 
 | Gate | Domain | Result |
 | --- | --- | --- |
@@ -389,4 +389,4 @@ This unit does not establish a resource advantage, Class-IV discriminator, ambie
 python scripts/experiment_typed_lift_defect.py
 ```
 
-The canonical run recorded in the result took 19.894 seconds. No expensive CI job is required.
+The canonical result intentionally excludes wall-clock timing so byte-for-byte replay is deterministic. A local run on 2026-10-06 completed in about 20 seconds; runtime is not part of the evidence contract.
