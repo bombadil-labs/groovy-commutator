@@ -47,9 +47,9 @@
     "title": "Dimensional Closure and the Commutator Lift",
     "eyebrow": "Research program",
     "date": "2026-09-09",
-    "updated": "2026-09-22",
+    "updated": "2026-10-06",
     "status": "stable",
-    "summary": "Existence and finite recursion are complete. No current downstream caller needs the phase-free binary layout; application work is dormant pending a consumer-driven comparison.",
+    "summary": "Existence and finite recursion remain complete. A 2026-10-06 exact audit identifies centered Groovy as basepoint dependence of finite-difference transport and the lift's temporal residual as a cross-effect of the encoding; no downstream census is automatically queued.",
     "thesis": "An exact representation is useful when its declared resource advantages survive comparison with simpler encodings.",
     "source": "docs/research/2026-09-09-dimensional-closure-program.md",
     "supports": [
@@ -106,7 +106,9 @@
       "causal-retention",
       "groovy-readout-cost",
       "phase-free-consumer-audit",
-      "recursive-g-boundary"
+      "recursive-g-boundary",
+      "typed-difference-geometry",
+      "ca-nearring-interpretation"
     ]
   },
   {

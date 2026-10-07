@@ -1,11 +1,57 @@
 # Nonlinear Rules 4 and 200 have zero commutator
 
-## Counterexamples
+Rules 4 and 200 are nonlinear cubic ECAs whose self-commutators vanish on the
+complete five-cell local domain.
 
-Rule 4 has Boolean expression \(c(1+l)(1+r)\); Rule 200 has \(lc\oplus cr\oplus lcr\). Here \(l,c,r\) are the neighborhood bits, not the affine bias vector. Products make both rules nonlinear.
+The 2026-10-06 typed-difference audit now explains the mechanism and completes
+the ECA classification. Let
 
-For each rule, the self-commutator vanishes on all 32 five-cell neighborhoods. Five cells contain its full local causal window, so this is exhaustive rather than a sampled orbit result.
+\[
+P=H_4,\qquad Q=H_{200}.
+\]
 
-## Reproduce
+As global maps,
 
-The [algebra verification script](../../scripts/verify_history_algebra.py) records the result in [the exact-check output](../../results/history_algebra_checks.json). The general classification is specific to elementary CA; the counterexamples suffice to disprove the broader converse.
+\[
+P\oplus Q=I,\qquad
+P^2=P,\qquad
+Q^2=Q,\qquad
+PQ=QP=0.
+\]
+
+Thus Rules 4 and 200 are complementary orthogonal idempotents. Since
+
+\[
+D_P=I\oplus P=Q,\qquad D_Q=P,
+\]
+
+their Groovy commutators vanish by mutual annihilation:
+
+\[
+G_P=QP\oplus PQ=0,
+\qquad
+G_Q=PQ\oplus QP=0.
+\]
+
+Their local ANFs are
+
+\[
+H_4=c\oplus lc\oplus cr\oplus lcr,
+\qquad
+H_{200}=lc\oplus cr\oplus lcr,
+\]
+
+so both remain genuinely cubic.
+
+An exact ANF classification over all 256 ECA truth tables and every complete
+radius-two source word proves that identically flat centered Groovy occurs for
+exactly the 16 affine rules plus Rules 4 and 200. There are no other nonlinear
+ECA exceptions.
+
+The four maps \(\{0,P,Q,I\}\) also form a four-element Boolean ring under XOR
+and composition inside the larger cellular-automaton near-ring.
+
+Sources:
+[original affine-converse correction](../research/2026-09-07-affine-converse.md);
+[typed difference geometry](../research/2026-10-06-typed-difference-geometry.md);
+[CA near-ring interpretation](../research/2026-10-06-ca-nearring-interpretation.md).

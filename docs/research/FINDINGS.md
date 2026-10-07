@@ -1,11 +1,70 @@
 # What we have learned
 
-Running plain-language summary, updated 2026-09-24. This is a synthesis of
+Running plain-language summary, updated 2026-10-06. This is a synthesis of
 existing evidence, not a new experiment or independent review. Each entry
 links to the technical account that states its assumptions and verification.
 “Complete” means the stated investigation has ended, not that every related
 mathematical question is solved. The [program survey](2026-09-22-program-survey.md)
 explains what deserves work next.
+
+## Groovy remembers where a change lives — 2026-10-06
+
+**We wondered:** Is `G` the defect that makes the dimensional lift fail to
+commute with its source dynamics?
+
+**We tried:** We wrote the commuting square using the accepted affine-oriented
+lift, then separated ordinary states from finite differences (changes). We
+derived the identities first and checked them independently over all 256 ECAs.
+
+**We found:** The literal lift defect is zero: the beam already intertwines
+evolution exactly. The nonzero object is one type sideways. A change
+`U` at state `X` is transported by
+`H(X XOR U) XOR H(X)`, not by applying `H` to `U` as though `U`
+were an ordinary state. Centered Groovy is exactly the discrepancy between
+transporting the rule's own displacement at its real basepoint and transporting
+the same displacement at zero. This transport is basepoint-independent for
+exactly the 16 affine ECAs and basepoint-dependent for the other 240.
+
+Equivalently, the ordinary base projection of the state/change bundle commutes
+with evolution, while `G` is the defect of the *other* projection: discard a
+change's basepoint, reinterpret its bits as an ordinary state, and evolve them.
+The older horizon fields `K_t` are the same projection defect after `t` steps.
+The correctly typed finite-difference transport is itself an exact nonlinear
+skew-product cocycle:
+`Phi_n(X,U) = H^n(X XOR U) XOR H^n(X)`; in basepoint-plus-endpoint
+coordinates it is simply conjugate to the pair dynamics `H × H`. Affine rules
+are special because this fibre action becomes basepoint-independent and linear.
+
+A second, distinct cocycle statement is cohomological. With the ordinary
+trivial coefficient action, polarization is the exact 2-coboundary
+`B_H = δ(H XOR H(0))`. It is therefore always a 2-cocycle but always represents
+the zero cohomology class; the useful signal is the nonzero representative,
+not a nontrivial ordinary `H^2` obstruction.
+
+The six-row affine-oriented lift already stores the relevant temporal bundle:
+its temporal rows are equivalent to the source state, its current change and
+that change after one correctly typed transport step. The old `(K1,K2)`
+residual is the second cross-effect of the centered encoding on those temporal
+rows. A bounded third-cross-effect attempt did **not** recover the nonlinear
+zero-`G` exceptions.
+
+Rules 4 and 200 now have a structural explanation: they are cubic,
+projection-like complements. Their XOR is identity Rule 204, each is idempotent,
+and each annihilates the other's image. Since each rule's `D` is the other
+one, both terms in its Groovy commutator vanish. An exact ANF
+classification proves there are no other nonlinear cases: the complete
+centered-flat ECA class is the 16 affine rules plus exactly 4 and 200.
+
+The algebraic home also turns out to be established: binary finite-radius
+cellular automata form a near-ring under pointwise XOR and composition.
+Polarization is exactly the missing distributive law of a centered nonlinear
+rule, and centered Groovy is that defect evaluated on `I` and `D_H`.
+Rules 4/200 generate a four-element Boolean ring inside this larger nonlinear
+near-ring.
+
+See [the exact typed-difference account](2026-10-06-typed-difference-geometry.md).
+This is an algebraic/representation result, not a Class-IV discriminator or an
+ambient claim about lifted rules.
 
 ## 1. A disagreement can mean we chose the wrong law
 

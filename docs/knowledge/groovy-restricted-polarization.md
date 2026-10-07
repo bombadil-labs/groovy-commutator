@@ -1,19 +1,66 @@
 # Centered Groovy is polarization on the trajectory graph
 
-For Boolean dynamics `H` write the centered polarization
-`B_H(X,U) = H(X⊕U) ⊕ H(X) ⊕ H(U) ⊕ H(0)` and the finite-difference tangent
-action `∂H_X(U) = H(X) ⊕ H(X⊕U)`. Then the centered commutator satisfies
-`G°_H(X) = ∂H_X(D_HX) ⊕ ∂H_0(D_HX) = B_H(X, D_HX)`: polarization evaluated
-only on the trajectory-displacement graph `{(X, D_HX)}`. `B_H ≡ 0` on all
-pairs exactly when `H` is affine (16 elementary rules), while `G° ≡ 0`
-requires vanishing only on the graph, which the nonlinear rules 4 and 200 also
-satisfy. Exact on the seven-cell ring for all 256 rules.
+For Boolean dynamics \(H\), write
 
-Consequences recorded with it: the uncentered `G = ∂H_X(D_HX) ⊕ H(D_HX)` is
-the defect between transporting the displacement as a tangent vector and
-evolving it as a point; the affine six-field jet's secant-versus-point
-residual is `(0,0,K_1,K_2,0,0)` with `K_1 = G` and `K_2 = [D_H, H²]`; the
-horizon commutators obey `K_{t+1} = G(H^t X) ⊕ ∂H_{H^t D_HX}(K_t)`, which
-unrolls to a linear Duhamel sum exactly in the affine case.
+\[
+d_H(X)=X\oplus H(X)
+\]
 
-Source: [the affine-oriented lift theorem](../research/2026-09-17-affine-oriented-lift-theorem.md); the rules 4/200 fact is established result 1.
+and the based finite-difference transport
+
+\[
+\partial H_X(U)=H(X\oplus U)\oplus H(X).
+\]
+
+The centered polarization is
+
+\[
+B_H(X,U)
+=
+H(X\oplus U)\oplus H(X)\oplus H(U)\oplus H(0)
+=
+\partial H_X(U)\oplus\partial H_0(U).
+\]
+
+The centered commutator therefore satisfies
+
+\[
+\boxed{
+G_H^\circ(X)
+=
+\partial H_X(d_HX)\oplus\partial H_0(d_HX)
+=
+B_H(X,d_HX).
+}
+\]
+
+So centered Groovy is polarization restricted to the
+trajectory-displacement graph \(\{(X,d_HX)\}\).
+
+The 2026-10-06 typed-difference unit supplies the geometric reason. Correct
+transport sends the rule's own displacement according to
+
+\[
+\partial H_X(d_HX)=d_H(HX),
+\]
+
+whereas Groovy flattens that based change and evolves its bits as an ordinary
+point. Thus \(G^\circ\) is precisely the basepoint dependence of change
+transport sampled on the rule's own displacement.
+
+All-pairs \(B_H\) vanishes exactly when \(H\) is affine. The graph restriction
+is weaker. For ECAs an exact radius-two ANF classification now proves
+
+\[
+G_H^\circ\equiv0
+\quad\Longleftrightarrow\quad
+H\text{ is affine or }H\in\{4,200\}.
+\]
+
+The same unit also identifies the affine-oriented lift's temporal residual as
+the temporal part of the second cross-effect of the centered lift encoding:
+\((0,0,K_1\oplus H(0),K_2\oplus H^2(0),0,0)\).
+
+Sources:
+[affine-oriented lift theorem](../research/2026-09-17-affine-oriented-lift-theorem.md);
+[typed difference geometry](../research/2026-10-06-typed-difference-geometry.md).
