@@ -30,6 +30,10 @@ ROOT = pathlib.Path(__file__).resolve().parents[1]
 
 # result file -> {hash key recorded in its source_hashes: path the hash was taken of}
 REGISTRY = {
+    'results/commutator_jet_fibers_20261007.json': {
+        'script_sha256': 'scripts/experiment_commutator_jet_fibers.py'},
+    'results/commutator_jet_language_20261007.json': {
+        'script_sha256': 'scripts/experiment_commutator_jet_language.py'},
     'results/commutator_jet_20261007.json': {
         'script_sha256': 'scripts/experiment_commutator_jet.py'},
     'results/rule110_latent_q_20261007.json': {p: p for p in (

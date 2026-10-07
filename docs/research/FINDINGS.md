@@ -7,6 +7,31 @@ links to the technical account that states its assumptions and verification.
 mathematical question is solved. The [program survey](2026-09-22-program-survey.md)
 explains what deserves work next.
 
+## The full-entropy jet leaves only phase/gauge ambiguity — 2026-10-07
+
+The intrinsic commutator jet does more than recover source entropy gradually.
+Exact infinite-line pair graphs show a qualitative transition in what remains
+hidden.
+
+For Rule 110, the shallow prefix \((G,Q)\) still has a positive-entropy mixed
+off-diagonal fiber. Adding \(R\) removes that extensive hidden language:
+\((G,Q,R)\) leaves only zero-entropy periodic phase sectors plus finitely
+presented domain-wall interfaces.
+
+Rule 62 does the same thing later. \((G,Q,R,A_4)\) still has a small positive-
+entropy hidden fiber; adding \(A_5\) removes it. The surviving recurrent
+off-diagonal components are all simple cycles.
+
+So the jet appears to consume **extensive latent state** until only a
+zero-entropy phase/gauge skeleton remains. Rule 62 also keeps an exact
+left-to-right two-context ambiguity while right-to-left words can synchronize,
+suggesting an oriented residual phase.
+
+This is an exact full-line symbolic result for the declared jet factors, not a
+Class-IV criterion. The next object should be a finite-state phase automaton
+built from the residual pair graph, not another raw source-derived field.
+[Exact account](2026-10-07-commutator-jet-fibers.md).
+
 ## D, G, Q and R form a nonlinear commutator jet — 2026-10-07
 
 Define \(A_0=D=I\oplus H\) and recursively
