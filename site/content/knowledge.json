@@ -2768,6 +2768,15 @@
       "research": [
         "matched-history-transport-20261007"
       ]
+    },
+    {
+      "source": "rule110-parity-g-phase-obstruction",
+      "type": "depends_on",
+      "target": "matched-history-groovy-coupling",
+      "reason": "The closure audit corrects and sharpens the matched-history readout result by testing the missing next-G condition.",
+      "research": [
+        "rule110-pg-closure-20261007"
+      ]
     }
   ],
   "nodes": [
@@ -5362,6 +5371,18 @@
       "source": "docs/knowledge/matched-history-groovy-coupling.md",
       "research": [
         "matched-history-transport-20261007"
+      ]
+    },
+    {
+      "id": "rule110-parity-g-phase-obstruction",
+      "title": "Rule 110 parity+Groovy hides a phase wall that future Groovy can reveal",
+      "kind": "finding",
+      "status": "exact",
+      "summary": "Current parity plus centered Groovy exactly repairs Rule-110 next parity, but is not autonomous: an infinite-line phase-wall pair has identical current P,G and different next G. Adding the even-sublattice phase gradient restores radius-two closure but reconstructs the source up to one global bit.",
+      "updated": "2026-10-07",
+      "source": "docs/knowledge/rule110-parity-g-phase-obstruction.md",
+      "research": [
+        "rule110-pg-closure-20261007"
       ]
     }
   ],
