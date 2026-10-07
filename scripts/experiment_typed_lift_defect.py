@@ -32,7 +32,6 @@ from __future__ import annotations
 import hashlib
 import json
 import pathlib
-import time
 from collections import Counter
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
@@ -428,7 +427,6 @@ def gate_e() -> dict:
 
 
 def main() -> None:
-    started = time.time()
     script_hash = hashlib.sha256(pathlib.Path(__file__).read_bytes()).hexdigest()
 
     result = {
@@ -465,7 +463,6 @@ def main() -> None:
             result["gate_E"]["dynamic_probes_ring7"][name]["rules4_200_nonzero"]
             for name in ("orbit", "raw", "typed")
         ),
-        "wall_seconds": round(time.time() - started, 3),
     }
 
     OUT.parent.mkdir(parents=True, exist_ok=True)
