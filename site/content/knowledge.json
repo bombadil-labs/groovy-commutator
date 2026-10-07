@@ -5378,7 +5378,7 @@
       "title": "Rule 110 parity+Groovy hides a phase wall that future Groovy can reveal",
       "kind": "finding",
       "status": "exact",
-      "summary": "Current parity plus centered Groovy exactly repairs Rule-110 next parity, but is not autonomous: an infinite-line phase-wall pair has identical current P,G and different next G. Adding the even-sublattice phase gradient restores radius-two closure but reconstructs the source up to one global bit.",
+      "summary": "Current parity plus centered Groovy exactly repairs Rule-110 next parity, but is not autonomous: an infinite-line phase-wall pair has identical current P,G and different next G. Phase-gradient and every radius-one one-bit track that restores bounded-radius autonomy are essentially microscopic encodings on the tested rings.",
       "updated": "2026-10-07",
       "source": "docs/knowledge/rule110-parity-g-phase-obstruction.md",
       "research": [
