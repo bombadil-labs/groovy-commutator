@@ -1,0 +1,335 @@
+{
+  "schema": "commutator-jet-v1-summary",
+  "date": "2026-10-07",
+  "protocol": "docs/research/protocols/commutator-jet-20261007.md",
+  "definitions": {
+    "A0": "D=I xor H",
+    "recurrence": "A{k+1}=A{k} o H xor H o A{k}",
+    "names": [
+      "D",
+      "G",
+      "Q",
+      "R",
+      "A4",
+      "A5"
+    ]
+  },
+  "algebra": {
+    "trajectory_recurrence": "A{k,t+1}=H(A{k,t}) xor A{k+1,t}",
+    "cadence2_identity": "C_{H^2}(A)=C_H(C_H(A)) xor B_H(H o A,C_H(A)) xor H(0)",
+    "zero_preserving_specialization": "C_{H^2}(A)=C_H^2(A) xor B_H(H o A,C_H(A))",
+    "rule110_G_specialization": "C_{H^2}(G)=R xor B_H(H(G),Q)",
+    "rule62_G_specialization": "C_{H^2}(G)=R xor B_H(H(G),Q)"
+  },
+  "local_operator_summary": {
+    "62": [
+      {
+        "name": "D",
+        "minimum_radius": 1,
+        "anf_degree": 3,
+        "anf_terms": 5,
+        "activity": 0.625
+      },
+      {
+        "name": "G",
+        "minimum_radius": 2,
+        "anf_degree": 4,
+        "anf_terms": 6,
+        "activity": 0.1875
+      },
+      {
+        "name": "Q",
+        "minimum_radius": 3,
+        "anf_degree": 6,
+        "anf_terms": 22,
+        "activity": 0.484375
+      },
+      {
+        "name": "R",
+        "minimum_radius": 4,
+        "anf_degree": 8,
+        "anf_terms": 90,
+        "activity": 0.41015625
+      },
+      {
+        "name": "A4",
+        "minimum_radius": 5,
+        "anf_degree": 10,
+        "anf_terms": 346,
+        "activity": 0.4423828125
+      },
+      {
+        "name": "A5",
+        "minimum_radius": 6,
+        "anf_degree": 11,
+        "anf_terms": 1660,
+        "activity": 0.46533203125
+      }
+    ],
+    "110": [
+      {
+        "name": "D",
+        "minimum_radius": 1,
+        "anf_degree": 3,
+        "anf_terms": 3,
+        "activity": 0.375
+      },
+      {
+        "name": "G",
+        "minimum_radius": 2,
+        "anf_degree": 4,
+        "anf_terms": 4,
+        "activity": 0.3125
+      },
+      {
+        "name": "Q",
+        "minimum_radius": 3,
+        "anf_degree": 6,
+        "anf_terms": 20,
+        "activity": 0.328125
+      },
+      {
+        "name": "R",
+        "minimum_radius": 4,
+        "anf_degree": 9,
+        "anf_terms": 102,
+        "activity": 0.400390625
+      },
+      {
+        "name": "A4",
+        "minimum_radius": 5,
+        "anf_degree": 9,
+        "anf_terms": 294,
+        "activity": 0.419921875
+      },
+      {
+        "name": "A5",
+        "minimum_radius": 6,
+        "anf_degree": 12,
+        "anf_terms": 812,
+        "activity": 0.484619140625
+      }
+    ]
+  },
+  "D_anchored_finite": {
+    "62": {
+      "closure_depth": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "D_source_bits_forgotten": [
+        1.64959919,
+        2.058041343,
+        2.469862388,
+        2.881445686,
+        3.293088066
+      ],
+      "DG_source_bits_forgotten": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "DG_class_counts": [
+        256,
+        1024,
+        4096,
+        16384,
+        65536
+      ],
+      "note": "DG is injective on every tested ring."
+    },
+    "110": {
+      "closure_depth": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "D_source_bits_forgotten": [
+        1.64959919,
+        2.058041343,
+        2.469862388,
+        2.881445686,
+        3.293088066
+      ],
+      "DG_source_bits_forgotten": [
+        0.015625,
+        0,
+        0.0009765625,
+        0,
+        0.00006103515625
+      ],
+      "DG_class_counts": [
+        254,
+        1024,
+        4094,
+        16384,
+        65534
+      ],
+      "note": "At widths divisible by four, the only DG ambiguity is two size-two fibers among the four phases of the period-4 1110 background; at widths 10 and 14 DG is injective."
+    },
+    "widths": [
+      8,
+      10,
+      12,
+      14,
+      16
+    ]
+  },
+  "D_anchored_full_line_locality": {
+    "62": {
+      "radius0": false,
+      "radius1": false,
+      "radius2": false,
+      "radius3": true,
+      "radius3_admissible_contexts": 279
+    },
+    "110": {
+      "radius0": false,
+      "radius1": false,
+      "radius2": false,
+      "radius3": false,
+      "first_witnesses": {
+        "0": [
+          29,
+          30
+        ],
+        "1": [
+          35,
+          36
+        ],
+        "2": [
+          151,
+          156
+        ],
+        "3": [
+          303,
+          314
+        ]
+      }
+    },
+    "target": "(D,G) -> Q"
+  },
+  "exploratory_G_anchored": {
+    "62": {
+      "closure_end_level": [
+        3,
+        4,
+        5,
+        5,
+        5
+      ],
+      "closure_prefix_by_width": [
+        "GQR",
+        "GQRA4",
+        "GQRA4A5",
+        "GQRA4A5",
+        "GQRA4A5"
+      ],
+      "G_source_bits_forgotten": [
+        3.178123833,
+        3.973394278,
+        4.766329284,
+        5.560231155,
+        6.35445222
+      ],
+      "GQ_source_bits_forgotten": [
+        0.15625,
+        0.317918823,
+        0.361558773,
+        0.412227596,
+        0.472409879
+      ],
+      "GQR_source_bits_forgotten": [
+        0.03125,
+        0.0859375,
+        0.10075931,
+        0.112443463,
+        0.128678815
+      ],
+      "local_factor_closed_prefix_to_next_radius_le_3": false
+    },
+    "110": {
+      "closure_end_level": [
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "closure_prefix": "(G,Q,R)",
+      "G_source_bits_forgotten": [
+        1.669254593,
+        2.019861922,
+        2.420994339,
+        2.811532626,
+        3.210817535
+      ],
+      "GQ_source_bits_forgotten": [
+        0.171875,
+        0.190965698,
+        0.226361316,
+        0.261888894,
+        0.299086581
+      ],
+      "GQR_source_bits_forgotten": [
+        0.046875,
+        0.0078125,
+        0.002929688,
+        0.000488281,
+        0.000183105
+      ],
+      "local_factor_GQR_to_A4_radius_le_3": false
+    },
+    "status": "post-hoc diagnostic; not a frozen protocol gate",
+    "widths": [
+      8,
+      10,
+      12,
+      14,
+      16
+    ]
+  },
+  "cadence2_bridge_activity": {
+    "62": {
+      "C_H2_G_activity": 0.42578125,
+      "R_activity": 0.41015625,
+      "polarization_correction_activity": 0.1875,
+      "fraction_C_H2_G_equals_R": 0.8125,
+      "C_H2_G_anf_degree": 8,
+      "C_H2_G_anf_terms": 84,
+      "polarization_correction_anf_degree": 7,
+      "polarization_correction_anf_terms": 78
+    },
+    "110": {
+      "C_H2_G_activity": 0.44140625,
+      "R_activity": 0.400390625,
+      "polarization_correction_activity": 0.185546875,
+      "fraction_C_H2_G_equals_R": 0.814453125,
+      "C_H2_G_anf_degree": 8,
+      "C_H2_G_anf_terms": 88,
+      "polarization_correction_anf_degree": 9,
+      "polarization_correction_anf_terms": 50
+    }
+  },
+  "cross_rule": {
+    "D_rule_110": 162,
+    "D_rule_62": 242,
+    "relation": "D_62 = reflect(conjugate(D_110))",
+    "implication": "The derivative fields are symmetry-equivalent; the matched D-level finite-ring information geometry is exact, while divergence begins when H acts back on D through G."
+  },
+  "interpretation": {
+    "frozen_primary": "Both rules close globally at the D,G prefix on tested finite rings, but for different reasons: Rule 62 DG reconstructs the source exactly, while Rule 110 DG is injective except for a tiny period-4 phase ambiguity. Full-line locality separates them: Rule 62 has an exact radius-3 DG->Q factor; Rule 110 has no radius<=3 factor.",
+    "exploratory": "Starting from G rather than D, Rule 110 reaches finite-ring jet closure at R (G,Q,R) at every tested width, whereas Rule 62 requires deeper levels as width grows before stabilizing at A5 for n>=12. Neither finite-ring closure yields a radius<=3 full-line local law in the tested closed prefix.",
+    "caution": "The finite-ring jet closures are near-injective and therefore do not establish compression advantages or infinite-line closure."
+  },
+  "source_hashes": {
+    "script_sha256": "c8d95aae32e41b1841aa711f510410463d7a526c181c7eb3f0ecf6c7ff0b721b"
+  }
+}
