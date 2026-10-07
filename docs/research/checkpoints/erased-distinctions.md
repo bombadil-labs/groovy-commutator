@@ -12,7 +12,25 @@ what is frozen and unrun, and what not to infer. Add a new checkpoint at the top
 when a substantial unit completes; keep the bounded-claim style. Text moved from
 `CLAUDE.md` on 2026-09-10 is verbatim.
 
-Program page: `docs/research/2026-09-08-dynamics-of-erased-distinctions.md`
+Program page: docs/research/2026-09-08-dynamics-of-erased-distinctions.md
+
+## Checkpoint 2026-10-07: Rule-110 readout correction is not autonomous state
+
+The [Rule-110 closure audit](../2026-10-07-rule110-pg-closure.md) corrects the
+matched-history interpretation. Current parity plus centered Groovy gives an
+exact cubic radius-one law for the next parity readout, but the complete
+current (P,G) fields do not determine their own next Groovy field. An explicit
+bi-infinite phase-wall pair certifies the obstruction.
+
+Adding the hidden block-phase gradient restores radius-two autonomy, but parity
+plus that gradient reconstructs the source up to one global complement bit.
+A complete search of all 256 radius-one one-bit block tracks finds no simple
+middle: the 48 radius-two autonomous repairs are injective or merge only one or
+two source pairs on rings 12--16.
+
+The simple local-track route is therefore closed under this grammar. The next
+useful representation family must compress hidden phase/history without nearly
+reconstructing the source. No Class-IV census is queued.
 
 ## Checkpoint 2026-09-22: readout-cost design complete
 
