@@ -23,9 +23,13 @@ both widths: the same predictive label and same centered G can still require
 different next observations.
 
 Quantitatively, 100% of Rule 110's predictive-repair information is Groovy-
-coupled at both widths, versus about 77.2% for Rule 62. This is a matched
-mechanism result, not a Class-IV classifier. It says that equal-looking
-history budgets can encode different causal distinctions.
+coupled at both widths, versus about 77.2% for Rule 62. A post-hoc complete
+local audit sharpens this: for Rule 110 the next block-parity bit is an exact
+radius-one function of current block parity plus current centered Groovy.
+So Groovy is a sufficient present-time correction coordinate for this coarse
+Rule-110 dynamics; Rule 62 fails even the whole-field parity-plus-Groovy factor
+on explicit witnesses. This is a matched mechanism result, not a Class-IV
+classifier or a minimality theorem.
 [Exact account](2026-10-07-matched-history-transport.md).
 
 ## 1. A disagreement can mean we chose the wrong law
