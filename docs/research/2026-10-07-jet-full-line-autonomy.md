@@ -194,6 +194,70 @@ Post-hoc diagnostic runner:
 [canonical table](../../results/rule54_periodic_j5_fibers_20261007.json).
 Its saved source hash and complete six-width replay are checked in CI.
 
+## Exact corollary: J5 is almost surely injective on fair-Bernoulli sources
+
+The finite-ring fiber counts suggest that non-injectivity is exceptional,
+but they are not by themselves an infinite-line theorem. The full-line
+equal-jet graph supplies such a theorem.
+
+On Rule 54 at J5, **all** 4,316 bi-infinite-supported pair-context
+vertices belong to recurrent SCCs: the graph has *zero* essential
+cross-component edges. The diagonal source-pair full shift has entropy
+one bit per site. Every non-diagonal SCC is either one of eleven simple
+periodic cycles or one of the three branching components described above.
+Their exact characteristic polynomials bound the largest non-diagonal
+spectral radius by
+
+\[
+\max\rho_{\mathrm{offdiag}}=\sqrt{\varphi}<2.
+\]
+
+Therefore the whole non-diagonal pair subshift has entropy
+
+\[
+h_{\mathrm{offdiag}}
+=\frac12\log_2\varphi\approx0.347121<1.
+\]
+
+Projection to its first source rail cannot increase entropy, and the
+golden subshift demonstrates that the upper bound is attained. Thus
+the set of binary source configurations admitting a distinct
+whole-line partner with **identical entire J5 field** has spatial
+topological entropy exactly \(\tfrac12\log_2\varphi\), strictly below
+the full source's entropy of one.
+
+Every sufficiently long word appearing in such an ambiguous source
+belongs to a language whose word count grows at most
+\(C\,\mathrm{poly}(n)(\sqrt\varphi)^n\); under fair Bernoulli(1/2)
+source bits its probability is bounded by that count divided by
+\(2^n\), which tends to zero.
+
+Hence
+
+\[
+\boxed{
+\Pr_{\mathrm{Bernoulli}(1/2)}
+\left(\exists Y\neq X:J_5(Y)=J_5(X)\right)=0.
+}
+\]
+
+**Rule 54 J5 is non-injective topologically but one-to-one on a
+full-measure set of unbiased binary sources.** It is an almost-surely
+invertible presentation of the unrestricted Bernoulli source, not
+a positive-rate compression of it. Its interesting positive-entropy
+hidden *pair* language sits entirely in an exceptional measure-zero
+subshift.
+
+This result also supplies a mathematical explanation of the declining
+finite-ring information-loss diagnostic without assuming that finite
+rings prove the limit.
+
+Reproducer:
+[verify_almost_sure.py](../../experiments/jet_full_line_autonomy_20261007/verify_almost_sure.py).
+It independently rebuilds all J5 pair SCCs, checks the absence of
+essential intercomponent edges and verifies the exact characteristic
+factors for every branching off-diagonal SCC.
+
 ## Why Rule 54's entire A5 relation is invariant
 
 The complete Rule-54 equal-G..A5 pair graph has 4,316 essential vertices,
