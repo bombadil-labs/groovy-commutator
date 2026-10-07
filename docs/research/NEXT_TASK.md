@@ -1,5 +1,25 @@
 # Next agent: require a concrete operation before another search
 
+**Latest handoff, 2026-10-07: exact latent-Q unit complete.** See the
+[research note](2026-10-07-rule110-latent-q.md), frozen protocol, canonical
+JSON and 21 finite certificates. Gathering branch:
+`gather/rule110-latent-q-20261007`, based on main with PR #322 merged as a
+dependency. Reviewed by: none. No merge into main is authorized by this unit.
+
+The coarsest autonomous Rule-110 refinement of current (P,G), at cadence two,
+has 2^n-2 classes on every even n=6 through 18. Its only merged source pairs
+are the uniform and alternating phases. G-only also fails the compression
+gate. Minimal equivariant binary Q fields exist on all tested rings, but the
+chosen construction fails local radius<=3 checks. Do not restart a feature
+search: changing representation cannot exceed this information bound on the
+same domain. Full-line extension, a changed observer, or a restricted source
+family would require a separately justified bounded unit. No census is queued.
+
+Run the two Q certificate verifiers and the shared integrity check, plus site
+tests/build. The initial Windows CRLF run is preserved with its exact inputs;
+canonical LF replay has identical science and certificate digests. The note
+records this provenance correction and the independent tuple self-checks.
+
 **Latest handoff, 2026-09-25: density observer/readout correction.**
 Inspected main `5823d46ef2512525b5de72c0afc16dc6c3000d76` after merged
 [PR #314](https://github.com/bombadil-labs/groovy-commutator/pull/314);

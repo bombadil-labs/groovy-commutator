@@ -483,3 +483,16 @@ the next Groovy field.
 A next unit, if pursued, should ask whether a compact phase coordinate added to
 \((P,G^\circ)\) closes the augmented dynamics, and whether that coordinate is
 strictly smaller than restoring the full microscopic pair state.
+
+
+## Follow-up: exact latent quotient, 2026-10-07
+
+The [latent-Q study](2026-10-07-rule110-latent-q.md) strengthens the local-track negative on the
+same full source rings: the minimal autonomous refinement retaining (P,G)
+has only the two uniform/alternating pair mergers at every tested even
+width 6--18. The most compressive successful local tracks had already
+reached this optimum on the overlapping rings. A different encoding cannot
+restore meaningful joint compression there. Binary Q fields do realize the
+quotient, but the chosen construction fails its bounded local-update checks.
+This does not extend the finite-ring bound to the full line. Original
+protocols, result bytes and local counterexamples above remain unchanged.

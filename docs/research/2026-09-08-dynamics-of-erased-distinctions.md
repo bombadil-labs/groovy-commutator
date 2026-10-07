@@ -1,5 +1,15 @@
 # Dynamics of Erased Distinctions
 
+**Current result — 2026-10-07:** The
+[exact latent-Q study](2026-10-07-rule110-latent-q.md) factors the known
+lossless lift by temporal future equivalence. On all tested even Rule-110
+rings of size 6--18, the optimal autonomous state retaining current parity/G
+distinguishes every source except the uniform pair and alternating pair.
+Binary Q fields realize the quotient, but meaningful joint compression fails.
+This is a bound on every encoding for the fixed finite domains and uniform
+prior, not an infinite-line theorem. The bounded unit is complete; no new
+feature grammar or rule census is queued. Reviewed by: none.
+
 **Current portfolio — 2026-09-22:** Primary home for local sufficient state and representation costs. The [readout-cost comparison](2026-09-22-groovy-readout-cost.md) is complete: ordinary difference caching matches the jet's marked query. A concrete consumer must justify another comparison; no census is queued.
 
 Read [the findings](FINDINGS.md) and [the portfolio survey](2026-09-22-program-survey.md). Historical program sections below retain their original evidence and chronology.

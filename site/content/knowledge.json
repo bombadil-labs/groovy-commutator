@@ -2777,6 +2777,15 @@
       "research": [
         "rule110-pg-closure-20261007"
       ]
+    },
+    {
+      "source": "rule110-latent-q-bound",
+      "type": "depends_on",
+      "target": "rule110-parity-g-phase-obstruction",
+      "reason": "Uses the same observer/cadence and the next-parity readout theorem for the stated post-result future-G corollary; the new finite quotient supplies the compression bound.",
+      "research": [
+        "rule110-latent-q-20261007"
+      ]
     }
   ],
   "nodes": [
@@ -5383,6 +5392,18 @@
       "source": "docs/knowledge/rule110-parity-g-phase-obstruction.md",
       "research": [
         "rule110-pg-closure-20261007"
+      ]
+    },
+    {
+      "id": "rule110-latent-q-bound",
+      "title": "Exact latent-Q fibers bound Rule-110 repair compression",
+      "kind": "finding",
+      "status": "exact",
+      "summary": "On full even Rule-110 source rings of size 6--18, every autonomous refinement retaining parity/G is almost microscopic. Equivariant binary Q realizes the minimal quotient, with finite-domain and locality limits stated.",
+      "updated": "2026-10-07",
+      "source": "docs/knowledge/rule110-latent-q-bound.md",
+      "research": [
+        "rule110-latent-q-20261007"
       ]
     }
   ],
