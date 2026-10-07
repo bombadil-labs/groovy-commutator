@@ -5442,7 +5442,7 @@
         210
       ]
     ],
-    "warning": "GQR branching status is not invariant under complement conjugacy."
+    "warning": "The jet-GQR branching criterion is not necessarily invariant under complement conjugacy."
   },
   "sources_sha256": {
     "cxx_source": "6b45ceeaa1c87dc1ec1b27d7922b98db217ede166791b7e593f9a21c32397ab9",
