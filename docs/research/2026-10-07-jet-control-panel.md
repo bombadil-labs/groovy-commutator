@@ -146,6 +146,52 @@ branching through A5.
 At A4 and A5 the recurrent pure-cycle periods include 1, 2, 4 and 8.
 The longest cycle period 8 exceeds the local jet source radius 5 or 6.
 
+## Post-hoc exact algebra: the persistent Rule-54 ambiguity has golden-mean growth
+
+After the two frozen Rule-54 depth checks, we noticed that the remaining
+branching SCC Perron value \(1.2720196495\ldots\) is the square root of the
+golden ratio. This was **not** a preregistered prediction.
+
+Computing exact integer adjacency characteristic polynomials for three
+selected off-diagonal recurrent components gives:
+
+| Prefix | selected SCC | exact characteristic polynomial |
+| --- | --- | --- |
+| GQR | 32 vertices, 48 edges | \(z^{30}(z^2-2)\) |
+| GQRA4 | 32 vertices, 42 edges | \(z^{24}(z^2-z+1)(z^2+z+1)(z^4-z^2-1)\) |
+| GQRA4A5 | 52 vertices, 68 edges | \(z^{44}(z^2-z+1)(z^2+z+1)(z^4-z^2-1)\) |
+
+Hence the first selected component has exact Perron root \(\sqrt2\) and
+spatial entropy \(1/2\) bit/site. The later selected components have Perron
+
+\[
+\rho=\sqrt{\varphi},
+\qquad
+\varphi=\frac{1+\sqrt5}{2},
+\]
+
+and thus
+
+\[
+\boxed{
+h=\tfrac12\log_2\varphi\approx0.347121\text{ bits/site}.
+}
+\]
+
+The same spectral factor survives from A4 to A5 despite changes in the
+SCC's presentation size. That is consistent with a persistent Fibonacci-like
+symbolic constraint on the exceptional equal-jet pair language.
+
+It does **not** prove the entire SCC is conjugate to the golden-mean shift:
+characteristic-polynomial factors and entropy are not conjugacy invariants
+strong enough to establish that. The precise symbolic generators and any
+conjugacy are a separate research question.
+
+Independent scalar temporal-recurrence evaluation checked every complete
+source patch for the Rule-54 A4 and A5 local truth tables: 2,048 and 8,192
+source patches respectively. An exact SymPy characteristic-polynomial
+calculation on the graph adjacencies produced the factors above.
+
 ## The proposed lift/depth/phase-period rhyme fails these controls
 
 Two earlier observations were
