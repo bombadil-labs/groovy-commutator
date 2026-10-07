@@ -5452,5 +5452,13 @@
     "independent_js_recomputation": true,
     "all_256_row_checksum_mod_1000000007": 617287869,
     "matches_independently_compiled_cpp": true
+  },
+  "source_hashes": {
+    "cxx_source": "6b45ceeaa1c87dc1ec1b27d7922b98db217ede166791b7e593f9a21c32397ab9",
+    "summary_runner": "d7f184c0270d39ccc7e378fe514b980f3ad3874402b412f645e7b630e3c4cf22"
+  },
+  "review_addendum": {
+    "date": "2026-10-07",
+    "note": "Independent reviewer found explicit period-four generator, narrowing interpretation to temporal phase. Engine data unchanged."
   }
 }
