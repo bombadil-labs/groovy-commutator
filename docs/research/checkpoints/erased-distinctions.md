@@ -14,19 +14,19 @@ when a substantial unit completes; keep the bounded-claim style. Text moved from
 
 Program page: docs/research/2026-09-08-dynamics-of-erased-distinctions.md
 
-## Checkpoint 2026-10-07: bounded asymptotic-closure scaling survives fresh widths
+## Checkpoint 2026-10-07: asymptotic-closure gate passes but lacks specificity
 
-The exact [scaling unit](../2026-10-07-asymptotic-closure-scaling.md) is
-complete. Under the fixed block-2 parity observer, fresh widths 16 and 18 place
-Rules 54/110 between Rule 30 and Rule 184 in absolute safe-forgetting reserve,
-while both core rules acquire new required predictive history relative to the
-width-14 baselines. All frozen gates pass.
+The exact [scaling unit](../2026-10-07-asymptotic-closure-scaling.md) passed its
+frozen 54/110 finite-panel gates. An independent
+[census control](../2026-10-07-asymptotic-closure-census-control.md) then
+reproduced the published values and found 41/88 canonical representatives pass
+the full corridor-plus-growth condition, including 37 non-IV rules.
 
-The result is a bounded finite-panel lead, not an asymptotic theorem. It does
-not establish unbounded history depth, convergence of the reserve, observer
-independence or a Class-IV classifier. Width 20 and the all-rule census were
-not run. The next useful target is a symbolic/finite certificate for the
-scaling sequence, not another tuned finite threshold.
+The scientific disposition is therefore corrected: retain the corridor as a
+broad matching geometry, not a Class-IV discriminator. Rule 62 nearly shadows
+Rule 110 on the primary coordinates and is the preferred matched control for
+mechanism work. The earlier subextensive-reserve theorem target is withdrawn
+as the preferred next target.
 
 ## Checkpoint 2026-09-22: readout-cost design complete
 
