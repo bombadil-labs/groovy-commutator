@@ -30,6 +30,9 @@ ROOT = pathlib.Path(__file__).resolve().parents[1]
 
 # result file -> {hash key recorded in its source_hashes: path the hash was taken of}
 REGISTRY = {
+    'results/jet_full_line_autonomy_20261007.json': {
+        'runner_sha256': 'experiments/jet_full_line_autonomy_20261007/run.py',
+        'algebra_sha256': 'experiments/jet_gqr_256/jet_algebra.py'},
     'results/jet_gqr_256_20261007.json': {
         'cxx_source': 'experiments/jet_gqr_256/gqr_census.cpp',
         'summary_runner': 'experiments/jet_gqr_256/prepare_census.py'},
