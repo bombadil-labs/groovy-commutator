@@ -25,3 +25,5 @@ jobs:
         run: python -m pip install numpy
       - name: Replay 20 full-line factor decisions and minimum radii
         run: python experiments/jet_full_line_autonomy_20261007/verify.py
+      - name: Replay complete Rule54 finite-ring fiber census
+        run: python experiments/jet_full_line_autonomy_20261007/verify_periodic_fibers.py
