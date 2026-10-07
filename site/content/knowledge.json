@@ -5354,10 +5354,10 @@
     },
     {
       "id": "matched-history-groovy-coupling",
-      "title": "Centered Groovy closes Rule 110 block parity as a local present-time factor",
+      "title": "Centered Groovy supplies an exact Rule 110 parity readout correction",
       "kind": "finding",
       "status": "exact",
-      "summary": "Under block-2 parity at cadence two, Rule 110's next macrostate is an exact radius-one function of current parity plus current centered Groovy on the complete local source domain. Matched Rule 62 fails even the whole-field factor on explicit witnesses.",
+      "summary": "Under block-2 parity at cadence two, Rule 110's next parity field is an exact radius-one function of current parity plus current centered Groovy. This is readout sufficiency, not autonomous (P,G) closure; matched Rule 62 fails even the whole-field parity-plus-G factor.",
       "updated": "2026-10-07",
       "source": "docs/knowledge/matched-history-groovy-coupling.md",
       "research": [
