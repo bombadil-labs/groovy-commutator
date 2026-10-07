@@ -7,15 +7,20 @@ sections are historical proposals, not an instruction to resume them.
 **Question:** which distinctions can a representation safely discard, which
 must it retain, and what does changing representation buy us?
 
-**New matched mechanism result.** The
-[Rule-62/Rule-110 comparison](2026-10-07-matched-history-transport.md)
-holds predictive-compression demand approximately fixed and asks what the
-newly necessary history is tracking. At fresh widths 16 and 18 every Rule-110
-repair step factors through current predictive state plus current centered
-Groovy; Rule 62 has exact early counterexamples. A complete local audit then
-proves a stronger Rule-110 identity: current block parity plus current centered
-Groovy already has a radius-one induced law for the next block-parity field.
-The next useful question is structural/minimality, not another rule census.
+**New Rule-110 mechanism result.** The
+[matched Rule-62/Rule-110 comparison](2026-10-07-matched-history-transport.md)
+shows that current centered Groovy contains every distinction needed for Rule
+110's next block-parity repair, while Rule 62 needs additional context. The
+follow-up [closure audit](2026-10-07-rule110-pg-closure.md) sharpens the claim:
+next parity has an exact cubic radius-one law from current parity+Groovy, but
+the augmented `(P,G)` fields are not autonomous. An infinite phase-wall
+witness has identical current `(P,G)` and different next Groovy.
+
+Adding the hidden block-phase gradient restores radius-two autonomy, but parity
+plus that gradient already reconstructs the source up to one global complement
+bit. The current research target is therefore a **middle representation**:
+smaller than the nearly microscopic gradient repair, but rich enough to update
+the correction field itself. Do not launch another class census.
 
 Our strongest work answers bounded versions of that question with exact
 factors, counterexamples, graph certificates and explicit constructions.
