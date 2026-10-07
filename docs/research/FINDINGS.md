@@ -1,11 +1,42 @@
 # What we have learned
 
-Running plain-language summary, updated 2026-09-24. This is a synthesis of
+Running plain-language summary, updated 2026-10-07. This is a synthesis of
 existing evidence, not a new experiment or independent review. Each entry
 links to the technical account that states its assumptions and verification.
 “Complete” means the stated investigation has ended, not that every related
 mathematical question is solved. The [program survey](2026-09-22-program-survey.md)
 explains what deserves work next.
+
+## A predictive quotient can keep receding without becoming the microstate — 2026-10-07
+
+We were curious whether "asymptotic closure" could distinguish a complex regime:
+as the system grows, new historical distinctions keep becoming necessary, but
+the minimal predictive quotient does not simply expand all the way to the
+microscopic state.
+
+A first one-axis test failed because Rule 30 had an even longer tail of cheap
+repairs than Rules 54/110; its stable quotient, however, retained essentially
+every source bit. A strict two-axis finite-width wedge then passed at width 12
+and failed at width 14 when Rule 110 tied the transport control in integer
+history depth.
+
+We therefore froze a scaling-sequence test before evaluating fresh widths 16
+and 18. Under the same block-2 parity observer, Rules 54 and 110 pass all frozen
+gates. Their safe-forgetting reserves remain strictly between Rule 30 and Rule
+184 at both widths:
+
+- width 16: Rule 30 = 0.00024 bits; 54 = 0.744; 110 = 0.539; 184 = 4.004;
+- width 18: Rule 30 = 0.00013 bits; 54 = 0.772; 110 = 0.606; 184 = 4.502.
+
+Both core rules also acquire new required predictive history relative to the
+width-14 baselines: Rule 54 goes from depth 5 to 7 by width 18; Rule 110 from
+4 to 6.
+
+This is an **exact bounded scaling pattern**, not an asymptotic theorem or a
+Class-IV classifier. It says that, on this observer and panel, the core complex
+rules keep needing new distinctions with scale while their predictive quotient
+remains neither as fine as Rule 30's near-identity quotient nor as coarse as
+Rule 184's. [Exact account](2026-10-07-asymptotic-closure-scaling.md).
 
 ## 1. A disagreement can mean we chose the wrong law
 
