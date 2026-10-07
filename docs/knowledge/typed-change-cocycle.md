@@ -1,42 +1,42 @@
 # Finite-difference transport is a nonlinear cocycle
 
-For Boolean dynamics (H), define the based finite difference
+For Boolean dynamics \(H\), define the based finite difference
 
-[
-partial H_X(U)=H(Xoplus U)oplus H(X)
-]
+\[
+\partial H_X(U)=H(X\oplus U)\oplus H(X)
+\]
 
-and its (n)-step transport
+and its \(n\)-step transport
 
-[
-Phi_n(X,U)=H^n(Xoplus U)oplus H^n(X).
-]
+\[
+\Phi_n(X,U)=H^n(X\oplus U)\oplus H^n(X).
+\]
 
 Then
 
-[
-Phi_{n+m}(X,U)
+\[
+\Phi_{n+m}(X,U)
 =
-Phi_m(H^nX,Phi_n(X,U)).
-]
+\Phi_m(H^nX,\Phi_n(X,U)).
+\]
 
-Thus (Phi) is an exact discrete-time nonlinear cocycle over (H). Under the
+Thus \(\Phi\) is an exact discrete-time nonlinear cocycle over \(H\). Under the
 coordinate change
 
-[
-Psi(X,U)=(X,Xoplus U),
-]
+\[
+\Psi(X,U)=(X,X\oplus U),
+\]
 
-the skew product ((X,U)mapsto(HX,partial H_X(U))) is conjugate to the pair
-system (H	imes H). The cocycle is therefore ordinary pair evolution written
+the skew product \((X,U)\mapsto(HX,\partial H_X(U))\) is conjugate to the pair
+system \(H\times H\). The cocycle is therefore ordinary pair evolution written
 as basepoint plus displacement.
 
-The rule's own dynamical displacement (d_H(X)=Xoplus H(X)) is an invariant
+The rule's own dynamical displacement \(d_H(X)=X\oplus H(X)\) is an invariant
 section:
 
-[
-partial H_X(d_HX)=d_H(HX).
-]
+\[
+\partial H_X(d_HX)=d_H(HX).
+\]
 
 Raw Groovy compares this correctly typed transport with evolving the same bit
 pattern as an ordinary point. Centered Groovy compares typed transport at the
