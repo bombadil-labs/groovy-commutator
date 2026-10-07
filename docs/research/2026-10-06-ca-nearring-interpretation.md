@@ -228,10 +228,12 @@ that Rules 4 and 200 are the only nonlinear elementary rules with
 (G_H^circequiv0).
 
 This small ring is structurally suggestive, but no novelty is claimed for the
-idempotence itself. Idempotent ECAs have been studied explicitly; Boykett and
-related composition work already place Rules 4 and 200 among the idempotent
-elementary rules. The specific complementary-XOR/mutual-annihilation
-identification is the project-level observation relevant to Groovy.
+idempotence itself. Idempotent cellular automata are an explicit subject of
+Castillo-Ramirez, Magaña-Chavez and Veliz-Quintero,
+[*Idempotent cellular automata and their natural order*](https://doi.org/10.1016/j.tcs.2024.114698),
+and elementary-rule composition has been studied separately. The specific
+complementary-XOR/mutual-annihilation identification is the project-level
+observation relevant to Groovy.
 
 ## 6. The typed geometry and near-ring algebra say the same thing from two sides
 
