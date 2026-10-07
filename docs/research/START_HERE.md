@@ -11,7 +11,7 @@ stores the source, current change and next typed change. Rules 4/200 are now
 explained by an exact nonlinear projection-like complement mechanism. No
 Class-IV inference or automatic follow-up census follows from this result.
 
-**Current direction, 2026-09-25.** This page is the scheduling authority for
+**Current direction, 2026-10-06.** This page is the scheduling authority for
 research. Older notes and checkpoints preserve the evidence; their “next”
 sections are historical proposals, not an instruction to resume them.
 
