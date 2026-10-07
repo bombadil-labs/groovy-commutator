@@ -139,6 +139,79 @@ The same tiny first-step witness survives unchanged:
 
 A second-step fresh-width witness is also saved in the canonical result.
 
+## Post-hoc mechanism: Groovy repairs the coarse state directly for Rule 110
+
+The fresh matched result suggested that the repeated history factor might be a
+consequence of a simpler present-only identity. A separate exact verifier tests
+that mechanism after the primary protocol.
+
+Group the current fields into macro symbols
+
+\[
+Z_j=(P_j,G^\circ_{2j},G^\circ_{2j+1}).
+\]
+
+For Rule 110, exhaustive enumeration of all \(2^{10}=1024\) source words in
+the complete causal window proves that the next block-parity bit after two
+source updates is an exact **radius-one local function**
+
+\[
+\boxed{
+P(H^2X)_j
+=
+F(Z_{j-1},Z_j,Z_{j+1})
+}
+\]
+
+on the full admissible source image.
+
+Thus the augmented present representation
+
+\[
+(P(X),G^\circ(X))
+\]
+
+already closes under an induced local law. The history-tower factor at every
+later step follows by time homogeneity: \(C_t\) contains the current parity
+field, and the current Groovy field supplies the correction coordinate needed
+for the next parity field.
+
+The nine obvious radius-one macro feature bits are
+
+\[
+(P_{j-1},G_{2j-2},G_{2j-1},
+P_j,G_{2j},G_{2j+1},
+P_{j+1},G_{2j+2},G_{2j+3}).
+\]
+
+On the admissible Rule-110 image, exhaustive subset search finds a unique
+minimum-cardinality seven-feature presentation:
+
+\[
+(P_{j-1},G_{2j-1},P_j,G_{2j},G_{2j+1},P_{j+1},G_{2j+2}).
+\]
+
+This is minimum only within that nine-feature grammar; it is not a global
+minimality theorem for every possible encoding.
+
+Rule 62 fails the same radius-one factor. More strongly, the primary whole-ring
+witnesses show that even the **entire** current \(P\) and \(G^\circ\) fields
+do not determine the next parity field: states 60 and 204 have equal current
+parity and equal centered Groovy but different next parity.
+
+Verifier:
+[verify_rule110_parity_g_factor.py](../../scripts/verify_rule110_parity_g_factor.py).  
+Result:
+[rule110_parity_g_factor_20261007.json](../../results/rule110_parity_g_factor_20261007.json).
+
+This gives the matched result a sharper interpretation:
+
+> **For Rule 110 under this observer, centered Groovy is a sufficient
+> present-time correction coordinate that compresses away the otherwise
+> necessary observed history.**
+
+The claim is sufficiency, not minimality or uniqueness.
+
 ## What this establishes
 
 The matched pair controls for a major failure of the preceding asymptotic-
