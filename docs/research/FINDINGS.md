@@ -29,6 +29,11 @@ Equivalently, the ordinary base projection of the state/change bundle commutes
 with evolution, while `G` is the defect of the *other* projection: discard a
 change's basepoint, reinterpret its bits as an ordinary state, and evolve them.
 The older horizon fields `K_t` are the same projection defect after `t` steps.
+There is also a literal but deliberately weaker cocycle statement: with the
+ordinary trivial coefficient action, polarization is the exact 2-coboundary
+`B_H = δ(H XOR H(0))`. It is therefore always a 2-cocycle but always represents
+the zero cohomology class; the useful signal is the nonzero representative,
+not a nontrivial ordinary `H^2` obstruction.
 
 The six-row affine-oriented lift already stores the relevant temporal bundle:
 its temporal rows are equivalent to the source state, its current change and
