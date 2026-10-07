@@ -7,6 +7,26 @@ sections are historical proposals, not an instruction to resume them.
 **Question:** which distinctions can a representation safely discard, which
 must it retain, and what does changing representation buy us?
 
+**New all-256 jet census and all-depth Rule-54 theorem (2026-10-07).**
+[The GQR census](2026-10-07-jet-gqr-census-fibonacci.md) establishes a base
+rate: 228/256 ECAs have branching recurrent off-diagonal GQR source-pair
+components. So branching by itself is not a complexity discriminator.
+
+The Rule-54 A5 follow-up isolates a more substantial result: two
+positive-entropy golden-growth equal-output source-pair SCCs exchange by
+inclusion under H54 x H54. Their union is forward-invariant, and a direct
+induction establishes that **all higher G-anchored commutator residuals agree
+for every pair in that union**, not merely A1..A5. This is a full-line
+symbolic theorem for an exceptional pair language, not a typical-information
+rate claim. The golden swap was selected and frozen after the initial
+three-component union failed, so do not count it as a prospectively
+confirmed predictor.
+
+**Next target:** extract small explicit symbolic generators from the two
+golden SCCs, independently review the graph/inclusion certificate, and test
+their relationship to Rule-54 backgrounds and defects. No additional
+256-rule census or brute-force jet depth extension is queued.
+
 **New three-rule jet control (2026-10-07).**
 [The 54/30/90 comparison](2026-10-07-jet-control-panel.md) corrects a
 too-broad phase-only intuition from the original 110/62 pair. Rule 90
@@ -18,10 +38,9 @@ jet image entropy already equals the source entropy. Rule 30's surviving
 period-six phase cycle at source radius four also falsifies the proposed
 radius/max-period coincidence.
 
-**Current next question:** explain the symbolic generators of the surviving
-Rule-54 branching equal-output pair language, independently of the lift and
-without a class census. Do not treat the original 110/62 phase-only result
-as a universal transition law.
+The later all-256 census and golden-component swap theorem above now
+supersede this earlier proposed next experiment. Do not treat the original
+110/62 phase-only result as a universal transition law.
 
 **New commutator-jet result.** The
 [2026-10-07 jet unit](2026-10-07-commutator-jet.md) defines
