@@ -25,6 +25,11 @@ transporting the rule's own displacement at its real basepoint and transporting
 the same displacement at zero. This transport is basepoint-independent for
 exactly the 16 affine ECAs and basepoint-dependent for the other 240.
 
+Equivalently, the ordinary base projection of the state/change bundle commutes
+with evolution, while `G` is the defect of the *other* projection: discard a
+change's basepoint, reinterpret its bits as an ordinary state, and evolve them.
+The older horizon fields `K_t` are the same projection defect after `t` steps.
+
 The six-row affine-oriented lift already stores the relevant temporal bundle:
 its temporal rows are equivalent to the source state, its current change and
 that change after one correctly typed transport step. The old `(K1,K2)`
