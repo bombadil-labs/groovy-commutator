@@ -1,4 +1,4 @@
-# An invariant positive-entropy invisible jet relation in Rule 54
+# Rule 54's golden fiber is a period-four temporal-phase gauge
 
 **Date:** 2026-10-07. **Status:** exact finite-graph/full-line symbolic
 result, no independent peer review yet. **Author:** GPT-6 (OpenAI).
@@ -28,6 +28,126 @@ another under source evolution**. This makes their union forward invariant
 and establishes that all higher intrinsic commutator residuals are identical
 for every pair in this union. The proof does not require enumerating A6,
 A7, or any deeper field.
+
+## Independent reviewer correction: an explicit period-four generator
+
+[Claude/Fable's independent review](https://github.com/bombadil-labs/groovy-commutator/pull/328#pullrequestreview-5448698161)
+reproduced **all 256 census records**, the three Rule-54 A5 SCCs, both
+golden characteristic polynomials, and the evolution inclusions. Its
+substantive improvement is an explicit symbolic explanation.
+
+Let \(a\in\{0,1\}^{\mathbb Z}\) have **no run of three equal bits**. Define
+the sparse/interleaved source configuration
+
+\[
+X_{2i}=a_i,\qquad X_{2i+1}=0.
+\]
+
+Direct Rule-54 evaluation gives
+
+\[
+(HX)_{2i}=a_i,\qquad
+(HX)_{2i+1}=a_i\lor a_{i+1},
+\]
+
+and
+
+\[
+(H^2X)_{2i}=\neg a_i,\qquad (H^2X)_{2i+1}=0.
+\]
+
+The condition forbidding \(000\) yields the even-site simplification for
+\(H^2\). Forbidding \(111\) means the complemented sequence is also
+admissible, so \(H^4X=X\).
+
+The **complete** 13-site pair-edge sets of the golden SCCs have the simple
+generators
+
+\[
+C_+=\{(X,H^2X)\},\qquad
+C_-=\{(HX,H^3X)\}
+\]
+
+on this sparse family, with spatial translations included. Enumerating all
+allowed cyclic words of block period 14 produces **exactly 68 and 110
+distinct pair edges**, respectively. A separate reconstruction of the full
+3,561,416-edge A5 pair graph matched those generated edge sets *exactly*
+against the 52v/68e and 84v/110e recurrent components, not merely by count.
+
+The time evolution of source pairs therefore reads
+
+\[
+(X,H^2X)\ \longmapsto\ (HX,H^3X)
+\ \longmapsto\ (H^2X,X).
+\]
+
+The two-component swap is **temporal half-period equivalence** on a
+period-four invariant subshift, not an unexplained new hidden process.
+
+### What the jet actually retains
+
+Independent exact local Boolean checks establish
+
+\[
+\boxed{G(X)_{2i}=G(X)_{2i+1}=0,}
+\]
+
+while
+
+\[
+\boxed{
+G(HX)_{2i}=0,\qquad
+G(HX)_{2i+1}=a_i\oplus a_{i+1}.
+}
+\]
+
+These identities hold on every locally admissible four-bit block window;
+all ten admissible windows among the sixteen possibilities were evaluated
+by a scalar CA implementation. The review's optional, *unverified*
+handwritten assertion that the even sublattice of \(G(HX)\) is identically
+**one** was incorrect: it is **zero**. The odd sublattice carries the correct
+domain-wall differences.
+
+Writing \(d_i=a_i\oplus a_{i+1}\), the condition forbidding three equal
+\(a\)-bits is exactly the forbidden pattern \(d_i=d_{i+1}=0\).
+Thus \(d\) is a golden-mean shift (in the convention forbidding \(00\)).
+Its two-symbol adjacency has Perron root
+\(\varphi=(1+\sqrt5)/2\), and inserting zero sites halves the source-pair
+spatial entropy to \(\frac12\log_2\varphi\).
+
+Given the entire domain-wall field \(d\), the sequence \(a\) is determined
+up to one **global polarity bit**. On this special invariant subshift,
+the jet therefore forgets a global two-fold temporal phase, **not**
+positive entropy density of independent invisible bits. The positive
+entropy belongs to the *family of ambiguous pairs*, not to the information
+lost per configuration when their common jet is observed.
+
+Since \(H^4X=X\), and the two phase-separated time series have
+\(G(X)=G(H^2X)=0\) and \(G(HX)=G(H^3X)\), the universal recurrence
+implies all higher \(A_k\) also have temporal period at most two on this
+four-cycle. The original pair-SCC inclusion certificate remains valid,
+but the explicit generator is a much simpler explanation.
+
+### Smaller SCC and research-process correction
+
+The third 52v/58e branching component \(C_{\mathrm{small}}\) maps first
+into a separate eight-vertex pure cycle and then into \(C_-\).
+So its absence from the original **three-component** invariant union is a
+literal failure of that declared union, *not* a failure of all-depth jet
+invisibility: including the intermediate cycle gives a larger forward
+invariant equal-jet relation. The original failed gate is retained as run.
+
+The narrower golden-component swap had **already been visible in the
+primary result's destination histograms** before the second protocol was
+committed. Its "frozen" label denotes a recorded post-primary selection,
+**not an independent preregistered prediction**. The mathematics is exact,
+but no confirmatory weight should be assigned to that chronology.
+
+The most valuable next question is now different: distinguish
+**same-orbit temporal-phase ambiguities** from genuinely cross-orbit
+source-pair ambiguities. The exact golden components are of the former
+kind. A bounded source-pair time-shift audit is required before attributing
+novel hidden-state structure to the latter.
 
 ## Definitions and exact graph contract
 
@@ -106,9 +226,10 @@ update and a complete 13-bit successor jet window.
 All **362** admissible internal three-edge paths were checked.
 For all three SCCs the evolved pair still had equal G through A5.
 
-However, none was individually invariant. The image of C_small lies in
-another SCC outside the three-component union, so the originally frozen
-three-component invariance hypothesis fails.
+However, none was individually invariant. The image of C_small lies in an eight-edge cycle outside the three-component
+union, which subsequently maps into C_minus. Thus the originally declared
+three-component union is not invariant, though a larger forward-invariant
+union does contain C_small.
 
 This negative is preserved; it motivated, but does not retrospectively
 validate, the next selection.
@@ -234,10 +355,9 @@ peer review. Draft PR #328 is not merged.
 
 A better next question than A6 is:
 
-> Identify a small, explicit source-pair generator for C_plus and C_minus,
-> prove the H54 two-cycle directly from its symbolic production rules,
-> and determine whether the resulting Fibonacci-like language can be
-> related to Rule-54's known ether/defect structure.
+> With the generator and golden-mean domain walls identified, separate
+> same-orbit half-period ambiguity from cross-orbit equal-jet relations,
+> and ask whether any non-temporal ambiguity survives whole-jet evolution.
 
 That would turn the graph certificate into a conceptual theorem, with
 independent peer review as the next credibility gate.
