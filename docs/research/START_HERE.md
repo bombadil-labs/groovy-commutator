@@ -3,7 +3,7 @@
 
 **Update 2026-10-06 — typed difference geometry.** A bounded dimensional-lift
 mechanism audit is complete in
-[\`2026-10-06-typed-difference-geometry.md\`](2026-10-06-typed-difference-geometry.md).
+[`2026-10-06-typed-difference-geometry.md`](2026-10-06-typed-difference-geometry.md).
 The marked beam's section/evolution defect is zero by the existing theorem;
 centered Groovy instead measures basepoint dependence of finite-difference
 transport along the dynamical displacement. The six-row lift's temporal core
