@@ -27,3 +27,5 @@ jobs:
         run: python -m pip install numpy scipy sympy
       - name: Compile and replay complete 256-rule census and Rule54 swap
         run: python experiments/jet_gqr_256/verify.py
+      - name: Independently verify period-four generator and corrected Groovy phase field
+        run: python experiments/jet_gqr_256/verify_period4_generator.py
