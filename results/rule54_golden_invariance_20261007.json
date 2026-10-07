@@ -1,0 +1,125 @@
+{
+  "schema": "rule54_golden_pair_invariance_v1",
+  "protocol": "docs/research/protocols/jet-gqr-census-fibonacci-invariance-20261007.md",
+  "rule": 54,
+  "jet_prefix": [
+    "G",
+    "Q",
+    "R",
+    "A4",
+    "A5"
+  ],
+  "source_radius": 6,
+  "pair_edges": 3561416,
+  "biinfinite_vertices": 4316,
+  "biinfinite_edges": 8460,
+  "target_components_count": 3,
+  "target_components": [
+    {
+      "component_id": 3,
+      "vertices": 52,
+      "edges": 68,
+      "perron": 1.2720196495140705,
+      "first_pair_context_raw": 267540,
+      "three_edge_paths_tested": 110,
+      "independent_scalar_spotchecks": 110,
+      "destination_component_histogram": {
+        "5": 110
+      },
+      "exact_characteristic_polynomial": "z**44*(z**2 - z + 1)*(z**2 + z + 1)*(z**4 - z**2 - 1)",
+      "claim_I_next_time_same_G_A5": true,
+      "claim_I_first_counterexample": null,
+      "claim_II_image_in_same_component": false,
+      "claim_II_first_counterexample": {
+        "source_x_15bit": 520,
+        "source_y_15bit": 10402,
+        "evolved_x_13bit": 910,
+        "evolved_y_13bit": 7931,
+        "next_pair_component_id": 5
+      },
+      "image_in_fixed_three_component_union": true,
+      "union_first_counterexample": null,
+      "any_jet_mismatch_first": null
+    },
+    {
+      "component_id": 4,
+      "vertices": 52,
+      "edges": 58,
+      "perron": 1.1278384855616788,
+      "first_pair_context_raw": 723048,
+      "three_edge_paths_tested": 74,
+      "independent_scalar_spotchecks": 74,
+      "destination_component_histogram": {
+        "6": 74
+      },
+      "exact_characteristic_polynomial": null,
+      "claim_I_next_time_same_G_A5": true,
+      "claim_I_first_counterexample": null,
+      "claim_II_image_in_same_component": false,
+      "claim_II_first_counterexample": {
+        "source_x_15bit": 1413,
+        "source_y_15bit": 17219,
+        "evolved_x_13bit": 1831,
+        "evolved_y_13bit": 4722,
+        "next_pair_component_id": 6
+      },
+      "image_in_fixed_three_component_union": false,
+      "union_first_counterexample": {
+        "source_x_15bit": 1413,
+        "source_y_15bit": 17219,
+        "evolved_x_13bit": 1831,
+        "evolved_y_13bit": 4722,
+        "next_pair_component_id": 6
+      },
+      "any_jet_mismatch_first": null
+    },
+    {
+      "component_id": 5,
+      "vertices": 84,
+      "edges": 110,
+      "perron": 1.272019649514069,
+      "first_pair_context_raw": 1867644,
+      "three_edge_paths_tested": 178,
+      "independent_scalar_spotchecks": 178,
+      "destination_component_histogram": {
+        "3": 178
+      },
+      "exact_characteristic_polynomial": "z**76*(z**2 - z + 1)*(z**2 + z + 1)*(z**4 - z**2 - 1)",
+      "claim_I_next_time_same_G_A5": true,
+      "claim_I_first_counterexample": null,
+      "claim_II_image_in_same_component": false,
+      "claim_II_first_counterexample": {
+        "source_x_15bit": 3640,
+        "source_y_15bit": 31727,
+        "evolved_x_13bit": 2210,
+        "evolved_y_13bit": 520,
+        "next_pair_component_id": 3
+      },
+      "image_in_fixed_three_component_union": true,
+      "union_first_counterexample": null,
+      "any_jet_mismatch_first": null
+    }
+  ],
+  "any_all_order_single_component_invariant": false,
+  "all_three_union_invariant": false,
+  "cpu_elapsed_seconds": 1.632841395000014,
+  "maximum_resident_set_kib": 401708,
+  "post_primary_golden_swap": {
+    "protocol": "docs/research/protocols/rule54-two-golden-scc-swap-20261007.md",
+    "chosen_by": "two maximal-Perron non-diagonal branching components preselected after original three-component outcome",
+    "components": [
+      3,
+      5
+    ],
+    "plus_to_minus": true,
+    "minus_to_plus": true,
+    "full_line_forward_invariant_union": true,
+    "all_higher_jet_levels_equal_by_induction": true,
+    "total_three_edge_paths_checked": 288,
+    "all_paths_independently_checked_scalar": true
+  },
+  "source_hashes": {
+    "algebra_sha256": "c9a17d6e13dd1fac2dff6bebac9bad01fe4da2a357364b67692b9d2207a6a7b2",
+    "runner_sha256": "062bb92476a7f946cb9852f334c3bd100f66e36e52dcc8b77083061b5b178386"
+  }
+}
