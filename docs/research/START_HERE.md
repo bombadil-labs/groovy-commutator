@@ -1,5 +1,16 @@
 # Research: start here
 
+
+**Update 2026-10-06 — typed difference geometry.** A bounded dimensional-lift
+mechanism audit is complete in
+[\`2026-10-06-typed-difference-geometry.md\`](2026-10-06-typed-difference-geometry.md).
+The marked beam's section/evolution defect is zero by the existing theorem;
+centered Groovy instead measures basepoint dependence of finite-difference
+transport along the dynamical displacement. The six-row lift's temporal core
+stores the source, current change and next typed change. Rules 4/200 are now
+explained by an exact nonlinear projection-like complement mechanism. No
+Class-IV inference or automatic follow-up census follows from this result.
+
 **Current direction, 2026-09-25.** This page is the scheduling authority for
 research. Older notes and checkpoints preserve the evidence; their “next”
 sections are historical proposals, not an instruction to resume them.
