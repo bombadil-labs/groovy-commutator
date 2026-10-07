@@ -540,6 +540,12 @@ def analyze_factor(name, rule, end_level, primary):
         "biinfinite_vertices": int(bi.sum()),
         "biinfinite_edges": int(edge_mask.sum()),
         "biinfinite_non_diagonal_vertices": int((~diagonal).sum()),
+        "biinfinite_transient_non_diagonal_vertices": int(
+            (~diagonal).sum()
+            - sum(
+                r["non_diagonal_vertices"] for r in records
+            )
+        ),
         "pair_graph_perron": pair_rho,
         "pair_graph_entropy_bits_per_site": pair_entropy,
         "relative_pair_entropy_above_source": pair_entropy - 1.0,
