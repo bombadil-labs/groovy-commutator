@@ -1,11 +1,41 @@
 # Research: start here
 
-**Current direction, 2026-09-25.** This page is the scheduling authority for
+**Current direction, 2026-10-07.** This page is the scheduling authority for
 research. Older notes and checkpoints preserve the evidence; their “next”
 sections are historical proposals, not an instruction to resume them.
 
 **Question:** which distinctions can a representation safely discard, which
 must it retain, and what does changing representation buy us?
+
+**New Rule-110 mechanism result.** The
+[matched Rule-62/Rule-110 comparison](2026-10-07-matched-history-transport.md)
+shows that current centered Groovy contains every distinction needed for Rule
+110's next block-parity repair, while Rule 62 needs additional context. The
+follow-up [closure audit](2026-10-07-rule110-pg-closure.md) sharpens the claim:
+next parity has an exact cubic radius-one law from current parity+Groovy, but
+the augmented `(P,G)` fields are not autonomous. An infinite phase-wall
+witness has identical current `(P,G)` and different next Groovy.
+
+Adding the hidden block-phase gradient restores radius-two autonomy, but parity
+plus that gradient already reconstructs the source up to one global complement
+bit. A complete search over all 256 radius-one one-bit block tracks finds no
+simple middle: every radius-two autonomous repair is injective or nearly
+injective on rings 12--16.
+
+The subsequent [exact latent-Q quotient](2026-10-07-rule110-latent-q.md)
+now bounds every representation class on the tested full source rings.
+For every even n=6 through 18, the coarsest autonomous refinement retaining
+(P,G) merges only the uniform pair and the alternating pair; every other
+source is distinguished. G alone also becomes nearly microscopic. Binary Q
+fields realize the minimal quotients with finite whole-field autonomy and
+translation covariance, but fail the frozen compression gate and local
+radius<=3 construction checks. The former local repairs already achieved
+optimal compression on the overlapping tested rings.
+
+This bounded unit is complete. A different encoding cannot recover meaningful
+joint compression while retaining the same visible state on these domains.
+Changing the observer/source family or proving a full-line result is a separate
+question. No further run, Class-IV census or feature search is queued.
 
 Our strongest work answers bounded versions of that question with exact
 factors, counterexamples, graph certificates and explicit constructions.

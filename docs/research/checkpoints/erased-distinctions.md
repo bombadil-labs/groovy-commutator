@@ -12,7 +12,41 @@ what is frozen and unrun, and what not to infer. Add a new checkpoint at the top
 when a substantial unit completes; keep the bounded-claim style. Text moved from
 `CLAUDE.md` on 2026-09-10 is verbatim.
 
-Program page: `docs/research/2026-09-08-dynamics-of-erased-distinctions.md`
+Program page: docs/research/2026-09-08-dynamics-of-erased-distinctions.md
+
+## Checkpoint 2026-10-07: exact latent-Q unit complete
+
+The [latent-Q quotient](../2026-10-07-rule110-latent-q.md) computes the
+coarsest all-future refinement on the frozen full source rings. Retaining
+parity/G permits only the two uniform/alternating source-pair mergers on
+every tested even width 6--18. G-only also fails the declared compression
+gate. Minimal equivariant binary Q fields and finite autonomous lookup laws
+are constructed, with preserved local-radius failures and exact witnesses.
+
+This bounds all autonomous augmentations on those finite domains, not just
+local tracks. It does not establish an infinite-line impossibility theorem.
+The protocol, code, original Windows-byte run, canonical replay, certificates
+and self-verification are preserved. Reviewed by: none. No further run is
+queued; the earlier proposed different-feature search is superseded by this
+information bound for the same visible state and finite source families.
+
+## Checkpoint 2026-10-07: Rule-110 readout correction is not autonomous state
+
+The [Rule-110 closure audit](../2026-10-07-rule110-pg-closure.md) corrects the
+matched-history interpretation. Current parity plus centered Groovy gives an
+exact cubic radius-one law for the next parity readout, but the complete
+current (P,G) fields do not determine their own next Groovy field. An explicit
+bi-infinite phase-wall pair certifies the obstruction.
+
+Adding the hidden block-phase gradient restores radius-two autonomy, but parity
+plus that gradient reconstructs the source up to one global complement bit.
+A complete search of all 256 radius-one one-bit block tracks finds no simple
+middle: the 48 radius-two autonomous repairs are injective or merge only one or
+two source pairs on rings 12--16.
+
+The simple local-track route is therefore closed under this grammar. The next
+useful representation family must compress hidden phase/history without nearly
+reconstructing the source. No Class-IV census is queued.
 
 ## Checkpoint 2026-09-22: readout-cost design complete
 

@@ -1,0 +1,22 @@
+[
+  {
+    "slug": "rule110-pg-closure-20261007",
+    "label": "Rule 110 parity-G closure",
+    "title": "Groovy closes Rule 110 parity readout but not its own augmented state",
+    "date": "2026-10-07",
+    "updated": "2026-10-07",
+    "kind": "Exact local algebra and counterexample",
+    "evidence": "exact",
+    "topic": "Observation and memory",
+    "summary": "For Rule 110, current parity plus centered Groovy determines the next parity bit by an exact cubic radius-one law, but two bi-infinite configurations have identical entire current parity+Groovy fields and different next Groovy. The augmented state is not autonomous.",
+    "takeaway": "Groovy is a sufficient readout correction for parity, not a closed history state; the missing distinction is exposed by a blockwise complement phase-domain-wall witness.",
+    "source": "docs/research/2026-10-07-rule110-pg-closure.md",
+    "promotion": {
+      "stage": "research"
+    },
+    "related": [
+      "matched-history-transport-20261007",
+      "history-lift-closure"
+    ]
+  }
+]
