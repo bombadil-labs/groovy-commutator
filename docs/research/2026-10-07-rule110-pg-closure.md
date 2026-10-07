@@ -375,6 +375,101 @@ The resulting hierarchy is now exact:
 This sharply locates the remaining problem: find a state between levels 2 and
 3, if one exists.
 
+## Bounded middle-track search: simple present-time repairs are nearly injective
+
+The phase-gradient repair closes the system by almost reconstructing the source.
+To ask whether that was merely a poor feature choice, we searched a complete
+simple track family.
+
+For every radius-one Boolean function \(t\), define one extra bit per macroblock
+
+\[
+T_j=t(X_{2j-1},X_{2j},X_{2j+1}),
+\]
+
+and the current state
+
+\[
+V_j=(P_j,G^\circ_{2j},G^\circ_{2j+1},T_j).
+\]
+
+All 256 truth tables were tested exactly.
+
+At macro radius one, **no track closes** the full augmented state.
+
+At macro radius two, exactly
+
+\[
+\boxed{48/256}
+\]
+
+tracks close.
+
+This is a stricter contract than the older Groovy-field track census: the
+track must participate in a present-time autonomous state containing parity,
+both Groovy bits and its **own next value**, not merely help predict next
+Groovy under the older history contract.
+
+The closing tracks were then evaluated as source encoders on rings 12, 14 and
+16. They split into three exact 16-track groups:
+
+| Closing-track family | width 12 | width 14 | width 16 |
+| --- | --- | --- | --- |
+| 16 tracks | 2 two-state fibers | 2 two-state fibers | 2 two-state fibers |
+| 16 tracks | 1 two-state fiber | 1 two-state fiber | 1 two-state fiber |
+| 16 tracks | injective | injective | injective |
+
+Every other source fiber is a singleton.
+
+Under the uniform source ensemble, the **largest** information loss among any
+successful track is therefore only
+
+\[
+0.0009765625\text{ bits at }n=12,
+\]
+
+\[
+0.000244140625\text{ bits at }n=14,
+\]
+
+and
+
+\[
+0.00006103515625\text{ bits at }n=16.
+\]
+
+So all successful encodings in this grammar are essentially microscopic.
+Even the most compressive ones retain all but \(O(1)\) isolated source-pair
+ambiguities over these rings.
+
+The complete closing set is
+
+\[
+\begin{aligned}
+\{&
+48,49,50,51,52,54,56,57,58,59,60,62,80,82,84,85,\\
+&86,87,88,90,92,93,94,95,160,161,162,163,165,167,\\
+&168,169,170,171,173,175,193,195,196,197,198,199,\\
+&201,203,204,205,206,207
+\}.
+\end{aligned}
+\]
+
+This family includes familiar gradient-like tracks such as 60 and 90, but the
+negative is broader: **no** radius-one one-bit block track in the complete
+256-table family supplies both radius-\(\le2\) present-time autonomy and a
+meaningful finite-ring quotient.
+
+Protocol:
+[rule110-middle-tracks-20261007.md](protocols/rule110-middle-tracks-20261007.md).  
+Runner:
+[experiment_rule110_middle_tracks.py](../../scripts/experiment_rule110_middle_tracks.py).  
+Result:
+[rule110_middle_tracks_20261007.json](../../results/rule110_middle_tracks_20261007.json).
+
+This does not rule out a middle state. It rules out a particularly natural,
+complete simple grammar for one.
+
 ## Next structural target
 
 The infinite witness suggests a concrete missing object rather than another
