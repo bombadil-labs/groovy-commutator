@@ -5354,14 +5354,15 @@
     },
     {
       "id": "asymptotic-closure-corridor",
-      "title": "A bounded asymptotic-closure corridor survives fresh scaling tests",
+      "title": "The asymptotic-closure corridor is broad under block parity",
       "kind": "finding",
       "status": "exact",
-      "summary": "At fresh widths 16 and 18 under block-2 parity, Rules 54/110 acquire new predictive history while their stable quotient keeps a safe-forgetting reserve between Rule 30's near-identity quotient and Rule 184's much coarser quotient.",
+      "summary": "Rules 54/110 pass the bounded reserve-plus-growth gate, but an independent 88-representative census finds 41 passers, including 37 non-IV rules. The corridor is a matching variable / necessary-condition-like geometry, not a discriminator.",
       "updated": "2026-10-07",
       "source": "docs/knowledge/asymptotic-closure-corridor.md",
       "research": [
-        "asymptotic-closure-scaling-20261007"
+        "asymptotic-closure-scaling-20261007",
+        "asymptotic-closure-census-control-20261007"
       ]
     }
   ],
