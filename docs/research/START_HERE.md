@@ -17,10 +17,16 @@ jet structure: Rule 62 has a radius-three local DG→Q factor; Rule 110 fails
 through radius three. Finite-ring jet closure is mostly near-injective, so do
 not treat it as a compression win.
 
-The next useful target is the **language of realized jet configurations**:
-can the raw binary jet be minimized as a constrained symbolic state without
-reintroducing the microscopic source? Do not launch a class census or another
-source-feature sweep.
+The symbolic-language and [fiber-product follow-up](2026-10-07-commutator-jet-fibers.md)
+now sharpen that target. Rule 110 reaches full source entropy at `(G,Q,R)`,
+Rule 62 at `(G,Q,R,A4,A5)`. Immediately before those depths each factor still
+has a positive-entropy mixed hidden fiber; at the first full-entropy prefix the
+non-diagonal recurrent ambiguity collapses to zero-entropy periodic phase
+cycles plus domain-wall interfaces.
+
+The next useful target is therefore a **finite-state phase automaton** extracted
+from that residual pair graph. Do not add another raw residual field, launch a
+Class-IV census, or resume local feature search.
 
 **New Rule-110 mechanism result.** The
 [matched Rule-62/Rule-110 comparison](2026-10-07-matched-history-transport.md)
