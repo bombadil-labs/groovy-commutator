@@ -2788,15 +2788,6 @@
         "ca-nearring-interpretation",
         "typed-difference-geometry"
       ]
-    },
-    {
-      "source": "typed-change-cocycle",
-      "type": "supports",
-      "target": "dimensional-beam",
-      "reason": "The affine-oriented lift's temporal rows are equivalent to a basepoint and successive correctly transported dynamical changes, clarifying what typed information the marked beam stores without making an off-beam or resource claim.",
-      "research": [
-        "typed-difference-geometry"
-      ]
     }
   ],
   "nodes": [
