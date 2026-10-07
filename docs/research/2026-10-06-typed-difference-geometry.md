@@ -117,6 +117,88 @@ For an affine map \(H(X)=AX\oplus c\), \(\partial H_X(U)=AU\) is independent of 
 
 and basepoint-dependent for the other 240. Rule 110 already has a three-bit local witness: for displacement word `001`, base words `000` and `010` produce different finite differences.
 
+
+### The exact noncommuting square
+
+The original cocycle intuition was therefore close, but attached to the wrong
+projection.
+
+On the trivialized change bundle write
+
+\[
+p(X,U)=X,\qquad q(X,U)=U.
+\]
+
+The legitimate bundle projection \(p\) always intertwines the change transport
+with point evolution:
+
+\[
+\boxed{p\circ TH=H\circ p.}
+\]
+
+The second-coordinate map \(q\), however, forgets the basepoint of a change.
+For a nonlinear map there is no reason for
+
+\[
+q\circ TH
+\quad\text{and}\quad
+H\circ q
+\]
+
+to agree. Evaluated on the dynamical-change section \(v_H\),
+
+\[
+\boxed{
+G_H
+=
+q\circ TH\circ v_H
+\;\oplus\;
+H\circ q\circ v_H.
+}
+\]
+
+Indeed the first path is \(d_H\circ H\) and the second is \(H\circ d_H\).
+So raw Groovy is exactly the commutation defect produced by **flattening a
+based change into an ordinary point before evolving it**.
+
+The centered version replaces point evolution on the flattened change by
+\(H^\circ(U)=H(U)\oplus H(0)\):
+
+\[
+G_H^\circ
+=
+q\circ TH\circ v_H
+\;\oplus\;
+H^\circ\circ q\circ v_H.
+\]
+
+For affine \(H\), this square commutes for every \((X,U)\), not merely along
+\(v_H\). Rules 4 and 200 are subtler: the square does not commute globally,
+but its defect vanishes on the particular dynamical-change section selected
+by the rule itself.
+
+The entire horizon family has the same form. Since
+\(TH^t\circ v_H=v_H\circ H^t\),
+
+\[
+\boxed{
+K_t(X)
+=
+q\!\left((TH)^t(v_H(X))\right)
+\oplus
+H^t\!\left(q(v_H(X))\right).
+}
+\]
+
+Thus \(K_t\) compares two ways of evolving the initial change for \(t\) steps:
+keep its basepoint and use typed change transport, or erase its basepoint at
+time zero and repeatedly apply the point dynamics to the resulting bitstring.
+\(K_1=G\) is simply the first member of this projection-defect family.
+
+This is a more precise home for the old "missing column" intuition: the missing
+column is not an extra term in the source evolution. It is the **basepoint
+coordinate that the second projection discards**.
+
 ## 4. The affine-oriented lift stores a two-step change jet
 
 Its temporal fields are
