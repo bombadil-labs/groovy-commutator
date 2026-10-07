@@ -9,28 +9,32 @@ explains what deserves work next.
 
 ## Similar amounts of history can be doing different jobs — 2026-10-07
 
-An independent census showed that Rule 62 and Rule 110 are nearly matched in
-how much predictive history the block-2 parity observer requires. We used that
-as a control and asked whether the newly necessary distinctions are related to
-the current centered Groovy field in the same way.
-
-They are not.
+Rule 62 and Rule 110 are nearly matched in how much predictive history the
+block-2 parity observer requires, but that history has a different relation to
+situated change.
 
 At fresh widths 16 and 18, every nonzero Rule-110 minimal-repair step is
-exactly determined by the pair (current predictive-history state, current
-centered G). Rule 62 has exact counterexamples in its first two repair steps at
-both widths: the same predictive label and same centered G can still require
-different next observations.
+exactly determined by the current predictive-history state plus current
+centered Groovy. Rule 62 has exact early counterexamples. Quantitatively, 100%
+of Rule 110's predictive-repair information is Groovy-coupled at both widths,
+versus about 77.2% for Rule 62.
 
-Quantitatively, 100% of Rule 110's predictive-repair information is Groovy-
-coupled at both widths, versus about 77.2% for Rule 62. A post-hoc complete
-local audit sharpens this: for Rule 110 the next block-parity bit is an exact
-radius-one function of current block parity plus current centered Groovy.
-So Groovy is a sufficient present-time correction coordinate for this coarse
-Rule-110 dynamics; Rule 62 fails even the whole-field parity-plus-Groovy factor
-on explicit witnesses. This is a matched mechanism result, not a Class-IV
-classifier or a minimality theorem.
-[Exact account](2026-10-07-matched-history-transport.md).
+A complete local audit then sharpens and limits the interpretation. For Rule
+110 the **next parity bit** is an exact cubic radius-one function of current
+parity plus current centered Groovy. But the augmented \((P,G)\) state is not
+autonomous: two explicit bi-infinite configurations have identical entire
+current parity and Groovy fields and different next Groovy.
+
+The hidden distinction is a block-phase domain wall. Adding the block-phase
+gradient restores exact radius-two autonomy, but that gradient plus parity
+already reconstructs the microscopic source up to one global complement bit.
+
+So the exact hierarchy is: parity alone needs history; parity+Groovy repairs
+the next parity readout; parity+Groovy+phase-gradient is autonomous but almost
+microscopic. The open target is a genuinely smaller state between the last two.
+[Matched experiment](2026-10-07-matched-history-transport.md);
+[closure correction](2026-10-07-rule110-pg-closure.md).
+
 
 ## 1. A disagreement can mean we chose the wrong law
 
