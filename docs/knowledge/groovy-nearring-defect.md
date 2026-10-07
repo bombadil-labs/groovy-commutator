@@ -1,25 +1,25 @@
 # Groovy is a selected distributivity defect in the CA near-ring
 
 Binary finite-radius cellular automata form an established centralizer near-ring
-under pointwise XOR and composition. Let (ar H(X)=H(X)oplus H(0)) be the
+under pointwise XOR and composition. Let \(\bar H(X)=H(X)\oplus H(0)\) be the
 centered rule and define
 
-[
-R_{ar H}(F,G)
+\[
+R_{\bar H}(F,G)
 =
-ar H(Foplus G)oplus ar H Foplus ar H G.
-]
+\bar H(F\oplus G)\oplus \bar H F\oplus \bar H G.
+\]
 
 This is the missing distributive law for left composition by a nonlinear
-cellular automaton. Pointwise it is the polarization/cross-effect of (H).
+cellular automaton. Pointwise it is the polarization/cross-effect of \(H\).
 
-With (D_H=Ioplus H),
+With \(D_H=I\oplus H\),
 
-[
-G_H^circ
+\[
+G_H^\circ
 =
-R_{ar H}(I,D_H).
-]
+R_{\bar H}(I,D_H).
+\]
 
 Centered Groovy is therefore one dynamically selected test of the
 non-distributive side of the CA near-ring: it evaluates the cross-effect on the
@@ -32,6 +32,6 @@ in either order are zero. The four maps they generate form a Boolean ring
 inside the larger nonlinear near-ring.
 
 The near-ring itself is prior art; the project-specific result is the placement
-of (B), centered (G), and the 4/200 mechanism inside it.
+of \(B\), centered \(G\), and the 4/200 mechanism inside it.
 
 Source: [the CA near-ring interpretation](../research/2026-10-06-ca-nearring-interpretation.md).
