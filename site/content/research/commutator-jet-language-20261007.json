@@ -1,0 +1,22 @@
+[
+  {
+    "slug": "commutator-jet-language-20261007",
+    "label": "Commutator jet language",
+    "title": "Successive jet levels recover the source spatial entropy",
+    "date": "2026-10-07",
+    "updated": "2026-10-07",
+    "kind": "Exact symbolic-language analysis",
+    "evidence": "exact",
+    "topic": "Observation and memory",
+    "summary": "Exact sofic image presentations show Rule 110's G,Q,R language reaches the binary source entropy rate, while matched Rule 62 approaches that rate more gradually and reaches it only through A5. Minimal DFA sizes keep growing rather than stabilizing.",
+    "takeaway": "The raw residual tower transfers hidden source information into its spatial language rather than collapsing to a fixed tiny grammar; the next candidate latent object is the residual directional synchronization state of the factor map.",
+    "source": "docs/research/2026-10-07-commutator-jet-language.md",
+    "promotion": {
+      "stage": "research"
+    },
+    "related": [
+      "commutator-jet-20261007",
+      "rule110-latent-q-20261007"
+    ]
+  }
+]
