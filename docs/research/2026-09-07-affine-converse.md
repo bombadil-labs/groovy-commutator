@@ -77,3 +77,24 @@ The [script](../../scripts/verify_history_algebra.py) records the exhaustive
 tables in [history_algebra_checks.json](../../results/history_algebra_checks.json).
 The general affine implication is algebraic; the lists above are specific
 to elementary cellular automata.
+
+
+## 2026-10-06 revision: the exceptions are now classified
+
+Later typed-difference work explains and exhausts the nonlinear ECA exceptions.
+Centered Groovy can be written as the difference between transporting the
+dynamical displacement at its actual basepoint and transporting that same
+displacement at the origin. An exact ANF classification over all 256 ECA
+truth tables proves that \(G^\circ\) is identically zero **if and only if**
+the rule is one of the 16 affine ECAs or Rule 4 or Rule 200.
+
+Rules 4 and 200 are not accidental misses. They are a nonlinear
+projection-like complementary pair: their XOR is identity Rule 204, each is
+idempotent, and each annihilates the other's image. Since the outgoing-change
+map \(D\) of either one is the other rule, both terms in its raw Groovy
+commutator vanish.
+
+See the exact derivation and coefficient classification in
+[Groovy is a basepoint defect, not the lift's section defect](2026-10-06-typed-difference-geometry.md).
+The original correction above remains historically valid; this revision
+supplies the mechanism and the complete centered-flat ECA classification.
