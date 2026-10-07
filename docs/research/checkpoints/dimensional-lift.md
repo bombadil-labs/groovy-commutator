@@ -4,8 +4,8 @@
 ## Checkpoint 2026-10-06: typed difference geometry
 
 The bounded unit in
-[\`2026-10-06-typed-difference-geometry.md\`](../2026-10-06-typed-difference-geometry.md)
-is complete on branch \`gather/cocycle-lift-20261006\` / draft PR #316.
+[`2026-10-06-typed-difference-geometry.md`](../2026-10-06-typed-difference-geometry.md)
+is complete on branch `gather/cocycle-lift-20261006` / draft PR #316.
 The literal cocycle-lift hypothesis failed cleanly: the accepted beam section
 already intertwines exactly, so its section/evolution defect is zero.
 
