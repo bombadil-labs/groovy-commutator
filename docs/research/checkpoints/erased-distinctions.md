@@ -12,7 +12,21 @@ what is frozen and unrun, and what not to infer. Add a new checkpoint at the top
 when a substantial unit completes; keep the bounded-claim style. Text moved from
 `CLAUDE.md` on 2026-09-10 is verbatim.
 
-Program page: `docs/research/2026-09-08-dynamics-of-erased-distinctions.md`
+Program page: docs/research/2026-09-08-dynamics-of-erased-distinctions.md
+
+## Checkpoint 2026-10-07: bounded asymptotic-closure scaling survives fresh widths
+
+The exact [scaling unit](../2026-10-07-asymptotic-closure-scaling.md) is
+complete. Under the fixed block-2 parity observer, fresh widths 16 and 18 place
+Rules 54/110 between Rule 30 and Rule 184 in absolute safe-forgetting reserve,
+while both core rules acquire new required predictive history relative to the
+width-14 baselines. All frozen gates pass.
+
+The result is a bounded finite-panel lead, not an asymptotic theorem. It does
+not establish unbounded history depth, convergence of the reserve, observer
+independence or a Class-IV classifier. Width 20 and the all-rule census were
+not run. The next useful target is a symbolic/finite certificate for the
+scaling sequence, not another tuned finite threshold.
 
 ## Checkpoint 2026-09-22: readout-cost design complete
 
