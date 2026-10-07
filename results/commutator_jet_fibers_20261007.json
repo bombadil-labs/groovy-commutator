@@ -1,0 +1,1001 @@
+{
+  "schema": "commutator-jet-fibers-v1",
+  "date": "2026-10-07",
+  "protocol": "docs/research/protocols/commutator-jet-fibers-20261007.md",
+  "factors": {
+    "110_control_GQ": {
+      "rule": 110,
+      "prefix_names": [
+        "G",
+        "Q"
+      ],
+      "source_radius": 3,
+      "source_contexts": 64,
+      "realized_alphabet": 4,
+      "pair_graph_total_vertices": 2508,
+      "pair_graph_total_edges": 5256,
+      "biinfinite_vertices": 186,
+      "biinfinite_edges": 338,
+      "biinfinite_non_diagonal_vertices": 122,
+      "pair_graph_perron": 2.0378403040751154,
+      "pair_graph_entropy_bits_per_site": 1.0270409987333478,
+      "relative_pair_entropy_above_source": 0.027040998733347754,
+      "recurrent_components": [
+        {
+          "name": "mixed",
+          "size": 120,
+          "edges": 236,
+          "diagonal_vertices": 64,
+          "non_diagonal_vertices": 56,
+          "simple_cycle": false,
+          "spectral_radius": 2.0378403040751225,
+          "entropy_bits_per_site": 1.0270409987333553
+        },
+        {
+          "name": "0111|1101",
+          "size": 4,
+          "edges": 4,
+          "diagonal_vertices": 0,
+          "non_diagonal_vertices": 4,
+          "simple_cycle": true,
+          "spectral_radius": 1,
+          "entropy_bits_per_site": 0,
+          "period": 4,
+          "x_period": "0111",
+          "y_period": "1101",
+          "xor_period": "1010"
+        },
+        {
+          "name": "01|10",
+          "size": 2,
+          "edges": 2,
+          "diagonal_vertices": 0,
+          "non_diagonal_vertices": 2,
+          "simple_cycle": true,
+          "spectral_radius": 1,
+          "entropy_bits_per_site": 0,
+          "period": 2,
+          "x_period": "01",
+          "y_period": "10",
+          "xor_period": "11"
+        },
+        {
+          "name": "01|11",
+          "size": 2,
+          "edges": 2,
+          "diagonal_vertices": 0,
+          "non_diagonal_vertices": 2,
+          "simple_cycle": true,
+          "spectral_radius": 1,
+          "entropy_bits_per_site": 0,
+          "period": 2,
+          "x_period": "01",
+          "y_period": "11",
+          "xor_period": "10"
+        },
+        {
+          "name": "0|1",
+          "size": 1,
+          "edges": 1,
+          "diagonal_vertices": 0,
+          "non_diagonal_vertices": 1,
+          "simple_cycle": true,
+          "spectral_radius": 1,
+          "entropy_bits_per_site": 0,
+          "period": 1,
+          "x_period": "0",
+          "y_period": "1",
+          "xor_period": "1"
+        },
+        {
+          "name": "11|01",
+          "size": 2,
+          "edges": 2,
+          "diagonal_vertices": 0,
+          "non_diagonal_vertices": 2,
+          "simple_cycle": true,
+          "spectral_radius": 1,
+          "entropy_bits_per_site": 0,
+          "period": 2,
+          "x_period": "11",
+          "y_period": "01",
+          "xor_period": "10"
+        },
+        {
+          "name": "1|0",
+          "size": 1,
+          "edges": 1,
+          "diagonal_vertices": 0,
+          "non_diagonal_vertices": 1,
+          "simple_cycle": true,
+          "spectral_radius": 1,
+          "entropy_bits_per_site": 0,
+          "period": 1,
+          "x_period": "1",
+          "y_period": "0",
+          "xor_period": "1"
+        }
+      ],
+      "directional_synchronization": {
+        "forward": {
+          "determinized_states": 111,
+          "minimum_compatible_contexts": 1,
+          "median_compatible_contexts": 4,
+          "minimum_word_length": 3,
+          "witness_jet_word": [
+            0,
+            3,
+            2
+          ],
+          "compatible_source_contexts": [
+            38
+          ]
+        },
+        "reverse": {
+          "determinized_states": 64,
+          "minimum_compatible_contexts": 1,
+          "median_compatible_contexts": 5.5,
+          "minimum_word_length": 2,
+          "witness_jet_word": [
+            3,
+            0
+          ],
+          "compatible_source_contexts": [
+            55
+          ]
+        }
+      }
+    },
+    "110_primary_GQR": {
+      "rule": 110,
+      "prefix_names": [
+        "G",
+        "Q",
+        "R"
+      ],
+      "source_radius": 4,
+      "source_contexts": 256,
+      "realized_alphabet": 8,
+      "pair_graph_total_vertices": 22886,
+      "pair_graph_total_edges": 48154,
+      "biinfinite_vertices": 340,
+      "biinfinite_edges": 646,
+      "biinfinite_non_diagonal_vertices": 84,
+      "pair_graph_perron": 2,
+      "pair_graph_entropy_bits_per_site": 1,
+      "relative_pair_entropy_above_source": 0,
+      "recurrent_components": [
+        {
+          "name": "diag",
+          "size": 256,
+          "edges": 512,
+          "diagonal_vertices": 256,
+          "non_diagonal_vertices": 0,
+          "simple_cycle": false,
+          "spectral_radius": 2,
+          "entropy_bits_per_site": 1
+        },
+        {
+          "name": "00|01",
+          "size": 2,
+          "edges": 2,
+          "diagonal_vertices": 0,
+          "non_diagonal_vertices": 2,
+          "simple_cycle": true,
+          "spectral_radius": 1,
+          "entropy_bits_per_site": 0,
+          "period": 2,
+          "x_period": "00",
+          "y_period": "01",
+          "xor_period": "01"
+        },
+        {
+          "name": "0111|1101",
+          "size": 4,
+          "edges": 4,
+          "diagonal_vertices": 0,
+          "non_diagonal_vertices": 4,
+          "simple_cycle": true,
+          "spectral_radius": 1,
+          "entropy_bits_per_site": 0,
+          "period": 4,
+          "x_period": "0111",
+          "y_period": "1101",
+          "xor_period": "1010"
+        },
+        {
+          "name": "01|00",
+          "size": 2,
+          "edges": 2,
+          "diagonal_vertices": 0,
+          "non_diagonal_vertices": 2,
+          "simple_cycle": true,
+          "spectral_radius": 1,
+          "entropy_bits_per_site": 0,
+          "period": 2,
+          "x_period": "01",
+          "y_period": "00",
+          "xor_period": "01"
+        },
+        {
+          "name": "01|10",
+          "size": 2,
+          "edges": 2,
+          "diagonal_vertices": 0,
+          "non_diagonal_vertices": 2,
+          "simple_cycle": true,
+          "spectral_radius": 1,
+          "entropy_bits_per_site": 0,
+          "period": 2,
+          "x_period": "01",
+          "y_period": "10",
+          "xor_period": "11"
+        },
+        {
+          "name": "01|11",
+          "size": 2,
+          "edges": 2,
+          "diagonal_vertices": 0,
+          "non_diagonal_vertices": 2,
+          "simple_cycle": true,
+          "spectral_radius": 1,
+          "entropy_bits_per_site": 0,
+          "period": 2,
+          "x_period": "01",
+          "y_period": "11",
+          "xor_period": "10"
+        },
+        {
+          "name": "0|1",
+          "size": 1,
+          "edges": 1,
+          "diagonal_vertices": 0,
+          "non_diagonal_vertices": 1,
+          "simple_cycle": true,
+          "spectral_radius": 1,
+          "entropy_bits_per_site": 0,
+          "period": 1,
+          "x_period": "0",
+          "y_period": "1",
+          "xor_period": "1"
+        },
+        {
+          "name": "11|01",
+          "size": 2,
+          "edges": 2,
+          "diagonal_vertices": 0,
+          "non_diagonal_vertices": 2,
+          "simple_cycle": true,
+          "spectral_radius": 1,
+          "entropy_bits_per_site": 0,
+          "period": 2,
+          "x_period": "11",
+          "y_period": "01",
+          "xor_period": "10"
+        },
+        {
+          "name": "1|0",
+          "size": 1,
+          "edges": 1,
+          "diagonal_vertices": 0,
+          "non_diagonal_vertices": 1,
+          "simple_cycle": true,
+          "spectral_radius": 1,
+          "entropy_bits_per_site": 0,
+          "period": 1,
+          "x_period": "1",
+          "y_period": "0",
+          "xor_period": "1"
+        }
+      ],
+      "interfaces": [
+        {
+          "from": "0111|1101",
+          "to": "diag",
+          "edges": 7,
+          "xor_word": "101010100000000"
+        },
+        {
+          "from": "0|1",
+          "to": "01|10",
+          "edges": 7,
+          "xor_word": "111111111111111"
+        },
+        {
+          "from": "0|1",
+          "to": "diag",
+          "edges": 10,
+          "xor_word": "111111111100000000"
+        },
+        {
+          "from": "1|0",
+          "to": "01|10",
+          "edges": 7,
+          "xor_word": "111111111111111"
+        },
+        {
+          "from": "1|0",
+          "to": "diag",
+          "edges": 10,
+          "xor_word": "111111111100000000"
+        }
+      ],
+      "directional_synchronization": {
+        "forward": {
+          "determinized_states": 244,
+          "minimum_compatible_contexts": 1,
+          "median_compatible_contexts": 3,
+          "minimum_word_length": 2,
+          "witness_jet_word": [
+            0,
+            3
+          ],
+          "compatible_source_contexts": [
+            27
+          ]
+        },
+        "reverse": {
+          "determinized_states": 136,
+          "minimum_compatible_contexts": 1,
+          "median_compatible_contexts": 8,
+          "minimum_word_length": 3,
+          "witness_jet_word": [
+            2,
+            2,
+            7
+          ],
+          "compatible_source_contexts": [
+            55
+          ]
+        }
+      },
+      "local_inverse": [
+        {
+          "radius": 0,
+          "pass": false,
+          "source_width": 9,
+          "witness": {
+            "word_x": 0,
+            "word_y": 16,
+            "shared_jet_key": 0
+          }
+        },
+        {
+          "radius": 1,
+          "pass": false,
+          "source_width": 11,
+          "witness": {
+            "word_x": 0,
+            "word_y": 46,
+            "shared_jet_key": 0
+          }
+        },
+        {
+          "radius": 2,
+          "pass": false,
+          "source_width": 13,
+          "witness": {
+            "word_x": 0,
+            "word_y": 1364,
+            "shared_jet_key": 0
+          }
+        },
+        {
+          "radius": 3,
+          "pass": false,
+          "source_width": 15,
+          "witness": {
+            "word_x": 0,
+            "word_y": 10920,
+            "shared_jet_key": 0
+          }
+        },
+        {
+          "radius": 4,
+          "pass": false,
+          "source_width": 17,
+          "witness": {
+            "word_x": 0,
+            "word_y": 21844,
+            "shared_jet_key": 0
+          }
+        }
+      ]
+    },
+    "62_control_GQRA4": {
+      "rule": 62,
+      "prefix_names": [
+        "G",
+        "Q",
+        "R",
+        "A4"
+      ],
+      "source_radius": 5,
+      "source_contexts": 1024,
+      "realized_alphabet": 14,
+      "pair_graph_total_vertices": 212400,
+      "pair_graph_total_edges": 392520,
+      "biinfinite_vertices": 1640,
+      "biinfinite_edges": 3164,
+      "biinfinite_non_diagonal_vertices": 616,
+      "pair_graph_perron": 2.00340645132996,
+      "pair_graph_entropy_bits_per_site": 1.0024551449804324,
+      "relative_pair_entropy_above_source": 0.002455144980432422,
+      "recurrent_components": [
+        {
+          "name": "mixed",
+          "size": 1416,
+          "edges": 2834,
+          "diagonal_vertices": 1024,
+          "non_diagonal_vertices": 392,
+          "simple_cycle": false,
+          "spectral_radius": 2.0034064513299628,
+          "entropy_bits_per_site": 1.0024551449804342
+        },
+        {
+          "name": "000|011",
+          "size": 3,
+          "edges": 3,
+          "diagonal_vertices": 0,
+          "non_diagonal_vertices": 3,
+          "simple_cycle": true,
+          "spectral_radius": 1,
+          "entropy_bits_per_site": 0,
+          "period": 3,
+          "x_period": "000",
+          "y_period": "011",
+          "xor_period": "011"
+        },
+        {
+          "name": "00|01",
+          "size": 2,
+          "edges": 2,
+          "diagonal_vertices": 0,
+          "non_diagonal_vertices": 2,
+          "simple_cycle": true,
+          "spectral_radius": 1,
+          "entropy_bits_per_site": 0,
+          "period": 2,
+          "x_period": "00",
+          "y_period": "01",
+          "xor_period": "01"
+        },
+        {
+          "name": "011|000",
+          "size": 3,
+          "edges": 3,
+          "diagonal_vertices": 0,
+          "non_diagonal_vertices": 3,
+          "simple_cycle": true,
+          "spectral_radius": 1,
+          "entropy_bits_per_site": 0,
+          "period": 3,
+          "x_period": "011",
+          "y_period": "000",
+          "xor_period": "011"
+        },
+        {
+          "name": "011|101",
+          "size": 3,
+          "edges": 3,
+          "diagonal_vertices": 0,
+          "non_diagonal_vertices": 3,
+          "simple_cycle": true,
+          "spectral_radius": 1,
+          "entropy_bits_per_site": 0,
+          "period": 3,
+          "x_period": "011",
+          "y_period": "101",
+          "xor_period": "110"
+        },
+        {
+          "name": "011|110",
+          "size": 3,
+          "edges": 3,
+          "diagonal_vertices": 0,
+          "non_diagonal_vertices": 3,
+          "simple_cycle": true,
+          "spectral_radius": 1,
+          "entropy_bits_per_site": 0,
+          "period": 3,
+          "x_period": "011",
+          "y_period": "110",
+          "xor_period": "101"
+        },
+        {
+          "name": "011|111",
+          "size": 3,
+          "edges": 3,
+          "diagonal_vertices": 0,
+          "non_diagonal_vertices": 3,
+          "simple_cycle": true,
+          "spectral_radius": 1,
+          "entropy_bits_per_site": 0,
+          "period": 3,
+          "x_period": "011",
+          "y_period": "111",
+          "xor_period": "100"
+        },
+        {
+          "name": "01|00",
+          "size": 2,
+          "edges": 2,
+          "diagonal_vertices": 0,
+          "non_diagonal_vertices": 2,
+          "simple_cycle": true,
+          "spectral_radius": 1,
+          "entropy_bits_per_site": 0,
+          "period": 2,
+          "x_period": "01",
+          "y_period": "00",
+          "xor_period": "01"
+        },
+        {
+          "name": "01|10",
+          "size": 2,
+          "edges": 2,
+          "diagonal_vertices": 0,
+          "non_diagonal_vertices": 2,
+          "simple_cycle": true,
+          "spectral_radius": 1,
+          "entropy_bits_per_site": 0,
+          "period": 2,
+          "x_period": "01",
+          "y_period": "10",
+          "xor_period": "11"
+        },
+        {
+          "name": "01|11",
+          "size": 2,
+          "edges": 2,
+          "diagonal_vertices": 0,
+          "non_diagonal_vertices": 2,
+          "simple_cycle": true,
+          "spectral_radius": 1,
+          "entropy_bits_per_site": 0,
+          "period": 2,
+          "x_period": "01",
+          "y_period": "11",
+          "xor_period": "10"
+        },
+        {
+          "name": "0|1",
+          "size": 1,
+          "edges": 1,
+          "diagonal_vertices": 0,
+          "non_diagonal_vertices": 1,
+          "simple_cycle": true,
+          "spectral_radius": 1,
+          "entropy_bits_per_site": 0,
+          "period": 1,
+          "x_period": "0",
+          "y_period": "1",
+          "xor_period": "1"
+        },
+        {
+          "name": "111|011",
+          "size": 3,
+          "edges": 3,
+          "diagonal_vertices": 0,
+          "non_diagonal_vertices": 3,
+          "simple_cycle": true,
+          "spectral_radius": 1,
+          "entropy_bits_per_site": 0,
+          "period": 3,
+          "x_period": "111",
+          "y_period": "011",
+          "xor_period": "100"
+        },
+        {
+          "name": "11|01",
+          "size": 2,
+          "edges": 2,
+          "diagonal_vertices": 0,
+          "non_diagonal_vertices": 2,
+          "simple_cycle": true,
+          "spectral_radius": 1,
+          "entropy_bits_per_site": 0,
+          "period": 2,
+          "x_period": "11",
+          "y_period": "01",
+          "xor_period": "10"
+        },
+        {
+          "name": "1|0",
+          "size": 1,
+          "edges": 1,
+          "diagonal_vertices": 0,
+          "non_diagonal_vertices": 1,
+          "simple_cycle": true,
+          "spectral_radius": 1,
+          "entropy_bits_per_site": 0,
+          "period": 1,
+          "x_period": "1",
+          "y_period": "0",
+          "xor_period": "1"
+        }
+      ],
+      "directional_synchronization": {
+        "forward": {
+          "determinized_states": 365,
+          "minimum_compatible_contexts": 2,
+          "median_compatible_contexts": 12,
+          "minimum_word_length": 2,
+          "witness_jet_word": [
+            0,
+            11
+          ],
+          "compatible_source_contexts": [
+            32,
+            544
+          ]
+        },
+        "reverse": {
+          "determinized_states": 909,
+          "minimum_compatible_contexts": 1,
+          "median_compatible_contexts": 4,
+          "minimum_word_length": 2,
+          "witness_jet_word": [
+            14,
+            7
+          ],
+          "compatible_source_contexts": [
+            71
+          ]
+        }
+      }
+    },
+    "62_primary_GQRA4A5": {
+      "rule": 62,
+      "prefix_names": [
+        "G",
+        "Q",
+        "R",
+        "A4",
+        "A5"
+      ],
+      "source_radius": 6,
+      "source_contexts": 4096,
+      "realized_alphabet": 27,
+      "pair_graph_total_vertices": 1759560,
+      "pair_graph_total_edges": 3206400,
+      "biinfinite_vertices": 4158,
+      "biinfinite_edges": 8256,
+      "biinfinite_non_diagonal_vertices": 62,
+      "pair_graph_perron": 2,
+      "pair_graph_entropy_bits_per_site": 1,
+      "relative_pair_entropy_above_source": 0,
+      "recurrent_components": [
+        {
+          "name": "diag",
+          "size": 4096,
+          "edges": 8192,
+          "diagonal_vertices": 4096,
+          "non_diagonal_vertices": 0,
+          "simple_cycle": false,
+          "spectral_radius": 2,
+          "entropy_bits_per_site": 1
+        },
+        {
+          "name": "000|011",
+          "size": 3,
+          "edges": 3,
+          "diagonal_vertices": 0,
+          "non_diagonal_vertices": 3,
+          "simple_cycle": true,
+          "spectral_radius": 1,
+          "entropy_bits_per_site": 0,
+          "period": 3,
+          "x_period": "000",
+          "y_period": "011",
+          "xor_period": "011"
+        },
+        {
+          "name": "00|01",
+          "size": 2,
+          "edges": 2,
+          "diagonal_vertices": 0,
+          "non_diagonal_vertices": 2,
+          "simple_cycle": true,
+          "spectral_radius": 1,
+          "entropy_bits_per_site": 0,
+          "period": 2,
+          "x_period": "00",
+          "y_period": "01",
+          "xor_period": "01"
+        },
+        {
+          "name": "010101|011011",
+          "size": 6,
+          "edges": 6,
+          "diagonal_vertices": 0,
+          "non_diagonal_vertices": 6,
+          "simple_cycle": true,
+          "spectral_radius": 1,
+          "entropy_bits_per_site": 0,
+          "period": 6,
+          "x_period": "010101",
+          "y_period": "011011",
+          "xor_period": "001110"
+        },
+        {
+          "name": "011011|010101",
+          "size": 6,
+          "edges": 6,
+          "diagonal_vertices": 0,
+          "non_diagonal_vertices": 6,
+          "simple_cycle": true,
+          "spectral_radius": 1,
+          "entropy_bits_per_site": 0,
+          "period": 6,
+          "x_period": "011011",
+          "y_period": "010101",
+          "xor_period": "001110"
+        },
+        {
+          "name": "011|000",
+          "size": 3,
+          "edges": 3,
+          "diagonal_vertices": 0,
+          "non_diagonal_vertices": 3,
+          "simple_cycle": true,
+          "spectral_radius": 1,
+          "entropy_bits_per_site": 0,
+          "period": 3,
+          "x_period": "011",
+          "y_period": "000",
+          "xor_period": "011"
+        },
+        {
+          "name": "011|101",
+          "size": 3,
+          "edges": 3,
+          "diagonal_vertices": 0,
+          "non_diagonal_vertices": 3,
+          "simple_cycle": true,
+          "spectral_radius": 1,
+          "entropy_bits_per_site": 0,
+          "period": 3,
+          "x_period": "011",
+          "y_period": "101",
+          "xor_period": "110"
+        },
+        {
+          "name": "011|110",
+          "size": 3,
+          "edges": 3,
+          "diagonal_vertices": 0,
+          "non_diagonal_vertices": 3,
+          "simple_cycle": true,
+          "spectral_radius": 1,
+          "entropy_bits_per_site": 0,
+          "period": 3,
+          "x_period": "011",
+          "y_period": "110",
+          "xor_period": "101"
+        },
+        {
+          "name": "011|111",
+          "size": 3,
+          "edges": 3,
+          "diagonal_vertices": 0,
+          "non_diagonal_vertices": 3,
+          "simple_cycle": true,
+          "spectral_radius": 1,
+          "entropy_bits_per_site": 0,
+          "period": 3,
+          "x_period": "011",
+          "y_period": "111",
+          "xor_period": "100"
+        },
+        {
+          "name": "01|00",
+          "size": 2,
+          "edges": 2,
+          "diagonal_vertices": 0,
+          "non_diagonal_vertices": 2,
+          "simple_cycle": true,
+          "spectral_radius": 1,
+          "entropy_bits_per_site": 0,
+          "period": 2,
+          "x_period": "01",
+          "y_period": "00",
+          "xor_period": "01"
+        },
+        {
+          "name": "01|10",
+          "size": 2,
+          "edges": 2,
+          "diagonal_vertices": 0,
+          "non_diagonal_vertices": 2,
+          "simple_cycle": true,
+          "spectral_radius": 1,
+          "entropy_bits_per_site": 0,
+          "period": 2,
+          "x_period": "01",
+          "y_period": "10",
+          "xor_period": "11"
+        },
+        {
+          "name": "01|11",
+          "size": 2,
+          "edges": 2,
+          "diagonal_vertices": 0,
+          "non_diagonal_vertices": 2,
+          "simple_cycle": true,
+          "spectral_radius": 1,
+          "entropy_bits_per_site": 0,
+          "period": 2,
+          "x_period": "01",
+          "y_period": "11",
+          "xor_period": "10"
+        },
+        {
+          "name": "0|1",
+          "size": 1,
+          "edges": 1,
+          "diagonal_vertices": 0,
+          "non_diagonal_vertices": 1,
+          "simple_cycle": true,
+          "spectral_radius": 1,
+          "entropy_bits_per_site": 0,
+          "period": 1,
+          "x_period": "0",
+          "y_period": "1",
+          "xor_period": "1"
+        },
+        {
+          "name": "111|011",
+          "size": 3,
+          "edges": 3,
+          "diagonal_vertices": 0,
+          "non_diagonal_vertices": 3,
+          "simple_cycle": true,
+          "spectral_radius": 1,
+          "entropy_bits_per_site": 0,
+          "period": 3,
+          "x_period": "111",
+          "y_period": "011",
+          "xor_period": "100"
+        },
+        {
+          "name": "11|01",
+          "size": 2,
+          "edges": 2,
+          "diagonal_vertices": 0,
+          "non_diagonal_vertices": 2,
+          "simple_cycle": true,
+          "spectral_radius": 1,
+          "entropy_bits_per_site": 0,
+          "period": 2,
+          "x_period": "11",
+          "y_period": "01",
+          "xor_period": "10"
+        },
+        {
+          "name": "1|0",
+          "size": 1,
+          "edges": 1,
+          "diagonal_vertices": 0,
+          "non_diagonal_vertices": 1,
+          "simple_cycle": true,
+          "spectral_radius": 1,
+          "entropy_bits_per_site": 0,
+          "period": 1,
+          "x_period": "1",
+          "y_period": "0",
+          "xor_period": "1"
+        }
+      ],
+      "interfaces": [
+        {
+          "from": "01|10",
+          "to": "0|1",
+          "edges": 11,
+          "xor_word": "11111111111111111111111"
+        },
+        {
+          "from": "01|10",
+          "to": "1|0",
+          "edges": 11,
+          "xor_word": "11111111111111111111111"
+        }
+      ],
+      "directional_synchronization": {
+        "forward": {
+          "determinized_states": 945,
+          "minimum_compatible_contexts": 2,
+          "median_compatible_contexts": 16,
+          "minimum_word_length": 2,
+          "witness_jet_word": [
+            0,
+            22
+          ],
+          "compatible_source_contexts": [
+            153,
+            2201
+          ]
+        },
+        "reverse": {
+          "determinized_states": 3066,
+          "minimum_compatible_contexts": 1,
+          "median_compatible_contexts": 4,
+          "minimum_word_length": 2,
+          "witness_jet_word": [
+            10,
+            1
+          ],
+          "compatible_source_contexts": [
+            115
+          ]
+        }
+      },
+      "local_inverse": [
+        {
+          "radius": 0,
+          "pass": false,
+          "source_width": 13,
+          "witness": {
+            "word_x": 0,
+            "word_y": 108,
+            "shared_jet_key": 0
+          }
+        },
+        {
+          "radius": 1,
+          "pass": false,
+          "source_width": 15,
+          "witness": {
+            "word_x": 0,
+            "word_y": 438,
+            "shared_jet_key": 0
+          }
+        },
+        {
+          "radius": 2,
+          "pass": false,
+          "source_width": 17,
+          "witness": {
+            "word_x": 0,
+            "word_y": 3510,
+            "shared_jet_key": 0
+          }
+        },
+        {
+          "radius": 3,
+          "pass": false,
+          "source_width": 19,
+          "witness": {
+            "word_x": 0,
+            "word_y": 7020,
+            "shared_jet_key": 0
+          }
+        },
+        {
+          "radius": 4,
+          "pass": false,
+          "source_width": 21,
+          "witness": {
+            "word_x": 0,
+            "word_y": 28086,
+            "shared_jet_key": 0
+          }
+        }
+      ]
+    }
+  },
+  "summary": {
+    "110_control_relative_pair_entropy": 0.027040998733347754,
+    "110_primary_relative_pair_entropy": 0,
+    "62_control_relative_pair_entropy": 0.002455144980432422,
+    "62_primary_relative_pair_entropy": 0,
+    "110_primary_non_diagonal_recurrent_components": 8,
+    "62_primary_non_diagonal_recurrent_components": 15,
+    "110_primary_all_non_diagonal_recurrent_are_cycles": true,
+    "62_primary_all_non_diagonal_recurrent_are_cycles": true,
+    "primary_interpretation": "At the first full-entropy jet prefix, both rules retain only zero-entropy recurrent phase/gauge ambiguity plus finitely presented interfaces; the immediately shallower controls retain a positive-entropy mixed fiber component."
+  },
+  "source_hashes": {
+    "script_sha256": "6def9e5de0b74a0aba20105dd94a4d8d81a076c86b7e7a60c381ea4f7b15ecf4"
+  }
+}
