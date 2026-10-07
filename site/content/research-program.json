@@ -6,7 +6,7 @@
     "date": "2026-09-08",
     "updated": "2026-10-07",
     "status": "living",
-    "summary": "Local sufficient state remains the primary agenda. A matched Rule-62/Rule-110 test shows similar predictive-history budgets can have different causal content: every fresh Rule-110 repair factors through current predictive state plus centered Groovy, while Rule 62 has exact counterexamples.",
+    "summary": "Local sufficient state remains the primary agenda. Rule 110 block parity plus centered Groovy exactly repairs the next parity readout but is not autonomous; an infinite phase-wall witness exposes the missing distinction. Gradient and complete one-bit-track repairs restore present-time closure only by becoming essentially microscopic.",
     "thesis": "Retain exactly the distinctions required by a declared observation, and make the certificates, costs and prior-art boundary explicit.",
     "source": "docs/research/2026-09-08-dynamics-of-erased-distinctions.md",
     "supports": [
@@ -40,7 +40,8 @@
       "groovy-readout-cost",
       "phase-free-consumer-audit",
       "recursive-g-boundary",
-      "matched-history-transport-20261007"
+      "matched-history-transport-20261007",
+      "rule110-pg-closure-20261007"
     ]
   },
   {
