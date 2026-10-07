@@ -29,3 +29,5 @@ jobs:
         run: python experiments/jet_full_line_autonomy_20261007/verify_periodic_fibers.py
       - name: Exact Rule54 offdiagonal source-pair entropy and a.e. injectivity certificate
         run: python experiments/jet_full_line_autonomy_20261007/verify_almost_sure.py
+      - name: Construct transient Rule54 Fibonacci component from an 8-phase preimage generator
+        run: python experiments/jet_full_line_autonomy_20261007/csmall_symbolic_generator.py
