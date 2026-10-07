@@ -35,6 +35,13 @@ all but at most one source bit on a connected line or ring.
 This specializes the earlier Groovy-field result that source gradients are a
 universal repair and connects directly to the six-field lift's gradient rails.
 
+A complete bounded search over all 256 radius-one Boolean tracks sampled once
+per parity block finds no simple compressed alternative. Zero tracks close the
+augmented present-time state at macro radius one; 48 close at radius two. On
+rings 12, 14 and 16, every one of those 48 encodings is injective or has only
+one or two two-state fibers. Thus present-time autonomy in this entire simple
+track grammar is purchased by retaining essentially the microscopic source.
+
 The resulting hierarchy is exact:
 
 1. parity alone is compressed but needs history;
