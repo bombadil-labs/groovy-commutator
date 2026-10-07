@@ -1,11 +1,44 @@
 # What we have learned
 
-Running plain-language summary, updated 2026-09-24. This is a synthesis of
+Running plain-language summary, updated 2026-10-07. This is a synthesis of
 existing evidence, not a new experiment or independent review. Each entry
 links to the technical account that states its assumptions and verification.
 “Complete” means the stated investigation has ended, not that every related
 mathematical question is solved. The [program survey](2026-09-22-program-survey.md)
 explains what deserves work next.
+
+## Similar amounts of history can be doing different jobs — 2026-10-07
+
+Rule 62 and Rule 110 are nearly matched in how much predictive history the
+block-2 parity observer requires, but that history has a different relation to
+situated change.
+
+At fresh widths 16 and 18, every nonzero Rule-110 minimal-repair step is
+exactly determined by the current predictive-history state plus current
+centered Groovy. Rule 62 has exact early counterexamples. Quantitatively, 100%
+of Rule 110's predictive-repair information is Groovy-coupled at both widths,
+versus about 77.2% for Rule 62.
+
+A complete local audit then sharpens and limits the interpretation. For Rule
+110 the **next parity bit** is an exact cubic radius-one function of current
+parity plus current centered Groovy. But the augmented \((P,G)\) state is not
+autonomous: two explicit bi-infinite configurations have identical entire
+current parity and Groovy fields and different next Groovy.
+
+The hidden distinction is a block-phase domain wall. Adding the block-phase
+gradient restores exact radius-two autonomy, but that gradient plus parity
+already reconstructs the microscopic source up to one global complement bit.
+
+So the exact hierarchy is: parity alone needs history; parity+Groovy repairs
+the next parity readout; parity+Groovy+phase-gradient is autonomous but almost
+microscopic. A complete search over all 256 radius-one one-bit block tracks
+finds no simple middle: every track that restores radius-two autonomy is
+injective or merges only one or two source pairs on rings 12--16. The next
+representation family must therefore be qualitatively different from "add one
+local bit."
+[Matched experiment](2026-10-07-matched-history-transport.md);
+[closure and middle-track account](2026-10-07-rule110-pg-closure.md).
+
 
 ## 1. A disagreement can mean we chose the wrong law
 

@@ -1,11 +1,31 @@
 # Research: start here
 
-**Current direction, 2026-09-25.** This page is the scheduling authority for
+**Current direction, 2026-10-07.** This page is the scheduling authority for
 research. Older notes and checkpoints preserve the evidence; their “next”
 sections are historical proposals, not an instruction to resume them.
 
 **Question:** which distinctions can a representation safely discard, which
 must it retain, and what does changing representation buy us?
+
+**New Rule-110 mechanism result.** The
+[matched Rule-62/Rule-110 comparison](2026-10-07-matched-history-transport.md)
+shows that current centered Groovy contains every distinction needed for Rule
+110's next block-parity repair, while Rule 62 needs additional context. The
+follow-up [closure audit](2026-10-07-rule110-pg-closure.md) sharpens the claim:
+next parity has an exact cubic radius-one law from current parity+Groovy, but
+the augmented `(P,G)` fields are not autonomous. An infinite phase-wall
+witness has identical current `(P,G)` and different next Groovy.
+
+Adding the hidden block-phase gradient restores radius-two autonomy, but parity
+plus that gradient already reconstructs the source up to one global complement
+bit. A complete search over all 256 radius-one one-bit block tracks finds no
+simple middle: every radius-two autonomous repair is injective or nearly
+injective on rings 12--16.
+
+The current target is therefore a **different representation class**, not
+another local-track sweep: a compact finite-state phase/history object that can
+update the correction field without reconstructing the source. Do not launch
+another Class-IV census or another unconstrained one-bit feature search.
 
 Our strongest work answers bounded versions of that question with exact
 factors, counterexamples, graph certificates and explicit constructions.
