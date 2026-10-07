@@ -1,0 +1,86 @@
+{
+  "schema": "jet54-deeper-fibers-summary-v1",
+  "date": "2026-10-07",
+  "protocol": "docs/research/protocols/jet54-deeper-fibers-20261007.md",
+  "provenance": "After the primary GQR finding, this separately precommitted protocol fixed Rule 54 levels A4/A5 before their exact pair-graph evaluations. Same local SciPy graph implementation and bound of 5 million pair edges.",
+  "rule": 54,
+  "levels": {
+    "4": {
+      "prefix": "G,Q,R,A4",
+      "source_radius": 5,
+      "pair_edges": 401768,
+      "biinfinite_vertices": 1212,
+      "biinfinite_offdiagonal_vertices": 188,
+      "recurrent_branching_offdiagonal_SCCs": [
+        {
+          "vertices": 32,
+          "edges": 42,
+          "rho": 1.2720196495140714
+        },
+        {
+          "vertices": 72,
+          "edges": 86,
+          "rho": 1.210607794
+        },
+        {
+          "vertices": 52,
+          "edges": 68,
+          "rho": 1.2720196495140714
+        }
+      ],
+      "recurrent_cycle_periods": [
+        1,
+        2,
+        4,
+        8
+      ],
+      "max_offdiagonal_entropy_bits_per_site": 0.34712095681531147,
+      "all_offdiagonal_recurrent_cycles": false,
+      "nonrecurrent_biinfinite_offdiagonal_vertices": 0
+    },
+    "5": {
+      "prefix": "G,Q,R,A4,A5",
+      "source_radius": 6,
+      "pair_edges": 3561416,
+      "biinfinite_vertices": 4316,
+      "biinfinite_offdiagonal_vertices": 220,
+      "recurrent_branching_offdiagonal_SCCs": [
+        {
+          "vertices": 52,
+          "edges": 68,
+          "rho": 1.2720196495140725
+        },
+        {
+          "vertices": 52,
+          "edges": 58,
+          "rho": 1.127838486
+        },
+        {
+          "vertices": 84,
+          "edges": 110,
+          "rho": 1.2720196495140725
+        }
+      ],
+      "recurrent_cycle_periods": [
+        1,
+        2,
+        4,
+        8
+      ],
+      "max_offdiagonal_entropy_bits_per_site": 0.3471209568153127,
+      "all_offdiagonal_recurrent_cycles": false,
+      "nonrecurrent_biinfinite_offdiagonal_vertices": 0
+    }
+  },
+  "summary": {
+    "phase_only_by_A5": false,
+    "persistent_branching_SCCs_at_A5": 3,
+    "maximum_offdiagonal_SCC_rho_at_A5": 1.2720196495140725,
+    "rule54_max_phase_period_at_A5": 8,
+    "jet_source_radius_at_A5": 6
+  },
+  "cautions": [
+    "Positive entropy of exceptional equal-output pair language is not a positive conditional entropy per typical input.",
+    "No deeper levels, other rules, or lift comparisons were evaluated by this separately bounded follow-up."
+  ]
+}
