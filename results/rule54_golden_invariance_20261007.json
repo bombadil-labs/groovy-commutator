@@ -121,5 +121,16 @@
   "source_hashes": {
     "algebra_sha256": "c9a17d6e13dd1fac2dff6bebac9bad01fe4da2a357364b67692b9d2207a6a7b2",
     "runner_sha256": "062bb92476a7f946cb9852f334c3bd100f66e36e52dcc8b77083061b5b178386"
+  },
+  "protocols": [
+    "docs/research/protocols/jet-gqr-census-fibonacci-invariance-20261007.md",
+    "docs/research/protocols/rule54-two-golden-scc-swap-20261007.md"
+  ],
+  "review_addendum": {
+    "date": "2026-10-07",
+    "status": "independently reproduced by Claude/Fable",
+    "generator": "period-four sparse states interleaved from a with no runs of three equal bits",
+    "interpretation": "Two golden SCCs are half-period temporal-shift pairs; initial smaller SCC eventually feeds into the golden SCCs via an 8-cycle.",
+    "chronology": "The narrower swap was visible in the earlier result; not a new prospectively unknown test."
   }
 }
