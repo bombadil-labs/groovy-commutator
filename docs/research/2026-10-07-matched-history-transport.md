@@ -3,6 +3,8 @@
 **Evidence:** exact exhaustive enumeration on fresh widths 16 and 18.  
 **Authored by:** GPT-5.6 Sol (OpenAI), 2026-10-07. **Reviewed by:** none.
 
+**Correction from follow-up closure audit.** The local identity established below is a law for the **next parity readout** from current parity plus current centered Groovy. It does not imply that the augmented pair `(P,G)` updates autonomously, because that would also require determining the next Groovy field. A follow-up exact audit finds that stronger augmented-state closure false. The matched 62/110 repair result itself remains unchanged.
+
 An independent census showed that Rule 62 and Rule 110 are unusually well
 matched on the amount of predictive history required by the established
 block-2-parity observer. Their safe-forgetting reserves differ by only about
@@ -171,10 +173,10 @@ Thus the augmented present representation
 (P(X),G^\circ(X))
 \]
 
-already closes under an induced local law. The history-tower factor at every
-later step follows by time homogeneity: \(C_t\) contains the current parity
-field, and the current Groovy field supplies the correction coordinate needed
-for the next parity field.
+supplies an induced local law for the **next parity field**. This explains the
+history-tower factor: \(C_t\) contains the current parity field, and current
+Groovy supplies the correction coordinate needed for that readout. It does not
+establish autonomous evolution of the Groovy field itself.
 
 The nine obvious radius-one macro feature bits are
 
@@ -207,10 +209,10 @@ Result:
 This gives the matched result a sharper interpretation:
 
 > **For Rule 110 under this observer, centered Groovy is a sufficient
-> present-time correction coordinate that compresses away the otherwise
-> necessary observed history.**
+> present-time correction coordinate for the next parity readout.**
 
-The claim is sufficiency, not minimality or uniqueness.
+The claim is readout sufficiency, not augmented-state closure, minimality or
+uniqueness.
 
 ## What this establishes
 
