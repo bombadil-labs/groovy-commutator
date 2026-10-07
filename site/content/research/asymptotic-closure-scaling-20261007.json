@@ -1,0 +1,21 @@
+[
+  {
+    "slug": "asymptotic-closure-scaling-20261007",
+    "label": "Asymptotic closure scaling",
+    "title": "A bounded asymptotic-closure corridor survives fresh widths 16 and 18",
+    "date": "2026-10-07",
+    "updated": "2026-10-07",
+    "kind": "Exact fresh-width scaling test",
+    "evidence": "exact",
+    "topic": "Observation and memory",
+    "summary": "Under the fixed block-parity observer, Rules 54/110 retain a safe-forgetting reserve strictly between Rule 30 and Rule 184 at fresh widths 16 and 18, while both acquire new required history relative to width 14.",
+    "takeaway": "On this bounded panel, complex rules keep needing new predictive distinctions with scale without simply collapsing the predictive quotient to microscopic identity.",
+    "source": "docs/research/2026-10-07-asymptotic-closure-scaling.md",
+    "promotion": {
+      "stage": "research"
+    },
+    "related": [
+      "history-lift-closure"
+    ]
+  }
+]
