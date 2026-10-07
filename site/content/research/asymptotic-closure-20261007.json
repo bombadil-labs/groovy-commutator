@@ -1,0 +1,23 @@
+[
+  {
+    "slug": "asymptotic-closure-20261007",
+    "label": "Asymptotic closure",
+    "title": "A long tail of cheap predictive repairs is not Class-IV-specific",
+    "date": "2026-10-07",
+    "updated": "2026-10-07",
+    "kind": "Exact bounded falsification",
+    "evidence": "exact",
+    "topic": "Observation and memory",
+    "summary": "On the frozen width-10 block-parity test, Rule 30 has a much longer thin tail of minimal predictive repairs than Rules 54/110. Its stable quotient is almost microscopic identity, so tail length alone fails to identify the hoped-for complex regime.",
+    "takeaway": "Repeated cheap repair can mean compression is collapsing toward the full microstate. The asymptote needs at least a second coordinate describing how much compression survives.",
+    "source": "docs/research/2026-10-07-asymptotic-closure.md",
+    "promotion": {
+      "stage": "research"
+    },
+    "related": [
+      "history-lift-closure",
+      "representation-design",
+      "block3-representation-design"
+    ]
+  }
+]
