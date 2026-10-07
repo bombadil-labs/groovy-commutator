@@ -1,0 +1,477 @@
+{
+  "schema": "commutator-jet-language-v1",
+  "date": "2026-10-07",
+  "protocol": "docs/research/protocols/commutator-jet-language-20261007.md",
+  "rules": {
+    "62": [
+      {
+        "prefix_names": [
+          "G"
+        ],
+        "source_radius": 2,
+        "source_debruijn_states": 16,
+        "realized_alphabet_size": 2,
+        "determinized_states": 8,
+        "minimal_dfa_accepting_states": 5,
+        "recurrent_scc_count": 1,
+        "recurrent_states": 5,
+        "largest_recurrent_scc": 5,
+        "perron_eigenvalue": 1.5701473121960525,
+        "topological_entropy_bits_per_site": 0.6508999200116208,
+        "allowed_block_counts_length_1_to_16": [
+          2,
+          3,
+          5,
+          8,
+          12,
+          19,
+          30,
+          47,
+          74,
+          116,
+          182,
+          286,
+          449,
+          705,
+          1107,
+          1738
+        ],
+        "compatible_source_contexts": {
+          "minimum": 2,
+          "median": 8,
+          "maximum": 16,
+          "has_singleton_context": false
+        },
+        "entropy_gap_from_source": 0.3491000799883792
+      },
+      {
+        "prefix_names": [
+          "G",
+          "Q"
+        ],
+        "source_radius": 3,
+        "source_debruijn_states": 64,
+        "realized_alphabet_size": 4,
+        "determinized_states": 55,
+        "minimal_dfa_accepting_states": 42,
+        "recurrent_scc_count": 3,
+        "recurrent_states": 39,
+        "largest_recurrent_scc": 35,
+        "perron_eigenvalue": 1.9693291530887227,
+        "topological_entropy_bits_per_site": 0.9777042630129423,
+        "allowed_block_counts_length_1_to_16": [
+          4,
+          10,
+          24,
+          50,
+          104,
+          209,
+          422,
+          845,
+          1686,
+          3342,
+          6603,
+          13027,
+          25689,
+          50632,
+          99765,
+          196527
+        ],
+        "compatible_source_contexts": {
+          "minimum": 2,
+          "median": 10,
+          "maximum": 64,
+          "has_singleton_context": false
+        },
+        "entropy_gap_from_source": 0.02229573698705767
+      },
+      {
+        "prefix_names": [
+          "G",
+          "Q",
+          "R"
+        ],
+        "source_radius": 4,
+        "source_debruijn_states": 256,
+        "realized_alphabet_size": 7,
+        "determinized_states": 127,
+        "minimal_dfa_accepting_states": 93,
+        "recurrent_scc_count": 4,
+        "recurrent_states": 69,
+        "largest_recurrent_scc": 62,
+        "perron_eigenvalue": 1.9919558055279598,
+        "topological_entropy_bits_per_site": 0.9941856394476921,
+        "allowed_block_counts_length_1_to_16": [
+          7,
+          31,
+          91,
+          208,
+          440,
+          908,
+          1830,
+          3693,
+          7374,
+          14717,
+          29366,
+          58523,
+          116628,
+          232347,
+          462869,
+          922088
+        ],
+        "compatible_source_contexts": {
+          "minimum": 2,
+          "median": 12,
+          "maximum": 256,
+          "has_singleton_context": false
+        },
+        "entropy_gap_from_source": 0.0058143605523078845
+      },
+      {
+        "prefix_names": [
+          "G",
+          "Q",
+          "R",
+          "A4"
+        ],
+        "source_radius": 5,
+        "source_debruijn_states": 1024,
+        "realized_alphabet_size": 14,
+        "determinized_states": 365,
+        "minimal_dfa_accepting_states": 271,
+        "recurrent_scc_count": 6,
+        "recurrent_states": 161,
+        "largest_recurrent_scc": 148,
+        "perron_eigenvalue": 1.9982744998383302,
+        "topological_entropy_bits_per_site": 0.9987547775016752,
+        "allowed_block_counts_length_1_to_16": [
+          14,
+          92,
+          292,
+          680,
+          1440,
+          2988,
+          6090,
+          12264,
+          24584,
+          49194,
+          98377,
+          196704,
+          393207,
+          785895,
+          1570613,
+          3138706
+        ],
+        "compatible_source_contexts": {
+          "minimum": 2,
+          "median": 12,
+          "maximum": 1024,
+          "has_singleton_context": false
+        },
+        "entropy_gap_from_source": 0.0012452224983248161
+      },
+      {
+        "prefix_names": [
+          "G",
+          "Q",
+          "R",
+          "A4",
+          "A5"
+        ],
+        "source_radius": 6,
+        "source_debruijn_states": 4096,
+        "realized_alphabet_size": 27,
+        "determinized_states": 945,
+        "minimal_dfa_accepting_states": 698,
+        "recurrent_scc_count": 11,
+        "recurrent_states": 350,
+        "largest_recurrent_scc": 317,
+        "perron_eigenvalue": 2.000000000000002,
+        "topological_entropy_bits_per_site": 1.0000000000000016,
+        "allowed_block_counts_length_1_to_16": [
+          27,
+          280,
+          955,
+          2196,
+          4622,
+          9443,
+          19079,
+          38313,
+          76893,
+          153995,
+          308119,
+          616390,
+          1233100,
+          2466531,
+          4933310,
+          9866853
+        ],
+        "compatible_source_contexts": {
+          "minimum": 2,
+          "median": 16,
+          "maximum": 4096,
+          "has_singleton_context": false
+        },
+        "entropy_gap_from_source": -1.5543122344752192e-15
+      }
+    ],
+    "110": [
+      {
+        "prefix_names": [
+          "G"
+        ],
+        "source_radius": 2,
+        "source_debruijn_states": 16,
+        "realized_alphabet_size": 2,
+        "determinized_states": 38,
+        "minimal_dfa_accepting_states": 26,
+        "recurrent_scc_count": 2,
+        "recurrent_states": 23,
+        "largest_recurrent_scc": 22,
+        "perron_eigenvalue": 1.7838858064303278,
+        "topological_entropy_bits_per_site": 0.8350232656115856,
+        "allowed_block_counts_length_1_to_16": [
+          2,
+          4,
+          8,
+          15,
+          27,
+          50,
+          91,
+          165,
+          298,
+          539,
+          969,
+          1740,
+          3116,
+          5578,
+          9973,
+          17825
+        ],
+        "compatible_source_contexts": {
+          "minimum": 1,
+          "median": 5,
+          "maximum": 16,
+          "has_singleton_context": true
+        },
+        "entropy_gap_from_source": 0.16497673438841443
+      },
+      {
+        "prefix_names": [
+          "G",
+          "Q"
+        ],
+        "source_radius": 3,
+        "source_debruijn_states": 64,
+        "realized_alphabet_size": 4,
+        "determinized_states": 111,
+        "minimal_dfa_accepting_states": 74,
+        "recurrent_scc_count": 6,
+        "recurrent_states": 36,
+        "largest_recurrent_scc": 29,
+        "perron_eigenvalue": 1.9817087805486788,
+        "topological_entropy_bits_per_site": 0.9867449687164558,
+        "allowed_block_counts_length_1_to_16": [
+          4,
+          15,
+          43,
+          104,
+          227,
+          472,
+          951,
+          1895,
+          3764,
+          7471,
+          14819,
+          29382,
+          58234,
+          115413,
+          228728,
+          453283
+        ],
+        "compatible_source_contexts": {
+          "minimum": 1,
+          "median": 4,
+          "maximum": 64,
+          "has_singleton_context": true
+        },
+        "entropy_gap_from_source": 0.013255031283544216
+      },
+      {
+        "prefix_names": [
+          "G",
+          "Q",
+          "R"
+        ],
+        "source_radius": 4,
+        "source_debruijn_states": 256,
+        "realized_alphabet_size": 8,
+        "determinized_states": 244,
+        "minimal_dfa_accepting_states": 131,
+        "recurrent_scc_count": 7,
+        "recurrent_states": 69,
+        "largest_recurrent_scc": 60,
+        "perron_eigenvalue": 2.0000000000000036,
+        "topological_entropy_bits_per_site": 1.0000000000000027,
+        "allowed_block_counts_length_1_to_16": [
+          8,
+          51,
+          160,
+          358,
+          742,
+          1495,
+          3015,
+          6040,
+          12090,
+          24210,
+          48464,
+          96981,
+          194014,
+          388084,
+          776230,
+          1552530
+        ],
+        "compatible_source_contexts": {
+          "minimum": 1,
+          "median": 3,
+          "maximum": 256,
+          "has_singleton_context": true
+        },
+        "entropy_gap_from_source": -2.6645352591003757e-15
+      },
+      {
+        "prefix_names": [
+          "G",
+          "Q",
+          "R",
+          "A4"
+        ],
+        "source_radius": 5,
+        "source_debruijn_states": 1024,
+        "realized_alphabet_size": 16,
+        "determinized_states": 754,
+        "minimal_dfa_accepting_states": 280,
+        "recurrent_scc_count": 6,
+        "recurrent_states": 160,
+        "largest_recurrent_scc": 152,
+        "perron_eigenvalue": 1.9999999999999996,
+        "topological_entropy_bits_per_site": 0.9999999999999997,
+        "allowed_block_counts_length_1_to_16": [
+          16,
+          148,
+          452,
+          970,
+          1954,
+          3912,
+          7822,
+          15665,
+          31396,
+          62821,
+          125702,
+          251471,
+          503025,
+          1006173,
+          2012466,
+          4025059
+        ],
+        "compatible_source_contexts": {
+          "minimum": 1,
+          "median": 3,
+          "maximum": 1024,
+          "has_singleton_context": true
+        },
+        "entropy_gap_from_source": 3.3306690738754696e-16
+      },
+      {
+        "prefix_names": [
+          "G",
+          "Q",
+          "R",
+          "A4",
+          "A5"
+        ],
+        "source_radius": 6,
+        "source_debruijn_states": 4096,
+        "realized_alphabet_size": 32,
+        "determinized_states": 2641,
+        "minimal_dfa_accepting_states": 621,
+        "recurrent_scc_count": 6,
+        "recurrent_states": 391,
+        "largest_recurrent_scc": 383,
+        "perron_eigenvalue": 2.0000000000000013,
+        "topological_entropy_bits_per_site": 1.0000000000000009,
+        "allowed_block_counts_length_1_to_16": [
+          32,
+          392,
+          1152,
+          2446,
+          4881,
+          9746,
+          19448,
+          38798,
+          77607,
+          155264,
+          310552,
+          621080,
+          1242197,
+          2484459,
+          4968996,
+          9938093
+        ],
+        "compatible_source_contexts": {
+          "minimum": 1,
+          "median": 3,
+          "maximum": 4096,
+          "has_singleton_context": true
+        },
+        "entropy_gap_from_source": -8.881784197001252e-16
+      }
+    ]
+  },
+  "summary": {
+    "110_minimal_dfa_states": [
+      26,
+      74,
+      131,
+      280,
+      621
+    ],
+    "62_minimal_dfa_states": [
+      5,
+      42,
+      93,
+      271,
+      698
+    ],
+    "110_entropy": [
+      0.8350232656115856,
+      0.9867449687164558,
+      1.0000000000000027,
+      0.9999999999999997,
+      1.0000000000000009
+    ],
+    "62_entropy": [
+      0.6508999200116208,
+      0.9777042630129423,
+      0.9941856394476921,
+      0.9987547775016752,
+      1.0000000000000016
+    ],
+    "110_first_full_entropy_to_1e-12": [
+      "G",
+      "Q",
+      "R"
+    ],
+    "62_first_full_entropy_to_1e-12": [
+      "G",
+      "Q",
+      "R",
+      "A4",
+      "A5"
+    ],
+    "presentation_state_counts_stabilize_through_A5": false
+  },
+  "source_hashes": {
+    "script_sha256": "fe45eb38915cc0b1effb4dca8aa7ca4a6ab157e94f6e5237b50e98abba415cf5"
+  }
+}
