@@ -7,6 +7,25 @@ sections are historical proposals, not an instruction to resume them.
 **Question:** which distinctions can a representation safely discard, which
 must it retain, and what does changing representation buy us?
 
+**New full-line jet factor theorem and sharp local radius (2026-10-07).**
+[The full-line autonomy audit](2026-10-07-jet-full-line-autonomy.md)
+strengthens the period-four pair-language result. Exact whole-line source-pair
+extension tests show Rule54's **entire** J5=(G,Q,R,A4,A5) representation
+is autonomous, with minimum symmetric induced local radius six.
+Rule30 closes at J3/radius five; Rule62 at J5/radius six; Rule110 remains
+nonautonomous through J5 because a periodic-to-zero phase interface
+retains invisible context and reveals a different A6.
+
+This does **not** yield useful bulk compression on unrestricted source
+ensembles: width-18 Rule54 retains 261,985 of 262,144 states and forgets
+0.00122 bits under the uniform prior. Phase ambiguities are exceptional
+and often simply time shifts or transient preimage coalescence.
+
+**Current highest-value next gate:** independently review the whole-line
+J5→A6 33,162-path proof and radius-six minimality; if upheld, derive a
+compact on-image symbolic transducer for the induced Rule54 jet evolution.
+Avoid additional class censuses and off-image Boolean-table expansion.
+
 **New all-256 jet census and all-depth Rule-54 theorem (2026-10-07).**
 [The GQR census](2026-10-07-jet-gqr-census-fibonacci.md) establishes a base
 rate: 228/256 ECAs have branching recurrent off-diagonal GQR source-pair
