@@ -334,6 +334,68 @@ H_{200}=lc\oplus cr\oplus lcr.
 
 Their XOR is exactly `c`, Rule 204.
 
+
+### There are no other nonlinear flat cases
+
+The projection-like pair is not just an explanation for two known
+counterexamples. For ECAs it completes the classification of identically flat
+**centered** Groovy.
+
+Write the local rule in algebraic normal form
+
+\[
+f(l,c,r)=a_0+a_Ll+a_Cc+a_Rr
++a_{LC}lc+a_{LR}lr+a_{CR}cr+a_{LCR}lcr.
+\]
+
+The center of \(G^\circ\) has radius two, so its value on all 32 five-bit
+source words is the complete full-line local condition. Eliminating those
+finite Boolean equations gives the equivalent coefficient constraints
+
+\[
+\begin{aligned}
+a_{LR}&=0,\\
+a_{CR}&=a_{LCR},\\
+a_{LC}&=a_{LCR},\\
+a_0a_{LCR}&=a_Ra_{LCR}=a_La_{LCR}=0.
+\end{aligned}
+\]
+
+This has exactly two branches.
+
+If \(a_{LCR}=0\), then \(a_{LC}=a_{LR}=a_{CR}=0\), while the constant and
+linear coefficients are free. These are exactly the 16 affine ECAs.
+
+If \(a_{LCR}=1\), then
+
+\[
+a_0=a_L=a_R=a_{LR}=0,\qquad
+a_{LC}=a_{CR}=a_{LCR}=1,
+\]
+
+with only \(a_C\) free. \(a_C=0\) is Rule 200 and \(a_C=1\) is Rule 4.
+
+Therefore
+
+\[
+\boxed{
+G^\circ_H\equiv0
+\quad\Longleftrightarrow\quad
+H\text{ is affine, or }H\in\{4,200\}
+}
+\]
+
+for elementary cellular automata.
+
+This is an exact finite-universe classification, not a claim about arbitrary
+Boolean cellular automata. The standalone verifier
+[\`verify_centered_g_zero_classification.py\`](../../scripts/verify_centered_g_zero_classification.py)
+checks all \(2^8\) ECA coefficient assignments and all 32 complete radius-two
+source words with zero mismatches; the canonical result is
+[\`centered_g_zero_classification_20261006.json\`](../../results/centered_g_zero_classification_20261006.json).
+It was discovered post hoc from the mechanism audit and is recorded as such,
+rather than retroactively presented as a preregistered prediction.
+
 ## 10. Prior-art boundary
 
 Three pieces of vocabulary already exist and should be used rather than reinvented:
