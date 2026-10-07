@@ -152,6 +152,48 @@ readings were not sufficient full-line proofs: Rule 110 closes
 at GQR on every one of these rings but fails there, and even
 at A5, on the full binary line.
 
+## How much does Rule-54's autonomous J5 actually compress?
+
+The full-line autonomy theorem does not require J5 to be injective.
+To distinguish exceptional symbolic ambiguity from useful *bulk*
+compression, we exhaustively encoded **every periodic source state**
+at even widths 8 through 18 and measured the complete J5 fibers
+under the uniform source ensemble.
+
+| Source width | J5 image states / source states | Equal-jet source pairs | Conditional source bits forgotten |
+| ---: | ---: | ---: | ---: |
+| 8 | 222 / 256 | 40 | 0.281250 |
+| 10 | 1,001 / 1,024 | 26 | 0.046875 |
+| 12 | 4,050 / 4,096 | 52 | 0.023438 |
+| 14 | 16,325 / 16,384 | 62 | 0.007324 |
+| 16 | 65,406 / 65,536 | 136 | 0.004028 |
+| 18 | 261,985 / 262,144 | 162 | 0.001221 |
+
+At width 18 the fiber histogram is **261,828 singleton fibers,
+156 two-state fibers and one four-state fiber**. Exactly 156 of the
+162 unordered colliding pairs lie on the *same* periodic source orbit,
+five are temporal predecessor/successor pairs, and one collides
+through distinct preimages with a common eventual cycle.
+
+Widths divisible by four also have four pairs of equal-J5 sources
+on disjoint source orbits, involving spatial phase ambiguity.
+These are finite-ring facts, not all-line preimage classifications.
+
+All J5 fiber classes are forward invariant at every tested ring;
+the separate full-line pair-graph result is the stronger theorem.
+
+The information forgotten falls sharply as the periodic ring grows.
+**Positive topological entropy of an exceptional invisible source-pair
+subshift does not imply positive conditional information density under
+the uniform full-shift source prior.** In particular, the Rule-54
+J5 local factor is autonomous but retains nearly all microscopic
+source information on these finite ensembles.
+
+Post-hoc diagnostic runner:
+[periodic_fiber_diagnostic.py](../../experiments/jet_full_line_autonomy_20261007/periodic_fiber_diagnostic.py);
+[canonical table](../../results/rule54_periodic_j5_fibers_20261007.json).
+Its saved source hash and complete six-width replay are checked in CI.
+
 ## Why Rule 54's entire A5 relation is invariant
 
 The complete Rule-54 equal-G..A5 pair graph has 4,316 essential vertices,
