@@ -1,0 +1,22 @@
+[
+  {
+    "slug": "commutator-jet-20261007",
+    "label": "Intrinsic commutator jet",
+    "title": "D, G, Q and R are successive transport residuals",
+    "date": "2026-10-07",
+    "updated": "2026-10-07",
+    "kind": "Exact algebra and matched-rule experiment",
+    "evidence": "exact",
+    "topic": "Observation and memory",
+    "summary": "Iterating C_H(A)=A∘H XOR H∘A gives D,G,Q,R as a same-lattice nonlinear jet. Rules 110 and 62 have symmetry-equivalent derivative maps but diverge at higher residuals; Rule 62 has a radius-3 local DG→Q factor while Rule 110 fails through radius 3.",
+    "takeaway": "Future values and intrinsic residuals are alternate coordinates for missing temporal information, but nonlinear cadence changes introduce polarization terms. Finite jet closure on tested rings is mostly near-injective rather than compressive.",
+    "source": "docs/research/2026-10-07-commutator-jet.md",
+    "promotion": {
+      "stage": "research"
+    },
+    "related": [
+      "rule110-latent-q-20261007",
+      "matched-history-transport-20261007"
+    ]
+  }
+]
