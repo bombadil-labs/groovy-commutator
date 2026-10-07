@@ -5413,7 +5413,7 @@
       "status": "exact",
       "summary": "With A0=D and A{k+1}=A_k∘H XOR H∘A_k, each next field corrects naive H-transport of the previous field. Cadence-two residuals add a polarization correction. Rules 110 and 62 have symmetry-equivalent D maps but different higher jet locality.",
       "updated": "2026-10-07",
-      "source": "docs/research/2026-10-07-commutator-jet.md",
+      "source": "docs/knowledge/commutator-jet.md",
       "research": [
         "commutator-jet-20261007"
       ]
