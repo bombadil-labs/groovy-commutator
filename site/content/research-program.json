@@ -107,7 +107,8 @@
       "groovy-readout-cost",
       "phase-free-consumer-audit",
       "recursive-g-boundary",
-      "typed-difference-geometry"
+      "typed-difference-geometry",
+      "ca-nearring-interpretation"
     ]
   },
   {
