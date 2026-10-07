@@ -7,6 +7,39 @@ links to the technical account that states its assumptions and verification.
 mathematical question is solved. The [program survey](2026-09-22-program-survey.md)
 explains what deserves work next.
 
+## D, G, Q and R form a nonlinear commutator jet — 2026-10-07
+
+Define \(A_0=D=I\oplus H\) and recursively
+\(A_{k+1}=A_k\circ H\oplus H\circ A_k\). Along every source trajectory,
+
+\[
+A_{k,t+1}=H(A_{k,t})\oplus A_{k+1,t}.
+\]
+
+So \(G,Q,R,\ldots\) are successive same-lattice corrections needed to
+transport the previous field coherently.
+
+Changing cadence is nonlinear: for zero-preserving rules,
+\[
+C_{H^2}(A)=C_H^2(A)\oplus B_H(H(A),C_H(A)).
+\]
+Thus the cadence-two latent complement used in the Rule-110 parity work is a
+jet term plus a polarization correction, not merely delayed \(Q\) or \(R\).
+
+Rules 110 and 62 are especially clean matched controls: their derivative maps
+are symmetry-equivalent (ECA 162 and 242), so their change geometry matches at
+D and diverges only when the source rule acts back through G.
+
+On tested finite rings, \((D,G)\) already globally closes for both rules, but
+almost by reconstructing the source. Full-line locality distinguishes them:
+Rule 62 has an exact radius-three \((D,G)\to Q\) law, while Rule 110 has no such
+factor through radius three. A post-hoc G-anchored diagnostic closes at
+\((G,Q,R)\) for Rule 110 on every tested width, while Rule 62 needs deeper jet
+levels before becoming nearly injective. Neither bounded closure supplies a
+compression theorem.
+
+[Exact account](2026-10-07-commutator-jet.md).
+
 ## The missing coordinate is small but the joint state is microscopic — 2026-10-07
 
 We computed the minimal future-equivalence quotient instead of guessing
