@@ -6,7 +6,7 @@
     "date": "2026-09-08",
     "updated": "2026-10-07",
     "status": "living",
-    "summary": "All-256 GQR exact source-pair census finds 228 branching rules; a post-primary Rule-54 symbolic certificate finds two positive-entropy golden-growth equal-jet SCCs exchanging under source evolution. Their invariant union is invisible to every higher commutator residual. Next: independent review and explicit symbolic generators, not deeper brute-force jets.",
+    "summary": "The all-256 GQR census and Fable's period-four Rule54 review led to an exact full-line autonomous Rule54 J5 factor, with sharp radius six; Rule30 closes at J3/radius five, Rule62 at J5/radius six, Rule110 fails through J5. Rule54's J5 retains nearly all uniform finite-ring source information. Next: independent review and an on-image symbolic transducer, not a class census.",
     "thesis": "Retain exactly the distinctions required by a declared observation, and make the certificates, costs and prior-art boundary explicit.",
     "source": "docs/research/2026-09-08-dynamics-of-erased-distinctions.md",
     "supports": [
@@ -44,7 +44,8 @@
       "rule110-pg-closure-20261007",
       "rule110-latent-q-20261007",
       "jet-control-panel-20261007",
-      "jet-gqr-256-fibonacci-20261007"
+      "jet-gqr-256-fibonacci-20261007",
+      "jet-full-line-autonomy-20261007"
     ]
   },
   {

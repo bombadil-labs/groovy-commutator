@@ -2795,6 +2795,15 @@
       "research": [
         "jet-gqr-256-fibonacci-20261007"
       ]
+    },
+    {
+      "source": "jet-full-line-autonomy",
+      "target": "rule54-golden-jet-fiber",
+      "type": "depends_on",
+      "reason": "The independent period-four/golden fiber review motivated testing invariance of the entire equal-J5 relation rather than selected recurrent components.",
+      "research": [
+        "jet-full-line-autonomy-20261007"
+      ]
     }
   ],
   "nodes": [
@@ -5437,6 +5446,18 @@
       "source": "docs/knowledge/rule54-golden-jet-fiber.md",
       "research": [
         "jet-gqr-256-fibonacci-20261007"
+      ]
+    },
+    {
+      "id": "jet-full-line-autonomy",
+      "title": "Rule 54's complete G-anchored jet evolves autonomously on the full line",
+      "kind": "finding",
+      "status": "exact",
+      "updated": "2026-10-07",
+      "summary": "Rule54 J5=GQRA4A5 is an exact autonomous full-line factor with minimum radius six. Its non-diagonal equal-jet source-pair language has entropy (log2 phi)/2 < 1 and zero cross-component edges, so fair-Bernoulli sources almost surely have unique J5 images despite exceptional phase partners. Rule30 closes at J3/radius5, Rule62 at J5/radius6, Rule110 fails through A5.",
+      "source": "docs/knowledge/jet-full-line-autonomy.md",
+      "research": [
+        "jet-full-line-autonomy-20261007"
       ]
     }
   ],

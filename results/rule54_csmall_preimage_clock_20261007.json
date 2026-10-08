@@ -1,0 +1,135 @@
+{
+  "schema": "rule54-csmall-preimage-phase-clock-v1",
+  "date": "2026-10-07",
+  "provenance": "Post-hoc structural reconstruction; period-eight successor-cycle pair selected from independently reviewed Rule54 full equal-J5 pair graph; no conjugacy claim.",
+  "successor_cycle_source_x": "00100111",
+  "successor_cycle_source_y": "01110010",
+  "local_source_word_width": 13,
+  "preimage_constrained_candidate_edges": 882,
+  "preimage_constrained_candidate_vertices": 704,
+  "recurrent_scc_vertices": 52,
+  "recurrent_scc_edges": 58,
+  "recurrent_scc_edge_sha256": "8038efc7d2c33bca3b4ad5fbcc7acaa970feb7924de46c196ccd69418679cb7a",
+  "all_candidate_phases": {
+    "0": {
+      "x_preimage_words": 15,
+      "y_preimage_words": 10,
+      "candidate_pairs": 78
+    },
+    "1": {
+      "x_preimage_words": 9,
+      "y_preimage_words": 21,
+      "candidate_pairs": 168
+    },
+    "2": {
+      "x_preimage_words": 15,
+      "y_preimage_words": 10,
+      "candidate_pairs": 78
+    },
+    "3": {
+      "x_preimage_words": 15,
+      "y_preimage_words": 15,
+      "candidate_pairs": 117
+    },
+    "4": {
+      "x_preimage_words": 10,
+      "y_preimage_words": 15,
+      "candidate_pairs": 78
+    },
+    "5": {
+      "x_preimage_words": 21,
+      "y_preimage_words": 9,
+      "candidate_pairs": 168
+    },
+    "6": {
+      "x_preimage_words": 10,
+      "y_preimage_words": 15,
+      "candidate_pairs": 78
+    },
+    "7": {
+      "x_preimage_words": 15,
+      "y_preimage_words": 15,
+      "candidate_pairs": 117
+    }
+  },
+  "phase_clock": {
+    "phase_population": {
+      "0": 5,
+      "1": 8,
+      "2": 8,
+      "3": 5,
+      "4": 5,
+      "5": 8,
+      "6": 8,
+      "7": 5
+    },
+    "phase_zero_return_matrix": [
+      [
+        1,
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        1,
+        1,
+        0,
+        1
+      ],
+      [
+        0,
+        1,
+        1,
+        0,
+        1
+      ],
+      [
+        0,
+        1,
+        1,
+        0,
+        1
+      ]
+    ],
+    "row_pattern_groups": [
+      [
+        0,
+        1
+      ],
+      [
+        2,
+        3,
+        4
+      ]
+    ],
+    "two_state_return_count_quotient": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "quotient_charpoly": "z^2 - 3z + 1",
+    "perron_eigenvalue_of_8_step_return": "phi^2",
+    "spatial_pair_entropy_bits_per_site": 0.17356047840765434,
+    "periodic_pair_counts": {
+      "8": 24,
+      "16": 56,
+      "24": 144,
+      "32": 376
+    }
+  },
+  "interpretation": "The transient 52v/58e Rule54 pair-language SCC is exactly the sole recurrent component of source pairs that evolve to a fixed spatially 8-periodic pair (with common phase) and have equal current G..A5; its 8-phase return transition counts possess a two-state equitable Fibonacci quotient. This proves growth-rate structure, not an explicit topological conjugacy."
+}

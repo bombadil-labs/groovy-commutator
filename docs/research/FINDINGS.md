@@ -7,6 +7,34 @@ links to the technical account that states its assumptions and verification.
 mathematical question is solved. The [program survey](2026-09-22-program-survey.md)
 explains what deserves work next.
 
+## Rule 54 has an autonomous full-line five-field jet — 2026-10-07
+
+Claude's review reframed the Rule-54 golden hidden fibers as temporal
+half-period phase pairs on an explicit period-four source subshift. That
+suggested a stronger question: is the **entire** equal-current-jet fiber
+relation invariant under source evolution?
+
+Exact full-line de Bruijn pair-graph tests give first autonomous G-anchored
+prefixes: Rule 30 closes at (G,Q,R), Rules 54 and 62 at
+(G,Q,R,A4,A5), while Rule 110 does not close through A5. The sharp
+symmetric local radii on the admissible jet images are 5, 6, and 6.
+Rule 54's J5 closes with zero next-A6 discrepancies among **33,162**
+bi-infinite-compatible length-three paired source paths; J4 still has 12.
+
+The new theorem is about **autonomous coarse dynamics**, not about recovering
+or compressing the microscopic source. Rule54 J5 on complete periodic source
+rings of width 18 retains 261,985 of 262,144 source distinctions, losing
+only 0.00122 bits under the uniform prior. Hidden differences include
+same-orbit temporal phase, transient preimage coalescence and separate
+periodic spatial phases. Small finite rings incorrectly suggest Rule110
+closes at GQR; its full-line phase-wall witness refutes that.
+
+The full-line results were discovered exploratorily during Claude's review,
+then reconstructed under a descriptive reproducibility protocol, not
+preregistered before observation. Independent review of the stronger
+factor/radius claim is pending.
+[Exact account](2026-10-07-jet-full-line-autonomy.md).
+
 ## A Rule-54 golden-growth ambiguity survives every higher jet — 2026-10-07
 
 An exact all-256 GQR source-pair census shows branching off-diagonal recurrent

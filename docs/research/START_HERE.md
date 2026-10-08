@@ -7,6 +7,37 @@ sections are historical proposals, not an instruction to resume them.
 **Question:** which distinctions can a representation safely discard, which
 must it retain, and what does changing representation buy us?
 
+**New full-line jet factor theorem and sharp local radius (2026-10-07).**
+[The full-line autonomy audit](2026-10-07-jet-full-line-autonomy.md)
+strengthens the period-four pair-language result. Exact whole-line source-pair
+extension tests show Rule54's **entire** J5=(G,Q,R,A4,A5) representation
+is autonomous, with minimum symmetric induced local radius six.
+Rule30 closes at J3/radius five; Rule62 at J5/radius six; Rule110 remains
+nonautonomous through J5 because a periodic-to-zero phase interface
+retains invisible context and reveals a different A6.
+
+This does **not** yield useful bulk compression on unrestricted source
+ensembles: width-18 Rule54 retains 261,985 of 262,144 states and forgets
+0.00122 bits under the uniform prior. Phase ambiguities are exceptional
+and often simply time shifts or transient preimage coalescence.
+
+**On-image Rule54 jet update implemented (2026-10-08).** The
+[transducer gate](2026-10-08-rule54-on-image-transducer.md) now gives an
+explicit finite-state input/output relation: 16,384 source contexts,
+32,768 labeled edges; 13 current jet symbols determine the central A6
+on the admissible image, with other four next fields given by the triangular
+commutator law. The implementation matches exhaustive periodic source rings
+8/10/12 and 32 selected length-13 jet windows. This is a constructive
+consequence of the prior factor theorem, **not** an independent new proof,
+a deterministic minimized presentation, or a generic compression win.
+See [living HTML report, Edition 8](live-commutator-jet-report-v8.html).
+
+**Current highest-value next gate:** independent review of the full-line
+J5→A6 33,162-path factor proof, both-flank radius-six witnesses, and
+almost-sure injectivity corollary. The on-image transducer is complete under
+its bounded protocol; no further minimization, class census or off-image
+Boolean-table expansion is queued without a costed consumer.
+
 **New all-256 jet census and all-depth Rule-54 theorem (2026-10-07).**
 [The GQR census](2026-10-07-jet-gqr-census-fibonacci.md) establishes a base
 rate: 228/256 ECAs have branching recurrent off-diagonal GQR source-pair
