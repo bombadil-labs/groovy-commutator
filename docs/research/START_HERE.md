@@ -21,10 +21,22 @@ ensembles: width-18 Rule54 retains 261,985 of 262,144 states and forgets
 0.00122 bits under the uniform prior. Phase ambiguities are exceptional
 and often simply time shifts or transient preimage coalescence.
 
-**Current highest-value next gate:** independently review the whole-line
-J5→A6 33,162-path proof and radius-six minimality; if upheld, derive a
-compact on-image symbolic transducer for the induced Rule54 jet evolution.
-Avoid additional class censuses and off-image Boolean-table expansion.
+**On-image Rule54 jet update implemented (2026-10-08).** The
+[transducer gate](2026-10-08-rule54-on-image-transducer.md) now gives an
+explicit finite-state input/output relation: 16,384 source contexts,
+32,768 labeled edges; 13 current jet symbols determine the central A6
+on the admissible image, with other four next fields given by the triangular
+commutator law. The implementation matches exhaustive periodic source rings
+8/10/12 and 32 selected length-13 jet windows. This is a constructive
+consequence of the prior factor theorem, **not** an independent new proof,
+a deterministic minimized presentation, or a generic compression win.
+See [living HTML report, Edition 8](live-commutator-jet-report-v8.html).
+
+**Current highest-value next gate:** independent review of the full-line
+J5→A6 33,162-path factor proof, both-flank radius-six witnesses, and
+almost-sure injectivity corollary. The on-image transducer is complete under
+its bounded protocol; no further minimization, class census or off-image
+Boolean-table expansion is queued without a costed consumer.
 
 **New all-256 jet census and all-depth Rule-54 theorem (2026-10-07).**
 [The GQR census](2026-10-07-jet-gqr-census-fibonacci.md) establishes a base
