@@ -34,6 +34,8 @@ REGISTRY = {
         'script_sha256': 'scripts/experiment_asymptotic_closure.py'},
     'results/asymptotic_closure_wedge_20261007.json': {
         'script_sha256': 'scripts/experiment_asymptotic_closure_wedge.py'},
+    'results/asymptotic_closure_scaling_20261007.json': {
+        'script_sha256': 'scripts/experiment_asymptotic_closure_scaling.py'},
     'results/order_image_gate_20260925.json': {p: p for p in (
         'docs/research/protocols/2026-09-25-order-image-gate.md',
         'experiments/order_image_gate_20260925/run.py',

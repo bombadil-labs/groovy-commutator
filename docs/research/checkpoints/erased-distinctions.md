@@ -12,7 +12,21 @@ what is frozen and unrun, and what not to infer. Add a new checkpoint at the top
 when a substantial unit completes; keep the bounded-claim style. Text moved from
 `CLAUDE.md` on 2026-09-10 is verbatim.
 
-Program page: `docs/research/2026-09-08-dynamics-of-erased-distinctions.md`
+Program page: docs/research/2026-09-08-dynamics-of-erased-distinctions.md
+
+## Checkpoint 2026-10-07: asymptotic-closure gate passes but lacks specificity
+
+The exact [scaling unit](../2026-10-07-asymptotic-closure-scaling.md) passed its
+frozen 54/110 finite-panel gates. An independent
+[census control](../2026-10-07-asymptotic-closure-census-control.md) then
+reproduced the published values and found 41/88 canonical representatives pass
+the full corridor-plus-growth condition, including 37 non-IV rules.
+
+The scientific disposition is therefore corrected: retain the corridor as a
+broad matching geometry, not a Class-IV discriminator. Rule 62 nearly shadows
+Rule 110 on the primary coordinates and is the preferred matched control for
+mechanism work. The earlier subextensive-reserve theorem target is withdrawn
+as the preferred next target.
 
 ## Checkpoint 2026-09-22: readout-cost design complete
 

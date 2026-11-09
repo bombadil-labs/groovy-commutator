@@ -1,0 +1,22 @@
+[
+  {
+    "slug": "asymptotic-closure-census-control-20261007",
+    "label": "Asymptotic-closure census control",
+    "title": "The asymptotic-closure gate is broad, not discriminative",
+    "date": "2026-10-07",
+    "updated": "2026-10-07",
+    "kind": "Independent negative control",
+    "evidence": "exact",
+    "topic": "Observation and memory",
+    "summary": "An independent census reproduces the 54/110 values but finds 41 of 88 canonical ECA representatives pass the full corridor-plus-growth gate, including 37 non-IV rules. Rule 62 nearly shadows Rule 110 on the primary coordinates.",
+    "takeaway": "The corridor is a broad necessary-condition-like geometry, not a Class-IV discriminator; matched controls are needed to study what the retained history actually does.",
+    "source": "docs/research/2026-10-07-asymptotic-closure-census-control.md",
+    "promotion": {
+      "stage": "research"
+    },
+    "related": [
+      "asymptotic-closure-scaling-20261007",
+      "history-lift-closure"
+    ]
+  }
+]
