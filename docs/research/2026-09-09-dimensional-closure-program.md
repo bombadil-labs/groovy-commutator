@@ -1,6 +1,6 @@
 # Dimensional Closure and the Commutator Lift
 
-**Current portfolio — 2026-09-22:** Existence and finite recursion are complete. The [bounded readout comparison](2026-09-22-groovy-readout-cost.md) finds the marked query benefit available from a smaller ordinary cache. Phase-free geometry remains a separate contract; no new campaign is justified without a consumer requiring it.
+**Current portfolio — 2026-10-06:** Existence and finite recursion remain complete. The [typed-difference audit](2026-10-06-typed-difference-geometry.md) shows that the beam section itself has zero evolution defect. The relevant Groovy mismatch lives in the state/change bundle: finite differences form a nonlinear cocycle conjugate to pair dynamics, centered Groovy measures basepoint dependence along the rule's own displacement, and the lift's temporal residual is the cross-effect of its encoding. [Near-ring prior art](2026-10-06-ca-nearring-interpretation.md) supplies the algebraic home: polarization is the missing distributive law and centered Groovy is its dynamically selected instance. This adds mechanism, not a resource advantage or a new Class-IV queue.
 
 Read [the findings](FINDINGS.md) and [the portfolio survey](2026-09-22-program-survey.md). Historical program sections below retain their original evidence and chronology.
 

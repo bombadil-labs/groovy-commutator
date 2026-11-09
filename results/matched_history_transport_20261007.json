@@ -1,0 +1,346 @@
+{
+  "schema": "matched-history-transport-v1",
+  "date": "2026-10-07",
+  "protocol": "docs/research/protocols/matched-history-transport-20261007.md",
+  "rules": [
+    62,
+    110
+  ],
+  "widths": [
+    16,
+    18
+  ],
+  "profiles": {
+    "16": {
+      "62": {
+        "rule": 62,
+        "n": 16,
+        "hstar": 4,
+        "all_nonzero_steps_factor": false,
+        "any_nonzero_step_failure": true,
+        "cumulative_G_coupled_fraction": 0.7723979612020179,
+        "uncoupled_repair_bits": 1.7004088687080259,
+        "steps": [
+          {
+            "t": 0,
+            "repair_bits": 5.3102368186539035,
+            "factor_pass": false,
+            "conditional_next_given_C_G_bits": 1.581131009547903,
+            "G_coupled_bits": 3.7291058091060005,
+            "gamma": 0.7022484940796473,
+            "witness": {
+              "source_x": 60,
+              "source_y": 204,
+              "current_x": 60,
+              "current_y": 204,
+              "predictive_label": 0,
+              "centered_G": 34,
+              "current_D_x": 122,
+              "current_D_y": 442,
+              "next_observation_x": 6,
+              "next_observation_y": 14
+            }
+          },
+          {
+            "t": 1,
+            "repair_bits": 1.9153288460327662,
+            "factor_pass": false,
+            "conditional_next_given_C_G_bits": 0.1192778591601229,
+            "G_coupled_bits": 1.7960509868726433,
+            "gamma": 0.9377246056690558,
+            "witness": {
+              "source_x": 3129,
+              "source_y": 64569,
+              "current_x": 64496,
+              "current_y": 3059,
+              "predictive_label": 401,
+              "centered_G": 33288,
+              "current_D_x": 63465,
+              "current_D_y": 38894,
+              "next_observation_x": 244,
+              "next_observation_y": 119
+            }
+          },
+          {
+            "t": 2,
+            "repair_bits": 0.22890502879254981,
+            "factor_pass": true,
+            "conditional_next_given_C_G_bits": 0,
+            "G_coupled_bits": 0.22890502879254981,
+            "gamma": 1,
+            "witness": null
+          },
+          {
+            "t": 3,
+            "repair_bits": 0.016503106616202246,
+            "factor_pass": true,
+            "conditional_next_given_C_G_bits": 0,
+            "G_coupled_bits": 0.016503106616202246,
+            "gamma": 1,
+            "witness": null
+          },
+          {
+            "t": 4,
+            "repair_bits": 0,
+            "factor_pass": true,
+            "conditional_next_given_C_G_bits": 0,
+            "G_coupled_bits": 0,
+            "gamma": null,
+            "witness": null
+          }
+        ]
+      },
+      "110": {
+        "rule": 110,
+        "n": 16,
+        "hstar": 5,
+        "all_nonzero_steps_factor": true,
+        "any_nonzero_step_failure": false,
+        "cumulative_G_coupled_fraction": 1,
+        "uncoupled_repair_bits": 0,
+        "steps": [
+          {
+            "t": 0,
+            "repair_bits": 5.559121477249812,
+            "factor_pass": true,
+            "conditional_next_given_C_G_bits": 0,
+            "G_coupled_bits": 5.559121477249812,
+            "gamma": 1,
+            "witness": null
+          },
+          {
+            "t": 1,
+            "repair_bits": 1.752723102064877,
+            "factor_pass": true,
+            "conditional_next_given_C_G_bits": 0,
+            "G_coupled_bits": 1.752723102064877,
+            "gamma": 1,
+            "witness": null
+          },
+          {
+            "t": 2,
+            "repair_bits": 0.13464907436703832,
+            "factor_pass": true,
+            "conditional_next_given_C_G_bits": 0,
+            "G_coupled_bits": 0.13464907436703832,
+            "gamma": 1,
+            "witness": null
+          },
+          {
+            "t": 3,
+            "repair_bits": 0.01450121917962477,
+            "factor_pass": true,
+            "conditional_next_given_C_G_bits": 0,
+            "G_coupled_bits": 0.01450121917962477,
+            "gamma": 1,
+            "witness": null
+          },
+          {
+            "t": 4,
+            "repair_bits": 0.00048828125,
+            "factor_pass": true,
+            "conditional_next_given_C_G_bits": 0,
+            "G_coupled_bits": 0.00048828125,
+            "gamma": 1,
+            "witness": null
+          },
+          {
+            "t": 5,
+            "repair_bits": 0,
+            "factor_pass": true,
+            "conditional_next_given_C_G_bits": 0,
+            "G_coupled_bits": 0,
+            "gamma": null,
+            "witness": null
+          }
+        ]
+      }
+    },
+    "18": {
+      "62": {
+        "rule": 62,
+        "n": 18,
+        "hstar": 5,
+        "all_nonzero_steps_factor": false,
+        "any_nonzero_step_failure": true,
+        "cumulative_G_coupled_fraction": 0.7725481566737649,
+        "uncoupled_repair_bits": 1.9116304892983358,
+        "steps": [
+          {
+            "t": 0,
+            "repair_bits": 5.97395396896405,
+            "factor_pass": false,
+            "conditional_next_given_C_G_bits": 1.777379484338617,
+            "G_coupled_bits": 4.196574484625433,
+            "gamma": 0.7024785437630624,
+            "witness": {
+              "source_x": 60,
+              "source_y": 204,
+              "current_x": 60,
+              "current_y": 204,
+              "predictive_label": 0,
+              "centered_G": 34,
+              "current_D_x": 122,
+              "current_D_y": 442,
+              "next_observation_x": 6,
+              "next_observation_y": 14
+            }
+          },
+          {
+            "t": 1,
+            "repair_bits": 2.15449919667979,
+            "factor_pass": false,
+            "conditional_next_given_C_G_bits": 0.13425100495971876,
+            "G_coupled_bits": 2.0202481917200714,
+            "gamma": 0.9376880691500803,
+            "witness": {
+              "source_x": 12345,
+              "source_y": 258105,
+              "current_x": 257264,
+              "current_y": 11507,
+              "predictive_label": 740,
+              "centered_G": 131720,
+              "current_D_x": 252905,
+              "current_D_y": 154606,
+              "next_observation_x": 508,
+              "next_observation_y": 255
+            }
+          },
+          {
+            "t": 2,
+            "repair_bits": 0.25732607573693755,
+            "factor_pass": true,
+            "conditional_next_given_C_G_bits": 0,
+            "G_coupled_bits": 0.25732607573693755,
+            "gamma": 1,
+            "witness": null
+          },
+          {
+            "t": 3,
+            "repair_bits": 0.015198652963338333,
+            "factor_pass": true,
+            "conditional_next_given_C_G_bits": 0,
+            "G_coupled_bits": 0.015198652963338333,
+            "gamma": 1,
+            "witness": null
+          },
+          {
+            "t": 4,
+            "repair_bits": 0.0035725429828588062,
+            "factor_pass": true,
+            "conditional_next_given_C_G_bits": 0,
+            "G_coupled_bits": 0.0035725429828588062,
+            "gamma": 1,
+            "witness": null
+          },
+          {
+            "t": 5,
+            "repair_bits": 0,
+            "factor_pass": true,
+            "conditional_next_given_C_G_bits": 0,
+            "G_coupled_bits": 0,
+            "gamma": null,
+            "witness": null
+          }
+        ]
+      },
+      "110": {
+        "rule": 110,
+        "n": 18,
+        "hstar": 6,
+        "all_nonzero_steps_factor": true,
+        "any_nonzero_step_failure": false,
+        "cumulative_G_coupled_fraction": 1,
+        "uncoupled_repair_bits": 0,
+        "steps": [
+          {
+            "t": 0,
+            "repair_bits": 6.253870403939928,
+            "factor_pass": true,
+            "conditional_next_given_C_G_bits": 0,
+            "G_coupled_bits": 6.253870403939928,
+            "gamma": 1,
+            "witness": null
+          },
+          {
+            "t": 1,
+            "repair_bits": 1.9728753243178332,
+            "factor_pass": true,
+            "conditional_next_given_C_G_bits": 0,
+            "G_coupled_bits": 1.9728753243178332,
+            "gamma": 1,
+            "witness": null
+          },
+          {
+            "t": 2,
+            "repair_bits": 0.1503445246190651,
+            "factor_pass": true,
+            "conditional_next_given_C_G_bits": 0,
+            "G_coupled_bits": 0.1503445246190651,
+            "gamma": 1,
+            "witness": null
+          },
+          {
+            "t": 3,
+            "repair_bits": 0.016371675950090037,
+            "factor_pass": true,
+            "conditional_next_given_C_G_bits": 0,
+            "G_coupled_bits": 0.016371675950090037,
+            "gamma": 1,
+            "witness": null
+          },
+          {
+            "t": 4,
+            "repair_bits": 0.00054931640625,
+            "factor_pass": true,
+            "conditional_next_given_C_G_bits": 0,
+            "G_coupled_bits": 0.00054931640625,
+            "gamma": 1,
+            "witness": null
+          },
+          {
+            "t": 5,
+            "repair_bits": 0.0001373291015625,
+            "factor_pass": true,
+            "conditional_next_given_C_G_bits": 0,
+            "G_coupled_bits": 0.0001373291015625,
+            "gamma": 1,
+            "witness": null
+          },
+          {
+            "t": 6,
+            "repair_bits": 0,
+            "factor_pass": true,
+            "conditional_next_given_C_G_bits": 0,
+            "G_coupled_bits": 0,
+            "gamma": null,
+            "witness": null
+          }
+        ]
+      }
+    }
+  },
+  "gates": {
+    "16": {
+      "rule110_all_repairs_G_sufficient": true,
+      "rule62_has_G_insufficient_repair": true,
+      "pass": true
+    },
+    "18": {
+      "rule110_all_repairs_G_sufficient": true,
+      "rule62_has_G_insufficient_repair": true,
+      "pass": true
+    }
+  },
+  "summary": {
+    "status": "bounded-positive",
+    "stop_reason": "fresh matched program complete",
+    "fresh_widths_evaluated": [
+      16,
+      18
+    ]
+  },
+  "source_hashes": {
+    "script_sha256": "2f979918f7339f2580b17325e9dfaaeb93c5da07417a3b4a2ae7dffde5758330"
+  }
+}

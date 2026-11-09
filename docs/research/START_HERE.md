@@ -1,247 +1,87 @@
 # Research: start here
 
-**Current direction, 2026-09-25.** This page is the scheduling authority for
-research. Older notes and checkpoints preserve the evidence; their “next”
-sections are historical proposals, not an instruction to resume them.
+**Updated 2026-11-09.** This page is the scheduling authority for research. It
+says what the question is, where the work stands, and what would justify more.
+It is deliberately short. Dated accounts live in the linked notes; the
+plain-language record is [What we have learned](FINDINGS.md); the previous
+version of this page, which had grown into a chronological ledger, is
+[archived verbatim](archive/start-here-2026-10-08.md).
 
-**Question:** which distinctions can a representation safely discard, which
-must it retain, and what does changing representation buy us?
+## The question
 
-Our strongest work answers bounded versions of that question with exact
-factors, counterexamples, graph certificates and explicit constructions.
-“Class IV” remains a motivation, not a specification or success criterion.
-The [limits and prior-art guide](2026-09-21-research-boundaries.md) explains
-what the impossibility theorems constrain and where useful exact work remains.
-The maintained [observation/law taxonomy](2026-09-24-observation-law-taxonomy.md)
-keeps same-rule G, an observer's own effective law, off-image completions and
-rule-switching controllers distinct. Its controller question is a proposed
-design direction, not a new Class-IV result or an automatically queued run.
-Myk requested testable hypotheses for a bounded
-[observer-relative orbit program](2026-09-24-observer-orbit-program.md).
-Its first [frozen preflight](protocols/observer-orbit-preflight-20260924.md)
-is [complete](2026-09-24-observer-orbit-preflight.md): a one-step Rule-30 G
-observer invents cycles on one six-cell ring, while the identity and valid
-three-row history controls do not through period six.
-Feedback and Class-IV-like behaviour are contingent later questions, not
-outcomes of an orbit-counting preflight.
-The subsequent [causality note](2026-09-24-feedback-causality.md) proves that
-choosing a rule from the G field of that same as-yet-unchosen rule need not
-define an update at all. Specify either fixed-reference G or a lagged
-realized-path residual before any policy search; neither supplies the missing
-independent maintenance target.
-An independently sourced Rule-54 [route feasibility gate](2026-09-24-rule54-glider-route-gate.md)
-now finds delayed repair opportunities using a single held-site rule
-switch. A known-injury-address oracle matches the full-state bound, so
-the decision is whether a G sensor earns its acquisition and coordination
-cost against plain local fault localization. No G selector was tested.
-The subsequent [fixed-reference G information gate](2026-09-24-rule54-g-sensor-gate.md)
-shows that the complete G field retains the full-state 408/1,156 ceiling
-while grouping 1,054 current states into 850 observed words. The prediction
-of information loss failed. This upper bound still reads all 34 current
-bits and pays three total Rule-54 evaluations (two additional if the
-native update's first pass is shared); no local selector or cost advantage
-was established. The subsequent [matched local trigger gate](2026-09-24-rule54-local-sensor-gate.md)
-finds that G-bit triggers never choose a unique repair address, while one
-raw five-bit pattern rescues 34 additional trials under the same arbiter.
-This negative is limited to that frozen one-bit G grammar. **Do not start
-a full-ECA repair-discriminator sweep:** independent native targets and
-positive action-feasibility gates are missing, and this proposed local
-G advantage failed on the existing target. A fresh Rule-110 target
-requires its own justification, not automatic transfer from Rule 54.
-Myk approved one final, specifically selected raw-pattern combination
-after this gate. The [frozen two-pattern closure](2026-09-24-rule54-two-pattern-closure.md)
-finds that 19 OR 25 never collide and reaches the full-state 408/1,156
-reward without harming a passive success. This is exact on the selected
-finite task, post-selected and not a general raw-versus-G theorem.
-**The Rule-54 one-shot repair benchmark is now closed.** A genuine
-continuation needs a new independently specified repeated-disturbance
-target and costed consumer; there is no queued ECA sweep.
+Which distinctions can a representation safely discard, which must it retain,
+and what does changing representation buy us?
 
-A bounded [rule-composition analysis](2026-09-25-rule-composition-phase.md)
-now proves that cyclic rotations of a fixed rule schedule have equal
-finite-ring periodic-cycle counts and zeta functions. A frozen 30/54/110
-example shows that a **noncyclic** permutation can change those counts on
-small rings. The first rule controls which later order differences remain
-visible through its image. This is an exact guardrail and a finite example,
-not an independent target, Class-IV discriminator, or reason to search every
-schedule. Compare any proposed schedule with its fused radius-three rule
-at matched sampling and count intermediate phase and update costs.
-The subsequent [exact seven-bit order-image gate](2026-09-25-order-image-gate.md)
-checks the full line for fixed Rules 54/110 following five frozen first
-rules. Rule 54 partially filters the order disagreement; Rules 30/90
-preserve all sensitive intermediate words; Rule 0 erases everything.
-Explicit local words witness full-line *map* difference for each
-nonconstant prefix, without changing the finite-ring-only status of the
-earlier cycle counts. No follow-on prefix search is queued.
-The [resource decision gate](2026-09-25-rule-composition-resource-contract.md)
-proves that a three-rule schedule and its own fused radius-at-most-three
-CA have identical outputs at every three-step epoch on every source. The
-saved Rule-30-first local tables show both fused maps genuinely require
-symmetric radius three. Neither table size nor rule ordering alone
-establishes a resource win; an intermediate-read or physical-radius
-consumer must specify clock, storage, locality and update costs before
-another composition unit. **This application line is parked.**
+"Class IV" is a motivation, not a specification or a success criterion. The
+[limits and prior-art guide](2026-09-21-research-boundaries.md) maps what the
+impossibility theorems constrain. The
+[observation/law taxonomy](2026-09-24-observation-law-taxonomy.md) keeps
+same-rule `G`, an observer's own effective law, off-image completions and
+rule-switching controllers distinct.
 
-An external [density-classification calibration](2026-09-25-density-classification-contract.md)
-sharpens that stop: Fukś's proved 184→232 program solves the uniform-majority
-output task that no single fixed uniform binary CA solves under the classical
-contract. It runs each stage for a length-dependent number of steps and obtains its
-switch from an external controller. Rule 184 turns conserved density into
-the absence of one kind of adjacent defect; Rule 232 amplifies the remaining
-side. Count the known ring length, timer, rule broadcast, site updates and
-output access; compare a direct count when global reads are permitted.
-This is prior art and a model-boundary example, not a consumer of our
-selected 30/54/110 schedule or a new experiment queue.
-The [observer/readout correction](2026-09-25-density-observer-readout.md)
-adds the omitted 1996 result: Rule 184 alone classifies by the surviving
-adjacent-pair language. Rule 232 makes the majority outputs homogeneous.
-A whole-ring scan, a fixed local read port over time, and a timed two-rule
-output program have different access and clock costs. A fixed port with
-no ring-length information cannot certify a tie in finite time on all
-unmarked rings. Preserve these output contracts instead of claiming that
-composition is required to create the majority distinction.
+## Where the work stands
 
-## Current agenda after integration
+**No empirical unit is queued.** That has been true since the
+[September stopping point](2026-09-22-research-drive-synthesis.md) and remains
+true after the October work below.
 
-Myk authorized reconciliation and merging of the five completed gathering
-units on 2026-09-23. Their protocols, implementations, canonical results and
-bounded negative outcomes are retained. See the
-[integration record](2026-09-23-research-integration.md) and
-[current handoff](NEXT_TASK.md). On main, treat all five as integrated.
+**September closed the application lines.** Each attempt to give `G` or the
+dimensional lift a job against a plain baseline ended without an advantage:
+the Rule-54 repair benchmark, the lift's readout, and rule composition are all
+parked pending a consumer with a cost contract.
 
-| Completed unit | What it establishes | Remaining boundary |
+**October returned to the mathematics of `G` itself.** Thirteen pull requests
+from 2026-10-06 to 2026-10-08 were reviewed and integrated on 2026-11-09; see
+[the review and integration record](2026-11-09-october-integration-review.md).
+
+| Unit | What it establishes | Boundary |
 | --- | --- | --- |
-| [Rule-30 history geometry](2026-09-22-groovy-separator-lift.md), PR #295 | Raw unlabelled three-row encoding fails; either constant fourth row gives a uniform binary 13-by-4 rule. | Exact realization, with costs; no operational advantage or optimality claim. |
-| [1D recursive G](2026-09-23-groovy-1d-third-generation.md), PR #296 | Explicit nonconstant second and third generations exist for mirror Rules 2/16 on specified inherited branches. | Completion matters; one tested branch stays unresolved beyond radius four. Long-term source motion is rigid translation; no fourth generation queued. |
-| [Reusable descriptions](2026-09-23-reusable-descriptions.md), PR #297 | Increment, native G and source XOR demand different retained distinctions or rule conventions; an interactive comparison makes this visible. | The arithmetic quotient is established mathematics; no prime-distribution result or minimal CA repair. |
-| [Relational search](2026-09-23-relational-search-pilot.md), PR #298 | Exact witnesses reduce full verifier calls from 278 to 11 on the known finite Rule-24 case. | Both arms use Prolog; no language advantage. Jev remains unevaluated and parked. |
-| [Prediction and repair](2026-09-23-prediction-repair.md), PR #299 | Two local labels predict stripe persistence; four suffice and are necessary for repair in the fixed grammar. | The target has no passive return paths, so the delayed task reduces to static correction. |
+| [Typed difference geometry](2026-10-06-typed-difference-geometry.md) | The lift's literal defect is zero. Centered `G` is the basepoint dependence of finite-difference transport, and a selected distributivity defect in the established [CA near-ring](2026-10-06-ca-nearring-interpretation.md). Rules 4 and 200 are complementary orthogonal idempotents, and they are the only nonlinear rules with a flat centered commutator. | Algebra and representation; no ambient claim about lifted rules. |
+| [Asymptotic-closure corridor](2026-10-07-asymptotic-closure-scaling.md) | Rules 54 and 110 pass a frozen reserve-and-growth gate under block parity. | [The census control](2026-10-07-asymptotic-closure-census-control.md) shows 41 of 88 representatives pass. A matching variable, not a discriminator. |
+| [Rule 62 against Rule 110](2026-10-07-matched-history-transport.md) and [parity-plus-G closure](2026-10-07-rule110-pg-closure.md) | For Rule 110, current parity plus centered `G` gives the next parity bit by an exact cubic radius-one law, yet is not a self-updating state. A phase wall is the hidden distinction. | Adding the phase gradient restores autonomy and nearly reconstructs the source. |
+| [Latent-Q bound](2026-10-07-rule110-latent-q.md) | On every even ring from 6 to 18 cells, any autonomous repair that retains parity and `G` must keep all but two source pairs. | Finite rings; no full-line theorem. |
+| [The commutator jet](2026-10-07-commutator-jet.md), its [language](2026-10-07-commutator-jet-language.md), [fibres](2026-10-07-commutator-jet-fibers.md) and [controls](2026-10-07-jet-control-panel.md) | `A_0 = D`, `A_{k+1} = A_k∘H ⊕ H∘A_k` makes `G, Q, R, …` the successive corrections needed to transport the previous field. Changing cadence mixes jet order with polarization. | Finite-ring jet closure is mostly near-injectivity, not compression. |
+| [256-rule census and Rule 54](2026-10-07-jet-gqr-census-fibonacci.md) | 228 of 256 rules have branching hidden fibres at `(G,Q,R)`. On a positive-entropy period-four subshift of Rule 54, the whole jet has period two, so no depth distinguishes a configuration from its half-period time shift. | An exceptional pair language, not a typical-source information rate. |
+| [Full-line jet autonomy](2026-10-07-jet-full-line-autonomy.md) | Jets become autonomous on the full line at depth 3 for Rule 30 and depth 5 for Rules 54 and 62, with sharp radii 5, 6 and 6. Rule 110 does not close through depth 5. | Read with its review addendum: `(G,Q,R)` is already almost surely injective for Rules 30, 54 and 110, so autonomy on this panel concerns a measure-zero set. |
 
-The operative direction is **task-specific representation and maintenance**:
-what must be visible to predict, intervene, or preserve a specified organization?
-The [target-eligibility preflight](2026-09-23-return-target-eligibility.md)
-(#300) found a Rule-54 target with both returning and nonreturning one-bit
-injuries. Eligibility alone was insufficient: the
-[delayed-action audit](2026-09-23-delayed-repair-feasibility.md) (#301)
-found that after waiting two steps no one-flip action improves the four-step
-outcome, even with all 12 bits visible. No observer search is justified under
-that contract. A new maintenance unit needs a separately motivated operation
-and passive/full-state baselines before a representation search.
+One July unit was recovered from an unpushed branch in the same pass:
+[the commutator on a finite ring's eventual image](2026-11-09-g-on-attractor.md).
 
-The separate [known-erasure sensing audit](2026-09-23-masked-history-sensing.md)
-(#302) found that two further Rule-54 observations reveal a hidden cell on
-the declared 52-source family. Its predicted task-only advantage failed:
-task prediction and exact source reconstruction become possible together.
-That finite observation result neither repairs a damaged state nor establishes
-an efficiency gain. Another sensing unit needs an independent task and a
-specified observation/corruption operator, with access and waiting costs.
+## Candidates, not a queue
 
-All three completed follow-ups are integrated. Their canonical results and
-failed predictions remain in the linked notes and
-[running findings](FINDINGS.md). No empirical unit is queued merely because
-a result leaves an interesting mathematical question open.
+Each of these needs the four-question decision argument below before any run.
 
-The user-authorized [observation-discovery unit](2026-09-23-observation-discovery.md)
-(#303) is complete. It extends witness-guided search to selecting observations
-from a frozen grammar. Rule 90 recovers its known XOR calibration; Rule 30's
-next-G readout needs six current source bits and gains nothing from the offered
-history or XOR features. Raw-only search is the cheaper method here. The
-visual witness viewer makes each missing distinction inspectable. Retain that
-interface; no broader observation grammar or rule census follows automatically.
+1. **Autonomous and lossy jets.** The second jet review found, in its own
+   unreviewed computation, 104 rules whose depth-four jet is self-updating and
+   discards information at a positive rate, including Rules 18 and 126. That is
+   the cell where a jet does what the project's question asks about. The first
+   step is to confirm whether known Rule-90 domain structure already explains
+   those two rules.
+2. **What the hidden fibres are.** Across the October units the residue a
+   closed representation fails to see is repeatedly a phase: temporal
+   half-period pairs, spatial block phase, the global complement. A sharp
+   statement would say which hidden fibres are orbits of a symmetry of the
+   observer and which are not. This is a reviewer's reading of the notes, not
+   an established account.
+3. **A full-line version of the latent-Q bound**, or the same bound for a
+   changed observer or a restricted source family.
 
-Keep the exact Python verifier and witness interface. The bounded Prolog pilot
-is available when its grammar is useful; it is not mandatory infrastructure.
-Prediction/repair already uses a native Python frontend without a language
-performance claim. Jev setup, Datalog migration and predicate invention are
-not prerequisites or scheduled work.
+The parked lines keep their reopening conditions:
 
-The requested observer-orbit preflight is complete. No empirical unit is
-queued; feedback needs its own independent target and costed baseline before
-a protocol. The [Groovy Field
-program](2026-09-22-groovy-field-program.md) remains a source of exact results
-and specified open questions; its old stage ordering does not supersede this
-agenda. The earlier Rule-110 autonomy obstruction and the completed research
-drive remain in force.
-
-## Portfolio after the completed unit
-
-Read [What we have learned](FINDINGS.md) for the running plain-language
-findings, and [the program survey](2026-09-22-program-survey.md) for the
-recommended portfolio. The [research-drive synthesis](2026-09-22-research-drive-synthesis.md)
-records the completed comparison, subsequent audits and current justified stop.
-Keep one active design agenda under Erased Distinctions:
-local sufficient state and the cost of representation. Representation Invariants
-supplies shared methods; it is not a separate automatic census queue.
-
-The [bounded Groovy readout comparison](2026-09-22-groovy-readout-cost.md)
-is complete: a three-track cache matches the six-field lift's marked readout.
-That caching benefit does not require the lift. Phase-free binary geometry is
-a different interface, not a free property of named tracks. No broad benchmark
-is justified by this candidate. A subsequent [consumer
-audit](2026-09-22-phase-free-consumer-audit.md) found no current downstream
-operation requiring the stricter interface: physical-window scripts study the
-lift itself, and the public code has no lift caller. Leave the application
-question dormant until a consumer supplies an exact operation and cost
-contract. Do not replace the failed advantage proposal with a sequence of
-friendlier targets.
-
-The [recursive-G boundary audit](2026-09-22-recursive-g-boundary.md) also
-resolves a stale naming conflict. Two-beam ancestral source-G transport is
-proved through every finite depth; native descendant G remains generally
-completion-dependent; one-beam typed compression is open but dormant. Do not
-schedule “recursive G” without naming which of these objects is intended.
-
-The only remaining experiment still marked planned was the 2026-09-10
-representation-empowerment census. A prospective
-[endpoint and cost audit](2026-09-22-representation-empowerment-disposition.md)
-parks it unrun. Its primary stable-future outcome includes the post-action
-observation, so identity attains the binary channel's one-bit ceiling for every
-rule; a broad census would not test dynamical persistence. Any replacement
-needs a delayed fixed target, common cadence, action-phase controls, a named
-consumer and a cost baseline under a new protocol.
-
-The CA/CRDT connection produced a completed fixed-interface retention result,
-not a fifth program. The dimensional existence objective is complete. The
-Class-IV, refinement, arithmetic and recoder extensions remain parked unless
-they meet the reopening conditions in the survey.
-
-## Completed bounded unit
-
-The [three executable case studies](representation-case-studies.md) now let a
-reader distinguish:
-
-1. the proposed effective law being wrong;
-2. the observation having no autonomous law on its declared domain;
-3. a finite-ring claim failing to transfer to the infinite line.
-
-Each has a fast verifier and explicit certificate. The separately frozen
-[causal-retention audit](2026-09-21-causal-retention.md) adds a restricted
-lower bound: Rule 110's Nakamura interface requires all twelve local states
-when current/phase readout, radius one and atomic-update semantics are fixed.
-It is compatible with established eight-state simulators that change protocol.
-
-The [agent handoff](NEXT_TASK.md) records publication through PR #282 and
-targeted verification. On main, this unit is integrated. No new
-numerical campaign is queued. The readout design unit closed its candidate
-comparison under a marked-track interface; the
-closed direct-quotient question does not need more rings or source rules.
-
-## What we have, and what is parked
-
-| Thread | State and evidence | Condition for further work |
+| Thread | State | Condition for further work |
 | --- | --- | --- |
-| The Groovy Field | **Bounded units complete in a living program.** Exact full-line [census](2026-09-22-groovy-field-census.md) of Groovy-field autonomy and repairs for all 256 elementary rules. | Use the [checkpoint](checkpoints/groovy-field.md) for evidence and limits. Geometry and 1D recursion units are integrated; a further operation or bound needs a decision argument. Bounded-memory obstructions remain distinct from a no-finite-memory theorem. |
-| Erased distinctions / representation invariants | **Bounded units complete.** Three executable representation cases, the restricted Rule-110 causal-retention lower bound, and the [original-source G autonomy boundary](2026-09-22-rule110-g-autonomy.md). The [depth-three onset result](2026-09-14-depth-three-onset.md) remains integrated. | Start from the completed unit (PR #282). Further depth or observation searches need a question whose answer changes a decision. |
-| Dimensional lift | **Existence and finite recursion closed; application dormant** under the [affine-oriented theorem's contract](2026-09-17-affine-oriented-lift-theorem.md) and [consumer audit](2026-09-22-phase-free-consumer-audit.md). No current downstream caller, uniqueness, optimality or spontaneous organization theorem. | A concrete locality, readout or intervention advantage over ordinary history and the proof's period-three necklace construction, charging encoding and preprocessing costs fairly. |
-| Class-IV discriminator | **Frozen finite benchmark**, with [partial original provenance](2026-09-17-selective-persistence-discriminator-record.md). Its two core positive families are 54 and 110. | An independently defined target and external validation domain; no further feature search on the same labels by default. |
-| Refinement fibers / defects | **Paused.** Local mechanisms are useful in their stated height-two family. The [held-structures completion and correction](2026-09-21-held-structures-account.md) preserves the ninth unit and invalidates three mistimed predictor scores. | A standalone scientific payoff and a bounded protocol; a corrected run is required before reusing those three scores. There is no automatic tenth unit. |
-| Source-recoder recovery (PR #231) | **Archived, incomplete:** 14/22 classified, eight unresolved; no certificate found in the frozen search. Data, code and resumable checkpoints are integrated. | A structural result or a credible method improvement with a small benchmark and hard budget. “More solver time” alone is insufficient. |
-| Predictive assembly support (PR #172) | **Archived, unevaluated:** protocol and implementation preserved; no canonical PAS result. The last off-Actions attempt has an unrecovered outcome. | A concrete use for minimum-test-collection support beyond renaming feature selection, plus a bounded execution plan. |
-| Ring arithmetic, weighted cohabitation, broader observation catalogs, older history/possibility proposals | **Parked.** Negative and partial results stay available. | A mechanism, comparison and stopping rule that justify reopening the line. |
+| The Groovy Field | Bounded units complete; [checkpoint](checkpoints/groovy-field.md). | A further operation or bound with a decision argument. Bounded-memory obstructions are not a no-finite-memory theorem. |
+| Erased distinctions and representation invariants | Bounded units complete; [checkpoint](checkpoints/erased-distinctions.md). | A question whose answer changes a decision, not more depth. |
+| Dimensional lift | Existence and finite recursion closed under [the theorem's contract](2026-09-17-affine-oriented-lift-theorem.md); application dormant after [the consumer audit](2026-09-22-phase-free-consumer-audit.md). | A concrete locality, readout or intervention advantage over ordinary history and the period-three necklace, with encoding costs charged. |
+| Class-IV discriminator | [Frozen finite benchmark](2026-09-17-selective-persistence-discriminator-record.md). | An independently defined target and external validation domain. |
+| Refinement fibres and defects | Paused; [completion and correction](2026-09-21-held-structures-account.md). | A standalone payoff, a bounded protocol, and a corrected run before reusing three invalidated scores. |
+| Controllers, repair and rule composition | Closed on their stated tasks; see the September entries in the findings. | An independently specified target and a costed consumer. |
+| Source-recoder recovery | [Archived incomplete](2026-09-14-bounded-source-recoder-recovery-status.md): 14 of 22 classified. | A structural result or a method improvement with a hard budget. |
+| Predictive assembly support | Archived unevaluated. | A concrete use and a bounded execution plan. |
+| Ring arithmetic, weighted cohabitation, wider observation catalogs | Parked. | A mechanism, a comparison and a stopping rule. |
 
-Parking an incomplete computation does not turn it into a negative theorem.
-Scheduling can stop while the mathematics remains open. The old protocol's
-22/22 scientific completion condition does not obligate indefinite spending.
+Parking an incomplete computation does not make it a negative theorem.
+Scheduling can stop while the mathematics remains open.
 
 ## Rules for choosing the next unit
 
@@ -250,7 +90,7 @@ Before a new experiment, answer these four questions in a short paragraph:
 - What uncertainty matters to the project?
 - What result would change the next action, including a negative result?
 - What existing theorem, simpler method or baseline must this beat?
-- What time/resource limit or result ends this line?
+- What time or resource limit, or what result, ends this line?
 
 Declare the rule, state family, boundary, observation, cadence, horizon and
 resource being measured. Keep an exact theorem, a finite computation, a
@@ -258,22 +98,25 @@ sampled observation and a conjecture distinct. A timeout, missing score or
 lost artifact is never a scientific negative. Do not reuse observed outcomes
 as fresh predictions. Integrity checks verify provenance, not the argument.
 
-Historical research remains at the four Program pages and their checkpoints.
-Read only the lineage needed for the chosen task. Do not append the whole
-research history to agent instructions. Authorship, evaluation and review
-chronology remain in the original records.
+## Keeping this page short
 
-## Reset provenance
+This page states the current position. It is not where a unit reports. When a
+unit ends:
 
-Myk authorized repository changes, consolidation, closure and merges on
-2026-09-21 and explicitly suspended the Fable peer-review protocol **for this
-reset**. This authorizes integration and correction, not a claim of independent
-scientific review. The [integration record](2026-09-21-research-reset.md)
-lists the four preserved PR heads, checks and limits. On 2026-09-22 Myk
-retired the standing review gates; review is now requested case by case
-(see `AGENTS.md`).
+- add its account to [the findings](FINDINGS.md) and link the evidence;
+- change at most one table row or one candidate here;
+- leave the dated narrative in the unit's own note and its program
+  [checkpoint](checkpoints/erased-distinctions.md).
 
-Myk subsequently authorized Codex to set up and continue this case-study and
-causal-retention work **solo** on 2026-09-21. Its protocols and notes record
-that additional exception. Self-verification does not constitute independent
-review; the exception is scoped to this unit and its frozen locality follow-up.
+Base every gathering branch on `main`. A stack of branches on branches is how a
+month of results went missing from this page.
+
+## Provenance
+
+Review is requested case by case; there has been no standing cross-agent gate
+since 2026-09-22 (see `AGENTS.md`). Earlier resets and their waivers are in
+[the 2026-09-21 reset record](2026-09-21-research-reset.md),
+[the 2026-09-23 integration record](2026-09-23-research-integration.md) and
+[the archived previous page](archive/start-here-2026-10-08.md). Unmerged
+branches and what became of each are in
+[the branch disposition](archive/branch-disposition-2026-11-09.md).

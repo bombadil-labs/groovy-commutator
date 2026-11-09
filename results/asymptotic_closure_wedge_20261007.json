@@ -1,0 +1,341 @@
+{
+  "schema": "asymptotic-closure-wedge-v1",
+  "date": "2026-10-07",
+  "protocol": "docs/research/protocols/asymptotic-closure-wedge-20261007.md",
+  "panel": [
+    0,
+    4,
+    90,
+    184,
+    30,
+    126,
+    54,
+    110
+  ],
+  "evaluated_widths": [
+    12,
+    14
+  ],
+  "profiles": {
+    "12": {
+      "0": {
+        "rule": 0,
+        "n": 12,
+        "hstar": 0,
+        "Hinf": 6,
+        "latent_bits": 0,
+        "repair_bits": [],
+        "A90": 0,
+        "depth_density": 0,
+        "safe_forgetting_density": 0.5
+      },
+      "4": {
+        "rule": 4,
+        "n": 12,
+        "hstar": 1,
+        "Hinf": 8.72369149786481,
+        "latent_bits": 2.7236914978648095,
+        "repair_bits": [
+          2.723691497864809
+        ],
+        "A90": 0,
+        "depth_density": 0.08333333333333333,
+        "safe_forgetting_density": 0.2730257085112659
+      },
+      "30": {
+        "rule": 30,
+        "n": 12,
+        "hstar": 10,
+        "Hinf": 11.98388671875,
+        "latent_bits": 5.98388671875,
+        "repair_bits": [
+          5.04613074130511,
+          0.846492906759313,
+          0.056106820685578,
+          0.01171875,
+          0.005859375,
+          0.005859375,
+          0.0029296875,
+          0.0029296875,
+          0.0029296875,
+          0.0029296875
+        ],
+        "A90": 0.8,
+        "depth_density": 0.8333333333333334,
+        "safe_forgetting_density": 0.0013427734375
+      },
+      "54": {
+        "rule": 54,
+        "n": 12,
+        "hstar": 5,
+        "Hinf": 11.336435345735564,
+        "latent_bits": 5.336435345735564,
+        "repair_bits": [
+          4.161371981378892,
+          1.032067723098848,
+          0.106345909799836,
+          0.021613604739498,
+          0.01503612671849
+        ],
+        "A90": 0.6,
+        "depth_density": 0.4166666666666667,
+        "safe_forgetting_density": 0.055297054522036294
+      },
+      "90": {
+        "rule": 90,
+        "n": 12,
+        "hstar": 0,
+        "Hinf": 6,
+        "latent_bits": 0,
+        "repair_bits": [],
+        "A90": 0,
+        "depth_density": 0,
+        "safe_forgetting_density": 0.5
+      },
+      "110": {
+        "rule": 110,
+        "n": 12,
+        "hstar": 4,
+        "Hinf": 11.594326948716152,
+        "latent_bits": 5.5943269487161515,
+        "repair_bits": [
+          4.169374140536881,
+          1.30734898125279,
+          0.10588507692648,
+          0.01171875
+        ],
+        "A90": 0.5,
+        "depth_density": 0.3333333333333333,
+        "safe_forgetting_density": 0.03380608760698737
+      },
+      "126": {
+        "rule": 126,
+        "n": 12,
+        "hstar": 4,
+        "Hinf": 9.804267041020932,
+        "latent_bits": 3.804267041020932,
+        "repair_bits": [
+          3.085109915569511,
+          0.666422750451421,
+          0.046875,
+          0.005859375
+        ],
+        "A90": 0.5,
+        "depth_density": 0.3333333333333333,
+        "safe_forgetting_density": 0.18297774658158902
+      },
+      "184": {
+        "rule": 184,
+        "n": 12,
+        "hstar": 3,
+        "Hinf": 8.9736328125,
+        "latent_bits": 2.9736328125,
+        "repair_bits": [
+          2.718158748055799,
+          0.242649522204704,
+          0.012824542239496
+        ],
+        "A90": 0.6666666666666666,
+        "depth_density": 0.25,
+        "safe_forgetting_density": 0.252197265625
+      }
+    },
+    "14": {
+      "0": {
+        "rule": 0,
+        "n": 14,
+        "hstar": 0,
+        "Hinf": 7,
+        "latent_bits": 0,
+        "repair_bits": [],
+        "A90": 0,
+        "depth_density": 0,
+        "safe_forgetting_density": 0.5
+      },
+      "4": {
+        "rule": 4,
+        "n": 14,
+        "hstar": 1,
+        "Hinf": 10.18043434749643,
+        "latent_bits": 3.18043434749643,
+        "repair_bits": [
+          3.18043434749643
+        ],
+        "A90": 0,
+        "depth_density": 0.07142857142857142,
+        "safe_forgetting_density": 0.2728261180359693
+      },
+      "30": {
+        "rule": 30,
+        "n": 14,
+        "hstar": 10,
+        "Hinf": 13.999755859375,
+        "latent_bits": 6.999755859375,
+        "repair_bits": [
+          5.926719215117688,
+          0.986829304012213,
+          0.0580090980576,
+          0.008544921875,
+          0.0059814453125,
+          0.0042724609375,
+          0.00341796875,
+          0.0025634765625,
+          0.001708984375,
+          0.001708984375
+        ],
+        "A90": 0.8,
+        "depth_density": 0.7142857142857143,
+        "safe_forgetting_density": 0.00001743861607142857
+      },
+      "54": {
+        "rule": 54,
+        "n": 14,
+        "hstar": 5,
+        "Hinf": 13.380063457195527,
+        "latent_bits": 6.3800634571955275,
+        "repair_bits": [
+          4.911732083364473,
+          1.252560490145292,
+          0.159470770003164,
+          0.038774671174018,
+          0.01752544250858
+        ],
+        "A90": 0.6,
+        "depth_density": 0.35714285714285715,
+        "safe_forgetting_density": 0.044281181628890894
+      },
+      "90": {
+        "rule": 90,
+        "n": 14,
+        "hstar": 0,
+        "Hinf": 7,
+        "latent_bits": 0,
+        "repair_bits": [],
+        "A90": 0,
+        "depth_density": 0,
+        "safe_forgetting_density": 0.5
+      },
+      "110": {
+        "rule": 110,
+        "n": 14,
+        "hstar": 4,
+        "Hinf": 13.529351063732978,
+        "latent_bits": 6.529351063732978,
+        "repair_bits": [
+          4.864464583199316,
+          1.530901574250029,
+          0.121376970185592,
+          0.012607936098041
+        ],
+        "A90": 0.5,
+        "depth_density": 0.2857142857142857,
+        "safe_forgetting_density": 0.033617781161930135
+      },
+      "126": {
+        "rule": 126,
+        "n": 14,
+        "hstar": 3,
+        "Hinf": 11.606668819657868,
+        "latent_bits": 4.606668819657868,
+        "repair_bits": [
+          3.638771481165854,
+          0.861714155197895,
+          0.106183183294119
+        ],
+        "A90": 0.3333333333333333,
+        "depth_density": 0.21428571428571427,
+        "safe_forgetting_density": 0.17095222716729516
+      },
+      "184": {
+        "rule": 184,
+        "n": 14,
+        "hstar": 4,
+        "Hinf": 10.4913330078125,
+        "latent_bits": 3.4913330078125,
+        "repair_bits": [
+          3.213663632677148,
+          0.262497962474812,
+          0.014316920473039,
+          0.0008544921875
+        ],
+        "A90": 0.75,
+        "depth_density": 0.2857142857142857,
+        "safe_forgetting_density": 0.2506190708705357
+      }
+    }
+  },
+  "gates": {
+    "12": {
+      "anchors_ordered": true,
+      "candidate_pass": {
+        "54": true,
+        "110": true
+      },
+      "pass": true,
+      "coordinates": {
+        "30": {
+          "depth_density": 0.8333333333333334,
+          "safe_forgetting_density": 0.0013427734375
+        },
+        "54": {
+          "depth_density": 0.4166666666666667,
+          "safe_forgetting_density": 0.055297054522036294
+        },
+        "110": {
+          "depth_density": 0.3333333333333333,
+          "safe_forgetting_density": 0.03380608760698737
+        },
+        "126": {
+          "depth_density": 0.3333333333333333,
+          "safe_forgetting_density": 0.18297774658158902
+        },
+        "184": {
+          "depth_density": 0.25,
+          "safe_forgetting_density": 0.252197265625
+        }
+      }
+    },
+    "14": {
+      "anchors_ordered": true,
+      "candidate_pass": {
+        "54": true,
+        "110": false
+      },
+      "pass": false,
+      "coordinates": {
+        "30": {
+          "depth_density": 0.7142857142857143,
+          "safe_forgetting_density": 0.00001743861607142857
+        },
+        "54": {
+          "depth_density": 0.35714285714285715,
+          "safe_forgetting_density": 0.044281181628890894
+        },
+        "110": {
+          "depth_density": 0.2857142857142857,
+          "safe_forgetting_density": 0.033617781161930135
+        },
+        "126": {
+          "depth_density": 0.21428571428571427,
+          "safe_forgetting_density": 0.17095222716729516
+        },
+        "184": {
+          "depth_density": 0.2857142857142857,
+          "safe_forgetting_density": 0.2506190708705357
+        }
+      }
+    }
+  },
+  "stop_reason": "strict wedge failed at n=14",
+  "summary": {
+    "status": "negative",
+    "evaluated_widths": [
+      12,
+      14
+    ],
+    "stop_reason": "strict wedge failed at n=14"
+  },
+  "source_hashes": {
+    "script_sha256": "99e2c9f09433be08813ab2444cea9c6d93c4f3c65a723024252a55ea90a7a9fd"
+  }
+}

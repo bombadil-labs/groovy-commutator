@@ -1,7 +1,7 @@
 [
   {
     "date": "2026-09-21",
-    "updated": "2026-09-23",
+    "updated": "2026-11-09",
     "promotion": {
       "stage": "research"
     },
@@ -9,12 +9,12 @@
     "recordType": "checkpoint",
     "scope": "lab",
     "label": "Research direction",
-    "title": "Research: current direction and the next concrete task",
+    "title": "Research: the question, where the work stands, and what would justify more",
     "kind": "Checkpoint: current research direction",
     "evidence": "state",
     "topic": "Research direction",
-    "summary": "Five completed representation units are integrated. The current question is what distinctions support prediction, intervention and maintenance under a specified contract.",
-    "takeaway": "Establish genuine return dynamics for a proposed repair target before searching observers; historical open questions and completed units do not automatically queue new experiments.",
+    "summary": "Everything completed through 2026-10-08 is integrated. September closed the application lines for want of a consumer; October returned to the mathematics of the commutator itself with the jet, its hidden fibres and an exact bound on repairing Rule 110's parity-plus-Groovy observer. No empirical unit is queued.",
+    "takeaway": "Three candidates are listed, each needing a decision argument first: autonomous and lossy jets, a symmetry account of hidden fibres, and a full-line version of the latent-Q bound. The page is kept short; units report in their own notes and the findings.",
     "source": "docs/research/START_HERE.md",
     "related": [
       "research-boundaries",
@@ -26,7 +26,11 @@
       "research-portfolio-20260922",
       "groovy-readout-cost",
       "research-integration-20260923",
-      "prediction-repair"
+      "prediction-repair",
+      "october-integration-review-20261109",
+      "jet-full-line-autonomy-20261007",
+      "rule110-latent-q-20261007",
+      "g-on-attractor-20261109"
     ]
   },
   {

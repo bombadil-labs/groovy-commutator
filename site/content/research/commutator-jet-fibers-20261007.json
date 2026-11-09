@@ -1,0 +1,22 @@
+[
+  {
+    "slug": "commutator-jet-fibers-20261007",
+    "label": "Commutator jet fibers",
+    "title": "Full-entropy jet prefixes leave only zero-entropy phase ambiguity",
+    "date": "2026-10-07",
+    "updated": "2026-10-07",
+    "kind": "Exact full-line pair-fiber analysis",
+    "evidence": "exact",
+    "topic": "Observation and memory",
+    "summary": "Immediately below full jet entropy, Rules 110 and 62 retain positive-entropy mixed hidden fibers. At their first full-entropy prefixes, every recurrent off-diagonal fiber component collapses to a finite periodic cycle; only zero-entropy phase sectors and interfaces remain.",
+    "takeaway": "Successive commutator residuals appear to consume extensive latent state until only a phase/gauge skeleton survives. The next target is a finite-state phase automaton, not another raw residual bit field.",
+    "source": "docs/research/2026-10-07-commutator-jet-fibers.md",
+    "promotion": {
+      "stage": "research"
+    },
+    "related": [
+      "commutator-jet-language-20261007",
+      "commutator-jet-20261007"
+    ]
+  }
+]

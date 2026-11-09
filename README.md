@@ -8,12 +8,12 @@ rules. Origin: https://liet-codes.github.io/wet-math/commutator.html
 
 The current research question is **which distinctions a representation can
 safely discard, which it must retain, and what a change of representation buys**.
-Read [what we have learned](docs/research/FINDINGS.md),
-[the program survey](docs/research/2026-09-22-program-survey.md), and
-[the next-agent task](docs/research/NEXT_TASK.md): the bounded readout comparison
-is complete; further work needs a concrete consumer and resource contract.
-Broad Class-IV searches, further dimensional
-existence sweeps and stalled solver campaigns are parked.
+Read [the direction page](docs/research/START_HERE.md) for where the work
+stands and what would justify more, [what we have learned](docs/research/FINDINGS.md)
+for the plain-language record, and [the handoff](docs/research/NEXT_TASK.md) for
+how to check the repository. Nothing is queued: the application lines are
+parked pending a consumer with a cost contract, and the most recent results
+are about the commutator itself (the commutator jet and its hidden fibres).
 
 The [limits and prior-art guide](docs/research/2026-09-21-research-boundaries.md)
 explains the mathematical boundaries. [AGENTS.md](AGENTS.md) contains the short
@@ -73,6 +73,14 @@ This note also corrects the old affine converse: nonlinear Rules 4 and
 - `docs/research/` — canonical research notes, archived conversation material,
   and the authoring/promotion guide. Published notes are selected by
   `site/content/research.json`; archived notes stay available as evidence.
+- `docs/knowledge/` — one short page per concept, finding, question or theory,
+  registered with typed links in `site/content/knowledge.json`.
+- `experiments/` — self-contained runners for individual research units, with
+  their own verifiers. Many are hashed by `scripts/check_result_integrity.py`;
+  do not edit a runner whose bytes a recorded result depends on.
+- `exploratory/` — small scripts and verbatim output written to settle a point
+  in review. `review/` — independent re-implementations used as cross-checks.
+- `tests/` — the Python test suite (`python -m pytest -q tests`).
 - `site/` — source for the GitHub Pages site (React + Vite): main pages —
   home, concepts (cellular automata, boolean calculus incl. the `I`/Euler-
   integration reading of evolution, the State&rarr;State shape, each
@@ -96,7 +104,7 @@ This note also corrects the old affine converse: nonlinear Rules 4 and
 ```bash
 python -m venv .venv && source .venv/bin/activate
 pip install -e .
-pip install -r requirements.txt   # adds matplotlib + jupyter for the notebook
+pip install -r requirements.txt   # notebook, verifier and test dependencies
 jupyter notebook notebooks/01_exploration.ipynb
 ```
 
@@ -119,8 +127,8 @@ divergence_stats(field)   # structured, persistent disagreement -- not noise, no
 ## Status
 
 The original 256-rule / 32,640-pair finite sweep is complete. Its empirical
-classification and corrections remain in the research record. Current work
-is consolidation of exact representation results; see
-[START_HERE](docs/research/START_HERE.md) for active and parked threads and
-[the reset record](docs/research/2026-09-21-research-reset.md) for integration
-of the four previously open research PRs.
+classification and corrections remain in the research record. Everything
+completed through 2026-10-08 is on `main`; see
+[START_HERE](docs/research/START_HERE.md) for the current position and parked
+threads, and [the 2026-11-09 review and integration record](docs/research/2026-11-09-october-integration-review.md)
+for how the last month of work was checked and combined.

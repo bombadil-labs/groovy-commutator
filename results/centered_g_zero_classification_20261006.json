@@ -1,0 +1,105 @@
+{
+  "classification": {
+    "affine_branch_count": 16,
+    "condition_rules": [
+      0,
+      4,
+      15,
+      51,
+      60,
+      85,
+      90,
+      102,
+      105,
+      150,
+      153,
+      165,
+      170,
+      195,
+      200,
+      204,
+      240,
+      255
+    ],
+    "equations": [
+      "aLR = 0",
+      "aCR = aLCR",
+      "aLC = aLCR",
+      "a0*aLCR = 0",
+      "aR*aLCR = 0",
+      "aL*aLCR = 0"
+    ],
+    "flat_rules": [
+      0,
+      4,
+      15,
+      51,
+      60,
+      85,
+      90,
+      102,
+      105,
+      150,
+      153,
+      165,
+      170,
+      195,
+      200,
+      204,
+      240,
+      255
+    ],
+    "mismatches": [],
+    "nonlinear_branch_anf": [
+      {
+        "anf": {
+          "a0": 0,
+          "aC": 1,
+          "aCR": 1,
+          "aL": 0,
+          "aLC": 1,
+          "aLCR": 1,
+          "aLR": 0,
+          "aR": 0
+        },
+        "rule": 4
+      },
+      {
+        "anf": {
+          "a0": 0,
+          "aC": 0,
+          "aCR": 1,
+          "aL": 0,
+          "aLC": 1,
+          "aLCR": 1,
+          "aLR": 0,
+          "aR": 0
+        },
+        "rule": 200
+      }
+    ],
+    "nonlinear_branch_rules": [
+      4,
+      200
+    ]
+  },
+  "date": "2026-10-06",
+  "domain": {
+    "reason": "the center of G has radius 2, so five source bits are the complete full-line local domain",
+    "rules": 256,
+    "source_words_per_rule": 32
+  },
+  "schema": "centered-g-zero-eca-classification-v1",
+  "source_hashes": {
+    "script_sha256": "3a44e4ccf8162fc665eac6ed8f8b7191632ca75da5b3bed54326d811c83d5233"
+  },
+  "summary": {
+    "affine_branch_count": 16,
+    "flat_rule_count": 18,
+    "nonlinear_branch_rules": [
+      4,
+      200
+    ],
+    "pass": true
+  }
+}

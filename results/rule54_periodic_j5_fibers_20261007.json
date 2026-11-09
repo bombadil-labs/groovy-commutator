@@ -1,0 +1,129 @@
+{
+  "schema": "rule54-periodic-j5-fiber-diagnostic-v1",
+  "date": "2026-10-07",
+  "provenance": "Post-hoc full periodic-ring census, not proof of typical full-line conditional information; source J5 dynamics and orbit class computed exactly from Rule54 on all states.",
+  "source": "Rule 54; uniform over all n-bit rings",
+  "observable": "J5=(G,Q,R,A4,A5)",
+  "rows": {
+    "8": {
+      "n": 8,
+      "source_states": 256,
+      "jet_image_states": 222,
+      "fiber_histogram": {
+        "1": 192,
+        "2": 28,
+        "4": 2
+      },
+      "colliding_fibers": 30,
+      "uniform_source_bits_forgotten": 0.28125,
+      "unordered_equal_jet_pairs": 40,
+      "mechanisms": {
+        "same_source_orbit": 14,
+        "one_is_future_of_other": 5,
+        "common_eventual_cycle_different_preimages": 17,
+        "disjoint_source_orbits": 4
+      },
+      "entire_current_J5_determines_next_J5": true
+    },
+    "10": {
+      "n": 10,
+      "source_states": 1024,
+      "jet_image_states": 1001,
+      "fiber_histogram": {
+        "1": 980,
+        "2": 20,
+        "4": 1
+      },
+      "colliding_fibers": 21,
+      "uniform_source_bits_forgotten": 0.046875,
+      "unordered_equal_jet_pairs": 26,
+      "mechanisms": {
+        "same_source_orbit": 20,
+        "one_is_future_of_other": 5,
+        "common_eventual_cycle_different_preimages": 1
+      },
+      "entire_current_J5_determines_next_J5": true
+    },
+    "12": {
+      "n": 12,
+      "source_states": 4096,
+      "jet_image_states": 4050,
+      "fiber_histogram": {
+        "1": 4008,
+        "2": 40,
+        "4": 2
+      },
+      "colliding_fibers": 42,
+      "uniform_source_bits_forgotten": 0.0234375,
+      "unordered_equal_jet_pairs": 52,
+      "mechanisms": {
+        "same_source_orbit": 42,
+        "one_is_future_of_other": 5,
+        "common_eventual_cycle_different_preimages": 1,
+        "disjoint_source_orbits": 4
+      },
+      "entire_current_J5_determines_next_J5": true
+    },
+    "14": {
+      "n": 14,
+      "source_states": 16384,
+      "jet_image_states": 16325,
+      "fiber_histogram": {
+        "1": 16268,
+        "2": 56,
+        "4": 1
+      },
+      "colliding_fibers": 57,
+      "uniform_source_bits_forgotten": 0.00732421875,
+      "unordered_equal_jet_pairs": 62,
+      "mechanisms": {
+        "same_source_orbit": 56,
+        "one_is_future_of_other": 5,
+        "common_eventual_cycle_different_preimages": 1
+      },
+      "entire_current_J5_determines_next_J5": true
+    },
+    "16": {
+      "n": 16,
+      "source_states": 65536,
+      "jet_image_states": 65406,
+      "fiber_histogram": {
+        "1": 65280,
+        "2": 124,
+        "4": 2
+      },
+      "colliding_fibers": 126,
+      "uniform_source_bits_forgotten": 0.0040283203125,
+      "unordered_equal_jet_pairs": 136,
+      "mechanisms": {
+        "same_source_orbit": 94,
+        "one_is_future_of_other": 5,
+        "common_eventual_cycle_different_preimages": 33,
+        "disjoint_source_orbits": 4
+      },
+      "entire_current_J5_determines_next_J5": true
+    },
+    "18": {
+      "n": 18,
+      "source_states": 262144,
+      "jet_image_states": 261985,
+      "fiber_histogram": {
+        "1": 261828,
+        "2": 156,
+        "4": 1
+      },
+      "colliding_fibers": 157,
+      "uniform_source_bits_forgotten": 0.001220703125,
+      "unordered_equal_jet_pairs": 162,
+      "mechanisms": {
+        "same_source_orbit": 156,
+        "one_is_future_of_other": 5,
+        "common_eventual_cycle_different_preimages": 1
+      },
+      "entire_current_J5_determines_next_J5": true
+    }
+  },
+  "source_hashes": {
+    "runner_sha256": "38bf2cb38097c6d4551558989599fe4f135105ac058c438b623bef0f9e0c539c"
+  }
+}

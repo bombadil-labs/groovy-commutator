@@ -1,0 +1,23 @@
+[
+  {
+    "slug": "rule110-latent-q-20261007",
+    "label": "Rule 110 latent Q",
+    "title": "Exact future fibers bound every autonomous parity/G repair",
+    "date": "2026-10-07",
+    "updated": "2026-10-07",
+    "kind": "Exact finite quotient and construction",
+    "evidence": "exact",
+    "topic": "Observation and memory",
+    "summary": "On every even Rule-110 ring from 6 through 18, the minimal autonomous parity/G refinement merges only two source pairs. Binary equivariant Q fields realize the quotient, but joint compression fails and the constructed local updates have exact radius-0--3 counterexamples.",
+    "takeaway": "A small missing coordinate can complete an almost microscopic visible state; exact future equivalence bounds every repair encoding on the declared finite domain.",
+    "source": "docs/research/2026-10-07-rule110-latent-q.md",
+    "promotion": {
+      "stage": "research"
+    },
+    "related": [
+      "rule110-pg-closure-20261007",
+      "matched-history-transport-20261007",
+      "history-lift-closure"
+    ]
+  }
+]

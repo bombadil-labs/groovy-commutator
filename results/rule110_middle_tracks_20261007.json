@@ -1,0 +1,380 @@
+{
+  "schema": "rule110-middle-tracks-v1",
+  "date": "2026-10-07",
+  "protocol": "docs/research/protocols/rule110-middle-tracks-20261007.md",
+  "candidate_family": "T_j=t(X_{2j-1},X_{2j},X_{2j+1}), all 256 radius-one Boolean t",
+  "radius1": {
+    "source_width": 10,
+    "closing_tracks": [],
+    "closing_count": 0
+  },
+  "radius2": {
+    "source_width": 14,
+    "closing_tracks": [
+      48,
+      49,
+      50,
+      51,
+      52,
+      54,
+      56,
+      57,
+      58,
+      59,
+      60,
+      62,
+      80,
+      82,
+      84,
+      85,
+      86,
+      87,
+      88,
+      90,
+      92,
+      93,
+      94,
+      95,
+      160,
+      161,
+      162,
+      163,
+      165,
+      167,
+      168,
+      169,
+      170,
+      171,
+      173,
+      175,
+      193,
+      195,
+      196,
+      197,
+      198,
+      199,
+      201,
+      203,
+      204,
+      205,
+      206,
+      207
+    ],
+    "closing_count": 48,
+    "details": {
+      "48": {
+        "distinct_contexts": 3717
+      },
+      "49": {
+        "distinct_contexts": 3240
+      },
+      "50": {
+        "distinct_contexts": 3718
+      },
+      "51": {
+        "distinct_contexts": 3240
+      },
+      "52": {
+        "distinct_contexts": 4188
+      },
+      "54": {
+        "distinct_contexts": 4193
+      },
+      "56": {
+        "distinct_contexts": 3837
+      },
+      "57": {
+        "distinct_contexts": 3360
+      },
+      "58": {
+        "distinct_contexts": 3838
+      },
+      "59": {
+        "distinct_contexts": 3360
+      },
+      "60": {
+        "distinct_contexts": 4308
+      },
+      "62": {
+        "distinct_contexts": 4313
+      },
+      "80": {
+        "distinct_contexts": 4193
+      },
+      "82": {
+        "distinct_contexts": 4188
+      },
+      "84": {
+        "distinct_contexts": 3718
+      },
+      "85": {
+        "distinct_contexts": 3240
+      },
+      "86": {
+        "distinct_contexts": 3717
+      },
+      "87": {
+        "distinct_contexts": 3240
+      },
+      "88": {
+        "distinct_contexts": 4313
+      },
+      "90": {
+        "distinct_contexts": 4308
+      },
+      "92": {
+        "distinct_contexts": 3838
+      },
+      "93": {
+        "distinct_contexts": 3360
+      },
+      "94": {
+        "distinct_contexts": 3837
+      },
+      "95": {
+        "distinct_contexts": 3360
+      },
+      "160": {
+        "distinct_contexts": 3360
+      },
+      "161": {
+        "distinct_contexts": 3837
+      },
+      "162": {
+        "distinct_contexts": 3360
+      },
+      "163": {
+        "distinct_contexts": 3838
+      },
+      "165": {
+        "distinct_contexts": 4308
+      },
+      "167": {
+        "distinct_contexts": 4313
+      },
+      "168": {
+        "distinct_contexts": 3240
+      },
+      "169": {
+        "distinct_contexts": 3717
+      },
+      "170": {
+        "distinct_contexts": 3240
+      },
+      "171": {
+        "distinct_contexts": 3718
+      },
+      "173": {
+        "distinct_contexts": 4188
+      },
+      "175": {
+        "distinct_contexts": 4193
+      },
+      "193": {
+        "distinct_contexts": 4313
+      },
+      "195": {
+        "distinct_contexts": 4308
+      },
+      "196": {
+        "distinct_contexts": 3360
+      },
+      "197": {
+        "distinct_contexts": 3838
+      },
+      "198": {
+        "distinct_contexts": 3360
+      },
+      "199": {
+        "distinct_contexts": 3837
+      },
+      "201": {
+        "distinct_contexts": 4193
+      },
+      "203": {
+        "distinct_contexts": 4188
+      },
+      "204": {
+        "distinct_contexts": 3240
+      },
+      "205": {
+        "distinct_contexts": 3718
+      },
+      "206": {
+        "distinct_contexts": 3240
+      },
+      "207": {
+        "distinct_contexts": 3717
+      }
+    }
+  },
+  "fiber_groups": [
+    {
+      "tracks": [
+        52,
+        54,
+        60,
+        62,
+        80,
+        82,
+        88,
+        90,
+        165,
+        167,
+        173,
+        175,
+        193,
+        195,
+        201,
+        203
+      ],
+      "count": 16,
+      "rings": {
+        "12": {
+          "n": 12,
+          "distinct_encodings": 4094,
+          "largest_fiber": 2,
+          "fiber_histogram": {
+            "1": 4092,
+            "2": 2
+          },
+          "conditional_source_bits": 0.0009765625
+        },
+        "14": {
+          "n": 14,
+          "distinct_encodings": 16382,
+          "largest_fiber": 2,
+          "fiber_histogram": {
+            "1": 16380,
+            "2": 2
+          },
+          "conditional_source_bits": 0.000244140625
+        },
+        "16": {
+          "n": 16,
+          "distinct_encodings": 65534,
+          "largest_fiber": 2,
+          "fiber_histogram": {
+            "1": 65532,
+            "2": 2
+          },
+          "conditional_source_bits": 0.00006103515625
+        }
+      }
+    },
+    {
+      "tracks": [
+        48,
+        50,
+        56,
+        58,
+        84,
+        86,
+        92,
+        94,
+        161,
+        163,
+        169,
+        171,
+        197,
+        199,
+        205,
+        207
+      ],
+      "count": 16,
+      "rings": {
+        "12": {
+          "n": 12,
+          "distinct_encodings": 4095,
+          "largest_fiber": 2,
+          "fiber_histogram": {
+            "1": 4094,
+            "2": 1
+          },
+          "conditional_source_bits": 0.00048828125
+        },
+        "14": {
+          "n": 14,
+          "distinct_encodings": 16383,
+          "largest_fiber": 2,
+          "fiber_histogram": {
+            "1": 16382,
+            "2": 1
+          },
+          "conditional_source_bits": 0.0001220703125
+        },
+        "16": {
+          "n": 16,
+          "distinct_encodings": 65535,
+          "largest_fiber": 2,
+          "fiber_histogram": {
+            "1": 65534,
+            "2": 1
+          },
+          "conditional_source_bits": 0.000030517578125
+        }
+      }
+    },
+    {
+      "tracks": [
+        49,
+        51,
+        57,
+        59,
+        85,
+        87,
+        93,
+        95,
+        160,
+        162,
+        168,
+        170,
+        196,
+        198,
+        204,
+        206
+      ],
+      "count": 16,
+      "rings": {
+        "12": {
+          "n": 12,
+          "distinct_encodings": 4096,
+          "largest_fiber": 1,
+          "fiber_histogram": {
+            "1": 4096
+          },
+          "conditional_source_bits": 0
+        },
+        "14": {
+          "n": 14,
+          "distinct_encodings": 16384,
+          "largest_fiber": 1,
+          "fiber_histogram": {
+            "1": 16384
+          },
+          "conditional_source_bits": 0
+        },
+        "16": {
+          "n": 16,
+          "distinct_encodings": 65536,
+          "largest_fiber": 1,
+          "fiber_histogram": {
+            "1": 65536
+          },
+          "conditional_source_bits": 0
+        }
+      }
+    }
+  ],
+  "summary": {
+    "radius1_closing_count": 0,
+    "radius2_closing_count": 48,
+    "all_radius2_closers_largest_fiber_at_most_two": true,
+    "max_conditional_source_bits_n12": 0.0009765625,
+    "max_conditional_source_bits_n16": 0.00006103515625,
+    "middle_representation_found": false
+  },
+  "source_hashes": {
+    "script_sha256": "16b0d4d44340df3ca73e542e2f875c44086f7486ff5fa02ca76e425c12539b01"
+  }
+}

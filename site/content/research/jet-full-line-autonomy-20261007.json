@@ -1,0 +1,22 @@
+[
+  {
+    "slug": "jet-full-line-autonomy-20261007",
+    "label": "Autonomous commutator jets",
+    "title": "Rule 54 closes its full-line G-anchored jet at A5 with local radius six",
+    "date": "2026-10-07",
+    "updated": "2026-10-07",
+    "kind": "Exact full-line factor and finite-ring diagnostic",
+    "evidence": "exact",
+    "topic": "Observation and memory",
+    "summary": "Exhaustive de Bruijn equal-jet source-pair tests show Rules 30, 54, 62 reach full-line G-anchored autonomous jet prefixes at R, A5, A5 respectively, with minimum local radii 5,6,6; Rule 110 remains nonautonomous through A5. Rule 54 J5's uniform finite-ring fibers forget just 0.00122 bits at width 18.",
+    "takeaway": "Full source entropy, full-line autonomy, bounded local inverse, and useful compression are different properties. Rule 54's exceptional phase and preimage ambiguity remains compatible with a globally autonomous induced local jet law.",
+    "source": "docs/research/2026-10-07-jet-full-line-autonomy.md",
+    "promotion": {
+      "stage": "research"
+    },
+    "related": [
+      "jet-gqr-256-fibonacci-20261007",
+      "commutator-jet-fibers-20261007"
+    ]
+  }
+]

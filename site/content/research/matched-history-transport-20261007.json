@@ -1,0 +1,22 @@
+[
+  {
+    "slug": "matched-history-transport-20261007",
+    "label": "Matched history transport",
+    "title": "Rule 62 and Rule 110 need similar history for different reasons",
+    "date": "2026-10-07",
+    "updated": "2026-10-07",
+    "kind": "Exact matched-control experiment",
+    "evidence": "exact",
+    "topic": "Observation and memory",
+    "summary": "At fresh widths 16 and 18, every nonzero Rule-110 predictive repair is exactly determined by the current predictive label plus current centered Groovy field. Rule 62, despite nearly matching Rule 110 in predictive-compression scaling, has exact early repair counterexamples at both widths.",
+    "takeaway": "Matching the amount of required history does not match its causal role: Rule 110's repairs are fully coupled to situated change in this test, while Rule 62 needs additional context.",
+    "source": "docs/research/2026-10-07-matched-history-transport.md",
+    "promotion": {
+      "stage": "research"
+    },
+    "related": [
+      "history-lift-closure",
+      "commutator-history-20260915"
+    ]
+  }
+]
