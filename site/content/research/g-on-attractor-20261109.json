@@ -1,0 +1,21 @@
+[
+  {
+    "slug": "g-on-attractor-20261109",
+    "label": "The commutator where a ring settles",
+    "title": "A commutator that varies globally can be constant on a finite ring's eventual image",
+    "date": "2026-11-09",
+    "updated": "2026-11-09",
+    "kind": "Exact algebra and exhaustive finite-ring computation",
+    "evidence": "exact",
+    "topic": "Algebra and closure",
+    "summary": "On periodic rings of 8 to 20 cells, 47 elementary rules beyond the affine rules and Rules 4 and 200 have a constant commutator on the states that lie on cycles. The constant is all-zeros or all-ones because the commutator respects the ring shift. A conjectured ceiling at period two is refuted by Rules 44 and 100, which carry a period-three wave exactly when the width is a multiple of three.",
+    "takeaway": "Most attractor-constancy is a fixed-point triviality, the two-valued outcome is forced by symmetry, and a claim required to hold at every ring size can hide a commensurability counterexample.",
+    "source": "docs/research/2026-11-09-g-on-attractor.md",
+    "promotion": {
+      "stage": "research"
+    },
+    "related": [
+      "commutator-jet-20261007"
+    ]
+  }
+]
