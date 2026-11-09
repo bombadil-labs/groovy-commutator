@@ -1,0 +1,124 @@
+{
+  "schema": "rule110-phase-gradient-repair-v1",
+  "date": "2026-10-07",
+  "provenance": "post-hoc mechanism audit selected from the parity+Groovy phase-wall witness",
+  "definition": {
+    "P_j": "X_{2j} xor X_{2j+1}",
+    "Phi_j": "X_{2j} xor X_{2j+2}",
+    "W_j": "(P_j,G_{2j},G_{2j+1},Phi_j)",
+    "cadence": 2
+  },
+  "local_closure": [
+    {
+      "radius": 0,
+      "pass": false,
+      "source_width": 10,
+      "contexts_before_conflict": 4,
+      "conflict": {
+        "word_x": 45,
+        "word_y": 46,
+        "current_context": [
+          1,
+          0,
+          0,
+          0
+        ],
+        "next_symbol_x": [
+          1,
+          1,
+          0,
+          0
+        ],
+        "next_symbol_y": [
+          1,
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "radius": 1,
+      "pass": false,
+      "source_width": 10,
+      "contexts_before_conflict": 39,
+      "conflict": {
+        "word_x": 93,
+        "word_y": 94,
+        "current_context": [
+          0,
+          1,
+          0,
+          0,
+          1,
+          1,
+          0,
+          0,
+          1,
+          0,
+          0,
+          1
+        ],
+        "next_symbol_x": [
+          1,
+          1,
+          0,
+          0
+        ],
+        "next_symbol_y": [
+          1,
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "radius": 2,
+      "pass": true,
+      "source_width": 14,
+      "distinct_admissible_contexts": 3876,
+      "conflict": null
+    }
+  ],
+  "compression": {
+    "exact_argument": "P and Phi determine Q_j=X_{2j} up to the choice of one global Q_0 bit; odd cells then equal Q_j xor P_j. Therefore (P,Phi), and hence W, has fibers of size at most two on a connected line/ring. The repair restores all but at most one global source bit.",
+    "finite_ring_checks": [
+      {
+        "n": 8,
+        "distinct_encodings": 128,
+        "fiber_sizes": [
+          2
+        ],
+        "all_fibers_size_two": true
+      },
+      {
+        "n": 10,
+        "distinct_encodings": 512,
+        "fiber_sizes": [
+          2
+        ],
+        "all_fibers_size_two": true
+      },
+      {
+        "n": 12,
+        "distinct_encodings": 2048,
+        "fiber_sizes": [
+          2
+        ],
+        "all_fibers_size_two": true
+      }
+    ]
+  },
+  "relation_to_prior_work": "Phi is the spatial gradient of the even-sublattice block phase. This is a blocked analogue of the source-gradient repairs already recorded in the Groovy-field census and of the lift's gradient rails.",
+  "summary": {
+    "radius0_pass": false,
+    "radius1_pass": false,
+    "radius2_pass": true,
+    "radius2_contexts": 3876,
+    "phase_gradient_repair_nearly_microscopic": true
+  },
+  "source_hashes": {
+    "script_sha256": "71087b8234cdf2b0f30412127da3f0930a3bcacbdfff5807f7308d1552478e05"
+  }
+}

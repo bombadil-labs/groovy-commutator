@@ -1,0 +1,208 @@
+{
+  "schema": "jet-full-line-autonomy-summary-v1",
+  "date": "2026-10-07",
+  "protocol": "docs/research/protocols/jet-full-line-autonomy-20261007.md",
+  "provenance": "Exploratory result prior to retrospective protocol; source-pair extension method exact; independently checked by direct finite-ring implementation.",
+  "rules": {
+    "30": {
+      "core_nodes": [
+        90,
+        148,
+        286,
+        1058,
+        4134
+      ],
+      "core_edges": [
+        194,
+        250,
+        544,
+        2084,
+        8232
+      ],
+      "paths": [
+        916,
+        840,
+        2084,
+        8232,
+        32812
+      ],
+      "violations": [
+        218,
+        50,
+        0,
+        0,
+        0
+      ],
+      "first_autonomous": 3,
+      "min_local_radius": 5,
+      "radius_bad_counts": [
+        6384,
+        794,
+        122,
+        10,
+        0
+      ],
+      "ring_first_depth": {
+        "8": 2,
+        "10": 2,
+        "12": 2,
+        "14": 2,
+        "16": 3
+      }
+    },
+    "54": {
+      "core_nodes": [
+        130,
+        210,
+        452,
+        1212,
+        4316
+      ],
+      "core_edges": [
+        304,
+        342,
+        772,
+        2276,
+        8460
+      ],
+      "paths": [
+        1544,
+        1002,
+        2494,
+        8528,
+        33162
+      ],
+      "violations": [
+        560,
+        64,
+        36,
+        12,
+        0
+      ],
+      "first_autonomous": 5,
+      "min_local_radius": 6,
+      "radius_bad_counts": [
+        196196,
+        5428,
+        334,
+        98,
+        12,
+        0
+      ],
+      "ring_first_depth": {
+        "8": 4,
+        "10": 5,
+        "12": 5,
+        "14": 4,
+        "16": 4
+      }
+    },
+    "62": {
+      "core_nodes": [
+        142,
+        406,
+        800,
+        1640,
+        4158
+      ],
+      "core_edges": [
+        368,
+        756,
+        1498,
+        3164,
+        8256
+      ],
+      "paths": [
+        2616,
+        2870,
+        5670,
+        12296,
+        32836
+      ],
+      "violations": [
+        708,
+        314,
+        498,
+        704,
+        0
+      ],
+      "first_autonomous": 5,
+      "min_local_radius": 6,
+      "radius_bad_counts": [
+        204540,
+        15820,
+        2984,
+        718,
+        66,
+        0
+      ],
+      "ring_first_depth": {
+        "8": 3,
+        "10": 4,
+        "12": 5,
+        "14": 5,
+        "16": 5
+      }
+    },
+    "110": {
+      "core_nodes": [
+        114,
+        186,
+        340,
+        1094,
+        4204
+      ],
+      "core_edges": [
+        252,
+        338,
+        646,
+        2152,
+        8366
+      ],
+      "paths": [
+        1262,
+        1272,
+        2474,
+        8492,
+        33330
+      ],
+      "violations": [
+        348,
+        132,
+        10,
+        2,
+        2
+      ],
+      "first_autonomous": null,
+      "min_local_radius": null,
+      "radius_bad_counts": null,
+      "ring_first_depth": {
+        "8": 3,
+        "10": 3,
+        "12": 3,
+        "14": 3,
+        "16": 3
+      }
+    }
+  },
+  "interpretation": {
+    "first_full_line_autonomous_prefix": {
+      "30": 3,
+      "54": 5,
+      "62": 5,
+      "110": null
+    },
+    "minimum_local_radius_at_first_closure": {
+      "30": 5,
+      "54": 6,
+      "62": 6,
+      "110": null
+    },
+    "meaning": "A G-anchored prefix J_m is autonomous on all binary configurations iff its equal-jet full-line fiber relation is HxH forward invariant; equivalently the next residual A_{m+1} factors through J_m. Compactness and shift equivariance then guarantee a finite local law. The radius test determines its exact symmetric minimum within the given jet coordinates.",
+    "caveat": "Finite rings can close at shallower depth; full-line witnesses rule out those extrapolations. No Class-IV discriminator or source-compression advantage is claimed."
+  },
+  "source_hashes": {
+    "runner_sha256": "3e7d432487f55b5f147a582b907fbcc3bb1a06660cce08896bf731e17f70fe35",
+    "algebra_sha256": "c9a17d6e13dd1fac2dff6bebac9bad01fe4da2a357364b67692b9d2207a6a7b2"
+  }
+}

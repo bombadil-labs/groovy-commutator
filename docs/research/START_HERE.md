@@ -20,15 +20,123 @@ sections are historical proposals, not an instruction to resume them.
 **Question:** which distinctions can a representation safely discard, which
 must it retain, and what does changing representation buy us?
 
-**New matched mechanism result.** The
-[Rule-62/Rule-110 comparison](2026-10-07-matched-history-transport.md)
-holds predictive-compression demand approximately fixed and asks what the
-newly necessary history is tracking. At fresh widths 16 and 18 every Rule-110
-repair step factors through current predictive state plus current centered
-Groovy; Rule 62 has exact early counterexamples. A complete local audit then
-proves a stronger Rule-110 identity: current block parity plus current centered
-Groovy already has a radius-one induced law for the next block-parity field.
-The next useful question is structural/minimality, not another rule census.
+**New full-line jet factor theorem and sharp local radius (2026-10-07).**
+[The full-line autonomy audit](2026-10-07-jet-full-line-autonomy.md)
+strengthens the period-four pair-language result. Exact whole-line source-pair
+extension tests show Rule54's **entire** J5=(G,Q,R,A4,A5) representation
+is autonomous, with minimum symmetric induced local radius six.
+Rule30 closes at J3/radius five; Rule62 at J5/radius six; Rule110 remains
+nonautonomous through J5 because a periodic-to-zero phase interface
+retains invisible context and reveals a different A6.
+
+This does **not** yield useful bulk compression on unrestricted source
+ensembles: width-18 Rule54 retains 261,985 of 262,144 states and forgets
+0.00122 bits under the uniform prior. Phase ambiguities are exceptional
+and often simply time shifts or transient preimage coalescence.
+
+**On-image Rule54 jet update implemented (2026-10-08).** The
+[transducer gate](2026-10-08-rule54-on-image-transducer.md) now gives an
+explicit finite-state input/output relation: 16,384 source contexts,
+32,768 labeled edges; 13 current jet symbols determine the central A6
+on the admissible image, with other four next fields given by the triangular
+commutator law. The implementation matches exhaustive periodic source rings
+8/10/12 and 32 selected length-13 jet windows. This is a constructive
+consequence of the prior factor theorem, **not** an independent new proof,
+a deterministic minimized presentation, or a generic compression win.
+See [living HTML report, Edition 8](live-commutator-jet-report-v8.html).
+
+**Current highest-value next gate:** independent review of the full-line
+J5→A6 33,162-path factor proof, both-flank radius-six witnesses, and
+almost-sure injectivity corollary. The on-image transducer is complete under
+its bounded protocol; no further minimization, class census or off-image
+Boolean-table expansion is queued without a costed consumer.
+
+**New all-256 jet census and all-depth Rule-54 theorem (2026-10-07).**
+[The GQR census](2026-10-07-jet-gqr-census-fibonacci.md) establishes a base
+rate: 228/256 ECAs have branching recurrent off-diagonal GQR source-pair
+components. So branching by itself is not a complexity discriminator.
+
+The Rule-54 A5 follow-up isolates a more substantial result: two
+positive-entropy golden-growth equal-output source-pair SCCs exchange by
+inclusion under H54 x H54. Their union is forward-invariant, and a direct
+induction establishes that **all higher G-anchored commutator residuals agree
+for every pair in that union**, not merely A1..A5. This is a full-line
+symbolic theorem for an exceptional pair language, not a typical-information
+rate claim. The golden swap was selected and frozen after the initial
+three-component union failed, so do not count it as a prospectively
+confirmed predictor.
+
+**Next target:** extract small explicit symbolic generators from the two
+golden SCCs, independently review the graph/inclusion certificate, and test
+their relationship to Rule-54 backgrounds and defects. No additional
+256-rule census or brute-force jet depth extension is queued.
+
+**New three-rule jet control (2026-10-07).**
+[The 54/30/90 comparison](2026-10-07-jet-control-panel.md) corrects a
+too-broad phase-only intuition from the original 110/62 pair. Rule 90
+vanishes above D because H is additive. Rules 54 and 30 both recover full
+spatial entropy by (G,Q,R), but only Rule 30 has exclusively periodic
+off-diagonal recurrent phase cycles there. Rule 54 retains branching
+positive-entropy source-pair components through A5, even though its total
+jet image entropy already equals the source entropy. Rule 30's surviving
+period-six phase cycle at source radius four also falsifies the proposed
+radius/max-period coincidence.
+
+The later all-256 census and golden-component swap theorem above now
+supersede this earlier proposed next experiment. Do not treat the original
+110/62 phase-only result as a universal transition law.
+
+**New commutator-jet result.** The
+[2026-10-07 jet unit](2026-10-07-commutator-jet.md) defines
+\(D,G,Q,R,\ldots\) recursively by \(A_{k+1}=A_k\circ H\oplus H\circ A_k\).
+This makes each new field the exact transport residual of the previous one.
+Cadence changes mix jet order with polarization, so the tower is nonlinear.
+Rules 110 and 62 have symmetry-equivalent derivative maps but different higher
+jet structure: Rule 62 has a radius-three local DG→Q factor; Rule 110 fails
+through radius three. Finite-ring jet closure is mostly near-injective, so do
+not treat it as a compression win.
+
+The symbolic-language and [fiber-product follow-up](2026-10-07-commutator-jet-fibers.md)
+now sharpen that target. Rule 110 reaches full source entropy at `(G,Q,R)`,
+Rule 62 at `(G,Q,R,A4,A5)`. Immediately before those depths each factor still
+has a positive-entropy mixed hidden fiber; at the first full-entropy prefix the
+non-diagonal recurrent ambiguity collapses to zero-entropy periodic phase
+cycles plus domain-wall interfaces.
+
+For those original two rules a finite-state phase automaton remains an
+interesting historical direction; the new Rule-54 control demonstrates that
+phase-only ambiguity is not generic at the first full-entropy prefix. Do not
+launch a Class-IV census or another blind local feature search.
+
+**New Rule-110 mechanism result.** The
+[matched Rule-62/Rule-110 comparison](2026-10-07-matched-history-transport.md)
+shows that current centered Groovy contains every distinction needed for Rule
+110's next block-parity repair, while Rule 62 needs additional context. The
+follow-up [closure audit](2026-10-07-rule110-pg-closure.md) sharpens the claim:
+next parity has an exact cubic radius-one law from current parity+Groovy, but
+the augmented `(P,G)` fields are not autonomous. An infinite phase-wall
+witness has identical current `(P,G)` and different next Groovy.
+
+Adding the hidden block-phase gradient restores radius-two autonomy, but parity
+plus that gradient already reconstructs the source up to one global complement
+bit. A complete search over all 256 radius-one one-bit block tracks finds no
+simple middle: every radius-two autonomous repair is injective or nearly
+injective on rings 12--16.
+
+The subsequent [exact latent-Q quotient](2026-10-07-rule110-latent-q.md)
+now bounds every representation class on the tested full source rings.
+For every even n=6 through 18, the coarsest autonomous refinement retaining
+(P,G) merges only the uniform pair and the alternating pair; every other
+source is distinguished. G alone also becomes nearly microscopic. Binary Q
+fields realize the minimal quotients with finite whole-field autonomy and
+translation covariance, but fail the frozen compression gate and local
+radius<=3 construction checks. The former local repairs already achieved
+optimal compression on the overlapping tested rings.
+
+This bounded unit is complete. A different encoding cannot recover meaningful
+joint compression while retaining the same visible state on these domains.
+Changing the observer/source family or proving a full-line result is a separate
+question. No further run, Class-IV census or feature search is queued.
 
 **Update — asymptotic closure specificity control.** The exact finite-panel
 [scaling test](2026-10-07-asymptotic-closure-scaling.md) passed, but an

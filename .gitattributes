@@ -1,0 +1,8 @@
+# Preserve exact hashed research artifacts, including the archived CRLF run.
+results/rule110_latent_q_20261007.json -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+results/rule110_latent_q_20261007/execution.json -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+results/rule110_latent_q_20261007/initial-windows-crlf/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+# The three scientific inputs are hashed as their canonical Git LF blobs.
+docs/research/protocols/rule110-latent-q-20261007.md text eol=lf
+scripts/experiment_rule110_latent_q.py text eol=lf
+scripts/experiment_matched_history_transport.py text eol=lf

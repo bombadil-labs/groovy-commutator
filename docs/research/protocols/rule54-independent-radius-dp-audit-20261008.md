@@ -1,0 +1,5 @@
+# Rule54 J5 finite-window independent-algorithm audit
+
+Date: 2026-10-08. Same-author verification, not external review or prospective discovery: existing target counts are already known.
+
+Freeze a second proof route requiring no paired-source SCC computation. Derive A0..A6 by the given commutator recurrence, enumerate all 15-bit source windows, group by the three central J5 symbols, and retain unequal-A6 pairs oriented 0/1. Starting with these bad radius-one triples, independently extend the left and right source boundaries, requiring matching J5 symbols and existentially choosing each newly exposed binary source-bit pair. Use 12-bit contexts on each side; run exactly five rounds, yielding radius counts R=1..6, then stop. A zero at radius six proves whole-line locality; a nonzero radius-five count disproves smaller symmetric locality. Check separately the earlier explicit left/right impulse witnesses for coordinatewise minimality. Compare honestly to previously reported 196196,5428,334,98,12,0 and publish any disagreement. Record implementation source SHA. Avoid new ECA sweeps, deeper jets, CI dispatch, or claims of independent peer review.

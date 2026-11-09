@@ -1,5 +1,52 @@
 # Next agent: require a concrete operation before another search
 
+**Latest handoff, 2026-10-07: 54/30/90 jet controls completed.**
+See [the exact comparison](2026-10-07-jet-control-panel.md), frozen panel
+and separate Rule-54 deeper-fiber protocols, saved summaries and
+scripts/experiment_jet_control_panel.py. Stacked draft PR #327 builds on
+the completed jet-fiber #326 branch. Independent reviewer: none.
+
+On the binary full shift, additive Rule 90 has G,Q,R,A4,A5 identically zero.
+Rules 54 and 30 both first attain full source spatial entropy at GQR, as does
+Rule 110. However Rule 30's full-line equal-GQR source-pair fiber has only
+periodic recurrent off-diagonal cycles, while Rule 54 has four branching
+off-diagonal SCCs. Three branching SCCs survive the separately frozen A4/A5
+extension. Exact selected SCC polynomials show a shift from sqrt(2) growth
+at GQR to sqrt(phi) growth through A5 (post-hoc structural finding).
+
+**Corrections:** full jet entropy does NOT generically imply the hidden
+equal-output pair graph is phase-only; critical jet radius does NOT
+generically equal the longest surviving phase period (Rule30 gives 4 vs 6).
+The exceptional positive-entropy Rule-54 pair language is not positive
+conditional entropy for a typical jet observation under an arbitrary prior.
+
+**Next decision:** do not connect a generic six-step threshold to the
+six-field lift or run a Class-IV census. If more work is commissioned, take
+one exact Rule-54 exceptional branching SCC and identify its symbolic
+generators, its constraint relation to familiar ether/glider languages if
+supported, and whether the golden-mean spectral factor has an exact
+two-cell presentation. Freeze that symbolic grammar question independently.
+
+**Latest handoff, 2026-10-07: exact latent-Q unit complete.** See the
+[research note](2026-10-07-rule110-latent-q.md), frozen protocol, canonical
+JSON and 21 finite certificates. Gathering branch:
+`gather/rule110-latent-q-20261007`, based on main with PR #322 merged as a
+dependency. Reviewed by: none. No merge into main is authorized by this unit.
+
+The coarsest autonomous Rule-110 refinement of current (P,G), at cadence two,
+has 2^n-2 classes on every even n=6 through 18. Its only merged source pairs
+are the uniform and alternating phases. G-only also fails the compression
+gate. Minimal equivariant binary Q fields exist on all tested rings, but the
+chosen construction fails local radius<=3 checks. Do not restart a feature
+search: changing representation cannot exceed this information bound on the
+same domain. Full-line extension, a changed observer, or a restricted source
+family would require a separately justified bounded unit. No census is queued.
+
+Run the two Q certificate verifiers and the shared integrity check, plus site
+tests/build. The initial Windows CRLF run is preserved with its exact inputs;
+canonical LF replay has identical science and certificate digests. The note
+records this provenance correction and the independent tuple self-checks.
+
 **Latest handoff, 2026-09-25: density observer/readout correction.**
 Inspected main `5823d46ef2512525b5de72c0afc16dc6c3000d76` after merged
 [PR #314](https://github.com/bombadil-labs/groovy-commutator/pull/314);

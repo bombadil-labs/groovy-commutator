@@ -36,6 +36,33 @@ REGISTRY = {
         'script_sha256': 'scripts/experiment_asymptotic_closure_wedge.py'},
     'results/asymptotic_closure_scaling_20261007.json': {
         'script_sha256': 'scripts/experiment_asymptotic_closure_scaling.py'},
+    'results/rule54_periodic_j5_fibers_20261007.json': {
+        'runner_sha256': 'experiments/jet_full_line_autonomy_20261007/periodic_fiber_diagnostic.py'},
+    'results/jet_full_line_autonomy_20261007.json': {
+        'runner_sha256': 'experiments/jet_full_line_autonomy_20261007/run.py',
+        'algebra_sha256': 'experiments/jet_gqr_256/jet_algebra.py'},
+    'results/jet_gqr_256_20261007.json': {
+        'cxx_source': 'experiments/jet_gqr_256/gqr_census.cpp',
+        'summary_runner': 'experiments/jet_gqr_256/prepare_census.py'},
+    'results/rule54_golden_invariance_20261007.json': {
+        'runner_sha256': 'experiments/jet_gqr_256/rule54_invariance.py',
+        'algebra_sha256': 'experiments/jet_gqr_256/jet_algebra.py'},
+    'results/commutator_jet_fibers_20261007.json': {
+        'script_sha256': 'scripts/experiment_commutator_jet_fibers.py'},
+    'results/commutator_jet_language_20261007.json': {
+        'script_sha256': 'scripts/experiment_commutator_jet_language.py'},
+    'results/commutator_jet_20261007.json': {
+        'script_sha256': 'scripts/experiment_commutator_jet.py'},
+    'results/rule110_latent_q_20261007.json': {p: p for p in (
+        'docs/research/protocols/rule110-latent-q-20261007.md',
+        'scripts/experiment_rule110_latent_q.py',
+        'scripts/experiment_matched_history_transport.py')},
+    'results/rule110_middle_tracks_20261007.json': {
+        'script_sha256': 'scripts/experiment_rule110_middle_tracks.py'},
+    'results/rule110_phase_gradient_repair_20261007.json': {
+        'script_sha256': 'scripts/verify_rule110_phase_gradient_repair.py'},
+    'results/rule110_pg_closure_20261007.json': {
+        'script_sha256': 'scripts/verify_rule110_pg_closure.py'},
     'results/rule110_parity_g_factor_20261007.json': {
         'script_sha256': 'scripts/verify_rule110_parity_g_factor.py'},
     'results/matched_history_transport_20261007.json': {
@@ -434,7 +461,8 @@ def main(argv: list[str]) -> int:
     targets = argv or list(REGISTRY)
     bad = []
     for t in targets:
-        t = str(pathlib.Path(t)); t = t if t in REGISTRY else str(pathlib.Path(t).relative_to(ROOT)) if pathlib.Path(t).is_absolute() else t
+        path = pathlib.Path(t)
+        t = path.relative_to(ROOT).as_posix() if path.is_absolute() else path.as_posix()
         if t not in REGISTRY: print(f'not registered: {t}'); bad.append(t); continue
         p = check(t)
         summary = json.loads((ROOT / t).read_text()).get('summary') if (ROOT / t).exists() else None

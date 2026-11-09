@@ -1,0 +1,28 @@
+{
+  "date": "2026-10-07",
+  "reviewed_by": "none",
+  "scientific_implementation_commit": "429ecb40d1479f0d440cad612abb64b9f339551c",
+  "checks": {
+    "saved_quotient_verifier": "pass",
+    "independent_tuple_local_witnesses": 54,
+    "independent_repetition_and_exceptional_fibers": "pass",
+    "original_vs_canonical_scientific_fields": "identical",
+    "all_registered_result_integrity": "pass",
+    "research_site_tests": {
+      "passed": 22,
+      "failed": 0
+    },
+    "site_build": "pass"
+  },
+  "repaired_verification_failures": [
+    "Windows path separators in integrity checker registry lookup",
+    "Windows path separators in two site test fixtures",
+    "Windows checkout CRLF input provenance; original preserved and canonical LF replay identical"
+  ],
+  "limits": [
+    "Finite periodic source rings only",
+    "No independent human review",
+    "Constructed finite codes fail local update radii 0 through 3",
+    "No meaningful joint compression in either G-retaining arm"
+  ]
+}

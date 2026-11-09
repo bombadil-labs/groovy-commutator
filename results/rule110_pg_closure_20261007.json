@@ -1,0 +1,471 @@
+{
+  "schema": "rule110-pg-closure-v1",
+  "date": "2026-10-07",
+  "protocol": "docs/research/protocols/rule110-pg-closure-20261007.md",
+  "gate_A_radius1": {
+    "radius": 1,
+    "pass": false,
+    "source_width": 10,
+    "contexts_before_conflict": 13,
+    "conflict": {
+      "word_x": 23,
+      "word_y": 40,
+      "current_context": [
+        1,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "next_augmented_x": [
+        1,
+        0,
+        0
+      ],
+      "next_augmented_y": [
+        1,
+        1,
+        0
+      ]
+    }
+  },
+  "gate_B_bounded_radius": [
+    {
+      "radius": 2,
+      "pass": false,
+      "source_width": 14,
+      "contexts_before_conflict": 55,
+      "conflict": {
+        "word_x": 95,
+        "word_y": 160,
+        "current_context": [
+          0,
+          0,
+          0,
+          1,
+          1,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "next_augmented_x": [
+          1,
+          0,
+          0
+        ],
+        "next_augmented_y": [
+          1,
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "radius": 3,
+      "pass": false,
+      "source_width": 18,
+      "contexts_before_conflict": 220,
+      "conflict": {
+        "word_x": 383,
+        "word_y": 640,
+        "current_context": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          1,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "next_augmented_x": [
+          1,
+          0,
+          0
+        ],
+        "next_augmented_y": [
+          1,
+          1,
+          0
+        ]
+      }
+    }
+  ],
+  "posthoc_infinite_line_counterexample": {
+    "x_definition": "x_i=1 iff i<=-2 or i=0",
+    "y_definition": "y_i=1 iff i in {-1,1}",
+    "uniform_tail_macro_symbol_zero": {
+      "all_zero": [
+        0,
+        0,
+        0
+      ],
+      "all_one": [
+        0,
+        0,
+        0
+      ]
+    },
+    "current_seam_check": [
+      {
+        "j": -4,
+        "x": [
+          0,
+          0,
+          0
+        ],
+        "y": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "j": -3,
+        "x": [
+          0,
+          0,
+          0
+        ],
+        "y": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "j": -2,
+        "x": [
+          0,
+          0,
+          0
+        ],
+        "y": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "j": -1,
+        "x": [
+          1,
+          1,
+          0
+        ],
+        "y": [
+          1,
+          1,
+          0
+        ]
+      },
+      {
+        "j": 0,
+        "x": [
+          1,
+          0,
+          0
+        ],
+        "y": [
+          1,
+          0,
+          0
+        ]
+      },
+      {
+        "j": 1,
+        "x": [
+          0,
+          0,
+          0
+        ],
+        "y": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "j": 2,
+        "x": [
+          0,
+          0,
+          0
+        ],
+        "y": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "j": 3,
+        "x": [
+          0,
+          0,
+          0
+        ],
+        "y": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "j": 4,
+        "x": [
+          0,
+          0,
+          0
+        ],
+        "y": [
+          0,
+          0,
+          0
+        ]
+      }
+    ],
+    "current_entire_Z_equal": true,
+    "next_seam_check": [
+      {
+        "j": -4,
+        "x": [
+          0,
+          0,
+          0
+        ],
+        "y": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "j": -3,
+        "x": [
+          0,
+          0,
+          0
+        ],
+        "y": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "j": -2,
+        "x": [
+          1,
+          1,
+          1
+        ],
+        "y": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "j": -1,
+        "x": [
+          1,
+          0,
+          0
+        ],
+        "y": [
+          1,
+          0,
+          0
+        ]
+      },
+      {
+        "j": 0,
+        "x": [
+          1,
+          0,
+          0
+        ],
+        "y": [
+          1,
+          1,
+          0
+        ]
+      },
+      {
+        "j": 1,
+        "x": [
+          0,
+          0,
+          0
+        ],
+        "y": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "j": 2,
+        "x": [
+          0,
+          0,
+          0
+        ],
+        "y": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "j": 3,
+        "x": [
+          0,
+          0,
+          0
+        ],
+        "y": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "j": 4,
+        "x": [
+          0,
+          0,
+          0
+        ],
+        "y": [
+          0,
+          0,
+          0
+        ]
+      }
+    ],
+    "next_center_x": [
+      1,
+      0,
+      0
+    ],
+    "next_center_y": [
+      1,
+      1,
+      0
+    ],
+    "next_center_differs": true
+  },
+  "gate_C_literal_minimality": {
+    "evaluated": false,
+    "reason": "no full augmented closure at radii 1,2,3"
+  },
+  "gate_D_parity_readout_anf": {
+    "admissible_context_count": 61,
+    "feature_names": [
+      "P-1",
+      "G-1",
+      "P0",
+      "G0",
+      "G1",
+      "P1",
+      "G2"
+    ],
+    "degree_search": [
+      {
+        "degree": 0,
+        "monomial_count": 1,
+        "solvable": false,
+        "rank": null,
+        "nullity": null
+      },
+      {
+        "degree": 1,
+        "monomial_count": 8,
+        "solvable": false,
+        "rank": null,
+        "nullity": null
+      },
+      {
+        "degree": 2,
+        "monomial_count": 29,
+        "solvable": false,
+        "rank": null,
+        "nullity": null
+      },
+      {
+        "degree": 3,
+        "monomial_count": 64,
+        "solvable": true,
+        "rank": 58,
+        "nullity": 6
+      }
+    ],
+    "minimum_degree": 3,
+    "minimum_degree_rank": 58,
+    "minimum_degree_solution_dimension": 6,
+    "minimum_support_at_minimum_degree": 9,
+    "minimum_support_solution_count": 2,
+    "minimum_support_anfs": [
+      [
+        "P0",
+        "G0",
+        "P1",
+        "G2",
+        "G1*P1",
+        "G1*G2",
+        "P1*G2",
+        "P-1*G-1*G0",
+        "P0*G1*P1"
+      ],
+      [
+        "P0",
+        "G0",
+        "P1",
+        "P0*G2",
+        "G1*P1",
+        "P-1*G-1*G0",
+        "P0*G1*P1",
+        "P0*G1*G2",
+        "P0*P1*G2"
+      ]
+    ]
+  },
+  "summary": {
+    "augmented_PG_autonomous": false,
+    "radius1_pass": false,
+    "radius2_pass": false,
+    "radius3_pass": false,
+    "infinite_line_same_current_Z_next_Z_differs": true,
+    "parity_readout_minimum_anf_degree": 3,
+    "parity_readout_minimum_support": 9
+  },
+  "source_hashes": {
+    "script_sha256": "5e0646a22243e6043df85f802e707190d37a950f45de834127564d1a526ed06b"
+  }
+}

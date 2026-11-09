@@ -7,30 +7,197 @@ links to the technical account that states its assumptions and verification.
 mathematical question is solved. The [program survey](2026-09-22-program-survey.md)
 explains what deserves work next.
 
+## Rule 54 has an autonomous full-line five-field jet — 2026-10-07
+
+Claude's review reframed the Rule-54 golden hidden fibers as temporal
+half-period phase pairs on an explicit period-four source subshift. That
+suggested a stronger question: is the **entire** equal-current-jet fiber
+relation invariant under source evolution?
+
+Exact full-line de Bruijn pair-graph tests give first autonomous G-anchored
+prefixes: Rule 30 closes at (G,Q,R), Rules 54 and 62 at
+(G,Q,R,A4,A5), while Rule 110 does not close through A5. The sharp
+symmetric local radii on the admissible jet images are 5, 6, and 6.
+Rule 54's J5 closes with zero next-A6 discrepancies among **33,162**
+bi-infinite-compatible length-three paired source paths; J4 still has 12.
+
+The new theorem is about **autonomous coarse dynamics**, not about recovering
+or compressing the microscopic source. Rule54 J5 on complete periodic source
+rings of width 18 retains 261,985 of 262,144 source distinctions, losing
+only 0.00122 bits under the uniform prior. Hidden differences include
+same-orbit temporal phase, transient preimage coalescence and separate
+periodic spatial phases. Small finite rings incorrectly suggest Rule110
+closes at GQR; its full-line phase-wall witness refutes that.
+
+The full-line results were discovered exploratorily during Claude's review,
+then reconstructed under a descriptive reproducibility protocol, not
+preregistered before observation. Independent review of the stronger
+factor/radius claim is pending.
+[Exact account](2026-10-07-jet-full-line-autonomy.md).
+
+## A Rule-54 golden-growth ambiguity survives every higher jet — 2026-10-07
+
+An exact all-256 GQR source-pair census shows branching off-diagonal recurrent
+fibers are common: 228/256 rules branch; 28/256 have only periodic
+off-diagonal recurrent ambiguity. Rule 54 is in a smaller 11-rule group with
+purely off-diagonal branching SCCs but no mixed branching SCC.
+
+The post-primary Rule-54 invariance test found something much stronger than a
+rare count. Two G..A5 equal-output off-diagonal SCCs with exact Perron root
+sqrt(phi) have 52/68 and 84/110 vertices/edges. Every admissible three-edge
+path in the first (110 total) evolves into the second; every one in the
+second (178 total) evolves into the first. All 288 exact local tests pass an
+independent scalar jet computation. The 52/58 third branching SCC does *not*
+belong to this closed pair.
+
+Their union is an invariant full-line source-pair relation with positive
+spatial pair-language entropy (log2(phi))/2. Because it remains invisible
+to G at all future times, the universal jet recurrence proves by induction
+that **every higher residual A_k, k>=1, also agrees on each pair**.
+
+This is a genuine all-depth invisibility certificate, not an infinite
+field-by-field simulation. It does not imply positive conditional entropy for
+a typical source configuration, a Class-IV discriminator, or a six-field lift
+correspondence. The golden-component selection was an explicitly
+post-primary follow-up after the original three-SCC union failed.
+[Exact full-line theorem and census](2026-10-07-jet-gqr-census-fibonacci.md).
+
+## Full source entropy does not imply a phase-only hidden fiber — 2026-10-07
+
+We compared Rules 54, 30 and 90 before attempting to connect jet depth to the
+six-field lift. Rule 90 is an exact additive control: G and every higher jet
+field vanish. Rules 54 and 30 both first recover full source spatial entropy
+at (G,Q,R), just as Rule 110 does.
+
+But exact full-line equal-jet source-pair graphs expose a decisive distinction.
+At GQR, Rule 30 has only periodic off-diagonal recurrent cycles (periods
+1,2,6). Rule 54 retains four branching off-diagonal recurrent SCCs with
+positive symbolic source-pair entropy; the strongest has Perron \(\sqrt2\),
+or 0.5 bits/site within that exceptional pair language.
+
+A separately frozen depth check finds three branching Rule-54 SCCs persist
+through A5, with Perron about 1.272. The original equality between longest
+hidden phase period and critical jet source radius is false already for
+Rule 30 (period 6, radius 4), and Rule 54 has period-8 cycles at source radius 6.
+
+This is **not** a Class-IV discriminator: 110 and 54 differ. Also, positive
+entropy of exceptional ambiguous *pairs* is not positive conditional
+information density for typical source states. The warranted next target is
+the symbolic generators of the surviving Rule-54 branching fibers.
+[Exact panel and follow-up](2026-10-07-jet-control-panel.md).
+
+## In the original Rule-110/62 pair, the full-entropy jet leaves only phase/gauge ambiguity — 2026-10-07
+
+The intrinsic commutator jet does more than recover source entropy gradually.
+Exact infinite-line pair graphs show a qualitative transition in what remains
+hidden.
+
+For Rule 110, the shallow prefix \((G,Q)\) still has a positive-entropy mixed
+off-diagonal fiber. Adding \(R\) removes that extensive hidden language:
+\((G,Q,R)\) leaves only zero-entropy periodic phase sectors plus finitely
+presented domain-wall interfaces.
+
+Rule 62 does the same thing later. \((G,Q,R,A_4)\) still has a small positive-
+entropy hidden fiber; adding \(A_5\) removes it. The surviving recurrent
+off-diagonal components are all simple cycles.
+
+So the jet appears to consume **extensive latent state** until only a
+zero-entropy phase/gauge skeleton remains. Rule 62 also keeps an exact
+left-to-right two-context ambiguity while right-to-left words can synchronize,
+suggesting an oriented residual phase.
+
+This is an exact full-line symbolic result for the declared jet factors, not a
+Class-IV criterion. The next object should be a finite-state phase automaton
+built from the residual pair graph, not another raw source-derived field.
+[Exact account](2026-10-07-commutator-jet-fibers.md).
+
+## D, G, Q and R form a nonlinear commutator jet — 2026-10-07
+
+Define \(A_0=D=I\oplus H\) and recursively
+\(A_{k+1}=A_k\circ H\oplus H\circ A_k\). Along every source trajectory,
+
+\[
+A_{k,t+1}=H(A_{k,t})\oplus A_{k+1,t}.
+\]
+
+So \(G,Q,R,\ldots\) are successive same-lattice corrections needed to
+transport the previous field coherently.
+
+Changing cadence is nonlinear: for zero-preserving rules,
+\[
+C_{H^2}(A)=C_H^2(A)\oplus B_H(H(A),C_H(A)).
+\]
+Thus the cadence-two latent complement used in the Rule-110 parity work is a
+jet term plus a polarization correction, not merely delayed \(Q\) or \(R\).
+
+Rules 110 and 62 are especially clean matched controls: their derivative maps
+are symmetry-equivalent (ECA 162 and 242), so their change geometry matches at
+D and diverges only when the source rule acts back through G.
+
+On tested finite rings, \((D,G)\) already globally closes for both rules, but
+almost by reconstructing the source. Full-line locality distinguishes them:
+Rule 62 has an exact radius-three \((D,G)\to Q\) law, while Rule 110 has no such
+factor through radius three. A post-hoc G-anchored diagnostic closes at
+\((G,Q,R)\) for Rule 110 on every tested width, while Rule 62 needs deeper jet
+levels before becoming nearly injective. Neither bounded closure supplies a
+compression theorem.
+
+[Exact account](2026-10-07-commutator-jet.md).
+
+## The missing coordinate is small but the joint state is microscopic — 2026-10-07
+
+We computed the minimal future-equivalence quotient instead of guessing
+another repair feature. On every even Rule-110 ring from 6 through 18 cells,
+the optimal autonomous refinement retaining current parity and Groovy merges
+only two source pairs. At n=18 it retains 262,142 of 262,144 distinctions and
+forgets just 0.00001526 bits under the uniform source prior. G alone also
+requires nearly the whole source once it must update itself.
+
+Binary latent Q fields on the original lattice realize these exact quotients
+and respect the declared translations. But their joint states fail the frozen
+compression gate, and the constructed codes fail local update radii 0--3.
+The extra Q above parity/G is small (0.2514 conditional bits at n=18);
+the existing parity/G state already carries 17.7486 bits. Thus small latent
+context and meaningful total compression are separate questions.
+
+Every autonomous augmentation retaining the observer must refine this exact
+quotient, regardless of its feature grammar. The prior best local repairs
+already achieved optimal compression on the overlapping tested rings.
+This is a finite-domain bound, not an infinite-line impossibility theorem.
+[Protocol, certificates and realization limits](2026-10-07-rule110-latent-q.md).
+
 ## Similar amounts of history can be doing different jobs — 2026-10-07
 
-An independent census showed that Rule 62 and Rule 110 are nearly matched in
-how much predictive history the block-2 parity observer requires. We used that
-as a control and asked whether the newly necessary distinctions are related to
-the current centered Groovy field in the same way.
-
-They are not.
+Rule 62 and Rule 110 are nearly matched in how much predictive history the
+block-2 parity observer requires, but that history has a different relation to
+situated change.
 
 At fresh widths 16 and 18, every nonzero Rule-110 minimal-repair step is
-exactly determined by the pair (current predictive-history state, current
-centered G). Rule 62 has exact counterexamples in its first two repair steps at
-both widths: the same predictive label and same centered G can still require
-different next observations.
+exactly determined by the current predictive-history state plus current
+centered Groovy. Rule 62 has exact early counterexamples. Quantitatively, 100%
+of Rule 110's predictive-repair information is Groovy-coupled at both widths,
+versus about 77.2% for Rule 62.
 
-Quantitatively, 100% of Rule 110's predictive-repair information is Groovy-
-coupled at both widths, versus about 77.2% for Rule 62. A post-hoc complete
-local audit sharpens this: for Rule 110 the next block-parity bit is an exact
-radius-one function of current block parity plus current centered Groovy.
-So Groovy is a sufficient present-time correction coordinate for this coarse
-Rule-110 dynamics; Rule 62 fails even the whole-field parity-plus-Groovy factor
-on explicit witnesses. This is a matched mechanism result, not a Class-IV
-classifier or a minimality theorem.
-[Exact account](2026-10-07-matched-history-transport.md).
+A complete local audit then sharpens and limits the interpretation. For Rule
+110 the **next parity bit** is an exact cubic radius-one function of current
+parity plus current centered Groovy. But the augmented \((P,G)\) state is not
+autonomous: two explicit bi-infinite configurations have identical entire
+current parity and Groovy fields and different next Groovy.
+
+The hidden distinction is a block-phase domain wall. Adding the block-phase
+gradient restores exact radius-two autonomy, but that gradient plus parity
+already reconstructs the microscopic source up to one global complement bit.
+
+So the exact hierarchy is: parity alone needs history; parity+Groovy repairs
+the next parity readout; parity+Groovy+phase-gradient is autonomous but almost
+microscopic. A complete search over all 256 radius-one one-bit block tracks
+finds no simple middle: every track that restores radius-two autonomy is
+injective or merges only one or two source pairs on rings 12--16. The
+subsequent exact-Q result above strengthens this from a feature-family
+negative to an optimal compression bound on the tested rings.
+[Matched experiment](2026-10-07-matched-history-transport.md);
+[closure and middle-track account](2026-10-07-rule110-pg-closure.md).
+
 
 ## Asymptotic-closure scaling is broad; use it as a matching variable — 2026-10-07
 

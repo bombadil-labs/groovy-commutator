@@ -103,7 +103,7 @@ test('a catalog addition creates its page, semantic backlink, and research backl
   const source = path.join(fixtureDir, 'entry.md');
   fs.writeFileSync(source, '# New question\n\n## Context\n\nSee [the observation](../observed-history.md) and [the experiment](../../research/2026-09-07-history-repairability.md).\n');
   const graph = readKnowledge();
-  graph.nodes.push({ id: 'new-question', title: 'A new question?', kind: 'question', status: 'open', summary: 'An added record.', updated: '2026-09-08', source: path.relative(ROOT, source), research: ['history-repairability'] });
+  graph.nodes.push({ id: 'new-question', title: 'A new question?', kind: 'question', status: 'open', summary: 'An added record.', updated: '2026-09-08', source: path.relative(ROOT, source).split(path.sep).join('/'), research: ['history-repairability'] });
   graph.edges.push({ source: 'new-question', type: 'depends_on', target: 'observed-history', reason: 'This question uses the observation definition.', research: ['history-repairability'] });
   const built = render(graph);
   assert.ok(built.inputs['knowledge-new-question']);
