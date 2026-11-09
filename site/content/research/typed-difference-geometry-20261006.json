@@ -1,0 +1,23 @@
+[
+  {
+    "slug": "typed-difference-geometry",
+    "label": "Typed difference geometry",
+    "title": "Groovy measures when a change forgets where it lives",
+    "date": "2026-10-06",
+    "updated": "2026-10-06",
+    "kind": "Exact derivation and audit",
+    "evidence": "exact",
+    "topic": "History and possibility",
+    "summary": "The dimensional beam section commutes exactly. Centered G instead measures basepoint dependence of finite-difference transport along the rule's own displacement; the lift's temporal rows store the corresponding two-step change data.",
+    "takeaway": "For a nonlinear rule, a change is not enough to predict how that change evolves: where the change lives is part of the state needed to transport it.",
+    "source": "docs/research/2026-10-06-typed-difference-geometry.md",
+    "promotion": {
+      "stage": "research"
+    },
+    "related": [
+      "dimensional-lift",
+      "affine-converse",
+      "affine-oriented-lift-20260917"
+    ]
+  }
+]

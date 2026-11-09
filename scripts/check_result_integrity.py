@@ -203,6 +203,10 @@ REGISTRY = {
     'results/affine_lift_20260917.json': {
         'script': 'scripts/verify_affine_lift.py',
         'proof': 'docs/research/proofs/affine-oriented-lift-proof-state-20260917.md'},
+    'results/typed_lift_defect_20261006.json': {
+        'script_sha256': 'scripts/experiment_typed_lift_defect.py'},
+    'results/centered_g_zero_classification_20261006.json': {
+        'script_sha256': 'scripts/verify_centered_g_zero_classification.py'},
     'results/representation_invariants_20260910.json': {
         'script': 'scripts/verify_representation_invariants.py',
         'local_correction_caps': 'results/local_correction_caps_20260910.json',

@@ -1,0 +1,23 @@
+[
+  {
+    "slug": "ca-nearring-interpretation",
+    "label": "CA near-ring interpretation",
+    "title": "Groovy is a missing distributive law in the cellular-automaton near-ring",
+    "date": "2026-10-06",
+    "updated": "2026-10-06",
+    "kind": "Algebraic synthesis and prior-art boundary",
+    "evidence": "exact",
+    "topic": "Algebra and closure",
+    "summary": "Known near-ring theory supplies the nonlinear algebra of cellular automata. Groovy's polarization is exactly the missing distributivity term, and Rules 4/200 generate a four-element Boolean ring inside the nonlinear CA near-ring.",
+    "takeaway": "Linear cellular automata form the ring-like core; Groovy measures one dynamically selected failure of the distributive law lost outside that core.",
+    "source": "docs/research/2026-10-06-ca-nearring-interpretation.md",
+    "promotion": {
+      "stage": "research"
+    },
+    "related": [
+      "typed-difference-geometry",
+      "affine-converse",
+      "dimensional-lift"
+    ]
+  }
+]
