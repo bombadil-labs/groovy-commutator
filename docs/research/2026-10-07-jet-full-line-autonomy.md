@@ -432,3 +432,78 @@ update mechanism**, not another all-rule census:
   from a smaller graph invariant.
 
 A numerical gate or Class-IV criterion is not claimed.
+
+## Review addendum, 2026-11-09
+
+The text above is unchanged from the reviewed revision. This addendum records
+what the independent review asked for and what was added at integration.
+
+**Review.** Claude (`claude-fable-5-1`) reviewed revision `ebffd18` at Myk's
+request and reproduced every claim it tested from separate code: all twenty
+A6-disagreement counts, the Rule-54 and Rule-110 pair-graph sizes, the sharp
+radii 5, 6 and 6 (a second way, by brute force over source windows), the
+bilateral witnesses, the periodic censuses and the almost-sure injectivity
+argument. The full review is on
+[pull request 329](https://github.com/bombadil-labs/groovy-commutator/pull/329).
+It did not check the 384-pair count for symbol 16, the transducer's
+live-context statistics or the HTML reports. Its five requested changes had
+not been applied when the branch was integrated; they are recorded here.
+
+**1. Almost-sure injectivity arrives at J3, not J5.** The review tabulated the
+same pair-graph computation by depth. This table is the reviewer's own
+computation and is not a registered canonical result.
+
+| Rule | Diagonal SCC also holds off-diagonal vertices | Largest purely off-diagonal Perron root | Autonomous |
+| --- | --- | --- | --- |
+| 30 | m = 1, 2 | 1 from m = 3 | from m = 3 |
+| 54 | m = 1, 2 | √2 at m = 3; √φ at m = 4, 5 | from m = 5 |
+| 62 | m = 1 to 4 | 1 at m = 5 | from m = 5 |
+| 110 | m = 1, 2 | 1 from m = 3 | not through m = 5 |
+
+A pair path that leaves the diagonal and returns is a diamond, and a factor
+code on the full shift has one exactly when it is infinite-to-one (Lind and
+Marcus, *An Introduction to Symbolic Dynamics and Coding*, sections 8.1 and
+9.1 to 9.2). With no diamond and every off-diagonal component of spectral
+radius below 2, a source with a partner has a half-line tail in a proper
+subshift, which has Bernoulli measure zero. That argument replaces "zero
+cross-component edges, therefore almost surely injective"; the zero-edge
+hypothesis is needed only for the exact entropy value. The corollary should
+therefore read: **(G,Q,R) is already almost surely injective for Rules 30, 54
+and 110.** For Rule 54, A4 and A5 add nothing for a typical source; they
+shrink the exceptional set until what remains is invariant.
+
+The integrating reviewer (Claude, `claude-fable-5-2`) recomputed the ring-level
+consequence with separate code. Bits forgotten by J3 on the 20-cell ring under
+the uniform prior: Rule 30, 0.000008; Rule 54, 0.002884; Rule 110, 0.000011;
+Rule 62, 0.160731. These match the review's figures. The script is
+[the integration reproducer](reproducers/review_october_20261109.py).
+
+**2. What autonomy means on this panel.** For all four rules the first
+autonomous jet is an almost-invertible recoding of the source. The statement
+above that J5 is "not a compressed source model" is correct and understated:
+on this panel there is no depth at which the jet is both self-updating and
+lossy at a positive rate. The 54-versus-110 contrast is a contrast between two
+measure-zero sets.
+
+**3. A property of the panel.** The review's own unreviewed 256-rule
+computation at depth four finds 104 rules whose jet is autonomous and lossy,
+including Rules 18, 126, 146 and 94. That cell is where a jet discards
+information and still evolves on its own. It is recorded as a candidate
+direction in [the direction page](START_HERE.md), not as a result.
+
+**4. Wording.** "Five are temporal predecessor/successor pairs" at width 18
+should say that three pairs are one step apart and two are two steps apart;
+the JSON key `one_is_future_of_other` is accurate. The ring table covers even
+widths only. On odd widths 9 through 19 exactly one pair of states shares J5
+(confirmed at integration: one two-element fibre at each of those widths), so
+the apparent smooth decay is a parity effect plus the golden family.
+
+**5. Unregistered sub-notes.** Four short same-author notes from 2026-10-07
+and 2026-10-08 are in the tree and not in the research registry:
+[bilateral locality](2026-10-07-rule54-bilateral-locality.md),
+[the on-image transducer](2026-10-08-rule54-on-image-transducer.md),
+[the independent radius check](2026-10-08-rule54-independent-radius-dp.md) and
+[the visible local decoder census](2026-10-08-rule54-visible-local-decoder-census.md).
+Treat them as working records. `results/rule54_csmall_preimage_clock_20261007.json`
+is not in the integrity registry, and the decoder protocol cites report
+editions 10 and 11, which are not in the tree.

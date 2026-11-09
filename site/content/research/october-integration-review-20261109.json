@@ -1,0 +1,24 @@
+[
+  {
+    "slug": "october-integration-review-20261109",
+    "label": "Review and integration",
+    "title": "Review and integration of the October 2026 gathering branches",
+    "date": "2026-11-09",
+    "updated": "2026-11-09",
+    "kind": "Checkpoint: review and integration",
+    "evidence": "state",
+    "topic": "Research direction",
+    "summary": "Thirteen unmerged pull requests from 2026-10-06 to 2026-10-08 were checked, their headline claims recomputed with separate code, and combined into one branch based on main. Every recomputation agrees with the notes, including an imported 88-rule census that previously had no code in the repository.",
+    "takeaway": "No scientific conclusion changed. The asymptotic-closure corridor page and the full-line jet autonomy note should be read more modestly than their original titles, and the entry pages are short again.",
+    "source": "docs/research/2026-11-09-october-integration-review.md",
+    "promotion": {
+      "stage": "research"
+    },
+    "related": [
+      "jet-full-line-autonomy-20261007",
+      "asymptotic-closure-census-control-20261007"
+    ],
+    "recordType": "checkpoint",
+    "scope": "lab"
+  }
+]
