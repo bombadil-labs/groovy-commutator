@@ -1,475 +1,59 @@
-# Next agent: require a concrete operation before another search
+# Handoff
 
-**Latest handoff, 2026-10-07: 54/30/90 jet controls completed.**
-See [the exact comparison](2026-10-07-jet-control-panel.md), frozen panel
-and separate Rule-54 deeper-fiber protocols, saved summaries and
-scripts/experiment_jet_control_panel.py. Stacked draft PR #327 builds on
-the completed jet-fiber #326 branch. Independent reviewer: none.
+**Updated 2026-11-09.** Read [the direction page](START_HERE.md) first. This
+page says only what state the repository is in and how to check it. The
+previous handoff, a 475-line chronological log, is
+[archived verbatim](archive/next-task-2026-10-08.md).
 
-On the binary full shift, additive Rule 90 has G,Q,R,A4,A5 identically zero.
-Rules 54 and 30 both first attain full source spatial entropy at GQR, as does
-Rule 110. However Rule 30's full-line equal-GQR source-pair fiber has only
-periodic recurrent off-diagonal cycles, while Rule 54 has four branching
-off-diagonal SCCs. Three branching SCCs survive the separately frozen A4/A5
-extension. Exact selected SCC polynomials show a shift from sqrt(2) growth
-at GQR to sqrt(phi) growth through A5 (post-hoc structural finding).
+## State
 
-**Corrections:** full jet entropy does NOT generically imply the hidden
-equal-output pair graph is phase-only; critical jet radius does NOT
-generically equal the longest surviving phase period (Rule30 gives 4 vs 6).
-The exceptional positive-entropy Rule-54 pair language is not positive
-conditional entropy for a typical jet observation under an arbitrary prior.
+- `main` contains every completed unit through 2026-10-08, plus the July
+  attractor unit recovered from an unpushed branch. Nothing is in flight.
+- The October work was reviewed and integrated on 2026-11-09:
+  [review and integration record](2026-11-09-october-integration-review.md).
+- No pull request is open. Every older remote branch was audited; what each
+  held, and whether anything in it is absent from `main`, is in
+  [the branch disposition](archive/branch-disposition-2026-11-09.md).
+- No empirical unit is queued. The direction page lists three candidates and
+  the condition each parked line needs.
 
-**Next decision:** do not connect a generic six-step threshold to the
-six-field lift or run a Class-IV census. If more work is commissioned, take
-one exact Rule-54 exceptional branching SCC and identify its symbolic
-generators, its constraint relation to familiar ether/glider languages if
-supported, and whether the golden-mean spectral factor has an exact
-two-cell presentation. Freeze that symbolic grammar question independently.
+## Check the repository
 
-**Latest handoff, 2026-10-07: exact latent-Q unit complete.** See the
-[research note](2026-10-07-rule110-latent-q.md), frozen protocol, canonical
-JSON and 21 finite certificates. Gathering branch:
-`gather/rule110-latent-q-20261007`, based on main with PR #322 merged as a
-dependency. Reviewed by: none. No merge into main is authorized by this unit.
+```
+python scripts/check_result_integrity.py
+python -m pytest -q tests
+npm ci --prefix site
+npm run test:research --prefix site
+npm run build --prefix site
+```
 
-The coarsest autonomous Rule-110 refinement of current (P,G), at cadence two,
-has 2^n-2 classes on every even n=6 through 18. Its only merged source pairs
-are the uniform and alternating phases. G-only also fails the compression
-gate. Minimal equivariant binary Q fields exist on all tested rings, but the
-chosen construction fails local radius<=3 checks. Do not restart a feature
-search: changing representation cannot exceed this information bound on the
-same domain. Full-line extension, a changed observer, or a restricted source
-family would require a separately justified bounded unit. No census is queued.
+Three things to know before trusting a failure:
 
-Run the two Q certificate verifiers and the shared integrity check, plus site
-tests/build. The initial Windows CRLF run is preserved with its exact inputs;
-canonical LF replay has identical science and certificate digests. The note
-records this provenance correction and the independent tuple self-checks.
+- **Line endings.** The integrity check hashes file bytes. `.gitattributes`
+  now requests LF for text files, so a fresh clone passes on Windows. An older
+  Windows checkout made with `core.autocrlf=true` reports dozens of false
+  hash failures until its files are re-checked-out (`git rm --cached -r . &&
+  git reset --hard`, on a clean tree).
+- **Unix-only module.** Some hashed runners import `resource`. The test suite
+  supplies a stand-in on Windows through `tests/conftest.py`; running such a
+  runner directly on Windows still fails, and the runners must not be edited,
+  because their bytes are part of recorded results.
+- **Prolog.** One relational-search test needs the pinned `swipl-wasm` Node
+  package: `npm ci --prefix experiments/relational_search_20260923`.
 
-**Latest handoff, 2026-09-25: density observer/readout correction.**
-Inspected main `5823d46ef2512525b5de72c0afc16dc6c3000d76` after merged
-[PR #314](https://github.com/bombadil-labs/groovy-commutator/pull/314);
-the Bombadil Labs connector reported no open PRs/issues. Myk approved a
-bounded comparison of three output/observer contracts. The
-[new note](2026-09-25-density-observer-readout.md) adds the omitted 1996
-Capcarrere–Sipper–Tomassini theorem: a fixed Rule 184 solves the density
-*label* task if the observer reads same-symbol adjacent blocks. Fukś's
-Rule-232 stage produces a homogeneous-majority endpoint under a length-timed
-switch. A whole-ring scan at `n=floor((L-2)/2)`, a fixed pair port from
-`T=ceil(L/2)` through `T+L-1`, and the two-rule endpoint at `L-2` are
-distinct interfaces. The note charges timing, access and site updates,
-and contrasts a central counter. An elementary fixed-port causal-cone
-argument shows no finite, clockless tie certificate on every arbitrary
-unmarked ring without length information. No new experiment or canonical
-result. Reviewed by: none. Gathering branch:
-`gather/density-observer-contract-20260925`.
+Expensive runs stay outside automatic CI; see `AGENTS.md`.
 
-**Decision:** correct the former suggestion that composition first makes
-the majority distinguishable. The answer is already in Rule 184's
-reachable pattern language, at a readout cost. Rule 232 changes the output
-format and locality of access. The selected 30/54/110 application stays
-parked. Next questions only with a named consumer: (1) is a static local
-pair sensor, global scan or distributed consensus the required output?
-(2) who supplies ring length and deadlines, and what does access cost?
-Otherwise no empirical unit is queued; do not start a new schedule sweep.
+## If you are about to start something
 
-**Latest handoff, 2026-09-25: external density-classification calibration.**
-Inspected main `e4647fbe86ab4d561247159dfb79cae681ecddf8` after PR #313;
-the Bombadil Labs connector reported no open PRs/issues. Myk authorized
-reconstructing Fukś's Rule-184→232 theorem and comparing its controller,
-local updates and direct counting baseline. The
-[costed prior-art note](2026-09-25-density-classification-contract.md)
-states the periodic-ring contract `L≥2`, exact deadlines
-`n=floor((L-2)/2)` and `m=floor((L-1)/2)`, tie handling and the
-paper's finite-ring proof ingredients. No experiment, canonical result or
-new theorem was produced. Reviewed by: none. Gathering branch:
-`gather/density-classification-contract-20260925`; publication and merge
-provenance are available from its PR once created.
+1. Write the four-question decision argument from the direction page.
+2. Open one `gather/<unit>` branch **based on `main`**, with a draft pull
+   request. Do not stack it on another unmerged branch.
+3. When the unit ends, add its account to [the findings](FINDINGS.md), update
+   its knowledge entries, and change at most one row of the direction page.
+4. Say who reviewed it and at which revision, or say `Reviewed by: none`.
 
-**Decision:** the known two-rule success depends on a length-dependent
-external switch. Charge its timer, known `L`, broadcast and `L(L-2)` site
-updates; direct central count uses `L` reads plus `L` writes where global
-access is permitted. Our PR #313 fixed-three-step fusion theorem does not
-remove the length-dependent controller. This reopens composition only as a
-concrete model-boundary calibration, not a schedule search. The selected
-30/54/110 application remains parked. Next questions, conditional on a
-consumer: (1) what physical interface actually forbids central count yet
-allows a global rule clock? (2) can a specified local timer realize the
-length-dependent switch, with its states and synchronization charged?
-Otherwise stop; no empirical unit is queued.
+## Corrections outstanding
 
-**Latest handoff, 2026-09-25: composition resource contract and stop.**
-Inspected main `7e3ee102119f9e0c8757388ee93a6ad8e316e0ae` after
-[PR #312](https://github.com/bombadil-labs/groovy-commutator/pull/312),
-with no open PRs/issues. Myk approved a bounded design gate following
-the exact local-image result. The
-[decision note](2026-09-25-rule-composition-resource-contract.md) proves
-for any three fixed ECAs `A,B,C` that a repeated schedule with no
-mid-epoch input has the same every-third-row output as the fused
-`F=C∘B∘A` for **all** initial configurations and horizons. Each selected
-Rule-30-first fused rule genuinely needs symmetric radius three on the
-full line: outer-bit witnesses 12/13 and 0/64 for 30→54→110; 4/5 and
-0/64 for 30→110→54, derived post hoc from the unchanged canonical 128-bit
-tables in `results/order_image_gate_20260925.json`. No new empirical
-evaluation, result bytes or global optimality claim. Reviewed by: none.
-
-The contract compares three sequential radius-one updates and a
-global three-phase clock with a direct seven-bit fused epoch lookup,
-or with a fixed radius-one CA that stores a local phase label.
-Twenty-four ECA lookup bits versus 128 direct radius-three truth-table
-entries are two encodings; the fair fused implementation may use the
-same three-table recipe. **Decision:** no endpoint-only behavioral
-experiment or schedule census; composition applications are dormant
-until a consumer specifies intermediate output or intervention, a
-physical locality constraint, and a matched storage/clock/access/latency
-score. The old Rule-54 repair benchmark remains closed. This unit's
-gathering branch is `gather/rule-composition-resource-contract-20260925`;
-publication PR and merge provenance can be read from that branch.
-
-**Latest handoff, 2026-09-25: local order-image gate finished.** Inspected
-main `bf938190b9c492e8017dd530bdf498d5b02caa4e`, with no open PRs or
-issues. Myk approved the proposed exact seven-bit diagnostic following
-[PR #311](https://github.com/bombadil-labs/groovy-commutator/pull/311).
-The [protocol](protocols/2026-09-25-order-image-gate.md) was published at
-`91f0b73e819a4a8ff3a0a311370ed45c7944d5c8` before the pinned
-[runner](../../experiments/order_image_gate_20260925/run.py) at
-`1a51e22fcbe9cb2abb4d7717a6d013be4670fb32`, then evaluation.
-Reviewed by: none.
-
-Fix the later pair to 54 and 110. For all 128 source patches and five
-preselected first rules 204, 30, 90, 54, 0, full-line order-difference
-patch counts are respectively **52, 52, 52, 43, 0**. The respective
-five-bit intermediate images have **32, 32, 32, 29, 1** words; of the
-13 pair-order-sensitive middle words they retain **13, 13, 13, 12, 0**.
-Rule 54 excludes middle words 13, 21, 22, only the last order-sensitive;
-it partially filters but does not erase the difference. The first
-Rule 30 witness is `1010000` (outputs 1 vs 0), proving the compositions
-differ as full-line *maps*. It does not extend the finite-ring cycle result
-to infinite-line recurrence. Scalar truth tables and vectorized 11-cell
-rings with both exterior fills agree on every output. Canonical file
-`results/order_image_gate_20260925.json` has SHA-256
-`af55c1bd4f0dbc08c90b0121e2f3d76319f8297080028277492a67200c7df549`;
-registered source hashes bind protocol, runner and library ECA step.
-The [result note](2026-09-25-order-image-gate.md) contains costs, witnesses,
-limitations and exact certificate scope. The prior PR #311 canonical bytes
-are untouched.
-
-**Next decision:** no additional prefix/rule search follows. A new unit
-needs an independent downstream task and source family where rule order
-matters, and a matched fused radius-three CA baseline. Counting differing
-neighborhoods alone is neither a measured distribution nor a dynamical
-advantage. This branch is `gather/rule-composition-local-witness-20260925`;
-the PR and integration provenance should be linked upon publication.
-
-**Latest handoff, 2026-09-25: composition phase and bounded order check.**
-Inspected main `95570ba142edebb7db466ceb88f6d600da8db868`; Bombadil
-Labs GitHub connector listed no open issues or PRs. Myk asked us to pursue
-rule composition and branch at natural stopping points. The exact
-[composition note](2026-09-25-rule-composition-phase.md) proves cyclic
-rotations of any fixed schedule have identical periodic-point and cycle
-counts, hence identical finite-ring dynamical zeta functions. This is an
-elementary general map fact, not a claimed new theorem about ECA. For
-three rules, swapping noncyclic slots after a common prefix tests the
-cross-rule order defect only on the prefix's reachable image. That is the
-specific representation distinction this branch exposed.
-
-The selected 30/54/110 comparison was frozen on the publishing branch at
-`736af639bbaad39ad3c30ef909f5d753976fbb9c` before the pinned and
-independently verified runner at
-`a53d95d504d09802227c7ef6e10f8d1f5222e7db`. Exact finite-ring
-enumeration at widths 4, 6 and 8 finds unequal cycle structures for
-30→54→110 versus 30→110→54; cyclic rotation 54→110→30 matches the first
-at every width. On width six the first has seven period-one and two
-period-nine cycles; the noncyclic permutation has one period-one and one
-period-six cycle. Canonical file:
-`results/three_rule_order_20260925.json`, SHA-256
-`9fd6af4bb8627c2777aa1602adf3711b6d40e41506da43165e94d0106c12dbbe`.
-The library vector step and an independent scalar LUT agree on all
-transitions; independent orbit tracing verifies cycle counts. Evidence is
-finite for the selected rings, with no complexity, infinite-line,
-maintainability, or cost superiority claim. Reviewed by: none.
-
-**Next decision:** do not enumerate pair/triple schedules for their own
-sake. A future question needs a task, source family and output that depend
-on rule order; then compare against the fused radius-at-most-three CA,
-including initialization, clock/selector, read radius and intermediate
-updates. If the task is externally repeated maintenance, specify the
-perturbation process before pursuing a selector. Local selection is a
-different construction already in `src/groovy/prehoc.py`; same-time local
-source selectors collapse to an ordinary ECA. Existing Rule-54 one-shot
-repair stays closed. Gathering branch `gather/rule-composition-context-20260925`
-is isolated from the previous dirty local checkout; link PR and merge commit
-when published. No automatic empirical unit is queued.
-
-**Latest handoff, 2026-09-24: Rule-54 route-repair task closed.**
-Inspected main `cd9f2bccdd53fa744c434745235d4186b9d44216`, with no
-open issues or PRs at the start. Myk approved exactly one post-selection
-closure check after raw local patterns 19 and 25 each independently
-rescued 34 injuries. The [frozen OR protocol](protocols/2026-09-24-rule54-two-pattern-closure.md)
-was committed as `66d2acca21667f48472bb50b9942a8f074469c78`, the
-runner and independent scalar verifier were pinned as
-`a52a7ecc3d51a13c366015d78fdb74e4ea185b10`, then the domain was
-evaluated on [gathering PR #310](https://github.com/bombadil-labs/groovy-commutator/pull/310).
-The new [canonical result](../../results/rule54_two_pattern_closure_20260924.json)
-has SHA-256 `88f948fe3afcc919355692fbebec5b7866ec665830504a6b686bbad1d2aeaa97`.
-Both original outcome and single-pattern canonical results are untouched;
-their SHA-256s are bound in the new record and checked by the independent
-verifier. Reviewed by: none.
-
-Result: one flag per site for local raw pattern 19 OR 25, then the same
-unique-site arbiter, succeeds on **408/1,156**: all 68 passively failing
-but action-recoverable cases are rescued, zero passive successes are
-harmed. The two patterns never co-occur on a trial. It holds a site in
-204 trials; each old single pattern still scores 374, noop scores 340,
-and full-state G/raw information ceiling is 408. Both predictions
-within this specifically post-selected follow-up held, and an
-independent scalar implementation recomputed the physical outcomes.
-The controller reads five current raw bits and compares two constants
-per site, emits a flag, and still pays for shared address arbitration.
-It uses no G field or history. This is a finite one-shot, selected-domain
-match, **not** held-out confirmation, glider persistence, an uncoordinated
-local CA, or a cross-rule discriminator.
-
-**Next decision:** stop tuning this Rule-54 route; no third pattern or
-priority rule, Rule-110 transplant, or 255-rule sweep follows. Reopen
-only for a separately justified repeated-disturbance target or independent
-consumer, with passive/fixed/full-state feasibility gates before sensors,
-and explicitly cost any distributed address arbitration. Earlier
-handoffs below preserve the original predictions and narrower results.
-
-**Latest handoff, 2026-09-24: local sensor gate and sweep decision.**
-Inspected main `4515a5e43ab329d584b306601dbe4a4e27088eb7`, with no
-open issues or PRs. Myk asked whether Rule 110 and other ECAs might share
-the complete G field's Rule-54 repair sufficiency, and authorized working
-until deciding whether a full sweep was justified. The highest-impact
-prerequisite was the [matched local Rule-54 comparison](2026-09-24-rule54-local-sensor-gate.md),
-since the 408/1,156 full-field ceiling does not implement an addressed
-local intervention. Protocol freeze `0cacece9ff8d72fa99bf61e6bda57e6f3713ba3f`
-and pinned implementation `0a08aa45bb79d61c405bf488bf25b42bbbb5b96f`
-preceded evaluation on [gathering PR #309](https://github.com/bombadil-labs/groovy-commutator/pull/309).
-Original outcome JSON was unchanged, SHA-256
-`b390b49d3506b5e78e45fbcbd3de710bdcad60b3b0a6d21054e1dc276d166f75`.
-New canonical result SHA-256
-`04374a9ec5b0a5c67ecdea92d2cffde6784cdba0f6d8460c43cb1267afce7970`.
-
-Result: best fixed/noop, G-bit, E-bit and D-bit unique-site triggers all
-score 340/1,156; best five-bit raw equality scores **374/1,156**, with
-34 additional rescues, no harmed passive successes, and the same
-radius-two source footprint and address arbiter. Full-field G/raw
-information upper bound remains 408. Prospective P1 failed, P2/P3 held;
-the independent scalar verifier rechecks the five-bit G table and all
-policy outcomes. Post hoc, every G field has 4–10 ones, so a one-bit
-predicate never selects exactly one site. Cost correction: full G
-requires three E passes total, **two additional** if the physical
-`E(s)` update is reused; all selectors share address coordination.
-Reviewed by: none. Historical evidence and failed predictions remain.
-
-**Decision:** do not run a 255-rule sweep. This particular local G policy
-failed its gain prediction even against a simple raw selector, and the
-cross-rule statistic would require independently defined native targets,
-perturbations and positive intervention gates. No Rule-110 repair claim
-was evaluated. Its established nonautonomy result concerns a different
-operation. A future Rule-110 unit first needs an independent repair target
-and full-state-vs-fixed feasibility gate; no such unit is queued to rescue
-this failed discriminator proposal. The earlier handoffs below remain
-historical provenance.
-
-**Latest handoff, 2026-09-24.** Inspected main
-`88abe0bc02835b987619202d6484ff4e26ada556`; no open PRs or issues
-at start. Selected the exact information gate for reference-rule G on the
-existing Rule-54 route-repair task because global G insufficiency would
-end every proposed G-only local selector without a radius search. Frozen
-protocol `749e694dbacae5986de698cfe2ee812d6b9b7d42` preceded pinned
-implementation `fcabee9be1a1f1d3db4e9bcaee07fb1af7fe3528` and first
-evaluation. The earlier canonical route result was unchanged (SHA-256
-`b390b49d3506b5e78e45fbcbd3de710bdcad60b3b0a6d21054e1dc276d166f75`).
-The new [exact result](2026-09-24-rule54-g-sensor-gate.md) finds
-340/1,156 fixed, 408/1,156 raw-full and **408/1,156 G-full** successes;
-1,054 raw decision states collapse to 850 G observations. Prospective P1
-(G loses a rescue) failed; P2 (data processing) held. Independent
-bit-parallel G and fiber verifier passed. New canonical result SHA-256
-`b2ebab4806922360f570b39ce0f1701df4a90cfc3704b8239bc671e604c661af`.
-This is a finite-domain information ceiling, not a local controller:
-computing G costs three full-ring E54 evaluations from all 34 source bits
-and still needs action-address coordination. Reviewed by: none.
-
-**Next decisions:** (1) freeze one explicit local G-trigger/arbiter interface
-and an equal-footprint raw local controller, counting per-site reads, rule
-evaluations, memory and address arbitration before evaluating; (2) if raw
-ties or dominates under total cost, park H3's G-specific advantage without
-changing the task; (3) keep all positive claims restricted to one-shot
-finite-ring route recovery. The earlier handoff below is historical context.
-
-Updated 2026-09-24. Authored by Codex (OpenAI). Reviewed by: none.
-**Latest bounded unit (inspected main `40e559ea80d0ca1ef76e8cfce2e2652b9d885f97`):**
-[The published-glider-route feasibility gate](2026-09-24-rule54-glider-route-gate.md)
-was frozen at `a7292eb975d0bc9c89853569abf737aa80622e3d` and its runner
-and scalar verifier at `88584bf5bb2bdf8f285abc2037fe25d5ce67cd55`,
-all before the first evaluation. Canonical result
-`results/rule54_glider_route_gate_20260924.json` has SHA-256
-`b390b49d3506b5e78e45fbcbd3de710bdcad60b3b0a6d21054e1dc276d166f75`.
-Across 1,156 Rule-54 trials (34 rotations × 34 one-bit injuries), passive
-and best fixed hold both succeed on 340; full-state single-site hold at
-time two succeeds on 408, rescuing 68. Independent scalar replay checks
-all 40,460 action outcomes and P0; prospective P1–P3 held. A separate
-post-evaluation diagnostic (not a frozen prediction) finds all 68 first
-rejoin the clean route at time seven, while an exogenously supplied original
-injury-site oracle also attains 408. All 68 occur at two sites relative to
-the clean route's rotation (24 or 26), a post-evaluation diagnostic. The
-finite-ring route is motivated by
-published glider encodings, not a certified glider trajectory or a G result.
-
-**Next decision:** if a concrete G advantage remains plausible, freeze a
-reference-rule G sensor and a local address selection interface against
-matched raw local fault sensing and the address-oracle ceiling, pricing
-all source reads, G computation, controller bits and address coordination.
-If the raw baseline is sufficient at equal or lower cost, park H3's G
-advantage. Do not change this positive gate's ring, endpoint or action
-budget or treat one-shot return as ongoing self-maintenance. No follow-up
-sensor experiment had been frozen at that point; the completed information
-gate above now supersedes this prospective instruction.
-
-**Current continuation (inspected main `1e32518c3bfe17ea08077cd80fc03c1697c8b36f`):**
-[The feedback-causality note](2026-09-24-feedback-causality.md) proves that
-`r=F(G_r(s))` need not specify a next rule. Constant ECA 0/255 give G fields
-0/1 for every state: an opposite selector has no fixed point, while a
-matching selector has two. The note supplies two causal contracts: a fixed
-reference rule's counterfactual G, and an already completed mixed-rule
-residual with two-step history. This is an exact policy-definition correction,
-not a feedback performance test. The finite Rule-30 observer-orbit result in
-PR #305 remains unchanged. No empirical unit is currently queued.
-
-**Next decisions:** (1) find an independently motivated target with genuine
-return/maintenance and a declared perturbation process, then test whether
-full-state actions can improve on passive evolution; (2) only if that gate
-passes, select a causal sensor contract and pre-register matched fixed-rule,
-clocked and controller-track costs. If no independent consumer or target
-appears, park H3. Preserve the negative Rule-54 full-state repair gate.
-
-Latest unit: the [observer-orbit hypotheses](2026-09-24-observer-orbit-program.md)
-and [frozen Rule-30 preflight](protocols/observer-orbit-preflight-20260924.md)
-were prepared against inspected main `37a3429e436060d6e6ee1662ca4b7d9d169c000d`.
-Protocol commit `dd5abe650aeb2b11c5cc889dc510e2e94cf73a59` preceded
-implementation commit `3a466968113fd342e5b45c032d682239b75d0aa1`;
-evaluation followed the latter. [The bounded result](2026-09-24-observer-orbit-preflight.md)
-on all 64 states of one six-cell Rule-30 ring found phantom G-graph closed
-walks `9,15,27,39,39,69` for lengths 1..6. The primitive `G=9` self-loop
-comes from `10 -> 27`, but the same run next reads `45`. The valid three-row
-G history and source-identity controls have no phantom words through six.
-The unchanged canonical JSON is `results/observer_orbit_preflight_20260924.json`
-(SHA-256 `189a60e6c37e43b7bb12c6e7bdc242cf424ba28ab9d4a0ce4d43109593687d6a`);
-the separate registered seal binds it to the protocol, runner and verifier.
-An independent scalar implementation by the same author verifies truth
-table, cycles, graph powers and witness; no independent peer reviewer.
-The three-row control needs two updates and three G reads. No feedback,
-Class-IV advantage or full-line recurrence claim follows.
-The maintained [observation/law taxonomy](2026-09-24-observation-law-taxonomy.md)
-defines the distinct same-rule, factor, recursive and controlled-switching
-questions. It adds no empirical unit; require a specified operation and
-matched control before searching rule schedules or recursive branches.
-Latest completed unit: [observation discovery #303](https://github.com/bombadil-labs/groovy-commutator/pull/303).
-Taxonomy-only update inspected main `7301e9dc1ac00549b72b97c46b7380c689ecb914`.
-The earlier empirical unit inspected main `45c8698d2a2e3c0dfcd9bb01dee1556fde58ba15`; its protocol
-`02948ab8ff523574a4ee11fdf0b379714ca87221` preceded implementation
-`eced9cee90570db53a2280f6101abffe441ef7da` and evaluation. Myk authorized
-this unit and merging completed work. Reviewed by: none.
-
-We tested whether witnesses can select which raw, XOR or past observations
-belong in a sufficient view. The Rule-90 calibration selected the known side
-XOR. On Rule 30, all three search arms chose six current bits at -2..3; the
-offered relations and history did not reduce feature count. Guided full
-queries fell from 26,892 to 67, but raw-only search was fastest (0.0046 s
-versus 0.4118 s guided total). P1/P3/P5 held; P2/P4 failed. Canonical result:
-`results/observation_discovery_20260923.json`. Separate scalar audit checks all
-1,024 calibration/test rows and 69 witnesses in under a second locally.
-
-[The note](2026-09-23-observation-discovery.md) states the exact local full-line
-one-step contract and post-evaluation algebraic cancellation. The interactive
-site page `observation-discovery.html` displays saved failure pairs and costs.
-The winner's six source bits already determine the mandatory G bit; a direct
-six-bit lookup can omit G. This is grammar-bound observation selection, not
-an autonomous reduced CA or a new biological object. Do not expand the grammar
-or continue a census to force a relational advantage.
-
-The five earlier gathering units #295–#299 and follow-ups
-[target eligibility #300](https://github.com/bombadil-labs/groovy-commutator/pull/300),
-[delayed action #301](https://github.com/bombadil-labs/groovy-commutator/pull/301),
-and [masked-history sensing #302](https://github.com/bombadil-labs/groovy-commutator/pull/302)
-are integrated on main at Myk's direction. Their original
-protocol → implementation → evaluation chronology and canonical result bytes
-are preserved. No independent reviewer participated in these three follow-ups;
-scalar audits by the same author and CI checks are verification, not review.
-
-The #300 exact finite target has both returning and nonreturning one-bit
-injuries on a 12-cell Rule-54 ring. #301 shows that at the two-step decision
-point, no addressed one-flip action rescues any of the 60 injuries that fail
-the four-step target endpoint passively; 36/96 succeed by no action.
-That negative result is limited to the fixed target, action budget, timing
-and endpoint. P1 held and P2–P4 failed. See
-[the note](2026-09-23-delayed-repair-feasibility.md) and
-`results/delayed_repair_feasibility_20260923.json`.
-
-The independent #302 known-erasure audit used 52 source states × 12 known
-hidden-cell positions on the same 12-cell periodic Rule-54 ring. Ambiguous
-observed fibers conflicting on the target task at times 0, 0–1 and 0–2:
-**48, 24, 0**; exact-source reconstruction has the same counts.
-P1–P3 held, P4 failed. A finite time-zero fiber deduction extends the
-equality of task/source sufficiency to all later histories retaining the
-initial observation in this domain. At sufficiency, 33 visible bits over
-two updates replace a direct 12-bit initial read, if available; no efficiency
-or biological claim. See [the note](2026-09-23-masked-history-sensing.md)
-and `results/masked_history_sensing_20260923.json`.
-
-[START_HERE](START_HERE.md) is the scheduling authority;
-[FINDINGS](FINDINGS.md) is the accessible running account.
-The [integration record](2026-09-23-research-integration.md) covers #295–#299.
-
-## What the combined work says
-
-1. **History geometry:** Rule 30's raw three-row encoding loses a temporal
-   distinction; one constant fourth row repairs it. Both binary separator
-   choices have exact uniform 13-by-4 laws. No speed or optimality claim.
-2. **Recursive 1D G:** mirror Rules 2/16 have specified nonconstant second
-   and third generations. Completion choices change third-level closure;
-   one branch remains unresolved beyond radius four. After the first source
-   step the dynamics translate rigidly. More depth alone has no established payoff.
-3. **Reusable descriptions:** what an observation needs depends on the operation.
-   Retaining erased state, widening access and choosing an off-image rule
-   extension solve different problems. The arithmetic/CA interactive comparison
-   is available at the site's reusable-descriptions route.
-4. **Search method:** exact conflict witnesses reduced full queries from 278
-   to 11 in the known Rule-24 test. Both arms used Prolog. No language-wide
-   advantage, Jev result or universal-verifier breakthrough was established.
-5. **Prediction and repair:** in the fixed Rule-54 task, minimum local alphabets
-   are 2 for passive target prediction and 4 for repair. The repair view can
-   forget global complement and is not a refinement of parity. However the
-   target has no incoming passive paths, so delayed repair is static correction.
-
-Read the linked unit notes in START_HERE for full contracts and evidence.
-Original protocols, canonical bytes, failed predictions and unresolved outcomes
-remain intact. Separate implementation checks and green CI are self-verification,
-not an independent review. There is no standing cross-agent gate to reactivate.
-
-## Next one to three decisions
-
-1. **Sensing:** obtain a concrete corruption or observation operator and a
-   task independently of the handpicked stripe family. Define the cost of
-   observation, delay, computation and reconstruction before asking whether
-   task identification can precede exact source recovery.
-2. **Maintenance:** identify a concrete consumer of repeated disturbance
-   tolerance or an internal constraint. Compare passive dynamics, full-state
-   action feasibility and a fixed-action baseline before searching encoders.
-3. **Scientific corrections:** correct a bounded claim if a witness or a
-   reproducing check contradicts it; preserve original result bytes and
-   failed predictions.
-
-No empirical unit is queued. A next decision is whether a real controller
-consumer supplies an independently specified organization target, causal
-selector, horizon and priced fixed/clocked controls; otherwise keep H3
-contingent. A second is whether a concrete scientific counterexample calls
-for a bounded correction. Dimensional applications,
-all-rule censuses, a fourth G generation, prime-distribution claims and the
-archived hard recoder campaign remain outside the current task. The earlier
-[research-drive synthesis](2026-09-22-research-drive-synthesis.md) remains
-valid; integration does not reverse its stopping decisions.
+None known. If a witness or a reproducing check contradicts a bounded claim,
+correct the claim visibly and preserve the original result bytes and the
+failed prediction.

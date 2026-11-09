@@ -5,14 +5,17 @@
 ## Start here
 
 Read [the current research direction](docs/research/START_HERE.md), then
-[the current handoff](docs/research/NEXT_TASK.md). The three executable
-representation cases and bounded causal-retention audit are complete in this
-unit, published through PR #282. On main, treat them as integrated before
-proposing another experiment.
+[the current handoff](docs/research/NEXT_TASK.md). Everything completed through
+2026-10-08 is integrated on `main`; treat it as such before proposing another
+experiment.
 The [running findings](docs/research/FINDINGS.md) summarize completed and stopped
 work in plain language. Update them when a unit ends, linking its evidence.
 Read only the source lineage it needs. Do not resume an old “next unit” just
 because a Program page, protocol or checkpoint proposes it.
+
+Both entry pages are short on purpose. A unit reports in its own note and in
+the findings; it changes at most one row of the direction page. Do not append
+dated update paragraphs to either page.
 
 The scientific question is: **which distinctions can a representation safely
 discard, which must it retain, and what does changing representation buy us?**
@@ -45,6 +48,8 @@ recursive G and externally or internally chosen rule schedules.
 ## Gathering branches and review
 
 Use one `gather/<unit>` branch and draft PR per coherent task, based on `main`.
+Do not base a branch or a PR on another unmerged gathering branch; if a unit
+needs an earlier one, merge that one first.
 State the purpose, scope, completion criteria and verification. Preserve
 protocol → implementation → evaluation history with merge commits. Do not
 force-push or overwrite shared work. Use isolated worktrees when needed.

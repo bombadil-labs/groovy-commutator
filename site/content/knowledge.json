@@ -2842,6 +2842,33 @@
       "research": [
         "jet-full-line-autonomy-20261007"
       ]
+    },
+    {
+      "source": "commutator-attractor-constancy",
+      "type": "depends_on",
+      "target": "affine-implication",
+      "reason": "The result asks where the global affine-to-constant implication can hold on a restricted domain for rules that fail it globally.",
+      "research": [
+        "g-on-attractor-20261109"
+      ]
+    },
+    {
+      "source": "commutator-attractor-constancy",
+      "type": "depends_on",
+      "target": "commutator-complement-covariance",
+      "reason": "The surviving rule set is closed under reflection and not under complement conjugation, as the self-dual covariance criterion predicts.",
+      "research": [
+        "g-on-attractor-20261109"
+      ]
+    },
+    {
+      "source": "commutator-attractor-constancy",
+      "type": "depends_on",
+      "target": "commutator-jet",
+      "reason": "Constancy along an orbit is equivalent to the first rung of the jet recurrence, D(HX) = H(DX) xor G(X), with a constant G.",
+      "research": [
+        "g-on-attractor-20261109"
+      ]
     }
   ],
   "nodes": [
@@ -5461,7 +5488,7 @@
       "kind": "finding",
       "status": "exact",
       "summary": "Rules 54/110 pass the bounded reserve-plus-growth gate, but an independent 88-representative census finds 41 passers, including 37 non-IV rules. The corridor is a matching variable / necessary-condition-like geometry, not a discriminator.",
-      "updated": "2026-10-07",
+      "updated": "2026-11-09",
       "source": "docs/knowledge/asymptotic-closure-corridor.md",
       "research": [
         "asymptotic-closure-scaling-20261007",
@@ -5538,6 +5565,18 @@
       "source": "docs/knowledge/jet-full-line-autonomy.md",
       "research": [
         "jet-full-line-autonomy-20261007"
+      ]
+    },
+    {
+      "id": "commutator-attractor-constancy",
+      "title": "A commutator that varies globally can be constant where a finite ring settles",
+      "kind": "finding",
+      "status": "exact",
+      "summary": "On periodic rings of 8 to 20 cells, 47 rules beyond the affine rules and Rules 4 and 200 have a constant commutator on the eventual image. Symmetry forces the constant to be all-zeros or all-ones; a conjectured period-two ceiling is refuted by Rules 44 and 100.",
+      "updated": "2026-11-09",
+      "source": "docs/knowledge/commutator-attractor-constancy.md",
+      "research": [
+        "g-on-attractor-20261109"
       ]
     }
   ],
