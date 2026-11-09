@@ -3,3 +3,7 @@ matplotlib
 jupyter
 pandas
 pyarrow
+# needed by the October 2026 jet verifiers and the test suite
+scipy
+sympy
+pytest

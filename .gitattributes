@@ -1,3 +1,8 @@
+# Check text files out with LF on every platform, so that hashed bytes match Git blobs
+# and scripts/check_result_integrity.py passes on Windows. Files already committed
+# with CRLF are left byte-exact: Git does not normalise a file whose blob has CRLF.
+* text=auto eol=lf
+
 # Preserve exact hashed research artifacts, including the archived CRLF run.
 results/rule110_latent_q_20261007.json -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
 results/rule110_latent_q_20261007/execution.json -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
