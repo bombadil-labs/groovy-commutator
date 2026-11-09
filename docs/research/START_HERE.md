@@ -20,6 +20,16 @@ sections are historical proposals, not an instruction to resume them.
 **Question:** which distinctions can a representation safely discard, which
 must it retain, and what does changing representation buy us?
 
+**New matched mechanism result.** The
+[Rule-62/Rule-110 comparison](2026-10-07-matched-history-transport.md)
+holds predictive-compression demand approximately fixed and asks what the
+newly necessary history is tracking. At fresh widths 16 and 18 every Rule-110
+repair step factors through current predictive state plus current centered
+Groovy; Rule 62 has exact early counterexamples. A complete local audit then
+proves a stronger Rule-110 identity: current block parity plus current centered
+Groovy already has a radius-one induced law for the next block-parity field.
+The next useful question is structural/minimality, not another rule census.
+
 **Update — asymptotic closure specificity control.** The exact finite-panel
 [scaling test](2026-10-07-asymptotic-closure-scaling.md) passed, but an
 [independent 88-representative census](2026-10-07-asymptotic-closure-census-control.md)

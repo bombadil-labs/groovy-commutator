@@ -1,0 +1,98 @@
+{
+  "schema": "rule110-parity-g-factor-v1",
+  "date": "2026-10-07",
+  "provenance": "post-hoc mechanism audit after matched-history result",
+  "rule110": {
+    "radius1_macro_factor": {
+      "pass": true,
+      "distinct_contexts": 160,
+      "conflict": null
+    },
+    "source_words_checked": 1024,
+    "macro_feature_names": [
+      "P-1",
+      "G-2",
+      "G-1",
+      "P0",
+      "G0",
+      "G1",
+      "P1",
+      "G2",
+      "G3"
+    ],
+    "minimum_feature_count": 7,
+    "minimum_subsets": [
+      [
+        "P-1",
+        "G-1",
+        "P0",
+        "G0",
+        "G1",
+        "P1",
+        "G2"
+      ]
+    ],
+    "minimum_subset_factor": {
+      "pass": true,
+      "distinct_contexts": 61,
+      "conflict": null
+    }
+  },
+  "rule62": {
+    "radius1_macro_factor": {
+      "pass": false,
+      "distinct_contexts_before_conflict": 8,
+      "conflict": {
+        "previous_word": 31,
+        "word": 32,
+        "context": [
+          0,
+          0,
+          0,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "previous_target": 0,
+        "target": 1
+      }
+    },
+    "global_witnesses": [
+      {
+        "n": 16,
+        "source_x": 60,
+        "source_y": 204,
+        "same_current_parity": true,
+        "current_parity": 0,
+        "same_centered_G": true,
+        "centered_G": 34,
+        "next_parity_x": 6,
+        "next_parity_y": 14
+      },
+      {
+        "n": 18,
+        "source_x": 60,
+        "source_y": 204,
+        "same_current_parity": true,
+        "current_parity": 0,
+        "same_centered_G": true,
+        "centered_G": 34,
+        "next_parity_x": 6,
+        "next_parity_y": 14
+      }
+    ]
+  },
+  "summary": {
+    "rule110_radius1_factor_pass": true,
+    "rule110_unique_minimum_feature_count": 7,
+    "rule110_number_of_minimum_subsets": 1,
+    "rule62_radius1_factor_pass": false,
+    "rule62_global_witness_pass": true
+  },
+  "source_hashes": {
+    "script_sha256": "f3a3503e0caea724c174f4e837b06f980f63296bb54dbb574c2e70479ce8552f"
+  }
+}
