@@ -1,0 +1,333 @@
+{
+  "date": "2026-10-07",
+  "evaluated_widths": [
+    10
+  ],
+  "gate_decision": {
+    "P1_controls": true,
+    "P2_primary_complex_gt_chaotic": false,
+    "stop_reason": "P2 failed at n=10: both Rules 54/110 did not have A90 strictly above both Rules 30/126"
+  },
+  "observer": {
+    "cadence": 2,
+    "kind": "nonoverlapping block-2 parity"
+  },
+  "panel": [
+    0,
+    4,
+    90,
+    184,
+    30,
+    126,
+    54,
+    110
+  ],
+  "profiles": {
+    "10": {
+      "0": {
+        "A90": 0,
+        "H0": 5,
+        "Hinf": 5,
+        "class_counts": [
+          32
+        ],
+        "depth_density": 0,
+        "hstar": 0,
+        "last_nonzero_repair_bits": 0,
+        "latent_bits": 0,
+        "mean_repair_bits": 0,
+        "n": 10,
+        "nonzero_repair_steps_after_t90": 0,
+        "partition_entropy": [
+          5
+        ],
+        "repair_bits": [],
+        "rule": 0,
+        "safe_forgetting_reserve_bits": 5,
+        "stable_entropy_density": 0.5,
+        "t50": 0,
+        "t90": 0,
+        "t99": 0
+      },
+      "4": {
+        "A90": 0,
+        "H0": 5,
+        "Hinf": 7.265212989339305,
+        "class_counts": [
+          32,
+          197
+        ],
+        "depth_density": 0.1,
+        "hstar": 1,
+        "last_nonzero_repair_bits": 2.2652129893393047,
+        "latent_bits": 2.2652129893393047,
+        "mean_repair_bits": 2.2652129893393047,
+        "n": 10,
+        "nonzero_repair_steps_after_t90": 0,
+        "partition_entropy": [
+          5,
+          7.265212989339305
+        ],
+        "repair_bits": [
+          2.2652129893393047
+        ],
+        "rule": 4,
+        "safe_forgetting_reserve_bits": 2.7347870106606953,
+        "stable_entropy_density": 0.7265212989339305,
+        "t50": 1,
+        "t90": 1,
+        "t99": 1
+      },
+      "30": {
+        "A90": 0.8,
+        "H0": 5,
+        "Hinf": 9.99609375,
+        "class_counts": [
+          32,
+          637,
+          937,
+          972,
+          982,
+          992,
+          1002,
+          1007,
+          1012,
+          1017,
+          1022
+        ],
+        "depth_density": 1,
+        "hstar": 10,
+        "last_nonzero_repair_bits": 0.009765625,
+        "latent_bits": 4.99609375,
+        "mean_repair_bits": 0.499609375,
+        "n": 10,
+        "nonzero_repair_steps_after_t90": 8,
+        "partition_entropy": [
+          5,
+          9.155767959369292,
+          9.830078125,
+          9.8984375,
+          9.91796875,
+          9.9375,
+          9.95703125,
+          9.966796875,
+          9.9765625,
+          9.986328125,
+          9.99609375
+        ],
+        "repair_bits": [
+          4.155767959369292,
+          0.6743101656307076,
+          0.068359375,
+          0.01953125,
+          0.01953125,
+          0.01953125,
+          0.009765625,
+          0.009765625,
+          0.009765625,
+          0.009765625
+        ],
+        "rule": 30,
+        "safe_forgetting_reserve_bits": 0.00390625,
+        "stable_entropy_density": 0.999609375,
+        "t50": 1,
+        "t90": 2,
+        "t99": 6
+      },
+      "54": {
+        "A90": 0.3333333333333333,
+        "H0": 5,
+        "Hinf": 9.500440551736684,
+        "class_counts": [
+          32,
+          412,
+          722,
+          777
+        ],
+        "depth_density": 0.3,
+        "hstar": 3,
+        "last_nonzero_repair_bits": 0.1538563232633141,
+        "latent_bits": 4.500440551736684,
+        "mean_repair_bits": 1.5001468505788946,
+        "n": 10,
+        "nonzero_repair_steps_after_t90": 1,
+        "partition_entropy": [
+          5,
+          8.431980896442724,
+          9.34658422847337,
+          9.500440551736684
+        ],
+        "repair_bits": [
+          3.431980896442724,
+          0.9146033320306461,
+          0.1538563232633141
+        ],
+        "rule": 54,
+        "safe_forgetting_reserve_bits": 0.4995594482633159,
+        "stable_entropy_density": 0.9500440551736684,
+        "t50": 1,
+        "t90": 2,
+        "t99": 3
+      },
+      "90": {
+        "A90": 0,
+        "H0": 5,
+        "Hinf": 5,
+        "class_counts": [
+          32
+        ],
+        "depth_density": 0,
+        "hstar": 0,
+        "last_nonzero_repair_bits": 0,
+        "latent_bits": 0,
+        "mean_repair_bits": 0,
+        "n": 10,
+        "nonzero_repair_steps_after_t90": 0,
+        "partition_entropy": [
+          5
+        ],
+        "repair_bits": [],
+        "rule": 90,
+        "safe_forgetting_reserve_bits": 5,
+        "stable_entropy_density": 0.5,
+        "t50": 0,
+        "t90": 0,
+        "t99": 0
+      },
+      "110": {
+        "A90": 0.5,
+        "H0": 5,
+        "Hinf": 9.66884985347337,
+        "class_counts": [
+          32,
+          432,
+          817,
+          862,
+          867
+        ],
+        "depth_density": 0.4,
+        "hstar": 4,
+        "last_nonzero_repair_bits": 0.009765625,
+        "latent_bits": 4.66884985347337,
+        "mean_repair_bits": 1.1672124633683425,
+        "n": 10,
+        "nonzero_repair_steps_after_t90": 2,
+        "partition_entropy": [
+          5,
+          8.47176994699653,
+          9.57119360347337,
+          9.65908422847337,
+          9.66884985347337
+        ],
+        "repair_bits": [
+          3.4717699469965293,
+          1.0994236564768407,
+          0.087890625,
+          0.009765625
+        ],
+        "rule": 110,
+        "safe_forgetting_reserve_bits": 0.33115014652663,
+        "stable_entropy_density": 0.966884985347337,
+        "t50": 1,
+        "t90": 2,
+        "t99": 3
+      },
+      "126": {
+        "A90": 0,
+        "H0": 5,
+        "Hinf": 7.9530308547418285,
+        "class_counts": [
+          32,
+          227,
+          317
+        ],
+        "depth_density": 0.2,
+        "hstar": 2,
+        "last_nonzero_repair_bits": 0.41015625,
+        "latent_bits": 2.9530308547418285,
+        "mean_repair_bits": 1.4765154273709142,
+        "n": 10,
+        "nonzero_repair_steps_after_t90": 0,
+        "partition_entropy": [
+          5,
+          7.5428746047418285,
+          7.9530308547418285
+        ],
+        "repair_bits": [
+          2.5428746047418285,
+          0.41015625
+        ],
+        "rule": 126,
+        "safe_forgetting_reserve_bits": 2.0469691452581715,
+        "stable_entropy_density": 0.7953030854741828,
+        "t50": 1,
+        "t90": 2,
+        "t99": 2
+      },
+      "184": {
+        "A90": 0.3333333333333333,
+        "H0": 5,
+        "Hinf": 7.478515625,
+        "class_counts": [
+          32,
+          182,
+          232,
+          237
+        ],
+        "depth_density": 0.3,
+        "hstar": 3,
+        "last_nonzero_repair_bits": 0.009765625,
+        "latent_bits": 2.478515625,
+        "mean_repair_bits": 0.826171875,
+        "n": 10,
+        "nonzero_repair_steps_after_t90": 1,
+        "partition_entropy": [
+          5,
+          7.227003051736685,
+          7.46875,
+          7.478515625
+        ],
+        "repair_bits": [
+          2.227003051736685,
+          0.241746948263315,
+          0.009765625
+        ],
+        "rule": 184,
+        "safe_forgetting_reserve_bits": 2.521484375,
+        "stable_entropy_density": 0.7478515625,
+        "t50": 1,
+        "t90": 2,
+        "t99": 2
+      }
+    }
+  },
+  "protocol": "docs/research/protocols/asymptotic-closure-20261007.md",
+  "schema": "asymptotic-closure-v1",
+  "source_hashes": {
+    "script_sha256": "fe65ff6b5db47b62245393c51e3a21bd72fa3e83eb17095abb4fe28c3eba6918"
+  },
+  "summary": {
+    "primary_A90": {
+      "0": 0,
+      "4": 0,
+      "30": 0.8,
+      "54": 0.3333333333333333,
+      "90": 0,
+      "110": 0.5,
+      "126": 0,
+      "184": 0.3333333333333333
+    },
+    "primary_hstar": {
+      "0": 0,
+      "4": 1,
+      "30": 10,
+      "54": 3,
+      "90": 0,
+      "110": 4,
+      "126": 2,
+      "184": 3
+    },
+    "primary_key_result": "Rule 30 has a longer thin minimal-repair tail than Rules 54/110 under the frozen observer at n=10",
+    "status": "negative"
+  }
+}
