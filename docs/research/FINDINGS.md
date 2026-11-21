@@ -1,11 +1,23 @@
 # What we have learned
 
-Running plain-language summary, updated 2026-09-24. This is a synthesis of
+Running plain-language summary, updated 2026-11-21. This is a synthesis of
 existing evidence, not a new experiment or independent review. Each entry
 links to the technical account that states its assumptions and verification.
 “Complete” means the stated investigation has ended, not that every related
 mathematical question is solved. The [program survey](2026-09-22-program-survey.md)
 explains what deserves work next.
+
+## November 21 update: same phases do not always mean the same future
+
+We trained two copies of a small oscillator grid on different stripe
+spacings, then gave them exactly the same visible phases and no drive.
+The full learned bond layout let their later phases distinguish spacing
+on the planned alignment score in 31 of 32 pairs. Shuffling within each
+axis or keeping just the two directional means removed this specific
+contrast; a different phase score still found a difference in the
+means condition. In the bounded six-cell Groovy transport transfer, none
+of four naturally matched pairs split on the next update.
+[Full result and replay](2026-11-21-phase-scramble-333.md).
 
 ## 1. A disagreement can mean we chose the wrong law
 

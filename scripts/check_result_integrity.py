@@ -30,6 +30,14 @@ ROOT = pathlib.Path(__file__).resolve().parents[1]
 
 # result file -> {hash key recorded in its source_hashes: path the hash was taken of}
 REGISTRY = {
+    'results/phase_scramble_333_20261121.json': {p: p for p in (
+        'docs/research/protocols/2026-11-21-phase-scramble-333-transfer.md',
+        'docs/research/protocols/2026-11-21-phase-scramble-333.md',
+        'experiments/phase_scramble_333/run.py',
+        'experiments/phase_scramble_333/transfer.py',
+        'src/groovy/ca.py',
+        'src/groovy/nonuniform.py',
+    )},
     'results/order_image_gate_20260925.json': {p: p for p in (
         'docs/research/protocols/2026-09-25-order-image-gate.md',
         'experiments/order_image_gate_20260925/run.py',
