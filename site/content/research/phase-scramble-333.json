@@ -1,7 +1,7 @@
 [
   {
     "slug": "phase-scramble-333",
-    "label": "Causal retention",
+    "label": "Phase reset",
     "title": "Same visible present, different futures",
     "date": "2026-11-21",
     "updated": "2026-11-21",
@@ -13,6 +13,10 @@
     "source": "docs/research/2026-11-21-phase-scramble-333.md",
     "promotion": {
       "stage": "research"
-    }
+    },
+    "related": [
+      "causal-retention",
+      "history-repairability"
+    ]
   }
 ]
