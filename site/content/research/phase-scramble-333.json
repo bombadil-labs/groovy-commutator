@@ -1,0 +1,18 @@
+[
+  {
+    "slug": "phase-scramble-333",
+    "label": "Causal retention",
+    "title": "Same visible present, different futures",
+    "date": "2026-11-21",
+    "updated": "2026-11-21",
+    "kind": "Experiment",
+    "evidence": "exploratory",
+    "topic": "Observation and memory",
+    "summary": "Drive off and phases reset, the spatial arrangement of bonds mattered for a spacing-sensitive alignment score in a 16×16 oscillator grid.",
+    "takeaway": "Two average bond strengths do not preserve the specific alignment signal, but they do preserve evidence of history under a different readout.",
+    "source": "docs/research/2026-11-21-phase-scramble-333.md",
+    "promotion": {
+      "stage": "research"
+    }
+  }
+]
